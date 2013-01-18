@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.io.File;
 import java.util.Scanner;
@@ -23,46 +25,39 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2SummonItem;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * @author FBIagent
  */
-public class SummonItemsData
-{
+public class SummonItemsData {
+	
 	protected static final Logger _log = Logger.getLogger(SummonItemsData.class.getName());
 	private final TIntObjectHashMap<L2SummonItem> _summonitems = new TIntObjectHashMap<>();
 	
-	public static SummonItemsData getInstance()
-	{
+	public static SummonItemsData getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected SummonItemsData()
-	{
+	protected SummonItemsData() {
 		Scanner s;
-		try
-		{
+		try {
 			s = new Scanner(new File(Config.DATAPACK_ROOT + "/data/summon_items.csv"));
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.warning("Summon items data: Can not find '" + Config.DATAPACK_ROOT + "/data/summon_items.csv'");
 			return;
 		}
 		
 		int lineCount = 0;
 		
-		while (s.hasNextLine())
-		{
+		while (s.hasNextLine()) {
 			lineCount++;
 			
 			String line = s.nextLine();
 			
-			if (line.startsWith("#"))
-			{
+			if (line.startsWith("#")) {
 				continue;
-			}
-			else if (line.isEmpty())
-			{
+			} else if (line.isEmpty()) {
 				continue;
 			}
 			
@@ -72,25 +67,20 @@ public class SummonItemsData
 			byte summonType = 0;
 			int despawn = -1;
 			
-			try
-			{
+			try {
 				itemID = Integer.parseInt(lineSplit[0]);
 				npcID = Integer.parseInt(lineSplit[1]);
 				summonType = Byte.parseByte(lineSplit[2]);
-				if (summonType == 0)
-				{
+				if (summonType == 0) {
 					despawn = Integer.parseInt(lineSplit[3]);
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.warning("Summon items data: Error in line " + lineCount + " -> incomplete/invalid data or wrong seperator!");
 				_log.warning("		" + line);
 				ok = false;
 			}
 			
-			if (!ok)
-			{
+			if (!ok) {
 				continue;
 			}
 			
@@ -101,25 +91,22 @@ public class SummonItemsData
 		_log.info("Summon items data: Loaded " + _summonitems.size() + " summon items.");
 	}
 	
-	public L2SummonItem getSummonItem(int itemId)
-	{
+	public L2SummonItem getSummonItem(int itemId) {
 		return _summonitems.get(itemId);
 	}
 	
-	public int[] itemIDs()
-	{
+	public int[] itemIDs() {
 		int size = _summonitems.size();
 		int[] result = new int[size];
 		int i = 0;
-		for (L2SummonItem si : _summonitems.values(new L2SummonItem[0]))
-		{
+		for (L2SummonItem si : _summonitems.values(new L2SummonItem[0])) {
 			result[i++] = si.getItemId();
 		}
 		return result;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final SummonItemsData _instance = new SummonItemsData();
 	}
+	
 }

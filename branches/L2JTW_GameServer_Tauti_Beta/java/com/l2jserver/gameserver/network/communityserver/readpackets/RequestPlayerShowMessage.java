@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.communityserver.readpackets;
 
@@ -25,20 +29,17 @@ import com.l2jserver.gameserver.network.serverpackets.ExMailArrived;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @authors  Forsaiken, Gigiikun
+ * @authors Forsaiken, Gigiikun
  */
-public final class RequestPlayerShowMessage extends BaseReadPacket
-{
+public final class RequestPlayerShowMessage extends BaseReadPacket {
 	private static final Logger _log = Logger.getLogger(RequestPlayerShowMessage.class.getName());
 	
-	public RequestPlayerShowMessage(final byte[] data)
-	{
+	public RequestPlayerShowMessage(final byte[] data) {
 		super(data);
 	}
 	
 	@Override
-	public final void run()
-	{
+	public final void run() {
 		final int playerObjId = super.readD();
 		final int type = super.readD();
 		
@@ -46,92 +47,82 @@ public final class RequestPlayerShowMessage extends BaseReadPacket
 		if (player == null)
 			return;
 		
-		switch(type)
-		{
+		switch (type) {
 			case -1: // mail arrived
 				player.sendPacket(ExMailArrived.STATIC_PACKET);
-				break;
+			break;
 			case 0: // text message
 				player.sendMessage(super.readS());
-				break;
+			break;
 			case 236:
 				player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED);
-				break;
+			break;
 			case 1050:
 				player.sendPacket(SystemMessageId.NO_CB_IN_MY_CLAN);
-				break;
+			break;
 			case 1070:
 				player.sendPacket(SystemMessageId.NO_READ_PERMISSION);
-				break;
+			break;
 			case 1071:
 				player.sendPacket(SystemMessageId.NO_WRITE_PERMISSION);
-				break;
+			break;
 			case 1205:
 				player.sendPacket(SystemMessageId.MAILBOX_FULL);
-				break;
+			break;
 			case 1206:
 				player.sendPacket(SystemMessageId.MEMOBOX_FULL);
-				break;
+			break;
 			case 1227:
-				try
-				{
+				try {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_UNREAD_MESSAGES);
 					final int number = super.readD();
 					sm.addNumber(number);
 					player.sendPacket(sm);
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 					_log.info("Incorrect packet from CBserver!");
 				}
-				break;
+			break;
 			case 1228:
-				try
-				{
+				try {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_BLOCKED_YOU_CANNOT_MAIL);
 					final String name = super.readS();
 					sm.addString(name);
 					player.sendPacket(sm);
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 					_log.info("Incorrect packet from CBserver!");
 				}
-				break;
+			break;
 			case 1229:
 				player.sendPacket(SystemMessageId.NO_MORE_MESSAGES_TODAY);
-				break;
+			break;
 			case 1230:
 				player.sendPacket(SystemMessageId.ONLY_FIVE_RECIPIENTS);
-				break;
+			break;
 			case 1231:
 				player.sendPacket(SystemMessageId.SENT_MAIL);
-				break;
+			break;
 			case 1232:
 				player.sendPacket(SystemMessageId.MESSAGE_NOT_SENT);
-				break;
+			break;
 			case 1233:
 				player.sendPacket(SystemMessageId.NEW_MAIL);
-				break;
+			break;
 			case 1234:
 				player.sendPacket(SystemMessageId.MAIL_STORED_IN_MAILBOX);
-				break;
+			break;
 			case 1238:
 				player.sendPacket(SystemMessageId.TEMP_MAILBOX_FULL);
-				break;
+			break;
 			case 1370:
-				try
-				{
+				try {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CANNOT_MAIL_GM_C1);
 					final String name = super.readS();
 					sm.addString(name);
 					player.sendPacket(sm);
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 					_log.info("Incorrect packet from CBserver!");
 				}
-				break;
+			break;
 			default:
 				_log.info("error: Unknown message request from CB server: " + type);
 		}

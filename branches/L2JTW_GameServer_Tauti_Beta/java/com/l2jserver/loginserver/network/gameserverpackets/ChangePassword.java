@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
@@ -32,13 +36,11 @@ import com.l2jserver.util.network.BaseRecievePacket;
 /**
  * @author Nik
  */
-public class ChangePassword extends BaseRecievePacket
-{
+public class ChangePassword extends BaseRecievePacket {
 	protected static Logger _log = Logger.getLogger(ChangePassword.class.getName());
 	private static GameServerThread gst = null;
 	
-	public ChangePassword(byte[] decrypt)
-	{
+	public ChangePassword(byte[] decrypt) {
 		super(decrypt);
 		
 		String accountName = readS();
@@ -48,28 +50,21 @@ public class ChangePassword extends BaseRecievePacket
 		
 		// get the GameServerThread
 		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
-		for (GameServerInfo gsi : serverList)
-		{
-			if ((gsi.getGameServerThread() != null) && gsi.getGameServerThread().hasAccountOnGameServer(accountName))
-			{
+		for (GameServerInfo gsi : serverList) {
+			if ((gsi.getGameServerThread() != null) && gsi.getGameServerThread().hasAccountOnGameServer(accountName)) {
 				gst = gsi.getGameServerThread();
 			}
 		}
 		
-		if (gst == null)
-		{
+		if (gst == null) {
 			return;
 		}
 		
-		if ((curpass == null) || (newpass == null))
-		{
+		if ((curpass == null) || (newpass == null)) {
 			gst.ChangePasswordResponse((byte) 0, characterName, "Invalid password data! Try again.");
-		}
-		else
-		{
+		} else {
 			Connection con = null;
-			try
-			{
+			try {
 				MessageDigest md = MessageDigest.getInstance("SHA");
 				
 				byte[] raw = curpass.getBytes("UTF-8");
@@ -83,15 +78,13 @@ public class ChangePassword extends BaseRecievePacket
 				PreparedStatement statement = con.prepareStatement("SELECT password FROM accounts WHERE login=?");
 				statement.setString(1, accountName);
 				ResultSet rset = statement.executeQuery();
-				if (rset.next())
-				{
+				if (rset.next()) {
 					pass = rset.getString("password");
 				}
 				rset.close();
 				statement.close();
 				
-				if (curpassEnc.equals(pass))
-				{
+				if (curpassEnc.equals(pass)) {
 					byte[] password = newpass.getBytes("UTF-8");
 					password = md.digest(password);
 					
@@ -103,26 +96,17 @@ public class ChangePassword extends BaseRecievePacket
 					ps.close();
 					
 					_log.log(Level.INFO, "The password for account " + accountName + " has been changed from " + curpassEnc + " to " + Base64.encodeBytes(password));
-					if (passUpdated > 0)
-					{
+					if (passUpdated > 0) {
 						gst.ChangePasswordResponse((byte) 1, characterName, "You have successfully changed your password!");
-					}
-					else
-					{
+					} else {
 						gst.ChangePasswordResponse((byte) 0, characterName, "The password change was unsuccessful!");
 					}
-				}
-				else
-				{
+				} else {
 					gst.ChangePasswordResponse((byte) 0, characterName, "The typed current password doesn't match with your current one.");
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.warning("Error while changing password for account " + accountName + " requested by player " + characterName + "! " + e);
-			}
-			finally
-			{
+			} finally {
 				// close the database connection at the end
 				L2DatabaseFactory.close(con);
 			}

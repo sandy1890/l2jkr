@@ -1,23 +1,26 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public final class Ride extends L2GameServerPacket
-{
+public final class Ride extends L2GameServerPacket {
 	private static final String _S__8c_Ride = "[S] 8c Ride";
 	public static final int ACTION_MOUNT = 1;
 	public static final int ACTION_DISMOUNT = 0;
@@ -27,8 +30,7 @@ public final class Ride extends L2GameServerPacket
 	private final int _rideClassID;
 	private final int _x, _y, _z;
 	
-	public Ride(L2PcInstance cha, boolean mount, int rideClassId)
-	{
+	public Ride(L2PcInstance cha, boolean mount, int rideClassId) {
 		_id = cha.getObjectId();
 		_bRide = mount ? 1 : 0;
 		_rideClassID = rideClassId + 1000000; // npcID
@@ -37,11 +39,10 @@ public final class Ride extends L2GameServerPacket
 		_y = cha.getY();
 		_z = cha.getZ();
 		
-		switch (rideClassId)
-		{
+		switch (rideClassId) {
 			case 0: // dismount
 				_rideType = 0;
-				break;
+			break;
 			case 12526: // Wind
 			case 12527: // Star
 			case 12528: // Twilight
@@ -50,20 +51,20 @@ public final class Ride extends L2GameServerPacket
 			case 16040: // red strider of dusk
 			case 16068: // Guardian Strider
 				_rideType = 1;
-				break;
+			break;
 			case 12621: // Wyvern
 				_rideType = 2;
-				break;
+			break;
 			case 16037: // Great Snow Wolf
 			case 16041: // Fenrir Wolf
 			case 16042: // White Fenrir Wolf
 				_rideType = 3;
-				break;
-			case 32:    //Jet Bike
+			break;
+			case 32: // Jet Bike
 			case 13130: // Light Purple Maned Horse
 			case 13146: // Tawny-Maned Lion
 			case 13147: // Steam Sledge
-			//rocknow-God-Awaking-Start
+				// rocknow-God-Awaking-Start
 			case 13311:
 			case 13312:
 			case 13313:
@@ -72,28 +73,25 @@ public final class Ride extends L2GameServerPacket
 			case 13316:
 			case 13317:
 			case 13318:
-			//rocknow-God-Awaking-End
+				// rocknow-God-Awaking-End
 				_rideType = 4;
-				break;
+			break;
 			default:
 				throw new IllegalArgumentException("Unsupported mount NpcId: " + rideClassId);
 		}
 	}
 	
 	@Override
-	public void runImpl()
-	{
+	public void runImpl() {
 		
 	}
 	
-	public int getMountType()
-	{
+	public int getMountType() {
 		return _rideType;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x8c);
 		writeD(_id);
 		writeD(_bRide);
@@ -105,8 +103,7 @@ public final class Ride extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__8c_Ride;
 	}
 }

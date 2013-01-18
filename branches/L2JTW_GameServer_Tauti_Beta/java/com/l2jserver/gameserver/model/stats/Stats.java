@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.stats;
 
@@ -20,8 +24,8 @@ import java.util.NoSuchElementException;
  * Enum of basic stats.
  * @author mkizub
  */
-public enum Stats
-{
+public enum Stats {
+	
 	// Base stats, for each in Calculator a slot is allocated
 	
 	// HP & MP
@@ -259,27 +263,23 @@ public enum Stats
 	
 	private String _value;
 	
-	public String getValue()
-	{
+	public String getValue() {
 		return _value;
 	}
 	
-	private Stats(String s)
-	{
+	private Stats(String s) {
 		_value = s;
 	}
 	
-	public static Stats valueOfXml(String name)
-	{
+	public static Stats valueOfXml(String name) {
 		name = name.intern();
-		for (Stats s : values())
-		{
-			if (s.getValue().equals(name))
-			{
+		for (Stats s : values()) {
+			if (s.getValue().equals(name)) {
 				return s;
 			}
 		}
 		
 		throw new NoSuchElementException("Unknown name '" + name + "' for enum BaseStats");
 	}
+	
 }

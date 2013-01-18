@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -18,31 +22,25 @@ import com.l2jserver.gameserver.datatables.ExperienceTable;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+
 /**
- *
- * TODO Add support for Eval. Score
- *
- * dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSddd   rev420
- * dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSdddcccddhh  rev478
+ * TODO Add support for Eval. Score dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSddd rev420 dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSdddcccddhh rev478
  * dddddSdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffddddSdddcccddhhddd rev551
  * @version $Revision: 1.2.2.2.2.8 $ $Date: 2005/03/27 15:29:39 $
  */
-public class GMViewCharacterInfo extends L2GameServerPacket
-{
+public class GMViewCharacterInfo extends L2GameServerPacket {
 	private static final String _S__8F_GMVIEWCHARINFO = "[S] 95 GMViewCharacterInfo";
 	private final L2PcInstance _activeChar;
 	
 	/**
 	 * @param character
 	 */
-	public GMViewCharacterInfo(L2PcInstance character)
-	{
+	public GMViewCharacterInfo(L2PcInstance character) {
 		_activeChar = character;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		float moveMultiplier = _activeChar.getMovementSpeedMultiplier();
 		int _runSpd = (int) (_activeChar.getRunSpeed() / moveMultiplier);
 		int _walkSpd = (int) (_activeChar.getWalkSpeed() / moveMultiplier);
@@ -56,12 +54,11 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_activeChar.getObjectId());
 		writeS(_activeChar.getName());
 		writeD(_activeChar.getRace().ordinal());
-		writeD(_activeChar.getAppearance().getSex()? 1 : 0);
+		writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
 		writeD(_activeChar.getClassId().getId());
 		writeD(_activeChar.getLevel());
 		writeQ(_activeChar.getExp());
-		writeF((float)(_activeChar.getExp() - ExperienceTable.getInstance().getExpForLevel(_activeChar.getLevel())) /
-				(ExperienceTable.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - ExperienceTable.getInstance().getExpForLevel(_activeChar.getLevel()))); // High Five exp %
+		writeF((float) (_activeChar.getExp() - ExperienceTable.getInstance().getExpForLevel(_activeChar.getLevel())) / (ExperienceTable.getInstance().getExpForLevel(_activeChar.getLevel() + 1) - ExperienceTable.getInstance().getExpForLevel(_activeChar.getLevel()))); // High Five exp %
 		writeD(_activeChar.getSTR());
 		writeD(_activeChar.getDEX());
 		writeD(_activeChar.getCON());
@@ -71,7 +68,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_activeChar.getMaxVisibleHp());
 		writeD((int) _activeChar.getCurrentHp());
 		writeD(_activeChar.getMaxMp());
-		writeD((int)_activeChar.getCurrentMp());
+		writeD((int) _activeChar.getCurrentMp());
 		writeD(_activeChar.getSp());
 		writeD(_activeChar.getCurrentLoad());
 		writeD(_activeChar.getMaxLoad());
@@ -207,11 +204,11 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		
 		writeD(_activeChar.getMDef(null, null));
 		
-		writeD(_activeChar.getPvpFlag()); // 0-non-pvp  1-pvp = violett name
-		int Karma = _activeChar.getKarma(); //rocknow-God-Test
-		if (Karma > 0) //rocknow-God-Test
-			Karma = 0 - Karma; //rocknow-God-Test
-		writeD(Karma); //rocknow-God-Test
+		writeD(_activeChar.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
+		int Karma = _activeChar.getKarma(); // rocknow-God-Test
+		if (Karma > 0) // rocknow-God-Test
+			Karma = 0 - Karma; // rocknow-God-Test
+		writeD(Karma); // rocknow-God-Test
 		
 		writeD(_runSpd);
 		writeD(_walkSpd);
@@ -222,18 +219,18 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_runSpd);
 		writeD(_walkSpd);
 		writeF(moveMultiplier);
-		writeF(_activeChar.getAttackSpeedMultiplier()); //2.9);//
-		writeF(_activeChar.getCollisionRadius());  // scale
+		writeF(_activeChar.getAttackSpeedMultiplier()); // 2.9);//
+		writeF(_activeChar.getCollisionRadius()); // scale
 		writeF(_activeChar.getCollisionHeight()); // y offset ??!? fem dwarf 4033
 		writeD(_activeChar.getAppearance().getHairStyle());
 		writeD(_activeChar.getAppearance().getHairColor());
 		writeD(_activeChar.getAppearance().getFace());
-		writeD(_activeChar.isGM() ? 0x01 : 0x00);	// builder level
+		writeD(_activeChar.isGM() ? 0x01 : 0x00); // builder level
 		
 		writeS(_activeChar.getTitle());
-		writeD(_activeChar.getClanId());		// pledge id
-		writeD(_activeChar.getClanCrestId());		// pledge crest id
-		writeD(_activeChar.getAllyId());		// ally id
+		writeD(_activeChar.getClanId()); // pledge id
+		writeD(_activeChar.getClanCrestId()); // pledge crest id
+		writeD(_activeChar.getAllyId()); // ally id
 		writeC(_activeChar.getMountType()); // mount type
 		writeC(_activeChar.getPrivateStoreType());
 		writeC(_activeChar.hasDwarvenCraft() ? 1 : 0);
@@ -241,17 +238,17 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_activeChar.getPvpKills());
 		
 		writeH(_activeChar.getRecomLeft());
-		writeH(_activeChar.getRecomHave()); //Blue value for name (0 = white, 255 = pure blue)
+		writeH(_activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
 		writeD(_activeChar.getClassId().getId());
 		writeD(0x00); // special effects? circles around player...
 		writeD(_activeChar.getMaxCp());
 		writeD((int) _activeChar.getCurrentCp());
 		
-		writeC(_activeChar.isRunning() ? 0x01 : 0x00); //changes the Speed display on Status Window
+		writeC(_activeChar.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
 		
 		writeC(321);
 		
-		writeD(_activeChar.getPledgeClass()); //changes the text above CP on Status Window
+		writeD(_activeChar.getPledgeClass()); // changes the text above CP on Status Window
 		
 		writeC(_activeChar.isNoble() ? 0x01 : 0x00);
 		writeC(_activeChar.isHero() ? 0x01 : 0x00);
@@ -276,8 +273,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
 	 */
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__8F_GMVIEWCHARINFO;
 	}
 }

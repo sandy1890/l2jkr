@@ -1,15 +1,20 @@
-/* This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+/*
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.util;
 
@@ -29,8 +34,8 @@ import com.l2jserver.gameserver.Shutdown;
  * Thread to check for deadlocked threads.
  * @author -Nemesiss- L2M
  */
-public class DeadLockDetector extends Thread
-{
+public class DeadLockDetector extends Thread {
+	
 	private static Logger _log = Logger.getLogger(DeadLockDetector.class.getName());
 	
 	/** Interval to check for deadlocked threads */
@@ -38,39 +43,31 @@ public class DeadLockDetector extends Thread
 	
 	private final ThreadMXBean tmx;
 	
-	public DeadLockDetector()
-	{
+	public DeadLockDetector() {
 		super("DeadLockDetector");
 		tmx = ManagementFactory.getThreadMXBean();
 	}
 	
 	@Override
-	public final void run()
-	{
+	public final void run() {
 		boolean deadlock = false;
-		while (!deadlock)
-		{
-			try
-			{
+		while (!deadlock) {
+			try {
 				long[] ids = tmx.findDeadlockedThreads();
 				
-				if (ids != null)
-				{
+				if (ids != null) {
 					deadlock = true;
 					ThreadInfo[] tis = tmx.getThreadInfo(ids, true, true);
 					StringBuilder info = new StringBuilder();
 					info.append("DeadLock Found!\n");
-					for (ThreadInfo ti : tis)
-					{
+					for (ThreadInfo ti : tis) {
 						info.append(ti.toString());
 					}
 					
-					for (ThreadInfo ti : tis)
-					{
+					for (ThreadInfo ti : tis) {
 						LockInfo[] locks = ti.getLockedSynchronizers();
 						MonitorInfo[] monitors = ti.getLockedMonitors();
-						if ((locks.length == 0) && (monitors.length == 0))
-						{
+						if ((locks.length == 0) && (monitors.length == 0)) {
 							continue;
 						}
 						
@@ -99,8 +96,7 @@ public class DeadLockDetector extends Thread
 					}
 					_log.warning(info.toString());
 					
-					if (Config.RESTART_ON_DEADLOCK)
-					{
+					if (Config.RESTART_ON_DEADLOCK) {
 						Announcements an = Announcements.getInstance();
 						an.announceToAll("Server has stability issues - restarting now.");
 						Shutdown.getInstance().startTelnetShutdown("DeadLockDetector - Auto Restart", 60, true);
@@ -108,11 +104,10 @@ public class DeadLockDetector extends Thread
 					
 				}
 				Thread.sleep(_sleepTime);
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "DeadLockDetector: ", e);
 			}
 		}
 	}
+	
 }

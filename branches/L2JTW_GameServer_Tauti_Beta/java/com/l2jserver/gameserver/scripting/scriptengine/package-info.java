@@ -29,24 +29,8 @@ package com.l2jserver.gameserver.scripting.scriptengine;
  * <br>
  * NOTE: You can use the boolean return of the listeners as a "code blocker". Which means that if your method returns "false" the method that triggered the listener will stop. (i.e.: you can stop something from happening using this)<br>
  * <br>
- * Example of use of one of these classes:
- * ChatListener listener = new ChatListener(){
-                               @Override
-                               public String filter(String text, L2PcInstance origin, ChatTargetType targetType)
-                               {
-                                       String modifiedText = text
-                                       if(!origin.isGM())
-                                       {
-                                               modifiedText = someFilterMethod(modifiedText);
-                                       }
-                                       return modifiedText;
-                               }
-                              
-                               @Override
-                               public boolean onTalk(String text, L2PcInstance origin, String target, ChatTargetType targetType)
-                               {
-                                       // DO SOMETHING...
-                               }
-                       };
+ * Example of use of one of these classes: ChatListener listener = new ChatListener(){
+ * @Override public String filter(String text, L2PcInstance origin, ChatTargetType targetType) { String modifiedText = text if(!origin.isGM()) { modifiedText = someFilterMethod(modifiedText); } return modifiedText; }
+ * @Override public boolean onTalk(String text, L2PcInstance origin, String target, ChatTargetType targetType) { // DO SOMETHING... } };
  * @author TheOne
  */

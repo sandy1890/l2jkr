@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -33,12 +37,10 @@ import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * This class ...
- * cd(dd)
+ * This class ... cd(dd)
  * @version $Revision: 1.1.2.3.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopListSet extends L2GameClientPacket
-{
+public final class RequestRecipeShopListSet extends L2GameClientPacket {
 	private static final String _C__BB_RequestRecipeShopListSet = "[C] BB RequestRecipeShopListSet";
 	
 	private static final int BATCH_LENGTH = 12; // length of the one item
@@ -46,23 +48,17 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 	private Recipe[] _items = null;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		int count = readD();
-		if (count <= 0
-				|| count > Config.MAX_ITEM_IN_PACKET
-				|| count * BATCH_LENGTH != _buf.remaining())
-		{
+		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
 			return;
 		}
 		
 		_items = new Recipe[count];
-		for (int i = 0; i < count ; i++)
-		{
+		for (int i = 0; i < count; i++) {
 			int id = readD();
 			long cost = readQ();
-			if (cost < 0)
-			{
+			if (cost < 0) {
 				_items = null;
 				return;
 			}
@@ -71,28 +67,24 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 			return;
 		
-		if (_items == null)
-		{
+		if (_items == null) {
 			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
 			player.broadcastUserInfo();
 			return;
 		}
 		
-		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) || player.isInDuel())
-		{
+		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) || player.isInDuel()) {
 			player.sendPacket(SystemMessageId.CANT_OPERATE_PRIVATE_STORE_DURING_COMBAT);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (player.isInsideZone(L2Character.ZONE_NOSTORE))
-		{
+		if (player.isInsideZone(L2Character.ZONE_NOSTORE)) {
 			player.sendPacket(SystemMessageId.NO_PRIVATE_WORKSHOP_HERE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -103,23 +95,15 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 		List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
 		List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		final RecipeData rd = RecipeData.getInstance();
-		for (Recipe i : _items)
-		{
+		for (Recipe i : _items) {
 			L2RecipeList list = rd.getRecipeList(i.getRecipeId());
-			if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list))
-			{
-				Util.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName()
-						+ " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);
+			if (!dwarfRecipes.contains(list) && !commonRecipes.contains(list)) {
+				Util.handleIllegalPlayerAction(player, "Warning!! Player " + player.getName() + " of account " + player.getAccountName() + " tried to set recipe which he dont have.", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
-			if (!i.addToList(createList))
-			{
-				Util.handleIllegalPlayerAction(player, "Warning!! Character "
-						+ player.getName() + " of account "
-						+ player.getAccountName() + " tried to set price more than "
-						+ MAX_ADENA + " adena in Private Manufacture.",
-						Config.DEFAULT_PUNISH);
+			if (!i.addToList(createList)) {
+				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + MAX_ADENA + " adena in Private Manufacture.", Config.DEFAULT_PUNISH);
 				return;
 			}
 		}
@@ -134,19 +118,16 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 		player.broadcastPacket(new RecipeShopMsg(player));
 	}
 	
-	private static class Recipe
-	{
+	private static class Recipe {
 		private final int _recipeId;
 		private final long _cost;
 		
-		public Recipe(int id, long c)
-		{
+		public Recipe(int id, long c) {
 			_recipeId = id;
 			_cost = c;
 		}
 		
-		public boolean addToList(L2ManufactureList list)
-		{
+		public boolean addToList(L2ManufactureList list) {
 			if (_cost > MAX_ADENA)
 				return false;
 			
@@ -154,15 +135,13 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 			return true;
 		}
 		
-		public int getRecipeId()
-		{
+		public int getRecipeId() {
 			return _recipeId;
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__BB_RequestRecipeShopListSet;
 	}
 }

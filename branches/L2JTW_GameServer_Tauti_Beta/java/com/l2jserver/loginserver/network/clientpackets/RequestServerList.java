@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.network.clientpackets;
 
@@ -25,8 +29,7 @@ import com.l2jserver.loginserver.network.serverpackets.ServerList;
  * c: ?
  * </pre>
  */
-public class RequestServerList extends L2LoginClientPacket
-{
+public class RequestServerList extends L2LoginClientPacket {
 	private int _skey1;
 	private int _skey2;
 	private int _data3;
@@ -34,32 +37,27 @@ public class RequestServerList extends L2LoginClientPacket
 	/**
 	 * @return
 	 */
-	public int getSessionKey1()
-	{
+	public int getSessionKey1() {
 		return _skey1;
 	}
 	
 	/**
 	 * @return
 	 */
-	public int getSessionKey2()
-	{
+	public int getSessionKey2() {
 		return _skey2;
 	}
 	
 	/**
 	 * @return
 	 */
-	public int getData3()
-	{
+	public int getData3() {
 		return _data3;
 	}
 	
 	@Override
-	public boolean readImpl()
-	{
-		if (super._buf.remaining() >= 8)
-		{
+	public boolean readImpl() {
+		if (super._buf.remaining() >= 8) {
 			_skey1 = readD(); // loginOk 1
 			_skey2 = readD(); // loginOk 2
 			return true;
@@ -71,14 +69,10 @@ public class RequestServerList extends L2LoginClientPacket
 	 * @see org.mmocore.network.ReceivablePacket#run()
 	 */
 	@Override
-	public void run()
-	{
-		if (getClient().getSessionKey().checkLoginPair(_skey1, _skey2))
-		{
+	public void run() {
+		if (getClient().getSessionKey().checkLoginPair(_skey1, _skey2)) {
 			getClient().sendPacket(new ServerList(getClient()));
-		}
-		else
-		{
+		} else {
 			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
 		}
 	}

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.zone.type;
 
@@ -26,30 +30,26 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
  * A dynamic zone? Maybe use this for interlude skills like protection field :>
  * @author durgus
  */
-public class L2DynamicZone extends L2ZoneType
-{
-	private L2WorldRegion _region;
-	private L2Character _owner;
-	private Future<?> _task;
-	private L2Skill _skill;
+public class L2DynamicZone extends L2ZoneType {
 	
-	protected void setTask(Future<?> task)
-	{
+	private final L2WorldRegion _region;
+	private final L2Character _owner;
+	private Future<?> _task;
+	private final L2Skill _skill;
+	
+	protected void setTask(Future<?> task) {
 		_task = task;
 	}
 	
-	public L2DynamicZone(L2WorldRegion region, L2Character owner, L2Skill skill)
-	{
+	public L2DynamicZone(L2WorldRegion region, L2Character owner, L2Skill skill) {
 		super(-1);
 		_region = region;
 		_owner = owner;
 		_skill = skill;
 		
-		Runnable r = new Runnable()
-		{
+		Runnable r = new Runnable() {
 			@Override
-			public void run()
-			{
+			public void run() {
 				remove();
 			}
 		};
@@ -57,34 +57,22 @@ public class L2DynamicZone extends L2ZoneType
 	}
 	
 	@Override
-	protected void onEnter(L2Character character)
-	{
-		if (character.isPlayer())
-		{
-			/* Move To MessageTable For L2JTW
-			character.sendMessage("You have entered a temporary zone!");
-			*/
+	protected void onEnter(L2Character character) {
+		if (character.isPlayer()) {
 			character.sendMessage(504);
 		}
-		if (_owner != null)
-		{
+		if (_owner != null) {
 			_skill.getEffects(_owner, character);
 		}
 	}
 	
 	@Override
-	protected void onExit(L2Character character)
-	{
-		if (character.isPlayer())
-		{
-			/* Move To MessageTable For L2JTW
-			character.sendMessage("You have left a temporary zone!"); // XXX: Custom message?
-			*/
+	protected void onExit(L2Character character) {
+		if (character.isPlayer()) {
 			character.sendMessage(505);
 		}
 		
-		if (character == _owner)
-		{
+		if (character == _owner) {
 			remove();
 			return;
 		}
@@ -92,17 +80,16 @@ public class L2DynamicZone extends L2ZoneType
 		character.stopSkillEffects(_skill.getId());
 	}
 	
-	protected void remove()
-	{
-		if (_task == null || _skill == null)
+	protected void remove() {
+		if ((_task == null) || (_skill == null)) {
 			return;
+		}
 		
 		_task.cancel(false);
 		_task = null;
 		
 		_region.removeZone(this);
-		for (L2Character member : getCharactersInside())
-		{
+		for (L2Character member : getCharactersInside()) {
 			member.stopSkillEffects(_skill.getId());
 		}
 		_owner.stopSkillEffects(_skill.getId());
@@ -110,21 +97,17 @@ public class L2DynamicZone extends L2ZoneType
 	}
 	
 	@Override
-	public void onDieInside(L2Character character)
-	{
-		if (character == _owner)
-		{
+	public void onDieInside(L2Character character) {
+		if (character == _owner) {
 			remove();
-		}
-		else
-		{
+		} else {
 			character.stopSkillEffects(_skill.getId());
 		}
 	}
 	
 	@Override
-	public void onReviveInside(L2Character character)
-	{
+	public void onReviveInside(L2Character character) {
 		_skill.getEffects(_owner, character);
 	}
+	
 }

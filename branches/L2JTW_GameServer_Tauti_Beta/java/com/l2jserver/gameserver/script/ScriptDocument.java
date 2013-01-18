@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.script;
 
@@ -29,63 +33,50 @@ import org.xml.sax.SAXException;
 /**
  *
  */
-public class ScriptDocument
-{
+public class ScriptDocument {
 	private static final Logger _log = Logger.getLogger(ScriptDocument.class.getName());
 	
 	private Document _document;
 	private final String _name;
 	
-	public ScriptDocument(String name, InputStream input)
-	{
+	public ScriptDocument(String name, InputStream input) {
 		_name = name;
 		
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		try
-		{
+		try {
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			_document = builder.parse(input);
 			
-		}
-		catch (SAXException sxe)
-		{
+		} catch (SAXException sxe) {
 			// Error generated during parsing)
 			Exception x = sxe;
-			if (sxe.getException() != null)
-			{
+			if (sxe.getException() != null) {
 				x = sxe.getException();
 			}
 			_log.warning(getClass().getSimpleName() + ": " + x.getMessage());
-		}
-		catch (ParserConfigurationException pce)
-		{
+		} catch (ParserConfigurationException pce) {
 			// Parser with specified options can't be built
 			_log.log(Level.WARNING, "", pce);
 			
-		}
-		catch (IOException ioe)
-		{
+		} catch (IOException ioe) {
 			// I/O error
 			_log.log(Level.WARNING, "", ioe);
 		}
 	}
 	
-	public Document getDocument()
-	{
+	public Document getDocument() {
 		return _document;
 	}
 	
 	/**
 	 * @return Returns the _name.
 	 */
-	public String getName()
-	{
+	public String getName() {
 		return _name;
 	}
 	
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return _name;
 	}
 	

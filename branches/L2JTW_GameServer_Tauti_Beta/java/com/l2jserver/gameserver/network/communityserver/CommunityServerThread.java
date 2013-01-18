@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.communityserver;
 
@@ -37,90 +41,67 @@ import com.l2jserver.gameserver.network.communityserver.readpackets.RequestWorld
 /**
  * @authors Forsaiken, Gigiikun
  */
-public final class CommunityServerThread extends NetConnection
-{
+public final class CommunityServerThread extends NetConnection {
 	private static final Logger _log = Logger.getLogger(CommunityServerThread.class.getName());
 	
 	private static CommunityServerThread _instance;
 	
-	public static final void initialize()
-	{
-		if (_instance == null)
-		{
-			if (Config.ENABLE_COMMUNITY_BOARD)
-			{
-				try
-				{
+	public static final void initialize() {
+		if (_instance == null) {
+			if (Config.ENABLE_COMMUNITY_BOARD) {
+				try {
 					_instance = new CommunityServerThread(new NetConnectionConfig(Config.COMMUNITY_CONFIGURATION_FILE));
 					_instance.start();
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 					_log.log(Level.WARNING, "CommunityServerThread: Failed loading config file! " + e.getMessage(), e);
 				}
-			}
-			else
-			{
+			} else {
 				_log.log(Level.INFO, "CommunityServerThread: Deactivated by config.");
 				_instance = new CommunityServerThread(null);
 			}
 		}
 	}
 	
-	public static final CommunityServerThread getInstance()
-	{
+	public static final CommunityServerThread getInstance() {
 		return _instance;
 	}
 	
 	private boolean _authed;
 	
-	private CommunityServerThread(final NetConnectionConfig config)
-	{
+	private CommunityServerThread(final NetConnectionConfig config) {
 		super(config);
 	}
 	
-	public final boolean isAuthed()
-	{
+	public final boolean isAuthed() {
 		return _authed;
 	}
 	
-	public final void setAuthed(final boolean authed)
-	{
+	public final void setAuthed(final boolean authed) {
 		_authed = authed;
 	}
 	
-	public final void forceClose(final BaseWritePacket packet)
-	{
+	public final void forceClose(final BaseWritePacket packet) {
 		_authed = false;
 		
-		try
-		{
+		try {
 			super.close(packet);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.INFO, "CommunityServerThread: Failed disconnecting server, server already disconnected: " + e.getMessage(), e);
 		}
 	}
 	
-	public boolean sendPacket(final BaseWritePacket packet)
-	{
+	public boolean sendPacket(final BaseWritePacket packet) {
 		return sendPacket(packet, true);
 	}
 	
-	public boolean sendPacket(final BaseWritePacket packet, final boolean needAuth)
-	{
-		if (needAuth && !_authed)
-		{
+	public boolean sendPacket(final BaseWritePacket packet, final boolean needAuth) {
+		if (needAuth && !_authed) {
 			return false;
 		}
 		
-		try
-		{
+		try {
 			super.write(packet);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.INFO, "CommunityServerThread: Failed sending TCP packet: " + e.getMessage(), e);
 			return false;
 		}
@@ -128,8 +109,7 @@ public final class CommunityServerThread extends NetConnection
 	}
 	
 	@Override
-	public void run()
-	{
+	public void run() {
 		_log.log(Level.INFO, "CommunityServerThread: Activated by config.");
 		
 		int packetType1 = 0xFF;
@@ -138,126 +118,101 @@ public final class CommunityServerThread extends NetConnection
 		BaseReadPacket packet = null;
 		byte[] data = null;
 		
-		while (!isInterrupted())
-		{
-			try
-			{
+		while (!isInterrupted()) {
+			try {
 				sleep(10000L);
-			}
-			catch (InterruptedException e)
-			{
+			} catch (InterruptedException e) {
 				return;
 			}
 			
 			_log.log(Level.INFO, "CommunityServerThread: Trying to connect to " + Config.COMMUNITY_SERVER_ADDRESS + " on port " + Config.COMMUNITY_SERVER_PORT + ".");
 			
-			try
-			{
+			try {
 				_instance.connect(Config.COMMUNITY_SERVER_ADDRESS, Config.COMMUNITY_SERVER_PORT);
-			}
-			catch (SocketException se)
-			{
+			} catch (SocketException se) {
 				_log.log(Level.INFO, "CommunityServerThread: Connecting to " + Config.COMMUNITY_SERVER_ADDRESS + " on port " + Config.COMMUNITY_SERVER_PORT + " failed.");
 				continue;
-			}
-			catch (IOException e)
-			{
+			} catch (IOException e) {
 				_log.log(Level.INFO, "CommunityServerThread: Connection failed: " + e.getMessage(), e);
 				continue;
 			}
 			
-			try
-			{
+			try {
 				long gameServerConnectStart = System.currentTimeMillis();
-				while (!isInterrupted())
-				{
+				while (!isInterrupted()) {
 					data = super.read();
 					packetType1 = data[0] & 0xFF;
 					packetType2 = data[1] & 0xFF;
 					
-					if (Config.PACKET_HANDLER_DEBUG)
-					{
+					if (Config.PACKET_HANDLER_DEBUG) {
 						_log.log(Level.INFO, "Received packet: 0x" + Integer.toHexString(packetType1) + "-0x" + Integer.toHexString(packetType2));
 					}
 					
-					switch (packetType1)
-					{
-						case 0x00:
-						{
-							switch (packetType2)
-							{
+					switch (packetType1) {
+						case 0x00: {
+							switch (packetType2) {
 								case 0x00:
 									packet = new InitCS(data, this);
-									break;
+								break;
 								case 0x01:
 									_log.info("Server connected in " + ((System.currentTimeMillis() - gameServerConnectStart) / 1000) + " seconds");
 									packet = new AuthResponse(data, this);
-									break;
+								break;
 								case 0x02:
 									packet = new ConnectionError(data);
-									break;
+								break;
 							}
 							break;
 						}
 						
-						case 0x01:
-						{
-							switch (packetType2)
-							{
+						case 0x01: {
+							switch (packetType2) {
 								case 0x00:
 									packet = new RequestWorldInfo(data, this, RequestWorldInfo.SERVER_LOAD);
-									break;
+								break;
 								case 0x01:
 									packet = new RequestWorldInfo(data, this, RequestWorldInfo.PLAYER_DATA_UPDATE);
-									break;
+								break;
 								case 0x02:
 									packet = new RequestWorldInfo(data, this, RequestWorldInfo.CLAN_DATA_UPDATE);
-									break;
+								break;
 								case 0x03:
 									packet = new ClanNoticeInfo(data, 0);
-									break;
+								break;
 								case 0x04:
 									packet = new ClanNoticeInfo(data, 1);
-									break;
+								break;
 								case 0x05:
 									packet = new ClanNoticeInfo(data, this, 2);
-									break;
+								break;
 							}
 							break;
 						}
 						
-						case 0x02:
-						{
-							switch (packetType2)
-							{
+						case 0x02: {
+							switch (packetType2) {
 								case 0x00:
 									packet = new RequestPlayerShowBoard(data);
-									break;
+								break;
 								case 0x01:
 									packet = new RequestPlayerShowMessage(data);
-									break;
+								break;
 							}
 							break;
 						}
 					}
 					
-					if (packet != null)
-					{
+					if (packet != null) {
 						// new Thread(packet).start();
 						ThreadPoolManager.getInstance().executeCommunityPacket(packet);
-					}
-					else
-					{
+					} else {
 						throw new IOException("Invalid packet!");
 					}
 				}
-				if (isInterrupted())
-				{
+				if (isInterrupted()) {
 					forceClose(null);
 				}
-			}
-			catch (IOException e)
-			{
+			} catch (IOException e) {
 				_log.log(Level.WARNING, "CommunityServerThread: TCP Connection lost: " + e.getMessage(), e);
 				
 				forceClose(null);

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.dbinstaller.gui;
 
@@ -37,8 +41,7 @@ import com.l2jserver.tools.images.ImagesTable;
 /**
  * @author mrTJO
  */
-public class DBConfigGUI extends JFrame
-{
+public class DBConfigGUI extends JFrame {
 	private static final long serialVersionUID = -8391792251140797076L;
 	
 	JTextField _dbHost;
@@ -53,8 +56,7 @@ public class DBConfigGUI extends JFrame
 	
 	Preferences _prop;
 	
-	public DBConfigGUI(String db, String dir, String cleanUp)
-	{
+	public DBConfigGUI(String db, String dir, String cleanUp) {
 		super("L2J Database Installer");
 		setLayout(new SpringLayout());
 		setDefaultLookAndFeelDecorated(true);
@@ -114,11 +116,9 @@ public class DBConfigGUI extends JFrame
 		labelDbDbse.setLabelFor(_dbDbse);
 		add(_dbDbse);
 		
-		ActionListener cancelListener = new ActionListener()
-		{
+		ActionListener cancelListener = new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent e)
-			{
+			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		};
@@ -128,15 +128,12 @@ public class DBConfigGUI extends JFrame
 		btnCancel.addActionListener(cancelListener);
 		add(btnCancel);
 		
-		ActionListener connectListener = new ActionListener()
-		{
+		ActionListener connectListener = new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent e)
-			{
+			public void actionPerformed(ActionEvent e) {
 				MySqlConnect connector = new MySqlConnect(_dbHost.getText(), _dbPort.getText(), _dbUser.getText(), new String(_dbPass.getPassword()), _dbDbse.getText(), false);
 				
-				if (connector.getConnection() != null)
-				{
+				if (connector.getConnection() != null) {
 					_prop.put("dbHost_" + _db, _dbHost.getText());
 					_prop.put("dbPort_" + _db, _dbPort.getText());
 					_prop.put("dbUser_" + _db, _dbUser.getText());
@@ -154,17 +151,14 @@ public class DBConfigGUI extends JFrame
 					};
 					int n = JOptionPane.showOptionDialog(null, "Select Installation Type", "Installation Type", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
 					
-					if ((n == 2) || (n == -1))
-					{
+					if ((n == 2) || (n == -1)) {
 						System.exit(0);
 					}
 					
-					if (n == 0)
-					{
+					if (n == 0) {
 						int conf = JOptionPane.showConfirmDialog(null, "Do you really want to destroy your db?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 						
-						if (conf == 1)
-						{
+						if (conf == 1) {
 							System.exit(0);
 						}
 						

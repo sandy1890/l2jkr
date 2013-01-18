@@ -1,26 +1,29 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
 /**
  * This class ...
- *
  * @version $Revision: 1.3.4.1 $ $Date: 2005/03/27 15:29:32 $
  */
-public class L2ShortCut
-{
+public class L2ShortCut {
+	
 	public static final int TYPE_ITEM = 1;
 	public static final int TYPE_SKILL = 2;
 	public static final int TYPE_ACTION = 3;
@@ -36,8 +39,7 @@ public class L2ShortCut
 	private final int _characterType;
 	private int _sharedReuseGroup = -1;
 	
-	public L2ShortCut(int slotId, int pageId, int shortcutType, int shortcutId, int shortcutLevel, int characterType)
-	{
+	public L2ShortCut(int slotId, int pageId, int shortcutType, int shortcutId, int shortcutLevel, int characterType) {
 		_slot = slotId;
 		_page = pageId;
 		_type = shortcutType;
@@ -46,43 +48,36 @@ public class L2ShortCut
 		_characterType = characterType;
 	}
 	
-	public int getId()
-	{
+	public int getId() {
 		return _id;
 	}
 	
-	public int getLevel()
-	{
+	public int getLevel() {
 		return _level;
 	}
 	
-	public int getPage()
-	{
+	public int getPage() {
 		return _page;
 	}
 	
-	public int getSlot()
-	{
+	public int getSlot() {
 		return _slot;
 	}
 	
-	public int getType()
-	{
+	public int getType() {
 		return _type;
 	}
 	
-	public int getCharacterType()
-	{
+	public int getCharacterType() {
 		return _characterType;
 	}
 	
-	public int getSharedReuseGroup()
-	{
+	public int getSharedReuseGroup() {
 		return _sharedReuseGroup;
 	}
 	
-	public void setSharedReuseGroup(int g)
-	{
+	public void setSharedReuseGroup(int g) {
 		_sharedReuseGroup = g;
 	}
+	
 }

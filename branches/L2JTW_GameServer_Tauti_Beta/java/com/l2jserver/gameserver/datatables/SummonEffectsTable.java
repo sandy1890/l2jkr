@@ -1,88 +1,80 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.util.List;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * @author Nyaran
  */
-public class SummonEffectsTable
-{
+public class SummonEffectsTable {
+	
 	/** Servitors **/
 	/*
-	 * Map tree
-	 * key: charObjectId, value: classIndex Map
-	 * 		key: classIndex, value: servitors Map
-	 * 			key: servitorSkillId, value: Effects list
+	 * Map tree key: charObjectId, value: classIndex Map key: classIndex, value: servitors Map key: servitorSkillId, value: Effects list
 	 */
-	private TIntObjectHashMap<TIntObjectHashMap<TIntObjectHashMap<List<SummonEffect>>>> _servitorEffects = new TIntObjectHashMap<>();
+	private final TIntObjectHashMap<TIntObjectHashMap<TIntObjectHashMap<List<SummonEffect>>>> _servitorEffects = new TIntObjectHashMap<>();
 	
-	public TIntObjectHashMap<TIntObjectHashMap<TIntObjectHashMap<List<SummonEffect>>>> getServitorEffectsOwner()
-	{
+	public TIntObjectHashMap<TIntObjectHashMap<TIntObjectHashMap<List<SummonEffect>>>> getServitorEffectsOwner() {
 		return _servitorEffects;
 	}
 	
-	public TIntObjectHashMap<List<SummonEffect>> getServitorEffects(L2PcInstance owner)
-	{
+	public TIntObjectHashMap<List<SummonEffect>> getServitorEffects(L2PcInstance owner) {
 		final TIntObjectHashMap<TIntObjectHashMap<List<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
-		if (servitorMap == null)
-		{
+		if (servitorMap == null) {
 			return null;
 		}
 		return servitorMap.get(owner.getClassIndex());
 	}
 	
 	/** Pets **/
-	private TIntObjectHashMap<List<SummonEffect>> _petEffects = new TIntObjectHashMap<>(); // key: petItemObjectId, value: Effects list
+	private final TIntObjectHashMap<List<SummonEffect>> _petEffects = new TIntObjectHashMap<>(); // key: petItemObjectId, value: Effects list
 	
-	public TIntObjectHashMap<List<SummonEffect>> getPetEffects()
-	{
+	public TIntObjectHashMap<List<SummonEffect>> getPetEffects() {
 		return _petEffects;
 	}
 	
-	public class SummonEffect
-	{
+	public class SummonEffect {
 		L2Skill _skill;
 		int _effectCount;
 		int _effectCurTime;
 		
-		public SummonEffect(L2Skill skill, int effectCount, int effectCurTime)
-		{
+		public SummonEffect(L2Skill skill, int effectCount, int effectCurTime) {
 			_skill = skill;
 			_effectCount = effectCount;
 			_effectCurTime = effectCurTime;
 		}
 		
-		public L2Skill getSkill()
-		{
+		public L2Skill getSkill() {
 			return _skill;
 		}
 		
-		public int getEffectCount()
-		{
+		public int getEffectCount() {
 			return _effectCount;
 		}
 		
-		public int getEffectCurTime()
-		{
+		public int getEffectCurTime() {
 			return _effectCurTime;
 		}
 	}
@@ -90,13 +82,12 @@ public class SummonEffectsTable
 	/**
 	 * @return
 	 */
-	public static SummonEffectsTable getInstance()
-	{
+	public static SummonEffectsTable getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final SummonEffectsTable _instance = new SummonEffectsTable();
 	}
+	
 }

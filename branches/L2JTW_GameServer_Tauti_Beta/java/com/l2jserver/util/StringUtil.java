@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.util;
 
@@ -49,8 +53,7 @@ import javolution.text.TextBuilder;
  * <pre>
  * final StringBuilder sbString = new StringBuilder();
  * StringUtil.append(sbString, &quot;header start&quot;, someText, &quot;header end&quot;);
- * for (int i = 0; i &lt; 50; i++)
- * {
+ * for (int i = 0; i &lt; 50; i++) {
  * 	StringUtil.append(sbString, &quot;text 1&quot;, stringArray[i], &quot;text 2&quot;);
  * }
  * </pre>
@@ -59,8 +62,7 @@ import javolution.text.TextBuilder;
  * 
  * <pre>
  * final StringBuilder sbString = StringUtil.startAppend(1300, &quot;header start&quot;, someText, &quot;header end&quot;);
- * for (int i = 0; i &lt; 50; i++)
- * {
+ * for (int i = 0; i &lt; 50; i++) {
  * 	StringUtil.append(sbString, &quot;text 1&quot;, stringArray[i], &quot;text 2&quot;);
  * }
  * </pre>
@@ -180,10 +182,8 @@ import javolution.text.TextBuilder;
  * </pre>
  * @author fordfrog
  */
-public final class StringUtil
-{
-	private StringUtil()
-	{
+public final class StringUtil {
+	private StringUtil() {
 	}
 	
 	/**
@@ -192,12 +192,10 @@ public final class StringUtil
 	 * @return concatenated string
 	 * @see StringUtil
 	 */
-	public static String concat(final String... strings)
-	{
+	public static String concat(final String... strings) {
 		final TextBuilder sbString = TextBuilder.newInstance();
 		
-		for (final String string : strings)
-		{
+		for (final String string : strings) {
 			sbString.append(string);
 		}
 		
@@ -213,13 +211,11 @@ public final class StringUtil
 	 * @return created string builder
 	 * @see StringUtil
 	 */
-	public static StringBuilder startAppend(final int sizeHint, final String... strings)
-	{
+	public static StringBuilder startAppend(final int sizeHint, final String... strings) {
 		final int length = getLength(strings);
 		final StringBuilder sbString = new StringBuilder(sizeHint > length ? sizeHint : length);
 		
-		for (final String string : strings)
-		{
+		for (final String string : strings) {
 			sbString.append(string);
 		}
 		
@@ -232,12 +228,10 @@ public final class StringUtil
 	 * @param strings strings to be appended
 	 * @see StringUtil
 	 */
-	public static void append(final StringBuilder sbString, final String... strings)
-	{
+	public static void append(final StringBuilder sbString, final String... strings) {
 		sbString.ensureCapacity(sbString.length() + getLength(strings));
 		
-		for (final String string : strings)
-		{
+		for (final String string : strings) {
 			sbString.append(string);
 		}
 	}
@@ -247,18 +241,13 @@ public final class StringUtil
 	 * @param strings array of strings
 	 * @return total length of all the strings
 	 */
-	private static int getLength(final String[] strings)
-	{
+	private static int getLength(final String[] strings) {
 		int length = 0;
 		
-		for (final String string : strings)
-		{
-			if (string == null)
-			{
+		for (final String string : strings) {
+			if (string == null) {
 				length += 4;
-			}
-			else
-			{
+			} else {
 				length += string.length();
 			}
 		}
@@ -266,11 +255,9 @@ public final class StringUtil
 		return length;
 	}
 	
-	public static String getTraceString(StackTraceElement[] trace)
-	{
+	public static String getTraceString(StackTraceElement[] trace) {
 		final TextBuilder sbString = TextBuilder.newInstance();
-		for (final StackTraceElement element : trace)
-		{
+		for (final StackTraceElement element : trace) {
 			sbString.append(element.toString()).append('\n');
 		}
 		

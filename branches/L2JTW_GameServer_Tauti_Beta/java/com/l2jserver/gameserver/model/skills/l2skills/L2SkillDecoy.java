@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.skills.l2skills;
 
@@ -24,34 +28,36 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
-public class L2SkillDecoy extends L2Skill
-{
+public class L2SkillDecoy extends L2Skill {
+	
 	private final int _npcId;
 	private final int _summonTotalLifeTime;
 	
-	public L2SkillDecoy(StatsSet set)
-	{
+	public L2SkillDecoy(StatsSet set) {
 		super(set);
 		_npcId = set.getInteger("npcId", 0);
-		_summonTotalLifeTime= set.getInteger("summonTotalLifeTime", 20000);
+		_summonTotalLifeTime = set.getInteger("summonTotalLifeTime", 20000);
 	}
 	
 	@Override
-	public void useSkill(L2Character caster, L2Object[] targets)
-	{
-		if (caster.isAlikeDead() || !(caster instanceof L2PcInstance))
+	public void useSkill(L2Character caster, L2Object[] targets) {
+		if (caster.isAlikeDead() || !(caster instanceof L2PcInstance)) {
 			return;
+		}
 		
-		if (_npcId == 0)
+		if (_npcId == 0) {
 			return;
+		}
 		
 		final L2PcInstance activeChar = (L2PcInstance) caster;
 		
-		if (activeChar.inObserverMode())
+		if (activeChar.inObserverMode()) {
 			return;
+		}
 		
-		if (activeChar.getPet() != null || activeChar.isMounted())
+		if ((activeChar.getPet() != null) || activeChar.isMounted()) {
 			return;
+		}
 		
 		L2NpcTemplate DecoyTemplate = NpcTable.getInstance().getTemplate(_npcId);
 		final L2DecoyInstance Decoy = new L2DecoyInstance(IdFactory.getInstance().getNextId(), DecoyTemplate, activeChar, this);
@@ -59,12 +65,12 @@ public class L2SkillDecoy extends L2Skill
 		Decoy.setCurrentMp(Decoy.getMaxMp());
 		Decoy.setHeading(activeChar.getHeading());
 		activeChar.setDecoy(Decoy);
-		//L2World.getInstance().storeObject(Decoy);
+		// L2World.getInstance().storeObject(Decoy);
 		Decoy.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 	}
 	
-	public final int getTotalLifeTime()
-	{
+	public final int getTotalLifeTime() {
 		return _summonTotalLifeTime;
 	}
+	
 }

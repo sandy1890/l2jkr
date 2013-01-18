@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -28,24 +32,21 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class ...
- *
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestFriendDel extends L2GameClientPacket{
+public final class RequestFriendDel extends L2GameClientPacket {
 	
 	private static final String _C__7A_REQUESTFRIENDDEL = "[C] 7A RequestFriendDel";
 	
 	private String _name;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_name = readS();
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		SystemMessage sm;
 		
 		L2PcInstance activeChar = getClient().getActiveChar();
@@ -54,16 +55,14 @@ public final class RequestFriendDel extends L2GameClientPacket{
 		
 		int id = CharNameTable.getInstance().getIdByName(_name);
 		
-		if (id == -1)
-		{
+		if (id == -1) {
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_NOT_ON_YOUR_FRIENDS_LIST);
 			sm.addString(_name);
 			activeChar.sendPacket(sm);
 			return;
 		}
 		
-		if (!activeChar.getFriendList().contains(id))
-		{
+		if (!activeChar.getFriendList().contains(id)) {
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_NOT_ON_YOUR_FRIENDS_LIST);
 			sm.addString(_name);
 			activeChar.sendPacket(sm);
@@ -72,8 +71,7 @@ public final class RequestFriendDel extends L2GameClientPacket{
 		
 		Connection con = null;
 		
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM character_friends WHERE (charId=? AND friendId=?) OR (charId=? AND friendId=?)");
@@ -86,9 +84,9 @@ public final class RequestFriendDel extends L2GameClientPacket{
 			
 			// Player deleted from your friendlist
 			/*
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DELETED_FROM_YOUR_FRIENDS_LIST);
-			*/
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_REMOVED_FROM_YOUR_FRIENDS_LIST); //Update by rocknow
+			 * sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DELETED_FROM_YOUR_FRIENDS_LIST);
+			 */
+			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_REMOVED_FROM_YOUR_FRIENDS_LIST); // Update by rocknow
 			sm.addString(_name);
 			activeChar.sendPacket(sm);
 			
@@ -96,26 +94,19 @@ public final class RequestFriendDel extends L2GameClientPacket{
 			activeChar.sendPacket(new FriendPacket(false, id));
 			
 			L2PcInstance player = L2World.getInstance().getPlayer(_name);
-			if (player != null)
-			{
+			if (player != null) {
 				player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));
 				player.sendPacket(new FriendPacket(false, activeChar.getObjectId()));
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "could not del friend objectid: ", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__7A_REQUESTFRIENDDEL;
 	}
 }
-

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.actor.templates;
 
@@ -26,10 +30,10 @@ import com.l2jserver.gameserver.model.items.PcItemTemplate;
 /**
  * @author mkizub, Zoey76
  */
-public class L2PcTemplate extends L2CharTemplate
-{
+public class L2PcTemplate extends L2CharTemplate {
+	
 	private final ClassId _classId;
-	public /*final*/ Race _race; //rocknow-God-Awaking
+	public/* final */Race _race; // rocknow-God-Awaking
 	private final String _className;
 	
 	private final int _spawnX;
@@ -54,8 +58,7 @@ public class L2PcTemplate extends L2CharTemplate
 	
 	private final List<PcItemTemplate> _initialEquipment;
 	
-	public L2PcTemplate(StatsSet set)
-	{
+	public L2PcTemplate(StatsSet set) {
 		super(set);
 		_classId = ClassId.getClassId(set.getInteger("classId"));
 		_race = Race.values()[set.getInteger("raceId")];
@@ -87,16 +90,14 @@ public class L2PcTemplate extends L2CharTemplate
 	/**
 	 * @return the template class Id.
 	 */
-	public ClassId getClassId()
-	{
+	public ClassId getClassId() {
 		return _classId;
 	}
 	
 	/**
 	 * @return the template race.
 	 */
-	public Race getRace()
-	{
+	public Race getRace() {
 		return _race;
 	}
 	
@@ -105,144 +106,127 @@ public class L2PcTemplate extends L2CharTemplate
 	 * @deprecated replaced by {@link ClassInfo#getClassName()}
 	 */
 	@Deprecated
-	public String getClassName()
-	{
+	public String getClassName() {
 		return _className;
 	}
 	
 	/**
 	 * @return the template X spawn coordinate.
 	 */
-	public int getSpawnX()
-	{
+	public int getSpawnX() {
 		return _spawnX;
 	}
 	
 	/**
 	 * @return the template Y spawn coordinate.
 	 */
-	public int getSpawnY()
-	{
+	public int getSpawnY() {
 		return _spawnY;
 	}
 	
 	/**
 	 * @return the template Z spawn coordinate.
 	 */
-	public int getSpawnZ()
-	{
+	public int getSpawnZ() {
 		return _spawnZ;
 	}
 	
 	/**
 	 * @return the template class base level.
 	 */
-	public int getClassBaseLevel()
-	{
+	public int getClassBaseLevel() {
 		return _classBaseLevel;
 	}
 	
 	/**
 	 * @return the template level Hp add.
 	 */
-	public float getLvlHpAdd()
-	{
+	public float getLvlHpAdd() {
 		return _lvlHpAdd;
 	}
 	
 	/**
 	 * @return the template level Hp mod.
 	 */
-	public float getLvlHpMod()
-	{
+	public float getLvlHpMod() {
 		return _lvlHpMod;
 	}
 	
 	/**
 	 * @return the template level Cp add.
 	 */
-	public float getLvlCpAdd()
-	{
+	public float getLvlCpAdd() {
 		return _lvlCpAdd;
 	}
 	
 	/**
 	 * @return the template level Cp mod.
 	 */
-	public float getLvlCpMod()
-	{
+	public float getLvlCpMod() {
 		return _lvlCpMod;
 	}
 	
 	/**
 	 * @return the template level Mp add.
 	 */
-	public float getLvlMpAdd()
-	{
+	public float getLvlMpAdd() {
 		return _lvlMpAdd;
 	}
 	
 	/**
 	 * @return the template level Mp mod.
 	 */
-	public float getLvlMpMod()
-	{
+	public float getLvlMpMod() {
 		return _lvlMpMod;
 	}
 	
 	/**
 	 * @return the template collision height for male characters.
 	 */
-	public double getFCollisionHeightMale()
-	{
+	public double getFCollisionHeightMale() {
 		return _fCollisionHeightMale;
 	}
 	
 	/**
 	 * @return the template collision radius for male characters.
 	 */
-	public double getFCollisionRadiusMale()
-	{
+	public double getFCollisionRadiusMale() {
 		return _fCollisionRadiusMale;
 	}
 	
 	/**
 	 * @return the template collision height for female characters.
 	 */
-	public double getFCollisionHeightFemale()
-	{
+	public double getFCollisionHeightFemale() {
 		return _fCollisionHeightFemale;
 	}
 	
 	/**
 	 * @return the template collision radius for female characters.
 	 */
-	public double getFCollisionRadiusFemale()
-	{
+	public double getFCollisionRadiusFemale() {
 		return _fCollisionRadiusFemale;
 	}
 	
 	/**
 	 * @return the fall height.
 	 */
-	public int getFallHeight()
-	{
+	public int getFallHeight() {
 		return _fallHeight;
 	}
 	
 	/**
 	 * @return the initial equipment for this Pc template.
 	 */
-	public List<PcItemTemplate> getInitialEquipment()
-	{
+	public List<PcItemTemplate> getInitialEquipment() {
 		return _initialEquipment;
 	}
-
+	
 	/**
 	 * @return {@code true} if this Pc template has an initial equipment associated, {@code false} otherwise.
 	 */
-	public boolean hasInitialEquipment()
-	{
+	public boolean hasInitialEquipment() {
 		return _initialEquipment != null;
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -26,8 +30,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  * This class load, holds and calculates the hit condition bonuses.
  * @author Nik
  */
-public final class HitConditionBonus extends DocumentParser
-{
+public final class HitConditionBonus extends DocumentParser {
+	
 	private int frontBonus = 0;
 	private int sideBonus = 0;
 	private int backBonus = 0;
@@ -39,18 +43,15 @@ public final class HitConditionBonus extends DocumentParser
 	/**
 	 * Instantiates a new hit condition bonus.
 	 */
-	protected HitConditionBonus()
-	{
+	protected HitConditionBonus() {
 		load();
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		parseDatapackFile("data/stats/hitConditionBonus.xml");
 		_log.info(getClass().getSimpleName() + ": Loaded Hit Condition bonuses.");
-		if (Config.DEBUG)
-		{
+		if (Config.DEBUG) {
 			_log.info(getClass().getSimpleName() + ": Front bonus: " + frontBonus);
 			_log.info(getClass().getSimpleName() + ": Side bonus: " + sideBonus);
 			_log.info(getClass().getSimpleName() + ": Back bonus: " + backBonus);
@@ -62,36 +63,33 @@ public final class HitConditionBonus extends DocumentParser
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		final Node n = getCurrentDocument().getFirstChild();
 		NamedNodeMap attrs;
-		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-		{
+		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
 			attrs = d.getAttributes();
-			switch (d.getNodeName())
-			{
+			switch (d.getNodeName()) {
 				case "front":
 					frontBonus = parseInt(attrs, "val");
-					break;
+				break;
 				case "side":
 					sideBonus = parseInt(attrs, "val");
-					break;
+				break;
 				case "back":
 					backBonus = parseInt(attrs, "val");
-					break;
+				break;
 				case "high":
 					highBonus = parseInt(attrs, "val");
-					break;
+				break;
 				case "low":
 					lowBonus = parseInt(attrs, "val");
-					break;
+				break;
 				case "dark":
 					darkBonus = parseInt(attrs, "val");
-					break;
+				break;
 				case "rain":
 					rainBonus = parseInt(attrs, "val");
-					break;
+				break;
 			}
 		}
 	}
@@ -102,38 +100,28 @@ public final class HitConditionBonus extends DocumentParser
 	 * @param target the attacked character.
 	 * @return the bonus of the attacker against the target.
 	 */
-	public double getConditionBonus(L2Character attacker, L2Character target)
-	{
+	public double getConditionBonus(L2Character attacker, L2Character target) {
 		double mod = 100;
 		// Get high or low bonus
-		if ((attacker.getZ() - target.getZ()) > 50)
-		{
+		if ((attacker.getZ() - target.getZ()) > 50) {
 			mod += highBonus;
-		}
-		else if ((attacker.getZ() - target.getZ()) < -50)
-		{
+		} else if ((attacker.getZ() - target.getZ()) < -50) {
 			mod += lowBonus;
 		}
 		
 		// Get weather bonus
-		if (GameTimeController.getInstance().isNowNight())
-		{
+		if (GameTimeController.getInstance().isNowNight()) {
 			mod += darkBonus;
 			// else if () No rain support yet.
 			// chance += hitConditionBonus.rainBonus;
 		}
 		
 		// Get side bonus
-		if (attacker.isBehindTarget())
-		{
+		if (attacker.isBehindTarget()) {
 			mod += backBonus;
-		}
-		else if (attacker.isInFrontOfTarget())
-		{
+		} else if (attacker.isInFrontOfTarget()) {
 			mod += frontBonus;
-		}
-		else
-		{
+		} else {
 			mod += sideBonus;
 		}
 		
@@ -145,13 +133,12 @@ public final class HitConditionBonus extends DocumentParser
 	 * Gets the single instance of HitConditionBonus.
 	 * @return single instance of HitConditionBonus
 	 */
-	public static HitConditionBonus getInstance()
-	{
+	public static HitConditionBonus getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final HitConditionBonus _instance = new HitConditionBonus();
 	}
+	
 }

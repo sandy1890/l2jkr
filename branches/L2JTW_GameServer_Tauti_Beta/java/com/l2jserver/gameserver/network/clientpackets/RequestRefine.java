@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -25,10 +29,9 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 
 /**
  * Format:(ch) dddd
- * @author  -Wooden-
+ * @author -Wooden-
  */
-public final class RequestRefine extends AbstractRefinePacket
-{
+public final class RequestRefine extends AbstractRefinePacket {
 	private static final String _C__D0_41_REQUESTREFINE = "[C] D0:41 RequestRefine";
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
@@ -36,8 +39,7 @@ public final class RequestRefine extends AbstractRefinePacket
 	private long _gemStoneCount;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_targetItemObjId = readD();
 		_refinerItemObjId = readD();
 		_gemStoneItemObjId = readD();
@@ -45,8 +47,7 @@ public final class RequestRefine extends AbstractRefinePacket
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 			return;
@@ -60,9 +61,8 @@ public final class RequestRefine extends AbstractRefinePacket
 		if (gemStoneItem == null)
 			return;
 		
-		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem))
-		{
-			activeChar.sendPacket(new ExVariationResult(0,0,0));
+		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem)) {
+			activeChar.sendPacket(new ExVariationResult(0, 0, 0));
 			activeChar.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
@@ -73,16 +73,14 @@ public final class RequestRefine extends AbstractRefinePacket
 		
 		final int lifeStoneLevel = ls.getLevel();
 		final int lifeStoneGrade = ls.getGrade();
-		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getItemGrade(), lifeStoneGrade))
-		{
-			activeChar.sendPacket(new ExVariationResult(0,0,0));
+		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getItemGrade(), lifeStoneGrade)) {
+			activeChar.sendPacket(new ExVariationResult(0, 0, 0));
 			activeChar.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
 		
 		// unequip item
-		if (targetItem.isEquipped())
-		{
+		if (targetItem.isEquipped()) {
 			L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
 			InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance itm : unequiped)
@@ -104,7 +102,7 @@ public final class RequestRefine extends AbstractRefinePacket
 		
 		final int stat12 = 0x0000FFFF & aug.getAugmentationId();
 		final int stat34 = aug.getAugmentationId() >> 16;
-		activeChar.sendPacket(new ExVariationResult(stat12,stat34,1));
+		activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1));
 		
 		InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
@@ -116,8 +114,7 @@ public final class RequestRefine extends AbstractRefinePacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_41_REQUESTREFINE;
 	}
 }

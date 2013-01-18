@@ -1,62 +1,68 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
 /**
- * This class represents a Newbie Helper Buff
- *
- * Author: Ayor
+ * This class represents a Newbie Helper Buff Author: Ayor
  */
-
-public class L2HelperBuff
-{
+public class L2HelperBuff {
+	
 	/** Min level that the player must achieve to obtain this buff from Newbie Helper */
-	private int _lowerLevel;
+	private final int _lowerLevel;
 	
 	/** Max level that the player mustn't exceed if it want to obtain this buff from Newbie Helper */
-	private int _upperLevel;
+	private final int _upperLevel;
 	
 	/** Identifier of the skill (buff) that the Newbie Helper must cast */
-	private int _skillID;
+	private final int _skillID;
 	
 	/** Level of the skill (buff) that the Newbie Helper must cast */
-	private int _skillLevel;
+	private final int _skillLevel;
 	
-	/** If True only Magus class will obtain this Buff <BR>
-	 *  If False only Fighter class will obtain this Buff */
+	/**
+	 * If True only Magus class will obtain this Buff <BR>
+	 * If False only Fighter class will obtain this Buff
+	 */
 	private boolean _isMagicClass;
 	
 	private boolean _forSummon = false;
+	
 	/**
-	 * Constructor of L2HelperBuff.<BR><BR>
-	 * @param set 
+	 * Constructor of L2HelperBuff.<BR>
+	 * <BR>
+	 * @param set
 	 */
-	public L2HelperBuff(StatsSet set)
-	{
+	public L2HelperBuff(StatsSet set) {
 		
 		_lowerLevel = set.getInteger("lowerLevel");
 		_upperLevel = set.getInteger("upperLevel");
 		_skillID = set.getInteger("skillID");
 		_skillLevel = set.getInteger("skillLevel");
-		if ("true".equals(set.getString("forSummon")))
+		if ("true".equals(set.getString("forSummon"))) {
 			_forSummon = true;
+		}
 		
-		if ("false".equals(set.getString("isMagicClass")))
+		if ("false".equals(set.getString("isMagicClass"))) {
 			_isMagicClass = false;
-		else
+		} else {
 			_isMagicClass = true;
+		}
 		
 	}
 	
@@ -64,8 +70,7 @@ public class L2HelperBuff
 	 * Returns the lower level that the L2PcInstance must achieve in order to obtain this buff
 	 * @return int
 	 */
-	public int getLowerLevel()
-	{
+	public int getLowerLevel() {
 		return _lowerLevel;
 	}
 	
@@ -73,8 +78,7 @@ public class L2HelperBuff
 	 * Returns the upper level that the L2PcInstance mustn't exceed in order to obtain this buff
 	 * @return int
 	 */
-	public int getUpperLevel()
-	{
+	public int getUpperLevel() {
 		return _upperLevel;
 	}
 	
@@ -82,8 +86,7 @@ public class L2HelperBuff
 	 * Returns the ID of the buff that the L2PcInstance will receive
 	 * @return int
 	 */
-	public int getSkillID()
-	{
+	public int getSkillID() {
 		return _skillID;
 	}
 	
@@ -91,8 +94,7 @@ public class L2HelperBuff
 	 * Returns the Level of the buff that the L2PcInstance will receive
 	 * @return int
 	 */
-	public int getSkillLevel()
-	{
+	public int getSkillLevel() {
 		return _skillLevel;
 	}
 	
@@ -100,13 +102,12 @@ public class L2HelperBuff
 	 * Returns if this Buff can be cast on a fighter or a mystic
 	 * @return boolean : False if it's a fighter class Buff
 	 */
-	public boolean isMagicClassBuff()
-	{
+	public boolean isMagicClassBuff() {
 		return _isMagicClass;
 	}
 	
-	public boolean isForSummon()
-	{
+	public boolean isForSummon() {
 		return _forSummon;
 	}
+	
 }

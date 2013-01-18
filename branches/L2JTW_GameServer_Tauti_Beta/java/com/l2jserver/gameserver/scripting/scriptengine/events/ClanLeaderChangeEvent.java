@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.scripting.scriptengine.events;
 
@@ -21,8 +25,7 @@ import com.l2jserver.gameserver.scripting.scriptengine.events.impl.L2Event;
 /**
  * @author TheOne
  */
-public class ClanLeaderChangeEvent implements L2Event
-{
+public class ClanLeaderChangeEvent implements L2Event {
 	private L2Clan clan;
 	private L2PcInstance newLeader;
 	private L2PcInstance oldLeader;
@@ -30,48 +33,42 @@ public class ClanLeaderChangeEvent implements L2Event
 	/**
 	 * @return the clan
 	 */
-	public L2Clan getClan()
-	{
+	public L2Clan getClan() {
 		return clan;
 	}
 	
 	/**
 	 * @param clan the clan to set
 	 */
-	public void setClan(L2Clan clan)
-	{
+	public void setClan(L2Clan clan) {
 		this.clan = clan;
 	}
 	
 	/**
 	 * @return the newLeader
 	 */
-	public L2PcInstance getNewLeader()
-	{
+	public L2PcInstance getNewLeader() {
 		return newLeader;
 	}
 	
 	/**
 	 * @param newLeader the newLeader to set
 	 */
-	public void setNewLeader(L2PcInstance newLeader)
-	{
+	public void setNewLeader(L2PcInstance newLeader) {
 		this.newLeader = newLeader;
 	}
 	
 	/**
 	 * @return the oldLeader
 	 */
-	public L2PcInstance getOldLeader()
-	{
+	public L2PcInstance getOldLeader() {
 		return oldLeader;
 	}
 	
 	/**
 	 * @param oldLeader the oldLeader to set
 	 */
-	public void setOldLeader(L2PcInstance oldLeader)
-	{
+	public void setOldLeader(L2PcInstance oldLeader) {
 		this.oldLeader = oldLeader;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -34,21 +38,18 @@ import javolution.util.FastList;
  * format d (ddd)
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:39 $
  */
-public final class SkillList extends L2GameServerPacket
-{
+public final class SkillList extends L2GameServerPacket {
 	private static final String _S__5F_SKILLLIST = "[S] 5F SkillList";
 	private final List<Skill> _skills;
 	
-	static class Skill
-	{
+	static class Skill {
 		public int id;
 		public int level;
 		public boolean passive;
 		public boolean disabled;
 		public boolean enchanted;
 		
-		Skill(int pId, int pLevel, boolean pPassive, boolean pDisabled, boolean pEnchanted)
-		{
+		Skill(int pId, int pLevel, boolean pPassive, boolean pDisabled, boolean pEnchanted) {
 			id = pId;
 			level = pLevel;
 			passive = pPassive;
@@ -57,37 +58,32 @@ public final class SkillList extends L2GameServerPacket
 		}
 	}
 	
-	public SkillList()
-	{
+	public SkillList() {
 		_skills = new FastList<>();
 	}
 	
-	public void addSkill(int id, int level, boolean passive, boolean disabled, boolean enchanted)
-	{
+	public void addSkill(int id, int level, boolean passive, boolean disabled, boolean enchanted) {
 		_skills.add(new Skill(id, level, passive, disabled, enchanted));
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x5F);
 		writeD(_skills.size());
 		
-		for (Skill temp : _skills)
-		{
+		for (Skill temp : _skills) {
 			writeD(temp.passive ? 1 : 0);
 			writeD(temp.level);
 			writeD(temp.id);
-			writeD(-1); //rocknow-God
+			writeD(-1); // rocknow-God
 			writeC(temp.disabled ? 1 : 0);
 			writeC(temp.enchanted ? 1 : 0);
 		}
-		writeD(0x00); //rocknow-God Need Not?
+		writeD(0x00); // rocknow-God Need Not?
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__5F_SKILLLIST;
 	}
 }

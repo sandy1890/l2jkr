@@ -1,26 +1,28 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-public final class StartRotation extends L2GameServerPacket
-{
+public final class StartRotation extends L2GameServerPacket {
 	private static final String _S__77_BEGINROTATION = "[S] 7a BeginRotation";
 	private int _charObjId, _degree, _side, _speed;
 	
-	public StartRotation(int objectId, int degree, int side, int speed)
-	{
+	public StartRotation(int objectId, int degree, int side, int speed) {
 		_charObjId = objectId;
 		_degree = degree;
 		_side = side;
@@ -28,8 +30,7 @@ public final class StartRotation extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x7a);
 		writeD(_charObjId);
 		writeD(_degree);
@@ -38,8 +39,7 @@ public final class StartRotation extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__77_BEGINROTATION;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -28,8 +32,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * @version 1.5
  * @author Zoey76
  */
-public class AcquireSkillInfo extends L2GameServerPacket
-{
+public class AcquireSkillInfo extends L2GameServerPacket {
 	private static final String _S__91_ACQUIRESKILLINFO = "[S] 91 AcquireSkillInfo";
 	
 	private final AcquireSkillType _type;
@@ -41,8 +44,7 @@ public class AcquireSkillInfo extends L2GameServerPacket
 	/**
 	 * Private class containing learning skill requisites.
 	 */
-	private static class Req
-	{
+	private static class Req {
 		public int itemId;
 		public long count;
 		public int type;
@@ -54,8 +56,7 @@ public class AcquireSkillInfo extends L2GameServerPacket
 		 * @param itemCount the item count.
 		 * @param pUnk TODO identify.
 		 */
-		public Req(int pType, int pItemId, long itemCount, int pUnk)
-		{
+		public Req(int pType, int pItemId, long itemCount, int pUnk) {
 			itemId = pItemId;
 			type = pType;
 			count = itemCount;
@@ -68,19 +69,15 @@ public class AcquireSkillInfo extends L2GameServerPacket
 	 * @param skillType the skill learning type.
 	 * @param skillLearn the skill learn.
 	 */
-	public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn)
-	{
+	public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn) {
 		_id = skillLearn.getSkillId();
 		_level = skillLearn.getSkillLevel();
 		_spCost = skillLearn.getLevelUpSp();
 		_type = skillType;
 		_reqs = new ArrayList<>();
-		if ((skillType != AcquireSkillType.Pledge) || Config.LIFE_CRYSTAL_NEEDED)
-		{
-			for (ItemHolder item : skillLearn.getRequiredItems())
-			{
-				if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == L2Skill.SKILL_DIVINE_INSPIRATION))
-				{
+		if ((skillType != AcquireSkillType.Pledge) || Config.LIFE_CRYSTAL_NEEDED) {
+			for (ItemHolder item : skillLearn.getRequiredItems()) {
+				if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == L2Skill.SKILL_DIVINE_INSPIRATION)) {
 					continue;
 				}
 				_reqs.add(new Req(99, item.getId(), item.getCount(), 50));
@@ -95,30 +92,26 @@ public class AcquireSkillInfo extends L2GameServerPacket
 	 * @param skillLearn the skill learn.
 	 * @param sp the custom SP amount.
 	 */
-	public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn, int sp)
-	{
+	public AcquireSkillInfo(AcquireSkillType skillType, L2SkillLearn skillLearn, int sp) {
 		_id = skillLearn.getSkillId();
 		_level = skillLearn.getSkillLevel();
 		_spCost = sp;
 		_type = skillType;
 		_reqs = new ArrayList<>();
-		for (ItemHolder item : skillLearn.getRequiredItems())
-		{
+		for (ItemHolder item : skillLearn.getRequiredItems()) {
 			_reqs.add(new Req(99, item.getId(), item.getCount(), 50));
 		}
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x91);
 		writeD(_id);
 		writeD(_level);
 		writeD(_spCost);
 		writeD(_type.ordinal());
 		writeD(_reqs.size());
-		for (Req temp : _reqs)
-		{
+		for (Req temp : _reqs) {
 			writeD(temp.type);
 			writeD(temp.itemId);
 			writeQ(temp.count);
@@ -127,8 +120,7 @@ public class AcquireSkillInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__91_ACQUIRESKILLINFO;
 	}
 }

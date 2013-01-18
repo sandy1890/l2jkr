@@ -1,37 +1,32 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-
-
 /**
- *
  * sample
  * <p>
- * 4b
- * c1 b2 e0 4a
- * 00 00 00 00
+ * 4b c1 b2 e0 4a 00 00 00 00
  * <p>
- *
- * format
- * cdd
- *
+ * format cdd
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class AskJoinParty extends L2GameServerPacket
-{
+public class AskJoinParty extends L2GameServerPacket {
 	private static final String _S__4B_ASKJOINPARTY_0X4B = "[S] 39 AskJoinParty";
 	
 	private String _requestorName;
@@ -41,23 +36,20 @@ public class AskJoinParty extends L2GameServerPacket
 	 * @param requestorName
 	 * @param itemDistribution
 	 */
-	public AskJoinParty(String requestorName, int itemDistribution)
-	{
+	public AskJoinParty(String requestorName, int itemDistribution) {
 		_requestorName = requestorName;
 		_itemDistribution = itemDistribution;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x39);
 		writeS(_requestorName);
 		writeD(_itemDistribution);
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__4B_ASKJOINPARTY_0X4B;
 	}
 }

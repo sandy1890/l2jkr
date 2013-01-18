@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.ai;
 
@@ -21,10 +25,9 @@ import java.util.ArrayList;
  * Has 2 array list for "work" and "break".
  * @author Yaroslav
  */
-public class NextAction
-{
-	public interface NextActionCallback
-	{
+public class NextAction {
+	
+	public interface NextActionCallback {
 		public void doWork();
 	}
 	
@@ -38,8 +41,7 @@ public class NextAction
 	 * @param intentions
 	 * @param callback
 	 */
-	public NextAction(ArrayList<CtrlEvent> events, ArrayList<CtrlIntention> intentions, NextActionCallback callback)
-	{
+	public NextAction(ArrayList<CtrlEvent> events, ArrayList<CtrlIntention> intentions, NextActionCallback callback) {
 		_events = events;
 		_intentions = intentions;
 		setCallback(callback);
@@ -51,25 +53,20 @@ public class NextAction
 	 * @param intention
 	 * @param callback
 	 */
-	public NextAction(CtrlEvent event, CtrlIntention intention, NextActionCallback callback)
-	{
-		if (_events == null)
-		{
+	public NextAction(CtrlEvent event, CtrlIntention intention, NextActionCallback callback) {
+		if (_events == null) {
 			_events = new ArrayList<>();
 		}
 		
-		if (_intentions == null)
-		{
+		if (_intentions == null) {
 			_intentions = new ArrayList<>();
 		}
 		
-		if (event != null)
-		{
+		if (event != null) {
 			_events.add(event);
 		}
 		
-		if (intention != null)
-		{
+		if (intention != null) {
 			_intentions.add(intention);
 		}
 		setCallback(callback);
@@ -78,10 +75,8 @@ public class NextAction
 	/**
 	 * Do action.
 	 */
-	public void doAction()
-	{
-		if (_callback != null)
-		{
+	public void doAction() {
+		if (_callback != null) {
 			_callback.doWork();
 		}
 	}
@@ -89,11 +84,9 @@ public class NextAction
 	/**
 	 * @return the _event
 	 */
-	public ArrayList<CtrlEvent> getEvents()
-	{
+	public ArrayList<CtrlEvent> getEvents() {
 		// If null return empty list.
-		if (_events == null)
-		{
+		if (_events == null) {
 			_events = new ArrayList<>();
 		}
 		return _events;
@@ -102,23 +95,19 @@ public class NextAction
 	/**
 	 * @param event the event to set.
 	 */
-	public void setEvents(ArrayList<CtrlEvent> event)
-	{
+	public void setEvents(ArrayList<CtrlEvent> event) {
 		_events = event;
 	}
 	
 	/**
 	 * @param event
 	 */
-	public void addEvent(CtrlEvent event)
-	{
-		if (_events == null)
-		{
+	public void addEvent(CtrlEvent event) {
+		if (_events == null) {
 			_events = new ArrayList<>();
 		}
 		
-		if (event != null)
-		{
+		if (event != null) {
 			_events.add(event);
 		}
 	}
@@ -126,10 +115,8 @@ public class NextAction
 	/**
 	 * @param event
 	 */
-	public void removeEvent(CtrlEvent event)
-	{
-		if (_events == null)
-		{
+	public void removeEvent(CtrlEvent event) {
+		if (_events == null) {
 			return;
 		}
 		_events.remove(event);
@@ -138,27 +125,23 @@ public class NextAction
 	/**
 	 * @return the _callback
 	 */
-	public NextActionCallback getCallback()
-	{
+	public NextActionCallback getCallback() {
 		return _callback;
 	}
 	
 	/**
 	 * @param callback the callback to set.
 	 */
-	public void setCallback(NextActionCallback callback)
-	{
+	public void setCallback(NextActionCallback callback) {
 		_callback = callback;
 	}
 	
 	/**
 	 * @return the _intentions
 	 */
-	public ArrayList<CtrlIntention> getIntentions()
-	{
+	public ArrayList<CtrlIntention> getIntentions() {
 		// If null return empty list.
-		if (_intentions == null)
-		{
+		if (_intentions == null) {
 			_intentions = new ArrayList<>();
 		}
 		return _intentions;
@@ -167,23 +150,19 @@ public class NextAction
 	/**
 	 * @param intentions the intention to set.
 	 */
-	public void setIntentions(ArrayList<CtrlIntention> intentions)
-	{
+	public void setIntentions(ArrayList<CtrlIntention> intentions) {
 		_intentions = intentions;
 	}
 	
 	/**
 	 * @param intention
 	 */
-	public void addIntention(CtrlIntention intention)
-	{
-		if (_intentions == null)
-		{
+	public void addIntention(CtrlIntention intention) {
+		if (_intentions == null) {
 			_intentions = new ArrayList<>();
 		}
 		
-		if (intention != null)
-		{
+		if (intention != null) {
 			_intentions.add(intention);
 		}
 	}
@@ -191,12 +170,11 @@ public class NextAction
 	/**
 	 * @param intention
 	 */
-	public void removeIntention(CtrlIntention intention)
-	{
-		if (_intentions == null)
-		{
+	public void removeIntention(CtrlIntention intention) {
+		if (_intentions == null) {
 			return;
 		}
 		_intentions.remove(intention);
 	}
+	
 }

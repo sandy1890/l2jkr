@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -23,10 +27,9 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.network.L2GameClient;
 
 /**
- * @author  KenM
+ * @author KenM
  */
-public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
-{
+public abstract class L2GameServerPacket extends SendablePacket<L2GameClient> {
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
 	protected boolean _invisible = false;
@@ -34,18 +37,15 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 	/**
 	 * @return True if packet originated from invisible character.
 	 */
-	public boolean isInvisible()
-	{
+	public boolean isInvisible() {
 		return _invisible;
 	}
 	
 	/**
-	 * Set "invisible" boolean flag in the packet.
-	 * Packets from invisible characters will not be broadcasted to players.
+	 * Set "invisible" boolean flag in the packet. Packets from invisible characters will not be broadcasted to players.
 	 * @param b
 	 */
-	public void setInvisible(boolean b)
-	{
+	public void setInvisible(boolean b) {
 		_invisible = b;
 	}
 	
@@ -53,21 +53,16 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 	 * @see org.mmocore.network.SendablePacket#write()
 	 */
 	@Override
-	protected void write()
-	{
-		try
-		{
-			//_log.info(this.getType());
+	protected void write() {
+		try {
+			// _log.info(this.getType());
 			writeImpl();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed writing: " + getType() + " - L2J Server Version: " + Config.SERVER_VERSION + " - DP Revision: " + Config.DATAPACK_VERSION + " ; " + e.getMessage(), e);
 		}
 	}
 	
-	public void runImpl()
-	{
+	public void runImpl() {
 		
 	}
 	

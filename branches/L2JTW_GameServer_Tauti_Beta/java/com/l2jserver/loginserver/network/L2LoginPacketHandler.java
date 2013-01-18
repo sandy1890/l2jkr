@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.network;
 
@@ -30,65 +34,58 @@ import com.l2jserver.loginserver.network.clientpackets.RequestServerLogin;
  * Handler for packets received by Login Server
  * @author KenM
  */
-public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
-{
+public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient> {
 	protected static final Logger _log = Logger.getLogger(L2LoginPacketHandler.class.getName());
 	
 	/**
 	 * @see org.mmocore.network.IPacketHandler#handlePacket(java.nio.ByteBuffer, org.mmocore.network.MMOClient)
 	 */
 	@Override
-	public ReceivablePacket<L2LoginClient> handlePacket(ByteBuffer buf, L2LoginClient client)
-	{
+	public ReceivablePacket<L2LoginClient> handlePacket(ByteBuffer buf, L2LoginClient client) {
 		int opcode = buf.get() & 0xFF;
 		
 		ReceivablePacket<L2LoginClient> packet = null;
 		LoginClientState state = client.getState();
 		
-		switch (state)
-		{
+		switch (state) {
 			case CONNECTED:
-				switch (opcode)
-				{
+				switch (opcode) {
 					case 0x07:
 						packet = new AuthGameGuard();
-						break;
+					break;
 					default:
 						debugOpcode(opcode, state);
-						break;
+					break;
 				}
-				break;
+			break;
 			case AUTHED_GG:
-				switch (opcode)
-				{
+				switch (opcode) {
 					case 0x00:
 						packet = new RequestAuthLogin();
-						break;
+					break;
 					default:
 						debugOpcode(opcode, state);
-						break;
+					break;
 				}
-				break;
+			break;
 			case AUTHED_LOGIN:
-				switch (opcode)
-				{
+				switch (opcode) {
 					case 0x02:
 						packet = new RequestServerLogin();
-						break;
+					break;
 					case 0x05:
 						packet = new RequestServerList();
-						break;
+					break;
 					default:
 						debugOpcode(opcode, state);
-						break;
+					break;
 				}
-				break;
+			break;
 		}
 		return packet;
 	}
 	
-	private void debugOpcode(int opcode, LoginClientState state)
-	{
+	private void debugOpcode(int opcode, LoginClientState state) {
 		_log.info("Unknown Opcode: " + opcode + " for state: " + state.name());
 	}
 }

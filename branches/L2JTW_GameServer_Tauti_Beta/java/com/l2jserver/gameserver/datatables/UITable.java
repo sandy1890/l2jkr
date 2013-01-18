@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -31,40 +35,36 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.entity.ActionKey;
 
 /**
- * @author  mrTJO
+ * @author mrTJO
  */
-public class UITable
-{
+public class UITable {
+	
 	private static final Logger _log = Logger.getLogger(UITable.class.getName());
 	
-	private Map<Integer, List<ActionKey>> _storedKeys = new HashMap<>();
-	private Map<Integer, List<Integer>> _storedCategories = new HashMap<>();
+	private final Map<Integer, List<ActionKey>> _storedKeys = new HashMap<>();
+	private final Map<Integer, List<Integer>> _storedCategories = new HashMap<>();
 	
-	public static UITable getInstance()
-	{
+	public static UITable getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected UITable()
-	{
+	protected UITable() {
 		parseCatData();
 		parseKeyData();
 		_log.info("UITable: Loaded " + _storedCategories.size() + " Categories.");
 		_log.info("UITable: Loaded " + _storedKeys.size() + " Keys.");
 	}
 	
-	private void parseCatData()
-	{
+	private void parseCatData() {
 		final File uiData = new File(Config.DATAPACK_ROOT, "data/uicats_en.csv");
 		try (FileReader fr = new FileReader(uiData);
 			BufferedReader br = new BufferedReader(fr);
-			LineNumberReader lnr = new LineNumberReader(br))
-		{
+			LineNumberReader lnr = new LineNumberReader(br)) {
 			String line = null;
-			while ((line = lnr.readLine()) != null)
-			{
-				if (line.trim().length() == 0 || line.startsWith("#"))
+			while ((line = lnr.readLine()) != null) {
+				if ((line.trim().length() == 0) || line.startsWith("#")) {
 					continue;
+				}
 				
 				StringTokenizer st = new StringTokenizer(line, ";");
 				
@@ -73,29 +73,23 @@ public class UITable
 				
 				insertCategory(cat, cmd);
 			}
-		}
-		catch (FileNotFoundException e)
-		{
+		} catch (FileNotFoundException e) {
 			_log.warning("uicats_en.csv is missing in data folder");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Error while creating UI Default Categories table " + e.getMessage(), e);
 		}
 	}
 	
-	private void parseKeyData()
-	{
+	private void parseKeyData() {
 		final File uiData = new File(Config.DATAPACK_ROOT, "data/uikeys_en.csv");
 		try (FileReader fr = new FileReader(uiData);
 			BufferedReader br = new BufferedReader(fr);
-			LineNumberReader lnr = new LineNumberReader(br))
-		{
+			LineNumberReader lnr = new LineNumberReader(br)) {
 			String line = null;
-			while ((line = lnr.readLine()) != null)
-			{
-				if (line.trim().length() == 0 || line.startsWith("#"))
+			while ((line = lnr.readLine()) != null) {
+				if ((line.trim().length() == 0) || line.startsWith("#")) {
 					continue;
+				}
 				
 				StringTokenizer st = new StringTokenizer(line, ";");
 				
@@ -108,54 +102,44 @@ public class UITable
 				
 				insertKey(cat, cmd, key, tk1, tk2, shw);
 			}
-		}
-		catch (FileNotFoundException e)
-		{
+		} catch (FileNotFoundException e) {
 			_log.warning("uikeys_en.csv is missing in data folder");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Error while creating UI Default Keys table " + e.getMessage(), e);
 		}
 	}
 	
-	private void insertCategory(int cat, int cmd)
-	{
-		if (_storedCategories.containsKey(cat))
+	private void insertCategory(int cat, int cmd) {
+		if (_storedCategories.containsKey(cat)) {
 			_storedCategories.get(cat).add(cmd);
-		else
-		{
+		} else {
 			List<Integer> tmp = new ArrayList<>();
 			tmp.add(cmd);
 			_storedCategories.put(cat, tmp);
 		}
 	}
 	
-	private void insertKey(int cat, int cmdId, int key, int tgKey1, int tgKey2, int show)
-	{
+	private void insertKey(int cat, int cmdId, int key, int tgKey1, int tgKey2, int show) {
 		ActionKey tmk = new ActionKey(cat, cmdId, key, tgKey1, tgKey2, show);
-		if (_storedKeys.containsKey(cat))
+		if (_storedKeys.containsKey(cat)) {
 			_storedKeys.get(cat).add(tmk);
-		else
-		{
+		} else {
 			List<ActionKey> tmp = new ArrayList<>();
 			tmp.add(tmk);
 			_storedKeys.put(cat, tmp);
 		}
 	}
 	
-	public Map<Integer, List<Integer>> getCategories()
-	{
+	public Map<Integer, List<Integer>> getCategories() {
 		return _storedCategories;
 	}
 	
-	public Map<Integer, List<ActionKey>> getKeys()
-	{
+	public Map<Integer, List<ActionKey>> getKeys() {
 		return _storedKeys;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final UITable _instance = new UITable();
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -25,16 +29,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * Client packet for setting ally crest.
  */
-public final class RequestSetAllyCrest extends L2GameClientPacket
-{
+public final class RequestSetAllyCrest extends L2GameClientPacket {
 	private static final String _C__91_REQUESTSETALLYCREST = "[C] 91 RequestSetAllyCrest";
 	
 	private int _length;
 	private byte[] _data;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_length = readD();
 		if (_length > 192)
 			return;
@@ -44,35 +46,30 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 			return;
 		
-		if (_length < 0)
-		{
-			/* Move To MessageTable For L2JTW
-			activeChar.sendMessage("File transfer error.");
-			*/
+		if (_length < 0) {
+			/*
+			 * Move To MessageTable For L2JTW activeChar.sendMessage("File transfer error.");
+			 */
 			activeChar.sendMessage(343);
 			return;
 		}
-		if (_length > 192)
-		{
-			/* Move To MessageTable For L2JTW
-			activeChar.sendMessage("The ally crest file size was too big (max 192 bytes).");
-			*/
+		if (_length > 192) {
+			/*
+			 * Move To MessageTable For L2JTW activeChar.sendMessage("The ally crest file size was too big (max 192 bytes).");
+			 */
 			activeChar.sendMessage(344);
 			return;
 		}
 		
-		if (activeChar.getAllyId() != 0)
-		{
+		if (activeChar.getAllyId() != 0) {
 			L2Clan leaderclan = ClanTable.getInstance().getClan(activeChar.getAllyId());
 			
-			if (activeChar.getClanId() != leaderclan.getClanId() || !activeChar.isClanLeader())
-			{
+			if (activeChar.getClanId() != leaderclan.getClanId() || !activeChar.isClanLeader()) {
 				return;
 			}
 			
@@ -84,8 +81,7 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 			if (!remove)
 				newId = IdFactory.getInstance().getNextId();
 			
-			if (!remove && !CrestCache.getInstance().saveAllyCrest(newId, _data))
-			{
+			if (!remove && !CrestCache.getInstance().saveAllyCrest(newId, _data)) {
 				_log.log(Level.INFO, "Error saving crest for ally " + leaderclan.getAllyName() + " [" + leaderclan.getAllyId() + "]");
 				return;
 			}
@@ -95,8 +91,7 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__91_REQUESTSETALLYCREST;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.actor.templates;
 
@@ -18,10 +22,9 @@ import com.l2jserver.gameserver.model.StatsSet;
 
 /**
  * @author JIV
- *
  */
-public class L2DoorTemplate extends L2CharTemplate
-{
+public class L2DoorTemplate extends L2CharTemplate {
+	
 	public final int doorId;
 	public final int nodeX[];
 	public final int nodeY[];
@@ -36,19 +39,18 @@ public class L2DoorTemplate extends L2CharTemplate
 	public final String groupName;
 	public final boolean showHp;
 	public final boolean isWall;
-	// -1 close,  0 nothing, 1 open
+	// -1 close, 0 nothing, 1 open
 	public final byte masterDoorClose;
 	public final byte masterDoorOpen;
 	
-	public L2DoorTemplate(StatsSet set)
-	{
+	public L2DoorTemplate(StatsSet set) {
 		super(set);
 		
-		//stats
+		// stats
 		doorId = set.getInteger("id");
 		name = set.getString("name");
-
-		//position
+		
+		// position
 		String[] pos = set.getString("pos").split(";");
 		posX = Integer.parseInt(pos[0]);
 		posY = Integer.parseInt(pos[1]);
@@ -59,14 +61,13 @@ public class L2DoorTemplate extends L2CharTemplate
 		nodeZ = set.getInteger("nodeZ");
 		nodeX = new int[4]; // 4 * x
 		nodeY = new int[4]; // 4 * y
-		for (int i = 0; i < 4; i++)
-		{
-			String split[] = set.getString("node"+(i+1)).split(",");
+		for (int i = 0; i < 4; i++) {
+			String split[] = set.getString("node" + (i + 1)).split(",");
 			nodeX[i] = Integer.parseInt(split[0]);
 			nodeY[i] = Integer.parseInt(split[1]);
 		}
 		
-		//optional
+		// optional
 		emmiter = set.getInteger("emitter_id", 0);
 		showHp = set.getBool("hp_showable", true);
 		isWall = set.getBool("is_wall", false);
@@ -75,22 +76,22 @@ public class L2DoorTemplate extends L2CharTemplate
 		childDoorId = set.getInteger("child_id_event", -1);
 		// true if door is opening
 		String masterevent = set.getString("master_close_event", "act_nothing");
-		if (masterevent.equals("act_open"))
+		if (masterevent.equals("act_open")) {
 			masterDoorClose = 1;
-		else if (masterevent.equals("act_close"))
+		} else if (masterevent.equals("act_close")) {
 			masterDoorClose = -1;
-		else
+		} else {
 			masterDoorClose = 0;
-		//#2
+		}
+		// #2
 		masterevent = set.getString("master_open_event", "act_nothing");
-		if (masterevent.equals("act_open"))
+		if (masterevent.equals("act_open")) {
 			masterDoorOpen = 1;
-		else if (masterevent.equals("act_close"))
+		} else if (masterevent.equals("act_close")) {
 			masterDoorOpen = -1;
-		else
+		} else {
 			masterDoorOpen = 0;
-		
-		
+		}
 	}
 	
 }

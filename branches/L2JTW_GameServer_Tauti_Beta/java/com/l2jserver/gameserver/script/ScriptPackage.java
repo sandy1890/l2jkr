@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.script;
 
@@ -26,16 +30,14 @@ import javolution.util.FastList;
 /**
  * @author Luis Arias
  */
-public class ScriptPackage
-{
+public class ScriptPackage {
 	private static final Logger _log = Logger.getLogger(ScriptPackage.class.getName());
 	
 	private final List<ScriptDocument> _scriptFiles;
 	private final List<String> _otherFiles;
 	private final String _name;
 	
-	public ScriptPackage(ZipFile pack)
-	{
+	public ScriptPackage(ZipFile pack) {
 		_scriptFiles = new FastList<>();
 		_otherFiles = new FastList<>();
 		_name = pack.getName();
@@ -45,41 +47,31 @@ public class ScriptPackage
 	/**
 	 * @return Returns the otherFiles.
 	 */
-	public List<String> getOtherFiles()
-	{
+	public List<String> getOtherFiles() {
 		return _otherFiles;
 	}
 	
 	/**
 	 * @return Returns the scriptFiles.
 	 */
-	public List<ScriptDocument> getScriptFiles()
-	{
+	public List<ScriptDocument> getScriptFiles() {
 		return _scriptFiles;
 	}
 	
 	/**
 	 * @param pack
 	 */
-	private void addFiles(ZipFile pack)
-	{
-		for (Enumeration<? extends ZipEntry> e = pack.entries(); e.hasMoreElements();)
-		{
+	private void addFiles(ZipFile pack) {
+		for (Enumeration<? extends ZipEntry> e = pack.entries(); e.hasMoreElements();) {
 			ZipEntry entry = e.nextElement();
-			if (entry.getName().endsWith(".xml"))
-			{
-				try
-				{
+			if (entry.getName().endsWith(".xml")) {
+				try {
 					ScriptDocument newScript = new ScriptDocument(entry.getName(), pack.getInputStream(entry));
 					_scriptFiles.add(newScript);
-				}
-				catch (IOException io)
-				{
+				} catch (IOException io) {
 					_log.warning(getClass().getSimpleName() + ": " + io.getMessage());
 				}
-			}
-			else if (!entry.isDirectory())
-			{
+			} else if (!entry.isDirectory()) {
 				_otherFiles.add(entry.getName());
 			}
 		}
@@ -88,16 +80,13 @@ public class ScriptPackage
 	/**
 	 * @return Returns the name.
 	 */
-	public String getName()
-	{
+	public String getName() {
 		return _name;
 	}
 	
 	@Override
-	public String toString()
-	{
-		if (getScriptFiles().isEmpty() && getOtherFiles().isEmpty())
-		{
+	public String toString() {
+		if (getScriptFiles().isEmpty() && getOtherFiles().isEmpty()) {
 			return "Empty Package.";
 		}
 		
@@ -106,21 +95,17 @@ public class ScriptPackage
 		out.append(getName());
 		out.append('\n');
 		
-		if (!getScriptFiles().isEmpty())
-		{
+		if (!getScriptFiles().isEmpty()) {
 			out.append("Xml Script Files...\n");
-			for (ScriptDocument script : getScriptFiles())
-			{
+			for (ScriptDocument script : getScriptFiles()) {
 				out.append(script.getName());
 				out.append('\n');
 			}
 		}
 		
-		if (!getOtherFiles().isEmpty())
-		{
+		if (!getOtherFiles().isEmpty()) {
 			out.append("Other Files...\n");
-			for (String fileName : getOtherFiles())
-			{
+			for (String fileName : getOtherFiles()) {
 				out.append(fileName);
 				out.append('\n');
 			}

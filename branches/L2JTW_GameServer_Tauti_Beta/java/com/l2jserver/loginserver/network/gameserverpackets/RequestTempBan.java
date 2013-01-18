@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
@@ -27,8 +31,7 @@ import com.l2jserver.util.network.BaseRecievePacket;
 /**
  * @author mrTJO
  */
-public class RequestTempBan extends BaseRecievePacket
-{
+public class RequestTempBan extends BaseRecievePacket {
 	private static final Logger _log = Logger.getLogger(RequestTempBan.class.getName());
 	
 	private final String _accountName;
@@ -40,25 +43,21 @@ public class RequestTempBan extends BaseRecievePacket
 	/**
 	 * @param decrypt
 	 */
-	public RequestTempBan(byte[] decrypt)
-	{
+	public RequestTempBan(byte[] decrypt) {
 		super(decrypt);
 		_accountName = readS();
 		_ip = readS();
 		_banTime = readQ();
 		boolean haveReason = readC() == 0 ? false : true;
-		if (haveReason)
-		{
+		if (haveReason) {
 			_banReason = readS();
 		}
 		banUser();
 	}
 	
-	private void banUser()
-	{
+	private void banUser() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO account_data VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE value=?");
 			statement.setString(1, _accountName);
@@ -67,22 +66,15 @@ public class RequestTempBan extends BaseRecievePacket
 			statement.setString(4, Long.toString(_banTime));
 			statement.execute();
 			statement.close();
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		
-		try
-		{
+		try {
 			LoginController.getInstance().addBanForAddress(_ip, _banTime);
-		}
-		catch (UnknownHostException e)
-		{
+		} catch (UnknownHostException e) {
 			
 		}
 	}

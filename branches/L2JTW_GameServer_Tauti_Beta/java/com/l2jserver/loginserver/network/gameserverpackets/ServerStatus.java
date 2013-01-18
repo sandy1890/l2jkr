@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
@@ -24,8 +28,7 @@ import com.l2jserver.util.network.BaseRecievePacket;
 /**
  * @author -Wooden-
  */
-public class ServerStatus extends BaseRecievePacket
-{
+public class ServerStatus extends BaseRecievePacket {
 	protected static Logger _log = Logger.getLogger(ServerStatus.class.getName());
 	
 	public static final String[] STATUS_STRING =
@@ -74,35 +77,31 @@ public class ServerStatus extends BaseRecievePacket
 	 * @param decrypt
 	 * @param server
 	 */
-	public ServerStatus(byte[] decrypt, GameServerThread server)
-	{
+	public ServerStatus(byte[] decrypt, GameServerThread server) {
 		super(decrypt);
 		
 		GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(server.getServerId());
-		if (gsi != null)
-		{
+		if (gsi != null) {
 			int size = readD();
-			for (int i = 0; i < size; i++)
-			{
+			for (int i = 0; i < size; i++) {
 				int type = readD();
 				int value = readD();
-				switch (type)
-				{
+				switch (type) {
 					case SERVER_LIST_STATUS:
 						gsi.setStatus(value);
-						break;
+					break;
 					case SERVER_LIST_SQUARE_BRACKET:
 						gsi.setShowingBrackets(value == ON);
-						break;
+					break;
 					case MAX_PLAYERS:
 						gsi.setMaxPlayers(value);
-						break;
+					break;
 					case SERVER_TYPE:
 						gsi.setServerType(value);
-						break;
+					break;
 					case SERVER_AGE:
 						gsi.setAgeLimit(value);
-						break;
+					break;
 				}
 			}
 		}

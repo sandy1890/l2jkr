@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -18,29 +22,27 @@ import com.l2jserver.gameserver.model.PartyMatchRoom;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Mode: <ul>
- * <li>0 - add </li>
- * <li>1 - modify </li>
+ * Mode:
+ * <ul>
+ * <li>0 - add</li>
+ * <li>1 - modify</li>
  * <li>2 - quit</li>
  * </ul>
- * @author Gnacik 
+ * @author Gnacik
  */
-public class ExManagePartyRoomMember extends L2GameServerPacket
-{
+public class ExManagePartyRoomMember extends L2GameServerPacket {
 	private final L2PcInstance _activeChar;
 	private final PartyMatchRoom _room;
 	private final int _mode;
 	
-	public ExManagePartyRoomMember(L2PcInstance player, PartyMatchRoom room, int mode)
-	{
+	public ExManagePartyRoomMember(L2PcInstance player, PartyMatchRoom room, int mode) {
 		_activeChar = player;
 		_room = room;
 		_mode = mode;
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x0A);
 		writeD(_mode);
@@ -49,26 +51,19 @@ public class ExManagePartyRoomMember extends L2GameServerPacket
 		writeD(_activeChar.getActiveClass());
 		writeD(_activeChar.getLevel());
 		writeD(0); // TODO: Closes town
-		if (_room.getOwner().equals(_activeChar))
-		{
+		if (_room.getOwner().equals(_activeChar)) {
 			writeD(1);
-		}
-		else
-		{
-			if ((_room.getOwner().isInParty() && _activeChar.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == _activeChar.getParty().getLeaderObjectId()))
-			{
+		} else {
+			if ((_room.getOwner().isInParty() && _activeChar.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == _activeChar.getParty().getLeaderObjectId())) {
 				writeD(2);
-			}
-			else
-			{
+			} else {
 				writeD(0);
 			}
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return "[S] FE:0A ExManagePartyRoomMember";
 	}
 }

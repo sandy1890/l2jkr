@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -21,45 +25,33 @@ import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.entity.Fort;
 
 /**
- * format: d (dSdd)
- * cnt:%d (fortressID:%d ownerName:%s, siegeState:%d, lastOwnedTime:%d)
- * 
+ * format: d (dSdd) cnt:%d (fortressID:%d ownerName:%s, siegeState:%d, lastOwnedTime:%d)
  * @author KenM
  */
-public class ExShowFortressInfo extends L2GameServerPacket
-{
+public class ExShowFortressInfo extends L2GameServerPacket {
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return "[S] FE:15 ExShowFortressInfo";
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x15);
 		List<Fort> forts = FortManager.getInstance().getForts();
 		writeD(forts.size());
-		for (Fort fort : forts)
-		{
+		for (Fort fort : forts) {
 			L2Clan clan = fort.getOwnerClan();
 			writeD(fort.getFortId());
-			if (clan != null)
-			{
+			if (clan != null) {
 				writeS(clan.getName());
-			}
-			else
-			{
+			} else {
 				writeS("");
 			}
 			
-			if (fort.getSiege().getIsInProgress())
-			{
+			if (fort.getSiege().getIsInProgress()) {
 				writeD(1);
-			}
-			else
-			{
+			} else {
 				writeD(0);
 			}
 			

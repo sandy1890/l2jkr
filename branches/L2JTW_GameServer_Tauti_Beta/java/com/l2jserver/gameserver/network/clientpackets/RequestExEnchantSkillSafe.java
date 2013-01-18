@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -40,8 +44,7 @@ import com.l2jserver.util.Rnd;
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x32 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillSafe extends L2GameClientPacket
-{
+public final class RequestExEnchantSkillSafe extends L2GameClientPacket {
 	private static final String _C__D0_32_REQUESTEXENCHANTSKILLSAFE = "[C] D0:32 RequestExEnchantSkillSafe";
 	private static final Logger _logEnchant = Logger.getLogger("enchant");
 	
@@ -49,18 +52,16 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 	private int _skillLvl;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_skillId = readD();
 		_skillLvl = readD();
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		if (_skillId <= 0 || _skillLvl <= 0) // minimal sanity check
 			return;
-
+		
 		L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 			return;
@@ -71,21 +72,18 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 			return;
 		}
 		
-		if (player.getLevel() < 76)
-		{
+		if (player.getLevel() < 76) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILL_ENCHANT_ON_THIS_LEVEL);
 			return;
 		}
 		
-		if (!player.isAllowedToEnchantSkills())
-		{
+		if (!player.isAllowedToEnchantSkills()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILL_ENCHANT_ATTACKING_TRANSFORMED_BOAT);
 			return;
 		}
 		
 		L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
-		if (skill == null)
-		{
+		if (skill == null) {
 			return;
 		}
 		
@@ -93,14 +91,12 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 		int reqItemId = EnchantGroupsData.SAFE_ENCHANT_BOOK;
 		
 		L2EnchantSkillLearn s = EnchantGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
-		if (s == null)
-		{
+		if (s == null) {
 			return;
 		}
 		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
 		final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
-		if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
-		{
+		if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl)) {
 			return;
 		}
 		
@@ -108,8 +104,7 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 		int requireditems = esd.getAdenaCost() * costMultiplier;
 		int rate = esd.getRate(player);
 		
-		if (player.getSp() >= requiredSp)
-		{
+		if (player.getSp() >= requiredSp) {
 			// No config option for safe enchant book consume
 			L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 			if (spb == null)// Haven't spellbook
@@ -118,8 +113,7 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 				return;
 			}
 			
-			if (player.getInventory().getAdena() < requireditems)
-			{
+			if (player.getInventory().getAdena() < requireditems) {
 				player.sendPacket(SystemMessageId.YOU_DONT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
 				return;
 			}
@@ -129,30 +123,29 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 			
 			check &= player.destroyItemByItemId("Consume", PcInventory.ADENA_ID, requireditems, player, true);
 			
-			if (!check)
-			{
+			if (!check) {
 				player.sendPacket(SystemMessageId.YOU_DONT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
 				return;
 			}
 			
 			// ok. Destroy ONE copy of the book
-			if (Rnd.get(100) <= rate)
-			{
-				if (Config.LOG_SKILL_ENCHANTS)
-				{
+			if (Rnd.get(100) <= rate) {
+				if (Config.LOG_SKILL_ENCHANTS) {
 					LogRecord record = new LogRecord(Level.INFO, "Safe Success");
 					record.setParameters(new Object[]
-					                                {
-							player, skill, spb, rate
-					                                });
+					{
+						player,
+						skill,
+						spb,
+						rate
+					});
 					record.setLoggerName("skill");
 					_logEnchant.log(record);
 				}
 				
 				player.addSkill(skill, true);
 				
-				if (Config.DEBUG)
-				{
+				if (Config.DEBUG) {
 					_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requireditems + " Adena.");
 				}
 				
@@ -161,16 +154,16 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_ENCHANTING_THE_SKILL_S1);
 				sm.addSkillName(_skillId);
 				player.sendPacket(sm);
-			}
-			else
-			{
-				if (Config.LOG_SKILL_ENCHANTS)
-				{
+			} else {
+				if (Config.LOG_SKILL_ENCHANTS) {
 					LogRecord record = new LogRecord(Level.INFO, "Safe Fail");
 					record.setParameters(new Object[]
-					                                {
-							player, skill, spb, rate
-					                                });
+					{
+						player,
+						skill,
+						spb,
+						rate
+					});
 					record.setLoggerName("skill");
 					_logEnchant.log(record);
 				}
@@ -188,17 +181,14 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 			player.sendPacket(new ExEnchantSkillInfo(_skillId, afterEnchantSkillLevel));
 			player.sendPacket(new ExEnchantSkillInfoDetail(1, _skillId, afterEnchantSkillLevel + 1, player));
 			player.updateShortCuts(_skillId, afterEnchantSkillLevel);
-		}
-		else
-		{
+		} else {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DONT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 			player.sendPacket(sm);
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_32_REQUESTEXENCHANTSKILLSAFE;
 	}
 }

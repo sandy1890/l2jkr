@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.util;
 
@@ -31,15 +35,12 @@ import com.l2jserver.util.file.filter.ExtFilter;
 /**
  * General Utility functions related to game server.
  */
-public final class Util
-{
-	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, int punishment)
-	{
+public final class Util {
+	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, int punishment) {
 		ThreadPoolManager.getInstance().scheduleGeneral(new IllegalPlayerAction(actor, message, punishment), 5000);
 	}
 	
-	public static String getRelativePath(File base, File file)
-	{
+	public static String getRelativePath(File base, File file) {
 		return file.toURI().getPath().substring(base.toURI().getPath().length());
 	}
 	
@@ -48,8 +49,7 @@ public final class Util
 	 * @param obj2
 	 * @return degree value of object 2 to the horizontal line with object 1 being the origin.
 	 */
-	public static double calculateAngleFrom(L2Object obj1, L2Object obj2)
-	{
+	public static double calculateAngleFrom(L2Object obj1, L2Object obj2) {
 		return calculateAngleFrom(obj1.getX(), obj1.getY(), obj2.getX(), obj2.getY());
 	}
 	
@@ -60,51 +60,41 @@ public final class Util
 	 * @param obj2Y
 	 * @return degree value of object 2 to the horizontal line with object 1 being the origin
 	 */
-	public static final double calculateAngleFrom(int obj1X, int obj1Y, int obj2X, int obj2Y)
-	{
+	public static final double calculateAngleFrom(int obj1X, int obj1Y, int obj2X, int obj2Y) {
 		double angleTarget = Math.toDegrees(Math.atan2(obj2Y - obj1Y, obj2X - obj1X));
-		if (angleTarget < 0)
-		{
+		if (angleTarget < 0) {
 			angleTarget = 360 + angleTarget;
 		}
 		return angleTarget;
 	}
 	
-	public static final double convertHeadingToDegree(int clientHeading)
-	{
+	public static final double convertHeadingToDegree(int clientHeading) {
 		double degree = clientHeading / 182.044444444;
 		return degree;
 	}
 	
-	public static final int convertDegreeToClientHeading(double degree)
-	{
-		if (degree < 0)
-		{
+	public static final int convertDegreeToClientHeading(double degree) {
+		if (degree < 0) {
 			degree = 360 + degree;
 		}
 		return (int) (degree * 182.044444444);
 	}
 	
-	public static final int calculateHeadingFrom(L2Object obj1, L2Object obj2)
-	{
+	public static final int calculateHeadingFrom(L2Object obj1, L2Object obj2) {
 		return calculateHeadingFrom(obj1.getX(), obj1.getY(), obj2.getX(), obj2.getY());
 	}
 	
-	public static final int calculateHeadingFrom(int obj1X, int obj1Y, int obj2X, int obj2Y)
-	{
+	public static final int calculateHeadingFrom(int obj1X, int obj1Y, int obj2X, int obj2Y) {
 		double angleTarget = Math.toDegrees(Math.atan2(obj2Y - obj1Y, obj2X - obj1X));
-		if (angleTarget < 0)
-		{
+		if (angleTarget < 0) {
 			angleTarget = 360 + angleTarget;
 		}
 		return (int) (angleTarget * 182.044444444);
 	}
 	
-	public static final int calculateHeadingFrom(double dx, double dy)
-	{
+	public static final int calculateHeadingFrom(double dx, double dy) {
 		double angleTarget = Math.toDegrees(Math.atan2(dy, dx));
-		if (angleTarget < 0)
-		{
+		if (angleTarget < 0) {
 			angleTarget = 360 + angleTarget;
 		}
 		return (int) (angleTarget * 182.044444444);
@@ -117,8 +107,7 @@ public final class Util
 	 * @param y2
 	 * @return the distance between the two coordinates in 2D plane
 	 */
-	public static double calculateDistance(int x1, int y1, int x2, int y2)
-	{
+	public static double calculateDistance(int x1, int y1, int x2, int y2) {
 		return calculateDistance(x1, y1, 0, x2, y2, 0, false);
 	}
 	
@@ -132,13 +121,11 @@ public final class Util
 	 * @param includeZAxis - if true, includes also the Z axis in the calculation
 	 * @return the distance between the two coordinates
 	 */
-	public static double calculateDistance(int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis)
-	{
+	public static double calculateDistance(int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis) {
 		double dx = (double) x1 - x2;
 		double dy = (double) y1 - y2;
 		
-		if (includeZAxis)
-		{
+		if (includeZAxis) {
 			double dz = z1 - z2;
 			return Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 		}
@@ -151,10 +138,8 @@ public final class Util
 	 * @param includeZAxis - if true, includes also the Z axis in the calculation
 	 * @return the distance between the two objects
 	 */
-	public static double calculateDistance(L2Object obj1, L2Object obj2, boolean includeZAxis)
-	{
-		if ((obj1 == null) || (obj2 == null))
-		{
+	public static double calculateDistance(L2Object obj1, L2Object obj2, boolean includeZAxis) {
+		if ((obj1 == null) || (obj2 == null)) {
 			return 1000000;
 		}
 		
@@ -165,17 +150,14 @@ public final class Util
 	 * @param str - the string whose first letter to capitalize
 	 * @return a string with the first letter of the {@code str} capitalized
 	 */
-	public static String capitalizeFirst(String str)
-	{
-		if ((str == null) || str.isEmpty())
-		{
+	public static String capitalizeFirst(String str) {
+		if ((str == null) || str.isEmpty()) {
 			return str;
 		}
 		final char[] arr = str.toCharArray();
 		final char c = arr[0];
 		
-		if (Character.isLetter(c))
-		{
+		if (Character.isLetter(c)) {
 			arr[0] = Character.toUpperCase(c);
 		}
 		return new String(arr);
@@ -188,10 +170,8 @@ public final class Util
 	 * @return a string with the first letter of every word in {@code str} capitalized
 	 */
 	@Deprecated
-	public static String capitalizeWords(String str)
-	{
-		if ((str == null) || str.isEmpty())
-		{
+	public static String capitalizeWords(String str) {
+		if ((str == null) || str.isEmpty()) {
 			return str;
 		}
 		
@@ -201,10 +181,8 @@ public final class Util
 		// Capitalize the first letter in the given string!
 		charArray[0] = Character.toUpperCase(charArray[0]);
 		
-		for (int i = 0; i < charArray.length; i++)
-		{
-			if (Character.isWhitespace(charArray[i]))
-			{
+		for (int i = 0; i < charArray.length; i++) {
+			if (Character.isWhitespace(charArray[i])) {
 				charArray[i + 1] = Character.toUpperCase(charArray[i + 1]);
 			}
 			
@@ -221,36 +199,29 @@ public final class Util
 	 * @param includeZAxis
 	 * @return {@code true} if the two objects are within specified range between each other, {@code false} otherwise
 	 */
-	public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
-	{
-		if ((obj1 == null) || (obj2 == null))
-		{
+	public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis) {
+		if ((obj1 == null) || (obj2 == null)) {
 			return false;
 		}
-		if (obj1.getInstanceId() != obj2.getInstanceId())
-		{
+		if (obj1.getInstanceId() != obj2.getInstanceId()) {
 			return false;
 		}
-		if (range == -1)
-		{
+		if (range == -1) {
 			return true; // not limited
 		}
 		
 		int rad = 0;
-		if (obj1 instanceof L2Character)
-		{
+		if (obj1 instanceof L2Character) {
 			rad += ((L2Character) obj1).getTemplate().getCollisionRadius();
 		}
-		if (obj2 instanceof L2Character)
-		{
+		if (obj2 instanceof L2Character) {
 			rad += ((L2Character) obj2).getTemplate().getCollisionRadius();
 		}
 		
 		double dx = obj1.getX() - obj2.getX();
 		double dy = obj1.getY() - obj2.getY();
 		
-		if (includeZAxis)
-		{
+		if (includeZAxis) {
 			double dz = obj1.getZ() - obj2.getZ();
 			double d = (dx * dx) + (dy * dy) + (dz * dz);
 			
@@ -268,22 +239,18 @@ public final class Util
 	 * @param includeZAxis if true, check also Z axis (3-dimensional check), otherwise only 2D
 	 * @return {@code true} if objects are within specified range between each other, {@code false} otherwise
 	 */
-	public static boolean checkIfInShortRadius(int radius, L2Object obj1, L2Object obj2, boolean includeZAxis)
-	{
-		if ((obj1 == null) || (obj2 == null))
-		{
+	public static boolean checkIfInShortRadius(int radius, L2Object obj1, L2Object obj2, boolean includeZAxis) {
+		if ((obj1 == null) || (obj2 == null)) {
 			return false;
 		}
-		if (radius == -1)
-		{
+		if (radius == -1) {
 			return true; // not limited
 		}
 		
 		int dx = obj1.getX() - obj2.getX();
 		int dy = obj1.getY() - obj2.getY();
 		
-		if (includeZAxis)
-		{
+		if (includeZAxis) {
 			int dz = obj1.getZ() - obj2.getZ();
 			return ((dx * dx) + (dy * dy) + (dz * dz)) <= (radius * radius);
 		}
@@ -294,8 +261,7 @@ public final class Util
 	 * @param str - the String to count
 	 * @return the number of "words" in a given string.
 	 */
-	public static int countWords(String str)
-	{
+	public static int countWords(String str) {
 		return str.trim().split("\\s+").length;
 	}
 	
@@ -305,12 +271,10 @@ public final class Util
 	 * @param strDelim - the delimiter to put between the strings
 	 * @return a delimited string for a given array of string elements.
 	 */
-	public static String implodeString(Iterable<String> strArray, String strDelim)
-	{
+	public static String implodeString(Iterable<String> strArray, String strDelim) {
 		final TextBuilder sbString = TextBuilder.newInstance();
 		
-		for (String strValue : strArray)
-		{
+		for (String strValue : strArray) {
 			sbString.append(strValue);
 			sbString.append(strDelim);
 		}
@@ -326,10 +290,8 @@ public final class Util
 	 * @param numPlaces - how many digits after decimal point to leave intact
 	 * @return the value of {@code number} rounded to specified number of digits after the decimal point.
 	 */
-	public static float roundTo(float number, int numPlaces)
-	{
-		if (numPlaces <= 1)
-		{
+	public static float roundTo(float number, int numPlaces) {
+		if (numPlaces <= 1) {
 			return Math.round(number);
 		}
 		
@@ -341,16 +303,12 @@ public final class Util
 	 * @param text - the text to check
 	 * @return {@code true} if {@code text} contains only numbers, {@code false} otherwise
 	 */
-	public static boolean isDigit(String text)
-	{
-		if ((text == null) || text.isEmpty())
-		{
+	public static boolean isDigit(String text) {
+		if ((text == null) || text.isEmpty()) {
 			return false;
 		}
-		for (char c : text.toCharArray())
-		{
-			if (!Character.isDigit(c))
-			{
+		for (char c : text.toCharArray()) {
+			if (!Character.isDigit(c)) {
 				return false;
 			}
 		}
@@ -361,16 +319,12 @@ public final class Util
 	 * @param text - the text to check
 	 * @return {@code true} if {@code text} contains only letters and/or numbers, {@code false} otherwise
 	 */
-	public static boolean isAlphaNumeric(String text)
-	{
-		if ((text == null) || text.isEmpty())
-		{
+	public static boolean isAlphaNumeric(String text) {
+		if ((text == null) || text.isEmpty()) {
 			return false;
 		}
-		for (char c : text.toCharArray())
-		{
-			if (!Character.isLetterOrDigit(c))
-			{
+		for (char c : text.toCharArray()) {
+			if (!Character.isLetterOrDigit(c)) {
 				return false;
 			}
 		}
@@ -383,20 +337,16 @@ public final class Util
 	 * @param amount - the amount of adena
 	 * @return the formatted adena amount
 	 */
-	public static String formatAdena(long amount)
-	{
+	public static String formatAdena(long amount) {
 		String s = "";
 		long rem = amount % 1000;
 		s = Long.toString(rem);
 		amount = (amount - rem) / 1000;
-		while (amount > 0)
-		{
-			if (rem < 99)
-			{
+		while (amount > 0) {
+			if (rem < 99) {
 				s = '0' + s;
 			}
-			if (rem < 9)
-			{
+			if (rem < 9) {
 				s = '0' + s;
 			}
 			rem = amount % 1000;
@@ -412,10 +362,8 @@ public final class Util
 	 * @param format : the format to correct by.
 	 * @return a string representation of the formatted date.
 	 */
-	public static String formatDate(Date date, String format)
-	{
-		if (date == null)
-		{
+	public static String formatDate(Date date, String format) {
+		if (date == null) {
 			return null;
 		}
 		final DateFormat dateFormat = new SimpleDateFormat(format);
@@ -428,12 +376,9 @@ public final class Util
 	 * @param obj - the object to search for
 	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise.
 	 */
-	public static <T> boolean contains(T[] array, T obj)
-	{
-		for (T element : array)
-		{
-			if (element == obj)
-			{
+	public static <T> boolean contains(T[] array, T obj) {
+		for (T element : array) {
+			if (element == obj) {
 				return true;
 			}
 		}
@@ -445,30 +390,24 @@ public final class Util
 	 * @param obj - the integer to search for
 	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise
 	 */
-	public static boolean contains(int[] array, int obj)
-	{
-		for (int element : array)
-		{
-			if (element == obj)
-			{
+	public static boolean contains(int[] array, int obj) {
+		for (int element : array) {
+			if (element == obj) {
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	public static File[] getDatapackFiles(String dirname, String extention)
-	{
+	public static File[] getDatapackFiles(String dirname, String extention) {
 		File dir = new File(Config.DATAPACK_ROOT, "data/" + dirname);
-		if (!dir.exists())
-		{
+		if (!dir.exists()) {
 			return null;
 		}
 		return dir.listFiles(new ExtFilter(extention));
 	}
 	
-	public static String getDateString(Date date)
-	{
+	public static String getDateString(Date date) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		return dateFormat.format(date.getTime());
 	}

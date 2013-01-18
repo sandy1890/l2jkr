@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.script.faenor;
 
@@ -32,17 +36,14 @@ import com.l2jserver.gameserver.script.EngineInterface;
 /**
  * @author Luis Arias
  */
-public class FaenorInterface implements EngineInterface
-{
+public class FaenorInterface implements EngineInterface {
 	protected static final Logger _log = Logger.getLogger(FaenorInterface.class.getName());
 	
-	public static FaenorInterface getInstance()
-	{
+	public static FaenorInterface getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	public List<?> getAllPlayers()
-	{
+	public List<?> getAllPlayers() {
 		return null;
 	}
 	
@@ -51,11 +52,9 @@ public class FaenorInterface implements EngineInterface
 	 * @see com.l2jserver.gameserver.script.EngineInterface#addQuestDrop(int, int, int, int, int, String, String[])
 	 */
 	@Override
-	public void addQuestDrop(int npcID, int itemID, int min, int max, int chance, String questID, String[] states)
-	{
+	public void addQuestDrop(int npcID, int itemID, int min, int max, int chance, String questID, String[] states) {
 		L2NpcTemplate npc = NpcTable.getInstance().getTemplate(npcID);
-		if (npc == null)
-		{
+		if (npc == null) {
 			throw new NullPointerException();
 		}
 		L2DropData drop = new L2DropData();
@@ -79,13 +78,10 @@ public class FaenorInterface implements EngineInterface
 	 * @throws NullPointerException
 	 * @see com.l2jserver.gameserver.script.EngineInterface#addQuestDrop(int, int, int, int, int, String, String[])
 	 */
-	public void addDrop(int npcID, int itemID, int min, int max, boolean sweep, int chance) throws NullPointerException
-	{
+	public void addDrop(int npcID, int itemID, int min, int max, boolean sweep, int chance) throws NullPointerException {
 		L2NpcTemplate npc = NpcTable.getInstance().getTemplate(npcID);
-		if (npc == null)
-		{
-			if (Config.DEBUG)
-			{
+		if (npc == null) {
+			if (Config.DEBUG) {
 				_log.warning("Npc doesnt Exist");
 			}
 			throw new NullPointerException();
@@ -105,20 +101,14 @@ public class FaenorInterface implements EngineInterface
 	 * @param drop
 	 * @param sweep
 	 */
-	public void addDrop(L2NpcTemplate npc, L2DropData drop, boolean sweep)
-	{
-		if (sweep)
-		{
+	public void addDrop(L2NpcTemplate npc, L2DropData drop, boolean sweep) {
+		if (sweep) {
 			addDrop(npc, drop, -1);
-		}
-		else
-		{
+		} else {
 			int maxCategory = -1;
 			
-			for (L2DropCategory cat : npc.getDropData())
-			{
-				if (maxCategory < cat.getCategoryType())
-				{
+			for (L2DropCategory cat : npc.getDropData()) {
+				if (maxCategory < cat.getCategoryType()) {
 					maxCategory = cat.getCategoryType();
 				}
 			}
@@ -133,25 +123,19 @@ public class FaenorInterface implements EngineInterface
 	 * @param drop
 	 * @param category
 	 */
-	public void addDrop(L2NpcTemplate npc, L2DropData drop, int category)
-	{
+	public void addDrop(L2NpcTemplate npc, L2DropData drop, int category) {
 		npc.addDropData(drop, category);
 	}
 	
-	public List<L2DropData> getQuestDrops(int npcID)
-	{
+	public List<L2DropData> getQuestDrops(int npcID) {
 		L2NpcTemplate npc = NpcTable.getInstance().getTemplate(npcID);
-		if (npc == null)
-		{
+		if (npc == null) {
 			return null;
 		}
 		List<L2DropData> questDrops = new FastList<>();
-		for (L2DropCategory cat : npc.getDropData())
-		{
-			for (L2DropData drop : cat.getAllDrops())
-			{
-				if (drop.getQuestID() != null)
-				{
+		for (L2DropCategory cat : npc.getDropData()) {
+			for (L2DropData drop : cat.getAllDrops()) {
+				if (drop.getQuestID() != null) {
 					questDrops.add(drop);
 				}
 			}
@@ -160,19 +144,16 @@ public class FaenorInterface implements EngineInterface
 	}
 	
 	@Override
-	public void addEventDrop(int[] items, int[] count, double chance, DateRange range)
-	{
+	public void addEventDrop(int[] items, int[] count, double chance, DateRange range) {
 		EventDroplist.getInstance().addGlobalDrop(items, count, (int) (chance * L2DropData.MAX_CHANCE), range);
 	}
 	
 	@Override
-	public void onPlayerLogin(String[] message, DateRange validDateRange)
-	{
+	public void onPlayerLogin(String[] message, DateRange validDateRange) {
 		Announcements.getInstance().addEventAnnouncement(validDateRange, message);
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final FaenorInterface _instance = new FaenorInterface();
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.conditions;
 
@@ -20,16 +24,15 @@ import com.l2jserver.gameserver.model.stats.Env;
  * The Class ConditionLogicAnd.
  * @author mkizub
  */
-public class ConditionLogicAnd extends Condition
-{
+public class ConditionLogicAnd extends Condition {
+	
 	private static Condition[] _emptyConditions = new Condition[0];
 	public Condition[] conditions = _emptyConditions;
 	
 	/**
 	 * Instantiates a new condition logic and.
 	 */
-	public ConditionLogicAnd()
-	{
+	public ConditionLogicAnd() {
 		super();
 	}
 	
@@ -37,14 +40,11 @@ public class ConditionLogicAnd extends Condition
 	 * Adds the.
 	 * @param condition the condition
 	 */
-	public void add(Condition condition)
-	{
-		if (condition == null)
-		{
+	public void add(Condition condition) {
+		if (condition == null) {
 			return;
 		}
-		if (getListener() != null)
-		{
+		if (getListener() != null) {
 			condition.setListener(this);
 		}
 		final int len = conditions.length;
@@ -60,19 +60,13 @@ public class ConditionLogicAnd extends Condition
 	 * @see com.l2jserver.gameserver.model.conditions.Condition#setListener(com.l2jserver.gameserver.model.conditions.ConditionListener)
 	 */
 	@Override
-	void setListener(ConditionListener listener)
-	{
-		if (listener != null)
-		{
-			for (Condition c : conditions)
-			{
+	void setListener(ConditionListener listener) {
+		if (listener != null) {
+			for (Condition c : conditions) {
 				c.setListener(this);
 			}
-		}
-		else
-		{
-			for (Condition c : conditions)
-			{
+		} else {
+			for (Condition c : conditions) {
 				c.setListener(null);
 			}
 		}
@@ -86,15 +80,13 @@ public class ConditionLogicAnd extends Condition
 	 * @see com.l2jserver.gameserver.model.conditions.Condition#testImpl(com.l2jserver.gameserver.model.stats.Env)
 	 */
 	@Override
-	public boolean testImpl(Env env)
-	{
-		for (Condition c : conditions)
-		{
-			if (!c.test(env))
-			{
+	public boolean testImpl(Env env) {
+		for (Condition c : conditions) {
+			if (!c.test(env)) {
 				return false;
 			}
 		}
 		return true;
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -38,7 +42,9 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.L2Player; //rocknow-God-Awaking
+import com.l2jserver.gameserver.network.serverpackets.L2Player;
+
+//rocknow-God-Awaking
 
 /**
  * Mother class of all objects in the world which ones is it possible to interact (PC, NPC, Item...)<BR>
@@ -47,8 +53,8 @@ import com.l2jserver.gameserver.network.serverpackets.L2Player; //rocknow-God-Aw
  * <BR>
  * <li>L2Character</li> <li>L2ItemInstance</li>
  */
-public abstract class L2Object
-{
+public abstract class L2Object {
+	
 	private boolean _isVisible; // Object visibility
 	private ObjectKnownList _knownList;
 	private String _name;
@@ -59,16 +65,14 @@ public abstract class L2Object
 	
 	private InstanceType _instanceType = null;
 	
-	public L2Object(int objectId)
-	{
+	public L2Object(int objectId) {
 		setInstanceType(InstanceType.L2Object);
 		_objectId = objectId;
 		initKnownList();
 		initPosition();
 	}
 	
-	public static enum InstanceType
-	{
+	public static enum InstanceType {
 		L2Object(null),
 		L2ItemInstance(L2Object),
 		L2Character(L2Object),
@@ -195,103 +199,88 @@ public abstract class L2Object
 		private final long _maskL;
 		private final long _maskH;
 		
-		private InstanceType(InstanceType parent)
-		{
+		private InstanceType(InstanceType parent) {
 			_parent = parent;
 			
 			final int high = this.ordinal() - (Long.SIZE - 1);
-			if (high < 0)
-			{
+			if (high < 0) {
 				_typeL = 1L << this.ordinal();
 				_typeH = 0;
-			}
-			else
-			{
+			} else {
 				_typeL = 0;
 				_typeH = 1L << high;
 			}
 			
-			if (_typeL < 0 || _typeH < 0)
+			if ((_typeL < 0) || (_typeH < 0)) {
 				throw new Error("Too many instance types, failed to load " + this.name());
+			}
 			
-			if (parent != null)
-			{
+			if (parent != null) {
 				_maskL = _typeL | parent._maskL;
 				_maskH = _typeH | parent._maskH;
-			}
-			else
-			{
+			} else {
 				_maskL = _typeL;
 				_maskH = _typeH;
 			}
 		}
 		
-		public final InstanceType getParent()
-		{
+		public final InstanceType getParent() {
 			return _parent;
 		}
 		
-		public final boolean isType(InstanceType it)
-		{
-			return (_maskL & it._typeL) > 0 || (_maskH & it._typeH) > 0;
+		public final boolean isType(InstanceType it) {
+			return ((_maskL & it._typeL) > 0) || ((_maskH & it._typeH) > 0);
 		}
 		
-		public final boolean isTypes(InstanceType... it)
-		{
-			for (InstanceType i : it)
-			{
-				if (isType(i))
+		public final boolean isTypes(InstanceType... it) {
+			for (InstanceType i : it) {
+				if (isType(i)) {
 					return true;
+				}
 			}
 			return false;
 		}
 	}
 	
-	protected final void setInstanceType(InstanceType i)
-	{
+	protected final void setInstanceType(InstanceType i) {
 		_instanceType = i;
 	}
 	
-	public final InstanceType getInstanceType()
-	{
+	public final InstanceType getInstanceType() {
 		return _instanceType;
 	}
 	
-	public final boolean isInstanceType(InstanceType i)
-	{
+	public final boolean isInstanceType(InstanceType i) {
 		return _instanceType.isType(i);
 	}
 	
-	public final boolean isInstanceTypes(InstanceType... i)
-	{
+	public final boolean isInstanceTypes(InstanceType... i) {
 		return _instanceType.isTypes(i);
 	}
 	
-	public final void onAction(L2PcInstance player)
-	{
+	public final void onAction(L2PcInstance player) {
 		onAction(player, true);
 	}
 	
-	public void onAction(L2PcInstance player, boolean interact)
-	{
+	public void onAction(L2PcInstance player, boolean interact) {
 		IActionHandler handler = ActionHandler.getInstance().getHandler(getInstanceType());
-		if (handler != null)
+		if (handler != null) {
 			handler.action(player, this, interact);
+		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	public void onActionShift(L2PcInstance player)
-	{
+	public void onActionShift(L2PcInstance player) {
 		IActionHandler handler = ActionShiftHandler.getInstance().getHandler(getInstanceType());
-		if (handler != null)
+		if (handler != null) {
 			handler.action(player, this, true);
+		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	public void onForcedAttack(L2PcInstance player)
-	{
+	public void onForcedAttack(L2PcInstance player) {
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
@@ -303,118 +292,106 @@ public abstract class L2Object
 	 * <li>L2GuardInstance : Set the home location of its L2GuardInstance</li> <li>L2Attackable : Reset the Spoiled flag</li><BR>
 	 * <BR>
 	 */
-	public void onSpawn()
-	{
+	public void onSpawn() {
 	}
 	
 	// Position - Should remove to fully move to L2ObjectPosition
-	public final void setXYZ(int x, int y, int z)
-	{
+	public final void setXYZ(int x, int y, int z) {
 		getPosition().setXYZ(x, y, z);
 	}
 	
-	public final void setXYZInvisible(int x, int y, int z)
-	{
+	public final void setXYZInvisible(int x, int y, int z) {
 		getPosition().setXYZInvisible(x, y, z);
 	}
 	
-	public final int getX()
-	{
-		assert getPosition().getWorldRegion() != null || _isVisible;
+	public final int getX() {
+		assert (getPosition().getWorldRegion() != null) || _isVisible;
 		return getPosition().getX();
 	}
 	
 	/**
 	 * @return The id of the instance zone the object is in - id 0 is global since everything like dropped items, mobs, players can be in a instanciated area, it must be in l2object
 	 */
-	public int getInstanceId()
-	{
+	public int getInstanceId() {
 		return _instanceId;
 	}
 	
 	/**
 	 * @param instanceId The id of the instance zone the object is in - id 0 is global
 	 */
-	public void setInstanceId(int instanceId)
-	{
-		if (_instanceId == instanceId)
+	public void setInstanceId(int instanceId) {
+		if (_instanceId == instanceId) {
 			return;
+		}
 		
 		Instance oldI = InstanceManager.getInstance().getInstance(_instanceId);
 		Instance newI = InstanceManager.getInstance().getInstance(instanceId);
 		
-		if (newI == null)
+		if (newI == null) {
 			return;
+		}
 		
-		if (this instanceof L2PcInstance)
-		{
-			if (_instanceId > 0 && oldI != null)
-			{
+		if (this instanceof L2PcInstance) {
+			if ((_instanceId > 0) && (oldI != null)) {
 				oldI.removePlayer(getObjectId());
-				if (oldI.isShowTimer())
-				{
+				if (oldI.isShowTimer()) {
 					int startTime = (int) ((System.currentTimeMillis() - oldI.getInstanceStartTime()) / 1000);
 					int endTime = (int) ((oldI.getInstanceEndTime() - oldI.getInstanceStartTime()) / 1000);
-					if (oldI.isTimerIncrease())
+					if (oldI.isTimerIncrease()) {
 						sendPacket(new ExSendUIEvent(this, true, true, startTime, endTime, oldI.getTimerText()));
-					else
+					} else {
 						sendPacket(new ExSendUIEvent(this, true, false, endTime - startTime, 0, oldI.getTimerText()));
+					}
 				}
 			}
-			if (instanceId > 0)
-			{
+			if (instanceId > 0) {
 				newI.addPlayer(getObjectId());
-				if (newI.isShowTimer())
-				{
+				if (newI.isShowTimer()) {
 					int startTime = (int) ((System.currentTimeMillis() - newI.getInstanceStartTime()) / 1000);
 					int endTime = (int) ((newI.getInstanceEndTime() - newI.getInstanceStartTime()) / 1000);
-					if (newI.isTimerIncrease())
+					if (newI.isTimerIncrease()) {
 						sendPacket(new ExSendUIEvent(this, false, true, startTime, endTime, newI.getTimerText()));
-					else
+					} else {
 						sendPacket(new ExSendUIEvent(this, false, false, endTime - startTime, 0, newI.getTimerText()));
+					}
 				}
 			}
 			
-			if (((L2PcInstance) this).getPet() != null)
+			if (((L2PcInstance) this).getPet() != null) {
 				((L2PcInstance) this).getPet().setInstanceId(instanceId);
-		}
-		else if (this instanceof L2Npc)
-		{
-			if (_instanceId > 0 && oldI != null)
+			}
+		} else if (this instanceof L2Npc) {
+			if ((_instanceId > 0) && (oldI != null)) {
 				oldI.removeNpc(((L2Npc) this));
-			if (instanceId > 0)
+			}
+			if (instanceId > 0) {
 				newI.addNpc(((L2Npc) this));
+			}
 		}
 		
 		_instanceId = instanceId;
 		
 		// If we change it for visible objects, me must clear & revalidates knownlists
-		if (_isVisible && _knownList != null)
-		{
-			if (this instanceof L2PcInstance)
-			{
+		if (_isVisible && (_knownList != null)) {
+			if (this instanceof L2PcInstance) {
 				
 				// We don't want some ugly looking disappear/appear effects, so don't update
 				// the knownlist here, but players usually enter instancezones through teleporting
 				// and the teleport will do the revalidation for us.
-			}
-			else
-			{
+			} else {
 				decayMe();
 				spawnMe();
 			}
 		}
 	}
 	
-	public final int getY()
-	{
-		assert getPosition().getWorldRegion() != null || _isVisible;
+	public final int getY() {
+		assert (getPosition().getWorldRegion() != null) || _isVisible;
 		return getPosition().getY();
 	}
 	
-	public final int getZ()
-	{
-		assert getPosition().getWorldRegion() != null || _isVisible;
+	public final int getZ() {
+		assert (getPosition().getWorldRegion() != null) || _isVisible;
 		return getPosition().getZ();
 	}
 	
@@ -437,14 +414,12 @@ public abstract class L2Object
 	 * <li>Delete NPC/PC or Unsummon</li><BR>
 	 * <BR>
 	 */
-	public void decayMe()
-	{
+	public void decayMe() {
 		assert getPosition().getWorldRegion() != null;
 		
 		L2WorldRegion reg = getPosition().getWorldRegion();
 		
-		synchronized (this)
-		{
+		synchronized (this) {
 			_isVisible = false;
 			getPosition().setWorldRegion(null);
 		}
@@ -456,8 +431,7 @@ public abstract class L2Object
 		L2World.getInstance().removeObject(this);
 	}
 	
-	public void refreshID()
-	{
+	public void refreshID() {
 		L2World.getInstance().removeObject(this);
 		IdFactory.getInstance().releaseId(getObjectId());
 		_objectId = IdFactory.getInstance().getNextId();
@@ -478,12 +452,10 @@ public abstract class L2Object
 	 * <BR>
 	 * <li>Create Door</li> <li>Spawn : Monster, Minion, CTs, Summon...</li><BR>
 	 */
-	public final void spawnMe()
-	{
-		assert getPosition().getWorldRegion() == null && getPosition().getWorldPosition().getX() != 0 && getPosition().getWorldPosition().getY() != 0 && getPosition().getWorldPosition().getZ() != 0;
+	public final void spawnMe() {
+		assert (getPosition().getWorldRegion() == null) && (getPosition().getWorldPosition().getX() != 0) && (getPosition().getWorldPosition().getY() != 0) && (getPosition().getWorldPosition().getZ() != 0);
 		
-		synchronized (this)
-		{
+		synchronized (this) {
 			// Set the x,y,z position of the L2Object spawn and update its _worldregion
 			_isVisible = true;
 			getPosition().setWorldRegion(L2World.getInstance().getRegion(getPosition().getWorldPosition()));
@@ -503,23 +475,25 @@ public abstract class L2Object
 		onSpawn();
 	}
 	
-	public final void spawnMe(int x, int y, int z)
-	{
+	public final void spawnMe(int x, int y, int z) {
 		assert getPosition().getWorldRegion() == null;
 		
-		synchronized (this)
-		{
+		synchronized (this) {
 			// Set the x,y,z position of the L2Object spawn and update its _worldregion
 			_isVisible = true;
 			
-			if (x > L2World.MAP_MAX_X)
+			if (x > L2World.MAP_MAX_X) {
 				x = L2World.MAP_MAX_X - 5000;
-			if (x < L2World.MAP_MIN_X)
+			}
+			if (x < L2World.MAP_MIN_X) {
 				x = L2World.MAP_MIN_X + 5000;
-			if (y > L2World.MAP_MAX_Y)
+			}
+			if (y > L2World.MAP_MAX_Y) {
 				y = L2World.MAP_MAX_Y - 5000;
-			if (y < L2World.MAP_MIN_Y)
+			}
+			if (y < L2World.MAP_MIN_Y) {
 				y = L2World.MAP_MIN_Y + 5000;
+			}
 			
 			getPosition().setWorldPosition(x, y, z);
 			getPosition().setWorldRegion(L2World.getInstance().getRegion(getPosition().getWorldPosition()));
@@ -541,23 +515,21 @@ public abstract class L2Object
 		onSpawn();
 	}
 	
-	public void toggleVisible()
-	{
-		if (isVisible())
+	public void toggleVisible() {
+		if (isVisible()) {
 			decayMe();
-		else
+		} else {
 			spawnMe();
+		}
 	}
 	
-	public boolean isAttackable()
-	{
+	public boolean isAttackable() {
 		return false;
 	}
 	
 	public abstract boolean isAutoAttackable(L2Character attacker);
 	
-	public boolean isMarker()
-	{
+	public boolean isMarker() {
 		return false;
 	}
 	
@@ -568,86 +540,74 @@ public abstract class L2Object
 	 * <BR>
 	 * @return
 	 */
-	public final boolean isVisible()
-	{
+	public final boolean isVisible() {
 		return getPosition().getWorldRegion() != null;
 	}
 	
-	public final void setIsVisible(boolean value)
-	{
+	public final void setIsVisible(boolean value) {
 		_isVisible = value;
-		if (!_isVisible)
+		if (!_isVisible) {
 			getPosition().setWorldRegion(null);
+		}
 	}
 	
-	public ObjectKnownList getKnownList()
-	{
+	public ObjectKnownList getKnownList() {
 		return _knownList;
 	}
 	
 	/**
 	 * Initializes the KnownList of the L2Object, is overwritten in classes that require a different knownlist Type. Removes the need for instanceof checks.
 	 */
-	public void initKnownList()
-	{
+	public void initKnownList() {
 		_knownList = new ObjectKnownList(this);
 	}
 	
-	public final void setKnownList(ObjectKnownList value)
-	{
+	public final void setKnownList(ObjectKnownList value) {
 		_knownList = value;
 	}
 	
-	public final String getName()
-	{
+	public final String getName() {
 		return _name;
 	}
 	
-	public void setName(String value)
-	{
+	public void setName(String value) {
 		_name = value;
 	}
 	
-	public final int getObjectId()
-	{
+	public final int getObjectId() {
 		return _objectId;
 	}
 	
-	public final ObjectPoly getPoly()
-	{
-		if (_poly == null)
+	public final ObjectPoly getPoly() {
+		if (_poly == null) {
 			_poly = new ObjectPoly(this);
+		}
 		return _poly;
 	}
 	
-	public ObjectPosition getPosition()
-	{
+	public ObjectPosition getPosition() {
 		return _position;
 	}
 	
 	/**
 	 * Initializes the Position class of the L2Object, is overwritten in classes that require a different position Type. Removes the need for instanceof checks.
 	 */
-	public void initPosition()
-	{
+	public void initPosition() {
 		_position = new ObjectPosition(this);
 	}
 	
-	public final void setObjectPosition(ObjectPosition value)
-	{
+	public final void setObjectPosition(ObjectPosition value) {
 		_position = value;
 	}
 	
 	/**
 	 * @return reference to region this object is in.
 	 */
-	public L2WorldRegion getWorldRegion()
-	{
+	public L2WorldRegion getWorldRegion() {
 		return getPosition().getWorldRegion();
 	}
 	
-	public L2PcInstance getActingPlayer()
-	{
+	public L2PcInstance getActingPlayer() {
 		return null;
 	}
 	
@@ -657,14 +617,12 @@ public abstract class L2Object
 	 * Is Overridden in: <li>L2AirShipInstance</li> <li>L2BoatInstance</li> <li>L2DoorInstance</li> <li>L2PcInstance</li> <li>L2StaticObjectInstance</li> <li>L2Decoy</li> <li>L2Npc</li> <li>L2Summon</li> <li>L2Trap</li> <li>L2ItemInstance</li>
 	 * @param activeChar
 	 */
-	public void sendInfo(L2PcInstance activeChar)
-	{
+	public void sendInfo(L2PcInstance activeChar) {
 		
 	}
 	
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return (getClass().getSimpleName() + ":" + getName() + "[" + getObjectId() + "]");
 	}
 	
@@ -677,18 +635,16 @@ public abstract class L2Object
 	 * <BR>
 	 * @param mov
 	 */
-	public void sendPacket(L2GameServerPacket mov)
-	{
+	public void sendPacket(L2GameServerPacket mov) {
 		// default implementation
 	}
 	
-	//rocknow-God-Awaking-Start
+	// rocknow-God-Awaking-Start
 	/**
 	 * @param objectId
 	 * @return
 	 */
-	public static L2Player getPlayer(int objectId)
-	{
+	public static L2Player getPlayer(int objectId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -696,12 +652,12 @@ public abstract class L2Object
 	/**
 	 * @return
 	 */
-	public int targetId()
-	{
+	public int targetId() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	//rocknow-God-Awaking-End
+	
+	// rocknow-God-Awaking-End
 	/**
 	 * Not Implemented.<BR>
 	 * <BR>
@@ -711,104 +667,92 @@ public abstract class L2Object
 	 * <BR>
 	 * @param id
 	 */
-	public void sendPacket(SystemMessageId id)
-	{
+	public void sendPacket(SystemMessageId id) {
 		// default implementation
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2PcInstance}
 	 */
-	public boolean isPlayer()
-	{
+	public boolean isPlayer() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2Playable}
 	 */
-	public boolean isPlayable()
-	{
+	public boolean isPlayable() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2Summon}
 	 */
-	public boolean isSummon()
-	{
+	public boolean isSummon() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2PetInstance}
 	 */
-	public boolean isPet()
-	{
+	public boolean isPet() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2DoorInstance}
 	 */
-	public boolean isDoor()
-	{
+	public boolean isDoor() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2Npc}
 	 */
-	public boolean isNpc()
-	{
+	public boolean isNpc() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2Attackable}
 	 */
-	public boolean isL2Attackable()
-	{
+	public boolean isL2Attackable() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2MonsterInstance}
 	 */
-	public boolean isMonster()
-	{
+	public boolean isMonster() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2TrapInstance}
 	 */
-	public boolean isTrap()
-	{
+	public boolean isTrap() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object is instance of {@link L2ItemInstance}
 	 */
-	public boolean isItem()
-	{
+	public boolean isItem() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object Npc Walker
 	 */
-	public boolean isWalker()
-	{
+	public boolean isWalker() {
 		return false;
 	}
 	
 	/**
 	 * @return {@code true} if object Can be targetable
 	 */
-	public boolean isTargetable()
-	{
+	public boolean isTargetable() {
 		return true;
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
@@ -37,43 +41,35 @@ import com.l2jserver.util.Rnd;
 /**
  * @author Kerberos, ZaKaX
  */
-public class L2CastleMagicianInstance extends L2NpcInstance implements L2SquadTrainer
-{
+public class L2CastleMagicianInstance extends L2NpcInstance implements L2SquadTrainer {
+	
 	protected static final int COND_ALL_FALSE = 0;
 	protected static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
 	protected static final int COND_OWNER = 2;
-
+	
 	/**
 	 * @param objectId
 	 * @param template
 	 */
-	public L2CastleMagicianInstance(int objectId, L2NpcTemplate template)
-	{
+	public L2CastleMagicianInstance(int objectId, L2NpcTemplate template) {
 		super(objectId, template);
 		setInstanceType(InstanceType.L2CastleMagicianInstance);
 	}
 	
 	@Override
-	public void showChatWindow(L2PcInstance player, int val)
-	{
+	public void showChatWindow(L2PcInstance player, int val) {
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		String filename = "data/html/castlemagician/magician-no.htm";
 		
 		int condition = validateCondition(player);
-		if (condition > COND_ALL_FALSE)
-		{
-			if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
-			{
+		if (condition > COND_ALL_FALSE) {
+			if (condition == COND_BUSY_BECAUSE_OF_SIEGE) {
 				filename = "data/html/castlemagician/magician-busy.htm"; // Busy because of siege
-			}
-			else if (condition == COND_OWNER) // Clan owns castle
+			} else if (condition == COND_OWNER) // Clan owns castle
 			{
-				if (val == 0)
-				{
+				if (val == 0) {
 					filename = "data/html/castlemagician/magician.htm";
-				}
-				else
-				{
+				} else {
 					filename = "data/html/castlemagician/magician-" + val + ".htm";
 				}
 			}
@@ -86,265 +82,230 @@ public class L2CastleMagicianInstance extends L2NpcInstance implements L2SquadTr
 	}
 	
 	@Override
-	public void onBypassFeedback(L2PcInstance player, String command)
-	{
-		if (command.startsWith("Chat"))
-		{
+	public void onBypassFeedback(L2PcInstance player, String command) {
+		if (command.startsWith("Chat")) {
 			int val = 0;
-			try
-			{
+			try {
 				val = Integer.parseInt(command.substring(5));
-			}
-			catch (IndexOutOfBoundsException ioobe)
-			{
-			}
-			catch (NumberFormatException nfe)
-			{
+			} catch (IndexOutOfBoundsException ioobe) {
+			} catch (NumberFormatException nfe) {
 			}
 			showChatWindow(player, val);
 			return;
-		}
-		else if (command.startsWith("ExchangeKE"))
-		{
+		} else if (command.startsWith("ExchangeKE")) {
 			String filename = null;
 			int item;
 			int i0 = Rnd.get(100);
-			if (i0 < 5)
-			{
+			if (i0 < 5) {
 				int i1 = Rnd.get(100);
-				if (i1 < 5)
-				{
+				if (i1 < 5) {
 					item = 9931; // Red Talisman of Meditation
-				}
-				else if (i1 <= 50)
-				{
+				} else if (i1 <= 50) {
 					item = 9932; // Blue Talisman - Divine Protection
-				}
-				else if (i1 <= 75)
-				{
+				} else if (i1 <= 75) {
 					item = 10416; // Blue Talisman - Explosion
-				}
-				else
-				{
+				} else {
 					item = 10417; // Blue Talisman - Magic Explosion
 				}
-			}
-			else if (i0 <= 15)
-			{
-				switch (Rnd.get(5))
-				{
+			} else if (i0 <= 15) {
+				switch (Rnd.get(5)) {
 					case 1: // Red Talisman of Minimum Clarity
 						item = 9917;
-						break;
+					break;
 					case 2: // Red Talisman of Maximum Clarity
 						item = 9918;
-						break;
+					break;
 					case 3: // Red Talisman of Mental Regeneration
 						item = 9928;
-						break;
+					break;
 					case 4: // Blue Talisman of Protection
 						item = 9929;
-						break;
+					break;
 					default: // Blue Talisman of Invisibility
 						item = 9920;
 						
 				}
-			}
-			else if (i0 <= 30)
-			{
-				switch (Rnd.get(8))
-				{
+			} else if (i0 <= 30) {
+				switch (Rnd.get(8)) {
 					case 1: // Blue Talisman of Defense
 						item = 9916;
-						break;
+					break;
 					case 2: // Blue Talisman of Defense
 						item = 9916;
-						break;
+					break;
 					case 3: // Blue Talisman of Healing
 						item = 9924;
-						break;
+					break;
 					case 4: // Red Talisman of Recovery
 						item = 9925;
-						break;
+					break;
 					case 5: // Blue Talisman of Defense
 						item = 9926;
-						break;
+					break;
 					case 6: // Blue Talisman of Magic Defense
 						item = 9927;
-						break;
+					break;
 					case 7: // Red Talisman - Life Force
 						item = 10518;
-						break;
+					break;
 					default: // Blue Talisman - Greater Healing
 						item = 10424;
 				}
-			}
-			else
-			{
-				switch (Rnd.get(46))
-				{
+			} else {
+				switch (Rnd.get(46)) {
 					case 0: // Blue Talisman of Power
 						item = 9914;
-						break;
+					break;
 					case 1: // Blue Talisman of Wild Magic
 						item = 9915;
-						break;
+					break;
 					case 2: // Blue Talisman of Invisibility
 						item = 9920;
-						break;
+					break;
 					case 3: // Blue Talisman of Invisibility
 						item = 9920;
-						break;
+					break;
 					case 4: // Blue Talisman - Shield Protection
 						item = 9921;
-						break;
+					break;
 					case 5: // Black Talisman - Mending
 						item = 9922;
-						break;
+					break;
 					case 6: // Yellow Talisman of Power
 						item = 9933;
-						break;
+					break;
 					case 7: // Yellow Talisman of Violent Haste
 						item = 9934;
-						break;
+					break;
 					case 8: // Yellow Talisman of Arcane Defense
 						item = 9935;
-						break;
+					break;
 					case 9: // Yellow Talisman of Arcane Power
 						item = 9936;
-						break;
+					break;
 					case 10: // Yellow Talisman of Arcane Haste
 						item = 9937;
-						break;
+					break;
 					case 11: // Yellow Talisman of Accuracy
 						item = 9938;
-						break;
+					break;
 					case 12: // Yellow Talisman of Defense
 						item = 9939;
-						break;
+					break;
 					case 13: // Yellow Talisman of Alacrity
 						item = 9940;
-						break;
+					break;
 					case 14: // Yellow Talisman of Speed
 						item = 9941;
-						break;
+					break;
 					case 15: // Yellow Talisman of Critical Reduction
 						item = 9942;
-						break;
+					break;
 					case 16: // Yellow Talisman of Critical Damage
 						item = 9943;
-						break;
+					break;
 					case 17: // Yellow Talisman of Critical Dodging
 						item = 9944;
-						break;
+					break;
 					case 18: // Yellow Talisman of Evasion
 						item = 9945;
-						break;
+					break;
 					case 19: // Yellow Talisman of Healing
 						item = 9946;
-						break;
+					break;
 					case 20: // Yellow Talisman of CP Regeneration
 						item = 9947;
-						break;
+					break;
 					case 21: // Yellow Talisman of Physical Regeneration
 						item = 9948;
-						break;
+					break;
 					case 22: // Yellow Talisman of Mental Regeneration
 						item = 9949;
-						break;
+					break;
 					case 23: // Grey Talisman of Weight Training
 						item = 9950;
-						break;
+					break;
 					case 24: // White Talisman of Protection
 						item = 9965;
-						break;
+					break;
 					case 25: // Orange Talisman - Hot Springs CP Potion
 						item = 9952;
-						break;
+					break;
 					case 26: // Orange Talisman - Elixir of Life
 						item = 9953;
-						break;
+					break;
 					case 27: // Orange Talisman - Elixir of Mental Strength
 						item = 9954;
-						break;
+					break;
 					case 28: // Black Talisman - Vocalization
 						item = 9955;
-						break;
+					break;
 					case 29: // Black Talisman - Arcane Freedom
 						item = 9956;
-						break;
+					break;
 					case 30: // Black Talisman - Physical Freedom
 						item = 9957;
-						break;
+					break;
 					case 31: // Black Talisman - Rescue
 						item = 9958;
-						break;
+					break;
 					case 32: // Black Talisman - Free Speech
 						item = 9959;
-						break;
+					break;
 					case 33: // White Talisman of Bravery
 						item = 9960;
-						break;
+					break;
 					case 34: // White Talisman of Motion
 						item = 9961;
-						break;
+					break;
 					case 35: // White Talisman of Grounding
 						item = 9962;
-						break;
+					break;
 					case 36: // White Talisman of Attention
 						item = 9963;
-						break;
+					break;
 					case 37: // White Talisman of Bandages
 						item = 9964;
-						break;
+					break;
 					case 38: // White Talisman - Storm
 						item = 10418;
-						break;
+					break;
 					case 39: // White Talisman - Water
 						item = 10420;
-						break;
-					case 40: // White Talisman -  Earth
+					break;
+					case 40: // White Talisman - Earth
 						item = 10519;
-						break;
+					break;
 					case 41: // White Talisman - Light
 						item = 10422;
-						break;
+					break;
 					case 42: // Blue Talisman - Self-Destruction
 						item = 10423;
-						break;
+					break;
 					case 43: // White Talisman - Darkness
 						item = 10419;
-						break;
+					break;
 					default: // White Talisman - Fire
 						item = 10421;
 				}
 			}
 			
-			if (player.exchangeItemsById("ExchangeKE", this, 9912, 10, item, 1, true))
-			{
+			if (player.exchangeItemsById("ExchangeKE", this, 9912, 10, item, 1, true)) {
 				filename = "data/html/castlemagician/magician-KE-Exchange.htm";
-			}
-			else
-			{
+			} else {
 				filename = "data/html/castlemagician/magician-no-KE.htm";
 			}
 			
 			showChatWindow(player, filename);
-		}
-		else if (command.equals("gotoleader"))
-		{
-			if (player.getClan() != null)
-			{
+		} else if (command.equals("gotoleader")) {
+			if (player.getClan() != null) {
 				final L2PcInstance clanLeader = player.getClan().getLeader().getPlayerInstance();
-				if (clanLeader == null)
-				{
+				if (clanLeader == null) {
 					return;
 				}
 				
-				if (clanLeader.getFirstEffect(L2EffectType.CLAN_GATE) != null)
-				{
-					if (!validateGateCondition(clanLeader, player))
-					{
+				if (clanLeader.getFirstEffect(L2EffectType.CLAN_GATE) != null) {
+					if (!validateGateCondition(clanLeader, player)) {
 						return;
 					}
 					
@@ -353,60 +314,41 @@ public class L2CastleMagicianInstance extends L2NpcInstance implements L2SquadTr
 				}
 				showChatWindow(player, "data/html/castlemagician/magician-nogate.htm");
 			}
-		}
-		else if (command.equals("subskills"))
-		{
-			if (player.isClanLeader())
-			{
+		} else if (command.equals("subskills")) {
+			if (player.isClanLeader()) {
 				final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSubPledgeSkills(player.getClan());
 				final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SubPledge);
 				int count = 0;
 				
-				for (L2SkillLearn s : skills)
-				{
-					if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null)
-					{
+				for (L2SkillLearn s : skills) {
+					if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null) {
 						asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), s.getLevelUpSp(), 0);
 						++count;
 					}
 				}
 				
-				if (count == 0)
-				{
+				if (count == 0) {
 					player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
-				}
-				else
-				{
+				} else {
 					player.sendPacket(asl);
 				}
-			}
-			else
-			{
+			} else {
 				showChatWindow(player, "data/html/castlemagician/magician-nosquad.htm");
 			}
-		}
-		else
-		{
+		} else {
 			super.onBypassFeedback(player, command);
 		}
 	}
 	
-	protected int validateCondition(L2PcInstance player)
-	{
-		if (player.isGM())
-		{
+	protected int validateCondition(L2PcInstance player) {
+		if (player.isGM()) {
 			return COND_OWNER;
 		}
-		if ((getCastle() != null) && (getCastle().getCastleId() > 0))
-		{
-			if (player.getClan() != null)
-			{
-				if (getCastle().getZone().isActive())
-				{
+		if ((getCastle() != null) && (getCastle().getCastleId() > 0)) {
+			if (player.getClan() != null) {
+				if (getCastle().getZone().isActive()) {
 					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if (getCastle().getOwnerId() == player.getClanId())
-				{
+				} else if (getCastle().getOwnerId() == player.getClanId()) {
 					return COND_OWNER;
 				}
 			}
@@ -414,135 +356,117 @@ public class L2CastleMagicianInstance extends L2NpcInstance implements L2SquadTr
 		return COND_ALL_FALSE;
 	}
 	
-	private static final boolean validateGateCondition(L2PcInstance clanLeader, L2PcInstance player)
-	{
-		if (clanLeader.isAlikeDead())
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+	private static final boolean validateGateCondition(L2PcInstance clanLeader, L2PcInstance player) {
+		if (clanLeader.isAlikeDead()) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
 		
-		if (clanLeader.isInStoreMode())
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+		if (clanLeader.isInStoreMode()) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
 		
-		if (clanLeader.isRooted() || clanLeader.isInCombat())
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+		if (clanLeader.isRooted() || clanLeader.isInCombat()) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
 		
-		if (clanLeader.isInOlympiadMode())
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+		if (clanLeader.isInOlympiadMode()) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
 		
-		if (clanLeader.isFestivalParticipant())
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+		if (clanLeader.isFestivalParticipant()) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
 		
-		if (clanLeader.inObserverMode())
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+		if (clanLeader.inObserverMode()) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
 		
-		if (clanLeader.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND))
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+		if (clanLeader.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND)) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
 		
-		if (clanLeader.getInstanceId() > 0)
-		{
-			if (!Config.ALLOW_SUMMON_TO_INSTANCE || InstanceManager.getInstance().getInstance(player.getInstanceId()).isSummonAllowed())
-			{
-				//TODO: Need retail message if there's one.
-				/* Move To MessageTable For L2JTW
-				player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-				*/
+		if (clanLeader.getInstanceId() > 0) {
+			if (!Config.ALLOW_SUMMON_TO_INSTANCE || InstanceManager.getInstance().getInstance(player.getInstanceId()).isSummonAllowed()) {
+				// TODO: Need retail message if there's one.
+				/*
+				 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+				 */
 				player.sendMessage(575);
 				return false;
 			}
 		}
 		
-		if (player.isIn7sDungeon())
-		{
+		if (player.isIn7sDungeon()) {
 			final int targetCabal = SevenSigns.getInstance().getPlayerCabal(clanLeader.getObjectId());
-			if (SevenSigns.getInstance().isSealValidationPeriod())
-			{
-				if (targetCabal != SevenSigns.getInstance().getCabalHighestScore())
-				{
-					//TODO: Need retail message if there's one.
-					/* Move To MessageTable For L2JTW
-					player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-					*/
+			if (SevenSigns.getInstance().isSealValidationPeriod()) {
+				if (targetCabal != SevenSigns.getInstance().getCabalHighestScore()) {
+					// TODO: Need retail message if there's one.
+					/*
+					 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+					 */
 					player.sendMessage(575);
 					return false;
 				}
-			}
-			else
-			{
-				if (targetCabal == SevenSigns.CABAL_NULL)
-				{
-					//TODO: Need retail message if there's one.
-					/* Move To MessageTable For L2JTW
-					player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-					*/
+			} else {
+				if (targetCabal == SevenSigns.CABAL_NULL) {
+					// TODO: Need retail message if there's one.
+					/*
+					 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+					 */
 					player.sendMessage(575);
 					return false;
 				}
 			}
 		}
 		
-		if (!TvTEvent.onEscapeUse(player.getObjectId()))
-		{
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("You on TvT Event, teleporting disabled.");
-			*/
+		if (!TvTEvent.onEscapeUse(player.getObjectId())) {
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("You on TvT Event, teleporting disabled.");
+			 */
 			player.sendMessage(576);
 			return false;
 		}
 		
-		if (!TvTEvent.onEscapeUse(clanLeader.getObjectId()))
-		{
-			//TODO: Need retail message if there's one.
-			/* Move To MessageTable For L2JTW
-			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
-			*/
+		if (!TvTEvent.onEscapeUse(clanLeader.getObjectId())) {
+			// TODO: Need retail message if there's one.
+			/*
+			 * Move To MessageTable For L2JTW player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
+			 */
 			player.sendMessage(575);
 			return false;
 		}
@@ -550,8 +474,8 @@ public class L2CastleMagicianInstance extends L2NpcInstance implements L2SquadTr
 	}
 	
 	@Override
-	public void showSubUnitSkillList(L2PcInstance player)
-	{
+	public void showSubUnitSkillList(L2PcInstance player) {
 		onBypassFeedback(player, "subskills");
 	}
+	
 }

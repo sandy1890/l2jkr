@@ -1,36 +1,34 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Party;
 
-
 /**
- *
- * @author  chris_00
- * ch sdd d[sdd]
+ * @author chris_00 ch sdd d[sdd]
  */
-public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
-{
+public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket {
 	private static final String _S__FE_31_EXMULTIPARTYCOMMANDCHANNELINFO = "[S] FE:31 ExMultiPartyCommandChannelInfo";
 	private L2CommandChannel _channel;
 	
-	
-	public ExMultiPartyCommandChannelInfo(L2CommandChannel channel)
-	{
+	public ExMultiPartyCommandChannelInfo(L2CommandChannel channel) {
 		this._channel = channel;
 	}
 	
@@ -38,8 +36,7 @@ public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
 	 */
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FE_31_EXMULTIPARTYCOMMANDCHANNELINFO;
 	}
 	
@@ -47,8 +44,7 @@ public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
 	 */
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		if (_channel == null)
 			return;
 		
@@ -62,13 +58,11 @@ public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
 		writeD(_channel.getMemberCount());
 		
 		writeD(_channel.getPartys().size());
-		for(L2Party p : _channel.getPartys())
-		{
+		for (L2Party p : _channel.getPartys()) {
 			writeS(p.getLeader().getName()); // Leadername
 			writeD(p.getLeaderObjectId()); // Leaders ObjId
 			writeD(p.getMemberCount()); // Membercount
 		}
 	}
-	
 	
 }

@@ -1,46 +1,47 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.handler;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * This class handles all chat handlers
- *
- * @author  durgus
+ * @author durgus
  */
-public class ChatHandler
-{
+public class ChatHandler {
+	
 	private static Logger _log = Logger.getLogger(ChatHandler.class.getName());
 	
 	private final TIntObjectHashMap<IChatHandler> _datatable;
 	
-	public static ChatHandler getInstance()
-	{
+	public static ChatHandler getInstance() {
 		return SingletonHolder._instance;
 	}
 	
 	/**
 	 * Singleton constructor
 	 */
-	protected ChatHandler()
-	{
+	protected ChatHandler() {
 		_datatable = new TIntObjectHashMap<>();
 	}
 	
@@ -48,14 +49,13 @@ public class ChatHandler
 	 * Register a new chat handler
 	 * @param handler
 	 */
-	public void registerHandler(IChatHandler handler)
-	{
+	public void registerHandler(IChatHandler handler) {
 		int[] ids = handler.getChatTypeList();
-		for (int i = 0; i < ids.length; i++)
-		{
-			if (Config.DEBUG)
-				_log.fine("Adding handler for chat type " + ids[i]);
-			_datatable.put(ids[i], handler);
+		for (int id : ids) {
+			if (Config.DEBUG) {
+				_log.fine("Adding handler for chat type " + id);
+			}
+			_datatable.put(id, handler);
 		}
 	}
 	
@@ -64,8 +64,7 @@ public class ChatHandler
 	 * @param chatType
 	 * @return
 	 */
-	public IChatHandler getHandler(int chatType)
-	{
+	public IChatHandler getHandler(int chatType) {
 		return _datatable.get(chatType);
 	}
 	
@@ -73,13 +72,12 @@ public class ChatHandler
 	 * Returns the size
 	 * @return
 	 */
-	public int size()
-	{
+	public int size() {
 		return _datatable.size();
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final ChatHandler _instance = new ChatHandler();
 	}
+	
 }

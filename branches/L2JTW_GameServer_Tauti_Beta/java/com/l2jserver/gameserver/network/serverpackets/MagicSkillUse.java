@@ -1,34 +1,30 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
 
 /**
- *
- * sample
- *
- * 0000: 5a  d8 a8 10 48  d8 a8 10 48  10 04 00 00  01 00 00    Z...H...H.......
- * 0010: 00  f0 1a 00 00  68 28 00 00                         .....h(..
- *
- * format   dddddd dddh (h)
- *
+ * sample 0000: 5a d8 a8 10 48 d8 a8 10 48 10 04 00 00 01 00 00 Z...H...H....... 0010: 00 f0 1a 00 00 68 28 00 00 .....h(.. format dddddd dddh (h)
  * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public final class MagicSkillUse extends L2GameServerPacket
-{
+public final class MagicSkillUse extends L2GameServerPacket {
 	private static final String _S__5A_MAGICSKILLUSER = "[S] 48 MagicSkillUser";
 	private int _targetId, _tx, _ty, _tz;
 	private int _skillId;
@@ -36,10 +32,10 @@ public final class MagicSkillUse extends L2GameServerPacket
 	private int _hitTime;
 	private int _reuseDelay;
 	private int _charObjId, _x, _y, _z;
-	//private int _flags;
 	
-	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
-	{
+	// private int _flags;
+	
+	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay) {
 		_charObjId = cha.getObjectId();
 		_targetId = target.getObjectId();
 		_skillId = skillId;
@@ -52,11 +48,10 @@ public final class MagicSkillUse extends L2GameServerPacket
 		_tx = target.getX();
 		_ty = target.getY();
 		_tz = target.getZ();
-		//_flags |= 0x20;
+		// _flags |= 0x20;
 	}
 	
-	public MagicSkillUse(L2Character cha, int skillId, int skillLevel, int hitTime, int reuseDelay)
-	{
+	public MagicSkillUse(L2Character cha, int skillId, int skillLevel, int hitTime, int reuseDelay) {
 		_charObjId = cha.getObjectId();
 		_targetId = cha.getTargetId();
 		_skillId = skillId;
@@ -69,21 +64,20 @@ public final class MagicSkillUse extends L2GameServerPacket
 		_tx = cha.getX();
 		_ty = cha.getY();
 		_tz = cha.getZ();
-		//_flags |= 0x20;
+		// _flags |= 0x20;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x48);
-		writeD(0x00); //rocknow-God
+		writeD(0x00); // rocknow-God
 		writeD(_charObjId);
 		writeD(_targetId);
-		writeC(0x00); //rocknow-God
+		writeC(0x00); // rocknow-God
 		writeD(_skillId);
 		writeD(_skillLevel);
 		writeD(_hitTime);
-		writeD(-1); //rocknow-God
+		writeD(-1); // rocknow-God
 		writeD(_reuseDelay);
 		writeD(_x);
 		writeD(_y);
@@ -92,13 +86,12 @@ public final class MagicSkillUse extends L2GameServerPacket
 		writeD(_tx);
 		writeD(_ty);
 		writeD(_tz);
-		writeD(0x00); //rocknow-God
-		writeD(0x00); //rocknow-God
+		writeD(0x00); // rocknow-God
+		writeD(0x00); // rocknow-God
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__5A_MAGICSKILLUSER;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.engines;
 
@@ -34,8 +38,8 @@ import com.l2jserver.util.file.filter.XMLFilter;
  * It's in <i>beta</i> state, so it's expected to change over time.
  * @author Zoey76
  */
-public abstract class DocumentParser
-{
+public abstract class DocumentParser {
+	
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
 	private static final String JAXP_SCHEMA_LANGUAGE = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
@@ -57,8 +61,7 @@ public abstract class DocumentParser
 	 * Wrapper for {@link #parseFile(File)} method.
 	 * @param path the relative path to the datapack root of the XML file to parse.
 	 */
-	protected void parseDatapackFile(String path)
-	{
+	protected void parseDatapackFile(String path) {
 		parseFile(new File(Config.DATAPACK_ROOT, path));
 	}
 	
@@ -68,10 +71,8 @@ public abstract class DocumentParser
 	 * <b>Validation is enforced.</b>
 	 * @param f the XML file to parse.
 	 */
-	protected void parseFile(File f)
-	{
-		if (!xmlFilter.accept(f))
-		{
+	protected void parseFile(File f) {
+		if (!xmlFilter.accept(f)) {
 			_log.warning(getClass().getSimpleName() + ": Could not parse " + f.getName() + " is not a file or it doesn't exist!");
 			return;
 		}
@@ -82,15 +83,12 @@ public abstract class DocumentParser
 		dbf.setIgnoringComments(true);
 		_currentDocument = null;
 		_currentFile = f;
-		try
-		{
+		try {
 			dbf.setAttribute(JAXP_SCHEMA_LANGUAGE, W3C_XML_SCHEMA);
 			final DocumentBuilder db = dbf.newDocumentBuilder();
 			db.setErrorHandler(new XMLErrorHandler());
 			_currentDocument = db.parse(f);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.warning(getClass().getSimpleName() + ": Could not parse " + f.getName() + " file: " + e.getMessage());
 			return;
 		}
@@ -101,8 +99,7 @@ public abstract class DocumentParser
 	 * Gets the current file.
 	 * @return the current file
 	 */
-	public File getCurrentFile()
-	{
+	public File getCurrentFile() {
 		return _currentFile;
 	}
 	
@@ -110,8 +107,7 @@ public abstract class DocumentParser
 	 * Gets the current document.
 	 * @return the current document
 	 */
-	protected Document getCurrentDocument()
-	{
+	protected Document getCurrentDocument() {
 		return _currentDocument;
 	}
 	
@@ -120,8 +116,7 @@ public abstract class DocumentParser
 	 * @param path the path to the directory where the XML files are.
 	 * @return {@code false} if it fails to find the directory, {@code true} otherwise.
 	 */
-	protected boolean parseDirectory(String path)
-	{
+	protected boolean parseDirectory(String path) {
 		return parseDirectory(new File(path));
 	}
 	
@@ -130,17 +125,14 @@ public abstract class DocumentParser
 	 * @param dir the directory object to scan.
 	 * @return {@code false} if it fails to find the directory, {@code true} otherwise.
 	 */
-	protected boolean parseDirectory(File dir)
-	{
-		if (!dir.exists())
-		{
+	protected boolean parseDirectory(File dir) {
+		if (!dir.exists()) {
 			_log.warning(getClass().getSimpleName() + ": Folder " + dir.getAbsolutePath() + " doesn't exist!");
 			return false;
 		}
 		
 		final File[] listOfFiles = dir.listFiles(xmlFilter);
-		for (File f : listOfFiles)
-		{
+		for (File f : listOfFiles) {
 			parseFile(f);
 		}
 		return true;
@@ -150,8 +142,7 @@ public abstract class DocumentParser
 	 * Overridable method that could parse a custom document.<br>
 	 * @param doc the document to parse.
 	 */
-	protected void parseDocument(Document doc)
-	{
+	protected void parseDocument(Document doc) {
 		// Do nothing, to be overridden in sub-classes.
 	}
 	
@@ -167,8 +158,7 @@ public abstract class DocumentParser
 	 * @param name the attribute name.
 	 * @return a parsed integer.
 	 */
-	protected static int parseInt(NamedNodeMap n, String name)
-	{
+	protected static int parseInt(NamedNodeMap n, String name) {
 		return Integer.parseInt(n.getNamedItem(name).getNodeValue());
 	}
 	
@@ -178,8 +168,7 @@ public abstract class DocumentParser
 	 * @param name the attribute name.
 	 * @return a parsed integer object.
 	 */
-	protected static Integer parseInteger(NamedNodeMap n, String name)
-	{
+	protected static Integer parseInteger(NamedNodeMap n, String name) {
 		return Integer.valueOf(n.getNamedItem(name).getNodeValue());
 	}
 	
@@ -188,8 +177,7 @@ public abstract class DocumentParser
 	 * @param n the node to parse.
 	 * @return the parsed integer.
 	 */
-	protected static int parseInt(Node n)
-	{
+	protected static int parseInt(Node n) {
 		return Integer.parseInt(n.getNodeValue());
 	}
 	
@@ -198,8 +186,7 @@ public abstract class DocumentParser
 	 * @param n the node to parse.
 	 * @return the parsed integer object.
 	 */
-	protected static Integer parseInteger(Node n)
-	{
+	protected static Integer parseInteger(Node n) {
 		return Integer.valueOf(n.getNodeValue());
 	}
 	
@@ -209,8 +196,7 @@ public abstract class DocumentParser
 	 * @param name the attribute name.
 	 * @return a parsed integer.
 	 */
-	protected static Long parseLong(NamedNodeMap n, String name)
-	{
+	protected static Long parseLong(NamedNodeMap n, String name) {
 		return Long.valueOf(n.getNamedItem(name).getNodeValue());
 	}
 	
@@ -220,8 +206,7 @@ public abstract class DocumentParser
 	 * @param name the attribute name.
 	 * @return a parsed double.
 	 */
-	protected static Double parseDouble(NamedNodeMap n, String name)
-	{
+	protected static Double parseDouble(NamedNodeMap n, String name) {
 		return Double.valueOf(n.getNamedItem(name).getNodeValue());
 	}
 	
@@ -231,19 +216,17 @@ public abstract class DocumentParser
 	 * @param name the attribute name.
 	 * @return {@code true} if the attribute exists and it's value is {@code true}, {@code false} otherwise.
 	 */
-	protected static boolean parseBoolean(NamedNodeMap n, String name)
-	{
+	protected static boolean parseBoolean(NamedNodeMap n, String name) {
 		final Node b = n.getNamedItem(name);
 		return (b != null) && Boolean.parseBoolean(b.getNodeValue());
 	}
 	
 	/**
 	 * @param n the named node map
-	 * @param name  the attribute name
+	 * @param name the attribute name
 	 * @return the node string value for the given node name and named node map if exist, otherwise an empty string
 	 */
-	protected static String parseString(NamedNodeMap n, String name)
-	{
+	protected static String parseString(NamedNodeMap n, String name) {
 		final Node b = n.getNamedItem(name);
 		return (b == null) ? "" : b.getNodeValue();
 	}
@@ -252,24 +235,21 @@ public abstract class DocumentParser
 	 * Simple XML error handler.
 	 * @author Zoey76
 	 */
-	protected class XMLErrorHandler implements ErrorHandler
-	{
+	protected class XMLErrorHandler implements ErrorHandler {
 		@Override
-		public void warning(SAXParseException e) throws SAXParseException
-		{
+		public void warning(SAXParseException e) throws SAXParseException {
 			throw e;
 		}
 		
 		@Override
-		public void error(SAXParseException e) throws SAXParseException
-		{
+		public void error(SAXParseException e) throws SAXParseException {
 			throw e;
 		}
 		
 		@Override
-		public void fatalError(SAXParseException e) throws SAXParseException
-		{
+		public void fatalError(SAXParseException e) throws SAXParseException {
 			throw e;
 		}
 	}
+	
 }

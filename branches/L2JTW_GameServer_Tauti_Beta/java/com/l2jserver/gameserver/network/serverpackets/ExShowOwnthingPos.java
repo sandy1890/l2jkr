@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -21,58 +25,45 @@ import com.l2jserver.gameserver.model.TerritoryWard;
 
 /**
  * Format: (ch) d[dddd]
- *
- * @author  -Gigiikun-
+ * @author -Gigiikun-
  */
-public class ExShowOwnthingPos extends L2GameServerPacket
-{
+public class ExShowOwnthingPos extends L2GameServerPacket {
 	private static final String _S__FE_93_EXSHOWOWNTHINGPOS = "[S] FE:93 ExShowOwnthingPos";
 	
-	public ExShowOwnthingPos()
-	{
+	public ExShowOwnthingPos() {
 	}
 	
 	/**
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
 	 */
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x93);
 		
-		if (TerritoryWarManager.getInstance().isTWInProgress())
-		{
+		if (TerritoryWarManager.getInstance().isTWInProgress()) {
 			List<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
 			writeD(territoryWardList.size());
-			for(TerritoryWard ward : territoryWardList)
-			{
+			for (TerritoryWard ward : territoryWardList) {
 				writeD(ward.getTerritoryId());
 				
-				if (ward.getNpc() != null)
-				{
+				if (ward.getNpc() != null) {
 					writeD(ward.getNpc().getX());
 					writeD(ward.getNpc().getY());
 					writeD(ward.getNpc().getZ());
-				}
-				else if (ward.getPlayer() != null)
-				{
+				} else if (ward.getPlayer() != null) {
 					writeD(ward.getPlayer().getX());
 					writeD(ward.getPlayer().getY());
 					writeD(ward.getPlayer().getZ());
-				}
-				else
-				{
+				} else {
 					writeD(0);
 					writeD(0);
 					writeD(0);
 				}
 			}
-		}
-		else
-		{
+		} else {
 			writeD(0);
-			//writeD(0);
+			// writeD(0);
 		}
 	}
 	
@@ -80,8 +71,7 @@ public class ExShowOwnthingPos extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
 	 */
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FE_93_EXSHOWOWNTHINGPOS;
 	}
 }
