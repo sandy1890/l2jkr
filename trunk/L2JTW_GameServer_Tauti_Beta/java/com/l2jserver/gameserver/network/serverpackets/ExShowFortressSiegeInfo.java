@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -21,11 +25,9 @@ import com.l2jserver.gameserver.instancemanager.FortSiegeManager.SiegeSpawn;
 import com.l2jserver.gameserver.model.entity.Fort;
 
 /**
- *
- * @author  KenM
+ * @author KenM
  */
-public class ExShowFortressSiegeInfo extends L2GameServerPacket
-{
+public class ExShowFortressSiegeInfo extends L2GameServerPacket {
 	private int _fortId;
 	private int _size;
 	private Fort _fort;
@@ -35,8 +37,7 @@ public class ExShowFortressSiegeInfo extends L2GameServerPacket
 	/**
 	 * @param fort
 	 */
-	public ExShowFortressSiegeInfo(Fort fort)
-	{
+	public ExShowFortressSiegeInfo(Fort fort) {
 		_fort = fort;
 		_fortId = fort.getFortId();
 		_size = fort.getFortSize();
@@ -50,8 +51,7 @@ public class ExShowFortressSiegeInfo extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
 	 */
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return "[S] FE:17 ExShowFortressSiegeInfo";
 	}
 	
@@ -59,59 +59,53 @@ public class ExShowFortressSiegeInfo extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
 	 */
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x17);
 		
 		writeD(_fortId); // Fortress Id
 		writeD(_size); // Total Barracks Count
-		if (_csize > 0)
-		{
-			switch (_csize)
-			{
+		if (_csize > 0) {
+			switch (_csize) {
 				case 3:
-					switch (_csize2)
-					{
+					switch (_csize2) {
 						case 0:
 							writeD(0x03);
-							break;
+						break;
 						case 1:
 							writeD(0x02);
-							break;
+						break;
 						case 2:
 							writeD(0x01);
-							break;
+						break;
 						case 3:
 							writeD(0x00);
-							break;
+						break;
 					}
-					break;
+				break;
 				case 4: // TODO: change 4 to 5 once control room supported
 					switch (_csize2)
 					// TODO: once control room supported, update writeD(0x0x) to support 5th room
 					{
 						case 0:
 							writeD(0x05);
-							break;
+						break;
 						case 1:
 							writeD(0x04);
-							break;
+						break;
 						case 2:
 							writeD(0x03);
-							break;
+						break;
 						case 3:
 							writeD(0x02);
-							break;
+						break;
 						case 4:
 							writeD(0x01);
-							break;
+						break;
 					}
-					break;
+				break;
 			}
-		}
-		else
-		{
+		} else {
 			for (int i = 0; i < _size; i++)
 				writeD(0x00);
 		}

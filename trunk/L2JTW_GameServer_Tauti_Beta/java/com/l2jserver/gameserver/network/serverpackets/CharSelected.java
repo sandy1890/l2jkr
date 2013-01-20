@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -19,11 +23,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class ...
- * 
  * @version $Revision: 1.4.2.5.2.6 $ $Date: 2005/03/27 15:29:39 $
  */
-public class CharSelected extends L2GameServerPacket
-{
+public class CharSelected extends L2GameServerPacket {
 	// SdSddddddddddffddddddddddddddddddddddddddddddddddddddddd d
 	private static final String _S__21_CHARSELECTED = "[S] 0b CharSelected";
 	private L2PcInstance _activeChar;
@@ -33,16 +35,14 @@ public class CharSelected extends L2GameServerPacket
 	 * @param cha
 	 * @param sessionId
 	 */
-	public CharSelected(L2PcInstance cha, int sessionId)
-	{
+	public CharSelected(L2PcInstance cha, int sessionId) {
 		_activeChar = cha;
 		_sessionId = sessionId;
 	}
 	
 	@SuppressWarnings("deprecation")
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x0b);
 		
 		writeS(_activeChar.getName());
@@ -64,9 +64,9 @@ public class CharSelected extends L2GameServerPacket
 		writeD(_activeChar.getSp());
 		writeQ(_activeChar.getExp());
 		writeD(_activeChar.getLevel());
-		int Karma = _activeChar.getKarma(); //rocknow-God-Test
-		if (Karma > 0) //rocknow-God-Test
-			Karma = 0 - Karma; //rocknow-God-Test
+		int Karma = _activeChar.getKarma(); // rocknow-God-Test
+		if (Karma > 0) // rocknow-God-Test
+			Karma = 0 - Karma; // rocknow-God-Test
 		writeD(Karma); // thx evill33t //rocknow-God-Test
 		writeD(_activeChar.getPkKills());
 		writeD(_activeChar.getINT());
@@ -91,8 +91,7 @@ public class CharSelected extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__21_CHARSELECTED;
 	}
 }

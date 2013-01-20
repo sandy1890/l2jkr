@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,14 +28,15 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.L2LvlupData;
 import com.l2jserver.gameserver.model.base.ClassId;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * This class ...
- *
  * @author NightMarez
  * @version $Revision: 1.3.2.4.2.3 $ $Date: 2005/03/27 15:29:18 $
  */
-public class LevelUpData
-{
+public class LevelUpData {
+	
 	private static final String SELECT_ALL = "SELECT classid, defaulthpbase, defaulthpadd, defaulthpmod, defaultcpbase, defaultcpadd, defaultcpmod, defaultmpbase, defaultmpadd, defaultmpmod, class_lvl FROM lvlupgain";
 	private static final String CLASS_LVL = "class_lvl";
 	private static final String MP_MOD = "defaultmpmod";
@@ -49,26 +52,22 @@ public class LevelUpData
 	
 	private static Logger _log = Logger.getLogger(LevelUpData.class.getName());
 	
-	private TIntObjectHashMap<L2LvlupData> _lvlTable;
+	private final TIntObjectHashMap<L2LvlupData> _lvlTable;
 	
-	public static LevelUpData getInstance()
-	{
+	public static LevelUpData getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected LevelUpData()
-	{
+	protected LevelUpData() {
 		_lvlTable = new TIntObjectHashMap<>();
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_ALL);
 			ResultSet rset = statement.executeQuery();
 			L2LvlupData lvlDat;
 			
-			while (rset.next())
-			{
+			while (rset.next()) {
 				lvlDat = new L2LvlupData();
 				lvlDat.setClassid(rset.getInt(CLASS_ID));
 				lvlDat.setClassLvl(rset.getInt(CLASS_LVL));
@@ -89,13 +88,9 @@ public class LevelUpData
 			statement.close();
 			
 			_log.info("LevelUpData: Loaded " + _lvlTable.size() + " Character Level Up Templates.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Error loading Level Up data.", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -104,18 +99,16 @@ public class LevelUpData
 	 * @param classId
 	 * @return
 	 */
-	public L2LvlupData getTemplate(int classId)
-	{
+	public L2LvlupData getTemplate(int classId) {
 		return _lvlTable.get(classId);
 	}
 	
-	public L2LvlupData getTemplate(ClassId classId)
-	{
+	public L2LvlupData getTemplate(ClassId classId) {
 		return _lvlTable.get(classId.getId());
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final LevelUpData _instance = new LevelUpData();
 	}
+	
 }

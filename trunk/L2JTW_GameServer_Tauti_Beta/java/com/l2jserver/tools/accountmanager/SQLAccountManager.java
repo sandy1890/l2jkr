@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.accountmanager;
 
@@ -37,36 +41,27 @@ import com.l2jserver.util.Base64;
  * @author netimperia
  * @version $Revision: 2.3.2.1.2.3 $ $Date: 2005/08/08 22:47:12 $
  */
-public class SQLAccountManager
-{
+public class SQLAccountManager {
 	private static String _uname = "";
 	private static String _pass = "";
 	private static String _level = "";
 	private static String _mode = "";
 	private static ConsoleLocalizator cl;
 	
-	public static void main(String[] args) throws SQLException, IOException, NoSuchAlgorithmException
-	{
+	public static void main(String[] args) throws SQLException, IOException, NoSuchAlgorithmException {
 		Server.serverMode = Server.MODE_LOGINSERVER;
 		Config.load();
-		if (args.length > 0)
-		{
-			if (LocaleCodes.getInstance().getLanguage(args[0]) != null)
-			{
+		if (args.length > 0) {
+			if (LocaleCodes.getInstance().getLanguage(args[0]) != null) {
 				cl = new ConsoleLocalizator("accountmanager", "SQLAccountManager", LocaleCodes.getInstance().getLanguage(args[0]));
-			}
-			else
-			{
+			} else {
 				cl = new ConsoleLocalizator("accountmanager", "SQLAccountManager", args[0]);
 			}
-		}
-		else
-		{
+		} else {
 			cl = new ConsoleLocalizator("accountmanager", "SQLAccountManager", Locale.getDefault());
 		}
 		
-		while (true)
-		{
+		while (true) {
 			cl.println("functChooser");
 			cl.println();
 			cl.println("functCreateAccount");
@@ -74,68 +69,47 @@ public class SQLAccountManager
 			cl.println("functDeleteAccount");
 			cl.println("functListAccount");
 			cl.println("functExit");
-			while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4") || _mode.equals("5")))
-			{
+			while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4") || _mode.equals("5"))) {
 				_mode = cl.inputString("inputChoice");
 			}
 			
-			if (_mode.equals("1") || _mode.equals("2") || _mode.equals("3"))
-			{
-				if (_mode.equals("1") || _mode.equals("2"))
-				{
-					while (_uname.trim().length() == 0)
-					{
+			if (_mode.equals("1") || _mode.equals("2") || _mode.equals("3")) {
+				if (_mode.equals("1") || _mode.equals("2")) {
+					while (_uname.trim().length() == 0) {
+						_uname = cl.inputString("inputUsername").toLowerCase();
+					}
+				} else if (_mode.equals("3")) {
+					while (_uname.trim().length() == 0) {
 						_uname = cl.inputString("inputUsername").toLowerCase();
 					}
 				}
-				else if (_mode.equals("3"))
-				{
-					while (_uname.trim().length() == 0)
-					{
-						_uname = cl.inputString("inputUsername").toLowerCase();
-					}
-				}
-				if (_mode.equals("1"))
-				{
-					while (_pass.trim().length() == 0)
-					{
+				if (_mode.equals("1")) {
+					while (_pass.trim().length() == 0) {
 						_pass = cl.inputString("inputPassword");
 					}
 				}
-				if (_mode.equals("1") || _mode.equals("2"))
-				{
-					while (_level.trim().length() == 0)
-					{
+				if (_mode.equals("1") || _mode.equals("2")) {
+					while (_level.trim().length() == 0) {
 						_level = cl.inputString("inputAccessLevel");
 					}
 				}
 			}
 			
-			if (_mode.equals("1"))
-			{
+			if (_mode.equals("1")) {
 				// Add or Update
 				addOrUpdateAccount(_uname.trim(), _pass.trim(), _level.trim());
-			}
-			else if (_mode.equals("2"))
-			{
+			} else if (_mode.equals("2")) {
 				// Change Level
 				changeAccountLevel(_uname.trim(), _level.trim());
-			}
-			else if (_mode.equals("3"))
-			{
+			} else if (_mode.equals("3")) {
 				// Delete
 				String yesno = cl.inputString("functDeleteAccountConfirm");
-				if ((yesno != null) && yesno.equalsIgnoreCase(cl.getString("yesChar")))
-				{
+				if ((yesno != null) && yesno.equalsIgnoreCase(cl.getString("yesChar"))) {
 					deleteAccount(_uname.trim());
-				}
-				else
-				{
+				} else {
 					cl.println("functDeleteAccountCancel");
 				}
-			}
-			else if (_mode.equals("4"))
-			{
+			} else if (_mode.equals("4")) {
 				// List
 				_mode = "";
 				cl.println();
@@ -145,15 +119,12 @@ public class SQLAccountManager
 				cl.println("functListAccountPrivileged");
 				cl.println("functListAccountRegular");
 				cl.println("functListAccountAll");
-				while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4")))
-				{
+				while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4"))) {
 					_mode = cl.inputString("inputChoice");
 				}
 				cl.println();
 				printAccInfo(_mode);
-			}
-			else if (_mode.equals("5"))
-			{
+			} else if (_mode.equals("5")) {
 				System.exit(0);
 			}
 			
@@ -165,30 +136,23 @@ public class SQLAccountManager
 		}
 	}
 	
-	private static void printAccInfo(String m) throws SQLException
-	{
+	private static void printAccInfo(String m) throws SQLException {
 		int count = 0;
 		Connection con = null;
 		con = L2DatabaseFactory.getInstance().getConnection();
 		String q = "SELECT login, accessLevel FROM accounts ";
-		if (m.equals("1"))
-		{
+		if (m.equals("1")) {
 			q = q.concat("WHERE accessLevel < 0");
-		}
-		else if (m.equals("2"))
-		{
+		} else if (m.equals("2")) {
 			q = q.concat("WHERE accessLevel > 0");
-		}
-		else if (m.equals("3"))
-		{
+		} else if (m.equals("3")) {
 			q = q.concat("WHERE accessLevel = 0");
 		}
 		q = q.concat(" ORDER BY login ASC");
 		
 		PreparedStatement statement = con.prepareStatement(q);
 		ResultSet rset = statement.executeQuery();
-		while (rset.next())
-		{
+		while (rset.next()) {
 			System.out.println(rset.getString("login") + " -> " + rset.getInt("accessLevel"));
 			count++;
 		}
@@ -198,8 +162,7 @@ public class SQLAccountManager
 		cl.println("functListAccountDisplayed", count);
 	}
 	
-	private static void addOrUpdateAccount(String account, String password, String level) throws IOException, SQLException, NoSuchAlgorithmException
-	{
+	private static void addOrUpdateAccount(String account, String password, String level) throws IOException, SQLException, NoSuchAlgorithmException {
 		// Encode Password
 		MessageDigest md = MessageDigest.getInstance("SHA");
 		byte[] newpass;
@@ -218,8 +181,7 @@ public class SQLAccountManager
 		L2DatabaseFactory.close(con);
 	}
 	
-	private static void changeAccountLevel(String account, String level) throws SQLException
-	{
+	private static void changeAccountLevel(String account, String level) throws SQLException {
 		Connection con = null;
 		con = L2DatabaseFactory.getInstance().getConnection();
 		
@@ -227,12 +189,9 @@ public class SQLAccountManager
 		PreparedStatement statement = con.prepareStatement("SELECT COUNT(*) FROM accounts WHERE login=?;");
 		statement.setString(1, account);
 		ResultSet rset = statement.executeQuery();
-		if (!rset.next())
-		{
+		if (!rset.next()) {
 			cl.println("falseString");
-		}
-		else if (rset.getInt(1) > 0)
-		{
+		} else if (rset.getInt(1) > 0) {
 			// Exist
 			// Update
 			statement = con.prepareStatement("UPDATE accounts SET accessLevel=? WHERE login=?;");
@@ -242,9 +201,7 @@ public class SQLAccountManager
 			statement.executeUpdate();
 			
 			cl.println("functAccessLevelUpdated", account);
-		}
-		else
-		{
+		} else {
 			// Not Exist
 			cl.println("functAccessLevelNotExist", account);
 		}
@@ -253,8 +210,7 @@ public class SQLAccountManager
 		L2DatabaseFactory.close(con);
 	}
 	
-	private static void deleteAccount(String account) throws SQLException
-	{
+	private static void deleteAccount(String account) throws SQLException {
 		Connection con = null;
 		con = L2DatabaseFactory.getInstance().getConnection();
 		
@@ -262,13 +218,10 @@ public class SQLAccountManager
 		PreparedStatement statement = con.prepareStatement("SELECT COUNT(*) FROM accounts WHERE login=?;");
 		statement.setString(1, account);
 		ResultSet rset = statement.executeQuery();
-		if (!rset.next())
-		{
+		if (!rset.next()) {
 			cl.println("falseString");
 			rset.close();
-		}
-		else if (rset.getInt(1) > 0)
-		{
+		} else if (rset.getInt(1) > 0) {
 			rset.close();
 			// Account exist
 			// Get Accounts ID
@@ -282,16 +235,14 @@ public class SQLAccountManager
 			FastList<String> charNames = new FastList<>();
 			FastList<String> clanIds = new FastList<>();
 			
-			while (rset.next())
-			{
+			while (rset.next()) {
 				objIds.add(rset.getString("charId"));
 				charNames.add(rset.getString("char_name"));
 				clanIds.add(rset.getString("clanid"));
 			}
 			rset.close();
 			
-			for (int index = 0; index < objIds.size(); index++)
-			{
+			for (int index = 0; index < objIds.size(); index++) {
 				cl.println("functDeleteAccountChar", charNames.get(index));
 				
 				// Check If clan leader Remove Clan and remove all from it
@@ -300,8 +251,7 @@ public class SQLAccountManager
 				statement.setString(1, clanIds.get(index));
 				rcln = statement.executeQuery();
 				rcln.next();
-				if (rcln.getInt(1) > 0)
-				{
+				if (rcln.getInt(1) > 0) {
 					rcln.close();
 					// Clan Leader
 					
@@ -357,9 +307,7 @@ public class SQLAccountManager
 					statement.setString(1, clanIds.get(index));
 					statement.executeUpdate();
 					
-				}
-				else
-				{
+				} else {
 					rcln.close();
 				}
 				
@@ -484,9 +432,7 @@ public class SQLAccountManager
 			statement.executeUpdate();
 			
 			cl.println("functDeleteAccountComplete", account);
-		}
-		else
-		{
+		} else {
 			// Not Exist
 			cl.println("functDeleteAccountNotExist", account);
 		}

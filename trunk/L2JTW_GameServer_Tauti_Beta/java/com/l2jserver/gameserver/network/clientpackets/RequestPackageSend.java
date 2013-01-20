@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -32,28 +36,23 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author -Wooden-
- * @author UnAfraid
- * Thanks mrTJO
+ * @author UnAfraid Thanks mrTJO
  */
-public class RequestPackageSend extends L2GameClientPacket
-{
+public class RequestPackageSend extends L2GameClientPacket {
 	private final String _C_A8_REQUESTPACKAGESEND = "[C] A8 RequestPackageSend";
 	private ItemHolder _items[] = null;
 	private int _objectId;
 	private int _count;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_objectId = readD();
 		_count = readD();
 		_items = new ItemHolder[_count];
-		for (int i = 0; i < _count; i++)
-		{
+		for (int i = 0; i < _count; i++) {
 			int objId = readD();
 			long cnt = readQ();
-			if (objId < 1 || cnt < 0)
-			{
+			if (objId < 1 || cnt < 0) {
 				_items = null;
 				return;
 			}
@@ -63,8 +62,7 @@ public class RequestPackageSend extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		if (_items == null)
 			return;
 		
@@ -72,8 +70,7 @@ public class RequestPackageSend extends L2GameClientPacket
 		if (player == null)
 			return;
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit"))
-		{
+		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit")) {
 			player.sendMessage("You depositing items too fast.");
 			return;
 		}
@@ -88,8 +85,7 @@ public class RequestPackageSend extends L2GameClientPacket
 		if ((manager == null || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false)) && !player.isGM())
 			return;
 		
-		if (player.getActiveEnchantItem() != null)
-		{
+		if (player.getActiveEnchantItem() != null) {
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
 			return;
 		}
@@ -99,16 +95,14 @@ public class RequestPackageSend extends L2GameClientPacket
 			return;
 		
 		// Freight price from config or normal price per item slot (30)
-		int fee = _count * Config.ALT_FREIGHT_PRICE; //Config.ALT_GAME_FREIGHT_PRICE;
+		int fee = _count * Config.ALT_FREIGHT_PRICE; // Config.ALT_GAME_FREIGHT_PRICE;
 		double currentAdena = player.getAdena();
 		int slots = 0;
 		
-		for (ItemHolder i : _items)
-		{
+		for (ItemHolder i : _items) {
 			// Check validity of requested item
 			L2ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
-			if (item == null)
-			{
+			if (item == null) {
 				_log.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (validity check)");
 				return;
 			}
@@ -126,15 +120,13 @@ public class RequestPackageSend extends L2GameClientPacket
 		}
 		
 		// Item Max Limit Check
-		if (!warehouse.validateCapacity(slots))
-		{
+		if (!warehouse.validateCapacity(slots)) {
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
 		}
 		
 		// Check if enough adena and charge the fee
-		if (currentAdena < fee || !player.reduceAdena(warehouse.getName(), fee, manager, false))
-		{
+		if (currentAdena < fee || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
 			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
 			return;
 		}
@@ -145,25 +137,21 @@ public class RequestPackageSend extends L2GameClientPacket
 		
 		// Proceed to the transfer
 		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (ItemHolder i : _items)
-		{
+		for (ItemHolder i : _items) {
 			// Check validity of requested item
 			L2ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
-			if (oldItem == null)
-			{
+			if (oldItem == null) {
 				_log.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
 				return;
 			}
 			
 			L2ItemInstance newItem = player.getInventory().transferItem("Trade", i.getId(), i.getCount(), warehouse, player, null);
-			if (newItem == null)
-			{
+			if (newItem == null) {
 				_log.log(Level.WARNING, "Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
 				continue;
 			}
 			
-			if (playerIU != null)
-			{
+			if (playerIU != null) {
 				if (oldItem.getCount() > 0 && oldItem != newItem)
 					playerIU.addModifiedItem(oldItem);
 				else
@@ -186,8 +174,7 @@ public class RequestPackageSend extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C_A8_REQUESTPACKAGESEND;
 	}
 }

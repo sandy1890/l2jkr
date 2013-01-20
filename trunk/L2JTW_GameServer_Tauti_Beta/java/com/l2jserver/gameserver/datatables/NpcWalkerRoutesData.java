@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -32,40 +36,32 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * Main Table to Load Npc Walkers Routes and Chat.
  * @author Rayan, JIV
  */
-public class NpcWalkerRoutesData extends DocumentParser
-{
+public class NpcWalkerRoutesData extends DocumentParser {
+	
 	private static final Map<Integer, List<L2NpcWalkerNode>> _routes = new HashMap<>();
 	
-	protected NpcWalkerRoutesData()
-	{
-		if (Config.ALLOW_NPC_WALKERS)
-		{
+	protected NpcWalkerRoutesData() {
+		if (Config.ALLOW_NPC_WALKERS) {
 			load();
 		}
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		_routes.clear();
 		parseDatapackFile("data/WalkerRoutes.xml");
 		_log.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " Npc Walker Routes.");
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		final Node n = getCurrentDocument().getFirstChild();
-		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-		{
-			if (d.getNodeName().equals("walker"))
-			{
+		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+			if (d.getNodeName().equals("walker")) {
 				List<L2NpcWalkerNode> list = new ArrayList<>(5);
 				final Integer npcId = parseInteger(d.getAttributes(), "npcId");
-				for (Node r = d.getFirstChild(); r != null; r = r.getNextSibling())
-				{
-					if (r.getNodeName().equals("route"))
-					{
+				for (Node r = d.getFirstChild(); r != null; r = r.getNextSibling()) {
+					if (r.getNodeName().equals("route")) {
 						NamedNodeMap attrs = r.getAttributes();
 						int id = parseInt(attrs, "id");
 						int x = parseInt(attrs, "X");
@@ -75,30 +71,21 @@ public class NpcWalkerRoutesData extends DocumentParser
 						String chatString = null;
 						NpcStringId npcString = null;
 						Node node = attrs.getNamedItem("string");
-						if (node != null)
-						{
+						if (node != null) {
 							chatString = node.getNodeValue();
-						}
-						else
-						{
+						} else {
 							node = attrs.getNamedItem("npcString");
-							if (node != null)
-							{
+							if (node != null) {
 								npcString = NpcStringId.getNpcStringId(node.getNodeValue());
-								if (npcString == null)
-								{
+								if (npcString == null) {
 									_log.log(Level.WARNING, "NpcWalkerRoutersTable: Unknown npcstring '" + node.getNodeValue() + ".");
 									continue;
 								}
-							}
-							else
-							{
+							} else {
 								node = attrs.getNamedItem("npcStringId");
-								if (node != null)
-								{
+								if (node != null) {
 									npcString = NpcStringId.getNpcStringId(parseInt(node));
-									if (npcString == null)
-									{
+									if (npcString == null) {
 										_log.log(Level.WARNING, "NpcWalkerRoutersTable: Unknown npcstring '" + node.getNodeValue() + ".");
 										continue;
 									}
@@ -114,18 +101,16 @@ public class NpcWalkerRoutesData extends DocumentParser
 		}
 	}
 	
-	public List<L2NpcWalkerNode> getRouteForNpc(int id)
-	{
+	public List<L2NpcWalkerNode> getRouteForNpc(int id) {
 		return _routes.get(id);
 	}
 	
-	public static NpcWalkerRoutesData getInstance()
-	{
+	public static NpcWalkerRoutesData getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final NpcWalkerRoutesData _instance = new NpcWalkerRoutesData();
 	}
+	
 }

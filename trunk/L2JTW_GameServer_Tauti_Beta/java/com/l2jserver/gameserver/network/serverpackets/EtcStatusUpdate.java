@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -21,17 +25,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /* Packet format: F3 XX000000 YY000000 ZZ000000 */
 
 /**
- *
- * @author  Luca Baldi
+ * @author Luca Baldi
  */
-public class EtcStatusUpdate extends L2GameServerPacket
-{
+public class EtcStatusUpdate extends L2GameServerPacket {
 	private static final String _S__F3_ETCSTATUSUPDATE = "[S] f9 EtcStatusUpdate";
 	
 	private L2PcInstance _activeChar;
 	
-	public EtcStatusUpdate(L2PcInstance activeChar)
-	{
+	public EtcStatusUpdate(L2PcInstance activeChar) {
 		_activeChar = activeChar;
 	}
 	
@@ -39,8 +40,7 @@ public class EtcStatusUpdate extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
 	 */
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xf9); // several icons to a separate line (0 = disabled)
 		writeD(_activeChar.getCharges()); // 1-7 increase force, lvl
 		writeD(_activeChar.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
@@ -57,8 +57,7 @@ public class EtcStatusUpdate extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
 	 */
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__F3_ETCSTATUSUPDATE;
 	}
 }

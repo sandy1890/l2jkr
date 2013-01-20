@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.actor.position;
 
@@ -22,8 +26,8 @@ import com.l2jserver.gameserver.model.L2WorldRegion;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.util.Point3D;
 
-public class ObjectPosition
-{
+public class ObjectPosition {
+	
 	private static final Logger _log = Logger.getLogger(ObjectPosition.class.getName());
 	
 	private final L2Object _activeObject;
@@ -31,8 +35,7 @@ public class ObjectPosition
 	private Point3D _worldPosition;
 	private L2WorldRegion _worldRegion; // Object localization : Used for items/chars that are seen in the world
 	
-	public ObjectPosition(L2Object activeObject)
-	{
+	public ObjectPosition(L2Object activeObject) {
 		_activeObject = activeObject;
 		setWorldRegion(L2World.getInstance().getRegion(getWorldPosition()));
 	}
@@ -51,21 +54,16 @@ public class ObjectPosition
 	 * @param y
 	 * @param z
 	 */
-	public final void setXYZ(int x, int y, int z)
-	{
+	public final void setXYZ(int x, int y, int z) {
 		assert getWorldRegion() != null;
 		
 		setWorldPosition(x, y, z);
 		
-		try
-		{
-			if (L2World.getInstance().getRegion(getWorldPosition()) != getWorldRegion())
-			{
+		try {
+			if (L2World.getInstance().getRegion(getWorldPosition()) != getWorldRegion()) {
 				updateWorldRegion();
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.warning("Object Id at bad coords: (x: " + getX() + ", y: " + getY() + ", z: " + getZ() + ").");
 			badCoords();
 		}
@@ -78,8 +76,7 @@ public class ObjectPosition
 	 * <BR>
 	 * <li>CharPosition</li> <li>PcPosition</li><BR>
 	 */
-	protected void badCoords()
-	{
+	protected void badCoords() {
 		
 	}
 	
@@ -101,23 +98,18 @@ public class ObjectPosition
 	 * @param y
 	 * @param z
 	 */
-	public final void setXYZInvisible(int x, int y, int z)
-	{
+	public final void setXYZInvisible(int x, int y, int z) {
 		assert getWorldRegion() == null;
-		if (x > L2World.MAP_MAX_X)
-		{
+		if (x > L2World.MAP_MAX_X) {
 			x = L2World.MAP_MAX_X - 5000;
 		}
-		if (x < L2World.MAP_MIN_X)
-		{
+		if (x < L2World.MAP_MIN_X) {
 			x = L2World.MAP_MIN_X + 5000;
 		}
-		if (y > L2World.MAP_MAX_Y)
-		{
+		if (y > L2World.MAP_MAX_Y) {
 			y = L2World.MAP_MAX_Y - 5000;
 		}
-		if (y < L2World.MAP_MIN_Y)
-		{
+		if (y < L2World.MAP_MIN_Y) {
 			y = L2World.MAP_MIN_Y + 5000;
 		}
 		
@@ -128,16 +120,13 @@ public class ObjectPosition
 	/**
 	 * checks if current object changed its region, if so, update references
 	 */
-	public void updateWorldRegion()
-	{
-		if (!getActiveObject().isVisible())
-		{
+	public void updateWorldRegion() {
+		if (!getActiveObject().isVisible()) {
 			return;
 		}
 		
 		L2WorldRegion newRegion = L2World.getInstance().getRegion(getWorldPosition());
-		if (newRegion != getWorldRegion())
-		{
+		if (newRegion != getWorldRegion()) {
 			getWorldRegion().removeVisibleObject(getActiveObject());
 			
 			setWorldRegion(newRegion);
@@ -147,98 +136,80 @@ public class ObjectPosition
 		}
 	}
 	
-	public L2Object getActiveObject()
-	{
+	public L2Object getActiveObject() {
 		return _activeObject;
 	}
 	
-	public final int getHeading()
-	{
+	public final int getHeading() {
 		return _heading;
 	}
 	
-	public final void setHeading(int value)
-	{
+	public final void setHeading(int value) {
 		_heading = value;
 	}
 	
 	/**
 	 * @return the x position of the L2Object.
 	 */
-	public final int getX()
-	{
+	public final int getX() {
 		return getWorldPosition().getX();
 	}
 	
-	public final void setX(int value)
-	{
+	public final void setX(int value) {
 		getWorldPosition().setX(value);
 	}
 	
 	/**
 	 * @return the y position of the L2Object.
 	 */
-	public final int getY()
-	{
+	public final int getY() {
 		return getWorldPosition().getY();
 	}
 	
-	public final void setY(int value)
-	{
+	public final void setY(int value) {
 		getWorldPosition().setY(value);
 	}
 	
 	/**
 	 * @return the z position of the L2Object.
 	 */
-	public final int getZ()
-	{
+	public final int getZ() {
 		return getWorldPosition().getZ();
 	}
 	
-	public final void setZ(int value)
-	{
+	public final void setZ(int value) {
 		getWorldPosition().setZ(value);
 	}
 	
-	public final Point3D getWorldPosition()
-	{
-		if (_worldPosition == null)
-		{
+	public final Point3D getWorldPosition() {
+		if (_worldPosition == null) {
 			_worldPosition = new Point3D(0, 0, 0);
 		}
 		return _worldPosition;
 	}
 	
-	public final void setWorldPosition(int x, int y, int z)
-	{
+	public final void setWorldPosition(int x, int y, int z) {
 		getWorldPosition().setXYZ(x, y, z);
 	}
 	
-	public final void setWorldPosition(Point3D newPosition)
-	{
+	public final void setWorldPosition(Point3D newPosition) {
 		setWorldPosition(newPosition.getX(), newPosition.getY(), newPosition.getZ());
 	}
 	
-	public final L2WorldRegion getWorldRegion()
-	{
+	public final L2WorldRegion getWorldRegion() {
 		return _worldRegion;
 	}
 	
-	public void setWorldRegion(L2WorldRegion value)
-	{
-		if ((_worldRegion != null) && (getActiveObject() instanceof L2Character)) // confirm revalidation of old region's zones
-		{
-			if (value != null)
-			{
+	public void setWorldRegion(L2WorldRegion value) {
+		if ((_worldRegion != null) && (getActiveObject() instanceof L2Character)) { // confirm revalidation of old region's zones
+			if (value != null) {
 				_worldRegion.revalidateZones((L2Character) getActiveObject()); // at world region change
-			}
-			else
-			{
+			} else {
 				_worldRegion.removeFromZones((L2Character) getActiveObject()); // at world region change
 			}
 		}
 		
 		_worldRegion = value;
 	}
+	
 }

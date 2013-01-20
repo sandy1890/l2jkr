@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.mail;
 
@@ -37,32 +41,27 @@ import com.l2jserver.loginserver.mail.MailSystem.MailContent;
 /**
  * @author mrTJO
  */
-public class BaseMail implements Runnable
-{
+public class BaseMail implements Runnable {
 	private static final Logger _log = Logger.getLogger(BaseMail.class.getName());
 	
 	private final Properties _mailProp = new Properties();
 	private final SmtpAuthenticator _authenticator;
 	private MimeMessage _messageMime = null;
 	
-	private class SmtpAuthenticator extends Authenticator
-	{
+	private class SmtpAuthenticator extends Authenticator {
 		private final PasswordAuthentication _auth;
 		
-		public SmtpAuthenticator()
-		{
+		public SmtpAuthenticator() {
 			_auth = new PasswordAuthentication(Config.EMAIL_SYS_USERNAME, Config.EMAIL_SYS_PASSWORD);
 		}
 		
 		@Override
-		public PasswordAuthentication getPasswordAuthentication()
-		{
+		public PasswordAuthentication getPasswordAuthentication() {
 			return _auth;
 		}
 	}
 	
-	public BaseMail(String account, String mailId, String... args)
-	{
+	public BaseMail(String account, String mailId, String... args) {
 		_mailProp.put("mail.smtp.host", Config.EMAIL_SYS_HOST);
 		_mailProp.put("mail.smtp.auth", Config.EMAIL_SYS_SMTP_AUTH);
 		_mailProp.put("mail.smtp.port", Config.EMAIL_SYS_PORT);
@@ -74,14 +73,12 @@ public class BaseMail implements Runnable
 		
 		String mailAddr = getUserMail(account);
 		
-		if (mailAddr == null)
-		{
+		if (mailAddr == null) {
 			return;
 		}
 		
 		MailContent content = MailSystem.getInstance().getMailContent(mailId);
-		if (content == null)
-		{
+		if (content == null) {
 			return;
 		}
 		
@@ -89,33 +86,24 @@ public class BaseMail implements Runnable
 		
 		Session mailSession = Session.getDefaultInstance(_mailProp, _authenticator);
 		
-		try
-		{
+		try {
 			_messageMime = new MimeMessage(mailSession);
 			_messageMime.setSubject(content.getSubject());
-			try
-			{
+			try {
 				_messageMime.setFrom(new InternetAddress(Config.EMAIL_SYS_ADDRESS, Config.EMAIL_SERVERINFO_NAME));
-			}
-			catch (UnsupportedEncodingException e)
-			{
+			} catch (UnsupportedEncodingException e) {
 				_log.warning("Sender Address not Valid!");
 			}
 			_messageMime.setContent(message, "text/html");
 			_messageMime.setRecipient(Message.RecipientType.TO, new InternetAddress(mailAddr));
-		}
-		catch (MessagingException e)
-		{
+		} catch (MessagingException e) {
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 	
-	private String compileHtml(String account, String html, String[] args)
-	{
-		if (args != null)
-		{
-			for (int i = 0; i < args.length; i++)
-			{
+	private String compileHtml(String account, String html, String[] args) {
+		if (args != null) {
+			for (int i = 0; i < args.length; i++) {
 				html = html.replace("%var" + i + "%", args[i]);
 			}
 		}
@@ -123,46 +111,34 @@ public class BaseMail implements Runnable
 		return html;
 	}
 	
-	private String getUserMail(String username)
-	{
+	private String getUserMail(String username) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(Config.EMAIL_SYS_SELECTQUERY);
 			statement.setString(1, username);
 			ResultSet rset = statement.executeQuery();
-			if (rset.next())
-			{
+			if (rset.next()) {
 				String mail = rset.getString(Config.EMAIL_SYS_DBFIELD);
 				return mail;
 			}
 			rset.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.warning("Cannot select user mail: Exception");
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		return null;
 	}
 	
 	@Override
-	public void run()
-	{
-		try
-		{
-			if (_messageMime != null)
-			{
+	public void run() {
+		try {
+			if (_messageMime != null) {
 				Transport.send(_messageMime);
 			}
-		}
-		catch (MessagingException e)
-		{
+		} catch (MessagingException e) {
 			_log.warning("Error encounterd while sending email");
 		}
 	}

@@ -1,27 +1,28 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2013 L2J Server
+ * 
+ * This file is part of L2J Server.
+ * 
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
 /**
-* Format (ch)d
-* d: already in use (2 - no, -1 - yes)
-* FE 0F 01 FF FF FF FF
-* @author OSTIN
-*/
-public class ExIsCharNameCreatable extends L2GameServerPacket
-{
+ * Format (ch)d d: already in use (2 - no, -1 - yes) FE 0F 01 FF FF FF FF
+ * @author OSTIN
+ */
+public class ExIsCharNameCreatable extends L2GameServerPacket {
 	private static final String _S__FE_10F_EXISCHARNAMECREATABLE = "[S] FE:10F ExIsCharNameCreatable";
 	
 	public static final int REASON_CREATION_FAILED = 0x00; // "Your character creation has failed."
@@ -34,22 +35,19 @@ public class ExIsCharNameCreatable extends L2GameServerPacket
 	
 	int _code;
 	
-	public ExIsCharNameCreatable(int code)
-	{
+	public ExIsCharNameCreatable(int code) {
 		_code = code;
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xFE);
 		writeH(0x10F);
 		writeD(_code);
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FE_10F_EXISCHARNAMECREATABLE;
 	}
 }

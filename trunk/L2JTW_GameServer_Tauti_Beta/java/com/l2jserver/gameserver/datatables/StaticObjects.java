@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -31,44 +35,36 @@ import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
  * This class loads and holds all static object data.
  * @author UnAfraid
  */
-public final class StaticObjects extends DocumentParser
-{
+public final class StaticObjects extends DocumentParser {
+	
 	private static final Map<Integer, L2StaticObjectInstance> _staticObjects = new HashMap<>();
 	
 	/**
 	 * Instantiates a new static objects.
 	 */
-	protected StaticObjects()
-	{
+	protected StaticObjects() {
 		load();
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		_staticObjects.clear();
 		parseDatapackFile("data/staticObjects.xml");
 		_log.info("StaticObject: Loaded " + _staticObjects.size() + " StaticObject Templates.");
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		NamedNodeMap attrs;
 		Node att;
 		StatsSet set;
-		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			if ("list".equalsIgnoreCase(n.getNodeName()))
-			{
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					if ("object".equalsIgnoreCase(d.getNodeName()))
-					{
+		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling()) {
+			if ("list".equalsIgnoreCase(n.getNodeName())) {
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+					if ("object".equalsIgnoreCase(d.getNodeName())) {
 						attrs = d.getAttributes();
 						set = new StatsSet();
-						for (int i = 0; i < attrs.getLength(); i++)
-						{
+						for (int i = 0; i < attrs.getLength(); i++) {
 							att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
@@ -83,8 +79,7 @@ public final class StaticObjects extends DocumentParser
 	 * Initialize an static object based on the stats set and add it to the map.
 	 * @param set the stats set to add.
 	 */
-	private void addObject(StatsSet set)
-	{
+	private void addObject(StatsSet set) {
 		L2StaticObjectInstance obj = new L2StaticObjectInstance(IdFactory.getInstance().getNextId(), new L2CharTemplate(new StatsSet()), set.getInteger("id"));
 		obj.setType(set.getInteger("type", 0));
 		obj.setName(set.getString("name"));
@@ -97,8 +92,7 @@ public final class StaticObjects extends DocumentParser
 	 * Gets the static objects.
 	 * @return a collection of static objects.
 	 */
-	public Collection<L2StaticObjectInstance> getStaticObjects()
-	{
+	public Collection<L2StaticObjectInstance> getStaticObjects() {
 		return _staticObjects.values();
 	}
 	
@@ -106,13 +100,12 @@ public final class StaticObjects extends DocumentParser
 	 * Gets the single instance of StaticObjects.
 	 * @return single instance of StaticObjects
 	 */
-	public static StaticObjects getInstance()
-	{
+	public static StaticObjects getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final StaticObjects _instance = new StaticObjects();
 	}
+	
 }

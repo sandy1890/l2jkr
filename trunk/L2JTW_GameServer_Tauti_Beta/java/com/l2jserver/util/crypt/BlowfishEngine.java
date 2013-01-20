@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.util.crypt;
 
@@ -33,8 +37,7 @@ import java.io.IOException;
  * FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,<br>
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-public class BlowfishEngine
-{
+public class BlowfishEngine {
 	private static final int[] KP =
 	{
 		0x243F6A88,
@@ -1105,8 +1108,7 @@ public class BlowfishEngine
 	private boolean encrypting = false;
 	private byte[] workingKey = null;
 	
-	public BlowfishEngine()
-	{
+	public BlowfishEngine() {
 		S0 = new int[SBOX_SK];
 		S1 = new int[SBOX_SK];
 		S2 = new int[SBOX_SK];
@@ -1120,58 +1122,46 @@ public class BlowfishEngine
 	 * @param key the key used to set up the cipher.
 	 * @exception IllegalArgumentException if the params argument is inappropriate.
 	 */
-	public void init(boolean pEncrypting, byte[] key)
-	{
+	public void init(boolean pEncrypting, byte[] key) {
 		encrypting = pEncrypting;
 		workingKey = key;
 		setKey(workingKey);
 		return;
 	}
 	
-	public String getAlgorithmName()
-	{
+	public String getAlgorithmName() {
 		return "Blowfish";
 	}
 	
-	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException
-	{
-		if (workingKey == null)
-		{
+	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException {
+		if (workingKey == null) {
 			throw new IllegalStateException("Blowfish not initialised");
 		}
-		if ((inOff + BLOCK_SIZE) > in.length)
-		{
+		if ((inOff + BLOCK_SIZE) > in.length) {
 			throw new IOException("input buffer too short");
 		}
-		if ((outOff + BLOCK_SIZE) > out.length)
-		{
+		if ((outOff + BLOCK_SIZE) > out.length) {
 			throw new IOException("output buffer too short");
 		}
-		if (encrypting)
-		{
+		if (encrypting) {
 			encryptBlock(in, inOff, out, outOff);
-		}
-		else
-		{
+		} else {
 			decryptBlock(in, inOff, out, outOff);
 		}
 		return BLOCK_SIZE;
 	}
 	
-	public void reset()
-	{
+	public void reset() {
 	}
 	
-	public int getBlockSize()
-	{
+	public int getBlockSize() {
 		return BLOCK_SIZE;
 	}
 	
 	// ==================================
 	// Private Implementation
 	// ==================================
-	private int func(int x)
-	{
+	private int func(int x) {
 		return (((S0[(x >>> 24)] + S1[(x >>> 16) & 0xff]) ^ S2[(x >>> 8) & 0xff]) + S3[x & 0xff]);
 	}
 	
@@ -1181,14 +1171,11 @@ public class BlowfishEngine
 	 * @param xr
 	 * @param table
 	 */
-	private void processTable(int xl, int xr, int[] table)
-	{
+	private void processTable(int xl, int xr, int[] table) {
 		int size = table.length;
-		for (int s = 0; s < size; s += 2)
-		{
+		for (int s = 0; s < size; s += 2) {
 			xl ^= P[0];
-			for (int i = 1; i < ROUNDS; i += 2)
-			{
+			for (int i = 1; i < ROUNDS; i += 2) {
 				xr ^= func(xl) ^ P[i];
 				xl ^= func(xr) ^ P[i + 1];
 			}
@@ -1200,12 +1187,9 @@ public class BlowfishEngine
 		}
 	}
 	
-	private void setKey(byte[] key)
-	{
+	private void setKey(byte[] key) {
 		/*
-		 * - comments are from _Applied Crypto_, Schneier, p338.<br>
-		 * Please be careful comparing the two, AC numbers the arrays from 1, the enclosed code from 0.<br>
-		 * (1) Initialize the S-boxes and the P-array, with a fixed string This string contains the hexadecimal digits of pi (3.141...)
+		 * - comments are from _Applied Crypto_, Schneier, p338.<br> Please be careful comparing the two, AC numbers the arrays from 1, the enclosed code from 0.<br> (1) Initialize the S-boxes and the P-array, with a fixed string This string contains the hexadecimal digits of pi (3.141...)
 		 */
 		System.arraycopy(KS0, 0, S0, 0, SBOX_SK);
 		System.arraycopy(KS1, 0, S1, 0, SBOX_SK);
@@ -1213,22 +1197,18 @@ public class BlowfishEngine
 		System.arraycopy(KS3, 0, S3, 0, SBOX_SK);
 		System.arraycopy(KP, 0, P, 0, P_SZ);
 		/*
-		 * (2) Now, XOR P[0] with the first 32 bits of the key, XOR P[1] with the second 32-bits of the key, and so on for all bits of the key (up to P[17]).<br>
-		 * Repeatedly cycle through the key bits until the entire P-array has been XOR-ed with the key bits
+		 * (2) Now, XOR P[0] with the first 32 bits of the key, XOR P[1] with the second 32-bits of the key, and so on for all bits of the key (up to P[17]).<br> Repeatedly cycle through the key bits until the entire P-array has been XOR-ed with the key bits
 		 */
 		int keyLength = key.length;
 		int keyIndex = 0;
-		for (int i = 0; i < P_SZ; i++)
-		{
+		for (int i = 0; i < P_SZ; i++) {
 			// get the 32 bits of the key, in 4 * 8 bit chunks
 			int data = 0x0000000;
-			for (int j = 0; j < 4; j++)
-			{
+			for (int j = 0; j < 4; j++) {
 				// create a 32 bit block
 				data = (data << 8) | (key[keyIndex++] & 0xff);
 				// wrap when we get to the end of the key
-				if (keyIndex >= keyLength)
-				{
+				if (keyIndex >= keyLength) {
 					keyIndex = 0;
 				}
 			}
@@ -1236,11 +1216,8 @@ public class BlowfishEngine
 			P[i] ^= data;
 		}
 		/*
-		 * (3) Encrypt the all-zero string with the Blowfish algorithm, using the subkeys described in (1) and (2)<br>
-		 * (4) Replace P1 and P2 with the output of step (3)<br>
-		 * (5) Encrypt the output of step(3) using the Blowfish algorithm, with the modified subkeys.<br>
-		 * (6) Replace P3 and P4 with the output of step (5)<br>
-		 * (7) Continue the process, replacing all elements of the P-array and then all four S-boxes in order, with the output of the continuously changing Blowfish algorithm
+		 * (3) Encrypt the all-zero string with the Blowfish algorithm, using the subkeys described in (1) and (2)<br> (4) Replace P1 and P2 with the output of step (3)<br> (5) Encrypt the output of step(3) using the Blowfish algorithm, with the modified subkeys.<br> (6) Replace P3 and P4 with the
+		 * output of step (5)<br> (7) Continue the process, replacing all elements of the P-array and then all four S-boxes in order, with the output of the continuously changing Blowfish algorithm
 		 */
 		processTable(0, 0, P);
 		processTable(P[P_SZ - 2], P[P_SZ - 1], S0);
@@ -1256,13 +1233,11 @@ public class BlowfishEngine
 	 * @param dst
 	 * @param dstIndex
 	 */
-	private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
-	{
+	private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex) {
 		int xl = bytesTo32bits(src, srcIndex);
 		int xr = bytesTo32bits(src, srcIndex + 4);
 		xl ^= P[0];
-		for (int i = 1; i < ROUNDS; i += 2)
-		{
+		for (int i = 1; i < ROUNDS; i += 2) {
 			xr ^= func(xl) ^ P[i];
 			xl ^= func(xr) ^ P[i + 1];
 		}
@@ -1278,13 +1253,11 @@ public class BlowfishEngine
 	 * @param dst
 	 * @param dstIndex
 	 */
-	private void decryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
-	{
+	private void decryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex) {
 		int xl = bytesTo32bits(src, srcIndex);
 		int xr = bytesTo32bits(src, srcIndex + 4);
 		xl ^= P[ROUNDS + 1];
-		for (int i = ROUNDS; i > 0; i -= 2)
-		{
+		for (int i = ROUNDS; i > 0; i -= 2) {
 			xr ^= func(xl) ^ P[i];
 			xl ^= func(xr) ^ P[i - 1];
 		}
@@ -1293,13 +1266,11 @@ public class BlowfishEngine
 		bits32ToBytes(xl, dst, dstIndex + 4);
 	}
 	
-	private int bytesTo32bits(byte[] b, int i)
-	{
+	private int bytesTo32bits(byte[] b, int i) {
 		return ((b[i + 3] & 0xff) << 24) | ((b[i + 2] & 0xff) << 16) | ((b[i + 1] & 0xff) << 8) | ((b[i] & 0xff));
 	}
 	
-	private void bits32ToBytes(int in, byte[] b, int offset)
-	{
+	private void bits32ToBytes(int in, byte[] b, int offset) {
 		b[offset] = (byte) in;
 		b[offset + 1] = (byte) (in >> 8);
 		b[offset + 2] = (byte) (in >> 16);

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.dbinstaller;
 
@@ -27,16 +31,14 @@ import com.l2jserver.util.file.filter.SQLFilter;
 /**
  * @author mrTJO
  */
-public class RunTasks extends Thread
-{
+public class RunTasks extends Thread {
 	DBOutputInterface _frame;
 	boolean _cleanInstall;
 	String _db;
 	String _sqlDir;
 	String _cleanUpFile;
 	
-	public RunTasks(DBOutputInterface frame, String db, String sqlDir, String cleanUpFile, boolean cleanInstall)
-	{
+	public RunTasks(DBOutputInterface frame, String db, String sqlDir, String cleanUpFile, boolean cleanInstall) {
 		_frame = frame;
 		_db = db;
 		_cleanInstall = cleanInstall;
@@ -45,8 +47,7 @@ public class RunTasks extends Thread
 	}
 	
 	@Override
-	public void run()
-	{
+	public void run() {
 		new DBDumper(_frame, _db);
 		ScriptExecutor exec = new ScriptExecutor(_frame);
 		
@@ -56,39 +57,28 @@ public class RunTasks extends Thread
 		
 		Preferences prefs = Preferences.userRoot();
 		
-		if (_cleanInstall)
-		{
-			if (clnFile.exists())
-			{
+		if (_cleanInstall) {
+			if (clnFile.exists()) {
 				_frame.appendToProgressArea("Cleaning Database...");
 				exec.execSqlFile(clnFile);
 				_frame.appendToProgressArea("Database Cleaned!");
-			}
-			else
-			{
+			} else {
 				_frame.appendToProgressArea("Database Cleaning Script Not Found!");
 			}
 			
-			if (updDir.exists())
-			{
+			if (updDir.exists()) {
 				StringBuilder sb = new StringBuilder();
-				for (File cf : files)
-				{
+				for (File cf : files) {
 					sb.append(cf.getName() + ';');
 				}
 				prefs.put(_db + "_upd", sb.toString());
 			}
-		}
-		else
-		{
-			if (!_cleanInstall && updDir.exists())
-			{
+		} else {
+			if (!_cleanInstall && updDir.exists()) {
 				_frame.appendToProgressArea("Installing Updates...");
 				
-				for (File cf : files)
-				{
-					if (!prefs.get(_db + "_upd", "").contains(cf.getName()))
-					{
+				for (File cf : files) {
+					if (!prefs.get(_db + "_upd", "").contains(cf.getName())) {
 						exec.execSqlFile(cf, true);
 						prefs.put(_db + "_upd", prefs.get(_db + "_upd", "") + cf.getName() + ";");
 					}
@@ -102,11 +92,9 @@ public class RunTasks extends Thread
 		_frame.appendToProgressArea("Database Installation Complete!");
 		
 		File cusDir = new File(_sqlDir, "custom");
-		if (cusDir.exists())
-		{
+		if (cusDir.exists()) {
 			int ch = _frame.requestConfirm("Install Custom", "Do you want to install custom tables?", JOptionPane.YES_NO_OPTION);
-			if (ch == 0)
-			{
+			if (ch == 0) {
 				_frame.appendToProgressArea("Installing Custom Tables...");
 				exec.execSqlBatch(cusDir);
 				_frame.appendToProgressArea("Custom Tables Installed!");
@@ -114,23 +102,18 @@ public class RunTasks extends Thread
 		}
 		
 		File modDir = new File(_sqlDir, "mods");
-		if (modDir.exists())
-		{
+		if (modDir.exists()) {
 			int ch = _frame.requestConfirm("Install Mods", "Do you want to install mod tables?", JOptionPane.YES_NO_OPTION);
-			if (ch == 0)
-			{
+			if (ch == 0) {
 				_frame.appendToProgressArea("Installing Mods Tables...");
 				exec.execSqlBatch(modDir);
 				_frame.appendToProgressArea("Mods Tables Installed!");
 			}
 		}
 		
-		try
-		{
+		try {
 			_frame.getConnection().close();
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			JOptionPane.showMessageDialog(null, "Cannot close MySQL Connection: " + e.getMessage(), "Connection Error", JOptionPane.ERROR_MESSAGE);
 		}
 		

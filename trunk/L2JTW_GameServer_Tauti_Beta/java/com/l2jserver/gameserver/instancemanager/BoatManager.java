@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.instancemanager;
-
-import gnu.trove.procedure.TObjectProcedure;
 
 import java.util.Map;
 
@@ -30,30 +32,31 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
-public class BoatManager
-{
-	private Map<Integer, L2BoatInstance> _boats = new FastMap<>();
-	private boolean[] _docksBusy = new boolean[3];
+import gnu.trove.procedure.TObjectProcedure;
+
+public class BoatManager {
+	
+	private final Map<Integer, L2BoatInstance> _boats = new FastMap<>();
+	private final boolean[] _docksBusy = new boolean[3];
 	
 	public static final int TALKING_ISLAND = 1;
 	public static final int GLUDIN_HARBOR = 2;
 	public static final int RUNE_HARBOR = 3;
 	
-	public static final BoatManager getInstance()
-	{
+	public static final BoatManager getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected BoatManager()
-	{
-		for (int i = 0; i < _docksBusy.length; i++)
+	protected BoatManager() {
+		for (int i = 0; i < _docksBusy.length; i++) {
 			_docksBusy[i] = false;
+		}
 	}
 	
-	public L2BoatInstance getNewBoat(int boatId, int x, int y, int z, int heading)
-	{
-		if (!Config.ALLOW_BOAT)
+	public L2BoatInstance getNewBoat(int boatId, int x, int y, int z, int heading) {
+		if (!Config.ALLOW_BOAT) {
 			return null;
+		}
 		
 		StatsSet npcDat = new StatsSet();
 		npcDat.set("npcId", boatId);
@@ -111,8 +114,7 @@ public class BoatManager
 	 * @param boatId
 	 * @return
 	 */
-	public L2BoatInstance getBoat(int boatId)
-	{
+	public L2BoatInstance getBoat(int boatId) {
 		return _boats.get(boatId);
 	}
 	
@@ -121,14 +123,11 @@ public class BoatManager
 	 * @param h Dock Id
 	 * @param value True if dock is locked
 	 */
-	public void dockShip(int h, boolean value)
-	{
-		try
-		{
+	public void dockShip(int h, boolean value) {
+		try {
 			_docksBusy[h] = value;
+		} catch (ArrayIndexOutOfBoundsException e) {
 		}
-		catch (ArrayIndexOutOfBoundsException e)
-		{}
 	}
 	
 	/**
@@ -136,73 +135,61 @@ public class BoatManager
 	 * @param h Dock Id
 	 * @return Trye if dock is locked
 	 */
-	public boolean dockBusy(int h)
-	{
-		try
-		{
+	public boolean dockBusy(int h) {
+		try {
 			return _docksBusy[h];
-		}
-		catch (ArrayIndexOutOfBoundsException e)
-		{
+		} catch (ArrayIndexOutOfBoundsException e) {
 			return false;
 		}
 	}
 	
 	/**
 	 * Broadcast one packet in both path points
-	 * @param point1 
-	 * @param point2 
-	 * @param packet 
+	 * @param point1
+	 * @param point2
+	 * @param packet
 	 */
-	public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket packet)
-	{
+	public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket packet) {
 		
 		L2World.getInstance().forEachPlayer(new ForEachPlayerBroadcastPackets(point1, point2, packet));
 	}
 	
 	/**
 	 * Broadcast several packets in both path points
-	 * @param point1 
-	 * @param point2 
-	 * @param packets 
+	 * @param point1
+	 * @param point2
+	 * @param packets
 	 */
-	public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket... packets)
-	{
+	public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket... packets) {
 		L2World.getInstance().forEachPlayer(new ForEachPlayerBroadcastPackets(point1, point2, packets));
 	}
 	
-	private final class ForEachPlayerBroadcastPackets implements TObjectProcedure<L2PcInstance>
-	{
+	private final class ForEachPlayerBroadcastPackets implements TObjectProcedure<L2PcInstance> {
 		VehiclePathPoint _point1, _point2;
 		L2GameServerPacket[] _packets;
 		
-		protected ForEachPlayerBroadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket ... packets)
-		{
+		protected ForEachPlayerBroadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket... packets) {
 			_point1 = point1;
 			_point2 = point2;
 			_packets = packets;
 		}
 		
 		@Override
-		public final boolean execute(final L2PcInstance player)
-		{
-			if (player != null)
-			{
+		public final boolean execute(final L2PcInstance player) {
+			if (player != null) {
 				double dx = (double) player.getX() - _point1.x;
 				double dy = (double) player.getY() - _point1.y;
-				if (Math.sqrt(dx * dx + dy * dy) < Config.BOAT_BROADCAST_RADIUS)
-				{
-					for (L2GameServerPacket p : _packets)
+				if (Math.sqrt((dx * dx) + (dy * dy)) < Config.BOAT_BROADCAST_RADIUS) {
+					for (L2GameServerPacket p : _packets) {
 						player.sendPacket(p);
-				}
-				else
-				{
+					}
+				} else {
 					dx = (double) player.getX() - _point2.x;
 					dy = (double) player.getY() - _point2.y;
-					if (Math.sqrt(dx * dx + dy * dy) < Config.BOAT_BROADCAST_RADIUS)
-					{
-						for (L2GameServerPacket p : _packets)
+					if (Math.sqrt((dx * dx) + (dy * dy)) < Config.BOAT_BROADCAST_RADIUS) {
+						for (L2GameServerPacket p : _packets) {
 							player.sendPacket(p);
+						}
 					}
 				}
 			}
@@ -211,8 +198,8 @@ public class BoatManager
 		}
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final BoatManager _instance = new BoatManager();
 	}
+	
 }

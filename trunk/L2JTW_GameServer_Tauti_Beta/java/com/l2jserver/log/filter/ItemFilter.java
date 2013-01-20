@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.log.filter;
 
@@ -22,8 +26,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 /**
  * @author Advi
  */
-public class ItemFilter implements Filter
-{
+public class ItemFilter implements Filter {
 	// private String _excludeProcess;
 	// private String _excludeItemType;
 	
@@ -32,27 +35,21 @@ public class ItemFilter implements Filter
 	private final String _excludeItemType = "Arrow, Shot, Herb";
 	
 	@Override
-	public boolean isLoggable(LogRecord record)
-	{
-		if (!"item".equals(record.getLoggerName()))
-		{
+	public boolean isLoggable(LogRecord record) {
+		if (!"item".equals(record.getLoggerName())) {
 			return false;
 		}
-		if (_excludeProcess != null)
-		{
+		if (_excludeProcess != null) {
 			// if (record.getMessage() == null) return true;
 			String[] messageList = record.getMessage().split(":");
-			if ((messageList.length < 2) || !_excludeProcess.contains(messageList[1]))
-			{
+			if ((messageList.length < 2) || !_excludeProcess.contains(messageList[1])) {
 				return true;
 			}
 		}
-		if (_excludeItemType != null)
-		{
+		if (_excludeItemType != null) {
 			// if (record.getParameters() == null || record.getParameters().length == 0 || !(record.getParameters()[0] instanceof L2ItemInstance)) return true;
 			L2ItemInstance item = ((L2ItemInstance) record.getParameters()[0]);
-			if (!_excludeItemType.contains(item.getItemType().toString()))
-			{
+			if (!_excludeItemType.contains(item.getItemType().toString())) {
 				return true;
 			}
 		}

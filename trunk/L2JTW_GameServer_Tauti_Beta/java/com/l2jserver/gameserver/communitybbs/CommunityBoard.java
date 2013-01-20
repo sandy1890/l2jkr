@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.communitybbs;
 
@@ -20,76 +24,57 @@ import com.l2jserver.gameserver.communitybbs.Manager.PostBBSManager;
 import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
 import com.l2jserver.gameserver.communitybbs.Manager.TopBBSManager;
 import com.l2jserver.gameserver.communitybbs.Manager.TopicBBSManager;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ShowBoard;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class CommunityBoard
-{
-	public static CommunityBoard getInstance()
-	{
+public class CommunityBoard {
+	
+	public static CommunityBoard getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	public void handleCommands(L2GameClient client, String command)
-	{
+	public void handleCommands(L2GameClient client, String command) {
 		L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		switch (Config.COMMUNITY_TYPE)
-		{
+		switch (Config.COMMUNITY_TYPE) {
 			default:
-			case 0: //disabled
+			case 0: // disabled
 				activeChar.sendPacket(SystemMessageId.CB_OFFLINE);
-				break;
+			break;
 			case 1: // old
 				RegionBBSManager.getInstance().parsecmd(command, activeChar);
-				break;
+			break;
 			case 2: // new
-				if (command.startsWith("_bbsclan"))
-				{
+				if (command.startsWith("_bbsclan")) {
 					ClanBBSManager.getInstance().parsecmd(command, activeChar);
-				}
-				else if (command.startsWith("_bbsmemo"))
-				{
+				} else if (command.startsWith("_bbsmemo")) {
 					TopicBBSManager.getInstance().parsecmd(command, activeChar);
-				}
-				else if (command.startsWith("_bbstopics"))
-				{
+				} else if (command.startsWith("_bbstopics")) {
 					TopicBBSManager.getInstance().parsecmd(command, activeChar);
-				}
-				else if (command.startsWith("_bbsposts"))
-				{
+				} else if (command.startsWith("_bbsposts")) {
 					PostBBSManager.getInstance().parsecmd(command, activeChar);
-				}
-				else if (command.startsWith("_bbstop"))
-				{
+				} else if (command.startsWith("_bbstop")) {
 					TopBBSManager.getInstance().parsecmd(command, activeChar);
-				}
-				else if (command.startsWith("_bbshome"))
-				{
+				} else if (command.startsWith("_bbshome")) {
 					TopBBSManager.getInstance().parsecmd(command, activeChar);
-				}
-				else if (command.startsWith("_bbsloc"))
-				{
+				} else if (command.startsWith("_bbsloc")) {
 					RegionBBSManager.getInstance().parsecmd(command, activeChar);
-				}
-				else
-				{
-					/* Move To MessageTable For L2JTW
-					ShowBoard sb = new ShowBoard("<html><body><br><br><center>the command: " + command
-							+ " is not implemented yet</center><br><br></body></html>", "101");
-					*/
-					ShowBoard sb = new ShowBoard("<html><body><br><br><center>"+MessageTable.Messages[50].getExtra(1) + command
-							+ MessageTable.Messages[50].getExtra(2)+"</center><br><br></body></html>", "101");
+				} else {
+					/*
+					 * Move To MessageTable For L2JTW ShowBoard sb = new ShowBoard("<html><body><br><br><center>the command: " + command + " is not implemented yet</center><br><br></body></html>", "101");
+					 */
+					ShowBoard sb = new ShowBoard("<html><body><br><br><center>" + MessageTable.Messages[50].getExtra(1) + command + MessageTable.Messages[50].getExtra(2) + "</center><br><br></body></html>", "101");
 					activeChar.sendPacket(sb);
 					activeChar.sendPacket(new ShowBoard(null, "102"));
 					activeChar.sendPacket(new ShowBoard(null, "103"));
 				}
-				break;
+			break;
 		}
 	}
 	
@@ -102,59 +87,47 @@ public class CommunityBoard
 	 * @param arg4
 	 * @param arg5
 	 */
-	public void handleWriteCommands(L2GameClient client, String url, String arg1, String arg2, String arg3, String arg4, String arg5)
-	{
+	public void handleWriteCommands(L2GameClient client, String url, String arg1, String arg2, String arg3, String arg4, String arg5) {
 		L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		switch (Config.COMMUNITY_TYPE)
-		{
+		switch (Config.COMMUNITY_TYPE) {
 			case 2:
-				if (url.equals("Topic"))
-				{
+				if (url.equals("Topic")) {
 					TopicBBSManager.getInstance().parsewrite(arg1, arg2, arg3, arg4, arg5, activeChar);
-				}
-				else if (url.equals("Post"))
-				{
+				} else if (url.equals("Post")) {
 					PostBBSManager.getInstance().parsewrite(arg1, arg2, arg3, arg4, arg5, activeChar);
-				}
-				else if (url.equals("Region"))
-				{
+				} else if (url.equals("Region")) {
 					RegionBBSManager.getInstance().parsewrite(arg1, arg2, arg3, arg4, arg5, activeChar);
-				}
-				else if (url.equals("Notice"))
-				{
+				} else if (url.equals("Notice")) {
 					ClanBBSManager.getInstance().parsewrite(arg1, arg2, arg3, arg4, arg5, activeChar);
-				}
-				else
-				{
-					/* Move To MessageTable For L2JTW
-					ShowBoard sb = new ShowBoard("<html><body><br><br><center>the command: " + url
-							+ " is not implemented yet</center><br><br></body></html>", "101");
-					*/
-					ShowBoard sb = new ShowBoard("<html><body><br><br><center>"+MessageTable.Messages[50].getExtra(1) + url
-							+ MessageTable.Messages[50].getExtra(2)+"</center><br><br></body></html>", "101");
+				} else {
+					/*
+					 * Move To MessageTable For L2JTW ShowBoard sb = new ShowBoard("<html><body><br><br><center>the command: " + url + " is not implemented yet</center><br><br></body></html>", "101");
+					 */
+					ShowBoard sb = new ShowBoard("<html><body><br><br><center>" + MessageTable.Messages[50].getExtra(1) + url + MessageTable.Messages[50].getExtra(2) + "</center><br><br></body></html>", "101");
 					activeChar.sendPacket(sb);
 					activeChar.sendPacket(new ShowBoard(null, "102"));
 					activeChar.sendPacket(new ShowBoard(null, "103"));
 				}
-				break;
+			break;
 			case 1:
 				RegionBBSManager.getInstance().parsewrite(arg1, arg2, arg3, arg4, arg5, activeChar);
-				break;
+			break;
 			default:
 			case 0:
 				ShowBoard sb = new ShowBoard("<html><body><br><br><center>The Community board is currently disabled</center><br><br></body></html>", "101");
 				activeChar.sendPacket(sb);
 				activeChar.sendPacket(new ShowBoard(null, "102"));
 				activeChar.sendPacket(new ShowBoard(null, "103"));
-				break;
+			break;
 		}
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final CommunityBoard _instance = new CommunityBoard();
 	}
+	
 }

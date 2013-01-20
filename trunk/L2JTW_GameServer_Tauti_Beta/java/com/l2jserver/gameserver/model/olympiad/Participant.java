@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.olympiad;
 
@@ -21,8 +25,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * @author DS, Zoey76
  */
-public final class Participant
-{
+public final class Participant {
+	
 	private final int objectId;
 	private L2PcInstance player;
 	private final String name;
@@ -32,8 +36,7 @@ public final class Participant
 	private boolean defaulted = false;
 	private final StatsSet stats;
 	
-	public Participant(L2PcInstance plr, int olympiadSide)
-	{
+	public Participant(L2PcInstance plr, int olympiadSide) {
 		objectId = plr.getObjectId();
 		player = plr;
 		name = plr.getName();
@@ -42,8 +45,7 @@ public final class Participant
 		stats = Olympiad.getNobleStats(getObjectId());
 	}
 	
-	public Participant(int objId, int olympiadSide)
-	{
+	public Participant(int objId, int olympiadSide) {
 		objectId = objId;
 		player = null;
 		name = "-";
@@ -56,10 +58,8 @@ public final class Participant
 	 * Updates the reference to {@link #player}, if it's null or appears off-line.
 	 * @return {@code true} if after the update the player isn't null, {@code false} otherwise.
 	 */
-	public final boolean updatePlayer()
-	{
-		if ((player == null) || !player.isOnline())
-		{
+	public final boolean updatePlayer() {
+		if ((player == null) || !player.isOnline()) {
 			player = L2World.getInstance().getPlayer(getObjectId());
 		}
 		return (player != null);
@@ -69,96 +69,85 @@ public final class Participant
 	 * @param statName
 	 * @param increment
 	 */
-	public final void updateStat(String statName, int increment)
-	{
+	public final void updateStat(String statName, int increment) {
 		stats.set(statName, Math.max(stats.getInteger(statName) + increment, 0));
 	}
 	
 	/**
 	 * @return the name the player's name.
 	 */
-	public String getName()
-	{
+	public String getName() {
 		return name;
 	}
 	
 	/**
 	 * @return the player
 	 */
-	public L2PcInstance getPlayer()
-	{
+	public L2PcInstance getPlayer() {
 		return player;
 	}
-
+	
 	/**
 	 * @return the objectId
 	 */
-	public int getObjectId()
-	{
+	public int getObjectId() {
 		return objectId;
 	}
-
+	
 	/**
 	 * @return the stats
 	 */
-	public StatsSet getStats()
-	{
+	public StatsSet getStats() {
 		return stats;
 	}
-
+	
 	/**
 	 * @param noble the player to set
 	 */
-	public void setPlayer(L2PcInstance noble)
-	{
+	public void setPlayer(L2PcInstance noble) {
 		player = noble;
 	}
-
+	
 	/**
 	 * @return the side
 	 */
-	public int getSide()
-	{
+	public int getSide() {
 		return side;
 	}
 	
 	/**
 	 * @return the baseClass
 	 */
-	public int getBaseClass()
-	{
+	public int getBaseClass() {
 		return baseClass;
 	}
 	
 	/**
 	 * @return the disconnected
 	 */
-	public boolean isDisconnected()
-	{
+	public boolean isDisconnected() {
 		return disconnected;
 	}
 	
 	/**
 	 * @param val the disconnected to set
 	 */
-	public void setDisconnected(boolean val)
-	{
+	public void setDisconnected(boolean val) {
 		disconnected = val;
 	}
 	
 	/**
 	 * @return the defaulted
 	 */
-	public boolean isDefaulted()
-	{
+	public boolean isDefaulted() {
 		return defaulted;
 	}
 	
 	/**
 	 * @param val the value to set.
 	 */
-	public void setDefaulted(boolean val)
-	{
+	public void setDefaulted(boolean val) {
 		defaulted = val;
 	}
+	
 }

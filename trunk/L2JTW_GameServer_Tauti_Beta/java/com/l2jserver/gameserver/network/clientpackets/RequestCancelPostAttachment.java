@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -35,21 +39,18 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestCancelPostAttachment extends L2GameClientPacket
-{
+public final class RequestCancelPostAttachment extends L2GameClientPacket {
 	private static final String _C__D0_6F_REQUESTCANCELPOSTATTACHMENT = "[C] D0:6F RequestCancelPostAttachment";
 	
 	private int _msgId;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_msgId = readD();
 	}
 	
 	@Override
-	public void runImpl()
-	{
+	public void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null || !Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
 			return;
@@ -60,46 +61,38 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		Message msg = MailManager.getInstance().getMessage(_msgId);
 		if (msg == null)
 			return;
-		if (msg.getSenderId() != activeChar.getObjectId())
-		{
-			Util.handleIllegalPlayerAction(activeChar,
-					"Player "+activeChar.getName()+" tried to cancel not own post!", Config.DEFAULT_PUNISH);
+		if (msg.getSenderId() != activeChar.getObjectId()) {
+			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to cancel not own post!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if (!activeChar.isInsideZone(ZONE_PEACE))
-		{
+		if (!activeChar.isInsideZone(ZONE_PEACE)) {
 			activeChar.sendPacket(SystemMessageId.CANT_CANCEL_NOT_IN_PEACE_ZONE);
 			return;
 		}
 		
-		if (activeChar.getActiveTradeList() != null)
-		{
+		if (activeChar.getActiveTradeList() != null) {
 			activeChar.sendPacket(SystemMessageId.CANT_CANCEL_DURING_EXCHANGE);
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
-		{
+		if (activeChar.isEnchanting()) {
 			activeChar.sendPacket(SystemMessageId.CANT_CANCEL_DURING_ENCHANT);
 			return;
 		}
 		
-		if (activeChar.getPrivateStoreType() > 0)
-		{
+		if (activeChar.getPrivateStoreType() > 0) {
 			activeChar.sendPacket(SystemMessageId.CANT_CANCEL_PRIVATE_STORE);
 			return;
 		}
 		
-		if (!msg.hasAttachments())
-		{
+		if (!msg.hasAttachments()) {
 			activeChar.sendPacket(SystemMessageId.YOU_CANT_CANCEL_RECEIVED_MAIL);
 			return;
 		}
 		
 		final ItemContainer attachments = msg.getAttachments();
-		if (attachments == null || attachments.getSize() == 0)
-		{
+		if (attachments == null || attachments.getSize() == 0) {
 			activeChar.sendPacket(SystemMessageId.YOU_CANT_CANCEL_RECEIVED_MAIL);
 			return;
 		}
@@ -107,29 +100,22 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		int weight = 0;
 		int slots = 0;
 		
-		for (L2ItemInstance item : attachments.getItems())
-		{
+		for (L2ItemInstance item : attachments.getItems()) {
 			if (item == null)
 				continue;
 			
-			if (item.getOwnerId() != activeChar.getObjectId())
-			{
-				Util.handleIllegalPlayerAction(activeChar,
-						"Player "+activeChar.getName()+" tried to get not own item from cancelled attachment!", Config.DEFAULT_PUNISH);
+			if (item.getOwnerId() != activeChar.getObjectId()) {
+				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get not own item from cancelled attachment!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
-			if (!item.getLocation().equals(ItemLocation.MAIL))
-			{
-				Util.handleIllegalPlayerAction(activeChar,
-						"Player "+activeChar.getName()+" tried to get items not from mail !", Config.DEFAULT_PUNISH);
+			if (!item.getLocation().equals(ItemLocation.MAIL)) {
+				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items not from mail !", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
-			if (item.getLocationSlot() != msg.getId())
-			{
-				Util.handleIllegalPlayerAction(activeChar,
-						"Player "+activeChar.getName()+" tried to get items from different attachment!", Config.DEFAULT_PUNISH);
+			if (item.getLocationSlot() != msg.getId()) {
+				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items from different attachment!", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
@@ -140,22 +126,19 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 				slots++;
 		}
 		
-		if (!activeChar.getInventory().validateCapacity(slots))
-		{
+		if (!activeChar.getInventory().validateCapacity(slots)) {
 			activeChar.sendPacket(SystemMessageId.CANT_CANCEL_INVENTORY_FULL);
 			return;
 		}
 		
-		if (!activeChar.getInventory().validateWeight(weight))
-		{
+		if (!activeChar.getInventory().validateWeight(weight)) {
 			activeChar.sendPacket(SystemMessageId.CANT_CANCEL_INVENTORY_FULL);
 			return;
 		}
 		
 		// Proceed to the transfer
 		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (L2ItemInstance item : attachments.getItems())
-		{
+		for (L2ItemInstance item : attachments.getItems()) {
 			if (item == null)
 				continue;
 			
@@ -164,8 +147,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 			if (newItem == null)
 				return;
 			
-			if (playerIU != null)
-			{
+			if (playerIU != null) {
 				if (newItem.getCount() > count)
 					playerIU.addModifiedItem(newItem);
 				else
@@ -191,8 +173,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		activeChar.sendPacket(su);
 		
 		final L2PcInstance receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
-		if (receiver != null)
-		{
+		if (receiver != null) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELLED_MAIL);
 			sm.addCharName(activeChar);
 			receiver.sendPacket(sm);
@@ -206,14 +187,12 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_6F_REQUESTCANCELPOSTATTACHMENT;
 	}
 	
 	@Override
-	protected boolean triggersOnActionRequest()
-	{
+	protected boolean triggersOnActionRequest() {
 		return false;
 	}
 }

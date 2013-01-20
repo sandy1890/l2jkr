@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.zone.type;
 
@@ -36,84 +40,63 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * A siege zone
  * @author durgus
  */
-public class L2SiegeZone extends L2ZoneType
-{
+public class L2SiegeZone extends L2ZoneType {
+	
 	private int _siegableId = -1;
 	private Siegable _siege = null;
 	private boolean _isActiveSiege = false;
 	private static final int DISMOUNT_DELAY = 5;
 	
-	public L2SiegeZone(int id)
-	{
+	public L2SiegeZone(int id) {
 		super(id);
 	}
 	
 	@Override
-	public void setParameter(String name, String value)
-	{
-		if (name.equals("castleId"))
-		{
-			if (_siegableId != -1)
-			{
+	public void setParameter(String name, String value) {
+		if (name.equals("castleId")) {
+			if (_siegableId != -1) {
 				throw new IllegalArgumentException("Siege object already defined!");
 			}
 			_siegableId = Integer.parseInt(value);
-		}
-		else if (name.equals("fortId"))
-		{
-			if (_siegableId != -1)
-			{
+		} else if (name.equals("fortId")) {
+			if (_siegableId != -1) {
 				throw new IllegalArgumentException("Siege object already defined!");
 			}
 			_siegableId = Integer.parseInt(value);
-		}
-		else if (name.equals("clanHallId"))
-		{
-			if (_siegableId != -1)
-			{
+		} else if (name.equals("clanHallId")) {
+			if (_siegableId != -1) {
 				throw new IllegalArgumentException("Siege object already defined!");
 			}
 			_siegableId = Integer.parseInt(value);
 			SiegableHall hall = CHSiegeManager.getInstance().getConquerableHalls().get(_siegableId);
-			if (hall == null)
-			{
+			if (hall == null) {
 				_log.warning("L2SiegeZone: Siegable clan hall with id " + value + " does not exist!");
-			}
-			else
-			{
+			} else {
 				hall.setSiegeZone(this);
 			}
-		}
-		else
-		{
+		} else {
 			super.setParameter(name, value);
 		}
 	}
 	
 	@Override
-	protected void onEnter(L2Character character)
-	{
-		if (_isActiveSiege)
-		{
+	protected void onEnter(L2Character character) {
+		if (_isActiveSiege) {
 			character.setInsideZone(L2Character.ZONE_PVP, true);
 			character.setInsideZone(L2Character.ZONE_SIEGE, true);
 			character.setInsideZone(L2Character.ZONE_NOSUMMONFRIEND, true); // FIXME: Custom ?
 			
-			if (character.isPlayer())
-			{
+			if (character.isPlayer()) {
 				L2PcInstance plyer = character.getActingPlayer();
-				if (plyer.isRegisteredOnThisSiegeField(_siegableId))
-				{
+				if (plyer.isRegisteredOnThisSiegeField(_siegableId)) {
 					plyer.setIsInSiege(true); // in siege
-					if (_siege.giveFame() && _siege.getFameFrequency() > 0)
-					{
+					if (_siege.giveFame() && (_siege.getFameFrequency() > 0)) {
 						plyer.startFameTask(_siege.getFameFrequency() * 1000, _siege.getFameAmount());
 					}
 				}
 				
 				character.sendPacket(SystemMessageId.ENTERED_COMBAT_ZONE);
-				if (!Config.ALLOW_WYVERN_DURING_SIEGE && plyer.getMountType() == 2)
-				{
+				if (!Config.ALLOW_WYVERN_DURING_SIEGE && (plyer.getMountType() == 2)) {
 					plyer.sendPacket(SystemMessageId.AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_WYVERN);
 					plyer.enteredNoLanding(DISMOUNT_DELAY);
 				}
@@ -122,44 +105,34 @@ public class L2SiegeZone extends L2ZoneType
 	}
 	
 	@Override
-	protected void onExit(L2Character character)
-	{
+	protected void onExit(L2Character character) {
 		character.setInsideZone(L2Character.ZONE_PVP, false);
 		character.setInsideZone(L2Character.ZONE_SIEGE, false);
 		character.setInsideZone(L2Character.ZONE_NOSUMMONFRIEND, false); // FIXME: Custom ?
-		if (_isActiveSiege)
-		{
-			if (character.isPlayer())
-			{
+		if (_isActiveSiege) {
+			if (character.isPlayer()) {
 				L2PcInstance player = character.getActingPlayer();
 				character.sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
-				if (player.getMountType() == 2)
-				{
+				if (player.getMountType() == 2) {
 					player.exitedNoLanding();
 				}
 				// Set pvp flag
-				if (player.getPvpFlag() == 0)
-				{
+				if (player.getPvpFlag() == 0) {
 					player.startPvPFlag();
 				}
 			}
 		}
-		if (character.isPlayer())
-		{
+		if (character.isPlayer()) {
 			L2PcInstance activeChar = character.getActingPlayer();
 			activeChar.stopFameTask();
 			activeChar.setIsInSiege(false);
 			
-			if (_siege instanceof FortSiege && activeChar.getInventory().getItemByItemId(9819) != null)
-			{
+			if ((_siege instanceof FortSiege) && (activeChar.getInventory().getItemByItemId(9819) != null)) {
 				// drop combat flag
 				Fort fort = FortManager.getInstance().getFortById(_siegableId);
-				if (fort != null)
-				{
+				if (fort != null) {
 					FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getFortId());
-				}
-				else
-				{
+				} else {
 					int slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
 					activeChar.getInventory().unEquipItemInBodySlot(slot);
 					activeChar.destroyItem("CombatFlag", activeChar.getInventory().getItemByItemId(9819), null, true);
@@ -167,28 +140,24 @@ public class L2SiegeZone extends L2ZoneType
 			}
 		}
 		
-		if (character instanceof L2SiegeSummonInstance)
-		{
+		if (character instanceof L2SiegeSummonInstance) {
 			((L2SiegeSummonInstance) character).unSummon(((L2SiegeSummonInstance) character).getOwner());
 		}
 	}
 	
 	@Override
-	public void onDieInside(L2Character character)
-	{
-		if (_isActiveSiege)
-		{
+	public void onDieInside(L2Character character) {
+		if (_isActiveSiege) {
 			// debuff participants only if they die inside siege zone
-			if (character.isPlayer() && character.getActingPlayer().isRegisteredOnThisSiegeField(_siegableId))
-			{
+			if (character.isPlayer() && character.getActingPlayer().isRegisteredOnThisSiegeField(_siegableId)) {
 				int lvl = 1;
 				final L2Effect e = character.getFirstEffect(5660);
-				if (e != null)
+				if (e != null) {
 					lvl = Math.min(lvl + e.getLevel(), 5);
+				}
 				
 				final L2Skill skill = SkillTable.getInstance().getInfo(5660, lvl);
-				if (skill != null)
-				{
+				if (skill != null) {
 					skill.getEffects(character, character);
 				}
 			}
@@ -196,44 +165,36 @@ public class L2SiegeZone extends L2ZoneType
 	}
 	
 	@Override
-	public void onReviveInside(L2Character character)
-	{
+	public void onReviveInside(L2Character character) {
 	}
 	
-	public void updateZoneStatusForCharactersInside()
-	{
-		if (_isActiveSiege)
-		{
-			for (L2Character character : getCharactersInside())
-			{
-				if (character != null)
+	public void updateZoneStatusForCharactersInside() {
+		if (_isActiveSiege) {
+			for (L2Character character : getCharactersInside()) {
+				if (character != null) {
 					onEnter(character);
+				}
 			}
-		}
-		else
-		{
+		} else {
 			L2PcInstance player;
-			for (L2Character character : getCharactersInside())
-			{
-				if (character == null)
+			for (L2Character character : getCharactersInside()) {
+				if (character == null) {
 					continue;
+				}
 				
 				character.setInsideZone(L2Character.ZONE_PVP, false);
 				character.setInsideZone(L2Character.ZONE_SIEGE, false);
 				character.setInsideZone(L2Character.ZONE_NOSUMMONFRIEND, false);
 				
-				if (character.isPlayer())
-				{
+				if (character.isPlayer()) {
 					player = character.getActingPlayer();
 					character.sendPacket(SystemMessageId.LEFT_COMBAT_ZONE);
 					player.stopFameTask();
-					if (player.getMountType() == 2)
-					{
+					if (player.getMountType() == 2) {
 						player.exitedNoLanding();
 					}
 				}
-				if (character instanceof L2SiegeSummonInstance)
-				{
+				if (character instanceof L2SiegeSummonInstance) {
 					((L2SiegeSummonInstance) character).unSummon(((L2SiegeSummonInstance) character).getOwner());
 				}
 				
@@ -245,32 +206,27 @@ public class L2SiegeZone extends L2ZoneType
 	 * Sends a message to all players in this zone
 	 * @param message
 	 */
-	public void announceToPlayers(String message)
-	{
-		for (L2PcInstance player : getPlayersInside())
-		{
-			if (player != null)
+	public void announceToPlayers(String message) {
+		for (L2PcInstance player : getPlayersInside()) {
+			if (player != null) {
 				player.sendMessage(message);
+			}
 		}
 	}
 	
-	public int getSiegeObjectId()
-	{
+	public int getSiegeObjectId() {
 		return _siegableId;
 	}
 	
-	public boolean isActive()
-	{
+	public boolean isActive() {
 		return _isActiveSiege;
 	}
 	
-	public void setIsActive(boolean val)
-	{
+	public void setIsActive(boolean val) {
 		_isActiveSiege = val;
 	}
 	
-	public void setSiegeInstance(Siegable siege)
-	{
+	public void setSiegeInstance(Siegable siege) {
 		_siege = siege;
 	}
 	
@@ -278,15 +234,15 @@ public class L2SiegeZone extends L2ZoneType
 	 * Removes all foreigners from the zone
 	 * @param owningClanId
 	 */
-	public void banishForeigners(int owningClanId)
-	{
+	public void banishForeigners(int owningClanId) {
 		TeleportWhereType type = TeleportWhereType.Town;
-		for (L2PcInstance temp : getPlayersInside())
-		{
-			if (temp.getClanId() == owningClanId)
+		for (L2PcInstance temp : getPlayersInside()) {
+			if (temp.getClanId() == owningClanId) {
 				continue;
+			}
 			
 			temp.teleToLocation(type);
 		}
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.util.crypt;
 
@@ -21,8 +25,7 @@ import com.l2jserver.util.Rnd;
 /**
  * @author KenM
  */
-public class LoginCrypt
-{
+public class LoginCrypt {
 	private static final byte[] STATIC_BLOWFISH_KEY =
 	{
 		(byte) 0x6b,
@@ -47,24 +50,20 @@ public class LoginCrypt
 	private NewCrypt _crypt;
 	private boolean _static = true;
 	
-	public void setKey(byte[] key)
-	{
+	public void setKey(byte[] key) {
 		_crypt = new NewCrypt(key);
 	}
 	
-	public boolean decrypt(byte[] raw, final int offset, final int size) throws IOException
-	{
+	public boolean decrypt(byte[] raw, final int offset, final int size) throws IOException {
 		_crypt.decrypt(raw, offset, size);
 		return NewCrypt.verifyChecksum(raw, offset, size);
 	}
 	
-	public int encrypt(byte[] raw, final int offset, int size) throws IOException
-	{
+	public int encrypt(byte[] raw, final int offset, int size) throws IOException {
 		// reserve checksum
 		size += 4;
 		
-		if (_static)
-		{
+		if (_static) {
 			// reserve for XOR "key"
 			size += 4;
 			
@@ -74,9 +73,7 @@ public class LoginCrypt
 			_staticCrypt.crypt(raw, offset, size);
 			
 			_static = false;
-		}
-		else
-		{
+		} else {
 			// padding
 			size += 8 - (size % 8);
 			NewCrypt.appendChecksum(raw, offset, size);

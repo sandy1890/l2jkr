@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.instancemanager;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.io.File;
 import java.sql.Connection;
@@ -35,57 +37,51 @@ import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.itemauction.ItemAuctionInstance;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * @author Forsaiken
  */
-public final class ItemAuctionManager
-{
+public final class ItemAuctionManager {
+	
 	private static final Logger _log = Logger.getLogger(ItemAuctionManager.class.getName());
 	
-	public static final ItemAuctionManager getInstance()
-	{
+	public static final ItemAuctionManager getInstance() {
 		return SingletonHolder._instance;
 	}
 	
 	private final TIntObjectHashMap<ItemAuctionInstance> _managerInstances;
 	private final AtomicInteger _auctionIds;
 	
-	protected ItemAuctionManager()
-	{
+	protected ItemAuctionManager() {
 		_managerInstances = new TIntObjectHashMap<>();
 		_auctionIds = new AtomicInteger(1);
 		
-		if (!Config.ALT_ITEM_AUCTION_ENABLED)
-		{
+		if (!Config.ALT_ITEM_AUCTION_ENABLED) {
 			_log.log(Level.INFO, "ItemAuctionManager: Disabled by config.");
 			return;
 		}
 		
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1");
 			ResultSet rset = statement.executeQuery();
 			
-			if (rset.next())
+			if (rset.next()) {
 				_auctionIds.set(rset.getInt(1) + 1);
+			}
 			
 			rset.close();
 			statement.close();
-		}
-		catch (final SQLException e)
-		{
+		} catch (final SQLException e) {
 			_log.log(Level.SEVERE, "ItemAuctionManager: Failed loading auctions.", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		
 		final File file = new File(Config.DATAPACK_ROOT + "/data/ItemAuctions.xml");
-		if (!file.exists())
-		{
+		if (!file.exists()) {
 			_log.log(Level.WARNING, "ItemAuctionManager: Missing ItemAuctions.xml!");
 			return;
 		}
@@ -94,22 +90,18 @@ public final class ItemAuctionManager
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
 		
-		try
-		{
+		try {
 			final Document doc = factory.newDocumentBuilder().parse(file);
-			for (Node na = doc.getFirstChild(); na != null; na = na.getNextSibling())
-			{
-				if ("list".equalsIgnoreCase(na.getNodeName()))
-				{
-					for (Node nb = na.getFirstChild(); nb != null; nb = nb.getNextSibling())
-					{
-						if ("instance".equalsIgnoreCase(nb.getNodeName()))
-						{
+			for (Node na = doc.getFirstChild(); na != null; na = na.getNextSibling()) {
+				if ("list".equalsIgnoreCase(na.getNodeName())) {
+					for (Node nb = na.getFirstChild(); nb != null; nb = nb.getNextSibling()) {
+						if ("instance".equalsIgnoreCase(nb.getNodeName())) {
 							final NamedNodeMap nab = nb.getAttributes();
 							final int instanceId = Integer.parseInt(nab.getNamedItem("id").getNodeValue());
 							
-							if (_managerInstances.containsKey(instanceId))
+							if (_managerInstances.containsKey(instanceId)) {
 								throw new Exception("Dublicated instanceId " + instanceId);
+							}
 							
 							final ItemAuctionInstance instance = new ItemAuctionInstance(instanceId, _auctionIds, nb);
 							_managerInstances.put(instanceId, instance);
@@ -118,37 +110,29 @@ public final class ItemAuctionManager
 				}
 			}
 			_log.log(Level.INFO, "ItemAuctionManager: Loaded " + _managerInstances.size() + " instance(s).");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "ItemAuctionManager: Failed loading auctions from xml.", e);
 		}
 	}
 	
-	public final void shutdown()
-	{
+	public final void shutdown() {
 		final ItemAuctionInstance[] instances = _managerInstances.values(new ItemAuctionInstance[0]);
-		for (final ItemAuctionInstance instance : instances)
-		{
+		for (final ItemAuctionInstance instance : instances) {
 			instance.shutdown();
 		}
 	}
 	
-	public final ItemAuctionInstance getManagerInstance(final int instanceId)
-	{
+	public final ItemAuctionInstance getManagerInstance(final int instanceId) {
 		return _managerInstances.get(instanceId);
 	}
 	
-	public final int getNextAuctionId()
-	{
+	public final int getNextAuctionId() {
 		return _auctionIds.getAndIncrement();
 	}
 	
-	public static final void deleteAuction(final int auctionId)
-	{
+	public static final void deleteAuction(final int auctionId) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?");
 			statement.setInt(1, auctionId);
@@ -159,19 +143,15 @@ public final class ItemAuctionManager
 			statement.setInt(1, auctionId);
 			statement.execute();
 			statement.close();
-		}
-		catch (final SQLException e)
-		{
+		} catch (final SQLException e) {
 			_log.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final ItemAuctionManager _instance = new ItemAuctionManager();
 	}
+	
 }

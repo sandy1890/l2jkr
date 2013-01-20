@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.scripting.scriptengine.listeners.player;
 
@@ -24,19 +28,16 @@ import com.l2jserver.gameserver.scripting.scriptengine.impl.L2JListener;
  * Use the boolean in the constructor!
  * @author TheOne
  */
-public abstract class EquipmentListener extends L2JListener
-{
+public abstract class EquipmentListener extends L2JListener {
 	private boolean isGlobal = false;
 	
 	/**
 	 * Constructor To set a global listener, set the L2PcInstance value to null
 	 * @param character
 	 */
-	public EquipmentListener(L2PcInstance character)
-	{
+	public EquipmentListener(L2PcInstance character) {
 		player = character;
-		if (character == null)
-		{
+		if (character == null) {
 			isGlobal = true;
 		}
 		register();
@@ -50,27 +51,19 @@ public abstract class EquipmentListener extends L2JListener
 	public abstract boolean onEquip(EquipmentEvent event);
 	
 	@Override
-	public void register()
-	{
-		if (isGlobal)
-		{
+	public void register() {
+		if (isGlobal) {
 			L2PcInstance.addGlobalEquipmentListener(this);
-		}
-		else
-		{
+		} else {
 			player.addEquipmentListener(this);
 		}
 	}
 	
 	@Override
-	public void unregister()
-	{
-		if (isGlobal)
-		{
+	public void unregister() {
+		if (isGlobal) {
 			L2PcInstance.removeGlobalEquipmentListener(this);
-		}
-		else
-		{
+		} else {
 			player.removeEquipmentListener(this);
 		}
 	}

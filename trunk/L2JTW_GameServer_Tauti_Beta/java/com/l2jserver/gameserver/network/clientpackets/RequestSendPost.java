@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -39,8 +43,7 @@ import com.l2jserver.util.StringUtil;
 /**
  * @author Migi, DS
  */
-public final class RequestSendPost extends L2GameClientPacket
-{
+public final class RequestSendPost extends L2GameClientPacket {
 	private static final String _C__D0_66_REQUESTSENDPOST = "[C] D0:66 RequestSendPost";
 	
 	private static final int BATCH_LENGTH = 12; // length of the one item
@@ -62,34 +65,26 @@ public final class RequestSendPost extends L2GameClientPacket
 	private AttachmentItem _items[] = null;
 	private long _reqAdena;
 	
-	
-	public RequestSendPost()
-	{
+	public RequestSendPost() {
 	}
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_receiver = readS();
 		_isCod = readD() == 0 ? false : true;
 		_subject = readS();
 		_text = readS();
 		
 		int attachCount = readD();
-		if (attachCount < 0
-				|| attachCount > Config.MAX_ITEM_IN_PACKET
-				|| attachCount * BATCH_LENGTH + 8 != _buf.remaining())
+		if (attachCount < 0 || attachCount > Config.MAX_ITEM_IN_PACKET || attachCount * BATCH_LENGTH + 8 != _buf.remaining())
 			return;
 		
-		if (attachCount > 0)
-		{
+		if (attachCount > 0) {
 			_items = new AttachmentItem[attachCount];
-			for (int i = 0; i < attachCount; i++)
-			{
+			for (int i = 0; i < attachCount; i++) {
 				int objectId = readD();
 				long count = readQ();
-				if (objectId < 1 || count < 0)
-				{
+				if (objectId < 1 || count < 0) {
 					_items = null;
 					return;
 				}
@@ -101,8 +96,7 @@ public final class RequestSendPost extends L2GameClientPacket
 	}
 	
 	@Override
-	public void runImpl()
-	{
+	public void runImpl() {
 		if (!Config.ALLOW_MAIL)
 			return;
 		
@@ -110,67 +104,57 @@ public final class RequestSendPost extends L2GameClientPacket
 		if (activeChar == null)
 			return;
 		
-		if (!Config.ALLOW_ATTACHMENTS)
-		{
+		if (!Config.ALLOW_ATTACHMENTS) {
 			_items = null;
 			_isCod = false;
 			_reqAdena = 0;
 		}
 		
-		if (!activeChar.getAccessLevel().allowTransaction())
-		{
-			/* Move To MessageTable For L2JTW
-			activeChar.sendMessage("Transactions are disabled for your Access Level.");
-			*/
+		if (!activeChar.getAccessLevel().allowTransaction()) {
+			/*
+			 * Move To MessageTable For L2JTW activeChar.sendMessage("Transactions are disabled for your Access Level.");
+			 */
 			activeChar.sendMessage(342);
 			return;
 		}
 		
-		if (!activeChar.isInsideZone(ZONE_PEACE) && _items != null)
-		{
+		if (!activeChar.isInsideZone(ZONE_PEACE) && _items != null) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_NOT_IN_PEACE_ZONE);
 			return;
 		}
 		
-		if (activeChar.getActiveTradeList() != null)
-		{
+		if (activeChar.getActiveTradeList() != null) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_DURING_EXCHANGE);
 			return;
 		}
 		
-		if (activeChar.isEnchanting())
-		{
+		if (activeChar.isEnchanting()) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_DURING_ENCHANT);
 			return;
 		}
 		
-		if (activeChar.getPrivateStoreType() > 0)
-		{
+		if (activeChar.getPrivateStoreType() > 0) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_PRIVATE_STORE);
 			return;
 		}
 		
-		if (_receiver.length() > MAX_RECV_LENGTH)
-		{
+		if (_receiver.length() > MAX_RECV_LENGTH) {
 			activeChar.sendPacket(SystemMessageId.ALLOWED_LENGTH_FOR_RECIPIENT_EXCEEDED);
 			return;
 		}
 		
-		if (_subject.length() > MAX_SUBJ_LENGTH)
-		{
+		if (_subject.length() > MAX_SUBJ_LENGTH) {
 			activeChar.sendPacket(SystemMessageId.ALLOWED_LENGTH_FOR_TITLE_EXCEEDED);
 			return;
 		}
 		
-		if (_text.length() > MAX_TEXT_LENGTH)
-		{
+		if (_text.length() > MAX_TEXT_LENGTH) {
 			// not found message for this
 			activeChar.sendPacket(SystemMessageId.ALLOWED_LENGTH_FOR_TITLE_EXCEEDED);
 			return;
 		}
 		
-		if (_items != null && _items.length > MAX_ATTACHMENTS)
-		{
+		if (_items != null && _items.length > MAX_ATTACHMENTS) {
 			activeChar.sendPacket(SystemMessageId.ITEM_SELECTION_POSSIBLE_UP_TO_8);
 			return;
 		}
@@ -178,99 +162,82 @@ public final class RequestSendPost extends L2GameClientPacket
 		if (_reqAdena < 0 || _reqAdena > MAX_ADENA)
 			return;
 		
-		if (_isCod)
-		{
-			if (_reqAdena == 0)
-			{
+		if (_isCod) {
+			if (_reqAdena == 0) {
 				activeChar.sendPacket(SystemMessageId.PAYMENT_AMOUNT_NOT_ENTERED);
 				return;
 			}
-			if (_items == null || _items.length == 0)
-			{
+			if (_items == null || _items.length == 0) {
 				activeChar.sendPacket(SystemMessageId.PAYMENT_REQUEST_NO_ITEM);
 				return;
 			}
 		}
 		
 		final int receiverId = CharNameTable.getInstance().getIdByName(_receiver);
-		if (receiverId <= 0)
-		{
+		if (receiverId <= 0) {
 			activeChar.sendPacket(SystemMessageId.RECIPIENT_NOT_EXIST);
 			return;
 		}
 		
-		if (receiverId == activeChar.getObjectId())
-		{
+		if (receiverId == activeChar.getObjectId()) {
 			activeChar.sendPacket(SystemMessageId.YOU_CANT_SEND_MAIL_TO_YOURSELF);
 			return;
 		}
 		
-		
 		final int level = CharNameTable.getInstance().getAccessLevelById(receiverId);
 		final L2AccessLevel accessLevel = AdminTable.getInstance().getAccessLevel(level);
 		
-		if (accessLevel.isGm() && !activeChar.getAccessLevel().isGm())
-		{
+		if (accessLevel.isGm() && !activeChar.getAccessLevel().isGm()) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CANNOT_MAIL_GM_C1);
 			sm.addString(_receiver);
 			activeChar.sendPacket(sm);
 			return;
 		}
 		
-		if (activeChar.isInJail() && ((Config.JAIL_DISABLE_TRANSACTION && _items != null) || Config.JAIL_DISABLE_CHAT))
-		{
+		if (activeChar.isInJail() && ((Config.JAIL_DISABLE_TRANSACTION && _items != null) || Config.JAIL_DISABLE_CHAT)) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_NOT_IN_PEACE_ZONE);
 			return;
 		}
 		
-		if (BlockList.isInBlockList(receiverId, activeChar.getObjectId()))
-		{
+		if (BlockList.isInBlockList(receiverId, activeChar.getObjectId())) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_BLOCKED_YOU_CANNOT_MAIL);
 			sm.addString(_receiver);
 			activeChar.sendPacket(sm);
 			return;
 		}
 		
-		if (MailManager.getInstance().getOutboxSize(activeChar.getObjectId()) >= OUTBOX_SIZE)
-		{
+		if (MailManager.getInstance().getOutboxSize(activeChar.getObjectId()) >= OUTBOX_SIZE) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_MAIL_LIMIT_EXCEEDED);
 			return;
 		}
 		
-		if (MailManager.getInstance().getInboxSize(receiverId) >= INBOX_SIZE)
-		{
+		if (MailManager.getInstance().getInboxSize(receiverId) >= INBOX_SIZE) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_MAIL_LIMIT_EXCEEDED);
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getSendMail().tryPerformAction("sendmail"))
-		{
+		if (!getClient().getFloodProtectors().getSendMail().tryPerformAction("sendmail")) {
 			activeChar.sendPacket(SystemMessageId.CANT_FORWARD_LESS_THAN_MINUTE);
 			return;
 		}
 		
 		Message msg = new Message(activeChar.getObjectId(), receiverId, _isCod, _subject, _text, _reqAdena);
-		if (removeItems(activeChar, msg))
-		{
+		if (removeItems(activeChar, msg)) {
 			MailManager.getInstance().sendMessage(msg);
 			activeChar.sendPacket(ExNoticePostSent.valueOf(true));
 			activeChar.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_SENT);
 		}
 	}
 	
-	private final boolean removeItems(L2PcInstance player, Message msg)
-	{
+	private final boolean removeItems(L2PcInstance player, Message msg) {
 		long currentAdena = player.getAdena();
 		long fee = MESSAGE_FEE;
 		
-		if (_items != null)
-		{
-			for (AttachmentItem i : _items)
-			{
+		if (_items != null) {
+			for (AttachmentItem i : _items) {
 				// Check validity of requested item
 				L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
-				if (item == null || !item.isTradeable() || item.isEquipped())
-				{
+				if (item == null || !item.isTradeable() || item.isEquipped()) {
 					player.sendPacket(SystemMessageId.CANT_FORWARD_BAD_ITEM);
 					return false;
 				}
@@ -283,8 +250,7 @@ public final class RequestSendPost extends L2GameClientPacket
 		}
 		
 		// Check if enough adena and charge the fee
-		if (currentAdena < fee || !player.reduceAdena("MailFee", fee, null, false))
-		{
+		if (currentAdena < fee || !player.reduceAdena("MailFee", fee, null, false)) {
 			player.sendPacket(SystemMessageId.CANT_FORWARD_NO_ADENA);
 			return false;
 		}
@@ -299,34 +265,27 @@ public final class RequestSendPost extends L2GameClientPacket
 			return false;
 		
 		final StringBuilder recv = new StringBuilder(32);
-		StringUtil.append(recv, msg.getReceiverName(),
-				"[",
-				String.valueOf(msg.getReceiverId()),
-		"]");
+		StringUtil.append(recv, msg.getReceiverName(), "[", String.valueOf(msg.getReceiverId()), "]");
 		final String receiver = recv.toString();
 		
 		// Proceed to the transfer
 		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (AttachmentItem i : _items)
-		{
+		for (AttachmentItem i : _items) {
 			// Check validity of requested item
 			L2ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
-			if (oldItem == null || !oldItem.isTradeable() || oldItem.isEquipped())
-			{
-				_log.warning("Error adding attachment for char "+player.getName()+" (olditem == null)");
+			if (oldItem == null || !oldItem.isTradeable() || oldItem.isEquipped()) {
+				_log.warning("Error adding attachment for char " + player.getName() + " (olditem == null)");
 				return false;
 			}
 			
 			final L2ItemInstance newItem = player.getInventory().transferItem("SendMail", i.getObjectId(), i.getCount(), attachments, player, receiver);
-			if (newItem == null)
-			{
-				_log.warning("Error adding attachment for char "+player.getName()+" (newitem == null)");
+			if (newItem == null) {
+				_log.warning("Error adding attachment for char " + player.getName() + " (newitem == null)");
 				continue;
 			}
 			newItem.setLocation(newItem.getLocation(), msg.getId());
 			
-			if (playerIU != null)
-			{
+			if (playerIU != null) {
 				if (oldItem.getCount() > 0 && oldItem != newItem)
 					playerIU.addModifiedItem(oldItem);
 				else
@@ -348,37 +307,31 @@ public final class RequestSendPost extends L2GameClientPacket
 		return true;
 	}
 	
-	private static class AttachmentItem
-	{
+	private static class AttachmentItem {
 		private final int _objectId;
 		private final long _count;
 		
-		public AttachmentItem(int id, long num)
-		{
+		public AttachmentItem(int id, long num) {
 			_objectId = id;
 			_count = num;
 		}
 		
-		public int getObjectId()
-		{
+		public int getObjectId() {
 			return _objectId;
 		}
 		
-		public long getCount()
-		{
+		public long getCount() {
 			return _count;
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_66_REQUESTSENDPOST;
 	}
 	
 	@Override
-	protected boolean triggersOnActionRequest()
-	{
+	protected boolean triggersOnActionRequest() {
 		return false;
 	}
 }

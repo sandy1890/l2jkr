@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.idfactory;
-
-import gnu.trove.list.array.TIntArrayList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -27,12 +29,13 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 
+import gnu.trove.list.array.TIntArrayList;
+
 /**
  * This class ...
  * @version $Revision: 1.3.2.1.2.7 $ $Date: 2005/04/11 10:06:12 $
  */
-public abstract class IdFactory
-{
+public abstract class IdFactory {
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
 	@Deprecated
@@ -119,13 +122,10 @@ public abstract class IdFactory
 	
 	protected static final IdFactory _instance;
 	
-	protected IdFactory()
-	{
+	protected IdFactory() {
 		setAllCharacterOffline();
-		if (Config.DATABASE_CLEAN_UP)
-		{
-			if (Config.L2JMOD_ALLOW_WEDDING)
-			{
+		if (Config.DATABASE_CLEAN_UP) {
+			if (Config.L2JMOD_ALLOW_WEDDING) {
 				cleanInvalidWeddings();
 			}
 			cleanUpDB();
@@ -133,47 +133,39 @@ public abstract class IdFactory
 		cleanUpTimeStamps();
 	}
 	
-	static
-	{
-		switch (Config.IDFACTORY_TYPE)
-		{
+	static {
+		switch (Config.IDFACTORY_TYPE) {
 			case Compaction:
 				throw new UnsupportedOperationException("Compaction IdFactory is disabled.");
 				// _instance = new CompactionIDFactory();
 				// break;
 			case BitSet:
 				_instance = new BitSetIDFactory();
-				break;
+			break;
 			case Stack:
 				_instance = new StackIDFactory();
-				break;
+			break;
 			default:
 				_instance = null;
-				break;
+			break;
 		}
 	}
 	
 	/**
 	 * Sets all character offline
 	 */
-	private void setAllCharacterOffline()
-	{
+	private void setAllCharacterOffline() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			statement.executeUpdate("UPDATE characters SET online = 0");
 			statement.close();
 			
 			_log.info("Updated characters online status.");
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			_log.log(Level.WARNING, "Could not update characters online status: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -181,12 +173,10 @@ public abstract class IdFactory
 	/**
 	 * Cleans up Database
 	 */
-	private void cleanUpDB()
-	{
+	private void cleanUpDB() {
 		Connection con = null;
 		Statement stmt = null;
-		try
-		{
+		try {
 			long cleanupStart = System.currentTimeMillis();
 			int cleanCount = 0;
 			con = L2DatabaseFactory.getInstance().getConnection();
@@ -290,22 +280,16 @@ public abstract class IdFactory
 			
 			_log.info("Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " s");
 			stmt.close();
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			_log.log(Level.WARNING, "Could not clean up database: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	private void cleanInvalidWeddings()
-	{
+	private void cleanInvalidWeddings() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			statement.executeUpdate("DELETE FROM mods_wedding WHERE player1Id NOT IN (SELECT charId FROM characters)");
@@ -313,27 +297,20 @@ public abstract class IdFactory
 			statement.close();
 			
 			_log.info("Cleaned up invalid Weddings.");
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			_log.log(Level.WARNING, "Could not clean up invalid Weddings: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	private void cleanUpTimeStamps()
-	{
+	private void cleanUpTimeStamps() {
 		Connection con = null;
 		PreparedStatement stmt = null;
-		try
-		{
+		try {
 			int cleanCount = 0;
 			con = L2DatabaseFactory.getInstance().getConnection();
-			for (String line : TIMESTAMPS_CLEAN)
-			{
+			for (String line : TIMESTAMPS_CLEAN) {
 				stmt = con.prepareStatement(line);
 				stmt.setLong(1, System.currentTimeMillis());
 				cleanCount += stmt.executeUpdate();
@@ -341,12 +318,8 @@ public abstract class IdFactory
 			}
 			
 			_log.info("Cleaned " + cleanCount + " expired timestamps from database.");
-		}
-		catch (SQLException e)
-		{
-		}
-		finally
-		{
+		} catch (SQLException e) {
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -356,12 +329,10 @@ public abstract class IdFactory
 	 * @throws Exception
 	 * @throws SQLException
 	 */
-	protected final int[] extractUsedObjectIDTable() throws Exception
-	{
+	protected final int[] extractUsedObjectIDTable() throws Exception {
 		Connection con = null;
 		
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			
 			Statement statement = null;
@@ -374,8 +345,7 @@ public abstract class IdFactory
 			rset.next();
 			temp.ensureCapacity(rset.getInt(1));
 			rset = statement.executeQuery("SELECT charId FROM characters");
-			while (rset.next())
-			{
+			while (rset.next()) {
 				temp.add(rset.getInt(1));
 			}
 			
@@ -383,8 +353,7 @@ public abstract class IdFactory
 			rset.next();
 			temp.ensureCapacity(temp.size() + rset.getInt(1));
 			rset = statement.executeQuery("SELECT object_id FROM items");
-			while (rset.next())
-			{
+			while (rset.next()) {
 				temp.add(rset.getInt(1));
 			}
 			
@@ -392,8 +361,7 @@ public abstract class IdFactory
 			rset.next();
 			temp.ensureCapacity(temp.size() + rset.getInt(1));
 			rset = statement.executeQuery("SELECT clan_id FROM clan_data");
-			while (rset.next())
-			{
+			while (rset.next()) {
 				temp.add(rset.getInt(1));
 			}
 			
@@ -401,8 +369,7 @@ public abstract class IdFactory
 			rset.next();
 			temp.ensureCapacity(temp.size() + rset.getInt(1));
 			rset = statement.executeQuery("SELECT object_id FROM itemsonground");
-			while (rset.next())
-			{
+			while (rset.next()) {
 				temp.add(rset.getInt(1));
 			}
 			
@@ -410,28 +377,23 @@ public abstract class IdFactory
 			rset.next();
 			temp.ensureCapacity(temp.size() + rset.getInt(1));
 			rset = statement.executeQuery("SELECT messageId FROM messages");
-			while (rset.next())
-			{
+			while (rset.next()) {
 				temp.add(rset.getInt(1));
 			}
 			
 			temp.sort();
 			
 			return temp.toArray();
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public boolean isInitialized()
-	{
+	public boolean isInitialized() {
 		return _initialized;
 	}
 	
-	public static IdFactory getInstance()
-	{
+	public static IdFactory getInstance() {
 		return _instance;
 	}
 	
@@ -444,4 +406,5 @@ public abstract class IdFactory
 	public abstract void releaseId(int id);
 	
 	public abstract int size();
+	
 }

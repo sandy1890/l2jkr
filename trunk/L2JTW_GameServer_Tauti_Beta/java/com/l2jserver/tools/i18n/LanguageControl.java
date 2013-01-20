@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.i18n;
 
@@ -25,8 +29,7 @@ import java.util.ResourceBundle.Control;
 /**
  * @author KenM
  */
-public class LanguageControl extends Control
-{
+public class LanguageControl extends Control {
 	public static final String LANGUAGES_DIRECTORY = "../languages/";
 	
 	public static final LanguageControl INSTANCE = new LanguageControl();
@@ -34,27 +37,23 @@ public class LanguageControl extends Control
 	/**
 	 * prevent instancing, allows sub-classing
 	 */
-	protected LanguageControl()
-	{
+	protected LanguageControl() {
 		
 	}
 	
 	@Override
-	public ResourceBundle newBundle(String baseName, Locale locale, String format, ClassLoader loader, boolean reload) throws IOException
-	{
-		if ((baseName == null) || (locale == null) || (format == null) || (loader == null))
-		{
+	public ResourceBundle newBundle(String baseName, Locale locale, String format, ClassLoader loader, boolean reload) throws IOException {
+		if ((baseName == null) || (locale == null) || (format == null) || (loader == null)) {
 			throw new NullPointerException();
 		}
 		ResourceBundle bundle = null;
-		if (format.equals("java.properties"))
-		{
+		if (format.equals("java.properties")) {
 			format = "properties";
 			String bundleName = toBundleName(baseName, locale);
 			String resourceName = LANGUAGES_DIRECTORY + toResourceName(bundleName, format);
 			
-			try (FileInputStream fis = new FileInputStream(resourceName); BufferedInputStream bis = new BufferedInputStream(fis))
-			{
+			try (FileInputStream fis = new FileInputStream(resourceName);
+				BufferedInputStream bis = new BufferedInputStream(fis)) {
 				bundle = new PropertyResourceBundle(bis);
 			}
 		}

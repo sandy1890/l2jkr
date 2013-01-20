@@ -1,27 +1,29 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
 /**
  * Special event info packet.
  * @author Kerberos
- * @author mrTJO
- * Format: (ch)dddddddSS
+ * @author mrTJO Format: (ch)dddddddSS
  */
-public class ExBrBroadcastEventState extends L2GameServerPacket
-{
+public class ExBrBroadcastEventState extends L2GameServerPacket {
 	private int _eventId;
 	private int _eventState;
 	private int _param0;
@@ -38,14 +40,12 @@ public class ExBrBroadcastEventState extends L2GameServerPacket
 	public static final int RAISING_RUDOLPH = 20091225; // event state (0 - hide, 1 - show)
 	public static final int LOVERS_JUBILEE = 20100214; // event state (0 - hide, 1 - show)
 	
-	public ExBrBroadcastEventState(int eventId, int eventState)
-	{
+	public ExBrBroadcastEventState(int eventId, int eventState) {
 		_eventId = eventId;
 		_eventState = eventState;
 	}
 	
-	public ExBrBroadcastEventState(int eventId, int eventState, int param0, int param1, int param2, int param3, int param4, String param5, String param6)
-	{
+	public ExBrBroadcastEventState(int eventId, int eventState, int param0, int param1, int param2, int param3, int param4, String param5, String param6) {
 		_eventId = eventId;
 		_eventState = eventState;
 		_param0 = param0;
@@ -58,8 +58,7 @@ public class ExBrBroadcastEventState extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xFE);
 		writeH(0xBC);
 		writeD(_eventId);
@@ -74,8 +73,7 @@ public class ExBrBroadcastEventState extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return "[S] FE:BC ExBrBroadcastEventState".intern();
 	}
 }

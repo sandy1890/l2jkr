@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.instancemanager;
 
@@ -24,8 +28,8 @@ import javolution.util.FastMap;
 
 import com.l2jserver.L2DatabaseFactory;
 
-public class GlobalVariablesManager
-{
+public class GlobalVariablesManager {
+	
 	private static final Logger _log = Logger.getLogger(GlobalVariablesManager.class.getName());
 	
 	private static final String LOAD_VAR = "SELECT var,value FROM global_variables";
@@ -33,25 +37,21 @@ public class GlobalVariablesManager
 	
 	private final Map<String, String> _variablesMap;
 	
-	protected GlobalVariablesManager()
-	{
+	protected GlobalVariablesManager() {
 		_variablesMap = new FastMap<>();
 		
 		loadVars();
 	}
 	
-	private final void loadVars()
-	{
+	private final void loadVars() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(LOAD_VAR);
 			ResultSet rset = statement.executeQuery();
 			
 			String var, value;
-			while (rset.next())
-			{
+			while (rset.next()) {
 				var = rset.getString(1);
 				value = rset.getString(2);
 				
@@ -60,28 +60,21 @@ public class GlobalVariablesManager
 			
 			rset.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.warning("GlobalVariablesManager: problem while loading variables: " + e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public final void saveVars()
-	{
+	public final void saveVars() {
 		Connection con = null;
 		PreparedStatement statement = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SAVE_VAR);
-
-			for(String var : _variablesMap.keySet())
-			{
+			
+			for (String var : _variablesMap.keySet()) {
 				statement.setString(1, var);
 				statement.setString(2, _variablesMap.get(var));
 				statement.setString(3, _variablesMap.get(var));
@@ -89,39 +82,31 @@ public class GlobalVariablesManager
 			}
 			statement.close();
 			_log.info("GlobalVariablesManager: Database updated.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.warning("GlobalVariablesManager: problem while saving variables: " + e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public void storeVariable(String var, String value)
-	{
+	public void storeVariable(String var, String value) {
 		_variablesMap.put(var, value);
 	}
 	
-	public boolean isVariableStored(String var)
-	{
+	public boolean isVariableStored(String var) {
 		return _variablesMap.containsKey(var);
 	}
 	
-	public String getStoredVariable(String var)
-	{
+	public String getStoredVariable(String var) {
 		return _variablesMap.get(var);
 	}
 	
-	public static final GlobalVariablesManager getInstance()
-	{
+	public static final GlobalVariablesManager getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final GlobalVariablesManager _instance = new GlobalVariablesManager();
 	}
+	
 }

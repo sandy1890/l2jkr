@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -29,44 +33,37 @@ import com.l2jserver.gameserver.model.base.ClassInfo;
  * It's in <i>beta</i> state, so it's expected to change over time.
  * @author Zoey76
  */
-public final class ClassListData extends DocumentParser
-{
+public final class ClassListData extends DocumentParser {
+	
 	private static final Map<ClassId, ClassInfo> _classData = new HashMap<>();
 	
 	/**
 	 * Instantiates a new class list data.
 	 */
-	protected ClassListData()
-	{
+	protected ClassListData() {
 		load();
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		_classData.clear();
 		parseDatapackFile("data/stats/chars/classList.xml");
 		_log.info(getClass().getSimpleName() + ": Loaded " + _classData.size() + " Class data.");
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		NamedNodeMap attrs;
 		Node attr;
 		ClassId classId;
 		String className;
 		String classServName;
 		ClassId parentClassId;
-		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			if ("list".equals(n.getNodeName()))
-			{
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
+		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling()) {
+			if ("list".equals(n.getNodeName())) {
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
 					attrs = d.getAttributes();
-					if ("class".equals(d.getNodeName()))
-					{
+					if ("class".equals(d.getNodeName())) {
 						attr = attrs.getNamedItem("classId");
 						classId = ClassId.getClassId(parseInt(attr));
 						attr = attrs.getNamedItem("name");
@@ -86,8 +83,7 @@ public final class ClassListData extends DocumentParser
 	 * Gets the class list.
 	 * @return the complete class list.
 	 */
-	public Map<ClassId, ClassInfo> getClassList()
-	{
+	public Map<ClassId, ClassInfo> getClassList() {
 		return _classData;
 	}
 	
@@ -96,8 +92,7 @@ public final class ClassListData extends DocumentParser
 	 * @param classId the class Id.
 	 * @return the class info related to the given {@code classId}.
 	 */
-	public ClassInfo getClass(final ClassId classId)
-	{
+	public ClassInfo getClass(final ClassId classId) {
 		return _classData.get(classId);
 	}
 	
@@ -106,8 +101,7 @@ public final class ClassListData extends DocumentParser
 	 * @param classId the class Id as integer.
 	 * @return the class info related to the given {@code classId}.
 	 */
-	public ClassInfo getClass(final int classId)
-	{
+	public ClassInfo getClass(final int classId) {
 		final ClassId id = ClassId.getClassId(classId);
 		return (id != null) ? _classData.get(id) : null;
 	}
@@ -117,12 +111,9 @@ public final class ClassListData extends DocumentParser
 	 * @param classServName the server side class name.
 	 * @return the class info related to the given {@code classServName}.
 	 */
-	public ClassInfo getClass(final String classServName)
-	{
-		for (final ClassInfo classInfo : _classData.values())
-		{
-			if (classInfo.getClassServName().equals(classServName))
-			{
+	public ClassInfo getClass(final String classServName) {
+		for (final ClassInfo classInfo : _classData.values()) {
+			if (classInfo.getClassServName().equals(classServName)) {
 				return classInfo;
 			}
 		}
@@ -133,13 +124,12 @@ public final class ClassListData extends DocumentParser
 	 * Gets the single instance of ClassListData.
 	 * @return single instance of ClassListData
 	 */
-	public static ClassListData getInstance()
-	{
+	public static ClassListData getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final ClassListData _instance = new ClassListData();
 	}
+	
 }

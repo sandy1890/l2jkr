@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -33,42 +37,35 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * The Class RecipeData.
  * @author Zoey76
  */
-public class RecipeData extends DocumentParser
-{
+public class RecipeData extends DocumentParser {
+	
 	private static final Map<Integer, L2RecipeList> _recipes = new HashMap<>();
 	
 	/**
 	 * Instantiates a new recipe data.
 	 */
-	protected RecipeData()
-	{
+	protected RecipeData() {
 		load();
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		_recipes.clear();
 		parseDatapackFile("data/recipes.xml");
 		_log.info(getClass().getSimpleName() + ": Loaded " + _recipes.size() + " recipes.");
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		// TODO: Cleanup checks enforced by XSD.
 		final List<L2RecipeInstance> recipePartList = new ArrayList<>();
 		final List<L2RecipeStatInstance> recipeStatUseList = new ArrayList<>();
 		final List<L2RecipeStatInstance> recipeAltStatChangeList = new ArrayList<>();
-		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			if ("list".equalsIgnoreCase(n.getNodeName()))
-			{
+		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling()) {
+			if ("list".equalsIgnoreCase(n.getNodeName())) {
 				recipesFile:
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					if ("item".equalsIgnoreCase(d.getNodeName()))
-					{
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+					if ("item".equalsIgnoreCase(d.getNodeName())) {
 						recipePartList.clear();
 						recipeStatUseList.clear();
 						recipeAltStatChangeList.clear();
@@ -79,8 +76,7 @@ public class RecipeData extends DocumentParser
 						StatsSet set = new StatsSet();
 						
 						att = attrs.getNamedItem("id");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe(getClass().getSimpleName() + ": Missing id for recipe item, skipping");
 							continue;
 						}
@@ -88,88 +84,67 @@ public class RecipeData extends DocumentParser
 						set.set("id", id);
 						
 						att = attrs.getNamedItem("recipeId");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe(getClass().getSimpleName() + ": Missing recipeId for recipe item id: " + id + ", skipping");
 							continue;
 						}
 						set.set("recipeId", Integer.parseInt(att.getNodeValue()));
 						
 						att = attrs.getNamedItem("name");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe(getClass().getSimpleName() + ": Missing name for recipe item id: " + id + ", skipping");
 							continue;
 						}
 						set.set("recipeName", att.getNodeValue());
 						
 						att = attrs.getNamedItem("craftLevel");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe(getClass().getSimpleName() + ": Missing level for recipe item id: " + id + ", skipping");
 							continue;
 						}
 						set.set("craftLevel", Integer.parseInt(att.getNodeValue()));
 						
 						att = attrs.getNamedItem("type");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe(getClass().getSimpleName() + ": Missing type for recipe item id: " + id + ", skipping");
 							continue;
 						}
 						set.set("isDwarvenRecipe", att.getNodeValue().equalsIgnoreCase("dwarven"));
 						
 						att = attrs.getNamedItem("successRate");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe(getClass().getSimpleName() + ": Missing successRate for recipe item id: " + id + ", skipping");
 							continue;
 						}
 						set.set("successRate", Integer.parseInt(att.getNodeValue()));
 						
-						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
-						{
-							if ("statUse".equalsIgnoreCase(c.getNodeName()))
-							{
+						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling()) {
+							if ("statUse".equalsIgnoreCase(c.getNodeName())) {
 								String statName = c.getAttributes().getNamedItem("name").getNodeValue();
 								int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
-								try
-								{
+								try {
 									recipeStatUseList.add(new L2RecipeStatInstance(statName, value));
-								}
-								catch (Exception e)
-								{
+								} catch (Exception e) {
 									_log.severe(getClass().getSimpleName() + ": Error in StatUse parameter for recipe item id: " + id + ", skipping");
 									continue recipesFile;
 								}
-							}
-							else if ("altStatChange".equalsIgnoreCase(c.getNodeName()))
-							{
+							} else if ("altStatChange".equalsIgnoreCase(c.getNodeName())) {
 								String statName = c.getAttributes().getNamedItem("name").getNodeValue();
 								int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
-								try
-								{
+								try {
 									recipeAltStatChangeList.add(new L2RecipeStatInstance(statName, value));
-								}
-								catch (Exception e)
-								{
+								} catch (Exception e) {
 									_log.severe(getClass().getSimpleName() + ": Error in AltStatChange parameter for recipe item id: " + id + ", skipping");
 									continue recipesFile;
 								}
-							}
-							else if ("ingredient".equalsIgnoreCase(c.getNodeName()))
-							{
+							} else if ("ingredient".equalsIgnoreCase(c.getNodeName())) {
 								int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
 								int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
 								recipePartList.add(new L2RecipeInstance(ingId, ingCount));
-							}
-							else if ("production".equalsIgnoreCase(c.getNodeName()))
-							{
+							} else if ("production".equalsIgnoreCase(c.getNodeName())) {
 								set.set("itemId", Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()));
 								set.set("count", Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue()));
-							}
-							else if ("productionRare".equalsIgnoreCase(c.getNodeName()))
-							{
+							} else if ("productionRare".equalsIgnoreCase(c.getNodeName())) {
 								set.set("rareItemId", Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()));
 								set.set("rareCount", Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue()));
 								set.set("rarity", Integer.parseInt(c.getAttributes().getNamedItem("rarity").getNodeValue()));
@@ -178,16 +153,13 @@ public class RecipeData extends DocumentParser
 						}
 						
 						L2RecipeList recipeList = new L2RecipeList(set, haveRare);
-						for (L2RecipeInstance recipePart : recipePartList)
-						{
+						for (L2RecipeInstance recipePart : recipePartList) {
 							recipeList.addRecipe(recipePart);
 						}
-						for (L2RecipeStatInstance recipeStatUse : recipeStatUseList)
-						{
+						for (L2RecipeStatInstance recipeStatUse : recipeStatUseList) {
 							recipeList.addStatUse(recipeStatUse);
 						}
-						for (L2RecipeStatInstance recipeAltStatChange : recipeAltStatChangeList)
-						{
+						for (L2RecipeStatInstance recipeAltStatChange : recipeAltStatChangeList) {
 							recipeList.addAltStatChange(recipeAltStatChange);
 						}
 						
@@ -203,8 +175,7 @@ public class RecipeData extends DocumentParser
 	 * @param listId the list id
 	 * @return the recipe list
 	 */
-	public L2RecipeList getRecipeList(int listId)
-	{
+	public L2RecipeList getRecipeList(int listId) {
 		return _recipes.get(listId);
 	}
 	
@@ -213,12 +184,9 @@ public class RecipeData extends DocumentParser
 	 * @param itemId the item id
 	 * @return the recipe by item id
 	 */
-	public L2RecipeList getRecipeByItemId(int itemId)
-	{
-		for (L2RecipeList find : _recipes.values())
-		{
-			if (find.getRecipeId() == itemId)
-			{
+	public L2RecipeList getRecipeByItemId(int itemId) {
+		for (L2RecipeList find : _recipes.values()) {
+			if (find.getRecipeId() == itemId) {
 				return find;
 			}
 		}
@@ -229,12 +197,10 @@ public class RecipeData extends DocumentParser
 	 * Gets the all item ids.
 	 * @return the all item ids
 	 */
-	public int[] getAllItemIds()
-	{
+	public int[] getAllItemIds() {
 		int[] idList = new int[_recipes.size()];
 		int i = 0;
-		for (L2RecipeList rec : _recipes.values())
-		{
+		for (L2RecipeList rec : _recipes.values()) {
 			idList[i++] = rec.getRecipeId();
 		}
 		return idList;
@@ -246,11 +212,9 @@ public class RecipeData extends DocumentParser
 	 * @param id the recipe list id
 	 * @return the valid recipe list
 	 */
-	public L2RecipeList getValidRecipeList(L2PcInstance player, int id)
-	{
+	public L2RecipeList getValidRecipeList(L2PcInstance player, int id) {
 		L2RecipeList recipeList = _recipes.get(id);
-		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
-		{
+		if ((recipeList == null) || (recipeList.getRecipes().length == 0)) {
 			player.sendMessage("No recipe for: " + id);
 			player.isInCraftMode(false);
 			return null;
@@ -262,16 +226,15 @@ public class RecipeData extends DocumentParser
 	 * Gets the single instance of RecipeData.
 	 * @return single instance of RecipeData
 	 */
-	public static RecipeData getInstance()
-	{
+	public static RecipeData getInstance() {
 		return SingletonHolder._instance;
 	}
 	
 	/**
 	 * The Class SingletonHolder.
 	 */
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final RecipeData _instance = new RecipeData();
 	}
+	
 }

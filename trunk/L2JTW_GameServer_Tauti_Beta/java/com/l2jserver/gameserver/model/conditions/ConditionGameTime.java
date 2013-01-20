@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.conditions;
 
@@ -21,13 +25,12 @@ import com.l2jserver.gameserver.model.stats.Env;
  * The Class ConditionGameTime.
  * @author mkizub
  */
-public class ConditionGameTime extends Condition
-{
+public class ConditionGameTime extends Condition {
+	
 	/**
 	 * The Enum CheckGameTime.
 	 */
-	public enum CheckGameTime
-	{
+	public enum CheckGameTime {
 		NIGHT
 	}
 	
@@ -39,8 +42,7 @@ public class ConditionGameTime extends Condition
 	 * @param check the check
 	 * @param required the required
 	 */
-	public ConditionGameTime(CheckGameTime check, boolean required)
-	{
+	public ConditionGameTime(CheckGameTime check, boolean required) {
 		_check = check;
 		_required = required;
 	}
@@ -52,13 +54,12 @@ public class ConditionGameTime extends Condition
 	 * @see com.l2jserver.gameserver.model.conditions.Condition#testImpl(com.l2jserver.gameserver.model.stats.Env)
 	 */
 	@Override
-	public boolean testImpl(Env env)
-	{
-		switch (_check)
-		{
+	public boolean testImpl(Env env) {
+		switch (_check) {
 			case NIGHT:
 				return GameTimeController.getInstance().isNowNight() == _required;
 		}
 		return !_required;
 	}
+	
 }

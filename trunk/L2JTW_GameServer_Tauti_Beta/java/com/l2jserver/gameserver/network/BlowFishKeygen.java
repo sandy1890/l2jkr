@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network;
 
@@ -18,22 +22,19 @@ import com.l2jserver.util.Rnd;
 
 /**
  * Blowfish keygen for GameServer client connections
- * @author  KenM
+ * @author KenM
  */
-public class BlowFishKeygen
-{
+public class BlowFishKeygen {
+	
 	private static final int CRYPT_KEYS_SIZE = 20;
 	private static final byte[][] CRYPT_KEYS = new byte[CRYPT_KEYS_SIZE][16];
 	
-	static
-	{
+	static {
 		// init the GS encryption keys on class load
 		
-		for (int i = 0; i < CRYPT_KEYS_SIZE; i++)
-		{
+		for (int i = 0; i < CRYPT_KEYS_SIZE; i++) {
 			// randomize the 8 first bytes
-			for (int j = 0; j < CRYPT_KEYS[i].length; j++)
-			{
+			for (int j = 0; j < CRYPT_KEYS[i].length; j++) {
 				CRYPT_KEYS[i][j] = (byte) Rnd.get(255);
 			}
 			
@@ -50,8 +51,7 @@ public class BlowFishKeygen
 	}
 	
 	// block instantiation
-	private BlowFishKeygen()
-	{
+	private BlowFishKeygen() {
 		
 	}
 	
@@ -60,8 +60,8 @@ public class BlowFishKeygen
 	 * Thus when getting a key with interests other then read-only a copy must be performed.<BR>
 	 * @return A key from this keygen pool.
 	 */
-	public static byte[] getRandomKey()
-	{
+	public static byte[] getRandomKey() {
 		return CRYPT_KEYS[Rnd.get(CRYPT_KEYS_SIZE)];
 	}
+	
 }

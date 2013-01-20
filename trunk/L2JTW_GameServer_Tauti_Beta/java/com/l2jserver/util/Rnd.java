@@ -19,8 +19,7 @@ import java.util.Random;
 /**
  * @author Forsaiken
  */
-public final class Rnd
-{
+public final class Rnd {
 	/**
 	 * This class extends {@link java.util.Random} but do not compare and store atomically.<br>
 	 * Instead it`s using a simple volatile flag to ensure reading and storing the whole 64bit seed chunk.<br>
@@ -28,30 +27,25 @@ public final class Rnd
 	 * @author Forsaiken
 	 * @see java.util.Random
 	 */
-	public static final class NonAtomicRandom extends Random
-	{
+	public static final class NonAtomicRandom extends Random {
 		private static final long serialVersionUID = 1L;
 		private volatile long _seed;
 		
-		public NonAtomicRandom()
-		{
+		public NonAtomicRandom() {
 			this(++SEED_UNIQUIFIER + System.nanoTime());
 		}
 		
-		public NonAtomicRandom(final long seed)
-		{
+		public NonAtomicRandom(final long seed) {
 			setSeed(seed);
 		}
 		
 		@Override
-		public final int next(final int bits)
-		{
+		public final int next(final int bits) {
 			return (int) ((_seed = ((_seed * MULTIPLIER) + ADDEND) & MASK) >>> (48 - bits));
 		}
 		
 		@Override
-		public final void setSeed(final long seed)
-		{
+		public final void setSeed(final long seed) {
 			_seed = (seed ^ MULTIPLIER) & MASK;
 		}
 	}
@@ -59,17 +53,14 @@ public final class Rnd
 	/**
 	 * @author Forsaiken
 	 */
-	protected static final class RandomContainer
-	{
+	protected static final class RandomContainer {
 		private final Random _random;
 		
-		protected RandomContainer(final Random random)
-		{
+		protected RandomContainer(final Random random) {
 			_random = random;
 		}
 		
-		public final Random directRandom()
-		{
+		public final Random directRandom() {
 			return _random;
 		}
 		
@@ -78,8 +69,7 @@ public final class Rnd
 		 * @return A random double number from 0 to 1
 		 * @see com.l2jserver.util.Rnd#nextDouble()
 		 */
-		public final double get()
-		{
+		public final double get() {
 			return _random.nextDouble();
 		}
 		
@@ -88,8 +78,7 @@ public final class Rnd
 		 * @param n The superior limit (exclusive)
 		 * @return A random integer number from 0 to n-1
 		 */
-		public final int get(final int n)
-		{
+		public final int get(final int n) {
 			return (int) (_random.nextDouble() * n);
 		}
 		
@@ -99,8 +88,7 @@ public final class Rnd
 		 * @param max The maximum value
 		 * @return A random integer number from min to max
 		 */
-		public final int get(final int min, final int max)
-		{
+		public final int get(final int min, final int max) {
 			return min + (int) (_random.nextDouble() * ((max - min) + 1));
 		}
 		
@@ -110,8 +98,7 @@ public final class Rnd
 		 * @param max The maximum value
 		 * @return A random long number from min to max
 		 */
-		public final long get(final long min, final long max)
-		{
+		public final long get(final long min, final long max) {
 			return min + (long) (_random.nextDouble() * ((max - min) + 1));
 		}
 		
@@ -120,8 +107,7 @@ public final class Rnd
 		 * @return A random boolean state (true or false)
 		 * @see java.util.Random#nextBoolean()
 		 */
-		public final boolean nextBoolean()
-		{
+		public final boolean nextBoolean() {
 			return _random.nextBoolean();
 		}
 		
@@ -130,8 +116,7 @@ public final class Rnd
 		 * @param array The array to be filled with random byte numbers
 		 * @see java.util.Random#nextBytes(byte[] bytes)
 		 */
-		public final void nextBytes(final byte[] array)
-		{
+		public final void nextBytes(final byte[] array) {
 			_random.nextBytes(array);
 		}
 		
@@ -140,8 +125,7 @@ public final class Rnd
 		 * @return A random double number from 0 to 1
 		 * @see java.util.Random#nextDouble()
 		 */
-		public final double nextDouble()
-		{
+		public final double nextDouble() {
 			return _random.nextDouble();
 		}
 		
@@ -150,8 +134,7 @@ public final class Rnd
 		 * @return A random integer number from 0 to 1
 		 * @see java.util.Random#nextFloat()
 		 */
-		public final float nextFloat()
-		{
+		public final float nextFloat() {
 			return _random.nextFloat();
 		}
 		
@@ -160,8 +143,7 @@ public final class Rnd
 		 * @return A random gaussian double number from 0 to 1
 		 * @see java.util.Random#nextGaussian()
 		 */
-		public final double nextGaussian()
-		{
+		public final double nextGaussian() {
 			return _random.nextGaussian();
 		}
 		
@@ -170,8 +152,7 @@ public final class Rnd
 		 * @return A random integer number from Integer.MIN_VALUE to Integer.MAX_VALUE
 		 * @see java.util.Random#nextInt()
 		 */
-		public final int nextInt()
-		{
+		public final int nextInt() {
 			return _random.nextInt();
 		}
 		
@@ -180,8 +161,7 @@ public final class Rnd
 		 * @return A random integer number from Long.MIN_VALUE to Long.MAX_VALUE
 		 * @see java.util.Random#nextLong()
 		 */
-		public final long nextLong()
-		{
+		public final long nextLong() {
 			return _random.nextLong();
 		}
 	}
@@ -189,8 +169,7 @@ public final class Rnd
 	/**
 	 * @author Forsaiken
 	 */
-	public static enum RandomType
-	{
+	public static enum RandomType {
 		/**
 		 * For best random quality.
 		 * @see java.security.SecureRandom
@@ -227,24 +206,19 @@ public final class Rnd
 	 * @author Forsaiken
 	 * @see java.util.Random
 	 */
-	public static final class ThreadLocalRandom extends Random
-	{
-		private static final class Seed
-		{
+	public static final class ThreadLocalRandom extends Random {
+		private static final class Seed {
 			long _seed;
 			
-			Seed(final long seed)
-			{
+			Seed(final long seed) {
 				setSeed(seed);
 			}
 			
-			final int next(final int bits)
-			{
+			final int next(final int bits) {
 				return (int) ((_seed = ((_seed * MULTIPLIER) + ADDEND) & MASK) >>> (48 - bits));
 			}
 			
-			final void setSeed(final long seed)
-			{
+			final void setSeed(final long seed) {
 				_seed = (seed ^ MULTIPLIER) & MASK;
 			}
 		}
@@ -252,41 +226,32 @@ public final class Rnd
 		private static final long serialVersionUID = 1L;
 		private final ThreadLocal<Seed> _seedLocal;
 		
-		public ThreadLocalRandom()
-		{
-			_seedLocal = new ThreadLocal<Seed>()
-			{
+		public ThreadLocalRandom() {
+			_seedLocal = new ThreadLocal<Seed>() {
 				@Override
-				public final Seed initialValue()
-				{
+				public final Seed initialValue() {
 					return new Seed(++SEED_UNIQUIFIER + System.nanoTime());
 				}
 			};
 		}
 		
-		public ThreadLocalRandom(final long seed)
-		{
-			_seedLocal = new ThreadLocal<Seed>()
-			{
+		public ThreadLocalRandom(final long seed) {
+			_seedLocal = new ThreadLocal<Seed>() {
 				@Override
-				public final Seed initialValue()
-				{
+				public final Seed initialValue() {
 					return new Seed(seed);
 				}
 			};
 		}
 		
 		@Override
-		public final int next(final int bits)
-		{
+		public final int next(final int bits) {
 			return _seedLocal.get().next(bits);
 		}
 		
 		@Override
-		public final void setSeed(final long seed)
-		{
-			if (_seedLocal != null)
-			{
+		public final void setSeed(final long seed) {
+			if (_seedLocal != null) {
 				_seedLocal.get().setSeed(seed);
 			}
 		}
@@ -302,8 +267,7 @@ public final class Rnd
 	
 	protected static volatile long SEED_UNIQUIFIER = 8682522807148012L;
 	
-	public static final Random directRandom()
-	{
+	public static final Random directRandom() {
 		return rnd.directRandom();
 	}
 	
@@ -312,8 +276,7 @@ public final class Rnd
 	 * @return A random double number from 0 to 1
 	 * @see com.l2jserver.util.Rnd#nextDouble()
 	 */
-	public static final double get()
-	{
+	public static final double get() {
 		return rnd.nextDouble();
 	}
 	
@@ -322,8 +285,7 @@ public final class Rnd
 	 * @param n The superior limit (exclusive)
 	 * @return A random integer number from 0 to n-1
 	 */
-	public static final int get(final int n)
-	{
+	public static final int get(final int n) {
 		return rnd.get(n);
 	}
 	
@@ -333,8 +295,7 @@ public final class Rnd
 	 * @param max The maximum value
 	 * @return A random integer number from min to max
 	 */
-	public static final int get(final int min, final int max)
-	{
+	public static final int get(final int min, final int max) {
 		return rnd.get(min, max);
 	}
 	
@@ -344,15 +305,12 @@ public final class Rnd
 	 * @param max The maximum value
 	 * @return A random long number from min to max
 	 */
-	public static final long get(final long min, final long max)
-	{
+	public static final long get(final long min, final long max) {
 		return rnd.get(min, max);
 	}
 	
-	public static final RandomContainer newInstance(final RandomType type)
-	{
-		switch (type)
-		{
+	public static final RandomContainer newInstance(final RandomType type) {
+		switch (type) {
 			case UNSECURE_ATOMIC:
 				return new RandomContainer(new Random());
 				
@@ -374,8 +332,7 @@ public final class Rnd
 	 * @return A random boolean state (true or false)
 	 * @see java.util.Random#nextBoolean()
 	 */
-	public static final boolean nextBoolean()
-	{
+	public static final boolean nextBoolean() {
 		return rnd.nextBoolean();
 	}
 	
@@ -384,8 +341,7 @@ public final class Rnd
 	 * @param array The array to be filled with random byte numbers
 	 * @see java.util.Random#nextBytes(byte[] bytes)
 	 */
-	public static final void nextBytes(final byte[] array)
-	{
+	public static final void nextBytes(final byte[] array) {
 		rnd.nextBytes(array);
 	}
 	
@@ -394,8 +350,7 @@ public final class Rnd
 	 * @return A random double number from 0 to 1
 	 * @see java.util.Random#nextDouble()
 	 */
-	public static final double nextDouble()
-	{
+	public static final double nextDouble() {
 		return rnd.nextDouble();
 	}
 	
@@ -404,8 +359,7 @@ public final class Rnd
 	 * @return A random integer number from 0 to 1
 	 * @see java.util.Random#nextFloat()
 	 */
-	public static final float nextFloat()
-	{
+	public static final float nextFloat() {
 		return rnd.nextFloat();
 	}
 	
@@ -414,8 +368,7 @@ public final class Rnd
 	 * @return A random gaussian double number from 0 to 1
 	 * @see java.util.Random#nextGaussian()
 	 */
-	public static final double nextGaussian()
-	{
+	public static final double nextGaussian() {
 		return rnd.nextGaussian();
 	}
 	
@@ -424,8 +377,7 @@ public final class Rnd
 	 * @return A random integer number from Integer.MIN_VALUE to Integer.MAX_VALUE
 	 * @see java.util.Random#nextInt()
 	 */
-	public static final int nextInt()
-	{
+	public static final int nextInt() {
 		return rnd.nextInt();
 	}
 	
@@ -434,8 +386,7 @@ public final class Rnd
 	 * @return
 	 * @see com.l2jserver.util.Rnd#get(int n)
 	 */
-	public static final int nextInt(final int n)
-	{
+	public static final int nextInt(final int n) {
 		return get(n);
 	}
 	
@@ -444,8 +395,7 @@ public final class Rnd
 	 * @return A random integer number from Long.MIN_VALUE to Long.MAX_VALUE
 	 * @see java.util.Random#nextLong()
 	 */
-	public static final long nextLong()
-	{
+	public static final long nextLong() {
 		return rnd.nextLong();
 	}
 }

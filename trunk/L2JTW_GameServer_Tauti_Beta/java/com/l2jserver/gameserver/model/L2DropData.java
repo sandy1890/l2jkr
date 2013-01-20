@@ -1,31 +1,31 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
 import java.util.Arrays;
 
 /**
-/*
- *
- * Special thanks to nuocnam
- * Author: LittleVexy
- *
+ * /* Special thanks to nuocnam Author: LittleVexy
  * @version $Revision: 1.1.4.4 $ $Date: 2005/03/29 23:15:15 $
  */
-public class L2DropData
-{
+public class L2DropData {
+	
 	public static final int MAX_CHANCE = 1000000;
 	
 	private int _itemId;
@@ -39,8 +39,7 @@ public class L2DropData
 	 * Returns the ID of the item dropped
 	 * @return int
 	 */
-	public int getItemId()
-	{
+	public int getItemId() {
 		return _itemId;
 	}
 	
@@ -48,8 +47,7 @@ public class L2DropData
 	 * Sets the ID of the item dropped
 	 * @param itemId : int designating the ID of the item
 	 */
-	public void setItemId(int itemId)
-	{
+	public void setItemId(int itemId) {
 		_itemId = itemId;
 	}
 	
@@ -57,8 +55,7 @@ public class L2DropData
 	 * Returns the minimum quantity of items dropped
 	 * @return int
 	 */
-	public int getMinDrop()
-	{
+	public int getMinDrop() {
 		return _minDrop;
 	}
 	
@@ -66,8 +63,7 @@ public class L2DropData
 	 * Returns the maximum quantity of items dropped
 	 * @return int
 	 */
-	public int getMaxDrop()
-	{
+	public int getMaxDrop() {
 		return _maxDrop;
 	}
 	
@@ -75,8 +71,7 @@ public class L2DropData
 	 * Returns the chance of having a drop
 	 * @return int
 	 */
-	public double getChance()
-	{
+	public double getChance() {
 		return _chance;
 	}
 	
@@ -84,8 +79,7 @@ public class L2DropData
 	 * Sets the value for minimal quantity of dropped items
 	 * @param mindrop : int designating the quantity
 	 */
-	public void setMinDrop(int mindrop)
-	{
+	public void setMinDrop(int mindrop) {
 		_minDrop = mindrop;
 	}
 	
@@ -93,8 +87,7 @@ public class L2DropData
 	 * Sets the value for maximal quantity of dopped items
 	 * @param maxdrop : int designating the quantity of dropped items
 	 */
-	public void setMaxDrop(int maxdrop)
-	{
+	public void setMaxDrop(int maxdrop) {
 		_maxDrop = maxdrop;
 	}
 	
@@ -102,16 +95,15 @@ public class L2DropData
 	 * Sets the chance of having the item for a drop
 	 * @param chance : int designating the chance
 	 */
-	public void setChance(double chance)
-	{
+	public void setChance(double chance) {
 		_chance = chance;
 	}
+	
 	/**
 	 * Returns the stateID.
 	 * @return String[]
 	 */
-	public String[] getStateIDs()
-	{
+	public String[] getStateIDs() {
 		return _stateID;
 	}
 	
@@ -119,8 +111,7 @@ public class L2DropData
 	 * Adds states of the dropped item
 	 * @param list : String[]
 	 */
-	public void addStates(String[] list)
-	{
+	public void addStates(String[] list) {
 		_stateID = list;
 	}
 	
@@ -128,8 +119,7 @@ public class L2DropData
 	 * Returns the questID.
 	 * @return String designating the ID of the quest
 	 */
-	public String getQuestID()
-	{
+	public String getQuestID() {
 		return _questID;
 	}
 	
@@ -137,8 +127,7 @@ public class L2DropData
 	 * Sets the questID
 	 * @param questID the quest Id to set.
 	 */
-	public void setQuestID(String questID)
-	{
+	public void setQuestID(String questID) {
 		_questID = questID;
 	}
 	
@@ -146,9 +135,8 @@ public class L2DropData
 	 * Returns if the dropped item is requested for a quest
 	 * @return boolean
 	 */
-	public boolean isQuestDrop()
-	{
-		return _questID != null && _stateID != null;
+	public boolean isQuestDrop() {
+		return (_questID != null) && (_stateID != null);
 	}
 	
 	/**
@@ -156,12 +144,9 @@ public class L2DropData
 	 * @return String
 	 */
 	@Override
-	public String toString()
-	{
-		String out = "ItemID: " + getItemId() + " Min: " + getMinDrop() +
-		" Max: " + getMaxDrop() + " Chance: " + (getChance() / 10000.0) + "%";
-		if (isQuestDrop())
-		{
+	public String toString() {
+		String out = "ItemID: " + getItemId() + " Min: " + getMinDrop() + " Max: " + getMaxDrop() + " Chance: " + (getChance() / 10000.0) + "%";
+		if (isQuestDrop()) {
 			out += " QuestID: " + getQuestID() + " StateID's: " + Arrays.toString(getStateIDs());
 		}
 		
@@ -172,11 +157,10 @@ public class L2DropData
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
-	public int hashCode()
-	{
+	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + _itemId;
+		result = (prime * result) + _itemId;
 		return result;
 	}
 	
@@ -184,17 +168,21 @@ public class L2DropData
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
-	public boolean equals(Object obj)
-	{
-		if (this == obj)
+	public boolean equals(Object obj) {
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (!(obj instanceof L2DropData))
+		}
+		if (!(obj instanceof L2DropData)) {
 			return false;
+		}
 		final L2DropData other = (L2DropData) obj;
-		if (_itemId != other._itemId)
+		if (_itemId != other._itemId) {
 			return false;
+		}
 		return true;
 	}
+	
 }

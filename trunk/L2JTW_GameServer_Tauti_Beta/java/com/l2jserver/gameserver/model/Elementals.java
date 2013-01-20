@@ -1,35 +1,39 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.funcs.FuncAdd;
 import com.l2jserver.gameserver.model.skills.funcs.LambdaConst;
 import com.l2jserver.gameserver.model.stats.Stats;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public final class Elementals
-{
+import gnu.trove.map.hash.TIntObjectHashMap;
+
+public final class Elementals {
+	
 	private static final TIntObjectHashMap<ElementalItems> TABLE = new TIntObjectHashMap<>();
 	
-	static
-	{
-		for (ElementalItems item : ElementalItems.values())
+	static {
+		for (ElementalItems item : ElementalItems.values()) {
 			TABLE.put(item._itemId, item);
+		}
 	}
 	
 	public static final byte NONE = -1;
@@ -46,9 +50,9 @@ public final class Elementals
 	
 	public static final int[] WEAPON_VALUES =
 	{
-		0,   // Level 1
-		25,  // Level 2
-		75,  // Level 3
+		0, // Level 1
+		25, // Level 2
+		75, // Level 3
 		150, // Level 4
 		175, // Level 5
 		225, // Level 6
@@ -59,12 +63,13 @@ public final class Elementals
 		475, // Level 11
 		525, // Level 12
 		600, // Level 13
-		Integer.MAX_VALUE  // TODO: Higher stones
+		Integer.MAX_VALUE
+	// TODO: Higher stones
 	};
 	
 	public static final int[] ARMOR_VALUES =
 	{
-		0,  // Level 1
+		0, // Level 1
 		12, // Level 2
 		30, // Level 3
 		60, // Level 4
@@ -78,23 +83,25 @@ public final class Elementals
 		210, // Level 12
 		240, // Level 13
 		300, // Level 14 //rocknow-God
-		Integer.MAX_VALUE  // TODO: Higher stones
+		Integer.MAX_VALUE
+	// TODO: Higher stones
 	};
 	
-	public static enum ElementalItemType
-	{
-		Stone(3), Roughore(3), Crystal(6), Jewel(9), Energy(12);
+	public static enum ElementalItemType {
+		Stone(3),
+		Roughore(3),
+		Crystal(6),
+		Jewel(9),
+		Energy(12);
 		
 		public int _maxLevel;
 		
-		private ElementalItemType(int maxLvl)
-		{
+		private ElementalItemType(int maxLvl) {
 			_maxLevel = maxLvl;
 		}
 	}
 	
-	public static enum ElementalItems
-	{
+	public static enum ElementalItems {
 		fireStone(FIRE, 9546, ElementalItemType.Stone),
 		waterStone(WATER, 9547, ElementalItemType.Stone),
 		windStone(WIND, 9549, ElementalItemType.Stone),
@@ -135,170 +142,171 @@ public final class Elementals
 		public int _itemId;
 		public ElementalItemType _type;
 		
-		private ElementalItems(byte element, int itemId, ElementalItemType type)
-		{
+		private ElementalItems(byte element, int itemId, ElementalItemType type) {
 			_element = element;
 			_itemId = itemId;
 			_type = type;
 		}
 	}
 	
-	public static byte getItemElement(int itemId)
-	{
+	public static byte getItemElement(int itemId) {
 		ElementalItems item = TABLE.get(itemId);
-		if (item != null)
+		if (item != null) {
 			return item._element;
+		}
 		return NONE;
 	}
 	
-	public static ElementalItems getItemElemental(int itemId)
-	{
+	public static ElementalItems getItemElemental(int itemId) {
 		return TABLE.get(itemId);
 	}
 	
-	public static int getMaxElementLevel(int itemId)
-	{
+	public static int getMaxElementLevel(int itemId) {
 		ElementalItems item = TABLE.get(itemId);
-		if (item != null)
+		if (item != null) {
 			return item._type._maxLevel;
+		}
 		return -1;
 	}
 	
-	public static String getElementName(byte element)
-	{
-		switch(element)
-		{
+	public static String getElementName(byte element) {
+		switch (element) {
 			case FIRE:
-				/* Move To MessageTable For L2JTW
-				return "Fire";
-				*/
+				/*
+				 * Move To MessageTable For L2JTW return "Fire";
+				 */
 				return MessageTable.Messages[398].getExtra(1);
 			case WATER:
-				/* Move To MessageTable For L2JTW
-				return "Water";
-				*/
+				/*
+				 * Move To MessageTable For L2JTW return "Water";
+				 */
 				return MessageTable.Messages[398].getExtra(2);
 			case WIND:
-				/* Move To MessageTable For L2JTW
-				return "Wind";
-				*/
+				/*
+				 * Move To MessageTable For L2JTW return "Wind";
+				 */
 				return MessageTable.Messages[398].getExtra(3);
 			case EARTH:
-				/* Move To MessageTable For L2JTW
-				return "Earth";
-				*/
+				/*
+				 * Move To MessageTable For L2JTW return "Earth";
+				 */
 				return MessageTable.Messages[398].getExtra(4);
 			case DARK:
-				/* Move To MessageTable For L2JTW
-				return "Dark";
-				*/
+				/*
+				 * Move To MessageTable For L2JTW return "Dark";
+				 */
 				return MessageTable.Messages[398].getExtra(5);
 			case HOLY:
-				/* Move To MessageTable For L2JTW
-				return "Holy";
-				*/
+				/*
+				 * Move To MessageTable For L2JTW return "Holy";
+				 */
 				return MessageTable.Messages[398].getExtra(6);
 		}
 		return "None";
 	}
 	
-	public static byte getElementId(String name)
-	{
+	public static byte getElementId(String name) {
 		String tmp = name.toLowerCase();
-		if (tmp.equals("fire"))
+		if (tmp.equals("fire")) {
 			return FIRE;
-		if (tmp.equals("water"))
+		}
+		if (tmp.equals("water")) {
 			return WATER;
-		if (tmp.equals("wind"))
+		}
+		if (tmp.equals("wind")) {
 			return WIND;
-		if (tmp.equals("earth"))
+		}
+		if (tmp.equals("earth")) {
 			return EARTH;
-		if (tmp.equals("dark"))
+		}
+		if (tmp.equals("dark")) {
 			return DARK;
-		if (tmp.equals("holy"))
+		}
+		if (tmp.equals("holy")) {
 			return HOLY;
-		if (tmp.equals(MessageTable.Messages[398].getExtra(1)))
+		}
+		if (tmp.equals(MessageTable.Messages[398].getExtra(1))) {
 			return FIRE;
-		if (tmp.equals(MessageTable.Messages[398].getExtra(2)))
+		}
+		if (tmp.equals(MessageTable.Messages[398].getExtra(2))) {
 			return WATER;
-		if (tmp.equals(MessageTable.Messages[398].getExtra(3)))
+		}
+		if (tmp.equals(MessageTable.Messages[398].getExtra(3))) {
 			return WIND;
-		if (tmp.equals(MessageTable.Messages[398].getExtra(4)))
+		}
+		if (tmp.equals(MessageTable.Messages[398].getExtra(4))) {
 			return EARTH;
-		if (tmp.equals(MessageTable.Messages[398].getExtra(5)))
+		}
+		if (tmp.equals(MessageTable.Messages[398].getExtra(5))) {
 			return DARK;
-		if (tmp.equals(MessageTable.Messages[398].getExtra(6)))
+		}
+		if (tmp.equals(MessageTable.Messages[398].getExtra(6))) {
 			return HOLY;
+		}
 		return NONE;
 	}
 	
-	public static byte getOppositeElement(byte element)
-	{
-		return (byte)((element % 2 == 0) ? (element + 1) : (element - 1));
+	public static byte getOppositeElement(byte element) {
+		return (byte) (((element % 2) == 0) ? (element + 1) : (element - 1));
 	}
 	
-	public static class ElementalStatBoni
-	{
+	public static class ElementalStatBoni {
 		private byte _elementalType;
 		private int _elementalValue;
 		private boolean _active;
 		
-		public ElementalStatBoni(byte type, int value)
-		{
+		public ElementalStatBoni(byte type, int value) {
 			_elementalType = type;
 			_elementalValue = value;
 			_active = false;
 		}
 		
-		public void applyBonus(L2PcInstance player, boolean isArmor)
-		{
+		public void applyBonus(L2PcInstance player, boolean isArmor) {
 			// make sure the bonuses are not applied twice..
-			if (_active)
+			if (_active) {
 				return;
+			}
 			
-			switch (_elementalType)
-			{
+			switch (_elementalType) {
 				case FIRE:
 					player.addStatFunc(new FuncAdd(isArmor ? Stats.FIRE_RES : Stats.FIRE_POWER, 0x40, this, new LambdaConst(_elementalValue)));
-					break;
+				break;
 				case WATER:
 					player.addStatFunc(new FuncAdd(isArmor ? Stats.WATER_RES : Stats.WATER_POWER, 0x40, this, new LambdaConst(_elementalValue)));
-					break;
+				break;
 				case WIND:
 					player.addStatFunc(new FuncAdd(isArmor ? Stats.WIND_RES : Stats.WIND_POWER, 0x40, this, new LambdaConst(_elementalValue)));
-					break;
+				break;
 				case EARTH:
 					player.addStatFunc(new FuncAdd(isArmor ? Stats.EARTH_RES : Stats.EARTH_POWER, 0x40, this, new LambdaConst(_elementalValue)));
-					break;
+				break;
 				case DARK:
 					player.addStatFunc(new FuncAdd(isArmor ? Stats.DARK_RES : Stats.DARK_POWER, 0x40, this, new LambdaConst(_elementalValue)));
-					break;
+				break;
 				case HOLY:
 					player.addStatFunc(new FuncAdd(isArmor ? Stats.HOLY_RES : Stats.HOLY_POWER, 0x40, this, new LambdaConst(_elementalValue)));
-					break;
+				break;
 			}
 			
 			_active = true;
 		}
 		
-		public void removeBonus(L2PcInstance player)
-		{
+		public void removeBonus(L2PcInstance player) {
 			// make sure the bonuses are not removed twice
-			if (!_active)
+			if (!_active) {
 				return;
+			}
 			
 			player.removeStatsOwner(this);
 			
 			_active = false;
 		}
 		
-		public void setValue(int val)
-		{
+		public void setValue(int val) {
 			_elementalValue = val;
 		}
 		
-		public void setElement(byte type)
-		{
+		public void setElement(byte type) {
 			_elementalType = type;
 		}
 	}
@@ -308,54 +316,46 @@ public final class Elementals
 	private byte _element = NONE;
 	private int _value = 0;
 	
-	public byte getElement()
-	{
+	public byte getElement() {
 		return _element;
 	}
 	
-	public void setElement(byte type)
-	{
+	public void setElement(byte type) {
 		_element = type;
 		_boni.setElement(type);
 	}
 	
-	public int getValue()
-	{
+	public int getValue() {
 		return _value;
 	}
 	
-	public void setValue(int val)
-	{
+	public void setValue(int val) {
 		_value = val;
 		_boni.setValue(val);
 	}
 	
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return getElementName(_element) + " +" + _value;
 	}
 	
-	public Elementals(byte type, int value)
-	{
+	public Elementals(byte type, int value) {
 		_element = type;
 		_value = value;
 		_boni = new ElementalStatBoni(_element, _value);
 	}
 	
-	public void applyBonus(L2PcInstance player, boolean isArmor)
-	{
+	public void applyBonus(L2PcInstance player, boolean isArmor) {
 		_boni.applyBonus(player, isArmor);
 	}
 	
-	public void removeBonus(L2PcInstance player)
-	{
+	public void removeBonus(L2PcInstance player) {
 		_boni.removeBonus(player);
 	}
 	
-	public void updateBonus(L2PcInstance player, boolean isArmor)
-	{
+	public void updateBonus(L2PcInstance player, boolean isArmor) {
 		_boni.removeBonus(player);
 		_boni.applyBonus(player, isArmor);
 	}
+	
 }

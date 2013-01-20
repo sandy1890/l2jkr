@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -31,8 +35,8 @@ import com.l2jserver.gameserver.model.StatsSet;
  * This class represents the Newbie Helper Buff list
  * @author Ayor
  */
-public class HelperBuffTable
-{
+public class HelperBuffTable {
+	
 	private static Logger _log = Logger.getLogger(HelperBuffTable.class.getName());
 	
 	/** The table containing all Buff of the Newbie Helper */
@@ -56,16 +60,14 @@ public class HelperBuffTable
 	
 	private int _servitorHighestLevel = 1;
 	
-	public static HelperBuffTable getInstance()
-	{
+	public static HelperBuffTable getInstance() {
 		return SingletonHolder._instance;
 	}
 	
 	/**
 	 * Create and Load the Newbie Helper Buff list from SQL Table helper_buff_list
 	 */
-	protected HelperBuffTable()
-	{
+	protected HelperBuffTable() {
 		_helperBuff = new FastList<>();
 		restoreHelperBuffData();
 		
@@ -74,11 +76,9 @@ public class HelperBuffTable
 	/**
 	 * Read and Load the Newbie Helper Buff list from SQL Table helper_buff_list
 	 */
-	private void restoreHelperBuffData()
-	{
+	private void restoreHelperBuffData() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM helper_buff_list");
 			ResultSet helperbuffdata = statement.executeQuery();
@@ -86,13 +86,9 @@ public class HelperBuffTable
 			fillHelperBuffTable(helperbuffdata);
 			helperbuffdata.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Table helper_buff_list not found : Update your DataPack! Error : " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -102,11 +98,9 @@ public class HelperBuffTable
 	 * @param HelperBuffData
 	 * @throws Exception
 	 */
-	private void fillHelperBuffTable(ResultSet HelperBuffData) throws Exception
-	{
+	private void fillHelperBuffTable(ResultSet HelperBuffData) throws Exception {
 		
-		while (HelperBuffData.next())
-		{
+		while (HelperBuffData.next()) {
 			StatsSet helperBuffDat = new StatsSet();
 			int id = HelperBuffData.getInt("id");
 			
@@ -119,39 +113,29 @@ public class HelperBuffTable
 			helperBuffDat.set("forSummon", HelperBuffData.getString("forSummon"));
 			
 			// Calulate the range level in wich player must be to obtain buff from Newbie Helper
-			if ("false".equals(HelperBuffData.getString("is_magic_class")))
-			{
-				if (HelperBuffData.getInt("lower_level") < _physicClassLowestLevel)
-				{
+			if ("false".equals(HelperBuffData.getString("is_magic_class"))) {
+				if (HelperBuffData.getInt("lower_level") < _physicClassLowestLevel) {
 					_physicClassLowestLevel = HelperBuffData.getInt("lower_level");
 				}
 				
-				if (HelperBuffData.getInt("upper_level") > _physicClassHighestLevel)
-				{
+				if (HelperBuffData.getInt("upper_level") > _physicClassHighestLevel) {
 					_physicClassHighestLevel = HelperBuffData.getInt("upper_level");
 				}
-			}
-			else
-			{
-				if (HelperBuffData.getInt("lower_level") < _magicClassLowestLevel)
-				{
+			} else {
+				if (HelperBuffData.getInt("lower_level") < _magicClassLowestLevel) {
 					_magicClassLowestLevel = HelperBuffData.getInt("lower_level");
 				}
 				
-				if (HelperBuffData.getInt("upper_level") > _magicClassHighestLevel)
-				{
+				if (HelperBuffData.getInt("upper_level") > _magicClassHighestLevel) {
 					_magicClassHighestLevel = HelperBuffData.getInt("upper_level");
 				}
 			}
-			if ("true".equals(HelperBuffData.getString("forSummon")))
-			{
-				if (HelperBuffData.getInt("lower_level") < _servitorLowestLevel)
-				{
+			if ("true".equals(HelperBuffData.getString("forSummon"))) {
+				if (HelperBuffData.getInt("lower_level") < _servitorLowestLevel) {
 					_servitorLowestLevel = HelperBuffData.getInt("lower_level");
 				}
 				
-				if (HelperBuffData.getInt("upper_level") > _servitorHighestLevel)
-				{
+				if (HelperBuffData.getInt("upper_level") > _servitorHighestLevel) {
 					_servitorHighestLevel = HelperBuffData.getInt("upper_level");
 				}
 			}
@@ -167,61 +151,54 @@ public class HelperBuffTable
 	/**
 	 * @return the Helper Buff List
 	 */
-	public List<L2HelperBuff> getHelperBuffTable()
-	{
+	public List<L2HelperBuff> getHelperBuffTable() {
 		return _helperBuff;
 	}
 	
 	/**
 	 * @return Returns the magicClassHighestLevel.
 	 */
-	public int getMagicClassHighestLevel()
-	{
+	public int getMagicClassHighestLevel() {
 		return _magicClassHighestLevel;
 	}
 	
 	/**
 	 * @return Returns the magicClassLowestLevel.
 	 */
-	public int getMagicClassLowestLevel()
-	{
+	public int getMagicClassLowestLevel() {
 		return _magicClassLowestLevel;
 	}
 	
 	/**
 	 * @return Returns the physicClassHighestLevel.
 	 */
-	public int getPhysicClassHighestLevel()
-	{
+	public int getPhysicClassHighestLevel() {
 		return _physicClassHighestLevel;
 	}
 	
 	/**
 	 * @return Returns the physicClassLowestLevel.
 	 */
-	public int getPhysicClassLowestLevel()
-	{
+	public int getPhysicClassLowestLevel() {
 		return _physicClassLowestLevel;
 	}
 	
 	/**
 	 * @return Returns the servitorLowestLevel.
 	 */
-	public int getServitorLowestLevel()
-	{
+	public int getServitorLowestLevel() {
 		return _servitorLowestLevel;
 	}
 	
 	/**
 	 * @return Returns the servitorHighestLevel.
 	 */
-	public int getServitorHighestLevel()
-	{
+	public int getServitorHighestLevel() {
 		return _servitorHighestLevel;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final HelperBuffTable _instance = new HelperBuffTable();
 	}
+	
 }

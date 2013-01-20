@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -19,44 +23,35 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * sample
- * 06 8f19904b 2522d04b 00000000 80 950c0000 4af50000 08f2ffff 0000    - 0 damage (missed 0x80)
- * 06 85071048 bc0e504b 32000000 10 fc41ffff fd240200 a6f5ffff 0100 bc0e504b 33000000 10                                     3....
-
- * format
- * dddc dddh (ddc)
+ * sample 06 8f19904b 2522d04b 00000000 80 950c0000 4af50000 08f2ffff 0000 - 0 damage (missed 0x80) 06 85071048 bc0e504b 32000000 10 fc41ffff fd240200 a6f5ffff 0100 bc0e504b 33000000 10 3.... format dddc dddh (ddc)
  */
-public class Attack extends L2GameServerPacket
-{
-	public static final int HITFLAG_USESS = 0x08; //rocknow-God (by otfnir)
-	public static final int HITFLAG_CRIT = 0x04; //rocknow-God (by otfnir)
-	public static final int HITFLAG_SHLD = 0x02; //rocknow-God (by otfnir)
-	public static final int HITFLAG_MISS = 0x01; //rocknow-God (by otfnir)
+public class Attack extends L2GameServerPacket {
+	public static final int HITFLAG_USESS = 0x08; // rocknow-God (by otfnir)
+	public static final int HITFLAG_CRIT = 0x04; // rocknow-God (by otfnir)
+	public static final int HITFLAG_SHLD = 0x02; // rocknow-God (by otfnir)
+	public static final int HITFLAG_MISS = 0x01; // rocknow-God (by otfnir)
 	
-	public class Hit
-	{
+	public class Hit {
 		protected final int _targetId;
 		protected final int _damage;
 		protected int _flags;
 		
-		Hit(L2Object target, int damage, boolean miss, boolean crit, byte shld)
-		{
+		Hit(L2Object target, int damage, boolean miss, boolean crit, byte shld) {
 			_targetId = target.getObjectId();
 			_damage = damage;
-			if (miss)
-			{
+			if (miss) {
 				_flags = HITFLAG_MISS;
 				return;
 			}
 			if (soulshot)
-				_flags = HITFLAG_USESS; //rocknow-God (by otfnir)
+				_flags = HITFLAG_USESS; // rocknow-God (by otfnir)
 			if (crit)
 				_flags |= HITFLAG_CRIT;
 			// dirty fix for lags on olympiad
 			if (shld > 0 && !(target instanceof L2PcInstance && ((L2PcInstance) target).isInOlympiadMode()))
 				_flags |= HITFLAG_SHLD;
-			//			if (shld > 0)
-			//				_flags |= HITFLAG_SHLD;
+			// if (shld > 0)
+			// _flags |= HITFLAG_SHLD;
 		}
 	}
 	
@@ -79,8 +74,7 @@ public class Attack extends L2GameServerPacket
 	 * @param useShots true if soulshots used
 	 * @param ssGrade the grade of the soulshots
 	 */
-	public Attack(L2Character attacker, L2Object target, boolean useShots, int ssGrade)
-	{
+	public Attack(L2Character attacker, L2Object target, boolean useShots, int ssGrade) {
 		_attackerObjId = attacker.getObjectId();
 		_targetObjId = target.getObjectId();
 		soulshot = useShots;
@@ -93,15 +87,12 @@ public class Attack extends L2GameServerPacket
 		_tz = target.getZ();
 	}
 	
-	public Hit createHit(L2Object target, int damage, boolean miss, boolean crit, byte shld)
-	{
+	public Hit createHit(L2Object target, int damage, boolean miss, boolean crit, byte shld) {
 		return new Hit(target, damage, miss, crit, shld);
 	}
 	
-	public void hit(Hit... hits)
-	{
-		if (_hits == null)
-		{
+	public void hit(Hit... hits) {
+		if (_hits == null) {
 			_hits = hits;
 			return;
 		}
@@ -116,22 +107,20 @@ public class Attack extends L2GameServerPacket
 	/**
 	 * @return True if the Server-Client packet Attack contains at least 1 hit.
 	 */
-	public boolean hasHits()
-	{
+	public boolean hasHits() {
 		return _hits != null;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x33);
 		
 		writeD(_attackerObjId);
 		writeD(_targetObjId);
-		writeC(0x00); //rocknow-God
+		writeC(0x00); // rocknow-God
 		writeD(_hits[0]._damage);
-		writeD(_hits[0]._flags); //rocknow-God
-		writeD(Attack.this._ssGrade); //rocknow-God
+		writeD(_hits[0]._flags); // rocknow-God
+		writeD(Attack.this._ssGrade); // rocknow-God
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
@@ -139,12 +128,11 @@ public class Attack extends L2GameServerPacket
 		writeH(_hits.length - 1);
 		// prevent sending useless packet while there is only one target.
 		if (_hits.length > 1)
-			for (Hit hit : _hits)
-			{
+			for (Hit hit : _hits) {
 				writeD(hit._targetId);
 				writeD(hit._damage);
-				writeD(hit._flags); //rocknow-God
-				writeD(Attack.this._ssGrade); //rocknow-God
+				writeD(hit._flags); // rocknow-God
+				writeD(Attack.this._ssGrade); // rocknow-God
 			}
 		
 		writeD(_tx);
@@ -153,8 +141,7 @@ public class Attack extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__06_ATTACK;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.ngl;
 
@@ -21,42 +25,34 @@ import java.util.Map;
 /**
  * @author mrTJO
  */
-public class LocaleCodes
-{
+public class LocaleCodes {
 	Map<String, Locale> _locales = new HashMap<>();
 	
-	public static LocaleCodes getInstance()
-	{
+	public static LocaleCodes getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected LocaleCodes()
-	{
+	protected LocaleCodes() {
 		loadCodes();
 	}
 	
-	private void loadCodes()
-	{
-		for (Locale locale : Locale.getAvailableLocales())
-		{
+	private void loadCodes() {
+		for (Locale locale : Locale.getAvailableLocales()) {
 			String language = locale.getLanguage();
 			// String script = locale.getScript();
 			String country = locale.getCountry();
 			String variant = locale.getVariant();
 			
-			if (language.isEmpty() && country.isEmpty() && variant.isEmpty())
-			{
+			if (language.isEmpty() && country.isEmpty() && variant.isEmpty()) {
 				continue;
 			}
 			
 			StringBuilder lang = new StringBuilder();
 			lang.append(language);
-			if (!country.isEmpty())
-			{
+			if (!country.isEmpty()) {
 				lang.append(country);
 			}
-			if (!variant.isEmpty())
-			{
+			if (!variant.isEmpty()) {
 				lang.append('_' + variant);
 			}
 			/*
@@ -66,13 +62,11 @@ public class LocaleCodes
 		}
 	}
 	
-	public Locale getLanguage(String lang)
-	{
+	public Locale getLanguage(String lang) {
 		return _locales.get(lang);
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final LocaleCodes _instance = new LocaleCodes();
 	}
 }

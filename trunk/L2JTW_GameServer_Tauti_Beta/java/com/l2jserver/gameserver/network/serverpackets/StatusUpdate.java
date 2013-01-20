@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -22,22 +26,19 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 
 /**
- *
- * 01                // Packet Identifier <BR>
- * c6 37 50 40       // ObjectId <BR><BR>
- *
- * 01 00             // Number of Attribute Trame of the Packet <BR><BR>
- *
- * c6 37 50 40       // Attribute Identifier : 01-Level, 02-Experience, 03-STR, 04-DEX, 05-CON, 06-INT, 07-WIT, 08-MEN, 09-Current HP, 0a, Max HP...<BR>
- * cd 09 00 00       // Attribute Value <BR>
- *
- * format   d d(dd)
- *
+ * 01 // Packet Identifier <BR>
+ * c6 37 50 40 // ObjectId <BR>
+ * <BR>
+ * 01 00 // Number of Attribute Trame of the Packet <BR>
+ * <BR>
+ * c6 37 50 40 // Attribute Identifier : 01-Level, 02-Experience, 03-STR, 04-DEX, 05-CON, 06-INT, 07-WIT, 08-MEN, 09-Current HP, 0a, Max HP...<BR>
+ * cd 09 00 00 // Attribute Value <BR>
+ * format d d(dd)
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:39 $
  */
-public final class StatusUpdate extends L2GameServerPacket
-{
+public final class StatusUpdate extends L2GameServerPacket {
 	private static final String _S__1A_STATUSUPDATE = "[S] 18 StatusUpdate";
+	@SuppressWarnings("unused")
 	private static final int HP_MOD = 10000000;
 	
 	public static final int LEVEL = 0x01;
@@ -73,24 +74,19 @@ public final class StatusUpdate extends L2GameServerPacket
 	public static final int CUR_CP = 0x21;
 	public static final int MAX_CP = 0x22;
 	
-	private int _objectId;
+	private final int _objectId;
+	@SuppressWarnings("unused")
 	private int _maxHp = -1;
-	private ArrayList<Attribute> _attributes;
+	private final ArrayList<Attribute> _attributes;
 	
-	static class Attribute
-	{
-		/** id values
-		 * 09 - current health
-		 * 0a - max health
-		 * 0b - current mana
-		 * 0c - max mana
-		 *
+	static class Attribute {
+		/**
+		 * id values 09 - current health 0a - max health 0b - current mana 0c - max mana
 		 */
 		public int id;
 		public int value;
 		
-		Attribute(int pId, int pValue)
-		{
+		Attribute(int pId, int pValue) {
 			id = pId;
 			value = pValue;
 		}
@@ -100,13 +96,11 @@ public final class StatusUpdate extends L2GameServerPacket
 	 * If you have access to object itself use {@link StatusUpdate#StatusUpdate(L2Object)}.
 	 * @param objectId
 	 */
-	public StatusUpdate(int objectId)
-	{
+	public StatusUpdate(int objectId) {
 		_attributes = new ArrayList<>();
 		_objectId = objectId;
 		L2Object obj = L2World.getInstance().findObject(objectId);
-		if (obj != null && obj instanceof L2Attackable)
-		{
+		if ((obj != null) && (obj instanceof L2Attackable)) {
 			_maxHp = ((L2Character) obj).getMaxVisibleHp();
 		}
 	}
@@ -115,54 +109,44 @@ public final class StatusUpdate extends L2GameServerPacket
 	 * Create {@link StatusUpdate} packet for given {@link L2Object}.
 	 * @param object
 	 */
-	public StatusUpdate(L2Object object)
-	{
+	public StatusUpdate(L2Object object) {
 		_attributes = new ArrayList<>();
 		_objectId = object.getObjectId();
-		if (object instanceof L2Attackable)
+		if (object instanceof L2Attackable) {
 			_maxHp = ((L2Character) object).getMaxVisibleHp();
+		}
 	}
 	
-	public void addAttribute(int id, int level)
-	{
-		/* //Update by rocknow if (_maxHp != -1)
-		{
-			if (id == MAX_HP)
-				level = HP_MOD;
-			else if (id == CUR_HP)
-			{
-				level = (int) ((level / (float)_maxHp) * HP_MOD);
-			}
-		} //Update by rocknow */ 
+	public void addAttribute(int id, int level) {
+		/*
+		 * //Update by rocknow if (_maxHp != -1) { if (id == MAX_HP) level = HP_MOD; else if (id == CUR_HP) { level = (int) ((level / (float)_maxHp) * HP_MOD); } } //Update by rocknow
+		 */
 		_attributes.add(new Attribute(id, level));
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x18);
 		writeD(_objectId);
-		writeD(0x00); //rocknow-God
-		writeD(0x00); //rocknow-God
+		writeD(0x00); // rocknow-God
+		writeD(0x00); // rocknow-God
 		writeD(_attributes.size());
 		
-		for (Attribute temp: _attributes)
-		{
+		for (Attribute temp : _attributes) {
 			writeD(temp.id);
-			if (temp.id == 0x1b) //rocknow-God-Test
+			if (temp.id == 0x1b) // rocknow-God-Test
 			{
 				int VA = temp.value;
 				VA = 0 - VA;
 				writeD(VA);
+			} else {
+				writeD(temp.value);
 			}
-			else //rocknow-God-Test
-			writeD(temp.value);
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__1A_STATUSUPDATE;
 	}
 }

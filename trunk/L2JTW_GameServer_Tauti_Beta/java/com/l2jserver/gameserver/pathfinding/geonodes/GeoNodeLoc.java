@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.pathfinding.geonodes;
 
@@ -20,14 +24,12 @@ import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
 /**
  * @author -Nemesiss-
  */
-public class GeoNodeLoc extends AbstractNodeLoc
-{
+public class GeoNodeLoc extends AbstractNodeLoc {
 	private final short _x;
 	private final short _y;
 	private final short _z;
 	
-	public GeoNodeLoc(short x, short y, short z)
-	{
+	public GeoNodeLoc(short x, short y, short z) {
 		_x = x;
 		_y = y;
 		_z = z;
@@ -37,8 +39,7 @@ public class GeoNodeLoc extends AbstractNodeLoc
 	 * @see com.l2jserver.gameserver.pathfinding.AbstractNodeLoc#getX()
 	 */
 	@Override
-	public int getX()
-	{
+	public int getX() {
 		return L2World.MAP_MIN_X + (_x * 128) + 48;
 	}
 	
@@ -46,8 +47,7 @@ public class GeoNodeLoc extends AbstractNodeLoc
 	 * @see com.l2jserver.gameserver.pathfinding.AbstractNodeLoc#getY()
 	 */
 	@Override
-	public int getY()
-	{
+	public int getY() {
 		return L2World.MAP_MIN_Y + (_y * 128) + 48;
 	}
 	
@@ -55,26 +55,22 @@ public class GeoNodeLoc extends AbstractNodeLoc
 	 * @see com.l2jserver.gameserver.pathfinding.AbstractNodeLoc#getZ()
 	 */
 	@Override
-	public short getZ()
-	{
+	public short getZ() {
 		return _z;
 	}
 	
 	@Override
-	public void setZ(short z)
-	{
+	public void setZ(short z) {
 		//
 	}
 	
 	@Override
-	public int getNodeX()
-	{
+	public int getNodeX() {
 		return _x;
 	}
 	
 	@Override
-	public int getNodeY()
-	{
+	public int getNodeY() {
 		return _y;
 	}
 	
@@ -82,8 +78,7 @@ public class GeoNodeLoc extends AbstractNodeLoc
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
-	public int hashCode()
-	{
+	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = (prime * result) + _x;
@@ -96,31 +91,24 @@ public class GeoNodeLoc extends AbstractNodeLoc
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
-	public boolean equals(Object obj)
-	{
-		if (this == obj)
-		{
+	public boolean equals(Object obj) {
+		if (this == obj) {
 			return true;
 		}
-		if (obj == null)
-		{
+		if (obj == null) {
 			return false;
 		}
-		if (!(obj instanceof GeoNodeLoc))
-		{
+		if (!(obj instanceof GeoNodeLoc)) {
 			return false;
 		}
 		final GeoNodeLoc other = (GeoNodeLoc) obj;
-		if (_x != other._x)
-		{
+		if (_x != other._x) {
 			return false;
 		}
-		if (_y != other._y)
-		{
+		if (_y != other._y) {
 			return false;
 		}
-		if (_z != other._z)
-		{
+		if (_z != other._z) {
 			return false;
 		}
 		return true;

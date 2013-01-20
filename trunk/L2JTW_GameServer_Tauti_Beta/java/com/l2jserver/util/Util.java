@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.util;
 
@@ -25,8 +29,7 @@ import java.util.logging.Logger;
  * This class ...
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-public class Util
-{
+public class Util {
 	private static final Logger _log = Logger.getLogger(Util.class.getName());
 	
 	/**
@@ -35,15 +38,11 @@ public class Util
 	 * @return true: host name is internal<br>
 	 *         false: host name is external
 	 */
-	public static boolean isInternalHostname(String host)
-	{
-		try
-		{
+	public static boolean isInternalHostname(String host) {
+		try {
 			InetAddress addr = InetAddress.getByName(host);
 			return addr.isSiteLocalAddress() || addr.isLoopbackAddress();
-		}
-		catch (UnknownHostException e)
-		{
+		} catch (UnknownHostException e) {
 			_log.warning("Util: " + e.getMessage());
 		}
 		return false;
@@ -56,35 +55,27 @@ public class Util
 	 * @param len the number of bytes to represent in hexadecimal representation
 	 * @return byte array represented in hexadecimal format
 	 */
-	public static String printData(byte[] data, int len)
-	{
+	public static String printData(byte[] data, int len) {
 		final StringBuilder result = new StringBuilder(len * 4);
 		
 		int counter = 0;
 		
-		for (int i = 0; i < len; i++)
-		{
-			if ((counter % 16) == 0)
-			{
+		for (int i = 0; i < len; i++) {
+			if ((counter % 16) == 0) {
 				result.append(fillHex(i, 4) + ": ");
 			}
 			
 			result.append(fillHex(data[i] & 0xff, 2) + " ");
 			counter++;
-			if (counter == 16)
-			{
+			if (counter == 16) {
 				result.append("   ");
 				
 				int charpoint = i - 15;
-				for (int a = 0; a < 16; a++)
-				{
+				for (int a = 0; a < 16; a++) {
 					int t1 = 0xFF & data[charpoint++];
-					if ((t1 > 0x1f) && (t1 < 0x80))
-					{
+					if ((t1 > 0x1f) && (t1 < 0x80)) {
 						result.append((char) t1);
-					}
-					else
-					{
+					} else {
 						result.append('.');
 					}
 				}
@@ -95,23 +86,17 @@ public class Util
 		}
 		
 		int rest = data.length % 16;
-		if (rest > 0)
-		{
-			for (int i = 0; i < (17 - rest); i++)
-			{
+		if (rest > 0) {
+			for (int i = 0; i < (17 - rest); i++) {
 				result.append("   ");
 			}
 			
 			int charpoint = data.length - rest;
-			for (int a = 0; a < rest; a++)
-			{
+			for (int a = 0; a < rest; a++) {
 				int t1 = 0xFF & data[charpoint++];
-				if ((t1 > 0x1f) && (t1 < 0x80))
-				{
+				if ((t1 > 0x1f) && (t1 < 0x80)) {
 					result.append((char) t1);
-				}
-				else
-				{
+				} else {
 					result.append('.');
 				}
 			}
@@ -122,12 +107,10 @@ public class Util
 		return result.toString();
 	}
 	
-	private static String fillHex(int data, int digits)
-	{
+	private static String fillHex(int data, int digits) {
 		String number = Integer.toHexString(data);
 		
-		for (int i = number.length(); i < digits; i++)
-		{
+		for (int i = number.length(); i < digits; i++) {
 			number = "0" + number;
 		}
 		
@@ -140,8 +123,7 @@ public class Util
 	 * @param data data to represent in hexadecimal
 	 * @return byte array represented in hexadecimal format
 	 */
-	public static String printData(byte[] data)
-	{
+	public static String printData(byte[] data) {
 		return printData(data, data.length);
 	}
 	
@@ -150,8 +132,7 @@ public class Util
 	 * @param buf ByteBuffer to represent the remaining bytes of as hexadecimal
 	 * @return hexadecimal representation of remaining bytes of the ByteBuffer
 	 */
-	public static String printData(ByteBuffer buf)
-	{
+	public static String printData(ByteBuffer buf) {
 		byte[] data = new byte[buf.remaining()];
 		buf.get(data);
 		String hex = Util.printData(data, data.length);
@@ -164,8 +145,7 @@ public class Util
 	 * @param size number of random bytes to generate
 	 * @return byte array with sequence of random bytes
 	 */
-	public static byte[] generateHex(int size)
-	{
+	public static byte[] generateHex(int size) {
 		byte[] array = new byte[size];
 		Rnd.nextBytes(array);
 		return array;
@@ -176,8 +156,7 @@ public class Util
 	 * @param t Throwable to get the stacktrace from
 	 * @return stack trace from Throwable as String
 	 */
-	public static String getStackTrace(Throwable t)
-	{
+	public static String getStackTrace(Throwable t) {
 		StringWriter sw = new StringWriter();
 		t.printStackTrace(new PrintWriter(sw));
 		return sw.toString();

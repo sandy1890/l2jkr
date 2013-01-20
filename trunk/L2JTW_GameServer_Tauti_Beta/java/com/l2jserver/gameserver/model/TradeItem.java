@@ -1,24 +1,28 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
-public class TradeItem
-{
+public class TradeItem {
+	
 	private int _objectId;
 	private final L2Item _item;
 	private final int _location;
@@ -32,11 +36,15 @@ public class TradeItem
 	private final int _elemAtkPower;
 	private final int[] _elemDefAttr =
 	{
-		0, 0, 0, 0, 0, 0
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
 	};
 	
-	public TradeItem(L2ItemInstance item, long count, long price)
-	{
+	public TradeItem(L2ItemInstance item, long count, long price) {
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();
@@ -47,14 +55,12 @@ public class TradeItem
 		_price = price;
 		_elemAtkType = item.getAttackElementType();
 		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
-		{
+		for (byte i = 0; i < 6; i++) {
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 	}
 	
-	public TradeItem(L2Item item, long count, long price)
-	{
+	public TradeItem(L2Item item, long count, long price) {
 		_objectId = 0;
 		_item = item;
 		_location = 0;
@@ -68,8 +74,7 @@ public class TradeItem
 		_elemAtkPower = 0;
 	}
 	
-	public TradeItem(TradeItem item, long count, long price)
-	{
+	public TradeItem(TradeItem item, long count, long price) {
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();
@@ -81,89 +86,73 @@ public class TradeItem
 		_price = price;
 		_elemAtkType = item.getAttackElementType();
 		_elemAtkPower = item.getAttackElementPower();
-		for (byte i = 0; i < 6; i++)
-		{
+		for (byte i = 0; i < 6; i++) {
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 	}
 	
-	public void setObjectId(int objectId)
-	{
+	public void setObjectId(int objectId) {
 		_objectId = objectId;
 	}
 	
-	public int getObjectId()
-	{
+	public int getObjectId() {
 		return _objectId;
 	}
 	
-	public L2Item getItem()
-	{
+	public L2Item getItem() {
 		return _item;
 	}
 	
-	public int getLocationSlot()
-	{
+	public int getLocationSlot() {
 		return _location;
 	}
 	
-	public void setEnchant(int enchant)
-	{
+	public void setEnchant(int enchant) {
 		_enchant = enchant;
 	}
 	
-	public int getEnchant()
-	{
+	public int getEnchant() {
 		return _enchant;
 	}
 	
-	public int getCustomType1()
-	{
+	public int getCustomType1() {
 		return _type1;
 	}
 	
-	public int getCustomType2()
-	{
+	public int getCustomType2() {
 		return _type2;
 	}
 	
-	public void setCount(long count)
-	{
+	public void setCount(long count) {
 		_count = count;
 	}
 	
-	public long getCount()
-	{
+	public long getCount() {
 		return _count;
 	}
 	
-	public long getStoreCount()
-	{
+	public long getStoreCount() {
 		return _storeCount;
 	}
 	
-	public void setPrice(long price)
-	{
+	public void setPrice(long price) {
 		_price = price;
 	}
 	
-	public long getPrice()
-	{
+	public long getPrice() {
 		return _price;
 	}
 	
-	public byte getAttackElementType()
-	{
+	public byte getAttackElementType() {
 		return _elemAtkType;
 	}
 	
-	public int getAttackElementPower()
-	{
+	public int getAttackElementPower() {
 		return _elemAtkPower;
 	}
 	
-	public int getElementDefAttr(byte i)
-	{
+	public int getElementDefAttr(byte i) {
 		return _elemDefAttr[i];
 	}
+	
 }

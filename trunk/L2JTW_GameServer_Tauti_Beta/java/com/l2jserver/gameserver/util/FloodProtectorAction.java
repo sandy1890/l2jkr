@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.util;
 
@@ -27,8 +31,7 @@ import com.l2jserver.util.StringUtil;
  * Flood protector implementation.
  * @author fordfrog
  */
-public final class FloodProtectorAction
-{
+public final class FloodProtectorAction {
 	/**
 	 * Logger
 	 */
@@ -63,8 +66,7 @@ public final class FloodProtectorAction
 	 * @param client the game client for which flood protection is being created
 	 * @param config flood protector configuration
 	 */
-	public FloodProtectorAction(final L2GameClient client, final FloodProtectorConfig config)
-	{
+	public FloodProtectorAction(final L2GameClient client, final FloodProtectorConfig config) {
 		super();
 		_client = client;
 		_config = config;
@@ -75,34 +77,25 @@ public final class FloodProtectorAction
 	 * @param command command issued or short command description
 	 * @return true if action is allowed, otherwise false
 	 */
-	public boolean tryPerformAction(final String command)
-	{
+	public boolean tryPerformAction(final String command) {
 		final int curTick = GameTimeController.getGameTicks();
 		
-		if ((curTick < _nextGameTick) || _punishmentInProgress)
-		{
-			if (_config.LOG_FLOODING && !_logged && _log.isLoggable(Level.WARNING))
-			{
+		if ((curTick < _nextGameTick) || _punishmentInProgress) {
+			if (_config.LOG_FLOODING && !_logged && _log.isLoggable(Level.WARNING)) {
 				log(" called command ", command, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeController.MILLIS_IN_TICK), " ms after previous command");
 				_logged = true;
 			}
 			
 			_count.incrementAndGet();
 			
-			if (!_punishmentInProgress && (_config.PUNISHMENT_LIMIT > 0) && (_count.get() >= _config.PUNISHMENT_LIMIT) && (_config.PUNISHMENT_TYPE != null))
-			{
+			if (!_punishmentInProgress && (_config.PUNISHMENT_LIMIT > 0) && (_count.get() >= _config.PUNISHMENT_LIMIT) && (_config.PUNISHMENT_TYPE != null)) {
 				_punishmentInProgress = true;
 				
-				if ("kick".equals(_config.PUNISHMENT_TYPE))
-				{
+				if ("kick".equals(_config.PUNISHMENT_TYPE)) {
 					kickPlayer();
-				}
-				else if ("ban".equals(_config.PUNISHMENT_TYPE))
-				{
+				} else if ("ban".equals(_config.PUNISHMENT_TYPE)) {
 					banAccount();
-				}
-				else if ("jail".equals(_config.PUNISHMENT_TYPE))
-				{
+				} else if ("jail".equals(_config.PUNISHMENT_TYPE)) {
 					jailChar();
 				}
 				
@@ -111,10 +104,8 @@ public final class FloodProtectorAction
 			return false;
 		}
 		
-		if (_count.get() > 0)
-		{
-			if (_config.LOG_FLOODING && _log.isLoggable(Level.WARNING))
-			{
+		if (_count.get() > 0) {
+			if (_config.LOG_FLOODING && _log.isLoggable(Level.WARNING)) {
 				log(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(_config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK), " ms");
 			}
 		}
@@ -128,19 +119,14 @@ public final class FloodProtectorAction
 	/**
 	 * Kick player from game (close network connection).
 	 */
-	private void kickPlayer()
-	{
-		if (_client.getActiveChar() != null)
-		{
+	private void kickPlayer() {
+		if (_client.getActiveChar() != null) {
 			_client.getActiveChar().logout(false);
-		}
-		else
-		{
+		} else {
 			_client.closeNow();
 		}
 		
-		if (_log.isLoggable(Level.WARNING))
-		{
+		if (_log.isLoggable(Level.WARNING)) {
 			log("kicked for flooding");
 		}
 	}
@@ -148,21 +134,16 @@ public final class FloodProtectorAction
 	/**
 	 * Bans char account and logs out the char.
 	 */
-	private void banAccount()
-	{
-		if (_client.getActiveChar() != null)
-		{
+	private void banAccount() {
+		if (_client.getActiveChar() != null) {
 			_client.getActiveChar().setPunishLevel(L2PcInstance.PunishLevel.ACC, _config.PUNISHMENT_TIME);
 			
-			if (_log.isLoggable(Level.WARNING))
-			{
+			if (_log.isLoggable(Level.WARNING)) {
 				log(" banned for flooding ", _config.PUNISHMENT_TIME <= 0 ? "forever" : "for " + _config.PUNISHMENT_TIME + " mins");
 			}
 			
 			_client.getActiveChar().logout();
-		}
-		else
-		{
+		} else {
 			log(" unable to ban account: no active player");
 		}
 	}
@@ -170,59 +151,45 @@ public final class FloodProtectorAction
 	/**
 	 * Jails char.
 	 */
-	private void jailChar()
-	{
-		if (_client.getActiveChar() != null)
-		{
+	private void jailChar() {
+		if (_client.getActiveChar() != null) {
 			_client.getActiveChar().setPunishLevel(L2PcInstance.PunishLevel.JAIL, _config.PUNISHMENT_TIME);
 			
-			if (_log.isLoggable(Level.WARNING))
-			{
+			if (_log.isLoggable(Level.WARNING)) {
 				log(" jailed for flooding ", _config.PUNISHMENT_TIME <= 0 ? "forever" : "for " + _config.PUNISHMENT_TIME + " mins");
 			}
-		}
-		else
-		{
+		} else {
 			log(" unable to jail: no active player");
 		}
 	}
 	
-	private void log(String... lines)
-	{
+	private void log(String... lines) {
 		final StringBuilder output = StringUtil.startAppend(100, _config.FLOOD_PROTECTOR_TYPE, ": ");
 		String address = null;
-		try
-		{
-			if (!_client.isDetached())
-			{
+		try {
+			if (!_client.isDetached()) {
 				address = _client.getConnection().getInetAddress().getHostAddress();
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 		}
 		
-		switch (_client.getState())
-		{
+		switch (_client.getState()) {
 			case IN_GAME:
-				if (_client.getActiveChar() != null)
-				{
+				if (_client.getActiveChar() != null) {
 					StringUtil.append(output, _client.getActiveChar().getName());
 					StringUtil.append(output, "(", String.valueOf(_client.getActiveChar().getObjectId()), ") ");
 				}
-				break;
+			break;
 			case AUTHED:
-				if (_client.getAccountName() != null)
-				{
+				if (_client.getAccountName() != null) {
 					StringUtil.append(output, _client.getAccountName(), " ");
 				}
-				break;
+			break;
 			case CONNECTED:
-				if (address != null)
-				{
+				if (address != null) {
 					StringUtil.append(output, address);
 				}
-				break;
+			break;
 			default:
 				throw new IllegalStateException("Missing state on switch");
 		}

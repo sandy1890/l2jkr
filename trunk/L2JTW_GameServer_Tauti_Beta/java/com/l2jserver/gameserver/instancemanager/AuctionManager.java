@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.instancemanager;
 
@@ -26,10 +30,10 @@ import javolution.util.FastList;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.entity.Auction;
 
-public class AuctionManager
-{
+public class AuctionManager {
+	
 	protected static final Logger _log = Logger.getLogger(AuctionManager.class.getName());
-	private List<Auction> _auctions;
+	private final List<Auction> _auctions;
 	
 	private static final String[] ITEM_INIT_DATA =
 	{
@@ -75,116 +79,135 @@ public class AuctionManager
 	
 	private static final int[] ItemInitDataId =
 	{
-		22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 36, 37, 38, 39, 40, 41, 42,
-		43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61
+		22,
+		23,
+		24,
+		25,
+		26,
+		27,
+		28,
+		29,
+		30,
+		31,
+		32,
+		33,
+		36,
+		37,
+		38,
+		39,
+		40,
+		41,
+		42,
+		43,
+		44,
+		45,
+		46,
+		47,
+		48,
+		49,
+		50,
+		51,
+		52,
+		53,
+		54,
+		55,
+		56,
+		57,
+		58,
+		59,
+		60,
+		61
 	};
 	
-	public static final AuctionManager getInstance()
-	{
+	public static final AuctionManager getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected AuctionManager()
-	{
+	protected AuctionManager() {
 		_auctions = new FastList<>();
 		load();
 	}
 	
-	public void reload()
-	{
+	public void reload() {
 		_auctions.clear();
 		load();
 	}
 	
-	private final void load()
-	{
+	private final void load() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT id FROM auction ORDER BY id");
 			ResultSet rs = statement.executeQuery();
-			while (rs.next())
+			while (rs.next()) {
 				_auctions.add(new Auction(rs.getInt("id")));
+			}
 			rs.close();
 			statement.close();
 			_log.info("Loaded: " + getAuctions().size() + " auction(s)");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: AuctionManager.load(): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public final Auction getAuction(int auctionId)
-	{
+	public final Auction getAuction(int auctionId) {
 		int index = getAuctionIndex(auctionId);
-		if (index >= 0)
+		if (index >= 0) {
 			return getAuctions().get(index);
+		}
 		return null;
 	}
 	
-	public final int getAuctionIndex(int auctionId)
-	{
+	public final int getAuctionIndex(int auctionId) {
 		Auction auction;
-		for (int i = 0; i < getAuctions().size(); i++)
-		{
+		for (int i = 0; i < getAuctions().size(); i++) {
 			auction = getAuctions().get(i);
-			if (auction != null && auction.getId() == auctionId)
+			if ((auction != null) && (auction.getId() == auctionId)) {
 				return i;
+			}
 		}
 		return -1;
 	}
 	
-	public final List<Auction> getAuctions()
-	{
+	public final List<Auction> getAuctions() {
 		return _auctions;
 	}
 	
 	/**
-	 * Init Clan NPC aution 
+	 * Init Clan NPC aution
 	 * @param id
 	 */
-	public void initNPC(int id)
-	{
+	public void initNPC(int id) {
 		int i;
-		for (i = 0; i < ItemInitDataId.length; i++)
-		{
-			if (ItemInitDataId[i] == id)
+		for (i = 0; i < ItemInitDataId.length; i++) {
+			if (ItemInitDataId[i] == id) {
 				break;
+			}
 		}
-		if (i >= ItemInitDataId.length || ItemInitDataId[i] != id)
-		{
+		if ((i >= ItemInitDataId.length) || (ItemInitDataId[i] != id)) {
 			_log.warning("Clan Hall auction not found for Id :" + id);
 			return;
 		}
 		
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `auction` VALUES " + ITEM_INIT_DATA[i]);
 			statement.execute();
 			statement.close();
 			_auctions.add(new Auction(id));
 			_log.info("Created auction for ClanHall: " + id);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Exception: Auction.initNPC(): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final AuctionManager _instance = new AuctionManager();
 	}
+	
 }

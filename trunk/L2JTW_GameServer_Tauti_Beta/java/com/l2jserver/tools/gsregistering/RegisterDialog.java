@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.gsregistering;
 
@@ -37,16 +41,14 @@ import com.l2jserver.loginserver.GameServerTable;
 /**
  * @author KenM
  */
-public class RegisterDialog extends JDialog implements ActionListener
-{
+public class RegisterDialog extends JDialog implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
 	private final ResourceBundle _bundle;
 	private final JComboBox<ComboServer> _combo;
 	private final GUserInterface _owner;
 	
-	public RegisterDialog(final GUserInterface owner)
-	{
+	public RegisterDialog(final GUserInterface owner) {
 		super(owner.getFrame(), true);
 		_owner = owner;
 		setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -66,10 +68,8 @@ public class RegisterDialog extends JDialog implements ActionListener
 		
 		_combo = new JComboBox<>();
 		_combo.setEditable(false);
-		for (Map.Entry<Integer, String> entry : GameServerTable.getInstance().getServerNames().entrySet())
-		{
-			if (!GameServerTable.getInstance().hasRegisteredGameServerOnId(entry.getKey()))
-			{
+		for (Map.Entry<Integer, String> entry : GameServerTable.getInstance().getServerNames().entrySet()) {
+			if (!GameServerTable.getInstance().hasRegisteredGameServerOnId(entry.getKey())) {
 				_combo.addItem(new ComboServer(entry.getKey(), entry.getValue()));
 			}
 		}
@@ -110,13 +110,11 @@ public class RegisterDialog extends JDialog implements ActionListener
 		setLocationRelativeTo(owner.getFrame());
 	}
 	
-	class ComboServer
-	{
+	class ComboServer {
 		private final int _id;
 		private final String _name;
 		
-		public ComboServer(int id, String name)
-		{
+		public ComboServer(int id, String name) {
 			_id = id;
 			_name = name;
 		}
@@ -124,22 +122,19 @@ public class RegisterDialog extends JDialog implements ActionListener
 		/**
 		 * @return Returns the id.
 		 */
-		public int getId()
-		{
+		public int getId() {
 			return _id;
 		}
 		
 		/**
 		 * @return Returns the name.
 		 */
-		public String getName()
-		{
+		public String getName() {
 			return _name;
 		}
 		
 		@Override
-		public String toString()
-		{
+		public String toString() {
 			return getName();
 		}
 	}
@@ -148,12 +143,10 @@ public class RegisterDialog extends JDialog implements ActionListener
 	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
 	 */
 	@Override
-	public void actionPerformed(ActionEvent e)
-	{
+	public void actionPerformed(ActionEvent e) {
 		String cmd = e.getActionCommand();
 		
-		if (cmd.equals("save"))
-		{
+		if (cmd.equals("save")) {
 			ComboServer server = (ComboServer) _combo.getSelectedItem();
 			int gsId = server.getId();
 			
@@ -161,37 +154,29 @@ public class RegisterDialog extends JDialog implements ActionListener
 			// fc.setS
 			fc.setDialogTitle(_bundle.getString("hexidDest"));
 			fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-			fc.setFileFilter(new FileFilter()
-			{
+			fc.setFileFilter(new FileFilter() {
 				
 				@Override
-				public boolean accept(File f)
-				{
+				public boolean accept(File f) {
 					return f.isDirectory();
 				}
 				
 				@Override
-				public String getDescription()
-				{
+				public String getDescription() {
 					return null;
 				}
 				
 			});
 			fc.showOpenDialog(this);
 			
-			try
-			{
+			try {
 				BaseGameServerRegister.registerGameServer(gsId, fc.getSelectedFile().getAbsolutePath());
 				_owner.refreshAsync();
 				setVisible(false);
-			}
-			catch (IOException e1)
-			{
+			} catch (IOException e1) {
 				_owner.showError(_bundle.getString("ioErrorRegister"), e1);
 			}
-		}
-		else if (cmd.equals("cancel"))
-		{
+		} else if (cmd.equals("cancel")) {
 			setVisible(false);
 		}
 	}

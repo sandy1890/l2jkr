@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.cache;
 
@@ -38,8 +42,8 @@ import com.l2jserver.util.file.filter.OldPledgeFilter;
 /**
  * @author Layane
  */
-public class CrestCache
-{
+public class CrestCache {
+	
 	private static Logger _log = Logger.getLogger(CrestCache.class.getName());
 	
 	private final FastMRUCache<Integer, byte[]> _cachePledge = new FastMRUCache<>();
@@ -52,25 +56,21 @@ public class CrestCache
 	
 	private long _bytesBuffLen;
 	
-	public static CrestCache getInstance()
-	{
+	public static CrestCache getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected CrestCache()
-	{
+	protected CrestCache() {
 		convertOldPedgeFiles();
 		reload();
 	}
 	
-	public void reload()
-	{
+	public void reload() {
 		final FileFilter filter = new BMPFilter();
 		final File dir = new File(Config.DATAPACK_ROOT, "data/crests/");
 		final File[] files = dir.listFiles(filter);
 		byte[] content;
-		synchronized (this)
-		{
+		synchronized (this) {
 			_loadedFiles = 0;
 			_bytesBuffLen = 0;
 			
@@ -84,75 +84,55 @@ public class CrestCache
 		FastMap<Integer, byte[]> _mapAlly = _cacheAlly.getContentMap();
 		
 		final L2Clan[] clans = ClanTable.getInstance().getClans();
-		for (File file : files)
-		{
-			synchronized (this)
-			{
-				try (RandomAccessFile rfa = new RandomAccessFile(file, "r"))
-				{
+		for (File file : files) {
+			synchronized (this) {
+				try (RandomAccessFile rfa = new RandomAccessFile(file, "r")) {
 					content = new byte[(int) rfa.length()];
 					rfa.readFully(content);
 					
 					boolean erase = true;
 					int crestId = 0;
 					
-					if (file.getName().startsWith("Crest_Large_"))
-					{
+					if (file.getName().startsWith("Crest_Large_")) {
 						crestId = Integer.parseInt(file.getName().substring(12, file.getName().length() - 4));
-						if (Config.CLEAR_CREST_CACHE)
-						{
-							for (final L2Clan clan : clans)
-							{
-								if (clan.getCrestLargeId() == crestId)
-								{
+						if (Config.CLEAR_CREST_CACHE) {
+							for (final L2Clan clan : clans) {
+								if (clan.getCrestLargeId() == crestId) {
 									erase = false;
 									break;
 								}
 							}
-							if (erase)
-							{
+							if (erase) {
 								file.delete();
 								continue;
 							}
 						}
 						_mapPledgeLarge.put(crestId, content);
-					}
-					else if (file.getName().startsWith("Crest_"))
-					{
+					} else if (file.getName().startsWith("Crest_")) {
 						crestId = Integer.parseInt(file.getName().substring(6, file.getName().length() - 4));
-						if (Config.CLEAR_CREST_CACHE)
-						{
-							for (final L2Clan clan : clans)
-							{
-								if (clan.getCrestId() == crestId)
-								{
+						if (Config.CLEAR_CREST_CACHE) {
+							for (final L2Clan clan : clans) {
+								if (clan.getCrestId() == crestId) {
 									erase = false;
 									break;
 								}
 							}
-							if (erase)
-							{
+							if (erase) {
 								file.delete();
 								continue;
 							}
 						}
 						_mapPledge.put(crestId, content);
-					}
-					else if (file.getName().startsWith("AllyCrest_"))
-					{
+					} else if (file.getName().startsWith("AllyCrest_")) {
 						crestId = Integer.parseInt(file.getName().substring(10, file.getName().length() - 4));
-						if (Config.CLEAR_CREST_CACHE)
-						{
-							for (final L2Clan clan : clans)
-							{
-								if (clan.getAllyCrestId() == crestId)
-								{
+						if (Config.CLEAR_CREST_CACHE) {
+							for (final L2Clan clan : clans) {
+								if (clan.getAllyCrestId() == crestId) {
 									erase = false;
 									break;
 								}
 							}
-							if (erase)
-							{
+							if (erase) {
 								file.delete();
 								continue;
 							}
@@ -161,38 +141,29 @@ public class CrestCache
 					}
 					_loadedFiles++;
 					_bytesBuffLen += content.length;
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 					_log.log(Level.WARNING, "Problem with crest bmp file " + e.getMessage(), e);
 				}
 			}
 		}
 		
-		for (L2Clan clan : clans)
-		{
-			if (clan.getCrestId() != 0)
-			{
-				if (getPledgeCrest(clan.getCrestId()) == null)
-				{
+		for (L2Clan clan : clans) {
+			if (clan.getCrestId() != 0) {
+				if (getPledgeCrest(clan.getCrestId()) == null) {
 					_log.log(Level.INFO, "Removing non-existent crest for clan " + clan.getName() + " [" + clan.getClanId() + "], crestId:" + clan.getCrestId());
 					clan.setCrestId(0);
 					clan.changeClanCrest(0);
 				}
 			}
-			if (clan.getCrestLargeId() != 0)
-			{
-				if (getPledgeCrestLarge(clan.getCrestLargeId()) == null)
-				{
+			if (clan.getCrestLargeId() != 0) {
+				if (getPledgeCrestLarge(clan.getCrestLargeId()) == null) {
 					_log.log(Level.INFO, "Removing non-existent large crest for clan " + clan.getName() + " [" + clan.getClanId() + "], crestLargeId:" + clan.getCrestLargeId());
 					clan.setCrestLargeId(0);
 					clan.changeLargeCrest(0);
 				}
 			}
-			if (clan.getAllyCrestId() != 0)
-			{
-				if (getAllyCrest(clan.getAllyCrestId()) == null)
-				{
+			if (clan.getAllyCrestId() != 0) {
+				if (getAllyCrest(clan.getAllyCrestId()) == null) {
 					_log.log(Level.INFO, "Removing non-existent ally crest for clan " + clan.getName() + " [" + clan.getClanId() + "], allyCrestId:" + clan.getAllyCrestId());
 					clan.setAllyCrestId(0);
 					clan.changeAllyCrest(0, true);
@@ -203,176 +174,133 @@ public class CrestCache
 		_log.info("Cache[Crest]: " + String.format("%.3f", getMemoryUsage()) + "MB on " + getLoadedFiles() + " files loaded. (Forget Time: " + (_cachePledge.getForgetTime() / 1000) + "s , Capacity: " + _cachePledge.capacity() + ")");
 	}
 	
-	public void convertOldPedgeFiles()
-	{
+	public void convertOldPedgeFiles() {
 		final File dir = new File(Config.DATAPACK_ROOT, "data/crests/");
 		final File[] files = dir.listFiles(new OldPledgeFilter());
-		for (File file : files)
-		{
+		for (File file : files) {
 			int clanId = Integer.parseInt(file.getName().substring(7, file.getName().length() - 4));
 			_log.info("Found old crest file \"" + file.getName() + "\" for clanId " + clanId);
 			final L2Clan clan = ClanTable.getInstance().getClan(clanId);
-			if (clan != null)
-			{
+			if (clan != null) {
 				removeOldPledgeCrest(clan.getCrestId());
 				int newId = IdFactory.getInstance().getNextId();
 				file.renameTo(new File(Config.DATAPACK_ROOT, "data/crests/Crest_" + newId + ".bmp"));
 				_log.info("Renamed Clan crest to new format: Crest_" + newId + ".bmp");
 				
 				Connection con = null;
-				try
-				{
+				try {
 					con = L2DatabaseFactory.getInstance().getConnection();
 					PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
 					statement.setInt(1, newId);
 					statement.setInt(2, clan.getClanId());
 					statement.executeUpdate();
 					statement.close();
-				}
-				catch (SQLException e)
-				{
+				} catch (SQLException e) {
 					_log.log(Level.WARNING, "Could not update the crest id:" + e.getMessage(), e);
-				}
-				finally
-				{
+				} finally {
 					L2DatabaseFactory.close(con);
 				}
 				clan.setCrestId(newId);
-			}
-			else
-			{
+			} else {
 				_log.info("Clan Id: " + clanId + " does not exist in table.. deleting.");
 				file.delete();
 			}
 		}
 	}
 	
-	public float getMemoryUsage()
-	{
+	public float getMemoryUsage() {
 		return ((float) _bytesBuffLen / 1048576);
 	}
 	
-	public int getLoadedFiles()
-	{
+	public int getLoadedFiles() {
 		return _loadedFiles;
 	}
 	
-	public byte[] getPledgeCrest(int id)
-	{
+	public byte[] getPledgeCrest(int id) {
 		return _cachePledge.get(id);
 	}
 	
-	public byte[] getPledgeCrestLarge(int id)
-	{
+	public byte[] getPledgeCrestLarge(int id) {
 		return _cachePledgeLarge.get(id);
 	}
 	
-	public byte[] getAllyCrest(int id)
-	{
+	public byte[] getAllyCrest(int id) {
 		return _cacheAlly.get(id);
 	}
 	
-	public void removePledgeCrest(int id)
-	{
+	public void removePledgeCrest(int id) {
 		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_" + id + ".bmp");
 		_cachePledge.remove(id);
-		try
-		{
+		try {
 			crestFile.delete();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 		}
 	}
 	
-	public void removePledgeCrestLarge(int id)
-	{
+	public void removePledgeCrestLarge(int id) {
 		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_Large_" + id + ".bmp");
 		_cachePledgeLarge.remove(id);
-		try
-		{
+		try {
 			crestFile.delete();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 		}
 	}
 	
-	public void removeOldPledgeCrest(int id)
-	{
+	public void removeOldPledgeCrest(int id) {
 		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Pledge_" + id + ".bmp");
-		try
-		{
+		try {
 			crestFile.delete();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 		}
 	}
 	
-	public void removeAllyCrest(int id)
-	{
+	public void removeAllyCrest(int id) {
 		File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/AllyCrest_" + id + ".bmp");
 		_cacheAlly.remove(id);
-		try
-		{
+		try {
 			crestFile.delete();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 		}
 	}
 	
-	public boolean savePledgeCrest(int newId, byte[] data)
-	{
+	public boolean savePledgeCrest(int newId, byte[] data) {
 		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_" + newId + ".bmp");
-		try (FileOutputStream out = new FileOutputStream(crestFile))
-		{
+		try (FileOutputStream out = new FileOutputStream(crestFile)) {
 			out.write(data);
 			_cachePledge.getContentMap().put(newId, data);
 			return true;
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.INFO, "Error saving pledge crest" + crestFile + ":", e);
 			return false;
 		}
 	}
 	
-	public boolean savePledgeCrestLarge(int newId, byte[] data)
-	{
+	public boolean savePledgeCrestLarge(int newId, byte[] data) {
 		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_Large_" + newId + ".bmp");
-		try (FileOutputStream out = new FileOutputStream(crestFile))
-		{
+		try (FileOutputStream out = new FileOutputStream(crestFile)) {
 			out.write(data);
 			_cachePledgeLarge.getContentMap().put(newId, data);
 			return true;
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.INFO, "Error saving Large pledge crest" + crestFile + ":", e);
 			return false;
 		}
 	}
 	
-	public boolean saveAllyCrest(int newId, byte[] data)
-	{
+	public boolean saveAllyCrest(int newId, byte[] data) {
 		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/AllyCrest_" + newId + ".bmp");
-		try (FileOutputStream out = new FileOutputStream(crestFile))
-		{
+		try (FileOutputStream out = new FileOutputStream(crestFile)) {
 			out.write(data);
 			_cacheAlly.getContentMap().put(newId, data);
 			return true;
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.INFO, "Error saving ally crest" + crestFile + ":", e);
 			return false;
 		}
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final CrestCache _instance = new CrestCache();
 	}
+	
 }

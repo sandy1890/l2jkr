@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -24,12 +28,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 /**
- * 
  * @author ShanSoft
- *
  */
-public class ExBuySellListPacket extends L2GameServerPacket
-{
+public class ExBuySellListPacket extends L2GameServerPacket {
 	private static final String _S__B7_ExBuySellListPacket = "[S] B7 ExBuySellListPacket";
 	
 	private final List<L2TradeItem> _buyList = new FastList<>();
@@ -37,10 +38,8 @@ public class ExBuySellListPacket extends L2GameServerPacket
 	private L2ItemInstance[] _refundList = null;
 	private final boolean _done;
 	
-	public ExBuySellListPacket(L2PcInstance player, L2TradeList list, double taxRate, boolean done)
-	{
-		for (L2TradeItem item : list.getItems())
-		{
+	public ExBuySellListPacket(L2PcInstance player, L2TradeList list, double taxRate, boolean done) {
+		for (L2TradeItem item : list.getItems()) {
 			if (item.hasLimitedStock() && item.getCurrentCount() <= 0)
 				continue;
 			_buyList.add(item);
@@ -52,18 +51,15 @@ public class ExBuySellListPacket extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xFE);
 		writeH(0xB7);
 		writeD(0x01);
-		writeD(0x00); //rocknow-God
+		writeD(0x00); // rocknow-God
 		
-		if (_sellList != null && _sellList.length > 0)
-		{
+		if (_sellList != null && _sellList.length > 0) {
 			writeH(_sellList.length);
-			for (L2ItemInstance item : _sellList)
-			{
+			for (L2ItemInstance item : _sellList) {
 				writeD(item.getObjectId());
 				writeD(item.getDisplayId());
 				writeD(item.getLocationSlot());
@@ -78,31 +74,27 @@ public class ExBuySellListPacket extends L2GameServerPacket
 				writeD(0x00);
 				writeD(-1);
 				writeD(-9999);
-				writeH(0x01); //rocknow-God
+				writeH(0x01); // rocknow-God
 				writeH(item.getAttackElementType());
 				writeH(item.getAttackElementPower());
-				for (byte i = 0; i < 6; i++)
-				{
+				for (byte i = 0; i < 6; i++) {
 					writeH(item.getElementDefAttr(i));
 				}
 				// Enchant Effects
 				writeH(0x00);
 				writeH(0x00);
 				writeH(0x00);
-				writeD(0x00); //rocknow-God-Weapon Appearance
+				writeD(0x00); // rocknow-God-Weapon Appearance
 				
 				writeQ(item.getItem().getReferencePrice() / 2);
 			}
-		}
-		else
+		} else
 			writeH(0x00);
 		
-		if (_refundList != null && _refundList.length > 0)
-		{
+		if (_refundList != null && _refundList.length > 0) {
 			writeH(_refundList.length);
 			int idx = 0;
-			for (L2ItemInstance item : _refundList)
-			{
+			for (L2ItemInstance item : _refundList) {
 				writeD(item.getObjectId());
 				writeD(item.getDisplayId());
 				writeD(0x00);
@@ -117,23 +109,21 @@ public class ExBuySellListPacket extends L2GameServerPacket
 				writeD(0x00);
 				writeD(-1);
 				writeD(-9999);
-				writeH(0x01); //rocknow-God
+				writeH(0x01); // rocknow-God
 				writeH(item.getAttackElementType());
 				writeH(item.getAttackElementPower());
-				for (byte i = 0; i < 6; i++)
-				{
+				for (byte i = 0; i < 6; i++) {
 					writeH(item.getElementDefAttr(i));
 				}
 				// Enchant Effects
 				writeH(0x00);
 				writeH(0x00);
 				writeH(0x00);
-				writeD(0x00); //rocknow-God-Weapon Appearance
+				writeD(0x00); // rocknow-God-Weapon Appearance
 				writeD(idx++);
 				writeQ(item.getItem().getReferencePrice() / 2 * item.getCount());
 			}
-		}
-		else
+		} else
 			writeH(0x00);
 		
 		writeC(_done ? 0x01 : 0x00);
@@ -142,8 +132,7 @@ public class ExBuySellListPacket extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__B7_ExBuySellListPacket;
 	}
 }

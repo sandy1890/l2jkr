@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver;
 
@@ -56,9 +60,11 @@ import com.l2jserver.gameserver.datatables.HennaData;
 import com.l2jserver.gameserver.datatables.HerbDropTable;
 import com.l2jserver.gameserver.datatables.HitConditionBonus;
 import com.l2jserver.gameserver.datatables.InitialEquipmentData;
+import com.l2jserver.gameserver.datatables.ItemNameTable;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.LevelUpData;
 import com.l2jserver.gameserver.datatables.MerchantPriceConfigTable;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcBufferTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -66,6 +72,7 @@ import com.l2jserver.gameserver.datatables.NpcWalkerRoutesData;
 import com.l2jserver.gameserver.datatables.OfflineTradersTable;
 import com.l2jserver.gameserver.datatables.PetDataTable;
 import com.l2jserver.gameserver.datatables.RecipeData;
+import com.l2jserver.gameserver.datatables.SkillNameTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -102,7 +109,7 @@ import com.l2jserver.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
-import com.l2jserver.gameserver.instancemanager.PcCafePointsManager; // Add pcbangpoints by pmq
+import com.l2jserver.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jserver.gameserver.instancemanager.PetitionManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossPointsManager;
@@ -133,17 +140,16 @@ import com.l2jserver.gameserver.taskmanager.TaskManager;
 import com.l2jserver.status.Status;
 import com.l2jserver.util.DeadLockDetector;
 import com.l2jserver.util.IPv4Filter;
-import com.l2jserver.gameserver.datatables.MessageTable;
-import com.l2jserver.gameserver.datatables.SkillNameTable; //Update by rocknow
-import com.l2jserver.gameserver.datatables.ItemNameTable; //Update by rocknow
+// Add pcbangpoints by pmq
+//Update by rocknow
+//Update by rocknow
 
 /**
  * This class ...
- * 
  * @version $Revision: 1.29.2.15.2.19 $ $Date: 2005/04/05 19:41:23 $
  */
-public class GameServer
-{
+public class GameServer {
+	
 	private static final Logger _log = Logger.getLogger(GameServer.class.getName());
 	
 	private final SelectorThread<L2GameClient> _selectorThread;
@@ -155,46 +161,38 @@ public class GameServer
 	private static Status _statusServer;
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
 	
-	public long getUsedMemoryMB()
-	{
+	public long getUsedMemoryMB() {
 		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576; // ;
 	}
 	
-	public SelectorThread<L2GameClient> getSelectorThread()
-	{
+	public SelectorThread<L2GameClient> getSelectorThread() {
 		return _selectorThread;
 	}
 	
-	public L2GamePacketHandler getL2GamePacketHandler()
-	{
+	public L2GamePacketHandler getL2GamePacketHandler() {
 		return _gamePacketHandler;
 	}
 	
-	public DeadLockDetector getDeadLockDetectorThread()
-	{
+	public DeadLockDetector getDeadLockDetectorThread() {
 		return _deadDetectThread;
 	}
 	
-	public GameServer() throws Exception
-	{
+	public GameServer() throws Exception {
 		long serverLoadStart = System.currentTimeMillis();
 		
 		gameServer = this;
 		_log.finest("used mem:" + getUsedMemoryMB() + "MB");
 		
-		if (Config.SERVER_VERSION != null)
-		{
+		if (Config.SERVER_VERSION != null) {
 			_log.info("L2JTW Server Version:    " + Config.SERVER_VERSION);
 		}
-		if (Config.DATAPACK_VERSION != null)
-		{
+		if (Config.DATAPACK_VERSION != null) {
 			_log.info("L2JTW Datapack Version:  " + Config.DATAPACK_VERSION);
 		}
 		
 		_idFactory = IdFactory.getInstance();
 		
-		if (!_idFactory.isInitialized())
-		{
+		if (!_idFactory.isInitialized()) {
 			_log.severe("Could not read object IDs from DB. Please Check Your Data.");
 			throw new Exception("Could not initialize the ID factory");
 		}
@@ -255,7 +253,7 @@ public class GameServer
 		PetDataTable.getInstance();
 		CharSummonTable.getInstance().init();
 		
-		printSection("Clans"); 
+		printSection("Clans");
 		ClanTable.getInstance();
 		CHSiegeManager.getInstance();
 		ClanHallManager.getInstance();
@@ -263,8 +261,9 @@ public class GameServer
 		
 		printSection("Geodata");
 		GeoData.getInstance();
-		if (Config.GEODATA == 2)
+		if (Config.GEODATA == 2) {
 			PathFinding.getInstance();
+		}
 		
 		printSection("NPCs");
 		HerbDropTable.getInstance();
@@ -320,26 +319,26 @@ public class GameServer
 		AirShipManager.getInstance();
 		GraciaSeedsManager.getInstance();
 		
-		try
-		{
+		try {
 			_log.info("Loading Server Scripts");
 			File scripts = new File(Config.DATAPACK_ROOT, "data/scripts.cfg");
-			if(!Config.ALT_DEV_NO_HANDLERS || !Config.ALT_DEV_NO_QUESTS)
+			if (!Config.ALT_DEV_NO_HANDLERS || !Config.ALT_DEV_NO_QUESTS) {
 				L2ScriptEngineManager.getInstance().executeScriptList(scripts);
-		}
-		catch (IOException ioe)
-		{
+			}
+		} catch (IOException ioe) {
 			_log.severe("Failed loading scripts.cfg, no script going to be loaded");
 		}
 		
 		QuestManager.getInstance().report();
 		TransformationManager.getInstance().report();
 		
-		if (Config.SAVE_DROPPED_ITEM)
+		if (Config.SAVE_DROPPED_ITEM) {
 			ItemsOnGroundManager.getInstance();
+		}
 		
-		if (Config.AUTODESTROY_ITEM_AFTER > 0 || Config.HERB_AUTO_DESTROY_TIME > 0)
+		if ((Config.AUTODESTROY_ITEM_AFTER > 0) || (Config.HERB_AUTO_DESTROY_TIME > 0)) {
 			ItemsAutoDestroy.getInstance();
+		}
 		
 		MonsterRace.getInstance();
 		
@@ -354,23 +353,26 @@ public class GameServer
 		_log.info("AutoChatHandler: Loaded " + AutoChatHandler.getInstance().size() + " handlers in total.");
 		_log.info("AutoSpawnHandler: Loaded " + AutoSpawnHandler.getInstance().size() + " handlers in total.");
 		
-		if (Config.L2JMOD_ALLOW_WEDDING)
+		if (Config.L2JMOD_ALLOW_WEDDING) {
 			CoupleManager.getInstance();
+		}
 		
 		TaskManager.getInstance();
-
+		
 		AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
 		MerchantPriceConfigTable.getInstance().updateReferences();
 		CastleManager.getInstance().activateInstances();
 		FortManager.getInstance().activateInstances();
-		SkillNameTable.getInstance(); //Update by rocknow
-		ItemNameTable.getInstance(); //Update by rocknow
+		SkillNameTable.getInstance(); // Update by rocknow
+		ItemNameTable.getInstance(); // Update by rocknow
 		
-		if (Config.ALLOW_MAIL)
+		if (Config.ALLOW_MAIL) {
 			MailManager.getInstance();
+		}
 		
-		if (Config.ACCEPT_GEOEDITOR_CONN)
+		if (Config.ACCEPT_GEOEDITOR_CONN) {
 			GeoEditorListener.getInstance();
+		}
 		
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		
@@ -379,22 +381,22 @@ public class GameServer
 		TvTManager.getInstance();
 		KnownListUpdateTaskManager.getInstance();
 		
-		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
+		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS) {
 			OfflineTradersTable.restoreOfflineTraders();
+		}
 		
-		if (Config.DEADLOCK_DETECTOR)
-		{
+		if (Config.DEADLOCK_DETECTOR) {
 			_deadDetectThread = new DeadLockDetector();
 			_deadDetectThread.setDaemon(true);
 			_deadDetectThread.start();
-		}
-		else
+		} else {
 			_deadDetectThread = null;
+		}
 		System.gc();
 		// maxMemory is the upper limit the jvm can use, totalMemory the size of
 		// the current allocation pool, freeMemory the unused memory in the
 		// allocation pool
-		long freeMem = (Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory() + Runtime.getRuntime().freeMemory()) / 1048576;
+		long freeMem = ((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576;
 		long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
 		_log.info("GameServer Started, free memory " + freeMem + " Mb of " + totalMem + " Mb");
 		Toolkit.getDefaultToolkit().beep();
@@ -415,24 +417,17 @@ public class GameServer
 		_selectorThread = new SelectorThread<>(sc, _gamePacketHandler, _gamePacketHandler, _gamePacketHandler, new IPv4Filter());
 		
 		InetAddress bindAddress = null;
-		if (!Config.GAMESERVER_HOSTNAME.equals("*"))
-		{
-			try
-			{
+		if (!Config.GAMESERVER_HOSTNAME.equals("*")) {
+			try {
 				bindAddress = InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
-			}
-			catch (UnknownHostException e1)
-			{
+			} catch (UnknownHostException e1) {
 				_log.log(Level.SEVERE, "WARNING: The GameServer bind address is invalid, using all avaliable IPs. Reason: " + e1.getMessage(), e1);
 			}
 		}
 		
-		try
-		{
+		try {
 			_selectorThread.openServerSocket(bindAddress, Config.PORT_GAME);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.SEVERE, "FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
@@ -444,8 +439,7 @@ public class GameServer
 		AutoAnnounceTaskManager.getInstance();
 	}
 	
-	public static void main(String[] args) throws Exception
-	{
+	public static void main(String[] args) throws Exception {
 		Server.serverMode = Server.MODE_GAMESERVER;
 		// Local Constants
 		final String LOG_FOLDER = "log"; // Name of folder for log file
@@ -467,22 +461,20 @@ public class GameServer
 		L2DatabaseFactory.getInstance();
 		gameServer = new GameServer();
 		
-		if (Config.IS_TELNET_ENABLED)
-		{
+		if (Config.IS_TELNET_ENABLED) {
 			_statusServer = new Status(Server.serverMode);
 			_statusServer.start();
-		}
-		else
-		{
+		} else {
 			_log.info("Telnet server is currently disabled.");
 		}
 	}
 	
-	public static void printSection(String s)
-	{
+	public static void printSection(String s) {
 		s = "=[ " + s + " ]";
-		while (s.length() < 78)
+		while (s.length() < 78) {
 			s = "-" + s;
+		}
 		_log.info(s);
 	}
+	
 }

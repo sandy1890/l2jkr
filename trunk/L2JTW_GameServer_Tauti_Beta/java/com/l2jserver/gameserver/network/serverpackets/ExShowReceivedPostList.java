@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -22,29 +26,24 @@ import com.l2jserver.gameserver.model.entity.Message;
 /**
  * @author Migi, DS
  */
-public class ExShowReceivedPostList extends L2GameServerPacket
-{
+public class ExShowReceivedPostList extends L2GameServerPacket {
 	private static final String _S__FE_AA_EXSHOWRECEIVEDPOSTLIST = "[S] FE:AA ExShowReceivedPostList";
 	
 	private List<Message> _inbox;
 	
-	public ExShowReceivedPostList(int objectId)
-	{
+	public ExShowReceivedPostList(int objectId) {
 		_inbox = MailManager.getInstance().getInbox(objectId);
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0xaa);
-		writeD((int)(System.currentTimeMillis() / 1000));
-		if (_inbox != null && _inbox.size() > 0)
-		{
+		writeD((int) (System.currentTimeMillis() / 1000));
+		if (_inbox != null && _inbox.size() > 0) {
 			writeD(_inbox.size());
-			for (Message msg : _inbox)
-			{
-				writeD(0x00); //rocknow-God
+			for (Message msg : _inbox) {
+				writeD(0x00); // rocknow-God
 				writeD(msg.getId());
 				writeS(msg.getSubject());
 				writeS(msg.getSenderName());
@@ -55,20 +54,17 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 				writeD(msg.hasAttachments() ? 0x01 : 0x00);
 				writeD(msg.isReturned() ? 0x01 : 0x00);
 				writeD(msg.getSendBySystem());
-				//rocknow-God writeD(0);
+				// rocknow-God writeD(0);
 			}
-		}
-		else
-		{
+		} else {
 			writeD(0x00);
 		}
-		writeD(100); //rocknow-God
-		writeD(1000); //rocknow-God
+		writeD(100); // rocknow-God
+		writeD(1000); // rocknow-God
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FE_AA_EXSHOWRECEIVEDPOSTLIST;
 	}
 }

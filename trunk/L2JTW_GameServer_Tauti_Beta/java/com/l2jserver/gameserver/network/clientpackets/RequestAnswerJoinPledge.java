@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -27,24 +31,20 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class ...
- *
  * @version $Revision: 1.4.2.1.2.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestAnswerJoinPledge extends L2GameClientPacket
-{
+public final class RequestAnswerJoinPledge extends L2GameClientPacket {
 	private static final String _C__27_REQUESTANSWERJOINPLEDGE = "[C] 27 RequestAnswerJoinPledge";
 	
 	private int _answer;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_answer = readD();
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 			return;
@@ -53,8 +53,7 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket
 		if (requestor == null)
 			return;
 		
-		if (_answer == 0)
-		{
+		if (_answer == 0) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DID_NOT_RESPOND_TO_S1_CLAN_INVITATION);
 			sm.addString(requestor.getName());
 			activeChar.sendPacket(sm);
@@ -63,28 +62,23 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket
 			sm.addString(activeChar.getName());
 			requestor.sendPacket(sm);
 			sm = null;
-		}
-		else
-		{
+		} else {
 			if (!(requestor.getRequest().getRequestPacket() instanceof RequestJoinPledge))
 				return; // hax
-			
+				
 			RequestJoinPledge requestPacket = (RequestJoinPledge) requestor.getRequest().getRequestPacket();
 			L2Clan clan = requestor.getClan();
 			// we must double check this cause during response time conditions can be changed, i.e. another player could join clan
-			if (clan.checkClanJoinCondition(requestor, activeChar, requestPacket.getPledgeType()))
-			{
+			if (clan.checkClanJoinCondition(requestor, activeChar, requestPacket.getPledgeType())) {
 				activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
 				
 				activeChar.setPledgeType(requestPacket.getPledgeType());
-				if(requestPacket.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
-				{
+				if (requestPacket.getPledgeType() == L2Clan.SUBUNIT_ACADEMY) {
 					activeChar.setPowerGrade(9); // adademy
 					activeChar.setLvlJoinedAcademy(activeChar.getLevel());
-				}
-				else
+				} else
 					activeChar.setPowerGrade(5); // new member starts at 5, not confirmed
-				
+					
 				clan.addClanMember(activeChar);
 				activeChar.setClanPrivileges(activeChar.getClan().getRankPrivs(activeChar.getPowerGrade()));
 				
@@ -115,8 +109,7 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__27_REQUESTANSWERJOINPLEDGE;
 	}
 }
