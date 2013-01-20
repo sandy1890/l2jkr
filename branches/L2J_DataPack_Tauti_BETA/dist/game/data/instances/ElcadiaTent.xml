@@ -3,8 +3,8 @@
 	<activityTime val="60" />
 	<timeDelay val="4" />
 	<allowSummon val="false" />
-	<spawnPoint spawnX="89809" spawnY="-238066" spawnZ="-9632"/>
 	<emptyDestroyTime val="1" />
+	<spawnPoint spawnX="89809" spawnY="-238066" spawnZ="-9632"/>
 	<spawnlist>
 		<spawn npcId="32784" x="89445" y="-238074" z="-9640" heading="0" respawn="0"/>
 	</spawnlist>
