@@ -8,9 +8,21 @@
 						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="timeDelay" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="val" type="xs:positiveInteger" use="required" />
+					</xs:complexType>
+				</xs:element>
 				<xs:element name="allowSummon" minOccurs="0" maxOccurs="1">
 					<xs:complexType>
 						<xs:attribute name="val" type="xs:boolean" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="returnteleport" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="x" type="xs:integer" use="required" />
+						<xs:attribute name="y" type="xs:integer" use="required" />
+						<xs:attribute name="z" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="emptyDestroyTime" minOccurs="0" maxOccurs="1">
