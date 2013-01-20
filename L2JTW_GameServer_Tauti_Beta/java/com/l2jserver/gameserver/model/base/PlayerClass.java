@@ -1,20 +1,24 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.base;
 
-import static com.l2jserver.gameserver.model.base.ClassLevel.Awaken; //rocknow-God-Awaking
+import static com.l2jserver.gameserver.model.base.ClassLevel.Awaken;
 import static com.l2jserver.gameserver.model.base.ClassLevel.First;
 import static com.l2jserver.gameserver.model.base.ClassLevel.Fourth;
 import static com.l2jserver.gameserver.model.base.ClassLevel.Second;
@@ -36,11 +40,13 @@ import java.util.Set;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
+//rocknow-God-Awaking
+
 /**
  * @author luisantonioa
  */
-public enum PlayerClass
-{
+public enum PlayerClass {
+	
 	HumanFighter(Human, Fighter, First),
 	Warrior(Human, Fighter, Second),
 	Gladiator(Human, Fighter, Third),
@@ -221,8 +227,7 @@ public enum PlayerClass
 	
 	private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
 	
-	static
-	{
+	static {
 		Set<PlayerClass> subclasses = getSet(null, Third);
 		subclasses.removeAll(neverSubclassed);
 		
@@ -250,131 +255,121 @@ public enum PlayerClass
 		subclassSetMap.put(Spellhowler, subclasseSet5);
 	}
 	
-	PlayerClass(Race pRace, ClassType pType, ClassLevel pLevel)
-	{
+	PlayerClass(Race pRace, ClassType pType, ClassLevel pLevel) {
 		_race = pRace;
 		_level = pLevel;
 		_type = pType;
 	}
 	
-	public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player)
-	{
+	public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player) {
 		Set<PlayerClass> subclasses = null;
 		
-		/* l2jtw start
-		if (_level == Third)
+		/*
+		 * l2jtw start if (_level == Third)
 		 */
-		if (_level == Third || _level == Awaken)
+		if ((_level == Third) || (_level == Awaken))
 		// l2jtw end
 		{
-			if (player.getRace() != Kamael)
-			{
+			if (player.getRace() != Kamael) {
 				subclasses = EnumSet.copyOf(mainSubclassSet);
 				
 				subclasses.remove(this);
 				
-				switch (player.getRace())
-				{
+				switch (player.getRace()) {
 					case Elf:
 						subclasses.removeAll(getSet(DarkElf, Third));
-						break;
+					break;
 					case DarkElf:
 						subclasses.removeAll(getSet(Elf, Third));
-						break;
+					break;
 				}
 				
 				subclasses.removeAll(getSet(Kamael, Third));
 				
 				Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
 				
-				if (unavailableClasses != null)
+				if (unavailableClasses != null) {
 					subclasses.removeAll(unavailableClasses);
+				}
 				
-				//rocknow-God-Start
-				if (player.getBaseClass() >= 139)
-				{
-					switch (player.getBaseClass())
-					{
+				// rocknow-God-Start
+				if (player.getBaseClass() >= 139) {
+					switch (player.getBaseClass()) {
 						case 139:
 							subclasses.removeAll(EnumSet.of(Paladin));
 							subclasses.removeAll(EnumSet.of(DarkAvenger));
 							subclasses.removeAll(EnumSet.of(TempleKnight));
 							subclasses.removeAll(EnumSet.of(ShillienKnight));
-							break;
+						break;
 						case 140:
 							subclasses.removeAll(EnumSet.of(Gladiator));
 							subclasses.removeAll(EnumSet.of(Warlord));
 							subclasses.removeAll(EnumSet.of(Destroyer));
 							subclasses.removeAll(EnumSet.of(Tyrant));
-							break;
+						break;
 						case 141:
 							subclasses.removeAll(EnumSet.of(TreasureHunter));
 							subclasses.removeAll(EnumSet.of(BountyHunter));
 							subclasses.removeAll(EnumSet.of(Plainswalker));
 							subclasses.removeAll(EnumSet.of(AbyssWalker));
-							break;
+						break;
 						case 142:
 							subclasses.removeAll(EnumSet.of(Hawkeye));
 							subclasses.removeAll(EnumSet.of(SilverRanger));
 							subclasses.removeAll(EnumSet.of(PhantomRanger));
-							break;
+						break;
 						case 143:
 							subclasses.removeAll(EnumSet.of(Sorceror));
 							subclasses.removeAll(EnumSet.of(Necromancer));
 							subclasses.removeAll(EnumSet.of(Spellsinger));
 							subclasses.removeAll(EnumSet.of(Spellhowler));
-							break;
+						break;
 						case 144:
 							subclasses.removeAll(EnumSet.of(Prophet));
 							subclasses.removeAll(EnumSet.of(Warcryer));
 							subclasses.removeAll(EnumSet.of(Swordsinger));
 							subclasses.removeAll(EnumSet.of(Bladedancer));
-							break;
+						break;
 						case 145:
 							subclasses.removeAll(EnumSet.of(Warlock));
 							subclasses.removeAll(EnumSet.of(ElementalSummoner));
 							subclasses.removeAll(EnumSet.of(PhantomSummoner));
-							break;
+						break;
 						case 146:
 							subclasses.removeAll(EnumSet.of(Bishop));
 							subclasses.removeAll(EnumSet.of(ElvenElder));
 							subclasses.removeAll(EnumSet.of(ShillienElder));
-							break;
+						break;
 					}
 				}
-				//rocknow-God-End
-			}
-			else
-			{
+				// rocknow-God-End
+			} else {
 				subclasses = getSet(Kamael, Third);
 				subclasses.remove(this);
 				// Check sex, male subclasses female and vice versa
 				// If server owner set MaxSubclass > 3 some kamael's cannot take 4 sub
 				// So, in that situation we must skip sex check
-				if (Config.MAX_SUBCLASS <= 3)
-				{
-					if (player.getAppearance().getSex())
+				if (Config.MAX_SUBCLASS <= 3) {
+					if (player.getAppearance().getSex()) {
 						subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
-					else
+					} else {
 						subclasses.removeAll(EnumSet.of(maleSoulbreaker));
+					}
 				}
-				if (!player.getSubClasses().containsKey(2) || player.getSubClasses().get(2).getLevel() < 75)
+				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75)) {
 					subclasses.removeAll(EnumSet.of(inspector));
+				}
 			}
 		}
 		return subclasses;
 	}
 	
-	public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
-	{
+	public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level) {
 		EnumSet<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
 		
-		for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class))
-		{
-			if (race == null || playerClass.isOfRace(race))
-			{
-				if (level == null || playerClass.isOfLevel(level))
-				{
+		for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class)) {
+			if ((race == null) || playerClass.isOfRace(race)) {
+				if ((level == null) || playerClass.isOfLevel(level)) {
 					allOf.add(playerClass);
 				}
 			}
@@ -382,23 +377,20 @@ public enum PlayerClass
 		return allOf;
 	}
 	
-	public final boolean isOfRace(Race pRace)
-	{
+	public final boolean isOfRace(Race pRace) {
 		return _race == pRace;
 	}
 	
-	public final boolean isOfType(ClassType pType)
-	{
+	public final boolean isOfType(ClassType pType) {
 		return _type == pType;
 	}
 	
-	public final boolean isOfLevel(ClassLevel pLevel)
-	{
+	public final boolean isOfLevel(ClassLevel pLevel) {
 		return _level == pLevel;
 	}
 	
-	public final ClassLevel getLevel()
-	{
+	public final ClassLevel getLevel() {
 		return _level;
 	}
+	
 }

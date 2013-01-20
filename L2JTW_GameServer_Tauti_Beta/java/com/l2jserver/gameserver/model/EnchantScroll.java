@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -23,8 +27,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 /**
  * @author UnAfraid
  */
-public class EnchantScroll extends EnchantItem
-{
+public class EnchantScroll extends EnchantItem {
+	
 	private final boolean _isBlessed;
 	private final boolean _isSafe;
 	
@@ -32,8 +36,7 @@ public class EnchantScroll extends EnchantItem
 	 * @param set
 	 * @param items
 	 */
-	public EnchantScroll(StatsSet set, List<Integer> items)
-	{
+	public EnchantScroll(StatsSet set, List<Integer> items) {
 		super(set, items);
 		
 		_isBlessed = set.getBool("isBlessed", false);
@@ -43,16 +46,14 @@ public class EnchantScroll extends EnchantItem
 	/**
 	 * @return true for blessed scrolls
 	 */
-	public final boolean isBlessed()
-	{
+	public final boolean isBlessed() {
 		return _isBlessed;
 	}
 	
 	/**
 	 * @return true for safe-enchant scrolls (enchant level will remain on failure)
 	 */
-	public final boolean isSafe()
-	{
+	public final boolean isSafe() {
 		return _isSafe;
 	}
 	
@@ -61,11 +62,11 @@ public class EnchantScroll extends EnchantItem
 	 * @param supportItem
 	 * @return
 	 */
-	public final boolean isValid(L2ItemInstance enchantItem, EnchantItem supportItem)
-	{
+	public final boolean isValid(L2ItemInstance enchantItem, EnchantItem supportItem) {
 		// blessed scrolls can't use support items
-		if (supportItem != null && (!supportItem.isValid(enchantItem) || isBlessed()))
+		if ((supportItem != null) && (!supportItem.isValid(enchantItem) || isBlessed())) {
 			return false;
+		}
 		
 		return super.isValid(enchantItem);
 	}
@@ -75,20 +76,23 @@ public class EnchantScroll extends EnchantItem
 	 * @param supportItem
 	 * @return
 	 */
-	public final double getChance(L2ItemInstance enchantItem, EnchantItem supportItem)
-	{
-		if (!isValid(enchantItem, supportItem))
+	public final double getChance(L2ItemInstance enchantItem, EnchantItem supportItem) {
+		if (!isValid(enchantItem, supportItem)) {
 			return -1;
+		}
 		
 		boolean fullBody = enchantItem.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR;
-		if (enchantItem.getEnchantLevel() < Config.ENCHANT_SAFE_MAX || (fullBody && enchantItem.getEnchantLevel() < Config.ENCHANT_SAFE_MAX_FULL))
+		if ((enchantItem.getEnchantLevel() < Config.ENCHANT_SAFE_MAX) || (fullBody && (enchantItem.getEnchantLevel() < Config.ENCHANT_SAFE_MAX_FULL))) {
 			return 100;
+		}
 		
 		double chance = _chanceAdd;
 		
-		if (supportItem != null && !_isBlessed)
+		if ((supportItem != null) && !_isBlessed) {
 			chance *= supportItem.getChanceAdd();
+		}
 		
 		return chance;
 	}
+	
 }

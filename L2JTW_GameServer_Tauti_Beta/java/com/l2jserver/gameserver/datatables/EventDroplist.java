@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -30,8 +34,8 @@ import com.l2jserver.gameserver.script.EventDrop;
  * Those extra Items are defined in the table <b>allNpcDateDrops</b>.<br>
  * Each Special Event has a start and end date to stop to drop extra Items automatically.
  */
-public class EventDroplist
-{
+public class EventDroplist {
+	
 	private static Logger _log = Logger.getLogger(EventDroplist.class.getName());
 	
 	/**
@@ -39,13 +43,11 @@ public class EventDroplist
 	 */
 	private static final List<DateDrop> _allNpcDateDrops = new FastList<>();
 	
-	public static class DateDrop
-	{
+	public static class DateDrop {
 		protected final DateRange _dateRange;
 		private final EventDrop _eventDrop;
 		
-		public DateDrop(DateRange dateRange, EventDrop eventDrop)
-		{
+		public DateDrop(DateRange dateRange, EventDrop eventDrop) {
 			_dateRange = dateRange;
 			_eventDrop = eventDrop;
 		}
@@ -53,16 +55,14 @@ public class EventDroplist
 		/**
 		 * @return the _eventDrop
 		 */
-		public EventDrop getEventDrop()
-		{
+		public EventDrop getEventDrop() {
 			return _eventDrop;
 		}
 		
 		/**
 		 * @return the _dateRange
 		 */
-		public DateRange getDateRange()
-		{
+		public DateRange getDateRange() {
 			return _dateRange;
 		}
 	}
@@ -74,8 +74,7 @@ public class EventDroplist
 	 * @param chance The chance to obtain this drop
 	 * @param dateRange The DateRange object to add to this DateDrop
 	 */
-	public void addGlobalDrop(int[] itemIdList, int[] count, int chance, DateRange dateRange)
-	{
+	public void addGlobalDrop(int[] itemIdList, int[] count, int chance, DateRange dateRange) {
 		_allNpcDateDrops.add(new DateDrop(dateRange, new EventDrop(itemIdList, count[0], count[1], chance)));
 	}
 	
@@ -84,39 +83,33 @@ public class EventDroplist
 	 * @param dateRange the date range.
 	 * @param eventDrop the event drop.
 	 */
-	public void addGlobalDrop(DateRange dateRange, EventDrop eventDrop)
-	{
+	public void addGlobalDrop(DateRange dateRange, EventDrop eventDrop) {
 		_allNpcDateDrops.add(new DateDrop(dateRange, eventDrop));
 	}
 	
 	/**
 	 * @return all DateDrop of EventDroplist allNpcDateDrops within the date range.
 	 */
-	public List<DateDrop> getAllDrops()
-	{
+	public List<DateDrop> getAllDrops() {
 		final List<DateDrop> list = new FastList<>();
 		final Date currentDate = new Date();
-		for (DateDrop drop : _allNpcDateDrops)
-		{
-			if (Config.DEBUG)
-			{
+		for (DateDrop drop : _allNpcDateDrops) {
+			if (Config.DEBUG) {
 				_log.info(drop._dateRange.toString() + " Now: " + currentDate);
 			}
-			if (drop._dateRange.isWithinRange(currentDate))
-			{
+			if (drop._dateRange.isWithinRange(currentDate)) {
 				list.add(drop);
 			}
 		}
 		return list;
 	}
 	
-	public static EventDroplist getInstance()
-	{
+	public static EventDroplist getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final EventDroplist _instance = new EventDroplist();
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -26,8 +30,8 @@ import com.l2jserver.gameserver.engines.DocumentParser;
  * This class holds the Experience points for each level for players and pets.
  * @author mrTJO
  */
-public final class ExperienceTable extends DocumentParser
-{
+public final class ExperienceTable extends DocumentParser {
+	
 	private final Map<Integer, Long> _expTable = new HashMap<>();
 	
 	private byte MAX_LEVEL;
@@ -36,14 +40,12 @@ public final class ExperienceTable extends DocumentParser
 	/**
 	 * Instantiates a new experience table.
 	 */
-	protected ExperienceTable()
-	{
+	protected ExperienceTable() {
 		load();
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		_expTable.clear();
 		parseDatapackFile("data/stats/experience.xml");
 		_log.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
@@ -52,8 +54,7 @@ public final class ExperienceTable extends DocumentParser
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		final Node table = getCurrentDocument().getFirstChild();
 		final NamedNodeMap tableAttr = table.getAttributes();
 		
@@ -61,10 +62,8 @@ public final class ExperienceTable extends DocumentParser
 		MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
 		
 		NamedNodeMap attrs;
-		for (Node n = table.getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			if ("experience".equals(n.getNodeName()))
-			{
+		for (Node n = table.getFirstChild(); n != null; n = n.getNextSibling()) {
+			if ("experience".equals(n.getNodeName())) {
 				attrs = n.getAttributes();
 				_expTable.put(parseInteger(attrs, "level"), parseLong(attrs, "tolevel"));
 			}
@@ -76,8 +75,7 @@ public final class ExperienceTable extends DocumentParser
 	 * @param level the level required.
 	 * @return the experience points required to reach the given level.
 	 */
-	public long getExpForLevel(int level)
-	{
+	public long getExpForLevel(int level) {
 		return _expTable.get(level);
 	}
 	
@@ -85,8 +83,7 @@ public final class ExperienceTable extends DocumentParser
 	 * Gets the max level.
 	 * @return the maximum level acquirable by a player.
 	 */
-	public byte getMaxLevel()
-	{
+	public byte getMaxLevel() {
 		return MAX_LEVEL;
 	}
 	
@@ -94,8 +91,7 @@ public final class ExperienceTable extends DocumentParser
 	 * Gets the max pet level.
 	 * @return the maximum level acquirable by a pet.
 	 */
-	public byte getMaxPetLevel()
-	{
+	public byte getMaxPetLevel() {
 		return MAX_PET_LEVEL;
 	}
 	
@@ -103,13 +99,12 @@ public final class ExperienceTable extends DocumentParser
 	 * Gets the single instance of ExperienceTable.
 	 * @return single instance of ExperienceTable
 	 */
-	public static ExperienceTable getInstance()
-	{
+	public static ExperienceTable getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final ExperienceTable _instance = new ExperienceTable();
 	}
+	
 }

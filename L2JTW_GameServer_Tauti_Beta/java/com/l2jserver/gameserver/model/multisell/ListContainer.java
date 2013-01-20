@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.multisell;
 
@@ -20,8 +24,8 @@ import java.util.List;
 /**
  * @author DS
  */
-public class ListContainer
-{
+public class ListContainer {
+	
 	protected int _listId;
 	protected boolean _applyTaxes = false;
 	protected boolean _maintainEnchantment = false;
@@ -29,8 +33,7 @@ public class ListContainer
 	
 	protected List<Entry> _entries;
 	
-	public ListContainer()
-	{
+	public ListContainer() {
 		_entries = new ArrayList<>();
 	}
 	
@@ -38,43 +41,35 @@ public class ListContainer
 	 * This constructor used in PreparedListContainer only ArrayList not created
 	 * @param listId
 	 */
-	protected ListContainer(int listId)
-	{
+	protected ListContainer(int listId) {
 		_listId = listId;
 	}
 	
-	public final List<Entry> getEntries()
-	{
+	public final List<Entry> getEntries() {
 		return _entries;
 	}
 	
-	public final void setListId(int listId)
-	{
+	public final void setListId(int listId) {
 		_listId = listId;
 	}
 	
-	public final int getListId()
-	{
+	public final int getListId() {
 		return _listId;
 	}
 	
-	public final void setApplyTaxes(boolean applyTaxes)
-	{
+	public final void setApplyTaxes(boolean applyTaxes) {
 		_applyTaxes = applyTaxes;
 	}
 	
-	public final boolean getApplyTaxes()
-	{
+	public final boolean getApplyTaxes() {
 		return _applyTaxes;
 	}
 	
-	public final void setMaintainEnchantment(boolean maintainEnchantment)
-	{
+	public final void setMaintainEnchantment(boolean maintainEnchantment) {
 		_maintainEnchantment = maintainEnchantment;
 	}
 	
-	public double getUseRate()
-	{
+	public double getUseRate() {
 		return _useRate;
 	}
 	
@@ -84,13 +79,12 @@ public class ListContainer
 	 * @param rate
 	 * @see com.l2jserver.gameserver.datatables.MultiSell#parseEntry
 	 */
-	public void setUseRate(double rate)
-	{
+	public void setUseRate(double rate) {
 		_useRate = rate;
 	}
 	
-	public final boolean getMaintainEnchantment()
-	{
+	public final boolean getMaintainEnchantment() {
 		return _maintainEnchantment;
 	}
+	
 }

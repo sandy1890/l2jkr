@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -29,123 +33,99 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 /**
  * @author godson, Luno, UnAfraid
  */
-public final class ArmorSetsData extends DocumentParser
-{
+public final class ArmorSetsData extends DocumentParser {
+	
 	private static final Map<Integer, L2ArmorSet> _armorSets = new HashMap<>();
 	
 	/**
 	 * Instantiates a new armor sets data.
 	 */
-	protected ArmorSetsData()
-	{
+	protected ArmorSetsData() {
 		load();
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		_armorSets.clear();
 		parseDirectory(new File(Config.DATAPACK_ROOT, "data/stats/armorsets"));
 		_log.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " Armor sets.");
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		NamedNodeMap attrs;
 		L2ArmorSet set;
-		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			if ("list".equalsIgnoreCase(n.getNodeName()))
-			{
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					if ("set".equalsIgnoreCase(d.getNodeName()))
-					{
+		for (Node n = getCurrentDocument().getFirstChild(); n != null; n = n.getNextSibling()) {
+			if ("list".equalsIgnoreCase(n.getNodeName())) {
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+					if ("set".equalsIgnoreCase(d.getNodeName())) {
 						set = new L2ArmorSet();
-						for (Node a = d.getFirstChild(); a != null; a = a.getNextSibling())
-						{
+						for (Node a = d.getFirstChild(); a != null; a = a.getNextSibling()) {
 							attrs = a.getAttributes();
-							switch (a.getNodeName())
-							{
-								case "chest":
-								{
+							switch (a.getNodeName()) {
+								case "chest": {
 									set.addChest(parseInt(attrs, "id"));
 									break;
 								}
-								case "feet":
-								{
+								case "feet": {
 									set.addFeet(parseInt(attrs, "id"));
 									break;
 								}
-								case "gloves":
-								{
+								case "gloves": {
 									set.addGloves(parseInt(attrs, "id"));
 									break;
 								}
-								case "head":
-								{
+								case "head": {
 									set.addHead(parseInt(attrs, "id"));
 									break;
 								}
-								case "legs":
-								{
+								case "legs": {
 									set.addLegs(parseInt(attrs, "id"));
 									break;
 								}
-								case "shield":
-								{
+								case "shield": {
 									set.addShield(parseInt(attrs, "id"));
 									break;
 								}
-								case "skill":
-								{
+								case "skill": {
 									int skillId = parseInt(attrs, "id");
 									int skillLevel = parseInt(attrs, "level");
 									set.addSkill(new SkillHolder(skillId, skillLevel));
 									break;
 								}
-								case "shield_skill":
-								{
+								case "shield_skill": {
 									int skillId = parseInt(attrs, "id");
 									int skillLevel = parseInt(attrs, "level");
 									set.addShieldSkill(new SkillHolder(skillId, skillLevel));
 									break;
 								}
-								case "enchant6skill":
-								{
+								case "enchant6skill": {
 									int skillId = parseInt(attrs, "id");
 									int skillLevel = parseInt(attrs, "level");
 									set.addEnchant6Skill(new SkillHolder(skillId, skillLevel));
 									break;
 								}
-								case "con":
-								{
+								case "con": {
 									set.addCon(parseInt(attrs, "val"));
 									break;
 								}
-								case "dex":
-								{
+								case "dex": {
 									set.addDex(parseInt(attrs, "val"));
 									break;
 								}
-								case "str":
-								{
+								case "str": {
 									set.addStr(parseInt(attrs, "val"));
 									break;
 								}
-								case "men":
-								{
+								case "men": {
 									set.addMen(parseInt(attrs, "val"));
 									break;
 								}
-								case "wit":
-								{
+								case "wit": {
 									set.addWit(parseInt(attrs, "val"));
 									break;
 								}
-								case "int":
-								{
+								case "int": {
 									set.addInt(parseInt(attrs, "val"));
 									break;
 								}
@@ -163,8 +143,7 @@ public final class ArmorSetsData extends DocumentParser
 	 * @param chestId the chest Id to verify.
 	 * @return {@code true} if the chest Id belongs to a registered armor set, {@code false} otherwise.
 	 */
-	public boolean isArmorSet(int chestId)
-	{
+	public boolean isArmorSet(int chestId) {
 		return _armorSets.containsKey(chestId);
 	}
 	
@@ -173,8 +152,7 @@ public final class ArmorSetsData extends DocumentParser
 	 * @param chestId the chest Id identifying the armor set.
 	 * @return the armor set associated to the give chest Id.
 	 */
-	public L2ArmorSet getSet(int chestId)
-	{
+	public L2ArmorSet getSet(int chestId) {
 		return _armorSets.get(chestId);
 	}
 	
@@ -182,13 +160,12 @@ public final class ArmorSetsData extends DocumentParser
 	 * Gets the single instance of ArmorSetsData.
 	 * @return single instance of ArmorSetsData
 	 */
-	public static ArmorSetsData getInstance()
-	{
+	public static ArmorSetsData getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final ArmorSetsData _instance = new ArmorSetsData();
 	}
+	
 }

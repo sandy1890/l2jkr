@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -25,13 +29,13 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 /**
  * @author Luno
  */
-public final class L2ArmorSet
-{
+public final class L2ArmorSet {
+	
 	private int _chestId;
 	private final List<Integer> _legs;
 	private final List<Integer> _head;
 	private final List<Integer> _gloves;
-	private final List<Integer> _feet;	
+	private final List<Integer> _feet;
 	private final List<Integer> _shield;
 	
 	private final List<SkillHolder> _skills;
@@ -45,8 +49,7 @@ public final class L2ArmorSet
 	private int _wit;
 	private int _int;
 	
-	public L2ArmorSet()
-	{
+	public L2ArmorSet() {
 		_legs = new ArrayList<>();
 		_head = new ArrayList<>();
 		_gloves = new ArrayList<>();
@@ -58,90 +61,72 @@ public final class L2ArmorSet
 		_enchant6Skill = new ArrayList<>();
 	}
 	
-	public void addChest(int id)
-	{
+	public void addChest(int id) {
 		_chestId = id;
 	}
 	
-	public void addLegs(int id)
-	{
+	public void addLegs(int id) {
 		_legs.add(id);
 	}
 	
-	public void addHead(int id)
-	{
+	public void addHead(int id) {
 		_head.add(id);
 	}
 	
-	public void addGloves(int id)
-	{
+	public void addGloves(int id) {
 		_gloves.add(id);
 	}
 	
-	public void addFeet(int id)
-	{
+	public void addFeet(int id) {
 		_feet.add(id);
 	}
 	
-	public void addShield(int id)
-	{
+	public void addShield(int id) {
 		_shield.add(id);
 	}
 	
-	public void addSkill(SkillHolder holder)
-	{
+	public void addSkill(SkillHolder holder) {
 		_skills.add(holder);
 	}
 	
-	public void addShieldSkill(SkillHolder holder)
-	{
+	public void addShieldSkill(SkillHolder holder) {
 		_shieldSkills.add(holder);
 	}
 	
-	public void addEnchant6Skill(SkillHolder holder)
-	{
+	public void addEnchant6Skill(SkillHolder holder) {
 		_enchant6Skill.add(holder);
 	}
 	
-	public void addCon(int val)
-	{
+	public void addCon(int val) {
 		_con = val;
 	}
 	
-	public void addDex(int val)
-	{
+	public void addDex(int val) {
 		_dex = val;
 	}
 	
-	public void addStr(int val)
-	{
+	public void addStr(int val) {
 		_str = val;
 	}
 	
-	public void addMen(int val)
-	{
+	public void addMen(int val) {
 		_men = val;
 	}
 	
-	public void addWit(int val)
-	{
+	public void addWit(int val) {
 		_wit = val;
 	}
 	
-	public void addInt(int val)
-	{
+	public void addInt(int val) {
 		_int = val;
 	}
 	
 	/**
 	 * Checks if player have equipped all items from set (not checking shield)
-	 * 
-	 * @param player
-	 *            whose inventory is being checked
+	 * @param player whose inventory is being checked
 	 * @return True if player equips whole set
 	 */
-	public boolean containAll(L2PcInstance player)
-	{
+	public boolean containAll(L2PcInstance player) {
 		Inventory inv = player.getInventory();
 		
 		L2ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
@@ -154,38 +139,44 @@ public final class L2ArmorSet
 		int gloves = 0;
 		int feet = 0;
 		
-		if (legsItem != null)
+		if (legsItem != null) {
 			legs = legsItem.getItemId();
-		if (headItem != null)
+		}
+		if (headItem != null) {
 			head = headItem.getItemId();
-		if (glovesItem != null)
+		}
+		if (glovesItem != null) {
 			gloves = glovesItem.getItemId();
-		if (feetItem != null)
+		}
+		if (feetItem != null) {
 			feet = feetItem.getItemId();
+		}
 		
 		return containAll(_chestId, legs, head, gloves, feet);
 	}
 	
-	public boolean containAll(int chest, int legs, int head, int gloves, int feet)
-	{
-		if (_chestId != 0 &&_chestId != chest)
+	public boolean containAll(int chest, int legs, int head, int gloves, int feet) {
+		if ((_chestId != 0) && (_chestId != chest)) {
 			return false;
-		if (!_legs.isEmpty() && !_legs.contains(legs))
+		}
+		if (!_legs.isEmpty() && !_legs.contains(legs)) {
 			return false;
-		if (!_head.isEmpty() && !_head.contains(head))
+		}
+		if (!_head.isEmpty() && !_head.contains(head)) {
 			return false;
-		if (!_gloves.isEmpty() && !_gloves.contains(gloves))
+		}
+		if (!_gloves.isEmpty() && !_gloves.contains(gloves)) {
 			return false;
-		if (!_feet.isEmpty() && !_feet.contains(feet))
+		}
+		if (!_feet.isEmpty() && !_feet.contains(feet)) {
 			return false;
+		}
 		
 		return true;
 	}
 	
-	public boolean containItem(int slot, int itemId)
-	{
-		switch (slot)
-		{
+	public boolean containItem(int slot, int itemId) {
+		switch (slot) {
 			case Inventory.PAPERDOLL_CHEST:
 				return _chestId == itemId;
 			case Inventory.PAPERDOLL_LEGS:
@@ -201,39 +192,34 @@ public final class L2ArmorSet
 		}
 	}
 	
-	public int getChestId()
-	{
+	public int getChestId() {
 		return _chestId;
 	}
 	
-	public List<SkillHolder> getSkills()
-	{
+	public List<SkillHolder> getSkills() {
 		return _skills;
 	}
 	
-	public boolean containShield(L2PcInstance player)
-	{
+	public boolean containShield(L2PcInstance player) {
 		Inventory inv = player.getInventory();
 		
 		L2ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		return (shieldItem != null && _shield.contains(Integer.valueOf(shieldItem.getItemId())));
+		return ((shieldItem != null) && _shield.contains(Integer.valueOf(shieldItem.getItemId())));
 	}
 	
-	public boolean containShield(int shield_id)
-	{
-		if (_shield.isEmpty())
+	public boolean containShield(int shield_id) {
+		if (_shield.isEmpty()) {
 			return false;
+		}
 		
 		return _shield.contains(Integer.valueOf(shield_id));
 	}
 	
-	public List<SkillHolder> getShieldSkillId()
-	{
+	public List<SkillHolder> getShieldSkillId() {
 		return _shieldSkills;
 	}
 	
-	public List<SkillHolder> getEnchant6skillId()
-	{
+	public List<SkillHolder> getEnchant6skillId() {
 		return _enchant6Skill;
 	}
 	
@@ -241,11 +227,11 @@ public final class L2ArmorSet
 	 * @param player
 	 * @return true if all parts of set are enchanted to +6 or more
 	 */
-	public boolean isEnchanted6(L2PcInstance player)
-	{
+	public boolean isEnchanted6(L2PcInstance player) {
 		// Player don't have full set
-		if (!containAll(player))
+		if (!containAll(player)) {
 			return false;
+		}
 		
 		Inventory inv = player.getInventory();
 		
@@ -255,47 +241,47 @@ public final class L2ArmorSet
 		L2ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
 		L2ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 		
-		if (chestItem == null || chestItem.getEnchantLevel() < 6)
+		if ((chestItem == null) || (chestItem.getEnchantLevel() < 6)) {
 			return false;
-		if (!_legs.isEmpty() && (legsItem == null || legsItem.getEnchantLevel() < 6))
+		}
+		if (!_legs.isEmpty() && ((legsItem == null) || (legsItem.getEnchantLevel() < 6))) {
 			return false;
-		if (!_gloves.isEmpty() && (glovesItem == null || glovesItem.getEnchantLevel() < 6))
+		}
+		if (!_gloves.isEmpty() && ((glovesItem == null) || (glovesItem.getEnchantLevel() < 6))) {
 			return false;
-		if (!_head.isEmpty() && (headItem == null || headItem.getEnchantLevel() < 6))
+		}
+		if (!_head.isEmpty() && ((headItem == null) || (headItem.getEnchantLevel() < 6))) {
 			return false;
-		if (!_feet.isEmpty() && (feetItem == null || feetItem.getEnchantLevel() < 6))
+		}
+		if (!_feet.isEmpty() && ((feetItem == null) || (feetItem.getEnchantLevel() < 6))) {
 			return false;
+		}
 		
 		return true;
 	}
 	
-	public int getCON()
-	{
+	public int getCON() {
 		return _con;
 	}
 	
-	public int getDEX()
-	{
+	public int getDEX() {
 		return _dex;
 	}
 	
-	public int getSTR()
-	{
+	public int getSTR() {
 		return _str;
 	}
 	
-	public int getMEN()
-	{
+	public int getMEN() {
 		return _men;
 	}
 	
-	public int getWIT()
-	{
+	public int getWIT() {
 		return _wit;
 	}
 	
-	public int getINT()
-	{
+	public int getINT() {
 		return _int;
 	}
+	
 }

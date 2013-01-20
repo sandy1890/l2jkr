@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.scripting.scriptengine.listeners.character;
 
@@ -21,8 +25,7 @@ import com.l2jserver.gameserver.scripting.scriptengine.impl.L2JListener;
 /**
  * @author TheOne
  */
-public abstract class AttackListener extends L2JListener
-{
+public abstract class AttackListener extends L2JListener {
 	private L2Character _character = null;
 	
 	/**
@@ -31,8 +34,7 @@ public abstract class AttackListener extends L2JListener
 	 * It will work for both NPCs and Players
 	 * @param character
 	 */
-	public AttackListener(L2Character character)
-	{
+	public AttackListener(L2Character character) {
 		_character = character;
 		register();
 	}
@@ -52,14 +54,12 @@ public abstract class AttackListener extends L2JListener
 	public abstract boolean isAttacked(AttackEvent event);
 	
 	@Override
-	public void register()
-	{
+	public void register() {
 		_character.addAttackListener(this);
 	}
 	
 	@Override
-	public void unregister()
-	{
+	public void unregister() {
 		_character.removeAttackListener(this);
 	}
 	
@@ -67,8 +67,7 @@ public abstract class AttackListener extends L2JListener
 	 * returns the L2Character this listener is attached to
 	 * @return
 	 */
-	public L2Character getCharacter()
-	{
+	public L2Character getCharacter() {
 		return _character;
 	}
 }

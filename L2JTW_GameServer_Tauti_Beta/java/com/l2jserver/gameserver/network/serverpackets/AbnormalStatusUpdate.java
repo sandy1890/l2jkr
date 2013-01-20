@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -19,33 +23,26 @@ import java.util.List;
 import javolution.util.FastList;
 
 /**
- *
- * MagicEffectIcons
- * format   h (dhd)
- *
+ * MagicEffectIcons format h (dhd)
  * @version $Revision: 1.3.2.1.2.6 $ $Date: 2005/04/05 19:41:08 $
  */
-public class AbnormalStatusUpdate extends L2GameServerPacket
-{
+public class AbnormalStatusUpdate extends L2GameServerPacket {
 	private static final String _S__97_ABNORMALSTATUSUPDATE = "[S] 85 AbnormalStatusUpdate";
 	private List<Effect> _effects;
 	
-	private static class Effect
-	{
+	private static class Effect {
 		protected int _skillId;
 		protected int _level;
 		protected int _duration;
 		
-		public Effect(int pSkillId, int pLevel, int pDuration)
-		{
+		public Effect(int pSkillId, int pLevel, int pDuration) {
 			_skillId = pSkillId;
 			_level = pLevel;
 			_duration = pDuration;
 		}
 	}
 	
-	public AbnormalStatusUpdate()
-	{
+	public AbnormalStatusUpdate() {
 		_effects = new FastList<>();
 	}
 	
@@ -54,22 +51,19 @@ public class AbnormalStatusUpdate extends L2GameServerPacket
 	 * @param level
 	 * @param duration
 	 */
-	public void addEffect(int skillId, int level, int duration)
-	{
-		if (skillId == 2031 ||skillId == 2032 ||skillId == 2037 || skillId == 26025 || skillId == 26026)
+	public void addEffect(int skillId, int level, int duration) {
+		if (skillId == 2031 || skillId == 2032 || skillId == 2037 || skillId == 26025 || skillId == 26026)
 			return;
 		_effects.add(new Effect(skillId, level, duration));
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x85);
 		
 		writeH(_effects.size());
 		
-		for (Effect temp : _effects)
-		{
+		for (Effect temp : _effects) {
 			writeD(temp._skillId);
 			writeH(temp._level);
 			
@@ -81,8 +75,7 @@ public class AbnormalStatusUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__97_ABNORMALSTATUSUPDATE;
 	}
 }

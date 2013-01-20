@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.zone.type;
 
@@ -23,95 +27,75 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * A mother-trees zone Basic type zone for Hp, MP regen
  * @author durgus
  */
-public class L2MotherTreeZone extends L2ZoneType
-{
+public class L2MotherTreeZone extends L2ZoneType {
+	
 	private int _enterMsg;
 	private int _leaveMsg;
 	private int _mpRegen;
 	private int _hpRegen;
 	
-	public L2MotherTreeZone(int id)
-	{
+	public L2MotherTreeZone(int id) {
 		super(id);
 	}
 	
 	@Override
-	public void setParameter(String name, String value)
-	{
-		if (name.equals("enterMsgId"))
-		{
+	public void setParameter(String name, String value) {
+		if (name.equals("enterMsgId")) {
 			_enterMsg = Integer.parseInt(value);
-		}
-		else if (name.equals("leaveMsgId"))
-		{
+		} else if (name.equals("leaveMsgId")) {
 			_leaveMsg = Integer.parseInt(value);
-		}
-		else if (name.equals("MpRegenBonus"))
-		{
+		} else if (name.equals("MpRegenBonus")) {
 			_mpRegen = Integer.parseInt(value);
-		}
-		else if (name.equals("HpRegenBonus"))
-		{
+		} else if (name.equals("HpRegenBonus")) {
 			_hpRegen = Integer.parseInt(value);
-		}
-		else
-		{
+		} else {
 			super.setParameter(name, value);
 		}
 	}
 	
 	@Override
-	protected void onEnter(L2Character character)
-	{
-		if (character.isPlayer())
-		{
+	protected void onEnter(L2Character character) {
+		if (character.isPlayer()) {
 			L2PcInstance player = character.getActingPlayer();
 			character.setInsideZone(L2Character.ZONE_MOTHERTREE, true);
-			if (_enterMsg != 0)
-			{
+			if (_enterMsg != 0) {
 				player.sendPacket(SystemMessage.getSystemMessage(_enterMsg));
 			}
 		}
 	}
 	
 	@Override
-	protected void onExit(L2Character character)
-	{
-		if (character.isPlayer())
-		{
+	protected void onExit(L2Character character) {
+		if (character.isPlayer()) {
 			L2PcInstance player = character.getActingPlayer();
 			player.setInsideZone(L2Character.ZONE_MOTHERTREE, false);
-			if (_leaveMsg != 0)
-			{
+			if (_leaveMsg != 0) {
 				player.sendPacket(SystemMessage.getSystemMessage(_leaveMsg));
 			}
 		}
 	}
 	
 	@Override
-	public void onDieInside(L2Character character)
-	{
+	public void onDieInside(L2Character character) {
 		
 	}
 	
 	@Override
-	public void onReviveInside(L2Character character)
-	{
+	public void onReviveInside(L2Character character) {
 	}
 	
 	/**
 	 * @return the _mpRegen
 	 */
-	public int getMpRegenBonus()
-	{
+	public int getMpRegenBonus() {
 		return _mpRegen;
 	}
 	
 	/**
 	 * @return the _hpRegen
 	 */
-	public int getHpRegenBonus()
-	{
+	public int getHpRegenBonus() {
 		return _hpRegen;
 	}
+	
 }

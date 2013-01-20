@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.skills.l2skills;
 
@@ -34,102 +38,86 @@ public class L2SkillElemental extends L2Skill {
 		super(set);
 		
 		_seeds = new int[3];
-		_seeds[0] = set.getInteger("seed1",0);
-		_seeds[1] = set.getInteger("seed2",0);
-		_seeds[2] = set.getInteger("seed3",0);
+		_seeds[0] = set.getInteger("seed1", 0);
+		_seeds[1] = set.getInteger("seed2", 0);
+		_seeds[2] = set.getInteger("seed3", 0);
 		
-		if (set.getInteger("seed_any",0)==1)
+		if (set.getInteger("seed_any", 0) == 1) {
 			_seedAny = true;
-		else
+		} else {
 			_seedAny = false;
+		}
 	}
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Object[] targets) {
-		if (activeChar.isAlikeDead())
+		if (activeChar.isAlikeDead()) {
 			return;
+		}
 		
 		boolean ss = false;
 		boolean bss = false;
 		
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		
-		if (activeChar instanceof L2PcInstance)
-		{
-			if (weaponInst == null)
-			{
-				/* Move To MessageTable For L2JTW
-				activeChar.sendMessage("You must equip your weapon before casting a spell.");
-				*/
+		if (activeChar instanceof L2PcInstance) {
+			if (weaponInst == null) {
 				activeChar.sendMessage(131);
 				return;
 			}
 		}
 		
-		if (weaponInst != null)
-		{
-			if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-			{
+		if (weaponInst != null) {
+			if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 				bss = true;
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-			}
-			else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-			{
+			} else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 				ss = true;
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
 		// If there is no weapon equipped, check for an active summon.
-		else if (activeChar instanceof L2Summon)
-		{
-			L2Summon activeSummon = (L2Summon)activeChar;
+		else if (activeChar instanceof L2Summon) {
+			L2Summon activeSummon = (L2Summon) activeChar;
 			
-			if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-			{
+			if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 				bss = true;
 				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-			}
-			else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-			{
+			} else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 				ss = true;
 				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
 		
-		for (L2Character target: (L2Character[]) targets)
-		{
-			if (target.isAlikeDead())
+		for (L2Character target : (L2Character[]) targets) {
+			if (target.isAlikeDead()) {
 				continue;
+			}
 			
 			boolean charged = true;
-			if (!_seedAny){
-				for (int i=0;i<_seeds.length;i++){
-					if (_seeds[i]!=0){
-						L2Effect e = target.getFirstEffect(_seeds[i]);
-						if (e==null || !e.getInUse()){
+			if (!_seedAny) {
+				for (int _seed : _seeds) {
+					if (_seed != 0) {
+						L2Effect e = target.getFirstEffect(_seed);
+						if ((e == null) || !e.getInUse()) {
 							charged = false;
 							break;
 						}
 					}
 				}
-			}
-			else {
+			} else {
 				charged = false;
-				for (int i=0;i<_seeds.length;i++){
-					if (_seeds[i]!=0){
-						L2Effect e = target.getFirstEffect(_seeds[i]);
-						if (e!=null && e.getInUse()){
+				for (int _seed : _seeds) {
+					if (_seed != 0) {
+						L2Effect e = target.getFirstEffect(_seed);
+						if ((e != null) && e.getInUse()) {
 							charged = true;
 							break;
 						}
 					}
 				}
 			}
-			if (!charged)
-			{
-				/* Move To MessageTable For L2JTW
-				activeChar.sendMessage("Target is not charged by elements.");
-				*/
+			if (!charged) {
 				activeChar.sendMessage(132);
 				continue;
 			}
@@ -137,16 +125,13 @@ public class L2SkillElemental extends L2Skill {
 			boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, this));
 			byte shld = Formulas.calcShldUse(activeChar, target, this);
 			
-			int damage = (int)Formulas.calcMagicDam(
-					activeChar, target, this, shld, ss, bss, mcrit);
+			int damage = (int) Formulas.calcMagicDam(activeChar, target, this, shld, ss, bss, mcrit);
 			
-			if (damage > 0)
-			{
+			if (damage > 0) {
 				target.reduceCurrentHp(damage, activeChar, this);
 				
 				// Manage attack or cast break of the target (calculating rate, sending message...)
-				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
-				{
+				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage)) {
 					target.breakAttack();
 					target.breakCast();
 				}
@@ -160,4 +145,5 @@ public class L2SkillElemental extends L2Skill {
 			getEffects(activeChar, target, new Env(shld, ss, false, bss));
 		}
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -23,39 +27,33 @@ import com.l2jserver.gameserver.model.items.L2Henna;
 /**
  * @author Zoey76
  */
-public class HennaEquipList extends L2GameServerPacket
-{
+public class HennaEquipList extends L2GameServerPacket {
 	private static final String _S__EE_HENNAEQUIPLIST = "[S] EE HennaEquipList";
 	
 	private final L2PcInstance _player;
 	private final List<L2Henna> _hennaEquipList;
 	
-	public HennaEquipList(L2PcInstance player)
-	{
+	public HennaEquipList(L2PcInstance player) {
 		_player = player;
 		_hennaEquipList = HennaData.getInstance().getHennaList(player.getClassId());
 	}
 	
-	public HennaEquipList(L2PcInstance player, List<L2Henna> list)
-	{
+	public HennaEquipList(L2PcInstance player, List<L2Henna> list) {
 		_player = player;
 		_hennaEquipList = list;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0xEE);
 		writeQ(_player.getAdena()); // activeChar current amount of Adena
 		writeD(3); // available equip slot
 		writeD(_hennaEquipList.size());
 		
-		for (L2Henna henna : _hennaEquipList)
-		{
+		for (L2Henna henna : _hennaEquipList) {
 			// Player must have at least one dye in inventory
 			// to be able to see the Henna that can be applied with it.
-			if ((_player.getInventory().getItemByItemId(henna.getDyeItemId())) != null)
-			{
+			if ((_player.getInventory().getItemByItemId(henna.getDyeItemId())) != null) {
 				writeD(henna.getDyeId()); // dye Id
 				writeD(henna.getDyeItemId()); // item Id of the dye
 				writeQ(henna.getWearCount()); // amount of dyes required
@@ -66,8 +64,7 @@ public class HennaEquipList extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__EE_HENNAEQUIPLIST;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2013 L2J Server
+ * 
+ * This file is part of L2J Server.
+ * 
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.util;
 
@@ -29,75 +33,58 @@ import java.util.logging.Logger;
  * Simplifies loading of property files and adds logging if a non existing property is requested.<br>
  * @author Noctarius
  */
-public final class L2Properties extends Properties
-{
+public final class L2Properties extends Properties {
 	private static final long serialVersionUID = 1L;
 	
 	private static Logger _log = Logger.getLogger(L2Properties.class.getName());
 	
-	public L2Properties()
-	{
+	public L2Properties() {
 		
 	}
 	
-	public L2Properties(String name) throws IOException
-	{
+	public L2Properties(String name) throws IOException {
 		load(new FileInputStream(name));
 	}
 	
-	public L2Properties(File file) throws IOException
-	{
+	public L2Properties(File file) throws IOException {
 		load(new FileInputStream(file));
 	}
 	
-	public L2Properties(InputStream inStream) throws IOException
-	{
+	public L2Properties(InputStream inStream) throws IOException {
 		load(inStream);
 	}
 	
-	public L2Properties(Reader reader) throws IOException
-	{
+	public L2Properties(Reader reader) throws IOException {
 		load(reader);
 	}
 	
-	public void load(String name) throws IOException
-	{
+	public void load(String name) throws IOException {
 		load(new FileInputStream(name));
 	}
 	
-	public void load(File file) throws IOException
-	{
+	public void load(File file) throws IOException {
 		load(new FileInputStream(file));
 	}
 	
 	@Override
-	public void load(InputStream inStream) throws IOException
-	{
+	public void load(InputStream inStream) throws IOException {
 		InputStreamReader reader = null;
-		try
-		{
+		try {
 			reader = new InputStreamReader(inStream, Charset.defaultCharset());
 			super.load(reader);
-		}
-		finally
-		{
+		} finally {
 			inStream.close();
-			if (reader != null)
-			{
+			if (reader != null) {
 				reader.close();
 			}
 		}
 	}
 	
 	@Override
-	public void load(Reader reader) throws IOException
-	{
-		try
-		{
+	public void load(Reader reader) throws IOException {
+		try {
 			super.load(reader);
-		}
-		finally
-		{
+		} finally {
 			reader.close();
 		}
 	}
@@ -106,12 +93,10 @@ public final class L2Properties extends Properties
 	 * @see Properties#getProperty(String)
 	 */
 	@Override
-	public String getProperty(String key)
-	{
+	public String getProperty(String key) {
 		String property = super.getProperty(key);
 		
-		if (property == null)
-		{
+		if (property == null) {
 			_log.info("L2Properties: Missing property for key - " + key);
 			
 			return null;
@@ -124,12 +109,10 @@ public final class L2Properties extends Properties
 	 * @see Properties#getProperty(String,String)
 	 */
 	@Override
-	public String getProperty(String key, String defaultValue)
-	{
+	public String getProperty(String key, String defaultValue) {
 		String property = super.getProperty(key, defaultValue);
 		
-		if (property == null)
-		{
+		if (property == null) {
 			_log.warning("L2Properties: Missing defaultValue for key - " + key);
 			
 			return null;

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -32,24 +36,21 @@ import com.l2jserver.gameserver.model.base.ClassId;
  * This will be reworked Soon(tm).
  * @author Unknown, Forsaiken, Zoey76
  */
-public final class CharTemplateTable
-{
+public final class CharTemplateTable {
+	
 	private static final Logger _log = Logger.getLogger(CharTemplateTable.class.getName());
 	
 	private static final Map<ClassId, L2PcTemplate> _charTemplates = new HashMap<>();
 	
-	protected CharTemplateTable()
-	{
+	protected CharTemplateTable() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM char_templates, lvlupgain WHERE char_templates.classId = lvlupgain.classId ORDER BY char_templates.ClassId");
 			final ResultSet rset = statement.executeQuery();
 			StatsSet set;
 			int cId;
-			while (rset.next())
-			{
+			while (rset.next()) {
 				set = new StatsSet();
 				cId = rset.getInt("ClassId");
 				set.set("classId", cId);
@@ -101,34 +102,27 @@ public final class CharTemplateTable
 			rset.close();
 			statement.close();
 			_log.info("CharTemplateTable: Loaded " + _charTemplates.size() + " Character Templates.");
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			_log.log(Level.SEVERE, "Failed loading char templates", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public L2PcTemplate getTemplate(final ClassId classId)
-	{
+	public L2PcTemplate getTemplate(final ClassId classId) {
 		return _charTemplates.get(classId);
 	}
 	
-	public L2PcTemplate getTemplate(final int classId)
-	{
+	public L2PcTemplate getTemplate(final int classId) {
 		return _charTemplates.get(ClassId.getClassId(classId));
 	}
 	
-	public static final CharTemplateTable getInstance()
-	{
+	public static final CharTemplateTable getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final CharTemplateTable _instance = new CharTemplateTable();
 	}
+	
 }

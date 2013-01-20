@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.zone.type;
 
@@ -24,15 +28,14 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
  * another type of zone where your speed is changed
  * @author kerberos
  */
-public class L2SwampZone extends L2ZoneType
-{
+public class L2SwampZone extends L2ZoneType {
+	
 	private int _move_bonus;
 	
 	private int _castleId;
 	private Castle _castle;
 	
-	public L2SwampZone(int id)
-	{
+	public L2SwampZone(int id) {
 		super(id);
 		
 		// Setup default speed reduce (in %)
@@ -44,24 +47,18 @@ public class L2SwampZone extends L2ZoneType
 	}
 	
 	@Override
-	public void setParameter(String name, String value)
-	{
-		if (name.equals("move_bonus"))
-		{
+	public void setParameter(String name, String value) {
+		if (name.equals("move_bonus")) {
 			_move_bonus = Integer.parseInt(value);
-		}
-		else if (name.equals("castleId"))
-		{
+		} else if (name.equals("castleId")) {
 			_castleId = Integer.parseInt(value);
-		}
-		else
+		} else {
 			super.setParameter(name, value);
+		}
 	}
 	
-	private Castle getCastle()
-	{
-		if (_castleId > 0 && _castle == null)
-		{
+	private Castle getCastle() {
+		if ((_castleId > 0) && (_castle == null)) {
 			_castle = CastleManager.getInstance().getCastleById(_castleId);
 		}
 		
@@ -69,57 +66,47 @@ public class L2SwampZone extends L2ZoneType
 	}
 	
 	@Override
-	protected void onEnter(L2Character character)
-	{
-		if (getCastle() != null)
-		{
+	protected void onEnter(L2Character character) {
+		if (getCastle() != null) {
 			// castle zones active only during siege
-			if (!getCastle().getSiege().getIsInProgress() || !getCastle().getSiege().isTrapsActive())
-			{
+			if (!getCastle().getSiege().getIsInProgress() || !getCastle().getSiege().isTrapsActive()) {
 				return;
 			}
 			
 			// defenders not affected
 			final L2PcInstance player = character.getActingPlayer();
-			if (player != null && player.isInSiege() && player.getSiegeState() == 2)
-			{
+			if ((player != null) && player.isInSiege() && (player.getSiegeState() == 2)) {
 				return;
 			}
 		}
 		
 		character.setInsideZone(L2Character.ZONE_SWAMP, true);
-		if (character.isPlayer())
-		{
+		if (character.isPlayer()) {
 			character.getActingPlayer().broadcastUserInfo();
 		}
 	}
 	
 	@Override
-	protected void onExit(L2Character character)
-	{
+	protected void onExit(L2Character character) {
 		// don't broadcast info if not needed
-		if (character.isInsideZone(L2Character.ZONE_SWAMP))
-		{
+		if (character.isInsideZone(L2Character.ZONE_SWAMP)) {
 			character.setInsideZone(L2Character.ZONE_SWAMP, false);
-			if (character.isPlayer())
-			{
+			if (character.isPlayer()) {
 				character.getActingPlayer().broadcastUserInfo();
 			}
 		}
 	}
 	
-	public int getMoveBonus()
-	{
+	public int getMoveBonus() {
 		return _move_bonus;
 	}
 	
 	@Override
-	public void onDieInside(L2Character character)
-	{
+	public void onDieInside(L2Character character) {
 	}
 	
 	@Override
-	public void onReviveInside(L2Character character)
-	{
+	public void onReviveInside(L2Character character) {
 	}
+	
 }

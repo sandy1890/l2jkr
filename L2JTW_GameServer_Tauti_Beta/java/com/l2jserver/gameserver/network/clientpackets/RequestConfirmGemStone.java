@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -21,10 +25,9 @@ import com.l2jserver.gameserver.network.serverpackets.ExPutCommissionResultForVa
 
 /**
  * Format:(ch) dddd
- * @author  -Wooden-
+ * @author -Wooden-
  */
-public final class RequestConfirmGemStone extends AbstractRefinePacket
-{
+public final class RequestConfirmGemStone extends AbstractRefinePacket {
 	private static final String _C__D0_28_REQUESTCONFIRMGEMSTONE = "[C] D0:28 RequestConfirmGemStone";
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
@@ -32,18 +35,15 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 	private long _gemStoneCount;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_targetItemObjId = readD();
 		_refinerItemObjId = readD();
 		_gemstoneItemObjId = readD();
-		_gemStoneCount= readQ();
+		_gemStoneCount = readQ();
 	}
 	
 	@Override
-	protected
-	void runImpl()
-	{
+	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 			return;
@@ -58,8 +58,7 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 			return;
 		
 		// Make sure the item is a gemstone
-		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem))
-		{
+		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem)) {
 			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
@@ -69,8 +68,7 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 		if (ls == null)
 			return;
 		
-		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getItemGrade(), ls.getGrade()))
-		{
+		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getItemGrade(), ls.getGrade())) {
 			activeChar.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);
 			return;
 		}
@@ -79,8 +77,7 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_28_REQUESTCONFIRMGEMSTONE;
 	}
 }

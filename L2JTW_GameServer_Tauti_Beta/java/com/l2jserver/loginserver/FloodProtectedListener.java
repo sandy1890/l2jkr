@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver;
 
@@ -29,51 +33,40 @@ import com.l2jserver.Config;
 /**
  * @author -Wooden-
  */
-public abstract class FloodProtectedListener extends Thread
-{
+public abstract class FloodProtectedListener extends Thread {
 	private final Logger _log = Logger.getLogger(FloodProtectedListener.class.getName());
 	private final Map<String, ForeignConnection> _floodProtection = new FastMap<>();
 	private final String _listenIp;
 	private final int _port;
 	private ServerSocket _serverSocket;
 	
-	public FloodProtectedListener(String listenIp, int port) throws IOException
-	{
+	public FloodProtectedListener(String listenIp, int port) throws IOException {
 		_port = port;
 		_listenIp = listenIp;
-		if (_listenIp.equals("*"))
-		{
+		if (_listenIp.equals("*")) {
 			_serverSocket = new ServerSocket(_port);
-		}
-		else
-		{
+		} else {
 			_serverSocket = new ServerSocket(_port, 50, InetAddress.getByName(_listenIp));
 		}
 	}
 	
 	@Override
-	public void run()
-	{
+	public void run() {
 		Socket connection = null;
 		
-		while (true)
-		{
-			try
-			{
+		while (true) {
+			try {
 				connection = _serverSocket.accept();
-				if (Config.FLOOD_PROTECTION)
-				{
+				if (Config.FLOOD_PROTECTION) {
 					ForeignConnection fConnection = _floodProtection.get(connection.getInetAddress().getHostAddress());
-					if (fConnection != null)
-					{
+					if (fConnection != null) {
 						fConnection.connectionNumber += 1;
 						if (((fConnection.connectionNumber > Config.FAST_CONNECTION_LIMIT) && ((System.currentTimeMillis() - fConnection.lastConnection) < Config.NORMAL_CONNECTION_TIME)) || ((System.currentTimeMillis() - fConnection.lastConnection) < Config.FAST_CONNECTION_TIME) || (fConnection.connectionNumber > Config.MAX_CONNECTION_PER_IP))
 						{
 							fConnection.lastConnection = System.currentTimeMillis();
 							connection.close();
 							fConnection.connectionNumber -= 1;
-							if (!fConnection.isFlooding)
-							{
+							if (!fConnection.isFlooding) {
 								_log.warning("Potential Flood from " + connection.getInetAddress().getHostAddress());
 							}
 							fConnection.isFlooding = true;
@@ -85,36 +78,24 @@ public abstract class FloodProtectedListener extends Thread
 							_log.info(connection.getInetAddress().getHostAddress() + " is not considered as flooding anymore.");
 						}
 						fConnection.lastConnection = System.currentTimeMillis();
-					}
-					else
-					{
+					} else {
 						fConnection = new ForeignConnection(System.currentTimeMillis());
 						_floodProtection.put(connection.getInetAddress().getHostAddress(), fConnection);
 					}
 				}
 				addClient(connection);
-			}
-			catch (Exception e)
-			{
-				try
-				{
-					if (connection != null)
-					{
+			} catch (Exception e) {
+				try {
+					if (connection != null) {
 						connection.close();
 					}
+				} catch (Exception e2) {
 				}
-				catch (Exception e2)
-				{
-				}
-				if (isInterrupted())
-				{
+				if (isInterrupted()) {
 					// shutdown?
-					try
-					{
+					try {
 						_serverSocket.close();
-					}
-					catch (IOException io)
-					{
+					} catch (IOException io) {
 						_log.log(Level.INFO, "", io);
 					}
 					break;
@@ -123,8 +104,7 @@ public abstract class FloodProtectedListener extends Thread
 		}
 	}
 	
-	protected static class ForeignConnection
-	{
+	protected static class ForeignConnection {
 		public int connectionNumber;
 		public long lastConnection;
 		public boolean isFlooding = false;
@@ -132,8 +112,7 @@ public abstract class FloodProtectedListener extends Thread
 		/**
 		 * @param time
 		 */
-		public ForeignConnection(long time)
-		{
+		public ForeignConnection(long time) {
 			lastConnection = time;
 			connectionNumber = 1;
 		}
@@ -141,35 +120,25 @@ public abstract class FloodProtectedListener extends Thread
 	
 	public abstract void addClient(Socket s);
 	
-	public void removeFloodProtection(String ip)
-	{
-		if (!Config.FLOOD_PROTECTION)
-		{
+	public void removeFloodProtection(String ip) {
+		if (!Config.FLOOD_PROTECTION) {
 			return;
 		}
 		ForeignConnection fConnection = _floodProtection.get(ip);
-		if (fConnection != null)
-		{
+		if (fConnection != null) {
 			fConnection.connectionNumber -= 1;
-			if (fConnection.connectionNumber == 0)
-			{
+			if (fConnection.connectionNumber == 0) {
 				_floodProtection.remove(ip);
 			}
-		}
-		else
-		{
+		} else {
 			_log.warning("Removing a flood protection for a GameServer that was not in the connection map??? :" + ip);
 		}
 	}
 	
-	public void close()
-	{
-		try
-		{
+	public void close() {
+		try {
 			_serverSocket.close();
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}

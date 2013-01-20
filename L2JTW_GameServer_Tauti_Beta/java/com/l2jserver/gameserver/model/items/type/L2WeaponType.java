@@ -1,25 +1,29 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.items.type;
 
 /**
- * @author mkizub
- * <BR>Description of Weapon Type
+ * @author mkizub <BR>
+ *         Description of Weapon Type
  */
-public enum L2WeaponType implements L2ItemType
-{
+public enum L2WeaponType implements L2ItemType {
+	
 	SWORD("Sword"),
 	BLUNT("Blunt"),
 	DAGGER("Dagger"),
@@ -37,7 +41,7 @@ public enum L2WeaponType implements L2ItemType
 	FLAG("Flag"),
 	OWNTHING("Ownthing"),
 	DUALDAGGER("Dual Dagger"),
-	DUALBLUNT("Dual Blunt"), //rocknow-God
+	DUALBLUNT("Dual Blunt"), // rocknow-God
 	
 	// L2J CUSTOM, BACKWARD COMPATIBILITY
 	BIGBLUNT("Big Blunt"),
@@ -50,8 +54,7 @@ public enum L2WeaponType implements L2ItemType
 	 * Constructor of the L2WeaponType.
 	 * @param name : String designating the name of the WeaponType
 	 */
-	private L2WeaponType(String name)
-	{
+	private L2WeaponType(String name) {
 		_mask = 1 << ordinal();
 		_name = name;
 	}
@@ -61,8 +64,7 @@ public enum L2WeaponType implements L2ItemType
 	 * @return int : ID of the item
 	 */
 	@Override
-	public int mask()
-	{
+	public int mask() {
 		return _mask;
 	}
 	
@@ -71,8 +73,7 @@ public enum L2WeaponType implements L2ItemType
 	 * @return String
 	 */
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return _name;
 	}
 	

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.scripting.scriptengine.events;
 
@@ -21,8 +25,7 @@ import com.l2jserver.gameserver.scripting.scriptengine.events.impl.L2Event;
 /**
  * @author TheOne
  */
-public class HennaEvent implements L2Event
-{
+public class HennaEvent implements L2Event {
 	private L2PcInstance player;
 	private L2Henna henna;
 	private boolean add;
@@ -30,48 +33,42 @@ public class HennaEvent implements L2Event
 	/**
 	 * @return the player
 	 */
-	public L2PcInstance getPlayer()
-	{
+	public L2PcInstance getPlayer() {
 		return player;
 	}
 	
 	/**
 	 * @param p the player to set
 	 */
-	public void setPlayer(L2PcInstance p)
-	{
+	public void setPlayer(L2PcInstance p) {
 		player = p;
 	}
 	
 	/**
 	 * @return the henna
 	 */
-	public L2Henna getHenna()
-	{
+	public L2Henna getHenna() {
 		return henna;
 	}
 	
 	/**
 	 * @param h
 	 */
-	public void setHenna(L2Henna h)
-	{
+	public void setHenna(L2Henna h) {
 		henna = h;
 	}
 	
 	/**
 	 * @return the add
 	 */
-	public boolean isAdd()
-	{
+	public boolean isAdd() {
 		return add;
 	}
 	
 	/**
 	 * @param add the add to set
 	 */
-	public void setAdd(boolean add)
-	{
+	public void setAdd(boolean add) {
 		this.add = add;
 	}
 }

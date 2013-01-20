@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.taskmanager;
 
@@ -30,8 +34,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
 
-public class KnownListUpdateTaskManager
-{
+public class KnownListUpdateTaskManager {
 	protected static final Logger _log = Logger.getLogger(KnownListUpdateTaskManager.class.getName());
 	
 	private static final int FULL_UPDATE_TIMER = 100;
@@ -42,42 +45,32 @@ public class KnownListUpdateTaskManager
 	
 	protected static final FastSet<L2WorldRegion> _failedRegions = new FastSet<>(1);
 	
-	protected KnownListUpdateTaskManager()
-	{
+	protected KnownListUpdateTaskManager() {
 		ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new KnownListUpdate(), 1000, Config.KNOWNLIST_UPDATE_INTERVAL);
 	}
 	
-	private class KnownListUpdate implements Runnable
-	{
-		public KnownListUpdate()
-		{
+	private class KnownListUpdate implements Runnable {
+		public KnownListUpdate() {
 		}
 		
 		@Override
-		public void run()
-		{
-			try
-			{
+		public void run() {
+			try {
 				boolean failed;
-				for (L2WorldRegion regions[] : L2World.getInstance().getAllWorldRegions())
-				{
+				for (L2WorldRegion regions[] : L2World.getInstance().getAllWorldRegions()) {
 					for (L2WorldRegion r : regions) // go through all world regions
 					{
 						// avoid stopping update if something went wrong in updateRegion()
-						try
-						{
+						try {
 							failed = _failedRegions.contains(r); // failed on last pass
 							if (r.isActive()) // and check only if the region is active
 							{
 								updateRegion(r, ((_fullUpdateTimer == FULL_UPDATE_TIMER) || failed), updatePass);
 							}
-							if (failed)
-							{
+							if (failed) {
 								_failedRegions.remove(r); // if all ok, remove
 							}
-						}
-						catch (Exception e)
-						{
+						} catch (Exception e) {
 							_log.log(Level.WARNING, "KnownListUpdateTaskManager: updateRegion(" + _fullUpdateTimer + "," + updatePass + ") failed for region " + r.getName() + ". Full update scheduled. " + e.getMessage(), e);
 							_failedRegions.add(r);
 						}
@@ -85,24 +78,18 @@ public class KnownListUpdateTaskManager
 				}
 				updatePass = !updatePass;
 				
-				if (_fullUpdateTimer > 0)
-				{
+				if (_fullUpdateTimer > 0) {
 					_fullUpdateTimer--;
-				}
-				else
-				{
+				} else {
 					_fullUpdateTimer = FULL_UPDATE_TIMER;
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "", e);
 			}
 		}
 	}
 	
-	public void updateRegion(L2WorldRegion region, boolean fullUpdate, boolean forgetObjects)
-	{
+	public void updateRegion(L2WorldRegion region, boolean fullUpdate, boolean forgetObjects) {
 		// synchronized (syncObject)
 		{
 			Collection<L2Object> vObj = region.getVisibleObjects().values();
@@ -110,46 +97,35 @@ public class KnownListUpdateTaskManager
 			{
 				for (L2Object object : vObj) // and for all members in region
 				{
-					if ((object == null) || !object.isVisible())
-					{
+					if ((object == null) || !object.isVisible()) {
 						continue; // skip dying objects
 					}
 					
 					// Some mobs need faster knownlist update
 					final boolean aggro = (Config.GUARD_ATTACK_AGGRO_MOB && (object instanceof L2GuardInstance)) || ((object instanceof L2Attackable) && (((L2Attackable) object).getEnemyClan() != null));
 					
-					if (forgetObjects)
-					{
+					if (forgetObjects) {
 						object.getKnownList().forgetObjects(aggro || fullUpdate);
 						continue;
 					}
-					for (L2WorldRegion regi : region.getSurroundingRegions())
-					{
-						if ((object instanceof L2Playable) || (aggro && regi.isActive()) || fullUpdate)
-						{
+					for (L2WorldRegion regi : region.getSurroundingRegions()) {
+						if ((object instanceof L2Playable) || (aggro && regi.isActive()) || fullUpdate) {
 							Collection<L2Object> inrObj = regi.getVisibleObjects().values();
 							// synchronized (regi.getVisibleObjects())
 							{
-								for (L2Object _object : inrObj)
-								{
-									if (_object != object)
-									{
+								for (L2Object _object : inrObj) {
+									if (_object != object) {
 										object.getKnownList().addKnownObject(_object);
 									}
 								}
 							}
-						}
-						else if (object instanceof L2Character)
-						{
-							if (regi.isActive())
-							{
+						} else if (object instanceof L2Character) {
+							if (regi.isActive()) {
 								Collection<L2Playable> inrPls = regi.getVisiblePlayable().values();
 								// synchronized (regi.getVisiblePlayable())
 								{
-									for (L2Object _object : inrPls)
-									{
-										if (_object != object)
-										{
+									for (L2Object _object : inrPls) {
+										if (_object != object) {
 											object.getKnownList().addKnownObject(_object);
 										}
 									}
@@ -162,13 +138,11 @@ public class KnownListUpdateTaskManager
 		}
 	}
 	
-	public static KnownListUpdateTaskManager getInstance()
-	{
+	public static KnownListUpdateTaskManager getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final KnownListUpdateTaskManager _instance = new KnownListUpdateTaskManager();
 	}
 }

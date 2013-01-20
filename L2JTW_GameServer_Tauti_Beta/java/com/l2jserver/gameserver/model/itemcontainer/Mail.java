@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.itemcontainer;
 
@@ -26,51 +30,43 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance.ItemLocation;
 
 /**
- * 
  * @author DS
- *
  */
-public class Mail extends ItemContainer
-{
+public class Mail extends ItemContainer {
+	
 	private final int _ownerId;
 	private int _messageId;
 	
-	public Mail(int objectId, int messageId)
-	{
+	public Mail(int objectId, int messageId) {
 		_ownerId = objectId;
 		_messageId = messageId;
 	}
 	
 	@Override
-	public String getName()
-	{
+	public String getName() {
 		return "Mail";
 	}
 	
 	@Override
-	public L2PcInstance getOwner()
-	{
+	public L2PcInstance getOwner() {
 		return null;
 	}
 	
 	@Override
-	public ItemLocation getBaseLocation()
-	{
+	public ItemLocation getBaseLocation() {
 		return ItemLocation.MAIL;
 	}
 	
-	public int getMessageId()
-	{
+	public int getMessageId() {
 		return _messageId;
 	}
 	
-	public void setNewMessageId(int messageId)
-	{
+	public void setNewMessageId(int messageId) {
 		_messageId = messageId;
-		for (L2ItemInstance item : _items)
-		{
-			if (item == null)
+		for (L2ItemInstance item : _items) {
+			if (item == null) {
 				continue;
+			}
 			
 			item.setLocation(getBaseLocation(), messageId);
 		}
@@ -78,22 +74,21 @@ public class Mail extends ItemContainer
 		updateDatabase();
 	}
 	
-	public void returnToWh(ItemContainer wh)
-	{
-		for (L2ItemInstance item : _items)
-		{
-			if (item == null)
+	public void returnToWh(ItemContainer wh) {
+		for (L2ItemInstance item : _items) {
+			if (item == null) {
 				continue;
-			if (wh == null)
+			}
+			if (wh == null) {
 				item.setLocation(ItemLocation.WAREHOUSE);
-			else
+			} else {
 				transferItem("Expire", item.getObjectId(), item.getCount(), wh, null, null);
+			}
 		}
 	}
 	
 	@Override
-	protected void addItem(L2ItemInstance item)
-	{
+	protected void addItem(L2ItemInstance item) {
 		super.addItem(item);
 		item.setLocation(getBaseLocation(), _messageId);
 	}
@@ -102,23 +97,18 @@ public class Mail extends ItemContainer
 	 * Allow saving of the items without owner
 	 */
 	@Override
-	public void updateDatabase()
-	{
-		for (L2ItemInstance item : _items)
-		{
-			if (item != null)
-			{
+	public void updateDatabase() {
+		for (L2ItemInstance item : _items) {
+			if (item != null) {
 				item.updateDatabase(true);
 			}
 		}
 	}
 	
 	@Override
-	public void restore()
-	{
+	public void restore() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND loc=? AND loc_data=?");
 			statement.setInt(1, getOwnerId());
@@ -127,36 +117,33 @@ public class Mail extends ItemContainer
 			ResultSet inv = statement.executeQuery();
 			
 			L2ItemInstance item;
-			while (inv.next())
-			{
+			while (inv.next()) {
 				item = L2ItemInstance.restoreFromDb(getOwnerId(), inv);
-				if (item == null)
+				if (item == null) {
 					continue;
+				}
 				
 				L2World.getInstance().storeObject(item);
 				
 				// If stackable item is found just add to current quantity
-				if (item.isStackable() && getItemByItemId(item.getItemId()) != null)
+				if (item.isStackable() && (getItemByItemId(item.getItemId()) != null)) {
 					addItem("Restore", item, null, null);
-				else
+				} else {
 					addItem(item);
+				}
 			}
 			inv.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "could not restore container:", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
 	@Override
-	public int getOwnerId()
-	{
+	public int getOwnerId() {
 		return _ownerId;
 	}
+	
 }

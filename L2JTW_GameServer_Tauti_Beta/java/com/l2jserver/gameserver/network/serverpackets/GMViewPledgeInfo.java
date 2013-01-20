@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -19,25 +23,21 @@ import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * format   SdSS dddddddd d (Sddddd)
- *
+ * format SdSS dddddddd d (Sddddd)
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
-public class GMViewPledgeInfo extends L2GameServerPacket
-{
+public class GMViewPledgeInfo extends L2GameServerPacket {
 	private static final String _S__A9_GMVIEWPLEDGEINFO = "[S] 96 GMViewPledgeInfo";
 	private L2Clan _clan;
 	private L2PcInstance _activeChar;
 	
-	public GMViewPledgeInfo(L2Clan clan, L2PcInstance activeChar)
-	{
+	public GMViewPledgeInfo(L2Clan clan, L2PcInstance activeChar) {
 		_clan = clan;
 		_activeChar = activeChar;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x96);
 		writeS(_activeChar.getName());
 		writeD(_clan.getClanId());
@@ -53,19 +53,17 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		writeD(_clan.getReputationScore());
 		writeD(0);
 		writeD(0);
-		writeD(0); //rocknow-God
+		writeD(0); // rocknow-God
 		
-		writeD(_clan.getAllyId()); //c2
-		writeS(_clan.getAllyName()); //c2
-		writeD(_clan.getAllyCrestId()); //c2
-		writeD(_clan.isAtWar()? 1 : 0); //c3
+		writeD(_clan.getAllyId()); // c2
+		writeS(_clan.getAllyName()); // c2
+		writeD(_clan.getAllyCrestId()); // c2
+		writeD(_clan.isAtWar() ? 1 : 0); // c3
 		writeD(0); // T3 Unknown
 		writeD(_clan.getMembers().length);
 		
-		for (L2ClanMember member : _clan.getMembers())
-		{
-			if (member != null)
-			{
+		for (L2ClanMember member : _clan.getMembers()) {
+			if (member != null) {
 				writeS(member.getName());
 				writeD(member.getLevel());
 				writeD(member.getClassId());
@@ -78,8 +76,7 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__A9_GMVIEWPLEDGEINFO;
 	}
 	

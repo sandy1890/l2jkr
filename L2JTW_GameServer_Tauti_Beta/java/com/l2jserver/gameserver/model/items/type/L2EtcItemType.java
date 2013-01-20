@@ -1,25 +1,28 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.items.type;
 
 /**
  * Description of EtcItem Type
  */
-
-public enum L2EtcItemType implements L2ItemType
-{
+public enum L2EtcItemType implements L2ItemType {
+	
 	NONE(1, "none"),
 	ARROW(2, "arrow"),
 	POTION(3, "potion"),
@@ -52,7 +55,7 @@ public enum L2EtcItemType implements L2ItemType
 	ANCIENT_CRYSTAL_ENCHANT_AM(30, "ancient_crystal_enchant_am"),
 	RUNE_SELECT(31, "rune_select"),
 	RUNE(32, "rune"),
-
+	
 	// L2J CUSTOM, BACKWARD COMPATIBILITY
 	SHOT(33, "Shot"),
 	HERB(34, "Herb");
@@ -65,8 +68,7 @@ public enum L2EtcItemType implements L2ItemType
 	 * @param id : int designating the ID of the EtcItemType
 	 * @param name : String designating the name of the EtcItemType
 	 */
-	L2EtcItemType(int id, String name)
-	{
+	L2EtcItemType(int id, String name) {
 		_id = id;
 		_name = name;
 	}
@@ -76,8 +78,7 @@ public enum L2EtcItemType implements L2ItemType
 	 * @return int : ID of the item
 	 */
 	@Override
-	public int mask()
-	{
+	public int mask() {
 		return 0;
 	}
 	
@@ -86,8 +87,8 @@ public enum L2EtcItemType implements L2ItemType
 	 * @return String
 	 */
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return _name;
 	}
+	
 }

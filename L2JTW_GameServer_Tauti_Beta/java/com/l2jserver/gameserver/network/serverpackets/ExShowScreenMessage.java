@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -22,10 +26,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * @author Kerberos
- *
  */
-public class ExShowScreenMessage extends L2GameServerPacket
-{
+public class ExShowScreenMessage extends L2GameServerPacket {
 	private int _type;
 	private int _sysMessageId;
 	private int _unk1;
@@ -40,8 +42,7 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	private int _npcString;
 	private List<String> _parameters;
 	
-	public ExShowScreenMessage (String text, int time)
-	{
+	public ExShowScreenMessage(String text, int time) {
 		_type = 1;
 		_sysMessageId = -1;
 		_unk1 = 0;
@@ -56,7 +57,7 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_npcString = -1;
 	}
 	
-	public ExShowScreenMessage (NpcStringId npcString, int position, int time) // For npcstring
+	public ExShowScreenMessage(NpcStringId npcString, int position, int time) // For npcstring
 	{
 		_type = 2;
 		_sysMessageId = -1;
@@ -72,7 +73,7 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_npcString = npcString.getId();
 	}
 	
-	public ExShowScreenMessage (SystemMessageId systemMsg, int position, int time) // For SystemMessage
+	public ExShowScreenMessage(SystemMessageId systemMsg, int position, int time) // For SystemMessage
 	{
 		_type = 2;
 		_sysMessageId = systemMsg.getId();
@@ -88,8 +89,7 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_npcString = -1;
 	}
 	
-	public ExShowScreenMessage (int type, int messageId, int position, int unk1, int size, int unk2, int unk3,boolean showEffect, int time,boolean fade, String text, NpcStringId npcString)
-	{
+	public ExShowScreenMessage(int type, int messageId, int position, int unk1, int size, int unk2, int unk3, boolean showEffect, int time, boolean fade, String text, NpcStringId npcString) {
 		_type = type;
 		_sysMessageId = messageId;
 		_unk1 = unk1;
@@ -108,22 +108,19 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	 * String parameter for argument S1,S2,.. in npcstring-e.dat
 	 * @param text
 	 */
-	public void addStringParameter(String text)
-	{
+	public void addStringParameter(String text) {
 		if (_parameters == null)
 			_parameters = new ArrayList<>();
 		_parameters.add(text);
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return "[S]FE:39 ExShowScreenMessage";
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x39);
 		writeD(_type); // 0 - system messages, 1 - your defined text, 2 - npcstring
@@ -139,14 +136,11 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		writeD(_npcString); // npcString
 		if (_npcString == -1)
 			writeS(_text); // your text (_type must be 1, otherwise no effect)
-		else
-		{
-			if (_parameters != null)
-			{
+		else {
+			if (_parameters != null) {
 				for (String s : _parameters)
 					writeS(s);
 			}
 		}
 	}
 }
-	

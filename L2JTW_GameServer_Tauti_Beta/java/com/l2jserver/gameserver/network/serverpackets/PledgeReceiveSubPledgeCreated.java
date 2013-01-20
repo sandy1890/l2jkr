@@ -1,29 +1,30 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Clan.SubPledge;
 
-
 /**
- *
- * @author  -Wooden-
+ * @author -Wooden-
  */
-public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
-{
+public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket {
 	private static final String _S__FE_3F_PLEDGERECEIVESUBPLEDGECREATED = "[S] FE:40 PledgeReceiveSubPledgeCreated";
 	private SubPledge _subPledge;
 	private L2Clan _clan;
@@ -32,8 +33,7 @@ public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 	 * @param subPledge
 	 * @param clan
 	 */
-	public PledgeReceiveSubPledgeCreated(SubPledge subPledge, L2Clan clan)
-	{
+	public PledgeReceiveSubPledgeCreated(SubPledge subPledge, L2Clan clan) {
 		_subPledge = subPledge;
 		_clan = clan;
 	}
@@ -42,8 +42,7 @@ public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
 	 */
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x40);
 		
@@ -53,17 +52,14 @@ public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 		writeS(getLeaderName());
 	}
 	
-	private String getLeaderName()
-	{
+	private String getLeaderName() {
 		int LeaderId = _subPledge.getLeaderId();
 		if (_subPledge.getId() == L2Clan.SUBUNIT_ACADEMY || LeaderId == 0)
 			return "";
-		else if (_clan.getClanMember(LeaderId) == null)
-		{
-			_log.warning("SubPledgeLeader: "+ LeaderId + " is missing from clan: "+ _clan.getName()+"["+_clan.getClanId()+"]");
+		else if (_clan.getClanMember(LeaderId) == null) {
+			_log.warning("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getClanId() + "]");
 			return "";
-		}
-		else
+		} else
 			return _clan.getClanMember(LeaderId).getName();
 	}
 	
@@ -71,8 +67,7 @@ public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
 	 */
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FE_3F_PLEDGERECEIVESUBPLEDGECREATED;
 	}
 	

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -21,45 +25,35 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author Zoey76
  */
-public final class RequestHennaRemove extends L2GameClientPacket
-{
+public final class RequestHennaRemove extends L2GameClientPacket {
 	private static final String _C__72_REQUESTHENNAREMOVE = "[C] 72 RequestHennaRemove";
 	private int _symbolId;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_symbolId = readD();
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final L2PcInstance activeChar = getActiveChar();
-		if (activeChar == null)
-		{
+		if (activeChar == null) {
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("HennaRemove"))
-		{
+		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("HennaRemove")) {
 			sendActionFailed();
 			return;
 		}
 		
 		L2Henna henna;
 		boolean found = false;
-		for (int i = 1; i <= 3; i++)
-		{
+		for (int i = 1; i <= 3; i++) {
 			henna = activeChar.getHenna(i);
-			if ((henna != null) && (henna.getDyeId() == _symbolId))
-			{
-				if (activeChar.getAdena() >= henna.getCancelFee())
-				{
+			if ((henna != null) && (henna.getDyeId() == _symbolId)) {
+				if (activeChar.getAdena() >= henna.getCancelFee()) {
 					activeChar.removeHenna(i);
-				}
-				else
-				{
+				} else {
 					activeChar.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
 					sendActionFailed();
 				}
@@ -68,16 +62,14 @@ public final class RequestHennaRemove extends L2GameClientPacket
 			}
 		}
 		// TODO: Test.
-		if (!found)
-		{
+		if (!found) {
 			_log.warning(getClass().getSimpleName() + ": Player " + activeChar + " requested Henna Draw remove without any henna.");
 			sendActionFailed();
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__72_REQUESTHENNAREMOVE;
 	}
 }

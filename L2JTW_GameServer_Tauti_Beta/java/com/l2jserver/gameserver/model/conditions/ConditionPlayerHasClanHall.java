@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.conditions;
 
@@ -23,16 +27,15 @@ import com.l2jserver.gameserver.model.stats.Env;
  * The Class ConditionPlayerHasClanHall.
  * @author MrPoke
  */
-public final class ConditionPlayerHasClanHall extends Condition
-{
+public final class ConditionPlayerHasClanHall extends Condition {
+	
 	private final ArrayList<Integer> _clanHall;
 	
 	/**
 	 * Instantiates a new condition player has clan hall.
 	 * @param clanHall the clan hall
 	 */
-	public ConditionPlayerHasClanHall(ArrayList<Integer> clanHall)
-	{
+	public ConditionPlayerHasClanHall(ArrayList<Integer> clanHall) {
 		_clanHall = clanHall;
 	}
 	
@@ -43,24 +46,21 @@ public final class ConditionPlayerHasClanHall extends Condition
 	 * @see com.l2jserver.gameserver.model.conditions.Condition#testImpl(com.l2jserver.gameserver.model.stats.Env)
 	 */
 	@Override
-	public boolean testImpl(Env env)
-	{
-		if (env.getPlayer() == null)
-		{
+	public boolean testImpl(Env env) {
+		if (env.getPlayer() == null) {
 			return false;
 		}
 		
 		final L2Clan clan = env.getPlayer().getClan();
-		if (clan == null)
-		{
+		if (clan == null) {
 			return ((_clanHall.size() == 1) && (_clanHall.get(0) == 0));
 		}
 		
 		// All Clan Hall
-		if ((_clanHall.size() == 1) && (_clanHall.get(0) == -1))
-		{
+		if ((_clanHall.size() == 1) && (_clanHall.get(0) == -1)) {
 			return clan.getHideoutId() > 0;
 		}
 		return _clanHall.contains(clan.getHideoutId());
 	}
+	
 }

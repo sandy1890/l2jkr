@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.communityserver.readpackets;
 
@@ -33,30 +37,26 @@ import com.l2jserver.gameserver.network.communityserver.writepackets.GameServerA
 import com.l2jserver.util.Rnd;
 
 /**
- * @authors  Forsaiken, Gigiikun
+ * @authors Forsaiken, Gigiikun
  */
-public final class InitCS extends BaseReadPacket
-{
+public final class InitCS extends BaseReadPacket {
 	protected static final Logger _log = Logger.getLogger(InitCS.class.getName());
 	private final CommunityServerThread _cst;
 	
-	public InitCS(final byte[] data, final CommunityServerThread cst)
-	{
+	public InitCS(final byte[] data, final CommunityServerThread cst) {
 		super(data);
 		_cst = cst;
 	}
 	
 	@Override
-	public final void run()
-	{
+	public final void run() {
 		final int length = super.readD();
 		final byte[] key = super.readB(length);
 		
-		try
-		{
+		try {
 			final KeyFactory kfac = KeyFactory.getInstance("RSA");
 			final RSAPublicKeySpec kspec1 = new RSAPublicKeySpec(new BigInteger(key), RSAKeyGenParameterSpec.F4);
-			final RSAPublicKey publicKey = (RSAPublicKey)kfac.generatePublic(kspec1);
+			final RSAPublicKey publicKey = (RSAPublicKey) kfac.generatePublic(kspec1);
 			
 			final byte[] privateKey = new byte[40];
 			Rnd.nextBytes(privateKey);
@@ -69,9 +69,7 @@ public final class InitCS extends BaseReadPacket
 			_cst.setCrypt(new NewCrypt(privateKey));
 			_cst.sendPacket(new GameServerAuth(), false);
 			
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "", e);
 		}
 	}

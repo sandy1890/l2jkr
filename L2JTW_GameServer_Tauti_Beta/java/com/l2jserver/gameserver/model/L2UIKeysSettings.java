@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -31,11 +35,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.ActionKey;
 
 /**
- *
- * @author  mrTJO
+ * @author mrTJO
  */
-public class L2UIKeysSettings
-{
+public class L2UIKeysSettings {
+	
 	protected static final Logger _log = Logger.getLogger(L2UIKeysSettings.class.getName());
 	
 	private final L2PcInstance _player;
@@ -45,43 +48,36 @@ public class L2UIKeysSettings
 	
 	boolean _saved = true;
 	
-	public L2UIKeysSettings(L2PcInstance player)
-	{
+	public L2UIKeysSettings(L2PcInstance player) {
 		_player = player;
 		loadFromDB();
 	}
 	
-	public void storeAll(Map<Integer, List<Integer>> catMap, Map<Integer, List<ActionKey>> keyMap)
-	{
+	public void storeAll(Map<Integer, List<Integer>> catMap, Map<Integer, List<ActionKey>> keyMap) {
 		_saved = false;
 		_storedCategories = catMap;
 		_storedKeys = keyMap;
 	}
 	
-	public void storeCategories(Map<Integer, List<Integer>> catMap)
-	{
+	public void storeCategories(Map<Integer, List<Integer>> catMap) {
 		_saved = false;
 		_storedCategories = catMap;
 	}
 	
-	public Map<Integer, List<Integer>> getCategories()
-	{
+	public Map<Integer, List<Integer>> getCategories() {
 		return _storedCategories;
 	}
 	
-	public void storeKeys(Map<Integer, List<ActionKey>> keyMap)
-	{
+	public void storeKeys(Map<Integer, List<ActionKey>> keyMap) {
 		_saved = false;
 		_storedKeys = keyMap;
 	}
 	
-	public Map<Integer, List<ActionKey>> getKeys()
-	{
+	public Map<Integer, List<ActionKey>> getKeys() {
 		return _storedKeys;
 	}
 	
-	public void loadFromDB()
-	{
+	public void loadFromDB() {
 		getCatsFromDB();
 		getKeysFromDB();
 	}
@@ -89,20 +85,18 @@ public class L2UIKeysSettings
 	/**
 	 * Save Categories and Mapped Keys into GameServer DataBase
 	 */
-	public void saveInDB()
-	{
+	public void saveInDB() {
 		String query;
 		int playerId = _player.getObjectId();
 		
-		if (_saved)
+		if (_saved) {
 			return;
+		}
 		
 		query = "REPLACE INTO character_ui_categories (`charId`, `catId`, `order`, `cmdId`) VALUES ";
-		for (int category : _storedCategories.keySet())
-		{
+		for (int category : _storedCategories.keySet()) {
 			int order = 0;
-			for (int key : _storedCategories.get(category))
-			{
+			for (int key : _storedCategories.get(category)) {
 				query += "(" + playerId + ", " + category + ", " + (order++) + ", " + key + "),";
 			}
 		}
@@ -111,105 +105,89 @@ public class L2UIKeysSettings
 		Connection con = null;
 		PreparedStatement statement;
 		
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			
 			statement = con.prepareStatement(query);
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: saveInDB(): " + e.getMessage(), e);
 		}
 		
 		query = "REPLACE INTO character_ui_actions (`charId`, `cat`, `order`, `cmd`, `key`, `tgKey1`, `tgKey2`, `show`) VALUES";
-		for (List<ActionKey> keyLst : _storedKeys.values())
-		{
+		for (List<ActionKey> keyLst : _storedKeys.values()) {
 			int order = 0;
-			for (ActionKey key : keyLst)
-			{
+			for (ActionKey key : keyLst) {
 				query += key.getSqlSaveString(playerId, order++) + ",";
 			}
 		}
 		query = query.substring(0, query.length() - 1) + ";";
 		
-		try
-		{
-			if (con == null)
+		try {
+			if (con == null) {
 				con = L2DatabaseFactory.getInstance().getConnection();
+			}
 			
 			statement = con.prepareStatement(query);
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: saveInDB(): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		_saved = true;
 	}
 	
-	public void getCatsFromDB()
-	{
+	public void getCatsFromDB() {
 		
-		if (_storedCategories != null)
+		if (_storedCategories != null) {
 			return;
+		}
 		
 		_storedCategories = new FastMap<>();
 		
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stmt = con.prepareStatement("SELECT * FROM character_ui_categories WHERE `charId` = ? ORDER BY `catId`, `order`");
 			stmt.setInt(1, _player.getObjectId());
 			ResultSet rs = stmt.executeQuery();
 			
-			while (rs.next())
-			{
+			while (rs.next()) {
 				int cat = rs.getInt("catId");
 				int cmd = rs.getInt("cmdId");
 				insertCategory(cat, cmd);
 			}
 			stmt.close();
 			rs.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: getCatsFromDB(): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		
-		if (_storedCategories.size() < 1)
+		if (_storedCategories.size() < 1) {
 			_storedCategories = UITable.getInstance().getCategories();
+		}
 	}
 	
-	public void getKeysFromDB()
-	{
-		if (_storedKeys != null)
+	public void getKeysFromDB() {
+		if (_storedKeys != null) {
 			return;
+		}
 		
 		_storedKeys = new FastMap<>();
 		
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stmt = con.prepareStatement("SELECT * FROM character_ui_actions WHERE `charId` = ? ORDER BY `cat`, `order`");
 			stmt.setInt(1, _player.getObjectId());
 			ResultSet rs = stmt.executeQuery();
 			
-			while (rs.next())
-			{
+			while (rs.next()) {
 				int cat = rs.getInt("cat");
 				int cmd = rs.getInt("cmd");
 				int key = rs.getInt("key");
@@ -220,47 +198,40 @@ public class L2UIKeysSettings
 			}
 			stmt.close();
 			rs.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: getKeysFromDB(): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		
-		if (_storedKeys.size() < 1)
+		if (_storedKeys.size() < 1) {
 			_storedKeys = UITable.getInstance().getKeys();
+		}
 	}
 	
-	public void insertCategory(int cat, int cmd)
-	{
-		if (_storedCategories.containsKey(cat))
+	public void insertCategory(int cat, int cmd) {
+		if (_storedCategories.containsKey(cat)) {
 			_storedCategories.get(cat).add(cmd);
-		else
-		{
+		} else {
 			List<Integer> tmp = new FastList<>();
 			tmp.add(cmd);
 			_storedCategories.put(cat, tmp);
 		}
 	}
 	
-	public void insertKey(int cat, int cmdId, int key, int tgKey1, int tgKey2, int show)
-	{
+	public void insertKey(int cat, int cmdId, int key, int tgKey1, int tgKey2, int show) {
 		ActionKey tmk = new ActionKey(cat, cmdId, key, tgKey1, tgKey2, show);
-		if (_storedKeys.containsKey(cat))
+		if (_storedKeys.containsKey(cat)) {
 			_storedKeys.get(cat).add(tmk);
-		else
-		{
+		} else {
 			List<ActionKey> tmp = new FastList<>();
 			tmp.add(tmk);
 			_storedKeys.put(cat, tmp);
 		}
 	}
 	
-	public boolean isSaved()
-	{
+	public boolean isSaved() {
 		return _saved;
 	}
+	
 }

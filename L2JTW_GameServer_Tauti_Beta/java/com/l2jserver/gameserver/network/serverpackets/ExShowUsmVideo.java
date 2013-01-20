@@ -1,11 +1,27 @@
+/*
+ * Copyright (C) 2004-2013 L2J Server
+ * 
+ * This file is part of L2J Server.
+ * 
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.l2jserver.gameserver.network.serverpackets;
 
 /**
- * 
  * @author mrTJO
  */
-public class ExShowUsmVideo extends L2GameServerPacket
-{
+public class ExShowUsmVideo extends L2GameServerPacket {
 	
 	private static final String _S__FE_10D_EXSHOWUSM = "[S] FE:10D ExShowUsm";
 	int _usmVideo;
@@ -31,22 +47,19 @@ public class ExShowUsmVideo extends L2GameServerPacket
 	public static int AWAKE_7 = 0x91;
 	public static int AWAKE_8 = 0x92;
 	
-	public ExShowUsmVideo(int usmVideo)
-	{
+	public ExShowUsmVideo(int usmVideo) {
 		_usmVideo = usmVideo;
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xFE);
 		writeH(0x10D);
 		writeD(_usmVideo);
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FE_10D_EXSHOWUSM;
 	}
 }

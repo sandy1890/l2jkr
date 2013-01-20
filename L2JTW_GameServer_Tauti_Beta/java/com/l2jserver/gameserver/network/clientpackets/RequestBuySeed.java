@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -33,19 +37,10 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Format: cdd[dd]
- * c    // id (0xC4)
- *
- * d    // manor id
- * d    // seeds to buy
- * [
- * d    // seed id
- * q    // count
- * ]
+ * Format: cdd[dd] c // id (0xC4) d // manor id d // seeds to buy [ d // seed id q // count ]
  * @author l3x
  */
-public class RequestBuySeed extends L2GameClientPacket
-{
+public class RequestBuySeed extends L2GameClientPacket {
 	private static final String _C__C5_REQUESTBUYSEED = "[C] C5 RequestBuySeed";
 	
 	private static final int BATCH_LENGTH = 12; // length of the one item
@@ -54,25 +49,19 @@ public class RequestBuySeed extends L2GameClientPacket
 	private Seed[] _seeds = null;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_manorId = readD();
 		
 		int count = readD();
-		if (count <= 0
-				|| count > Config.MAX_ITEM_IN_PACKET
-				|| count * BATCH_LENGTH != _buf.remaining())
-		{
+		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
 			return;
 		}
 		
 		_seeds = new Seed[count];
-		for (int i = 0; i < count; i++)
-		{
+		for (int i = 0; i < count; i++) {
 			int itemId = readD();
 			long cnt = readQ();
-			if (cnt < 1)
-			{
+			if (cnt < 1) {
 				_seeds = null;
 				return;
 			}
@@ -81,8 +70,7 @@ public class RequestBuySeed extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 			return;
@@ -90,8 +78,7 @@ public class RequestBuySeed extends L2GameClientPacket
 		if (!getClient().getFloodProtectors().getManor().tryPerformAction("BuySeed"))
 			return;
 		
-		if (_seeds == null)
-		{
+		if (_seeds == null) {
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -113,20 +100,14 @@ public class RequestBuySeed extends L2GameClientPacket
 		int slots = 0;
 		int totalWeight = 0;
 		
-		for (Seed i : _seeds)
-		{
+		for (Seed i : _seeds) {
 			if (!i.setProduction(castle))
 				return;
 			
 			totalPrice += i.getPrice();
 			
-			if (totalPrice > MAX_ADENA)
-			{
-				Util.handleIllegalPlayerAction(player, "Warning!! Character "
-						+ player.getName() + " of account "
-						+ player.getAccountName() + " tried to purchase over "
-						+ MAX_ADENA + " adena worth of goods.",
-						Config.DEFAULT_PUNISH);
+			if (totalPrice > MAX_ADENA) {
+				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
@@ -138,31 +119,25 @@ public class RequestBuySeed extends L2GameClientPacket
 				slots++;
 		}
 		
-		if (!player.getInventory().validateWeight(totalWeight))
-		{
+		if (!player.getInventory().validateWeight(totalWeight)) {
 			player.sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
 			return;
 		}
 		
-		if (!player.getInventory().validateCapacity(slots))
-		{
+		if (!player.getInventory().validateCapacity(slots)) {
 			player.sendPacket(SystemMessageId.SLOTS_FULL);
 			return;
 		}
 		
-		if (totalPrice < 0 || player.getAdena() < totalPrice)
-		{
+		if (totalPrice < 0 || player.getAdena() < totalPrice) {
 			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
 			return;
 		}
 		
-		
 		// Proceed the purchase
-		for (Seed i : _seeds)
-		{
+		for (Seed i : _seeds) {
 			// take adena and check seed amount once again
-			if (!player.reduceAdena("Buy", i.getPrice(), player, false) || !i.updateProduction(castle))
-			{
+			if (!player.reduceAdena("Buy", i.getPrice(), player, false) || !i.updateProduction(castle)) {
 				// failed buy, reduce total price
 				totalPrice -= i.getPrice();
 				continue;
@@ -173,8 +148,7 @@ public class RequestBuySeed extends L2GameClientPacket
 		}
 		
 		// Adding to treasury for Manor Castle
-		if (totalPrice > 0)
-		{
+		if (totalPrice > 0) {
 			castle.addToTreasuryNoTax(totalPrice);
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED_ADENA);
 			sm.addItemNumber(totalPrice);
@@ -182,35 +156,29 @@ public class RequestBuySeed extends L2GameClientPacket
 		}
 	}
 	
-	private static class Seed
-	{
+	private static class Seed {
 		private final int _seedId;
 		private final long _count;
 		SeedProduction _seed;
 		
-		public Seed(int id, long num)
-		{
+		public Seed(int id, long num) {
 			_seedId = id;
 			_count = num;
 		}
 		
-		public int getSeedId()
-		{
+		public int getSeedId() {
 			return _seedId;
 		}
 		
-		public long getCount()
-		{
+		public long getCount() {
 			return _count;
 		}
 		
-		public long getPrice()
-		{
+		public long getPrice() {
 			return _seed.getPrice() * _count;
 		}
 		
-		public boolean setProduction(Castle c)
-		{
+		public boolean setProduction(Castle c) {
 			_seed = c.getSeed(_seedId, CastleManorManager.PERIOD_CURRENT);
 			// invalid price - seed disabled
 			if (_seed.getPrice() <= 0)
@@ -225,10 +193,8 @@ public class RequestBuySeed extends L2GameClientPacket
 			return true;
 		}
 		
-		public boolean updateProduction(Castle c)
-		{
-			synchronized(_seed)
-			{
+		public boolean updateProduction(Castle c) {
+			synchronized (_seed) {
 				long amount = _seed.getCanProduce();
 				if (_count > amount)
 					return false; // not enough seeds
@@ -242,8 +208,7 @@ public class RequestBuySeed extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__C5_REQUESTBUYSEED;
 	}
 }

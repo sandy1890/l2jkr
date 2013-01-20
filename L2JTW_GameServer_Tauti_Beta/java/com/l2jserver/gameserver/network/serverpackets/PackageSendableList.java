@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -19,36 +23,29 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 /**
  * @author -Wooden-
- * @author UnAfraid
- * Thanks mrTJO
+ * @author UnAfraid Thanks mrTJO
  */
-public class PackageSendableList extends L2GameServerPacket
-{
+public class PackageSendableList extends L2GameServerPacket {
 	private static final String _S__D2_PACKAGESENDABLELIST = "[S] D2 PackageSendableList";
 	private final L2ItemInstance[] _items;
 	private final int _playerObjId;
 	
-	public PackageSendableList(L2ItemInstance[] items, int playerObjId)
-	{
+	public PackageSendableList(L2ItemInstance[] items, int playerObjId) {
 		_items = items;
 		_playerObjId = playerObjId;
 	}
 	
-
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 			return;
-		
 		
 		writeC(0xD2);
 		writeD(_playerObjId);
 		writeQ(activeChar.getAdena());
 		writeD(_items.length);
-		for (L2ItemInstance item : _items)
-		{
+		for (L2ItemInstance item : _items) {
 			writeD(item.getObjectId()); // This is not the real object id of the item!
 			writeD(item.getDisplayId());
 			writeD(item.getLocationSlot());
@@ -65,25 +62,23 @@ public class PackageSendableList extends L2GameServerPacket
 				writeD(0x00);
 			writeD(item.getMana());
 			writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999);
-			writeH(0x01); //rocknow-God
+			writeH(0x01); // rocknow-God
 			writeH(item.getAttackElementType());
 			writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
-			{
+			for (byte i = 0; i < 6; i++) {
 				writeH(item.getElementDefAttr(i));
 			}
 			// Enchant Effects
 			writeH(0x00);
 			writeH(0x00);
 			writeH(0x00);
-			writeD(0x00); //rocknow-God-Weapon Appearance
+			writeD(0x00); // rocknow-God-Weapon Appearance
 			writeD(item.getObjectId()); // object id THE REAL ONE
 		}
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__D2_PACKAGESENDABLELIST;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.gsregistering;
 
@@ -23,12 +27,10 @@ import java.util.ResourceBundle;
 
 import com.l2jserver.loginserver.GameServerTable;
 
-public class GameServerRegister extends BaseGameServerRegister
-{
+public class GameServerRegister extends BaseGameServerRegister {
 	private LineNumberReader _in;
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		// Backwards compatibility, redirect to the new one
 		BaseGameServerRegister.main(args);
 	}
@@ -36,27 +38,23 @@ public class GameServerRegister extends BaseGameServerRegister
 	/**
 	 * @param bundle
 	 */
-	public GameServerRegister(ResourceBundle bundle)
-	{
+	public GameServerRegister(ResourceBundle bundle) {
 		super(bundle);
 		load();
 		
 		int size = GameServerTable.getInstance().getServerNames().size();
-		if (size == 0)
-		{
+		if (size == 0) {
 			System.out.println(getBundle().getString("noServerNames"));
 			System.exit(1);
 		}
 	}
 	
-	public void consoleUI() throws IOException
-	{
+	public void consoleUI() throws IOException {
 		_in = new LineNumberReader(new InputStreamReader(System.in));
 		boolean choiceOk = false;
 		String choice;
 		
-		while (true)
-		{
+		while (true) {
 			hr();
 			System.out.println("GSRegister");
 			System.out.println('\n');
@@ -66,40 +64,35 @@ public class GameServerRegister extends BaseGameServerRegister
 			System.out.println("4 - " + getBundle().getString("cmdMenuRemoveAll"));
 			System.out.println("5 - " + getBundle().getString("cmdMenuExit"));
 			
-			do
-			{
+			do {
 				System.out.print(getBundle().getString("yourChoice") + ' ');
 				choice = _in.readLine();
-				try
-				{
+				try {
 					int choiceNumber = Integer.parseInt(choice);
 					choiceOk = true;
 					
-					switch (choiceNumber)
-					{
+					switch (choiceNumber) {
 						case 1:
 							registerNewGS();
-							break;
+						break;
 						case 2:
 							listGSNames();
-							break;
+						break;
 						case 3:
 							unregisterSingleGS();
-							break;
+						break;
 						case 4:
 							unregisterAllGS();
-							break;
+						break;
 						case 5:
 							System.exit(0);
-							break;
+						break;
 						default:
 							System.out.printf(getBundle().getString("invalidChoice") + '\n', choice);
 							choiceOk = false;
 					}
 					
-				}
-				catch (NumberFormatException nfe)
-				{
+				} catch (NumberFormatException nfe) {
 					System.out.printf(getBundle().getString("invalidChoice") + '\n', choice);
 				}
 			}
@@ -110,26 +103,21 @@ public class GameServerRegister extends BaseGameServerRegister
 	/**
 	 * 
 	 */
-	private void hr()
-	{
+	private void hr() {
 		System.out.println("_____________________________________________________\n");
 	}
 	
 	/**
 	 * 
 	 */
-	private void listGSNames()
-	{
+	private void listGSNames() {
 		int idMaxLen = 0;
 		int nameMaxLen = 0;
-		for (Entry<Integer, String> e : GameServerTable.getInstance().getServerNames().entrySet())
-		{
-			if (e.getKey().toString().length() > idMaxLen)
-			{
+		for (Entry<Integer, String> e : GameServerTable.getInstance().getServerNames().entrySet()) {
+			if (e.getKey().toString().length() > idMaxLen) {
 				idMaxLen = e.getKey().toString().length();
 			}
-			if (e.getValue().length() > nameMaxLen)
-			{
+			if (e.getValue().length() > nameMaxLen) {
 				nameMaxLen = e.getValue().length();
 			}
 		}
@@ -141,21 +129,18 @@ public class GameServerRegister extends BaseGameServerRegister
 		String gsInUse = getBundle().getString("gsInUse");
 		String gsFree = getBundle().getString("gsFree");
 		int gsStatusMaxLen = Math.max(gsInUse.length(), gsFree.length()) + 2;
-		for (Entry<Integer, String> e : GameServerTable.getInstance().getServerNames().entrySet())
-		{
+		for (Entry<Integer, String> e : GameServerTable.getInstance().getServerNames().entrySet()) {
 			id = e.getKey().toString();
 			System.out.print(id);
 			
-			for (int i = id.length(); i < idMaxLen; i++)
-			{
+			for (int i = id.length(); i < idMaxLen; i++) {
 				System.out.print(' ');
 			}
 			System.out.print("| ");
 			
 			System.out.print(e.getValue());
 			
-			for (int i = e.getValue().length(); i < nameMaxLen; i++)
-			{
+			for (int i = e.getValue().length(); i < nameMaxLen; i++) {
 				System.out.print(' ');
 			}
 			System.out.print("| ");
@@ -164,8 +149,7 @@ public class GameServerRegister extends BaseGameServerRegister
 			String inUseStr = (inUse ? gsInUse : gsFree);
 			System.out.print(inUseStr);
 			
-			for (int i = inUseStr.length(); i < gsStatusMaxLen; i++)
-			{
+			for (int i = inUseStr.length(); i < gsStatusMaxLen; i++) {
 				System.out.print(' ');
 			}
 			System.out.println('|');
@@ -175,27 +159,20 @@ public class GameServerRegister extends BaseGameServerRegister
 	/**
 	 * @throws IOException
 	 */
-	private void unregisterAllGS() throws IOException
-	{
-		if (yesNoQuestion(getBundle().getString("confirmRemoveAllText")))
-		{
-			try
-			{
+	private void unregisterAllGS() throws IOException {
+		if (yesNoQuestion(getBundle().getString("confirmRemoveAllText"))) {
+			try {
 				BaseGameServerRegister.unregisterAllGameServers();
 				System.out.println(getBundle().getString("unregisterAllOk"));
-			}
-			catch (SQLException e)
-			{
+			} catch (SQLException e) {
 				showError(getBundle().getString("sqlErrorUnregisterAll"), e);
 			}
 		}
 	}
 	
-	private boolean yesNoQuestion(String question) throws IOException
-	{
+	private boolean yesNoQuestion(String question) throws IOException {
 		
-		do
-		{
+		do {
 			hr();
 			System.out.println(question);
 			System.out.println("1 - " + getBundle().getString("yes"));
@@ -203,18 +180,12 @@ public class GameServerRegister extends BaseGameServerRegister
 			System.out.print(getBundle().getString("yourChoice") + ' ');
 			String choice;
 			choice = _in.readLine();
-			if (choice != null)
-			{
-				if (choice.equals("1"))
-				{
+			if (choice != null) {
+				if (choice.equals("1")) {
 					return true;
-				}
-				else if (choice.equals("2"))
-				{
+				} else if (choice.equals("2")) {
 					return false;
-				}
-				else
-				{
+				} else {
 					System.out.printf(getBundle().getString("invalidChoice") + '\n', choice);
 				}
 			}
@@ -225,94 +196,66 @@ public class GameServerRegister extends BaseGameServerRegister
 	/**
 	 * @throws IOException
 	 */
-	private void unregisterSingleGS() throws IOException
-	{
+	private void unregisterSingleGS() throws IOException {
 		String line;
 		int id = Integer.MIN_VALUE;
 		
-		do
-		{
+		do {
 			System.out.print(getBundle().getString("enterDesiredId") + ' ');
 			line = _in.readLine();
-			try
-			{
+			try {
 				id = Integer.parseInt(line);
-			}
-			catch (NumberFormatException e)
-			{
+			} catch (NumberFormatException e) {
 				System.out.printf(getBundle().getString("invalidChoice") + '\n', line);
 			}
 		}
 		while (id == Integer.MIN_VALUE);
 		
 		String name = GameServerTable.getInstance().getServerNameById(id);
-		if (name == null)
-		{
+		if (name == null) {
 			System.out.printf(getBundle().getString("noNameForId") + '\n', id);
-		}
-		else
-		{
-			if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
-			{
+		} else {
+			if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id)) {
 				System.out.printf(getBundle().getString("confirmRemoveText") + '\n', id, name);
-				try
-				{
+				try {
 					BaseGameServerRegister.unregisterGameServer(id);
 					System.out.printf(getBundle().getString("unregisterOk") + '\n', id);
-				}
-				catch (SQLException e)
-				{
+				} catch (SQLException e) {
 					showError(getBundle().getString("sqlErrorUnregister"), e);
 				}
 				
-			}
-			else
-			{
+			} else {
 				System.out.printf(getBundle().getString("noServerForId") + '\n', id);
 			}
 		}
 		
 	}
 	
-	private void registerNewGS() throws IOException
-	{
+	private void registerNewGS() throws IOException {
 		String line;
 		int id = Integer.MIN_VALUE;
 		
-		do
-		{
+		do {
 			System.out.println(getBundle().getString("enterDesiredId"));
 			line = _in.readLine();
-			try
-			{
+			try {
 				id = Integer.parseInt(line);
-			}
-			catch (NumberFormatException e)
-			{
+			} catch (NumberFormatException e) {
 				System.out.printf(getBundle().getString("invalidChoice") + '\n', line);
 			}
 		}
 		while (id == Integer.MIN_VALUE);
 		
 		String name = GameServerTable.getInstance().getServerNameById(id);
-		if (name == null)
-		{
+		if (name == null) {
 			System.out.printf(getBundle().getString("noNameForId") + '\n', id);
-		}
-		else
-		{
-			if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
-			{
+		} else {
+			if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id)) {
 				System.out.println(getBundle().getString("idIsNotFree"));
-			}
-			else
-			{
-				try
-				{
+			} else {
+				try {
 					BaseGameServerRegister.registerGameServer(id, ".");
-				}
-				catch (IOException e)
-				{
+				} catch (IOException e) {
 					showError(getBundle().getString("ioErrorRegister"), e);
 				}
 			}
@@ -323,16 +266,12 @@ public class GameServerRegister extends BaseGameServerRegister
 	 * @see com.l2jserver.tools.gsregistering.BaseGameServerRegister#showError(java.lang.String, java.lang.Throwable)
 	 */
 	@Override
-	public void showError(String msg, Throwable t)
-	{
+	public void showError(String msg, Throwable t) {
 		String title;
-		if (getBundle() != null)
-		{
+		if (getBundle() != null) {
 			title = getBundle().getString("error");
 			msg += '\n' + getBundle().getString("reason") + ' ' + t.getLocalizedMessage();
-		}
-		else
-		{
+		} else {
 			title = "Error";
 			msg += "\nCause: " + t.getLocalizedMessage();
 		}

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.entity;
 
@@ -28,8 +32,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * @author evill33t
  */
-public class Couple
-{
+public class Couple {
+	
 	private static final Logger _log = Logger.getLogger(Couple.class.getName());
 	
 	private int _Id = 0;
@@ -39,13 +43,11 @@ public class Couple
 	private Calendar _affiancedDate;
 	private Calendar _weddingDate;
 	
-	public Couple(int coupleId)
-	{
+	public Couple(int coupleId) {
 		_Id = coupleId;
 		
 		Connection con = null;
-		try
-		{
+		try {
 			PreparedStatement statement;
 			ResultSet rs;
 			
@@ -55,8 +57,7 @@ public class Couple
 			statement.setInt(1, _Id);
 			rs = statement.executeQuery();
 			
-			while (rs.next())
-			{
+			while (rs.next()) {
 				_player1Id = rs.getInt("player1Id");
 				_player2Id = rs.getInt("player2Id");
 				_maried = rs.getBoolean("married");
@@ -69,19 +70,14 @@ public class Couple
 			}
 			rs.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Exception: Couple.load(): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public Couple(L2PcInstance player1, L2PcInstance player2)
-	{
+	public Couple(L2PcInstance player1, L2PcInstance player2) {
 		int _tempPlayer1Id = player1.getObjectId();
 		int _tempPlayer2Id = player2.getObjectId();
 		
@@ -95,8 +91,7 @@ public class Couple
 		_weddingDate.setTimeInMillis(Calendar.getInstance().getTimeInMillis());
 		
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
 			_Id = IdFactory.getInstance().getNextId();
@@ -109,22 +104,16 @@ public class Couple
 			statement.setLong(6, _weddingDate.getTimeInMillis());
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Could not create couple: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public void marry()
-	{
+	public void marry() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE mods_wedding set married = ?, weddingDate = ? where id = ?");
 			statement.setBoolean(1, true);
@@ -134,65 +123,50 @@ public class Couple
 			statement.execute();
 			statement.close();
 			_maried = true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Could not marry: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public void divorce()
-	{
+	public void divorce() {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM mods_wedding WHERE id=?");
 			statement.setInt(1, _Id);
 			statement.execute();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Exception: Couple.divorce(): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public final int getId()
-	{
+	public final int getId() {
 		return _Id;
 	}
 	
-	public final int getPlayer1Id()
-	{
+	public final int getPlayer1Id() {
 		return _player1Id;
 	}
 	
-	public final int getPlayer2Id()
-	{
+	public final int getPlayer2Id() {
 		return _player2Id;
 	}
 	
-	public final boolean getMaried()
-	{
+	public final boolean getMaried() {
 		return _maried;
 	}
 	
-	public final Calendar getAffiancedDate()
-	{
+	public final Calendar getAffiancedDate() {
 		return _affiancedDate;
 	}
 	
-	public final Calendar getWeddingDate()
-	{
+	public final Calendar getWeddingDate() {
 		return _weddingDate;
 	}
+	
 }

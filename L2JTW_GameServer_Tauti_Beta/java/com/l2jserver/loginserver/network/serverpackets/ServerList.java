@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.network.serverpackets;
 
@@ -54,8 +58,7 @@ import com.l2jserver.loginserver.network.gameserverpackets.ServerStatus;
  * is less than half the maximum. as Normal between half and 4/5<br>
  * and Full when there's more than 4/5 of the maximum number of players.
  */
-public final class ServerList extends L2LoginServerPacket
-{
+public final class ServerList extends L2LoginServerPacket {
 	protected static final Logger _log = Logger.getLogger(ServerList.class.getName());
 	
 	private final List<ServerData> _servers;
@@ -63,8 +66,7 @@ public final class ServerList extends L2LoginServerPacket
 	private final Map<Integer, Integer> _charsOnServers;
 	private final Map<Integer, long[]> _charsToDelete;
 	
-	class ServerData
-	{
+	class ServerData {
 		protected byte[] _ip;
 		protected int _port;
 		protected int _ageLimit;
@@ -77,14 +79,10 @@ public final class ServerList extends L2LoginServerPacket
 		protected int _serverId;
 		protected int _serverType;
 		
-		ServerData(L2LoginClient client, GameServerInfo gsi)
-		{
-			try
-			{
+		ServerData(L2LoginClient client, GameServerInfo gsi) {
+			try {
 				_ip = InetAddress.getByName(gsi.getServerAddress(client.getConnection().getInetAddress())).getAddress();
-			}
-			catch (UnknownHostException e)
-			{
+			} catch (UnknownHostException e) {
 				_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 				_ip = new byte[4];
 				_ip[0] = 127;
@@ -106,12 +104,10 @@ public final class ServerList extends L2LoginServerPacket
 		}
 	}
 	
-	public ServerList(L2LoginClient client)
-	{
+	public ServerList(L2LoginClient client) {
 		_servers = new ArrayList<>(GameServerTable.getInstance().getRegisteredGameServers().size());
 		_lastServer = client.getLastServer();
-		for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
-		{
+		for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values()) {
 			_servers.add(new ServerData(client, gsi));
 		}
 		_charsOnServers = client.getCharsOnServ();
@@ -119,13 +115,11 @@ public final class ServerList extends L2LoginServerPacket
 	}
 	
 	@Override
-	public void write()
-	{
+	public void write() {
 		writeC(0x04);
 		writeC(_servers.size());
 		writeC(_lastServer);
-		for (ServerData server : _servers)
-		{
+		for (ServerData server : _servers) {
 			writeC(server._serverId); // server id
 			
 			writeC(server._ip[0] & 0xff);
@@ -143,29 +137,21 @@ public final class ServerList extends L2LoginServerPacket
 			writeC(server._brackets ? 0x01 : 0x00);
 		}
 		writeH(0x00); // unknown
-		if (_charsOnServers != null)
-		{
+		if (_charsOnServers != null) {
 			writeC(_charsOnServers.size());
-			for (int servId : _charsOnServers.keySet())
-			{
+			for (int servId : _charsOnServers.keySet()) {
 				writeC(servId);
 				writeC(_charsOnServers.get(servId));
-				if ((_charsToDelete == null) || !_charsToDelete.containsKey(servId))
-				{
+				if ((_charsToDelete == null) || !_charsToDelete.containsKey(servId)) {
 					writeC(0x00);
-				}
-				else
-				{
+				} else {
 					writeC(_charsToDelete.get(servId).length);
-					for (long deleteTime : _charsToDelete.get(servId))
-					{
+					for (long deleteTime : _charsToDelete.get(servId)) {
 						writeD((int) ((deleteTime - System.currentTimeMillis()) / 1000));
 					}
 				}
 			}
-		}
-		else
-		{
+		} else {
 			writeC(0x00);
 		}
 	}

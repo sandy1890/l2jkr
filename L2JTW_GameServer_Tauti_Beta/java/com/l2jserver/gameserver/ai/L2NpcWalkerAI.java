@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.ai;
 
@@ -24,16 +28,18 @@ import com.l2jserver.gameserver.model.L2NpcWalkerNode;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcWalkerInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.util.Rnd; //rocknow-God-Test Only
+import com.l2jserver.util.Rnd;
 
-public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
-{
+//rocknow-God-Test Only
+
+public class L2NpcWalkerAI extends L2CharacterAI implements Runnable {
+	
 	private static final int DEFAULT_MOVE_DELAY = 0;
 	
 	private long _nextMoveTime;
 	
 	private boolean _walkingToNextPoint = false;
-	private static long _saytime; //rocknow-God-Test Only
+	private static long _saytime; // rocknow-God-Test Only
 	
 	/**
 	 * home points for xyz
@@ -51,47 +57,47 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 	private int _currentPos;
 	
 	/**
-	 * Constructor of L2CharacterAI.<BR><BR>
-	 *
+	 * Constructor of L2CharacterAI.<BR>
+	 * <BR>
 	 * @param accessor The AI accessor of the L2Character
 	 */
-	public L2NpcWalkerAI(L2Character.AIAccessor accessor)
-	{
+	public L2NpcWalkerAI(L2Character.AIAccessor accessor) {
 		super(accessor);
 		
-		if (!Config.ALLOW_NPC_WALKERS)
+		if (!Config.ALLOW_NPC_WALKERS) {
 			return;
+		}
 		
 		_route = NpcWalkerRoutesData.getInstance().getRouteForNpc(getActor().getNpcId());
 		
 		// Here we need 1 second initial delay cause getActor().hasAI() will return null...
 		// Constructor of L2NpcWalkerAI is called faster then ai object is attached in L2NpcWalkerInstance
-		if (_route != null)
+		if (_route != null) {
 			ThreadPoolManager.getInstance().scheduleAiAtFixedRate(this, 1000, 1000);
-		else
-			_log.warning(getClass().getSimpleName()+": Missing route data! Npc: "+_actor);
+		} else {
+			_log.warning(getClass().getSimpleName() + ": Missing route data! Npc: " + _actor);
+		}
 	}
 	
 	@Override
-	public void run()
-	{
+	public void run() {
 		onEvtThink();
 	}
 	
 	@Override
-	protected void onEvtThink()
-	{
-		if (!Config.ALLOW_NPC_WALKERS)
+	protected void onEvtThink() {
+		if (!Config.ALLOW_NPC_WALKERS) {
 			return;
+		}
 		
-		if (isWalkingToNextPoint())
-		{
+		if (isWalkingToNextPoint()) {
 			checkArrived();
 			return;
 		}
 		
-		if (_nextMoveTime < System.currentTimeMillis())
+		if (_nextMoveTime < System.currentTimeMillis()) {
 			walkToLocation();
+		}
 	}
 	
 	/**
@@ -99,8 +105,7 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 	 * @param blocked_at_pos ignoring it
 	 */
 	@Override
-	protected void onEvtArrivedBlocked(L2CharPosition blocked_at_pos)
-	{
+	protected void onEvtArrivedBlocked(L2CharPosition blocked_at_pos) {
 		_log.warning(getClass().getSimpleName() + ": " + getActor().getNpcId() + ": Blocked at rote position [" + _currentPos + "], coords: " + blocked_at_pos.x + ", " + blocked_at_pos.y + ", " + blocked_at_pos.z + ". Teleporting to next point");
 		
 		int destinationX = _route.get(_currentPos).getMoveX();
@@ -111,47 +116,42 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 		super.onEvtArrivedBlocked(blocked_at_pos);
 	}
 	
-	private void checkArrived()
-	{
+	private void checkArrived() {
 		int destinationX = _route.get(_currentPos).getMoveX();
 		int destinationY = _route.get(_currentPos).getMoveY();
 		int destinationZ = _route.get(_currentPos).getMoveZ();
 		
-		if ((getActor().isInsideRadius(destinationX, destinationY, destinationZ, 5, false, false)) || (destinationX == 0 && destinationY == 0 && destinationZ == 0))
-		{
+		if ((getActor().isInsideRadius(destinationX, destinationY, destinationZ, 5, false, false)) || ((destinationX == 0) && (destinationY == 0) && (destinationZ == 0))) {
 			NpcStringId npcString = _route.get(_currentPos).getNpcString();
 			String chat = null;
-			if (npcString == null)
+			if (npcString == null) {
 				chat = _route.get(_currentPos).getChatText();
+			}
 			
-			//rocknow-God-Test Only-Start
+			// rocknow-God-Test Only-Start
 			long delay_2 = 0;
-			if ((npcString != null) || (chat != null && !chat.isEmpty()))
-			{
+			if ((npcString != null) || ((chat != null) && !chat.isEmpty())) {
 				int NPCID = getActor().getNpcId();
-				if (NPCID == 32972 || NPCID == 32975 || NPCID == 33124 || NPCID == 33199)
-				{
+				if ((NPCID == 32972) || (NPCID == 32975) || (NPCID == 33124) || (NPCID == 33199)) {
 					getActor().broadcastChat(chat, npcString);
-				}
-				else if ((System.currentTimeMillis() - _saytime) >= 1000)
-				{
+				} else if ((System.currentTimeMillis() - _saytime) >= 1000) {
 					getActor().broadcastChat(chat, npcString);
 					_saytime = System.currentTimeMillis();
 				}
 				delay_2 = Rnd.get(5) * 1000;
 			}
-			//rocknow-God-Test Only-End
+			// rocknow-God-Test Only-End
 			
-			//time in millis
+			// time in millis
 			long delay = _route.get(_currentPos).getDelay() * 1000;
-			delay = delay + delay_2; //rocknow-God-Test Only
+			delay = delay + delay_2; // rocknow-God-Test Only
 			
-			//sleeps between each move
-			if (delay <= 0)
-			{
+			// sleeps between each move
+			if (delay <= 0) {
 				delay = DEFAULT_MOVE_DELAY;
-				if (Config.DEVELOPER)
+				if (Config.DEVELOPER) {
 					_log.warning(getClass().getSimpleName() + ": Wrong Delay Set in Npc Walker Functions = " + delay + " secs, using default delay: " + DEFAULT_MOVE_DELAY + " secs instead.");
+				}
 			}
 			
 			_nextMoveTime = System.currentTimeMillis() + delay;
@@ -159,81 +159,74 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 		}
 	}
 	
-	private void walkToLocation()
-	{
-		if (_currentPos < (_route.size() - 1))
+	private void walkToLocation() {
+		if (_currentPos < (_route.size() - 1)) {
 			_currentPos++;
-		else
+		} else {
 			_currentPos = 0;
+		}
 		
 		boolean moveType = _route.get(_currentPos).getRunning();
 		
 		/**
-		 * false - walking
-		 * true - Running
+		 * false - walking true - Running
 		 */
-		if (moveType)
+		if (moveType) {
 			getActor().setRunning();
-		else
+		} else {
 			getActor().setWalking();
+		}
 		
-		//now we define destination
+		// now we define destination
 		int destinationX = _route.get(_currentPos).getMoveX();
 		int destinationY = _route.get(_currentPos).getMoveY();
 		int destinationZ = _route.get(_currentPos).getMoveZ();
 		
-		//notify AI of MOVE_TO
+		// notify AI of MOVE_TO
 		setWalkingToNextPoint(true);
 		
-		//rocknow-God-Test Only-Start
-		if (destinationX != 0 && destinationY != 0 && destinationZ != 0)
+		// rocknow-God-Test Only-Start
+		if ((destinationX != 0) && (destinationY != 0) && (destinationZ != 0)) {
 			setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(destinationX, destinationY, destinationZ, 0));
-		//rocknow-God-Test Only-End
+			// rocknow-God-Test Only-End
+		}
 	}
 	
 	@Override
-	public L2NpcWalkerInstance getActor()
-	{
+	public L2NpcWalkerInstance getActor() {
 		return (L2NpcWalkerInstance) super.getActor();
 	}
 	
-	public int getHomeX()
-	{
+	public int getHomeX() {
 		return _homeX;
 	}
 	
-	public int getHomeY()
-	{
+	public int getHomeY() {
 		return _homeY;
 	}
 	
-	public int getHomeZ()
-	{
+	public int getHomeZ() {
 		return _homeZ;
 	}
 	
-	public void setHomeX(int homeX)
-	{
+	public void setHomeX(int homeX) {
 		_homeX = homeX;
 	}
 	
-	public void setHomeY(int homeY)
-	{
+	public void setHomeY(int homeY) {
 		_homeY = homeY;
 	}
 	
-	public void setHomeZ(int homeZ)
-	{
+	public void setHomeZ(int homeZ) {
 		_homeZ = homeZ;
 	}
 	
-	public boolean isWalkingToNextPoint()
-	{
+	public boolean isWalkingToNextPoint() {
 		return _walkingToNextPoint;
 	}
 	
-	public void setWalkingToNextPoint(boolean value)
-	{
+	public void setWalkingToNextPoint(boolean value) {
 		_walkingToNextPoint = value;
 	}
+	
 }

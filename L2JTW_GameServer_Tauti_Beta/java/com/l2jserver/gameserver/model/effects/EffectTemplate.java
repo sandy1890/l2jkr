@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.effects;
 
@@ -27,13 +31,11 @@ import com.l2jserver.gameserver.model.skills.funcs.FuncTemplate;
 import com.l2jserver.gameserver.model.skills.funcs.Lambda;
 import com.l2jserver.gameserver.model.stats.Env;
 
-
 /**
  * @author mkizub
- * 
  */
-public class EffectTemplate
-{
+public class EffectTemplate {
+	
 	static Logger _log = Logger.getLogger(EffectTemplate.class.getName());
 	
 	private final Class<?> _func;
@@ -61,10 +63,7 @@ public class EffectTemplate
 	
 	public final boolean passiveEffect;
 	
-	public EffectTemplate(Condition pAttachCond, Condition pApplayCond, String func, Lambda pLambda,
-			int pCounter, int pAbnormalTime, AbnormalEffect pAbnormalEffect, AbnormalEffect[] pSpecialEffect,
-			AbnormalEffect pEventEffect, String pAbnormalType, byte pAbnormalLvl, boolean showicon,
-			double ePower, L2SkillType eType, int trigId, int trigLvl, ChanceCondition chanceCond, boolean passiveEff)
+	public EffectTemplate(Condition pAttachCond, Condition pApplayCond, String func, Lambda pLambda, int pCounter, int pAbnormalTime, AbnormalEffect pAbnormalEffect, AbnormalEffect[] pSpecialEffect, AbnormalEffect pEventEffect, String pAbnormalType, byte pAbnormalLvl, boolean showicon, double ePower, L2SkillType eType, int trigId, int trigLvl, ChanceCondition chanceCond, boolean passiveEff)
 	{
 		attachCond = pAttachCond;
 		applayCond = pApplayCond;
@@ -88,43 +87,32 @@ public class EffectTemplate
 		passiveEffect = passiveEff;
 		
 		_func = EffectHandler.getInstance().getHandler(func);
-		if(func == null)
-		{
-			_log.warning("EffectTemplate: Requested Unexistent effect: "+func);
+		if (func == null) {
+			_log.warning("EffectTemplate: Requested Unexistent effect: " + func);
 			throw new RuntimeException();
 		}
-
-		try
-		{
+		
+		try {
 			_constructor = _func.getConstructor(Env.class, EffectTemplate.class);
-		}
-		catch (NoSuchMethodException e)
-		{
+		} catch (NoSuchMethodException e) {
 			throw new RuntimeException(e);
 		}
 	}
 	
-	public L2Effect getEffect(Env env)
-	{
-		if (attachCond != null && !attachCond.test(env))
+	public L2Effect getEffect(Env env) {
+		if ((attachCond != null) && !attachCond.test(env)) {
 			return null;
-		try
-		{
+		}
+		try {
 			L2Effect effect = (L2Effect) _constructor.newInstance(env, this);
 			return effect;
-		}
-		catch (IllegalAccessException e)
-		{
+		} catch (IllegalAccessException e) {
 			_log.log(Level.WARNING, "", e);
 			return null;
-		}
-		catch (InstantiationException e)
-		{
+		} catch (InstantiationException e) {
 			_log.log(Level.WARNING, "", e);
 			return null;
-		}
-		catch (InvocationTargetException e)
-		{
+		} catch (InvocationTargetException e) {
 			_log.log(Level.WARNING, "Error creating new instance of Class " + _func + " Exception was: " + e.getTargetException().getMessage(), e.getTargetException());
 			return null;
 		}
@@ -133,58 +121,46 @@ public class EffectTemplate
 	
 	/**
 	 * Creates an L2Effect instance from an existing one and an Env object.
-	 * 
 	 * @param env
 	 * @param stolen
 	 * @return
 	 */
-	public L2Effect getStolenEffect(Env env, L2Effect stolen)
-	{
+	public L2Effect getStolenEffect(Env env, L2Effect stolen) {
 		Class<?> func = EffectHandler.getInstance().getHandler(funcName);
-		if(func == null)
+		if (func == null) {
 			throw new RuntimeException();
+		}
 		
 		Constructor<?> stolenCons;
-		try
-		{
+		try {
 			stolenCons = func.getConstructor(Env.class, L2Effect.class);
-		}
-		catch (NoSuchMethodException e)
-		{
+		} catch (NoSuchMethodException e) {
 			throw new RuntimeException(e);
 		}
-		try
-		{
+		try {
 			L2Effect effect = (L2Effect) stolenCons.newInstance(env, stolen);
 			// if (_applayCond != null)
 			// effect.setCondition(_applayCond);
 			return effect;
-		}
-		catch (IllegalAccessException e)
-		{
+		} catch (IllegalAccessException e) {
 			_log.log(Level.WARNING, "", e);
 			return null;
-		}
-		catch (InstantiationException e)
-		{
+		} catch (InstantiationException e) {
 			_log.log(Level.WARNING, "", e);
 			return null;
-		}
-		catch (InvocationTargetException e)
-		{
+		} catch (InvocationTargetException e) {
 			_log.log(Level.WARNING, "Error creating new instance of Class " + func + " Exception was: " + e.getTargetException().getMessage(), e.getTargetException());
 			return null;
 		}
 	}
 	
-	public void attach(FuncTemplate f)
-	{
-		if (funcTemplates == null)
-		{
-			funcTemplates = new FuncTemplate[] { f };
-		}
-		else
-		{
+	public void attach(FuncTemplate f) {
+		if (funcTemplates == null) {
+			funcTemplates = new FuncTemplate[]
+			{
+				f
+			};
+		} else {
 			int len = funcTemplates.length;
 			FuncTemplate[] tmp = new FuncTemplate[len + 1];
 			System.arraycopy(funcTemplates, 0, tmp, 0, len);
@@ -192,4 +168,5 @@ public class EffectTemplate
 			funcTemplates = tmp;
 		}
 	}
+	
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.skills;
 
@@ -30,8 +34,8 @@ package com.l2jserver.gameserver.model.skills;
  * </ul>
  * @author Zoey76
  */
-public enum L2SkillOpType
-{
+public enum L2SkillOpType {
+	
 	/**
 	 * Active Skill with "Instant Effect" (for example damage skills heal/pdam/mdam/cpdam skills).
 	 */
@@ -85,10 +89,8 @@ public enum L2SkillOpType
 	/**
 	 * @return {@code true} if the operative skill type is active, {@code false} otherwise.
 	 */
-	public boolean isActive()
-	{
-		switch (this)
-		{
+	public boolean isActive() {
+		switch (this) {
 			case A1:
 			case A2:
 			case A3:
@@ -106,16 +108,15 @@ public enum L2SkillOpType
 	/**
 	 * @return {@code true} if the operative skill type is passive, {@code false} otherwise.
 	 */
-	public boolean isPassive()
-	{
+	public boolean isPassive() {
 		return (this == P);
 	}
 	
 	/**
 	 * @return {@code true} if the operative skill type is toggle, {@code false} otherwise.
 	 */
-	public boolean isToggle()
-	{
+	public boolean isToggle() {
 		return (this == T);
 	}
+	
 }

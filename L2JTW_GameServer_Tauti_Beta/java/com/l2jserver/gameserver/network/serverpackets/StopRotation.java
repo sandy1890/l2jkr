@@ -1,39 +1,39 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
 /**
  * This class ...
- *
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/27 15:29:57 $
  */
-public class StopRotation extends L2GameServerPacket
-{
+public class StopRotation extends L2GameServerPacket {
 	private static final String _S__78_STOPROTATION = "[S] 61 StopRotation";
 	private int _charObjId, _degree, _speed;
 	
-	public StopRotation(int objectId, int degree, int speed)
-	{
+	public StopRotation(int objectId, int degree, int speed) {
 		_charObjId = objectId;
 		_degree = degree;
 		_speed = speed;
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x61);
 		writeD(_charObjId);
 		writeD(_degree);
@@ -42,8 +42,7 @@ public class StopRotation extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__78_STOPROTATION;
 	}
 }

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver;
 
@@ -42,8 +46,7 @@ import com.l2jserver.status.Status;
 /**
  * @author KenM
  */
-public final class L2LoginServer
-{
+public final class L2LoginServer {
 	private final Logger _log = Logger.getLogger(L2LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0106;
@@ -53,18 +56,15 @@ public final class L2LoginServer
 	private Status _statusServer;
 	private Thread _restartLoginServer;
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		_instance = new L2LoginServer();
 	}
 	
-	public static L2LoginServer getInstance()
-	{
+	public static L2LoginServer getInstance() {
 		return _instance;
 	}
 	
-	public L2LoginServer()
-	{
+	public L2LoginServer() {
 		Server.serverMode = Server.MODE_LOGINSERVER;
 		// Local Constants
 		final String LOG_FOLDER = "log"; // Name of folder for log file
@@ -77,12 +77,9 @@ public final class L2LoginServer
 		
 		// Create input stream for log file -- or store file data into memory
 		
-		try (InputStream is = new FileInputStream(new File(LOG_NAME)))
-		{
+		try (InputStream is = new FileInputStream(new File(LOG_NAME))) {
 			LogManager.getLogManager().readConfiguration(is);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
@@ -90,22 +87,16 @@ public final class L2LoginServer
 		Config.load();
 		
 		// Prepare Database
-		try
-		{
+		try {
 			L2DatabaseFactory.getInstance();
-		}
-		catch (SQLException e)
-		{
+		} catch (SQLException e) {
 			_log.log(Level.SEVERE, "FATAL: Failed initializing database. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
-		try
-		{
+		try {
 			LoginController.load();
-		}
-		catch (GeneralSecurityException e)
-		{
+		} catch (GeneralSecurityException e) {
 			_log.log(Level.SEVERE, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
@@ -114,20 +105,15 @@ public final class L2LoginServer
 		
 		loadBanFile();
 		
-		if (Config.EMAIL_SYS_ENABLED)
-		{
+		if (Config.EMAIL_SYS_ENABLED) {
 			MailSystem.getInstance();
 		}
 		
 		InetAddress bindAddress = null;
-		if (!Config.LOGIN_BIND_ADDRESS.equals("*"))
-		{
-			try
-			{
+		if (!Config.LOGIN_BIND_ADDRESS.equals("*")) {
+			try {
 				bindAddress = InetAddress.getByName(Config.LOGIN_BIND_ADDRESS);
-			}
-			catch (UnknownHostException e)
-			{
+			} catch (UnknownHostException e) {
 				_log.log(Level.WARNING, "WARNING: The LoginServer bind address is invalid, using all avaliable IPs. Reason: " + e.getMessage(), e);
 			}
 		}
@@ -140,51 +126,36 @@ public final class L2LoginServer
 		
 		final L2LoginPacketHandler lph = new L2LoginPacketHandler();
 		final SelectorHelper sh = new SelectorHelper();
-		try
-		{
+		try {
 			_selectorThread = new SelectorThread<>(sc, sh, lph, sh, sh);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.SEVERE, "FATAL: Failed to open Selector. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
-		try
-		{
+		try {
 			_gameServerListener = new GameServerListener();
 			_gameServerListener.start();
 			_log.info("Listening for GameServers on " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.SEVERE, "FATAL: Failed to start the Game Server Listener. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
-		if (Config.IS_TELNET_ENABLED)
-		{
-			try
-			{
+		if (Config.IS_TELNET_ENABLED) {
+			try {
 				_statusServer = new Status(Server.serverMode);
 				_statusServer.start();
-			}
-			catch (IOException e)
-			{
+			} catch (IOException e) {
 				_log.log(Level.WARNING, "Failed to start the Telnet Server. Reason: " + e.getMessage(), e);
 			}
-		}
-		else
-		{
+		} else {
 			_log.info("Telnet server is currently disabled.");
 		}
 		
-		try
-		{
+		try {
 			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			_log.log(Level.SEVERE, "FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
@@ -193,31 +164,26 @@ public final class L2LoginServer
 		_log.info("Login Server ready on " + (bindAddress == null ? "*" : bindAddress.getHostAddress()) + ":" + Config.PORT_LOGIN);
 	}
 	
-	public Status getStatusServer()
-	{
+	public Status getStatusServer() {
 		return _statusServer;
 	}
 	
-	public GameServerListener getGameServerListener()
-	{
+	public GameServerListener getGameServerListener() {
 		return _gameServerListener;
 	}
 	
-	private void loadBanFile()
-	{
+	private void loadBanFile() {
 		final File bannedFile = new File("./banned_ip.cfg");
-		if (bannedFile.exists() && bannedFile.isFile())
-		{
+		if (bannedFile.exists() && bannedFile.isFile()) {
 			String line;
 			String[] parts;
-			try (FileInputStream fis = new FileInputStream(bannedFile); InputStreamReader is = new InputStreamReader(fis); LineNumberReader reader = new LineNumberReader(is))
-			{
-				while ((line = reader.readLine()) != null)
-				{
+			try (FileInputStream fis = new FileInputStream(bannedFile);
+				InputStreamReader is = new InputStreamReader(fis);
+				LineNumberReader reader = new LineNumberReader(is)) {
+				while ((line = reader.readLine()) != null) {
 					line = line.trim();
 					// check if this line isn't a comment line
-					if ((line.length() > 0) && (line.charAt(0) != '#'))
-					{
+					if ((line.length() > 0) && (line.charAt(0) != '#')) {
 						// split comments if any
 						parts = line.split("#", 2);
 						
@@ -230,43 +196,31 @@ public final class L2LoginServer
 						
 						long duration = 0;
 						
-						if (parts.length > 1)
-						{
-							try
-							{
+						if (parts.length > 1) {
+							try {
 								duration = Long.parseLong(parts[1]);
-							}
-							catch (NumberFormatException e)
-							{
+							} catch (NumberFormatException e) {
 								_log.warning("Skipped: Incorrect ban duration (" + parts[1] + ") on (" + bannedFile.getName() + "). Line: " + reader.getLineNumber());
 								continue;
 							}
 						}
 						
-						try
-						{
+						try {
 							LoginController.getInstance().addBanForAddress(address, duration);
-						}
-						catch (UnknownHostException e)
-						{
+						} catch (UnknownHostException e) {
 							_log.warning("Skipped: Invalid address (" + parts[0] + ") on (" + bannedFile.getName() + "). Line: " + reader.getLineNumber());
 						}
 					}
 				}
-			}
-			catch (IOException e)
-			{
+			} catch (IOException e) {
 				_log.log(Level.WARNING, "Error while reading the bans file (" + bannedFile.getName() + "). Details: " + e.getMessage(), e);
 			}
 			_log.info("Loaded " + LoginController.getInstance().getBannedIps().size() + " IP Bans.");
-		}
-		else
-		{
+		} else {
 			_log.warning("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
 		}
 		
-		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
-		{
+		if (Config.LOGIN_SERVER_SCHEDULE_RESTART) {
 			_log.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
 			_restartLoginServer = new LoginServerRestart();
 			_restartLoginServer.setDaemon(true);
@@ -274,24 +228,17 @@ public final class L2LoginServer
 		}
 	}
 	
-	class LoginServerRestart extends Thread
-	{
-		public LoginServerRestart()
-		{
+	class LoginServerRestart extends Thread {
+		public LoginServerRestart() {
 			setName("LoginServerRestart");
 		}
 		
 		@Override
-		public void run()
-		{
-			while (!isInterrupted())
-			{
-				try
-				{
+		public void run() {
+			while (!isInterrupted()) {
+				try {
 					Thread.sleep(Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME * 60 * 60 * 1000);
-				}
-				catch (InterruptedException e)
-				{
+				} catch (InterruptedException e) {
 					return;
 				}
 				shutdown(true);
@@ -299,8 +246,7 @@ public final class L2LoginServer
 		}
 	}
 	
-	public void shutdown(boolean restart)
-	{
+	public void shutdown(boolean restart) {
 		Runtime.getRuntime().exit(restart ? 2 : 0);
 	}
 }

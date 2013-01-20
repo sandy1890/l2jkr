@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -22,11 +26,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 
 /**
- * 
  * @author KenM
  */
-public class ExEnchantSkillInfoDetail extends L2GameServerPacket
-{
+public class ExEnchantSkillInfoDetail extends L2GameServerPacket {
 	private static final int TYPE_NORMAL_ENCHANT = 0;
 	private static final int TYPE_SAFE_ENCHANT = 1;
 	private static final int TYPE_UNTRAIN_ENCHANT = 2;
@@ -42,24 +44,20 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 	private int _sp;
 	private final int _adenacount;
 	
-	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, L2PcInstance ply)
-	{
+	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, L2PcInstance ply) {
 		
 		L2EnchantSkillLearn enchantLearn = EnchantGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
 		EnchantSkillHolder esd = null;
 		// do we have this skill?
-		if (enchantLearn != null)
-		{
-			if (skilllvl > 100)
-			{
+		if (enchantLearn != null) {
+			if (skilllvl > 100) {
 				esd = enchantLearn.getEnchantSkillHolder(skilllvl);
-			}
-			else
+			} else
 				esd = enchantLearn.getFirstRouteGroup().getEnchantGroupDetails().get(0);
 		}
 		
 		if (esd == null)
-			throw new IllegalArgumentException("Skill "+skillid + " dont have enchant data for level "+skilllvl);
+			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + skilllvl);
 		
 		if (type == 0)
 			multi = EnchantGroupsData.NORMAL_ENCHANT_COST_MULTIPLIER;
@@ -74,24 +72,23 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		_skillid = skillid;
 		_skilllvl = skilllvl;
 		
-		switch (type)
-		{
+		switch (type) {
 			case TYPE_NORMAL_ENCHANT:
 				bookId = EnchantGroupsData.NORMAL_ENCHANT_BOOK;
-				reqCount = ((_skilllvl % 100 > 1) ? 0 : 1) ;
-				break;
+				reqCount = ((_skilllvl % 100 > 1) ? 0 : 1);
+			break;
 			case TYPE_SAFE_ENCHANT:
 				bookId = EnchantGroupsData.SAFE_ENCHANT_BOOK;
 				reqCount = 1;
-				break;
+			break;
 			case TYPE_UNTRAIN_ENCHANT:
 				bookId = EnchantGroupsData.UNTRAIN_ENCHANT_BOOK;
 				reqCount = 1;
-				break;
+			break;
 			case TYPE_CHANGE_ENCHANT:
 				bookId = EnchantGroupsData.CHANGE_ENCHANT_BOOK;
 				reqCount = 1;
-				break;
+			break;
 			default:
 				return;
 		}
@@ -101,14 +98,12 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return "[S] FE:5E ExEnchantSkillInfoDetail";
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x5e);
 		

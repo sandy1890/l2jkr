@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.skills.funcs.formulas;
 
@@ -22,33 +26,27 @@ import com.l2jserver.gameserver.model.stats.Stats;
 
 /**
  * @author UnAfraid
- *
  */
-public class FuncPAtkMod extends Func
-{
+public class FuncPAtkMod extends Func {
+	
 	private static final FuncPAtkMod _fpa_instance = new FuncPAtkMod();
 	
-	public static Func getInstance()
-	{
+	public static Func getInstance() {
 		return _fpa_instance;
 	}
 	
-	private FuncPAtkMod()
-	{
+	private FuncPAtkMod() {
 		super(Stats.POWER_ATTACK, 0x30, null);
 	}
 	
 	@Override
-	public void calc(Env env)
-	{
-		if (env.getCharacter() instanceof L2PcInstance)
-		{
+	public void calc(Env env) {
+		if (env.getCharacter() instanceof L2PcInstance) {
 			env.mulValue(BaseStats.STR.calcBonus(env.getPlayer()) * env.getPlayer().getLevelMod());
-		}
-		else
-		{
+		} else {
 			float level = env.getCharacter().getLevel();
 			env.mulValue(BaseStats.STR.calcBonus(env.getCharacter()) * ((level + 89) / 100));
 		}
 	}
+	
 }

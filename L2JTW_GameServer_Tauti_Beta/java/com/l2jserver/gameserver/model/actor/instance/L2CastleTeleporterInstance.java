@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.actor.instance;
-
-import gnu.trove.procedure.TObjectProcedure;
 
 import java.util.StringTokenizer;
 import java.util.logging.Level;
@@ -29,11 +31,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
+import gnu.trove.procedure.TObjectProcedure;
+
 /**
  * @author Kerberos
  */
-public final class L2CastleTeleporterInstance extends L2Npc
-{
+public final class L2CastleTeleporterInstance extends L2Npc {
+	
 	public static final Logger _log = Logger.getLogger(L2CastleTeleporterInstance.class.getName());
 	
 	private boolean _currentTask = false;
@@ -42,30 +46,27 @@ public final class L2CastleTeleporterInstance extends L2Npc
 	 * @param objectId
 	 * @param template
 	 */
-	public L2CastleTeleporterInstance(int objectId, L2NpcTemplate template)
-	{
+	public L2CastleTeleporterInstance(int objectId, L2NpcTemplate template) {
 		super(objectId, template);
 		setInstanceType(InstanceType.L2CastleTeleporterInstance);
 	}
 	
 	@Override
-	public void onBypassFeedback(L2PcInstance player, String command)
-	{
+	public void onBypassFeedback(L2PcInstance player, String command) {
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken(); // Get actual command
 		
-		if (actualCommand.equalsIgnoreCase("tele"))
-		{
+		if (actualCommand.equalsIgnoreCase("tele")) {
 			int delay;
-			if (!getTask())
-			{
-				if (getCastle().getSiege().getIsInProgress() && getCastle().getSiege().getControlTowerCount() == 0)
+			if (!getTask()) {
+				if (getCastle().getSiege().getIsInProgress() && (getCastle().getSiege().getControlTowerCount() == 0)) {
 					delay = 480000;
-				else
+				} else {
 					delay = 30000;
+				}
 				
 				setTask(true);
-				ThreadPoolManager.getInstance().scheduleGeneral(new oustAllPlayers(), delay );
+				ThreadPoolManager.getInstance().scheduleGeneral(new oustAllPlayers(), delay);
 			}
 			
 			String filename = "data/html/castleteleporter/MassGK-1.htm";
@@ -78,18 +79,17 @@ public final class L2CastleTeleporterInstance extends L2Npc
 	}
 	
 	@Override
-	public void showChatWindow(L2PcInstance player)
-	{
+	public void showChatWindow(L2PcInstance player) {
 		String filename;
-		if (!getTask())
-		{
-			if (getCastle().getSiege().getIsInProgress() && getCastle().getSiege().getControlTowerCount() == 0)
+		if (!getTask()) {
+			if (getCastle().getSiege().getIsInProgress() && (getCastle().getSiege().getControlTowerCount() == 0)) {
 				filename = "data/html/castleteleporter/MassGK-2.htm";
-			else
+			} else {
 				filename = "data/html/castleteleporter/MassGK.htm";
-		}
-		else
+			}
+		} else {
 			filename = "data/html/castleteleporter/MassGK-1.htm";
+		}
 		
 		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player.getHtmlPrefix(), filename);
@@ -97,59 +97,50 @@ public final class L2CastleTeleporterInstance extends L2Npc
 		player.sendPacket(html);
 	}
 	
-	void oustAllPlayers()
-	{
+	void oustAllPlayers() {
 		getCastle().oustAllPlayers();
 	}
 	
-	class oustAllPlayers implements Runnable
-	{
+	class oustAllPlayers implements Runnable {
 		@Override
-		public void run()
-		{
-			try
-			{
+		public void run() {
+			try {
 				NpcSay cs = new NpcSay(getObjectId(), 1, getNpcId(), NpcStringId.THE_DEFENDERS_OF_S1_CASTLE_WILL_BE_TELEPORTED_TO_THE_INNER_CASTLE);
 				cs.addStringParameter(getCastle().getName());
 				int region = MapRegionManager.getInstance().getMapRegionLocId(getX(), getY());
 				L2World.getInstance().forEachPlayer(new ForEachPlayerInRegionSendPacket(region, cs));
 				oustAllPlayers();
 				setTask(false);
-			}
-			catch (NullPointerException e)
-			{
+			} catch (NullPointerException e) {
 				_log.log(Level.WARNING, "" + e.getMessage(), e);
 			}
 		}
 	}
 	
-	private final class ForEachPlayerInRegionSendPacket implements TObjectProcedure<L2PcInstance>
-	{
+	private final class ForEachPlayerInRegionSendPacket implements TObjectProcedure<L2PcInstance> {
 		int _region;
 		NpcSay _cs;
 		
-		protected ForEachPlayerInRegionSendPacket(int region, NpcSay cs)
-		{
+		protected ForEachPlayerInRegionSendPacket(int region, NpcSay cs) {
 			_region = region;
 			_cs = cs;
 		}
 		
 		@Override
-		public final boolean execute(final L2PcInstance player)
-		{
-			if (_region == MapRegionManager.getInstance().getMapRegionLocId(player.getX(), player.getY()))
+		public final boolean execute(final L2PcInstance player) {
+			if (_region == MapRegionManager.getInstance().getMapRegionLocId(player.getX(), player.getY())) {
 				player.sendPacket(_cs);
+			}
 			return true;
 		}
 	}
 	
-	public boolean getTask()
-	{
+	public boolean getTask() {
 		return _currentTask;
 	}
 	
-	public void setTask(boolean state)
-	{
+	public void setTask(boolean state) {
 		_currentTask = state;
 	}
+	
 }

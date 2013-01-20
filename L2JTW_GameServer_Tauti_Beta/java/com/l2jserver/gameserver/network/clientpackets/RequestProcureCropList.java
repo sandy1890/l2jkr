@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -32,18 +36,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Format: (ch) d [dddd]
- * d: size
- * [
- * d  obj id
- * d  item id
- * d  manor id
- * d  count
- * ]
+ * Format: (ch) d [dddd] d: size [ d obj id d item id d manor id d count ]
  * @author l3x
  */
-public class RequestProcureCropList extends L2GameClientPacket
-{
+public class RequestProcureCropList extends L2GameClientPacket {
 	private static final String _C__D0_02_REQUESTPROCURECROPLIST = "[C] D0:02 RequestProcureCropList";
 	
 	private static final int BATCH_LENGTH = 20; // length of the one item
@@ -51,25 +47,19 @@ public class RequestProcureCropList extends L2GameClientPacket
 	private Crop[] _items = null;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		int count = readD();
-		if(count <= 0
-				|| count > Config.MAX_ITEM_IN_PACKET
-				|| count * BATCH_LENGTH != _buf.remaining())
-		{
+		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
 			return;
 		}
 		
 		_items = new Crop[count];
-		for (int i = 0; i < count; i++)
-		{
+		for (int i = 0; i < count; i++) {
 			int objId = readD();
 			int itemId = readD();
 			int manorId = readD();
 			long cnt = readQ();
-			if (objId < 1 || itemId < 1 || manorId < 0 || cnt < 0)
-			{
+			if (objId < 1 || itemId < 1 || manorId < 0 || cnt < 0) {
 				_items = null;
 				return;
 			}
@@ -78,8 +68,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		if (_items == null)
 			return;
 		
@@ -98,14 +87,13 @@ public class RequestProcureCropList extends L2GameClientPacket
 		if (!player.isInsideRadius(manager, INTERACTION_DISTANCE, false, false))
 			return;
 		
-		int castleId = ((L2ManorManagerInstance)manager).getCastle().getCastleId();
+		int castleId = ((L2ManorManagerInstance) manager).getCastle().getCastleId();
 		
 		// Calculate summary values
 		int slots = 0;
 		int weight = 0;
 		
-		for (Crop i : _items)
-		{
+		for (Crop i : _items) {
 			if (!i.getCrop())
 				continue;
 			
@@ -118,21 +106,18 @@ public class RequestProcureCropList extends L2GameClientPacket
 				slots++;
 		}
 		
-		if (!player.getInventory().validateWeight(weight))
-		{
+		if (!player.getInventory().validateWeight(weight)) {
 			player.sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
 			return;
 		}
 		
-		if (!player.getInventory().validateCapacity(slots))
-		{
+		if (!player.getInventory().validateCapacity(slots)) {
 			player.sendPacket(SystemMessageId.SLOTS_FULL);
 			return;
 		}
 		
 		// Proceed the purchase
-		for (Crop i : _items)
-		{
+		for (Crop i : _items) {
 			if (i.getReward() == 0)
 				continue;
 			
@@ -143,8 +128,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 				continue;
 			
 			long rewardItemCount = i.getPrice() / rewardPrice;
-			if (rewardItemCount < 1)
-			{
+			if (rewardItemCount < 1) {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_CROP_S1);
 				sm.addItemName(i.getItemId());
 				sm.addItemNumber(i.getCount());
@@ -152,8 +136,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 				continue;
 			}
 			
-			if (player.getAdena() < fee)
-			{
+			if (player.getAdena() < fee) {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_CROP_S1);
 				sm.addItemName(i.getItemId());
 				sm.addItemNumber(i.getCount());
@@ -182,8 +165,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 		}
 	}
 	
-	private static class Crop
-	{
+	private static class Crop {
 		private final int _objectId;
 		private final int _itemId;
 		private final int _manorId;
@@ -191,55 +173,44 @@ public class RequestProcureCropList extends L2GameClientPacket
 		private int _reward = 0;
 		private CropProcure _crop = null;
 		
-		public Crop(int obj, int id, int m, long num)
-		{
+		public Crop(int obj, int id, int m, long num) {
 			_objectId = obj;
 			_itemId = id;
 			_manorId = m;
 			_count = num;
 		}
 		
-		public int getObjectId()
-		{
+		public int getObjectId() {
 			return _objectId;
 		}
 		
-		public int getItemId()
-		{
+		public int getItemId() {
 			return _itemId;
 		}
 		
-		public long getCount()
-		{
+		public long getCount() {
 			return _count;
 		}
 		
-		public int getReward()
-		{
+		public int getReward() {
 			return _reward;
 		}
 		
-		public long getPrice()
-		{
+		public long getPrice() {
 			return _crop.getPrice() * _count;
 		}
 		
-		public long getFee(int castleId)
-		{
+		public long getFee(int castleId) {
 			if (_manorId == castleId)
 				return 0;
 			
-			return (getPrice() /100) * 5; // 5% fee for selling to other manor
+			return (getPrice() / 100) * 5; // 5% fee for selling to other manor
 		}
 		
-		public boolean getCrop()
-		{
-			try
-			{
+		public boolean getCrop() {
+			try {
 				_crop = CastleManager.getInstance().getCastleById(_manorId).getCrop(_itemId, CastleManorManager.PERIOD_CURRENT);
-			}
-			catch (NullPointerException e)
-			{
+			} catch (NullPointerException e) {
 				return false;
 			}
 			if (_crop == null || _crop.getId() == 0 || _crop.getPrice() == 0 || _count == 0)
@@ -255,10 +226,8 @@ public class RequestProcureCropList extends L2GameClientPacket
 			return true;
 		}
 		
-		public boolean setCrop()
-		{
-			synchronized(_crop)
-			{
+		public boolean setCrop() {
+			synchronized (_crop) {
 				long amount = _crop.getAmount();
 				if (_count > amount)
 					return false; // not enough crops
@@ -271,8 +240,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_02_REQUESTPROCURECROPLIST;
 	}
 }

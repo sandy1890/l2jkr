@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -22,19 +26,18 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  * class contains itemId, quantity, ownerId, referencePrice, but not objectId<br>
  * is stored, this will be only "list" of items with it's owner
  */
-public final class TempItem
-{
-	private int _itemId;
+public final class TempItem {
+	
+	private final int _itemId;
 	private int _quantity;
-	private int _referencePrice;
-	private String _itemName;
+	private final int _referencePrice;
+	private final String _itemName;
 	
 	/**
 	 * @param item
 	 * @param quantity of that item
 	 */
-	public TempItem(L2ItemInstance item, int quantity)
-	{
+	public TempItem(L2ItemInstance item, int quantity) {
 		super();
 		_itemId = item.getItemId();
 		_quantity = quantity;
@@ -45,37 +48,33 @@ public final class TempItem
 	/**
 	 * @return the quantity.
 	 */
-	public int getQuantity()
-	{
+	public int getQuantity() {
 		return _quantity;
 	}
 	
 	/**
 	 * @param quantity The quantity to set.
 	 */
-	public void setQuantity(int quantity)
-	{
+	public void setQuantity(int quantity) {
 		_quantity = quantity;
 	}
 	
-	public int getReferencePrice()
-	{
+	public int getReferencePrice() {
 		return _referencePrice;
 	}
 	
 	/**
 	 * @return the itemId.
 	 */
-	public int getItemId()
-	{
+	public int getItemId() {
 		return _itemId;
 	}
 	
 	/**
 	 * @return the itemName.
 	 */
-	public String getItemName()
-	{
+	public String getItemName() {
 		return _itemName;
 	}
+	
 }

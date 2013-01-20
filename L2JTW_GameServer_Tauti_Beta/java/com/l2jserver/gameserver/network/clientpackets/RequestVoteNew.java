@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -22,29 +26,25 @@ import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 
-public final class RequestVoteNew extends L2GameClientPacket
-{
+public final class RequestVoteNew extends L2GameClientPacket {
 	private static final String _C__D0_7E_REQUESTVOTENEW = "[C] D0:7E RequestVoteNew";
 	
 	private int _targetId;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_targetId = readD();
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 			return;
 		
 		L2Object object = activeChar.getTarget();
 		
-		if (!(object instanceof L2PcInstance))
-		{
+		if (!(object instanceof L2PcInstance)) {
 			if (object == null)
 				activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
 			else
@@ -57,20 +57,17 @@ public final class RequestVoteNew extends L2GameClientPacket
 		if (target.getObjectId() != _targetId)
 			return;
 		
-		if (target == activeChar)
-		{
+		if (target == activeChar) {
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);
 			return;
 		}
 		
-		if (activeChar.getRecomLeft() <= 0)
-		{
+		if (activeChar.getRecomLeft() <= 0) {
 			activeChar.sendPacket(SystemMessageId.YOU_CURRENTLY_DO_NOT_HAVE_ANY_RECOMMENDATIONS);
 			return;
 		}
 		
-		if (target.getRecomHave() >= 255)
-		{
+		if (target.getRecomHave() >= 255) {
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_NO_LONGER_RECEIVE_A_RECOMMENDATION);
 			return;
 		}
@@ -97,8 +94,7 @@ public final class RequestVoteNew extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_7E_REQUESTVOTENEW;
 	}
 }

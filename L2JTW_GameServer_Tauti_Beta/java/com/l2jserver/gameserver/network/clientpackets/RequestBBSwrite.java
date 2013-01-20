@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -20,12 +24,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
 import com.l2jserver.gameserver.network.communityserver.writepackets.RequestCommunityBoardWrite;
+
 /**
  * Format SSSSSS
  * @author -Wooden-
  */
-public final class RequestBBSwrite extends L2GameClientPacket
-{
+public final class RequestBBSwrite extends L2GameClientPacket {
 	private static final String _C__24_REQUESTBBSWRITE = "[C] 24 RequestBBSwrite";
 	private String _url;
 	private String _arg1;
@@ -35,8 +39,7 @@ public final class RequestBBSwrite extends L2GameClientPacket
 	private String _arg5;
 	
 	@Override
-	protected final void readImpl()
-	{
+	protected final void readImpl() {
 		_url = readS();
 		_arg1 = readS();
 		_arg2 = readS();
@@ -46,25 +49,21 @@ public final class RequestBBSwrite extends L2GameClientPacket
 	}
 	
 	@Override
-	protected final void runImpl()
-	{
-		if (Config.ENABLE_COMMUNITY_BOARD)
-		{
+	protected final void runImpl() {
+		if (Config.ENABLE_COMMUNITY_BOARD) {
 			L2PcInstance activeChar = getClient().getActiveChar();
 			
 			if (activeChar == null)
 				return;
 			
-			if (!CommunityServerThread.getInstance().sendPacket(new RequestCommunityBoardWrite(activeChar.getObjectId(), _url,_arg1,_arg2, _arg3, _arg4, _arg5)))
+			if (!CommunityServerThread.getInstance().sendPacket(new RequestCommunityBoardWrite(activeChar.getObjectId(), _url, _arg1, _arg2, _arg3, _arg4, _arg5)))
 				activeChar.sendPacket(SystemMessageId.CB_OFFLINE);
-		}
-		else
-			CommunityBoard.getInstance().handleWriteCommands(getClient(),_url,_arg1,_arg2, _arg3, _arg4, _arg5);
+		} else
+			CommunityBoard.getInstance().handleWriteCommands(getClient(), _url, _arg1, _arg2, _arg3, _arg4, _arg5);
 	}
 	
 	@Override
-	public final String getType()
-	{
+	public final String getType() {
 		return _C__24_REQUESTBBSWRITE;
 	}
 }

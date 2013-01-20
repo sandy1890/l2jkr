@@ -1,27 +1,33 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.effects;
 
 import java.util.NoSuchElementException;
 
 /**
- * @author  DrHouse
+ * @author DrHouse
  */
-public enum AbnormalEffect
-{
-	/* l2jtw start
+public enum AbnormalEffect {
+	
+	/* l2jtw start */
+	//@formatter:off
+	/*
 	NULL("null", 0x0),
 	BLEEDING("bleed", 0x000001),
 	POISON("poison", 0x000002),
@@ -85,8 +91,10 @@ public enum AbnormalEffect
 	E_VESPER_3("vesper3", 0x000080),
 	HUNTING_BONUS("hunting_bonus", 0x80000),
 	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000); //Add NevitAdvent by pmq
-	 */
-	//rocknow-God-Start
+	*/
+	//@formatter:on
+	
+	// rocknow-God-Start
 	NULL("null", 0x0, 0),
 	BLEEDING("bleed", 0x000001, 1),
 	POISON("poison", 0x000002, 2),
@@ -121,7 +129,7 @@ public enum AbnormalEffect
 	DEATH_MARK("deathmark", 0x40000000, 31),
 	SKULL_FEAR("skull_fear", 0x80000000, 32),
 	ARCANE_SHIELD("arcane_shield", 0x008000, 16),
-	//CONFUSED("confused", 0x0020),
+	// CONFUSED("confused", 0x0020),
 	
 	// special effects
 	S_INVINCIBLE("invincible", 0x000001, 33),
@@ -167,18 +175,19 @@ public enum AbnormalEffect
 	E_VESPER_2("vesper2", 0x000040, 0),
 	E_VESPER_3("vesper3", 0x000080, 0),
 	HUNTING_BONUS("hunting_bonus", 0x80000, 0),
-	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); //Add NevitAdvent by pmq
-	//rocknow-God-End
+	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); // Add NevitAdvent by pmq
+	// rocknow-God-End
 	// l2jtw end
 	
 	private final int _mask;
 	private final String _name;
 	// l2jtw add start
 	private final int _id;
+	
 	// l2jtw add end
-
-	/* l2jtw start
-	private AbnormalEffect(String name, int mask)
+	
+	/*
+	 * l2jtw start private AbnormalEffect(String name, int mask)
 	 */
 	private AbnormalEffect(String name, int mask, int id)
 	// l2jtw end
@@ -190,41 +199,37 @@ public enum AbnormalEffect
 		// l2jtw add end
 	}
 	
-	public final int getMask()
-	{
+	public final int getMask() {
 		return _mask;
 	}
 	
-	public final String getName()
-	{
+	public final String getName() {
 		return _name;
 	}
 	
 	// l2jtw add start
-	public final int getId()
-	{
+	public final int getId() {
 		return _id;
 	}
-
-	public static int getAbnormalId(int mask)
-	{
-		for (AbnormalEffect eff : AbnormalEffect.values())
-		{
-			if (eff.getMask() == mask && eff.getId() <= 32)
+	
+	public static int getAbnormalId(int mask) {
+		for (AbnormalEffect eff : AbnormalEffect.values()) {
+			if ((eff.getMask() == mask) && (eff.getId() <= 32)) {
 				return eff.getId();
+			}
 		}
-		throw new NoSuchElementException("AbnormalEffect not found for mask: '"+ mask + "'.\n Please check "+AbnormalEffect.class.getCanonicalName());
+		throw new NoSuchElementException("AbnormalEffect not found for mask: '" + mask + "'.\n Please check " + AbnormalEffect.class.getCanonicalName());
 	}
-
-	public static int getSpecialId(int mask)
-	{
-		for (AbnormalEffect eff : AbnormalEffect.values())
-		{
-			if (eff.getMask() == mask && eff.getId() > 32)
+	
+	public static int getSpecialId(int mask) {
+		for (AbnormalEffect eff : AbnormalEffect.values()) {
+			if ((eff.getMask() == mask) && (eff.getId() > 32)) {
 				return eff.getId();
+			}
 		}
-		throw new NoSuchElementException("AbnormalEffect not found for mask: '"+ mask + "'.\n Please check "+AbnormalEffect.class.getCanonicalName());
+		throw new NoSuchElementException("AbnormalEffect not found for mask: '" + mask + "'.\n Please check " + AbnormalEffect.class.getCanonicalName());
 	}
+	
 	// l2jtw add end
 	
 	/**
@@ -232,13 +237,13 @@ public enum AbnormalEffect
 	 * @return the found abnormal effect.
 	 * @throws NoSuchElementException if no abnormal effect is found with the specified name.
 	 */
-	public static AbnormalEffect getByName(String name)
-	{
-		for (AbnormalEffect eff : AbnormalEffect.values())
-		{
-			if (eff.getName().equals(name))
+	public static AbnormalEffect getByName(String name) {
+		for (AbnormalEffect eff : AbnormalEffect.values()) {
+			if (eff.getName().equals(name)) {
 				return eff;
+			}
 		}
-		throw new NoSuchElementException("AbnormalEffect not found for name: '"+name+ "'.\n Please check "+AbnormalEffect.class.getCanonicalName());
+		throw new NoSuchElementException("AbnormalEffect not found for name: '" + name + "'.\n Please check " + AbnormalEffect.class.getCanonicalName());
 	}
+	
 }

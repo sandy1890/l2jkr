@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,20 +43,20 @@ import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.BaseStats;
 
-public class NpcTable
-{
+import gnu.trove.map.hash.TIntObjectHashMap;
+
+public class NpcTable {
+	
 	private static final Logger _log = Logger.getLogger(NpcTable.class.getName());
 	
 	private final TIntObjectHashMap<L2NpcTemplate> _npcs = new TIntObjectHashMap<>();
 	
-	protected NpcTable()
-	{
+	protected NpcTable() {
 		_npcs.clear();
 		restoreNpcData();
 	}
 	
-	private void restoreNpcData()
-	{
+	private void restoreNpcData() {
 		loadNpcs(0);
 		loadNpcsSkills(0);
 		loadNpcsDrop(0);
@@ -68,8 +70,7 @@ public class NpcTable
 	 * @param NpcData
 	 * @throws Exception
 	 */
-	private void fillNpcTable(ResultSet NpcData) throws Exception
-	{
+	private void fillNpcTable(ResultSet NpcData) throws Exception {
 		StatsSet npcDat = new StatsSet();
 		int id = NpcData.getInt("id");
 		int idTemp = NpcData.getInt("idTemplate");
@@ -139,16 +140,13 @@ public class NpcTable
 	/**
 	 * @param id of the NPC to reload.
 	 */
-	public void reloadNpc(int id)
-	{
+	public void reloadNpc(int id) {
 		Map<QuestEventType, List<Quest>> quests = null;
-		try
-		{
+		try {
 			// save a copy of the old data
 			L2NpcTemplate old = getTemplate(id);
 			
-			if (old != null)
-			{
+			if (old != null) {
 				quests = old.getEventQuests();
 			}
 			
@@ -163,13 +161,10 @@ public class NpcTable
 			// restore additional data from saved copy
 			L2NpcTemplate created = getTemplate(id);
 			
-			if ((old != null) && (created != null))
-			{
+			if ((old != null) && (created != null)) {
 				created.getEventQuests().putAll(quests);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not reload data for NPC " + id + ": " + e.getMessage(), e);
 		}
 	}
@@ -177,20 +172,17 @@ public class NpcTable
 	/**
 	 * Just wrapper.
 	 */
-	public void reloadAllNpc()
-	{
+	public void reloadAllNpc() {
 		restoreNpcData();
 	}
 	
 	/**
 	 * @param npc
 	 */
-	public void saveNpc(StatsSet npc)
-	{
+	public void saveNpc(StatsSet npc) {
 		final Map<String, Object> set = npc.getSet();
 		int length = 0;
-		for (Object obj : set.keySet())
-		{
+		for (Object obj : set.keySet()) {
 			// 15 is just guessed npc name length
 			length += ((String) obj).length() + 7 + 15;
 		}
@@ -199,52 +191,41 @@ public class NpcTable
 		final StringBuilder npcAiSb = new StringBuilder(30);
 		String attribute;
 		String value;
-		for (Entry<String, Object> entry : set.entrySet())
-		{
+		for (Entry<String, Object> entry : set.entrySet()) {
 			attribute = entry.getKey();
 			value = String.valueOf(entry.getValue());
-			switch (attribute)
-			{
+			switch (attribute) {
 				case "npcId":
-					break;
+				break;
 				case "aggro":
 				case "showName":
-				case "targetable":
-				{
+				case "targetable": {
 					appendEntry(npcAiSb, attribute, value);
 					break;
 				}
-				default:
-				{
+				default: {
 					appendEntry(npcSb, attribute, value);
 				}
 			}
 		}
 		
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			int updated = 0;
 			final int npcId = npc.getInteger("npcId");
-			if (Config.CUSTOM_NPC_TABLE)
-			{
+			if (Config.CUSTOM_NPC_TABLE) {
 				updated = performUpdate(npcSb, "custom_npc", "id", npcId, con);
 				performUpdate(npcAiSb, "custom_npcaidata", "npcId", npcId, con);
 			}
 			
-			if (updated == 0)
-			{
+			if (updated == 0) {
 				performUpdate(npcSb, "npc", "id", npcId, con);
 				performUpdate(npcAiSb, "npcaidata", "npcId", npcId, con);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not store new NPC data in database: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -254,10 +235,8 @@ public class NpcTable
 	 * @param attribute the attribute to append.
 	 * @param value the value to append.
 	 */
-	private final void appendEntry(StringBuilder sb, String attribute, String value)
-	{
-		if (sb.length() > 0)
-		{
+	private final void appendEntry(StringBuilder sb, String attribute, String value) {
+		if (sb.length() > 0) {
 			sb.append(", ");
 		}
 		
@@ -276,11 +255,9 @@ public class NpcTable
 	 * @return the count of updated NPCs.
 	 * @throws SQLException the SQL exception.
 	 */
-	private final int performUpdate(StringBuilder sb, String table, String key, int npcId, Connection con) throws SQLException
-	{
+	private final int performUpdate(StringBuilder sb, String table, String key, int npcId, Connection con) throws SQLException {
 		int updated = 0;
-		if ((sb != null) && !sb.toString().isEmpty())
-		{
+		if ((sb != null) && !sb.toString().isEmpty()) {
 			final StringBuilder sbQuery = new StringBuilder(sb.length() + 28);
 			sbQuery.append("UPDATE ");
 			sbQuery.append(table);
@@ -301,8 +278,7 @@ public class NpcTable
 	 * @param id the template Id to get.
 	 * @return the template for the given id.
 	 */
-	public L2NpcTemplate getTemplate(int id)
-	{
+	public L2NpcTemplate getTemplate(int id) {
 		return _npcs.get(id);
 	}
 	
@@ -310,12 +286,9 @@ public class NpcTable
 	 * @param name of the template to get.
 	 * @return the template for the given name.
 	 */
-	public L2NpcTemplate getTemplateByName(String name)
-	{
-		for (L2NpcTemplate npcTemplate : _npcs.values(new L2NpcTemplate[0]))
-		{
-			if (npcTemplate.getName().equalsIgnoreCase(name))
-			{
+	public L2NpcTemplate getTemplateByName(String name) {
+		for (L2NpcTemplate npcTemplate : _npcs.values(new L2NpcTemplate[0])) {
+			if (npcTemplate.getName().equalsIgnoreCase(name)) {
 				return npcTemplate;
 			}
 		}
@@ -326,15 +299,11 @@ public class NpcTable
 	 * @param lvls of all the templates to get.
 	 * @return the template list for the given level.
 	 */
-	public List<L2NpcTemplate> getAllOfLevel(int... lvls)
-	{
+	public List<L2NpcTemplate> getAllOfLevel(int... lvls) {
 		final List<L2NpcTemplate> list = new ArrayList<>();
-		for (int lvl : lvls)
-		{
-			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0]))
-			{
-				if (t.getLevel() == lvl)
-				{
+		for (int lvl : lvls) {
+			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0])) {
+				if (t.getLevel() == lvl) {
 					list.add(t);
 				}
 			}
@@ -346,15 +315,11 @@ public class NpcTable
 	 * @param lvls of all the monster templates to get.
 	 * @return the template list for the given level.
 	 */
-	public List<L2NpcTemplate> getAllMonstersOfLevel(int... lvls)
-	{
+	public List<L2NpcTemplate> getAllMonstersOfLevel(int... lvls) {
 		final List<L2NpcTemplate> list = new ArrayList<>();
-		for (int lvl : lvls)
-		{
-			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0]))
-			{
-				if ((t.getLevel() == lvl) && t.isType("L2Monster"))
-				{
+		for (int lvl : lvls) {
+			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0])) {
+				if ((t.getLevel() == lvl) && t.isType("L2Monster")) {
 					list.add(t);
 				}
 			}
@@ -366,15 +331,11 @@ public class NpcTable
 	 * @param letters of all the NPC templates which its name start with.
 	 * @return the template list for the given letter.
 	 */
-	public List<L2NpcTemplate> getAllNpcStartingWith(String... letters)
-	{
+	public List<L2NpcTemplate> getAllNpcStartingWith(String... letters) {
 		final List<L2NpcTemplate> list = new ArrayList<>();
-		for (String letter : letters)
-		{
-			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0]))
-			{
-				if (t.getName().startsWith(letter) && t.isType("L2Npc"))
-				{
+		for (String letter : letters) {
+			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0])) {
+				if (t.getName().startsWith(letter) && t.isType("L2Npc")) {
 					list.add(t);
 				}
 			}
@@ -386,15 +347,11 @@ public class NpcTable
 	 * @param classTypes of all the templates to get.
 	 * @return the template list for the given class type.
 	 */
-	public List<L2NpcTemplate> getAllNpcOfClassType(String... classTypes)
-	{
+	public List<L2NpcTemplate> getAllNpcOfClassType(String... classTypes) {
 		final List<L2NpcTemplate> list = new ArrayList<>();
-		for (String classType : classTypes)
-		{
-			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0]))
-			{
-				if (t.isType(classType))
-				{
+		for (String classType : classTypes) {
+			for (L2NpcTemplate t : _npcs.values(new L2NpcTemplate[0])) {
+				if (t.isType(classType)) {
 					list.add(t);
 				}
 			}
@@ -406,20 +363,16 @@ public class NpcTable
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load.
 	 */
-	public void loadNpcs(int id)
-	{
+	@SuppressWarnings("resource")
+	public void loadNpcs(int id) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
-			if (id > 0)
-			{
+			if (id > 0) {
 				statement = con.prepareStatement("SELECT * FROM npc WHERE id = ?");
 				statement.setInt(1, id);
-			}
-			else
-			{
+			} else {
 				statement = con.prepareStatement("SELECT * FROM npc ORDER BY id");
 			}
 			ResultSet rset = statement.executeQuery();
@@ -427,8 +380,7 @@ public class NpcTable
 			int cont = 0;
 			int cCont = 0;
 			
-			while (rset.next())
-			{
+			while (rset.next()) {
 				fillNpcTable(rset);
 				cont++;
 			}
@@ -436,21 +388,16 @@ public class NpcTable
 			rset.close();
 			statement.close();
 			
-			if (Config.CUSTOM_NPC_TABLE)
-			{
-				if (id > 0)
-				{
+			if (Config.CUSTOM_NPC_TABLE) {
+				if (id > 0) {
 					statement = con.prepareStatement("SELECT * FROM custom_npc WHERE id = ?");
 					statement.setInt(1, id);
-				}
-				else
-				{
+				} else {
 					statement = con.prepareStatement("SELECT * FROM custom_npc ORDER BY id");
 				}
 				rset = statement.executeQuery();
 				
-				while (rset.next())
-				{
+				while (rset.next()) {
 					fillNpcTable(rset);
 					cCont++;
 				}
@@ -460,13 +407,9 @@ public class NpcTable
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") NPC template(s).");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error creating NPC table.", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -475,20 +418,16 @@ public class NpcTable
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load it's skills.
 	 */
-	public void loadNpcsSkills(int id)
-	{
+	@SuppressWarnings("resource")
+	public void loadNpcsSkills(int id) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
-			if (id > 0)
-			{
+			if (id > 0) {
 				statement = con.prepareStatement("SELECT * FROM npcskills WHERE npcid = ?");
 				statement.setInt(1, id);
-			}
-			else
-			{
+			} else {
 				statement = con.prepareStatement("SELECT * FROM npcskills ORDER BY npcid");
 			}
 			
@@ -500,13 +439,11 @@ public class NpcTable
 			L2NpcTemplate npcDat = null;
 			L2Skill npcSkill = null;
 			
-			while (rset.next())
-			{
+			while (rset.next()) {
 				int mobId = rset.getInt("npcid");
 				npcDat = _npcs.get(mobId);
 				
-				if (npcDat == null)
-				{
+				if (npcDat == null) {
 					_log.warning(getClass().getSimpleName() + ": Skill data for undefined NPC. npcId: " + mobId);
 					continue;
 				}
@@ -514,15 +451,13 @@ public class NpcTable
 				int skillId = rset.getInt("skillid");
 				int level = rset.getInt("level");
 				
-				if (skillId == L2Skill.SKILL_NPC_RACE)
-				{
+				if (skillId == L2Skill.SKILL_NPC_RACE) {
 					npcDat.setRace(level);
 					continue;
 				}
 				
 				npcSkill = SkillTable.getInstance().getInfo(skillId, level);
-				if (npcSkill == null)
-				{
+				if (npcSkill == null) {
 					continue;
 				}
 				cont++;
@@ -532,26 +467,20 @@ public class NpcTable
 			rset.close();
 			statement.close();
 			
-			if (Config.CUSTOM_NPC_SKILLS_TABLE)
-			{
-				if (id > 0)
-				{
+			if (Config.CUSTOM_NPC_SKILLS_TABLE) {
+				if (id > 0) {
 					statement = con.prepareStatement("SELECT * FROM custom_npcskills WHERE npcid = ?");
 					statement.setInt(1, id);
-				}
-				else
-				{
+				} else {
 					statement = con.prepareStatement("SELECT * FROM custom_npcskills ORDER BY npcid");
 				}
 				rset = statement.executeQuery();
 				
-				while (rset.next())
-				{
+				while (rset.next()) {
 					int mobId = rset.getInt("npcid");
 					npcDat = _npcs.get(mobId);
 					
-					if (npcDat == null)
-					{
+					if (npcDat == null) {
 						_log.warning("Custom " + getClass().getSimpleName() + ": Skill data for undefined NPC. npcId: " + mobId);
 						continue;
 					}
@@ -559,16 +488,14 @@ public class NpcTable
 					int skillId = rset.getInt("skillid");
 					int level = rset.getInt("level");
 					
-					if ((npcDat.getRace() == null) && (skillId == L2Skill.SKILL_NPC_RACE))
-					{
+					if ((npcDat.getRace() == null) && (skillId == L2Skill.SKILL_NPC_RACE)) {
 						npcDat.setRace(level);
 						continue;
 					}
 					
 					npcSkill = SkillTable.getInstance().getInfo(skillId, level);
 					
-					if (npcSkill == null)
-					{
+					if (npcSkill == null) {
 						continue;
 					}
 					
@@ -581,13 +508,9 @@ public class NpcTable
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") npc skills.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC skills table.", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -596,21 +519,17 @@ public class NpcTable
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load it's drops.
 	 */
-	public void loadNpcsDrop(int id)
-	{
+	@SuppressWarnings("resource")
+	public void loadNpcsDrop(int id) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = null;
 			
-			if (id > 0)
-			{
+			if (id > 0) {
 				statement = con.prepareStatement("SELECT * FROM droplist WHERE mobId = ? ORDER BY mobId, chance DESC");
 				statement.setInt(1, id);
-			}
-			else
-			{
+			} else {
 				statement = con.prepareStatement("SELECT * FROM droplist ORDER BY mobId, chance DESC");
 			}
 			
@@ -621,12 +540,10 @@ public class NpcTable
 			int cont = 0;
 			int cCont = 0;
 			
-			while (rset.next())
-			{
+			while (rset.next()) {
 				int mobId = rset.getInt("mobId");
 				npcDat = _npcs.get(mobId);
-				if (npcDat == null)
-				{
+				if (npcDat == null) {
 					_log.warning(getClass().getSimpleName() + ": Drop data for undefined NPC. npcId: " + mobId);
 					continue;
 				}
@@ -639,8 +556,7 @@ public class NpcTable
 				
 				int category = rset.getInt("category");
 				
-				if (ItemTable.getInstance().getTemplate(dropDat.getItemId()) == null)
-				{
+				if (ItemTable.getInstance().getTemplate(dropDat.getItemId()) == null) {
 					_log.warning(getClass().getSimpleName() + ": Drop data for undefined item template! NpcId: " + mobId + " itemId: " + dropDat.getItemId());
 					continue;
 				}
@@ -651,27 +567,21 @@ public class NpcTable
 			rset.close();
 			statement.close();
 			
-			if (Config.CUSTOM_DROPLIST_TABLE)
-			{
-				if (id > 0)
-				{
+			if (Config.CUSTOM_DROPLIST_TABLE) {
+				if (id > 0) {
 					statement = con.prepareStatement("SELECT * FROM custom_droplist WHERE mobId = ? ORDER BY mobId, chance DESC");
 					statement.setInt(1, id);
-				}
-				else
-				{
+				} else {
 					statement = con.prepareStatement("SELECT * FROM custom_droplist ORDER BY mobId, chance DESC");
 				}
 				
 				rset = statement.executeQuery();
 				int mobId;
 				int category;
-				while (rset.next())
-				{
+				while (rset.next()) {
 					mobId = rset.getInt("mobId");
 					npcDat = _npcs.get(mobId);
-					if (npcDat == null)
-					{
+					if (npcDat == null) {
 						_log.warning(getClass().getSimpleName() + ": CUSTOM DROPLIST: Drop data for undefined NPC. npcId: " + mobId);
 						continue;
 					}
@@ -683,8 +593,7 @@ public class NpcTable
 					dropDat.setChance(rset.getInt("chance"));
 					category = rset.getInt("category");
 					
-					if (ItemTable.getInstance().getTemplate(dropDat.getItemId()) == null)
-					{
+					if (ItemTable.getInstance().getTemplate(dropDat.getItemId()) == null) {
 						_log.warning(getClass().getSimpleName() + ": Custom drop data for undefined item template! NpcId: " + mobId + " itemId: " + dropDat.getItemId());
 						continue;
 					}
@@ -696,13 +605,9 @@ public class NpcTable
 				statement.close();
 			}
 			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") drops.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC dropdata. ", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -711,20 +616,15 @@ public class NpcTable
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load it's skill learn list.
 	 */
-	private void loadNpcsSkillLearn(int id)
-	{
+	private void loadNpcsSkillLearn(int id) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
-			if (id > 0)
-			{
+			if (id > 0) {
 				statement = con.prepareStatement("SELECT * FROM skill_learn WHERE npc_id = ?");
 				statement.setInt(1, id);
-			}
-			else
-			{
+			} else {
 				statement = con.prepareStatement("SELECT * FROM skill_learn");
 			}
 			
@@ -734,13 +634,11 @@ public class NpcTable
 			int npcId;
 			int classId;
 			L2NpcTemplate npc;
-			while (rset.next())
-			{
+			while (rset.next()) {
 				npcId = rset.getInt("npc_id");
 				classId = rset.getInt("class_id");
 				npc = getTemplate(npcId);
-				if (npc == null)
-				{
+				if (npc == null) {
 					_log.warning(getClass().getSimpleName() + ": Error getting NPC template ID " + npcId + " while trying to load skill trainer data.");
 					continue;
 				}
@@ -753,13 +651,9 @@ public class NpcTable
 			statement.close();
 			
 			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " Skill Learn.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC trainer data.", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -768,21 +662,16 @@ public class NpcTable
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load it's minions.
 	 */
-	public void loadMinions(int id)
-	{
+	public void loadMinions(int id) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = null;
 			
-			if (id > 0)
-			{
+			if (id > 0) {
 				statement = con.prepareStatement("SELECT * FROM minions WHERE boss_id = ?");
 				statement.setInt(1, id);
-			}
-			else
-			{
+			} else {
 				statement = con.prepareStatement("SELECT * FROM minions ORDER BY boss_id");
 			}
 			
@@ -792,12 +681,10 @@ public class NpcTable
 			L2NpcTemplate npcDat = null;
 			int cnt = 0;
 			int raidId;
-			while (rset.next())
-			{
+			while (rset.next()) {
 				raidId = rset.getInt("boss_id");
 				npcDat = _npcs.get(raidId);
-				if (npcDat == null)
-				{
+				if (npcDat == null) {
 					_log.warning(getClass().getSimpleName() + ": Minion references undefined boss NPC. Boss NpcId: " + raidId);
 					continue;
 				}
@@ -813,13 +700,9 @@ public class NpcTable
 			rset.close();
 			statement.close();
 			_log.info(getClass().getSimpleName() + ": Loaded " + cnt + " Minions.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error loading minion data.", e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -828,21 +711,17 @@ public class NpcTable
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load it's AI data.
 	 */
-	public void loadNpcsAI(int id)
-	{
+	@SuppressWarnings("resource")
+	public void loadNpcsAI(int id) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = null;
 			
-			if (id > 0)
-			{
+			if (id > 0) {
 				statement = con.prepareStatement("SELECT * FROM npcaidata WHERE npcId = ?");
 				statement.setInt(1, id);
-			}
-			else
-			{
+			} else {
 				statement = con.prepareStatement("SELECT * FROM npcaidata ORDER BY npcId");
 			}
 			
@@ -854,12 +733,10 @@ public class NpcTable
 			int cont = 0;
 			int cCont = 0;
 			int npcId;
-			while (rset.next())
-			{
+			while (rset.next()) {
 				npcId = rset.getInt("npcId");
 				npcDat = _npcs.get(npcId);
-				if (npcDat == null)
-				{
+				if (npcDat == null) {
 					_log.severe(getClass().getSimpleName() + ": AI Data Error with id : " + npcId);
 					continue;
 				}
@@ -895,25 +772,19 @@ public class NpcTable
 			rset.close();
 			statement.close();
 			
-			if (Config.CUSTOM_NPC_TABLE)
-			{
-				if (id > 0)
-				{
+			if (Config.CUSTOM_NPC_TABLE) {
+				if (id > 0) {
 					statement = con.prepareStatement("SELECT * FROM custom_npcaidata WHERE npcId = ?");
 					statement.setInt(1, id);
-				}
-				else
-				{
+				} else {
 					statement = con.prepareStatement("SELECT * FROM custom_npcaidata ORDER BY npcId");
 				}
 				
 				rset = statement.executeQuery();
-				while (rset.next())
-				{
+				while (rset.next()) {
 					npcId = rset.getInt("npcId");
 					npcDat = _npcs.get(npcId);
-					if (npcDat == null)
-					{
+					if (npcDat == null) {
 						_log.severe(getClass().getSimpleName() + ": Custom AI Data Error with id : " + npcId);
 						continue;
 					}
@@ -951,13 +822,9 @@ public class NpcTable
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") AI Data.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC AI Data: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -966,20 +833,16 @@ public class NpcTable
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load it's element data.
 	 */
-	public void loadNpcsElement(int id)
-	{
+	@SuppressWarnings("resource")
+	public void loadNpcsElement(int id) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = null;
-			if (id > 0)
-			{
+			if (id > 0) {
 				statement = con.prepareStatement("SELECT * FROM npc_elementals WHERE npc_id = ?");
 				statement.setInt(1, id);
-			}
-			else
-			{
+			} else {
 				statement = con.prepareStatement("SELECT * FROM npc_elementals ORDER BY npc_id");
 			}
 			
@@ -989,35 +852,32 @@ public class NpcTable
 			int cont = 0;
 			int cCount = 0;
 			int npcId;
-			while (rset.next())
-			{
+			while (rset.next()) {
 				npcId = rset.getInt("npc_id");
 				npcDat = _npcs.get(npcId);
-				if (npcDat == null)
-				{
+				if (npcDat == null) {
 					_log.severe("NPCElementals: Elementals Error with id : " + npcId);
 					continue;
 				}
-				switch (rset.getByte("elemAtkType"))
-				{
+				switch (rset.getByte("elemAtkType")) {
 					case Elementals.FIRE:
 						npcDat.setBaseFire(rset.getInt("elemAtkValue"));
-						break;
+					break;
 					case Elementals.WATER:
 						npcDat.setBaseWater(rset.getInt("elemAtkValue"));
-						break;
+					break;
 					case Elementals.EARTH:
 						npcDat.setBaseEarth(rset.getInt("elemAtkValue"));
-						break;
+					break;
 					case Elementals.WIND:
 						npcDat.setBaseWind(rset.getInt("elemAtkValue"));
-						break;
+					break;
 					case Elementals.HOLY:
 						npcDat.setBaseHoly(rset.getInt("elemAtkValue"));
-						break;
+					break;
 					case Elementals.DARK:
 						npcDat.setBaseDark(rset.getInt("elemAtkValue"));
-						break;
+					break;
 					default:
 						_log.severe("NPCElementals: Elementals Error with id : " + npcId + "; unknown elementType: " + rset.getByte("elemAtkType"));
 						continue;
@@ -1034,49 +894,42 @@ public class NpcTable
 			rset.close();
 			statement.close();
 			
-			if (Config.CUSTOM_NPC_TABLE)
-			{
-				if (id > 0)
-				{
+			if (Config.CUSTOM_NPC_TABLE) {
+				if (id > 0) {
 					statement = con.prepareStatement("SELECT * FROM custom_npc_elementals WHERE npc_id = ?");
 					statement.setInt(1, id);
-				}
-				else
-				{
+				} else {
 					statement = con.prepareStatement("SELECT * FROM custom_npc_elementals ORDER BY npc_id");
 				}
 				
 				rset = statement.executeQuery();
 				
-				while (rset.next())
-				{
+				while (rset.next()) {
 					npcId = rset.getInt("npc_id");
 					npcDat = _npcs.get(npcId);
-					if (npcDat == null)
-					{
+					if (npcDat == null) {
 						_log.severe("NPCElementals: Custom Elementals Error with id : " + npcId);
 						continue;
 					}
-					switch (rset.getByte("elemAtkType"))
-					{
+					switch (rset.getByte("elemAtkType")) {
 						case Elementals.FIRE:
 							npcDat.setBaseFire(rset.getInt("elemAtkValue"));
-							break;
+						break;
 						case Elementals.WATER:
 							npcDat.setBaseWater(rset.getInt("elemAtkValue"));
-							break;
+						break;
 						case Elementals.EARTH:
 							npcDat.setBaseEarth(rset.getInt("elemAtkValue"));
-							break;
+						break;
 						case Elementals.WIND:
 							npcDat.setBaseWind(rset.getInt("elemAtkValue"));
-							break;
+						break;
 						case Elementals.HOLY:
 							npcDat.setBaseHoly(rset.getInt("elemAtkValue"));
-							break;
+						break;
 						case Elementals.DARK:
 							npcDat.setBaseDark(rset.getInt("elemAtkValue"));
-							break;
+						break;
 						default:
 							_log.severe("NPCElementals: Custom Elementals Error with id : " + npcId + "; unknown elementType: " + rset.getByte("elemAtkType"));
 							continue;
@@ -1094,24 +947,19 @@ public class NpcTable
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCount + ") elementals Data.");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC Elementals Data: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public static NpcTable getInstance()
-	{
+	public static NpcTable getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final NpcTable _instance = new NpcTable();
 	}
+	
 }

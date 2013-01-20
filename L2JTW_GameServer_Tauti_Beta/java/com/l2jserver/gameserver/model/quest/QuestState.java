@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.quest;
 
@@ -26,7 +30,8 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.instancemanager.PcCafePointsManager; //Add pcbangpoints by pmq
+import com.l2jserver.gameserver.datatables.MessageTable;
+import com.l2jserver.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -41,13 +46,12 @@ import com.l2jserver.gameserver.network.serverpackets.TutorialEnableClientEvent;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
 /**
  * @author Luis Arias
  */
-public final class QuestState
-{
+public final class QuestState {
+	
 	protected static final Logger _log = Logger.getLogger(QuestState.class.getName());
 	
 	/** The name of the quest of this QuestState */
@@ -70,8 +74,7 @@ public final class QuestState
 	/**
 	 * This enumerate represent the different quest types.
 	 */
-	public static enum QuestType
-	{
+	public static enum QuestType {
 		REPEATABLE,
 		ONE_TIME,
 		DAILY
@@ -83,8 +86,7 @@ public final class QuestState
 	 * @param player the owner of this {@link QuestState} object
 	 * @param state the initial state of the quest
 	 */
-	public QuestState(Quest quest, L2PcInstance player, byte state)
-	{
+	public QuestState(Quest quest, L2PcInstance player, byte state) {
 		_questName = quest.getName();
 		_player = player;
 		_state = state;
@@ -95,24 +97,21 @@ public final class QuestState
 	/**
 	 * @return the name of the quest of this QuestState
 	 */
-	public String getQuestName()
-	{
+	public String getQuestName() {
 		return _questName;
 	}
 	
 	/**
 	 * @return the {@link Quest} object of this QuestState
 	 */
-	public Quest getQuest()
-	{
+	public Quest getQuest() {
 		return QuestManager.getInstance().getQuest(_questName);
 	}
 	
 	/**
 	 * @return the {@link L2PcInstance} object of the owner of this QuestState
 	 */
-	public L2PcInstance getPlayer()
-	{
+	public L2PcInstance getPlayer() {
 		return _player;
 	}
 	
@@ -120,8 +119,7 @@ public final class QuestState
 	 * @return the current State of this QuestState
 	 * @see com.l2jserver.gameserver.model.quest.State
 	 */
-	public byte getState()
-	{
+	public byte getState() {
 		return _state;
 	}
 	
@@ -129,8 +127,7 @@ public final class QuestState
 	 * @return {@code true} if the State of this QuestState is CREATED, {@code false} otherwise
 	 * @see com.l2jserver.gameserver.model.quest.State
 	 */
-	public boolean isCreated()
-	{
+	public boolean isCreated() {
 		return (_state == State.CREATED);
 	}
 	
@@ -138,8 +135,7 @@ public final class QuestState
 	 * @return {@code true} if the State of this QuestState is STARTED, {@code false} otherwise
 	 * @see com.l2jserver.gameserver.model.quest.State
 	 */
-	public boolean isStarted()
-	{
+	public boolean isStarted() {
 		return (_state == State.STARTED);
 	}
 	
@@ -147,8 +143,7 @@ public final class QuestState
 	 * @return {@code true} if the State of this QuestState is COMPLETED, {@code false} otherwise
 	 * @see com.l2jserver.gameserver.model.quest.State
 	 */
-	public boolean isCompleted()
-	{
+	public boolean isCompleted() {
 		return (_state == State.COMPLETED);
 	}
 	
@@ -158,8 +153,7 @@ public final class QuestState
 	 * @see #setState(byte state, boolean saveInDb)
 	 * @see com.l2jserver.gameserver.model.quest.State
 	 */
-	public boolean setState(byte state)
-	{
+	public boolean setState(byte state) {
 		return setState(state, true);
 	}
 	
@@ -170,22 +164,16 @@ public final class QuestState
 	 * @return {@code true} if state was changed, {@code false} otherwise
 	 * @see com.l2jserver.gameserver.model.quest.State
 	 */
-	public boolean setState(byte state, boolean saveInDb)
-	{
-		if (_state == state)
-		{
+	public boolean setState(byte state, boolean saveInDb) {
+		if (_state == state) {
 			return false;
 		}
-		final boolean newQuest = isCreated(); 
+		final boolean newQuest = isCreated();
 		_state = state;
-		if (saveInDb)
-		{
-			if (newQuest)
-			{
+		if (saveInDb) {
+			if (newQuest) {
 				Quest.createQuestInDb(this);
-			}
-			else
-			{
+			} else {
 				Quest.updateQuestInDb(this);
 			}
 		}
@@ -200,15 +188,12 @@ public final class QuestState
 	 * @param val : String pointing out the value of the variable for quest
 	 * @return String (equal to parameter "val")
 	 */
-	public String setInternal(String var, String val)
-	{
-		if (_vars == null)
-		{
+	public String setInternal(String var, String val) {
+		if (_vars == null) {
 			_vars = new HashMap<>();
 		}
 		
-		if (val == null)
-		{
+		if (val == null) {
 			val = "";
 		}
 		
@@ -231,47 +216,34 @@ public final class QuestState
 	 * @param val : String indicating the value of the variable for quest
 	 * @return String (equal to parameter "val")
 	 */
-	public String set(String var, String val)
-	{
-		if (_vars == null)
-		{
+	public String set(String var, String val) {
+		if (_vars == null) {
 			_vars = new HashMap<>();
 		}
 		
-		if (val == null)
-		{
+		if (val == null) {
 			val = "";
 		}
 		
 		// FastMap.put() returns previous value associated with specified key, or null if there was no mapping for key.
 		String old = _vars.put(var, val);
 		
-		if (old != null)
-		{
+		if (old != null) {
 			Quest.updateQuestVarInDb(this, var, val);
-		}
-		else
-		{
+		} else {
 			Quest.createQuestVarInDb(this, var, val);
 		}
 		
-		if ("cond".equals(var))
-		{
-			try
-			{
+		if ("cond".equals(var)) {
+			try {
 				int previousVal = 0;
-				try
-				{
+				try {
 					previousVal = Integer.parseInt(old);
-				}
-				catch (Exception ex)
-				{
+				} catch (Exception ex) {
 					previousVal = 0;
 				}
 				setCond(Integer.parseInt(val), previousVal);
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, _player.getName() + ", " + getQuestName() + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
 			}
 		}
@@ -292,10 +264,8 @@ public final class QuestState
 	 * @param cond the current quest progress condition (0 - 31 including)
 	 * @param old the previous quest progress condition to check against
 	 */
-	private void setCond(int cond, int old)
-	{
-		if (cond == old)
-		{
+	private void setCond(int cond, int old) {
+		if (cond == old) {
 			return;
 		}
 		
@@ -304,25 +274,20 @@ public final class QuestState
 		// always exist (i.e. it can never be skipped). So if cond is 2, we can still safely
 		// assume no steps have been skipped.
 		// Finally, more than 31 steps CANNOT be supported in any way with skipping.
-		if ((cond < 3) || (cond > 31))
-		{
+		if ((cond < 3) || (cond > 31)) {
 			unset("__compltdStateFlags");
-		}
-		else
-		{
+		} else {
 			completedStateFlags = getInt("__compltdStateFlags");
 		}
 		
 		// case 1: No steps have been skipped so far...
-		if (completedStateFlags == 0)
-		{
+		if (completedStateFlags == 0) {
 			// check if this step also doesn't skip anything. If so, no further work is needed
 			// also, in this case, no work is needed if the state is being reset to a smaller value
 			// in those cases, skip forward to informing the client about the change...
 			
 			// ELSE, if we just now skipped for the first time...prepare the flags!!!
-			if (cond > (old + 1))
-			{
+			if (cond > (old + 1)) {
 				// set the most significant bit to 1 (indicates that there exist skipped states)
 				// also, ensure that the least significant bit is an 1 (the first step is never skipped, no matter
 				// what the cond says)
@@ -339,18 +304,14 @@ public final class QuestState
 		}
 		// case 2: There were exist previously skipped steps
 		// if this is a push back to a previous step, clear all completion flags ahead
-		else if (cond < old)
-		{
+		else if (cond < old) {
 			// note, this also unsets the flag indicating that there exist skips
 			completedStateFlags &= ((1 << cond) - 1);
 			
 			// now, check if this resulted in no steps being skipped any more
-			if (completedStateFlags == ((1 << cond) - 1))
-			{
+			if (completedStateFlags == ((1 << cond) - 1)) {
 				unset("__compltdStateFlags");
-			}
-			else
-			{
+			} else {
 				// set the most significant bit back to 1 again, to correctly indicate that this skips states.
 				// also, ensure that the least significant bit is an 1 (the first step is never skipped, no matter
 				// what the cond says)
@@ -360,8 +321,7 @@ public final class QuestState
 		}
 		// If this moves forward, it changes nothing on previously skipped steps.
 		// Just mark this state and we are done.
-		else
-		{
+		else {
 			completedStateFlags |= (1 << (cond - 1));
 			set("__compltdStateFlags", String.valueOf(completedStateFlags));
 		}
@@ -370,8 +330,7 @@ public final class QuestState
 		_player.sendPacket(new QuestList());
 		
 		final Quest q = getQuest();
-		if (!q.isCustomQuest() && (cond > 0))
-		{
+		if (!q.isCustomQuest() && (cond > 0)) {
 			_player.sendPacket(new ExShowQuestMark(q.getQuestIntId()));
 		}
 	}
@@ -381,16 +340,13 @@ public final class QuestState
 	 * @param var the name of the variable to remove
 	 * @return the previous value of the variable or {@code null} if none were found
 	 */
-	public String unset(String var)
-	{
-		if (_vars == null)
-		{
+	public String unset(String var) {
+		if (_vars == null) {
 			return null;
 		}
 		
 		String old = _vars.remove(var);
-		if (old != null)
-		{
+		if (old != null) {
 			Quest.deleteQuestVarInDb(this, var);
 		}
 		return old;
@@ -402,11 +358,9 @@ public final class QuestState
 	 * @param value the value of the variable
 	 */
 	// TODO: these methods should not be here, they could be used by other classes to save some variables, but they can't because they require to create a QuestState first.
-	public final void saveGlobalQuestVar(String var, String value)
-	{
+	public final void saveGlobalQuestVar(String var, String value) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_quest_global_data (charId, var, value) VALUES (?, ?, ?)");
 			statement.setInt(1, _player.getObjectId());
@@ -414,13 +368,9 @@ public final class QuestState
 			statement.setString(3, value);
 			statement.executeUpdate();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Could not insert player's global quest variable: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -435,30 +385,23 @@ public final class QuestState
 	 * @return the value of the variable or an empty string if the variable does not exist in the database
 	 */
 	// TODO: these methods should not be here, they could be used by other classes to save some variables, but they can't because they require to create a QuestState first.
-	public final String getGlobalQuestVar(String var)
-	{
+	public final String getGlobalQuestVar(String var) {
 		String result = "";
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT value FROM character_quest_global_data WHERE charId = ? AND var = ?");
 			statement.setInt(1, _player.getObjectId());
 			statement.setString(2, var);
 			ResultSet rs = statement.executeQuery();
-			if (rs.first())
-			{
+			if (rs.first()) {
 				result = rs.getString(1);
 			}
 			rs.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Could not load player's global quest variable: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		return result;
@@ -468,24 +411,18 @@ public final class QuestState
 	 * Permanently delete a global quest variable from the database.
 	 * @param var the name of the variable to delete
 	 */
-	public final void deleteGlobalQuestVar(String var)
-	{
+	public final void deleteGlobalQuestVar(String var) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_quest_global_data WHERE charId = ? AND var = ?");
 			statement.setInt(1, _player.getObjectId());
 			statement.setString(2, var);
 			statement.executeUpdate();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "could not delete player's global quest variable; charId = " + _player.getObjectId() + ", variable name = " + var + ". Exception: " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
@@ -494,10 +431,8 @@ public final class QuestState
 	 * @param var the name of the variable to get
 	 * @return the value of the variable from the list of quest variables
 	 */
-	public String get(String var)
-	{
-		if (_vars == null)
-		{
+	public String get(String var) {
+		if (_vars == null) {
 			return null;
 		}
 		
@@ -508,26 +443,20 @@ public final class QuestState
 	 * @param var the name of the variable to get
 	 * @return the integer value of the variable or 0 if the variable does not exist or its value is not an integer
 	 */
-	public int getInt(String var)
-	{
-		if (_vars == null)
-		{
+	public int getInt(String var) {
+		if (_vars == null) {
 			return 0;
 		}
 		
 		final String variable = _vars.get(var);
-		if ((variable == null) || (variable.length() == 0))
-		{
+		if ((variable == null) || (variable.length() == 0)) {
 			return 0;
 		}
 		
 		int varint = 0;
-		try
-		{
+		try {
 			varint = Integer.parseInt(variable);
-		}
-		catch (NumberFormatException nfe)
-		{
+		} catch (NumberFormatException nfe) {
 			_log.log(Level.INFO, "Quest " + getQuestName() + ", method getInt(" + var + "), tried to parse a non-integer value (" + variable + "). Char ID: " + _player.getObjectId(), nfe);
 		}
 		
@@ -540,8 +469,7 @@ public final class QuestState
 	 * @return {@code true} if the quest condition is equal to {@code condition}, {@code false} otherwise
 	 * @see #getInt(String var)
 	 */
-	public boolean isCond(int condition)
-	{
+	public boolean isCond(int condition) {
 		return (getInt("cond") == condition);
 	}
 	
@@ -551,10 +479,8 @@ public final class QuestState
 	 * @return this {@link QuestState} object
 	 * @see #set(String var, String val)
 	 */
-	public QuestState setCond(int value)
-	{
-		if (isStarted())
-		{
+	public QuestState setCond(int value) {
+		if (isStarted()) {
 			set("cond", String.valueOf(value));
 		}
 		return this;
@@ -568,16 +494,13 @@ public final class QuestState
 	 * @see #set(String var, String val)
 	 * @see #setCond(int value)
 	 */
-	public QuestState setCond(int value, boolean playQuestMiddle)
-	{
-		if (!isStarted())
-		{
+	public QuestState setCond(int value, boolean playQuestMiddle) {
+		if (!isStarted()) {
 			return this;
 		}
 		set("cond", String.valueOf(value));
 		
-		if (playQuestMiddle)
-		{
+		if (playQuestMiddle) {
 			playSound("ItemSound.quest_middle");
 		}
 		return this;
@@ -587,10 +510,8 @@ public final class QuestState
 	 * Add player to get notification of characters death
 	 * @param character the {@link L2Character} object of the character to get notification of death
 	 */
-	public void addNotifyOfDeath(L2Character character)
-	{
-		if ((character == null) || !(character instanceof L2PcInstance))
-		{
+	public void addNotifyOfDeath(L2Character character) {
+		if ((character == null) || !(character instanceof L2PcInstance)) {
 			return;
 		}
 		
@@ -604,8 +525,7 @@ public final class QuestState
 	 * @param itemId the ID of the item wanted to be count
 	 * @return long
 	 */
-	public long getQuestItemsCount(int itemId)
-	{
+	public long getQuestItemsCount(int itemId) {
 		return getQuest().getQuestItemsCount(getPlayer(), itemId);
 	}
 	
@@ -613,8 +533,7 @@ public final class QuestState
 	 * @param itemId the ID of the item required
 	 * @return true if item exists in player's inventory, false - if not
 	 */
-	public boolean hasQuestItems(int itemId)
-	{
+	public boolean hasQuestItems(int itemId) {
 		return getQuest().hasQuestItems(getPlayer(), itemId);
 	}
 	
@@ -623,8 +542,7 @@ public final class QuestState
 	 * @param itemId : ID of the item to check enchantment
 	 * @return int
 	 */
-	public int getEnchantLevel(int itemId)
-	{
+	public int getEnchantLevel(int itemId) {
 		return getQuest().getEnchantLevel(getPlayer(), itemId);
 	}
 	
@@ -633,8 +551,7 @@ public final class QuestState
 	 * @param count
 	 * @param applyRates
 	 */
-	public void giveAdena(long count, boolean applyRates)
-	{
+	public void giveAdena(long count, boolean applyRates) {
 		giveItems(PcInventory.ADENA_ID, count, applyRates ? 0 : 1);
 	}
 	
@@ -643,8 +560,7 @@ public final class QuestState
 	 * @param itemId
 	 * @param count
 	 */
-	public void rewardItems(int itemId, long count)
-	{
+	public void rewardItems(int itemId, long count) {
 		getQuest().rewardItems(getPlayer(), itemId, count);
 	}
 	
@@ -653,18 +569,15 @@ public final class QuestState
 	 * @param itemId
 	 * @param count
 	 */
-	public void giveItems(int itemId, long count)
-	{
+	public void giveItems(int itemId, long count) {
 		giveItems(itemId, count, 0);
 	}
 	
-	public void giveItems(int itemId, long count, int enchantlevel)
-	{
+	public void giveItems(int itemId, long count, int enchantlevel) {
 		getQuest().giveItems(getPlayer(), itemId, count, enchantlevel);
 	}
 	
-	public void giveItems(int itemId, long count, byte attributeId, int attributeLevel)
-	{
+	public void giveItems(int itemId, long count, byte attributeId, int attributeLevel) {
 		getQuest().giveItems(getPlayer(), itemId, count, attributeId, attributeLevel);
 	}
 	
@@ -677,30 +590,25 @@ public final class QuestState
 	 * @param sound boolean indicating whether to play sound
 	 * @return boolean indicating whether player has requested number of items
 	 */
-	public boolean dropQuestItems(int itemId, int count, long neededCount, int dropChance, boolean sound)
-	{
+	public boolean dropQuestItems(int itemId, int count, long neededCount, int dropChance, boolean sound) {
 		return dropQuestItems(itemId, count, count, neededCount, dropChance, sound);
 	}
 	
-	public boolean dropQuestItems(int itemId, int minCount, int maxCount, long neededCount, int dropChance, boolean sound)
-	{
+	public boolean dropQuestItems(int itemId, int minCount, int maxCount, long neededCount, int dropChance, boolean sound) {
 		return getQuest().dropQuestItems(getPlayer(), itemId, minCount, maxCount, neededCount, dropChance, sound);
 	}
 	
 	// TODO: More radar functions need to be added when the radar class is complete.
 	// BEGIN STUFF THAT WILL PROBABLY BE CHANGED
-	public void addRadar(int x, int y, int z)
-	{
+	public void addRadar(int x, int y, int z) {
 		_player.getRadar().addMarker(x, y, z);
 	}
 	
-	public void removeRadar(int x, int y, int z)
-	{
+	public void removeRadar(int x, int y, int z) {
 		_player.getRadar().removeMarker(x, y, z);
 	}
 	
-	public void clearRadar()
-	{
+	public void clearRadar() {
 		_player.getRadar().removeAllMarkers();
 	}
 	
@@ -716,8 +624,7 @@ public final class QuestState
 	 * @param itemId : Identifier of the item
 	 * @param count : Quantity of items to destroy
 	 */
-	public void takeItems(int itemId, long count)
-	{
+	public void takeItems(int itemId, long count) {
 		getQuest().takeItems(getPlayer(), itemId, count);
 	}
 	
@@ -725,8 +632,7 @@ public final class QuestState
 	 * Send a packet in order to play sound at client terminal
 	 * @param sound
 	 */
-	public void playSound(String sound)
-	{
+	public void playSound(String sound) {
 		getQuest().playSound(getPlayer(), sound);
 	}
 	
@@ -735,18 +641,16 @@ public final class QuestState
 	 * @param exp
 	 * @param sp
 	 */
-	public void addExpAndSp(int exp, int sp)
-	{
+	public void addExpAndSp(int exp, int sp) {
 		getQuest().addExpAndSp(getPlayer(), exp, sp);
-		PcCafePointsManager.getInstance().givePcCafePoint(getPlayer(), (long)(exp * Config.RATE_QUEST_REWARD_XP)); //Add pcbangpoints by pmq
+		PcCafePointsManager.getInstance().givePcCafePoint(getPlayer(), (long) (exp * Config.RATE_QUEST_REWARD_XP)); // Add pcbangpoints by pmq
 	}
 	
 	/**
 	 * @param loc
 	 * @return number of ticks from GameTimeController
 	 */
-	public int getItemEquipped(int loc)
-	{
+	public int getItemEquipped(int loc) {
 		return getQuest().getItemEquipped(getPlayer(), loc);
 	}
 	
@@ -754,24 +658,21 @@ public final class QuestState
 	 * Return the number of ticks from the GameTimeController
 	 * @return int
 	 */
-	public int getGameTicks()
-	{
+	public int getGameTicks() {
 		return getQuest().getGameTicks();
 	}
 	
 	/**
 	 * @return {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
 	 */
-	public final boolean isExitQuestOnCleanUp()
-	{
+	public final boolean isExitQuestOnCleanUp() {
 		return _isExitQuestOnCleanUp;
 	}
 	
 	/**
 	 * @param isExitQuestOnCleanUp {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
 	 */
-	public void setIsExitQuestOnCleanUp(boolean isExitQuestOnCleanUp)
-	{
+	public void setIsExitQuestOnCleanUp(boolean isExitQuestOnCleanUp) {
 		_isExitQuestOnCleanUp = isExitQuestOnCleanUp;
 	}
 	
@@ -781,8 +682,7 @@ public final class QuestState
 	 * @param name the name of the timer/event
 	 * @param time time in milliseconds till the event is executed
 	 */
-	public void startQuestTimer(String name, long time)
-	{
+	public void startQuestTimer(String name, long time) {
 		getQuest().startQuestTimer(name, time, null, getPlayer(), false);
 	}
 	
@@ -793,8 +693,7 @@ public final class QuestState
 	 * @param time time in milliseconds till the event is executed
 	 * @param npc the L2Npc associated with this event
 	 */
-	public void startQuestTimer(String name, long time, L2Npc npc)
-	{
+	public void startQuestTimer(String name, long time, L2Npc npc) {
 		getQuest().startQuestTimer(name, time, npc, getPlayer(), false);
 	}
 	
@@ -804,8 +703,7 @@ public final class QuestState
 	 * @param name the name of the timer/event
 	 * @param time time in milliseconds till the event is executed/repeated
 	 */
-	public void startRepeatingQuestTimer(String name, long time)
-	{
+	public void startRepeatingQuestTimer(String name, long time) {
 		getQuest().startQuestTimer(name, time, null, getPlayer(), true);
 	}
 	
@@ -816,8 +714,7 @@ public final class QuestState
 	 * @param time time in milliseconds till the event is executed/repeated
 	 * @param npc the L2Npc associated with this event
 	 */
-	public void startRepeatingQuestTimer(String name, long time, L2Npc npc)
-	{
+	public void startRepeatingQuestTimer(String name, long time, L2Npc npc) {
 		getQuest().startQuestTimer(name, time, npc, getPlayer(), true);
 	}
 	
@@ -825,8 +722,7 @@ public final class QuestState
 	 * @param name the name of the QuestTimer required
 	 * @return the {@link QuestTimer} object with the specified name or {@code null} if it doesn't exist
 	 */
-	public final QuestTimer getQuestTimer(String name)
-	{
+	public final QuestTimer getQuestTimer(String name) {
 		return getQuest().getQuestTimer(name, null, getPlayer());
 	}
 	
@@ -838,8 +734,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
 	 */
-	public L2Npc addSpawn(int npcId)
-	{
+	public L2Npc addSpawn(int npcId) {
 		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, 0, false);
 	}
 	
@@ -851,8 +746,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
 	 */
-	public L2Npc addSpawn(int npcId, int despawnDelay)
-	{
+	public L2Npc addSpawn(int npcId, int despawnDelay) {
 		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, despawnDelay, false);
 	}
 	
@@ -865,8 +759,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
 	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z)
-	{
+	public L2Npc addSpawn(int npcId, int x, int y, int z) {
 		return addSpawn(npcId, x, y, z, 0, false, 0, false);
 	}
 	
@@ -880,8 +773,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
 	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int despawnDelay)
-	{
+	public L2Npc addSpawn(int npcId, int x, int y, int z, int despawnDelay) {
 		return addSpawn(npcId, x, y, z, 0, false, despawnDelay, false);
 	}
 	
@@ -892,8 +784,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
 	 */
-	public L2Npc addSpawn(int npcId, L2Character cha)
-	{
+	public L2Npc addSpawn(int npcId, L2Character cha) {
 		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), true, 0, false);
 	}
 	
@@ -905,8 +796,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
 	 */
-	public L2Npc addSpawn(int npcId, L2Character cha, int despawnDelay)
-	{
+	public L2Npc addSpawn(int npcId, L2Character cha, int despawnDelay) {
 		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), true, despawnDelay, false);
 	}
 	
@@ -919,8 +809,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
 	 */
-	public L2Npc addSpawn(int npcId, L2Character cha, boolean randomOffset, int despawnDelay)
-	{
+	public L2Npc addSpawn(int npcId, L2Character cha, boolean randomOffset, int despawnDelay) {
 		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), randomOffset, despawnDelay, false);
 	}
 	
@@ -936,8 +825,7 @@ public final class QuestState
 	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
 	 * @see #addSpawn(int, int, int, int, int, boolean, int, boolean)
 	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
-	{
+	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay) {
 		return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, false);
 	}
 	
@@ -962,8 +850,7 @@ public final class QuestState
 	 * @see #addSpawn(int, int, int, int, int, boolean, int)
 	 * @see #addSpawn(int, int, int, int, int, boolean, int, boolean)
 	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	{
+	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn) {
 		return getQuest().addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn);
 	}
 	
@@ -971,8 +858,7 @@ public final class QuestState
 	 * @param fileName the name of the file you want to show. Must be in the same folder (or subfolder) as script
 	 * @return a String containing the contents of the specified HTML file
 	 */
-	public String showHtmlFile(String fileName)
-	{
+	public String showHtmlFile(String fileName) {
 		return getQuest().showHtmlFile(getPlayer(), fileName);
 	}
 	
@@ -981,10 +867,8 @@ public final class QuestState
 	 * Works only if state is CREATED and the quest is not a custom quest.
 	 * @return the newly created {@code QuestState} object
 	 */
-	public QuestState startQuest()
-	{
-		if (isCreated() && !getQuest().isCustomQuest())
-		{
+	public QuestState startQuest() {
+		if (isCreated() && !getQuest().isCustomQuest()) {
 			set("cond", "1");
 			setState(State.STARTED);
 			playSound("ItemSound.quest_accept");
@@ -1001,20 +885,16 @@ public final class QuestState
 	 * @see #exitQuest(boolean repeatable)
 	 * @see #exitQuest(boolean repeatable, boolean playExitQuest)
 	 */
-	public QuestState exitQuest(QuestType type)
-	{
-		switch (type)
-		{
-			case DAILY:
-			{
+	public QuestState exitQuest(QuestType type) {
+		switch (type) {
+			case DAILY: {
 				exitQuest(false);
 				setRestartTime();
 				break;
 			}
 			// case ONE_TIME:
 			// case REPEATABLE:
-			default:
-			{
+			default: {
 				exitQuest(type == QuestType.REPEATABLE);
 				break;
 			}
@@ -1032,11 +912,9 @@ public final class QuestState
 	 * @see #exitQuest(boolean repeatable)
 	 * @see #exitQuest(boolean repeatable, boolean playExitQuest)
 	 */
-	public QuestState exitQuest(QuestType type, boolean playExitQuest)
-	{
+	public QuestState exitQuest(QuestType type, boolean playExitQuest) {
 		exitQuest(type);
-		if (playExitQuest)
-		{
+		if (playExitQuest) {
 			playSound("ItemSound.quest_finish");
 		}
 		return this;
@@ -1051,12 +929,10 @@ public final class QuestState
 	 * @see #exitQuest(QuestType type, boolean playExitQuest)
 	 * @see #exitQuest(boolean repeatable, boolean playExitQuest)
 	 */
-	public QuestState exitQuest(boolean repeatable)
-	{
+	public QuestState exitQuest(boolean repeatable) {
 		_player.removeNotifyQuestOfDeath(this);
 		
-		if (!isStarted())
-		{
+		if (!isStarted()) {
 			return this;
 		}
 		
@@ -1064,21 +940,16 @@ public final class QuestState
 		
 		// Clean registered quest items
 		int[] itemIdList = getQuest().getRegisteredItemIds();
-		if (itemIdList != null)
-		{
-			for (int element : itemIdList)
-			{
+		if (itemIdList != null) {
+			for (int element : itemIdList) {
 				takeItems(element, -1);
 			}
 		}
 		
 		Quest.deleteQuestInDb(this, repeatable);
-		if (repeatable)
-		{
+		if (repeatable) {
 			_player.delQuestState(getQuestName());
-		}
-		else
-		{
+		} else {
 			Quest.updateQuestInDb(this);
 		}
 		_vars = null;
@@ -1095,52 +966,40 @@ public final class QuestState
 	 * @see #exitQuest(QuestType type, boolean playExitQuest)
 	 * @see #exitQuest(boolean repeatable)
 	 */
-	public QuestState exitQuest(boolean repeatable, boolean playExitQuest)
-	{
+	public QuestState exitQuest(boolean repeatable, boolean playExitQuest) {
 		exitQuest(repeatable);
-		if (playExitQuest)
-		{
+		if (playExitQuest) {
 			playSound("ItemSound.quest_finish");
 		}
 		return this;
 	}
 	
-	public void showQuestionMark(int number)
-	{
+	public void showQuestionMark(int number) {
 		_player.sendPacket(new TutorialShowQuestionMark(number));
 	}
 	
-	public void playTutorialVoice(String voice)
-	{
+	public void playTutorialVoice(String voice) {
 		_player.sendPacket(new PlaySound(2, voice, 0, 0, _player.getX(), _player.getY(), _player.getZ()));
 	}
 	
-	public void showTutorialHTML(String html)
-	{
+	public void showTutorialHTML(String html) {
 		String text = HtmCache.getInstance().getHtm(_player.getHtmlPrefix(), "data/scripts/quests/255_Tutorial/" + html);
-		if (text == null)
-		{
+		if (text == null) {
 			_log.warning("missing html page data/scripts/quests/255_Tutorial/" + html);
-			/* Move To MessageTable For L2JTW
-			text = "<html><body>File data/scripts/quests/255_Tutorial/" + html + " not found or file is empty.</body></html>";
-			*/
 			text = "<html><body>" + MessageTable.Messages[497].getExtra(1) + "data/scripts/quests/255_Tutorial/" + html + MessageTable.Messages[497].getExtra(2) + "</body></html>";
 		}
 		_player.sendPacket(new TutorialShowHtml(text));
 	}
 	
-	public void closeTutorialHtml()
-	{
+	public void closeTutorialHtml() {
 		_player.sendPacket(new TutorialCloseHtml());
 	}
 	
-	public void onTutorialClientEvent(int number)
-	{
+	public void onTutorialClientEvent(int number) {
 		_player.sendPacket(new TutorialEnableClientEvent(number));
 	}
 	
-	public void dropItem(L2MonsterInstance npc, L2PcInstance player, int itemId, int count)
-	{
+	public void dropItem(L2MonsterInstance npc, L2PcInstance player, int itemId, int count) {
 		npc.dropItem(player, itemId, count);
 	}
 	
@@ -1149,11 +1008,9 @@ public final class QuestState
 	 * The time is hardcoded at {@link Quest#getResetHour()} hours, {@link Quest#getResetMinutes()} minutes of the following day.<br>
 	 * It can be overridden in scripts (quests).
 	 */
-	public void setRestartTime()
-	{
+	public void setRestartTime() {
 		final Calendar reDo = Calendar.getInstance();
-		if (reDo.get(Calendar.HOUR_OF_DAY) >= getQuest().getResetHour())
-		{
+		if (reDo.get(Calendar.HOUR_OF_DAY) >= getQuest().getResetHour()) {
 			reDo.add(Calendar.DATE, 1);
 		}
 		reDo.set(Calendar.HOUR_OF_DAY, getQuest().getResetHour());
@@ -1165,9 +1022,9 @@ public final class QuestState
 	 * Check if a daily quest is available to be started over.
 	 * @return {@code true} if the quest is available, {@code false} otherwise.
 	 */
-	public boolean isNowAvailable()
-	{
+	public boolean isNowAvailable() {
 		final String val = get("restartTime");
 		return ((val == null) || !Util.isDigit(val)) || (Long.parseLong(val) <= System.currentTimeMillis());
 	}
+	
 }

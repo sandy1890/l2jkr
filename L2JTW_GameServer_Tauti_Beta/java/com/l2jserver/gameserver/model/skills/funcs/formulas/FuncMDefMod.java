@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.skills.funcs.formulas;
 
@@ -25,66 +29,50 @@ import com.l2jserver.gameserver.model.stats.Stats;
 
 /**
  * @author UnAfraid
- *
  */
-public class FuncMDefMod extends Func
-{
+public class FuncMDefMod extends Func {
+	
 	private static final FuncMDefMod _fmm_instance = new FuncMDefMod();
 	
-	public static Func getInstance()
-	{
+	public static Func getInstance() {
 		return _fmm_instance;
 	}
 	
-	private FuncMDefMod()
-	{
+	private FuncMDefMod() {
 		super(Stats.MAGIC_DEFENCE, 0x20, null);
 	}
 	
 	@Override
-	public void calc(Env env)
-	{
+	public void calc(Env env) {
 		float level = env.getCharacter().getLevel();
-		if (env.getCharacter() instanceof L2PcInstance)
-		{
+		if (env.getCharacter() instanceof L2PcInstance) {
 			L2PcInstance p = env.getPlayer();
-			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LFINGER) != null)
-			{
+			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LFINGER) != null) {
 				env.subValue(5);
 			}
-			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RFINGER) != null)
-			{
+			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RFINGER) != null) {
 				env.subValue(5);
 			}
-			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEAR) != null)
-			{
+			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEAR) != null) {
 				env.subValue(9);
 			}
-			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_REAR) != null)
-			{
+			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_REAR) != null) {
 				env.subValue(9);
 			}
-			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_NECK) != null)
-			{
+			if (p.getInventory().getPaperdollItem(Inventory.PAPERDOLL_NECK) != null) {
 				env.subValue(13);
 			}
 			env.mulValue(BaseStats.MEN.calcBonus(env.getPlayer()) * env.getPlayer().getLevelMod());
-		}
-		else if ((env.getCharacter() instanceof L2PetInstance) || (env.getCharacter() instanceof L2BabyPetInstance))
-		{
-			if (env.getCharacter().getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK) != 0)
-			{
+		} else if ((env.getCharacter() instanceof L2PetInstance) || (env.getCharacter() instanceof L2BabyPetInstance)) {
+			if (env.getCharacter().getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK) != 0) {
 				env.subValue(13);
 				env.mulValue(BaseStats.MEN.calcBonus(env.getCharacter()) * ((level + 89) / 100));
-			}
-			else
-			{
+			} else {
 				env.mulValue(BaseStats.MEN.calcBonus(env.getCharacter()) * ((level + 89) / 100));
 			}
-		}
-		else
-		{
+		} else {
 			env.mulValue(BaseStats.MEN.calcBonus(env.getCharacter()) * ((level + 89) / 100));
 		}
 	}
+	
 }

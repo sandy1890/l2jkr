@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -25,43 +29,36 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 /**
  * This class ...
- *
  * @version $Revision: 1.4.2.3.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
-public class SellList extends L2GameServerPacket
-{
+public class SellList extends L2GameServerPacket {
 	private static final String _S__10_SELLLIST = "[S] 06 SellList";
 	private final L2PcInstance _activeChar;
 	private final L2MerchantInstance _lease;
 	private long _money;
 	private List<L2ItemInstance> _selllist = new FastList<>();
 	
-	public SellList(L2PcInstance player)
-	{
+	public SellList(L2PcInstance player) {
 		_activeChar = player;
 		_lease = null;
 		_money = _activeChar.getAdena();
 		doLease();
 	}
 	
-	public SellList(L2PcInstance player, L2MerchantInstance lease)
-	{
+	public SellList(L2PcInstance player, L2MerchantInstance lease) {
 		_activeChar = player;
 		_lease = lease;
 		_money = _activeChar.getAdena();
 		doLease();
 	}
 	
-	private void doLease()
-	{
-		if (_lease == null)
-		{
-			for (L2ItemInstance item : _activeChar.getInventory().getItems())
-			{
-				if (!item.isEquipped() &&														// Not equipped
-						item.isSellable() &&													// Item is sellable
-						(_activeChar.getPet() == null ||										// Pet not summoned or
-								item.getObjectId() != _activeChar.getPet().getControlObjectId()))			// Pet is summoned and not the item that summoned the pet
+	private void doLease() {
+		if (_lease == null) {
+			for (L2ItemInstance item : _activeChar.getInventory().getItems()) {
+				if (!item.isEquipped() && // Not equipped
+				item.isSellable() && // Item is sellable
+				(_activeChar.getPet() == null || // Pet not summoned or
+				item.getObjectId() != _activeChar.getPet().getControlObjectId())) // Pet is summoned and not the item that summoned the pet
 				{
 					_selllist.add(item);
 					if (Config.DEBUG)
@@ -72,26 +69,24 @@ public class SellList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x06);
 		writeQ(_money);
 		writeD(_lease == null ? 0x00 : 1000000 + _lease.getTemplate().getNpcId());
 		writeH(_selllist.size());
 		
-		for (L2ItemInstance item : _selllist)
-		{
+		for (L2ItemInstance item : _selllist) {
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());
 			writeD(item.getDisplayId());
 			writeQ(item.getCount());
 			writeH(item.getItem().getType2());
-			writeH(item.isEquipped() ? 0x01 : 0x00); //rocknow-Sync L2J
+			writeH(item.isEquipped() ? 0x01 : 0x00); // rocknow-Sync L2J
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getEnchantLevel());
 			writeH(0x00);
 			writeH(item.getCustomType2());
-			writeQ(item.getItem().getReferencePrice()/2);
+			writeQ(item.getItem().getReferencePrice() / 2);
 			
 			// T1
 			writeH(item.getAttackElementType());
@@ -106,8 +101,7 @@ public class SellList extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__10_SELLLIST;
 	}
 }

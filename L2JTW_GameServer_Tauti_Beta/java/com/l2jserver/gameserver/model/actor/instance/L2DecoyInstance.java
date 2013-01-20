@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
@@ -27,23 +31,19 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.l2skills.L2SkillDecoy;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 
-
-public class L2DecoyInstance extends L2Decoy
-{
+public class L2DecoyInstance extends L2Decoy {
+	
 	private int _totalLifeTime;
 	private int _timeRemaining;
 	private Future<?> _DecoyLifeTask;
 	private Future<?> _HateSpam;
-	public L2DecoyInstance(int objectId, L2NpcTemplate template, L2PcInstance owner, L2Skill skill)
-	{
+	
+	public L2DecoyInstance(int objectId, L2NpcTemplate template, L2PcInstance owner, L2Skill skill) {
 		super(objectId, template, owner);
 		setInstanceType(InstanceType.L2DecoyInstance);
-		if (skill != null)
-		{
-			_totalLifeTime = ((L2SkillDecoy)skill).getTotalLifeTime();
-		}
-		else
-		{
+		if (skill != null) {
+			_totalLifeTime = ((L2SkillDecoy) skill).getTotalLifeTime();
+		} else {
 			_totalLifeTime = 20000;
 		}
 		_timeRemaining = _totalLifeTime;
@@ -54,12 +54,11 @@ public class L2DecoyInstance extends L2Decoy
 	}
 	
 	@Override
-	public boolean doDie(L2Character killer)
-	{
-		if (!super.doDie(killer))
+	public boolean doDie(L2Character killer) {
+		if (!super.doDie(killer)) {
 			return false;
-		if (_HateSpam != null)
-		{
+		}
+		if (_HateSpam != null) {
 			_HateSpam.cancel(true);
 			_HateSpam = null;
 		}
@@ -69,104 +68,84 @@ public class L2DecoyInstance extends L2Decoy
 	}
 	
 	@Override
-	public DecoyKnownList getKnownList()
-	{
+	public DecoyKnownList getKnownList() {
 		return (DecoyKnownList) super.getKnownList();
 	}
 	
 	@Override
-	public void initKnownList()
-	{
+	public void initKnownList() {
 		setKnownList(new DecoyKnownList(this));
 	}
 	
-	static class DecoyLifetime implements Runnable
-	{
-		private L2PcInstance _activeChar;
+	static class DecoyLifetime implements Runnable {
+		private final L2PcInstance _activeChar;
 		
-		private L2DecoyInstance _Decoy;
+		private final L2DecoyInstance _Decoy;
 		
-		DecoyLifetime(L2PcInstance activeChar, L2DecoyInstance Decoy)
-		{
+		DecoyLifetime(L2PcInstance activeChar, L2DecoyInstance Decoy) {
 			_activeChar = activeChar;
 			_Decoy = Decoy;
 		}
 		
 		@Override
-		public void run()
-		{
-			try
-			{
+		public void run() {
+			try {
 				double newTimeRemaining;
 				_Decoy.decTimeRemaining(1000);
 				newTimeRemaining = _Decoy.getTimeRemaining();
-				if (newTimeRemaining < 0)
-				{
+				if (newTimeRemaining < 0) {
 					_Decoy.unSummon(_activeChar);
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.SEVERE, "Decoy Error: ", e);
 			}
 		}
 	}
 	
-	static class HateSpam implements Runnable
-	{
-		private L2DecoyInstance _activeChar;
+	static class HateSpam implements Runnable {
+		private final L2DecoyInstance _activeChar;
 		
-		private L2Skill _skill;
+		private final L2Skill _skill;
 		
-		HateSpam(L2DecoyInstance activeChar, L2Skill Hate)
-		{
+		HateSpam(L2DecoyInstance activeChar, L2Skill Hate) {
 			_activeChar = activeChar;
 			_skill = Hate;
 		}
 		
 		@Override
-		public void run()
-		{
-			try
-			{
+		public void run() {
+			try {
 				_activeChar.setTarget(_activeChar);
 				_activeChar.doCast(_skill);
-			}
-			catch (Throwable e)
-			{
+			} catch (Throwable e) {
 				_log.log(Level.SEVERE, "Decoy Error: ", e);
 			}
 		}
 	}
 	
 	@Override
-	public void unSummon(L2PcInstance owner)
-	{
-		if (_DecoyLifeTask != null)
-		{
+	public void unSummon(L2PcInstance owner) {
+		if (_DecoyLifeTask != null) {
 			_DecoyLifeTask.cancel(true);
 			_DecoyLifeTask = null;
 		}
-		if (_HateSpam != null)
-		{
+		if (_HateSpam != null) {
 			_HateSpam.cancel(true);
 			_HateSpam = null;
 		}
 		super.unSummon(owner);
 	}
 	
-	public void decTimeRemaining(int value)
-	{
+	public void decTimeRemaining(int value) {
 		_timeRemaining -= value;
 	}
 	
-	public int getTimeRemaining()
-	{
+	public int getTimeRemaining() {
 		return _timeRemaining;
 	}
 	
-	public int getTotalLifeTime()
-	{
+	public int getTotalLifeTime() {
 		return _totalLifeTime;
 	}
+	
 }

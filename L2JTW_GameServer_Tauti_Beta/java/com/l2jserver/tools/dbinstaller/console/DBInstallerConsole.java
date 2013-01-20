@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.tools.dbinstaller.console;
 
@@ -25,17 +29,14 @@ import com.l2jserver.tools.dbinstaller.util.mysql.MySqlConnect;
 /**
  * @author mrTJO
  */
-public class DBInstallerConsole implements DBOutputInterface
-{
+public class DBInstallerConsole implements DBOutputInterface {
 	Connection _con;
 	
-	public DBInstallerConsole(String db, String dir, String cleanUp)
-	{
+	public DBInstallerConsole(String db, String dir, String cleanUp) {
 		System.out.println("Welcome to L2J DataBase installer");
 		Preferences prop = Preferences.userRoot();
 		Scanner scn = new Scanner(System.in);
-		while (_con == null)
-		{
+		while (_con == null) {
 			System.out.printf("%s (%s): ", "Host", prop.get("dbHost_" + db, "localhost"));
 			String dbHost = scn.nextLine();
 			System.out.printf("%s (%s): ", "Port", prop.get("dbPort_" + db, "3306"));
@@ -61,77 +62,64 @@ public class DBInstallerConsole implements DBOutputInterface
 		
 		System.out.print("(C)lean install, (U)pdate or (E)xit? ");
 		String resp = scn.next();
-		if (resp.equalsIgnoreCase("c"))
-		{
+		if (resp.equalsIgnoreCase("c")) {
 			System.out.print("Do you really want to destroy your db (Y/N)?");
-			if (scn.next().equalsIgnoreCase("y"))
-			{
+			if (scn.next().equalsIgnoreCase("y")) {
 				rt = new RunTasks(this, db, dir, cleanUp, true);
 			}
-		}
-		else if (resp.equalsIgnoreCase("u"))
-		{
+		} else if (resp.equalsIgnoreCase("u")) {
 			rt = new RunTasks(this, db, dir, cleanUp, false);
 		}
 		
-		if (rt != null)
-		{
+		if (rt != null) {
 			rt.run();
-		}
-		else
-		{
+		} else {
 			System.exit(0);
 		}
+		scn.close();
 	}
 	
 	@Override
-	public void appendToProgressArea(String text)
-	{
+	public void appendToProgressArea(String text) {
 		System.out.println(text);
 	}
 	
 	@Override
-	public Connection getConnection()
-	{
+	public Connection getConnection() {
 		return _con;
 	}
 	
 	@Override
-	public void setProgressIndeterminate(boolean value)
-	{
+	public void setProgressIndeterminate(boolean value) {
 	}
 	
 	@Override
-	public void setProgressMaximum(int maxValue)
-	{
+	public void setProgressMaximum(int maxValue) {
 	}
 	
 	@Override
-	public void setProgressValue(int value)
-	{
+	public void setProgressValue(int value) {
 	}
 	
 	@Override
-	public void setFrameVisible(boolean value)
-	{
+	public void setFrameVisible(boolean value) {
 	}
 	
 	@Override
-	public int requestConfirm(String title, String message, int type)
-	{
+	public int requestConfirm(String title, String message, int type) {
 		System.out.print(message);
 		Scanner scn = new Scanner(System.in);
 		String res = scn.next();
-		if (res.equalsIgnoreCase("y"))
-		{
+		if (res.equalsIgnoreCase("y")) {
+			scn.close();
 			return 0;
 		}
+		scn.close();
 		return 1;
 	}
 	
 	@Override
-	public void showMessage(String title, String message, int type)
-	{
+	public void showMessage(String title, String message, int type) {
 		System.out.println(message);
 	}
 }

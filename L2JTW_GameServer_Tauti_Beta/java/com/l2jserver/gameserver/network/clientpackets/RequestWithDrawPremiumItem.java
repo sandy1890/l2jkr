@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
@@ -24,8 +28,7 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Gnacik
  */
-public final class RequestWithDrawPremiumItem extends L2GameClientPacket
-{
+public final class RequestWithDrawPremiumItem extends L2GameClientPacket {
 	private static final String _C__D0_52_REQUESTWITHDRAWPREMIUMITEM = "[C] D0:52 RequestWithDrawPremiumItem";
 	
 	private int _itemNum;
@@ -33,39 +36,30 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 	private long _itemCount;
 	
 	@Override
-	protected void readImpl()
-	{
+	protected void readImpl() {
 		_itemNum = readD();
 		_charId = readD();
 		_itemCount = readQ();
 	}
 	
 	@Override
-	protected void runImpl()
-	{
+	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		
 		if (activeChar == null)
 			return;
 		else if (_itemCount <= 0)
 			return;
-		else if (activeChar.getObjectId() != _charId)
-		{
+		else if (activeChar.getObjectId() != _charId) {
 			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH);
 			return;
-		}
-		else if (activeChar.getPremiumItemList().isEmpty())
-		{
+		} else if (activeChar.getPremiumItemList().isEmpty()) {
 			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);
 			return;
-		}
-		else if (activeChar.getWeightPenalty() >= 3 || !activeChar.isInventoryUnder80(false))
-		{
+		} else if (activeChar.getWeightPenalty() >= 3 || !activeChar.isInventoryUnder80(false)) {
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_THE_VITAMIN_ITEM);
 			return;
-		}
-		else if (activeChar.isProcessingTransaction())
-		{
+		} else if (activeChar.isProcessingTransaction()) {
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_VITAMIN_ITEM_DURING_AN_EXCHANGE);
 			return;
 		}
@@ -80,13 +74,10 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		
 		activeChar.addItem("PremiumItem", _item.getItemId(), _itemCount, activeChar.getTarget(), true);
 		
-		if (itemsLeft > 0)
-		{
+		if (itemsLeft > 0) {
 			_item.updateCount(itemsLeft);
 			activeChar.updatePremiumItem(_itemNum, itemsLeft);
-		}
-		else
-		{
+		} else {
 			activeChar.getPremiumItemList().remove(_itemNum);
 			activeChar.deletePremiumItem(_itemNum);
 		}
@@ -98,8 +89,7 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _C__D0_52_REQUESTWITHDRAWPREMIUMITEM;
 	}
 }

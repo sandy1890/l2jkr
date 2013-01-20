@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -21,13 +25,11 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.util.Rnd;
 
-
 /**
- *
- * @author  kombat
+ * @author kombat
  */
-public final class ChanceCondition
-{
+public final class ChanceCondition {
+	
 	protected static final Logger _log = Logger.getLogger(ChanceCondition.class.getName());
 	public static final int EVT_HIT = 1;
 	public static final int EVT_CRIT = 2;
@@ -47,8 +49,7 @@ public final class ChanceCondition
 	public static final int EVT_ON_ACTION_TIME = 32768;
 	public static final int EVT_ON_EXIT = 65536;
 	
-	public static enum TriggerType
-	{
+	public static enum TriggerType {
 		// You hit an enemy
 		ON_HIT(1),
 		// You hit an enemy - was crit
@@ -86,13 +87,11 @@ public final class ChanceCondition
 		
 		private final int _mask;
 		
-		private TriggerType(int mask)
-		{
+		private TriggerType(int mask) {
 			_mask = mask;
 		}
 		
-		public final boolean check(int event)
-		{
+		public final boolean check(int event) {
 			return (_mask & event) != 0; // Trigger (sub-)type contains event (sub-)type
 		}
 	}
@@ -104,8 +103,7 @@ public final class ChanceCondition
 	private final int[] _activationSkills;
 	private final boolean _pvpOnly;
 	
-	private ChanceCondition(TriggerType trigger, int chance, int mindmg, byte[] elements, int[] activationSkills, boolean pvpOnly)
-	{
+	private ChanceCondition(TriggerType trigger, int chance, int mindmg, byte[] elements, int[] activationSkills, boolean pvpOnly) {
 		_triggerType = trigger;
 		_chance = chance;
 		_mindmg = mindmg;
@@ -114,10 +112,8 @@ public final class ChanceCondition
 		_activationSkills = activationSkills;
 	}
 	
-	public static ChanceCondition parse(StatsSet set)
-	{
-		try
-		{
+	public static ChanceCondition parse(StatsSet set) {
+		try {
 			TriggerType trigger = set.getEnum("chanceType", TriggerType.class, null);
 			int chance = set.getInteger("activationChance", -1);
 			int mindmg = set.getInteger("activationMinDamage", -1);
@@ -125,85 +121,87 @@ public final class ChanceCondition
 			String activationSkills = set.getString("activationSkills", null);
 			boolean pvpOnly = set.getBool("pvpChanceOnly", false);
 			
-			if (trigger != null)
+			if (trigger != null) {
 				return new ChanceCondition(trigger, chance, mindmg, parseElements(elements), parseActivationSkills(activationSkills), pvpOnly);
-		}
-		catch (Exception e)
-		{
+			}
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "", e);
 		}
 		return null;
 	}
 	
-	public static ChanceCondition parse(String chanceType, int chance, int mindmg, String elements, String activationSkills, boolean pvpOnly)
-	{
-		try
-		{
-			if (chanceType == null)
+	public static ChanceCondition parse(String chanceType, int chance, int mindmg, String elements, String activationSkills, boolean pvpOnly) {
+		try {
+			if (chanceType == null) {
 				return null;
+			}
 			
 			TriggerType trigger = Enum.valueOf(TriggerType.class, chanceType);
 			
-			if (trigger != null)
+			if (trigger != null) {
 				return new ChanceCondition(trigger, chance, mindmg, parseElements(elements), parseActivationSkills(activationSkills), pvpOnly);
-		}
-		catch (Exception e)
-		{
+			}
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "", e);
 		}
 		
 		return null;
 	}
 	
-	public static final byte[] parseElements(String list)
-	{
-		if (list == null)
+	public static final byte[] parseElements(String list) {
+		if (list == null) {
 			return null;
+		}
 		
 		String[] valuesSplit = list.split(",");
 		byte[] elements = new byte[valuesSplit.length];
-		for (int i = 0; i < valuesSplit.length; i++)
+		for (int i = 0; i < valuesSplit.length; i++) {
 			elements[i] = Byte.parseByte(valuesSplit[i]);
+		}
 		
 		Arrays.sort(elements);
 		return elements;
 	}
 	
-	public static final int[] parseActivationSkills(String list)
-	{
-		if (list == null)
+	public static final int[] parseActivationSkills(String list) {
+		if (list == null) {
 			return null;
+		}
 		
 		String[] valuesSplit = list.split(",");
 		int[] skillIds = new int[valuesSplit.length];
-		for (int i = 0; i < valuesSplit.length; i++)
+		for (int i = 0; i < valuesSplit.length; i++) {
 			skillIds[i] = Integer.parseInt(valuesSplit[i]);
+		}
 		
 		return skillIds;
 	}
 	
-	public boolean trigger(int event, int damage, byte element, boolean playable, L2Skill skill)
-	{
-		if (_pvpOnly && !playable)
+	public boolean trigger(int event, int damage, byte element, boolean playable, L2Skill skill) {
+		if (_pvpOnly && !playable) {
 			return false;
+		}
 		
-		if (_elements != null && Arrays.binarySearch(_elements, element) < 0)
+		if ((_elements != null) && (Arrays.binarySearch(_elements, element) < 0)) {
 			return false;
+		}
 		
-		if (_activationSkills != null && skill != null && Arrays.binarySearch(_activationSkills, skill.getId()) < 0)
+		if ((_activationSkills != null) && (skill != null) && (Arrays.binarySearch(_activationSkills, skill.getId()) < 0)) {
 			return false;
+		}
 		
 		// if the skill has "activationMinDamage" setted to higher than -1(default)
 		// and if "activationMinDamage" is still higher than the recieved damage, the skill wont trigger
-		if (_mindmg > -1 && _mindmg > damage)
+		if ((_mindmg > -1) && (_mindmg > damage)) {
 			return false;
+		}
 		
-		return _triggerType.check(event) && (_chance < 0 || Rnd.get(100) < _chance);
+		return _triggerType.check(event) && ((_chance < 0) || (Rnd.get(100) < _chance));
 	}
 	
 	@Override
-	public String toString()
-	{
-		return "Trigger["+_chance+";"+_triggerType.toString()+"]";
+	public String toString() {
+		return "Trigger[" + _chance + ";" + _triggerType.toString() + "]";
 	}
+	
 }

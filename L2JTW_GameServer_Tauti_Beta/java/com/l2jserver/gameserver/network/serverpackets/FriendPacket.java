@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -18,21 +22,16 @@ import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.model.L2World;
 
 /**
- * Support for "Chat with Friends" dialog.
- * 
- * Add new friend or delete.
- * <BR>
+ * Support for "Chat with Friends" dialog. Add new friend or delete. <BR>
  * Format: cddSdd <BR>
  * d: action <BR>
  * d: Player Object ID <BR>
  * S: Friend Name <BR>
  * d: Online/Offline <BR>
  * d: Unknown (0 if offline)<BR>
- * 
  * @author JIV
  */
-public class FriendPacket extends L2GameServerPacket
-{
+public class FriendPacket extends L2GameServerPacket {
 	private static final String _S__FA_FRIENDLIST = "[S] 76 FriendPacket";
 	private boolean _action, _online;
 	private int _objid;
@@ -40,10 +39,9 @@ public class FriendPacket extends L2GameServerPacket
 	
 	/**
 	 * @param action - true for adding, false for remove
-	 * @param objId 
+	 * @param objId
 	 */
-	public FriendPacket(boolean action, int objId)
-	{
+	public FriendPacket(boolean action, int objId) {
 		_action = action;
 		_objid = objId;
 		_name = CharNameTable.getInstance().getNameById(objId);
@@ -51,8 +49,7 @@ public class FriendPacket extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
-	{
+	protected final void writeImpl() {
 		writeC(0x76);
 		writeD(_action ? 1 : 3); // 1-add 3-remove
 		writeD(_objid);
@@ -63,8 +60,7 @@ public class FriendPacket extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FA_FRIENDLIST;
 	}
 }

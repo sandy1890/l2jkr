@@ -30,8 +30,7 @@ import java.util.Arrays;
  * @author wolfgang.hoschek@cern.ch
  * @version 1.0, 09/24/99
  */
-public final class PrimeFinder
-{
+public final class PrimeFinder {
 	/**
 	 * The largest prime this class can generate; currently equal to <tt>Integer.MAX_VALUE</tt>.
 	 */
@@ -328,10 +327,9 @@ public final class PrimeFinder
 		1600153859
 	};
 	
-	static
-	{ // initializer
-		// The above prime numbers are formatted for human readability.
-		// To find numbers fast, we sort them once and for all.
+	static { // initializer
+				// The above prime numbers are formatted for human readability.
+				// To find numbers fast, we sort them once and for all.
 		
 		Arrays.sort(PRIME_CAPACITIES);
 	}
@@ -341,11 +339,9 @@ public final class PrimeFinder
 	 * @param desiredCapacity the capacity desired by the user.
 	 * @return the capacity which should be used for a hashtable.
 	 */
-	public static final int nextPrime(int desiredCapacity)
-	{
+	public static final int nextPrime(int desiredCapacity) {
 		int i = Arrays.binarySearch(PRIME_CAPACITIES, desiredCapacity);
-		if (i < 0)
-		{
+		if (i < 0) {
 			// desired capacity not found, choose next prime greater
 			// than desired capacity
 			i = -i - 1; // remember the semantics of binarySearch...

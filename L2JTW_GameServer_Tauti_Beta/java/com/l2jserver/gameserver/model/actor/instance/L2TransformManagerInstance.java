@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
@@ -39,8 +43,8 @@ import com.l2jserver.gameserver.util.Util;
  * Transformation skill learning and transformation buying.
  * @author Zoey76
  */
-public final class L2TransformManagerInstance extends L2MerchantInstance
-{
+public final class L2TransformManagerInstance extends L2MerchantInstance {
+	
 	private static final String htmlFolder = "data/html/masterTransformation/";
 	
 	public static final String[] _questVarNames =
@@ -51,175 +55,137 @@ public final class L2TransformManagerInstance extends L2MerchantInstance
 		"ClassAbility80-"
 	};
 	
-	private static final int[] _itemsIds = { 10280, 10281, 10282, 10283, 10284, 10285, 10286, 10287, 10288, 10289, 10290, 10291, 10292, 10293, 10294, 10612 };
-	
-	public L2TransformManagerInstance(int objectId, L2NpcTemplate template)
+	private static final int[] _itemsIds =
 	{
+		10280,
+		10281,
+		10282,
+		10283,
+		10284,
+		10285,
+		10286,
+		10287,
+		10288,
+		10289,
+		10290,
+		10291,
+		10292,
+		10293,
+		10294,
+		10612
+	};
+	
+	public L2TransformManagerInstance(int objectId, L2NpcTemplate template) {
 		super(objectId, template);
 		setInstanceType(InstanceType.L2TransformManagerInstance);
 	}
 	
 	@Override
-	public String getHtmlPath(int npcId, int val)
-	{
+	public String getHtmlPath(int npcId, int val) {
 		return htmlFolder + "master_transformation001.htm";
 	}
 	
 	@Override
-	public void onBypassFeedback(L2PcInstance player, String command)
-	{
-		if (command.startsWith("LearnTransformationSkill"))
-		{
-			if (canTransform(player))
-			{
+	public void onBypassFeedback(L2PcInstance player, String command) {
+		if (command.startsWith("LearnTransformationSkill")) {
+			if (canTransform(player)) {
 				L2TransformManagerInstance.showTransformSkillList(player);
-			}
-			else
-			{
+			} else {
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation003.htm");
 				player.sendPacket(html);
 			}
 			return;
-		}
-		else if (command.startsWith("BuyTransformationItems"))
-		{
-			if (canTransform(player))
-			{
+		} else if (command.startsWith("BuyTransformationItems")) {
+			if (canTransform(player)) {
 				MultiSell.getInstance().separateAndSend(32323001, player, this, false);
-			}
-			else
-			{
+			} else {
 				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation004.htm");
 				player.sendPacket(html);
 			}
 			return;
-		}
-		else if (command.startsWith("LearnSubClassSkill"))
-		{
-			if (player.isSubClassActive())
-			{
+		} else if (command.startsWith("LearnSubClassSkill")) {
+			if (player.isSubClassActive()) {
 				NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation008.htm");
 				player.sendPacket(html);
-			}
-			else
-			{
+			} else {
 				boolean hasItems = false;
-				for (int i : _itemsIds)
-				{
-					if (player.getInventory().getItemByItemId(i) != null)
-					{
+				for (int i : _itemsIds) {
+					if (player.getInventory().getItemByItemId(i) != null) {
 						hasItems = true;
 						break;
 					}
 				}
-				if (hasItems)
-				{
+				if (hasItems) {
 					showSubClassSkillList(player);
-				}
-				else
-				{
+				} else {
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation008.htm");
 					player.sendPacket(html);
 				}
 			}
 			return;
-		}
-		else if (command.startsWith("CancelCertification"))
-		{
+		} else if (command.startsWith("CancelCertification")) {
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			if (player.getSubClasses().size() == 0)
-			{
+			if (player.getSubClasses().size() == 0) {
 				html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation007.htm");
-			}
-			else if (player.isSubClassActive())
-			{
+			} else if (player.isSubClassActive()) {
 				html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation008.htm");
-			}
-			else if (player.getAdena() < Config.FEE_DELETE_SUBCLASS_SKILLS)
-			{
+			} else if (player.getAdena() < Config.FEE_DELETE_SUBCLASS_SKILLS) {
 				html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation008no.htm");
-			}
-			else
-			{
+			} else {
 				QuestState st = player.getQuestState("SubClassSkills");
-				if (st == null)
-				{
+				if (st == null) {
 					st = QuestManager.getInstance().getQuest("SubClassSkills").newQuestState(player);
 				}
 				
 				int activeCertifications = 0;
-				for (String varName : _questVarNames)
-				{
-					for (int i = 1; i <= Config.MAX_SUBCLASS; i++)
-					{
+				for (String varName : _questVarNames) {
+					for (int i = 1; i <= Config.MAX_SUBCLASS; i++) {
 						String qvar = st.getGlobalQuestVar(varName + i);
-						if (!qvar.isEmpty() && (qvar.endsWith(";") || !qvar.equals("0")))
-						{
+						if (!qvar.isEmpty() && (qvar.endsWith(";") || !qvar.equals("0"))) {
 							activeCertifications++;
 						}
 					}
 				}
-				if (activeCertifications == 0)
-				{
+				if (activeCertifications == 0) {
 					html.setFile(player.getHtmlPrefix(), htmlFolder + "master_transformation010no.htm");
-				}
-				else
-				{
-					for (String varName : _questVarNames)
-					{
-						for (int i = 1; i <= Config.MAX_SUBCLASS; i++)
-						{
+				} else {
+					for (String varName : _questVarNames) {
+						for (int i = 1; i <= Config.MAX_SUBCLASS; i++) {
 							final String qvarName = varName + i;
 							final String qvar = st.getGlobalQuestVar(qvarName);
-							if (qvar.endsWith(";"))
-							{
+							if (qvar.endsWith(";")) {
 								final String skillIdVar = qvar.replace(";", "");
-								if (Util.isDigit(skillIdVar))
-								{
+								if (Util.isDigit(skillIdVar)) {
 									int skillId = Integer.parseInt(skillIdVar);
 									final L2Skill sk = SkillTable.getInstance().getInfo(skillId, 1);
-									if (sk != null)
-									{
+									if (sk != null) {
 										player.removeSkill(sk);
 										st.saveGlobalQuestVar(qvarName, "0");
 									}
-								}
-								else
-								{
+								} else {
 									_log.warning("Invalid Sub-Class Skill Id: " + skillIdVar + " for player " + player.getName() + "!");
 								}
-							}
-							else if (!qvar.isEmpty() && !qvar.equals("0"))
-							{
-								if (Util.isDigit(qvar))
-								{
+							} else if (!qvar.isEmpty() && !qvar.equals("0")) {
+								if (Util.isDigit(qvar)) {
 									final int itemObjId = Integer.parseInt(qvar);
 									L2ItemInstance itemInstance = player.getInventory().getItemByObjectId(itemObjId);
-									if (itemInstance != null)
-									{
+									if (itemInstance != null) {
 										player.destroyItem("CancelCertification", itemObjId, 1, player, false);
-									}
-									else
-									{
+									} else {
 										itemInstance = player.getWarehouse().getItemByObjectId(itemObjId);
-										if (itemInstance != null)
-										{
+										if (itemInstance != null) {
 											_log.warning("Somehow " + player.getName() + " put a certification book into warehouse!");
 											player.getWarehouse().destroyItem("CancelCertification", itemInstance, 1, player, false);
-										}
-										else
-										{
+										} else {
 											_log.warning("Somehow " + player.getName() + " deleted a certification book!");
 										}
 									}
 									st.saveGlobalQuestVar(qvarName, "0");
-								}
-								else
-								{
+								} else {
 									_log.warning("Invalid item object Id: " + qvar + " for player " + player.getName() + "!");
 								}
 							}
@@ -231,13 +197,11 @@ public final class L2TransformManagerInstance extends L2MerchantInstance
 					player.sendSkillList();
 				}
 				
-				//Let's consume all certification books, even those not present in database.
+				// Let's consume all certification books, even those not present in database.
 				L2ItemInstance itemInstance = null;
-				for (int itemId : _itemsIds)
-				{
+				for (int itemId : _itemsIds) {
 					itemInstance = player.getInventory().getItemByItemId(itemId);
-					if (itemInstance != null)
-					{
+					if (itemInstance != null) {
 						_log.warning(getClass().getName() + ": player " + player + " had 'extra' certification skill books while cancelling sub-class certifications!");
 						player.destroyItem("CancelCertificationExtraBooks", itemInstance, this, false);
 					}
@@ -249,20 +213,17 @@ public final class L2TransformManagerInstance extends L2MerchantInstance
 		super.onBypassFeedback(player, command);
 	}
 	
-	//Transformations:
+	// Transformations:
 	/**
 	 * @param player the player to verify.
 	 * @return {code true} if {code player} meets the required conditions to learn a transformation.
 	 */
-	public static boolean canTransform(L2PcInstance player)
-	{
-		if (Config.ALLOW_TRANSFORM_WITHOUT_QUEST)
-		{
+	public static boolean canTransform(L2PcInstance player) {
+		if (Config.ALLOW_TRANSFORM_WITHOUT_QUEST) {
 			return true;
 		}
 		final QuestState st = player.getQuestState("136_MoreThanMeetsTheEye");
-		if ((st != null) && st.isCompleted())
-		{
+		if ((st != null) && st.isCompleted()) {
 			return true;
 		}
 		return false;
@@ -272,68 +233,54 @@ public final class L2TransformManagerInstance extends L2MerchantInstance
 	 * This displays Transformation Skill List to the player.
 	 * @param player the active character.
 	 */
-	public static void showTransformSkillList(L2PcInstance player)
-	{
+	public static void showTransformSkillList(L2PcInstance player) {
 		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransformSkills(player);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.Transform);
 		int counts = 0;
 		
-		for (L2SkillLearn s : skills)
-		{
-			if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null)
-			{
+		for (L2SkillLearn s : skills) {
+			if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null) {
 				counts++;
 				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), s.getLevelUpSp(), 0);
 			}
 		}
 		
-		if (counts == 0)
-		{
+		if (counts == 0) {
 			final int minlevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getTransformSkillTree());
-			if (minlevel > 0)
-			{
-				//No more skills to learn, come back when you level.
+			if (minlevel > 0) {
+				// No more skills to learn, come back when you level.
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DO_NOT_HAVE_FURTHER_SKILLS_TO_LEARN_S1);
 				sm.addNumber(minlevel);
 				player.sendPacket(sm);
-			}
-			else
-			{
+			} else {
 				player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
 			}
-		}
-		else
-		{
+		} else {
 			player.sendPacket(asl);
 		}
 	}
 	
-	//SubClass:
+	// SubClass:
 	/**
 	 * This displays Sub-Class Skill List to the player.
 	 * @param player the active character.
 	 */
-	public static void showSubClassSkillList(L2PcInstance player)
-	{
+	public static void showSubClassSkillList(L2PcInstance player) {
 		final List<L2SkillLearn> subClassSkills = SkillTreesData.getInstance().getAvailableSubClassSkills(player);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SubClass);
 		int count = 0;
 		
-		for (L2SkillLearn s : subClassSkills)
-		{
-			if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null)
-			{
+		for (L2SkillLearn s : subClassSkills) {
+			if (SkillTable.getInstance().getInfo(s.getSkillId(), s.getSkillLevel()) != null) {
 				count++;
 				asl.addSkill(s.getSkillId(), s.getSkillLevel(), s.getSkillLevel(), 0, 0);
 			}
 		}
-		if (count > 0)
-		{
+		if (count > 0) {
 			player.sendPacket(asl);
-		}
-		else
-		{
+		} else {
 			player.sendPacket(SystemMessageId.NO_MORE_SKILLS_TO_LEARN);
 		}
 	}
+	
 }

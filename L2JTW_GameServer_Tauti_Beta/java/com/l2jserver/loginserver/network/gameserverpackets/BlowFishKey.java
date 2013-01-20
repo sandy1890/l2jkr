@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
@@ -29,21 +33,18 @@ import com.l2jserver.util.network.BaseRecievePacket;
 /**
  * @author -Wooden-
  */
-public class BlowFishKey extends BaseRecievePacket
-{
+public class BlowFishKey extends BaseRecievePacket {
 	protected static final Logger _log = Logger.getLogger(BlowFishKey.class.getName());
 	
 	/**
 	 * @param decrypt
 	 * @param server
 	 */
-	public BlowFishKey(byte[] decrypt, GameServerThread server)
-	{
+	public BlowFishKey(byte[] decrypt, GameServerThread server) {
 		super(decrypt);
 		int size = readD();
 		byte[] tempKey = readB(size);
-		try
-		{
+		try {
 			byte[] tempDecryptKey;
 			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.DECRYPT_MODE, server.getPrivateKey());
@@ -51,10 +52,8 @@ public class BlowFishKey extends BaseRecievePacket
 			// there are nulls before the key we must remove them
 			int i = 0;
 			int len = tempDecryptKey.length;
-			for (; i < len; i++)
-			{
-				if (tempDecryptKey[i] != 0)
-				{
+			for (; i < len; i++) {
+				if (tempDecryptKey[i] != 0) {
 					break;
 				}
 			}
@@ -62,14 +61,11 @@ public class BlowFishKey extends BaseRecievePacket
 			System.arraycopy(tempDecryptKey, i, key, 0, len - i);
 			
 			server.SetBlowFish(new NewCrypt(key));
-			if (Config.DEBUG)
-			{
+			if (Config.DEBUG) {
 				_log.info("New BlowFish key received, Blowfih Engine initialized:");
 			}
 			server.setLoginConnectionState(GameServerState.BF_CONNECTED);
-		}
-		catch (GeneralSecurityException e)
-		{
+		} catch (GeneralSecurityException e) {
 			_log.log(Level.SEVERE, "Error While decrypting blowfish key (RSA): " + e.getMessage(), e);
 		}
 	}

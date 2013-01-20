@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.pathfinding;
 
@@ -24,12 +28,9 @@ import com.l2jserver.gameserver.pathfinding.geonodes.GeoPathFinding;
 /**
  * @author -Nemesiss-
  */
-public abstract class PathFinding
-{
-	public static PathFinding getInstance()
-	{
-		if (!Config.GEODATA_CELLFINDING)
-		{
+public abstract class PathFinding {
+	public static PathFinding getInstance() {
+		if (!Config.GEODATA_CELLFINDING) {
 			// Higher Memory Usage, Smaller Cpu Usage
 			return GeoPathFinding.getInstance();
 		}
@@ -151,8 +152,7 @@ public abstract class PathFinding
 	 * @param geo_pos
 	 * @return pathnode position
 	 */
-	public short getNodePos(int geo_pos)
-	{
+	public short getNodePos(int geo_pos) {
 		return (short) (geo_pos >> 3); // OK?
 	}
 	
@@ -161,23 +161,19 @@ public abstract class PathFinding
 	 * @param node_pos
 	 * @return pathnode block position (0...255)
 	 */
-	public short getNodeBlock(int node_pos)
-	{
+	public short getNodeBlock(int node_pos) {
 		return (short) (node_pos % 256);
 	}
 	
-	public byte getRegionX(int node_pos)
-	{
+	public byte getRegionX(int node_pos) {
 		return (byte) ((node_pos >> 8) + Config.WORLD_X_MIN);
 	}
 	
-	public byte getRegionY(int node_pos)
-	{
+	public byte getRegionY(int node_pos) {
 		return (byte) ((node_pos >> 8) + Config.WORLD_Y_MIN);
 	}
 	
-	public short getRegionOffset(byte rx, byte ry)
-	{
+	public short getRegionOffset(byte rx, byte ry) {
 		return (short) ((rx << 5) + ry);
 	}
 	
@@ -186,8 +182,7 @@ public abstract class PathFinding
 	 * @param node_x rx
 	 * @return
 	 */
-	public int calculateWorldX(short node_x)
-	{
+	public int calculateWorldX(short node_x) {
 		return L2World.MAP_MIN_X + (node_x * 128) + 48;
 	}
 	
@@ -196,13 +191,11 @@ public abstract class PathFinding
 	 * @param node_y
 	 * @return
 	 */
-	public int calculateWorldY(short node_y)
-	{
+	public int calculateWorldY(short node_y) {
 		return L2World.MAP_MIN_Y + (node_y * 128) + 48;
 	}
 	
-	public String[] getStat()
-	{
+	public String[] getStat() {
 		return null;
 	}
 }

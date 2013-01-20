@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.conditions;
 
@@ -21,8 +25,8 @@ import com.l2jserver.gameserver.model.stats.Env;
  * The Class ConditionForceBuff.
  * @author kombat, Forsaiken
  */
-public final class ConditionForceBuff extends Condition
-{
+public final class ConditionForceBuff extends Condition {
+	
 	private static final short BATTLE_FORCE = 5104;
 	private static final short SPELL_FORCE = 5105;
 	
@@ -32,8 +36,7 @@ public final class ConditionForceBuff extends Condition
 	 * Instantiates a new condition force buff.
 	 * @param forces the forces
 	 */
-	public ConditionForceBuff(byte[] forces)
-	{
+	public ConditionForceBuff(byte[] forces) {
 		_forces = forces;
 	}
 	
@@ -44,25 +47,21 @@ public final class ConditionForceBuff extends Condition
 	 * @see com.l2jserver.gameserver.model.conditions.Condition#testImpl(com.l2jserver.gameserver.model.stats.Env)
 	 */
 	@Override
-	public boolean testImpl(Env env)
-	{
-		if (_forces[0] > 0)
-		{
+	public boolean testImpl(Env env) {
+		if (_forces[0] > 0) {
 			L2Effect force = env.getCharacter().getFirstEffect(BATTLE_FORCE);
-			if ((force == null) || (force.getForceEffect() < _forces[0]))
-			{
+			if ((force == null) || (force.getForceEffect() < _forces[0])) {
 				return false;
 			}
 		}
 		
-		if (_forces[1] > 0)
-		{
+		if (_forces[1] > 0) {
 			L2Effect force = env.getCharacter().getFirstEffect(SPELL_FORCE);
-			if ((force == null) || (force.getForceEffect() < _forces[1]))
-			{
+			if ((force == null) || (force.getForceEffect() < _forces[1])) {
 				return false;
 			}
 		}
 		return true;
 	}
+	
 }

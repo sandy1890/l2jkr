@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.datatables;
 
@@ -30,84 +34,61 @@ import com.l2jserver.gameserver.model.StatsSet;
  * TODO: Unhardcode where is possible boolean methods and load and use all pet parameters.
  * @author Zoey76 (rework)
  */
-public final class PetDataTable extends DocumentParser
-{
+public final class PetDataTable extends DocumentParser {
+	
 	private static final Map<Integer, L2PetData> _pets = new HashMap<>();
 	
 	/**
 	 * Instantiates a new pet data table.
 	 */
-	protected PetDataTable()
-	{
+	protected PetDataTable() {
 		load();
 	}
 	
 	@Override
-	public void load()
-	{
+	public void load() {
 		_pets.clear();
 		parseDatapackFile("data/stats/npc/PetData.xml");
 		_log.info(getClass().getSimpleName() + ": Loaded " + _pets.size() + " Pets.");
 	}
 	
 	@Override
-	protected void parseDocument()
-	{
+	protected void parseDocument() {
 		NamedNodeMap attrs;
 		Node n = getCurrentDocument().getFirstChild();
-		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-		{
-			if (d.getNodeName().equals("pet"))
-			{
+		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+			if (d.getNodeName().equals("pet")) {
 				int npcId = parseInt(d.getAttributes(), "id");
 				// index ignored for now
 				L2PetData data = new L2PetData();
-				for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling())
-				{
-					if (p.getNodeName().equals("set"))
-					{
+				for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling()) {
+					if (p.getNodeName().equals("set")) {
 						attrs = p.getAttributes();
 						String type = attrs.getNamedItem("name").getNodeValue();
-						if ("food".equals(type))
-						{
-							for (String foodId : attrs.getNamedItem("val").getNodeValue().split(";"))
-							{
+						if ("food".equals(type)) {
+							for (String foodId : attrs.getNamedItem("val").getNodeValue().split(";")) {
 								data.addFood(Integer.valueOf(foodId));
 							}
-						}
-						else if ("load".equals(type))
-						{
+						} else if ("load".equals(type)) {
 							data.setLoad(parseInt(attrs, "val"));
-						}
-						else if ("hungry_limit".equals(type))
-						{
+						} else if ("hungry_limit".equals(type)) {
 							data.setHungryLimit(parseInt(attrs, "val"));
 						}
 						// sync_level and evolve ignored
-					}
-					else if (p.getNodeName().equals("skills"))
-					{
-						for (Node s = p.getFirstChild(); s != null; s = s.getNextSibling())
-						{
-							if (s.getNodeName().equals("skill"))
-							{
+					} else if (p.getNodeName().equals("skills")) {
+						for (Node s = p.getFirstChild(); s != null; s = s.getNextSibling()) {
+							if (s.getNodeName().equals("skill")) {
 								attrs = s.getAttributes();
 								data.addNewSkill(parseInt(attrs, "skillId"), parseInt(attrs, "skillLvl"), parseInt(attrs, "minLvl"));
 							}
 						}
-					}
-					else if (p.getNodeName().equals("stats"))
-					{
-						for (Node s = p.getFirstChild(); s != null; s = s.getNextSibling())
-						{
-							if (s.getNodeName().equals("stat"))
-							{
+					} else if (p.getNodeName().equals("stats")) {
+						for (Node s = p.getFirstChild(); s != null; s = s.getNextSibling()) {
+							if (s.getNodeName().equals("stat")) {
 								final int level = Integer.parseInt(s.getAttributes().getNamedItem("level").getNodeValue());
 								final StatsSet set = new StatsSet();
-								for (Node bean = s.getFirstChild(); bean != null; bean = bean.getNextSibling())
-								{
-									if (bean.getNodeName().equals("set"))
-									{
+								for (Node bean = s.getFirstChild(); bean != null; bean = bean.getNextSibling()) {
+									if (bean.getNodeName().equals("set")) {
 										attrs = bean.getAttributes();
 										set.set(attrs.getNamedItem("name").getNodeValue(), attrs.getNamedItem("val").getNodeValue());
 									}
@@ -128,11 +109,9 @@ public final class PetDataTable extends DocumentParser
 	 * @param petLevel the pet level.
 	 * @return the pet's parameters for the given Id and level.
 	 */
-	public L2PetLevelData getPetLevelData(int petId, int petLevel)
-	{
+	public L2PetLevelData getPetLevelData(int petId, int petLevel) {
 		final L2PetData pd = getPetData(petId);
-		if (pd != null)
-		{
+		if (pd != null) {
 			return pd.getPetLevelData(petLevel);
 		}
 		return null;
@@ -143,10 +122,8 @@ public final class PetDataTable extends DocumentParser
 	 * @param petId the pet Id.
 	 * @return the pet data
 	 */
-	public L2PetData getPetData(int petId)
-	{
-		if (!_pets.containsKey(petId))
-		{
+	public L2PetData getPetData(int petId) {
+		if (!_pets.containsKey(petId)) {
 			_log.info("Missing pet data for npcid: " + petId);
 		}
 		return _pets.get(petId);
@@ -157,8 +134,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param petId the pet Id.
 	 * @return the pet min level
 	 */
-	public int getPetMinLevel(int petId)
-	{
+	public int getPetMinLevel(int petId) {
 		return _pets.get(petId).getMinLevel();
 	}
 	
@@ -167,8 +143,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from a wolf, {@code false} otherwise.
 	 */
-	public static boolean isWolf(int npcId)
-	{
+	public static boolean isWolf(int npcId) {
 		return npcId == 12077;
 	}
 	
@@ -177,8 +152,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from an evolved wolf, {@code false} otherwise.
 	 */
-	public static boolean isEvolvedWolf(int npcId)
-	{
+	public static boolean isEvolvedWolf(int npcId) {
 		return (npcId == 16030) || (npcId == 16037) || (npcId == 16025) || (npcId == 16041) || (npcId == 16042);
 	}
 	
@@ -187,8 +161,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from a Sin Eater, {@code false} otherwise.
 	 */
-	public static boolean isSinEater(int npcId)
-	{
+	public static boolean isSinEater(int npcId) {
 		return npcId == 12564;
 	}
 	
@@ -197,8 +170,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from a hatchling, {@code false} otherwise.
 	 */
-	public static boolean isHatchling(int npcId)
-	{
+	public static boolean isHatchling(int npcId) {
 		return (npcId > 12310) && (npcId < 12314);
 	}
 	
@@ -207,8 +179,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from a strider, {@code false} otherwise.
 	 */
-	public static boolean isStrider(int npcId)
-	{
+	public static boolean isStrider(int npcId) {
 		return ((npcId > 12525) && (npcId < 12529)) || ((npcId > 16037) && (npcId < 16041)) || (npcId == 16068);
 	}
 	
@@ -217,8 +188,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from a wyvern, {@code false} otherwise.
 	 */
-	public static boolean isWyvern(int npcId)
-	{
+	public static boolean isWyvern(int npcId) {
 		return npcId == 12621;
 	}
 	
@@ -227,8 +197,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from a baby pet, {@code false} otherwise.
 	 */
-	public static boolean isBaby(int npcId)
-	{
+	public static boolean isBaby(int npcId) {
 		return (npcId > 12779) && (npcId < 12783);
 	}
 	
@@ -237,8 +206,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from an improved baby pet, {@code false} otherwise.
 	 */
-	public static boolean isImprovedBaby(int npcId)
-	{
+	public static boolean isImprovedBaby(int npcId) {
 		return (npcId > 16033) && (npcId < 16037);
 	}
 	
@@ -247,10 +215,8 @@ public final class PetDataTable extends DocumentParser
 	 * @param itemId the item Id to verify.
 	 * @return {@code true} if the given Id is from a pet's food, {@code false} otherwise.
 	 */
-	public static boolean isPetFood(int itemId)
-	{
-		switch (itemId)
-		{
+	public static boolean isPetFood(int itemId) {
+		switch (itemId) {
 			case 2515:
 			case 4038:
 			case 5168:
@@ -270,10 +236,8 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to get its summoning item.
 	 * @return an array containing the list of summoning items for the given NPC Id.
 	 */
-	public static int[] getPetItemsByNpc(int npcId)
-	{
-		switch (npcId)
-		{
+	public static int[] getPetItemsByNpc(int npcId) {
+		switch (npcId) {
 			case 12077:// Wolf
 				return new int[]
 				{
@@ -372,8 +336,7 @@ public final class PetDataTable extends DocumentParser
 	 * @param npcId the NPC Id to verify.
 	 * @return {@code true} if the given Id is from a mountable pet, {@code false} otherwise.
 	 */
-	public static boolean isMountable(int npcId)
-	{
+	public static boolean isMountable(int npcId) {
 		return (npcId == 12526 // wind strider
 		) || (npcId == 12527 // star strider
 		) || (npcId == 12528 // twilight strider
@@ -391,13 +354,12 @@ public final class PetDataTable extends DocumentParser
 	 * Gets the single instance of PetDataTable.
 	 * @return this class unique instance.
 	 */
-	public static PetDataTable getInstance()
-	{
+	public static PetDataTable getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final PetDataTable _instance = new PetDataTable();
 	}
+	
 }

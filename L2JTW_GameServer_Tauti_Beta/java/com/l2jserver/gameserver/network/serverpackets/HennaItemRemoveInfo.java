@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -20,22 +24,19 @@ import com.l2jserver.gameserver.model.items.L2Henna;
 /**
  * @author Zoey76
  */
-public final class HennaItemRemoveInfo extends L2GameServerPacket
-{
+public final class HennaItemRemoveInfo extends L2GameServerPacket {
 	private static final String _S__E7_HENNAITEMREMOVEINFO = "[S] E7 HennaItemRemoveInfo";
 	
 	private final L2PcInstance _activeChar;
 	private final L2Henna _henna;
 	
-	public HennaItemRemoveInfo(L2Henna henna, L2PcInstance player)
-	{
+	public HennaItemRemoveInfo(L2Henna henna, L2PcInstance player) {
 		_henna = henna;
 		_activeChar = player;
 	}
 	
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xE7);
 		writeD(_henna.getDyeId()); // symbol Id
 		writeD(_henna.getDyeItemId()); // item id of dye
@@ -58,8 +59,7 @@ public final class HennaItemRemoveInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__E7_HENNAITEMREMOVEINFO;
 	}
 }

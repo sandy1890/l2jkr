@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.util;
 
@@ -27,8 +31,7 @@ import java.util.Map;
  * @param <K>
  * @param <V>
  */
-public class L2FastMap<K extends Object, V extends Object> extends HashMap<K, V>
-{
+public class L2FastMap<K extends Object, V extends Object> extends HashMap<K, V> {
 	static final long serialVersionUID = 1L;
 	
 	/**
@@ -37,18 +40,15 @@ public class L2FastMap<K extends Object, V extends Object> extends HashMap<K, V>
 	 * @param <K>
 	 * @param <V>
 	 */
-	public interface I2ForEach<K, V>
-	{
+	public interface I2ForEach<K, V> {
 		public boolean forEach(K key, V val);
 	}
 	
-	public interface I2ForEachKey<K>
-	{
+	public interface I2ForEachKey<K> {
 		public boolean forEach(K key);
 	}
 	
-	public interface I2ForEachValue<V>
-	{
+	public interface I2ForEachValue<V> {
 		public boolean forEach(V val);
 	}
 	
@@ -59,36 +59,27 @@ public class L2FastMap<K extends Object, V extends Object> extends HashMap<K, V>
 	 * @return - returns true if entire collection is iterated, false if it`s been interrupted by<br>
 	 *         check method (I2ForEach.forEach())<br>
 	 */
-	public boolean ForEach(I2ForEach<K, V> func)
-	{
-		for (Map.Entry<K, V> e : entrySet())
-		{
-			if (!func.forEach(e.getKey(), e.getValue()))
-			{
+	public boolean ForEach(I2ForEach<K, V> func) {
+		for (Map.Entry<K, V> e : entrySet()) {
+			if (!func.forEach(e.getKey(), e.getValue())) {
 				return false;
 			}
 		}
 		return true;
 	}
 	
-	public boolean ForEachKey(I2ForEachKey<K> func)
-	{
-		for (K k : keySet())
-		{
-			if (!func.forEach(k))
-			{
+	public boolean ForEachKey(I2ForEachKey<K> func) {
+		for (K k : keySet()) {
+			if (!func.forEach(k)) {
 				return false;
 			}
 		}
 		return true;
 	}
 	
-	public boolean ForEachValue(I2ForEachValue<V> func)
-	{
-		for (V v : values())
-		{
-			if (!func.forEach(v))
-			{
+	public boolean ForEachValue(I2ForEachValue<V> func) {
+		for (V v : values()) {
+			if (!func.forEach(v)) {
 				return false;
 			}
 		}

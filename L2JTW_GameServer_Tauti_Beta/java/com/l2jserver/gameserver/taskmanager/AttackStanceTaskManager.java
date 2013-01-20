@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.taskmanager;
 
@@ -30,8 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.AutoAttackStop;
 /**
  * @author Luca Baldi, Zoey76
  */
-public class AttackStanceTaskManager
-{
+public class AttackStanceTaskManager {
 	protected static final Logger _log = Logger.getLogger(AttackStanceTaskManager.class.getName());
 	
 	protected static final FastMap<L2Character, Long> _attackStanceTasks = new FastMap<>();
@@ -39,8 +42,7 @@ public class AttackStanceTaskManager
 	/**
 	 * Instantiates a new attack stance task manager.
 	 */
-	protected AttackStanceTaskManager()
-	{
+	protected AttackStanceTaskManager() {
 		_attackStanceTasks.shared();
 		ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FightModeScheduler(), 0, 1000);
 	}
@@ -49,15 +51,11 @@ public class AttackStanceTaskManager
 	 * Adds the attack stance task.
 	 * @param actor the actor
 	 */
-	public void addAttackStanceTask(L2Character actor)
-	{
-		if ((actor != null) && actor.isPlayable())
-		{
+	public void addAttackStanceTask(L2Character actor) {
+		if ((actor != null) && actor.isPlayable()) {
 			final L2PcInstance player = actor.getActingPlayer();
-			for (L2CubicInstance cubic : player.getCubics().values())
-			{
-				if (cubic.getId() != L2CubicInstance.LIFE_CUBIC)
-				{
+			for (L2CubicInstance cubic : player.getCubics().values()) {
+				if (cubic.getId() != L2CubicInstance.LIFE_CUBIC) {
 					cubic.doAction();
 				}
 			}
@@ -69,10 +67,8 @@ public class AttackStanceTaskManager
 	 * Removes the attack stance task.
 	 * @param actor the actor
 	 */
-	public void removeAttackStanceTask(L2Character actor)
-	{
-		if ((actor != null) && actor.isSummon())
-		{
+	public void removeAttackStanceTask(L2Character actor) {
+		if ((actor != null) && actor.isSummon()) {
 			actor = actor.getActingPlayer();
 		}
 		_attackStanceTasks.remove(actor);
@@ -84,47 +80,36 @@ public class AttackStanceTaskManager
 	 * @param actor the actor
 	 * @return {@code true} if the character has an attack stance task, {@code false} otherwise
 	 */
-	public boolean getAttackStanceTask(L2Character actor)
-	{
-		if ((actor != null) && actor.isSummon())
-		{
+	public boolean getAttackStanceTask(L2Character actor) {
+		if ((actor != null) && actor.isSummon()) {
 			actor = actor.getActingPlayer();
 		}
 		return _attackStanceTasks.containsKey(actor);
 	}
 	
-	protected class FightModeScheduler implements Runnable
-	{
+	protected class FightModeScheduler implements Runnable {
 		@Override
-		public void run()
-		{
+		public void run() {
 			long current = System.currentTimeMillis();
-			try
-			{
+			try {
 				final Iterator<Entry<L2Character, Long>> iter = _attackStanceTasks.entrySet().iterator();
 				Entry<L2Character, Long> e;
 				L2Character actor;
-				while (iter.hasNext())
-				{
+				while (iter.hasNext()) {
 					e = iter.next();
-					if ((current - e.getValue()) > 15000)
-					{
+					if ((current - e.getValue()) > 15000) {
 						actor = e.getKey();
-						if (actor != null)
-						{
+						if (actor != null) {
 							actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
 							actor.getAI().setAutoAttacking(false);
-							if (actor.isPlayer() && actor.getActingPlayer().hasPet())
-							{
+							if (actor.isPlayer() && actor.getActingPlayer().hasPet()) {
 								actor.getActingPlayer().getPet().broadcastPacket(new AutoAttackStop(actor.getActingPlayer().getPet().getObjectId()));
 							}
 						}
 						iter.remove();
 					}
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				// Unless caught here, players remain in attack positions.
 				_log.log(Level.WARNING, "Error in FightModeScheduler: " + e.getMessage(), e);
 			}
@@ -135,13 +120,11 @@ public class AttackStanceTaskManager
 	 * Gets the single instance of AttackStanceTaskManager.
 	 * @return single instance of AttackStanceTaskManager
 	 */
-	public static AttackStanceTaskManager getInstance()
-	{
+	public static AttackStanceTaskManager getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final AttackStanceTaskManager _instance = new AttackStanceTaskManager();
 	}
 }

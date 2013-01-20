@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -23,8 +27,8 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * <b>Filter this carefully as it becomes redundant to store reuse for small delays.</b>
  * @author Yesod, Zoey76
  */
-public class TimeStamp
-{
+public class TimeStamp {
+	
 	private final int _id1; // Item or Skill Id.
 	private final int _id2; // Item Object Id or Skill Level.
 	private final long _reuse;
@@ -35,8 +39,7 @@ public class TimeStamp
 	 * @param skill the skill upon the stamp will be created.
 	 * @param reuse the reuse time for this skill.
 	 */
-	public TimeStamp(L2Skill skill, long reuse)
-	{
+	public TimeStamp(L2Skill skill, long reuse) {
 		_id1 = skill.getId();
 		_id2 = skill.getLevel();
 		_reuse = reuse;
@@ -49,8 +52,7 @@ public class TimeStamp
 	 * @param reuse the reuse time for this skill.
 	 * @param systime overrides the system time with a customized one.
 	 */
-	public TimeStamp(L2Skill skill, long reuse, long systime)
-	{
+	public TimeStamp(L2Skill skill, long reuse, long systime) {
 		_id1 = skill.getId();
 		_id2 = skill.getLevel();
 		_reuse = reuse;
@@ -62,8 +64,7 @@ public class TimeStamp
 	 * @param item the item upon the stamp will be created.
 	 * @param reuse the reuse time for this item.
 	 */
-	public TimeStamp(L2ItemInstance item, long reuse)
-	{
+	public TimeStamp(L2ItemInstance item, long reuse) {
 		_id1 = item.getItemId();
 		_id2 = item.getObjectId();
 		_reuse = reuse;
@@ -76,8 +77,7 @@ public class TimeStamp
 	 * @param reuse the reuse time for this item.
 	 * @param systime overrides the system time with a customized one.
 	 */
-	public TimeStamp(L2ItemInstance item, long reuse, long systime)
-	{
+	public TimeStamp(L2ItemInstance item, long reuse, long systime) {
 		_id1 = item.getItemId();
 		_id2 = item.getObjectId();
 		_reuse = reuse;
@@ -88,64 +88,56 @@ public class TimeStamp
 	/**
 	 * @return the time stamp, either the system time where this time stamp was created or the custom time assigned.
 	 */
-	public long getStamp()
-	{
+	public long getStamp() {
 		return _stamp;
 	}
 	
 	/**
 	 * @return the first Id for the item, the item Id.
 	 */
-	public int getItemId()
-	{
+	public int getItemId() {
 		return _id1;
 	}
 	
 	/**
 	 * @return the second Id for the item, the item object Id.
 	 */
-	public int getItemObjectId()
-	{
+	public int getItemObjectId() {
 		return _id2;
 	}
 	
 	/**
 	 * @return the skill Id.
 	 */
-	public int getSkillId()
-	{
+	public int getSkillId() {
 		return _id1;
 	}
 	
 	/**
 	 * @return the skill level.
 	 */
-	public int getSkillLvl()
-	{
+	public int getSkillLvl() {
 		return _id2;
 	}
 	
 	/**
 	 * @return the reuse set for this Item/Skill.
 	 */
-	public long getReuse()
-	{
+	public long getReuse() {
 		return _reuse;
 	}
 	
 	/**
 	 * @return the shared reuse group for the item, -1 for skills.
 	 */
-	public int getSharedReuseGroup()
-	{
+	public int getSharedReuseGroup() {
 		return _group;
 	}
 	
 	/**
 	 * @return the remaining time for this time stamp to expire.
 	 */
-	public long getRemaining()
-	{
+	public long getRemaining() {
 		return Math.max(_stamp - System.currentTimeMillis(), 0);
 	}
 	
@@ -153,8 +145,8 @@ public class TimeStamp
 	 * Check if the reuse delay has passed and if it has not then update the stored reuse time according to what is currently remaining on the delay.
 	 * @return {@code true} if this time stamp has expired, {@code false} otherwise.
 	 */
-	public boolean hasNotPassed()
-	{
+	public boolean hasNotPassed() {
 		return System.currentTimeMillis() < _stamp;
 	}
+	
 }

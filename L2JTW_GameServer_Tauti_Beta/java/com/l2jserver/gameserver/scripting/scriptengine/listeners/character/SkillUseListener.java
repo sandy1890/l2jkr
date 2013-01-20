@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.scripting.scriptengine.listeners.character;
 
@@ -21,8 +25,7 @@ import com.l2jserver.gameserver.scripting.scriptengine.impl.L2JListener;
 /**
  * @author TheOne
  */
-public abstract class SkillUseListener extends L2JListener
-{
+public abstract class SkillUseListener extends L2JListener {
 	private L2Character _character = null;
 	private int _skillId = -1;
 	private int _npcId = -1;
@@ -33,8 +36,7 @@ public abstract class SkillUseListener extends L2JListener
 	 * @param character
 	 * @param skillId
 	 */
-	public SkillUseListener(L2Character character, int skillId)
-	{
+	public SkillUseListener(L2Character character, int skillId) {
 		_skillId = skillId;
 		_character = character;
 		_characterSpecific = true;
@@ -46,8 +48,7 @@ public abstract class SkillUseListener extends L2JListener
 	 * @param npcId
 	 * @param skillId
 	 */
-	public SkillUseListener(int npcId, int skillId)
-	{
+	public SkillUseListener(int npcId, int skillId) {
 		_skillId = skillId;
 		_npcId = npcId;
 		register();
@@ -61,27 +62,19 @@ public abstract class SkillUseListener extends L2JListener
 	public abstract boolean onSkillUse(SkillUseEvent event);
 	
 	@Override
-	public void register()
-	{
-		if (!_characterSpecific)
-		{
+	public void register() {
+		if (!_characterSpecific) {
 			L2Character.addGlobalSkillUseListener(this);
-		}
-		else
-		{
+		} else {
 			_character.addSkillUseListener(this);
 		}
 	}
 	
 	@Override
-	public void unregister()
-	{
-		if (!_characterSpecific)
-		{
+	public void unregister() {
+		if (!_characterSpecific) {
 			L2Character.removeGlobalSkillUseListener(this);
-		}
-		else
-		{
+		} else {
 			_character.removeSkillUseListener(this);
 		}
 	}
@@ -90,8 +83,7 @@ public abstract class SkillUseListener extends L2JListener
 	 * Returns the npcId this listener will be triggered for
 	 * @return
 	 */
-	public int getNpcId()
-	{
+	public int getNpcId() {
 		return _npcId;
 	}
 	
@@ -99,8 +91,7 @@ public abstract class SkillUseListener extends L2JListener
 	 * Returns the skillId this listener will be triggered for
 	 * @return
 	 */
-	public int getSkillId()
-	{
+	public int getSkillId() {
 		return _skillId;
 	}
 	
@@ -108,8 +99,7 @@ public abstract class SkillUseListener extends L2JListener
 	 * Returns the L2Character this listener is attached to
 	 * @return
 	 */
-	public L2Character getCharacter()
-	{
+	public L2Character getCharacter() {
 		return _character;
 	}
 }

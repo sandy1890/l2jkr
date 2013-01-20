@@ -1,47 +1,48 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
 /**
  * @author UnAfraid
  */
-public class ClanInfo
-{
+public class ClanInfo {
+	
 	private final L2Clan _clan;
 	private final int _total;
 	private final int _online;
 	
-	public ClanInfo(final L2Clan clan)
-	{
+	public ClanInfo(final L2Clan clan) {
 		_clan = clan;
 		_total = clan.getMembersCount();
 		_online = clan.getOnlineMembersCount();
 	}
 	
-	public L2Clan getClan()
-	{
+	public L2Clan getClan() {
 		return _clan;
 	}
 	
-	public int getTotal()
-	{
+	public int getTotal() {
 		return _total;
 	}
 	
-	public int getOnline()
-	{
+	public int getOnline() {
 		return _online;
 	}
+	
 }

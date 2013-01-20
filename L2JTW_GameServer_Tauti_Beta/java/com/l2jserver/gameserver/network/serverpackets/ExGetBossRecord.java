@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
@@ -18,17 +22,15 @@ import java.util.Map;
 
 /**
  * Format: ch ddd [ddd]
- * @author  KenM
+ * @author KenM
  */
-public class ExGetBossRecord extends L2GameServerPacket
-{
+public class ExGetBossRecord extends L2GameServerPacket {
 	private static final String _S__FE_33_EXGETBOSSRECORD = "[S] FE:34 ExGetBossRecord";
 	private Map<Integer, Integer> _bossRecordInfo;
 	private int _ranking;
 	private int _totalPoints;
 	
-	public ExGetBossRecord(int ranking, int totalScore, Map<Integer, Integer> list)
-	{
+	public ExGetBossRecord(int ranking, int totalScore, Map<Integer, Integer> list) {
 		_ranking = ranking;
 		_totalPoints = totalScore;
 		_bossRecordInfo = list;
@@ -38,27 +40,22 @@ public class ExGetBossRecord extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
 	 */
 	@Override
-	protected void writeImpl()
-	{
+	protected void writeImpl() {
 		writeC(0xfe);
 		writeH(0x34);
 		writeD(_ranking);
 		writeD(_totalPoints);
-		if (_bossRecordInfo == null)
-		{
+		if (_bossRecordInfo == null) {
 			writeD(0x00);
 			writeD(0x00);
 			writeD(0x00);
 			writeD(0x00);
-		}
-		else
-		{
-			writeD(_bossRecordInfo.size()); //list size
-			for (int bossId : _bossRecordInfo.keySet())
-			{
+		} else {
+			writeD(_bossRecordInfo.size()); // list size
+			for (int bossId : _bossRecordInfo.keySet()) {
 				writeD(bossId);
 				writeD(_bossRecordInfo.get(bossId));
-				writeD(0x00); //??
+				writeD(0x00); // ??
 			}
 		}
 	}
@@ -67,8 +64,7 @@ public class ExGetBossRecord extends L2GameServerPacket
 	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
 	 */
 	@Override
-	public String getType()
-	{
+	public String getType() {
 		return _S__FE_33_EXGETBOSSRECORD;
 	}
 }

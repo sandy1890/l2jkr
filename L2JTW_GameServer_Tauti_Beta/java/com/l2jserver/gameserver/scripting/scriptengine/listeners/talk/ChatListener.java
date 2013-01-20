@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.scripting.scriptengine.listeners.talk;
 
@@ -24,10 +28,8 @@ import com.l2jserver.gameserver.scripting.scriptengine.impl.L2JListener;
  * See network.Say2.java
  * @author TheOne
  */
-public abstract class ChatListener extends L2JListener
-{
-	public ChatListener()
-	{
+public abstract class ChatListener extends L2JListener {
+	public ChatListener() {
 		register();
 	}
 	
@@ -38,14 +40,12 @@ public abstract class ChatListener extends L2JListener
 	public abstract void onTalk(ChatEvent event);
 	
 	@Override
-	public void register()
-	{
+	public void register() {
 		Say2.addChatListener(this);
 	}
 	
 	@Override
-	public void unregister()
-	{
+	public void unregister() {
 		Say2.removeChatListener(this);
 	}
 	
@@ -53,8 +53,7 @@ public abstract class ChatListener extends L2JListener
 	 * Defines the type of talk/chat taking place
 	 * @author TheOne
 	 */
-	public enum ChatTargetType
-	{
+	public enum ChatTargetType {
 		ALL,
 		SHOUT,
 		TELL,
@@ -85,15 +84,11 @@ public abstract class ChatListener extends L2JListener
 	 * @param type
 	 * @return
 	 */
-	public static ChatTargetType getTargetType(String type)
-	{
+	public static ChatTargetType getTargetType(String type) {
 		ChatTargetType targetType = ChatTargetType.ALL;
-		try
-		{
+		try {
 			targetType = ChatTargetType.valueOf(type);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			log.info("Invalid ChatTargetType:" + type);
 			e.getMessage();
 		}

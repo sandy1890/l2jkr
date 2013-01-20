@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model;
 
@@ -18,8 +22,8 @@ package com.l2jserver.gameserver.model;
  * Stats definition for each pet level.
  * @author JIV, Zoey76
  */
-public class L2PetLevelData
-{
+public class L2PetLevelData {
+	
 	private final int _ownerExpTaken;
 	private final int _petFeedBattle;
 	private final int _petFeedNormal;
@@ -36,8 +40,7 @@ public class L2PetLevelData
 	private final short _petSoulShot;
 	private final short _petSpiritShot;
 	
-	public L2PetLevelData(StatsSet set)
-	{
+	public L2PetLevelData(StatsSet set) {
 		_ownerExpTaken = set.getInteger("get_exp_type");
 		_petMaxExp = set.getLong("exp");
 		_petMaxHP = set.getFloat("org_hp");
@@ -58,120 +61,106 @@ public class L2PetLevelData
 	/**
 	 * @return the owner's experience points consumed by the pet.
 	 */
-	public int getOwnerExpTaken()
-	{
+	public int getOwnerExpTaken() {
 		return _ownerExpTaken;
 	}
 	
 	/**
 	 * @return the pet's food consume rate at battle state.
 	 */
-	public int getPetFeedBattle()
-	{
+	public int getPetFeedBattle() {
 		return _petFeedBattle;
 	}
 	
 	/**
 	 * @return the pet's food consume rate at normal state.
 	 */
-	public int getPetFeedNormal()
-	{
+	public int getPetFeedNormal() {
 		return _petFeedNormal;
 	}
 	
 	/**
 	 * @return the pet's Magical Attack.
 	 */
-	public float getPetMAtk()
-	{
+	public float getPetMAtk() {
 		return _petMAtk;
 	}
 	
 	/**
 	 * @return the pet's maximum experience points.
 	 */
-	public long getPetMaxExp()
-	{
+	public long getPetMaxExp() {
 		return _petMaxExp;
 	}
 	
 	/**
 	 * @return the pet's maximum feed points.
 	 */
-	public int getPetMaxFeed()
-	{
+	public int getPetMaxFeed() {
 		return _petMaxFeed;
 	}
 	
 	/**
 	 * @return the pet's maximum HP.
 	 */
-	public float getPetMaxHP()
-	{
+	public float getPetMaxHP() {
 		return _petMaxHP;
 	}
 	
 	/**
 	 * @return the pet's maximum MP.
 	 */
-	public float getPetMaxMP()
-	{
+	public float getPetMaxMP() {
 		return _petMaxMP;
 	}
 	
 	/**
 	 * @return the pet's Magical Defense.
 	 */
-	public float getPetMDef()
-	{
+	public float getPetMDef() {
 		return _petMDef;
 	}
 	
 	/**
 	 * @return the pet's Physical Attack.
 	 */
-	public float getPetPAtk()
-	{
+	public float getPetPAtk() {
 		return _petPAtk;
 	}
 	
 	/**
 	 * @return the pet's Physical Defense.
 	 */
-	public float getPetPDef()
-	{
+	public float getPetPDef() {
 		return _petPDef;
 	}
 	
 	/**
 	 * @return the pet's HP regeneration rate.
 	 */
-	public float getPetRegenHP()
-	{
+	public float getPetRegenHP() {
 		return _petRegenHP;
 	}
 	
 	/**
 	 * @return the pet's MP regeneration rate.
 	 */
-	public float getPetRegenMP()
-	{
+	public float getPetRegenMP() {
 		return _petRegenMP;
 	}
 	
 	/**
 	 * @return the pet's soulshot use count.
 	 */
-	public short getPetSoulShot()
-	{
+	public short getPetSoulShot() {
 		return _petSoulShot;
 	}
 	
 	/**
 	 * @return the pet's spiritshot use count.
 	 */
-	public short getPetSpiritShot()
-	{
+	public short getPetSpiritShot() {
 		return _petSpiritShot;
 	}
+	
 }

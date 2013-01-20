@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.communitybbs.Manager;
 
@@ -27,85 +31,71 @@ import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.communitybbs.BB.Forum;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public class ForumsBBSManager extends BaseBBSManager
-{
+public class ForumsBBSManager extends BaseBBSManager {
+	
 	private static Logger _log = Logger.getLogger(ForumsBBSManager.class.getName());
-	private List<Forum> _table;
+	private final List<Forum> _table;
 	private int _lastid = 1;
 	
 	/**
 	 * @return
 	 */
-	public static ForumsBBSManager getInstance()
-	{
+	public static ForumsBBSManager getInstance() {
 		return SingletonHolder._instance;
 	}
 	
-	protected ForumsBBSManager()
-	{
+	protected ForumsBBSManager() {
 		_table = new FastList<>();
 		
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT forum_id FROM forums WHERE forum_type=0");
 			ResultSet result = statement.executeQuery();
-			while (result.next())
-			{
+			while (result.next()) {
 				int forumId = result.getInt("forum_id");
 				Forum f = new Forum(forumId, null);
 				addForum(f);
 			}
 			result.close();
 			statement.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Data error on Forum (root): " + e.getMessage(), e);
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public void initRoot()
-	{
-		for (Forum f : _table)
+	public void initRoot() {
+		for (Forum f : _table) {
 			f.vload();
+		}
 		_log.info("Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
 	}
 	
-	public void addForum(Forum ff)
-	{
-		if (ff == null)
+	public void addForum(Forum ff) {
+		if (ff == null) {
 			return;
+		}
 		
 		_table.add(ff);
 		
-		if (ff.getID() > _lastid)
-		{
+		if (ff.getID() > _lastid) {
 			_lastid = ff.getID();
 		}
 	}
 	
 	@Override
-	public void parsecmd(String command, L2PcInstance activeChar)
-	{
+	public void parsecmd(String command, L2PcInstance activeChar) {
 	}
 	
 	/**
-	 * 
 	 * @param Name
 	 * @return
 	 */
-	public Forum getForumByName(String Name)
-	{
-		for (Forum f : _table)
-		{
-			if (f.getName().equals(Name))
-			{
+	public Forum getForumByName(String Name) {
+		for (Forum f : _table) {
+			if (f.getName().equals(Name)) {
 				return f;
 			}
 		}
@@ -121,8 +111,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 * @param oid
 	 * @return
 	 */
-	public Forum createNewForum(String name, Forum parent, int type, int perm, int oid)
-	{
+	public Forum createNewForum(String name, Forum parent, int type, int perm, int oid) {
 		Forum forum = new Forum(name, parent, type, perm, oid);
 		forum.insertIntoDb();
 		return forum;
@@ -131,8 +120,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	/**
 	 * @return
 	 */
-	public int getANewID()
-	{
+	public int getANewID() {
 		return ++_lastid;
 	}
 	
@@ -140,12 +128,9 @@ public class ForumsBBSManager extends BaseBBSManager
 	 * @param idf
 	 * @return
 	 */
-	public Forum getForumByID(int idf)
-	{
-		for (Forum f : _table)
-		{
-			if (f.getID() == idf)
-			{
+	public Forum getForumByID(int idf) {
+		for (Forum f : _table) {
+			if (f.getID() == idf) {
 				return f;
 			}
 		}
@@ -153,12 +138,11 @@ public class ForumsBBSManager extends BaseBBSManager
 	}
 	
 	@Override
-	public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, L2PcInstance activeChar)
-	{
+	public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, L2PcInstance activeChar) {
 	}
 	
-	private static class SingletonHolder
-	{
+	private static class SingletonHolder {
 		protected static final ForumsBBSManager _instance = new ForumsBBSManager();
 	}
+	
 }

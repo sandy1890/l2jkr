@@ -1,32 +1,34 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J Server
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J Server.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.model.base;
 
 /**
- * This class defines all classes (ex : human fighter, darkFighter...) that a player can chose.<BR><BR>
- *
- * Data :<BR><BR>
- * <li>id : The Identifier of the class</li>
- * <li>isMage : True if the class is a mage class</li>
- * <li>race : The race of this class</li>
- * <li>parent : The parent ClassId or null if this class is the root</li><BR><BR>
- *
+ * This class defines all classes (ex : human fighter, darkFighter...) that a player can chose.<BR>
+ * <BR>
+ * Data :<BR>
+ * <BR>
+ * <li>id : The Identifier of the class</li> <li>isMage : True if the class is a mage class</li> <li>race : The race of this class</li> <li>parent : The parent ClassId or null if this class is the root</li><BR>
+ * <BR>
  * @version $Revision: 1.4.4.4 $ $Date: 2005/03/27 15:29:33 $
  */
-public enum ClassId
-{
+public enum ClassId {
+	
 	fighter(0x00, false, Race.Human, null),
 	
 	warrior(0x01, false, Race.Human, fighter),
@@ -96,10 +98,7 @@ public enum ClassId
 	warsmith(0x39, false, Race.Dwarf, artisan),
 	
 	/*
-	 * Dummy Entries (id's already in decimal format)
-	 * btw FU NCSoft for the amount of work you put me
-	 * through to do this!!
-	 * <START>
+	 * Dummy Entries (id's already in decimal format) btw FU NCSoft for the amount of work you put me through to do this!! <START>
 	 */
 	dummyEntry1(58, false, null, null),
 	dummyEntry2(59, false, null, null),
@@ -132,8 +131,7 @@ public enum ClassId
 	dummyEntry29(86, false, null, null),
 	dummyEntry30(87, false, null, null),
 	/*
-	 * <END>
-	 * Of Dummy entries
+	 * <END> Of Dummy entries
 	 */
 	
 	/*
@@ -192,7 +190,7 @@ public enum ClassId
 	maleSoulhound(0x84, false, Race.Kamael, maleSoulbreaker),
 	femaleSoulhound(0x85, false, Race.Kamael, femaleSoulbreaker),
 	trickster(0x86, false, Race.Kamael, arbalester),
-	inspector(0x87, false, Race.Kamael, warder), //DS: yes, both male/female inspectors use skills from warder
+	inspector(0x87, false, Race.Kamael, warder), // DS: yes, both male/female inspectors use skills from warder
 	judicator(0x88, false, Race.Kamael, inspector),
 	
 	dummyEntry35(0x89, false, null, null),
@@ -230,8 +228,7 @@ public enum ClassId
 	 * @param pRace the race related to the class.
 	 * @param pParent the parent class Id.
 	 */
-	private ClassId(int pId, boolean pIsMage, Race pRace, ClassId pParent)
-	{
+	private ClassId(int pId, boolean pIsMage, Race pRace, ClassId pParent) {
 		_id = pId;
 		_isMage = pIsMage;
 		_isSummoner = false;
@@ -247,8 +244,7 @@ public enum ClassId
 	 * @param pRace the race related to the class.
 	 * @param pParent the parent class Id.
 	 */
-	private ClassId(int pId, boolean pIsMage, boolean pIsSummoner, Race pRace, ClassId pParent)
-	{
+	private ClassId(int pId, boolean pIsMage, boolean pIsSummoner, Race pRace, ClassId pParent) {
 		_id = pId;
 		_isMage = pIsMage;
 		_isSummoner = pIsSummoner;
@@ -259,32 +255,28 @@ public enum ClassId
 	/**
 	 * @return the Id of the Class.
 	 */
-	public final int getId()
-	{
+	public final int getId() {
 		return _id;
 	}
 	
 	/**
 	 * @return {code true} if the class is a mage class.
 	 */
-	public final boolean isMage()
-	{
+	public final boolean isMage() {
 		return _isMage;
 	}
 	
 	/**
 	 * @return {code true} if the class is a summoner class.
 	 */
-	public final boolean isSummoner()
-	{
+	public final boolean isSummoner() {
 		return _isSummoner;
 	}
 	
 	/**
 	 * @return the Race object of the class.
 	 */
-	public final Race getRace()
-	{
+	public final Race getRace() {
 		return _race;
 	}
 	
@@ -292,13 +284,14 @@ public enum ClassId
 	 * @param cid the parent ClassId to check.
 	 * @return {code true} if this Class is a child of the selected ClassId.
 	 */
-	public final boolean childOf(ClassId cid)
-	{
-		if (_parent == null)
+	public final boolean childOf(ClassId cid) {
+		if (_parent == null) {
 			return false;
+		}
 		
-		if (_parent == cid)
+		if (_parent == cid) {
 			return true;
+		}
 		
 		return _parent.childOf(cid);
 		
@@ -308,18 +301,17 @@ public enum ClassId
 	 * @param cid the parent ClassId to check.
 	 * @return {code true} if this Class is equal to the selected ClassId or a child of the selected ClassId.
 	 */
-	public final boolean equalsOrChildOf(ClassId cid)
-	{
-		return this == cid || childOf(cid);
+	public final boolean equalsOrChildOf(ClassId cid) {
+		return (this == cid) || childOf(cid);
 	}
 	
 	/**
 	 * @return the child level of this Class (0=root, 1=child leve 1...)
 	 */
-	public final int level()
-	{
-		if (_parent == null)
+	public final int level() {
+		if (_parent == null) {
 			return 0;
+		}
 		
 		return 1 + _parent.level();
 	}
@@ -327,20 +319,16 @@ public enum ClassId
 	/**
 	 * @return its parent Class Id
 	 */
-	public final ClassId getParent()
-	{
+	public final ClassId getParent() {
 		return _parent;
 	}
 	
-	public static ClassId getClassId(int cId)
-	{
-		try
-		{
+	public static ClassId getClassId(int cId) {
+		try {
 			return ClassId.values()[cId];
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			return null;
 		}
 	}
+	
 }
