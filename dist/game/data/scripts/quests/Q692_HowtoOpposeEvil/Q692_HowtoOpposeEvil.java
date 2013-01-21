@@ -119,7 +119,7 @@ public final class Q692_HowtoOpposeEvil extends Quest
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+			return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		}
 		if (event.equalsIgnoreCase("32549-03.htm"))
 		{
@@ -179,7 +179,7 @@ public final class Q692_HowtoOpposeEvil extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -267,6 +267,6 @@ public final class Q692_HowtoOpposeEvil extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q692_HowtoOpposeEvil(692, qn, "¹ï§Ü´cªº¤èªk");
+		new Q692_HowtoOpposeEvil(692, qn, "å°æŠ—æƒ¡çš„æ–¹æ³•");
 	}
 }

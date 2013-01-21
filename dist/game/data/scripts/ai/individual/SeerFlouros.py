@@ -5,9 +5,9 @@ from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.util import Rnd
 
-FLOUROS = 18559  # ¥d¯Ç´µ ¹w¨¥ªÌ ´¶³ÒÃ¹¯À
-GUARD1  = 18560  # ´¶³ÒÃ¹¯Àªº¤â¤U
-GUARD2  = 18560  # ´¶³ÒÃ¹¯Àªº¤â¤U
+FLOUROS = 18559  # å¡ç´æ–¯ é è¨€è€… æ™®å‹ç¾…ç´ 
+GUARD1  = 18560  # æ™®å‹ç¾…ç´ çš„æ‰‹ä¸‹
+GUARD2  = 18560  # æ™®å‹ç¾…ç´ çš„æ‰‹ä¸‹
 
 class PyObject:
 	pass

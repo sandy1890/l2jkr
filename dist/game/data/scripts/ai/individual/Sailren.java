@@ -16,7 +16,7 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.util.Rnd;
 
 /**
- * «Ê¦LªºÅ]¤ö ÁÉº¸Äõ
+ * å°å°çš„é­”çˆª è³½çˆ¾è˜­
  * Sailren AI
  * @author rocknow
  */
@@ -204,7 +204,7 @@ public class Sailren extends L2AttackableAIScript
 		{
 			if (player.isFlying())
 			{
-				htmltext = "<html><body>®uµY¸t¹³¡G<br>ÃM­¼­¸Àsªºª¬ºA¤UµLªkÅı§A¶i¤J¡C</body></html>";
+				htmltext = "<html><body>å¸­ç³è–åƒï¼š<br>é¨ä¹˜é£›é¾çš„ç‹€æ…‹ä¸‹ç„¡æ³•è®“ä½ é€²å…¥ã€‚</body></html>";
 			}
 			else if (player.getQuestState("sailren").getQuestItemsCount(8784) > 0)
 			{
@@ -218,12 +218,12 @@ public class Sailren extends L2AttackableAIScript
 				}
 			}
 			else
-				htmltext = "<html><body>®uµY¸t¹³¡G<br><font color=LEVEL>¥d¯÷§J</font>¬O«Ê¦LÁÉº¸Äõ¥²³Æªºª««~¡C</body></html>";
+				htmltext = "<html><body>å¸­ç³è–åƒï¼š<br><font color=LEVEL>å¡èŒ²å…‹</font>æ˜¯å°å°è³½çˆ¾è˜­å¿…å‚™çš„ç‰©å“ã€‚</body></html>";
 		}
 	else if (GrandBossManager.getInstance().getBossStatus(SAILREN) == FIGHTING)
-		htmltext = "<html><body>®uµY¸t¹³¡G<br><font color=\"LEVEL\">¤w¸g¦³¤H¶i¤JÁÉº¸Äõ±_¥Ş¡C¦b¥L­Ì»PÁÉº¸Äõªº¹ï¾Ôµ²§ô¤§«e¤£¯àÅı§A­Ì¶i¤J¡C</font></body></html>";
+		htmltext = "<html><body>å¸­ç³è–åƒï¼š<br><font color=\"LEVEL\">å·²ç¶“æœ‰äººé€²å…¥è³½çˆ¾è˜­å·¢ç©´ã€‚åœ¨ä»–å€‘èˆ‡è³½çˆ¾è˜­çš„å°æˆ°çµæŸä¹‹å‰ä¸èƒ½è®“ä½ å€‘é€²å…¥ã€‚</font></body></html>";
 	else
-		htmltext = "<html><body>®uµY¸t¹³¡G<br><font color=\"LEVEL\">ÁÉº¸Äõ¥Ø«e¨IºÎ¤¤.....½Ğ¦^§a¡C</font></body></html>";
+		htmltext = "<html><body>å¸­ç³è–åƒï¼š<br><font color=\"LEVEL\">è³½çˆ¾è˜­ç›®å‰æ²‰ç¡ä¸­.....è«‹å›å§ã€‚</font></body></html>";
 	return htmltext;
 	}
 

@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * ¼w¾|»h»i¤H«ü´§©x
+ * å¾·é­¯èœ¥èœ´äººæŒ‡æ®å®˜
  */
 public class Delu_Lizardman_Special_Commander extends L2AttackableAIScript
 {
@@ -32,17 +32,17 @@ public class Delu_Lizardman_Special_Commander extends L2AttackableAIScript
 
 	private static String[] text =
 	{
-		"³º´±§«Ãª¯«¸tªº¨M°«¡Iµ´¹ïÄÇ¤£¤F§A­Ì¡I",
-		"±N¨õ¦HªÌ³B¦º§a¡I",
-		"¨õ¦HªÌ¡I¥h¦º§a¡I",
-		"¥Ç³W¡I¤j®a§Öµ¹§Ú³B¨M¨õ¦HªÌ¡I",
-		"¤ñªZµ²§ô¤F¡I¤j®a¶i§ğ¡I"
+		"ç«Ÿæ•¢å¦¨ç¤™ç¥è–çš„æ±ºé¬¥ï¼çµ•å°é¥’ä¸äº†ä½ å€‘ï¼",
+		"å°‡å‘åŠ£è€…è™•æ­»å§ï¼",
+		"å‘åŠ£è€…ï¼å»æ­»å§ï¼",
+		"çŠ¯è¦ï¼å¤§å®¶å¿«çµ¦æˆ‘è™•æ±ºå‘åŠ£è€…ï¼",
+		"æ¯”æ­¦çµæŸäº†ï¼å¤§å®¶é€²æ”»ï¼"
 	};
 	
 	private static String[] text1 =
 	{
-		"¡I³º´±§«Ãª§Ú­Ì¤ñªZ¡I¦U¦ì¡I",
-		"¡I³º´±§«Ãª§Ú­Ì¤ñªZ¡I¤j®aÀ°À°§Ú¡I"
+		"ï¼ç«Ÿæ•¢å¦¨ç¤™æˆ‘å€‘æ¯”æ­¦ï¼å„ä½ï¼",
+		"ï¼ç«Ÿæ•¢å¦¨ç¤™æˆ‘å€‘æ¯”æ­¦ï¼å¤§å®¶å¹«å¹«æˆ‘ï¼"
 	};
 	
 	public Delu_Lizardman_Special_Commander(int questId, String name, String descr)

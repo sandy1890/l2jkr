@@ -88,7 +88,7 @@ public class Q20_BringUpWithLove extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -146,6 +146,6 @@ public class Q20_BringUpWithLove extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q20_BringUpWithLove(20, qn, "½Ğ¥H·R¤ß¾i¨|");
+		new Q20_BringUpWithLove(20, qn, "è«‹ä»¥æ„›å¿ƒé¤Šè‚²");
 	}
 }

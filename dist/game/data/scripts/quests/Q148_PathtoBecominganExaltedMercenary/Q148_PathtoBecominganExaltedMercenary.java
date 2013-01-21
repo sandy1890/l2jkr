@@ -70,7 +70,7 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -115,7 +115,7 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 				}
 				break;
 			case State.COMPLETED:
-				htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+				htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 				break;
 		}
 		return htmltext;
@@ -131,6 +131,6 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q148_PathtoBecominganExaltedMercenary(148, qn, "¦¨¬°³Ì°ªºë¾U¶Ä§Lªº¸ô");
+		new Q148_PathtoBecominganExaltedMercenary(148, qn, "æˆç‚ºæœ€é«˜ç²¾éŠ³å‚­å…µçš„è·¯");
 	}
 }

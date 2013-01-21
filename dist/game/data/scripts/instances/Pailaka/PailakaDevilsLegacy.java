@@ -58,10 +58,10 @@ public class PailakaDevilsLegacy extends Quest
 	};
 	private static final int ZONE        = 20109;
 
-	private static final int SURVIVOR    = 32498; // ´cÅ]®qªº´_¬¡ªÌ
-	private static final int SUPPORTER   = 32501; // ´cÅ]®qªº¨ó§UªÌ
-	private static final int ADVENTURER1 = 32508; // ¸G¤H±´ÀI®a
-	private static final int ADVENTURER2 = 32511; // ¸G¤H±´ÀI®a ³Ì«á¥X²{ªº¸G¤H
+	private static final int SURVIVOR    = 32498; // æƒ¡é­”å³¶çš„å¾©æ´»è€…
+	private static final int SUPPORTER   = 32501; // æƒ¡é­”å³¶çš„å”åŠ©è€…
+	private static final int ADVENTURER1 = 32508; // çŸ®äººæ¢éšªå®¶
+	private static final int ADVENTURER2 = 32511; // çŸ®äººæ¢éšªå®¶ æœ€å¾Œå‡ºç¾çš„çŸ®äºº
 	private static final int[] NPCS =
 	{
 		SURVIVOR,
@@ -70,14 +70,14 @@ public class PailakaDevilsLegacy extends Quest
 		ADVENTURER2
 	};
 	
-	private static final int KAMS         = 18629;  // ¥d©i¤h        ©¬¥£¥d
-	private static final int HIKORO       = 18630;  // ¤é¤ñ          ©¬¥£¥d
-	private static final int ALKASO       = 18631;  // ¥Ë§J¦u        ©¬¥£¥d
-	private static final int GERBERA      = 18632;  // ®æ¾|¤Ú©Ô      ©¬¥£¥d
-	private static final int LEMATAN      = 18633;  // ¹p°¨°ó
-	private static final int FOLLOWERS    = 18634;  // ¹p°¨°óªº¤â¤U
-	private static final int TREASURE_BOX = 32495;  // Ä_½c
-	private static final int POWDER_KEG   = 18622;  // ¤õÃÄ±í
+	private static final int KAMS         = 18629;  // å¡å§†å£«        å¸•å¥´å¡
+	private static final int HIKORO       = 18630;  // æ—¥æ¯”          å¸•å¥´å¡
+	private static final int ALKASO       = 18631;  // ç“¦å…‹å®ˆ        å¸•å¥´å¡
+	private static final int GERBERA      = 18632;  // æ ¼é­¯å·´æ‹‰      å¸•å¥´å¡
+	private static final int LEMATAN      = 18633;  // é›·é¦¬å ‚
+	private static final int FOLLOWERS    = 18634;  // é›·é¦¬å ‚çš„æ‰‹ä¸‹
+	private static final int TREASURE_BOX = 32495;  // å¯¶ç®±
+	private static final int POWDER_KEG   = 18622;  // ç«è—¥æ¡¶
 	private static final int[] MONSTERS =
 	{
 		KAMS,
@@ -95,19 +95,19 @@ public class PailakaDevilsLegacy extends Quest
 		18627
 	};
 	
-	private static final int PAILAKA_INSTANT_SHIELD         = 13032;  // µá©Ô¥d§Y®É¬Ş
-	private static final int QUICK_HEALING_POTION           = 13033;  // Àş¶¡Åé¤OªvÂ¡ÃÄ¤ô
-	private static final int ANCIENT_LEGACY_SWORD           = 13042;  // ¥j¥N¿ò²£¤§¼C
-	private static final int ENHANCED_ANCIENT_LEGACY_SWORD  = 13043;  // ±j¤Æ¥j¥N¿ò²£¤§¼C
-	private static final int COMPLETE_ANCIENT_LEGACY_SWORD  = 13044;  // §¹¥ş¤Æ¥j¥N¿ò²£¤§¼C
-	private static final int PAILAKA_WEAPON_UPGRADE_STAGE_1 = 13046;  // µá©Ô¥dªZ¾¹¤É¯Å ¶¥¬q1
-	private static final int PAILAKA_WEAPON_UPGRADE_STAGE_2 = 13047;  // µá©Ô¥dªZ¾¹¤É¯Å ¶¥¬q2
-	private static final int PAILAKA_ANTIDOTE               = 13048;  // µá©Ô¥d¸Ñ¬r¾¯
-	private static final int DIVINE_SOUL                    = 13049;  // ¯«¸tªZ¾¹¥[«ù
-	private static final int LONG_RANGEDEFENSE_POTION       = 13059;  // »·¶ZÂ÷¨¾¿m¯à¤O´£¤ÉÃÄ¤ô
-	private static final int PAILAKA_ALL_PURPOSE_KEY        = 13150;  // µá©Ô¥d¸U¯àÆ_°Í
-	private static final int PAILAKA_BRACELET               = 13295;  // µá©Ô¥d¤âÅN
-	private static final int PSOE                           = 736;    // ªğ¦^¨÷¶b
+	private static final int PAILAKA_INSTANT_SHIELD         = 13032;  // è²æ‹‰å¡å³æ™‚ç›¾
+	private static final int QUICK_HEALING_POTION           = 13033;  // ç¬é–“é«”åŠ›æ²»ç™’è—¥æ°´
+	private static final int ANCIENT_LEGACY_SWORD           = 13042;  // å¤ä»£éºç”¢ä¹‹åŠ
+	private static final int ENHANCED_ANCIENT_LEGACY_SWORD  = 13043;  // å¼·åŒ–å¤ä»£éºç”¢ä¹‹åŠ
+	private static final int COMPLETE_ANCIENT_LEGACY_SWORD  = 13044;  // å®Œå…¨åŒ–å¤ä»£éºç”¢ä¹‹åŠ
+	private static final int PAILAKA_WEAPON_UPGRADE_STAGE_1 = 13046;  // è²æ‹‰å¡æ­¦å™¨å‡ç´š éšæ®µ1
+	private static final int PAILAKA_WEAPON_UPGRADE_STAGE_2 = 13047;  // è²æ‹‰å¡æ­¦å™¨å‡ç´š éšæ®µ2
+	private static final int PAILAKA_ANTIDOTE               = 13048;  // è²æ‹‰å¡è§£æ¯’åŠ‘
+	private static final int DIVINE_SOUL                    = 13049;  // ç¥è–æ­¦å™¨åŠ æŒ
+	private static final int LONG_RANGEDEFENSE_POTION       = 13059;  // é è·é›¢é˜²ç¦¦èƒ½åŠ›æå‡è—¥æ°´
+	private static final int PAILAKA_ALL_PURPOSE_KEY        = 13150;  // è²æ‹‰å¡è¬èƒ½é‘°åŒ™
+	private static final int PAILAKA_BRACELET               = 13295;  // è²æ‹‰å¡æ‰‹é²
+	private static final int PSOE                           = 736;    // è¿”å›å·è»¸
 	
 	private static boolean _isTeleportScheduled = false;
 	private static boolean _isOnShip = false;
@@ -671,6 +671,6 @@ public class PailakaDevilsLegacy extends Quest
 	
 	public static void main(String[] args)
 	{
-		new PailakaDevilsLegacy(129, qn, "µá©Ô¥d-´cÅ]ªº¿ò²£");
+		new PailakaDevilsLegacy(129, qn, "è²æ‹‰å¡-æƒ¡é­”çš„éºç”¢");
 	}
 }

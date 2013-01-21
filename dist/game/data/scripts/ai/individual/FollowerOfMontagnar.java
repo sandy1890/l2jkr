@@ -20,7 +20,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * ©s¶ð¨ºªº¤â¤U
+ * å­Ÿå¡”é‚£çš„æ‰‹ä¸‹
  */
 public class FollowerOfMontagnar extends L2AttackableAIScript
 {

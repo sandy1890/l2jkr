@@ -9,7 +9,7 @@ from com.l2jserver.gameserver.network.serverpackets import NpcSay
 
 MutationId ={   # Npc:[NewNpc,% for chance by shot,Type Message,nb message]
                 # if Quest_Drop = 5 => 5% by shot to change mob
-                21261:[21262,1,"Type1",5],      # 1st mutation Ol Mahum Transcender °[¯T¶W¶VªÌ
+                21261:[21262,1,"Type1",5],      # 1st mutation Ol Mahum Transcender è±ºç‹¼è¶…è¶Šè€…
                 21262:[21263,1,"Type1",5],      # 2st mutation Ol Mahum Transcender
                 21263:[21264,1,"Type1",5],      # 3rd mutation Ol Mahum Transcender
                 21258:[21259,100,"Type1",5],    # always mutation on atk Fallen Orc Shaman
@@ -25,10 +25,10 @@ MutationId ={   # Npc:[NewNpc,% for chance by shot,Type Message,nb message]
                 21620:[21621,1,"Type1",5]       # Musveren
                 }
 # message by Name on MutationId
-NpcMessage={   "Type1":["§Ú¤Ó¤p¬İ§A­Ì¤F¡I¨º»ò´N»{¯u¦a¹ï¥I§A­Ì§a¡I",
-                              "²{¦b¤~¬O¯u¥¿ªº¶}©l¡I",
-                              "¥Ş¬O¦n¤[¨S¦³¸I¨ìÅı§Ú¼ö¦åªmÄËªº¹ï¤â¡I",
-                              "Åı§AÁ@Á@§Ú¯u¥¿ªº¤O¶q¡I",
+NpcMessage={   "Type1":["æˆ‘å¤ªå°çœ‹ä½ å€‘äº†ï¼é‚£éº¼å°±èªçœŸåœ°å°ä»˜ä½ å€‘å§ï¼",
+                              "ç¾åœ¨æ‰æ˜¯çœŸæ­£çš„é–‹å§‹ï¼",
+                              "ç©´æ˜¯å¥½ä¹…æ²’æœ‰ç¢°åˆ°è®“æˆ‘ç†±è¡€æ²¸é¨°çš„å°æ‰‹ï¼",
+                              "è®“ä½ ç§ç§æˆ‘çœŸæ­£çš„åŠ›é‡ï¼",
                               "This time at the last! The end!"],
                "Type2":[" "] # posibility to add other message on type 2 and change on MutationId
             }

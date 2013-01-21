@@ -26,7 +26,7 @@ class mercenary3 (JQuest) :
 			L2Multisell.getInstance().separateAndSend(npcId*10000+3, player, npc.getNpcId(), False, 0.0);
 			htmltext = ""
 		else :
-			htmltext = "<html><body>§A­n®³µ¹§Ú¬İªº¸ê®æÃÒ¦b­ş¸Ì¡H§A¬OÁ@¤£°_§Ú¶Ü¡H</body></html>"
+			htmltext = "<html><body>ä½ è¦æ‹¿çµ¦æˆ‘çœ‹çš„è³‡æ ¼è­‰åœ¨å“ªè£¡ï¼Ÿä½ æ˜¯ç§ä¸èµ·æˆ‘å—ï¼Ÿ</body></html>"
 		return htmltext
 
 QUEST = mercenary3(-1,qn,"Custom")

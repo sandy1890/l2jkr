@@ -73,7 +73,7 @@ public class Q182_NewRecruits extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -86,7 +86,7 @@ public class Q182_NewRecruits extends Quest
 		}
 		if (player.getLevel() < 17)
 		{
-			return "<html><body>ªø¦Ñ³Í§J¬¥´¶´µ¡G<br>§Ú¦b´M§ä¥~¨ÓªÌ¨ÓÀ°§U§Ú­Ì¤@±Úªº¦~»´¤H¡A±z©P³ò¦³¤H¿ï¶Ü¡H<br>¡]¥u¦³µ¥¯Å17¥H¤W¡B21¥H¤U¥B©|¥¼§¹¦¨¤@¦¸ÂàÂ¾ªºîî¤Ñ¨ÏºØ±Ú¥H¥~ªº¨¤¦â¡A¤~¥i¥H°õ¦æªº¥ô°È¡C¡^</body></html>";
+			return "<html><body>é•·è€å‡±å…‹æ´›æ™®æ–¯ï¼š<br>æˆ‘åœ¨å°‹æ‰¾å¤–ä¾†è€…ä¾†å¹«åŠ©æˆ‘å€‘ä¸€æ—çš„å¹´è¼•äººï¼Œæ‚¨å‘¨åœæœ‰äººé¸å—ï¼Ÿ<br>ï¼ˆåªæœ‰ç­‰ç´š17ä»¥ä¸Šã€21ä»¥ä¸‹ä¸”å°šæœªå®Œæˆä¸€æ¬¡è½‰è·çš„é—‡å¤©ä½¿ç¨®æ—ä»¥å¤–çš„è§’è‰²ï¼Œæ‰å¯ä»¥åŸ·è¡Œçš„ä»»å‹™ã€‚ï¼‰</body></html>";
 		}
 		if (npc.getNpcId() == _kekropus)
 		{
@@ -102,7 +102,7 @@ public class Q182_NewRecruits extends Quest
 					}
 					break;
 				case State.COMPLETED:
-					htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+					htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 					break;
 			}
 		}
@@ -127,6 +127,6 @@ public class Q182_NewRecruits extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q182_NewRecruits(182, qn, "¶Ò¶°À°¤â");
+		new Q182_NewRecruits(182, qn, "å‹Ÿé›†å¹«æ‰‹");
 	}
 }

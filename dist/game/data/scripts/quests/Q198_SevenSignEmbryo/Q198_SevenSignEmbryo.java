@@ -241,7 +241,7 @@ public class Q198_SevenSignEmbryo extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState fifth = player.getQuestState("197_SevenSignTheSacredBookOfSeal");
 		
@@ -351,6 +351,6 @@ public class Q198_SevenSignEmbryo extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q198_SevenSignEmbryo(198, qn, "¤C«Ê¦L¡A­F­L");
+		new Q198_SevenSignEmbryo(198, qn, "ä¸ƒå°å°ï¼Œèƒšèƒ");
 	}
 }

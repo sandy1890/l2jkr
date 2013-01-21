@@ -109,7 +109,7 @@ public class Q463_IMustBeaGenius extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>�ثe�S��������ȡA�α��󤣲šC</body></html>";
+		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -208,6 +208,6 @@ public class Q463_IMustBeaGenius extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q463_IMustBeaGenius(463, qn, "�ݨӧگu�O�ӤѤ~");
+		new Q463_IMustBeaGenius(463, qn, "看來我真是個天才");
 	}
 }

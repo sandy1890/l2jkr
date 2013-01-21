@@ -37,7 +37,7 @@ public class Q195_SevenSignSecretRitualOfThePriests extends Quest
 		QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
-			return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+			return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		
 		if (event.equalsIgnoreCase("31001-05.htm"))
 		{
@@ -114,7 +114,7 @@ public class Q195_SevenSignSecretRitualOfThePriests extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState contractOfMammon = player.getQuestState("194_SevenSignContractOfMammon");
 		
@@ -139,7 +139,7 @@ public class Q195_SevenSignSecretRitualOfThePriests extends Quest
 						htmltext = "31001-06.htm";
 					break;
 				case State.COMPLETED:
-					htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+					htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 			}
 		}
 		else if (npc.getNpcId() == JOHN)
@@ -193,6 +193,6 @@ public class Q195_SevenSignSecretRitualOfThePriests extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q195_SevenSignSecretRitualOfThePriests(195, qn, "¤C«Ê¦L¡A²½¥q­Ìªº¯¦±K»ö¦¡");
+		new Q195_SevenSignSecretRitualOfThePriests(195, qn, "ä¸ƒå°å°ï¼Œç¥­å¸å€‘çš„ç¥•å¯†å„€å¼");
 	}
 }

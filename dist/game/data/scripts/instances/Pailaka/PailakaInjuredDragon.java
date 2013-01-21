@@ -61,58 +61,58 @@ public class PailakaInjuredDragon extends Quest
 	}
 	
 	// NPCS
-	private static final int KETRA_ORC_SHAMAN              = 32499;  // ªÖ¯S©ÔÃ~¤H ©G³N¤h
-	private static final int KETRA_ORC_SUPPORTER           = 32502;  // ªÖ¯S©ÔÃ~¤H¨ó§UªÌ
-	private static final int KETRA_ORC_SUPPORTER2          = 32512;  // ªÖ¯S©ÔÃ~¤H«á´©ªÌ
-	private static final int KETRA_ORC_INTELIGENCE_OFFICER = 32509;  // ªÖ¯S©ÔÃ~¤H¿Ò³ø­û
+	private static final int KETRA_ORC_SHAMAN              = 32499;  // è‚¯ç‰¹æ‹‰ç¸äºº å’’è¡“å£«
+	private static final int KETRA_ORC_SUPPORTER           = 32502;  // è‚¯ç‰¹æ‹‰ç¸äººå”åŠ©è€…
+	private static final int KETRA_ORC_SUPPORTER2          = 32512;  // è‚¯ç‰¹æ‹‰ç¸äººå¾Œæ´è€…
+	private static final int KETRA_ORC_INTELIGENCE_OFFICER = 32509;  // è‚¯ç‰¹æ‹‰ç¸äººè«œå ±å“¡
 	
 	// WALL MOBS
-	private static final int VARKA_SILENOS_RECRUIT     = 18635;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ°V½m§L
-	private static final int VARKA_SILENOS_FOOTMAN     = 18636;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ¨B§L
-	private static final int VARKA_SILENOS_WARRIOR     = 18642;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ¾Ô¤h
-	private static final int VARKA_SILENOS_OFFICER     = 18646;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ¤U¤h
-	private static final int VARKAS_COMMANDER          = 18654;  // ¤Ú·ç¥d­x¹Îªø
-	private static final int VARKA_ELITE_GUARD         = 18653;  // ¤Ú·ç¥dºë¾U¿Ë½Ã¶¤
-	private static final int VARKA_SILENOS_GREAT_MAGUS = 18649;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ¤jÅ]¾É¤h
-	private static final int VARKA_SILENOS_GENERAL     = 18650;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ­x©x
-	private static final int VARKA_SILENOS_HEAD_GUARD  = 18655;  // ¤Ú·ç¥d­º®u¿Ë½Ã¶¤
-	private static final int PROPHET_GUARD             = 18657;  // ¹w¨¥ªÌªº¿Ë½Ã§L
-	private static final int VARKAS_PROPHET            = 18659;  // ¤Ú·ç¥d¹w¨¥ªÌ
+	private static final int VARKA_SILENOS_RECRUIT     = 18635;  // å·´ç‘å¡è³½å‹’è«¾æ–¯è¨“ç·´å…µ
+	private static final int VARKA_SILENOS_FOOTMAN     = 18636;  // å·´ç‘å¡è³½å‹’è«¾æ–¯æ­¥å…µ
+	private static final int VARKA_SILENOS_WARRIOR     = 18642;  // å·´ç‘å¡è³½å‹’è«¾æ–¯æˆ°å£«
+	private static final int VARKA_SILENOS_OFFICER     = 18646;  // å·´ç‘å¡è³½å‹’è«¾æ–¯ä¸‹å£«
+	private static final int VARKAS_COMMANDER          = 18654;  // å·´ç‘å¡è»åœ˜é•·
+	private static final int VARKA_ELITE_GUARD         = 18653;  // å·´ç‘å¡ç²¾éŠ³è¦ªè¡›éšŠ
+	private static final int VARKA_SILENOS_GREAT_MAGUS = 18649;  // å·´ç‘å¡è³½å‹’è«¾æ–¯å¤§é­”å°å£«
+	private static final int VARKA_SILENOS_GENERAL     = 18650;  // å·´ç‘å¡è³½å‹’è«¾æ–¯è»å®˜
+	private static final int VARKA_SILENOS_HEAD_GUARD  = 18655;  // å·´ç‘å¡é¦–å¸­è¦ªè¡›éšŠ
+	private static final int PROPHET_GUARD             = 18657;  // é è¨€è€…çš„è¦ªè¡›å…µ
+	private static final int VARKAS_PROPHET            = 18659;  // å·´ç‘å¡é è¨€è€…
 	
 	// EXTRA WALL SILENOS
-	private static final int VARKA_SILENOS_MEDIUM      = 18644;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µÆF´C
-	private static final int VARKA_SILENOS_PRIEST      = 18641;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ²½¥q
-	private static final int VARKA_SILENOS_SHAMAN      = 18640;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ©G³N¤h
-	private static final int VARKA_SILENOS_SEER        = 18648;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ²½¥qªø
-	private static final int VARKA_SILENOS_MAGNUS      = 18645;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µÅ]¾É¤h
-	private static final int DISCIPLE_OF_PROPHET       = 18658;  // ¹w¨¥ªÌªºªù®{
-	private static final int VARKA_HEAD_MAGUS          = 18656;  // ¤Ú·ç¥d­º®uÅ]¾É¤h
-	private static final int VARKA_SILENOS_GREAT_SEER  = 18652;  // ¤Ú·ç¥dÁÉ°Ç¿Õ´µ¤j²½¥qªø
+	private static final int VARKA_SILENOS_MEDIUM      = 18644;  // å·´ç‘å¡è³½å‹’è«¾æ–¯éˆåª’
+	private static final int VARKA_SILENOS_PRIEST      = 18641;  // å·´ç‘å¡è³½å‹’è«¾æ–¯ç¥­å¸
+	private static final int VARKA_SILENOS_SHAMAN      = 18640;  // å·´ç‘å¡è³½å‹’è«¾æ–¯å’’è¡“å£«
+	private static final int VARKA_SILENOS_SEER        = 18648;  // å·´ç‘å¡è³½å‹’è«¾æ–¯ç¥­å¸é•·
+	private static final int VARKA_SILENOS_MAGNUS      = 18645;  // å·´ç‘å¡è³½å‹’è«¾æ–¯é­”å°å£«
+	private static final int DISCIPLE_OF_PROPHET       = 18658;  // é è¨€è€…çš„é–€å¾’
+	private static final int VARKA_HEAD_MAGUS          = 18656;  // å·´ç‘å¡é¦–å¸­é­”å°å£«
+	private static final int VARKA_SILENOS_GREAT_SEER  = 18652;  // å·´ç‘å¡è³½å‹’è«¾æ–¯å¤§ç¥­å¸é•·
 	
 	// NORMAL MOBS
-	private static final int ANTYLOPE_1                = 18637;  // ©ñªªªº²Ü¦Ï
-	private static final int ANTYLOPE_2                = 18643;  // ©ñªªªº²Ü¦Ï
-	private static final int ANTYLOPE_3                = 18651;  // ©ñªªªº²Ü¦Ïªø¦Ñ
-	private static final int FLAVA                     = 18647;  // ©ñªªªºªÜ©Ô¥Ë
+	private static final int ANTYLOPE_1                = 18637;  // æ”¾ç‰§çš„ç¾šç¾Š
+	private static final int ANTYLOPE_2                = 18643;  // æ”¾ç‰§çš„ç¾šç¾Š
+	private static final int ANTYLOPE_3                = 18651;  // æ”¾ç‰§çš„ç¾šç¾Šé•·è€
+	private static final int FLAVA                     = 18647;  // æ”¾ç‰§çš„èŠ™æ‹‰ç“¦
 	
 	// BOSS
-	private static final int LATANA = 18660;  // ©Ô¶ğ¨º
+	private static final int LATANA = 18660;  // æ‹‰å¡”é‚£
 	
 	// ITEMS
-	private static final int SPEAR     = 13052;  // ÁÉ°Ç¿Õ´µ¤§ºj
-	private static final int ENCHSPEAR = 13053;  // ±j¤ÆÁÉ°Ç¿Õ´µ¤§ºj
-	private static final int LASTSPEAR = 13054;  // §¹¥ş¤ÆÁÉ°Ç¿Õ´µ¤§ºj
-	private static final int STAGE1    = 13056;  // ªZ¾¹¤É¯Å ¶¥¬q1
-	private static final int STAGE2    = 13057;  // ªZ¾¹¤É¯Å ¶¥¬q2
+	private static final int SPEAR     = 13052;  // è³½å‹’è«¾æ–¯ä¹‹æ§
+	private static final int ENCHSPEAR = 13053;  // å¼·åŒ–è³½å‹’è«¾æ–¯ä¹‹æ§
+	private static final int LASTSPEAR = 13054;  // å®Œå…¨åŒ–è³½å‹’è«¾æ–¯ä¹‹æ§
+	private static final int STAGE1    = 13056;  // æ­¦å™¨å‡ç´š éšæ®µ1
+	private static final int STAGE2    = 13057;  // æ­¦å™¨å‡ç´š éšæ®µ2
 	
-	private static final int SHIELD_POTION = 13032;  // µá©Ô¥d§Y®É¬Ş
-	private static final int HEAL_POTION   = 13033;  // Àş¶¡Åé¤OªvÂ¡ÃÄ¤ô
+	private static final int SHIELD_POTION = 13032;  // è²æ‹‰å¡å³æ™‚ç›¾
+	private static final int HEAL_POTION   = 13033;  // ç¬é–“é«”åŠ›æ²»ç™’è—¥æ°´
 	
 	// Rewards
-	private static final int PSHIRT = 13296;  // µá©Ô¥d­m
-	private static final int SCROLL_OF_ESCAPE = 736;  // ªğ¦^¨÷¶b
+	private static final int PSHIRT = 13296;  // è²æ‹‰å¡è¡«
+	private static final int SCROLL_OF_ESCAPE = 736;  // è¿”å›å·è»¸
 	
-	private static final String EMPTY = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+	private static final String EMPTY = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 	
 	private static int buff_counter = 5;
 	private static boolean _hasDoneAnimation = false;
@@ -975,6 +975,6 @@ public class PailakaInjuredDragon extends Quest
 	
 	public static void main(String[] args)
 	{
-		new PailakaInjuredDragon(144, qn, "µá©Ô¥d-¨ü¶ËªºÀs");
+		new PailakaInjuredDragon(144, qn, "è²æ‹‰å¡-å—å‚·çš„é¾");
 	}
 }

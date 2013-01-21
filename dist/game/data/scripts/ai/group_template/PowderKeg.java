@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * ¤õÃÄ±í
+ * ç«è—¥æ¡¶
  */
 public class PowderKeg extends L2AttackableAIScript
 {

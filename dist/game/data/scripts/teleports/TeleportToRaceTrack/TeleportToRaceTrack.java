@@ -81,7 +81,7 @@ public class TeleportToRaceTrack extends Quest
 			
 			else
 			{
-				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "§A¬O¥Î¨ä¥¦ªº¤èªk¨Ó¨ì³o¸Ì¡A¦]¦¹±N¶Ç°e¨ì³Ìªñªº¨f®¦«°Âí¡C"));
+				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "ä½ æ˜¯ç”¨å…¶å®ƒçš„æ–¹æ³•ä¾†åˆ°é€™è£¡ï¼Œå› æ­¤å°‡å‚³é€åˆ°æœ€è¿‘çš„ç‹„æ©åŸé®ã€‚"));
 				st.getPlayer().teleToLocation(15670, 142983, -2700);
 			}
 			

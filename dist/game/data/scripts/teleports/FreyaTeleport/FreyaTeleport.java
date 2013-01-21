@@ -38,7 +38,7 @@ public class FreyaTeleport extends Quest
 		if (player.getLevel() >= 80)
 			player.teleToLocation(-180218, 185923, -10576);
 		else
-			htmltext = "<html><body>�x�x �J�ܦ̴��G<br>���M���p���A����ı�o���a��A�ӻ��٬O�ܦM�I�C�ڻ{�������ӱN�öQ���ͩR�G�J���ҡA�ЧA�̸ѡC���M�A�p�G�A���i�@�ǹ�O���ܱo��j�����ܡA������H�ɳ��|�w��A�C<br>(�u��<font color=\"LEVEL\">����80</font>�H�W������~��i�J�f�����ءC)</body></html>";
+			htmltext = "<html><body>軍官 克萊米斯：<br>雖然情況緊急，但我覺得此地對你來說還是很危險。我認為不應該將珍貴的生命逼入絕境，請你諒解。當然，如果你培養一些實力後變得更強悍的話，那麼我隨時都會歡迎你。<br>(只有<font color=\"LEVEL\">等級80</font>以上的角色才能進入殄滅之種。)</body></html>";
 
 		st.exitQuest(true);
 		return htmltext;

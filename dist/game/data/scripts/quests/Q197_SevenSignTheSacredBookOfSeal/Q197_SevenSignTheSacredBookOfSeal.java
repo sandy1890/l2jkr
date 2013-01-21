@@ -149,7 +149,7 @@ public class Q197_SevenSignTheSacredBookOfSeal extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState fourth = player.getQuestState("196_SevenSignSealOfTheEmperor");
 		
@@ -277,6 +277,6 @@ public class Q197_SevenSignTheSacredBookOfSeal extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q197_SevenSignTheSacredBookOfSeal(197, qn, "¤C«Ê¦L¡A«Ê¦Lªº¸g¨å");
+		new Q197_SevenSignTheSacredBookOfSeal(197, qn, "ä¸ƒå°å°ï¼Œå°å°çš„ç¶“å…¸");
 	}
 }

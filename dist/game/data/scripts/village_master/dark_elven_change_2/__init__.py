@@ -43,7 +43,7 @@ CLASSES = {
     "PS":[41,39,2,"50","51","52","53",[MARK_OF_SCHOLAR,MARK_OF_FATE,MARK_OF_SUMMONER]],
     }
 #Messages
-default = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+default = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 
 def change(st,player,newclass,items) :
    for item in items :
@@ -120,7 +120,7 @@ class Quest (JQuest) :
        else :
          htmltext += "-56.htm"                # other conditions
      else :
-       htmltext += "-57.htm"   #pmq­×¥¿       # other races
+       htmltext += "-57.htm"   #pmqä¿®æ­£       # other races
    st.exitQuest(1)
    return htmltext
 

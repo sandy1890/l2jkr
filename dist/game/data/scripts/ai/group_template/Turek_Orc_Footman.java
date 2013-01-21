@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * ¤g·ç§JÃ~¤H¨B§L
+ * åœŸç‘å…‹ç¸äººæ­¥å…µ
  */
 public class Turek_Orc_Footman extends L2AttackableAIScript
 {
@@ -32,14 +32,14 @@ public class Turek_Orc_Footman extends L2AttackableAIScript
 
 	private static String[] text =
 	{
-		"¤U¦¸¤@©wÅı§A¤U¦aº»¡I",
-		"¤µ¤Ñ¨ü¨ì®¢°d¡A¤U¦¸¤@©w©^ÁÙµ¹§A¡I"
+		"ä¸‹æ¬¡ä¸€å®šè®“ä½ ä¸‹åœ°ç„ï¼",
+		"ä»Šå¤©å—åˆ°æ¥è¾±ï¼Œä¸‹æ¬¡ä¸€å®šå¥‰é‚„çµ¦ä½ ï¼"
 	};
 	
 	private static String[] text1 =
 	{
-		"¤£­n¦A¥´¤F¡I",
-		"´Nºâ±ş¤F§Ú¡A§A¤]±o¤£¨ì¤°»ò¡C"
+		"ä¸è¦å†æ‰“äº†ï¼",
+		"å°±ç®—æ®ºäº†æˆ‘ï¼Œä½ ä¹Ÿå¾—ä¸åˆ°ä»€éº¼ã€‚"
 	};
 	
 	public Turek_Orc_Footman(int questId, String name, String descr)

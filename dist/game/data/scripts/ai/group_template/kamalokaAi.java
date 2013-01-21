@@ -9,7 +9,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.util.Rnd;
 
 /**
- * ���BOSS AI
+ * 카마로카 보스 AI
  */
 public class kamalokaAi  extends L2AttackableAIScript 
 {

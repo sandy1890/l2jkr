@@ -71,35 +71,35 @@ public class Q196_SevenSignSealOfTheEmperor extends Quest
 	private static final int INSTANCE_ID       = 112;
 	
 	// NPCs
-	private static final int HEINE             = 30969;  // ¦ã´Ë®ü¤º
-	private static final int MAMMON            = 32584;  // °]´Iªº°Ó¤H
-	private static final int SHUNAIMAN         = 32586;  // ¦ãº¸¼¯¨È¤B¬Ó«Ò ¥v©`°Ò
-	private static final int MAGICAN           = 32598;  // ¦ãº¸¼¯¨È¤B ®c§ÊÅ]ªk®v
-	private static final int WOOD              = 32593;  // ¯«©x §Å¼w
-	private static final int LEON              = 32587;  // ¬Ó«ÒÄµ½Ã µÜ·Å
-	private static final int PROMICE_OF_MAMMON = 32585;  // ¶Ç°e®v °]´Iªº¬ù©w
-	private static final int DISCIPLES_GK      = 32657;  // ¨Ï®{ªº¦uªù¤H
+	private static final int HEINE             = 30969;  // è‰¾æ£®æµ·å…§
+	private static final int MAMMON            = 32584;  // è²¡å¯Œçš„å•†äºº
+	private static final int SHUNAIMAN         = 32586;  // è‰¾çˆ¾æ‘©äºä¸çš‡å¸ å²å¥ˆæ›¼
+	private static final int MAGICAN           = 32598;  // è‰¾çˆ¾æ‘©äºä¸ å®®å»·é­”æ³•å¸«
+	private static final int WOOD              = 32593;  // ç¥å®˜ å·«å¾·
+	private static final int LEON              = 32587;  // çš‡å¸è­¦è¡› èŠæº«
+	private static final int PROMICE_OF_MAMMON = 32585;  // å‚³é€å¸« è²¡å¯Œçš„ç´„å®š
+	private static final int DISCIPLES_GK      = 32657;  // ä½¿å¾’çš„å®ˆé–€äºº
 	
 	//FIGHTING NPCS
-	private static final int LILITH        = 32715;  // ²`²Wªº¸t¥À ²ú²úµ·
-	private static final int LILITH_GUARD0 = 32716;  // ²ú²úµ·ªº¥N¨¥ªÌ
-	private static final int LILITH_GUARD1 = 32717;  // ²ú²úµ·ªº¿Ë½Ã¶¤
-	private static final int ANAKIM        = 32718;  // ¸t¤õªº¤õªá ¨È¯Ç
-	private static final int ANAKIM_GUARD0 = 32719;  // ¨È¯Çªº¦uÅ@ªÌ
-	private static final int ANAKIM_GUARD1 = 32720;  // ¨È¯Çªº¸T½Ã¶¤
-	private static final int ANAKIM_GUARD2 = 32721;  // ¨È¯Çªº°õ¦æªÌ
+	private static final int LILITH        = 32715;  // æ·±æ·µçš„è–æ¯ è‰è‰çµ²
+	private static final int LILITH_GUARD0 = 32716;  // è‰è‰çµ²çš„ä»£è¨€è€…
+	private static final int LILITH_GUARD1 = 32717;  // è‰è‰çµ²çš„è¦ªè¡›éšŠ
+	private static final int ANAKIM        = 32718;  // è–ç«çš„ç«èŠ± äºç´
+	private static final int ANAKIM_GUARD0 = 32719;  // äºç´çš„å®ˆè­·è€…
+	private static final int ANAKIM_GUARD1 = 32720;  // äºç´çš„ç¦è¡›éšŠ
+	private static final int ANAKIM_GUARD2 = 32721;  // äºç´çš„åŸ·è¡Œè€…
 	
 	//DOOR
-	//private static final int DOOR1  = 17240101; /** ²Ä¤@©Ğ¶¡ªù­n¥Î¸t¤ô¶}±Ò */
-	private static final int DOOR2  = 17240102; /** ²Ä¤@©Ğ¶¡©Ç¥ş·À¦Û°Ê¶}ªù */
-	//private static final int DOOR3  = 17240103; /** ²Ä¤G©Ğ¶¡ªù­n¥ÎÅ]ªk´Î¶}±Ò */
-	private static final int DOOR4  = 17240104; /** ²Ä¤G©Ğ¶¡©Ç¥ş·À¦Û°Ê¶}ªù */
-	//private static final int DOOR5  = 17240105; /** ²Ä¤T©Ğ¶¡ªù­n¥Î¸t¤ô¶}±Ò */
-	private static final int DOOR6  = 17240106; /** ²Ä¤T©Ğ¶¡©Ç¥ş·À¦Û°Ê¶}ªù */
-	//private static final int DOOR7  = 17240107; /** ²Ä¥|©Ğ¶¡ªù­n¥ÎÅ]ªk´Î¶}±Ò */
-	private static final int DOOR8  = 17240108; /** ²Ä¥|©Ğ¶¡©Ç¥ş·À¦Û°Ê¶}ªù */
-	//private static final int DOOR9  = 17240109; /** ²Ä¤­©Ğ¶¡ªù­n¥Î¸t¤ô¶}±Ò */
-	private static final int DOOR10 = 17240110; /** ²Ä¤­©Ğ¶¡©Ç¥ş·À¦Û°Ê¶}ªù */
+	//private static final int DOOR1  = 17240101; /** ç¬¬ä¸€æˆ¿é–“é–€è¦ç”¨è–æ°´é–‹å•Ÿ */
+	private static final int DOOR2  = 17240102; /** ç¬¬ä¸€æˆ¿é–“æ€ªå…¨æ»…è‡ªå‹•é–‹é–€ */
+	//private static final int DOOR3  = 17240103; /** ç¬¬äºŒæˆ¿é–“é–€è¦ç”¨é­”æ³•æ£’é–‹å•Ÿ */
+	private static final int DOOR4  = 17240104; /** ç¬¬äºŒæˆ¿é–“æ€ªå…¨æ»…è‡ªå‹•é–‹é–€ */
+	//private static final int DOOR5  = 17240105; /** ç¬¬ä¸‰æˆ¿é–“é–€è¦ç”¨è–æ°´é–‹å•Ÿ */
+	private static final int DOOR6  = 17240106; /** ç¬¬ä¸‰æˆ¿é–“æ€ªå…¨æ»…è‡ªå‹•é–‹é–€ */
+	//private static final int DOOR7  = 17240107; /** ç¬¬å››æˆ¿é–“é–€è¦ç”¨é­”æ³•æ£’é–‹å•Ÿ */
+	private static final int DOOR8  = 17240108; /** ç¬¬å››æˆ¿é–“æ€ªå…¨æ»…è‡ªå‹•é–‹é–€ */
+	//private static final int DOOR9  = 17240109; /** ç¬¬äº”æˆ¿é–“é–€è¦ç”¨è–æ°´é–‹å•Ÿ */
+	private static final int DOOR10 = 17240110; /** ç¬¬äº”æˆ¿é–“æ€ªå…¨æ»…è‡ªå‹•é–‹é–€ */
 	private static final int DOOR = 17240111;
 	// INSTANCE TP
 	private static final int[] TELEPORT = { -89559, 216030, -7488 };
@@ -107,15 +107,15 @@ public class Q196_SevenSignSealOfTheEmperor extends Quest
 	private static final int[] NPCS = { HEINE, WOOD, MAMMON, MAGICAN, SHUNAIMAN, LEON, PROMICE_OF_MAMMON, DISCIPLES_GK };
 	
 	// MOBs
-	private static final int SEALDEVICE = 27384;  // ¥v©`°Ò¬Ó«Òªº «Ê¦L¸Ë¸m
+	private static final int SEALDEVICE = 27384;  // å²å¥ˆæ›¼çš‡å¸çš„ å°å°è£ç½®
 	private static final int[] TOKILL = {27371,27372,27373,27374,27375,27377,27378,27379,27384};
 	private static final int[] TOCHAT = {27371,27372,27373,27377,27378,27379};
 	
 	// QUEST ITEMS
-	private static final int WATER = 13808;  // ¦ãº¸¼¯¨È¤Bªº¸t¤ô
-	private static final int SWORD = 15310;  // ®ï®üÂÄ¸t¼C
-	private static final int SEAL  = 13846;  // «Ê¦Lªº¦L³¹
-	private static final int STAFF = 13809;  // ®c§ÊÅ]ªk®vªºÅ]ªk´Î
+	private static final int WATER = 13808;  // è‰¾çˆ¾æ‘©äºä¸çš„è–æ°´
+	private static final int SWORD = 15310;  // æ®·æµ·è–©è–åŠ
+	private static final int SEAL  = 13846;  // å°å°çš„å°ç« 
+	private static final int STAFF = 13809;  // å®®å»·é­”æ³•å¸«çš„é­”æ³•æ£’
 	
 	//Skills
 	private static final int EINHASAD_STRIKE = 8357;
@@ -125,22 +125,22 @@ public class Q196_SevenSignSealOfTheEmperor extends Quest
 	private int _numAtk = 0;
 	
 	/**
-	¡i³Æµù¡j¡G¡i1~3¡j ¬O¶}³õ¥Õ¥u·|¥X¤@¦¸¡A¡i4~12¡j ¬O¶Ã¼Æ¥X¹ï¸Ü¡A¡iEND¡j ¬O³Ì«á¤~·|¥Xªº¹ï¸Ü¡C
-	¡i¦rÃC¦â¡j	¡i¹ï¸Ü¦¸§Ç¡j	¡i¤Hª«¡j	¡i¹ï¸Ü½s¸¹¡j	¡i¹ï¸Ü¤º®e¡j
-	¡iOrange¡j	¡i1¡j			¡iANAKIM¡j	¡i19606¡j		¡i¬°¤F®ï®üÂÄªº¥Ã«í¡I¡I¡I¡j
-	¡iPink¡j	¡i2¡j			¡iANAKIM¡j	¡i19611¡j		¡i§Úªº¤O¶q¦bÅÜ®z¡A½Ğ»°§Ö±Ò°Ê«Ê¦L¸Ë¸m§a¡I¡I¡I¡j
-	¡iOrange¡j	¡i3¡j			¡iLILITH¡j	¡i19615¡j		¡i·MÄøªºªF¦è¡I³o³õ¾Ôª§ªº³Ó§Q¬OÂk®uµYªº¡I¡I¡I¡j
-	¡iOrange¡j	¡i4¡j			¡iANAKIM¡j	¡i19609¡j		¡i¥ú©ú­x¶Õ°Ú¡IÀ»±Ñ®uµYªº«Ä¤l­Ì§a¡I¡I¡I¡j
-	¡iPink¡j	¡i5¡j			¡iANAKIM¡j	¡i19614¡j		¡i¡u$s1¡v°Ú¡A½Ğ±z¦A..¥[ÂI¤O¡C¡j
-	¡iOrange¡j	¡i7¡j			¡iANAKIM¡j	¡i19608¡j		¡i§ÚÅı§A­ÌÁ@Á@®ï®üÂÄ¯u¥¿ªº¤O¶q¡I¡j
-	¡iPink¡j	¡i8¡j			¡iANAKIM¡j	¡i19613¡j		¡i²ú²úµ·ªº§ğÀ»ÅÜ±o§ó¥[¥û²r¤F¡I½Ğ»°§Ö±Ò°Ê¡I¡j
-	¡iOrange¡j	¡i11¡j			¡iANAKIM¡j	¡i19607¡j		¡i®uµYªº«Ä¤l­Ì°Ú¡I§A­ÌµLªk¦¨¬°§Ú­Ìªº¹ï¤â¡I¡j
-	¡iPink¡j	¡i12¡j			¡iANAKIM¡j	¡i19612¡j		¡i4­Ó«Ê¦L¸Ë¸m¥²¶·­n¥ş³¡±Ò°Ê¡I¡I¡I¡j
-	¡iOrange¡j	¡iEND¡j			¡iANAKIM¡j	¡i19610¡j		¡i³o¥ş³£¬O°U¡u$s1¡vªººÖ¡AÁÂÁÂ¡I¡j
-	¡iOrange¡j	¡i6¡j			¡iLILITH¡j	¡i19617¡j		¡i¨È¯Ç¡I¥H°¶¤jªº®uµY¤§¦W¡A§Ú±N¤FÂ_§Aªº¥Í©R¡I¡j
-	¡iOrange¡j	¡i9¡j			¡iLILITH¡j	¡i19616¡j		¡i³º´±·Q­n©M§Ú¤ñªZ¡H¯u¬O¥i¯º¡C¡j
-	¡iOrange¡j	¡i10¡j			¡iLILITH¡j	¡i19618¡j		¡i§AµLªk¦¨¬°§Ú--²ú²úµ·ªº¹ï¤â¡AÅı§AÁ@Á@§Úªº¼F®`¡I¡j
-	¡iOrange¡j	¡iEND¡j			¡iLILITH¡j	¡i19619¡j		¡i³ºµM´N³o¼Ë¦^¨ì®uµYªºÃh©ê..¯u¬O®ğ¼«..¡j
+	ã€å‚™è¨»ã€‘ï¼šã€1~3ã€‘ æ˜¯é–‹å ´ç™½åªæœƒå‡ºä¸€æ¬¡ï¼Œã€4~12ã€‘ æ˜¯äº‚æ•¸å‡ºå°è©±ï¼Œã€ENDã€‘ æ˜¯æœ€å¾Œæ‰æœƒå‡ºçš„å°è©±ã€‚
+	ã€å­—é¡è‰²ã€‘	ã€å°è©±æ¬¡åºã€‘	ã€äººç‰©ã€‘	ã€å°è©±ç·¨è™Ÿã€‘	ã€å°è©±å…§å®¹ã€‘
+	ã€Orangeã€‘	ã€1ã€‘			ã€ANAKIMã€‘	ã€19606ã€‘		ã€ç‚ºäº†æ®·æµ·è–©çš„æ°¸æ†ï¼ï¼ï¼ã€‘
+	ã€Pinkã€‘	ã€2ã€‘			ã€ANAKIMã€‘	ã€19611ã€‘		ã€æˆ‘çš„åŠ›é‡åœ¨è®Šå¼±ï¼Œè«‹è¶•å¿«å•Ÿå‹•å°å°è£ç½®å§ï¼ï¼ï¼ã€‘
+	ã€Orangeã€‘	ã€3ã€‘			ã€LILITHã€‘	ã€19615ã€‘		ã€æ„šè ¢çš„æ±è¥¿ï¼é€™å ´æˆ°çˆ­çš„å‹åˆ©æ˜¯æ­¸å¸­ç³çš„ï¼ï¼ï¼ã€‘
+	ã€Orangeã€‘	ã€4ã€‘			ã€ANAKIMã€‘	ã€19609ã€‘		ã€å…‰æ˜è»å‹¢å•Šï¼æ“Šæ•—å¸­ç³çš„å­©å­å€‘å§ï¼ï¼ï¼ã€‘
+	ã€Pinkã€‘	ã€5ã€‘			ã€ANAKIMã€‘	ã€19614ã€‘		ã€ã€Œ$s1ã€å•Šï¼Œè«‹æ‚¨å†..åŠ é»åŠ›ã€‚ã€‘
+	ã€Orangeã€‘	ã€7ã€‘			ã€ANAKIMã€‘	ã€19608ã€‘		ã€æˆ‘è®“ä½ å€‘ç§ç§æ®·æµ·è–©çœŸæ­£çš„åŠ›é‡ï¼ã€‘
+	ã€Pinkã€‘	ã€8ã€‘			ã€ANAKIMã€‘	ã€19613ã€‘		ã€è‰è‰çµ²çš„æ”»æ“Šè®Šå¾—æ›´åŠ å…‡çŒ›äº†ï¼è«‹è¶•å¿«å•Ÿå‹•ï¼ã€‘
+	ã€Orangeã€‘	ã€11ã€‘			ã€ANAKIMã€‘	ã€19607ã€‘		ã€å¸­ç³çš„å­©å­å€‘å•Šï¼ä½ å€‘ç„¡æ³•æˆç‚ºæˆ‘å€‘çš„å°æ‰‹ï¼ã€‘
+	ã€Pinkã€‘	ã€12ã€‘			ã€ANAKIMã€‘	ã€19612ã€‘		ã€4å€‹å°å°è£ç½®å¿…é ˆè¦å…¨éƒ¨å•Ÿå‹•ï¼ï¼ï¼ã€‘
+	ã€Orangeã€‘	ã€ENDã€‘			ã€ANAKIMã€‘	ã€19610ã€‘		ã€é€™å…¨éƒ½æ˜¯è¨—ã€Œ$s1ã€çš„ç¦ï¼Œè¬è¬ï¼ã€‘
+	ã€Orangeã€‘	ã€6ã€‘			ã€LILITHã€‘	ã€19617ã€‘		ã€äºç´ï¼ä»¥å‰å¤§çš„å¸­ç³ä¹‹åï¼Œæˆ‘å°‡äº†æ–·ä½ çš„ç”Ÿå‘½ï¼ã€‘
+	ã€Orangeã€‘	ã€9ã€‘			ã€LILITHã€‘	ã€19616ã€‘		ã€ç«Ÿæ•¢æƒ³è¦å’Œæˆ‘æ¯”æ­¦ï¼ŸçœŸæ˜¯å¯ç¬‘ã€‚ã€‘
+	ã€Orangeã€‘	ã€10ã€‘			ã€LILITHã€‘	ã€19618ã€‘		ã€ä½ ç„¡æ³•æˆç‚ºæˆ‘--è‰è‰çµ²çš„å°æ‰‹ï¼Œè®“ä½ ç§ç§æˆ‘çš„å²å®³ï¼ã€‘
+	ã€Orangeã€‘	ã€ENDã€‘			ã€LILITHã€‘	ã€19619ã€‘		ã€ç«Ÿç„¶å°±é€™æ¨£å›åˆ°å¸­ç³çš„æ‡·æŠ±..çœŸæ˜¯æ°£æ†¤..ã€‘
 	*/
 	/**
 	 * @param ch
@@ -809,7 +809,7 @@ public class Q196_SevenSignSealOfTheEmperor extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState qs = player.getQuestState("195_SevenSignSecretRitualOfThePriests");
 		
@@ -846,13 +846,13 @@ public class Q196_SevenSignSealOfTheEmperor extends Quest
 								return "30969-12.htm";
 						}
 					case State.COMPLETED:
-						return "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+						return "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 				}
 			case WOOD:
 				if (cond == 6)
 					return "32593-01.htm";
 				else if (st.getState() == State.COMPLETED)
-					return "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+					return "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 			case MAMMON:
 				switch (st.getInt("cond"))
 				{
@@ -1073,6 +1073,6 @@ public class Q196_SevenSignSealOfTheEmperor extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q196_SevenSignSealOfTheEmperor(196, qn, "¤C«Ê¦L¡A¬Ó«Òªº«Ê¦L");
+		new Q196_SevenSignSealOfTheEmperor(196, qn, "ä¸ƒå°å°ï¼Œçš‡å¸çš„å°å°");
 	}
 }

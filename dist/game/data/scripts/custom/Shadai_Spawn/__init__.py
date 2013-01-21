@@ -13,10 +13,10 @@ from com.l2jserver.gameserver.network.serverpackets import SocialAction
 qn = "Shadai_Spawn" 
 
 REPORTS={
-"REPORT1":[0,"½Ö·|¦¨¬°¤µ±ßªº©¯¹B¨à©O¡H«¢«¢¡I¯u¬O¦n©_¡A¯u¬O¦n©_¡I","REPORT2"],
-"REPORT2":[0,"½Ö·|¦¨¬°¤µ±ßªº©¯¹B¨à©O¡H«¢«¢¡I¯u¬O¦n©_¡A¯u¬O¦n©_¡I","REPORT3"],
-"REPORT3":[4,"½Ö·|¦¨¬°¤µ±ßªº©¯¹B¨à©O¡H«¢«¢¡I¯u¬O¦n©_¡A¯u¬O¦n©_¡I","REPORT4"],
-"REPORT4":[4,"¤µ¤Ñ¨ì¦¹¬°¤î°Õ¡I¤U¦¸¦A¨£...«ô«ô¡A¤£­n¤Ó·Q§Ú¡I","timer_check"],
+"REPORT1":[0,"èª°æœƒæˆç‚ºä»Šæ™šçš„å¹¸é‹å…’å‘¢ï¼Ÿå“ˆå“ˆï¼çœŸæ˜¯å¥½å¥‡ï¼ŒçœŸæ˜¯å¥½å¥‡ï¼","REPORT2"],
+"REPORT2":[0,"èª°æœƒæˆç‚ºä»Šæ™šçš„å¹¸é‹å…’å‘¢ï¼Ÿå“ˆå“ˆï¼çœŸæ˜¯å¥½å¥‡ï¼ŒçœŸæ˜¯å¥½å¥‡ï¼","REPORT3"],
+"REPORT3":[4,"èª°æœƒæˆç‚ºä»Šæ™šçš„å¹¸é‹å…’å‘¢ï¼Ÿå“ˆå“ˆï¼çœŸæ˜¯å¥½å¥‡ï¼ŒçœŸæ˜¯å¥½å¥‡ï¼","REPORT4"],
+"REPORT4":[4,"ä»Šå¤©åˆ°æ­¤ç‚ºæ­¢å•¦ï¼ä¸‹æ¬¡å†è¦‹...æ‹œæ‹œï¼Œä¸è¦å¤ªæƒ³æˆ‘ï¼","timer_check"],
 }
 
 def autochat(npc,text) :
@@ -33,7 +33,7 @@ class Shadai_Spawn(JQuest) :
 	def onAdvEvent (self,event,npc,pc) :
 		if event == "timer_check" :
 			sayNpc = self.addSpawn(self.SHADAI,9041,253010,-1938,49909,False,2410000)
-			autochat(sayNpc,"½Ö·|¦¨¬°¤µ±ßªº©¯¹B¨à©O¡H«¢«¢¡I¯u¬O¦n©_¡A¯u¬O¦n©_¡I")
+			autochat(sayNpc,"èª°æœƒæˆç‚ºä»Šæ™šçš„å¹¸é‹å…’å‘¢ï¼Ÿå“ˆå“ˆï¼çœŸæ˜¯å¥½å¥‡ï¼ŒçœŸæ˜¯å¥½å¥‡ï¼")
 			self.startQuestTimer("REPORT1",600000, sayNpc, None)
 		elif event in REPORTS.keys() :
 			check,report,nextEvent=REPORTS[event]

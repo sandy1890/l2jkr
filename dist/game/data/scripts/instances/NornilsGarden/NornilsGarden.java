@@ -605,22 +605,22 @@ public class NornilsGarden extends Quest
 				{
 					openDoor(st, player, 16200014);
 					// Door Open Send Message
-					player.sendPacket(new ExShowScreenMessage("³Q±»»\ªº³Ğ³y¥D...",15000));
-					htmltext = "³Q±»»\ªº³Ğ³y¥D...";
+					player.sendPacket(new ExShowScreenMessage("è¢«æ©è“‹çš„å‰µé€ ä¸»...",15000));
+					htmltext = "è¢«æ©è“‹çš„å‰µé€ ä¸»...";
 				}
 				else if ((npc.getNpcId() == 32261) && (correct == 3))
 				{
 					openDoor(st, player, 16200015);
 					// Door Open Send Message
-					player.sendPacket(new ExShowScreenMessage("À³«Ê¦L°_¨ÓªººØ±Ú",15000));
-					htmltext = "À³«Ê¦L°_¨ÓªººØ±Ú";
+					player.sendPacket(new ExShowScreenMessage("æ‡‰å°å°èµ·ä¾†çš„ç¨®æ—",15000));
+					htmltext = "æ‡‰å°å°èµ·ä¾†çš„ç¨®æ—";
 				}
 				else if ((npc.getNpcId() == 32262) && (correct == 4))
 				{
 					openDoor(st, player, 16200016);
 					// Door Open Send Message
-					player.sendPacket(new ExShowScreenMessage("´ı¨Pªº¥¼¨Ó...",15000));
-					htmltext = "´ı¨Pªº¥¼¨Ó...";
+					player.sendPacket(new ExShowScreenMessage("æ¸¾æ²Œçš„æœªä¾†...",15000));
+					htmltext = "æ¸¾æ²Œçš„æœªä¾†...";
 				}
 				else
 				{
@@ -696,7 +696,7 @@ public class NornilsGarden extends Quest
 		if (npc.getNpcId() == 25528)
 		{
 			// Boss Die Send Message
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "¯u¦³¹ê¤O¡C¨ì¤F³o­Óµ{«×¡A¨º§Ú¤]´N»{¦P§A¹F¨ì¤F¥i¥H³q¹L§Úªº¤ô·Ç¡C®³µÛÆ_°ÍÂ÷¶}¦¹¦a§a¡C"));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "çœŸæœ‰å¯¦åŠ›ã€‚åˆ°äº†é€™å€‹ç¨‹åº¦ï¼Œé‚£æˆ‘ä¹Ÿå°±èªåŒä½ é”åˆ°äº†å¯ä»¥é€šéæˆ‘çš„æ°´æº–ã€‚æ‹¿è‘—é‘°åŒ™é›¢é–‹æ­¤åœ°å§ã€‚"));
 		}
 		
 		for (int _gk[] : _gatekeepers)

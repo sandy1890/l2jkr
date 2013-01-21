@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- * �Ŭu�Ǫ�
+ * 溫泉怪物
  * Hot Spring Disease AI
  * 
  * @author devO

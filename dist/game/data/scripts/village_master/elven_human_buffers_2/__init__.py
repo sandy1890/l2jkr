@@ -30,7 +30,7 @@ CLASSES = {
     "EE":[30,29,1,"12","13","14","15",[MARK_OF_PILGRIM,MARK_OF_LIFE,MARK_OF_HEALER]],
     }
 #Messages
-default = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+default = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 
 def change(st,player,newclass,items) :
    for item in items :

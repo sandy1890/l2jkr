@@ -144,7 +144,7 @@ public class Q10284_AcquisitionOfDivineSword extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 			return htmltext;
@@ -213,7 +213,7 @@ public class Q10284_AcquisitionOfDivineSword extends Quest
 		else if (npc.getNpcId() == _kroon || npc.getNpcId() == _taroon)
 		{
 			if (st.getState() != State.STARTED)
-				return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+				return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 			
 			if (st.getInt("progress") == 2)
 				htmltext = npc.getNpcId() == _kroon ? "32653-01.htm" : "32654-01.htm";
@@ -234,6 +234,6 @@ public class Q10284_AcquisitionOfDivineSword extends Quest
 
 	public static void main(String[] args)
 	{
-		new Q10284_AcquisitionOfDivineSword(10284, qn, "Àò±o¯«¼C");
+		new Q10284_AcquisitionOfDivineSword(10284, qn, "ç²å¾—ç¥åŠ");
 	}
 }

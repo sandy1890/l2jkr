@@ -59,7 +59,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
@@ -171,6 +171,6 @@ public class Q10291_FireDragonDestroyer extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10291_FireDragonDestroyer(10291, qn, "À»±Ñ¤õÀs");
+		new Q10291_FireDragonDestroyer(10291, qn, "æ“Šæ•—ç«é¾");
 	}
 }

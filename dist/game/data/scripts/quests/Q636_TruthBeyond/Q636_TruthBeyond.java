@@ -76,7 +76,7 @@ public final class Q636_TruthBeyond extends Quest
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+			return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		}
 		
 		if (npc.getNpcId() == ELIAH)
@@ -110,7 +110,7 @@ public final class Q636_TruthBeyond extends Quest
 			st.exitQuest(true);
 			return "32010-03.htm";
 		}
-		return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 	}
 	
 	@Override
@@ -129,6 +129,6 @@ public final class Q636_TruthBeyond extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q636_TruthBeyond(636, qn, "ªù´v«áªº¯u¹ê");
+		new Q636_TruthBeyond(636, qn, "é–€æ‰‰å¾Œçš„çœŸå¯¦");
 	}
 }

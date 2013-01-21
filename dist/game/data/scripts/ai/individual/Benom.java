@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * «Ò¹p¼Ú°õ¬F©x ¨©¿Õ©i
+ * å¸é›·æ­åŸ·æ”¿å®˜ è²è«¾å§†
  * @author Lunawang
  */
 public class Benom extends L2AttackableAIScript

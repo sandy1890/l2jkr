@@ -12,7 +12,7 @@ from com.l2jserver.gameserver.network.serverpackets import CreatureSay
 from com.l2jserver.gameserver.network.serverpackets import MagicSkillUse
 from com.l2jserver.util                             import Rnd
 
-npcid     = 32328  # ¤ô´¹°ª±[
+npcid     = 32328  # æ°´æ™¶é«˜å´™
 crystalid = 9693
 
 def autochat(npc,text):

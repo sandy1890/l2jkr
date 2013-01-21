@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * ¥d¯Ç´µ ³Íº¸ ¤ñ©Ô¯S / ¤ñ©Ô¯Sªº¤â¤U
+ * å¡ç´æ–¯ å‡±çˆ¾ æ¯”æ‹‰ç‰¹ / æ¯”æ‹‰ç‰¹çš„æ‰‹ä¸‹
  */
 public class KelBilette extends L2AttackableAIScript
 {

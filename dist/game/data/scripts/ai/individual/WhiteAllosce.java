@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * ¥d¯Ç´µ ¦Ê²´ªº ªüÃ¹±ô / ªüÃ¹±ôªº¤â¤U
+ * å¡ç´æ–¯ ç™¾çœ¼çš„ é˜¿ç¾…æ¢­ / é˜¿ç¾…æ¢­çš„æ‰‹ä¸‹
  */
 public class WhiteAllosce extends L2AttackableAIScript
 {

@@ -113,7 +113,7 @@ public class Q10287_StoryOfThoseLeft extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		
 		if (st == null)
@@ -186,6 +186,6 @@ public class Q10287_StoryOfThoseLeft extends Quest
 
 	public static void main(String[] args)
 	{
-		new Q10287_StoryOfThoseLeft(10287, qn, "´İ¦sªº¤H­Ìªº¬G¨Æ");
+		new Q10287_StoryOfThoseLeft(10287, qn, "æ®˜å­˜çš„äººå€‘çš„æ•…äº‹");
 	}
 }

@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * ¥¬¿à¥dÃ~¤H¤ı
+ * å¸ƒè³´å¡ç¸äººç‹
  */
 public class BrekaOrcOverlord extends L2AttackableAIScript
 {
@@ -47,15 +47,15 @@ public class BrekaOrcOverlord extends L2AttackableAIScript
 			{
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"¨s·¥¤O¶q°Ú¡I¡I¡I¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"ç©¶æ¥µåŠ›é‡å•Šï¼ï¼ï¼ï¼"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"²{¦b¶}©l¤~¬O¯u¥¿ªº¨M°«¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"ç¾åœ¨é–‹å§‹æ‰æ˜¯çœŸæ­£çš„æ±ºé¬¥ï¼"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"¨S·Q¨ì³º·|¹ï¨Å¯ä¥¼°®ªº¤p¤l¨Ï¥Î³o©Û¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æ²’æƒ³åˆ°ç«Ÿæœƒå°ä¹³è‡­æœªä¹¾çš„å°å­ä½¿ç”¨é€™æ‹›ï¼"));
 				}
 			}
 			_FirstAttacked = true;

@@ -3,7 +3,7 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.gameserver.network.serverpackets import NpcSay
 from com.l2jserver.util import Rnd
 
-# ¥d¾|­¹¤H§¯
+# å¡é­¯é£Ÿäººå¦–
 # karul_bugbear
 class karul_bugbear(JQuest) :
 
@@ -19,11 +19,11 @@ class karul_bugbear(JQuest) :
 		objId = npc.getObjectId()
 		if self.FirstAttacked :
 			if Rnd.get(4) : return
-			npc.broadcastPacket(NpcSay(objId, 0, npc.getNpcId(), "´X¥GµL¤H¨¾¦uªº«á¤è¬O§Aªº¡I"))
+			npc.broadcastPacket(NpcSay(objId, 0, npc.getNpcId(), "å¹¾ä¹ç„¡äººé˜²å®ˆçš„å¾Œæ–¹æ˜¯ä½ çš„ï¼"))
 		else :
 			self.FirstAttacked = True
 			if Rnd.get(4) : return
-			npc.broadcastPacket(NpcSay(objId, 0, npc.getNpcId(),"§Ú¤@©w·|¦^¨Ó¡I"))
+			npc.broadcastPacket(NpcSay(objId, 0, npc.getNpcId(),"æˆ‘ä¸€å®šæœƒå›ä¾†ï¼"))
 		return
 
 	def onKill(self, npc, player, isPet) :

@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * ¤g·ç§JÃ~¤H±N­x
+ * åœŸç‘å…‹ç¸äººå°‡è»
  */
 public class Turek_Orc_Warlord extends L2AttackableAIScript
 {
@@ -47,15 +47,15 @@ public class Turek_Orc_Warlord extends L2AttackableAIScript
 			{
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"¨s·¥¤O¶q°Ú¡I¡I¡I¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"ç©¶æ¥µåŠ›é‡å•Šï¼ï¼ï¼ï¼"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"·Q¾Æ§Ú¡AÁÙ¦­ªº«Ü©O¡H"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æƒ³å¬´æˆ‘ï¼Œé‚„æ—©çš„å¾ˆå‘¢ï¼Ÿ"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"¨S·Q¨ì³º·|¹ï¨Å¯ä¥¼°®ªº¤p¤l¨Ï¥Î³o©Û¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æ²’æƒ³åˆ°ç«Ÿæœƒå°ä¹³è‡­æœªä¹¾çš„å°å­ä½¿ç”¨é€™æ‹›ï¼"));
 				}
 			}
 			_FirstAttacked = true;
