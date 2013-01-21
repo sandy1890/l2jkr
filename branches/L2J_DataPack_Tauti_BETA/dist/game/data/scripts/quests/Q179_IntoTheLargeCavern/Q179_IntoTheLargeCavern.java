@@ -77,7 +77,7 @@ public class Q179_IntoTheLargeCavern extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -86,7 +86,7 @@ public class Q179_IntoTheLargeCavern extends Quest
 		
 		QuestState _prev = player.getQuestState("178_IconicTrinity");
 		if (player.getRace() != Race.Kamael)
-			return "<html><body>ªø¦Ñ³Í§J¬¥´¶´µ¡G<br>«Ü©êºp¡A³o¨Æ±¡»P¥LºØ±ÚµLÃö¡C<br>¡]¥u¦³îî¤Ñ¨ÏºØ±Ú¤~¯à°õ¦æ¦¹¥ô°È¡C¡^</body></html>";
+			return "<html><body>é•·è€å‡±å…‹æ´›æ™®æ–¯ï¼š<br>å¾ˆæŠ±æ­‰ï¼Œé€™äº‹æƒ…èˆ‡ä»–ç¨®æ—ç„¡é—œã€‚<br>ï¼ˆåªæœ‰é—‡å¤©ä½¿ç¨®æ—æ‰èƒ½åŸ·è¡Œæ­¤ä»»å‹™ã€‚ï¼‰</body></html>";
 
 		if (_prev != null && _prev.getState() == State.COMPLETED && player.getLevel() >= 17 && player.getClassId().level() == 0)
 		{
@@ -104,7 +104,7 @@ public class Q179_IntoTheLargeCavern extends Quest
 						}
 						break;
 					case State.COMPLETED:
-						htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+						htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 						break;
 				}
 			}
@@ -135,6 +135,6 @@ public class Q179_IntoTheLargeCavern extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q179_IntoTheLargeCavern(179, qn, "¶i¤J¤jªÅ¬}");
+		new Q179_IntoTheLargeCavern(179, qn, "é€²å…¥å¤§ç©ºæ´");
 	}
 }

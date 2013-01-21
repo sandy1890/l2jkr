@@ -43,7 +43,7 @@ public class Q19_GoToThePastureland extends Quest
 		
 		if (st == null)
 		{
-			return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+			return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		}
 		
 		if (event.equalsIgnoreCase("31302-02.htm"))
@@ -84,7 +84,7 @@ public class Q19_GoToThePastureland extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -109,7 +109,7 @@ public class Q19_GoToThePastureland extends Quest
 					htmltext = "31302-04.html";
 					break;
 				case State.COMPLETED:
-					htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+					htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 					break;
 			}
 		}
@@ -136,6 +136,6 @@ public class Q19_GoToThePastureland extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q19_GoToThePastureland(19, qn, "«e©¹©ñªª³õ§a!");
+		new Q19_GoToThePastureland(19, qn, "å‰å¾€æ”¾ç‰§å ´å§!");
 	}
 }

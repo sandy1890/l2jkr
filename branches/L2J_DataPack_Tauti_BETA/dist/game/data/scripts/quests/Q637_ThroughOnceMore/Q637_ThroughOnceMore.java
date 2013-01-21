@@ -88,7 +88,7 @@ public final class Q637_ThroughOnceMore extends Quest
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
-			return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+			return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		}
 		
 		final byte id = st.getState();
@@ -128,7 +128,7 @@ public final class Q637_ThroughOnceMore extends Quest
 			}
 			return "32010-04.htm";
 		}
-		return "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		return "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 	}
 	
 	@Override
@@ -169,6 +169,6 @@ public final class Q637_ThroughOnceMore extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q637_ThroughOnceMore(637, qn, "¦A¦¸©¹¨ºªù´v¤§«á");
+		new Q637_ThroughOnceMore(637, qn, "å†æ¬¡å¾€é‚£é–€æ‰‰ä¹‹å¾Œ");
 	}
 }

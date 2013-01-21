@@ -6,11 +6,11 @@ from com.l2jserver.gameserver.model.actor.instance import L2PcInstance
 
 qn = "1205_TeleportCube"
 
-TELECUBE_S = 32107 # �ɺ����_�� - �ǰe����
-TELECUBE_F = 29061 # �̫᪺�ӳ� - �ಾ����
+TELECUBE_S = 32107 # 賽爾蘭巢穴 - 傳送晶體
+TELECUBE_F = 29061 # 最後的皇陵 - 轉移晶體
 
-MSG4 = "�w���}�ɺ����_�ޡC"
-MSG5 = "�w���}�̫᪺�ӳ��C"
+MSG4 = "已離開賽爾蘭巢穴。"
+MSG5 = "已離開最後的皇陵。"
 
 class Quest (JQuest):
 

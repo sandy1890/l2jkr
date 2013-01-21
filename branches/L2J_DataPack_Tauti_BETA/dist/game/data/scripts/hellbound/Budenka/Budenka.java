@@ -21,10 +21,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 
 public class Budenka extends Quest
 {
-	private static final int BUDENKA       = 32294; //©_©¥ªº°Ó¶¤ ¥¬¤¦¥d
-	private static final int BASIC_CERT    = 9850;  //°Ó¶¤ªì¯Å»{ÃÒ®Ñ
-	private static final int STANDART_CERT = 9851;  //°Ó¶¤¤¤¯Å»{ÃÒ®Ñ
-	private static final int PREMIUM_CERT  = 9852;  //°Ó¶¤°ª¯Å»{ÃÒ®Ñ
+	private static final int BUDENKA       = 32294; //å¥‡å²©çš„å•†éšŠ å¸ƒä¸¹å¡
+	private static final int BASIC_CERT    = 9850;  //å•†éšŠåˆç´šèªè­‰æ›¸
+	private static final int STANDART_CERT = 9851;  //å•†éšŠä¸­ç´šèªè­‰æ›¸
+	private static final int PREMIUM_CERT  = 9852;  //å•†éšŠé«˜ç´šèªè­‰æ›¸
 	
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)

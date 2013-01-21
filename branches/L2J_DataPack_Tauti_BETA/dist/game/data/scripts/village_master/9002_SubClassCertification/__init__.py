@@ -98,17 +98,17 @@ class Quest (JQuest) :
      else:
        return "9002-03.htm"
    elif event == "Obtain65":
-     html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§A¥´ºâ±µ¨ü%class%µ¥¯Å%level%ªº»{ÃÒ-%skilltype%¡C¤Á°O¡I¤@¥¹»â¨ú³o­Ó»{ÃÒªº¸Ü¡A°£¤F¥Î¯S§Oªº¤èªk¨ú®ø»{ÃÒ¤§«e¡A´Nºâ§R°£³o­ÓÂ¾·~«á­«·s°ö¾i«á¦A¨Ó¡A¤]µLªk¦A¦¸±o¨ì»{ÃÒ¡C<br>¨º»ò¡A­n±µ¨ü»{ÃÒ¶Ü¡H<br><a action=\"bypass -h Quest 9002_SubClassCertification %event%\">±µ¨ü»{ÃÒ</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">¤£±µ¨ü»{ÃÒ</a></body></html>"
-     htmltext = html.replace("%level%","65").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","¦@¦P§Ş¯à").replace("%event%","lvl65Emergent")
+     html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ æ‰“ç®—æ¥å—%class%ç­‰ç´š%level%çš„èªè­‰-%skilltype%ã€‚åˆ‡è¨˜ï¼ä¸€æ—¦é ˜å–é€™å€‹èªè­‰çš„è©±ï¼Œé™¤äº†ç”¨ç‰¹åˆ¥çš„æ–¹æ³•å–æ¶ˆèªè­‰ä¹‹å‰ï¼Œå°±ç®—åˆªé™¤é€™å€‹è·æ¥­å¾Œé‡æ–°åŸ¹é¤Šå¾Œå†ä¾†ï¼Œä¹Ÿç„¡æ³•å†æ¬¡å¾—åˆ°èªè­‰ã€‚<br>é‚£éº¼ï¼Œè¦æ¥å—èªè­‰å—ï¼Ÿ<br><a action=\"bypass -h Quest 9002_SubClassCertification %event%\">æ¥å—èªè­‰</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">ä¸æ¥å—èªè­‰</a></body></html>"
+     htmltext = html.replace("%level%","65").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","å…±åŒæŠ€èƒ½").replace("%event%","lvl65Emergent")
    elif event == "Obtain70":
-     html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§A¥´ºâ±µ¨ü%class%µ¥¯Å%level%ªº»{ÃÒ-%skilltype%¡C¤Á°O¡I¤@¥¹»â¨ú³o­Ó»{ÃÒªº¸Ü¡A°£¤F¥Î¯S§Oªº¤èªk¨ú®ø»{ÃÒ¤§«e¡A´Nºâ§R°£³o­ÓÂ¾·~«á­«·s°ö¾i«á¦A¨Ó¡A¤]µLªk¦A¦¸±o¨ì»{ÃÒ¡C<br>¨º»ò¡A­n±µ¨ü»{ÃÒ¶Ü¡H<br><a action=\"bypass -h Quest 9002_SubClassCertification %event%\">±µ¨ü»{ÃÒ</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">¤£±µ¨ü»{ÃÒ</a></body></html>"
-     htmltext = html.replace("%level%","70").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","¦@¦P§Ş¯à").replace("%event%","lvl70Emergent")
+     html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ æ‰“ç®—æ¥å—%class%ç­‰ç´š%level%çš„èªè­‰-%skilltype%ã€‚åˆ‡è¨˜ï¼ä¸€æ—¦é ˜å–é€™å€‹èªè­‰çš„è©±ï¼Œé™¤äº†ç”¨ç‰¹åˆ¥çš„æ–¹æ³•å–æ¶ˆèªè­‰ä¹‹å‰ï¼Œå°±ç®—åˆªé™¤é€™å€‹è·æ¥­å¾Œé‡æ–°åŸ¹é¤Šå¾Œå†ä¾†ï¼Œä¹Ÿç„¡æ³•å†æ¬¡å¾—åˆ°èªè­‰ã€‚<br>é‚£éº¼ï¼Œè¦æ¥å—èªè­‰å—ï¼Ÿ<br><a action=\"bypass -h Quest 9002_SubClassCertification %event%\">æ¥å—èªè­‰</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">ä¸æ¥å—èªè­‰</a></body></html>"
+     htmltext = html.replace("%level%","70").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","å…±åŒæŠ€èƒ½").replace("%event%","lvl70Emergent")
    elif event == "Obtain75":
-     html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§A¥´ºâ±µ¨ü%class%µ¥¯Å%level%ªº»{ÃÒ-%skilltype%¡C¤Á°O¡I¤@¥¹»â¨ú³o­Ó»{ÃÒªº¸Ü¡A°£¤F¥Î¯S§Oªº¤èªk¨ú®ø»{ÃÒ¤§«e¡A´Nºâ§R°£³o­ÓÂ¾·~«á­«·s°ö¾i«á¦A¨Ó¡A¤]µLªk¦A¦¸±o¨ì»{ÃÒ¡C<br>¨º»ò¡A­n±µ¨ü»{ÃÒ¶Ü¡H<br><a action=\"bypass -h Quest 9002_SubClassCertification %event1%\">±µ¨ü¦@¦P»{ÃÒ</a><br><a action=\"bypass -h Quest 9002_SubClassCertification %event2%\">±µ¨ü¯S®í»{ÃÒ</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">¤£±µ¨ü»{ÃÒ</a></body></html>"
-     htmltext = html.replace("%level%","75").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","¦@¦P¡B¯S®í§Ş¯à").replace("%event1%","lvl75Master").replace("%event2%","lvl75Class")#Update by rocknow
+     html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ æ‰“ç®—æ¥å—%class%ç­‰ç´š%level%çš„èªè­‰-%skilltype%ã€‚åˆ‡è¨˜ï¼ä¸€æ—¦é ˜å–é€™å€‹èªè­‰çš„è©±ï¼Œé™¤äº†ç”¨ç‰¹åˆ¥çš„æ–¹æ³•å–æ¶ˆèªè­‰ä¹‹å‰ï¼Œå°±ç®—åˆªé™¤é€™å€‹è·æ¥­å¾Œé‡æ–°åŸ¹é¤Šå¾Œå†ä¾†ï¼Œä¹Ÿç„¡æ³•å†æ¬¡å¾—åˆ°èªè­‰ã€‚<br>é‚£éº¼ï¼Œè¦æ¥å—èªè­‰å—ï¼Ÿ<br><a action=\"bypass -h Quest 9002_SubClassCertification %event1%\">æ¥å—å…±åŒèªè­‰</a><br><a action=\"bypass -h Quest 9002_SubClassCertification %event2%\">æ¥å—ç‰¹æ®Šèªè­‰</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">ä¸æ¥å—èªè­‰</a></body></html>"
+     htmltext = html.replace("%level%","75").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","å…±åŒã€ç‰¹æ®ŠæŠ€èƒ½").replace("%event1%","lvl75Master").replace("%event2%","lvl75Class")#Update by rocknow
    elif event == "Obtain80":
-     html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§A¥´ºâ±µ¨ü%class%µ¥¯Å%level%ªº»{ÃÒ-%skilltype%¡C¤Á°O¡I¤@¥¹»â¨ú³o­Ó»{ÃÒªº¸Ü¡A°£¤F¥Î¯S§Oªº¤èªk¨ú®ø»{ÃÒ¤§«e¡A´Nºâ§R°£³o­ÓÂ¾·~«á­«·s°ö¾i«á¦A¨Ó¡A¤]µLªk¦A¦¸±o¨ì»{ÃÒ¡C<br>¨º»ò¡A­n±µ¨ü»{ÃÒ¶Ü¡H<br><a action=\"bypass -h Quest 9002_SubClassCertification %event%\">±µ¨ü»{ÃÒ</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">¤£±µ¨ü»{ÃÒ</a></body></html>"
-     htmltext = html.replace("%level%","80").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","²×·¥§Ş¯à").replace("%event%","lvl80Class") 
+     html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ æ‰“ç®—æ¥å—%class%ç­‰ç´š%level%çš„èªè­‰-%skilltype%ã€‚åˆ‡è¨˜ï¼ä¸€æ—¦é ˜å–é€™å€‹èªè­‰çš„è©±ï¼Œé™¤äº†ç”¨ç‰¹åˆ¥çš„æ–¹æ³•å–æ¶ˆèªè­‰ä¹‹å‰ï¼Œå°±ç®—åˆªé™¤é€™å€‹è·æ¥­å¾Œé‡æ–°åŸ¹é¤Šå¾Œå†ä¾†ï¼Œä¹Ÿç„¡æ³•å†æ¬¡å¾—åˆ°èªè­‰ã€‚<br>é‚£éº¼ï¼Œè¦æ¥å—èªè­‰å—ï¼Ÿ<br><a action=\"bypass -h Quest 9002_SubClassCertification %event%\">æ¥å—èªè­‰</a><br><a action=\"bypass -h Quest 9002_SubClassCertification 9002-05.htm\">ä¸æ¥å—èªè­‰</a></body></html>"
+     htmltext = html.replace("%level%","80").replace("%class%",str(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode())).replace("%skilltype%","çµ‚æ¥µæŠ€èƒ½").replace("%event%","lvl80Class") 
    elif event.startswith("lvl"):
      level = int(event[3:5])
      type = event.replace(event[0:5],"")
@@ -124,7 +124,7 @@ class Quest (JQuest) :
              getCertified(player, itemId, var)
              return "9002-07.htm"
            else:
-             html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§Aªº¹ê¤OÁÙ¤£¨ì¥i¥H»â¨úµ¥¯Å%level%ªº»{ÃÒ¡A§ó¥[°ö¾i¤@¤U¹ê¤O¦A¨Ó§a¡C</body></html>"
+             html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ çš„å¯¦åŠ›é‚„ä¸åˆ°å¯ä»¥é ˜å–ç­‰ç´š%level%çš„èªè­‰ï¼Œæ›´åŠ åŸ¹é¤Šä¸€ä¸‹å¯¦åŠ›å†ä¾†å§ã€‚</body></html>"
              htmltext = html.replace("%level%",(event[3:5]))
              return htmltext
          else:
@@ -137,7 +137,7 @@ class Quest (JQuest) :
              getCertified(player, itemId, var)
              return "9002-07.htm"
            else:
-             html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§Aªº¹ê¤OÁÙ¤£¨ì¥i¥H»â¨úµ¥¯Å%level%ªº»{ÃÒ¡A§ó¥[°ö¾i¤@¤U¹ê¤O¦A¨Ó§a¡C</body></html>"
+             html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ çš„å¯¦åŠ›é‚„ä¸åˆ°å¯ä»¥é ˜å–ç­‰ç´š%level%çš„èªè­‰ï¼Œæ›´åŠ åŸ¹é¤Šä¸€ä¸‹å¯¦åŠ›å†ä¾†å§ã€‚</body></html>"
              htmltext = html.replace("%level%",(event[3:5]))
              return htmltext
          else:
@@ -151,7 +151,7 @@ class Quest (JQuest) :
            getCertified(player, itemId, var)
            return "9002-07.htm"
          else:
-           html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§Aªº¹ê¤OÁÙ¤£¨ì¥i¥H»â¨úµ¥¯Å%level%ªº»{ÃÒ¡A§ó¥[°ö¾i¤@¤U¹ê¤O¦A¨Ó§a¡C</body></html>"
+           html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ çš„å¯¦åŠ›é‚„ä¸åˆ°å¯ä»¥é ˜å–ç­‰ç´š%level%çš„èªè­‰ï¼Œæ›´åŠ åŸ¹é¤Šä¸€ä¸‹å¯¦åŠ›å†ä¾†å§ã€‚</body></html>"
            htmltext = html.replace("%level%",(event[3:5]))
            return htmltext
        else:
@@ -166,7 +166,7 @@ class Quest (JQuest) :
              getCertified(player, itemId, var)
              return "9002-07.htm"
            else:
-             html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§Aªº¹ê¤OÁÙ¤£¨ì¥i¥H»â¨úµ¥¯Å%level%ªº»{ÃÒ¡A§ó¥[°ö¾i¤@¤U¹ê¤O¦A¨Ó§a¡C</body></html>"
+             html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ çš„å¯¦åŠ›é‚„ä¸åˆ°å¯ä»¥é ˜å–ç­‰ç´š%level%çš„èªè­‰ï¼Œæ›´åŠ åŸ¹é¤Šä¸€ä¸‹å¯¦åŠ›å†ä¾†å§ã€‚</body></html>"
              htmltext = html.replace("%level%",(event[3:5]))
              return htmltext
          else:
@@ -180,7 +180,7 @@ class Quest (JQuest) :
              getCertified(player, itemId, var)
              return "9002-07.htm"
            else:
-             html = "<html><body>°ÆÂ¾·~¹ê¤O»{ÃÒ¡G<br>§Aªº¹ê¤OÁÙ¤£¨ì¥i¥H»â¨úµ¥¯Å%level%ªº»{ÃÒ¡A§ó¥[°ö¾i¤@¤U¹ê¤O¦A¨Ó§a¡C</body></html>"
+             html = "<html><body>å‰¯è·æ¥­å¯¦åŠ›èªè­‰ï¼š<br>ä½ çš„å¯¦åŠ›é‚„ä¸åˆ°å¯ä»¥é ˜å–ç­‰ç´š%level%çš„èªè­‰ï¼Œæ›´åŠ åŸ¹é¤Šä¸€ä¸‹å¯¦åŠ›å†ä¾†å§ã€‚</body></html>"
              htmltext = html.replace("%level%",(event[3:5]))
              return htmltext
          else:

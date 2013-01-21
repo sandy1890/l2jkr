@@ -18,9 +18,9 @@ class AutoBuffGoD(JQuest):
 	qn = "AutoBuffGoD"
 	qDesc = "custom"
 	
-	NPCID = [33454] #ªì¾ÇªÌÀ°¤â
+	NPCID = [33454] #åˆå­¸è€…å¹«æ‰‹
 
-	radius = 50 # ¥b®|
+	radius = 50 # åŠå¾‘
 	
 	blacklist = []
 	
@@ -71,7 +71,7 @@ class AutoBuffGoD(JQuest):
 				for skillid in skills:
 					self.giveBuff(npc, target, skillid, 1)
 				if len(skills) > 0:
-					#1600027	ªì¾ÇªÌ§U¤â¹ï¡u$s1¡v¬I®i¤F»²§UÅ]ªk¡C					
+					#1600027	åˆå­¸è€…åŠ©æ‰‹å°ã€Œ$s1ã€æ–½å±•äº†è¼”åŠ©é­”æ³•ã€‚					
 					#essm = ExShowScreenMessage(NpcStringId.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_S1, 2, 5000) #stringid, position, duration
 					essm = ExShowScreenMessage(NpcStringId.getNpcStringId(1600027), 2, 5000) #stringid, position, duration
 					essm.addStringParameter(target.getName())

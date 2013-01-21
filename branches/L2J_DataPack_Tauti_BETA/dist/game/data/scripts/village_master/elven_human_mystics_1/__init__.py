@@ -32,7 +32,7 @@ CLASSES = {
     "HC":[15,10,0,"27","28","29","30",MARK_OF_FAITH]
     }
 #Messages
-default = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+default = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 
 def change(st,player,newclass,item) :
    st.takeItems(item,1)

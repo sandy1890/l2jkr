@@ -85,7 +85,7 @@ public class Q452_FindingtheLostSoldiers extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -180,6 +180,6 @@ public class Q452_FindingtheLostSoldiers extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q452_FindingtheLostSoldiers(452, qn, "´M§ä¿ò§Ñªº¤h§L­Ì");
+		new Q452_FindingtheLostSoldiers(452, qn, "å°‹æ‰¾éºå¿˜çš„å£«å…µå€‘");
 	}
 }

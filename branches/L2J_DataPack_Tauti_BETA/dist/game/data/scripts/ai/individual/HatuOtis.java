@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * ¥d¯Ç´µ ¨ª¦â«¢¹Ï ¶ø­}¥q
+ * å¡ç´æ–¯ èµ¤è‰²å“ˆåœ– å¥§è¿ªå¸
  */
 public class HatuOtis extends L2AttackableAIScript
 {

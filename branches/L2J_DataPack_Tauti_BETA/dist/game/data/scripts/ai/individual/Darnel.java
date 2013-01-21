@@ -20,7 +20,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * ¼s³õªº ¹Fº¸¥§«ä / ¯«¿Ù¤Ş¾ÉªÌ
+ * å»£å ´çš„ é”çˆ¾å°¼æ€ / ç¥è«­å¼•å°è€…
  */
 public class Darnel extends L2AttackableAIScript
 {

@@ -214,7 +214,7 @@ public class Q287_FiguringItOut extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState prev = player.getQuestState("250_WatchWhatYouEat");
 		
@@ -333,6 +333,6 @@ public class Q287_FiguringItOut extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q287_FiguringItOut(287, qn, "Á`¦³¤@¤Ñ­n¬d¥X¯u¬Û");
+		new Q287_FiguringItOut(287, qn, "ç¸½æœ‰ä¸€å¤©è¦æŸ¥å‡ºçœŸç›¸");
 	}
 }

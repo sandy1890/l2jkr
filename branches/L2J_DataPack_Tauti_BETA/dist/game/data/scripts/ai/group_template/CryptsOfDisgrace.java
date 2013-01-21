@@ -22,11 +22,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
- * ³Q¦Ã¬Vªº²ö¦C§J¾Ô¤h
- * ³Q¦Ã¬Vªº¤Ú¦R¾Ô¤h
- * ³Q¦Ã¬Vªº¤Ú¦R«ü´§©x
- * ¹Ï¾|¥d³¡¤U«èÆF
- * ¹Ï¾|¥d­º»â«èÆF ¹Ó¦a¦uÅ@ÆF
+ * è¢«æ±¡æŸ“çš„è«åˆ—å…‹æˆ°å£«
+ * è¢«æ±¡æŸ“çš„å·´åæˆ°å£«
+ * è¢«æ±¡æŸ“çš„å·´åæŒ‡æ®å®˜
+ * åœ–é­¯å¡éƒ¨ä¸‹æ€¨éˆ
+ * åœ–é­¯å¡é¦–é ˜æ€¨éˆ å¢“åœ°å®ˆè­·éˆ
  */
 public class CryptsOfDisgrace extends L2AttackableAIScript
 {

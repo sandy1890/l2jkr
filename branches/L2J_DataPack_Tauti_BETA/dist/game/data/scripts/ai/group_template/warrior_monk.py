@@ -3,7 +3,7 @@ from com.l2jserver.gameserver.ai import CtrlIntention
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.gameserver.network.serverpackets import NpcSay
 from com.l2jserver.util import Rnd
-# ¯«©x¾Ô¤h
+# ç¥žå®˜æˆ°å£«
 class warrior_monk(JQuest) :
 
   def __init__(self, id, name, descr) :

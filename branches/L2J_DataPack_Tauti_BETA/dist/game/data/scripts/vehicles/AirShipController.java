@@ -76,17 +76,17 @@ public abstract class AirShipController extends Quest
 	private static final int STARSTONE = 13277;
 	private static final int SUMMON_COST = 5;
 
-	private static final SystemMessage SM_ALREADY_EXISTS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_IS_ALREADY_EXISTS); //¤w¦³Äİ©ó¦å·ùªº­¸ªÅ¸¥¡C
-	private static final SystemMessage SM_ALREADY_SUMMONED = SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_AIRSHIP_ALREADY_SUMMONED); //½XÀY¤W¤w¦³¥l³ê¨ä¥Lªº­¸ªÅ¸¥¡A½Ğµy«á¦A§Q¥Î¡C
-	private static final SystemMessage SM_NEED_LICENSE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_LICENSE_TO_SUMMON); //©|¥¼¿é¤J­¸ªÅ¸¥¥l³ê³\¥iÃÒ¡A©ÎªÌ¨S¦³Äİ©ó¦å·ùªº­¸ªÅ¸¥¡A¦]¦¹µLªk¥l³ê­¸ªÅ¸¥¡C
-	//private static final SystemMessage SM_NEED_CLANLVL5 = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_CLANLVL_5_TO_SUMMON); //¦pªG·Q­nÀò±o­¸ªÅ¸¥¡A¦å·ùµ¥¯Å¥²¶·­n¹F¨ìµ¥¯Å5¤~¦æ¡C
-	private static final SystemMessage SM_NO_PRIVS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES); //Äİ©ó¦å·ùªº­¸ªÅ¸¥¶È­­·ù¥D¨ÓÁÊ¶R¡C
-	private static final SystemMessage SM_ALREADY_USED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_ALREADY_USED); //Äİ©ó¦å·ùªº­¸ªÅ¸¥¤w³Q¨ä¥L¦å·ù¦¨­û¨Ï¥Î¡C
-	//private static final SystemMessage SM_LICENSE_ALREADY_ACQUIRED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED); //¤wÀò±o­¸ªÅ¸¥¥l³ê³\¥iÃÒ¡C
-	private static final SystemMessage SM_LICENSE_ENTERED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED); //­¸ªÅ¸¥¥l³ê³\¥iÃÒ¤w¿é¤J§¹²¦¡A©¹«á¶Q¦å·ù´N¯à¥l³ê­¸ªÅ¸¥¡C
-	//private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_MORE_S1).addItemName(STARSTONE); //¡u$s1¡v¤£¨¬¡A¦]¦ÓµLªk¥l³ê­¸ªÅ¸¥¡C
+	private static final SystemMessage SM_ALREADY_EXISTS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_IS_ALREADY_EXISTS); //å·²æœ‰å±¬æ–¼è¡€ç›Ÿçš„é£›ç©ºè‰‡ã€‚
+	private static final SystemMessage SM_ALREADY_SUMMONED = SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_AIRSHIP_ALREADY_SUMMONED); //ç¢¼é ­ä¸Šå·²æœ‰å¬å–šå…¶ä»–çš„é£›ç©ºè‰‡ï¼Œè«‹ç¨å¾Œå†åˆ©ç”¨ã€‚
+	private static final SystemMessage SM_NEED_LICENSE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_LICENSE_TO_SUMMON); //å°šæœªè¼¸å…¥é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰ï¼Œæˆ–è€…æ²’æœ‰å±¬æ–¼è¡€ç›Ÿçš„é£›ç©ºè‰‡ï¼Œå› æ­¤ç„¡æ³•å¬å–šé£›ç©ºè‰‡ã€‚
+	//private static final SystemMessage SM_NEED_CLANLVL5 = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_CLANLVL_5_TO_SUMMON); //å¦‚æœæƒ³è¦ç²å¾—é£›ç©ºè‰‡ï¼Œè¡€ç›Ÿç­‰ç´šå¿…é ˆè¦é”åˆ°ç­‰ç´š5æ‰è¡Œã€‚
+	private static final SystemMessage SM_NO_PRIVS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES); //å±¬æ–¼è¡€ç›Ÿçš„é£›ç©ºè‰‡åƒ…é™ç›Ÿä¸»ä¾†è³¼è²·ã€‚
+	private static final SystemMessage SM_ALREADY_USED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_ALREADY_USED); //å±¬æ–¼è¡€ç›Ÿçš„é£›ç©ºè‰‡å·²è¢«å…¶ä»–è¡€ç›Ÿæˆå“¡ä½¿ç”¨ã€‚
+	//private static final SystemMessage SM_LICENSE_ALREADY_ACQUIRED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED); //å·²ç²å¾—é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰ã€‚
+	private static final SystemMessage SM_LICENSE_ENTERED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED); //é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰å·²è¼¸å…¥å®Œç•¢ï¼Œå¾€å¾Œè²´è¡€ç›Ÿå°±èƒ½å¬å–šé£›ç©ºè‰‡ã€‚
+	//private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_MORE_S1).addItemName(STARSTONE); //ã€Œ$s1ã€ä¸è¶³ï¼Œå› è€Œç„¡æ³•å¬å–šé£›ç©ºè‰‡ã€‚
 
-	//private static final String ARRIVAL_MSG = "¤w¥l³ê¨ì­¸ªÅ¸¥¡C5¤ÀÄÁ«á¡A±N·|¦Û°Ê¥Xµo¡C";
+	//private static final String ARRIVAL_MSG = "å·²å¬å–šåˆ°é£›ç©ºè‰‡ã€‚5åˆ†é˜å¾Œï¼Œå°‡æœƒè‡ªå‹•å‡ºç™¼ã€‚";
 
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -106,7 +106,7 @@ public abstract class AirShipController extends Quest
 			}
 			if ((player.getClanPrivileges() & L2Clan.CP_CL_SUMMON_AIRSHIP) != L2Clan.CP_CL_SUMMON_AIRSHIP)
 			{
-				player.sendMessage("»İ­n¥ı³Ğ¥ß¦å·ù©ÎÁõÄİ©ó¬Y¦å·ù¤§¤U¡C");
+				player.sendMessage("éœ€è¦å…ˆå‰µç«‹è¡€ç›Ÿæˆ–éš¸å±¬æ–¼æŸè¡€ç›Ÿä¹‹ä¸‹ã€‚");
 				return null;
 			}
 			int ownerId = player.getClanId();
@@ -122,7 +122,7 @@ public abstract class AirShipController extends Quest
 			}
 			if (!player.destroyItemByItemId("AirShipSummon", STARSTONE, SUMMON_COST, npc, false))
 			{
-				player.sendMessage("¹D¨ã¤£¨¬¡C¦pªG·Q­n¥l³ê­¸ªÅ¸¥¡A»İ­n¥Î¨ì¯à¶q¬P¥Û5­Ó¡C");
+				player.sendMessage("é“å…·ä¸è¶³ã€‚å¦‚æœæƒ³è¦å¬å–šé£›ç©ºè‰‡ï¼Œéœ€è¦ç”¨åˆ°èƒ½é‡æ˜ŸçŸ³5å€‹ã€‚");
 				return null;
 			}
 			
@@ -215,12 +215,12 @@ public abstract class AirShipController extends Quest
 		{
 			if (player.getClan() == null)
 			{
-				player.sendMessage("»İ­n¥ı³Ğ¥ß¦å·ù©ÎÁõÄİ©ó¬Y¦å·ù¤§¤U¡C");
+				player.sendMessage("éœ€è¦å…ˆå‰µç«‹è¡€ç›Ÿæˆ–éš¸å±¬æ–¼æŸè¡€ç›Ÿä¹‹ä¸‹ã€‚");
 				return null;
 			}
 			if (player.getClan().getLevel() < 5)
 			{
-				player.sendMessage("¨S¦³­¸ªÅ¸¥¥l³ê³\¥iÃÒ¡C­¸ªÅ¸¥¥l³ê³\¥iÃÒ¥i¦V¤uµ{®v¹p©[¥Ó½Ğµo¦æ¡C");
+				player.sendMessage("æ²’æœ‰é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰ã€‚é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰å¯å‘å·¥ç¨‹å¸«é›·å¤ç”³è«‹ç™¼è¡Œã€‚");
 				return null;
 			}
 			if (!player.isClanLeader())
@@ -231,12 +231,12 @@ public abstract class AirShipController extends Quest
 			final int ownerId = player.getClanId();
 			if (AirShipManager.getInstance().hasAirShipLicense(ownerId))
 			{
-				player.sendMessage("¤w¦³¿é¤J­¸ªÅ¸¥¥l³ê³\¥iÃÒ¡C");
+				player.sendMessage("å·²æœ‰è¼¸å…¥é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰ã€‚");
 				return null;
 			}
 			if (!player.destroyItemByItemId("AirShipLicense", LICENSE, 1, npc, false))
 			{
-				player.sendMessage("¨S¦³­¸ªÅ¸¥¥l³ê³\¥iÃÒ¡C­¸ªÅ¸¥¥l³ê³\¥iÃÒ¥i¦V¤uµ{®v¹p©[¥Ó½Ğµo¦æ¡C");
+				player.sendMessage("æ²’æœ‰é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰ã€‚é£›ç©ºè‰‡å¬å–šè¨±å¯è­‰å¯å‘å·¥ç¨‹å¸«é›·å¤ç”³è«‹ç™¼è¡Œã€‚");
 				return null;
 			}
 			

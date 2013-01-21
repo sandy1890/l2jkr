@@ -21,14 +21,14 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (Self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
     npcId = npc.getNpcId()
     Level = st.getPlayer().getLevel()
     ClassId = player.getClassId().getId()
 
-    if npcId == 30598 : # ¤HÃş
+    if npcId == 30598 : # äººé¡
        if player.getRace().ordinal() == 0 :
           if Level < 20 :
              if ClassId in FIGHTER :
@@ -42,7 +42,7 @@ class Quest (JQuest) :
        else:
           htmltext = str(npcId)+"-00.htm"
 
-    elif npcId == 30599 : # ºëÆF
+    elif npcId == 30599 : # ç²¾éˆ
        if player.getRace().ordinal() == 1 :
           if Level < 20 :
              if ClassId in FIGHTER :
@@ -56,7 +56,7 @@ class Quest (JQuest) :
        else:
           htmltext = str(npcId)+"-00.htm"
 
-    elif npcId == 30600 : # ¶Â·tºëÆF
+    elif npcId == 30600 : # é»‘æš—ç²¾éˆ
        if player.getRace().ordinal() == 2 :
           if Level < 20 :
              if ClassId in FIGHTER :
@@ -70,7 +70,7 @@ class Quest (JQuest) :
        else:
           htmltext = str(npcId)+"-00.htm"
 
-    elif npcId == 30601 : # ¸G¤H
+    elif npcId == 30601 : # çŸ®äºº
        if player.getRace().ordinal() == 4 :
           if Level < 20 :
              if ClassId in FIGHTER :
@@ -82,7 +82,7 @@ class Quest (JQuest) :
        else:
           htmltext = str(npcId)+"-00.htm"
 
-    elif npcId == 30602 : # ¥bÃ~¤H
+    elif npcId == 30602 : # åŠç¸äºº
        if player.getRace().ordinal() == 3 :
           if Level < 20 :
              if ClassId in FIGHTER :
@@ -96,7 +96,7 @@ class Quest (JQuest) :
        else:
           htmltext = str(npcId)+"-00.htm"
 
-    elif npcId == 32135 : # îî¤Ñ¨Ï
+    elif npcId == 32135 : # é—‡å¤©ä½¿
        if player.getRace().ordinal() == 5 :
           if Level < 20 :
              if ClassId in FIGHTER :

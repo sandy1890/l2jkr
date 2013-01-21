@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * ¥d¯Ç´µ ©_²§ ´¶¤º
+ * å¡ç´æ–¯ å¥‡ç•° æ™®å…§
  */
 public class WeirdBunei extends L2AttackableAIScript
 {

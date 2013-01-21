@@ -5,7 +5,7 @@ from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.util import Rnd
 
-# ¥d¯Ç´µ °[¯T ¨È¯d­×
+# å¡ç´æ–¯ è±ºç‹¼ äºç•™ä¿®
 ARIOSH = 18555
 GUARD1 = 18556
 

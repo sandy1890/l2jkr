@@ -86,7 +86,7 @@ public class Q10288_SecretMission extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -165,6 +165,6 @@ public class Q10288_SecretMission extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10288_SecretMission(10288, qn, "Áô±K¥ô°È");
+		new Q10288_SecretMission(10288, qn, "éš±å¯†ä»»å‹™");
 	}
 }

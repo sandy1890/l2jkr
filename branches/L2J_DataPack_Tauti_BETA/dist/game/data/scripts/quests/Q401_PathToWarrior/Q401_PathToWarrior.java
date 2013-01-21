@@ -129,7 +129,7 @@ public class Q401_PathToWarrior extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -282,6 +282,6 @@ public class Q401_PathToWarrior extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q401_PathToWarrior(401, qn, "¦¨¬°°«¤hªº¸ô");
+		new Q401_PathToWarrior(401, qn, "æˆç‚ºé¬¥å£«çš„è·¯");
 	}
 }

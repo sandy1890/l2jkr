@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * ¤g·ç§JÃ~¤H¸É¥R§L
+ * åœŸç‘å…‹ç¸äººè£œå……å…µ
  */
 public class Turek_Orc_Supplier extends L2AttackableAIScript
 {
@@ -47,15 +47,15 @@ public class Turek_Orc_Supplier extends L2AttackableAIScript
 			{
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"ºM°h¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æ’¤é€€ï¼"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"¥ı°h¦A»¡¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"å…ˆé€€å†èªªï¼"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"¦³¤J«IªÌ¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æœ‰å…¥ä¾µè€…ï¼"));
 				}
 			}
 			_FirstAttacked = true;

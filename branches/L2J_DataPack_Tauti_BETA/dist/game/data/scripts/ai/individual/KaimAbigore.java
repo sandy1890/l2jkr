@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * ¥d¯Ç´µ ¥d­Ê ¨È¤ñ°ªº¸ / ¨È¤ñ°ªº¸ªº¤â¤U
+ * å¡ç´æ–¯ å¡å€š äºæ¯”é«˜çˆ¾ / äºæ¯”é«˜çˆ¾çš„æ‰‹ä¸‹
  */
 public class KaimAbigore extends L2AttackableAIScript
 {

@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * ¥d¯Ç´µ ²¦¿Õ©i´µ ¥v¦«©Ô´µ / ¥v¦«©Ô´µªº¤â¤U
+ * å¡ç´æ–¯ ç•¢è«¾å§†æ–¯ å²æ‰˜æ‹‰æ–¯ / å²æ‰˜æ‹‰æ–¯çš„æ‰‹ä¸‹
  */
 public class VenomousStorace extends L2AttackableAIScript
 {

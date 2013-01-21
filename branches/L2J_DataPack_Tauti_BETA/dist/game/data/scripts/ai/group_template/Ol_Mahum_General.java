@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * °[¯T±N­x
+ * è±ºç‹¼å°‡è»
  */
 public class Ol_Mahum_General extends L2AttackableAIScript
 {
@@ -47,11 +47,11 @@ public class Ol_Mahum_General extends L2AttackableAIScript
 			{
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"§Ú­Ì±N¬İ¨ì³o¤@ÂI¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æˆ‘å€‘å°‡çœ‹åˆ°é€™ä¸€é»ï¼"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"§Ú¤@©w·|³øµª¦¹²Û°d¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æˆ‘ä¸€å®šæœƒå ±ç­”æ­¤ç¾è¾±ï¼"));
 				}
 			}
 			_FirstAttacked = true;

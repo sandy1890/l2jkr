@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * ¿ß²´µs¸é
+ * è²“çœ¼ç›œè³Š
  */
 public class Cats_Eye_Bandit extends L2AttackableAIScript
 {
@@ -45,7 +45,7 @@ public class Cats_Eye_Bandit extends L2AttackableAIScript
 		{
 			if (_FirstAttacked)
 			{
-				if (_numAtk < 1) npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"§A¥®¸Xªº¶Ì¥Ê¡A§A¥H¬°§A¯à§ì¦í§Ú¡H"));
+				if (_numAtk < 1) npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"ä½ å¹¼ç¨šçš„å‚»ç“œï¼Œä½ ä»¥ç‚ºä½ èƒ½æŠ“ä½æˆ‘ï¼Ÿ"));
 				_numAtk++;
 			}
 			_FirstAttacked = true;
@@ -59,7 +59,7 @@ public class Cats_Eye_Bandit extends L2AttackableAIScript
 		int npcId = npc.getNpcId();
 		if (npcId == Cats_Eye_Bandit)
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"§Ú¥²¶·°µ¤@¨Ç¹ï³oºØ¥i®¢ªº¨Æ¥ó..."));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"æˆ‘å¿…é ˆåšä¸€äº›å°é€™ç¨®å¯æ¥çš„äº‹ä»¶..."));
 			_numAtk = 0;
 			_FirstAttacked = false;
 		}

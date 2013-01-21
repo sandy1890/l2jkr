@@ -45,7 +45,7 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -75,7 +75,7 @@ public class Q10278_MutatedKaneusHeine extends Quest
 			case MINEVIA:
 				if (st.isCompleted())
 				{
-					htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+					htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 				}
 				else if (st.hasQuestItems(TISSUE_BO) && !st.hasQuestItems(TISSUE_WB))
 				{

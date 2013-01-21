@@ -20,7 +20,7 @@ SOUL_BREAKER_CERTIFICATE = 9806
 #PIECHE,ZOLDART,NIZER,YENICHE
 NPCS_MALE1=[32139,32196,32199]
 NPCS_MALE2=[32146,32205,32209,32213,32217,32221,32225,32229,32233]
-NPCS_FEMALE1=[32140,32193,32202,32191] #pmq­×¥¿
+NPCS_FEMALE1=[32140,32193,32202,32191] #pmqä¿®æ­£
 NPCS_FEMALE2=[32145,32206,32210,32214,32218,32222,32226,32230,32234]
 SHADOW_WEAPON_COUPON_DGRADE = 8869
 SHADOW_WEAPON_COUPON_CGRADE = 8870
@@ -43,7 +43,7 @@ CLASSES = {
     "SBM":[128,125,5,40,"40","41","42","43",[SOUL_BREAKER_CERTIFICATE],SHADOW_WEAPON_COUPON_CGRADE]  #m_trooper -> m_soulbreaker
     }
 #Messages
-default = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+default = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 
 def change(st,player,newclass,items) :
    for item in items :

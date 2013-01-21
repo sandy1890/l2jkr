@@ -19,8 +19,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 import ai.group_template.L2AttackableAIScript;
+
 /**
- * ¹Ú¹Òªº«I»kªÌ ¨È®¦©_©`º¸¡i¹Ú¤Ûµ²¬É¡j
+ * å¤¢å¢ƒçš„ä¾µè•è€… äºæ©å¥‡å¥ˆçˆ¾ã€å¤¢å¹»çµç•Œã€‘
  */
 public class Aenkinel extends L2AttackableAIScript
 {

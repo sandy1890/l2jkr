@@ -41,7 +41,7 @@ class Quest (JQuest) :
 
 	def onTalk (self,npc,player):
 		st = player.getQuestState(qn)
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		if not st: return htmltext
 
 		npcId = npc.getNpcId()
@@ -54,7 +54,7 @@ class Quest (JQuest) :
 		ItemsCount_BP = st.getQuestItemsCount(BAULS_POTION)
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED:
 			if npcId == DARIN and cond == 0 :
 				if player.getLevel() >= 2 :
@@ -105,7 +105,7 @@ class Quest (JQuest) :
 					htmltext = "30048-07.htm"
 		return htmltext
 
-QUEST		= Quest(1,qn,"·R±¡ÀH«H")
+QUEST		= Quest(1,qn,"æ„›æƒ…éš¨ä¿¡")
 
 QUEST.addStartNpc(DARIN)
 

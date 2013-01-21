@@ -84,7 +84,7 @@ public class Q250_WatchWhatYouEat extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -204,6 +204,6 @@ public class Q250_WatchWhatYouEat extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q250_WatchWhatYouEat(250, qn, "½Ğ¤ÅÀH·N­¹¥Î");
+		new Q250_WatchWhatYouEat(250, qn, "è«‹å‹¿éš¨æ„é£Ÿç”¨");
 	}
 }

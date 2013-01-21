@@ -72,7 +72,7 @@ public class Q50_LanoscosSpecialBait extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		final QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -82,7 +82,7 @@ public class Q50_LanoscosSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
-				htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>";
+				htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>";
 				break;
 			case State.CREATED:
 				htmltext = (player.getLevel() >= 27) ? "31570-01.htm" : "31570-02.html";

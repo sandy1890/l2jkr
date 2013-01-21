@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * ¤õªººëÆF ¥[º¸°ª´µ
+ * ç«çš„ç²¾éˆ åŠ çˆ¾é«˜æ–¯
  */
 public class Gargos extends L2AttackableAIScript
 {

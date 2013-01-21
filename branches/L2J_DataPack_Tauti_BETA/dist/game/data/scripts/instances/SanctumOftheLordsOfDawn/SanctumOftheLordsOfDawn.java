@@ -57,15 +57,15 @@ public class SanctumOftheLordsOfDawn extends Quest
 	private static final int IDENTITY_CARD = 13822;
 	
 	// NPCs
-	private static final int LIGHTOFDAWN = 32575;  // ¶Ç°e®v ¾¤©ú¤§¥ú
-	private static final int PWDEVICE    = 32577;  // ·t¸¹¿é¤J¸Ë¸m
-	private static final int DEVICE      = 32578;  // ¨­¥÷½T»{¸Ë¸m
-	private static final int BLACK       = 32579;  // ¶Ç°e®v ¾¤©úªº¶Â·t
-	private static final int SHELF       = 32580;  // ¾¤©úªº®ÑÂd
-	private static final int PRIESTS     = 18828;  // ¾¤©úªº¤W¦ì²½¥q
-	private static final int GUARD       = 18834;  // ¾¤©úªºÄµ½Ã¶¤­û
-	private static final int WPRIEST     = 18835;  // ¾¤©úªºÄµ½Ã¶¤­û
-	private static final int WGUARD      = 27351;  // ¾¤©úªºÄµ½Ã¶¤­û
+	private static final int LIGHTOFDAWN = 32575;  // å‚³é€å¸« é»æ˜ä¹‹å…‰
+	private static final int PWDEVICE    = 32577;  // æš—è™Ÿè¼¸å…¥è£ç½®
+	private static final int DEVICE      = 32578;  // èº«ä»½ç¢ºèªè£ç½®
+	private static final int BLACK       = 32579;  // å‚³é€å¸« é»æ˜çš„é»‘æš—
+	private static final int SHELF       = 32580;  // é»æ˜çš„æ›¸æ«ƒ
+	private static final int PRIESTS     = 18828;  // é»æ˜çš„ä¸Šä½ç¥­å¸
+	private static final int GUARD       = 18834;  // é»æ˜çš„è­¦è¡›éšŠå“¡
+	private static final int WPRIEST     = 18835;  // é»æ˜çš„è­¦è¡›éšŠå“¡
+	private static final int WGUARD      = 27351;  // é»æ˜çš„è­¦è¡›éšŠå“¡
 	
 	private static final int ONE         = 17240001;
 	private static final int TWO         = 17240003;

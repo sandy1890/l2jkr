@@ -22,8 +22,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
- * ªÖ¯S©ÔÃ~¤H
- * ¤Ú·ç¥dÁÉ°Ç¿Õ´µ
+ * è‚¯ç‰¹æ‹‰ç¸äºº
+ * å·´ç‘å¡è³½å‹’è«¾æ–¯
  */
 public class VarkaKetraAlly extends L2AttackableAIScript
 {

@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.util.Rnd;
 
 /**
- * �d�Ǵ� �M�b ��}�q
+ * BladeOtis
  * @author InsOmnia
  */
 

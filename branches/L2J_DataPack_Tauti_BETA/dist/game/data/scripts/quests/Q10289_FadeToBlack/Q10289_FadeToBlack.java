@@ -73,7 +73,7 @@ public class Q10289_FadeToBlack extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState secretMission = player.getQuestState("10288_SecretMission");
 		if (st == null)
@@ -168,6 +168,6 @@ public class Q10289_FadeToBlack extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q10289_FadeToBlack(10289, qn, "®ø·À¥ú©ú¤§¤H");
+		new Q10289_FadeToBlack(10289, qn, "æ¶ˆæ»…å…‰æ˜ä¹‹äºº");
 	}
 }

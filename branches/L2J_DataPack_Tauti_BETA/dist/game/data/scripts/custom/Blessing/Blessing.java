@@ -23,43 +23,43 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- *¡iID¡j   ¡iITEM_NAME¡j
- * 17094	©`¤ñ¯S¤§Án		¤º§t©`¤ñ¯S¤§Ánªº¨©´ß¡A¦¹¹D¨ã¥i¥H´£¤É¦Û¤vªºµû»ù­È10¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17095	©`¤ñ¯S¨Fº|-1¤p®É	1~19	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å1~19¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17096	©`¤ñ¯S¨Fº|-1.5¤p®É	1~19	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å1~19¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17097	©`¤ñ¯S¨Fº|-2¤p®É	1~19	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å1~19¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17098	©`¤ñ¯S¨Fº|-2.5¤p®É	1~19	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å1~19¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17099	©`¤ñ¯S¨Fº|-3¤p®É	1~19	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ3¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å1~19¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17100	©`¤ñ¯S¨Fº|-1¤p®É	20~39	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å20~39¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17101	©`¤ñ¯S¨Fº|-1.5¤p®É	20~39	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å20~39¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17102	©`¤ñ¯S¨Fº|-2¤p®É	20~39	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å20~39¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17103	©`¤ñ¯S¨Fº|-2.5¤p®É	20~39	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å20~39¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17104	©`¤ñ¯S¨Fº|-3¤p®É	20~39	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ3¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å20~39¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17105	©`¤ñ¯S¨Fº|-1¤p®É	40~51	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å40~51¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17106	©`¤ñ¯S¨Fº|-1.5¤p®É	40~51	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å40~51¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17107	©`¤ñ¯S¨Fº|-2¤p®É	40~51	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å40~51¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17108	©`¤ñ¯S¨Fº|-2.5¤p®É	40~51	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å40~51¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17109	©`¤ñ¯S¨Fº|-3¤p®É	40~51	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ3¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å40~51¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17110	©`¤ñ¯S¨Fº|-1¤p®É	52~60	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å52~60¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17111	©`¤ñ¯S¨Fº|-1.5¤p®É	52~60	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å52~60¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17112	©`¤ñ¯S¨Fº|-2¤p®É	52~60	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å52~60¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17113	©`¤ñ¯S¨Fº|-2.5¤p®É	52~60	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å52~60¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17114	©`¤ñ¯S¨Fº|-3¤p®É	52~60	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ3¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å52~60¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17115	©`¤ñ¯S¨Fº|-1¤p®É	61~75	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å61~75¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17116	©`¤ñ¯S¨Fº|-1.5¤p®É	61~75	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å61~75¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17117	©`¤ñ¯S¨Fº|-2¤p®É	61~75	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å61~75¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17118	©`¤ñ¯S¨Fº|-2.5¤p®É	61~75	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å61~75¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17119	©`¤ñ¯S¨Fº|-3¤p®É	61~75	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ3¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å61~75¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17120	©`¤ñ¯S¨Fº|-1¤p®É	76~79	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å76~79¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17121	©`¤ñ¯S¨Fº|-1.5¤p®É	76~79	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å76~79¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17122	©`¤ñ¯S¨Fº|-2¤p®É	76~79	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å76~79¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17123	©`¤ñ¯S¨Fº|-2.5¤p®É	76~79	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å76~79¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17124	©`¤ñ¯S¨Fº|-3¤p®É	76~79	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ3¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å76~79¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17125	©`¤ñ¯S¨Fº|-1¤p®É	80~85	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å80~85¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17126	©`¤ñ¯S¨Fº|-1.5¤p®É	80~85	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ1.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å80~85¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17127	©`¤ñ¯S¨Fº|-2¤p®É	80~85	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å80~85¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17128	©`¤ñ¯S¨Fº|-2.5¤p®É	80~85	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ2.5¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å80~85¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
- * 17129	©`¤ñ¯S¨Fº|-3¤p®É	80~85	¥i¥H©µªø©`¤ñ¯S¯¬ºÖ3¤p®Éªº©`¤ñ¯S¨Fº|¡C¶È­­µ¥¯Å80~85¨Ï¥Î¡CµLªk¥æ©ö©Î¥á±ó¡C
+ *ã€IDã€‘   ã€ITEM_NAMEã€‘
+ * 17094	å¥ˆæ¯”ç‰¹ä¹‹è²		å…§å«å¥ˆæ¯”ç‰¹ä¹‹è²çš„è²æ®¼ï¼Œæ­¤é“å…·å¯ä»¥æå‡è‡ªå·±çš„è©•åƒ¹å€¼10ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17095	å¥ˆæ¯”ç‰¹æ²™æ¼-1å°æ™‚	1~19	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š1~19ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17096	å¥ˆæ¯”ç‰¹æ²™æ¼-1.5å°æ™‚	1~19	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š1~19ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17097	å¥ˆæ¯”ç‰¹æ²™æ¼-2å°æ™‚	1~19	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š1~19ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17098	å¥ˆæ¯”ç‰¹æ²™æ¼-2.5å°æ™‚	1~19	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š1~19ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17099	å¥ˆæ¯”ç‰¹æ²™æ¼-3å°æ™‚	1~19	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦3å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š1~19ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17100	å¥ˆæ¯”ç‰¹æ²™æ¼-1å°æ™‚	20~39	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š20~39ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17101	å¥ˆæ¯”ç‰¹æ²™æ¼-1.5å°æ™‚	20~39	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š20~39ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17102	å¥ˆæ¯”ç‰¹æ²™æ¼-2å°æ™‚	20~39	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š20~39ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17103	å¥ˆæ¯”ç‰¹æ²™æ¼-2.5å°æ™‚	20~39	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š20~39ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17104	å¥ˆæ¯”ç‰¹æ²™æ¼-3å°æ™‚	20~39	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦3å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š20~39ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17105	å¥ˆæ¯”ç‰¹æ²™æ¼-1å°æ™‚	40~51	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š40~51ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17106	å¥ˆæ¯”ç‰¹æ²™æ¼-1.5å°æ™‚	40~51	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š40~51ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17107	å¥ˆæ¯”ç‰¹æ²™æ¼-2å°æ™‚	40~51	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š40~51ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17108	å¥ˆæ¯”ç‰¹æ²™æ¼-2.5å°æ™‚	40~51	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š40~51ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17109	å¥ˆæ¯”ç‰¹æ²™æ¼-3å°æ™‚	40~51	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦3å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š40~51ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17110	å¥ˆæ¯”ç‰¹æ²™æ¼-1å°æ™‚	52~60	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š52~60ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17111	å¥ˆæ¯”ç‰¹æ²™æ¼-1.5å°æ™‚	52~60	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š52~60ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17112	å¥ˆæ¯”ç‰¹æ²™æ¼-2å°æ™‚	52~60	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š52~60ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17113	å¥ˆæ¯”ç‰¹æ²™æ¼-2.5å°æ™‚	52~60	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š52~60ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17114	å¥ˆæ¯”ç‰¹æ²™æ¼-3å°æ™‚	52~60	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦3å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š52~60ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17115	å¥ˆæ¯”ç‰¹æ²™æ¼-1å°æ™‚	61~75	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š61~75ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17116	å¥ˆæ¯”ç‰¹æ²™æ¼-1.5å°æ™‚	61~75	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š61~75ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17117	å¥ˆæ¯”ç‰¹æ²™æ¼-2å°æ™‚	61~75	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š61~75ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17118	å¥ˆæ¯”ç‰¹æ²™æ¼-2.5å°æ™‚	61~75	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š61~75ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17119	å¥ˆæ¯”ç‰¹æ²™æ¼-3å°æ™‚	61~75	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦3å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š61~75ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17120	å¥ˆæ¯”ç‰¹æ²™æ¼-1å°æ™‚	76~79	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š76~79ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17121	å¥ˆæ¯”ç‰¹æ²™æ¼-1.5å°æ™‚	76~79	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š76~79ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17122	å¥ˆæ¯”ç‰¹æ²™æ¼-2å°æ™‚	76~79	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š76~79ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17123	å¥ˆæ¯”ç‰¹æ²™æ¼-2.5å°æ™‚	76~79	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š76~79ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17124	å¥ˆæ¯”ç‰¹æ²™æ¼-3å°æ™‚	76~79	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦3å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š76~79ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17125	å¥ˆæ¯”ç‰¹æ²™æ¼-1å°æ™‚	80~85	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š80~85ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17126	å¥ˆæ¯”ç‰¹æ²™æ¼-1.5å°æ™‚	80~85	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦1.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š80~85ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17127	å¥ˆæ¯”ç‰¹æ²™æ¼-2å°æ™‚	80~85	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š80~85ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17128	å¥ˆæ¯”ç‰¹æ²™æ¼-2.5å°æ™‚	80~85	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦2.5å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š80~85ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
+ * 17129	å¥ˆæ¯”ç‰¹æ²™æ¼-3å°æ™‚	80~85	å¯ä»¥å»¶é•·å¥ˆæ¯”ç‰¹ç¥ç¦3å°æ™‚çš„å¥ˆæ¯”ç‰¹æ²™æ¼ã€‚åƒ…é™ç­‰ç´š80~85ä½¿ç”¨ã€‚ç„¡æ³•äº¤æ˜“æˆ–ä¸Ÿæ£„ã€‚
  */
 
 /**
@@ -69,15 +69,15 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Blessing extends Quest
 {
-	private static final int BLESSING               = 32783;    // ¯¬ºÖªº¯«©x
-	private static final int NEVITS_VOICE           = 17094;    // ©`¤ñ¯S¤§Án
-	private static final int NEVITS_HOURGLASS       = 17129;    // ©`¤ñ¯S¨Fº|
+	private static final int BLESSING               = 32783;    // ç¥ç¦çš„ç¥žå®˜
+	private static final int NEVITS_VOICE           = 17094;    // å¥ˆæ¯”ç‰¹ä¹‹è²
+	private static final int NEVITS_HOURGLASS       = 17129;    // å¥ˆæ¯”ç‰¹æ²™æ¼
 
-	private static final int ADENA                  = 57;       // ª÷¹ô
-	private static final int NEVITS_VOICE_PRICE     = 100000;   // ©`¤ñ¯S¤§Án»ù¿ú
-	private static final int NEVITS_VOICE_TIME      = 20;       // ©`¤ñ¯S¤§Án¥i¦A¶R®É¶¡¡i¤w¤p®É¬°³æ¦ì¡j
-	private static final int NEVITS_HOURGLASS_PRICE = 5000000;  // ©`¤ñ¯S¨Fº|»ù¿ú
-	private static final int NEVITS_HOURGLASS_TIME  = 20;       // ©`¤ñ¯S¨Fº|¥i¦A¶R®É¶¡¡i¤w¤p®É¬°³æ¦ì¡j
+	private static final int ADENA                  = 57;       // é‡‘å¹£
+	private static final int NEVITS_VOICE_PRICE     = 100000;   // å¥ˆæ¯”ç‰¹ä¹‹è²åƒ¹éŒ¢
+	private static final int NEVITS_VOICE_TIME      = 20;       // å¥ˆæ¯”ç‰¹ä¹‹è²å¯å†è²·æ™‚é–“ã€å·²å°æ™‚ç‚ºå–®ä½ã€‘
+	private static final int NEVITS_HOURGLASS_PRICE = 5000000;  // å¥ˆæ¯”ç‰¹æ²™æ¼åƒ¹éŒ¢
+	private static final int NEVITS_HOURGLASS_TIME  = 20;       // å¥ˆæ¯”ç‰¹æ²™æ¼å¯å†è²·æ™‚é–“ã€å·²å°æ™‚ç‚ºå–®ä½ã€‘
 
 	public Blessing(int questId, String name, String descr)
 	{
@@ -110,7 +110,7 @@ public class Blessing extends Quest
 					htmltext = "";
 				}
 				else
-					htmltext = "<html><body>¯¬ºÖªº¯«©x¡G<br>±zªº¦n·N§Ú¤ß»â¤F¡A¦ý±z­n®½Ämªºª÷¹ô¦n¹³ÁÙ¤£¤Ó°÷©O¡C¨ó§U³h§x¤H­Ìªº¾÷·|¤@ª½³£¬°±z´¯¶}µÛ¡Aµ¥±z¦³¯à¤O¨ó§Uªº®É­Ô¡A½ÐÀH®É¨Ó§ä§Ú¡CÄ@¯«ªº¯¬ºÖ»P±z¦P¦b...</body></html>";
+					htmltext = "<html><body>ç¥ç¦çš„ç¥žå®˜ï¼š<br>æ‚¨çš„å¥½æ„æˆ‘å¿ƒé ˜äº†ï¼Œä½†æ‚¨è¦æç»çš„é‡‘å¹£å¥½åƒé‚„ä¸å¤ªå¤ å‘¢ã€‚å”åŠ©è²§å›°äººå€‘çš„æ©Ÿæœƒä¸€ç›´éƒ½ç‚ºæ‚¨æ•žé–‹è‘—ï¼Œç­‰æ‚¨æœ‰èƒ½åŠ›å”åŠ©çš„æ™‚å€™ï¼Œè«‹éš¨æ™‚ä¾†æ‰¾æˆ‘ã€‚é¡˜ç¥žçš„ç¥ç¦èˆ‡æ‚¨åŒåœ¨...</body></html>";
 			}
 			else
 			{
@@ -144,7 +144,7 @@ public class Blessing extends Quest
 						htmltext = "";
 					}
 					else
-						htmltext = "<html><body>¯¬ºÖªº¯«©x¡G<br>±zªº¦n·N§Ú¤ß»â¤F¡A¦ý±z­n®½Ämªºª÷¹ô¦n¹³ÁÙ¤£¤Ó°÷©O¡C¨ó§U³h§x¤H­Ìªº¾÷·|¤@ª½³£¬°±z´¯¶}µÛ¡Aµ¥±z¦³¯à¤O¨ó§Uªº®É­Ô¡A½ÐÀH®É¨Ó§ä§Ú¡CÄ@¯«ªº¯¬ºÖ»P±z¦P¦b...</body></html>";
+						htmltext = "<html><body>ç¥ç¦çš„ç¥žå®˜ï¼š<br>æ‚¨çš„å¥½æ„æˆ‘å¿ƒé ˜äº†ï¼Œä½†æ‚¨è¦æç»çš„é‡‘å¹£å¥½åƒé‚„ä¸å¤ªå¤ å‘¢ã€‚å”åŠ©è²§å›°äººå€‘çš„æ©Ÿæœƒä¸€ç›´éƒ½ç‚ºæ‚¨æ•žé–‹è‘—ï¼Œç­‰æ‚¨æœ‰èƒ½åŠ›å”åŠ©çš„æ™‚å€™ï¼Œè«‹éš¨æ™‚ä¾†æ‰¾æˆ‘ã€‚é¡˜ç¥žçš„ç¥ç¦èˆ‡æ‚¨åŒåœ¨...</body></html>";
 				}
 			}
 		}
@@ -163,7 +163,7 @@ public class Blessing extends Quest
 					htmltext = "";
 				}
 				else
-					htmltext = "<html><body>¯¬ºÖªº¯«©x¡G<br>±zªº¦n·N§Ú¤ß»â¤F¡A¦ý±z­n®½Ämªºª÷¹ô¦n¹³ÁÙ¤£¤Ó°÷©O¡C¨ó§U³h§x¤H­Ìªº¾÷·|¤@ª½³£¬°±z´¯¶}µÛ¡Aµ¥±z¦³¯à¤O¨ó§Uªº®É­Ô¡A½ÐÀH®É¨Ó§ä§Ú¡CÄ@¯«ªº¯¬ºÖ»P±z¦P¦b...</body></html>";
+					htmltext = "<html><body>ç¥ç¦çš„ç¥žå®˜ï¼š<br>æ‚¨çš„å¥½æ„æˆ‘å¿ƒé ˜äº†ï¼Œä½†æ‚¨è¦æç»çš„é‡‘å¹£å¥½åƒé‚„ä¸å¤ªå¤ å‘¢ã€‚å”åŠ©è²§å›°äººå€‘çš„æ©Ÿæœƒä¸€ç›´éƒ½ç‚ºæ‚¨æ•žé–‹è‘—ï¼Œç­‰æ‚¨æœ‰èƒ½åŠ›å”åŠ©çš„æ™‚å€™ï¼Œè«‹éš¨æ™‚ä¾†æ‰¾æˆ‘ã€‚é¡˜ç¥žçš„ç¥ç¦èˆ‡æ‚¨åŒåœ¨...</body></html>";
 			}
 			else
 			{
@@ -197,7 +197,7 @@ public class Blessing extends Quest
 						htmltext = "";
 					}
 					else
-						htmltext = "<html><body>¯¬ºÖªº¯«©x¡G<br>±zªº¦n·N§Ú¤ß»â¤F¡A¦ý±z­n®½Ämªºª÷¹ô¦n¹³ÁÙ¤£¤Ó°÷©O¡C¨ó§U³h§x¤H­Ìªº¾÷·|¤@ª½³£¬°±z´¯¶}µÛ¡Aµ¥±z¦³¯à¤O¨ó§Uªº®É­Ô¡A½ÐÀH®É¨Ó§ä§Ú¡CÄ@¯«ªº¯¬ºÖ»P±z¦P¦b...</body></html>";
+						htmltext = "<html><body>ç¥ç¦çš„ç¥žå®˜ï¼š<br>æ‚¨çš„å¥½æ„æˆ‘å¿ƒé ˜äº†ï¼Œä½†æ‚¨è¦æç»çš„é‡‘å¹£å¥½åƒé‚„ä¸å¤ªå¤ å‘¢ã€‚å”åŠ©è²§å›°äººå€‘çš„æ©Ÿæœƒä¸€ç›´éƒ½ç‚ºæ‚¨æ•žé–‹è‘—ï¼Œç­‰æ‚¨æœ‰èƒ½åŠ›å”åŠ©çš„æ™‚å€™ï¼Œè«‹éš¨æ™‚ä¾†æ‰¾æˆ‘ã€‚é¡˜ç¥žçš„ç¥ç¦èˆ‡æ‚¨åŒåœ¨...</body></html>";
 				}
 			}
 		}

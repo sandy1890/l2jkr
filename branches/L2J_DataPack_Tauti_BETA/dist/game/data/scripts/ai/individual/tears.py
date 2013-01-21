@@ -5,9 +5,9 @@ from com.l2jserver.gameserver.model.quest        import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.util import Rnd
 
-# ¯«¿Ù¤Ş¾ÉªÌ = 32279
-Tears      = 25534  # ¦Bªº ´£º¸´µ
-Tears_Copy = 25535  # ¦Bªº ´£º¸´µ
+# ç¥è«­å¼•å°è€… = 32279
+Tears      = 25534  # å†°çš„ æçˆ¾æ–¯
+Tears_Copy = 25535  # å†°çš„ æçˆ¾æ–¯
 
 class PyObject:
 	pass

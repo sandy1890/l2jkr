@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * ¥d¯Ç´µ ÃM¤h ©s¶ğ¨º
+ * å¡ç´æ–¯ é¨å£« å­Ÿå¡”é‚£
  */
 public class FollowerOfAllosce extends L2AttackableAIScript
 {

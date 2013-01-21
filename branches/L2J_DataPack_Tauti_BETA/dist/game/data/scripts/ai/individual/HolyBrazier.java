@@ -23,9 +23,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * HolyBrazier AI
- * ¯«¸tªº¤õÄl / ¸tªM¦uÅ@ªÌ
+ * ç¥è–çš„ç«çˆ / è–æ¯å®ˆè­·è€…
  * @author Emperorc
- * 
  */
 public class HolyBrazier extends L2AttackableAIScript
 {

@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
 
 /**
- * ¼w¾|»h»i¤H°ªµ¥¾Ô¤h
+ * å¾·é­¯èœ¥èœ´äººé«˜ç­‰æˆ°å£«
  */
 public class Delu_Lizardman_Special_Agent extends L2AttackableAIScript
 {
@@ -47,11 +47,11 @@ public class Delu_Lizardman_Special_Agent extends L2AttackableAIScript
 			{
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"³º´±§«Ãª¯«¸tªº¨M°«¡Iµ´¹ïÄÇ¤£¤F§A­Ì¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"ç«Ÿæ•¢å¦¨ç¤™ç¥è–çš„æ±ºé¬¥ï¼çµ•å°é¥’ä¸äº†ä½ å€‘ï¼"));
 				}
 				if (Rnd.get(100) == 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),player.getName()+"¡I³º´±§«Ãª§Ú­Ì¤ñªZ¡I¤j®aÀ°À°§Ú¡I"));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),player.getName()+"ï¼ç«Ÿæ•¢å¦¨ç¤™æˆ‘å€‘æ¯”æ­¦ï¼å¤§å®¶å¹«å¹«æˆ‘ï¼"));
 				}
 			}
 			_FirstAttacked = true;
