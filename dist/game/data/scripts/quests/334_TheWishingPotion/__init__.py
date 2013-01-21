@@ -54,8 +54,8 @@ DROPLIST={AMBER_BASILISK:[AMBER_SCALE,15],WHISPERING_WIND:[WIND_SOULSTONE,20],GL
           TYRANT_KINGPIN:[TYRANTS_CHITIN,50],TURAK_BUGBEAR:[BUGBEAR_BLOOD,25],TURAK_BUGBEAR_WARRIOR:[BUGBEAR_BLOOD,25]}
 
 # set of random messages
-MESSAGES={SUCCUBUS_OF_SEDUCTION:["¯uªº·|·R§Ú­Ì¶Ü¡H¨ş¨ş¡C","§A»İ­n·R¶Ü?","Åı§Ú·R§A§a...","·Qª¾¹D¤°»ò¬O·R¶Ü?","§A¤@©w»İ­n·R?","§Ú·R§A«Ü¤[°Õ"],
-	      GRIMA:["«z«¢«¢«¢¡I","boom! boom!","...","Ki ab kya karein hum"],
+MESSAGES={SUCCUBUS_OF_SEDUCTION:["çœŸçš„æœƒæ„›æˆ‘å€‘å—ï¼Ÿå‘µå‘µã€‚","ä½ éœ€è¦æ„›å—?","è®“æˆ‘æ„›ä½ å§...","æƒ³çŸ¥é“ä»€éº¼æ˜¯æ„›å—?","ä½ ä¸€å®šéœ€è¦æ„›?","æˆ‘æ„›ä½ å¾ˆä¹…å•¦"],
+	      GRIMA:["å“‡å“ˆå“ˆå“ˆï¼","boom! boom!","...","Ki ab kya karein hum"],
 	      }
 
 def check_ingredients(st,required) :
@@ -165,15 +165,15 @@ class Quest (JQuest) :
      else:
        htmltext = "30738-14.htm"
    elif event == "matild_timer1":
-     autochat(npc,"¨Ó¡A¤j®a­¢¤Áªº¬èÃ«§a¡I")
+     autochat(npc,"ä¾†ï¼Œå¤§å®¶è¿«åˆ‡çš„ç¥ˆç¦±å§ï¼")
      st.startQuestTimer("matild_timer2",4000,npc)
      return
    elif event == "matild_timer2":
-     autochat(npc,"´ÂµÛ¤ÑªÅ¡AÁ|°_Âù¤â¡I¤j®a¤@°_¤jÁn§o³Û§a¡I")
+     autochat(npc,"æœè‘—å¤©ç©ºï¼Œèˆ‰èµ·é›™æ‰‹ï¼å¤§å®¶ä¸€èµ·å¤§è²å¶å–Šå§ï¼")
      st.startQuestTimer("matild_timer3",4000,npc)
      return
    elif event == "matild_timer3":
-     autochat(npc,"¤@¡I¤G¡IÄ@±æ°Ú~¹ê²{§a¡I")
+     autochat(npc,"ä¸€ï¼äºŒï¼é¡˜æœ›å•Š~å¯¦ç¾å§ï¼")
      wish = st.getInt("wish")
      WISH_CHANCE = self.getRandom(100)
      if wish == 1 :
@@ -207,7 +207,7 @@ class Quest (JQuest) :
          if not self.getRandom(3):
             st.giveItems(HEART_OF_PAAGRIO,1)
        else:
-         autochat(st.addSpawn(WISDOM_CHEST,120000),"§Ú¾Ö¦³´¼¼z¡C§Ú¬O´¼¼z¤§²°¡I")
+         autochat(st.addSpawn(WISDOM_CHEST,120000),"æˆ‘æ“æœ‰æ™ºæ…§ã€‚æˆ‘æ˜¯æ™ºæ…§ä¹‹ç›’ï¼")
      npc.setBusy(False)
      return
    elif event == "sanches_timer1" :
@@ -228,7 +228,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -354,7 +354,7 @@ class Quest (JQuest) :
        except: pass
    return
 
-QUEST	  = Quest(334,qn,"Ä@±æÃÄ¤ô")
+QUEST	  = Quest(334,qn,"é¡˜æœ›è—¥æ°´")
 
 QUEST.addStartNpc(ALCHEMIST_MATILD)
 

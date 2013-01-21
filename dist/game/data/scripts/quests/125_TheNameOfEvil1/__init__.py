@@ -102,7 +102,7 @@ class Quest (JQuest) :
 
 
 	def onTalk (self, npc, player) :
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -113,7 +113,7 @@ class Quest (JQuest) :
 		if npcId == MUSHIKA :
 			first = player.getQuestState("124_MeetingTheElroki")
 			if st.getState() == State.COMPLETED :
-				htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+				htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 			elif first and first.getState() == State.COMPLETED and st.getState() == State.CREATED and player.getLevel() >= 76 :
 				htmltext = "32114-01.htm"
 			elif cond == 0 :
@@ -190,7 +190,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_middle")
 		return
 
-QUEST		= Quest(125,qn,"¤¿¯«¤§¦W¬° ²Ä¤@³¡")
+QUEST		= Quest(125,qn,"å‡¶ç¥ä¹‹åç‚º ç¬¬ä¸€éƒ¨")
 
 QUEST.addStartNpc(MUSHIKA)
 QUEST.addTalkId(MUSHIKA)

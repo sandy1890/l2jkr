@@ -52,7 +52,7 @@ class Quest (JQuest) :
       return htmltext
 
    def onTalk (self,npc,player) :
-      htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+      htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
       st = player.getQuestState(qn)
       if not st : return htmltext
       npcId = npc.getNpcId()
@@ -68,7 +68,7 @@ class Quest (JQuest) :
          elif cond == 4 and st.getQuestItemsCount(VACUALITE) :
             htmltext = "31540-04.htm"
          else :
-            htmltext = "31540-03a.htm"                                    # pmq­×¥¿
+            htmltext = "31540-03a.htm"                                    # pmqä¿®æ­£
       elif npcId == HILDA :
          if cond == 1 :
             htmltext = "31271-01.htm"
@@ -101,7 +101,7 @@ class Quest (JQuest) :
             st.giveItems(VACUALITE_ORE,int(numItems)) 
       return
 
-QUEST       = Quest(618,qn,"Áa¨­¤õµK")
+QUEST       = Quest(618,qn,"ç¸±èº«ç«ç„°")
 
 QUEST.addStartNpc(KLEIN)
 QUEST.addTalkId(KLEIN)

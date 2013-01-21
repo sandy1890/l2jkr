@@ -295,7 +295,7 @@ class Quest (JQuest) :
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -327,10 +327,10 @@ class Quest (JQuest) :
         st.exitQuest(1)
       return htmltext
     elif player.getClan() and player.getClan().getLevel() >= 5:        # player has level 5 clan already
-      return "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      return "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
     elif id == State.COMPLETED:                                  # player has proof, and has finished quest as leader
-      return "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      return "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
     else:
       ######## Leader Area ######
@@ -535,7 +535,7 @@ class Quest (JQuest) :
             leader_st.addSpawn(27179)
     return
 
-QUEST     = Quest(503,qn,"¦å·ù¡A°l¨D³¥¤ß¡I")
+QUEST     = Quest(503,qn,"è¡€ç›Ÿï¼Œè¿½æ±‚é‡å¿ƒï¼")
 
 QUEST.addStartNpc(NPC[3])
 

@@ -48,12 +48,12 @@ class Quest (JQuest) :
         st.giveItems(JELLY_RECIPE,1)
         st.playSound("ItemSound.quest_finish")
      else :
-        htmltext = "§Ú·|±q§Aªº²´·úÀ½¥XªG­á¨Ó"
+        htmltext = "æˆ‘æœƒå¾ä½ çš„çœ¼ç›æ“ å‡ºæœå‡ä¾†"
      st.exitQuest(1)
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -121,7 +121,7 @@ class Quest (JQuest) :
                st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(380,qn,"´£°ª§÷®Æªº¨ı¹D!")
+QUEST       = Quest(380,qn,"æé«˜ææ–™çš„å‘³é“!")
 
 QUEST.addStartNpc(ROLLANT)
 

@@ -94,7 +94,7 @@ class Quest (JQuest) :
        st.set("talk","1")
     elif event == "32041-31.htm" :
        choice = st.getInt("choice")
-       if choice == 2 :                                # pmq ­×§ï
+       if choice == 2 :                                # pmq ä¿®æ”¹
           htmltext = "32041-37.htm"
     elif event == "32041-32.htm" :
        st.set("cond","21")
@@ -102,7 +102,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
     elif event == "32041-36.htm" :
        st.set("cond","20")
-       st.set("progress","MIDDLE")                     # pmq ­×§ï
+       st.set("progress","MIDDLE")                     # pmq ä¿®æ”¹
        st.playSound("ItemSound.quest_middle")
     elif event == "32046-02.htm" :
        st.set("cond","19")
@@ -140,7 +140,7 @@ class Quest (JQuest) :
        st.set("talk","0")
        st.set("choice","3")
        st.unset("talk1")
-    elif event == "32047-13b.htm" :                    # pmq ­×§ï
+    elif event == "32047-13b.htm" :                    # pmq ä¿®æ”¹
        st.set("cond","7")
        st.playSound("ItemSound.quest_middle")
     elif event == "32047-13a.htm" :
@@ -188,7 +188,7 @@ class Quest (JQuest) :
     elif event == "32047-34.htm" :
           st.set("cond","9")
           st.playSound("ItemSound.quest_middle")
-    elif event == "32047-36a.htm" :                    # pmq ­×§ï
+    elif event == "32047-36a.htm" :                    # pmq ä¿®æ”¹
           st.set("cond","23")
           st.playSound("ItemSound.quest_middle")
     elif event == "32047-38.htm" :
@@ -196,7 +196,7 @@ class Quest (JQuest) :
        st.takeItems(57,3000)
        st.set("cond","26")
        st.playSound("ItemSound.quest_middle")
-    elif event == "32047-39" :                         # pmq ­×§ï
+    elif event == "32047-39" :                         # pmq ä¿®æ”¹
          htmltext = "32047-39.htm"
          if st.get("progress") :
             if st.get("progress") == "MIDDLE":
@@ -209,7 +209,7 @@ class Quest (JQuest) :
        st.giveItems(Starstone,1)
        st.playSound("ItemSound.quest_middle")
        st.set("talk","0")
-    elif event == "32050-04a.htm" :                    # pmq ­×§ï
+    elif event == "32050-04a.htm" :                    # pmq ä¿®æ”¹
        st.set("cond","24")
        st.giveItems(Starstone2,1)
        st.playSound("ItemSound.quest_middle")
@@ -228,7 +228,7 @@ class Quest (JQuest) :
     return None
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
@@ -237,7 +237,7 @@ class Quest (JQuest) :
     talk = st.getInt("talk")
     talk1 = st.getInt("talk1")
     if state == State.COMPLETED :
-       htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+       htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
     elif npcId == Yumi :
        if state == State.CREATED :
           Pavel = player.getQuestState("121_PavelTheGiants")
@@ -279,7 +279,7 @@ class Quest (JQuest) :
           htmltext = "32041-36.htm"
        elif cond == 21:
           htmltext = "32041-33.htm"
-       elif cond in [22,25,26]:                        # pmq ­×§ï
+       elif cond in [22,25,26]:                        # pmq ä¿®æ”¹
           htmltext = "32041-34.htm"
           st.set("cond","27")
           st.playSound("ItemSound.quest_middle")
@@ -293,9 +293,9 @@ class Quest (JQuest) :
              htmltext = "32047-04.htm"
        elif cond == 3:
           htmltext = "32047-09.htm"
-       elif cond == 4:                                 # pmq ­×§ï
+       elif cond == 4:                                 # pmq ä¿®æ”¹
           htmltext = "32047-09a.htm"
-       elif cond == 5:                                 # pmq ­×§ï
+       elif cond == 5:                                 # pmq ä¿®æ”¹
           htmltext = "32047-09b.htm"
        elif cond == 6:
           choice = st.getInt("choice")
@@ -342,20 +342,20 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_middle")
        elif cond == 16:
           htmltext = "32047-27.htm"
-       elif cond == 20:                                # pmq ­×§ï
+       elif cond == 20:                                # pmq ä¿®æ”¹
           choice = st.getInt("choice")
           if choice == 3:
              htmltext = "32047-35.htm"
           else:
              htmltext = "32047-35a.htm"
-       elif cond == 23:                                # pmq ­×§ï
-          htmltext = "32047-37a.htm"                   # pmq ­×§ï
-       elif cond == 24:                                # pmq ­×§ï
-          htmltext = "32047-38a.htm"                   # pmq ­×§ï
+       elif cond == 23:                                # pmq ä¿®æ”¹
+          htmltext = "32047-37a.htm"                   # pmq ä¿®æ”¹
+       elif cond == 24:                                # pmq ä¿®æ”¹
+          htmltext = "32047-38a.htm"                   # pmq ä¿®æ”¹
           st.set("cond","25")
           st.playSound("ItemSound.quest_middle")
-       elif cond == 25:                                # pmq ­×§ï
-          htmltext = "32047-38a.htm"                   # pmq ­×§ï
+       elif cond == 25:                                # pmq ä¿®æ”¹
+          htmltext = "32047-38a.htm"                   # pmq ä¿®æ”¹
        elif cond == 26:
           htmltext = "32047-40.htm"
     elif npcId == Box :
@@ -366,10 +366,10 @@ class Quest (JQuest) :
              htmltext = "32050-03.htm"
        elif cond == 14:
           htmltext = "32050-05.htm"
-       elif cond == 23:                                # pmq ­×§ï
-          htmltext = "32050-01a.htm"                   # pmq ­×§ï
-       elif cond == 24:                                # pmq ­×§ï
-          htmltext = "32050-06.htm"                    # pmq ­×§ï
+       elif cond == 23:                                # pmq ä¿®æ”¹
+          htmltext = "32050-01a.htm"                   # pmq ä¿®æ”¹
+       elif cond == 24:                                # pmq ä¿®æ”¹
+          htmltext = "32050-06.htm"                    # pmq ä¿®æ”¹
     elif npcId == Stones :
        if cond == 18:
           htmltext = "32046-01.htm"
@@ -394,7 +394,7 @@ class Quest (JQuest) :
          st.set("cond","11")
          st.playSound("ItemSound.quest_middle")
 
-QUEST = Quest(114,qn,"¥j¥NºŞ²zªÌªº´_¬¡")
+QUEST = Quest(114,qn,"å¤ä»£ç®¡ç†è€…çš„å¾©æ´»")
 
 QUEST.addStartNpc(Yumi)
 QUEST.addFirstTalkId(Stones)

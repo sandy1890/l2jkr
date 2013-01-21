@@ -64,7 +64,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound3.sys_siren")
             self.startQuestTimer("1",60000, alarm, player)
             time.sleep(1)
-            player.sendPacket(NpcSay(alarm.getObjectId(), 0, alarm.getNpcId(), "µo²{¤J«IªÌ¡A¬°Á×§K±¡³ø¬ªº|¡A±N¦b2¤ÀÄÁ«á¶i¦æ¬ö¿ı¸Ë¸mªºÃz¯}¡C"))
+            player.sendPacket(NpcSay(alarm.getObjectId(), 0, alarm.getNpcId(), "ç™¼ç¾å…¥ä¾µè€…ï¼Œç‚ºé¿å…æƒ…å ±æ´©æ¼ï¼Œå°‡åœ¨2åˆ†é˜å¾Œé€²è¡Œç´€éŒ„è£ç½®çš„çˆ†ç ´ã€‚"))
         elif event == "32366-05.htm" :
             st.unset("step")
             st.playSound("ItemSound.quest_middle")
@@ -92,33 +92,33 @@ class Quest (JQuest) :
                 else :
                     htmltext == "32367-06.htm"
         elif event == "1" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "¶ZÂ÷¬ö¿ı¸Ë¸mÃz¯}®É¶¡ÁÙ³Ñ¤U60¬í¡A­Y­n¤¤Â_½Ğ¿é¤J±K½X¡C"))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "è·é›¢ç´€éŒ„è£ç½®çˆ†ç ´æ™‚é–“é‚„å‰©ä¸‹60ç§’ï¼Œè‹¥è¦ä¸­æ–·è«‹è¼¸å…¥å¯†ç¢¼ã€‚"))
             self.startQuestTimer("2",30000, npc, player)
             return
         elif event == "2" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "¶ZÂ÷¬ö¿ı¸Ë¸mÃz¯}®É¶¡ÁÙ³Ñ¤U30¬í¡A­Y­n¤¤Â_½Ğ¿é¤J±K½X¡C"))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "è·é›¢ç´€éŒ„è£ç½®çˆ†ç ´æ™‚é–“é‚„å‰©ä¸‹30ç§’ï¼Œè‹¥è¦ä¸­æ–·è«‹è¼¸å…¥å¯†ç¢¼ã€‚"))
             self.startQuestTimer("3",20000, npc, player)
             return
         elif event == "3" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "¶ZÂ÷¬ö¿ı¸Ë¸mÃz¯}®É¶¡ÁÙ³Ñ¤U10¬í¡A­Y­n¤¤Â_½Ğ¿é¤J±K½X¡C"))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "è·é›¢ç´€éŒ„è£ç½®çˆ†ç ´æ™‚é–“é‚„å‰©ä¸‹10ç§’ï¼Œè‹¥è¦ä¸­æ–·è«‹è¼¸å…¥å¯†ç¢¼ã€‚"))
             self.startQuestTimer("4",10000, npc, player)
             return
         elif event == "4" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "¬ö¿ı¸Ë¸m¤w³QºR·´¡C"))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "ç´€éŒ„è£ç½®å·²è¢«æ‘§æ¯€ã€‚"))
             npc.deleteMe()
             st.set("step","2")
             return
         return htmltext
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+        htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
         st = player.getQuestState(qn)
         if not st : return htmltext
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED:
-            htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+            htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
         elif id == State.STARTED:
             if npcId == Nikola :
                 if not cond :
@@ -161,7 +161,7 @@ class Quest (JQuest) :
            q2.notifyEvent("32367-01.htm",npc,player)
        return None
 
-QUEST       = Quest(185,qn,"¥§¥j©Ôªº¨ó§U-ÃöÃh½g")
+QUEST       = Quest(185,qn,"å°¼å¤æ‹‰çš„å”åŠ©-é—œæ‡·ç¯‡")
 
 QUEST.addTalkId(Nikola)
 QUEST.addTalkId(Lorain)

@@ -185,7 +185,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -208,7 +208,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
    elif id == State.COMPLETED :                                   # Check if the quest is already made
       if npcId == 30514 :
-        htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+        htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    else :                                                   # The quest it self
      try :
@@ -510,7 +510,7 @@ class Quest (JQuest) :
        st.playSound("Itemsound.quest_middle")
    return
 
-QUEST       = Quest(220,qn,"ºaÅAªº¦ÒÅç")
+QUEST       = Quest(220,qn,"æ¦®è­½çš„è€ƒé©—")
 
 QUEST.addStartNpc(30514)
 

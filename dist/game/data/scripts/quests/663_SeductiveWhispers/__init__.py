@@ -74,7 +74,7 @@ class Quest (JQuest) :
    elif event == "Wilbert_LetsPlay.htm": # "Let's play" pressed
      beads=st.getQuestItemsCount(SPIRIT_BEAD)
      if beads<50:
-       htmltext = "Wilbert_Practice_50NotEnoughBeads.htm"  #pmq ­×§ï
+       htmltext = "Wilbert_Practice_50NotEnoughBeads.htm"  #pmq ä¿®æ”¹
      else:
        htmltext = "Wilbert_PlayRound1.htm"
        st.set("round","0")
@@ -94,19 +94,19 @@ class Quest (JQuest) :
          round = round + 1
          htmltext = st.showHtmlFile("Wilbert_PlayWin.htm").replace("NROUND", str(round))
          if round == 1:
-           htmltext = htmltext.replace("MYPRIZE","40,000 ª÷¹ô")
+           htmltext = htmltext.replace("MYPRIZE","40,000 é‡‘å¹£")
          if round == 2:
-           htmltext = htmltext.replace("MYPRIZE","80,000 ª÷¹ô")
+           htmltext = htmltext.replace("MYPRIZE","80,000 é‡‘å¹£")
          if round == 3:
-           htmltext = htmltext.replace("MYPRIZE","110,000 ª÷¹ô¡BªZ¾¹±j¤Æ¨÷¶b-D¯Å")
+           htmltext = htmltext.replace("MYPRIZE","110,000 é‡‘å¹£ã€æ­¦å™¨å¼·åŒ–å·è»¸-Dç´š")
          if round == 4:
-           htmltext = htmltext.replace("MYPRIZE","199,000 ª÷¹ô¡BªZ¾¹±j¤Æ¨÷¶b-C¯Å")
+           htmltext = htmltext.replace("MYPRIZE","199,000 é‡‘å¹£ã€æ­¦å™¨å¼·åŒ–å·è»¸-Cç´š")
          if round == 5:
-           htmltext = htmltext.replace("MYPRIZE","388,000 ª÷¹ô¡BB¯ÅªZ¾¹»s§@¨÷¶b¨ä¤¤¤§¤@")
+           htmltext = htmltext.replace("MYPRIZE","388,000 é‡‘å¹£ã€Bç´šæ­¦å™¨è£½ä½œå·è»¸å…¶ä¸­ä¹‹ä¸€")
          if round == 6:
-           htmltext = htmltext.replace("MYPRIZE","675,000 ª÷¹ô¡BB¯ÅªZ¾¹¥²¶·§÷®Æ¨ä¤¤¤§¤@")
+           htmltext = htmltext.replace("MYPRIZE","675,000 é‡‘å¹£ã€Bç´šæ­¦å™¨å¿…é ˆææ–™å…¶ä¸­ä¹‹ä¸€")
          if round == 7:
-           htmltext = htmltext.replace("MYPRIZE","1,284,000 ª÷¹ô¡BªZ¾¹±j¤Æ¨÷¶b-B¯Å2±i¡B¨¾¨ã±j¤Æ¨÷¶b-B¯Å2±i")
+           htmltext = htmltext.replace("MYPRIZE","1,284,000 é‡‘å¹£ã€æ­¦å™¨å¼·åŒ–å·è»¸-Bç´š2å¼µã€é˜²å…·å¼·åŒ–å·è»¸-Bç´š2å¼µ")
          if round == 8: # reached round 8; give prizes and restart game
            round = 0
            st.giveItems(ADENA,2384000)
@@ -153,7 +153,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    st = player.getQuestState(qn)
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
@@ -162,7 +162,7 @@ class Quest (JQuest) :
        if player.getLevel() >= 50 : # check player level
            htmltext = "Wilbert_start.htm"
        else:
-           htmltext = "Wilbert_QuestLevel.htm"  #pmq ­×§ï
+           htmltext = "Wilbert_QuestLevel.htm"  #pmq ä¿®æ”¹
            st.exitQuest(1)
    # talk to Wilbert when quest already in progress
    elif npcId == WILBERT and id == State.STARTED :
@@ -183,7 +183,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST = Quest(663,qn,"»¤´bªº¦Õ»y")
+QUEST = Quest(663,qn,"èª˜æƒ‘çš„è€³èª")
 
 QUEST.addStartNpc(WILBERT)
 QUEST.addTalkId(WILBERT)

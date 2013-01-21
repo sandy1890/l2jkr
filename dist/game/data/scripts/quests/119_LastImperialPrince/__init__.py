@@ -7,15 +7,15 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "119_LastImperialPrince"
 
 #NPC
-SPIRIT   = 31453    #µL¦WªºÆF»î
-DEVORIN  = 32009    #ÂLªÜµY
+SPIRIT   = 31453    #ç„¡åçš„éˆé­‚
+DEVORIN  = 32009    #é»›èŠ™ç³
 
 #ITEM
-BROOCH   = 7262     #¯}ÂÂªº¯İ°w
+BROOCH   = 7262     #ç ´èˆŠçš„èƒ¸é‡
 
 #REWARD
-ADENA    = 57       #ª÷¹ô
-AMOUNT   = 150292   #¼Æ¶q
+ADENA    = 57       #é‡‘å¹£
+AMOUNT   = 150292   #æ•¸é‡
 
 class Quest (JQuest) :
 
@@ -29,7 +29,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
     elif event == "32009-2.htm" :
        if st.getQuestItemsCount(BROOCH) < 1 :
-          htmltext = "<html><body><font color=\"LEVEL\">¥|¸tªM</font>¥ô°È©|¥¼§¹¦¨¡C</body></html>"
+          htmltext = "<html><body><font color=\"LEVEL\">å››è–æ¯</font>ä»»å‹™å°šæœªå®Œæˆã€‚</body></html>"
           st.exitQuest(1)
     elif event == "32009-3.htm" :
        st.set("cond","2")
@@ -44,13 +44,13 @@ class Quest (JQuest) :
 
   def onTalk (Self,npc,player):
     st = player.getQuestState(qn)
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     if not st: return htmltext
     cond = st.getInt("cond")
     npcId = npc.getNpcId()
     id = st.getState()
     if st.getQuestItemsCount(BROOCH) < 1 :
-       htmltext = "<html><body><font color=\"LEVEL\">¥|¸tªM</font>¥ô°È©|¥¼§¹¦¨¡C</body></html>"
+       htmltext = "<html><body><font color=\"LEVEL\">å››è–æ¯</font>ä»»å‹™å°šæœªå®Œæˆã€‚</body></html>"
        st.exitQuest(1)
     elif id == State.CREATED :
        if player.getLevel() < 74 :
@@ -59,7 +59,7 @@ class Quest (JQuest) :
        else :
           htmltext = "31453-1.htm"
     elif id == State.COMPLETED :
-       htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+       htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
        st.exitQuest(1)
     elif npcId == SPIRIT :
        if cond == 1 :
@@ -73,7 +73,7 @@ class Quest (JQuest) :
           htmltext = "32009-3.htm"
     return htmltext
 
-QUEST = Quest(119,qn,"³Ì«áªº¬Ó¤l")
+QUEST = Quest(119,qn,"æœ€å¾Œçš„çš‡å­")
 
 QUEST.addStartNpc(SPIRIT)
 

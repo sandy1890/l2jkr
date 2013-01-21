@@ -7,7 +7,7 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 QuestNumber      = 381
 QuestName        = "LetsBecomeARoyalMember"
-QuestDescription = "¦¨¬°³Ì°ªªº·|­û"
+QuestDescription = "æˆç‚ºæœ€é«˜çš„æœƒå“¡"
 qn = "381_LetsBecomeARoyalMember"
 
 #Quest items
@@ -42,11 +42,11 @@ class Quest (JQuest) :
             st.set("id","1")
             st.playSound("ItemSound.quest_accept")
          else :
-            htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+            htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
       return htmltext
 
   def onTalk (self,npc,player):
-      htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+      htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
       st = player.getQuestState(qn)
       if not st : return htmltext
 

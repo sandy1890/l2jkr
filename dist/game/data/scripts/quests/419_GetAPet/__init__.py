@@ -179,7 +179,7 @@ class Quest (JQuest):
     return
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -259,7 +259,7 @@ class Quest (JQuest):
       return
 
 # Quest class and state definition
-QUEST       = Quest(419, qn, "±o¨ìÃdª«")
+QUEST       = Quest(419, qn, "å¾—åˆ°å¯µç‰©")
 
 # Quest NPC starter initialization
 QUEST.addStartNpc(PET_MANAGER_MARTIN)

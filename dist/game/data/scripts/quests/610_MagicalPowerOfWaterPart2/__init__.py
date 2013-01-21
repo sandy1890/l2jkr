@@ -97,12 +97,12 @@ class Quest (JQuest) :
            npc.deleteMe()
            st.set("cond","2")
            self.startQuestTimer("Soul of Water Ashutar has despawned",1200000,spawnedNpc,None)
-           AutoChat(spawnedNpc,"¤ô¤§Å]¤O´N¬O¼É­·»P®ü¼Sªº¤O¶q¡I»P§Ú¹ï§Ü¥u¦³¦º¸ô¤@±ø¡I")
+           AutoChat(spawnedNpc,"æ°´ä¹‹é­”åŠ›å°±æ˜¯æš´é¢¨èˆ‡æµ·å˜¯çš„åŠ›é‡ï¼èˆ‡æˆ‘å°æŠ—åªæœ‰æ­»è·¯ä¸€æ¢ï¼")
    return htmltext
 
  def onTalk (self, npc, player):
    st = player.getQuestState(qn)
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    if st :
     npcId = npc.getNpcId()
     cond = st.getInt("cond")
@@ -168,7 +168,7 @@ class Quest (JQuest) :
          st.exitQuest(1)
     return
 
-QUEST = Quest(610,qn,"¤ô¤§Å]¤O-¤U½g")
+QUEST = Quest(610,qn,"æ°´ä¹‹é­”åŠ›-ä¸‹ç¯‡")
 
 QUEST.addStartNpc(Asefa)
 

@@ -9,8 +9,8 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "695_DefendTheHallOfSuffering"
 
-# ���ȸ��
-# 695	1	�W�h�ëǨ��m	���íW�h�ë�	�b�������ؤ��������ԫǡA�x�x�S���ڥq��N�F���íW�h�ëǪ����ȡC�����שҦ��ж������}�l���~�F��_���A�M��A�h�B�z���M�L���`�M�h�C\n\n�n�y�����ؼЩǪ�-��u �J�����w���B��u �Jù�}�w��\n	0															0															0	0	0	75	82	0	�W�h�ë�	1	1	1	32603	-183296	205715	-12896	�S�����󭭨�	�����x�θչϧ�^�Q�_�I�a�̩Ҧ��⪺�W�h�ëǡA�M���Ǧ��Q�n��_�O�q�C�]���b�������ئa�Ϫ����ԫǡA�x�x�S���ڥq���b�M��_�I�a�Ӫ���Ƶo�͡C	0																																																																						0						0	0	0	285	1	2	-1002	736										2	0	1										
+# 任務資料
+# 695	1	苦痛棺室防禦	防衛苦痛棺室	在不滅之種內部的等候室，軍官特普歐司交代了防衛苦痛棺室的任務。先阻擋所有房間內的破損的腫瘤體復活，然後再去處理雙胞胎死亡騎士。\n\n要獵殺的目標怪物-艾罕 克蘭尼庫斯、艾罕 克羅迪庫斯\n	0															0															0	0	0	75	82	0	苦痛棺室	1	1	1	32603	-183296	205715	-12896	沒有條件限制	不死軍團試圖找回被冒險家們所佔領的苦痛棺室，然後藉此想要恢復力量。因此在不滅之種地區的等候室，軍官特普歐司正在尋找冒險家來阻止此事發生。	0																																																																						0						0	0	0	285	1	2	-1002	736										2	0	1										
 
 #NPCs
 Keucereus     = 32548
@@ -38,7 +38,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>�ثe�S��������ȡA�α��󤣲šC</body></html>"
+		htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -76,7 +76,7 @@ class Quest (JQuest) :
 				htmltext = "32603-04.htm"
 		return htmltext
 
-QUEST		= Quest(695,qn,"�W�h�ëǨ��m")
+QUEST		= Quest(695,qn,"苦痛棺室防禦")
 
 QUEST.addStartNpc(Tepios)
 QUEST.addTalkId(Tepios)

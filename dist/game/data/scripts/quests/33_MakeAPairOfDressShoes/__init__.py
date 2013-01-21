@@ -57,7 +57,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -66,7 +66,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED:
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == 30838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
 				fwear = player.getQuestState("37_PleaseMakeMeFormalWear")
@@ -103,7 +103,7 @@ class Quest (JQuest) :
 					htmltext = "30164-1a.htm"
 		return htmltext
 
-QUEST		= Quest(33,qn,"½ĞÀ°§Ú»s§@¬ÃÂÃ¥Îªº¥Ö¾c")
+QUEST		= Quest(33,qn,"è«‹å¹«æˆ‘è£½ä½œçè—ç”¨çš„çš®é‹")
 
 QUEST.addStartNpc(30838)
 

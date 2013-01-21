@@ -15,16 +15,16 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    player = st.getPlayer()                     #pmq­×§ï
+    player = st.getPlayer()                     #pmqä¿®æ”¹
     if event == "1" :
-      if player.getLevel() >= 15 :              #pmq­×§ï
-        htmltext = "30956_2.htm"                #pmq­×§ï
+      if player.getLevel() >= 15 :              #pmqä¿®æ”¹
+        htmltext = "30956_2.htm"                #pmqä¿®æ”¹
         st.set("cond","1")
         st.setState(State.STARTED)
         st.playSound("ItemSound.quest_accept")
-      else :                                    #pmq­×§ï
-        htmltext = "30956_0.htm"                #pmq­×§ï
-        st.exitQuest(1)                         #pmq­×§ï
+      else :                                    #pmqä¿®æ”¹
+        htmltext = "30956_0.htm"                #pmqä¿®æ”¹
+        st.exitQuest(1)                         #pmqä¿®æ”¹
     elif event == "5" :
         st.giveItems(4420,1)
         st.playSound("ItemSound.quest_finish")
@@ -34,7 +34,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -47,30 +47,30 @@ class Quest (JQuest) :
    if npcId == 30956 and st.getInt("cond") == 0 :
         htmltext = "30956_1.htm"
    elif npcId == 30956 and st.getInt("cond") == 1 :
-        htmltext = "<html><body>½Ğ§äÅK¦K®v³Å¶ø¥Ö´µ...</body></html>"
+        htmltext = "<html><body>è«‹æ‰¾éµåŒ å¸«å‚…å¥§çš®æ–¯...</body></html>"
    elif npcId == 30595 and st.getInt("cond") == 1 :
         st.set("cond","2")
         htmltext = "30595_1.htm"
    elif npcId == 30595 and st.getInt("cond") > 1 :
-        htmltext = "<html><body>¦^¥h§ä­µ¼Ö®a®R®RµY...</body></html>"
+        htmltext = "<html><body>å›å»æ‰¾éŸ³æ¨‚å®¶å¨œå¨œç³...</body></html>"
    elif npcId == 30956 and st.getInt("cond") == 2 :
         st.giveItems(4319,1)
         st.set("cond","3")
         htmltext = "30956_3.htm"
    elif npcId == 30956 and st.getInt("cond") == 3 :
-        htmltext = "<html><body>½Ğ§ä­µ¼Ö®a¤Úº¸¤Ú§ù...</body></html>"
+        htmltext = "<html><body>è«‹æ‰¾éŸ³æ¨‚å®¶å·´çˆ¾å·´æœ...</body></html>"
    elif npcId == 30959 and st.getInt("cond") == 3 :
         st.takeItems(4319,1)
         st.set("cond","4")
         htmltext = "30959_1.htm"
    elif npcId == 30959 and st.getInt("cond") == 4 :
-        htmltext = "<html><body>¦A¦^¥h§ä­µ¼Ö®a®R®RµY...</body></html>"
+        htmltext = "<html><body>å†å›å»æ‰¾éŸ³æ¨‚å®¶å¨œå¨œç³...</body></html>"
    elif npcId == 30956 and st.getInt("cond") == 4 :
         htmltext = "30956_4.htm"
    return htmltext
 
 
-QUEST       = Quest(363,qn,"´d¶Ëªº²ÃÁn")
+QUEST       = Quest(363,qn,"æ‚²å‚·çš„ç¬›è²")
 
 QUEST.addStartNpc(30956)
 QUEST.addTalkId(30956)

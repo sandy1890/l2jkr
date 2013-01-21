@@ -36,13 +36,13 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
      npcId = npc.getNpcId()
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
      id = st.getState()
      cond = st.getInt("cond")
      if id == State.COMPLETED :
-       htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+       htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
      elif id == State.CREATED and npcId == ZENYA :
        if player.getLevel() >= 3 and player.getRace().ordinal() == 5 :
          htmltext = "32140-01.htm"
@@ -58,7 +58,7 @@ class Quest (JQuest) :
            htmltext = "32163-01.htm"
      return htmltext
  
-QUEST = Quest(172,qn,"«e©¹¼e¼sªº¥@¬É") 
+QUEST = Quest(172,qn,"å‰å¾€å¯¬å»£çš„ä¸–ç•Œ") 
  
 QUEST.addStartNpc(ZENYA) 
 

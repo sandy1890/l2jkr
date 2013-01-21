@@ -40,7 +40,7 @@ class Quest (JQuest) :
     elif event == "30533_1" :
         if st.getQuestItemsCount(ADENA)>100 :
             st.takeItems(ADENA, 100)
-            st.playSound("ItemSound.quest_accept") #pmq­×§ï
+            st.playSound("ItemSound.quest_accept") #pmqä¿®æ”¹
             if st.getInt("cond")== 1:
                 st.set("cond","2")
             else :
@@ -49,7 +49,7 @@ class Quest (JQuest) :
         else :
             htmltext = str(BALANKI)+"-03.htm"
     elif event == "30532_1" :
-        st.playSound("ItemSound.quest_accept")     #pmq­×§ï
+        st.playSound("ItemSound.quest_accept")     #pmqä¿®æ”¹
         htmltext = str(SPIRON)+"-02a.htm"
         if st.getInt("cond")== 1:
             st.set("cond","3")
@@ -63,23 +63,23 @@ class Quest (JQuest) :
         st.giveItems(CALCULATOR,1)
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
-        #pmq­×§ï
-        #pmq­×§ï
+        #pmqä¿®æ”¹
+        #pmqä¿®æ”¹
         st.exitQuest(1)
         htmltext = str(BRUNON)+"-05.htm"
     elif event == "30526_2" :
-        st.giveItems(ADENA,1500)        #pmq­×§ï
+        st.giveItems(ADENA,1500)        #pmqä¿®æ”¹
         st.takeItems(CALCULATOR_Q,1)
         st.playSound("ItemSound.quest_middle")
-        #pmq­×§ï
-        #pmq­×§ï
+        #pmqä¿®æ”¹
+        #pmqä¿®æ”¹
         st.exitQuest(1)
         htmltext = str(BRUNON)+"-06.htm"
     return htmltext
 
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -93,7 +93,7 @@ class Quest (JQuest) :
            st.set("cond","0")
            htmltext = str(BRUNON)+"-01.htm"
         else:
-           htmltext = str(BRUNON)+"-00.htm"    #pmq­×§ï-Start
+           htmltext = str(BRUNON)+"-00.htm"    #pmqä¿®æ”¹-Start
            st.exitQuest(1)
            return htmltext
     elif npcId == BRUNON and (st.getInt("cond")==1 or st.getInt("cond")==2) and st.getQuestItemsCount(CALCULATOR_Q)==0 :
@@ -121,7 +121,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_itemget")
         st.set("cond","6")
     elif npcId == SILVERA and st.getInt("cond")==6 and st.getQuestItemsCount(CALCULATOR_Q)==1 :
-        htmltext = str(SILVERA)+"-05.htm"      #pmq­×§ï-End
+        htmltext = str(SILVERA)+"-05.htm"      #pmqä¿®æ”¹-End
     elif npcId == BRUNON and st.getInt("cond")==6 and st.getQuestItemsCount(CALCULATOR_Q)==1 :
         htmltext = str(BRUNON)+"-04.htm"
     return htmltext
@@ -140,7 +140,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(347,qn,"¨ú±o­pºâ¾÷")
+QUEST       = Quest(347,qn,"å–å¾—è¨ˆç®—æ©Ÿ")
 
 QUEST.addStartNpc(BRUNON)
 

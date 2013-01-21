@@ -10,12 +10,12 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "629_CleanUpTheSwampOfScreams"
 
 #NPC
-CAPTAIN = 31553 # ¶Ä§L¶¤ªø ¤ñ´µ
+CAPTAIN = 31553 # å‚­å…µéšŠé•· æ¯”æ–¯
 #ITEMS
-CLAWS   = 7250  # ¥q¶ğ¥d©İ¤§¤ö
-COIN    = 7251  # ¶Àª÷¦Ïªº»É¹ô
-RECRUIT = 7246  # ¶Àª÷¦Ïªº¼Ğ»x-·s§L
-SOLDIER = 7247  # ¶Àª÷¦Ïªº¼Ğ»x-ºë¾U§L
+CLAWS   = 7250  # å¸å¡”å¡æ‹“ä¹‹çˆª
+COIN    = 7251  # é»ƒé‡‘ç¾Šçš„éŠ…å¹£
+RECRUIT = 7246  # é»ƒé‡‘ç¾Šçš„æ¨™èªŒ-æ–°å…µ
+SOLDIER = 7247  # é»ƒé‡‘ç¾Šçš„æ¨™èªŒ-ç²¾éŠ³å…µ
 
 #CHANCES
 MAX=1000
@@ -59,7 +59,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk(self, npc, player) :
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st :return htmltext
 
@@ -117,7 +117,7 @@ class Quest (JQuest) :
 					st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(629,qn,"±½¿º´d»ïªºªh¿A")
+QUEST		= Quest(629,qn,"æƒè•©æ‚²é³´çš„æ²¼æ¾¤")
 
 QUEST.addStartNpc(CAPTAIN)
 QUEST.addFirstTalkId(CAPTAIN)

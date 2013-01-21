@@ -42,9 +42,9 @@ QMCa = {
     25 : ["tutorial_mage017.htm",45610,52206,-2792],
     31 : ["tutorial_fighter017.htm",10344,14445,-4242],
     38 : ["tutorial_mage017.htm",10344,14445,-4242],
-    44 : ["tutorial_orc_fighter017.htm",-46324,-114384,-200],     #¼W¥[¥bÃ~¤H¾Ô¤hªº¹ï¸Ü
-    49 : ["tutorial_orc_mage017.htm",-46305,-112763,-200],        #¼W¥[¥bÃ~¤Hªk®vªº¹ï¸Ü
-    53 : ["tutorial_dwarven017.htm",115447,-182672,-1440],        #¼W¥[¸G¤Hªº¹ï¸Ü
+    44 : ["tutorial_orc_fighter017.htm",-46324,-114384,-200],     #å¢åŠ åŠç¸äººæˆ°å£«çš„å°è©±
+    49 : ["tutorial_orc_mage017.htm",-46305,-112763,-200],        #å¢åŠ åŠç¸äººæ³•å¸«çš„å°è©±
+    53 : ["tutorial_dwarven017.htm",115447,-182672,-1440],        #å¢åŠ çŸ®äººçš„å°è©±
     123: ["tutorial_fighter017.htm",-118132,42788,723],
     124: ["tutorial_fighter017.htm",-118132,42788,723]
     }
@@ -184,7 +184,7 @@ class Quest (JQuest) :
             elif playerLevel == 79 and not player.getQuestState("192_SevenSignSeriesOfDoubt") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
-            elif playerLevel == 81 and not player.getQuestState("10292_SevenSignsGirlOfDoubt") : # ¶ÙÂ½¤Ñ
+            elif playerLevel == 81 and not player.getQuestState("10292_SevenSignsGirlOfDoubt") : # å—¨ç¿»å¤©
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
         # QUEST TIMER #
@@ -302,7 +302,7 @@ class Quest (JQuest) :
             elif event_id == 40 :
                 if playerLevel == 5 and player.getClassId().level() == 0:
                    if st.getInt("lvl") < 5 :
-                    if not player.getClassId().isMage() and classId != 49: #­×¥¿¥bÃ~¤Hªk®vµ¥¯Å§PÂ_-1
+                    if not player.getClassId().isMage() and classId != 49: #ä¿®æ­£åŠç¸äººæ³•å¸«ç­‰ç´šåˆ¤æ–·-1
                      st.playTutorialVoice("tutorial_voice_014")
                      st.showQuestionMark(9)
                      st.playSound("ItemSound.quest_tutorial")
@@ -312,7 +312,7 @@ class Quest (JQuest) :
                    st.playSound("ItemSound.quest_tutorial")
                    st.showQuestionMark(24)
                    st.set("lvl","6")
-                elif playerLevel == 7 and player.getClassId().isMage() or playerLevel == 7 and classId == 49: #­×¥¿¥bÃ~¤Hªk®vµ¥¯Å§PÂ_-2
+                elif playerLevel == 7 and player.getClassId().isMage() or playerLevel == 7 and classId == 49: #ä¿®æ­£åŠç¸äººæ³•å¸«ç­‰ç´šåˆ¤æ–·-2
                    if st.getInt("lvl") < 7 and player.getClassId().level() == 0:
                       st.playTutorialVoice("tutorial_voice_019")
                       st.playSound("ItemSound.quest_tutorial")
@@ -472,8 +472,8 @@ class Quest (JQuest) :
                     htmltext = "tutorial_kama_68.htm"
                 elif lvl == 79 :
                     htmltext = "tutorial_epic_quest.htm"
-                elif lvl == 81 :                       # ¶ÙÂ½¤Ñ
-                    htmltext = "tutorial_hf_quest.htm" # ¶ÙÂ½¤Ñ
+                elif lvl == 81 :                       # å—¨ç¿»å¤©
+                    htmltext = "tutorial_hf_quest.htm" # å—¨ç¿»å¤©
             elif MarkId == 34 :
                 htmltext = "tutorial_28.htm"
             elif MarkId == 35 :
@@ -483,4 +483,4 @@ class Quest (JQuest) :
         st.showTutorialHTML(str(htmltext))
         return
 
-QUEST = Quest(255,qn,"ªì¾ÇªÌ¾ÉÄı")
+QUEST = Quest(255,qn,"åˆå­¸è€…å°è¦½")

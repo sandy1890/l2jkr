@@ -87,7 +87,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -97,7 +97,7 @@ class Quest (JQuest) :
      st.set("step","0")
      st.set("cond","0")
    if id == State.COMPLETED :
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    elif st.getInt("step")==0 :
       if player.getClassId().getId() in [0x01,0x2f,0x13,0x20] :
@@ -157,7 +157,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
   return
 
-QUEST       = Quest(222,qn,"¨M°«ªÌªº¦ÒÅç")
+QUEST       = Quest(222,qn,"æ±ºé¬¥è€…çš„è€ƒé©—")
 
 
 QUEST.addStartNpc(30623)

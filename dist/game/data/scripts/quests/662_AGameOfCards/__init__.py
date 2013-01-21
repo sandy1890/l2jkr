@@ -38,13 +38,13 @@ REWARDS = {
 }
 
 REWARDS_TEXT = [
-    "¶â¡H³o¬O¡HµL¹ï¡H¨Ó¡A¨S¦³¼úª÷¡C",
-    "¶â¡H³o¬O¡H¤@¹ï¡H¨Ó¡A³o¬O¼úª÷¡C",
-    "¶â¡H³o¬O¡H¤T±ø¡H§Aªº¹B®ğÁÙ¤£¿ù¹À¡C³o¬O¼úª÷¡C",
-    "¶â¡H³o¬O¡H¥|±ø¡Iº}«G¡I§A¯u¬O¤F¤£°_¡I¦«§AªººÖ¡I³º¬İ¨ì¼Æ¦~Ãø±o¤@¨£ªº¥|±ø¡C¨Ó¡A³o¬O¼úª÷¡C",
-    "¶â¡H³o¬O¡H¤­±ø¡H¨S·Q¨ì³º¯à¬İ¨ì¤­±ø¡I§A¯u¬O¤Ó¤F¤£°_¡IÃø¹D»¡³Ó§Q¤k¯«¦b«O¦ö§A¤£¦¨¡H¨Ó¡A³o¬O¼úª÷¡I³o¼úª÷¤@ÂI³£¤£¥i±¤°Ú¡C«¢«¢«¢~",
-    "¶â¡H³o¬O¡H¨â¹ï¡H¨Ó¡A³o¬O¼úª÷¡C",
-    "¶â¡H³o¬O¡H¸¬Äª¡H¨Ó¡A³o¬O¼úª÷¡C"
+    "å—¯ï¼Ÿé€™æ˜¯ï¼Ÿç„¡å°ï¼Ÿä¾†ï¼Œæ²’æœ‰çé‡‘ã€‚",
+    "å—¯ï¼Ÿé€™æ˜¯ï¼Ÿä¸€å°ï¼Ÿä¾†ï¼Œé€™æ˜¯çé‡‘ã€‚",
+    "å—¯ï¼Ÿé€™æ˜¯ï¼Ÿä¸‰æ¢ï¼Ÿä½ çš„é‹æ°£é‚„ä¸éŒ¯å˜›ã€‚é€™æ˜¯çé‡‘ã€‚",
+    "å—¯ï¼Ÿé€™æ˜¯ï¼Ÿå››æ¢ï¼æ¼‚äº®ï¼ä½ çœŸæ˜¯äº†ä¸èµ·ï¼æ‰˜ä½ çš„ç¦ï¼ç«Ÿçœ‹åˆ°æ•¸å¹´é›£å¾—ä¸€è¦‹çš„å››æ¢ã€‚ä¾†ï¼Œé€™æ˜¯çé‡‘ã€‚",
+    "å—¯ï¼Ÿé€™æ˜¯ï¼Ÿäº”æ¢ï¼Ÿæ²’æƒ³åˆ°ç«Ÿèƒ½çœ‹åˆ°äº”æ¢ï¼ä½ çœŸæ˜¯å¤ªäº†ä¸èµ·ï¼é›£é“èªªå‹åˆ©å¥³ç¥åœ¨ä¿ä½‘ä½ ä¸æˆï¼Ÿä¾†ï¼Œé€™æ˜¯çé‡‘ï¼é€™çé‡‘ä¸€é»éƒ½ä¸å¯æƒœå•Šã€‚å“ˆå“ˆå“ˆ~",
+    "å—¯ï¼Ÿé€™æ˜¯ï¼Ÿå…©å°ï¼Ÿä¾†ï¼Œé€™æ˜¯çé‡‘ã€‚",
+    "å—¯ï¼Ÿé€™æ˜¯ï¼Ÿè‘«è˜†ï¼Ÿä¾†ï¼Œé€™æ˜¯çé‡‘ã€‚"
 ]
 
 class Quest (JQuest) :
@@ -99,19 +99,19 @@ class Quest (JQuest) :
              # prize = 4 : 5 cards (XXXXX). 1 variant [XXXXX]
              # prize = 5 : 2 pairs (XXYY). 3 variants [XXYY-] [XX-YY] [-XXYY]
              # prize = 6 : Fullhouse (XXXYY). 2 variants [XXXYY] [YYXXX]
-             link1 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_QuestInProgress.htm\">¦A¨Ó¤@¦¸</a><br>"
+             link1 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_QuestInProgress.htm\">å†ä¾†ä¸€æ¬¡</a><br>"
              prizestr = REWARDS_TEXT[prize]
          else : # game still in progress, display links
-           link1 = "Â½¶}²Ä¤@±i¯ÈµP<br>"
-           link2 = "Â½¶}²Ä¤G±i¯ÈµP<br>"
-           link3 = "Â½¶}²Ä¤T±i¯ÈµP<br>"
-           link4 = "Â½¶}²Ä¥|±i¯ÈµP<br>"
-           link5 = "Â½¶}²Ä¤­±i¯ÈµP<br>"
-           if card1 == 0: link1 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard1.htm\">Â½¶}²Ä¤@±i¯ÈµP</a><br>"
-           if card2 == 0: link2 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard2.htm\">Â½¶}²Ä¤G±i¯ÈµP</a><br>"
-           if card3 == 0: link3 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard3.htm\">Â½¶}²Ä¤T±i¯ÈµP</a><br>"
-           if card4 == 0: link4 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard4.htm\">Â½¶}²Ä¥|±i¯ÈµP</a><br>"
-           if card5 == 0: link5 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard5.htm\">Â½¶}²Ä¤­±i¯ÈµP</a><br>"
+           link1 = "ç¿»é–‹ç¬¬ä¸€å¼µç´™ç‰Œ<br>"
+           link2 = "ç¿»é–‹ç¬¬äºŒå¼µç´™ç‰Œ<br>"
+           link3 = "ç¿»é–‹ç¬¬ä¸‰å¼µç´™ç‰Œ<br>"
+           link4 = "ç¿»é–‹ç¬¬å››å¼µç´™ç‰Œ<br>"
+           link5 = "ç¿»é–‹ç¬¬äº”å¼µç´™ç‰Œ<br>"
+           if card1 == 0: link1 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard1.htm\">ç¿»é–‹ç¬¬ä¸€å¼µç´™ç‰Œ</a><br>"
+           if card2 == 0: link2 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard2.htm\">ç¿»é–‹ç¬¬äºŒå¼µç´™ç‰Œ</a><br>"
+           if card3 == 0: link3 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard3.htm\">ç¿»é–‹ç¬¬ä¸‰å¼µç´™ç‰Œ</a><br>"
+           if card4 == 0: link4 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard4.htm\">ç¿»é–‹ç¬¬å››å¼µç´™ç‰Œ</a><br>"
+           if card5 == 0: link5 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard5.htm\">ç¿»é–‹ç¬¬äº”å¼µç´™ç‰Œ</a><br>"
          htmltext = self.getHtm(st.getPlayer().getHtmlPrefix(), "Klump_PlayField.htm")
          htmltext = htmltext.replace("CARD1",CARD_VALUES[card1]).replace("CARD2",CARD_VALUES[card2]).replace("CARD3",CARD_VALUES[card3]).replace("CARD4",CARD_VALUES[card4]).replace("CARD5",CARD_VALUES[card5])
          htmltext = htmltext.replace("LINK1",link1).replace("LINK2",link2).replace("LINK3",link3).replace("LINK4",link4).replace("LINK5",link5).replace("PRIZE",prizestr)
@@ -126,7 +126,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
      st = player.getQuestState(qn)
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      if not st : return htmltext
      npcId = npc.getNpcId()
      id = st.getState()
@@ -135,7 +135,7 @@ class Quest (JQuest) :
          if player.getLevel() >= 61 : # check player level
              htmltext = "Klump_FirstTalk.htm"
          else:
-             htmltext = "Klump_QuestLevel.htm" #pmq ­×§ï
+             htmltext = "Klump_QuestLevel.htm" #pmq ä¿®æ”¹
              st.exitQuest(1)
      # talk to Klump when quest already in progress
      elif id == State.STARTED :
@@ -158,7 +158,7 @@ class Quest (JQuest) :
              st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST = Quest(662,qn,"¨Óª±¼³§JµP¹CÀ¸")
+QUEST = Quest(662,qn,"ä¾†ç©æ’²å…‹ç‰ŒéŠæˆ²")
 
 QUEST.addStartNpc(KLUMP)
 QUEST.addTalkId(KLUMP)

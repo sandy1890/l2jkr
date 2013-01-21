@@ -25,7 +25,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -37,7 +37,7 @@ class Quest (JQuest) :
          if level>=20 :
              htmltext = "30078-01.htm"
          else:
-             htmltext = "30078-00.htm"    #­×§ï pmq
+             htmltext = "30078-00.htm"    #ä¿®æ”¹ pmq
              st.exitQuest(1)
      elif cond==1 :
          if st.getQuestItemsCount(BEAR_SKIN)>=20 :
@@ -61,7 +61,7 @@ class Quest (JQuest) :
          st.dropQuestItems(BEAR_SKIN,1,20,CHANCE,1)
      return
 
-QUEST       = Quest(341,qn,"³¥Ã~ªº¬¼Ây")
+QUEST       = Quest(341,qn,"é‡ç¸çš„ç‹©çµ")
 
 QUEST.addStartNpc(30078)
 

@@ -66,7 +66,7 @@ class Quest (JQuest) :
         return htmltext
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+        htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
         st = player.getQuestState(qn)
         if not st : return htmltext
         npcId = npc.getNpcId()
@@ -76,7 +76,7 @@ class Quest (JQuest) :
             if npcId == Gobie:
                htmltext = "32198-16.htm"
             else:
-               htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+               htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
         elif npcId == Sione :
             if player.getClassId().getId() != 124 or player.getLevel() < 18:
@@ -203,7 +203,7 @@ class Quest (JQuest) :
                 st.set("cond","12")
         return
 
-QUEST       = Quest(63,qn,"¦¨¬°ª®À»½Ã¤h¤§¸ô")
+QUEST       = Quest(63,qn,"æˆç‚ºç‹™æ“Šè¡›å£«ä¹‹è·¯")
 
 QUEST.addStartNpc(Sione)
 

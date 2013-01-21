@@ -23,45 +23,45 @@ DINOSAUR_EGG = 8775
 DINOSAURS = [22199,22215,22216,22217,22196,22197,22198,22218,22223,18344]
 REWARDS = [8690,8692,8694,8696,8698,8700,8702,8704,8706,8708,8710]
 REWARDS_W = {
-    "1" : [9967 , 1], # �s�@���b(���¼C60%)
-    "2" : [9968 , 1], # �s�@���b(���¤��b60%)
-    "3" : [9969 , 1], # �s�@���b(���¤ۼv�C60%)
-    "4" : [9970 , 1], # �s�@���b(���¤}60%)
-    "5" : [9971 , 1], # �s�@���b(���¤p�M60%)
-    "6" : [9972 , 1], # �s�@���b(���ª��`�Դu60%)
-    "7" : [9973 , 1], # �s�@���b(���¾���60%)
-    "8" : [9974 , 1], # �s�@���b(���°v��60%)
-    "9" : [9975 , 1], # �s�@���b(���®��M��60%)
+    "1" : [9967 , 1], # 製作卷軸(王朝劍60%)
+    "2" : [9968 , 1], # 製作卷軸(王朝之刃60%)
+    "3" : [9969 , 1], # 製作卷軸(王朝幻影劍60%)
+    "4" : [9970 , 1], # 製作卷軸(王朝弓60%)
+    "5" : [9971 , 1], # 製作卷軸(王朝小刀60%)
+    "6" : [9972 , 1], # 製作卷軸(王朝長柄戰戟60%)
+    "7" : [9973 , 1], # 製作卷軸(王朝戰鎚60%)
+    "8" : [9974 , 1], # 製作卷軸(王朝釘鎚60%)
+    "9" : [9975 , 1], # 製作卷軸(王朝拳套爪60%)
     }
 # Dinn Html
 # 32105-00
-Dinn_A = "<html><body>�B�w�G<br>�@�A�z�ݨӤ����O�A�X�o�M�I�t�q���ȤH�C...�o�̬O�D�`�M�I���a��A���}���a��z�|�����U���C<br>(�u���F�쵥��75�H�W�~�������ȡC)</body></html>"
+Dinn_A = "<html><body>丁定：<br>哦，您看來不像是適合這危險孤島的客人耶...這裡是非常危險的地方，離開此地對您會有幫助的。<br>(只有達到等級75以上才能執行任務。)</body></html>"
 # 32105-01
-Dinn_B = "<html><body>�B�w�G<br>�@�A�n�[�S���ȤH�Ө�o�M�I���t�q�C...�_�I�a�դU�]�Oť������Ӫ��a...<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_C\">�z�����O��������H</a></body></html>"
+Dinn_B = "<html><body>丁定：<br>哦，好久沒有客人來到這危險的孤島耶...冒險家閣下也是聽到消息來的吧...<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_C\">您說的是什麼消息？</a></body></html>"
 # 32105-02
-Dinn_C = "<html><body>�B�w�G<br>�o��l���q�O�̪�~�Q�o�{��...���[��d���X�A�o�ण�O�@�몺�q���C�b��L�a�訣���쪺���j�B�j�O���ͩR��ͦs�󦹡C<br>�\�h�H�靈�������s���ͩR��P����j������C<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_D\">�߰ݭ��ǤH�̹擄��F��P�쿳��</a></body></html>"
+Dinn_C = "<html><body>丁定：<br>這原始之島是最近才被發現的...不久後查明出，這兒不是一般的島嶼。在其他地方見不到的巨大且強力的生命體生存於此。<br>許多人對有關那全新的生命體感到莫大的興趣。<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_D\">詢問哪些人們對什麼東西感到興趣</a></body></html>"
 # 32105-03
-Dinn_D = "<html><body>�B�w�G<br>�������Ѫ��]�k�v�̱N���ǥͩR�٬����s�A�ٻ��e�̤��O�Q�ثe�Ҫ����ȤB�ѯ��гy���ͩR�C<br>�{�b�U�a���]�k�v���b��s�������s�̪��_���A�H�ή��s�X�{���N�q�C<br>���~�A�U�a���u�K����_�Q�γo�s�X�{���j�O�ͪ��ӻs�y�s�Z���άO�U�ا��ƪ��Ʊ��A�]�P����j������C<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_E\">�ڷQ���o�ǤH�U�@�u���O</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_L\">�ۤv�������Ӧۤv�h���A�ڨS����</a></body></html>"
+Dinn_D = "<html><body>丁定：<br>滿腹學識的魔法師們將那些生命稱為恐龍，還說牠們不是被目前所知的亞丁諸神創造的生命。<br>現在各地的魔法師都在研究有關恐龍們的起源，以及恐龍出現的意義。<br>此外，各地的工匠對於能否利用這新出現的強力生物來製造新武器或是各種材料的事情，也感到莫大的興趣。<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_E\">我想為這些人助一臂之力</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_L\">自己的事應該自己去做，我沒興趣</a></body></html>"
 # 32105-04
-Dinn_E = "<html><body>�B�w�G<br>�@�A�O�o�˶ܡH�u�O�Ӧn�F�C����s�P����j���쪺�]�k�v�̥H�θG�H�u�K�̡A���F�����L�̤u�@�ɻݭn�����ơA�ܷQ��o�_�I�a�̪����U�C�]���o��l���q�O�ӦM�I���a�C<br>�L���٫��U�L�ڡA���L�̱��˯�����⦹�ƪ��_�I�a�O�C<br>�h����<font color=\"LEVEL\">��L�s�B���s�B���r�s</font>��A�����e�̪������´�ӧa�C<br>��F�A�N1��<font color=\"LEVEL\">�j�N���Z</font>�P150�Ӯ��s�����´�լ��@�M���ܡA�]�i�z�L����ӥ[�u��C<br>����j�N���Z�A�u�n�j�M���s�̪��Ϯ��a�N���o��C���O�D�`�M�I�A�i�n�p�߳�CĲ�I�j�N���Z���ܡA<font color=\"LEVEL\">�P�򪺮��s�̬��F�O�@�j�N���Z�A�������|�]�Ӫ��C�j�N���Z�������s�����´�@�˻ݭn�ܦh�A�ҥH�ЦҼ{�M����A���M�w�a�I</font><br>����A���z�n�B�C</body></html>"
+Dinn_E = "<html><body>丁定：<br>哦，是這樣嗎？真是太好了。對於恐龍感到莫大興趣的魔法師們以及矮人工匠們，為了收集他們工作時需要的材料，很想獲得冒險家們的幫助。因為這原始之島是個危險之地。<br>他們還拜託過我，為他們推薦能夠接手此事的冒險家呢。<br>去擊倒<font color=\"LEVEL\">喙嘴龍、暴龍、迅猛龍</font>後，收集牠們的活體組織來吧。<br>對了，將1顆<font color=\"LEVEL\">古代之卵</font>與150個恐龍活體組織組為一套的話，也可透過實驗來加工喔。<br>關於古代之卵，只要搜尋恐龍們的棲息地就能找得到。但是非常危險，可要小心喔。觸碰古代之卵的話，<font color=\"LEVEL\">周圍的恐龍們為了保護古代之卵，全部都會跑來的。古代之卵不像恐龍活體組織一樣需要很多，所以請考慮清楚後再做決定吧！</font><br>那麼，祝您好運。</body></html>"
 # 32105-05
-Dinn_F = "<html><body>�B�w�G<br>�\�h�H�����ݵ۫_�I�a�j�H�����U�աC<br>�h����<font color=\"LEVEL\">��L�s�B���s�B���r�s</font>��A�����e�̪������´�ӧa�C<br>��F�A�N1��<font color=\"LEVEL\">�j�N���Z</font>�P150�Ӯ��s�����´�լ��@�M���ܡA�]�i�z�L����ӥ[�u��C<br>�u�n�j�M���s�̪��Ϯ��a�N���o��j�N���Z�C���O�D�`�M�I�A�i�n�p�߳�CĲ�I�j�N���Z���ܡA<font color=\"LEVEL\">�P�򪺮��s�̬��F�O�@�j�N���Z�A�q�q���|�]�Ӫ��C�j�N���Z�������s�����´�@�˻ݭn�ܦh�A�ҥH�ЦҼ{�M����A���M�w�I</font><br>����֥h�����@�Ǧ^�ӧa�C</body></html>"
+Dinn_F = "<html><body>丁定：<br>許多人正等待著冒險家大人的幫助啦。<br>去擊倒<font color=\"LEVEL\">喙嘴龍、暴龍、迅猛龍</font>後，收集牠們的活體組織來吧。<br>對了，將1顆<font color=\"LEVEL\">古代之卵</font>與150個恐龍活體組織組為一套的話，也可透過實驗來加工喔。<br>只要搜尋恐龍們的棲息地就能找得到古代之卵。但是非常危險，可要小心喔。觸碰古代之卵的話，<font color=\"LEVEL\">周圍的恐龍們為了保護古代之卵，通通都會跑來的。古代之卵不像恐龍活體組織一樣需要很多，所以請考慮清楚後再做決定！</font><br>那麼快去收集一些回來吧。</body></html>"
 # 32105-06
-Dinn_G = "<html><body>�B�w�G<br>�@~�z�����ӰաC�j�a�@�w�|�ܰ������C<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_H\">��X���s�����´</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_I\">�N1���j�N���Z�M150�Ӯ��s�����´�z�L����[�u</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_M\">���Q�d�ݨ�L���~</a></body></html>"
+Dinn_G = "<html><body>丁定：<br>哦~您收集來啦。大家一定會很高興的。<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_H\">交出恐龍活體組織</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_I\">將1顆古代之卵和150個恐龍活體組織透過實驗加工</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_M\">說想查看其他物品</a></body></html>"
 # 32105-06a
-Dinn_H = "<html><body>�B�w�G<br>���W�F�C����|���\�h��s�N�}�l�i��C�Ʊ�঳�n���G�A�p�G�঳�\�h�H�ӳo��l���q�N�n�F...�o�O�ڤp�p���߷N�C�Ц��U...�n�~�������ܡH<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_K\">���n�~��</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_L\">���n���</a></body></html>"
+Dinn_H = "<html><body>丁定：<br>辛苦了。往後會有許多研究將開始進行。希望能有好成果，如果能有許多人來這原始之島就好了...這是我小小的心意。請收下...要繼續幫忙嗎？<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_K\">說要繼續做</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_L\">說要放棄</a></body></html>"
 # 32105-07
-Dinn_I = "<html><body>�B�w�G<br>By processing 1 Ancient Egg and 150 dinosaur biological tissues, it's possible to create some truly special materials.<br>These materials will be of great help to the scholars studying these creatures.<br>If you give me the ingredients that you've collected in order to make the processed material, I'll trade you the following items�G<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8690\">�s�@���b(���S�B�b60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8692\">�s�@���b(��i�����C60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8694\">�s�@���b(���Գͺ��t��60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8696\">�s�@���b(���Ʋ������e60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8698\">�s�@���b(���d����60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8700\">�s�@���b(���̫ʪ��u60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8702\">�s�@���b(�L��w�y�}60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8704\">�s�@���b(�����J����60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8706\">�s�@���b(�{�̵�����60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8708\">�s�@���b(�d�����ڤ���60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8710\">�s�@���b(�c�]����60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_K\">�{�b���Q�[�u</a></body></html>"
+Dinn_I = "<html><body>丁定：<br>By processing 1 Ancient Egg and 150 dinosaur biological tissues, it's possible to create some truly special materials.<br>These materials will be of great help to the scholars studying these creatures.<br>If you give me the ingredients that you've collected in order to make the processed material, I'll trade you the following items：<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8690\">製作卷軸(希露冰刃60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8692\">製作卷軸(伊波斯巨劍60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8694\">製作卷軸(貝拉凱爾聖斧60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8696\">製作卷軸(貝希莫斯巨叉60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8698\">製作卷軸(那卡風暴60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8700\">製作卷軸(岱依封長戟60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8702\">製作卷軸(夏伊德獵弓60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8704\">製作卷軸(索貝克颶風60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8706\">製作卷軸(緹米絲之舌60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8708\">製作卷軸(卡布里歐之手60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8710\">製作卷軸(惡魔結晶60%)</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature Dinn_K\">現在不想加工</a></body></html>"
 # 32105-07a
-Dinn_J = "<html><body>�B�w�G<br>�n�i����窺�ܡA�ݭn��1���j�N���Z�P150�Ӯ��s�����´���@�ժ��M��C�h����<font color=\"LEVEL\">��L�s�B���s�B���r�s</font>��A�N�e�̪������´��...�٦��O�ѤF�j�M���s�̪��Ϯ��a�A�N<font color=\"LEVEL\">�j�N���Z</font>���ӧa...</body></html>"
+Dinn_J = "<html><body>丁定：<br>要進行實驗的話，需要有1顆古代之卵與150個恐龍活體組織為一組的套件。去擊倒<font color=\"LEVEL\">喙嘴龍、暴龍、迅猛龍</font>後，將牠們的活體組織來...還有別忘了搜尋恐龍們的棲息地，將<font color=\"LEVEL\">古代之卵</font>拿來吧...</body></html>"
 # 32105-08
-Dinn_K = "<html><body>�B�w�G<br>���¡I<br>�����~��h����<font color=\"LEVEL\">��L�s�B���s�B���r�s</font>��A�����e�̪������´�ӧa�C<br>��F�A�N1��<font color=\"LEVEL\">�j�N���Z</font>�P150�Ӯ��s�����´�լ��@�M���ܡA�]�i�z�L����ӥ[�u��C<br>�u�n�j�M���s�̪��Ϯ��a�N���o��j�N���Z�C���O�D�`�M�I�A�i�n�p�߳�CĲ�I�j�N���Z���ܡA<font color=\"LEVEL\">�P�򪺮��s�̬��F�O�@�j�N���Z�A�|�����]�Ӫ��C�j�N���Z�������s�����´�@�˻ݭn�ܦh�A�ҥH�ЦҼ{�M����A���M�w�a�I</font><br>����A�~�򨯭W�z�F�C</body></html>"
+Dinn_K = "<html><body>丁定：<br>謝謝！<br>那麼繼續去擊倒<font color=\"LEVEL\">喙嘴龍、暴龍、迅猛龍</font>後，收集牠們的活體組織來吧。<br>對了，將1顆<font color=\"LEVEL\">古代之卵</font>與150個恐龍活體組織組為一套的話，也可透過實驗來加工喔。<br>只要搜尋恐龍們的棲息地就能找得到古代之卵。但是非常危險，可要小心喔。觸碰古代之卵的話，<font color=\"LEVEL\">周圍的恐龍們為了保護古代之卵，會全部跑來的。古代之卵不像恐龍活體組織一樣需要很多，所以請考慮清楚後再做決定吧！</font><br>那麼，繼續辛苦您了。</body></html>"
 # 32105-09
-Dinn_L = "<html><body>�B�w�G<br>�O���A�ڤ��O���L�F�ܡH���ޥh���z���Ʊ��a�C</body></html>"
+Dinn_L = "<html><body>丁定：<br>是的，我不是說過了嗎？儘管去忙您的事情吧。</body></html>"
 # 32105-10
-Dinn_M = "<html><body>�d�ԥd���G<br>�ά����´450�Ӫ��ܡA�ڷ|���Ө��Ӽƶq��I�A�X�z���S�ҡC<br>�A�Q�n��ܤ���O�H<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 1\">�����u�s�@���b-�]���¼C60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 2\">�����u�s�@���b-�]���¤��b60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 3\">�����u�s�@���b-�]���¤ۼv�C60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 4\">�����u�s�@���b-�]���¤}60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 5\">�����u�s�@���b-�]���¤p�M60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 6\">�����u�s�@���b-�]���ª��`�Դu60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 7\">�����u�s�@���b-�]���¾���60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8\">�����u�s�@���b-�]���°v��60%�^�v</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 9\">�����u�s�@���b-�]���®��M��60%�^�v</a></body></html>"
+Dinn_M = "<html><body>卡拉卡維：<br>用活體組織450個的話，我會按照那個數量支付你合理的酬勞。<br>你想要選擇什麼呢？<br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 1\">換取「製作卷軸-（王朝劍60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 2\">換取「製作卷軸-（王朝之刃60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 3\">換取「製作卷軸-（王朝幻影劍60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 4\">換取「製作卷軸-（王朝弓60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 5\">換取「製作卷軸-（王朝小刀60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 6\">換取「製作卷軸-（王朝長柄戰戟60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 7\">換取「製作卷軸-（王朝戰鎚60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 8\">換取「製作卷軸-（王朝釘鎚60%）」</a><br><a action=\"bypass -h Quest 642_APowerfulPrimevalCreature 9\">換取「製作卷軸-（王朝拳套爪60%）」</a></body></html>"
 # 32105-11
-Dinn_N = "<html><body>�B�w�G<br>�Y�Q�o��s�����~�A�ݭn�������´450�ӡC�A�h���y�@��<font color=\"LEVEL\">��L�s�B���s�B���r�s</font>��A�a�^���������s�����´�a�C</body></html>"
+Dinn_N = "<html><body>丁定：<br>若想得到新的物品，需要有活體組織450個。再去狩獵一些<font color=\"LEVEL\">喙嘴龍、暴龍、迅猛龍</font>後，帶回足夠的恐龍活體組織吧。</body></html>"
 
 class Quest (JQuest) :
 
@@ -148,7 +148,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>�ثe�S��������ȡA�α��󤣲šC</body></html>"
+		htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -198,7 +198,7 @@ class Quest (JQuest) :
 						st.giveItems(itemId,int(numItems))
 		return
 
-QUEST		= Quest(642,qn,"�����ӥj�j�O�ͪ�����s")
+QUEST		= Quest(642,qn,"有關太古強力生物的研究")
 
 QUEST.addStartNpc(32105)
 

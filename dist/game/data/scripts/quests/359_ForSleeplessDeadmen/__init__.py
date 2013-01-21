@@ -7,7 +7,7 @@ from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
-QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 359,"ForSleeplessDeadmen","¬°¤F©|¥¼¦w®§ªº¤`ªÌ"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 359,"ForSleeplessDeadmen","ç‚ºäº†å°šæœªå®‰æ¯çš„äº¡è€…"
 qn = "359_ForSleeplessDeadmen"
 
 #Variables
@@ -40,18 +40,18 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
-    # pmq­×¥¿ elif event == "30857-7.htm" :
-    # pmq­×¥¿    st.exitQuest(1)
-    # pmq­×¥¿    st.playSound("ItemSound.quest_finish")
+    # pmqä¿®æ­£ elif event == "30857-7.htm" :
+    # pmqä¿®æ­£    st.exitQuest(1)
+    # pmqä¿®æ­£    st.playSound("ItemSound.quest_finish")
     elif event == "30857-8.htm" :
        st.set("cond","1")
        st.giveItems(REWARDS[self.getRandom(len(REWARDS))] ,4)
-       st.exitQuest(1)                                       # pmq­×¥¿
-       st.playSound("ItemSound.quest_finish")                # pmq­×¥¿
+       st.exitQuest(1)                                       # pmqä¿®æ­£
+       st.playSound("ItemSound.quest_finish")                # pmqä¿®æ­£
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 

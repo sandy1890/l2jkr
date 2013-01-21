@@ -359,7 +359,7 @@ class Quest (JQuest):
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -478,7 +478,7 @@ class Quest (JQuest):
               return check_eggs(st,"shamhai",progress)
           elif progress in [ 19,20 ] and st.getQuestItemsCount(SH_EGG) == 1 :
               return "420_shamhai_5.htm"
-    return "<html><body>§Ú¨S¤°»ò¸Ü¥i¹ï§A»¡¡C</body></html>"
+    return "<html><body>æˆ‘æ²’ä»€éº¼è©±å¯å°ä½ èªªã€‚</body></html>"
 
   def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
@@ -555,7 +555,7 @@ class Quest (JQuest):
 
 
 # Quest class and state definition
-QUEST       = Quest(420, qn, "¤p¯Í»H")
+QUEST       = Quest(420, qn, "å°ç¿…è†€")
 
 # Quest NPC starter initialization
 QUEST.addStartNpc(PM_COOPER)

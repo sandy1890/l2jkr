@@ -17,26 +17,26 @@ RANDOM_REWARDS=[[951,1],   #Enchant Weapon C
                 [736,1],   #SoE
                ]
 #Roshambo
-OPTIONS={0:"�ŤM",1:"���Y",2:"��"}
+OPTIONS={0:"剪刀",1:"石頭",2:"布"}
 OUTCOME={0:1,1:2,2:0}
 #Coin Toss
-TOSS={0:"��",1:"��"}
+TOSS={0:"正",1:"反"}
 ORBS=[10,30,70,150,310,0]
 #Messages
-start_msg=["�ŤM~���Y~","�ŤM~���Y~","�ŤM~���Y~","�ŤM~���Y~"]
-tie_msg=["�H�H~�I�O�ӥ����r�I���`�ٵ��A�C�n�A�A���@���a�H",\
-         "�H�H~�I�O�ӥ����r�I���`�ٵ��A�C�n�A�A���@���a�H"]
-win_msg=["���r�I�ڿ�F�C���`���������a�C��~�A�Ӥ@���a~",\
-         "���r�I�ڿ�F�C���`���������a�C��~�A�Ӥ@���a~",\
-         "���r�I�ڿ�F�C���`���������a�C��~�A�Ӥ@���a~"]
-lose_msg=["�����I�A��F�I����ڧ��`���������F~�հ�~�n�A�Ӥ@���ܡH",\
-          "�����I�A��F�I����ڧ��`���������F~�հ�~�n�A�Ӥ@���ܡH",\
-          "�����I�A��F�I����ڧ��`���������F~�հ�~�n�A�Ӥ@���ܡH"]
-again_msg=["�}�l�C��","���q���C��"]
-toss_msg=[["�o���O�A�ƤF�I",""],\
-          ["�o���O�A�ƤF�I","�O2�s�ӭC�I"],\
-          ["�o���O�A�ƤF�I","�O3�s�ӭC�I"],\
-          ["�o���O�A�ƤF�I","�O4�s�ӭC�I"]]
+start_msg=["剪刀~石頭~","剪刀~石頭~","剪刀~石頭~","剪刀~石頭~"]
+tie_msg=["嘻嘻~！是個平局呀！把賭注還給你。好，再玩一次吧？",\
+         "嘻嘻~！是個平局呀！把賭注還給你。好，再玩一次吧？"]
+win_msg=["唉呀！我輸了。把賭注全部拿走吧。哼~再來一次吧~",\
+         "唉呀！我輸了。把賭注全部拿走吧。哼~再來一次吧~",\
+         "唉呀！我輸了。把賭注全部拿走吧。哼~再來一次吧~"]
+lose_msg=["呵呵！你輸了！那麼我把賭注全部拿走了~啦啦~要再來一局嗎？",\
+          "呵呵！你輸了！那麼我把賭注全部拿走了~啦啦~要再來一局嗎？",\
+          "呵呵！你輸了！那麼我把賭注全部拿走了~啦啦~要再來一局嗎？"]
+again_msg=["開始遊戲","玩猜拳遊戲"]
+toss_msg=[["這次是你嬴了！",""],\
+          ["這場是你嬴了！","是2連勝耶！"],\
+          ["這場是你嬴了！","是3連勝耶！"],\
+          ["這場是你嬴了！","是4連勝耶！"]]
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
@@ -148,7 +148,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>�ثe�S��������ȡA�α��󤣲šC</body></html>"
+     htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -198,7 +198,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(343,qn,"�H���𪺳��v")
+QUEST       = Quest(343,qn,"象牙塔的陰影")
 
 QUEST.addStartNpc(30834)
 

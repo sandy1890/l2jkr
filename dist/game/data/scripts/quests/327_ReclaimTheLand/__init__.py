@@ -163,7 +163,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -222,7 +222,7 @@ class Quest (JQuest) :
 						st.set("cond","3")
 						st.playSound("ItemSound.quest_middle")
 					else:
-						htmltext = "¹D¨ã¤£²Å"
+						htmltext = "é“å…·ä¸ç¬¦"
 				elif cond in [4,5] :
 					if dogtag + medallion == 0 :
 						htmltext = "30597-04.htm"
@@ -253,7 +253,7 @@ class Quest (JQuest) :
 				st.giveItems(JADE_NECKLACE_BEAD,1)
 		return
 
-QUEST		= Quest(327,qn,"¹Ü¦^¹A¦a")
+QUEST		= Quest(327,qn,"å¥ªå›è¾²åœ°")
 
 QUEST.addStartNpc(30382)
 QUEST.addStartNpc(30597)

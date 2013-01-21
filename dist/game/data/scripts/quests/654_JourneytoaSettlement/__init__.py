@@ -7,14 +7,14 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "654_JourneytoaSettlement"
 
 # NPC
-SPIRIT   = 31453  # µL¦WªºÆF»î
+SPIRIT   = 31453  # ç„¡åçš„éˆé­‚
 # MOB
-TARGET_1 = 21294  # ¤s¨¦²Ü¦Ï
-TARGET_2 = 21295  # ¤s¨¦²Ü¦Ï¥£Áõ
+TARGET_1 = 21294  # å±±è°·ç¾šç¾Š
+TARGET_2 = 21295  # å±±è°·ç¾šç¾Šå¥´éš¸
 # ITEM
-ITEM     = 8072   # ²Ü¦Ï¥Ö­²
+ITEM     = 8072   # ç¾šç¾Šçš®é©
 # REWARD
-SCROLL   = 8073   # ªÜµY®õ¨Fªºµ²¬É¯}©G®Ñ
+SCROLL   = 8073   # èŠ™ç³æ³°æ²™çš„çµç•Œç ´å’’æ›¸
 
 class Quest (JQuest) :
 
@@ -43,7 +43,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (Self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -58,10 +58,10 @@ class Quest (JQuest) :
 					if player.getLevel() >= 74 :
 						htmltext = "31453-1.htm"
 					else :
-						htmltext = "31453-0.htm" # rocknow ­×¥¿
+						htmltext = "31453-0.htm" # rocknow ä¿®æ­£
 						st.exitQuest(1)
 				else :
-					htmltext = "<html><body>¥²¶·¥ı§¹¦¨¡u<font color=\"LEVEL\">³Ì«áªº¬Ó¤l</font>¡vªº¥ô°È¡C</body></html>"
+					htmltext = "<html><body>å¿…é ˆå…ˆå®Œæˆã€Œ<font color=\"LEVEL\">æœ€å¾Œçš„çš‡å­</font>ã€çš„ä»»å‹™ã€‚</body></html>"
 					st.exitQuest(1)
 		elif id == State.STARTED:
 			if npcId == SPIRIT :
@@ -81,7 +81,7 @@ class Quest (JQuest) :
 			st.playSound("ItemSound.quest_middle")
 		return
 
-QUEST		= Quest(654,qn,"ªï±µ³Ì²×ªºµ²§½")
+QUEST		= Quest(654,qn,"è¿æ¥æœ€çµ‚çš„çµå±€")
 
 QUEST.addStartNpc(SPIRIT)
 QUEST.addTalkId(SPIRIT)

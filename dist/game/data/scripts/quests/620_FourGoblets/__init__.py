@@ -38,7 +38,7 @@ class Quest (JQuest) :
       self.questItemIds = [ANTIQUE_BROOCH,SEALED_BOX,7256,7257,7258,7259,GRAVE_PASS]
 
   def onTalk (Self,npc,player) :
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     id = st.getState()
     if id == State.CREATED :
@@ -112,8 +112,8 @@ class Quest (JQuest) :
       htmltext = "31924-E.htm"
     elif npcId == GHOST_CHAMBERLAIN_1 :
       htmltext = "31919-1.htm"
-    elif npcId == GHOST_CHAMBERLAIN_2 :    #¼W¥[NPC 31920
-      htmltext = "31920-1.htm"             #¼W¥[NPC 31920
+    elif npcId == GHOST_CHAMBERLAIN_2 :    #å¢åŠ NPC 31920
+      htmltext = "31920-1.htm"             #å¢åŠ NPC 31920
     return htmltext
 
   def onKill (self,npc,player,isPet) :
@@ -556,7 +556,7 @@ class Quest (JQuest) :
              htmltext = "31919-5.htm"
       else :
         htmltext = "31919-6.htm"
-    elif event == "20" :                            #¼W¥[NPC 31920-START
+    elif event == "20" :                            #å¢åŠ NPC 31920-START
       if st.getQuestItemsCount(SEALED_BOX) >= 1 :
         htmltext = "31920-3.htm"
         st.takeItems(SEALED_BOX,1)
@@ -733,14 +733,14 @@ class Quest (JQuest) :
           else :
              htmltext = "31920-5.htm"
       else :
-        htmltext = "31920-6.htm"                    #¼W¥[NPC 31920-END
+        htmltext = "31920-6.htm"                    #å¢åŠ NPC 31920-END
     elif event.isdigit() and int(event) in RCP_REWARDS :
       st.takeItems(RELIC,1000)
       st.giveItems(int(event),1)
       htmltext = "31454-17.htm"
     return htmltext
 
-QUEST       = Quest(620,qn,"¥|¸tªM")
+QUEST       = Quest(620,qn,"å››è–æ¯")
 
 QUEST.addStartNpc(NAMELESS_SPIRIT)
 

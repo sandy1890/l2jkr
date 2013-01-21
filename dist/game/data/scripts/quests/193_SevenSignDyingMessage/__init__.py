@@ -13,61 +13,61 @@ from com.l2jserver.gameserver.network.serverpackets import NpcSay
 qn = "193_SevenSignDyingMessage"
 
 # NPCs
-HOLLINT       = 30191  # �j���x �N���L�S
-CAIN          = 32569  # ���x �ͦ]
-ERIC          = 32570  # ���Įv ��O�J
-ATHEBALDT     = 30760  # �j���F�� �ȤӪk�S��
-SHILENSEVIL   = 27343  # �u�Y������
+HOLLINT       = 30191  # 大神官 霍爾林特
+CAIN          = 32569  # 神官 凱因
+ERIC          = 32570  # 採藥師 艾力克
+ATHEBALDT     = 30760  # 古斯達夫 亞太法特卿
+SHILENSEVIL   = 27343  # 席琳的邪念
 # ITEMS
-JACOB_NECK    = 13814  # ���U������
-DEADMANS_HERB = 13816  # ���̪��į�
-SCULPTURE     = 14353  # �ðݪ��J��
+JACOB_NECK    = 13814  # 雅各的項鍊
+DEADMANS_HERB = 13816  # 死者的藥草
+SCULPTURE     = 14353  # 疑問的雕像
 
-# �j���x �N���L�S
+# 大神官 霍爾林特
 # 30191-03.htm
-hollint_03 = "<html><body>�j���x �N���L�S�G<br>�t�d���F�����O<font color=\"LEVEL\">���x�ͦ]</font>�C<br>�L�b<font color=\"LEVEL\">�ڷ竰��������񪺼��F������</font>����C<br>�٦��A�ڦb������w���ĤJ���֪���ë�A�o�Ʊ��]�бz�O�ѤF��i���x�ͦ]�C<br>�@����Ī����ֻP�z�P�b...</body></html>"
+hollint_03 = "<html><body>大神官 霍爾林特：<br>負責慰靈祭的是<font color=\"LEVEL\">神官凱因</font>。<br>他在<font color=\"LEVEL\">歐瑞城鎮湖水附近的慰靈祭祭壇</font>附近。<br>還有，我在那項鍊已有融入祝福的祈禱，這事情也請您別忘了轉告神官凱因。<br>願殷海薩的祝福與您同在...</body></html>"
 #
-# ���x �ͦ]
+# 神官 凱因
 # 32569-01.htm
-cain_01 = "<html><body>���x �ͦ]�G<br>���M�|���ӭ��ͤH�ӧ�ڡA�ݨӦb�o�@�W���Y�Ө����A�S���@�ӥͩR���h�F�L�����~...<br>��A�A�O�Ӭ����|�漢�F�����O�H�i�D�ڨ��s�h�ߧa�C<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_02\">�ڬO�e���|�涮�U�����F��</a></body></html>"
+cain_01 = "<html><body>神官 凱因：<br>竟然會有個陌生人來找我，看來在這世上的某個角落，又有一個生命失去了他的光芒...<br>嗯，你是來為誰舉行慰靈祭的呢？告訴我來龍去脈吧。<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_02\">我是前來舉行雅各的慰靈祭</a></body></html>"
 # 32569-02.htm
-cain_02 = "<html><body>���x �ͦ]�G<br>�����x�H�u�O�_�ǰ�...�e�X�Ѥ~��赲���F�@�Ӽ��F���A�]�O�P�]�I���ӤH����L���t�@�ӸG�H�����x..<br>�A���S���@�ӫ����x���F�O�ܡH�I..��..<br>�O�֤��ЧA�L�Ӫ��H<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_03\">�ڬO�g�Ѥj���x�N���L�S���йL�Ӫ�</a></body></html>"
+cain_02 = "<html><body>神官 凱因：<br>契約官？真是奇怪啊...前幾天才剛剛結束了一個慰靈祭，也是與財富的商人交易過的另一個矮人契約官..<br>你說又有一個契約官死了是嗎？！..嗯..<br>是誰介紹你過來的？<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_03\">我是經由大神官霍爾林特介紹過來的</a></body></html>"
 # 32569-03.htm
-cain_03 = "<html><body>���x �ͦ]�G<br>�A�����O�ڷ竰�����j���x�N���L�S�ܡH<br>�o�򻡡A�o�����������x�O�b�t�d�l���ڷ竰���P�]�I���ӤH�����������o�C<br>�W�������O���F�S���������x�O..<br>�J�M�O�ѧA���|�漢�F���A����Ĥ@�ӵo�{���骺�H���ӴN�O�A�a�C<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_04\">�O���A�S��</a></body></html>"
+cain_03 = "<html><body>神官 凱因：<br>你說的是歐瑞城鎮的大神官霍爾林特嗎？<br>這麼說，這次死的契約官是在負責締結歐瑞城鎮與財富的商人之間的契約囉。<br>上次死的是高達特城的契約官呢..<br>既然是由你來舉行慰靈祭，那麼第一個發現屍體的人應該就是你吧。<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_04\">是的，沒錯</a></body></html>"
 # 32569-04.htm
-cain_04 = "<html><body>���x �ͦ]�G<br>�A�u�O���H�浽��..���L�b�i�漢�F�����e�A�ڭ̦��Ӱ��D�s�b�C<br>���F�b���F�������I�����ܡA�N�n�Ψ�s��<font color=\"LEVEL\">�u���̪��į�v</font>���F��...���̪��|�檺���F���Ӧh�A�ҥH�į�]���Χ��F�C<br>�A�[�W�A�����n�e�Ӧ��̪��į�<font color=\"LEVEL\">���Įv��O�J</font>�S��𥼨�...<br>�L�֩w�O���F�Ķ����_���į�A�ѤF�ڪ��e�U�C<br>�A�h���O�J�A���ڻ��<font color=\"LEVEL\">�u���̪��į�v</font>�n�ܡH���F�|�漢�F���A�����n�����̪��į�~��C<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_05\">�ڷ|���A������̪��į�^��</a></body></html>"
+cain_04 = "<html><body>神官 凱因：<br>你真是替人行善啊..不過在進行慰靈祭之前，我們有個問題存在。<br>為了在慰靈祭祭壇點香的話，就要用到叫做<font color=\"LEVEL\">「死者的藥草」</font>的東西...但最近舉行的慰靈祭太多，所以藥草也都用完了。<br>再加上，答應要送來死者的藥草的<font color=\"LEVEL\">採藥師艾力克</font>又遲遲未到...<br>他肯定是為了採集神奇的藥草，忘了我的委託。<br>你去找艾力克，幫我領取<font color=\"LEVEL\">「死者的藥草」</font>好嗎？為了舉行慰靈祭，必須要有死者的藥草才行。<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_05\">我會幫你領取死者的藥草回來</a></body></html>"
 # 32569-05.htm
-cain_05 = "<html><body>���x �ͦ]�G<br>���§A�I����A����h��<font color=\"LEVEL\">���Įv��O�J</font>�A<br>�M��A�ɶq�h����@��<font color=\"LEVEL\">�u���̪��į�v</font>�C<br>�ڷQ�L���ӷ|�b<font color=\"LEVEL\">���먦</font>������A�]�����Ӧa��H�X���öQ���į�ӻD�W�C<br>�٦��A�p�G�A���a�Ӧ��̪��򪫡A�N�⥦�浹�ڧa�C<br>�@�I�I�I�b�򪫤W���o�ۯ��t���𮧡A�ݨ��N���L�S�w�N�����̯��֪���ë�ĤJ�F�䤤�C���\�O�N���L�S�C<br>����A�A�N�֥h��^�į�a�C</body></html>"
+cain_05 = "<html><body>神官 凱因：<br>謝謝你！那麼，趕緊去找<font color=\"LEVEL\">採藥師艾力克</font>，<br>然後，盡量多領取一些<font color=\"LEVEL\">「死者的藥草」</font>。<br>我想他應該會在<font color=\"LEVEL\">妖精谷</font>的附近，因為那個地方以出產珍貴的藥草而聞名。<br>還有，如果你有帶來死者的遺物，就把它交給我吧。<br>哦！！！在遺物上散發著神聖的氣息，看來霍爾林特已將為死者祝福的祈禱融入了其中。不愧是霍爾林特。<br>那麼，你就快去領回藥草吧。</body></html>"
 # 32569-06.htm
-cain_06 = "<html><body>���x �ͦ]�G<br>���n�����A�֥h��b<font color=\"LEVEL\">���먦</font>����<font color=\"LEVEL\">���Įv��O�J</font>�A<br>�ӥB���n�ѤF��^<font color=\"LEVEL\">�u���̪��į�v</font>�I�I�I</body></html>"
+cain_06 = "<html><body>神官 凱因：<br>不要耽擱，快去找在<font color=\"LEVEL\">妖精谷</font>附近的<font color=\"LEVEL\">採藥師艾力克</font>，<br>而且不要忘了領回<font color=\"LEVEL\">「死者的藥草」</font>！！！</body></html>"
 # 32569-07.htm
-cain_07 = "<html><body>���x �ͦ]�G<br>�a�^<font color=\"LEVEL\">���̪��į�</font>�աA�⥦�浹�ڧa�C<br>�u�O���W�A�F�C����ڭ̴N�ӥ����a�|�漢�F���C<br>�a�L�Ӥ@�I�A�M��H�@�۪��߶}�l�|�漢�F���a�C����A�ǳƦn�F�ܡH<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage 9\">�O���A�ǳƦn�F</a></body></html>"
+cain_07 = "<html><body>神官 凱因：<br>帶回<font color=\"LEVEL\">死者的藥草</font>啦，把它交給我吧。<br>真是辛苦你了。那麼我們就來正式地舉行慰靈祭。<br>靠過來一點，然後以虔誠的心開始舉行慰靈祭吧。那麼，準備好了嗎？<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage 9\">是的，準備好了</a></body></html>"
 # 32569-08.htm
-cain_08 = "<html><body>���x �ͦ]�G<br>�u�_��...�A�]�ݨ�F�ܡH<br>���ڧ���m�첽�®ɡC�����¤W�誽�Ī��R�����c���¦���K...<br>�۱q�|�漢�F���H�ӡA�q�ӨS���o�͹L�o�˪��Ʊ��I�I�I<br>�u�Q���z���¦���K���N�q..�p�G���O�t�����̱j�P�����@...���N���ܱ��H�Ǫ����c�𮧿Ķi�F�򪫤���...<br>�`���A�̦n�٬O�o�J���[��o�Ӷ���C<br>�x�I�I�I���өǤH�O�֡H�I�I<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_09\">�����P��</a></body></html>"
+cain_08 = "<html><body>神官 凱因：<br>真奇怪...你也看到了嗎？<br>當我把遺物獻到祭壇時。往祭壇上方直衝的充滿邪惡的黑色火焰...<br>自從舉行慰靈祭以來，從來沒有發生過這樣的事情！！！<br>真想不透那黑色火焰的意義..如果不是含有死者強烈的心願...那就表示殺人犯的邪惡氣息融進了遺物之中...<br>總之，最好還是得仔細觀察這個項鍊。<br>咦！！！那個怪人是誰？！！<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_09\">環視周圍</a></body></html>"
 # 32569-09.htm
-cain_09 = "<html><body>���x �ͦ]�G<br>��M�_�X�Ӫ����өǤH�O����H<br>�n�ӧ����ڭ̤F�I�I�I�Ʊ��ڭ̵y��A�͡I�I�I<br>���Ȥ���O�n�B�z�����өǤH�I�I�I</body></html>"
+cain_09 = "<html><body>神官 凱因：<br>突然冒出來的那個怪人是什麼？<br>要來攻擊我們了！！！事情我們稍後再談！！！<br>當務之急是要處理掉那個怪人！！！</body></html>"
 # 32569-10.htm
-cain_10 = "<html><body>���x �ͦ]�G<br>���M�|�Q�ǤH��ŧ...�q���夤���o�¦�𮧫�A�ǤH�N�X�{�F�C<br>�i��b�o���`���I��A���ӻݭn�d�����T��..�S���A�n���O����<font color=\"LEVEL\">���e���T��</font>�C<br>�ڦb�Q�A���ڱN�o�����m�W���®ɡA���Ѩ㦳���c�𮧥B���Ī��¦���K�A�n���N�P���ӨӾ��������ǤH���s�e�ʡC<br>�ڻ{���o�O���U�Q�n���o�����ۤv�M<font color=\"LEVEL\">�����x�̦��`</font>���u�ۡA�ҥH�L���t�����j�N�@������A�~�|�ިӨ��өǤ�C<br>�Ө��өǤH�N�O���F����ӯu�۳Q���o�A�ҥH�~�|�ӷm�ܨ��Ӷ���C<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_11\">�~��ť�G��</a></body></html>"
+cain_10 = "<html><body>神官 凱因：<br>竟然會被怪人突襲...從項鍊中散發黑色氣息後，怪人就出現了。<br>可能在這死亡的背後，有個需要查明的訊息..沒錯，好像是有個<font color=\"LEVEL\">死前的訊息</font>。<br>我在想，當我將這項鍊獻上祭壇時，那股具有邪惡氣息且直衝的黑色火焰，好像就與那個來歷不明的怪人有連貫性。<br>我認為這是雅各想要揭發有關自己和<font color=\"LEVEL\">契約官們死亡</font>的真相，所以他那含有堅強意願的項鍊，才會引來那個怪手。<br>而那個怪人就是為了阻止那個真相被揭發，所以才會來搶奪那個項鍊。<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_11\">繼續聽故事</a></body></html>"
 # 32569-11.htm
-cain_11 = "<html><body>���x �ͦ]�G<br>�����x�̪��s�򦺤`�ƥ�M���өǤH..�H�γs���ӥX�{�b���F�������N�Q����...<br>�ӥB�ܤ��کҽլd�����G�A�M�A�|�Q�o���o��Ʊ�...�γ\�]���໡�O�ӯº骺���M..<br>���L�A�A��ť���L����<font color=\"LEVEL\">�C�ʦL</font>���Ʊ��ܡH<br>�S���A�N�O���F�ʦL�ۡA<font color=\"LEVEL\">�����M�����������v��</font>�C<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_12\">�ڦ�ť���L</a></body></html>"
+cain_11 = "<html><body>神官 凱因：<br>契約官們的連續死亡事件和那個怪人..以及連那個出現在慰靈祭的不吉利的氣息...<br>而且至今我所調查的結果，和你會被牽扯到這件事情...或許也不能說是個純粹的偶然..<br>不過，你有聽說過關於<font color=\"LEVEL\">七封印</font>的事情嗎？<br>沒錯，就是為了封印石，<font color=\"LEVEL\">黎明和黃昏之間的競爭</font>。<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_12\">我有聽說過</a></body></html>"
 # 32569-12.htm
-cain_12 = "<html><body>���x �ͦ]�G<br>���A�ڬO���ݩ󾤩������K�F���C<br>�{�b�|�ѧڨӾ�����F�������x�A�]�O�]���������������{���A�̪�o�ͪ��i�ê��s�򦺤`�ƥ�M�C�ʦL���s�e�ʡC<br>�ӥB�A���P�O�o�q���������ݡA���ӨӾ��������ǤH�A�ש�b���ѥX�{�F�C<br>�M��A�������өǤH���A�A�N�O�ڭ̾����o�@��D�֦����i���H�C<br>����...�n���n�M�ڭ̾����@�_�X�@�H�`ı�o�n�O�N�o�˿��L�A�A�ڤ@�w�|�D�`�ᮬ���C<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_13\">�ڷQ�n�@�_�X�@</a></body></html>"
+cain_12 = "<html><body>神官 凱因：<br>其實，我是隸屬於黎明的秘密幹員。<br>現在會由我來擔任慰靈祭的神官，也是因為黎明的首腦部認為，最近發生的可疑的連續死亡事件和七封印有連貫性。<br>而且，不枉費這段期間的等待，那個來歷不明的怪人，終於在今天出現了。<br>然後，殺掉那個怪人的你，就是我們黎明這一方非擁有不可的人。<br>怎麼樣...要不要和我們黎明一起合作？總覺得要是就這樣錯過你，我一定會非常後悔的。<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage cain_13\">我想要一起合作</a></body></html>"
 # 32569-13.htm
-cain_13 = "<html><body>���x �ͦ]�G<br>�Ӧn�F�I�I�I�I�A�@�w�O�ӳ̨ΤH��A�Ӵ��o�s�򦺤`�ƥ�M�C�ʦL�������s�e�ʡC<br>�H�ڳo�L�z���w����O�]����P����O�C<br>�ӡA����h���X�t�d�ڭ̾����x�ƪ�<font color=\"LEVEL\">�j���F�� �ȤӪk�S��</font>�A�L�b���o�̤�����<font color=\"LEVEL\">�ڷ竰��</font>�C<br>�h��L�A�çi�D�L�O�ѧڤ��йL�Ӫ��C<br>�����d�b���媺���e���T���M�ǤH���Ʊ��A�ڷ|�A���I��s�A�M��t�~�V�ȤӪk�S�봣��լd���i�C<br>����A���֥h��<font color=\"LEVEL\">�j���F�� �ȤӪk�S��</font>�a�C<br>�٦��@�I�I�I�I���өǤH�γ\�|���ܧA�A�ҥH�ȥ��n�[�򨾳ƫ��I�I�I�I</body></html>"
+cain_13 = "<html><body>神官 凱因：<br>太好了！！！！你一定是個最佳人選，來揭發連續死亡事件和七封印之間的連貫性。<br>以我這微弱的預知能力也能夠感受到呢。<br>來，那麼去拜訪負責我們黎明軍事的<font color=\"LEVEL\">古斯達夫 亞太法特卿</font>，他在離這裡不遠的<font color=\"LEVEL\">歐瑞城鎮</font>。<br>去找他，並告訴他是由我介紹過來的。<br>有關留在項鍊的死前的訊息和怪人的事情，我會再做點研究，然後另外向亞太法特卿提交調查報告。<br>那麼，趕快去找<font color=\"LEVEL\">古斯達夫 亞太法特卿</font>吧。<br>還有一點！！！那個怪人或許會跟蹤你，所以務必要加緊防備後方！！！！</body></html>"
 #
-# ���Įv ��O�J
+# 採藥師 艾力克
 # 32570-01.htm
-eric_01 = "<html><body>���Įv ��O�J�G<br>����Q�F�H��ڳo�h�a�����Įv���ƶܡH<br>�Y�Q�n�T�]�A�ڬݧA�O�ն]�@��C�ھ֦����A�]�u���L�O�o�X�گ�}�F�C<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage eric_02\">�ڬO�����x�ͦ]���e�U�ӨӪ�</a></body></html>"
+eric_01 = "<html><body>採藥師 艾力克：<br>有何貴幹？找我這貧窮的採藥師有事嗎？<br>若想要劫財，我看你是白跑一趟。我擁有的，也只不過是這幾根草罷了。<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage eric_02\">我是受神官凱因的委託而來的</a></body></html>"
 # 32570-02.htm
-eric_02 = "<html><body>���Įv ��O�J�G<br>���x�ͦ]�H�u�r�I�I�I�I�V�|�A�ڳ��M�ѱo�@���G�b�C<br>�@�W�~���ڡA�Ʊ��۵M�N�O���M�F...<br>�ڤ@�ߴM��u���F���t�\��v..���M�⥦���ѤF�C<br>���A�N�O�ӻ���ͦ]�e�U���u���̪��į�v���ܡH<br>�ӡA�u���̪��į�v�b�o�̡C���֮��h�浹�ͦ]�A�M�ᶶ�K��L���n��p�C</body></html>"
+eric_02 = "<html><body>採藥師 艾力克：<br>神官凱因？哎呀！！！！糟糕，我竟然忘得一乾二淨。<br>一上年紀啊，事情自然就記不清了...<br>我一心尋找「精靈的含淚草」..竟然把它給忘了。<br>那你就是來領取凱因委託的「死者的藥草」的嗎？<br>來，「死者的藥草」在這裡。趕快拿去交給凱因，然後順便跟他說聲抱歉。</body></html>"
 # 32570-03.htm
-eric_03 = "<html><body>���Įv ��O�J�G<br>�W�~���F�A�H�ɳ��|���O���M�Ʊ����ɭ�...<br>�A�٨S�X�o�ڡH<br>���ֱN�į���浹�ͦ]�C</body></html>"
+eric_03 = "<html><body>採藥師 艾力克：<br>上年紀了，隨時都會有記不清事情的時候...<br>你還沒出發啊？<br>趕快將藥草轉交給凱因。</body></html>"
 #
-# �j���F�� �ȤӪk�S��
+# 古斯達夫 亞太法特卿
 # 30760-01.htm
-athebaldt_01 = "<html><body>�j���F�� �ȤӪk�S��G<br>�A�O���x�ͦ]���йL�Ӫ��H�@�I�I��ӬO�A�ڡC�ڱq�ͦ]���̤w��ť������A<br>�ͦ]�ٻ��F�ܦh�����A���n�ܩO�C<br>�ڦ��ܦh�Ʊ��Q�nť�A���A�ӥB�]�Q�����Ať�C<br>���O�b�����e�A�ڷQ�������·N�A�P�§A����U���x�ͦ]�A���F�ڭ̾����ݭn�լd���Ʊ��C<br>�A�|�����ڭ̾��������¶ܡH<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage athebaldt_02\">�ڷ|�ۤ߱���</a></body></html>"
+athebaldt_01 = "<html><body>古斯達夫 亞太法特卿：<br>你是神官凱因介紹過來的？哦！！原來是你啊。我從凱因那裡已有聽到消息，<br>凱因還說了很多有關你的好話呢。<br>我有很多事情想要聽你說，而且也想說給你聽。<br>但是在那之前，我想先表示謝意，感謝你曾協助神官凱因，幫了我們黎明需要調查的事情。<br>你會接受我們黎明的答謝嗎？<br><a action=\"bypass -h Quest 193_SevenSignDyingMessage athebaldt_02\">我會誠心接受</a></body></html>"
 # 30760-02.htm
-athebaldt_02 = "<html><body>�j���F�� �ȤӪk�S��G<br>�ӡA�����ڭ̪����§a�C<br>����A�ڷQ�A�]�Ӳ֤F�A���P�ȳ~���ҹy��A�A�ӧ�ڧa�C<br>�����C�ʦL���Ʊ��A�ڦ��ܦh�ܭn��A���C</body></html>"
+athebaldt_02 = "<html><body>古斯達夫 亞太法特卿：<br>來，接受我們的答謝吧。<br>那麼，我想你也該累了，放鬆旅途的勞頓後，再來找我吧。<br>有關七封印的事情，我有很多話要對你說。</body></html>"
 
 class Quest (JQuest) :
 	def __init__(self,id,name,descr):
@@ -103,9 +103,9 @@ class Quest (JQuest) :
 				return ""
 		elif event == "cain_09" :
 			htmltext = cain_09
-			npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"�u" + player.getName() + "�v�I�ڭ̱o���˨��өǤH�A�ڷ|�ɥ��O�����A���I"))
+			npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"「" + player.getName() + "」！我們得擊倒那個怪人，我會盡全力來幫你的！"))
 			monster = self.addSpawn(SHILENSEVIL, 82624, 47422, -3220, 0, False, 60000, True)
-			monster.broadcastPacket(NpcSay(monster.getObjectId(),0,monster.getNpcId(),"���Ӫ��~���D�H���O�A��..."))
+			monster.broadcastPacket(NpcSay(monster.getObjectId(),0,monster.getNpcId(),"那個物品的主人不是你們..."))
 			monster.setRunning()
 			monster.addDamageHate(player,0,999)
 			monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st.getPlayer())
@@ -117,15 +117,15 @@ class Quest (JQuest) :
 		elif event == "athebaldt_02" :
 			htmltext = athebaldt_02
 			st.addExpAndSp(52518015,5817677)
-			#st.addExpAndSp(25000000,2500000)  # ��½�� �g���
+			#st.addExpAndSp(25000000,2500000)  # 嗨翻天 經驗值
 			st.unset("cond")
 			st.setState(State.COMPLETED)
 			st.exitQuest(False)
 			st.playSound("ItemSound.quest_finish")
-		#  �j���x �N���L�S
+		#  大神官 霍爾林特
 		elif event == "hollint_03" :
 			htmltext = hollint_03
-		#  ���x �ͦ]
+		#  神官 凱因
 		elif event == "cain_01" :
 			htmltext = cain_01
 		elif event == "cain_02" :
@@ -152,14 +152,14 @@ class Quest (JQuest) :
 			htmltext = cain_12
 		elif event == "cain_13" :
 			htmltext = cain_13
-		#  ���Įv ��O�J
+		#  採藥師 艾力克
 		elif event == "eric_01" :
 			htmltext = eric_01
 		elif event == "eric_02" :
 			htmltext = eric_02
 		elif event == "eric_03" :
 			htmltext = eric_03
-		#  �j���F�� �ȤӪk�S��
+		#  古斯達夫 亞太法特卿
 		elif event == "athebaldt_01" :
 			htmltext = athebaldt_01
 		elif event == "athebaldt_02" :
@@ -214,14 +214,14 @@ class Quest (JQuest) :
 		st = player.getQuestState(qn)
 		if not st : return
 		if npc.getNpcId() == SHILENSEVIL and st.getInt("cond") == 4 :
-			npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"�u" + player.getName() + "�v�I�{�b�ڴN���A�@�B..���L�A�ڤ@�w�|���A���C"))
-			npc.broadcastPacket(NpcSay(32569,0,32569,"�ܦn�A�u" + player.getName() + "�v�C�ܰ��������o�W�A�C"))
+			npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"「" + player.getName() + "」！現在我就讓你一步..不過，我一定會抓到你的。"))
+			npc.broadcastPacket(NpcSay(32569,0,32569,"很好，「" + player.getName() + "」。很高興能幫得上你。"))
 			st.giveItems(SCULPTURE, 1)
 			st.set("cond", "5")
 			st.playSound("ItemSound.quest_middle")
 		return
 
-QUEST	= Quest(193,qn,"�C�ʦL�A���e���T��")
+QUEST	= Quest(193,qn,"七封印，死前的訊息")
 
 QUEST.addStartNpc(HOLLINT)
 QUEST.addTalkId(HOLLINT)

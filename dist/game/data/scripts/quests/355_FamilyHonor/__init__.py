@@ -73,7 +73,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -104,7 +104,7 @@ class Quest (JQuest) :
      if st.getQuestItemsCount(WORK_OF_BERONA) :   
        htmltext = "30929-0.htm"
      else :
-       htmltext = "<html><body>§A¨S¦³¥i¥HÅ²©wªºªF¦è¡C</body></html>"
+       htmltext = "<html><body>ä½ æ²’æœ‰å¯ä»¥é‘‘å®šçš„æ±è¥¿ã€‚</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -122,7 +122,7 @@ class Quest (JQuest) :
        st.giveItems(BUST_OF_ANCIENT_GODDESS,1)      
    return
 
-QUEST       = Quest(355,qn,"®a±ÚªººaÄ£")
+QUEST       = Quest(355,qn,"å®¶æ—çš„æ¦®è€€")
 
 QUEST.addStartNpc(GALIBREDO)
 QUEST.addTalkId(GALIBREDO)

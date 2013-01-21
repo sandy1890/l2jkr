@@ -91,7 +91,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -128,7 +128,7 @@ class Quest (JQuest) :
         htmltext = "30594-9.htm"
    return htmltext
 
-QUEST       = Quest(378,qn,"²±¤jªº±ß®b")
+QUEST       = Quest(378,qn,"ç››å¤§çš„æ™šå®´")
 
 
 QUEST.addStartNpc(RANSPO)

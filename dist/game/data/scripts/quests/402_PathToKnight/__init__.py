@@ -65,37 +65,37 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_accept")
            st.giveItems(MARK_OF_ESQUIRE,1)
         else:
-           htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+           htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30332-02.htm" :
         if squire and not guards_mark1 and not coin1:
           st.giveItems(GLUDIO_GUARDS_MARK1,1)
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30289-03.htm" :
         if squire and not church_mark1 and not coin2:
           st.giveItems(EINHASAD_CHURCH_MARK1,1)
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30379-02.htm" :
         if squire and not guards_mark2 and not coin3:
           st.giveItems(GLUDIO_GUARDS_MARK2,1)
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30037-02.htm" :
         if squire and not church_mark2 and not coin4:
           st.giveItems(EINHASAD_CHURCH_MARK2,1)
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30039-02.htm" :
         if squire and not guards_mark3 and not coin5:
           st.giveItems(GLUDIO_GUARDS_MARK3,1)
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30031-02.htm" :
         if squire and not church_mark3 and not coin6:
           st.giveItems(EINHASAD_CHURCH_MARK3,1)
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30417-13.htm" :
         if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
           for item in range(1162,1180) :
@@ -115,7 +115,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_finish")
           player.sendPacket(SocialAction(player.getObjectId(),3))
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     elif event == "30417-14.htm" :
         if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
           if player.getLevel() >= 20 :
@@ -134,12 +134,12 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_finish")
           player.sendPacket(SocialAction(player.getObjectId(),3))
         else:
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     return htmltext
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -153,7 +153,7 @@ class Quest (JQuest) :
    church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
    cond = st.getInt("cond")
    if id == State.COMPLETED:
-      htmltext="<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext="<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    elif npcId == 30417 :
       if cond==0 :
@@ -281,7 +281,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(402,qn,"¦¨¬°ÃM¤hªº¸ô")
+QUEST       = Quest(402,qn,"æˆç‚ºé¨å£«çš„è·¯")
 
 QUEST.addStartNpc(30417)
 

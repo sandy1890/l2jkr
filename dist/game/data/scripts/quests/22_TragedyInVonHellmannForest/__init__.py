@@ -74,7 +74,7 @@ class Quest (JQuest) :
 					st.takeItems(SKULL,-1)
 					priest = st.addSpawn(GHOST_PRIEST,38354,-49777,-1128,120000)
 					st.startQuestTimer("Despawn Ghost Priest",110000,priest)
-					AutoChat(priest,"¥H"+player.getName()+"¬°¦W¤§¤H°Ú¡A¥s§Úªº¤H´N¬O§A¶Ü...")
+					AutoChat(priest,"ä»¥"+player.getName()+"ç‚ºåä¹‹äººå•Šï¼Œå«æˆ‘çš„äººå°±æ˜¯ä½ å—...")
 					self.priest = player.getName()
 			elif st.getInt("id") == 4 and st.getQuestItemsCount(CROSS) > 0 :
 				if self.tifaren == 1 :
@@ -86,7 +86,7 @@ class Quest (JQuest) :
 					st.takeItems(SKULL,-1)
 					priest = st.addSpawn(GHOST_PRIEST,38354,-49777,-1128,120000)
 					st.startQuestTimer("Despawn Ghost Priest",110000,priest)
-					AutoChat(priest,"¥H"+player.getName()+"¬°¦W¤§¤H°Ú¡A¥s§Úªº¤H´N¬O§A¶Ü...")
+					AutoChat(priest,"ä»¥"+player.getName()+"ç‚ºåä¹‹äººå•Šï¼Œå«æˆ‘çš„äººå°±æ˜¯ä½ å—...")
 					self.priest = player.getName()
 		elif event == "31528-05.htm" :
 			st.playSound("AmbSound.d_horror_03")
@@ -135,7 +135,7 @@ class Quest (JQuest) :
 			st.set("cond","16")
 			st.playSound("ItemSound.quest_accept")
 		elif event == "Despawn Ghost Priest" :
-			AutoChat(npc,"ºë¯«®ø´².. ²{¦b¬O¤£¬O¦^¥hªº®É¨è...")
+			AutoChat(npc,"ç²¾ç¥æ¶ˆæ•£.. ç¾åœ¨æ˜¯ä¸æ˜¯å›å»çš„æ™‚åˆ»...")
 			npc.reduceCurrentHp(9999999,npc,None)
 			self.tifaren = 0
 			if st.getQuestTimer("Despawn Ghost Priest 2") :
@@ -144,7 +144,7 @@ class Quest (JQuest) :
 		elif event == "Despawn Ghost Priest 2" :
 			npc.reduceCurrentHp(9999999,npc,None)
 			self.tifaren = 0
-			AutoChat(npc,"ºë¯«®ø´².. ²{¦b¬O¤£¬O¦^¥hªº®É¨è...")
+			AutoChat(npc,"ç²¾ç¥æ¶ˆæ•£.. ç¾åœ¨æ˜¯ä¸æ˜¯å›å»çš„æ™‚åˆ»...")
 			if st.getQuestTimer("Despawn Ghost Priest") :
 				st.getQuestTimer("Despawn Ghost Priest").cancel()
 			return
@@ -159,7 +159,7 @@ class Quest (JQuest) :
 
 	def onTalk (self,npc,player):
 		st = player.getQuestState(qn)
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		if not st: return htmltext
 
 		npcId = npc.getNpcId()
@@ -170,7 +170,7 @@ class Quest (JQuest) :
 		onlyone = st.getInt("onlyone")
 
 		if state == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif state == State.CREATED :
 			if npcId == TIFAREN and cond == 0 :
 				st2 = player.getQuestState("21_HiddenTruth")
@@ -309,7 +309,7 @@ class Quest (JQuest) :
 					st.set("cond","5")
 		return
 
-QUEST		= Quest(22,qn,"«¢°Ò´ËªLªº´d¼@")
+QUEST		= Quest(22,qn,"å“ˆæ›¼æ£®æ—çš„æ‚²åŠ‡")
 
 QUEST.addStartNpc(TIFAREN)
 

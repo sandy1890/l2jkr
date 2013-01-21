@@ -63,7 +63,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -75,13 +75,13 @@ class Quest (JQuest) :
 		st2 = player.getQuestState("15_SweetWhisper")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == HIERARCH and cond == 0 :
 				if st2 and st2.getState() == State.COMPLETED:
 					htmltext = "31517-00.htm"
 				else :
-					htmltext = "<html><body>¥²¶·¥ı§¹¦¨¡u²¢¬üªº²Ó»y¡vªº¥ô°È¡C</body></html>"
+					htmltext = "<html><body>å¿…é ˆå…ˆå®Œæˆã€Œç”œç¾çš„ç´°èªã€çš„ä»»å‹™ã€‚</body></html>"
 					st.exitQuest(1)
 		elif id == State.STARTED :
 			if npcId == HIERARCH :
@@ -132,7 +132,7 @@ class Quest (JQuest) :
 					htmltext = "31511-03.htm"
 		return htmltext
 
-QUEST		= Quest(17,qn,"¥ú½÷¬V¤W¶Â·t")
+QUEST		= Quest(17,qn,"å…‰è¼æŸ“ä¸Šé»‘æš—")
 
 QUEST.addStartNpc(HIERARCH)
 

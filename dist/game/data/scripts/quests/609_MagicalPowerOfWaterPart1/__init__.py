@@ -144,8 +144,8 @@ class Quest (JQuest) :
                         spawnedNpc = st.addSpawn(Eye,xx,yy,zz,10000)
                         st.set("spawned","1")
                         st.set("npcid",str(npc.getObjectId()))
-                        #AutoChat(spawnedNpc,"You cannot escape Asefa's eyes!")           #²{¦b³£¤£·|¥X³o¹ï¸Ü
-                        #st.startQuestTimer("Asefa's Eye has despawned",9500,spawnedNpc)  #²{¦b³£¤£·|¥X³o¹ï¸Ü
+                        #AutoChat(spawnedNpc,"You cannot escape Asefa's eyes!")           #ç¾åœ¨éƒ½ä¸æœƒå‡ºé€™å°è©±
+                        #st.startQuestTimer("Asefa's Eye has despawned",9500,spawnedNpc)  #ç¾åœ¨éƒ½ä¸æœƒå‡ºé€™å°è©±
                         if Red_Totem :
                             st.takeItems(Totem,-1)
     return
@@ -167,7 +167,7 @@ class Quest (JQuest) :
     return
 
 
-QUEST       = Quest(609,qn,"¤ô¤§Å]¤O-¤W½g")
+QUEST       = Quest(609,qn,"æ°´ä¹‹é­”åŠ›-ä¸Šç¯‡")
 
 QUEST.addStartNpc(Wahkan)
 QUEST.addTalkId(Wahkan)

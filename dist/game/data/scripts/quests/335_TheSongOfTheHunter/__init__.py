@@ -215,45 +215,45 @@ Cyb_Rewards = {
     }
 
 Tor_menu = [
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3727\">C:­x¯«¥d­}´µ¹ÏÄË40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3728\">C:´£º¿§J¥É¥Û¶µÁå50­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3729\">C:ªşªk©¥¥Û°ª±[ªº¸H¤ù50­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3730\">C:¥¨¤j²´©Ç¦×30­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3731\">C:¨¸´c¨ÈÀs¤§³J40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3732\">C:¨¸´c»h»i¦uÅ@ªÌªº¤ö100­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3733\">C:¤`ªÌÂêÃì50­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3734\">C:·Å¼wÂÄ´µªº¤ú30­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3735\">C:¸¯¹p­}´µªºÀY°©100­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3736\">C:®õ¥i¶ÂÂ`¥Û¶µÁå50­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3737\">C:¥d¾|­¹¤H§¯ªºÀY30­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3738\">C:¶ğªLªº¶H¤ú²Å©G40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3739\">B:¨½¦h¤¸¦Ñ®³©Ô§JÀYÆ`</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3740\">B:ªşªkÁlÅ]ªº¨¤50­Ó</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3741\">B:¥¬¿à¥dÃ~¤H³D¤§¹ÏÄË50­Ó</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3742\">B:³q½r-¨½¦h©G³N¤h§J¦¸</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3743\">B:³q½r-´£º¿§J¬ğÀ»¶¤ªø¥d¼İ§J</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3744\">B:¥i¬¥¤ñªº¬rÅn30­Ó</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3746\">A:¸¯Á¢­}´µ­º»â¤Ä§J-º¿°ê§J¤U¥¨¤Hªº¥ÛªO</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3747\">A:¥d¾|±Úªø¼Ú¾|¦«¥v©`°Òªº¸g¨å</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3749\">C:±Z¨FªLªº¬rÅn40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3750\">C:®õ¥iÃ~¤H¹ÏÄË50­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3751\">C:«¢¨½¯SªºÅì¶µÁå40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3752\">C:¥j¥N«Ò°êªº»É¹ô20­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3753\">C:©¬§JÄõ¤§¥Ö30­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3754\">C:Áü­·¸H¤ù40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3755\">C:®ü¼S¸H¤ù40­Ó</a><br>",    #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3756\">C:¤ù¥£ªºÃO¤ò40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3758\">C:ÁÉ°Ç¿Õ´µªº»È¦âÃO¤ò30­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3759\">C:¶ğº¸§J­¹¤H§¯ªº¹ÏÄË30­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3760\">B:³q½r-´£º¿§Jªº¹Îªø¶ø©ø</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3761\">B:³q½r-®õ¥iªº¹Îªø¥d§JÄõ</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3762\">B:¯Çº¸§Æ´µªºÆF»î¥Û40­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3763\">B:«ÒµÜ´¶¤§²´20­Ó</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3764\">B:¿W¨¤Ã~¤§¨¤20­Ó</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3765\">B:§Jº¸¿Õ´µªº¶Àª÷ÃO¤ò</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3766\">A:¦º¥}ÀY°©20­Ó</a><br>",
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3767\">A:¯S©Ô§È´µ°ê¤ıªº¯İ¹³</a><br>",  #pmq ­×§ï¤¤¤å¤Æ
-    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3768\">A:¥d¼w©i´µ°ê¤ı¿Ë½Ã¶¤¤§¼C10­Ó</a><br>"  #pmq ­×§ï¤¤¤å¤Æ
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3727\">C:è»ç¥å¡è¿ªæ–¯åœ–é¨°40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3728\">C:æç‘ªå…‹ç‰çŸ³é …éŠ50å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3729\">C:é™„æ³•å²©çŸ³é«˜å´™çš„ç¢ç‰‡50å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3730\">C:å·¨å¤§çœ¼æ€ªè‚‰30å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3731\">C:é‚ªæƒ¡äºé¾ä¹‹è›‹40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3732\">C:é‚ªæƒ¡èœ¥èœ´å®ˆè­·è€…çš„çˆª100å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3733\">C:äº¡è€…é–éˆ50å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3734\">C:æº«å¾·è–©æ–¯çš„ç‰™30å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3735\">C:è‘›é›·è¿ªæ–¯çš„é ­éª¨100å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3736\">C:æ³°å¯é»‘æ›œçŸ³é …éŠ50å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3737\">C:å¡é­¯é£Ÿäººå¦–çš„é ­30å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3738\">C:å¡”æ—çš„è±¡ç‰™ç¬¦å’’40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3739\">B:é‡Œå¤šå…ƒè€æ‹¿æ‹‰å…‹é ­é¡±</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3740\">B:é™„æ³•ç¿¼é­”çš„è§’50å€‹</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3741\">B:å¸ƒè³´å¡ç¸äººè›‡ä¹‹åœ–é¨°50å€‹</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3742\">B:é€šç·-é‡Œå¤šå’’è¡“å£«å…‹æ¬¡</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3743\">B:é€šç·-æç‘ªå…‹çªæ“ŠéšŠé•·å¡æ¯…å…‹</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3744\">B:å¯æ´›æ¯”çš„æ¯’å›Š30å€‹</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3746\">A:è‘›è•¾è¿ªæ–¯é¦–é ˜å‹¾å…‹-ç‘ªåœ‹å…‹ä¸‹å·¨äººçš„çŸ³æ¿</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3747\">A:å¡é­¯æ—é•·æ­é­¯æ‰˜å²å¥ˆæ›¼çš„ç¶“å…¸</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3749\">C:å´”æ²™æ—çš„æ¯’å›Š40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3750\">C:æ³°å¯ç¸äººåœ–é¨°50å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3751\">C:å“ˆé‡Œç‰¹çš„é±—é …éŠ40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3752\">C:å¤ä»£å¸åœ‹çš„éŠ…å¹£20å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3753\">C:å¸•å…‹è˜­ä¹‹çš®30å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3754\">C:é¢¶é¢¨ç¢ç‰‡40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3755\">C:æµ·å˜¯ç¢ç‰‡40å€‹</a><br>",    #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3756\">C:ç‰‡å¥´çš„é¬ƒæ¯›40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3758\">C:è³½å‹’è«¾æ–¯çš„éŠ€è‰²é¬ƒæ¯›30å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3759\">C:å¡”çˆ¾å…‹é£Ÿäººå¦–çš„åœ–é¨°30å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3760\">B:é€šç·-æç‘ªå…‹çš„åœ˜é•·å¥§æ˜†</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3761\">B:é€šç·-æ³°å¯çš„åœ˜é•·å¡å…‹è˜­</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3762\">B:ç´çˆ¾å¸Œæ–¯çš„éˆé­‚çŸ³40å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3763\">B:å¸èŠæ™®ä¹‹çœ¼20å€‹</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3764\">B:ç¨è§’ç¸ä¹‹è§’20å€‹</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3765\">B:å…‹çˆ¾è«¾æ–¯çš„é»ƒé‡‘é¬ƒæ¯›</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3766\">A:æ­»å›šé ­éª¨20å€‹</a><br>",
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3767\">A:ç‰¹æ‹‰åº‡æ–¯åœ‹ç‹çš„èƒ¸åƒ</a><br>",  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
+    "<a action=\"bypass -h Quest 335_TheSongOfTheHunter 3768\">A:å¡å¾·å§†æ–¯åœ‹ç‹è¦ªè¡›éšŠä¹‹åŠ10å€‹</a><br>"  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
     ]
 
 
@@ -319,7 +319,7 @@ class Quest (JQuest) :
                 htmltext = "30745-04.htm"
         elif event == "Tor_list_1" :
             if not st.getInt("hasTask") :
-                htmltext = "<html><body>Ây¤H¤½·|·|­û¦«°Ç:<br>"  #pmq ­×§ï¤¤¤å¤Æ
+                htmltext = "<html><body>çµäººå…¬æœƒæœƒå“¡æ‰˜å‹’:<br>"  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
                 pins = st.getQuestItemsCount(Leaf_Pin)
                 reply_0 = Rnd.get(12)
                 reply_1 = Rnd.get(12)
@@ -346,7 +346,7 @@ class Quest (JQuest) :
                 htmltext += "</body></html>"
         elif event == "Tor_list_2" :
             if not st.getInt("hasTask") :
-                htmltext = "<html><body>Ây¤H¤½·|·|­û¦«°Ç:<br>"  #pmq ­×§ï¤¤¤å¤Æ
+                htmltext = "<html><body>çµäººå…¬æœƒæœƒå“¡æ‰˜å‹’:<br>"  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
                 pins = st.getQuestItemsCount(Leaf_Pin)
                 reply_0 = Rnd.get(10)
                 reply_1 = Rnd.get(10)
@@ -397,7 +397,7 @@ class Quest (JQuest) :
         return htmltext
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+        htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
         st = player.getQuestState(qn)
         if not st : return htmltext
         npcId = npc.getNpcId()
@@ -562,7 +562,7 @@ class Quest (JQuest) :
                     if npcId in [27160,27164] and Rnd.get(2) :
                         st.addSpawn(27150,300000)
                         st.addSpawn(27150,300000)
-                        AutoChat(npc,"§Ú­Ì±N·|§â¥j¥N«Ò°êªº¿ò²£±a¨«¡I")  #pmq ­×§ï¤¤¤å¤Æ
+                        AutoChat(npc,"æˆ‘å€‘å°‡æœƒæŠŠå¤ä»£å¸åœ‹çš„éºç”¢å¸¶èµ°ï¼")  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
         elif cond == 3 :
             if npcId in Tor_requests_2.keys() :
                 req,give,amount,chance = Tor_requests_2[npcId]
@@ -576,10 +576,10 @@ class Quest (JQuest) :
                         if npcId == 27162 and Rnd.get(2) :
                             st.addSpawn(27150,300000)
                             st.addSpawn(27150,300000)
-                            AutoChat(npc,"§Ú­Ì±N·|§â¥j¥N«Ò°êªº¿ò²£±a¨«¡I")  #pmq ­×§ï¤¤¤å¤Æ
+                            AutoChat(npc,"æˆ‘å€‘å°‡æœƒæŠŠå¤ä»£å¸åœ‹çš„éºç”¢å¸¶èµ°ï¼")  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
                     if npcId in [20661,20662,20589,20590,20639] and not Rnd.get(20) :
                         st.addSpawn(Gremlin_Filcher,300000)
-                        AutoChat(npc,"±Nº}«Gªº°{Ä£¯]Ä_®³¥X¨Ó¡I³£¬O§Úªº¡I")  #pmq ­×§ï¤¤¤å¤Æ
+                        AutoChat(npc,"å°‡æ¼‚äº®çš„é–ƒè€€ç å¯¶æ‹¿å‡ºä¾†ï¼éƒ½æ˜¯æˆ‘çš„ï¼")  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
             elif npcId == Gremlin_Filcher :
                 req = 0
                 for item in Filcher.keys() :
@@ -594,7 +594,7 @@ class Quest (JQuest) :
                             st.playSound("ItemSound.quest_middle")
                         else :
                             st.playSound("ItemSound.quest_itemget")
-                        AutoChat(npc,"§c¡I")  #pmq ­×§ï¤¤¤å¤Æ
+                        AutoChat(npc,"å‘ƒï¼")  #pmq ä¿®æ”¹ä¸­æ–‡åŒ–
         if npcId in Tor_requests_tospawn.keys() and rand < 10:
             it1,it2,id = Tor_requests_tospawn[npcId]
             if st.getQuestItemsCount(it1) and not st.getQuestItemsCount(it2) :
@@ -615,7 +615,7 @@ class Quest (JQuest) :
                 st.giveItems(3708,1)
         return
 
-QUEST = Quest(335,qn,"Ây¤H¤§ºq")
+QUEST = Quest(335,qn,"çµäººä¹‹æ­Œ")
 
 QUEST.addStartNpc(Grey)
 QUEST.addTalkId(Grey)

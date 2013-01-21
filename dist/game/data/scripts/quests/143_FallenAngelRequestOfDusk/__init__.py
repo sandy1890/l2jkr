@@ -68,7 +68,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -77,7 +77,7 @@ class Quest (JQuest) :
     cond = st.getInt("cond")
     if id == State.CREATED : return htmltext
     if id == State.COMPLETED :
-       htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+       htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
     elif npcId == NATOOLS :
        if cond == 1 :
           htmltext = "30894-01.htm"
@@ -126,7 +126,7 @@ class Quest (JQuest) :
           htmltext = "32369-10.htm"
     return htmltext
 
-QUEST       = Quest(143,qn,"¼Y¸¨ªº¤Ñ¨Ï-¶À©üªº©e°U")
+QUEST       = Quest(143,qn,"å¢œè½çš„å¤©ä½¿-é»ƒæ˜çš„å§”è¨—")
 
 #this quest doesnt have starter npc, quest will appear in list only when u select him from quest 998
 QUEST.addTalkId(NATOOLS)

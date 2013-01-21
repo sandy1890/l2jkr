@@ -178,7 +178,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -197,7 +197,7 @@ class Quest (JQuest) :
           else:
             htmltext = "30104-03.htm"
    elif npcId == 30104 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
@@ -460,7 +460,7 @@ class Quest (JQuest) :
             st.set("cond","8")
    return
 
-QUEST       = Quest(221,qn,"Ácºaªº¦ÒÅç")
+QUEST       = Quest(221,qn,"ç¹æ¦®çš„è€ƒé©—")
 
 QUEST.addStartNpc(30104)
 

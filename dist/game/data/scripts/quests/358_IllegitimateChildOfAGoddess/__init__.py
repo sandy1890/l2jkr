@@ -7,7 +7,7 @@ from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
-QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 358,"IllegitimateChildOfAGoddess","¤k¯«ªº¨p¥Í¤l"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 358,"IllegitimateChildOfAGoddess","å¥³ç¥çš„ç§ç”Ÿå­"
 qn = "358_IllegitimateChildOfAGoddess"
 
 #Variables
@@ -41,8 +41,8 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        st.set("cond","1")
        st.playSound("ItemSound.quest_accept")
-    # pmg­×¥¿ elif event == "30862-6.htm" :
-    # pmg­×¥¿    st.exitQuest(1)
+    # pmgä¿®æ­£ elif event == "30862-6.htm" :
+    # pmgä¿®æ­£    st.exitQuest(1)
     elif event == "30862-7.htm" :
        if st.getQuestItemsCount(SN_SCALE) >= REQUIRED :
           st.takeItems(SN_SCALE,REQUIRED)
@@ -56,7 +56,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 

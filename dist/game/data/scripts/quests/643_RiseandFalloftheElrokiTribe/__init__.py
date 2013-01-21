@@ -20,46 +20,46 @@ BONES_OF_A_PLAINS_DINOSAUR = 8776
 REWARDS = range(8712,8723)
 # Singsing npc Html
 # 32106-00
-Singsing_A = "<html><body>���D�G<br>��~�_�I�a��~�b��M�i�����Ʊ��ܡH�o���o�̵o�{��l���q�A�ȤB��f�b�o�̶}�]�F�@�ӽX�Y�C<br>��M�o�a�誺�_�I�a�����W�[�A���߳o�̪��]�k�v�]�v���W�[�C<br>�ڭ̰��F�ǳƲ�A�]���ѫK�Q���A�ȵ��ӳX���a���H�A�ӥB�]�P���������C<br>�{�b���ѫ_�I�a�̻P�e�U�̭̪��pô�~�ȡC<br>��F�C�{�b������@�өe�U...<br>�@...<br>�ݨӳo�e�U��_�I�a�z���I�x����C<br>(�u���F�쵥��75�H�W�~�������ȡC)</body></html>"
+Singsing_A = "<html><body>辛刑：<br>啊~冒險家啊~在找尋可做的事情嗎？這次這裡發現原始之島，亞丁港口在這裡開設了一個碼頭。<br>找尋這地方的冒險家漸漸增加，關心這裡的魔法師也逐漸增加。<br>我們除了準備船隻，也提供便利的服務給來訪此地的人，而且也與原住民交易。<br>現在提供冒險家們與委託者們的聯繫業務。<br>對了。現在有收到一個委託...<br>哦...<br>看來這委託對冒險家您有點困難喔。<br>(只有達到等級75以上才能執行任務。)</body></html>"
 # 32106-01
-Singsing_B = "<html><body>���D�G<br>��~�_�I�a��~�b��M�i�����Ʊ��ܡH�o���o�̵o�{��l���q�A�ȤB��f�b�o�̶}�]�F�@�ӽX�Y�C<br>��M�o�a�誺�_�I�a�����W�[�A���߳o�̪��]�k�v�]�v���W�[�C<br>�ڭ̰��F�ǳƲ�A�]���ѫK�Q���A�ȵ��ӳX���a���H�A�ӥB�]�P���������C<br>�P�ɤ]���ѫ_�I�a�̻P�e�U�̭̪��pô�~�ȡC<br>��F�C�{�b������@�өe�U...<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_C\">�O����e�U�O�H</a></body></html>"
+Singsing_B = "<html><body>辛刑：<br>啊~冒險家啊~在找尋可做的事情嗎？這次這裡發現原始之島，亞丁港口在這裡開設了一個碼頭。<br>找尋這地方的冒險家漸漸增加，關心這裡的魔法師也逐漸增加。<br>我們除了準備船隻，也提供便利的服務給來訪此地的人，而且也與原住民交易。<br>同時也提供冒險家們與委託者們的聯繫業務。<br>對了。現在有收到一個委託...<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_C\">是什麼委託呢？</a></body></html>"
 # 32106-02
-Singsing_C = "<html><body>���D�G<br>�b�o��l���q�Ϯ��ۤӥj���ͪ�-���s�A�O�b�ȤB�j���ݤ��쪺�C�����Ѫ��]�k�v�̻��]���s�ѯ����Ȩe�̱j�����O�q�A�]�����P���H�êӧ@�ԹL�C�]�Y�ح�]�b�ȤB�j���w�g�������o�ǥͪ����b���a�Q�o�{�F�C<br>�b�X�Y����u���o�{����L�z���ͪ��A<br>�s������檺�]�k�v�����F��s�ݭn���ͪ������Y�C�p�G���Ѯ��s�a�^�������Y�A�ڱN���ʶR��F���e�U�H�C�z�n�����e�U�ܡH<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_D\">�ϰϨ��ؤp��...�ګַܼN���z</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_I\">���n�N��...�ڹ益���������߯g...�藍�_</a></body></html>"
+Singsing_C = "<html><body>辛刑：<br>在這原始之島棲息著太古的生物-恐龍，是在亞丁大陸看不到的。有知識的魔法師們說因為連諸神都怕牠們強悍的力量，因此曾與巨人並肩作戰過。因某種原因在亞丁大陸已經消失的這些生物竟在此地被發現了。<br>在碼頭附近只有發現比較微弱的生物，<br>叫做畢菲格的魔法師說為了研究需要此生物的骨頭。如果擊敗恐龍帶回它的骨頭，我將它購買轉達給委託人。您要接受委託嗎？<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_D\">區區那種小事...我很樂意幫您</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_I\">不好意思...我對爬蟲類有恐懼症...對不起</a></body></html>"
 # 32106-03
-Singsing_D = "<html><body>���D�G<br>�ڡA�G�M�O�ӫ_�I�a�ڡC���y<font color=\"LEVEL\">�����s�B�����s�B�p�Y�s�B���ͮy�s</font>�̤���A���^<font color=\"LEVEL\">���쮣�s�����Y</font>�ڴN�|��F�������C<br>��F�A�P�o�q�������������B�ͻ��A��������G�N�h�]�b�M��o���s�����Y�C�p�G�z������h��������G�N�h�a�C<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_E\">������G�N�h�Ҧb����m�O�H</a></body></html>"
+Singsing_D = "<html><body>辛刑：<br>啊，果然是個冒險家啊。狩獵<font color=\"LEVEL\">恐爪龍、似鳥龍、厚頭龍、野生座龍</font>們之後，拿回<font color=\"LEVEL\">平原恐龍的骨頭</font>我就會轉達給畢菲格。<br>對了，與這島的原住民交易的朋友說，原住民的咒術士也在尋找這恐龍的骨頭。如果您有興趣去見原住民咒術士吧。<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_E\">原住民咒術士所在的位置是？</a></body></html>"
 # 32106-04
-Singsing_E = "<html><body>���D�G<br>��������G�N�h�b���a�n�誺��l������n�����@�өt�q�C�]���ƥ��~�Ӫ̡A�ҥH�u��z�L��l����n�������P�������_�ޤ������s�S�����A�s��<font color=\"LEVEL\">�کԩ_��</font>��������Ԥh�~��i�J���t�q�C</body></html>"
+Singsing_E = "<html><body>辛刑：<br>原住民的咒術士在此地南方的原始之平原南部有一個孤島。因為排斥外來者，所以只能透過原始平原南部海岸與失落的巢穴之間的山麓角落，叫做<font color=\"LEVEL\">歐拉奇恩</font>的原住民戰士才能進入那孤島。</body></html>"
 # 32106-05
-Singsing_F = "<html><body>���D�G<br>���֧⮣�s�����Y�����^�ӧa�A�����@���b�ʩO�C<br>�n���O�]���S�����s�����Y�L�k�i���s...<br>���O�Y�N�n�b�̯��ګ��]�k��|�o����s���e�O�C<br>�бz�A�h�V�O�I<br>���y<font color=\"LEVEL\">�����s�B�����s�B�p�Y�s�B���ͮy�s</font>�̤���A���^<font color=\"LEVEL\">���쮣�s�����Y</font>�N�i�H�F�C</body></html>"
+Singsing_F = "<html><body>辛刑：<br>趕快把恐龍的骨頭收集回來吧，畢菲格一直在催呢。<br>好像是因為沒有恐龍的骨頭無法進行研究...<br>說是即將要在米茲巴帝魔法協會發表研究內容呢。<br>請您再多努力！<br>狩獵<font color=\"LEVEL\">恐爪龍、似鳥龍、厚頭龍、野生座龍</font>們之後，拿回<font color=\"LEVEL\">平原恐龍的骨頭</font>就可以了。</body></html>"
 # 32106-05a
-Singsing_G = "<html><body>���D�G<br>�@�I�z���^<font color=\"LEVEL\">���쮣�s�����Y</font>�աC�����^�Ӫ�<font color=\"LEVEL\">���쮣�s�����Y</font>�A�ﲦ��檺��s�|���ܤj�����U�C<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_H\">�N���^�����쮣�s�����Y�洫������</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_J\">���u�N�����쪺���쮣�s�����Y�����浹������G�N�h�v</a></body></html>"
+Singsing_G = "<html><body>辛刑：<br>哦！您收回<font color=\"LEVEL\">平原恐龍的骨頭</font>啦。收集回來的<font color=\"LEVEL\">平原恐龍的骨頭</font>，對畢菲格的研究會有很大的幫助。<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_H\">將收回的平原恐龍的骨頭交換成金幣</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_J\">說「將收集到的平原恐龍的骨頭直接交給原住民咒術士」</a></body></html>"
 # 32106-06
-Singsing_H = "<html><body>���D�G<br>�ڡA�o�ӧڷ|�n�n���áC�@�w�|��F������檺�C�����@�w�|�ܳ��w�C<br>�o�O�e�U���O�ΡC���M���h���]�бz���U�C<br>�n�~�򱵨��e�U�ܡH<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_L\">�~��u�@</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_I\">�����F</a></body></html>"
+Singsing_H = "<html><body>辛刑：<br>啊，這個我會好好收藏。一定會轉達給畢菲格的。畢菲格一定會很喜歡。<br>這是委託的費用。雖然不多但也請您收下。<br>要繼續接受委託嗎？<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_L\">繼續工作</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_I\">不做了</a></body></html>"
 # 32106-07
-Singsing_I = "<html><body>���D�G<br>�ڡA�O�ܡC��_�I�a�z�ӻ��A�o�y�q�n�����O�ӥO�z�ΪA���a��C�o�̦��ܦh�z�Q�����������X�S��... (�o�ˤ]�s�_�I�a�ڡH)</body></html>"
+Singsing_I = "<html><body>辛刑：<br>啊，是嗎。對冒險家您來說，這座島好像不是個令您舒服的地方。這裡有很多您討厭的爬蟲類出沒喔... (這樣也叫冒險家啊？)</body></html>"
 # 32106-08
-Singsing_J = "<html><body>���D�G<br>��~��ӳo�˰�...�@...��<font color=\"LEVEL\">���쮣�s�����Y</font>�浹�֨��O�_�I�a�z�ۤv�i�����M�w...���O���������Q�бz���s�Ҽ{�@�U�C<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_E\">������G�N�h�b���̡H</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_K\">�z�L������G�N�h�i�H�o��Ǥ���H</a><br></body></html>"
+Singsing_J = "<html><body>辛刑：<br>啊~原來這樣啊...哦...把<font color=\"LEVEL\">平原恐龍的骨頭</font>交給誰其實是冒險家您自己可做的決定...但是哪邊比較有利請您重新考慮一下。<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_E\">原住民咒術士在哪裡？</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Singsing_K\">透過原住民咒術士可以得到些什麼？</a><br></body></html>"
 # 32106-08a
-Singsing_K = "<html><body>���D�G<br>ť���V��������G�N�h�̥�I���쮣�s�����Y300�Ӫ��ܡA�N���H���o��<font color=\"LEVEL\">���F�s�@A�ůS�ŪZ��������</font>�C<br>�ӥB�A�̪��ٻ��O�|��<font color=\"LEVEL\">S80���b</font>�@�����y�~�O�C�o�ǪF��̷Ӫ��~�N�|�n�D���쮣�s�����Y100~300�ӥ��k�C<br>���O�A�p�G�z�L�ڪ��ܡA�N���ݸg�L�·Ъ�����A�u�n�H<font color=\"LEVEL\">����</font>�N��洫�F�C�ҥH�бz�V���Ҽ{�A�O���X���ۤv�ᮬ����ܡC</body></html>"
+Singsing_K = "<html><body>辛刑：<br>聽說向原住民的咒術士們交付平原恐龍的骨頭300個的話，就能隨機得到<font color=\"LEVEL\">為了製作A級特級武器的材料</font>。<br>而且，最近還說是會給<font color=\"LEVEL\">S80卷軸</font>作為獎勵品呢。這些東西依照物品將會要求平原恐龍的骨頭100~300個左右。<br>但是，如果透過我的話，就不需經過麻煩的手續，只要以<font color=\"LEVEL\">金幣</font>就能交換了。所以請您慎重考慮，別做出讓自己後悔的選擇。</body></html>"
 # 32106-09
-Singsing_L = "<html><body>���D�G<br>���·бz�~��V�O�C���y<font color=\"LEVEL\">�����s�B�����s�B�p�Y�s�B���ͮy�s</font>����A���^<font color=\"LEVEL\">���쮣�s�����Y</font>�N�i�H�F�C</body></html>"
+Singsing_L = "<html><body>辛刑：<br>那麻煩您繼續努力。狩獵<font color=\"LEVEL\">恐爪龍、似鳥龍、厚頭龍、野生座龍</font>之後，拿回<font color=\"LEVEL\">平原恐龍的骨頭</font>就可以了。</body></html>"
 # Singsing npc Html
 # 32117-01
-Karakawei_A = "<html><body>�d�ԥd���G<br>�ڻ��ڭ̤@�ڬO���F�ʵ��s�����|�ߩȪ��ӥj�j�O�ͩR��-���s�A���j���k���u�Y�ҬD��X�����j�رڡC���O�����q��ɰ_�u�Y��ڭ̪���ë�S���^���C<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_B\">�߰ݬ�����S���^��</a></body></html>"
+Karakawei_A = "<html><body>卡拉卡維：<br>據說我們一族是為了監視連神都會懼怕的太古強力生命體-恐龍，偉大的女神席琳所挑選出的堅強種族。但是不知從何時起席琳對我們的祈禱沒有回應。<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_B\">詢問為什麼沒有回應</a></body></html>"
 # 32117-02
-Karakawei_B = "<html><body>�d�ԥd���G<br>���ӧڭ̤]���ӲM���C���D�ڭ̤@�ڦ����줰�򤣩����Ʊ��ܡH���ޫ�ˡA�ڭ̺رڤ@�w�n��_�u�Y�����d�C���h���d���ڭ̤@���ܪ��V�ӶV���z...�ͯf...�ٳQ�ڭ̩Һʵ������s����...�رڥ��������I�ܡC<br>�~�Ӫ��_�I�a�ڡA�ڭ̬��F�v¡�ڭ̺����`�����f�A�H�ά��F�|���_�u�Y�����d�������A�ݭn���~...<br>���F�ڭ̡A�A�i�H���X<font color=\"LEVEL\">���쮣�s�����Y</font>�ܡH�p�G��U�ڭ̧�����_���d�������A����ڷ|���A�̥Ω�s�@�Z�������ơA�Ӭ��F�v���f����U�ڭ̻s�@�ħ����ܡA�ڷ|���A�Ω�s�@�Z�����s�@���b�ӳ����A�C<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_D\">�бN���쮣�s�����Y300�ӥΩ�u�����v�W</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_F\">�бN���쮣�s�����Y�ά��u�ħ��v</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_H\">��A�̨���l�رڪ����`�S���򿳽�A�H�A�K�a</a></body></html>"
+Karakawei_B = "<html><body>卡拉卡維：<br>那個我們也不太清楚。難道我們一族有做到什麼不忠的事情嗎？不管怎樣，我們種族一定要恢復席琳的恩寵。失去恩寵的我們一族變的越來越懦弱...生病...還被我們所監視的恐龍擊敗...種族本身漸漸衰竭。<br>外來的冒險家啊，我們為了治癒我們漸漸深重的病，以及為了舉行恢復席琳之恩寵的儀式，需要祭品...<br>為了我們，你可以捐出<font color=\"LEVEL\">平原恐龍的骨頭</font>嗎？如果協助我們完成恢復恩寵的儀式，那麼我會給你們用於製作武器的材料，而為了治療病情協助我們製作藥材的話，我會給你用於製作武器的製作卷軸來報答你。<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_D\">請將平原恐龍的骨頭300個用於「祭祀」上</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_F\">請將平原恐龍的骨頭用為「藥材」</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_H\">對你們那原始種族的興亡沒什麼興趣，隨你便吧</a></body></html>"
 # 32117-02a
-Karakawei_C = "<html><body>�d�ԥd���G<br>�O���ɭԪ��_�I�a��...�A�ӧ�ڭ̤@�ڬO����ơH<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_A\">�߰ݦ����C���iù�@�ڪ������I�`</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_D\">�бN���쮣�s�����Y300�ӥΩ�u�����v�W</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_F\">�бN���쮣�s�����Y�ά��u�ħ��v</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_H\">��A�̨���l�رڪ����`�S���򿳽��H�A�K�a</a></body></html>"
+Karakawei_C = "<html><body>卡拉卡維：<br>是那時候的冒險家啊...你來找我們一族是為何事？<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_A\">詢問有關耶爾可羅一族的興盛衰亡</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_D\">請將平原恐龍的骨頭300個用於「祭祀」上</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_F\">請將平原恐龍的骨頭用為「藥材」</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe Karakawei_H\">對你們那原始種族的興亡沒什麼興趣隨你便吧</a></body></html>"
 # 32117-03
-Karakawei_D = "<html><body>�d�ԥd���G<br>Thank you, adventurer...<br>I can now perform the ritual.<br>(Karakawei softly chants and seems to lose consciousness.)<br>....<br>....<br>....<br>....<br>(Suddenly, his eyes open!)<br>Ah, I feel that Shilen is satisfied with the ritual!<br>Thank you, adventurer...<br>Please accept this as a token of our appreciation. I also ask that you bring back those bones of the dinosaurs from the plains so that we may continue with these rituals!</body></html>"
+Karakawei_D = "<html><body>卡拉卡維：<br>Thank you, adventurer...<br>I can now perform the ritual.<br>(Karakawei softly chants and seems to lose consciousness.)<br>....<br>....<br>....<br>....<br>(Suddenly, his eyes open!)<br>Ah, I feel that Shilen is satisfied with the ritual!<br>Thank you, adventurer...<br>Please accept this as a token of our appreciation. I also ask that you bring back those bones of the dinosaurs from the plains so that we may continue with these rituals!</body></html>"
 # 32117-04
-Karakawei_E = "<html><body>�d�ԥd���G<br>���F�����ݭn<font color=\"LEVEL\">300�ӥ��쮣�s�����Y</font>�C�p�G�N���������F�ơA���λ��O�o��u�Y�����d�A�i��|����a���I�I�I<br>���I�h���y<font color=\"LEVEL\">�����s�B�����s�B�p�Y�s�B���ͮy�s</font>����A�a�^<font color=\"LEVEL\">���쮣�s�����Y300��</font>�^�ӡI�I�I</body></html>"
+Karakawei_E = "<html><body>卡拉卡維：<br>為了祭祀需要<font color=\"LEVEL\">300個平原恐龍的骨頭</font>。如果將祭祀疏忽了事，不用說是得到席琳的恩寵，可能會受到災難！！！<br>快點去狩獵<font color=\"LEVEL\">恐爪龍、似鳥龍、厚頭龍、野生座龍</font>之後，帶回<font color=\"LEVEL\">平原恐龍的骨頭300個</font>回來！！！</body></html>"
 # 32117-05
-Karakawei_F = "<html><body>�d�ԥd���G<br>�p�G���F�v���ڭ̪��f�A���X���쮣�s�����Y���ܡA�ڷ|���Ө��Ӽƶq��I�A�X�z���S�ҡC<br>�A�Q�n��ܤ���O�H<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 1\">���X���쮣�s�����Y400�ӫ�A����u�s�@���b-�ʦL�����¥~��]60%�^�v</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 2\">���X���쮣�s�����Y250�ӫ�A����u�s�@���b-�ʦL�����ª����]60%�^�v</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 3\">���X���쮣�s�����Y200�ӫ�A����u�s�@���b-�ʦL�������Y�T�]60%�^�v</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 4\">���X���쮣�s�����Y134�ӫ�A����u�s�@���b-�ʦL�����¤�M�]60%�^�v</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 5\">���X���쮣�s�����Y134�ӫ�A����u�s�@���b-�ʦL�����¾c�]60%�^�v</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 6\">���X���쮣�s�����Y287�ӫ�A����u�s�@���b-�ʦL�����²ŦL�]60%�^�v</a></body></html>"
+Karakawei_F = "<html><body>卡拉卡維：<br>如果為了治療我們的病，捐出平原恐龍的骨頭的話，我會按照那個數量支付你合理的酬勞。<br>你想要選擇什麼呢？<br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 1\">捐出平原恐龍的骨頭400個後，領取「製作卷軸-封印的王朝外衣（60%）」</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 2\">捐出平原恐龍的骨頭250個後，領取「製作卷軸-封印的王朝長襪（60%）」</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 3\">捐出平原恐龍的骨頭200個後，領取「製作卷軸-封印的王朝頭箍（60%）」</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 4\">捐出平原恐龍的骨頭134個後，領取「製作卷軸-封印的王朝手套（60%）」</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 5\">捐出平原恐龍的骨頭134個後，領取「製作卷軸-封印的王朝鞋（60%）」</a><br><a action=\"bypass -h Quest 643_RiseandFalloftheElrokiTribe 6\">捐出平原恐龍的骨頭287個後，領取「製作卷軸-封印的王朝符印（60%）」</a></body></html>"
 # 32117-06
-Karakawei_G = "<html><body>�d�ԥd���G<br>���F�s�@�ľ��A�ݭn�Ψ쨬�������쮣�s�����Y�C�ڭ̤��O���F�Q�q�A�ӬO���F�ͦs�~�|�i�������A�]���A��Q�P�ڭ̰Q���ٻ��C�p�G�S���T�O���T���ƶq�A���N�S���ҿת�����C<br>���֥h���y<font color=\"LEVEL\">�����s�B�����s�B�p�Y�s�B���ͮy�s</font>����A����������<font color=\"LEVEL\">���쮣�s�����Y</font>�^�ӡI�I�I</body></html>"
+Karakawei_G = "<html><body>卡拉卡維：<br>為了製作藥劑，需要用到足夠的平原恐龍的骨頭。我們不是為了利益，而是為了生存才會進行交易的，因此，休想與我們討價還價。如果沒有確保正確的數量，那就沒有所謂的交易。<br>趕快去狩獵<font color=\"LEVEL\">恐爪龍、似鳥龍、厚頭龍、野生座龍</font>之後，收集足夠的<font color=\"LEVEL\">平原恐龍的骨頭</font>回來！！！</body></html>"
 # 32117-08
-Karakawei_H = "<html><body>�d�ԥd���G<br>�@...�O���۱i���~�Ӫ�...�p�G���_�ڭ̺رڱq�e���O�q...�N���|����o�ثݹJ...<br>�ڡA�ڡA�u�Y��...<br>�p�G�S�ƻ������}�o�̡I�I�I</body></html>"
+Karakawei_H = "<html><body>卡拉卡維：<br>哦...是個囂張的外來者...如果能恢復我們種族從前的力量...就不會受到這種待遇...<br>啊，啊，席琳啊...<br>如果沒事趕快離開這裡！！！</body></html>"
 
 class Quest (JQuest) :
 
@@ -178,7 +178,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>�ثe�S��������ȡA�α��󤣲šC</body></html>"
+		htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -226,7 +226,7 @@ class Quest (JQuest) :
 						st.giveItems(BONES_OF_A_PLAINS_DINOSAUR,int(numItems))
 		return
 
-QUEST		= Quest(643,qn,"�C���iù�@�ڪ������I�`")
+QUEST		= Quest(643,qn,"耶爾可羅一族的興盛衰亡")
 
 QUEST.addStartNpc(32106)
 

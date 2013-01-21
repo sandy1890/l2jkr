@@ -167,7 +167,7 @@ class Quest (JQuest) :
     return
 
 
-QUEST       = Quest(615,qn,"ª¢¤§Å]¤O-¤W½g")
+QUEST       = Quest(615,qn,"ç‚Žä¹‹é­”åŠ›-ä¸Šç¯‡")
 
 QUEST.addStartNpc(Naran)
 

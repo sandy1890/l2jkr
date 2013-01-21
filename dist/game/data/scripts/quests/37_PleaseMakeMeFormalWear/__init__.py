@@ -45,7 +45,7 @@ class Quest (JQuest) :
 				st.set("cond","4")
 				st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext = "¹D¨ã¤£²Å¡C"
+				htmltext = "é“å…·ä¸ç¬¦ã€‚"
 		elif event == "31521-3.htm" :
 			st.giveItems(BOX_OF_COOKIES,1)
 			st.set("cond","5")
@@ -61,7 +61,7 @@ class Quest (JQuest) :
 				st.set("cond","7")
 				st.playSound("ItemSound.quest_accept")
 			else :
-				htmltext = "¹D¨ã¤£²Å¡C"
+				htmltext = "é“å…·ä¸ç¬¦ã€‚"
 		elif event == "31520-7.htm" :
 			if st.getQuestItemsCount(DRESS_SHOES_BOX) :
 				st.takeItems(DRESS_SHOES_BOX,1)
@@ -70,11 +70,11 @@ class Quest (JQuest) :
 				st.exitQuest(False)
 				st.playSound("ItemSound.quest_finish")
 			else :
-				htmltext = "¹D¨ã¤£²Å¡C"
+				htmltext = "é“å…·ä¸ç¬¦ã€‚"
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -83,7 +83,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == 30842 and cond == 0 :
 				if player.getLevel() >= 60 :
@@ -131,7 +131,7 @@ class Quest (JQuest) :
 					htmltext = "31627-1a.htm"
 		return htmltext
 
-QUEST		= Quest(37,qn,"½ĞÀ°§Ú°µÂ§ªA!")
+QUEST		= Quest(37,qn,"è«‹å¹«æˆ‘åšç¦®æœ!")
 
 QUEST.addStartNpc(30842)
 

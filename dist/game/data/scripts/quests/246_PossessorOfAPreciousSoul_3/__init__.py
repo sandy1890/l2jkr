@@ -9,29 +9,29 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "246_PossessorOfAPreciousSoul_3"
 
 #NPC
-LADD     = 30721  # ±Ğ®v ©Ô¼w
-CARADINE = 31740  # ³Í©Ô¸¦
-OSSIAN   = 31741  # ¼Ú®L®¦
+LADD     = 30721  # æ•™å¸« æ‹‰å¾·
+CARADINE = 31740  # å‡±æ‹‰è’‚
+OSSIAN   = 31741  # æ­å¤æ©
 
 #QUEST ITEM
-CARADINE_LETTER      = 7678  # ³Í©Ô¸¦ªº«H
-CARADINE_LETTER_LAST = 7679  # ³Í©Ô¸¦ªº«H
-WATERBINDER          = 7591  # ¤k¯«ªº§Ù«ü-¤ô¤§Åù²Ì
-EVERGREEN            = 7592  # ¤k¯«ªº¶µÁå-ºñ¤§¥Ã«í
-RAIN_SONG            = 7593  # ¤k¯«ªº¤â§ú-«B¤§¸Öºq
-RELIC_BOX            = 7594  # ¸tª«½c¤l
-FRAGMENTS            = 21725 # ¤k¯«ªº¤â§ú-«B¤§¸Öºq¸H¤ù
+CARADINE_LETTER      = 7678  # å‡±æ‹‰è’‚çš„ä¿¡
+CARADINE_LETTER_LAST = 7679  # å‡±æ‹‰è’‚çš„ä¿¡
+WATERBINDER          = 7591  # å¥³ç¥çš„æˆ’æŒ‡-æ°´ä¹‹ç¾ˆçµ†
+EVERGREEN            = 7592  # å¥³ç¥çš„é …éŠ-ç¶ ä¹‹æ°¸æ†
+RAIN_SONG            = 7593  # å¥³ç¥çš„æ‰‹æ–-é›¨ä¹‹è©©æ­Œ
+RELIC_BOX            = 7594  # è–ç‰©ç®±å­
+FRAGMENTS            = 21725 # å¥³ç¥çš„æ‰‹æ–-é›¨ä¹‹è©©æ­Œç¢ç‰‡
 
 #MOBS
-PILGRIM_OF_SPLENDOR = 21541  # ½÷·×ªº¨D¹DªÌ
-JUDGE_OF_SPLENDOR   = 21544  # ½÷·×ªº¼f§P©x
-BARAKIEL            = 25325  # ¬¼Ây­º»â ½÷·×¤§ª¢ ¨©©Ô³Íº¸
-# = 21535  # ½÷·×ªº¦L°O
-# = 21536  # ½÷·×ªº¤ı°Ã
-# = 21537  # ½÷·×ªºÃ~¤ú
-# = 21538  # ½÷·×ªºÃ~¤ú
-# = 21539  # ½÷·×ªº­Wµh
-# = 21540  # ½÷·×ªº­Wµh
+PILGRIM_OF_SPLENDOR = 21541  # è¼ç…Œçš„æ±‚é“è€…
+JUDGE_OF_SPLENDOR   = 21544  # è¼ç…Œçš„å¯©åˆ¤å®˜
+BARAKIEL            = 25325  # ç‹©çµé¦–é ˜ è¼ç…Œä¹‹ç‚ è²æ‹‰å‡±çˆ¾
+# = 21535  # è¼ç…Œçš„å°è¨˜
+# = 21536  # è¼ç…Œçš„ç‹å†•
+# = 21537  # è¼ç…Œçš„ç¸ç‰™
+# = 21538  # è¼ç…Œçš„ç¸ç‰™
+# = 21539  # è¼ç…Œçš„è‹¦ç—›
+# = 21540  # è¼ç…Œçš„è‹¦ç—›
 MOBS = [21535,21536,21537,21538,21539,21540]
 
 #CHANCE FOR DROP
@@ -87,7 +87,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -98,7 +98,7 @@ class Quest (JQuest) :
      if npcId == CARADINE :
          if cond == 0 and st.getQuestItemsCount(CARADINE_LETTER) == 1 :
            if id == State.COMPLETED :
-             htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+             htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
            elif player.getLevel() < 65 : 
              htmltext = "31740-2.htm"
              st.exitQuest(1)
@@ -122,12 +122,12 @@ class Quest (JQuest) :
      elif npcId == LADD and cond == 6 :
        htmltext = "30721-1.htm"
    else :
-     htmltext = "<html><body>¡]°ÆÂ¾·~µ¥¯Å50¥H¤Wªº¨¤¦â¤~¥i¥H°õ¦æªº¥ô°È¡C¡^</body></html>"
+     htmltext = "<html><body>ï¼ˆå‰¯è·æ¥­ç­‰ç´š50ä»¥ä¸Šçš„è§’è‰²æ‰å¯ä»¥åŸ·è¡Œçš„ä»»å‹™ã€‚ï¼‰</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):
    npcId = npc.getNpcId()
-   if npcId == PILGRIM_OF_SPLENDOR :  # ½÷·×ªº¨D¹DªÌ
+   if npcId == PILGRIM_OF_SPLENDOR :  # è¼ç…Œçš„æ±‚é“è€…
      #get a random party member who is doing this quest and needs this drop 
      partyMember = self.getRandomPartyMember(player,"awaitsWaterbinder","1")
      if partyMember :
@@ -143,7 +143,7 @@ class Quest (JQuest) :
              else:
                st.playSound("ItemSound.quest_middle")
                st.set("cond","3")
-   elif npcId == JUDGE_OF_SPLENDOR :  # ½÷·×ªº¼f§P©x
+   elif npcId == JUDGE_OF_SPLENDOR :  # è¼ç…Œçš„å¯©åˆ¤å®˜
      #get a random party member who is doing this quest and needs this drop 
      partyMember = self.getRandomPartyMember(player,"awaitsEvergreen","1")
      if partyMember :
@@ -159,7 +159,7 @@ class Quest (JQuest) :
              else:
                st.playSound("ItemSound.quest_middle")
                st.set("cond","3")
-   elif npcId == BARAKIEL :  # ¬¼Ây­º»â ½÷·×¤§ª¢ ¨©©Ô³Íº¸
+   elif npcId == BARAKIEL :  # ç‹©çµé¦–é ˜ è¼ç…Œä¹‹ç‚ è²æ‹‰å‡±çˆ¾
      #give the quest item and update variables for ALL PARTY MEMBERS who are doing the quest,
      #so long as they each qualify for the drop (cond == 4 and item not in inventory)
      #note: the killer WILL participate in the loop as a party member (no need to handle separately)
@@ -191,7 +191,7 @@ class Quest (JQuest) :
                 
    return 
 
-QUEST       = Quest(246,qn,"¾Ö¦³°ª¶QÆF»î¤§¤H¡A¶Q±Ú  ²Ä¤T³¡")
+QUEST       = Quest(246,qn,"æ“æœ‰é«˜è²´éˆé­‚ä¹‹äººï¼Œè²´æ—  ç¬¬ä¸‰éƒ¨")
 
 QUEST.addStartNpc(CARADINE)
 QUEST.addTalkId(CARADINE)

@@ -112,14 +112,14 @@ class Quest (JQuest) :
         return None
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+        htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
         st = player.getQuestState(qn)
         if not st : return htmltext
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED :
-            htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+            htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
         elif npcId == Vitus :
             if player.getClassId().getId() not in [125,126] or player.getLevel() < 39:
                 htmltext = "<html><body>Only Troopers or Warders are allowed to take this quest! Go away before I get angry!<br>You must be level 39 or higher to undertake this quest.</body></html>"
@@ -269,7 +269,7 @@ class Quest (JQuest) :
                   st.playSound("ItemSound.quest_itemget")
         return
 
-QUEST       = Quest(65,qn,"¸H»îªÌªºµı©ú")
+QUEST       = Quest(65,qn,"ç¢é­‚è€…çš„è¨¼æ˜")
 
 QUEST.addStartNpc(Vitus)
 

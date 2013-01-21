@@ -123,14 +123,14 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 		npcId = npc.getNpcId()
 		id = st.getState()
 		cond = st.getInt("cond")
 		if id == State.COMPLETED:
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED:
 			if npcId == Benedict:
 				st2 = st.getPlayer().getQuestState("24_InhabitantsOfTheForrestOfTheDead")
@@ -238,7 +238,7 @@ class Quest (JQuest) :
 			st.set("step","2")
 		return
 
-QUEST		= Quest(25,qn,"¦b¯u¹ê¥t¤@ºİ·æÁYªº¤H")
+QUEST		= Quest(25,qn,"åœ¨çœŸå¯¦å¦ä¸€ç«¯ç‘Ÿç¸®çš„äºº")
 
 QUEST.addStartNpc(Benedict)
 

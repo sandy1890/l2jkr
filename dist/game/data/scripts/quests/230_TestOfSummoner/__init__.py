@@ -194,7 +194,7 @@ class Quest (JQuest) :
       return htmltext
 
    def onTalk (self,npc,player):
-      htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+      htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
       st = player.getQuestState(qn)
       if not st : return htmltext
 
@@ -218,7 +218,7 @@ class Quest (JQuest) :
             htmltext = "30634-01.htm"
             st.exitQuest(1)
       elif id == State.COMPLETED:                     # quest already done, not repeatable
-         htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+         htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
       elif id == State.STARTED:
          step = st.getInt("step")             # stats as short vars if the player has state <Started>
@@ -391,7 +391,7 @@ class Quest (JQuest) :
             self.inProgressDuelMobs.pop(npcId)
       return
 
-QUEST       = Quest(230,qn,"¤¸¯À¨Ïªº¼f®Ö")
+QUEST       = Quest(230,qn,"å…ƒç´ ä½¿çš„å¯©æ ¸")
 
 QUEST.addStartNpc(NPC[1])
 

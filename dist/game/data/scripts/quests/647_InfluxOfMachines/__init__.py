@@ -44,7 +44,7 @@ class Quest (JQuest) :
 
  def onTalk (self, npc, player):
     st = player.getQuestState(qn)
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     if st :
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
@@ -86,7 +86,7 @@ class Quest (JQuest) :
                     st.giveItems(BROKEN_GOLEM_FRAGMENT,int(numItems))
     return
 
-QUEST       = Quest(647,qn,"¼É¨«ªº¾÷±ñ­Ì")
+QUEST       = Quest(647,qn,"æš´èµ°çš„æ©Ÿæ¢°å€‘")
 
 QUEST.addStartNpc(32069)
 

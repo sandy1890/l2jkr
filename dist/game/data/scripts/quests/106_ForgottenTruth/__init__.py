@@ -41,13 +41,13 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    npcId = npc.getNpcId()
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
    id = st.getState()
    if id == State.COMPLETED :                                  # Check if the quest is already made
-     htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+     htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
    elif id == State.CREATED :                                      # Check if is starting the quest
      if player.getRace().ordinal() == 2 :
        if player.getLevel() >= 10 :
@@ -129,7 +129,7 @@ class Quest (JQuest) :
          st.set("cond","3")
    return
 
-QUEST       = Quest(106,qn,"³Q¿ò§Ñªº¯u¹ê")
+QUEST       = Quest(106,qn,"è¢«éºå¿˜çš„çœŸå¯¦")
 
 QUEST.addStartNpc(30358)
 

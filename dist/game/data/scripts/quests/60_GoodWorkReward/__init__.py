@@ -13,24 +13,24 @@ from com.l2jserver.gameserver.network.serverpackets import NpcSay
 qn = "60_GoodWorkReward"
 
 BYPASS = {
-1:"<a action=\"bypass -h Quest 60_GoodWorkReward WL\">¶Ä§L</a><br><a action=\"bypass -h Quest 60_GoodWorkReward GL\">¼C°«¤h</a>",
-4:"<a action=\"bypass -h Quest 60_GoodWorkReward PA\">¸tÃM¤h</a><br><a action=\"bypass -h Quest 60_GoodWorkReward DA\">îîÃM¤h</a>",
-7:"<a action=\"bypass -h Quest 60_GoodWorkReward TH\">Ä_ÂÃÂy¤H</a><br><a action=\"bypass -h Quest 60_GoodWorkReward HK\">ÆN²´</a>",
-11:"<a action=\"bypass -h Quest 60_GoodWorkReward SC\">³N¤h</a><br><a action=\"bypass -h Quest 60_GoodWorkReward NM\">¦ºÆFªk®v</a><br><a action=\"bypass -h Quest 60_GoodWorkReward WA\">ªkÅ]</a>",
-15:"<a action=\"bypass -h Quest 60_GoodWorkReward BS\">¥D±Ğ</a><br><a action=\"bypass -h Quest 60_GoodWorkReward PP\">¥ıª¾</a>",
-19:"<a action=\"bypass -h Quest 60_GoodWorkReward TK\">¸t·µÃM¤h</a><br><a action=\"bypass -h Quest 60_GoodWorkReward SS\">¼C³N¸Ö¤H</a>",
-22:"<a action=\"bypass -h Quest 60_GoodWorkReward PW\">¤j¦a¦æªÌ</a><br><a action=\"bypass -h Quest 60_GoodWorkReward SR\">»È¤ë¹C«L</a>",
-26:"<a action=\"bypass -h Quest 60_GoodWorkReward SP\">©G³N¸Ö¤H</a><br><a action=\"bypass -h Quest 60_GoodWorkReward ES\">¤¸¯À¨Ï</a>",
-29:"<a action=\"bypass -h Quest 60_GoodWorkReward EE\">ªø¦Ñ</a>",
-32:"<a action=\"bypass -h Quest 60_GoodWorkReward SK\">®uµYÃM¤h</a><br><a action=\"bypass -h Quest 60_GoodWorkReward BD\">¼C¤b»RªÌ</a>",
-35:"<a action=\"bypass -h Quest 60_GoodWorkReward AW\">²`²W¦æªÌ</a><br><a action=\"bypass -h Quest 60_GoodWorkReward PR\">îî¼v¹C«L</a>",
-39:"<a action=\"bypass -h Quest 60_GoodWorkReward SH\">¨g©G³N¤h</a><br><a action=\"bypass -h Quest 60_GoodWorkReward PS\">îî¼v¥l³ê¤h</a>",
-42:"<a action=\"bypass -h Quest 60_GoodWorkReward SE\">®uµYªø¦Ñ</a>",
-45:"<a action=\"bypass -h Quest 60_GoodWorkReward DT\">¯}ÃaªÌ</a>",
-47:"<a action=\"bypass -h Quest 60_GoodWorkReward TR\">¼É§g</a>",
-50:"<a action=\"bypass -h Quest 60_GoodWorkReward OL\">ÅQ¥D</a><br><a action=\"bypass -h Quest 60_GoodWorkReward WC\">¾Ô¨g</a>",
-54:"<a action=\"bypass -h Quest 60_GoodWorkReward BH\">½àª÷Ây¤H</a>",
-56:"<a action=\"bypass -h Quest 60_GoodWorkReward WS\">¾Ôª§¤u¦K</a>"
+1:"<a action=\"bypass -h Quest 60_GoodWorkReward WL\">å‚­å…µ</a><br><a action=\"bypass -h Quest 60_GoodWorkReward GL\">åŠé¬¥å£«</a>",
+4:"<a action=\"bypass -h Quest 60_GoodWorkReward PA\">è–é¨å£«</a><br><a action=\"bypass -h Quest 60_GoodWorkReward DA\">é—‡é¨å£«</a>",
+7:"<a action=\"bypass -h Quest 60_GoodWorkReward TH\">å¯¶è—çµäºº</a><br><a action=\"bypass -h Quest 60_GoodWorkReward HK\">é·¹çœ¼</a>",
+11:"<a action=\"bypass -h Quest 60_GoodWorkReward SC\">è¡“å£«</a><br><a action=\"bypass -h Quest 60_GoodWorkReward NM\">æ­»éˆæ³•å¸«</a><br><a action=\"bypass -h Quest 60_GoodWorkReward WA\">æ³•é­”</a>",
+15:"<a action=\"bypass -h Quest 60_GoodWorkReward BS\">ä¸»æ•™</a><br><a action=\"bypass -h Quest 60_GoodWorkReward PP\">å…ˆçŸ¥</a>",
+19:"<a action=\"bypass -h Quest 60_GoodWorkReward TK\">è–æ®¿é¨å£«</a><br><a action=\"bypass -h Quest 60_GoodWorkReward SS\">åŠè¡“è©©äºº</a>",
+22:"<a action=\"bypass -h Quest 60_GoodWorkReward PW\">å¤§åœ°è¡Œè€…</a><br><a action=\"bypass -h Quest 60_GoodWorkReward SR\">éŠ€æœˆéŠä¿ </a>",
+26:"<a action=\"bypass -h Quest 60_GoodWorkReward SP\">å’’è¡“è©©äºº</a><br><a action=\"bypass -h Quest 60_GoodWorkReward ES\">å…ƒç´ ä½¿</a>",
+29:"<a action=\"bypass -h Quest 60_GoodWorkReward EE\">é•·è€</a>",
+32:"<a action=\"bypass -h Quest 60_GoodWorkReward SK\">å¸­ç³é¨å£«</a><br><a action=\"bypass -h Quest 60_GoodWorkReward BD\">åŠåˆƒèˆè€…</a>",
+35:"<a action=\"bypass -h Quest 60_GoodWorkReward AW\">æ·±æ·µè¡Œè€…</a><br><a action=\"bypass -h Quest 60_GoodWorkReward PR\">é—‡å½±éŠä¿ </a>",
+39:"<a action=\"bypass -h Quest 60_GoodWorkReward SH\">ç‹‚å’’è¡“å£«</a><br><a action=\"bypass -h Quest 60_GoodWorkReward PS\">é—‡å½±å¬å–šå£«</a>",
+42:"<a action=\"bypass -h Quest 60_GoodWorkReward SE\">å¸­ç³é•·è€</a>",
+45:"<a action=\"bypass -h Quest 60_GoodWorkReward DT\">ç ´å£è€…</a>",
+47:"<a action=\"bypass -h Quest 60_GoodWorkReward TR\">æš´å›</a>",
+50:"<a action=\"bypass -h Quest 60_GoodWorkReward OL\">éœ¸ä¸»</a><br><a action=\"bypass -h Quest 60_GoodWorkReward WC\">æˆ°ç‹‚</a>",
+54:"<a action=\"bypass -h Quest 60_GoodWorkReward BH\">è³é‡‘çµäºº</a>",
+56:"<a action=\"bypass -h Quest 60_GoodWorkReward WS\">æˆ°çˆ­å·¥åŒ </a>"
 }
 
 CLASSES = {
@@ -77,7 +77,7 @@ class Quest (JQuest) :
 	def onAdvEvent (self,event,npc,player) :
 		if event == "npc_cleanup" :
 			self.isNpcSpawned = 0
-			npc.broadcastPacket(NpcSay(27340,0,npc.getNpcId(),"§A¹B®ğ¯u¦n¡A¤U¦¸§Ú·|¦A¨Ó§ä§Aªº¡C"))
+			npc.broadcastPacket(NpcSay(27340,0,npc.getNpcId(),"ä½ é‹æ°£çœŸå¥½ï¼Œä¸‹æ¬¡æˆ‘æœƒå†ä¾†æ‰¾ä½ çš„ã€‚"))
 			return
 		st = player.getQuestState(qn)
 		if not st: return
@@ -94,7 +94,7 @@ class Quest (JQuest) :
 			st.playSound("ItemSound.quest_middle")
 		elif event == "32487-02.htm" and self.isNpcSpawned == 0:
 			npc = st.addSpawn(27340,72590,148100,-3312,60000)
-			npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"¡u" + player.getName() + "¡v" + "! ¥h¦º§a¡A­n©Ç´N©Ç§Aªº¦n©_¤ß¡C"))
+			npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"ã€Œ" + player.getName() + "ã€" + "! å»æ­»å§ï¼Œè¦æ€ªå°±æ€ªä½ çš„å¥½å¥‡å¿ƒã€‚"))
 			npc.setRunning()
 			npc.addDamageHate(st.getPlayer(),0,999)
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st.getPlayer())
@@ -123,10 +123,10 @@ class Quest (JQuest) :
 			st.exitQuest(False)
 			st.playSound("ItemSound.quest_finish")
 			text = BYPASS[player.getClassId().getId()]
-			htmltext = "<html><body>°]´Iªº¦a¤U°Ó¤H¡G<br>¿úªº¨Æ¹À¡A§AÁÙ¬O§â¥¦§Ñ¤F§a...<br>§Ú»¡¹L·|À°§AÂàÂ¾ªº¹À¡I§A·Q­nÂàÂ¾¬°­ş¤@ºØÂ¾·~©O¡H¬D¬D¬İ§a...<br>"+text+"</body></html>"
+			htmltext = "<html><body>è²¡å¯Œçš„åœ°ä¸‹å•†äººï¼š<br>éŒ¢çš„äº‹å˜›ï¼Œä½ é‚„æ˜¯æŠŠå®ƒå¿˜äº†å§...<br>æˆ‘èªªéæœƒå¹«ä½ è½‰è·çš„å˜›ï¼ä½ æƒ³è¦è½‰è·ç‚ºå“ªä¸€ç¨®è·æ¥­å‘¢ï¼ŸæŒ‘æŒ‘çœ‹å§...<br>"+text+"</body></html>"
 		elif event == "31092-06.htm" :
 			text = BYPASS[player.getClassId().getId()]
-			htmltext = "<html><body>°]´Iªº¦a¤U°Ó¤H¡G<br>¦pªG¦Ò¼{¦n¤F¡A¨º´N»°§Ö¿ï¾Ü¤@¤U§a¡C§A·Q­n­ş¤@ºØÂ¾·~©O¡H<br>"+text+"</body></html>"
+			htmltext = "<html><body>è²¡å¯Œçš„åœ°ä¸‹å•†äººï¼š<br>å¦‚æœè€ƒæ…®å¥½äº†ï¼Œé‚£å°±è¶•å¿«é¸æ“‡ä¸€ä¸‹å§ã€‚ä½ æƒ³è¦å“ªä¸€ç¨®è·æ¥­å‘¢ï¼Ÿ<br>"+text+"</body></html>"
 		elif event in CLASSES.keys():
 			newclass,req_item=CLASSES[event]
 			adena = 0
@@ -144,7 +144,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -154,7 +154,7 @@ class Quest (JQuest) :
 
 		if id == State.COMPLETED :
 			if npcId == 31435 :
-				htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+				htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 			elif npcId == 31092 :
 				if player.getClassId().level() == 1 and not st.getInt("onlyone"):
 					htmltext = "31092-04.htm"
@@ -190,7 +190,7 @@ class Quest (JQuest) :
 					if self.isNpcSpawned == 0 :
 						htmltext = "32487-01.htm"
 					else:
-						htmltext = "<html><body>º¿§J¡G<br>«á­±..¤p¤ß«á­±¡C</body></html>"
+						htmltext = "<html><body>ç‘ªå…‹ï¼š<br>å¾Œé¢..å°å¿ƒå¾Œé¢ã€‚</body></html>"
 				elif cond == 2 :
 					htmltext = "32487-03.htm"
 					st.set("cond","3")
@@ -231,14 +231,14 @@ class Quest (JQuest) :
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
 		if npcId == 27340 and cond == 1 :
-			string = "¨S·Q¨ì·|³o»ò±j¡A§Ú¥¢ºâ¤F¡C"
+			string = "æ²’æƒ³åˆ°æœƒé€™éº¼å¼·ï¼Œæˆ‘å¤±ç®—äº†ã€‚"
 			npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),string))
 			st.giveItems(10867,1)
 			st.set("cond","2")
 			st.playSound("ItemSound.quest_middle")
 		return
 
-QUEST		= Quest(60,qn,"µ½¦æªº³øµª")
+QUEST		= Quest(60,qn,"å–„è¡Œçš„å ±ç­”")
 
 QUEST.addStartNpc(31092)
 QUEST.addStartNpc(31435)

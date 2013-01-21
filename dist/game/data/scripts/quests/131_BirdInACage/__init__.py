@@ -52,13 +52,13 @@ class Quest (JQuest) :
 
  def onTalk (self, npc, player):
    st = player.getQuestState(qn)
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    if not st : return htmltext
 
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    if st.getState() == State.COMPLETED :
-     htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+     htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
    elif npcId == KANIS :
      if cond == 0 :
        if player.getLevel() >= 78 :
@@ -80,7 +80,7 @@ class Quest (JQuest) :
        htmltext = "32271-01.htm"
    return htmltext
 
-QUEST = Quest(131,qn,"Å¢¤¤¤§³¾")
+QUEST = Quest(131,qn,"ç± ä¸­ä¹‹é³¥")
 
 QUEST.addStartNpc(KANIS)
 

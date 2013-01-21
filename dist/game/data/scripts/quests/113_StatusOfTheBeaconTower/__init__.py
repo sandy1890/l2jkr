@@ -39,14 +39,14 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):        
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
     npcId = npc.getNpcId()
     cond = st.getInt("cond")
     if state == State.COMPLETED :
-       htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+       htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
     elif npcId == Moira :
        if state == State.CREATED:
           if st.getPlayer().getLevel() >= 80 :
@@ -60,7 +60,7 @@ class Quest (JQuest) :
        htmltext = "32016-01.htm"
     return htmltext
 
-QUEST = Quest(113,qn,"²l¤õ»Oªº²{ªp")
+QUEST = Quest(113,qn,"çƒ½ç«è‡ºçš„ç¾æ³")
 
 QUEST.addStartNpc(Moira)
 

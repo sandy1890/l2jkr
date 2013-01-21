@@ -91,7 +91,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -236,7 +236,7 @@ class Quest (JQuest) :
          st.giveItems(ZOMBIE_LIVER1_ID,1)
    return
 
-QUEST       = Quest(325,qn,"¤£²»ªº¦¬ÂÃ®a")
+QUEST       = Quest(325,qn,"ä¸ç¥¥çš„æ”¶è—å®¶")
 
 QUEST.addStartNpc(30336)
 QUEST.addTalkId(30336)
