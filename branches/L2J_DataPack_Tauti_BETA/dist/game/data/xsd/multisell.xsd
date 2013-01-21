@@ -10,6 +10,7 @@
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="enchant" type="xs:integer" use="optional" />
 									<xs:attribute name="maintainIngredient" type="xs:boolean" />
 								</xs:complexType>
 							</xs:element>
@@ -17,6 +18,7 @@
 								<xs:complexType>
 									<xs:attribute name="count" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="id" type="xs:integer" use="required" />
+									<xs:attribute name="enchant" type="xs:integer" use="optional" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
