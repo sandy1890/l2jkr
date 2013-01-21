@@ -1,98 +1,98 @@
 @echo off
-REM ¥\¯à»¡©ú¡G¨C¹j¤@¬q®É¶¡§R°£ libs ©M§Ö¨ú¡A¥H¨¾¤î GS ¥X¿ù
-if not exist ..\libs\*.jar echo ±z¥²¶·­«·s¸ÑÀ£ÁY¡u½sÄ¶§¹¦¨¡vªº GS¡A¤~¥i¥HÄ~Äò¦w¸Ë¸ê®Æ®w
+REM åŠŸèƒ½èªªæ˜ï¼šæ¯éš”ä¸€æ®µæ™‚é–“åˆªé™¤ libs å’Œå¿«å–ï¼Œä»¥é˜²æ­¢ GS å‡ºéŒ¯
+if not exist ..\libs\*.jar echo æ‚¨å¿…é ˆé‡æ–°è§£å£“ç¸®ã€Œç·¨è­¯å®Œæˆã€çš„ GSï¼Œæ‰å¯ä»¥ç¹¼çºŒå®‰è£è³‡æ–™åº«
 if not exist ..\libs\*.jar echo.
 if not exist ..\libs\*.jar pause
 if not exist ..\libs\*.jar exit
 
-REM ¦pªG libs §Ö¨ú¤£¦s¦b¡Aªí¥ÜÁÙ¨S¦³±Ò°Ê¹L¦øªA¾¹¡A«h¸õ¹LÀË¬d
+REM å¦‚æœ libs å¿«å–ä¸å­˜åœ¨ï¼Œè¡¨ç¤ºé‚„æ²’æœ‰å•Ÿå‹•éä¼ºæœå™¨ï¼Œå‰‡è·³éæª¢æŸ¥
 if not exist ..\libs\cachedir\ md ..\libs\cachedir\
 if not exist ..\libs\cachedir\packages\*.pkc goto _lib_update
 
-REM ¦pªG log ¤£¦s¦b¡Aªí¥ÜÁÙ¨S¦³±Ò°Ê¹L¦øªA¾¹¡A«h¸õ¹LÀË¬d
+REM å¦‚æœ log ä¸å­˜åœ¨ï¼Œè¡¨ç¤ºé‚„æ²’æœ‰å•Ÿå‹•éä¼ºæœå™¨ï¼Œå‰‡è·³éæª¢æŸ¥
 if not exist ..\game\log\*.log goto _lib_update
 
 REM ------------------------------------------------------
-REM _lib_check1 ªºÀË¬d ¶}©l
-REM ¦pªG Windows ªº CMD ª©¥»¸ê°T¤w¦s¦b¡A«h¸õ¨ìÀË¬d1
+REM _lib_check1 çš„æª¢æŸ¥ é–‹å§‹
+REM å¦‚æœ Windows çš„ CMD ç‰ˆæœ¬è³‡è¨Šå·²å­˜åœ¨ï¼Œå‰‡è·³åˆ°æª¢æŸ¥1
 if exist ..\libs\cachedir\check_w_ver.txt goto _lib_check1
 
-REM ¦pªG Windows ªº CMD ª©¥»¸ê°T¤£¦s¦b¡A«h«Ø¥ß¸ê°T
+REM å¦‚æœ Windows çš„ CMD ç‰ˆæœ¬è³‡è¨Šä¸å­˜åœ¨ï¼Œå‰‡å»ºç«‹è³‡è¨Š
 ver > ..\libs\cachedir\check_w_ver.txt
 goto _lib_del
 
 :_lib_check1
-REM ¨ú±o¥Ø«eªº Windows CMD ª©¥»¸ê°T
+REM å–å¾—ç›®å‰çš„ Windows CMD ç‰ˆæœ¬è³‡è¨Š
 ver > %temp%\check.txt
 FOR /F "skip=1 delims=*" %%a IN (%temp%\check.txt) do set aaa=%%a
 
-REM ¨ú±o¤w¦s¦bªº Windows CMD ª©¥»¸ê°T
+REM å–å¾—å·²å­˜åœ¨çš„ Windows CMD ç‰ˆæœ¬è³‡è¨Š
 FOR /F "skip=1 delims=*" %%b IN (..\libs\cachedir\check_w_ver.txt) do set bbb=%%b
 
-REM ¤ñ¸û Windows ªº CMD ª©¥»¸ê°T
+REM æ¯”è¼ƒ Windows çš„ CMD ç‰ˆæœ¬è³‡è¨Š
 if "%aaa%"=="%bbb%" goto _lib_check2
-echo ¦]¬°±zªº Windows ª©¥»¦³§ó·s¡A©Ò¥H¥²¶·§R°£ÂÂªº libs ©M§Ö¨ú¡A¥H¨¾¤î GS ¥X¿ù
+echo å› ç‚ºæ‚¨çš„ Windows ç‰ˆæœ¬æœ‰æ›´æ–°ï¼Œæ‰€ä»¥å¿…é ˆåˆªé™¤èˆŠçš„ libs å’Œå¿«å–ï¼Œä»¥é˜²æ­¢ GS å‡ºéŒ¯
 echo.
 pause
 goto _lib_del
-REM _lib_check1 ªºÀË¬d µ²§ô
+REM _lib_check1 çš„æª¢æŸ¥ çµæŸ
 REM ------------------------------------------------------
 
 
 REM ------------------------------------------------------
-REM _lib_check2 ªºÀË¬d ¶}©l
-REM ¦pªG Java ¸ô®|¤£¦s¦b¡A«h¸õ¨ì¤U¤@­ÓÀË¬d
+REM _lib_check2 çš„æª¢æŸ¥ é–‹å§‹
+REM å¦‚æœ Java è·¯å¾‘ä¸å­˜åœ¨ï¼Œå‰‡è·³åˆ°ä¸‹ä¸€å€‹æª¢æŸ¥
 if not exist "%ProgramFiles%\Java\jdk1.7.*" goto _lib_check3
 
-REM ¦pªG Java ª©¥»¸ê°T¤w¦s¦b¡A«h¸õ¨ìÀË¬d2
+REM å¦‚æœ Java ç‰ˆæœ¬è³‡è¨Šå·²å­˜åœ¨ï¼Œå‰‡è·³åˆ°æª¢æŸ¥2
 if exist ..\libs\cachedir\check_j_ver.txt goto _lib_check2
 
-REM ¦pªG Java ª©¥»¸ê°T¤£¦s¦b¡A«h«Ø¥ß¸ê°T
+REM å¦‚æœ Java ç‰ˆæœ¬è³‡è¨Šä¸å­˜åœ¨ï¼Œå‰‡å»ºç«‹è³‡è¨Š
 dir "%ProgramFiles%\Java\jdk1.7.*" /A:D /B /O > ..\libs\cachedir\check_j_ver.txt
 goto _lib_del
 
 :_lib_check2
-REM ¨ú±o¥Ø«eªº Java ª©¥»¸ê°T
+REM å–å¾—ç›®å‰çš„ Java ç‰ˆæœ¬è³‡è¨Š
 dir "%ProgramFiles%\Java\jdk1.7.*" /A:D /B /O > %temp%\check.txt
 FOR /F %%j IN (%temp%\check.txt) DO set jjj=%%j
 
-REM ¨ú±o¤w¦s¦bªº Java ª©¥»¸ê°T
+REM å–å¾—å·²å­˜åœ¨çš„ Java ç‰ˆæœ¬è³‡è¨Š
 FOR /F %%k IN (..\libs\cachedir\check_j_ver.txt) do set kkk=%%k
 
-REM ¤ñ¸û Java ª©¥»¸ê°T
+REM æ¯”è¼ƒ Java ç‰ˆæœ¬è³‡è¨Š
 if "%jjj%"=="%kkk%" goto _lib_check3
-echo ¦]¬°±zªº Java ª©¥»¦³§ó·s¡A©Ò¥H¥²¶·§R°£ÂÂªº libs ©M§Ö¨ú¡A¥H¨¾¤î GS ¥X¿ù
+echo å› ç‚ºæ‚¨çš„ Java ç‰ˆæœ¬æœ‰æ›´æ–°ï¼Œæ‰€ä»¥å¿…é ˆåˆªé™¤èˆŠçš„ libs å’Œå¿«å–ï¼Œä»¥é˜²æ­¢ GS å‡ºéŒ¯
 echo.
 pause
 goto _lib_del
-REM _lib_check2 ªºÀË¬d µ²§ô
+REM _lib_check2 çš„æª¢æŸ¥ çµæŸ
 REM ------------------------------------------------------
 
 
 REM ------------------------------------------------------
-REM _lib_check3 ªºÀË¬d ¶}©l
-REM ¦pªG ¤é´Á-¤ë¥÷ ªº¸ê°T¤w¦s¦b¡A«h¸õ¨ìÀË¬d3
+REM _lib_check3 çš„æª¢æŸ¥ é–‹å§‹
+REM å¦‚æœ æ—¥æœŸ-æœˆä»½ çš„è³‡è¨Šå·²å­˜åœ¨ï¼Œå‰‡è·³åˆ°æª¢æŸ¥3
 if exist ..\libs\cachedir\check_d_ver.txt goto _lib_check3
 
-REM ¦pªG ¤é´Á-¤ë¥÷ ªº¸ê°T¤£¦s¦b¡A«h«Ø¥ß¸ê°T
+REM å¦‚æœ æ—¥æœŸ-æœˆä»½ çš„è³‡è¨Šä¸å­˜åœ¨ï¼Œå‰‡å»ºç«‹è³‡è¨Š
 date/t > ..\libs\cachedir\check_d_ver.txt
 goto _lib_del
 
 :_lib_check3
-REM ¨ú±o¥Ø«eªº ¤é´Á-¤ë¥÷ ¸ê°T
+REM å–å¾—ç›®å‰çš„ æ—¥æœŸ-æœˆä»½ è³‡è¨Š
 date/t > %temp%\check.txt
 FOR /F "tokens=2 delims=/" %%d IN (%temp%\check.txt) DO set ddd=%%d
 
-REM ¨ú±o¤w¦s¦bªº ¤é´Á-¤ë¥÷ ¸ê°T
+REM å–å¾—å·²å­˜åœ¨çš„ æ—¥æœŸ-æœˆä»½ è³‡è¨Š
 FOR /F "tokens=2 delims=/" %%m IN (..\libs\cachedir\check_d_ver.txt) do set mmm=%%m
 
-REM ¤ñ¸û ¤é´Á-¤ë¥÷ ¸ê°T
+REM æ¯”è¼ƒ æ—¥æœŸ-æœˆä»½ è³‡è¨Š
 if "%ddd%"=="%mmm%" goto _lib_end
-echo ¦¹¬°¨C­Ó¤ë¦Û°Ê²M²zÂÂªº libs ©M§Ö¨ú¡A¥H¨¾¤î GS ¥X¿ù
+echo æ­¤ç‚ºæ¯å€‹æœˆè‡ªå‹•æ¸…ç†èˆŠçš„ libs å’Œå¿«å–ï¼Œä»¥é˜²æ­¢ GS å‡ºéŒ¯
 echo.
 pause
 goto _lib_del
-REM _lib_check3 ªºÀË¬d µ²§ô
+REM _lib_check3 çš„æª¢æŸ¥ çµæŸ
 REM ------------------------------------------------------
 
 
@@ -103,11 +103,11 @@ if not exist ..\libs\backup\ md ..\libs\backup\
 copy ..\libs\*.* ..\libs\backup\ /Y > nul
 del ..\libs\*.* /F /Q > nul
 del ..\libs\cachedir\packages\*.* /F /Q > nul
-if exist ..\libs\*.jar echo µLªk§R°£ libs ©M§Ö¨ú¡I½Ğ¥ıÃö³¬¦øªA¾¹©Î­«·s¶}¾÷¡AµM«á¦A¸Õ¤@¦¸
+if exist ..\libs\*.jar echo ç„¡æ³•åˆªé™¤ libs å’Œå¿«å–ï¼è«‹å…ˆé—œé–‰ä¼ºæœå™¨æˆ–é‡æ–°é–‹æ©Ÿï¼Œç„¶å¾Œå†è©¦ä¸€æ¬¡
 if exist ..\libs\*.jar echo.
 if exist ..\libs\*.jar pause
 if exist ..\libs\*.jar exit
-if exist ..\libs\cachedir\packages\*.pkc echo µLªk§R°£ libs ©M§Ö¨ú¡I½Ğ¥ıÃö³¬¦øªA¾¹©Î­«·s¶}¾÷¡AµM«á¦A¸Õ¤@¦¸
+if exist ..\libs\cachedir\packages\*.pkc echo ç„¡æ³•åˆªé™¤ libs å’Œå¿«å–ï¼è«‹å…ˆé—œé–‰ä¼ºæœå™¨æˆ–é‡æ–°é–‹æ©Ÿï¼Œç„¶å¾Œå†è©¦ä¸€æ¬¡
 if exist ..\libs\cachedir\packages\*.pkc echo.
 if exist ..\libs\cachedir\packages\*.pkc pause
 if exist ..\libs\cachedir\packages\*.pkc exit
@@ -115,8 +115,8 @@ ver > ..\libs\cachedir\check_w_ver.txt
 dir "%ProgramFiles%\Java\jdk1.7.*" /A:D /B /O > ..\libs\cachedir\check_j_ver.txt
 date/t > ..\libs\cachedir\check_d_ver.txt
 CLS
-echo ÂÂªº libs ©M§Ö¨ú²M²z§¹²¦¡I
-echo ±z¥²¶·­«·s¸ÑÀ£ÁY¡u½sÄ¶§¹¦¨¡vªº GS¡A¤~¥i¥HÄ~Äò¦w¸Ë¸ê®Æ®w
+echo èˆŠçš„ libs å’Œå¿«å–æ¸…ç†å®Œç•¢ï¼
+echo æ‚¨å¿…é ˆé‡æ–°è§£å£“ç¸®ã€Œç·¨è­¯å®Œæˆã€çš„ GSï¼Œæ‰å¯ä»¥ç¹¼çºŒå®‰è£è³‡æ–™åº«
 echo.
 pause
 exit
@@ -169,7 +169,7 @@ set fresh_setup=0
 
 :loadconfig
 cls
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 if not exist %config_file% goto configure
 ren %config_file% vars.bat
 call vars.bat
@@ -177,23 +177,23 @@ ren vars.bat %config_file%
 call :colors 17
 if /i %config_version% == 2 goto ls_backup
 set upgrade_mode=2
-echo ±z¦ü¥G¬O²Ä¤@¦¸¨Ï¥Î³o­Óª©¥»ªº database_installer
-echo ¦ı¬O§Úµo²{¦w¸Ë¸ê®Æ®wªº³]©wÀÉ¤w¸g¦s¦b
-echo ¦]¦¹§Ú±N°İ±z´X­Ó°İÃD¡A¤Ş¾É±zÄ~Äò¦w¸Ë
+echo æ‚¨ä¼¼ä¹æ˜¯ç¬¬ä¸€æ¬¡ä½¿ç”¨é€™å€‹ç‰ˆæœ¬çš„ database_installer
+echo ä½†æ˜¯æˆ‘ç™¼ç¾å®‰è£è³‡æ–™åº«çš„è¨­å®šæª”å·²ç¶“å­˜åœ¨
+echo å› æ­¤æˆ‘å°‡å•æ‚¨å¹¾å€‹å•é¡Œï¼Œå¼•å°æ‚¨ç¹¼çºŒå®‰è£
 echo.
-echo §ó·s³]©w¿ï¶µ¡G
+echo æ›´æ–°è¨­å®šé¸é …ï¼š
 echo.
-echo (1) ¾É¤J¡®Ä~Äò¨Ï¥ÎÂÂªº³]©w¡G±N¨Ï¥Î­ì¥»ÂÂªº¸ê®Æ¨Ã¥B¶i¦æ§ó·s§@·~
+echo (1) å°å…¥ï¼†ç¹¼çºŒä½¿ç”¨èˆŠçš„è¨­å®šï¼šå°‡ä½¿ç”¨åŸæœ¬èˆŠçš„è³‡æ–™ä¸¦ä¸”é€²è¡Œæ›´æ–°ä½œæ¥­
 echo.
-echo (2) ¾É¤J¡®¨Ï¥Î·sªº³]©w¡G¾É¤J·sªº¸ê®Æ¨Ã¥B­«·s³]©w¸ê®Æ
+echo (2) å°å…¥ï¼†ä½¿ç”¨æ–°çš„è¨­å®šï¼šå°å…¥æ–°çš„è³‡æ–™ä¸¦ä¸”é‡æ–°è¨­å®šè³‡æ–™
 echo.
-echo (3) ¾É¤J¥ş·sªº¸ê®Æ¡G©Ò¦³ÂÂªº¸ê®Æ±N·|²¾°£¨Ã¥B¾É¤J·sªº¸ê®Æ
+echo (3) å°å…¥å…¨æ–°çš„è³‡æ–™ï¼šæ‰€æœ‰èˆŠçš„è³‡æ–™å°‡æœƒç§»é™¤ä¸¦ä¸”å°å…¥æ–°çš„è³‡æ–™
 echo.
-echo (4) ¬d¬İ¦s¨úªº³]©w­È
+echo (4) æŸ¥çœ‹å­˜å–çš„è¨­å®šå€¼
 echo.
-echo (5) °h¥X
+echo (5) é€€å‡º
 echo.
-set /P upgrade_mode="¿é¤J¼Æ¦r«á¡A½Ğ«ö Enter¡]¹w³]­È¬°¡u%upgrade_mode%¡v¡^: "
+set /P upgrade_mode="è¼¸å…¥æ•¸å­—å¾Œï¼Œè«‹æŒ‰ Enterï¼ˆé è¨­å€¼ç‚ºã€Œ%upgrade_mode%ã€ï¼‰: "
 if %upgrade_mode%==1 goto ls_backup
 if %upgrade_mode%==2 goto configure
 if %upgrade_mode%==3 goto configure
@@ -210,7 +210,7 @@ goto :eof
 :configure
 cls
 call :colors 17
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 set config_version=2
 if NOT %upgrade_mode% == 2 (
 set fresh_setup=1
@@ -250,17 +250,17 @@ set backup=.
 set logdir=.
 )
 set mysqlPath=%mysqlBinPath%\mysql.exe
-echo ·sªº³]©w­È¡G
+echo æ–°çš„è¨­å®šå€¼ï¼š
 echo.
-echo 1.MySql µ{¦¡
+echo 1.MySql ç¨‹å¼
 echo --------------------
-echo ½Ğ³]©w mysql.exe ©M mysqldump.exe ªº¦ì¸m
+echo è«‹è¨­å®š mysql.exe å’Œ mysqldump.exe çš„ä½ç½®
 echo.
 if "%mysqlBinPath%" == "" (
 set mysqlBinPath=use path
-echo ¨S¦³§ä¨ì MySQL ªº¦ì¸m
+echo æ²’æœ‰æ‰¾åˆ° MySQL çš„ä½ç½®
 ) else (
-echo ½Ğ´ú¸Õ¥H¤U©Ò§ä¨ìªº MySQL ¦ì¸m¡A¬O§_¥i¥H¶i¦æ¾É¤J§@·~
+echo è«‹æ¸¬è©¦ä»¥ä¸‹æ‰€æ‰¾åˆ°çš„ MySQL ä½ç½®ï¼Œæ˜¯å¦å¯ä»¥é€²è¡Œå°å…¥ä½œæ¥­
 echo.
 echo %mysqlPath%
 )
@@ -268,63 +268,63 @@ if not "%mysqlBinPath%" == "use path" call :binaryfind
 echo.
 path|find "MySQL">NUL
 if %errorlevel% == 0 (
-echo ¤W­±¬O§ä¨ìªº MySQL¡A¦¹¦ì¸m±N·|³Q³]¬°¹w³]­È¡A¦pªG·Q´«¦ì¸m½Ğ­×§ï...
+echo ä¸Šé¢æ˜¯æ‰¾åˆ°çš„ MySQLï¼Œæ­¤ä½ç½®å°‡æœƒè¢«è¨­ç‚ºé è¨­å€¼ï¼Œå¦‚æœæƒ³æ›ä½ç½®è«‹ä¿®æ”¹...
 set mysqlBinPath=use path
 ) else (
-echo µLªk§ä¨ì MySQL¡A½Ğ¿é¤J mysql.exe ªº¦ì¸m...
+echo ç„¡æ³•æ‰¾åˆ° MySQLï¼Œè«‹è¼¸å…¥ mysql.exe çš„ä½ç½®...
 echo.
-echo ¦pªG¤£½T©w³o¬O¤°»ò·N«ä©M¦p¦ó¾Ş§@¡A½Ğ¨ì¬ÛÃöºô¯¸¬d¸ß©ÎªÌ¦Ü L2JTW ©x¤èºô¯¸µo°İ©Î´M§ä¬ÛÃö¸ê°T
+echo å¦‚æœä¸ç¢ºå®šé€™æ˜¯ä»€éº¼æ„æ€å’Œå¦‚ä½•æ“ä½œï¼Œè«‹åˆ°ç›¸é—œç¶²ç«™æŸ¥è©¢æˆ–è€…è‡³ L2JTW å®˜æ–¹ç¶²ç«™ç™¼å•æˆ–å°‹æ‰¾ç›¸é—œè³‡è¨Š
 )
 echo.
-echo ½Ğ¿é¤J mysql.exe ªº¦ì¸m¡G
+echo è«‹è¼¸å…¥ mysql.exe çš„ä½ç½®ï¼š
 set /P mysqlBinPath="(default %mysqlBinPath%): "
 cls
 echo.
-echo 2.µn¤J¦øªA¾¹³]©w
+echo 2.ç™»å…¥ä¼ºæœå™¨è¨­å®š
 echo --------------------
-echo ¦¹§@·~±N·|³s½u¦Ü©Ò«ü©wªº MySQL ¦øªA¾¹¡A¨Ã¥B¶i¦æ¾É¤J§@·~
+echo æ­¤ä½œæ¥­å°‡æœƒé€£ç·šè‡³æ‰€æŒ‡å®šçš„ MySQL ä¼ºæœå™¨ï¼Œä¸¦ä¸”é€²è¡Œå°å…¥ä½œæ¥­
 echo.
-set /P lsuser="¨Ï¥ÎªÌ¦WºÙ¡]¹w³]­È¡u%lsuser%¡v¡^: "
+set /P lsuser="ä½¿ç”¨è€…åç¨±ï¼ˆé è¨­å€¼ã€Œ%lsuser%ã€ï¼‰: "
 :_lspass
-set /P lspass="¨Ï¥ÎªÌ±K½X¡]¹w³]­È¡u%lspass%¡v¡^: "
+set /P lspass="ä½¿ç”¨è€…å¯†ç¢¼ï¼ˆé è¨­å€¼ã€Œ%lspass%ã€ï¼‰: "
 if "%lspass%"=="" goto _lspass
-set /P lsdb="¸ê®Æ®w¡]¹w³]­È¡u%lsdb%¡v¡^: "
-set /P lshost="¦ì¸m¡]¹w³]­È¡u%lshost%¡v¡^: "
+set /P lsdb="è³‡æ–™åº«ï¼ˆé è¨­å€¼ã€Œ%lsdb%ã€ï¼‰: "
+set /P lshost="ä½ç½®ï¼ˆé è¨­å€¼ã€Œ%lshost%ã€ï¼‰: "
 echo.
 cls
 echo.
-echo 3-°Q½×ª©¦øªA¾¹³]©w
+echo 3-è¨è«–ç‰ˆä¼ºæœå™¨è¨­å®š
 echo --------------------
-echo ¦¹§@·~±N·|³s½u¦Ü¡u°Q½×ª©±M¥Î¡vªº MySQL ¦øªA¾¹¡A¨Ã¥B¶i¦æ¾É¤J§@·~
+echo æ­¤ä½œæ¥­å°‡æœƒé€£ç·šè‡³ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„ MySQL ä¼ºæœå™¨ï¼Œä¸¦ä¸”é€²è¡Œå°å…¥ä½œæ¥­
 echo.
-set /P cbuser="¨Ï¥ÎªÌ¦WºÙ¡]¹w³]­È¡u%cbuser%¡v¡^: "
+set /P cbuser="ä½¿ç”¨è€…åç¨±ï¼ˆé è¨­å€¼ã€Œ%cbuser%ã€ï¼‰: "
 :_cbpass
-set /P cbpass="¨Ï¥ÎªÌ±K½X¡]¹w³]­È¡u%cbpass%¡v¡^: "
+set /P cbpass="ä½¿ç”¨è€…å¯†ç¢¼ï¼ˆé è¨­å€¼ã€Œ%cbpass%ã€ï¼‰: "
 if "%cbpass%"=="" goto _cbpass
-set /P cbdb="¸ê®Æ®w¡]¹w³]­È¡u%cbdb%¡v¡^: "
-set /P cbhost="¦ì¸m¡]¹w³]­È¡u%cbhost%¡v¡^: "
+set /P cbdb="è³‡æ–™åº«ï¼ˆé è¨­å€¼ã€Œ%cbdb%ã€ï¼‰: "
+set /P cbhost="ä½ç½®ï¼ˆé è¨­å€¼ã€Œ%cbhost%ã€ï¼‰: "
 echo.
 cls
 echo.
-echo 4.¹CÀ¸¦øªA¾¹³]©w
+echo 4.éŠæˆ²ä¼ºæœå™¨è¨­å®š
 echo --------------------
-set /P gsuser="¨Ï¥ÎªÌ¦WºÙ¡]¹w³]­È¡u%gsuser%¡v¡^: "
+set /P gsuser="ä½¿ç”¨è€…åç¨±ï¼ˆé è¨­å€¼ã€Œ%gsuser%ã€ï¼‰: "
 :_gspass
-set /P gspass="¨Ï¥ÎªÌ±K½X¡]¹w³]­È¡u%gspass%¡v¡^: "
+set /P gspass="ä½¿ç”¨è€…å¯†ç¢¼ï¼ˆé è¨­å€¼ã€Œ%gspass%ã€ï¼‰: "
 if "%gspass%"=="" goto _gspass
-set /P gsdb="¸ê®Æ®w¡]¹w³]­È¡u%gsdb%¡v¡^: "
-set /P gshost="¦ì¸m¡]¹w³]­È¡u%gshost%¡v¡^: "
+set /P gsdb="è³‡æ–™åº«ï¼ˆé è¨­å€¼ã€Œ%gsdb%ã€ï¼‰: "
+set /P gshost="ä½ç½®ï¼ˆé è¨­å€¼ã€Œ%gshost%ã€ï¼‰: "
 echo.
 cls
 echo.
-echo 5.¨ä¥L³]©w
+echo 5.å…¶ä»–è¨­å®š
 echo --------------------
-set /P cmode="ÃC¦â¼Ò¦¡ (c)¬°ÃC¦â ©Î (n)¬°µLÃC¦â¡]¹w³]­È¡u%cmode%¡v¡^: "
-set /P backup="³Æ¥÷¦ì¸m¡]¹w³]­È¡u%backup%¡v¡^: "
-set /P logdir="Logs°T®§¦ì¸m¡]¹w³]­È¡u%logdir%¡v¡^: "
+set /P cmode="é¡è‰²æ¨¡å¼ (c)ç‚ºé¡è‰² æˆ– (n)ç‚ºç„¡é¡è‰²ï¼ˆé è¨­å€¼ã€Œ%cmode%ã€ï¼‰: "
+set /P backup="å‚™ä»½ä½ç½®ï¼ˆé è¨­å€¼ã€Œ%backup%ã€ï¼‰: "
+set /P logdir="Logsè¨Šæ¯ä½ç½®ï¼ˆé è¨­å€¼ã€Œ%logdir%ã€ï¼‰: "
 :safe1
 set safemode=y
-set /P safemode="Debug ¼Ò¦¡¡]y/n¡A ¹w³]­È¡u%safemode%¡v¡^: "
+set /P safemode="Debug æ¨¡å¼ï¼ˆy/nï¼Œ é è¨­å€¼ã€Œ%safemode%ã€ï¼‰: "
 if /i %safemode%==y (set safe_mode=1&goto safe2)
 if /i %safemode%==n (set safe_mode=0&goto safe2)
 goto safe1
@@ -362,8 +362,8 @@ echo set gshost=%gshost%>> %config_file%
 echo set logdir=%logdir%>> %config_file%
 echo set backup=%backup%>> %config_file%
 echo.
-echo ³]©w¦¨¥\¡I
-echo §Aªº³]©w­È±N·|Àx¦s¦b¡u%config_file%¡v¡A©Ò¦³ªº±b¸¹±K½X±N¥H©ú¤åÅã¥Ü
+echo è¨­å®šæˆåŠŸï¼
+echo ä½ çš„è¨­å®šå€¼å°‡æœƒå„²å­˜åœ¨ã€Œ%config_file%ã€ï¼Œæ‰€æœ‰çš„å¸³è™Ÿå¯†ç¢¼å°‡ä»¥æ˜æ–‡é¡¯ç¤º
 echo.
 pause
 goto loadconfig
@@ -373,9 +373,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=1
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b³Æ¥÷µn¤J¦øªA¾¹ªº¸ê®Æ®w...
+echo æ­£åœ¨å‚™ä»½ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«...
 set cmdline="%mysqldumpPath%" --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> "%backup%\ls_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto ls_db_ok
@@ -384,23 +384,23 @@ if %ERRORLEVEL% == 0 goto ls_db_ok
 cls
 set lsdbprompt=y
 call :colors 47
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ³Æ¥÷¥¢±Ñ¡I
-echo ­ì¦]¬O¦]¬°¸ê®Æ®w¤£¦s¦b
-echo ²{¦b¥i¥HÀ°§A«Ø¥ß %lsdb%¡A©ÎªÌÄ~Äò¨ä¥¦³]©w
+echo å‚™ä»½å¤±æ•—ï¼
+echo åŸå› æ˜¯å› ç‚ºè³‡æ–™åº«ä¸å­˜åœ¨
+echo ç¾åœ¨å¯ä»¥å¹«ä½ å»ºç«‹ %lsdb%ï¼Œæˆ–è€…ç¹¼çºŒå…¶å®ƒè¨­å®š
 echo.
-echo «Ø¥ßµn¤J¦øªA¾¹ªº¸ê®Æ®w¡H
+echo å»ºç«‹ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«ï¼Ÿ
 echo.
-echo (y)½T©w
+echo (y)ç¢ºå®š
 echo.
-echo (n)¨ú®ø
+echo (n)å–æ¶ˆ
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p lsdbprompt=½Ğ¿ï¾Ü¡]¹w³]­È-½T©w¡^:
+set /p lsdbprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-ç¢ºå®šï¼‰:
 if /i %lsdbprompt%==y goto ls_db_create
 if /i %lsdbprompt%==n goto cs_backup
 if /i %lsdbprompt%==r goto configure
@@ -412,9 +412,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=2
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b«Ø¥ßµn¤J¦øªA¾¹ªº¸ê®Æ®w...
+echo æ­£åœ¨å»ºç«‹ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«...
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto ls_db_ok
@@ -424,24 +424,24 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo µn¤J¦øªA¾¹ªº¸ê®Æ®w«Ø¥ß¥¢±Ñ¡I
+echo ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«å»ºç«‹å¤±æ•—ï¼
 echo.
-echo ¥i¯àªº­ì¦]¡G
-echo 1.¿é¤Jªº¸ê®Æ¿ù»~¡A¨Ò¦p¡G¨Ï¥ÎªÌ¦WºÙ/¨Ï¥ÎªÌ±K½X/¨ä¥L¬ÛÃö¸ê®Æ
-echo 2.¨Ï¥ÎªÌ¡u%lsuser%¡vªºÅv­­¤£¨¬
-echo 3.¸ê®Æ®w¤w¦s¦b
+echo å¯èƒ½çš„åŸå› ï¼š
+echo 1.è¼¸å…¥çš„è³‡æ–™éŒ¯èª¤ï¼Œä¾‹å¦‚ï¼šä½¿ç”¨è€…åç¨±/ä½¿ç”¨è€…å¯†ç¢¼/å…¶ä»–ç›¸é—œè³‡æ–™
+echo 2.ä½¿ç”¨è€…ã€Œ%lsuser%ã€çš„æ¬Šé™ä¸è¶³
+echo 3.è³‡æ–™åº«å·²å­˜åœ¨
 echo.
-echo ½ĞÀË¬d³]©w¨Ã¥B­×¥¿¡A©ÎªÌª½±µ­«·s³]©w
+echo è«‹æª¢æŸ¥è¨­å®šä¸¦ä¸”ä¿®æ­£ï¼Œæˆ–è€…ç›´æ¥é‡æ–°è¨­å®š
 echo.
-echo (c)Ä~Äò
+echo (c)ç¹¼çºŒ
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p omfgprompt=½Ğ¿ï¾Ü¡]¹w³]­È-°h¥X¡^:
+set /p omfgprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-é€€å‡ºï¼‰:
 if /i %omfgprompt%==c goto cs_backup
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
@@ -451,21 +451,21 @@ goto ls_err2
 cls
 set loginprompt=u
 call :colors 17
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo µn¤J¦øªA¾¹ªº¸ê®Æ®w¦w¸Ë¡G
+echo ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«å®‰è£ï¼š
 echo.
-echo (f) §¹¾ã¡G±N²¾°£©Ò¦³ÂÂªº¸ê®Æ¡A­«·s¾É¤J·sªº¸ê®Æ
+echo (f) å®Œæ•´ï¼šå°‡ç§»é™¤æ‰€æœ‰èˆŠçš„è³‡æ–™ï¼Œé‡æ–°å°å…¥æ–°çš„è³‡æ–™
 echo.
-echo (u) §ó·s¡G§Ú·|ºÉ¤O«O«ùµn¿ıªº©Ò¦³¸ê®Æ
+echo (u) æ›´æ–°ï¼šæˆ‘æœƒç›¡åŠ›ä¿æŒç™»éŒ„çš„æ‰€æœ‰è³‡æ–™
 echo.
-echo (s) ¬Ù²¤¡G¸õ¹L¦¹¿ï¶µ
+echo (s) çœç•¥ï¼šè·³éæ­¤é¸é …
 echo.
-echo (r) ­«·s³]©w
+echo (r) é‡æ–°è¨­å®š
 echo.
-echo (q) °h¥X
+echo (q) é€€å‡º
 echo.
-set /p loginprompt=½Ğ¿ï¾Ü¡]¹w³]­È-§ó·s¡^:
+set /p loginprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-æ›´æ–°ï¼‰:
 if /i %loginprompt%==f goto ls_cleanup
 if /i %loginprompt%==u goto ls_upgrade
 if /i %loginprompt%==s goto cs_backup
@@ -476,21 +476,21 @@ goto ls_db_ok
 :ls_cleanup
 call :colors 17
 set cmdline=
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b²¾°£µn¤J¦øªA¾¹ªº¸ê®Æ®w¡AµM«á¾É¤J·sªº¸ê®Æ®w...
+echo æ­£åœ¨ç§»é™¤ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«ï¼Œç„¶å¾Œå°å…¥æ–°çš„è³‡æ–™åº«...
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ls_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
-echo µn¤J¦øªA¾¹¸ê®Æ®w¤w³Q§R°£
+echo ç™»å…¥ä¼ºæœå™¨è³‡æ–™åº«å·²è¢«åˆªé™¤
 goto ls_install
 
 :ls_upgrade
 cls
 echo.
-echo §ó·sµn¤J¦øªA¾¹¸ê®Æ®wµ²ºc
+echo æ›´æ–°ç™»å…¥ä¼ºæœå™¨è³‡æ–™åº«çµæ§‹
 echo.
 echo @echo off> temp.bat
 if exist ls_errors.log del ls_errors.log
@@ -504,21 +504,21 @@ goto ls_install
 cls
 set cmdline=
 if %full% == 1 (
-title L2JTW ¥¿¦b¦w¸Ëµn¤J¦øªA¾¹ªº¸ê®Æ®w...
+title L2JTW æ­£åœ¨å®‰è£ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«...
 echo.
-echo ¥¿¦b¦w¸Ë·sªºµn¤J¦øªA¾¹ªº¸ê®Æ®w¤º®e
+echo æ­£åœ¨å®‰è£æ–°çš„ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«å…§å®¹
 echo.
 ) else (
-title L2JTW ¥¿¦b§ó·sµn¤J¦øªA¾¹ªº¸ê®Æ®w...
+title L2JTW æ­£åœ¨æ›´æ–°ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«...
 echo.
-echo ¥¿¦b§ó·sµn¤J¦øªA¾¹ªº¸ê®Æ®w¤º®e
+echo æ­£åœ¨æ›´æ–°ç™»å…¥ä¼ºæœå™¨çš„è³‡æ–™åº«å…§å®¹
 echo.
 )
 if %logging% == 0 set output=NUL
 set dest=ls
 for %%i in (..\sql\login\*.sql) do call :dump %%i
 
-echo §¹¦¨...
+echo å®Œæˆ...
 echo.
 goto cs_backup
 
@@ -527,9 +527,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=3
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b³Æ¥÷¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w...
+echo æ­£åœ¨å‚™ä»½ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«...
 set cmdline="%mysqldumpPath%" --add-drop-table -h %cbhost% -u %cbuser% --password=%cbpass% %cbdb% ^> "%backup%\cs_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto cs_db_ok
@@ -538,23 +538,23 @@ if %ERRORLEVEL% == 0 goto cs_db_ok
 cls
 set cbdbprompt=y
 call :colors 47
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ³Æ¥÷¥¢±Ñ¡I
-echo ­ì¦]¬O¦]¬°¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w¤£¦s¦b
-echo ²{¦b¥i¥HÀ°§A«Ø¥ß %cbdb%¡A©ÎªÌÄ~Äò¨ä¥¦³]©w
+echo å‚™ä»½å¤±æ•—ï¼
+echo åŸå› æ˜¯å› ç‚ºã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«ä¸å­˜åœ¨
+echo ç¾åœ¨å¯ä»¥å¹«ä½ å»ºç«‹ %cbdb%ï¼Œæˆ–è€…ç¹¼çºŒå…¶å®ƒè¨­å®š
 echo.
-echo «Ø¥ß¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w¡H
+echo å»ºç«‹ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«ï¼Ÿ
 echo.
-echo (y)½T©w
+echo (y)ç¢ºå®š
 echo.
-echo (n)¨ú®ø
+echo (n)å–æ¶ˆ
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p cbdbprompt=½Ğ¿ï¾Ü¡]¹w³]­È-½T©w¡^:
+set /p cbdbprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-ç¢ºå®šï¼‰:
 if /i %cbdbprompt%==y goto cs_db_create
 if /i %cbdbprompt%==n goto gs_backup
 if /i %cbdbprompt%==r goto configure
@@ -566,9 +566,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=4
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b«Ø¥ß¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w...
+echo æ­£åœ¨å»ºç«‹ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«...
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -e "CREATE DATABASE %cbdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto cs_db_ok
@@ -578,24 +578,24 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w«Ø¥ß¥¢±Ñ¡I
+echo ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«å»ºç«‹å¤±æ•—ï¼
 echo.
-echo ¥i¯àªº­ì¦]¡G
-echo 1.¿é¤Jªº¸ê®Æ¿ù»~¡A¨Ò¦p¡G¨Ï¥ÎªÌ¦WºÙ/¨Ï¥ÎªÌ±K½X/¨ä¥L¬ÛÃö¸ê®Æ
-echo 2.¨Ï¥ÎªÌ¡u%cbuser%¡vªºÅv­­¤£¨¬
-echo 3.¸ê®Æ®w¤w¦s¦b
+echo å¯èƒ½çš„åŸå› ï¼š
+echo 1.è¼¸å…¥çš„è³‡æ–™éŒ¯èª¤ï¼Œä¾‹å¦‚ï¼šä½¿ç”¨è€…åç¨±/ä½¿ç”¨è€…å¯†ç¢¼/å…¶ä»–ç›¸é—œè³‡æ–™
+echo 2.ä½¿ç”¨è€…ã€Œ%cbuser%ã€çš„æ¬Šé™ä¸è¶³
+echo 3.è³‡æ–™åº«å·²å­˜åœ¨
 echo.
-echo ½ĞÀË¬d³]©w¨Ã¥B­×¥¿¡A©ÎªÌª½±µ­«·s³]©w
+echo è«‹æª¢æŸ¥è¨­å®šä¸¦ä¸”ä¿®æ­£ï¼Œæˆ–è€…ç›´æ¥é‡æ–°è¨­å®š
 echo.
-echo (c)Ä~Äò
+echo (c)ç¹¼çºŒ
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p omfgprompt=½Ğ¿ï¾Ü¡]¹w³]­È-°h¥X¡^:
+set /p omfgprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-é€€å‡ºï¼‰:
 if /i %omfgprompt%==c goto gs_backup
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
@@ -605,21 +605,21 @@ goto cs_err2
 cls
 set communityprompt=u
 call :colors 17
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w¦w¸Ë¡G
+echo ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«å®‰è£ï¼š
 echo.
-echo (f)§¹¾ã¡G±N²¾°£©Ò¦³ÂÂªº¸ê®Æ¡A­«·s¾É¤J·sªº¸ê®Æ
+echo (f)å®Œæ•´ï¼šå°‡ç§»é™¤æ‰€æœ‰èˆŠçš„è³‡æ–™ï¼Œé‡æ–°å°å…¥æ–°çš„è³‡æ–™
 echo.
-echo (u)§ó·s¡G±N«O¯d©Ò¦³ÂÂªº¸ê®Æ¡A¨Ã¥B¶i¦æ§ó·s§@·~
+echo (u)æ›´æ–°ï¼šå°‡ä¿ç•™æ‰€æœ‰èˆŠçš„è³‡æ–™ï¼Œä¸¦ä¸”é€²è¡Œæ›´æ–°ä½œæ¥­
 echo.
-echo (s)¬Ù²¤¡G¸õ¹L¦¹¿ï¶µ
+echo (s)çœç•¥ï¼šè·³éæ­¤é¸é …
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p communityprompt=½Ğ¿ï¾Ü¡]¹w³]­È-§ó·s¡^:
+set /p communityprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-æ›´æ–°ï¼‰:
 if /i %communityprompt%==f goto cs_cleanup
 if /i %communityprompt%==u goto cs_upgrade
 if /i %communityprompt%==s goto gs_backup
@@ -630,21 +630,21 @@ goto cs_db_ok
 :cs_cleanup
 call :colors 17
 set cmdline=
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b²¾°£¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w¡AµM«á¾É¤J·sªº¸ê®Æ®w...
+echo æ­£åœ¨ç§»é™¤ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«ï¼Œç„¶å¾Œå°å…¥æ–°çš„è³‡æ–™åº«...
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< cs_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
-echo ¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®w¤w³Q§R°£
+echo ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«å·²è¢«åˆªé™¤
 goto cs_install
 
 :cs_upgrade
 cls
 echo.
-echo §ó·s¡u°Q½×ª©±M¥Î¡vªº¸ê®Æ®wµ²ºc
+echo æ›´æ–°ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€çš„è³‡æ–™åº«çµæ§‹
 echo.
 echo @echo off> temp.bat
 if exist cs_errors.log del cs_errors.log
@@ -658,14 +658,14 @@ goto cs_install
 cls
 set cmdline=
 if %full% == 1 (
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¦w¸Ë·sªº¡u°Q½×ª©±M¥Î¡v¸ê®Æ®w...
+echo å®‰è£æ–°çš„ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€è³‡æ–™åº«...
 echo.
 ) else (
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo §ó·s¡u°Q½×ª©±M¥Î¡v¸ê®Æ®w...
+echo æ›´æ–°ã€Œè¨è«–ç‰ˆå°ˆç”¨ã€è³‡æ–™åº«...
 echo.
 )
 if %logging% == 0 set output=NUL
@@ -681,9 +681,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=5
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b³Æ¥÷¹CÀ¸¦øªA¾¹ªº¸ê®Æ®w...
+echo æ­£åœ¨å‚™ä»½éŠæˆ²ä¼ºæœå™¨çš„è³‡æ–™åº«...
 set cmdline="%mysqldumpPath%" --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> "%backup%\gs_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gs_db_ok
@@ -692,23 +692,23 @@ if %ERRORLEVEL% == 0 goto gs_db_ok
 cls
 set gsdbprompt=y
 call :colors 47
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ³Æ¥÷¥¢±Ñ¡I
-echo ­ì¦]¬O¦]¬°¸ê®Æ®w¤£¦s¦b
-echo ²{¦b¥i¥HÀ°§A«Ø¥ß %gsdb%¡A©ÎªÌÄ~Äò¨ä¥¦³]©w
+echo å‚™ä»½å¤±æ•—ï¼
+echo åŸå› æ˜¯å› ç‚ºè³‡æ–™åº«ä¸å­˜åœ¨
+echo ç¾åœ¨å¯ä»¥å¹«ä½ å»ºç«‹ %gsdb%ï¼Œæˆ–è€…ç¹¼çºŒå…¶å®ƒè¨­å®š
 echo.
-echo «Ø¥ß¹CÀ¸¦øªA¾¹ªº¸ê®Æ®w¡H
+echo å»ºç«‹éŠæˆ²ä¼ºæœå™¨çš„è³‡æ–™åº«ï¼Ÿ
 echo.
-echo (y)½T©w
+echo (y)ç¢ºå®š
 echo.
-echo (n)¨ú®ø
+echo (n)å–æ¶ˆ
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p gsdbprompt=½Ğ¿ï¾Ü¡]¹w³]­È-½T©w¡^:
+set /p gsdbprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-ç¢ºå®šï¼‰:
 if /i %gsdbprompt%==y goto gs_db_create
 if /i %gsdbprompt%==n goto eof
 if /i %gsdbprompt%==r goto configure
@@ -720,9 +720,9 @@ cls
 call :colors 17
 set stage=6
 set cmdline=
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b«Ø¥ß¹CÀ¸¦øªA¾¹ªº¸ê®Æ®w...
+echo æ­£åœ¨å»ºç«‹éŠæˆ²ä¼ºæœå™¨çš„è³‡æ–™åº«...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -e "CREATE DATABASE %gsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gs_db_ok
@@ -732,22 +732,22 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¹CÀ¸¦øªA¾¹ªº¸ê®Æ®w«Ø¥ß¥¢±Ñ¡I
+echo éŠæˆ²ä¼ºæœå™¨çš„è³‡æ–™åº«å»ºç«‹å¤±æ•—ï¼
 echo.
-echo ¥i¯àªº­ì¦]¡G
-echo 1.¿é¤Jªº¸ê®Æ¿ù»~¡A¨Ò¦p¡G¨Ï¥ÎªÌ¦WºÙ/¨Ï¥ÎªÌ±K½X/¨ä¥L¬ÛÃö¸ê®Æ
-echo 2.¨Ï¥ÎªÌ¡u%gsuser%¡vªºÅv­­¤£¨¬
-echo 3.¸ê®Æ®w¤w¦s¦b
+echo å¯èƒ½çš„åŸå› ï¼š
+echo 1.è¼¸å…¥çš„è³‡æ–™éŒ¯èª¤ï¼Œä¾‹å¦‚ï¼šä½¿ç”¨è€…åç¨±/ä½¿ç”¨è€…å¯†ç¢¼/å…¶ä»–ç›¸é—œè³‡æ–™
+echo 2.ä½¿ç”¨è€…ã€Œ%gsuser%ã€çš„æ¬Šé™ä¸è¶³
+echo 3.è³‡æ–™åº«å·²å­˜åœ¨
 echo.
-echo ½ĞÀË¬d³]©w¨Ã¥B­×¥¿¡A©ÎªÌª½±µ­«·s³]©w
+echo è«‹æª¢æŸ¥è¨­å®šä¸¦ä¸”ä¿®æ­£ï¼Œæˆ–è€…ç›´æ¥é‡æ–°è¨­å®š
 echo.
-echo (r)­«·s°õ¦æ¨Ã¥B¶i¦æ³]©w
+echo (r)é‡æ–°åŸ·è¡Œä¸¦ä¸”é€²è¡Œè¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p omfgprompt=½Ğ¿ï¾Ü¡]¹w³]­È-°h¥X¡^:
+set /p omfgprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-é€€å‡ºï¼‰:
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
 goto gs_err2
@@ -756,19 +756,19 @@ goto gs_err2
 cls
 set installtype=u
 call :colors 17
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¹CÀ¸¦øªA¾¹ªº¸ê®Æ®w¦w¸Ë¡G
+echo éŠæˆ²ä¼ºæœå™¨çš„è³‡æ–™åº«å®‰è£ï¼š
 echo.
-echo (f)§¹¾ã¡G±N²¾°£©Ò¦³ÂÂªº¸ê®Æ¡A­«·s¾É¤J·sªº¸ê®Æ
+echo (f)å®Œæ•´ï¼šå°‡ç§»é™¤æ‰€æœ‰èˆŠçš„è³‡æ–™ï¼Œé‡æ–°å°å…¥æ–°çš„è³‡æ–™
 echo.
-echo (u)§ó·s¡G±N«O¯d©Ò¦³ÂÂªº¸ê®Æ¡A¨Ã¥B¶i¦æ§ó·s§@·~
+echo (u)æ›´æ–°ï¼šå°‡ä¿ç•™æ‰€æœ‰èˆŠçš„è³‡æ–™ï¼Œä¸¦ä¸”é€²è¡Œæ›´æ–°ä½œæ¥­
 echo.
-echo (s)¬Ù²¤¡G¸õ¹L¦¹¿ï¶µ
+echo (s)çœç•¥ï¼šè·³éæ­¤é¸é …
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p installtype=½Ğ¿ï¾Ü¡]¹w³]­È-§ó·s¡^:
+set /p installtype=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-æ›´æ–°ï¼‰:
 if /i %installtype%==f goto gs_cleanup
 if /i %installtype%==u goto gs_upgrade
 if /i %installtype%==s goto custom_ask
@@ -778,21 +778,21 @@ goto gs_db_ok
 :gs_cleanup
 call :colors 17
 set cmdline=
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥¿¦b²¾°£¹CÀ¸¦øªA¾¹ªº¸ê®Æ®w¡AµM«á¾É¤J·sªº¸ê®Æ®w...
+echo æ­£åœ¨ç§»é™¤éŠæˆ²ä¼ºæœå™¨çš„è³‡æ–™åº«ï¼Œç„¶å¾Œå°å…¥æ–°çš„è³‡æ–™åº«...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< gs_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
-echo ¹CÀ¸¸ê®Æ®w²¾°£§¹¦¨
+echo éŠæˆ²è³‡æ–™åº«ç§»é™¤å®Œæˆ
 goto gs_install
 
 :gs_upgrade
 cls
 echo.
-echo §ó·s¹CÀ¸¸ê®Æ®wµ²ºc
+echo æ›´æ–°éŠæˆ²è³‡æ–™åº«çµæ§‹
 echo.
 echo @echo off> temp.bat
 if exist gs_errors.log del gs_errors.log
@@ -806,14 +806,14 @@ goto gs_install
 cls
 set cmdline=
 if %full% == 1 (
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¦w¸Ë·sªº¹CÀ¸¸ê®Æ®w...
+echo å®‰è£æ–°çš„éŠæˆ²è³‡æ–™åº«...
 echo.
 ) else (
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo §ó·s¹CÀ¸¸ê®Æ®w...
+echo æ›´æ–°éŠæˆ²è³‡æ–™åº«...
 echo.
 )
 if %logging% == 0 set output=NUL
@@ -823,23 +823,23 @@ for %%i in (..\sql\game\mods\*.sql) do call :dump %%i
 for %%i in (..\sql\game\custom\*.sql) do call :dump %%i
 for %%i in (..\sql\L2JTW\*.sql) do call :dump %%i
 
-echo §¹¦¨...
+echo å®Œæˆ...
 echo.
 set charprompt=y
-set /p charprompt=¦w¸Ë¡u§Ş¯à/ª««~/Â¾·~/NPC»¡¸Ü¡v¤¤¤å¤Æ: (y) ½T©w ©Î (N) ¨ú®ø¡H¡]¹w³]­È-½T©w¡^:
+set /p charprompt=å®‰è£ã€ŒæŠ€èƒ½/ç‰©å“/è·æ¥­/NPCèªªè©±ã€ä¸­æ–‡åŒ–: (y) ç¢ºå®š æˆ– (N) å–æ¶ˆï¼Ÿï¼ˆé è¨­å€¼-ç¢ºå®šï¼‰:
 if /i %charprompt%==n goto custom_ask
 for %%i in (..\sql\L2JTW_2\*.sql) do call :dump %%i
-echo §¹¦¨...
+echo å®Œæˆ...
 echo.
-echo ¡¸ª`·N¡G³¡¤À¨t²Î¦w¸Ë¤¤¤å¤Æ·|¥¢±Ñ¡A¾É­P¹CÀ¸¤¤¥X²{¶Ã½X
-echo ¡@¡@¡@¡@¦pªG¹J¨ì³oºØ±¡§Î¡A½Ğ¦A¤â°Ê¾É¤J SQL ¸Ì­±ªº
-echo ¡@¡@¡@¡@skill_tw.sql / item_tw.sql / messagetable /
-echo ¡@¡@¡@¡@auto_chat_text_tw / char_templates_tw ³o 5 ­Ó SQL
+echo â˜†æ³¨æ„ï¼šéƒ¨åˆ†ç³»çµ±å®‰è£ä¸­æ–‡åŒ–æœƒå¤±æ•—ï¼Œå°è‡´éŠæˆ²ä¸­å‡ºç¾äº‚ç¢¼
+echo ã€€ã€€ã€€ã€€å¦‚æœé‡åˆ°é€™ç¨®æƒ…å½¢ï¼Œè«‹å†æ‰‹å‹•å°å…¥ SQL è£¡é¢çš„
+echo ã€€ã€€ã€€ã€€skill_tw.sql / item_tw.sql / messagetable /
+echo ã€€ã€€ã€€ã€€auto_chat_text_tw / char_templates_tw é€™ 5 å€‹ SQL
 goto custom_ask
 
 :dump
 set cmdline=
-if /i %full% == 1 (set action=¦w¸Ë) else (set action=§ó·s)
+if /i %full% == 1 (set action=å®‰è£) else (set action=æ›´æ–°)
 echo %action% %1>>"%output%"
 echo %action% %~nx1
 if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %1 2^>^>"%output%"
@@ -853,24 +853,24 @@ goto :eof
 cls
 set ntpebcak=c
 call :colors 47
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo ¥X²{¿ù»~¡G
+echo å‡ºç¾éŒ¯èª¤ï¼š
 echo %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb%
 echo.
-echo ÀÉ®× %~nx1
+echo æª”æ¡ˆ %~nx1
 echo.
-echo ³B²z¤è¦¡¡H
+echo è™•ç†æ–¹å¼ï¼Ÿ
 echo.
-echo (l)«Ø¥ß°T®§ÀÉ®×¤è«K¬d¸ß
+echo (l)å»ºç«‹è¨Šæ¯æª”æ¡ˆæ–¹ä¾¿æŸ¥è©¢
 echo.
-echo (c)Ä~Äò
+echo (c)ç¹¼çºŒ
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p ntpebcak=½Ğ¿ï¾Ü¡]¹w³]­È-Ä~Äò¡^:
+set /p ntpebcak=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-ç¹¼çºŒï¼‰:
 if /i %ntpebcak%==c (call :colors 17 & goto :eof)
 if /i %ntpebcak%==l (call :logginon %1 & goto :eof)
 if /i %ntpebcak%==r (call :configure & exit)
@@ -880,7 +880,7 @@ goto omfg2
 :logginon
 cls
 call :colors 17
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 set logging=1
 if %full% == 1 (
   set output=%logdir%\install-%~nx1.log
@@ -888,42 +888,42 @@ if %full% == 1 (
   set output=%logdir%\upgrade-%~nx1.log
 )
 echo.
-echo «Ø¥ß°T®§ÀÉ®×...
+echo å»ºç«‹è¨Šæ¯æª”æ¡ˆ...
 echo.
-echo ÀÉ®×¬°¡u%output%¡v
+echo æª”æ¡ˆç‚ºã€Œ%output%ã€
 echo.
-echo ¦pªG¦¹ÀÉ®×¤w¦s¦b¡A½Ğ¶i¦æ³Æ¥÷¡A§_«h±N·|ÂĞ»\¹L¥h
+echo å¦‚æœæ­¤æª”æ¡ˆå·²å­˜åœ¨ï¼Œè«‹é€²è¡Œå‚™ä»½ï¼Œå¦å‰‡å°‡æœƒè¦†è“‹éå»
 echo.
 pause
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^<..\sql\%1 2^>^>"%output%"
 date /t >"%output%"
 time /t >>"%output%"
 %cmdline%
-echo «Ø¥ß°T®§¸ê®Æ...
+echo å»ºç«‹è¨Šæ¯è³‡æ–™...
 call :colors 17
 set logging=0
 set output=NUL
 goto :eof
 
 :custom_ask
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 cls
 set cstprompt=y
 echo.
-echo custom ¦Û­q¸ê®Æªí¥[¤J¸ê®Æ®w§¹¦¨
-echo ©Ò¦³¿ù»~¸ê°T±N©ñ¤J¡ucustom_errors.log¡v
+echo custom è‡ªè¨‚è³‡æ–™è¡¨åŠ å…¥è³‡æ–™åº«å®Œæˆ
+echo æ‰€æœ‰éŒ¯èª¤è³‡è¨Šå°‡æ”¾å…¥ã€Œcustom_errors.logã€
 echo.
-echo ½Ğª`·N¡A¦pªG­n¨Ï³o¨Ç¦Û­q¸ê®Æªí¯à°÷±Ò¥Î
-echo §A¥²¶·­×§ï config ªºÀÉ®×³]©w
+echo è«‹æ³¨æ„ï¼Œå¦‚æœè¦ä½¿é€™äº›è‡ªè¨‚è³‡æ–™è¡¨èƒ½å¤ å•Ÿç”¨
+echo ä½ å¿…é ˆä¿®æ”¹ config çš„æª”æ¡ˆè¨­å®š
 echo.
-set /p cstprompt=¦w¸Ë custom ¦Û­q¸ê®Æªí: (y) ½T©w ©Î (N) ¨ú®ø¡]¹w³]­È-½T©w¡^:
+set /p cstprompt=å®‰è£ custom è‡ªè¨‚è³‡æ–™è¡¨: (y) ç¢ºå®š æˆ– (N) å–æ¶ˆï¼ˆé è¨­å€¼-ç¢ºå®šï¼‰:
 if /i %cstprompt%==y goto custom_install
 if /i %cstprompt%==n goto mod_ask
 
 :custom_install
 cls
 echo.
-echo ¦w¸Ë custom ¦Û­q¤º®e
+echo å®‰è£ custom è‡ªè¨‚å…§å®¹
 echo @echo off> temp.bat
 if exist custom_errors.log del custom_errors.log
 for %%i in (..\sql\game\custom\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.log >> temp.bat
@@ -933,25 +933,25 @@ move custom_errors.log %workdir%
 goto mod_ask
 
 :mod_ask
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 cls
 set cstprompt=y
 echo.
-echo Mod ¦Û­q¸ê®Æªí¥[¤J¸ê®Æ®w§¹¦¨
-echo ©Ò¦³¿ù»~¸ê°T±N©ñ¤J¡umod_errors.log¡v
+echo Mod è‡ªè¨‚è³‡æ–™è¡¨åŠ å…¥è³‡æ–™åº«å®Œæˆ
+echo æ‰€æœ‰éŒ¯èª¤è³‡è¨Šå°‡æ”¾å…¥ã€Œmod_errors.logã€
 echo.
-echo ½Ğª`·N¡A¦pªG­n¨Ï³o¨Ç¦Û­q¸ê®Æªí¯à°÷±Ò¥Î
-echo §A¥²¶·­×§ï config ªºÀÉ®×³]©w
+echo è«‹æ³¨æ„ï¼Œå¦‚æœè¦ä½¿é€™äº›è‡ªè¨‚è³‡æ–™è¡¨èƒ½å¤ å•Ÿç”¨
+echo ä½ å¿…é ˆä¿®æ”¹ config çš„æª”æ¡ˆè¨­å®š
 echo.
 echo.
-set /p cstprompt=¦w¸Ë Mods ¦Û­q¸ê®Æªí: (y) ½T©w ©Î (N) ¨ú®ø¡]¹w³]­È-½T©w¡^:
+set /p cstprompt=å®‰è£ Mods è‡ªè¨‚è³‡æ–™è¡¨: (y) ç¢ºå®š æˆ– (N) å–æ¶ˆï¼ˆé è¨­å€¼-ç¢ºå®šï¼‰:
 if /i %cstprompt%==y goto mod_install
 if /i %cstprompt%==n goto end
 
 :mod_install
 cls
 echo.
-echo ¦w¸Ë Mods ¦Û­q¤º®e
+echo å®‰è£ Mods è‡ªè¨‚å…§å®¹
 echo @echo off> temp.bat
 if exist mods_errors.log del mods_errors.log
 for %%i in (..\sql\game\mods\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> mods_errors.log >> temp.bat
@@ -964,13 +964,13 @@ goto end
 set omfgprompt=q
 call :colors 57
 cls
-title L2JTW Datapack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW Datapack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 echo.
-echo °õ¦æ®É¥X²{¿ù»~¡G
+echo åŸ·è¡Œæ™‚å‡ºç¾éŒ¯èª¤ï¼š
 echo.
 echo "%cmdline%"
 echo.
-echo «ØÄ³ÀË¬d¤@¤U³]©wªº¸ê®Æ¡A¥H½T«O©Ò¦³¿é¤Jªº¼Æ­È¨S¦³¿ù»~¡I
+echo å»ºè­°æª¢æŸ¥ä¸€ä¸‹è¨­å®šçš„è³‡æ–™ï¼Œä»¥ç¢ºä¿æ‰€æœ‰è¼¸å…¥çš„æ•¸å€¼æ²’æœ‰éŒ¯èª¤ï¼
 echo.
 if %stage% == 1 set label=ls_err1
 if %stage% == 2 set label=ls_err2
@@ -979,31 +979,31 @@ if %stage% == 4 set label=cs_err2
 if %stage% == 5 set label=gs_err1
 if %stage% == 6 set label=gs_err2
 echo.
-echo (c)Ä~Äò
+echo (c)ç¹¼çºŒ
 echo.
-echo (r)­«·s³]©w
+echo (r)é‡æ–°è¨­å®š
 echo.
-echo (q)°h¥X
+echo (q)é€€å‡º
 echo.
-set /p omfgprompt=½Ğ¿ï¾Ü¡]¹w³]­È-°h¥X¡^:
+set /p omfgprompt=è«‹é¸æ“‡ï¼ˆé è¨­å€¼-é€€å‡ºï¼‰:
 if /i %omfgprompt%==c goto %label%
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
 goto omfg
 
 :binaryfind
-if EXIST "%mysqlBinPath%" (echo §ä¨ìªº MySQL) else (echo ¨S¦³§ä¨ì MySQL¡A½Ğ¦b¤U­±¿é¤J¥¿½Tªº¦ì¸m...)
+if EXIST "%mysqlBinPath%" (echo æ‰¾åˆ°çš„ MySQL) else (echo æ²’æœ‰æ‰¾åˆ° MySQLï¼Œè«‹åœ¨ä¸‹é¢è¼¸å…¥æ­£ç¢ºçš„ä½ç½®...)
 goto :eof
 
 :end
 call :colors 17
-title L2JTW DataPack ¦w¸Ë - For¡GL2JTW GameServer HighFive Alpha
+title L2JTW DataPack å®‰è£ - Forï¼šL2JTW GameServer HighFive Alpha
 cls
 echo.
-echo L2JTW DataPack ¦w¸Ëµ{§Ç - For¡GL2JTW GameServer HighFive Alpha
-echo (C) 2007-2012 L2JTW DataPack ¶}µo¹Î¶¤
+echo L2JTW DataPack å®‰è£ç¨‹åº - Forï¼šL2JTW GameServer HighFive Alpha
+echo (C) 2007-2012 L2JTW DataPack é–‹ç™¼åœ˜éšŠ
 echo.
-echo ·PÁÂ¨Ï¥Î L2JTW ¦øªA¾¹
-echo ¬ÛÃö¸ê°T¥i¥H¦b http://www.l2jtw.com ¬d¸ß¨ì
+echo æ„Ÿè¬ä½¿ç”¨ L2JTW ä¼ºæœå™¨
+echo ç›¸é—œè³‡è¨Šå¯ä»¥åœ¨ http://www.l2jtw.com æŸ¥è©¢åˆ°
 echo.
 pause
