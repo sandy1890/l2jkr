@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="L2JTW_GameServer_Tauti_Beta" default="build" basedir=".">
+<project name="L2J_Server_Tauti_BETA" default="build" basedir=".">
 	<description>
 		This script will build the L2JTW server.
 
@@ -208,7 +208,7 @@
 	</target>
 
 	<target name="build" depends="jar" description="Create the Zip file.">
-		<zip destfile="${build}/L2JTW_Server.zip" basedir="${build.dist}" level="9" />
+		<zip destfile="${build}/L2J_Server_Tauti_BETA.zip" basedir="${build.dist}" level="9" />
 	</target>
 
 	<target name="checkRequirements" description="Check Requirements.">
@@ -229,7 +229,7 @@
 			<arg value="--stop-on-copy" />
 		</exec>
 		<tstamp>
-			<format property="build.tstamp" pattern="dd/MM/yyyy HH:mm" />
+			<format property="build.tstamp" pattern="yyyy/MM/dd HH:mm" />
 		</tstamp>
 		<exec dir="${basedir}" executable="svnversion" outputproperty="l2j.version" />
 	</target>
