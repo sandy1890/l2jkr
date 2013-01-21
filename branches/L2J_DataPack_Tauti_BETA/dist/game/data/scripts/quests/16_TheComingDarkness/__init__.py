@@ -56,7 +56,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -67,17 +67,17 @@ class Quest (JQuest) :
 		st2 = player.getQuestState("17_LightAndDarkness")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == HIERARCH:
 				if st2 and st2.getState() == State.COMPLETED :
 					if player.getLevel() >= 62 :
 						htmltext = "31517-0.htm"
 					else:
-						htmltext = "<html><body>¡]µ¥¯Å62¥H¤Wªº¨¤¦â¤~¥i¥H°õ¦æªº¥ô°È¡C¡^</body></html>"
+						htmltext = "<html><body>ï¼ˆç­‰ç´š62ä»¥ä¸Šçš„è§’è‰²æ‰å¯ä»¥åŸ·è¡Œçš„ä»»å‹™ã€‚ï¼‰</body></html>"
 						st.exitQuest(1)
 				else:
-					htmltext = "<html><body>¥²¶·¥ı§¹¦¨¡u¥ú½÷¬V¤W¶Â·t¡vªº¥ô°È¡C</body></html>"
+					htmltext = "<html><body>å¿…é ˆå…ˆå®Œæˆã€Œå…‰è¼æŸ“ä¸Šé»‘æš—ã€çš„ä»»å‹™ã€‚</body></html>"
 					st.exitQuest(1)
 		elif id == State.STARTED :
 			if npcId == EVIL_ALTAR_1 and cond == 1 :
@@ -98,7 +98,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_finish")
 		return htmltext
 
-QUEST		= Quest(16,qn,"§Y±N¨ÓÁ{ªº¶Â·t")
+QUEST		= Quest(16,qn,"å³å°‡ä¾†è‡¨çš„é»‘æš—")
 
 QUEST.addStartNpc(31517)
 

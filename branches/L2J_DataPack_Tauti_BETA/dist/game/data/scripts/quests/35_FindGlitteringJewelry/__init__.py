@@ -47,11 +47,11 @@ class Quest (JQuest) :
 				st.unset("cond")
 				st.exitQuest(False)
 			else :
-				htmltext = "¹D¨ã¤£¨¬"
+				htmltext = "é“å…·ä¸è¶³"
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -60,7 +60,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED:
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == 30091 and cond == 0 and st.getQuestItemsCount(JEWEL_BOX) == 0 :
 				fwear = player.getQuestState("37_PleaseMakeMeFormalWear")
@@ -117,7 +117,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(35,qn,"´M§ä¤@°{¤@°{«G´¹´¹ªºÄ_¥Û!")
+QUEST		= Quest(35,qn,"å°‹æ‰¾ä¸€é–ƒä¸€é–ƒäº®æ™¶æ™¶çš„å¯¶çŸ³!")
 
 QUEST.addStartNpc(30091)
 

@@ -55,13 +55,13 @@ class Quest (JQuest) :
        htmltext = "31521-4.htm"
        st.exitQuest(1)
      else:
-       htmltext="31521-5.htm"  # ³Æµù¡G©xªA¦pªG¦Û¤v§R°£¥ô°È¹D¨ã±N¤£¯àÄ~Äò±o¨ì¥ô°È¹D¨ã¡A¥u¦³§R°£¥ô°È­«·s±µ¹L¥ô°È¡C
+       htmltext="31521-5.htm"  # å‚™è¨»ï¼šå®˜æœå¦‚æœè‡ªå·±åˆªé™¤ä»»å‹™é“å…·å°‡ä¸èƒ½ç¹¼çºŒå¾—åˆ°ä»»å‹™é“å…·ï¼Œåªæœ‰åˆªé™¤ä»»å‹™é‡æ–°æ¥éä»»å‹™ã€‚
        st.set("cond","1")
    return htmltext
 
  def onTalk (self,npc,player):
    st = player.getQuestState(qn)
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    if st :
        npcId = npc.getNpcId()
        cond = st.getInt("cond")
@@ -112,7 +112,7 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_itemget")  
    return
 
-QUEST       = Quest(624,qn,"¶Ç»¡¤¤ªº®Æ²z­¹§÷-«e½g")
+QUEST       = Quest(624,qn,"å‚³èªªä¸­çš„æ–™ç†é£Ÿæ-å‰ç¯‡")
 
 QUEST.addStartNpc(JEREMY)
 QUEST.addTalkId(JEREMY)

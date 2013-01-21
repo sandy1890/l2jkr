@@ -82,7 +82,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -101,7 +101,7 @@ class Quest (JQuest) :
          htmltext = "30118-02.htm"
          st.exitQuest(1)
    elif npcId == 30118 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    elif npcId == 30118 and st.getInt("cond")==3 and st.getQuestItemsCount(HUGE_NAIL)>=1:
         htmltext = "30118-05.htm"
@@ -251,7 +251,7 @@ class Quest (JQuest) :
 
    return
 
-QUEST       = Quest(227,qn,"ÅÜ­²ªÌªº¼f®Ö")
+QUEST       = Quest(227,qn,"è®Šé©è€…çš„å¯©æ ¸")
 
 QUEST.addStartNpc(30118)
 

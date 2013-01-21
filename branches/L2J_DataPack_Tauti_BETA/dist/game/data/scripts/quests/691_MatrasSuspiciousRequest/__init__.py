@@ -13,10 +13,10 @@ MATRAS = 32245
 MOBS = [22363,22364,22365,22366,22367,22368,22369,22370,22371,22372]
 
 # Quest Item
-REDSTONE = 10372             # ¬õ¥Û
+REDSTONE = 10372             # ç´…çŸ³
 
-ADENA = 57                   # ª÷¹ô
-DYNASTICESSENCEII = 10413    # ¤ı´Â¤§»îII
+ADENA = 57                   # é‡‘å¹£
+DYNASTICESSENCEII = 10413    # ç‹æœä¹‹é­‚II
 
 class Quest (JQuest) :
 
@@ -61,7 +61,7 @@ class Quest (JQuest) :
 		return htmltext    
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -81,7 +81,7 @@ class Quest (JQuest) :
 		elif id == State.STARTED:
 			if npcId == MATRAS and cond == 1 and RED >= 1 :
 				if talk == 0 :
-					htmltext = "32245-04a.htm"  # ³Æµù¡G©xªA³Â¯S©Ô´µ¶i¤J 32245-05 ³o¬q®É·|¦¬¨ú§A¨­¤W¥ş³¡¬õ¥Û ¦ı32245-05 32245-05a 32245-09 ³o´X­Ó htm ·|Åã¥Ü¦¬¨ú¬õ¥Û¼Æ¶q ¦ı¤£·|µ¹¦^§Aªº
+					htmltext = "32245-04a.htm"  # å‚™è¨»ï¼šå®˜æœéº»ç‰¹æ‹‰æ–¯é€²å…¥ 32245-05 é€™æ®µæ™‚æœƒæ”¶å–ä½ èº«ä¸Šå…¨éƒ¨ç´…çŸ³ ä½†32245-05 32245-05a 32245-09 é€™å¹¾å€‹ htm æœƒé¡¯ç¤ºæ”¶å–ç´…çŸ³æ•¸é‡ ä½†ä¸æœƒçµ¦å›ä½ çš„
 				elif talk >= 1 :
 					htmltext = st.showHtmlFile("32245-05a.htm").replace("%pmq%",str(RED))
 				else :
@@ -103,7 +103,7 @@ class Quest (JQuest) :
 					st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(691, qn, "³Â¯S©Ô´µ¥iºÃªº©e°U")
+QUEST		= Quest(691, qn, "éº»ç‰¹æ‹‰æ–¯å¯ç–‘çš„å§”è¨—")
 
 QUEST.addStartNpc(32245)
 

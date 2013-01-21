@@ -42,7 +42,7 @@ class Quest (JQuest) :
              htmltext = "30912-03.htm"
              st.playSound("ItemSound.quest_itemget")
          else :
-             htmltext = "<html><body>ª÷¿ú¤£¨¬¡C</body></html>"
+             htmltext = "<html><body>é‡‘éŒ¢ä¸è¶³ã€‚</body></html>"
      elif event == "4" :
          htmltext = "30973-02.htm"
          st.takeItems(POWDER_TO_SUMMON_DEAD_SOULS,-1)
@@ -55,7 +55,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -71,7 +71,7 @@ class Quest (JQuest) :
              if level>=35 :
                  htmltext = "30970-01.htm"
              else :
-                 htmltext = "30970-00.htm"  # pmq ­×§ï
+                 htmltext = "30970-00.htm"  # pmq ä¿®æ”¹
                  st.exitQuest(1)
          elif cond==1 and st.getQuestItemsCount(VICTIMS_ARM_BONE) and st.getQuestItemsCount(VICTIMS_THIGH_BONE) and st.getQuestItemsCount(VICTIMS_SKULL) and st.getQuestItemsCount(VICTIMS_RIB_BONE) and st.getQuestItemsCount(VICTIMS_SPINE) :
              htmltext = "30970-05.htm"
@@ -88,7 +88,7 @@ class Quest (JQuest) :
              htmltext = "30912-01.htm"
              st.playSound("ItemSound.quest_middle")
          elif cond == 3 :
-             htmltext = "<html><body>Â»»¡¤F¤°»ò¡H</body></html>"
+             htmltext = "<html><body>ç½ˆèªªäº†ä»€éº¼ï¼Ÿ</body></html>"
          elif cond == 6 :
              htmltext = "30912-04.htm"
              st.set("cond","7")
@@ -119,7 +119,7 @@ class Quest (JQuest) :
          st.giveItems(USELESS_BONE_PIECES,self.getRandom(8)+1)
      return
 
-QUEST       = Quest(345,qn,"­±¹ï¦ºªÌªº¤èªk")
+QUEST       = Quest(345,qn,"é¢å°æ­»è€…çš„æ–¹æ³•")
 
 QUEST.addStartNpc(30970)
 

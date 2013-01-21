@@ -64,7 +64,7 @@ class Quest (JQuest) :
 		elif event == "31523-02.htm":
 			st.playSound("SkillSound5.horror_02")
 			ghost = st.addSpawn(31524,51432,-54570,-3136,1800000)
-			ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),"¬O½Ö¥s¿ô§Ú¡C"))
+			ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),"æ˜¯èª°å«é†’æˆ‘ã€‚"))
 		elif event == "31523-05.htm":
 			st.startQuestTimer("ghost_timer",10000)
 		elif event == "ghost_timer":
@@ -79,7 +79,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -88,7 +88,7 @@ class Quest (JQuest) :
 		state = st.getState()
 
 		if state == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif state == State.CREATED :
 			if npcId == Innocentin and cond == 0 :
 				st2 = st.getPlayer().getQuestState("22_TragedyInVonHellmannForest")
@@ -168,7 +168,7 @@ class Quest (JQuest) :
 					htmltext = "31386-03.htm"
 		return htmltext
 
-QUEST		= Quest(23,qn,"²ú­}¨Èªº¤ß")
+QUEST		= Quest(23,qn,"è‰è¿ªäºçš„å¿ƒ")
 
 QUEST.addStartNpc(Innocentin)
 

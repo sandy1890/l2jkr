@@ -42,7 +42,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¦X¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦åˆã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -51,7 +51,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == CASIAN and cond == 0 :
 				if not HellboundManager.getInstance().isLocked() :
@@ -80,10 +80,10 @@ class Quest (JQuest) :
 					if st.getQuestItemsCount(CASIAN_BLUE_CRY) == 1 :
 						htmltext = "32292-04.htm"
 					else :
-						htmltext = "¹D¨ã¤£²Å¡C"
+						htmltext = "é“å…·ä¸ç¬¦ã€‚"
 		return htmltext
 
-QUEST		= Quest(130,qn,"©¹¦aº»Ãä¬Éªº¸ô")
+QUEST		= Quest(130,qn,"å¾€åœ°ç„é‚Šç•Œçš„è·¯")
 
 QUEST.addStartNpc(CASIAN)
 

@@ -20,7 +20,7 @@ class Quest (JQuest) :
       st.exitQuest(1);
    return "32016-00.htm"
 
-QUEST       = Quest(646, qn, "«q¶Ãªº¼x¥ü")
+QUEST       = Quest(646, qn, "å›äº‚çš„å¾µå…†")
 
 QUEST.addStartNpc(32016)
 QUEST.addTalkId(32016)

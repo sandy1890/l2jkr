@@ -10,8 +10,8 @@ GIANT_SPIDER_SKIN = 1495
 ADENA = 57
 HEALING_POTION = 1061
 WOODEN_ARROW = 17
-Soulshot_No_Grade = 1835   #pmq­×§ï
-Spiritshot_No_Grade = 2509 #pmq­×§ï
+Soulshot_No_Grade = 1835   #pmqä¿®æ”¹
+Spiritshot_No_Grade = 2509 #pmqä¿®æ”¹
 
 class Quest (JQuest) :
 
@@ -33,21 +33,21 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
     elif event == "30405-04.htm" :
       if count >= 10 :
-         st.giveItems(HEALING_POTION,2)       #pmq­×§ï
-         st.takeItems(GIANT_SPIDER_SKIN,10)   #pmq­×§ï
-    elif event == "30405-08.htm" :            #pmq­×§ï
-      if count >= 10 :                        #pmq­×§ï
-         st.giveItems(Soulshot_No_Grade,60)   #pmq­×§ï
-         st.takeItems(GIANT_SPIDER_SKIN,10)   #pmq­×§ï
-    elif event == "30405-09.htm" :            #pmq­×§ï
-      if count >= 10 :                        #pmq­×§ï
-         st.giveItems(Spiritshot_No_Grade,30) #pmq­×§ï
+         st.giveItems(HEALING_POTION,2)       #pmqä¿®æ”¹
+         st.takeItems(GIANT_SPIDER_SKIN,10)   #pmqä¿®æ”¹
+    elif event == "30405-08.htm" :            #pmqä¿®æ”¹
+      if count >= 10 :                        #pmqä¿®æ”¹
+         st.giveItems(Soulshot_No_Grade,60)   #pmqä¿®æ”¹
+         st.takeItems(GIANT_SPIDER_SKIN,10)   #pmqä¿®æ”¹
+    elif event == "30405-09.htm" :            #pmqä¿®æ”¹
+      if count >= 10 :                        #pmqä¿®æ”¹
+         st.giveItems(Spiritshot_No_Grade,30) #pmqä¿®æ”¹
          st.takeItems(GIANT_SPIDER_SKIN,10)
       else:
          htmltext="Incorrect item count"
     elif event == "30405-05.htm" :
       if count >= 10 :
-         st.giveItems(WOODEN_ARROW,250)       #pmq­×§ï
+         st.giveItems(WOODEN_ARROW,250)       #pmqä¿®æ”¹
          st.takeItems(GIANT_SPIDER_SKIN,10)
       else:
          htmltext="Incorrect item count"
@@ -57,7 +57,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -102,7 +102,7 @@ class Quest (JQuest) :
    st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(259,qn,"ªª³õ¥Dªº©e°U")
+QUEST       = Quest(259,qn,"ç‰§å ´ä¸»çš„å§”è¨—")
 
 QUEST.addStartNpc(30497)
 QUEST.addTalkId(30497)

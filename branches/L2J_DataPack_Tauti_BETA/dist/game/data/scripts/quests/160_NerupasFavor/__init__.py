@@ -32,7 +32,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -48,7 +48,7 @@ class Quest (JQuest) :
        htmltext = "30370-02.htm"
        st.exitQuest(1)
    elif id == State.COMPLETED :
-     htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+     htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    elif id == State.STARTED :
      try :
@@ -101,7 +101,7 @@ class Quest (JQuest) :
           htmltext = "30370-06.htm"
    return htmltext
 
-QUEST       = Quest(160,qn,"®R¾|©¬ªºÅñ°U")
+QUEST       = Quest(160,qn,"å¨œé­¯å¸•çš„å›‘è¨—")
 
 QUEST.addStartNpc(30370)
 

@@ -16,17 +16,17 @@ qn = "692_HowToOpposeEvil"
 DILIOS = 32549
 KUTRAN = 32550
 # ITEMS
-LEKONS_CERTIFICATE       = 13857  # ╧p╘[╙╨цр╘З╝я
-NUCLEUS_OF_A_FREED_SOUL  = 13796  # ╦я╘Я╙╨фF╩Н╓╖╝ж
-FLEET_STEED_TROUPS_CHARM = 13841  # юs╟╗╧не@╗╜╡е
-RAGING_HUNSHI_DEBRIS     = 15486  # фF╩Н╔ш╦H╓Ы
+LEKONS_CERTIFICATE       = 13857  # И⌡╥Е²╓Г └Х╜┴Ф≤▌Ф⌡╦
+NUCLEUS_OF_A_FREED_SOUL  = 13796  # Х╖ёФ■╬Г └И²┬И╜┌Д╧▀Ф═╦
+FLEET_STEED_TROUPS_CHARM = 13841  # И╬█И╕╛Е°≤Х╜╥Х╨╚Г╛╕
+RAGING_HUNSHI_DEBRIS     = 15486  # И²┬И╜┌Г÷ЁГ╒▌Г┴┤
 # QUEST DROP
-PORTION                  = 13798  # фF╩Н╙╨╓Ы╛q
-NUCLEUS                  = 13863  # ╓ё╖╧╬Ц╙╨фF╩Н╓╖╝ж
-FLEET                    = 13865  # юs╟╗╧н╧одк
-BREATH                   = 13867  # ╦╕╤╝╞S╝П╝╖
-CONDENSATION             = 15535  # ╬╝аY╙╨╔м╘R╞Ю╤q
-SOULSTONE                = 15536  # фF╩Н╔ш╦H╓Ы╞╩╔╫
+PORTION                  = 13798  # И²┬И╜┌Г └Г┴┤Ф╝╣
+NUCLEUS                  = 13863  # Д╦█Е╝▄Ф∙╢Г └И²┬И╜┌Д╧▀Ф═╦
+FLEET                    = 13865  # И╬█И╕╛Е°≤Е°√И╗╟
+BREATH                   = 13867  # Х▓┌И⌡┘Г┴╧Ф╟ёФ│╞
+CONDENSATION             = 15535  # Е┤²Г╦╝Г └Г■÷Е▒╫Х┐╫И┤▐
+SOULSTONE                = 15536  # И²┬И╜┌Г÷ЁГ╒▌Г┴┤Г╡┴Ф°╚
 DESTRUCTION_DROP = [FLEET,BREATH]
 IMMORTALITY_DROP = [NUCLEUS]
 EXTERMINTE_DROP  = [CONDENSATION,SOULSTONE]
@@ -59,7 +59,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>╔ь╚e╗S╕Ё╟У╕Ф╔Т╟х║A╘н╠Ь╔С╓ё╡е║C</body></html>"
+		htmltext = "<html><body>Г⌡╝Е┴█Ф╡▓Ф°┴Е÷╥Х║▄Д╩╩Е▀≥О╪▄Ф┬√Ф╒²Д╩╤Д╦█Г╛╕Ц─┌</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -132,7 +132,7 @@ class Quest (JQuest) :
 					st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(692,qn,"╧О╖э╢c╙╨╓Х╙k")
+QUEST		= Quest(692,qn,"Е╟█Ф┼≈Ф┐║Г └Ф√╧ФЁ∙")
 
 QUEST.addStartNpc(DILIOS)
 QUEST.addTalkId(DILIOS)

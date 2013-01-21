@@ -8,21 +8,21 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "307_ControlDeviceOfTheGiants"
 
 # NPC
-DROPH = 32711               # ¸G¤H±´ÀI®a ¼w¬¥¤Ò
+DROPH = 32711               # çŸ®äººæŽ¢éšªå®¶ å¾·æ´›å¤«
 # L2RaidBoss
-GORGOLOS          = 25467   # ¬¼Ây­º»â °ªº¸¤Ä­Û¥q
-LAST_TITAN_UTENUS = 25470   # ¬¼Ây­º»â ³Ì«áªº¤U¥¨¤H µS¯S§V´µ
-GIANT_MARPANAK    = 25680   # ¬¼Ây­º»â ¥¨¤H ®³º¸©¬®³§J
-HEKATON_PRIME     = 25687   # ¬¼Ây­º»â ¶Â¥d¯S­ì«¬
+GORGOLOS          = 25467   # ç‹©çµé¦–é ˜ é«˜çˆ¾å‹¾å€«å¸
+LAST_TITAN_UTENUS = 25470   # ç‹©çµé¦–é ˜ æœ€å¾Œçš„ä¸‹å·¨äºº çŒ¶ç‰¹åŠªæ–¯
+GIANT_MARPANAK    = 25680   # ç‹©çµé¦–é ˜ å·¨äºº æ‹¿çˆ¾å¸•æ‹¿å…‹
+HEKATON_PRIME     = 25687   # ç‹©çµé¦–é ˜ é»‘å¡ç‰¹åŽŸåž‹
 # ITEM
-CET_1_SHEET = 14829         # ¬}¸]±´ÀI¤§®Ñ ²Ä1³¹
-CET_2_SHEET = 14830         # ¬}¸]±´ÀI¤§®Ñ ²Ä2³¹
-CET_3_SHEET = 14831         # ¬}¸]±´ÀI¤§®Ñ ²Ä3³¹
+CET_1_SHEET = 14829         # æ´žçªŸæŽ¢éšªä¹‹æ›¸ ç¬¬1ç« 
+CET_2_SHEET = 14830         # æ´žçªŸæŽ¢éšªä¹‹æ›¸ ç¬¬2ç« 
+CET_3_SHEET = 14831         # æ´žçªŸæŽ¢éšªä¹‹æ›¸ ç¬¬3ç« 
 # NpcId:[x,y,z] # name
-RADAR  = { 25467:[0,0,0] }  # ¬¼Ây­º»â °ªº¸¤Ä­Û¥q
-RADAR1 = { 25470:[0,0,0] }  # ¬¼Ây­º»â ³Ì«áªº¤U¥¨¤H µS¯S§V´µ
-RADAR2 = { 25680:[0,0,0] }  # ¬¼Ây­º»â ¥¨¤H ®³º¸©¬®³§J
-RADAR3 = { 25687:[0,0,0] }  # ¬¼Ây­º»â ¶Â¥d¯S­ì«¬
+RADAR  = { 25467:[0,0,0] }  # ç‹©çµé¦–é ˜ é«˜çˆ¾å‹¾å€«å¸
+RADAR1 = { 25470:[0,0,0] }  # ç‹©çµé¦–é ˜ æœ€å¾Œçš„ä¸‹å·¨äºº çŒ¶ç‰¹åŠªæ–¯
+RADAR2 = { 25680:[0,0,0] }  # ç‹©çµé¦–é ˜ å·¨äºº æ‹¿çˆ¾å¸•æ‹¿å…‹
+RADAR3 = { 25687:[0,0,0] }  # ç‹©çµé¦–é ˜ é»‘å¡ç‰¹åŽŸåž‹
 
 class Quest (JQuest) :
 
@@ -60,7 +60,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -102,7 +102,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_accept")
 		return
 
-QUEST = Quest(307, qn, "¥¨¤H­Ìªº²Îªv¸Ë¸m")
+QUEST = Quest(307, qn, "å·¨äººå€‘çš„çµ±æ²»è£ç½®")
 
 QUEST.addStartNpc(DROPH)
 QUEST.addTalkId(DROPH)

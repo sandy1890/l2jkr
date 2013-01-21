@@ -61,7 +61,7 @@ class Quest (JQuest) :
  def onTalk (self,npc,player): 
 
    npcId = npc.getNpcId() 
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn) 
    if not st : return htmltext 
 
@@ -69,7 +69,7 @@ class Quest (JQuest) :
    if id == State.CREATED : 
      st.set("cond","0") 
    if npcId == 30523 and id == State.COMPLETED : 
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
    elif npcId == 30523 and st.getInt("cond")==0 : 
           if player.getRace().ordinal() != 4 : 
             htmltext = "30523-00.htm" 
@@ -238,7 +238,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle") 
    return 
 
-QUEST       = Quest(108,qn,"ªF©b¦è¼²ªºÆp¥Û¤jÄÌ°Ê")
+QUEST       = Quest(108,qn,"æ±å¥”è¥¿æ’çš„é‘½çŸ³å¤§é¨·å‹•")
 
 QUEST.addStartNpc(30523) 
 

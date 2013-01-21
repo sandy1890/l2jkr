@@ -45,7 +45,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player) :
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -58,7 +58,7 @@ class Quest (JQuest) :
 		if id == State.CREATED :
 			if npcId == Messenger and cond == 0 :
 				if clan == None:
-					htmltext = "<html><body>¨ÏªÌ¡G<br>§A«ç»ò·|¥H³o»ò·L®zªº¹ê¤O´N·Q¸ò§Ú­Ì¶ø­Cº¿¤Òµ²·ù©O¡H<br>(¦å·ùµ¥¯Å4¥H¤Wªº¦å·ù·ù¥D¤~¥i¥H°õ¦æ¡C)</body></html>"
+					htmltext = "<html><body>ä½¿è€…ï¼š<br>ä½ æ€éº¼æœƒä»¥é€™éº¼å¾®å¼±çš„å¯¦åŠ›å°±æƒ³è·Ÿæˆ‘å€‘å¥§è€¶ç‘ªå¤«çµç›Ÿå‘¢ï¼Ÿ<br>(è¡€ç›Ÿç­‰ç´š4ä»¥ä¸Šçš„è¡€ç›Ÿç›Ÿä¸»æ‰å¯ä»¥åŸ·è¡Œã€‚)</body></html>"
 					st.exitQuest(1)
 					return htmltext
 				if clan.getLevel() < 4:
@@ -70,12 +70,12 @@ class Quest (JQuest) :
 					st.exitQuest(1)
 					return htmltext
 				if clanhall == 1 :
-					htmltext = "<html><body>¨ÏªÌ¡G<br>¼K¡A§A¦b·F¶Ü¡H§A¤w¸g¦³¤F®Ú¾Ú¦a¡I¹L¤Àªº³g¼¤·|±a¨Ó¤£©¯¡C¨º´N§iÃã¤F¡C</body></html>"
+					htmltext = "<html><body>ä½¿è€…ï¼š<br>å˜¿ï¼Œä½ åœ¨å¹¹å—ï¼Ÿä½ å·²ç¶“æœ‰äº†æ ¹æ“šåœ°ï¼éåˆ†çš„è²ªæ…¾æœƒå¸¶ä¾†ä¸å¹¸ã€‚é‚£å°±å‘Šè¾­äº†ã€‚</body></html>"
 					st.exitQuest(1)
 					return htmltext
 				if BanditStrongholdSiege.getInstance().isRegistrationPeriod():
 					if st.getQuestItemsCount(TarlkAmulet) > 1 :
-						htmltext = "<html><body>¨ÏªÌ¡G<br>§A¬D¾Ô¹L¤W¦¸ªº¹wÁÉ¶Ü¡H¨º»ò§â¨º­Ó¾ÌÃÒ¥æµ¹§Ú¤§«á¦AÄ~Äò§@¾Ô§a¡I</body></html>"
+						htmltext = "<html><body>ä½¿è€…ï¼š<br>ä½ æŒ‘æˆ°éä¸Šæ¬¡çš„é è³½å—ï¼Ÿé‚£éº¼æŠŠé‚£å€‹æ†‘è­‰äº¤çµ¦æˆ‘ä¹‹å¾Œå†ç¹¼çºŒä½œæˆ°å§ï¼</body></html>"
 						st.takeItems(TarlkAmulet,30)
 						st.exitQuest(1)
 					else :
@@ -98,7 +98,7 @@ class Quest (JQuest) :
 			st.giveItems(TarlkAmulet,1)
 			st.playSound("ItemSound.quest_itemget")
 
-QUEST = Quest(504,qn,"¤s¹ëª§¹Ü¾Ô")
+QUEST = Quest(504,qn,"å±±å¯¨çˆ­å¥ªæˆ°")
 
 QUEST.addStartNpc(Messenger)
 QUEST.addTalkId(Messenger)

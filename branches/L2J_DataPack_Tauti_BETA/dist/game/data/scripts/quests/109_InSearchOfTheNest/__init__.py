@@ -8,11 +8,11 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "109_InSearchOfTheNest"
 
 # Npc
-PIERCE  = 31553  # ¶Ä§L¶¤ªø ¤ñ´µ
-CORPSE  = 32015  # °»¬d§Lªº«ÍÅé
-KAHMAN  = 31554  # ¶Ä§L ¥d©i®¦
+PIERCE  = 31553  # å‚­å…µéšŠé•· æ¯”æ–¯
+CORPSE  = 32015  # åµæŸ¥å…µçš„å±é«”
+KAHMAN  = 31554  # å‚­å…µ å¡å§†æ©
 # Item
-MEMO    = 8083   # °»¬d§Lªº°»¬d°O¿ı
+MEMO    = 8083   # åµæŸ¥å…µçš„åµæŸ¥è¨˜éŒ„
 
 class Quest (JQuest):
 
@@ -46,7 +46,7 @@ class Quest (JQuest):
 		return htmltext
 
 	def onTalk(self, npc, player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st :return htmltext
 
@@ -55,7 +55,7 @@ class Quest (JQuest):
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == PIERCE :
 				if st.getPlayer().getLevel() >= 81 :
@@ -81,7 +81,7 @@ class Quest (JQuest):
 					htmltext = "31554-01.htm"
 		return htmltext
 
-QUEST		= Quest(109,qn,"´M§ä±_¥Ş")
+QUEST		= Quest(109,qn,"å°‹æ‰¾å·¢ç©´")
 
 QUEST.addStartNpc(PIERCE)
 

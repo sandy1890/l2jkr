@@ -10,11 +10,11 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "311_ExpulsionOfEvilSpirits"
 
 # NPCS
-CHAIREN           = 32655  # »ô³s
+CHAIREN           = 32655  # é½Šé€£
 
-SOUL_PENDANT      = 14848  # ¦uÅ@ÆF»îªº¼Y¤l
-SOUL_CORE         = 14881  # «Ê¦í´cÆFªºÆF»î¤§®Ö
-RAGNA_ORCS_AMULET = 14882  # Ã¹®æ¨ºÃ~¤Hªº²Å©G
+SOUL_PENDANT      = 14848  # å®ˆè­·éˆé­‚çš„å¢œå­
+SOUL_CORE         = 14881  # å°ä½æƒ¡éˆçš„éˆé­‚ä¹‹æ ¸
+RAGNA_ORCS_AMULET = 14882  # ç¾…æ ¼é‚£ç¸äººçš„ç¬¦å’’
 
 DROP_CHANCE = 20
 
@@ -90,7 +90,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player) :
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -133,7 +133,7 @@ class Quest (JQuest) :
 					st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(311,qn,"À»°h´cÆF")
+QUEST		= Quest(311,qn,"æ“Šé€€æƒ¡éˆ")
 
 QUEST.addStartNpc(CHAIREN)
 QUEST.addTalkId(CHAIREN)

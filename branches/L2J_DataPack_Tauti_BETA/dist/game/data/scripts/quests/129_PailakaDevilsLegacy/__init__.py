@@ -1,5 +1,5 @@
 # By Psycho(killer1888) / L2jFree
-# ����� pmq
+# 中文化 pmq
 import sys
 from com.l2jserver.gameserver.datatables             import ItemTable
 from com.l2jserver.gameserver.instancemanager        import InstanceManager
@@ -16,54 +16,54 @@ from com.l2jserver.gameserver.network.serverpackets  import SystemMessage
 from com.l2jserver.util                              import Rnd
 from com.l2jserver.gameserver.model.zone             import L2ZoneType
 
-# 129 1 �i��ԥd-�c�]���� �c�]�q����ԥd�j
-# 129 2 �i��ԥd-�c�]���� ��ԥd���Q�ɡj
-# 129 3 �i��ԥd-�c�]���� �b�ƴc�]�q�j
-# 129 4 �i��ԥd-�c�]���� �b�ƪ��c�]�q�j
+# 129 1 【菲拉卡-惡魔的遺產 惡魔島的菲拉卡】
+# 129 2 【菲拉卡-惡魔的遺產 菲拉卡的嚮導】
+# 129 3 【菲拉卡-惡魔的遺產 淨化惡魔島】
+# 129 4 【菲拉卡-惡魔的遺產 淨化的惡魔島】
 
 qn = "129_PailakaDevilsLegacy"
 
 debug = False
 
 #NPC
-SURVUVOR                       = 32498    # �c�]�q���_����
-SUPPORTER                      = 32501    # �c�]�q����U��
-DWARF                          = 32508    # �G�H���I�a
-DWARF2                         = 32511    # �G�H���I�a �̫�X�{���G�H
+SURVUVOR                       = 32498    # 惡魔島的復活者
+SUPPORTER                      = 32501    # 惡魔島的協助者
+DWARF                          = 32508    # 矮人探險家
+DWARF2                         = 32511    # 矮人探險家 最後出現的矮人
 
 #MOBs
-POWER_KEG                      = 18622    # ���ı�
-BEGRUDGED_ARCHER               = 18623    # ��몺�}��
-DEADMAN_S_GRUDGE_1             = 18624    # ���̪����
-DEADMAN_S_GRUDGE_2             = 18625    # ���̪����
-DEADMAN_S_GRUDGE_3             = 18626    # ���̪����
-DEADMAN_S_GRUDGE_4             = 18627    # ���̪����
-ATAN                           = 18628    # �ȭ�          �u���
-KAMS                           = 18629    # �d�i�h        �����d
-HIKORO                         = 18630    # ���          �����d
-ALKASO                         = 18631    # �˧J�u        �����d
-GERBERA                        = 18632    # ��|�ک�      �����d
-LEMATAN                        = 18633    # �p����
-LEMATAN_S_FOLLOWER             = 18634    # �p���󪺤�U
-TREASURE_BOX                   = 32495    # �_�c
+POWER_KEG                      = 18622    # 火藥桶
+BEGRUDGED_ARCHER               = 18623    # 怨恨的弓手
+DEADMAN_S_GRUDGE_1             = 18624    # 死者的怨恨
+DEADMAN_S_GRUDGE_2             = 18625    # 死者的怨恨
+DEADMAN_S_GRUDGE_3             = 18626    # 死者的怨恨
+DEADMAN_S_GRUDGE_4             = 18627    # 死者的怨恨
+ATAN                           = 18628    # 亞唐          守望者
+KAMS                           = 18629    # 卡姆士        帕奴卡
+HIKORO                         = 18630    # 日比          帕奴卡
+ALKASO                         = 18631    # 瓦克守        帕奴卡
+GERBERA                        = 18632    # 格魯巴拉      帕奴卡
+LEMATAN                        = 18633    # 雷馬堂
+LEMATAN_S_FOLLOWER             = 18634    # 雷馬堂的手下
+TREASURE_BOX                   = 32495    # 寶箱
 
 #ITEM
-PAILAKA_INSTANT_SHIELD         = 13032    # ��ԥd�Y�ɬ�
-QUICK_HEALING_POTION           = 13033    # ������O�v¡�Ĥ�
-ANCIENT_LEGACY_SWORD           = 13042    # �j�N�򲣤��C
-ENHANCED_ANCIENT_LEGACY_SWORD  = 13043    # �j�ƥj�N�򲣤��C
-COMPLETE_ANCIENT_LEGACY_SWORD  = 13044    # �����ƥj�N�򲣤��C
-PAILAKA_WEAPON_UPGRADE_STAGE_1 = 13046    # ��ԥd�Z���ɯ� ���q1        �P�u�j�N�򲣤��C�v�@�P�浹�G�H���I�a�A�N��洫���u�j�N�򲣤��C ���q2�v�C
-PAILAKA_WEAPON_UPGRADE_STAGE_2 = 13047    # ��ԥd�Z���ɯ� ���q2        �P�u�j�N�򲣤��C�v�@�P�浹�G�H���I�a���ܡA�N��洫���u�j�N�򲣤��C ���q3�v�C
-PAILAKA_ANTIDOTE               = 13048    # ��ԥd�Ѭr��                �i�Ѱ��·����r���Ѭr���C�L�k����Υ��C�ȭ��b��ԥd�Y�ɬ}�]�ϥΡC
-DIVINE_SOUL                    = 13049    # ���t�Z���[��                �i�P�����t�𮧪��Ĥ��C�L�k����Υ��C�ȭ��b��ԥd�Y�ɬ}�]�ϥΡC
-LONG_RANGEDEFENSE_POTION       = 13059    # ���Z�����m��O�����Ĥ�      �ϥΫ�A�i�H�W�[�ﻷ�Z�����������m��O�C�L�k����Υ��C�ȭ��b��ԥd�Y�ɬ}�]�ϥΡC
-PSOE                           = 736      # ��^���b
-PAILAKA_ALL_PURPOSE_KEY        = 13150    # ��ԥd�U���_��              �}�ҵ�ԥd�c�]�q���Ҧ��������_�͡A���u�n�ϥΤ@���N�|���H�����C�L�k����Υ��C
-PAILAKA_BRACELET               = 13295    # ��ԥd���N
+PAILAKA_INSTANT_SHIELD         = 13032    # 菲拉卡即時盾
+QUICK_HEALING_POTION           = 13033    # 瞬間體力治癒藥水
+ANCIENT_LEGACY_SWORD           = 13042    # 古代遺產之劍
+ENHANCED_ANCIENT_LEGACY_SWORD  = 13043    # 強化古代遺產之劍
+COMPLETE_ANCIENT_LEGACY_SWORD  = 13044    # 完全化古代遺產之劍
+PAILAKA_WEAPON_UPGRADE_STAGE_1 = 13046    # 菲拉卡武器升級 階段1        與「古代遺產之劍」一同交給矮人探險家，就能交換成「古代遺產之劍 階段2」。
+PAILAKA_WEAPON_UPGRADE_STAGE_2 = 13047    # 菲拉卡武器升級 階段2        與「古代遺產之劍」一同交給矮人探險家的話，就能交換成「古代遺產之劍 階段3」。
+PAILAKA_ANTIDOTE               = 13048    # 菲拉卡解毒劑                可解除麻痺中毒的解毒劑。無法交易或丟棄。僅限在菲拉卡即時洞窟使用。
+DIVINE_SOUL                    = 13049    # 神聖武器加持                可感受神聖氣息的藥水。無法交易或丟棄。僅限在菲拉卡即時洞窟使用。
+LONG_RANGEDEFENSE_POTION       = 13059    # 遠距離防禦能力提升藥水      使用後，可以增加對遠距離攻擊的防禦能力。無法交易或丟棄。僅限在菲拉卡即時洞窟使用。
+PSOE                           = 736      # 返回卷軸
+PAILAKA_ALL_PURPOSE_KEY        = 13150    # 菲拉卡萬能鑰匙              開啟菲拉卡惡魔島內所有門扇的鑰匙，但只要使用一次就會粉碎消失。無法交易或丟棄。
+PAILAKA_BRACELET               = 13295    # 菲拉卡手鐲
 
-#Pailaka Energy Replenishing Potion (100%)13151 ��ԥd���O�R���Ĥ�(100%) ��ԥd���y�~�C�ɥR���O100%���R���Ĥ��C
-#Pailaka Energy Replenishing Potion (50%) 13152 ��ԥd���O�R���Ĥ� (50%) ��ԥd���y�~�C�ɥR���O50%���R���Ĥ��C
+#Pailaka Energy Replenishing Potion (100%)13151 菲拉卡活力充能藥水(100%) 菲拉卡獎勵品。補充活力100%的充能藥水。
+#Pailaka Energy Replenishing Potion (50%) 13152 菲拉卡活力充能藥水 (50%) 菲拉卡獎勵品。補充活力50%的充能藥水。
 
 REWARDS1 = [13032,13033,13048,13049,13059]
 
@@ -96,7 +96,7 @@ def enterInstance(self,player,template,teleto,quest):
 		self.world_ids.append(instanceId)
 		instance = InstanceManager.getInstance().getInstance(instanceId)
 		instance.setAllowSummon(False)
-		print "��ԥd-�c�]���� (���� 61-67)�G"+ template +"  �Y�ɦa�ϡG" + str(instanceId) + " �гy���a�G" + str(player.getName())
+		print "菲拉卡-惡魔的遺產 (等級 61-67)："+ template +"  即時地區：" + str(instanceId) + " 創造玩家：" + str(player.getName())
 	# Teleports player
 	teleto.instanceId = instanceId
 	teleportplayer(self,player,teleto)
@@ -199,7 +199,7 @@ class Quest(JQuest):
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>�ثe�S��������ȡA�α��󤣲šC</body></html>"
+		htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -277,7 +277,7 @@ class Quest(JQuest):
 					newNpc = self.addSpawn(DWARF2, 84990, -208376, -3342, 55000, False, 0, False, world.instanceId)
 		return
 
-QUEST = Quest(129, qn, "��ԥd-�c�]����")
+QUEST = Quest(129, qn, "菲拉卡-惡魔的遺產")
 
 QUEST.addStartNpc(SURVUVOR)
 

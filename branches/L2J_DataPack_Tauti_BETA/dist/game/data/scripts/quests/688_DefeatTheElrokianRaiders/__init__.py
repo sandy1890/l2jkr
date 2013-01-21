@@ -50,7 +50,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self, npc, player) :
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -96,7 +96,7 @@ class Quest (JQuest) :
 						st.giveItems(DINOSAUR_FANG_NECKLACE,int(numItems))
 		return
 
-QUEST		= Quest(688,qn,"À»°h­Cº¸¥iÃ¹Å§À»¶¤§a¡I")
+QUEST		= Quest(688,qn,"æ“Šé€€è€¶çˆ¾å¯ç¾…è¥²æ“ŠéšŠå§ï¼")
 
 QUEST.addStartNpc(32105)
 

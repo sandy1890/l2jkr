@@ -8,11 +8,11 @@ from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
-QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 348,"ArrogantSearch","¶ÆºCªº±´¯Á"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 348,"ArrogantSearch","å‚²æ…¢çš„æ¢ç´¢"
 qn = "348_ArrogantSearch"
 
 #Messages
-default   = "<html><body>§Ú¸ò§AµL¸Ü¥i»¡¡C</body></html>"
+default   = "<html><body>æˆ‘è·Ÿä½ ç„¡è©±å¯èªªã€‚</body></html>"
 #MOBS TO KILL
 YINTZU = 20647
 PALIOTE = 20648
@@ -191,7 +191,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 

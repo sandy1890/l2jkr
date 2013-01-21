@@ -47,7 +47,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -56,7 +56,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == DONAL and cond == 0 :
 				htmltext = "31314-01.htm"
@@ -74,7 +74,7 @@ class Quest (JQuest) :
 					htmltext = "31555-01.htm"
 		return htmltext
 
-QUEST		= Quest(18, qn, "¾D¹J¶Àª÷¦Ï")
+QUEST		= Quest(18, qn, "é­é‡é»ƒé‡‘ç¾Š")
 
 QUEST.addStartNpc(DONAL)
 

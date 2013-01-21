@@ -30,7 +30,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -44,7 +44,7 @@ class Quest (JQuest) :
         if level>=39 :
             htmltext = "31067-01.htm"
         else :
-            htmltext = "31067-00.htm"    # pmq ­×§ï
+            htmltext = "31067-00.htm"    # pmq ä¿®æ”¹
             st.exitQuest(1)
      elif cond==1 :
         if not eggs1 and not eggs2 :
@@ -79,7 +79,7 @@ class Quest (JQuest) :
          st.giveItems(LIENRIK_EGG2,1)
      return
 
-QUEST       = Quest(352,qn,"·Q§Ë¨Ó·íÃdª«!")
+QUEST       = Quest(352,qn,"æƒ³å¼„ä¾†ç•¶å¯µç‰©!")
 
 QUEST.addStartNpc(31067)
 

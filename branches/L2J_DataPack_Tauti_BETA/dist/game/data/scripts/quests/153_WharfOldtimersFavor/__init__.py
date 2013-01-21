@@ -44,7 +44,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext 
 
@@ -58,7 +58,7 @@ class Quest (JQuest) :
         htmltext = "30041-02.htm"
         st.exitQuest(1)
    elif npcId == 30041 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+        htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
    elif npcId == 30041 and st.getInt("cond")!=0 and (st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0)==0 :
         htmltext = "30041-05.htm"
    if id == State.STARTED :     
@@ -110,7 +110,7 @@ class Quest (JQuest) :
               htmltext = "30041-06.htm"
    return htmltext
 
-QUEST       = Quest(153,qn,"¹B°eª««~")
+QUEST       = Quest(153,qn,"é‹é€ç‰©å“")
 
 QUEST.addStartNpc(30041)
 

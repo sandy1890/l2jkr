@@ -14,134 +14,134 @@ from com.l2jserver.gameserver.network.serverpackets import ExStartScenePlayer
 qn = "194_SevenSignContractOfMammon"
 
 # NPCs
-ATHEBALDT = 30760  # �j���F�� �ȤӪk�S ��
-COLIN     = 32571  # ���K�լd�� ���Y
-FROG      = 32572  # �C��j��
-TESS      = 32573  # ��������
-KUTA      = 32574  # �����w�F
-CLAUDIA   = 31001  # �J�ҭ}�� �ȤӪk�S
+ATHEBALDT = 30760  # 古斯達夫 亞太法特 卿
+COLIN     = 32571  # 祕密調查員 革琳
+FROG      = 32572  # 青蛙大王
+TESS      = 32573  # 泰絲祖母
+KUTA      = 32574  # 村民庫達
+CLAUDIA   = 31001  # 克勞迪雅 亞太法特
 
 # ITEMS
-INTRODUCTION   = 13818  # �ȤӪk�S�몺���˨�
-FROG_KING_BEAD = 13820  # �C��j�����]�l
-CANDY_POUCH    = 13821  # �����������}�G�]
-NATIVES_GLOVE  = 13819  # ��������M
+INTRODUCTION   = 13818  # 亞太法特卿的推薦函
+FROG_KING_BEAD = 13820  # 青蛙大王的珠子
+CANDY_POUCH    = 13821  # 泰絲奶奶的糖果包
+NATIVES_GLOVE  = 13819  # 村民的手套
 
-# �j���F�� �ȤӪk�S ��
+# 古斯達夫 亞太法特 卿
 # 30760-03.htm
-athebaldt_03 ="<html><body>�j���F�� �ȤӪk�S��G<br><font color=\"LEVEL\">�C�ʦL</font>�q�`�Q�s��<font color=\"LEVEL\">�u�Y���C�ʦL��</font>�Ӽs���H���C<br>�p�A�Ҫ��A�N�O�z�L�����b�j���U�a��<font color=\"LEVEL\">�j�N���өM�a�U�ӥ�</font>�C<br>��ڷQ�ﭲ���H�̡A�ηQ�n�O���J�o�v�O���H�̨ӻ��A�{�b�o�Ǧa��̵M�γ~�s�x�C�ר�A�{�b�U�Ӧ���ٱ��W�F�ۤv���X�m�A��¶��<font color=\"LEVEL\">�ʦL��</font>�ް_�F�E�P���v���C<br>�i�O�A�o�u���L�O�����C�ʦL���L���u�ۦӤw�A���ê��u�ۤ~�O�`���i���O�C<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon athebaldt_04\">�ڷQ���D���󨺭ӯu��</a></body></html>"
+athebaldt_03 ="<html><body>古斯達夫 亞太法特卿：<br><font color=\"LEVEL\">七封印</font>通常被叫做<font color=\"LEVEL\">席琳的七封印而</font>而廣為人知。<br>如你所知，就是透過分布在大陸各地的<font color=\"LEVEL\">古代公墓和地下墓穴</font>。<br>對夢想改革的人們，或想要保住既得權力的人們來說，現在這些地方依然用途廣泛。尤其，現在各個血盟還掛上了自己的旗幟，圍繞著<font color=\"LEVEL\">封印石</font>引起了激烈的競爭。<br>可是，這只不過是有關七封印極微的真相而已，隱藏的真相才是深不可測呢。<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon athebaldt_04\">我想知道關於那個真相</a></body></html>"
 # 30760-04.htm
-athebaldt_04 ="<html><body>�j���F�� �ȤӪk�S��G<br>�p�G�Q�n���D����C�ʦL���u�ۡA�N�O���F�ѥ����_���C�@�W�o�ͪ��Ҧ��Ʊ��A�����}�ݴN�|�i�D�A���Ʊ����ڷ��C<br>�C�ʦL���}�l�A�_����<font color=\"LEVEL\">�㺸���ȤB�ɥN���v�`�Ҭӫ�</font>�C�v�`�ҬӫҬO�Ӱ��j�B�i�r���t�g�A���L���۪��~�N�O�Ӵ��P��檺�ѤU�C<br>���L�A�L�٬O�����F���Ǵ��P�A�M��Q�A���إ߲{���ȤB�@�ɩM�����H���C�Ө���í���v�@�A�N�H��<font color=\"LEVEL\">�v�`�ҬӫҪ��Y��j��</font>�ӥ����i�}�F�C<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon 10\">�~���ť�ȤӪk�S��һ�����</a></body></html>"
+athebaldt_04 ="<html><body>古斯達夫 亞太法特卿：<br>如果想要知道關於七封印的真相，就是先了解它的起源。世上發生的所有事情，它的開端就會告訴你整件事情的根源。<br>七封印的開始，起源於<font color=\"LEVEL\">艾爾摩亞丁時代的史奈曼皇帝</font>。史奈曼皇帝是個偉大且勇猛的聖君，但他活著的年代是個渾沌橫行的天下。<br>不過，他還是平息了那些渾沌，然後被譽為建立現今亞丁世界和平的人物。而那平穩的治世，就隨著<font color=\"LEVEL\">史奈曼皇帝的即位大典</font>而正式展開了。<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon 10\">繼續聆聽亞太法特卿所說的話</a></body></html>"
 # 30760-05.htm
-athebaldt_05 ="<html><body>�j���F�� �ȤӪk�S��G<br>�b�o�ӬG�Ƥ��A�ڭ̾����ҭ������A�N�O<font color=\"LEVEL\">�P�]�I���ӤH�̦�����������</font>�C<br>�ڭ̻{���̪�P�]�I���ӤH�i��L����������x�G�H�̡A����L�̪����`�ƥ�O�M���ӫ����Ѧ������C<br>�ھڽլd�A���������x�������������H�]--�ǤH..�n���N�O�b�M��o�ӪF��...<br>�ӧڭ̲q�Q�o�ӪF��A�N�O<font color=\"LEVEL\">�v�`�ҬӫҩM�]�I���ӤH������������</font>�C<br>�ҥH�A�ڭ̾����{�������b���ǳå�̧�쨺�ӫ����Ѥ��e�A���n�ѧڭ̧��~��C<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon athebaldt_06\">�ڷQ���D���������Ѫ��U��</a></body></html>"
+athebaldt_05 ="<html><body>古斯達夫 亞太法特卿：<br>在這個故事中，我們黎明所重視的，就是<font color=\"LEVEL\">與財富的商人們有關的契約書</font>。<br>我們認為最近與財富的商人進行過交易的契約官矮人們，關於他們的死亡事件是和那個契約書有關的。<br>根據調查，殺死契約官的那個謎之殺人魔--怪人..好像就是在尋找這個東西...<br>而我們猜想這個東西，就是<font color=\"LEVEL\">史奈曼皇帝和財富的商人之間的契約書</font>。<br>所以，我們黎明認為必須在那些傢伙們找到那個契約書之前，先要由我們找到才行。<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon athebaldt_06\">我想知道有關契約書的下落</a></body></html>"
 # 30760-06.htm
-athebaldt_06 ="<html><body>�j���F�� �ȤӪk�S��G<br>�����Ѫ������A�ڭ̫��U�L�]�I���ӤH�̡A�]�������F�A�����ä��O�ܧ���C�]���O���۫����ѯS�O���ڪ������ѥ������b����...<br>�G�H�̻��b�ܤ[�H�e�A�L�̤]�D����W��ŧ���A�򥢤F���ӥ����C���O�ڭ̾����z�L��Ӥ��˪��լd�A�ש���F���������U���C�������Ѫ������N�b<font color=\"LEVEL\">���������q��</font>�⤤�C<br>�ڭ̻{���̪񪺳s�򦺤`�ƥ�A���Y��<font color=\"LEVEL\">�M��]�I�������Ѫ����������q��</font>�A�o�@�I�N�O�M�w�ʪ��ҾڡC<br>����..�A�֬��ڭ̧�ӥv�`�ҬӫҩM�]�I���ӤH�������ѥ����ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon athebaldt_07\">�ڷ|�h��ӫ�����..</a></body></html>"
+athebaldt_06 ="<html><body>古斯達夫 亞太法特卿：<br>契約書的正本，我們拜託過財富的商人們，因此拿到手了，但它並不是很完整。因為記載著契約書特別條款的契約書末頁不在那裡...<br>矮人們說在很久以前，他們也遭到莫名的襲擊，遺失了那個末頁。但是我們黎明透過鍥而不捨的調查，終於找到了那末頁的下落。那契約書的末頁就在<font color=\"LEVEL\">黎明的祭司團</font>手中。<br>我們認為最近的連續死亡事件，關係到<font color=\"LEVEL\">尋找財富的契約書的黎明的祭司團</font>，這一點就是決定性的證據。<br>怎麼樣..你肯為我們找來史奈曼皇帝和財富的商人的契約書末頁嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon athebaldt_07\">我會去找來契約書..</a></body></html>"
 # 30760-07.htm
-athebaldt_07 ="<html><body>�j���F�� �ȤӪk�S��G<br>�A���өʯu�O���n�ڡA�u�X�ڷN�C<br>���O�A�����Ѫ��������Ҧb���B�A�O�b�@�ӥH�{�b���A����L�kĲ�Ϊ��a��C<br>�ҥH�A���F�e�����Ӧa��A�A�o�h�����V�m�A�Ө��ӰV�m�ä��O�p�A�Q����A�P�԰��O�����C�A���԰���O�A���X��A�٬O�S��k�ƹL���q�Ϊ��C<br>�ݭn������[���K���V�m�~��C�]���A�ڴN����<font color=\"LEVEL\">���������K�լd�����Y</font>���A�C���쯵�K�լd�譱�A�L�i���O�@�y���C<br>�ӡA�o�̦����˨�C�a�۳o�ӱ��˨�h�䭲�Y�A�L�|�b<font color=\"LEVEL\">�ȤB�����n��J�f</font>�C</body></html>"
+athebaldt_07 ="<html><body>古斯達夫 亞太法特卿：<br>你的個性真是豪爽啊，真合我意。<br>但是，契約書的末頁的所在之處，是在一個以現在的你絕對無法觸及的地方。<br>所以，為了前往那個地方，你得去接受訓練，而那個訓練並不是如你想像般，與戰鬥力有關。你的戰鬥實力再怎麼出色，還是沒辦法嬴過祭司團的。<br>需要接受更加秘密的訓練才行。因此，我就介紹<font color=\"LEVEL\">黎明的秘密調查員革琳</font>給你。說到秘密調查方面，他可說是一流的。<br>來，這裡有推薦函。帶著這個推薦函去找革琳，他會在<font color=\"LEVEL\">亞丁城鎮南邊入口</font>。</body></html>"
 # 30760-08.htm
-athebaldt_08 ="<html><body>�j���F�� �ȤӪk�S��G<br>�a�ۧڵ������˨�A�h��<font color=\"LEVEL\">���K�լd�����Y</font>�C<br>���쯦�K�լd�o�@�譱�A�L�i���O�@�y���C<br>�L�|�b<font color=\"LEVEL\">�ȤB����</font>�A���I�A�ɶ��򭢡C�S�ɶ��b���W�����F�C</body></html>"
+athebaldt_08 ="<html><body>古斯達夫 亞太法特卿：<br>帶著我給的推薦函，去找<font color=\"LEVEL\">祕密調查員革琳</font>。<br>說到祕密調查這一方面，他可說是一流的。<br>他會在<font color=\"LEVEL\">亞丁城鎮</font>，快點，時間緊迫。沒時間在路上耽擱了。</body></html>"
 #
-# ���K�լd�� ���Y
+# 祕密調查員 革琳
 # 32571-01.htm
-colin_01 = "<html><body>���K�լd�� ���Y�G<br>�A�O�ȤӪk�S�묣���L�Ӫ��H��ӧA�N�O���ӫ_�I�a�ڡA�N�O�J���i�ê��ǤH��A���˥L��..<br>�������A�A�u�O�ܰ����C����A�ڨӥ������Ф@�U�ۤv�a�C�ڬO���ݩ󾤩���<font color=\"LEVEL\">���K�լd�����Y</font>�C�u��������A�C<br>���򤣥������A�ڭ̴N�����i�J���D�A�]���ڭ̨S���ܦh�ɶ��F�C�ӥB�ڭ̤]�����D���өǤH��ɷ|�A�i������C<br>���F��^<font color=\"LEVEL\">������</font>�A�����A�o��J���������h���q�̨D�����٪�<font color=\"LEVEL\">�����g�D���t��</font>�C<br>���O�H�A�{�b�o�ӥ���A�ڥ��N�L�k�a�񨺭Ӧa��C<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_02\">���ڸӫ�򰵩O�H</a></body></html>"
+colin_01 = "<html><body>祕密調查員 革琳：<br>你是亞太法特卿派遣過來的？原來你就是那個冒險家啊，就是遇見可疑的怪人後，擊倒他的..<br>能夠見到你，真是很高興。那麼，我來正式介紹一下自己吧。我是隸屬於黎明的<font color=\"LEVEL\">秘密調查員革琳</font>。真高興見到你。<br>那麼不必耽擱，我們就直接進入正題，因為我們沒有很多時間了。而且我們也不知道那個怪人何時會再進行攻擊。<br>為了找回<font color=\"LEVEL\">契約書</font>，首先你得潛入黎明的高層祭司們求取神諭的<font color=\"LEVEL\">黎明君主的聖殿</font>。<br>但是以你現在這個打扮，根本就無法靠近那個地方。<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_02\">那我該怎麼做呢？</a></body></html>"
 # 32571-02.htm
-colin_02 = "<html><body>���K�լd�� ���Y�G<br>�A�����n<font color=\"LEVEL\">�ܨ�</font>���J���̡C���O�o�ܨ��O�A�u�n���ܨ����b���ܡA���ȤH���i�H�ܨ��C<br>�ҥH�u�����n���O�A<font color=\"LEVEL\">�b�ܨ����A�U�����ܯ�O</font>�C�ܨ��o�F�襻���N���O�ܧ����A�ҥH�b�ܨ����A�U�ɥi��n�o���̤j�����ܯ�O�A�B�ʧ@�n���t�C<br>�]���A<font color=\"LEVEL\">�L�F�@�q�ɶ����ܡA�N�|���Ѱ��ܨ����ɶ�����</font>�C<br>�ҥH�@���ܨ����A���ܡA�����b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υ[�ֲ��ʳt�ת�<font color=\"LEVEL\">�b�]</font>�ޯ�C<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_03\">�Q�Χޯ�H</a></body></html>"
+colin_02 = "<html><body>祕密調查員 革琳：<br>你必須要<font color=\"LEVEL\">變身</font>後潛入那裡。但是這變身呢，只要有變身卷軸的話，任務人都可以變身。<br>所以真正重要的是，<font color=\"LEVEL\">在變身狀態下的應變能力</font>。變身這東西本身就不是很完美，所以在變身狀態下盡可能要發揮最大的應變能力，且動作要迅速。<br>因為，<font color=\"LEVEL\">過了一段時間的話，將會有解除變身的時間限制</font>。<br>所以一到變身狀態的話，必須在<font color=\"LEVEL\">技能</font>視窗好好利用加快移動速度的<font color=\"LEVEL\">奔跑</font>技能。<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_03\">利用技能？</a></body></html>"
 # 32571-03.htm
-colin_03 = "<html><body>���K�լd�� ���Y�G<br>�������I�I�I�S���C<br>����A�{�b�N�Ӷi��@���V�m�a�C�����h��<font color=\"LEVEL\">�C��j��</font>�A�M��P�e��ͨña���ڤ@�Өe�����~�C<br>�ڦA���@���A�ܨ����O�ӧ������F��A�@���ܨ����A���ܡA�N�o�b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υi�H�[�ֲ��ʳt�ת�<font color=\"LEVEL\">�b�]</font>�ޯ�A�M��o�����ܯ�O�A����C��j���C<br>����A�ǳƦn�F�ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_04\">�O���A�Ч���ܨ����C��</a><br><br><font color=\"LEVEL\">�]�u�ܨ��ɡA�b�������ʳt�ת����U�]�k�����A���F���O���U�]�k���~�A�N�|�R���Ҧ���L�����ʳt�׻��U�]�k�]�]�A���ʻ��U�]�k�^�v�^</font></body></html>"
+colin_03 = "<html><body>祕密調查員 革琳：<br>哈哈哈！！！沒錯。<br>那麼，現在就來進行一次訓練吧。首先去找<font color=\"LEVEL\">青蛙大王</font>，然後與牠交談並帶給我一個牠的物品。<br>我再說一次，變身不是個完美的東西，一到變身狀態的話，就得在<font color=\"LEVEL\">技能</font>視窗好好利用可以加快移動速度的<font color=\"LEVEL\">奔跑</font>技能，然後發揮應變能力再接近青蛙大王。<br>那麼，準備好了嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_04\">是的，請把我變身為青蛙</a><br><br><font color=\"LEVEL\">（「變身時，在有關移動速度的輔助魔法當中，除了活力輔助魔法之外，將會刪除所有其他的移動速度輔助魔法（包括活動輔助魔法）」）</font></body></html>"
 # 32571-04.htm
-colin_04 = "<html><body>���K�լd�� ���Y�G<br>�ӡA�w�ܨ������A���֥h��<font color=\"LEVEL\">�C��j��</font>�a�C<br>���O�A�H�A�{�b���ܨ��ɶ��ӻ��A�N�|�b�a��C��j�����e�N�|�Ѱ��ܨ����C<br>�ҥH�A�b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υ[�ֲ��ʳt�ת�<font color=\"LEVEL\">�C��e��</font>�A�H�̧֪��t�ץh��C��j���a�C<br>���Ѱ��C���ܨ����ɶ��ѤU�S�h�[�F�C���I�A�ɶ��򭢡C<br>�٦��A<font color=\"LEVEL\">�b�ܨ����A�U�i�J�������ܡA�N�|�Ѱ��ܨ�</font>�A�ҥH�p�ߡA�~���i�d�U���n�i���̡I</body></html>"
+colin_04 = "<html><body>祕密調查員 革琳：<br>來，已變身完畢，趕快去找<font color=\"LEVEL\">青蛙大王</font>吧。<br>但是，以你現在的變身時間來說，將會在靠近青蛙大王之前就會解除變身的。<br>所以，在<font color=\"LEVEL\">技能</font>視窗好好利用加快移動速度的<font color=\"LEVEL\">青蛙疾走</font>，以最快的速度去找青蛙大王吧。<br>離解除青蛙變身的時間剩下沒多久了。快點，時間緊迫。<br>還有，<font color=\"LEVEL\">在變身狀態下進入水中的話，就會解除變身</font>，所以小心，途中可千萬不要進水裡！</body></html>"
 # 32571-05.htm
-colin_05 = "<html><body>���K�լd�� ���Y�G<br>���򻰧֥h��C��j���A�a�^���ҧa�C<br>�A�w�g�ܨ����C��F�A�F���٨ӧ�ڡH�I�I�I<br>�p�G�O�]���C�쪺�ܨ��ɶ��ѤU���h�A�ӷQ�n���s�ܨ����ܡA�ݭn���Ѱ��ܨ���A�~��A���ܨ�...���D�F�ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_06\">�иѰ��C�쪺�ܨ�</a></body></html>"
+colin_05 = "<html><body>祕密調查員 革琳：<br>那麼趕快去找青蛙大王，帶回憑證吧。<br>你已經變身為青蛙了，幹嘛還來找我？！！！<br>如果是因為青蛙的變身時間剩下不多，而想要重新變身的話，需要先解除變身後，才能再來變身...知道了嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_06\">請解除青蛙的變身</a></body></html>"
 # 32571-06.htm
-colin_06 = "<html><body>���K�լd�� ���Y�G<br>�p�G�Q�n�A���ܨ����C���A�~�򱵨��V�m���ܡA�H�ɳ��ӧi�D�ڤ@�n�C�ڭ̪��V�m�ɶ��ä��ܦh�C</body></html>"
+colin_06 = "<html><body>祕密調查員 革琳：<br>如果想要再次變身為青蛙後，繼續接受訓練的話，隨時都來告訴我一聲。我們的訓練時間並不很多。</body></html>"
 # 32571-07.htm
-colin_07 = "<html><body>���K�լd�� ���Y�G<br>���ֱ���<font color=\"LEVEL\">�C��j��</font>��A�a���ګC��j�����@�Ӫ��~�a�C<br>�x�A�A�쩳�h���̰��F�Ǥ���A���C���ܨ��o��ִN�Q�Ѱ��աH�n�a�A�ݭn�A���ܨ��ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_08\">�O���A�ЦA�������ܨ����C�ӷ|</a><br><br><font color=\"LEVEL\">�]�u�ܨ��ɡA�b�������ʳt�ת����U�]�k�����A���F���O���U�]�k���~�A�N�|�R���Ҧ���L�����ʳt�׻��U�]�k�]�]�A���ʻ��U�]�k�^�v�^</font></body></html>"
+colin_07 = "<html><body>祕密調查員 革琳：<br>趕快接近<font color=\"LEVEL\">青蛙大王</font>後，帶給我青蛙大王的一個物品吧。<br>咦，你到底去哪裡做了些什麼，怎麼青蛙變身這麼快就被解除啦？好吧，需要再次變身嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_08\">是的，請再次為我變身為青商會</a><br><br><font color=\"LEVEL\">（「變身時，在有關移動速度的輔助魔法當中，除了活力輔助魔法之外，將會刪除所有其他的移動速度輔助魔法（包括活動輔助魔法）」）</font></body></html>"
 # 32571-08.htm
-colin_08 = "<html><body>���K�լd�� ���Y�G<br>�ӡA�ڤw�A�����A�ܨ����C��A����A���֥h�a�^�C��j�������~�a�C<br>�ڦA���@���A�ܨ��ä��@�w�O�ӧ������F��C�ר�O�ܨ����C�쪺�ɶ��ä��O����R�ΡA�A�n�ʰO�b�ߡC<br>�ҥH�A�b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υ[�ֲ��ʳt�ת�<font color=\"LEVEL\">�C��e��</font>�A�H�̧֪��t�ץh��<font color=\"LEVEL\">�C��j��</font>�a�C<br>���Ѱ��C�쪺�ܨ��ɶ��S�Ѧh�֤F�C���I�A�ɶ��򭢡C<br>�٦��A<font color=\"LEVEL\">�b�ܨ����A�U�i�J�������ܡA�N�|�Ѱ��ܨ�</font>�A�ҥH�p�ߡA�~���i�d�U���n�i���̡I</body></html>"
+colin_08 = "<html><body>祕密調查員 革琳：<br>來，我已再次為你變身為青蛙，那麼，趕快去帶回青蛙大王的物品吧。<br>我再說一次，變身並不一定是個完美的東西。尤其是變身為青蛙的時間並不是那麼充裕，你要銘記在心。<br>所以，在<font color=\"LEVEL\">技能</font>視窗好好利用加快移動速度的<font color=\"LEVEL\">青蛙疾走</font>，以最快的速度去找<font color=\"LEVEL\">青蛙大王</font>吧。<br>離解除青蛙的變身時間沒剩多少了。快點，時間緊迫。<br>還有，<font color=\"LEVEL\">在變身狀態下進入水中的話，就會解除變身</font>，所以小心，途中可千萬不要進水裡！</body></html>"
 # 32571-09.htm
-colin_09 = "<html><body>���K�լd�� ���Y�G<br>�ש�^�ӰաH�I�I�۱q�A���}�H��A��O�F����[���ɶ��A���٥H���X�F����ƩO�I<br>����A�C��j�������~���a�^�ӶܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_10\">�O���A�a�^�ӤF</a></body></html>"
+colin_09 = "<html><body>祕密調查員 革琳：<br>終於回來啦？！！自從你離開以後，花費了那麼久的時間，我還以為出了什麼事呢！<br>那麼，青蛙大王的物品有帶回來嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_10\">是的，帶回來了</a></body></html>"
 # 32571-10.htm
-colin_10 = "<html><body>���K�լd�� ���Y�G<br>�@�I�I�I�O<font color=\"LEVEL\">�C��j�����]�l</font>�ڡC���W�F�C<br>����A���A���믫�����U�@�ӤG���V�m�ɡA�A�ӧ�ڥ�ͧa�C<br>���U�Ӫ��G���V�m�A�|��{�b�n�D��i�@�B�����ܯ�O�C<br>�٦��A���n�ѤF�A�ڭ̪��V�m�ɶ��ä��h�A�ҥH�ɧ֦�ʡC</body></html>"
+colin_10 = "<html><body>祕密調查員 革琳：<br>哦！！！是<font color=\"LEVEL\">青蛙大王的珠子</font>啊。辛苦了。<br>那麼，當你有精神接受下一個二次訓練時，再來找我交談吧。<br>接下來的二次訓練，會比現在要求更進一步的應變能力。<br>還有，不要忘了，我們的訓練時間並不多，所以盡快行動。</body></html>"
 # 32571-11.htm
-colin_11 = "<html><body>���K�լd�� ���Y�G<br>�z�L�@���V�m���C���ܨ��V�m��A�ڷQ�A���ӹ�ı��F�ܨ���o�����ܯ�O�ӱ�����A�O��Q�����٭n�����C<br>�G���V�m�O�n�ܨ���<font color=\"LEVEL\">�p��</font>�A�M��b��u���ɶ����h��p�Ī�����--<font color=\"LEVEL\">��������</font>��A����Y�Ӿ��Ҧ^�ӡC<br>�o���]�@�ˡA�i�H�ܨ����p�Ī��ɶ��O������C<br>�ҥH�A�b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υ[�ֲ��ʳt�ת�<font color=\"LEVEL\">�ֶ]</font>�A�H�̧֪��t�ץh�䥤���a�C<br>����A�ǳƦn�n�ܨ��F�ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_12\">�O���A�ǳƦn�F</a><br><br><font color=\"LEVEL\">�]�u�ܨ��ɡA�b�������ʳt�ת����U�]�k�����A���F���O���U�]�k���~�A�N�|�R���Ҧ���L�����ʳt�׻��U�]�k�]�]�A���ʻ��U�]�k�^�v�^</font></body></html>"
+colin_11 = "<html><body>祕密調查員 革琳：<br>透過一次訓練的青蛙變身訓練後，我想你應該察覺到了變身後發揮應變能力來接近對方，是比想像中還要難的。<br>二次訓練是要變身為<font color=\"LEVEL\">小孩</font>，然後在更短的時間內去找小孩的奶奶--<font color=\"LEVEL\">泰絲奶奶</font>後，領取某個憑證回來。<br>這次也一樣，可以變身為小孩的時間是有限制的。<br>所以，在<font color=\"LEVEL\">技能</font>視窗好好利用加快移動速度的<font color=\"LEVEL\">快跑</font>，以最快的速度去找奶奶吧。<br>那麼，準備好要變身了嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_12\">是的，準備好了</a><br><br><font color=\"LEVEL\">（「變身時，在有關移動速度的輔助魔法當中，除了活力輔助魔法之外，將會刪除所有其他的移動速度輔助魔法（包括活動輔助魔法）」）</font></body></html>"
 # 32571-12.htm
-colin_12 = "<html><body>���K�լd�� ���Y�G<br>�ӡI�I�I�w�g�ܨ����p�ĤF�A���򻰧֦V<font color=\"LEVEL\">��������</font>������Ҧ^�ӧa�C<br>�ٳѤU�@�ӰV�m�A�ڭ̤���b�o�̯Ի~�ɶ��A���ְʨ��a�C</body></html>"
+colin_12 = "<html><body>祕密調查員 革琳：<br>來！！！已經變身為小孩了，那麼趕快向<font color=\"LEVEL\">泰絲奶奶</font>領取憑證回來吧。<br>還剩下一個訓練，我們不能在這裡耽誤時間，趕快動身吧。</body></html>"
 # 32571-13.htm
-colin_13 = "<html><body>���K�լd�� ���Y�G<br>���򻰧֥h��<font color=\"LEVEL\">��������</font>�A�a�^���ҧa�C<br>�A�w�g�ܨ����p�ĤF�A�F���٨ӧ�ڡH�I�I�I<br>�p�G�O�]���p�Ī��ܨ��ɶ��ѤU���h�A�ӷQ�n���s�ܨ����ܡA�ݭn���Ѱ��ܨ���A�~��A���ܨ�...���D�F�ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_14\">�Ь��ڸѰ��ܨ�</a></body></html>"
+colin_13 = "<html><body>祕密調查員 革琳：<br>那麼趕快去找<font color=\"LEVEL\">泰絲奶奶</font>，帶回憑證吧。<br>你已經變身為小孩了，幹嘛還來找我？！！！<br>如果是因為小孩的變身時間剩下不多，而想要重新變身的話，需要先解除變身後，才能再來變身...知道了嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_14\">請為我解除變身</a></body></html>"
 # 32571-14.htm
-colin_14 = "<html><body>���K�լd�� ���Y�G<br>�p�G�Q�n�A���ܨ����p�ī�A�~�򱵨��G���V�m���ܡA�H�ɳ��ӧi�D�ڤ@�n�C�ڭ̪��V�m�ɶ��ä��O�ܦh�C</body></html>"
+colin_14 = "<html><body>祕密調查員 革琳：<br>如果想要再次變身為小孩後，繼續接受二次訓練的話，隨時都來告訴我一聲。我們的訓練時間並不是很多。</body></html>"
 # 32571-15.htm
-colin_15 = "<html><body>���K�լd�� ���Y�G<br>���ֱ��񥤥���A�a����<font color=\"LEVEL\">��������</font>���@�Ӫ��~�a�C<br>�x�A�A�쩳�h���̰��F�Ǥ���A���p���ܨ��o��ִN�Q�Ѱ��աH�n�a�A�ݭn�A���ܨ��ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_16\">�ЦA�������ܨ�</a><br><br><font color=\"LEVEL\">�]�u�ܨ��ɡA�b�������ʳt�ת����U�]�k�����A���F���O���U�]�k���~�A�N�|�R���Ҧ���L�����ʳt�׻��U�]�k�]�]�A���ʻ��U�]�k�^�v�^</font></body></html>"
+colin_15 = "<html><body>祕密調查員 革琳：<br>趕快接近奶奶後，帶給我<font color=\"LEVEL\">泰絲奶奶</font>的一個物品吧。<br>咦，你到底去哪裡做了些什麼，怎麼小孩變身這麼快就被解除啦？好吧，需要再次變身嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_16\">請再次為我變身</a><br><br><font color=\"LEVEL\">（「變身時，在有關移動速度的輔助魔法當中，除了活力輔助魔法之外，將會刪除所有其他的移動速度輔助魔法（包括活動輔助魔法）」）</font></body></html>"
 # 32571-16.htm
-colin_16 = "<html><body>���K�լd�� ���Y�G<br>�ӡA�ڤw�A�����A�ܨ����p�ġA����A���֥h�a�^<font color=\"LEVEL\">��������</font>�����~�a�C<br>�ڦA���@���A�ܨ��ä��@�w�O�������C�ר�O�����ܨ����p�Ī��ɶ��ä��O����R�ΡA�A�n�ʰO�b�ߡC<br>�ҥH�A�b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υ[�ֲ��ʳt�ת�<font color=\"LEVEL\">�ֶ]</font>�A�H�̧֪��t�ץh�䥤���a�C<br>�p�Ī��ܨ��ɶ��S�Ѧh�֤F�C���I�A�ɶ��򭢡C<br>�٦��A<font color=\"LEVEL\">�b�ܨ����A�U�i�J�������ܡA�N�|�Ѱ��ܨ�</font>�A�ҥH�p�ߡA�~���i�d�U���n�i���̡I</body></html>"
+colin_16 = "<html><body>祕密調查員 革琳：<br>來，我已再次為你變身為小孩，那麼，趕快去帶回<font color=\"LEVEL\">泰絲奶奶</font>的物品吧。<br>我再說一次，變身並不一定是完美的。尤其是維持變身為小孩的時間並不是那麼充裕，你要銘記在心。<br>所以，在<font color=\"LEVEL\">技能</font>視窗好好利用加快移動速度的<font color=\"LEVEL\">快跑</font>，以最快的速度去找奶奶吧。<br>小孩的變身時間沒剩多少了。快點，時間緊迫。<br>還有，<font color=\"LEVEL\">在變身狀態下進入水中的話，就會解除變身</font>，所以小心，途中可千萬不要進水裡！</body></html>"
 # 32571-17.htm
-colin_17 = "<html><body>���K�լd�� ���Y�G<br>�ש�^�ӰաH�I�I�۱q�A���}�H��A��O�F����[���ɶ��A���٥H���X�F����ƩO�I<br>����A���������~���a�^�ӶܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_18\">�O���A�a�^�ӤF</a></body></html>"
+colin_17 = "<html><body>祕密調查員 革琳：<br>終於回來啦？！！自從你離開以後，花費了那麼久的時間，我還以為出了什麼事呢！<br>那麼，奶奶的物品有帶回來嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_18\">是的，帶回來了</a></body></html>"
 # 32571-18.htm
-colin_18 = "<html><body>���K�լd�� ���Y�G<br>�@�I�I�I�O<font color=\"LEVEL\">�����������}�G</font>�ڡC���W�F�C<br>����A���A���믫�����U�@�ӤT���V�m�ɡA�A�ӧ�ڥ�ͧa�C<br>���U�Ӫ��T���V�m�A�|��{�b�n�D��i�@�B�����ܯ�O�C<br>�٦��A���n�ѤF�A�ڭ̪��V�m�ɶ��ä��h�A�ҥH�ɧ֦�ʡC</body></html>"
+colin_18 = "<html><body>祕密調查員 革琳：<br>哦！！！是<font color=\"LEVEL\">泰絲奶奶的糖果</font>啊。辛苦了。<br>那麼，當你有精神接受下一個三次訓練時，再來找我交談吧。<br>接下來的三次訓練，會比現在要求更進一步的應變能力。<br>還有，不要忘了，我們的訓練時間並不多，所以盡快行動。</body></html>"
 # 32571-19.htm
-colin_19 = "<html><body>���K�լd�� ���Y�G<br>����A�o���Q�ΰ����ܨ��ޯ��A�ܨ������H�κA�ݬݧa�C<br>��_�ܨ����C��Τp�ġA�ܨ����H���ܨ����ɶ���[�u�P�C<br>��~�ڦb���A���ɭԡA��n���ӧ����b�ڭ��e�g�L�A��ť��L���n��<font color=\"LEVEL\">�j����v�޳�</font>�i����פu�@�C�A�h���񨺭ӧ�����A�a�^�L�����~�a�C<br>�o���]�@�ˡA�b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υ[�ֲ��ʳt�ת�<font color=\"LEVEL\">��t�ֶ]</font>�A�H�̧֪��t�ץh������a�C�ǳƦn�F�ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_20\">�O���A�Ч���ܨ�������</a><br><br><font color=\"LEVEL\">�]�u�ܨ��ɡA�b�������ʳt�ת����U�]�k�����A���F���O���U�]�k���~�A�N�|�R���Ҧ���L�����ʳt�׻��U�]�k�]�]�A���ʻ��U�]�k�^�v�^</font></body></html>"
+colin_19 = "<html><body>祕密調查員 革琳：<br>那麼，這次利用高級變身技能後，變身為成人形態看看吧。<br>比起變身為青蛙或小孩，變身為人體變身的時間更加短促。<br>剛才我在等你的時候，剛好有個村民在我面前經過，我聽到他說要到<font color=\"LEVEL\">大圓形競技場</font>進行維修工作。你去接近那個村民後，帶回他的物品吧。<br>這次也一樣，在<font color=\"LEVEL\">技能</font>視窗好好利用加快移動速度的<font color=\"LEVEL\">急速快跑</font>，以最快的速度去找村民吧。準備好了嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_20\">是的，請把我變身為村民</a><br><br><font color=\"LEVEL\">（「變身時，在有關移動速度的輔助魔法當中，除了活力輔助魔法之外，將會刪除所有其他的移動速度輔助魔法（包括活動輔助魔法）」）</font></body></html>"
 # 32571-20.htm
-colin_20 = "<html><body>���K�լd�� ���Y�G<br>�ӡI�I�I�w�g�ܨ��������F�A���򻰧֦V�j����v�޳����񪺧���������Ҧ^�ӧa�C<br>�٦��A���ӧ����W�s<font color=\"LEVEL\">�����w�F</font>�C<br>�ӡA���֤W���a�A�S���ɶ��b�o�̯����F�C���ְʨ��a�C<br>�t�~�A�ڤw�j�զn�X���F�A<font color=\"LEVEL\">�b�ܨ����A�U�i�J�������ܡA�N�|�Ѱ��ܨ�</font>�A�ҥH�p�ߡA�~���i�d�U���n�i���̡I</body></html>"
+colin_20 = "<html><body>祕密調查員 革琳：<br>來！！！已經變身為村民了，那麼趕快向大圓形競技場附近的村民領取憑證回來吧。<br>還有，那個村民名叫<font color=\"LEVEL\">村民庫達</font>。<br>來，趕快上路吧，沒有時間在這裡耽擱了。趕快動身吧。<br>另外，我已強調好幾次了，<font color=\"LEVEL\">在變身狀態下進入水中的話，就會解除變身</font>，所以小心，途中可千萬不要進水裡！</body></html>"
 # 32571-21.htm
-colin_21 = "<html><body>���K�լd�� ���Y�G<br>���򻰧֥h��<font color=\"LEVEL\">�����w�F</font>�A�a�^���ҧa�C<br>�A�w�g�ܨ��������F�A�F���٨ӧ�ڡH�I�I�I<br>�p�G�O�]���������ܨ��ɶ��ѤU���h�A�ӷQ�n���s�ܨ����ܡA�ݭn���Ѱ��ܨ���A�~��A���ܨ�...���D�F�ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_22\">�иѰ��������ܨ�</a></body></html>"
+colin_21 = "<html><body>祕密調查員 革琳：<br>那麼趕快去找<font color=\"LEVEL\">村民庫達</font>，帶回憑證吧。<br>你已經變身為村民了，幹嘛還來找我？！！！<br>如果是因為村民的變身時間剩下不多，而想要重新變身的話，需要先解除變身後，才能再來變身...知道了嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_22\">請解除村民的變身</a></body></html>"
 # 32571-22.htm
-colin_22 = "<html><body>���K�լd�� ���Y�G<br>�p�G�Q�n�A���ܨ���������A�~�򱵨��T���V�m���ܡA�H�ɳ��ӧi�D�ڤ@�n�C�ڭ̪��V�m�ɶ��ä��O�ܦh�C<br>�ӥB�o�O�̫�@�ӰV�m�A�ҥH�ɧ֦�ʡC</body></html>"
+colin_22 = "<html><body>祕密調查員 革琳：<br>如果想要再次變身為村民後，繼續接受三次訓練的話，隨時都來告訴我一聲。我們的訓練時間並不是很多。<br>而且這是最後一個訓練，所以盡快行動。</body></html>"
 # 32571-23.htm
-colin_23 = "<html><body>���K�լd�� ���Y�G<br>����A���ֱ���<font color=\"LEVEL\">�����w�F</font>�A�a�^���������~�a�C<br>�x�A�A�쩳�h���̰��F�Ǥ���A�������ܨ��o��ִN�Q�Ѱ��աH�n�a�A�ݭn�A���ܨ��ܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_24\">�ЦA�����ܨ�</a><br><br><font color=\"LEVEL\">�]�u�ܨ��ɡA�b�������ʳt�ת����U�]�k�����A���F���O���U�]�k���~�A�N�|�R���Ҧ���L�����ʳt�׻��U�]�k�]�]�A���ʻ��U�]�k�^�v�^</font></body></html>"
+colin_23 = "<html><body>祕密調查員 革琳：<br>那麼，趕快接近<font color=\"LEVEL\">村民庫達</font>，帶回村民的物品吧。<br>咦，你到底去哪裡做了些什麼，怎麼村民變身這麼快就被解除啦？好吧，需要再次變身嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_24\">請再為我變身</a><br><br><font color=\"LEVEL\">（「變身時，在有關移動速度的輔助魔法當中，除了活力輔助魔法之外，將會刪除所有其他的移動速度輔助魔法（包括活動輔助魔法）」）</font></body></html>"
 # 32571-24.htm
-colin_24 = "<html><body>���K�լd�� ���Y�G<br>�ӡA�ڤw�A�����A�ܨ��������A����A���֥h�a�^<font color=\"LEVEL\">�����w�F</font>�����~�a�C<br>�ڦA���@���A�ܨ��ä��@�w�O�������C�ר�O�ܨ����H�骺�ɶ��ä��O����R�ΡA�A�n�ʰO�b�ߡC<br>�ҥH�A�b<font color=\"LEVEL\">�ޯ�</font>�����n�n�Q�Υ[�ֲ��ʳt�ת�<font color=\"LEVEL\">��t�ֶ]</font>�A�H�̧֪��t�ץh������a�C<br>�������ܨ��ɶ��S�Ѧh�֤F�C���I�A�ɶ��򭢡C<br>�t�~�A�ڤw�j�զn�X���F�A<font color=\"LEVEL\">�b�ܨ����A�U�i�J�������ܡA�N�|�Ѱ��ܨ�</font>�A�ҥH�p�ߡA�~���i�d�U���n�i�J���̡I</body></html>"
+colin_24 = "<html><body>祕密調查員 革琳：<br>來，我已再次為你變身為村民，那麼，趕快去帶回<font color=\"LEVEL\">村民庫達</font>的物品吧。<br>我再說一次，變身並不一定是完美的。尤其是變身為人體的時間並不是那麼充裕，你要銘記在心。<br>所以，在<font color=\"LEVEL\">技能</font>視窗好好利用加快移動速度的<font color=\"LEVEL\">急速快跑</font>，以最快的速度去找村民吧。<br>村民的變身時間沒剩多少了。快點，時間緊迫。<br>另外，我已強調好幾次了，<font color=\"LEVEL\">在變身狀態下進入水中的話，就會解除變身</font>，所以小心，途中可千萬不要進入水裡！</body></html>"
 # 32571-25.htm
-colin_25 = "<html><body>���K�լd�� ���Y�G<br>�ש�^�ӰաH�I�I�^�ӱo�ٯu�֡I�I�I�G�M��ݱo�X�@�B�G���V�m�����G�C<br>����A���������~���a�^�ӶܡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_26\">�O���A�a�^�ӤF</a></body></html>"
+colin_25 = "<html><body>祕密調查員 革琳：<br>終於回來啦？！！回來得還真快！！！果然能看得出一、二次訓練的成果。<br>那麼，村民的物品有帶回來嗎？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon colin_26\">是的，帶回來了</a></body></html>"
 # 32571-26.htm
-colin_26 = "<html><body>���K�լd�� ���Y�G<br>�@�I�I�I�O<font color=\"LEVEL\">������M</font>�ڡC���W�F�C<br>�]���A�����ۡA�T���V�m�����i�H���Q�����F�C�b�A���T���V�m���}�����q�ɶ��A�j���F�� �ȤӪk�S�몺�ҤH--<font color=\"LEVEL\">�J�ҭ}�� �ȤӪk�S</font>�ҤH�ǨӤF�����C<br>�o�����A�����V�m��A�n�ڧ�A�e��o���̥h�C<br>�ҤH�N�|�N���o������--�ȤӪk�S��A��A�ܤ������V�m�ұo�����G��I�S�ҡA�åB�|�i�D�A���ᾤ�����������p�e�C<br>�J�ҭ}���ҤH�N�b�P���a�۪�<font color=\"LEVEL\">�ȤB���~��</font>�C<br>����A�N�h���X�ҤH�A���ڦV�o�ݦn�A�åB����S�ҩMť����������p�e�������a�C�o�q�������W�A�F�C</body></html>"
+colin_26 = "<html><body>祕密調查員 革琳：<br>哦！！！是<font color=\"LEVEL\">村民手套</font>啊。辛苦了。<br>因為你的熱誠，三次訓練全都可以順利完成了。在你為三次訓練離開的那段時間，古斯達夫 亞太法特卿的夫人--<font color=\"LEVEL\">克勞迪雅 亞太法特</font>夫人傳來了消息。<br>她說等你結束訓練後，要我把你送到她那裡去。<br>夫人將會代替她的先生--亞太法特卿，對你至今接受訓練所得的成果支付酬勞，並且會告訴你往後黎明首腦部的計畫。<br>克勞迪雅夫人就在與此地相近的<font color=\"LEVEL\">亞丁城外圍</font>。<br>那麼你就去拜訪夫人，替我向她問好，並且領取酬勞和聽取有關往後計畫的說明吧。這段期間辛苦你了。</body></html>"
 # 32571-27.htm
-colin_27 = "<html><body>���K�լd�� ���Y�G<br>���֨�<font color=\"LEVEL\">�ȤB���~��</font>���X<font color=\"LEVEL\">�J�ҭ}�� �ȤӪk�S</font>�ҤH�a�C<br>�ҤH�N�|�N���o������--�ȤӪk�S��A��A�ܤ������V�m�ұo�����G��I�S�ҡA�åB�|�i�D�A���ᾤ�����������p�e�C<br>�J�ҭ}���ҤH�N�b�P���a�۪�<font color=\"LEVEL\">�ȤB���~��</font>�C<br>����A�N�h���X�ҤH�A���ڦV�o�ݦn�A�åB����S�ҩMť����������p�e�������a�C�o�q�������W�A�F�C</body></html>"
+colin_27 = "<html><body>祕密調查員 革琳：<br>趕快到<font color=\"LEVEL\">亞丁城外圍</font>拜訪<font color=\"LEVEL\">克勞迪雅 亞太法特</font>夫人吧。<br>夫人將會代替她的先生--亞太法特卿，對你至今接受訓練所得的成果支付酬勞，並且會告訴你往後黎明首腦部的計畫。<br>克勞迪雅夫人就在與此地相近的<font color=\"LEVEL\">亞丁城外圍</font>。<br>那麼你就去拜訪夫人，替我向她問好，並且領取酬勞和聽取有關往後計畫的說明吧。這段期間辛苦你了。</body></html>"
 #
-# �C��j��
+# 青蛙大王
 # 32572-00.htm
-frog_00 = "<html><body>�C��j���G<br>�O�֦b�n���ڰڡH�I�I�I�u�r..�@�ӤH���å볺�M�|�V�ڷf�_�ܨӤF...<br>�O�O...�٤��ֺu�}..�O�O�I�I�I�s�A���n�ӷЧڡI�I�I</body></html>"
+frog_00 = "<html><body>青蛙大王：<br>是誰在吵醒我啊？！！！哎呀..一個人類傢伙竟然會向我搭起話來了...<br>嘓嘓...還不快滾開..嘓嘓！！！叫你不要來煩我！！！</body></html>"
 # 32572-01.htm
-frog_01 = "<html><body>�C��j���G<br>�O�֡H..��..��ӬO�A��..�ڵy�L���ڤF�@�U...<br>�A�o�å�I�I�I���|�o��߰ڡH�O�O..�N�]���A���^�ӡC�`�ڵ��ӥb���C�O�O�O�O..<br>�ڨ��R���R�N�����ѡA�A�i�����p��F���o�H<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon frog_02\">��..���ѡH��..�ڤw���Q����F�L�F</a></body></html>"
+frog_01 = "<html><body>青蛙大王：<br>是誰？..喔..原來是你啊..我稍微打盹了一下...<br>你這傢伙！！！怎麼會這麼晚啊？嘓嘓..就因為你不回來。害我等個半死。嘓嘓嘓嘓..<br>我那充滿愛意的情書，你可有幫私轉達給她？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon frog_02\">情..情書？啊..我已順利的轉達過了</a></body></html>"
 # 32572-02.htm
-frog_02 = "<html><body>�C��j���G<br>�n�A�A���o�ܦn�C�O�O�O�O...�n�A���o�������p��H�o�������y���ܳ��w�ܡH�٬O�A�ܥͮ�H<br>���֧i�D�ڡI�I�I<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon frog_03\">�o..�o���w���ܩO..�u���L..�o���O���ήѫH�A�����H���@�R������..</a></body></html>"
+frog_02 = "<html><body>青蛙大王：<br>好，你做得很好。嘓嘓嘓嘓...好，那她的反應如何？她有紅著臉表示喜歡嗎？還是，很生氣？<br>趕快告訴我！！！<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon frog_03\">她..她喜歡的很呢..只不過..她說是光用書信，不足以當作愛的憑證..</a></body></html>"
 # 32572-03.htm
-frog_03 = "<html><body>�C��j���G<br>����H�����H�O�O�O�O..���r..�k�H���߰�..�G�M�L�k�H�ϰϤ@�ӱ��Ѩӥ���..�O�O�O�O...<br>����..�ڸӰe�o����n�O�H�O�O..�A���e��n�H<br>�٬O�e�h�������Ψ�H�O�O�O�O...<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon frog_04\">�z...�z�N�H�K...</a></body></html>"
+frog_03 = "<html><body>青蛙大王：<br>什麼？不夠？嘓嘓嘓嘓..唉呀..女人的心啊..果然無法以區區一個情書來打動..嘓嘓嘓嘓...<br>那麼..我該送她什麼好呢？嘓嘓..你說送花好？<br>還是送去美味的蟲兒？嘓嘓嘓嘓...<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon frog_04\">您...您就隨便...</a></body></html>"
 # 32572-04.htm
-frog_04 = "<html><body>�j�� �C��G<br>����I�I�I�A���H�K�H��I�I�I���i����C<br>�n�a�I�I�I���٬O�e�W�ڪ��_��""1""��-�Ŧ�y�]�a�C<br>���Ӳy�]�O�b�ڤp�ɭԡA���M�b�򩳾ߨ쪺�F��...�O�O�O�O...<br>�o�Ӳy�]��A�ܬ��A���ӥi�H�ձo�o���n�P..�O�O..<br>�ӡA���U�ڪ��y�]�I�I�I�M�᮳�h�浹�o�C�٦��A�]�J���[��@�U�A�ݦo�O���O�ܳ��w..�O�O...</body></html>"
+frog_04 = "<html><body>大王 青蛙：<br>什麼！！！你說隨便？哼！！！那可不行。<br>好吧！！！那還是送上我的寶物""1""號-藍色球珠吧。<br>那個球珠是在我小時候，偶然在湖底撿到的東西...嘓嘓嘓嘓...<br>這個球珠色澤很美，應該可以博得她的好感..嘓嘓..<br>來，收下我的球珠！！！然後拿去交給她。還有，也仔細觀察一下，看她是不是很喜歡..嘓嘓...</body></html>"
 # 32572-05.htm
-frog_05 = "<html><body>�C��j���G<br>���֧�y�]��F���o�I�I�O�O�O�O..<br>�ڷ|�b�o�̥��έӤ�ı...�O�O...<br></body></html>"
+frog_05 = "<html><body>青蛙大王：<br>趕快把球珠轉達給她！！嘓嘓嘓嘓..<br>我會在這裡先睡個午覺...嘓嘓...<br></body></html>"
 #
-# ��������
+# 泰絲祖母
 # 32573-00.htm
-tess_00 = "<html><body>���������G<br>�а�..�z���S���b�o���񨣨�ڪ��]�l�̩O�H�Ĥl�̥h����..<br>�����]�h�F�h�����a��A�ڳo�ѤH�a��������b�����ΡC<br>�u�r..�ڪ��y��..���L�ɡA�p�G����ڪ��]�l�̡A�·���i�@�U�ڥ��b��L�̡C</body></html>"
+tess_00 = "<html><body>泰絲奶奶：<br>請問..您有沒有在這附近見到我的孫子們呢？孩子們去釣魚..<br>不知跑去了多遠的地方，我這老人家的眼睛實在不中用。<br>哎呀..我的腰啊..路過時，如果見到我的孫子們，麻煩轉告一下我正在找他們。</body></html>"
 # 32573-01.htm
-tess_01 = "<html><body>���������G<br>����~�~���ڤF�C�~�a�ѤH�a�i�����..���L�A�A�O�֩O...<br>�����ڦѤF�A�����]��F...�s�A���W�r�]�O���Ӱ_�ӤF�O..<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon tess_02\">�����A�ګ����L�C</a></body></html>"
+tess_01 = "<html><body>泰絲奶奶：<br>唉喲~嚇死我了。嚇壞老人家可不行喔..不過，你是誰呢...<br>奶奶我老了，眼睛也花了...連你的名字也記不太起來了呢..<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon tess_02\">奶奶，我很難過耶</a></body></html>"
 # 32573-02.htm
-tess_02 = "<html><body>���������G<br>���A�A�o�p�å�...�����ѤF�A�ҥH�~�|�O���o...���M�N���o�I�p�s�����L...<br>�i�O�A�A���S���L�Ĥl�̤@�_�h�����O�H<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon tess_03\">��...�]���ڷQ�Y�I�߰�</a></body></html>"
+tess_02 = "<html><body>泰絲奶奶：<br>唉，你這小傢伙...奶奶老了，所以才會記不得...竟然就為這點小究而難過...<br>可是，你怎麼沒跟其他孩子們一起去釣魚呢？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon tess_03\">嗯...因為我想吃點心啊</a></body></html>"
 # 32573-03.htm
-tess_03 = "<html><body>���������G<br>�I�I�I..�A�O���F�Q�Y�o���������}�G�A�ҥH�~�^�Ӫ��a..���A�C���U�o������������<font color=\"LEVEL\">�}�G</font>�a�C<br>�h�a�@�I�^�h������L���Ĥl��...�s�L�̤��n���ӻ��A���I�^��...�u�r..�ڪ��y��..</body></html>"
+tess_03 = "<html><body>泰絲奶奶：<br>呼呼呼..你是為了想吃這奶奶做的糖果，所以才回來的吧..給你。收下這泰絲奶奶做的<font color=\"LEVEL\">糖果</font>吧。<br>多帶一點回去分給其他的孩子們...叫他們不要走太遠，早點回來...哎呀..我的腰啊..</body></html>"
 # 32573-04.htm
-tess_04 = "<html><body>���������G<br>���ֱa�ۥ������}�G�A�h�����Ĥl��..<br>�٦��A�s�L�̤��n���ӻ��A���I�^��...�u�r..�ڪ��y��..</body></html>"
+tess_04 = "<html><body>泰絲奶奶：<br>趕快帶著奶奶的糖果，去分給孩子們..<br>還有，叫他們不要走太遠，早點回來...哎呀..我的腰啊..</body></html>"
 #
-# �����w�F
+# 村民庫達
 # 32574-00.htm
-kuta_00 = "<html><body>���� �w�F�G<br>�A���S������@�Ӧb�o���񶢳}���~�������ڡH<br>���ѥ��ӻ��n�n�@�_�i��j����v�޳������פu�{...<br>�p�G�L�����ɭԡA�ݨ�@�Ӧ~�����������ܡA�N������i�ڡu�w�F�v�|�b�j����v�޳��J�f���L�C���U�A�C</body></html>"
+kuta_00 = "<html><body>村民 庫達：<br>你有沒有見到一個在這附近閒逛的年輕村民啊？<br>今天本來說好要一起進行大圓形競技場的維修工程...<br>如果過路的時候，看到一個年輕的村民的話，就幫忙轉告我「庫達」會在大圓形競技場入口等他。拜託你。</body></html>"
 # 32574-01.htm
-kuta_01 = "<html><body>���� �w�F�G<br>�ޡA�A���o��߰ڡI�I�I�o�i�O�ڭ̲Ĥ@���n�X�ٰ��ƩO�I�I�I�I�~���H���M�|�o�򴲺�...<br>�o�O�Ĥ@���A�ҥH�ڴN�ǧA�@�^�A�q�U���}�l�A�ʧ@�n�֤@�I�C<br>�����A�ڨӭӦۧڤ��СA�ڥs�w�F�C<br>�A�N�O�ѧڦѤ�--��V�����СA���Ѭ��F��U���פj����v�޳��ӨӪ��a�H<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon kuta_02\">����H�O���A�S��</a><br></body></html>"
+kuta_01 = "<html><body>村民 庫達：<br>喂，你怎麼這麼晚啊！！！這可是我們第一次要合夥做事呢！！！！年輕人竟然會這麼散漫...<br>這是第一次，所以我就饒你一回，從下次開始，動作要快一點。<br>首先，我來個自我介紹，我叫庫達。<br>你就是由我老友--塔努的介紹，今天為了協助維修大圓形競技場而來的吧？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon kuta_02\">什麼？是的，沒錯</a><br></body></html>"
 # 32574-02.htm
-kuta_02 = "<html><body>���� �w�F�G<br>�Ӧn�F�C<br>�ѩ�̪�Ʊ��ܦh�F�A�@�ӤH�ٯu���I���L�ӡC���L�A�J�M�A�n�q���Ѱ_���ڰ���u���Ʊ��A���u�O�ӷP�§A�աC<br>����A���ֶi�J�j����v�޳���ʤu�a�C<br>�x�A���L�A�S�a��M�ӶܡH�o�O�Ӳ��W���u�@�A�ܮe���ˤ⪺..<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon kuta_03\">�ڧѰO�a�ӤF...</a></body></html>"
+kuta_02 = "<html><body>村民 庫達：<br>太好了。<br>由於最近事情變多了，一個人還真應付不過來。不過，既然你要從今天起幫我做木工的事情，那真是太感謝你啦。<br>那麼，趕快進入大圓形競技場後動工吧。<br>咦，不過你沒帶手套來嗎？這是個粗糙的工作，很容易傷手的..<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon kuta_03\">我忘記帶來了...</a></body></html>"
 # 32574-03.htm
-kuta_03 = "<html><body>���� �w�F�G<br>�u�r..�~���H��믫�����̥h�F�H�I�u�S��...<br>���ѴN���Χڦh�l����M�a�C�γ\�ؤo�|���I���X�A�ҥH���Ѱ_�N�a�A����M�ӡC<br>����A�٦��S������ѤF�a���ڡH<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon kuta_04\">�u���A�ڦn�����F�@�ӪF��</a></body></html>"
+kuta_03 = "<html><body>村民 庫達：<br>哎呀..年輕人把精神丟到哪裡去了？！真沒心...<br>今天就先用我多餘的手套吧。或許尺寸會有點不合，所以明天起就帶你的手套來。<br>那麼，還有沒有什麼忘了帶的啊？<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon kuta_04\">沿路，我好像掉了一個東西</a></body></html>"
 # 32574-04.htm
-kuta_04 = "<html><body>���� �w�F�G<br>�A�ٯu���·Ф��ְڡC����٤����A���M�ٷ|���F��...<br>�򥢪��F��S���ण��..����֥h�֦^�a�C<br>�����A���Χڦh�l����M�C�A�Ӥ��|�m�o�Ӥ]��F�a�H<br>�ɶ��w�g�����F�A�ڥ��i�h�j����v�޳��A�}�l�i����פu�@�C���֡A�ζ]���C</body></html>"
+kuta_04 = "<html><body>村民 庫達：<br>你還真嫌麻煩不少啊。遲到還不夠，竟然還會掉東西...<br>遺失的東西又不能不找..那麼快去快回吧。<br>首先，先用我多餘的手套。你該不會逅這個也丟了吧？<br>時間已經不早了，我先進去大圓形競技場，開始進行維修工作。趕快，用跑的。</body></html>"
 #
-# �J�ҭ}���ҤH
+# 克勞迪雅夫人
 # 31001-01.htm
-claudia_01 = "<html><body>�J�ҭ}���ҤH�G<br>��A�O�A�ڡH<br>�ڱq�ڥ���--�ȤӪk�S�먺�̤wť�즳���A���Ʊ��C<br>�ھڭ��Y�ǨӪ����i���e�A����A�H�u�۩M���������F�V�m�C<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon claudia_02\">�~��ť�G��</a></body></html>"
+claudia_01 = "<html><body>克勞迪雅夫人：<br>喔，是你啊？<br>我從我先生--亞太法特卿那裡已聽到有關你的事情。<br>根據革琳傳來的報告內容，提到你以真誠和熱情完成了訓練。<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon claudia_02\">繼續聽故事</a></body></html>"
 # 31001-02.htm
-claudia_02 = "<html><body>�J�ҭ}���ҤH�G<br>���A�o�ˬJ�۹�S����O���H������b�ڭ̾����o�@��A�u�O���§A�C<br>�ӥB�A�ڷQ�ڥ���--�ȤӪk�S�����Ӧ���A���L�A�ڭ̪��ؼлP�p�e�w�ܽT�w�C<br>���O�A�b�����e�ڷQ���I�A�S�ҡA�A���u�q�a�����F���Y���V�m�C<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon claudia_03\">����</a></body></html>"
+claudia_02 = "<html><body>克勞迪雅夫人：<br>像你這樣既誠實又有能力的人能夠站在我們黎明這一方，真是謝謝你。<br>而且，我想我先生--亞太法特卿應該有跟你說過，我們的目標與計畫已很確定。<br>但是，在那之前我想先付你酬勞，你很優秀地完成了革琳的訓練。<br><a action=\"bypass -h Quest 194_SevenSignContractOfMammon claudia_03\">謝謝</a></body></html>"
 # 31001-03.htm
-claudia_03 = "<html><body>�J�ҭ}���ҤH�G<br>���A���W�A�F...����Aťť�ڭ̾������U�@�ӭp�e��A����ǳƦn�ѻP���ܡA�A�ӧ�ڧa�C</body></html>"
+claudia_03 = "<html><body>克勞迪雅夫人：<br>不，辛苦你了...那麼，聽聽我們黎明的下一個計畫後，等到準備好參與的話，再來找我吧。</body></html>"
 
 def transformPlayer(npc, player, transid) :
 	if player.isTransformed() == True :
@@ -255,12 +255,12 @@ class Quest (JQuest) :
 		elif event == "claudia_03" :
 			htmltext = claudia_03
 			st.addExpAndSp(52518015,5817677)
-			#st.addExpAndSp(25000000,2500000)  # ��½�� �g���
+			#st.addExpAndSp(25000000,2500000)  # 嗨翻天 經驗值
 			st.unset("cond")
 			st.setState(State.COMPLETED)
 			st.exitQuest(False)
 			st.playSound("ItemSound.quest_finish")
-		# �j���F�� �ȤӪk�S ��
+		# 古斯達夫 亞太法特 卿
 		elif event == "athebaldt_03" :
 			htmltext = athebaldt_03
 		elif event == "athebaldt_04" :
@@ -273,7 +273,7 @@ class Quest (JQuest) :
 			htmltext = athebaldt_07
 		elif event == "athebaldt_08" :
 			htmltext = athebaldt_08
-		# ���K�լd�� ���Y
+		# 祕密調查員 革琳
 		elif event == "colin_01" :
 			htmltext = colin_01
 		elif event == "colin_02" :
@@ -328,7 +328,7 @@ class Quest (JQuest) :
 			htmltext = colin_26
 		elif event == "colin_27" :
 			htmltext = colin_27
-		# �C��j��
+		# 青蛙大王
 		elif event == "frog_00" :
 			htmltext = frog_00
 		elif event == "frog_01" :
@@ -341,7 +341,7 @@ class Quest (JQuest) :
 			htmltext = frog_04
 		elif event == "frog_05" :
 			htmltext = frog_05
-		# ��������
+		# 泰絲祖母
 		elif event == "tess_00" :
 			htmltext = tess_00
 		elif event == "tess_01" :
@@ -352,7 +352,7 @@ class Quest (JQuest) :
 			htmltext = tess_03
 		elif event == "tess_04" :
 			htmltext = tess_04
-		# �����w�F
+		# 村民庫達
 		elif event == "kuta_00" :
 			htmltext = kuta_00
 		elif event == "kuta_01" :
@@ -363,7 +363,7 @@ class Quest (JQuest) :
 			htmltext = kuta_03
 		elif event == "kuta_04" :
 			htmltext = kuta_04
-		# �J�ҭ}���ҤH
+		# 克勞迪雅夫人
 		elif event == "claudia_01" :
 			htmltext = claudia_01
 		elif event == "claudia_02" :
@@ -384,7 +384,7 @@ class Quest (JQuest) :
 		if st.getState() == State.COMPLETED :
 			htmltext = Quest.getAlreadyCompletedMsg(player)
 		elif id == State.CREATED :
-			# �j���F�� �ȤӪk�S ��
+			# 古斯達夫 亞太法特 卿
 			if npcId == ATHEBALDT and cond == 0 :
 				second = player.getQuestState("193_SevenSignDyingMessage")
 				if second and second.getState() == State.COMPLETED and player.getLevel() >= 79 :
@@ -393,7 +393,7 @@ class Quest (JQuest) :
 					htmltext = "30760-00.htm"
 					st.exitQuest(True)
 		elif id == State.STARTED :
-			# �j���F�� �ȤӪk�S ��
+			# 古斯達夫 亞太法特 卿
 			if npcId == ATHEBALDT :
 				if cond == 1 :
 					htmltext = athebaldt_03
@@ -401,7 +401,7 @@ class Quest (JQuest) :
 					htmltext = athebaldt_05
 				elif cond == 3 :
 					htmltext = athebaldt_08
-			# ���K�լd�� ���Y
+			# 祕密調查員 革琳
 			elif npcId == COLIN :
 				if cond == 3 :
 					htmltext = colin_01
@@ -432,7 +432,7 @@ class Quest (JQuest) :
 					htmltext = colin_25
 				elif cond == 12 :
 					htmltext = colin_27
-			# �C��j��
+			# 青蛙大王
 			elif npcId == FROG :
 				if cond == 4:
 					if checkPlayer(player, 6201):
@@ -444,7 +444,7 @@ class Quest (JQuest) :
 						htmltext = frog_05
 					else :
 						htmltext = ""
-			# ��������
+			# 泰絲祖母
 			elif npcId == TESS :
 				if cond in [4,5,6] :
 					if checkPlayer(player, 6202):
@@ -461,7 +461,7 @@ class Quest (JQuest) :
 						htmltext = tess_04
 					else :
 						htmltext = ""
-			# �����w�F
+			# 村民庫達
 			elif npcId == KUTA :
 				if cond in [4,5,6,7,8,9] :
 					if checkPlayer(player, 6203):
@@ -473,13 +473,13 @@ class Quest (JQuest) :
 						htmltext = kuta_01
 					else :
 						htmltext = kuta_00
-			# �J�ҭ}�� �ȤӪk�S
+			# 克勞迪雅 亞太法特
 			elif npcId == CLAUDIA :
 				if cond == 12 :
 					htmltext = claudia_01
 		return htmltext
 
-QUEST	= Quest(194,qn,"�C�ʦL�A�]�I��������")
+QUEST	= Quest(194,qn,"七封印，財富的契約書")
 
 QUEST.addStartNpc(ATHEBALDT)
 QUEST.addTalkId(ATHEBALDT)

@@ -74,7 +74,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -82,7 +82,7 @@ class Quest (JQuest) :
    id = st.getState()
    cond = st.getInt("cond")
    if id == State.COMPLETED :
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
    elif npcId == HARDIN :
       if cond == 0 :
          if player.getLevel() >= 50 :
@@ -92,40 +92,40 @@ class Quest (JQuest) :
             st.exitQuest(1)
       elif cond == 1 :
          htmltext = "30832-02.htm"
-      elif cond > 1 and cond < 5 :                  #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
-         htmltext = "30832-05_end.htm"              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
+      elif cond > 1 and cond < 5 :                  #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
+         htmltext = "30832-05_end.htm"              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
       elif cond == 5 :
          htmltext = "30832-06.htm"
-      elif cond > 5 and cond < 9 :                  #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
-         htmltext = "30832-10_end.htm"              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
+      elif cond > 5 and cond < 9 :                  #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
+         htmltext = "30832-10_end.htm"              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
       elif cond == 9 :
          htmltext = "30832-11.htm"
    elif npcId == ERRICKIN :
       if cond == 2 :
          htmltext = "30701-01.htm"
-      if cond == 3 :                                #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
-         htmltext = "30701-02_end.htm"              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
+      if cond == 3 :                                #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
+         htmltext = "30701-02_end.htm"              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
       if cond == 4 :
          htmltext = "30701-03.htm"
          st.takeItems(ECTOPLASM,35)
          st.giveItems(STABILIZED_ECTOPLASM,1)
          st.set("cond","5")
          st.playSound("ItemSound.quest_middle")
-      elif cond == 5 :                              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
-         htmltext = "30701-03_end.htm"              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
+      elif cond == 5 :                              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
+         htmltext = "30701-03_end.htm"              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
    elif npcId == CLAYTON :
       if cond == 6 :
          htmltext = "30464-01.htm"
-      if cond == 7 :                                #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
-         htmltext = "30464-02_end.htm"              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
+      if cond == 7 :                                #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
+         htmltext = "30464-02_end.htm"              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
       if cond == 8 :
          htmltext = "30464-03.htm"
          st.takeItems(GLASS_JAGUAR_CRYSTAL,5)
          st.giveItems(BOOK_OF_SEAL,1)
          st.set("cond","9")
          st.playSound("ItemSound.quest_middle")
-      elif cond == 9 :                              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
-         htmltext = "30464-03_end.htm"              #¼W¥[:±µ¤U¶¥¬q©Ê¥ô°È«áªº¹ï¸Ü
+      elif cond == 9 :                              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
+         htmltext = "30464-03_end.htm"              #å¢åŠ :æ¥ä¸‹éšæ®µæ€§ä»»å‹™å¾Œçš„å°è©±
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -155,7 +155,7 @@ class Quest (JQuest) :
          st.giveItems(itemId,qty)
    return
 
-QUEST       = Quest(136,qn,"¤£¦PÆF»î¡A¤£¦P­±»ª")
+QUEST       = Quest(136,qn,"ä¸åŒéˆé­‚ï¼Œä¸åŒé¢è²Œ")
 
 QUEST.addStartNpc(HARDIN)
 

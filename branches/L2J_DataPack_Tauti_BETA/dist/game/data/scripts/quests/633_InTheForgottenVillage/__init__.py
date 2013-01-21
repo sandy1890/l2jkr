@@ -82,7 +82,7 @@ class Quest (JQuest):
     
 
     def onTalk (self,npc,player):        
-        htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+        htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
         st = player.getQuestState(qn)
         if not st: return
         npcId = npc.getNpcId()
@@ -125,7 +125,7 @@ class Quest (JQuest):
                     st.playSound("ItemSound.quest_itemget") 
         return        
 
-QUEST       = Quest(633, qn, "¦b³Q¿ò§Ñªº§ø²ø")
+QUEST       = Quest(633, qn, "åœ¨è¢«éºå¿˜çš„æ‘èŠ")
 
 for i in DAMOBS.keys():
     QUEST.addKillId(i)

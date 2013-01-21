@@ -43,7 +43,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -59,7 +59,7 @@ class Quest (JQuest) :
        htmltext = "30145-02.htm"
        st.exitQuest(1)
    elif npcId == 30145 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    elif npcId == 30145 and st.getInt("cond") :
       if st.getQuestItemsCount(CRACKED_SKULL_ID) >= 1 and st.getQuestItemsCount(PERFECT_SKULL_ID) == 0 :
@@ -96,7 +96,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(169,qn,"¾µ¹Úªº¤l®]")
+QUEST       = Quest(169,qn,"å™©å¤¢çš„å­å­«")
 
 QUEST.addStartNpc(30145)
 

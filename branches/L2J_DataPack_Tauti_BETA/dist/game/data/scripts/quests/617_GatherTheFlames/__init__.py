@@ -24,8 +24,8 @@ DROPLIST = {21381:51,21653:51,21387:53,21655:53,21390:56,21656:69,21389:55,21388
             21391:55,21393:58,21657:57,21386:52,21652:49,21378:49,21376:48,21377:48,\
             21379:59,21380:49}
 
-REWARDS = [ 6881,6883,6885,6887,6891,6893,6895,6897,6899,7580 ]  # 60%¨÷¶b
-REWARDS2= [ 6882,6884,6886,6888,6892,6894,6896,6898,6900,7581 ]  # 100%¨÷¶b
+REWARDS = [ 6881,6883,6885,6887,6891,6893,6895,6897,6899,7580 ]  # 60%å·è»¸
+REWARDS2= [ 6882,6884,6886,6888,6892,6894,6896,6898,6900,7581 ]  # 100%å·è»¸
 
 #Change this value to 1 if you wish 100% recipes, default 60%
 ALT_RP100 = 0
@@ -122,11 +122,11 @@ class Quest (JQuest) :
 					htmltext = "32049-01.htm"
 				else :
 					htmltext = "32049-02.htm"
-				AutoChat(npc,"ÅwªïÅwªï¡I")
-				#AutoChat(npc,"§ÖÂI¡A§ÖÂI¡A»°§Ö¡C")
-				#AutoChat(npc,"§Ú¤£³ßÅwªø´Á«İ¦b¦P¤@­Ó¦a¤è¡C")
-				#AutoChat(npc,"³o¼Ë¯¸µÛ·|«Ü²Öªº¡C")
-				#AutoChat(npc,"³o¦¸´N©¹¨ºÃä¬İ¬İ§a¡H¡I")
+				AutoChat(npc,"æ­¡è¿æ­¡è¿ï¼")
+				#AutoChat(npc,"å¿«é»ï¼Œå¿«é»ï¼Œè¶•å¿«ã€‚")
+				#AutoChat(npc,"æˆ‘ä¸å–œæ­¡é•·æœŸå¾…åœ¨åŒä¸€å€‹åœ°æ–¹ã€‚")
+				#AutoChat(npc,"é€™æ¨£ç«™è‘—æœƒå¾ˆç´¯çš„ã€‚")
+				#AutoChat(npc,"é€™æ¬¡å°±å¾€é‚£é‚Šçœ‹çœ‹å§ï¼Ÿï¼")
 		return htmltext
 
 	def onKill(self,npc,player,isPet):
@@ -149,7 +149,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(617, qn, "¾®»E¤õµK")
+QUEST		= Quest(617, qn, "å‡èšç«ç„°")
 
 QUEST.addStartNpc(VULCAN)
 QUEST.addStartNpc(HILDA)

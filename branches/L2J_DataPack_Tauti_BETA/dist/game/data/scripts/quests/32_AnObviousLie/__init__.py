@@ -57,7 +57,7 @@ class Quest (JQuest) :
 				st.set("cond","5")
 				st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext="§÷®Æ©Î¹D¨ã¤£¨¬¡C"
+				htmltext="ææ–™æˆ–é“å…·ä¸è¶³ã€‚"
 				st.set("cond","3")
 		elif event == "30094-7.htm" :
 			if st.getQuestItemsCount(SPIRIT_ORES) >= 500:
@@ -65,7 +65,7 @@ class Quest (JQuest) :
 				st.set("cond","6")
 				st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext="§÷®Æ©Î¹D¨ã¤£¨¬¡C"
+				htmltext="ææ–™æˆ–é“å…·ä¸è¶³ã€‚"
 		elif event == "31706-4.htm" :
 			st.set("cond","7")
 			st.playSound("ItemSound.quest_accept")
@@ -77,7 +77,7 @@ class Quest (JQuest) :
 				st.takeItems(THREAD,1000)
 				st.takeItems(SUEDE,500)
 			else:
-				htmltext = "§÷®Æ©Î¹D¨ã¤£¨¬¡C"
+				htmltext = "ææ–™æˆ–é“å…·ä¸è¶³ã€‚"
 		elif event in ["cat","racoon","rabbit"] :
 			if st.getInt("cond") == 8 :
 				if event == "cat" :
@@ -96,7 +96,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -105,7 +105,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == MAXIMILIAN and cond == 0 :
 				if player.getLevel() >= 45 :
@@ -164,7 +164,7 @@ class Quest (JQuest) :
 					st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(32,qn,"ÁÀ¨¥¤]¯à¬İªº¨£")
+QUEST		= Quest(32,qn,"è¬Šè¨€ä¹Ÿèƒ½çœ‹çš„è¦‹")
 
 QUEST.addStartNpc(MAXIMILIAN)
 

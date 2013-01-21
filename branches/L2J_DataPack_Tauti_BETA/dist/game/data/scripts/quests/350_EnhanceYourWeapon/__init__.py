@@ -43,13 +43,13 @@ class Quest (JQuest) :
         st.giveItems(GREEN_SOUL_CRYSTAL0_ID,1)
     elif event in ["30115-11.htm","30856-11.htm","30194-11.htm"] :
         st.giveItems(BLUE_SOUL_CRYSTAL0_ID,1)
-    elif event in ["30115-22.htm","30856-22.htm","30194-22.htm"] :  # pmq­×§ï¼W¥[¹ï¸Ü
-        st.playSound("ItemSound.quest_finish")                      # pmq­×§ï¼W¥[¹ï¸Ü
+    elif event in ["30115-22.htm","30856-22.htm","30194-22.htm"] :  # pmqä¿®æ”¹å¢åŠ å°è©±
+        st.playSound("ItemSound.quest_finish")                      # pmqä¿®æ”¹å¢åŠ å°è©±
         st.exitQuest(1)
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -58,17 +58,17 @@ class Quest (JQuest) :
    if id == State.CREATED :
      st.set("cond","0")
    if st.getInt("cond") == 0: 
-     if player.getLevel() >= 40 :                                   # pmq­×§ï¼W¥[¥ô°Èµ¥¯Å
-       htmltext = npcId+"-02.htm"                                   # pmq­×§ï¼W¥[¹ï¸Ü
-     else :                                                         # pmq­×§ï¼W¥[¹ï¸Ü
-       htmltext = npcId+"-00.htm"                                   # pmq­×§ï¼W¥[¹ï¸Ü
+     if player.getLevel() >= 40 :                                   # pmqä¿®æ”¹å¢åŠ ä»»å‹™ç­‰ç´š
+       htmltext = npcId+"-02.htm"                                   # pmqä¿®æ”¹å¢åŠ å°è©±
+     else :                                                         # pmqä¿®æ”¹å¢åŠ å°è©±
+       htmltext = npcId+"-00.htm"                                   # pmqä¿®æ”¹å¢åŠ å°è©±
    elif check(st) :
      htmltext = npcId+"-03.htm"
    elif st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0 :
      htmltext = npcId+"-21.htm"
    return htmltext
 
-QUEST       = Quest(350,qn,"¤O¶q¶°¤¤¦b¤M¦y")
+QUEST       = Quest(350,qn,"åŠ›é‡é›†ä¸­åœ¨åˆ€å°–")
 
 for npcId in NPC:
   QUEST.addStartNpc(npcId)

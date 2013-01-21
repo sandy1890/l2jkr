@@ -142,7 +142,7 @@ class Quest (JQuest) :
     return htmltext
  
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
     npcId = npc.getNpcId()
@@ -170,7 +170,7 @@ class Quest (JQuest) :
             else :
                 htmltext = "<html><body>Kekropus:<br>Go talk to Rodenpicula. Mao can help you get to her.</body></html>"
         elif id == State.COMPLETED :
-            htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+            htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
     elif npcId == WIZARD and id == State.STARTED:
        # first time talking to Wizard. Talk a bit
         if cond==1 :
@@ -246,7 +246,7 @@ class Quest (JQuest) :
                 st.set("cond",str(cond+1))
     return
 
-QUEST = Quest(236,qn,"´ı¨PªººØ¤l")
+QUEST = Quest(236,qn,"æ¸¾æ²Œçš„ç¨®å­")
 
 QUEST.addStartNpc(KEKROPUS)
 

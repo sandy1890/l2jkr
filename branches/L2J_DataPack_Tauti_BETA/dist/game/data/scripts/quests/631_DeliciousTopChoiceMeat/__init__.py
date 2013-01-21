@@ -44,7 +44,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if st :
         npcId = npc.getNpcId()
@@ -87,7 +87,7 @@ class Quest (JQuest) :
                st.giveItems(TOP_QUALITY_MEAT,int(numItems))
    return
 
-QUEST       = Quest(631,qn,"¨ı¹D¶W´Îªº°ª¯Å¦×")
+QUEST       = Quest(631,qn,"å‘³é“è¶…æ£’çš„é«˜ç´šè‚‰")
 
 QUEST.addStartNpc(TUNATUN)
 

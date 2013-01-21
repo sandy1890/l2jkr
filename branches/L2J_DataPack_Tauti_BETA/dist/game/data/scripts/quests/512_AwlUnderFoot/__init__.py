@@ -40,24 +40,24 @@ DL_MARK = 9798
 KNIGHT_EPALUETTE = 9912
 
 #MESSAGES
-warden_exchange = "<html><body>�ʺ��޲z���G<br>�A�w�g�B�z���a�U�ʺ��}�ǤF�ܡH�F�o�n�I<br>���±z�����U�A�Ѱ��F��ڭ̪��¯١C<br>�o�̬O�M�h���ӳ����ӿաC<br>�A�i�H�V�c���]�k�v�洫��������ɵ��~�C<br>...<br>�z�Q�~��D�ԶܡH<br><br><a action=\"bypass -h Quest 512_AwlUnderFoot continue\">���Q�~��</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot quit\">�ڭn���</a></body></html>"
-quest_no = "<html><body>�ʺ��޲z���G<br><center><font color=\"FF0000\">�]�\��|����ˡI�^</font></center></body></html>"
-warden_no = "<html><body>�ʺ��޲z���G<br>���z���ǳƤ@�U�A�^�ӮɡA�Шӧ�ڧa...</body></html>"
-rumor = "<html><body>�ʺ��޲z���G<br>��t��ԥd���M�O�ڪ������A���]�|�v�T�{��ͬ��C���{�b�o�ˡA�V�O���O�ɶ��A�x�b��ԥd��4�W�լd���V�|�B��M�I�C�бz���I�C<br><a action=\"bypass -h Quest 512_AwlUnderFoot quest_no\">�бN�ڰe�쨺�Ӧa��</a></body></html>"
-warden_ask = "<html><body>�ʺ��޲z���G<br>�@...<br>�]�����[����Q��m���t�G�A�L�h�Q�}�T���Ǫ�-�a�U�ʺ����}��-�̡A�ثe�U�ۧΦ��դO�C<br>�b�a�U���ʺ����A�Ǫ��̨ϥΥu���L�̯������B���ʪ����K�q�D�A�ӳo�ǯ��K�q�D�p�j����몺����s���C<br>��ť���o�ǳq�D�]�P�a�W�Ǫ��̴x�����a�ϳs���b�@�_�O�C<br>�p���x���n��a�U�@�ɤ��D���v���դO��´�A�O�ѹL�h�Q�}�T���Ǫ��̩Ҳզ����A�ӥB�٦s�b�۩w�����šFť�������a�U�ϰ�O�ѧ󰪦a�쪺�]���̴x�����A�ӭn��a�U�h�Ѹ��C�a�쪺�]���̦���C<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_ask1\">���ҥH�a�U�ʺ����Ǫ��̤��_�X�S�A�N��A��򩺰Q...</a></body></html>"
-warden_ask1 = "<html><body>�ʺ��޲z���G<br>�S���C<br>�ҥH�ڭ̤~�|�V������_�I�a�̨D�U...<br>���M�Ať������¾�쪺�Բ��a�P�Ǫ̡B�]�k�v�̡A���b�M�D�i�ä[�ʸѨM�o���D����k�C<br>���O�]���դO�U��������������O���F���D�A�ҥH�i�檺���Ӷ��Q�C<br>�`���A�b�ѨM��ץX�Ӥ��e�A�u�n�~��h���Q�F�C<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_ask2\">�ڸӰ��Ǥ���O�H</a></body></html>"
-warden_ask2 = "<html><body>�ʺ��޲z���G<br>�L�h�b�o�a�U�ʺ����]���̩M���Q���������A�����L�j�W�Ҫ��԰��C<br>�u�O���E�P���԰�...<br>���賣���˺G���C<br>�ҥH�P�쮣�ߪ��]���̤]�����������N���a�U�ʺ������ۮa�몺�i�X�F�C<br>���L��ӫ��a�U�ʺ������򦳬y�J���O�L�h�}�Ǫ��j���]���A�H�T�H�ղզ����@�s���a�U�ʺ��ڸs�C<br>�������t�ѡA���@�w�O�b�d���򳱿ѧa�C<br>�N�·Ы_�I�a�z�N<font color=\"LEVEL\">�T�H��</font>�����h��A���˲զ��a�U�ʺ��}�Ǳڸs���Ҧ��]���a�C<br>�N�̫�@�ժ�����Ǫ�������a�^<font color=\"LEVEL\">���a�U�ʺ��]�������ų��H��</font>���ܡA�ڴN��I�M�h�ӳ����z�C<br>�Q���M�h�ӳ��i�H�V�c���]�k�v�洫��������ɵ��~�C<br>��F�A�٦�...<br>��ثe����o����i���a�U�ʺ��}�ǭ��⦳<font color=\"LEVEL\">�������`�����C�B�ʳ����n�e�B�}�a�̥[��</font>�C<br>�i�z�L�ڶi�J���a�U�ʺ��C<br>���N���U�z�F�C<br><a action=\"bypass -h Quest 512_AwlUnderFoot status\">�߰ݫ����a�U�ʺ����p</a></body></html>"
-CastleWarden = "<html><body>�ʺ��޲z���G<br><br>�o�̬O�M�I���a�C�Y�S���Q�n�ܱo��j���N�ӡA�ЧO�b�o����r�d�C<br><br><a action=\"bypass -h Quest 512_AwlUnderFoot rumor\">��ť�즳����t��ԥd������</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot enter\">���ڶi�J�ʺ��a</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_quest.htm\">����</a></body></html>"
-default = "<html><body>�ʺ��޲z���G<br>�ثe�S��������ȡA�α��󤣲šC</body></html>"
-nolvl = "<html><body>�ʺ��޲z���G<br>�ګܷP�«_�I�a�z�Q�n��U���߷N�A���ڤ]�O�����n�몺�@���A�i���Ʊ�����O���Ū�����������J�I�ҡC<br>�p���������޲z�d���]�O�ڪ�¾�ȡC<br>�b�����o¾�Ȥ��e�A�ڤ]���O�ӥw�\�������_�I�a�C<br�H�e�����߳��ӬݡA�_�I�a�z����O�٤����������Q���ȡC<br>�h�i�m��O��A�ӧ�ڧa�C<br>(�u������70�H�W�~�i�H���檺���ȡC)</body></html>"
-noitem = "<html><body>�ʺ��޲z���G<br>�A�w�g�^�ӶܡH<br1>�A������F�ڪ��n�D�C�A�S���a�U�ʺ��]�������ų��H���C</body></html>"
-wrongcastle = "<html><body>�ʺ��޲z���G<br>(�֦����������������������~����檺���ȡC)</body></html>"
-noclan = "<html><body>�ʺ��޲z���G<br>�A�O�֡H�n�����b����������W�椺...<br>(�֦����������������������~����檺���ȡC)</body></html>"
-finish = "<html><body>�ʺ��޲z���G<br>�ڡA�ک��աC�G�M�A�ڨS���ݿ��H...<br>���§A���o�̰����@���C<br>�p�G�A�Q�A�����X���⪺�ܡA�ڭ̷|�D�`�P�E�C<br>���A�ȳ~�r�֡I</body></html>"
-noparty = "<html><body>�i�J�ʺ�������O�A���զ�2�W�H�W������A�ӥB�Ҧ�������������b�i����Ȥ~��C�٦��A�}�l�V�m��A�ܤ֦b4�p�ɤ����L�k�W�[�B�~���V�m�C</body></html>"
-#noleader = "<html><body>�ʺ��޲z���G<br>���F�b�԰����ͦs�A�̭��n���O��������p���ɦۤv������A���M�A�b��ԥd���N��ɱz���H�A�]�|�O�����C�ҥH�A�ګD�`�L�������ɤH���C�z�������O" + str(pln) + "�A�h�N�z�������Шӳo��a�C<br>(�u�������~��չ϶i�J�C)</body></html>"
-warden_quest = "<html><body>�ʺ��޲z���G<br>�ڬO�o�ӫ������a�U�ʺ��޲z���C�o�Ӧa�U�ʺ��Ǫ��}��̪�Q�o�{���C<br>�ڪ��D��L�����]���o�˪��a�U�ʺ��C�ڪ��d���O�n�O���o�Ӧa�U�ʺ��Ϧw���C<br>�����A�o�N�X�G�O�i�����Ǫ��X�{�M�����b�a�c���@�y�����A���O�ܡH<br>�������O�A�ڭ̮ڥ��L�k��W�B�z�o�Ӥu�@�C<br>�ڭ̻ݭn�_�I�a�����U�C<br>���M�A�ڭ̷|��I���z�S�ҡC<br><br><a action=\"bypass -h Quest 512_AwlUnderFoot start\">�ڷ|���A��</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_no\">�ڤ��O�{�b</a></body></html>"
-warden_yes = "<html><body>�ʺ��޲z���G<br>�i�J���a�U�ʺ���A�N�a�U�ʺ��}�����h�a�C<br>�_�I�a�z�����n�N<font color=\"LEVEL\">�T�H��</font>�����h��A���˲զ��a�U�ʨƥ}�Ǳڸs���Ҧ��]���~��C<br>�N�̫�@�ժ�����Ǫ�������A�a�^���a�U�ʺ��]�������ų��H�����ܡA�ڴN��I�M�h�ӳ����z�C<br>�Q���M�h�ӳ��i�H�V�c���]�k�v�洫��������ɵ��~�C<br>��F�A�٦�...<br>��ثe����o����i���a�U�ʺ��}�ǭ��⦳<font color=\"LEVEL\">�������`�����C�B�ʳ����n�e�B�}�a�̥[��</font>�C<br>�i�z�L�ڶi�J���a�U�ʺ��C<br>���N���U�z�F�C<br><a action=\"bypass -h Quest 512_AwlUnderFoot enter\">���D�F�A�{�b�N�X�o</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_ask\">�a�U�ʺ����Ǫ��̬O��诫�t�H</a></body></html>"
+warden_exchange = "<html><body>監獄管理員：<br>你已經處理掉地下監獄囚犯了嗎？幹得好！<br>謝謝您的幫助，解除了對我們的威脅。<br>這裡是騎士的肩章的承諾。<br>你可以向宮廷魔法師交換城堡血盟補給品。<br>...<br>您想繼續挑戰嗎？<br><br><a action=\"bypass -h Quest 512_AwlUnderFoot continue\">說想繼續</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot quit\">我要放棄</a></body></html>"
+quest_no = "<html><body>監獄管理員：<br><center><font color=\"FF0000\">（功能尚未實裝！）</font></center></body></html>"
+warden_no = "<html><body>監獄管理員：<br>那您先準備一下，回來時，請來找我吧...</body></html>"
+rumor = "<html><body>監獄管理員：<br>邊緣菲拉卡雖然是夢的次元，但也會影響現實生活。像現在這樣，越是浪費時間，困在菲拉卡的4名調查員越會處於危險。請您快點。<br><a action=\"bypass -h Quest 512_AwlUnderFoot quest_no\">請將我送到那個地方</a></body></html>"
+warden_ask = "<html><body>監獄管理員：<br>哦...<br>因為長久歲月被放置的緣故，過去被囚禁的怪物-地下監獄的囚犯-們，目前各自形成勢力。<br>在地下的監獄內，怪物們使用只有他們能夠接近、移動的秘密通道，而這些秘密通道如蜘蛛網般的錯綜連接。<br>還聽說這些通道也與地上怪物們掌控的地區連接在一起呢。<br>如此掌握要塞地下世界之主導權的勢力組織，是由過去被囚禁的怪物們所組成的，而且還存在自定的階級；聽說城堡地下區域是由更高地位的魔物們掌握的，而要塞地下則由較低地位的魔物們佔領。<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_ask1\">之所以地下監獄內怪物們不斷出沒，就算再怎麼征討...</a></body></html>"
+warden_ask1 = "<html><body>監獄管理員：<br>沒錯。<br>所以我們才會向血盟的冒險家們求助...<br>當然，聽說高等職位的戰略家與學者、魔法師們，正在尋求可永久性解決這問題的方法。<br>但是因為勢力各異的城堡間之協力成了問題，所以進行的不太順利。<br>總之，在解決方案出來之前，只好繼續去征討了。<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_ask2\">我該做些什麼呢？</a></body></html>"
+warden_ask2 = "<html><body>監獄管理員：<br>過去在這地下監獄的魔物們和征討部隊之間，曾有過大規模的戰鬥。<br>真是場激烈的戰鬥...<br>雙方都死傷慘重。<br>所以感到恐懼的魔物們也不敢輕易的將城地下監獄當成自家般的進出了。<br>不過近來城地下監獄內持續有流入曾是過去囚犯的強悍魔物，以三人組組成為一群的地下監獄族群。<br>雖不明緣由，但一定是在搞什麼陰謀吧。<br>就麻煩冒險家您將<font color=\"LEVEL\">三人組</font>都擊退後，擊倒組成地下監獄囚犯族群的所有魔物吧。<br>將最後一組的首領怪物殺死後帶回<font color=\"LEVEL\">城地下監獄魔物的階級章碎片</font>的話，我就支付騎士肩章給您。<br>利用騎士肩章可以向宮廷魔法師交換城堡血盟補給品。<br>對了，還有...<br>到目前為止得到報告的地下監獄囚犯首領有<font color=\"LEVEL\">美貌的奈茲里耶、粗野的南龐、破壞者加斯</font>。<br>可透過我進入城地下監獄。<br>那就拜託您了。<br><a action=\"bypass -h Quest 512_AwlUnderFoot status\">詢問城堡地下監獄情況</a></body></html>"
+CastleWarden = "<html><body>監獄管理員：<br><br>這裡是危險之地。若沒有想要變得更強的意志，請別在這附近逗留。<br><br><a action=\"bypass -h Quest 512_AwlUnderFoot rumor\">我聽到有關邊緣菲拉卡的消息</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot enter\">讓我進入監獄吧</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_quest.htm\">任務</a></body></html>"
+default = "<html><body>監獄管理員：<br>目前沒有執行任務，或條件不符。</body></html>"
+nolvl = "<html><body>監獄管理員：<br>我很感謝冒險家您想要協助的心意，但我也是身為要塞的一員，可不希望讓實力不符的血盟成員陷入險境。<br>如此之類的管理責任也是我的職務。<br>在接任這職務之前，我也曾是個叱吒風雲的冒險家。<br以前輩的立場來看，冒險家您的實力還不足接任征討任務。<br>去磨練實力後再來找我吧。<br>(只有等級70以上才可以執行的任務。)</body></html>"
+noitem = "<html><body>監獄管理員：<br>你已經回來嗎？<br1>你做不到了我的要求。你沒有地下監獄魔物的階級章碎片。</body></html>"
+wrongcastle = "<html><body>監獄管理員：<br>(擁有此城堡的血盟之血盟成員才能執行的任務。)</body></html>"
+noclan = "<html><body>監獄管理員：<br>你是誰？好像不在血盟成員的名單內...<br>(擁有此城堡的血盟之血盟成員才能執行的任務。)</body></html>"
+finish = "<html><body>監獄管理員：<br>啊，我明白。果然，我沒有看錯人...<br>謝謝你為這裡做的一切。<br>如果你想再次伸出援手的話，我們會非常感激。<br>祝你旅途愉快！</body></html>"
+noparty = "<html><body>進入監獄的條件是，須組成2名以上的隊伍，而且所有隊伍成員必須有在進行任務才行。還有，開始訓練後，至少在4小時之內無法增加額外的訓練。</body></html>"
+#noleader = "<html><body>監獄管理員：<br>為了在戰鬥中生存，最重要的是隊伍的隊長如何領導自己的隊伍，當然，在菲拉卡內將領導您的人，也會是隊長。所以，我非常尊重隊伍的領導人物。您的隊長是" + str(pln) + "，去將您的隊長請來這邊吧。<br>(只有隊長才能試圖進入。)</body></html>"
+warden_quest = "<html><body>監獄管理員：<br>我是這個城堡的地下監獄管理員。這個地下監獄怪物陣營最近被發現的。<br>我知道其他城堡也有這樣的地下監獄。我的責任是要保持這個地下監獄區安全。<br>畢竟，這將幾乎是可取的怪物出現和消失在地牢的一座城堡，不是嗎？<br>不幸的是，我們根本無法單獨處理這個工作。<br>我們需要冒險家的幫助。<br>當然，我們會支付給您酬勞。<br><br><a action=\"bypass -h Quest 512_AwlUnderFoot start\">我會幫你的</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_no\">我不是現在</a></body></html>"
+warden_yes = "<html><body>監獄管理員：<br>進入城地下監獄後，將地下監獄囚犯擊退吧。<br>冒險家您必須要將<font color=\"LEVEL\">三人組</font>都擊退後，擊倒組成地下監事囚犯族群的所有魔物才行。<br>將最後一組的首領怪物殺死後，帶回城地下監獄魔物的階級章碎片的話，我就支付騎士肩章給您。<br>利用騎士肩章可以向宮廷魔法師交換城堡血盟補給品。<br>對了，還有...<br>到目前為止得到報告的地下監獄囚犯首領有<font color=\"LEVEL\">美貌的奈茲里耶、粗野的南龐、破壞者加斯</font>。<br>可透過我進入城地下監獄。<br>那就拜託您了。<br><a action=\"bypass -h Quest 512_AwlUnderFoot enter\">知道了，現在就出發</a><br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_ask\">地下監獄的怪物們是何方神聖？</a></body></html>"
 
 class PyObject:
 	pass
@@ -108,10 +108,10 @@ def enterInstance(self, player, template, teleto):
 			if st :
 				id = st.getState()
 				if not id == State.STARTED :
-					player.sendPacket(SystemMessage.sendString(partyMember.getName() + "������S���i����ȡC"))
+					player.sendPacket(SystemMessage.sendString(partyMember.getName() + "隊伍成員沒有進行任務。"))
 					return 0
 			else :
-				player.sendPacket(SystemMessage.sendString(partyMember.getName() + "������S���i����ȡC"))
+				player.sendPacket(SystemMessage.sendString(partyMember.getName() + "隊伍成員沒有進行任務。"))
 				return 0
 			if partyMember.getInstanceId() != 0:
 				instanceId = partyMember.getInstanceId()
@@ -128,7 +128,7 @@ def enterInstance(self, player, template, teleto):
 			if worldid == instanceId:
 				foundworld = True
 		if not foundworld:
-			player.sendPacket(SystemMessage.sendString("�A�������w�i�J�䥦���Y�ɦa�ϡC"))
+			player.sendPacket(SystemMessage.sendString("你的隊員已進入其它的即時地區。"))
 			return 0
 		teleto.instanceId = instanceId
 		teleportplayer(self, player, teleto)
@@ -183,7 +183,7 @@ def checkEnter(self, player) :
 			return True
 		else :
 			timeleft = remain / 60000
-			player.sendPacket(SystemMessage.sendString("�q�{�b�_�N�|����i�J�Y�ɦa�ϡG�u�����a�U�ʺ��v�C�U�@�����i���ɶ��ٳ�" + str(timeleft) + "�����C"))
+			player.sendPacket(SystemMessage.sendString("從現在起將會限制進入即時地區：「城堡地下監獄」。下一次的進場時間還剩" + str(timeleft) + "分鐘。"))
 			return False
 	else :
 		return True
@@ -249,22 +249,22 @@ class Quest (JQuest) :
 			if entertime.isdigit() :
 				remain = long(entertime) - System.currentTimeMillis()
 				if remain <= 0 :
-					htmltext = "<html><body>�ʺ��޲z���G<br>�a�U�ʺ����m���A�A�{�b�i�H�i�J�C<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">��^</a></body></html>"
+					htmltext = "<html><body>監獄管理員：<br>地下監獄閒置中，你現在可以進入。<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">返回</a></body></html>"
 				else :
 					timeleft = remain / 60000
 					if timeleft > 180 :
-						htmltext = "<html><body>�ʺ��޲z���G<br>�a�U�ʺ��{�b���H�D�Ԥ��C�ݥL�����}�ɡA�M��A�դ@���C<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">��^</a></body></html>"
+						htmltext = "<html><body>監獄管理員：<br>地下監獄現在有人挑戰中。待他們離開時，然後再試一次。<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">返回</a></body></html>"
 					else :
-						htmltext = "<html><body>�ʺ��޲z���G<br>�q�{�b�_�N�|����i�J�Y�ɦa�ϡG�u�����a�U�ʺ��v�C�U�@�����i���ɶ��ٳ� <font color=\"LEVEL\">" + str(timeleft) + "</font> �����C<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">��^</a></body></html>"
+						htmltext = "<html><body>監獄管理員：<br>從現在起將會限制進入即時地區：「城堡地下監獄」。下一次的進場時間還剩 <font color=\"LEVEL\">" + str(timeleft) + "</font> 分鐘。<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">返回</a></body></html>"
 			else :
-				htmltext = "<html><body>�ʺ��޲z���G<br>�a�U�ʺ����m���A�A�{�b�i�H�i�J�C<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">��^</a></body></html>"
+				htmltext = "<html><body>監獄管理員：<br>地下監獄閒置中，你現在可以進入。<br><a action=\"bypass -h Quest 512_AwlUnderFoot warden_yes\">返回</a></body></html>"
 		elif event == "enter" :
 			party = player.getParty()
 			if not party:
 				htmltext = noparty
 			elif not player.getParty().isLeader(player):
 				pln = player.getParty().getLeader().getName()
-				htmltext = "<html><body>�ʺ��޲z���G<br>���F�b�԰����ͦs�A�̭��n���O��������p���ɦۤv������A���M�A�b��ԥd���N��ɱz���H�A�]�|�O�����C�ҥH�A�ګD�`�L�������ɤH���C�z�������O" + str(pln) + "�A�h�N�z�������Шӳo��a�C<br>(�u�������~��չ϶i�J�C)</body></html>"
+				htmltext = "<html><body>監獄管理員：<br>為了在戰鬥中生存，最重要的是隊伍的隊長如何領導自己的隊伍，當然，在菲拉卡內將領導您的人，也會是隊長。所以，我非常尊重隊伍的領導人物。您的隊長是" + str(pln) + "，去將您的隊長請來這邊吧。<br>(只有隊長才能試圖進入。)</body></html>"
 			else :
 				tele = PyObject()
 				tele.x = 11740

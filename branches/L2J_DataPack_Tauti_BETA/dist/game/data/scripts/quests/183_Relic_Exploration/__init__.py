@@ -54,7 +54,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -64,14 +64,14 @@ class Quest (JQuest) :
 
 		if id == State.COMPLETED :
 			if npcId == Kusto :
-				htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+				htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 			elif npcId == Nikola :
 				qs1 = player.getQuestState("184_Nikolas_Cooperation_Contract")
 				qs2 = player.getQuestState("185_Nikolas_Cooperation_Consideration")
 				if not qs1 and not qs2 :
 					htmltext = "30621-03.htm"
 				else :
-					htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+					htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == Kusto and cond == 0 :
 				if player.getLevel() < 40 :
@@ -93,7 +93,7 @@ class Quest (JQuest) :
 					htmltext = "30621-01.htm"
 		return htmltext
 
-QUEST		= Quest(183,qn,"±´¬d¥¨¤Hªº¿òÂİ")
+QUEST		= Quest(183,qn,"æ¢æŸ¥å·¨äººçš„éºè¹Ÿ")
 
 QUEST.addStartNpc(Kusto)
 QUEST.addStartNpc(Nikola)

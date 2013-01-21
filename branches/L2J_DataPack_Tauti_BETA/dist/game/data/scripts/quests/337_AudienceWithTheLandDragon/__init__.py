@@ -101,7 +101,7 @@ class Quest (JQuest) :
      return
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
     npcId = npc.getNpcId()
@@ -350,7 +350,7 @@ class Quest (JQuest) :
         self.cancelQuestTimer("Jewel2_Timer2",npc,None)
     return
 
-QUEST       = Quest(337,qn,"¦aÀsªº¥X²{")
+QUEST       = Quest(337,qn,"åœ°é¾çš„å‡ºç¾")
 
 QUEST.addStartNpc(GABRIELLE)
 

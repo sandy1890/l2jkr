@@ -17,7 +17,7 @@ ALT_RP_100=0
 # In order to make special rewards harder to get, you could set max_chance to 1000, or slt
 REWARD_RATE = [1,3,5,100]
 # 2- Quest info: You prolly won't need to change this
-QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 372, "LegacyOfInsolence", "¶ÆºCªº¿ò²£"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 372, "LegacyOfInsolence", "å‚²æ…¢çš„éºç”¢"
 # 3- Quest specific definitions: Don't mess with it unless you know what you're doing
 #Quest items: Papyrus
 RE_PAP,BL_PAP,BK_PAP,WH_PAP=range(5966,5970)
@@ -132,7 +132,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 

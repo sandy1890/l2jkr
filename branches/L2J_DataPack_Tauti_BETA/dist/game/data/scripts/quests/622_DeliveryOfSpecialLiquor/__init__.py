@@ -45,7 +45,7 @@ class Quest (JQuest) :
        st.giveItems(SPECIAL_DRINK,5)
        st.playSound("ItemSound.quest_accept")
      else:
-       htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+       htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    elif event == "31547-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==1:
@@ -53,7 +53,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","2")
        else:
-         htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+         htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -64,7 +64,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","3")
        else:
-         htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+         htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -75,7 +75,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","4")
        else:
-         htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+         htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -86,7 +86,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","5")
        else:
-         htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+         htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -97,7 +97,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","6")
        else:
-         htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+         htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -119,11 +119,11 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
      else:
-        htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+        htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if st :
         npcId = npc.getNpcId()
@@ -155,7 +155,7 @@ class Quest (JQuest) :
                  htmltext = "31267-1.htm"
    return htmltext
 
-QUEST       = Quest(622,qn,"¹B°e¯S²£°s")
+QUEST       = Quest(622,qn,"é‹é€ç‰¹ç”¢é…’")
 
 QUEST.addStartNpc(31521)
 

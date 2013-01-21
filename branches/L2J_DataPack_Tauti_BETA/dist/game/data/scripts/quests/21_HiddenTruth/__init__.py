@@ -48,15 +48,15 @@ class Quest (JQuest) :
 			htmltext = "31328-05.htm"
 		elif event == "31523-03.htm" :
 			st.playSound("SkillSound5.horror_02")
-			st.playSound("ItemSound.quest_middle")   #pmq­×§ï
+			st.playSound("ItemSound.quest_middle")   #pmqä¿®æ”¹
 			st.set("cond","2")
 			ghost = st.addSpawn(31524,51432,-54570,-3136,180000)
-			ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),"¬O½Ö¥s¿ô§Ú¡C"))
+			ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),"æ˜¯èª°å«é†’æˆ‘ã€‚"))
 		elif event == "31524-06.htm" :
 			st.set("cond","3")
 			st.playSound("ItemSound.quest_middle")
 			ghost = self.addSpawn(31525,npc)
-			ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),player.getName()+"¡A¨Ì·Ó¥D¤Hªº©R¥O¡A§Ú±N¤Ş¾É±z¡C"))  #pmq­×§ï
+			ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),player.getName()+"ï¼Œä¾ç…§ä¸»äººçš„å‘½ä»¤ï¼Œæˆ‘å°‡å¼•å°æ‚¨ã€‚"))  #pmqä¿®æ”¹
 			self.startQuestTimer("1",1,ghost,player)
 			self.startQuestTimer("despawn",180000,ghost,player)
 		elif event == "31526-03.htm" :
@@ -93,7 +93,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -103,7 +103,7 @@ class Quest (JQuest) :
 		state = st.getState()
 
 		if state == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif state == State.CREATED :
 			if npcId == 31522:
 				if st.getPlayer().getLevel() >= 63 :
@@ -113,7 +113,7 @@ class Quest (JQuest) :
 					st.exitQuest(1)
 		elif state == State.STARTED:
 			if npcId == 31522:
-				if cond in [1,2,3,4,5,6,7,8] :    #pmq­×§ï cond 1~8
+				if cond in [1,2,3,4,5,6,7,8] :    #pmqä¿®æ”¹ cond 1~8
 					htmltext = "31522-05.htm"       
 			elif npcId == 31523 :
 				if cond == 1 :
@@ -121,7 +121,7 @@ class Quest (JQuest) :
 				elif cond == 2 :
 					htmltext = "31523-04.htm"
 					st.playSound("SkillSound5.horror_02")
-				elif cond in [3,4] :            #pmq­×§ï cond 3,4
+				elif cond in [3,4] :            #pmqä¿®æ”¹ cond 3,4
 					htmltext = "31523-04.htm"
 			elif npcId == 31524 :
 				if cond == 2 :
@@ -132,10 +132,10 @@ class Quest (JQuest) :
 					st.playSound("ItemSound.quest_middle")
 				elif cond == 4 :
 					htmltext = "31524-07c.htm"
-				elif cond == 5 :                #pmq­×§ï
-					htmltext = "31524-07.htm"   #pmq­×§ï
-				elif cond == 6 :                #pmq­×§ï
-					htmltext = "31524-07a.htm"  #pmq­×§ï
+				elif cond == 5 :                #pmqä¿®æ”¹
+					htmltext = "31524-07.htm"   #pmqä¿®æ”¹
+				elif cond == 6 :                #pmqä¿®æ”¹
+					htmltext = "31524-07a.htm"  #pmqä¿®æ”¹
 			elif npcId == 31525 :
 				if cond == 3 :
 					htmltext = "31525-01.htm"
@@ -190,7 +190,7 @@ class Quest (JQuest) :
 					htmltext = "31328-06.htm"
 		return htmltext
 
-QUEST		= Quest(21,qn,"ÁôÂÃªº¯u¹ê")
+QUEST		= Quest(21,qn,"éš±è—çš„çœŸå¯¦")
 
 QUEST.addStartNpc(31522)
 

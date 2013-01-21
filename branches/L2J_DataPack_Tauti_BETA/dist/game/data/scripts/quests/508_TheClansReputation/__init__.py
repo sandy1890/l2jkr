@@ -20,7 +20,7 @@ from com.l2jserver.gameserver.network.serverpackets      	import SystemMessage
 from com.l2jserver.util 									import Rnd
 
 qn="508_TheClansReputation"
-qd="¦å·ù¡A´­¦W¥|®ü"
+qd="è¡€ç›Ÿï¼Œæšåå››æµ·"
 
 # Quest NPC
 SIR_ERIC_RODEMAI = 30868
@@ -89,7 +89,7 @@ class Quest (JQuest) :
   return htmltext
 
  def onTalk (self,npc,player) :
-  htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+  htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
   st = player.getQuestState(qn)
   if not st : return htmltext
   clan = player.getClan()

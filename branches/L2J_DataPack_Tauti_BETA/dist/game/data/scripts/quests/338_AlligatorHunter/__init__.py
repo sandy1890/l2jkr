@@ -26,13 +26,13 @@ class Quest (JQuest) :
          st.setState(State.STARTED)
          st.set("cond","1")
          st.playSound("ItemSound.quest_accept")
-     elif event == "30892-09.htm" : # pmq ­×§ï
+     elif event == "30892-09.htm" : # pmq ä¿®æ”¹
          st.exitQuest(1)
          st.playSound("ItemSound.quest_finish")
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -66,7 +66,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(338,qn,"Æs³½Ây¤H")
+QUEST       = Quest(338,qn,"é±·é­šçµäºº")
 
 QUEST.addStartNpc(30892)
 

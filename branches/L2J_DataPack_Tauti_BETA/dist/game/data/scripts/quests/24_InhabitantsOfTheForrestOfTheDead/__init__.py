@@ -92,7 +92,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -104,7 +104,7 @@ class Quest (JQuest) :
 			if npcId == Wizard :
 				htmltext = "31522-20.htm"
 			else:
-				htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+				htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif state == State.CREATED :
 			if npcId == Dorian :
 				st2 = st.getPlayer().getQuestState("23_LidiasHeart")
@@ -170,11 +170,11 @@ class Quest (JQuest) :
 					st.takeItems(SilverCross,-1)
 					st.giveItems(BrokenSilverCross,1)
 					st.set("cond","4")
-					AutoChat(npc,"¨º­Ó¡A¨º­Ó¸t¼Ğ¬O....¡I")
+					AutoChat(npc,"é‚£å€‹ï¼Œé‚£å€‹è–æ¨™æ˜¯....ï¼")
 					st.playSound("ItemSound.quest_middle")
 		return
 
-QUEST		= Quest(24,qn,"¤`ªÌ´ËªLªº¦í¤H­Ì")
+QUEST		= Quest(24,qn,"äº¡è€…æ£®æ—çš„ä½äººå€‘")
 
 QUEST.addStartNpc(Dorian)
 

@@ -84,7 +84,7 @@ class Quest (JQuest) :
    return htmltext 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -96,7 +96,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
    elif player.getPledgeType() == -1 :
      if id == State.COMPLETED:
-       htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+       htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
      elif player.getLevel() < 19 or not player.getSponsor() :
        htmltext = "30298-00.htm"
        st.exitQuest(1)
@@ -186,7 +186,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_itemget")
     return
 
-QUEST     = Quest(118,qn,"¤Ş¾ÉªÌ¡A³Q¤Ş¾ÉªÌ")
+QUEST     = Quest(118,qn,"å¼•å°è€…ï¼Œè¢«å¼•å°è€…")
 
 QUEST.addStartNpc(PINTER) 
 

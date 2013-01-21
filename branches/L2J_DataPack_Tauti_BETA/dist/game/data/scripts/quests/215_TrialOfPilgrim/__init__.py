@@ -88,7 +88,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -108,7 +108,7 @@ class Quest (JQuest) :
           htmltext = "30648-02.htm"
           st.exitQuest(1)
    elif npcId == 30648 and cond==0 and id == State.COMPLETED :
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
    elif npcId == 30648 and cond==1 and st.hasQuestItems(VOUCHER_OF_TRIAL) :
       htmltext = "30648-09.htm"
@@ -243,7 +243,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(215,qn,"¨D¹DªÌªº¸Õ½m")
+QUEST       = Quest(215,qn,"æ±‚é“è€…çš„è©¦ç·´")
 
 
 QUEST.addStartNpc(30648)

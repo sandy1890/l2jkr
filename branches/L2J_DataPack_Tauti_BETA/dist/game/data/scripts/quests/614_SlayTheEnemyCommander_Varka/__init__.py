@@ -57,7 +57,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if st :
       npcId = npc.getNpcId()
@@ -74,7 +74,7 @@ class Quest (JQuest) :
               else :
                   htmltext = "31377-05.htm"
           #else:
-              #htmltext="<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+              #htmltext="<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
     return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -92,7 +92,7 @@ class Quest (JQuest) :
           giveReward(pst,npc)
     return
 
-QUEST       = Quest(614,qn,"ª®±ş¼Ä±N¡I")
+QUEST       = Quest(614,qn,"ç‹™æ®ºæ•µå°‡ï¼")
 
 QUEST.addStartNpc(Ashas)
 QUEST.addTalkId(Ashas)

@@ -73,7 +73,7 @@ class Quest (JQuest) :
 					htmltext = "30519-04.htm"
 					st.giveItems(BRONKS_INGOT,1)
 			else:
-				htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+				htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		elif event == "30519_2" :
 			htmltext = "30519-06.htm"
 		elif event == "30519_3" :
@@ -104,7 +104,7 @@ class Quest (JQuest) :
 					st.set("cond","4")
 					st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+				htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		elif event == "30519_6" :
 			if st.getQuestItemsCount(ZIMENFS_PAY) or st.getQuestItemsCount(CHALIS_PAY) or st.getQuestItemsCount(BRONKS_PAY):
 				n = self.getRandom(3)
@@ -125,7 +125,7 @@ class Quest (JQuest) :
 					st.giveItems(BRONKS_INGOT,1)
 					st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+				htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		elif event == "30316_1" :
 			if st.getQuestItemsCount(BEAD_PARCEL):
 				htmltext = "30316-02.htm"
@@ -134,7 +134,7 @@ class Quest (JQuest) :
 				st.set("cond","10")
 				st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+				htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		elif event == "30316_2" :
 			if st.getQuestItemsCount(BEAD_PARCEL):
 				htmltext = "30316-03.htm"
@@ -143,7 +143,7 @@ class Quest (JQuest) :
 				st.set("cond","10")
 				st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+				htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		elif event == "30557_1" :
 			htmltext = "30557-02.htm"
 		elif event == "30557_2" :
@@ -154,7 +154,7 @@ class Quest (JQuest) :
 				st.set("cond","11")
 				st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+				htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		elif event == "a" :
 			htmltext = "30556-05a.htm"
 			st.takeItems(BEAD,st.getQuestItemsCount(BEAD))
@@ -183,7 +183,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -384,7 +384,7 @@ class Quest (JQuest) :
 							st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(417,qn,"¦¨¬°¦¬¶°ªÌªº¸ô")
+QUEST		= Quest(417,qn,"æˆç‚ºæ”¶é›†è€…çš„è·¯")
 
 QUEST.addStartNpc(30524)
 QUEST.addTalkId(30524)

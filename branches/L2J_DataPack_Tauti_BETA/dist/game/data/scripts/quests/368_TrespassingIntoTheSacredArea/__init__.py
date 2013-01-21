@@ -29,7 +29,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -42,7 +42,7 @@ class Quest (JQuest) :
         if level>=36 :
             htmltext = "30926-01.htm"
         else :
-            htmltext = "30926-00.htm"    # pmq ­×§ï
+            htmltext = "30926-00.htm"    # pmq ä¿®æ”¹
      elif cond and not amount :
          htmltext = "30926-03.htm"
      elif amount :
@@ -66,7 +66,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(368,qn,"¹ï¸t°ìªº«I¥Ç")
+QUEST       = Quest(368,qn,"å°è–åŸŸçš„ä¾µçŠ¯")
 
 QUEST.addStartNpc(30926)
 

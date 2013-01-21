@@ -87,7 +87,7 @@ class Quest (JQuest) :
           st.set("cond","1")
           st.playSound("ItemSound.quest_accept")
         else :
-          htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+          htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
           st.exitQuest(1)
      elif event == "30754-08.htm" :     
          st.exitQuest(1)
@@ -121,7 +121,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -166,7 +166,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(344,qn,"¤d¦~«s±¥ªºµ²§ô")
+QUEST       = Quest(344,qn,"åƒå¹´å“€æ‚¼çš„çµæŸ")
 
 QUEST.addStartNpc(GILMORE)
 

@@ -146,7 +146,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -158,14 +158,14 @@ class Quest (JQuest) :
    if npcId == TALIEN :
        if cond == 0 :
          if id == State.COMPLETED :
-           htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+           htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
          elif player.getLevel() >= 50 and player.isSubClassActive():
            htmltext = "31739-1.htm"
          else : 
            htmltext = "31739-2.htm"
            st.exitQuest(1)
        if not player.isSubClassActive() :
-           htmltext = "<html><body>¡]°ÆÂ¾·~µ¥¯Å50¥H¤Wªº¨¤¦â¤~¥i¥H°õ¦æªº¥ô°È¡C¡^</body></html>"
+           htmltext = "<html><body>ï¼ˆå‰¯è·æ¥­ç­‰ç´š50ä»¥ä¸Šçš„è§’è‰²æ‰å¯ä»¥åŸ·è¡Œçš„ä»»å‹™ã€‚ï¼‰</body></html>"
        elif cond == 1 :
          htmltext = "31739-5.htm"
        elif cond == 4 and st.getQuestItemsCount(LEGEND_OF_SEVENTEEN) == 1 :
@@ -250,7 +250,7 @@ class Quest (JQuest) :
        elif cond == 21 :
          htmltext = "31272-7.htm"
    else :
-     htmltext = "<html><body>¡]°ÆÂ¾·~µ¥¯Å50¥H¤Wªº¨¤¦â¤~¥i¥H°õ¦æªº¥ô°È¡C¡^</body></html>"
+     htmltext = "<html><body>ï¼ˆå‰¯è·æ¥­ç­‰ç´š50ä»¥ä¸Šçš„è§’è‰²æ‰å¯ä»¥åŸ·è¡Œçš„ä»»å‹™ã€‚ï¼‰</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -289,7 +289,7 @@ class Quest (JQuest) :
              st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(241,qn,"¾Ö¦³°ª¶QÆF»î¤§¤H¡A¶Q±Ú  ²Ä¤@³¡")
+QUEST       = Quest(241,qn,"æ“æœ‰é«˜è²´éˆé­‚ä¹‹äººï¼Œè²´æ—  ç¬¬ä¸€éƒ¨")
 
 QUEST.addStartNpc(TALIEN)
 QUEST.addTalkId(TALIEN)

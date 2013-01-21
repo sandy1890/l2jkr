@@ -42,7 +42,7 @@ class Quest (JQuest):
 
  def onTalk (self,npc,player):
    st = player.getQuestState(qn)
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
@@ -52,7 +52,7 @@ class Quest (JQuest):
        if player.getLevel() >= 77 :
          htmltext = "32109-01.htm"
        else :
-         htmltext = "<html><body>®uµY¸t¹³¡G<br>©ñ¸v¡I³sÄ²ºN¯«¸tªº®uµY¸t¹³³£¤£°÷¸ê®æªº¤H¡A³º´±·n®Ì®uµYªº«ä©À¨Ã§â¥¦¥s¿ô¨Ó¡I²@µL·N¸qªºÄ²ºN¯«¹³´N¦p¦P¬O¹ï¯«ªº«V°d¡C<br>·MÄøªº¤H°Ú¡G³o¦¸ÄÇ®¤§A¤@¦¸¡A»°§ÖÂ÷¶}³o¸Ì§a¡I(¥u¦³§¹¦¨¡u¤¿¯«¤§¦W¬°²Ä¤G³¡¡vªº¨¤¦â¤~¯à°õ¦æªº¥ô°È¡C)</body></html>"
+         htmltext = "<html><body>å¸­ç³è–åƒï¼š<br>æ”¾è‚†ï¼é€£è§¸æ‘¸ç¥è–çš„å¸­ç³è–åƒéƒ½ä¸å¤ è³‡æ ¼çš„äººï¼Œç«Ÿæ•¢æ–æ™ƒå¸­ç³çš„æ€å¿µä¸¦æŠŠå®ƒå«é†’ä¾†ï¼æ¯«ç„¡æ„ç¾©çš„è§¸æ‘¸ç¥åƒå°±å¦‚åŒæ˜¯å°ç¥çš„ä¾®è¾±ã€‚<br>æ„šè ¢çš„äººå•Šï¼šé€™æ¬¡é¥’æ•ä½ ä¸€æ¬¡ï¼Œè¶•å¿«é›¢é–‹é€™è£¡å§ï¼(åªæœ‰å®Œæˆã€Œå‡¶ç¥ä¹‹åç‚ºç¬¬äºŒéƒ¨ã€çš„è§’è‰²æ‰èƒ½åŸ·è¡Œçš„ä»»å‹™ã€‚)</body></html>"
          st.exitQuest(1)
          return
      elif cond == 1 :
@@ -78,7 +78,7 @@ class Quest (JQuest):
            st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(641,qn,"¦VÁÉº¸Äõ¶i§ğ¡I")
+QUEST       = Quest(641,qn,"å‘è³½çˆ¾è˜­é€²æ”»ï¼")
 
 QUEST.addStartNpc(STATUE)
 

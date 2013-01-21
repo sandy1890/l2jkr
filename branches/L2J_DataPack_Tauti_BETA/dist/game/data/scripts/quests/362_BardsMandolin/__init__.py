@@ -27,7 +27,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -39,11 +39,11 @@ class Quest (JQuest) :
      st.set("cond","0")
    cond = st.getInt("cond")
    if npcId == 30957 and cond == 0 :
-      if player.getLevel() >= 15 :   #pmq­×§ï
-         htmltext = "30957_1.htm"    #pmq­×§ï
-      else :                         #pmq­×§ï
-         htmltext = "30957_0.htm"    #pmq­×§ï
-         st.exitQuest(1)             #pmq­×§ï
+      if player.getLevel() >= 15 :   #pmqä¿®æ”¹
+         htmltext = "30957_1.htm"    #pmqä¿®æ”¹
+      else :                         #pmqä¿®æ”¹
+         htmltext = "30957_0.htm"    #pmqä¿®æ”¹
+         st.exitQuest(1)             #pmqä¿®æ”¹
    elif npcId == 30837 and cond == 1 :
         st.set("cond","2")
         htmltext = "30837_1.htm"
@@ -68,7 +68,7 @@ class Quest (JQuest) :
    return htmltext
 
 
-QUEST       = Quest(362,qn,"§u¹C¸Ö¤Hªº°ÒªûªL")
+QUEST       = Quest(362,qn,"åŸéŠè©©äººçš„æ›¼é™€æ—")
 
 QUEST.addStartNpc(30957)
 QUEST.addTalkId(30957)

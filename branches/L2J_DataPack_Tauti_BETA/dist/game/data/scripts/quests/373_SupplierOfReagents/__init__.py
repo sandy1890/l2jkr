@@ -8,38 +8,38 @@ from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
-QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 373,"SupplierOfReagents","¸Õ¾¯ªº¨ÑÀ³­pµe"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 373,"SupplierOfReagents","è©¦åŠ‘çš„ä¾›æ‡‰è¨ˆç•«"
 qn = "373_SupplierOfReagents"
 
 #Variables
 #itemId:[icon,name,description]
 ITEMS={
-6011:["etc_reagent_red_i00","¨ÈÀsªº¦å",""],
-6012:["etc_inf_ore_high_i00","º²©¥¥Û",""],
-6013:["etc_broken_crystal_silver_i00","¤ë¥Û¯}¤ù",""],
-6014:["etc_piece_bone_black_i00","»GÄêªº¸H¤ù",""],
-6015:["etc_reagent_green_i00","´cÅ]ªº¦å",""],
-6016:["etc_inf_ore_least_i00","¦]¤À¥§®¦­ì¥Û","³Ì§Cµ¥¯Å¤ÏÀ³ª«"],
-6017:["etc_ginseng_red_i00","¦åªº®Ú",""],
-6018:["etc_powder_gray_i00","¤õ¤s¦Ç",""],
-6019:["etc_reagent_silver_i00","¨E",""],
-6020:["etc_powder_orange_i00","²¸ÁD",""],
-6021:["etc_dragons_blood_i05","Àsªº­ì¥Í½è","³Ì§Cµ¥¯Å¤ÏÀ³ª«"],
-6022:["etc_powder_red_i00","©¥¼ß¯»¥½",""],
-6023:["etc_powder_white_i00","¤ë«G¯»¥½","³Ì§Cµ¥¯Å¤ÏÀ³ª«"],
-6024:["etc_potion_purpel_i00","»G«Íªº­ì¥Í½è","³Ì§Cµ¥¯Å¤ÏÀ³ª«"],
-6025:["etc_potion_green_i00","´cÅ]ªº­ì¥Í½è","³Ì§Cµ¥¯Å¤ÏÀ³ª«"],
-6026:["etc_powder_black_i00","¦aº»¯»¥½",""], 
-6027:["etc_dragon_blood_i00","ÀsªººëµØ","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6028:["etc_dragons_blood_i00","¯P¤õªººëµØ","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6029:["etc_mithril_ore_i00","¸ô®R®Ú¯S","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6030:["etc_dragons_blood_i02","¤È©]ªºªo","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6031:["etc_dragons_blood_i05","´cÅ]ªººëµØ","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6032:["etc_dragons_blood_i04","²`²Wªºªo","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6033:["etc_luxury_wine_b_i00","¦aº»·~¤õªºªo","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6034:["etc_luxury_wine_c_i00","¹ÚÆLªºªo","³Ì°ªµ¥¯Å¤ÏÀ³ª«"],
-6320:["etc_broken_crystal_silver_i00","¯Â»È",""],
-6321:["etc_broken_crystal_gold_i00","¯uª÷",""],
+6011:["etc_reagent_red_i00","äºé¾çš„è¡€",""],
+6012:["etc_inf_ore_high_i00","ç†”å²©çŸ³",""],
+6013:["etc_broken_crystal_silver_i00","æœˆçŸ³ç ´ç‰‡",""],
+6014:["etc_piece_bone_black_i00","è…çˆ›çš„ç¢ç‰‡",""],
+6015:["etc_reagent_green_i00","æƒ¡é­”çš„è¡€",""],
+6016:["etc_inf_ore_least_i00","å› åˆ†å°¼æ©åŸçŸ³","æœ€ä½ç­‰ç´šåæ‡‰ç‰©"],
+6017:["etc_ginseng_red_i00","è¡€çš„æ ¹",""],
+6018:["etc_powder_gray_i00","ç«å±±ç°",""],
+6019:["etc_reagent_silver_i00","æ±",""],
+6020:["etc_powder_orange_i00","ç¡«ç£º",""],
+6021:["etc_dragons_blood_i05","é¾çš„åŸç”Ÿè³ª","æœ€ä½ç­‰ç´šåæ‡‰ç‰©"],
+6022:["etc_powder_red_i00","å²©æ¼¿ç²‰æœ«",""],
+6023:["etc_powder_white_i00","æœˆäº®ç²‰æœ«","æœ€ä½ç­‰ç´šåæ‡‰ç‰©"],
+6024:["etc_potion_purpel_i00","è…å±çš„åŸç”Ÿè³ª","æœ€ä½ç­‰ç´šåæ‡‰ç‰©"],
+6025:["etc_potion_green_i00","æƒ¡é­”çš„åŸç”Ÿè³ª","æœ€ä½ç­‰ç´šåæ‡‰ç‰©"],
+6026:["etc_powder_black_i00","åœ°ç„ç²‰æœ«",""], 
+6027:["etc_dragon_blood_i00","é¾çš„ç²¾è¯","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6028:["etc_dragons_blood_i00","çƒˆç«çš„ç²¾è¯","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6029:["etc_mithril_ore_i00","è·¯å¨œæ ¹ç‰¹","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6030:["etc_dragons_blood_i02","åˆå¤œçš„æ²¹","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6031:["etc_dragons_blood_i05","æƒ¡é­”çš„ç²¾è¯","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6032:["etc_dragons_blood_i04","æ·±æ·µçš„æ²¹","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6033:["etc_luxury_wine_b_i00","åœ°ç„æ¥­ç«çš„æ²¹","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6034:["etc_luxury_wine_c_i00","å¤¢é­˜çš„æ²¹","æœ€é«˜ç­‰ç´šåæ‡‰ç‰©"],
+6320:["etc_broken_crystal_silver_i00","ç´”éŠ€",""],
+6321:["etc_broken_crystal_gold_i00","çœŸé‡‘",""],
 }
 #Quest items
 REAGENT_POUCH1,   REAGENT_POUCH2,REAGENT_POUCH3, REAGENT_BOX, \
@@ -82,7 +82,7 @@ MIMIRS_ELIXIR:   [PURE_SILVER,1,TRUE_GOLD,1],
 def render_urn(st, page) :
     stone,ingredient,catalyst = st.getInt("mixing"),st.getInt("ingredient"),st.getInt("catalyst")
     if page == "Start" :
-       html = "<html><body>²V¦X§÷®Æ¥Îªº¬û:<br><table border=0 width=300><tr><tr><td width=50%><a action=\"bypass -h Quest 373_SupplierOfReagents U_M_MACT\">©ñ¤J/¨ú¥X²V¦X¥Û</a></td><td></td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_I_IACT\">¿ï¾Ü¥D§÷®Æ</a></td><td>(¥Ø«e: INGR)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_C_CACT\">¿ï¾Ü¶Ê¤Æ¾¯</a></td><td>(¥Ø«e: CATA)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 31149-5.htm\">¿ï¾Ü·Å«×</a></td><td>(¥Ø«e: ·Å«×)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 31149-6.htm\">²V¦X</a></td><td></td></tr></table></body></html>"
+       html = "<html><body>æ··åˆææ–™ç”¨çš„ç¼¸:<br><table border=0 width=300><tr><tr><td width=50%><a action=\"bypass -h Quest 373_SupplierOfReagents U_M_MACT\">æ”¾å…¥/å–å‡ºæ··åˆçŸ³</a></td><td></td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_I_IACT\">é¸æ“‡ä¸»ææ–™</a></td><td>(ç›®å‰: INGR)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents U_C_CACT\">é¸æ“‡å‚¬åŒ–åŠ‘</a></td><td>(ç›®å‰: CATA)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 31149-5.htm\">é¸æ“‡æº«åº¦</a></td><td>(ç›®å‰: æº«åº¦)</td></tr><tr><td><a action=\"bypass -h Quest 373_SupplierOfReagents 31149-6.htm\">æ··åˆ</a></td><td></td></tr></table></body></html>"
        ingr,cata,temp=st.getInt("ingredient"),st.getInt("catalyst"),st.get("temp")
        if ingr : ingr = ITEMS[ingr][1]+"x"+st.get("i_qty")
        else : ingr = "None"
@@ -96,14 +96,14 @@ def render_urn(st, page) :
        if catalyst : html = html.replace("CACT","Retrieve")
        else : html = html.replace("CACT","Insert")
     elif isinstance(page,list) :
-       html = "<html><body>¿ï¾Ü:<table border=0>"
+       html = "<html><body>é¸æ“‡:<table border=0>"
        amt = 0
        for i in MATS :
          if st.getQuestItemsCount(i):
            amt += 1
            html += "<tr><td height=45><img src=icon."+ITEMS[i][0]+" height=32 width=32></td><td width=180>"+ITEMS[i][1]+"</td><td><button value=X1 action=\"bypass -h Quest 373_SupplierOfReagents x_1_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest 373_SupplierOfReagents x_2_"+page[1]+"_"+str(i)+"\" width=40 height=15 fore=sek.cbui92></td></tr>"
        if not amt : html += "<tr><td>You don't have any material that could be used with this Urn. Read the Mixing Manual.</td></tr>"
-       html += "</table><center><a action=\"bypass -h Quest 373_SupplierOfReagents urn\">ªğ¦^</a></center></body></html>"
+       html += "</table><center><a action=\"bypass -h Quest 373_SupplierOfReagents urn\">è¿”å›</a></center></body></html>"
     return html
 
 class Quest (JQuest) :
@@ -250,7 +250,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 

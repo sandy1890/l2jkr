@@ -7,7 +7,7 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.gameserver.model.base import Race
 #Quest info
 qn = "235_MimirsElixir"
-QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 235,"MimirsElixir","¦Ì±Kº¸ªº¬u¤ô"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 235,"MimirsElixir","ç±³å¯†çˆ¾çš„æ³‰æ°´"
 
 DROP_RATE = 20
 
@@ -49,7 +49,7 @@ class Quest (JQuest) :
     return htmltext
  
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -71,7 +71,7 @@ class Quest (JQuest) :
             elif st.getInt("cond")==0 :
                 htmltext = "30166-02.htm"    # Successful start: Bring me Pure silver from Reagents quest
         elif id == State.COMPLETED :
-            htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+            htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
         # was asked to get pure silver but has not done so yet.  Repeat: get pure silver
         elif cond==1 and not st.getQuestItemsCount(PURE_SILVER) :
             htmltext = "30166-03.htm"    # Bring me Pure silver from Reagents quest

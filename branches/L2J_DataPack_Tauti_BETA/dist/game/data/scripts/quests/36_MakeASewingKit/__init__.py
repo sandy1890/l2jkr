@@ -42,7 +42,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player) :
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -51,7 +51,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED:
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == 30847 and cond == 0 and st.getQuestItemsCount(SEWING_KIT) == 0 :
 				fwear = player.getQuestState("37_PleaseMakeMeFormalWear")
@@ -72,7 +72,7 @@ class Quest (JQuest) :
 					if st.getQuestItemsCount(REINFORCED_STEEL) == 5 :
 						htmltext = "30847-2.htm"
 					else :
-						htmltext == "¹D¨ã¤£²Å"
+						htmltext == "é“å…·ä¸ç¬¦"
 				elif cond == 3 :
 					if st.getQuestItemsCount(ORIHARUKON) >= 10 and st.getQuestItemsCount(ARTISANS_FRAME) >= 10 :
 						htmltext = "30847-4.htm"
@@ -95,7 +95,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_itemget")
 		return
 
-QUEST		= Quest(36,qn,"½ĞÀ°§Ú°µ°w½u²°!")
+QUEST		= Quest(36,qn,"è«‹å¹«æˆ‘åšé‡ç·šç›’!")
 
 QUEST.addStartNpc(30847)
 

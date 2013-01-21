@@ -74,7 +74,7 @@ class Quest (JQuest):
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -83,7 +83,7 @@ class Quest (JQuest):
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED:
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == ClaudiaAthebalt and cond == 0:
 				third = player.getQuestState("194_SevenSignContractOfMammon")
@@ -136,7 +136,7 @@ class Quest (JQuest):
 				htmltext = "30969-01.htm" 
 		return htmltext
 
-QUEST		= Quest(195,qn,"¤C«Ê¦L¡A²½¥q­Ìªº¯¦±K»ö¦¡") 
+QUEST		= Quest(195,qn,"ä¸ƒå°å°ï¼Œç¥­å¸å€‘çš„ç¥•å¯†å„€å¼") 
 
 QUEST.addStartNpc(ClaudiaAthebalt)
 QUEST.addTalkId(ClaudiaAthebalt)

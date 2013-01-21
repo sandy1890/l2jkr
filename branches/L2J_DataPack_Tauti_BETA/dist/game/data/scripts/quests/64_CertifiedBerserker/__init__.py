@@ -66,14 +66,14 @@ class Quest (JQuest) :
         return htmltext
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+        htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
         st = player.getQuestState(qn)
         if not st : return htmltext
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED :
-            htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+            htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
         elif npcId == Orkurus :
             if player.getClassId().getId() != 125 or player.getLevel() < 39:
@@ -181,7 +181,7 @@ class Quest (JQuest) :
                     st.startQuestTimer("Despawn Harkilgamed",120000)
         return
 
-QUEST       = Quest(64,qn,"¨g¾Ô¤hªºÃÒ©ú")
+QUEST       = Quest(64,qn,"ç‹‚æˆ°å£«çš„è­‰æ˜")
 
 QUEST.addStartNpc(Orkurus)
 

@@ -142,7 +142,7 @@ class Quest (JQuest) :
     return htmltext
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -168,7 +168,7 @@ class Quest (JQuest) :
       return htmltext
     # if quest is already State.COMPLETED
     elif id == State.COMPLETED:
-      return "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      return "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 
     # if quest is accepted and in progress
     elif id == State.STARTED and st.get("progress") == "PART1":
@@ -382,7 +382,7 @@ class Quest (JQuest) :
             
     return
 
-QUEST     = Quest(233,qn,"¾Ôª§ÆFªº¼f®Ö")
+QUEST     = Quest(233,qn,"æˆ°çˆ­éˆçš„å¯©æ ¸")
 
 QUEST.addStartNpc(30510)
 

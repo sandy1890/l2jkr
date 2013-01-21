@@ -7,7 +7,7 @@ from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 #Quest info
-QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","³Q¹Ü¨«ªº´LÄY"
+QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","è¢«å¥ªèµ°çš„å°Šåš´"
 qn = "386_StolenDignity"
 
 #Variables
@@ -28,7 +28,7 @@ starting2 = "Starting2.htm"
 binfo1    = "Bingo_howto.htm"
 bingo     = "Bingo_start.htm"
 bingo0    = "Bingo_starting.htm"
-ext_msg   = "Quest_aborted.htm"  # pmq ­×§ï
+ext_msg   = "Quest_aborted.htm"  # pmq ä¿®æ”¹
 
 #NPCs
 WK_ROMP = 30843
@@ -65,17 +65,17 @@ MOB={
 MAX = 100
 
 #templates
-number  = ["¤G","¤T","¥|","¤­","¤»"]
-header  = "<html><body>­t³d³fª«ªº­Ü®wºŞ²z­û­Û¤Ò:<br><br>"
+number  = ["äºŒ","ä¸‰","å››","äº”","å…­"]
+header  = "<html><body>è² è²¬è²¨ç‰©çš„å€‰åº«ç®¡ç†å“¡å€«å¤«:<br><br>"
 link    = "<a action=\"bypass -h Quest 386_StolenDignity "
-middle  = "<br><br>¥ı°Ñ¦Ò¤@¤U¡A²{¦bªº±¡ªp¦p¤U¡G<br><br><table border=1 width=120 hieght=64>"
+middle  = "<br><br>å…ˆåƒè€ƒä¸€ä¸‹ï¼Œç¾åœ¨çš„æƒ…æ³å¦‚ä¸‹ï¼š<br><br><table border=1 width=120 hieght=64>"
 footer  = "</table></body></html>"
-loser   = "§A³o­Ó¤H¯u¨S¹B®ğ¡C¦b¤U­±»«ªGªO¤Wªº¬õ¦â¼Æ¦r¬O§A¿ï¾Üªº¡C§A¬İ¤F´Nª¾¹D¡A¤@±ø½u³£¨S¦³§¹¦¨­C¡C¨ä¹ê¡A¨S§¹¦¨¥ô¦ó¤@±ø½u¤ñ§¹¦¨¤T±ø½uÁÙ­nÃø­C¡C<br>¤@¯ë¨ÓÁ¿¡A¦b¨S§¹¦¨¥ô¦ó¤@±ø½u®É¡A¬O¤£µ¹¥ô¦ó¸ÉÀvªº¡A¦ı¬İ§A¥i¼¦´NÅı§Ú¨Óµoµo·O´d§a¡C§Aµ¥¤@¤U¡C<br>.<br>.<br>.<br>¨Ó¡A§â³o­Ó®³¨«§a¡C§Æ±æ³o­Ó¹ï§A¨ºÁ}Ãøªº¤H¥Í±a¨Ó¤@ÂIÀ°§U¡C<br><br>"
-winner  = "ÜÓ¡H§¹¦¨¤F¤T±ø½u°Ú¡I§A¬İ¤@¤U¡A¤U­±ªº»«ªGªO¤W¬õ¦âªº¼Æ¦r¬O§A¿ï¾Üªº¡C´N¦p§A©Ò¬İ¨ìªº¡A¶¶§Q§¹¦¨¤F¤T±ø½u­C¡C®¥³ß§A¡I«ö·Ó¬ù©w¡A¤½·|·Ç³Æªº³ø¹S´N¬O»s§@A¯ÅªZ¾¹®É©Ò»İªº§÷®Æ§a¡C½Ğµ¥¤@¤U¡C<br>.<br>.<br>.<br>¨Ó¡A§â³o­Ó®³¨«§a¡C§Æ±æ³o­Ó¹ï§A¨ºÁ}Ãøªº¤H¥Í±a¨Ó¤@ÂIÀ°§U¡C<br><br>"
-average = "«x¡C¯u¥i±¤¤£¦¨3±ø½u¡C¤U¦¸¦A¨Ó¬D¾Ô§a¡CÅı§A¬İ¤@¤U¡A¤U­±ªº»«ªGªO¤W¬õ¦âªº¼Æ¦r¬O§A¿ï¾Üªº¡C<br><br>"
+loser   = "ä½ é€™å€‹äººçœŸæ²’é‹æ°£ã€‚åœ¨ä¸‹é¢è³“æœæ¿ä¸Šçš„ç´…è‰²æ•¸å­—æ˜¯ä½ é¸æ“‡çš„ã€‚ä½ çœ‹äº†å°±çŸ¥é“ï¼Œä¸€æ¢ç·šéƒ½æ²’æœ‰å®Œæˆè€¶ã€‚å…¶å¯¦ï¼Œæ²’å®Œæˆä»»ä½•ä¸€æ¢ç·šæ¯”å®Œæˆä¸‰æ¢ç·šé‚„è¦é›£è€¶ã€‚<br>ä¸€èˆ¬ä¾†è¬›ï¼Œåœ¨æ²’å®Œæˆä»»ä½•ä¸€æ¢ç·šæ™‚ï¼Œæ˜¯ä¸çµ¦ä»»ä½•è£œå„Ÿçš„ï¼Œä½†çœ‹ä½ å¯æ†å°±è®“æˆ‘ä¾†ç™¼ç™¼æ…ˆæ‚²å§ã€‚ä½ ç­‰ä¸€ä¸‹ã€‚<br>.<br>.<br>.<br>ä¾†ï¼ŒæŠŠé€™å€‹æ‹¿èµ°å§ã€‚å¸Œæœ›é€™å€‹å°ä½ é‚£è‰±é›£çš„äººç”Ÿå¸¶ä¾†ä¸€é»å¹«åŠ©ã€‚<br><br>"
+winner  = "å—„ï¼Ÿå®Œæˆäº†ä¸‰æ¢ç·šå•Šï¼ä½ çœ‹ä¸€ä¸‹ï¼Œä¸‹é¢çš„è³“æœæ¿ä¸Šç´…è‰²çš„æ•¸å­—æ˜¯ä½ é¸æ“‡çš„ã€‚å°±å¦‚ä½ æ‰€çœ‹åˆ°çš„ï¼Œé †åˆ©å®Œæˆäº†ä¸‰æ¢ç·šè€¶ã€‚æ­å–œä½ ï¼æŒ‰ç…§ç´„å®šï¼Œå…¬æœƒæº–å‚™çš„å ±é…¬å°±æ˜¯è£½ä½œAç´šæ­¦å™¨æ™‚æ‰€éœ€çš„ææ–™å§ã€‚è«‹ç­‰ä¸€ä¸‹ã€‚<br>.<br>.<br>.<br>ä¾†ï¼ŒæŠŠé€™å€‹æ‹¿èµ°å§ã€‚å¸Œæœ›é€™å€‹å°ä½ é‚£è‰±é›£çš„äººç”Ÿå¸¶ä¾†ä¸€é»å¹«åŠ©ã€‚<br><br>"
+average = "å’¦ã€‚çœŸå¯æƒœä¸æˆ3æ¢ç·šã€‚ä¸‹æ¬¡å†ä¾†æŒ‘æˆ°å§ã€‚è®“ä½ çœ‹ä¸€ä¸‹ï¼Œä¸‹é¢çš„è³“æœæ¿ä¸Šç´…è‰²çš„æ•¸å­—æ˜¯ä½ é¸æ“‡çš„ã€‚<br><br>"
 
 def partial(st) :
-    html = "­Ó¼Æ¦r¡C<br><br>"
+    html = "å€‹æ•¸å­—ã€‚<br><br>"
     for z in range(1,10) :
         html += link+str(z)+"\">"+str(z)+"</a>&nbsp;&nbsp;&nbsp;&nbsp;"
     html += middle
@@ -121,7 +121,7 @@ class Quest (JQuest) :
         htmltext = binfo1
     elif event == "0" :
        htmltext = ext_msg
-       st.playSound("ItemSound.quest_finish")  # pmq ­×§ï
+       st.playSound("ItemSound.quest_finish")  # pmq ä¿®æ”¹
        st.exitQuest(1)
     elif event == "bingo" :
        if st.getQuestItemsCount(SI_ORE) >= REQUIRED_ORE :
@@ -169,13 +169,13 @@ class Quest (JQuest) :
                       for var in ["chosen","grid","playing"]:
                           st.unset(var)
                   else :
-                      htmltext = header+"¨Ó¡A½Ğ¿ï¾Ü²Ä"+number[8-chosen.count("?")]+partial(st)
+                      htmltext = header+"ä¾†ï¼Œè«‹é¸æ“‡ç¬¬"+number[8-chosen.count("?")]+partial(st)
             else:
-              htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+              htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 

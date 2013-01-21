@@ -27,7 +27,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -81,7 +81,7 @@ class Quest (JQuest) :
         st.giveItems(WOLF_CLAW,qty)
    return
 
-QUEST       = Quest(264,qn,"§Q¤ö")
+QUEST       = Quest(264,qn,"åˆ©çˆª")
 
 QUEST.addStartNpc(30136)
 

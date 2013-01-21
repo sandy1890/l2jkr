@@ -140,7 +140,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -158,7 +158,7 @@ class Quest (JQuest) :
           htmltext = "30473-02.htm"
           st.exitQuest(1)
      elif st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+      htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
      elif st.getInt("cond")<23 and st.getInt("cond")>0 :
       htmltext = "30473-05.htm"
      elif st.getInt("cond")==23 and st.getQuestItemsCount(GOLDEN_STATUE)==0 :
@@ -288,7 +288,7 @@ class Quest (JQuest) :
      st.playSound("Itemsound.quest_middle")
    return
 
-QUEST       = Quest(226,qn,"ªvÂ¡ªÌªº¼f®Ö")
+QUEST       = Quest(226,qn,"æ²»ç™’è€…çš„å¯©æ ¸")
 
 QUEST.addStartNpc(BANDELLOS)
 

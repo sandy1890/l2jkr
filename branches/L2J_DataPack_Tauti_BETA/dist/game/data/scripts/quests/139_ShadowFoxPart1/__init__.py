@@ -49,7 +49,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -58,7 +58,7 @@ class Quest (JQuest) :
     cond = st.getInt("cond")
     if id == State.CREATED : return htmltext
     if id == State.COMPLETED :
-       htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+       htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
     elif npcId == MIA :
        if cond == 0 :
           if player.getLevel() >= 37:
@@ -99,7 +99,7 @@ class Quest (JQuest) :
    npc.showChatWindow(player)
    return
 
-QUEST       = Quest(139,qn,"¼vª°-1")
+QUEST       = Quest(139,qn,"å½±ç‹-1")
 
 QUEST.addFirstTalkId(MIA) #this quest doesnt have starter npc, quest will appear in list only when u finish quest 137
 QUEST.addTalkId(MIA)

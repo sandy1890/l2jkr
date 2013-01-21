@@ -79,7 +79,7 @@ class Quest (JQuest) :
 				st.set("cond","4")
 				st.playSound("ItemSound.quest_accept")
 			else :
-				htmltext = "¹D¨ã¤£²Å¡C"
+				htmltext = "é“å…·ä¸ç¬¦ã€‚"
 		elif event == "30332-5.htm" :
 			if st.getQuestItemsCount(INCENSE_POUCH) == 30 and st.getQuestItemsCount(GEM_OF_MAILLE) == 30 :
 				st.takeItems(INCENSE_POUCH,30)
@@ -92,11 +92,11 @@ class Quest (JQuest) :
 				st.exitQuest(False)
 				st.playSound("ItemSound.quest_finish")
 			else :
-				htmltext = "¹D¨ã¤£²Å¡C"
+				htmltext = "é“å…·ä¸ç¬¦ã€‚"
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -105,7 +105,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == BABENCO and cond == 0 :
 				if player.getLevel() >= 20 :
@@ -141,7 +141,7 @@ class Quest (JQuest) :
 				drop(partyMember,DROPLIST[npcId])
 		return
 
-QUEST		= Quest(39,qn,"¬õ²´ªº«I²¤ªÌ")
+QUEST		= Quest(39,qn,"ç´…çœ¼çš„ä¾µç•¥è€…")
 
 QUEST.addStartNpc(BABENCO)
 

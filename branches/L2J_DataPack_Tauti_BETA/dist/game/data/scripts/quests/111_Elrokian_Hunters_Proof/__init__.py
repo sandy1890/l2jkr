@@ -18,10 +18,10 @@ KIRIKASHIN = 32116
 FRAGMENT   = 8768
 ADENA      = 57
 #MOB
-MOBS1 = [22196,22197,22198,22218,22223]  # ¨³²rÀs
-MOBS2 = [22200,22201,22202,22219,22224]  # ¦ü³¾Às
-MOBS3 = [22208,22209,22210,22221,22226]  # «pÀYÀs
-MOBS4 = [22203,22204,22205,22220,22225]  # ®£¤öÀs
+MOBS1 = [22196,22197,22198,22218,22223]  # è¿…çŒ›é¾
+MOBS2 = [22200,22201,22202,22219,22224]  # ä¼¼é³¥é¾
+MOBS3 = [22208,22209,22210,22221,22226]  # åšé ­é¾
+MOBS4 = [22203,22204,22205,22220,22225]  # æçˆªé¾
 
 class Quest (JQuest) :
 
@@ -49,7 +49,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player) :
-		htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+		htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -58,7 +58,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+			htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
 		elif id == State.CREATED :
 			if npcId == MARQUEZ :
 				if st.getPlayer().getLevel() >= 75 :
@@ -163,7 +163,7 @@ class Quest (JQuest) :
 				st.playSound("ItemSound.quest_middle")
 		return
 
-QUEST		= Quest(111,qn,"­Cº¸¥iÃ¹Ây¤HªºÃÒ¾Ú")
+QUEST		= Quest(111,qn,"è€¶çˆ¾å¯ç¾…çµäººçš„è­‰æ“š")
 
 QUEST.addStartNpc(32113)
 

@@ -39,7 +39,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -51,7 +51,7 @@ class Quest (JQuest) :
      if player.getLevel() >= 52 :
        htmltext = "30873-0.htm"
      else:
-       htmltext = "30873-0a.htm"    #­×§ï pmq
+       htmltext = "30873-0a.htm"    #ä¿®æ”¹ pmq
        st.exitQuest(1)
    elif not supplies :
      htmltext = "30873-3.htm"
@@ -79,7 +79,7 @@ class Quest (JQuest) :
    st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(360,qn,"¹Ü¨ú¸Éµ¹«~")
+QUEST       = Quest(360,qn,"å¥ªå–è£œçµ¦å“")
 
 QUEST.addStartNpc(COLEMAN)
 QUEST.addTalkId(COLEMAN)

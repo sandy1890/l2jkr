@@ -36,7 +36,7 @@ class Quest (JQuest) :
      return htmltext
  
  def onTalk (self,npc,player):
-     htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+     htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -44,11 +44,11 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
      if id == State.CREATED :
-      if player.getLevel() >= 31 :      #pmq­×§ï
+      if player.getLevel() >= 31 :      #pmqä¿®æ”¹
          htmltext = "31043-01.htm"
-      else :                            #pmq­×§ï
-         htmltext = "31043-00.htm"      #pmq­×§ï
-         st.exitQuest(1)                #pmq­×§ï
+      else :                            #pmqä¿®æ”¹
+         htmltext = "31043-00.htm"      #pmqä¿®æ”¹
+         st.exitQuest(1)                #pmqä¿®æ”¹
      elif cond == 1 :
          htmltext = "31043-03.htm"
      elif cond == 2 :
@@ -74,7 +74,7 @@ class Quest (JQuest) :
              st.giveItems(RED_CRYSTALS_ID,int(numItems))
      return
  
-QUEST       = Quest(432,qn,"¥Í¤é§Ö¼Öºq")
+QUEST       = Quest(432,qn,"ç”Ÿæ—¥å¿«æ¨‚æ­Œ")
 
 QUEST.addStartNpc(31043)
 

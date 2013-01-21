@@ -38,7 +38,7 @@ EVENTS={
 "30129_04":["30129-04.htm", 12116,  16666,-4610,                 0,0x26,                0,  0,0x1f,              0,  0],
 "30528_02":["30528-03.htm",     0,      0,    0,LICENSE_OF_MINER  ,0x35,SOULSHOT_NOVICE  ,200,0x00,              0,  0],
 "30528_04":["30528-04.htm",115642,-178046, -941,                 0,0x35,                0,  0,0x00,              0,  0],
-"30573_02":["30573-03.htm",     0,      0,    0,VOUCHER_OF_FLAME  ,0x31,SOULSHOT_NOVICE  ,200,0x2c,SOULSHOT_NOVICE,200], #­×¥¿¥bÃ~¤Hªk®v¼úÀy
+"30573_02":["30573-03.htm",     0,      0,    0,VOUCHER_OF_FLAME  ,0x31,SOULSHOT_NOVICE  ,200,0x2c,SOULSHOT_NOVICE,200], #ä¿®æ­£åŠç¸äººæ³•å¸«çå‹µ
 "30573_04":["30573-04.htm",-45067,-113549, -235,                 0,0x31,                0,  0,0x2c,              0,  0]
 }
 
@@ -108,19 +108,19 @@ class Quest (JQuest) :
        elif event == "isle" :
           st.addRadar(-119692,44504,380)
           st.getPlayer().teleToLocation(-120050,44500,360)
-          if npc.getNpcId() == 30008 :                        #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-           Name = "©v®vÃ¹¥ì®¦"                                #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-          if npc.getNpcId() == 30017 :                        #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-           Name = "¤j§Å®v¾¿º¸ªL¯S"                            #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-          if npc.getNpcId() == 30129 :                        #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-           Name = "½Å¦âºëÆF±Úªø¦Ì¯S©Ôº¸"                      #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-          if npc.getNpcId() == 30370 :                        #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-           Name = "®R¾|©¬"                                    #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-          if npc.getNpcId() == 30528 :                        #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-           Name = "ºÊ·ş©x©Ô°ö­Û"                              #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-          if npc.getNpcId() == 30573 :                        #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-           Name = "¤õ¤§¦uÅ@¯«¥¬º¸§J´µ"                        #¼W¥[§PÂ_NPC¤¤¤å¦WºÙ
-          htmltext = "<html><body>"+Name+"¡G<br>²{¦b¥h<font color=\"LEVEL\">îî¤Ñ¨Ï§ø²ø</font>§ä<font color=\"LEVEL\">ªì¾ÇªÌÂQ¾É</font>§a¡C¥L·|µ¹§A³\¦h­«­nªº«ü¾É¡C¦Ó¥B¥LÁÙ·|µ¹¹D¨ã¡A©Ò¥H¤@©w­n¥h¨£¥L®@¡I<br>·ÓÀY³»¤Wªº½bÀY¤è¦V²¾°Ê¡A´N¯à¨£¨ìªì¾ÇªÌÂQ¾É¤F¡C¨º»ò¡A²{¦b´N¥Xµo§a¡C¯¬§A¦n¹B¡I</body></html>"
+          if npc.getNpcId() == 30008 :                        #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+           Name = "å®—å¸«ç¾…ä¼Šæ©"                                #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+          if npc.getNpcId() == 30017 :                        #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+           Name = "å¤§å·«å¸«å™¶çˆ¾æ—ç‰¹"                            #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+          if npc.getNpcId() == 30129 :                        #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+           Name = "è¤è‰²ç²¾éˆæ—é•·ç±³ç‰¹æ‹‰çˆ¾"                      #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+          if npc.getNpcId() == 30370 :                        #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+           Name = "å¨œé­¯å¸•"                                    #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+          if npc.getNpcId() == 30528 :                        #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+           Name = "ç›£ç£å®˜æ‹‰åŸ¹å€«"                              #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+          if npc.getNpcId() == 30573 :                        #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+           Name = "ç«ä¹‹å®ˆè­·ç¥å¸ƒçˆ¾å…‹æ–¯"                        #å¢åŠ åˆ¤æ–·NPCä¸­æ–‡åç¨±
+          htmltext = "<html><body>"+Name+"ï¼š<br>ç¾åœ¨å»<font color=\"LEVEL\">é—‡å¤©ä½¿æ‘èŠ</font>æ‰¾<font color=\"LEVEL\">åˆå­¸è€…åš®å°</font>å§ã€‚ä»–æœƒçµ¦ä½ è¨±å¤šé‡è¦çš„æŒ‡å°ã€‚è€Œä¸”ä»–é‚„æœƒçµ¦é“å…·ï¼Œæ‰€ä»¥ä¸€å®šè¦å»è¦‹ä»–å“¦ï¼<br>ç…§é ­é ‚ä¸Šçš„ç®­é ­æ–¹å‘ç§»å‹•ï¼Œå°±èƒ½è¦‹åˆ°åˆå­¸è€…åš®å°äº†ã€‚é‚£éº¼ï¼Œç¾åœ¨å°±å‡ºç™¼å§ã€‚ç¥ä½ å¥½é‹ï¼</body></html>"
        else :
           htmlfile,radarX,radarY,radarZ,item,classId1,gift1,count1,classId2,gift2,count2 = EVENTS[event]
           if radarX != 0:
@@ -142,7 +142,7 @@ class Quest (JQuest) :
                 if gift2:
                    st.giveItems(gift2,count2)
                    st.playTutorialVoice("tutorial_voice_026")
-             st.set("step","3")                               #­×¥¿ª¬ºA
+             st.set("step","3")                               #ä¿®æ­£ç‹€æ…‹
              st.set("onlyone","1")
     return htmltext
 
@@ -183,7 +183,7 @@ class Quest (JQuest) :
        st.exitQuest(False)
      npc.showChatWindow(player)
      return None
-   elif onlyone == 0 and level < 10 and st.getState() != State.COMPLETED: #­×¥¿¥²¶·¬O¥ô°È­è¶}©l
+   elif onlyone == 0 and level < 10 and st.getState() != State.COMPLETED: #ä¿®æ­£å¿…é ˆæ˜¯ä»»å‹™å‰›é–‹å§‹
     if player.getRace().ordinal() == raceId :
       htmltext=htmlfiles[0]
       if npcTyp==1:
@@ -195,11 +195,11 @@ class Quest (JQuest) :
          st.setState(State.STARTED)
         else:
          htmltext="30530-01.htm"
-         if st.getPlayer().getClassId().getId() == 0x31 :    #¼W¥[§PÂ_¥bÃ~¤Hªk®v
-          htmltext="30575-01.htm"                            #¼W¥[§PÂ_¥bÃ~¤Hªk®v
+         if st.getPlayer().getClassId().getId() == 0x31 :    #å¢åŠ åˆ¤æ–·åŠç¸äººæ³•å¸«
+          htmltext="30575-01.htm"                            #å¢åŠ åˆ¤æ–·åŠç¸äººæ³•å¸«
          st.set("step","1")
          st.setState(State.STARTED)
-       elif step==1 and st.getQuestItemsCount(item)==0 :     #¨ú®ø§PÂ_Ex
+       elif step==1 and st.getQuestItemsCount(item)==0 :     #å–æ¶ˆåˆ¤æ–·Ex
          if st.getQuestItemsCount(BLUE_GEM) :
            st.takeItems(BLUE_GEM,st.getQuestItemsCount(BLUE_GEM))
            st.giveItems(item,1)
@@ -212,20 +212,20 @@ class Quest (JQuest) :
              st.giveItems(SPIRITSHOT_NOVICE,100)
              htmltext = htmlfiles[2]
              if htmltext == 0 :
-                 htmltext = "<html><body>«Ü©êºp¡I§Ú¥u¯àÀ°§U¾Ô¤h¡A½Ğ§ä¨ä¥Lªºªì¾ÇªÌÀ°¤â«ü¾É§A§a¡C</body></html>"
+                 htmltext = "<html><body>å¾ˆæŠ±æ­‰ï¼æˆ‘åªèƒ½å¹«åŠ©æˆ°å£«ï¼Œè«‹æ‰¾å…¶ä»–çš„åˆå­¸è€…å¹«æ‰‹æŒ‡å°ä½ å§ã€‚</body></html>"
            else:
              st.playTutorialVoice("tutorial_voice_026")
              st.giveItems(SOULSHOT_NOVICE,200)
              htmltext = htmlfiles[1]
              if htmltext == 0 :
-                 htmltext = "<html><body>«Ü©êºp¡I§Ú¥u¯àÀ°§Uªk®v¡A½Ğ§ä¨ä¥Lªºªì¾ÇªÌÀ°¤â«ü¾É§A§a¡C</body></html>"
+                 htmltext = "<html><body>å¾ˆæŠ±æ­‰ï¼æˆ‘åªèƒ½å¹«åŠ©æ³•å¸«ï¼Œè«‹æ‰¾å…¶ä»–çš„åˆå­¸è€…å¹«æ‰‹æŒ‡å°ä½ å§ã€‚</body></html>"
          else:
            if isMage :
              htmltext = "30131-02.htm"
            else:
              htmltext = "30530-02.htm"
-             if st.getPlayer().getClassId().getId() == 0x31 :    #¼W¥[§PÂ_¥bÃ~¤Hªk®v
-              htmltext="30575-02.htm"                            #¼W¥[§PÂ_¥bÃ~¤Hªk®v
+             if st.getPlayer().getClassId().getId() == 0x31 :    #å¢åŠ åˆ¤æ–·åŠç¸äººæ³•å¸«
+              htmltext="30575-02.htm"                            #å¢åŠ åˆ¤æ–·åŠç¸äººæ³•å¸«
        elif step==2 :
         htmltext = htmlfiles[3]
       elif npcTyp == 0 :
@@ -235,15 +235,15 @@ class Quest (JQuest) :
           htmltext = htmlfiles[1]
         elif step==3 :
           htmltext = htmlfiles[2]
-   elif step==2 and npcTyp == 0 and level < 10 :                 #­×¥¿¥²¶·¬Oµ¥¯Å10¥H¤U¥B¤w´«¨úÄ_¥Û
+   elif step==2 and npcTyp == 0 and level < 10 :                 #ä¿®æ­£å¿…é ˆæ˜¯ç­‰ç´š10ä»¥ä¸‹ä¸”å·²æ›å–å¯¶çŸ³
      htmltext = str(npc.getNpcId())+"-04.htm"
    if htmltext == None or htmltext == "":
      npc.showChatWindow(player)
    return htmltext
 
- def onTalk (self,npc,player):                                   #¼W¥[¥ô°È¤w§¹¦¨ªº¹ï¸Ü
+ def onTalk (self,npc,player):                                   #å¢åŠ ä»»å‹™å·²å®Œæˆçš„å°è©±
    npcId = npc.getNpcId()
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st: return htmltext
    npcTyp=1
@@ -252,7 +252,7 @@ class Quest (JQuest) :
    if npcTyp == 0 :
      htmltext = htmlfiles[2]
    if st.getState() == State.COMPLETED:
-     htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+     htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -262,20 +262,20 @@ class Quest (JQuest) :
    if not st : return
    qs = st.getPlayer().getQuestState(qnTutorial)
    if not qs : return
-   Ex = qs.getInt("Ex")           #­×¥¿Int
-   step = st.getInt("step")       #¼W¥[stepªº§PÂ_
+   Ex = qs.getInt("Ex")           #ä¿®æ­£Int
+   step = st.getInt("step")       #å¢åŠ stepçš„åˆ¤æ–·
    if qs != None :
-      if Ex < 2 :                 #Exªº§PÂ_§ï¼e
+      if Ex < 2 :                 #Exçš„åˆ¤æ–·æ”¹å¯¬
          st.playTutorialVoice("tutorial_voice_011")
          st.showQuestionMark(3)
          qs.set("Ex","2")
-      if step==1 and st.getQuestItemsCount(6353) < 1 :   #­ì¥»§PÂ_Ex§ï¦¨§PÂ_step
+      if step==1 and st.getQuestItemsCount(6353) < 1 :   #åŸæœ¬åˆ¤æ–·Exæ”¹æˆåˆ¤æ–·step
          if self.getRandom(100) < 50 :
             st.dropItem(npc,player,6353,1)
             st.playSound("ItemSound.quest_tutorial")
    return
 
-QUEST       = Quest(-1,qn,"ªì¾ÇªÌÀ°¤â")
+QUEST       = Quest(-1,qn,"åˆå­¸è€…å¹«æ‰‹")
 
 for startNpc in [30008,30009,30017,30019,30129,30131,30573,30575,30370,30528,30530,30400,30401,30402,30403,30404,30600,30601,30602,30598,30599,32133,32134,32135]:
   QUEST.addStartNpc(startNpc)

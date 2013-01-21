@@ -4,7 +4,7 @@
 qn = "336_CoinOfMagic"
 QUEST_NUMBER      = 336
 QUEST_NAME        = "CoinOfMagic"
-QUEST_DESCRIPTION = "Å]ªk»É¿ú"
+QUEST_DESCRIPTION = "é­”æ³•éŠ…éŒ¢"
 
 #Quest items
 COIN_DIAGRAM,KALDIS_COIN,MEMBERSHIP_1,MEMBERSHIP_2,MEMBERSHIP_3 = range(3811,3816)
@@ -291,7 +291,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 

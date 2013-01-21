@@ -32,7 +32,7 @@ class Quest (JQuest) :
      if cond == 1 :
        st.set("cond","2")
        st.takeItems(CARADINE_LETTER_LAST,1)
-       st.getPlayer().teleToLocation(143209,43968,-3038) #­×¥¿
+       st.getPlayer().teleToLocation(143209,43968,-3038) #ä¿®æ­£
    elif event == "31745-5.htm" :
      if cond == 2 :
        st.set("cond","0")
@@ -44,7 +44,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>"
+   htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -58,7 +58,7 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(CARADINE_LETTER_LAST) == 1 :
            if cond in [0,1] :
              if id == State.COMPLETED :
-               htmltext = "<html><body>³o¬O¤w¸g§¹¦¨ªº¥ô°È¡C</body></html>"
+               htmltext = "<html><body>é€™æ˜¯å·²ç¶“å®Œæˆçš„ä»»å‹™ã€‚</body></html>"
              elif player.getLevel() < 75 : 
                htmltext = "31740-2.htm"
                st.exitQuest(1)
@@ -69,10 +69,10 @@ class Quest (JQuest) :
      elif npcId == LADY_OF_LAKE and cond == 2 :
          htmltext = "31745-1.htm"
    else :
-     htmltext = "<html><body>¡]°ÆÂ¾·~µ¥¯Å50¥H¤Wªº¨¤¦â¤~¥i¥H°õ¦æªº¥ô°È¡C¡^</body></html>"
+     htmltext = "<html><body>ï¼ˆå‰¯è·æ¥­ç­‰ç´š50ä»¥ä¸Šçš„è§’è‰²æ‰å¯ä»¥åŸ·è¡Œçš„ä»»å‹™ã€‚ï¼‰</body></html>"
    return htmltext
 
-QUEST       = Quest(247,qn,"¾Ö¦³°ª¶QÆF»î¤§¤H¡A¶Q±Ú  ²Ä¥|³¡")
+QUEST       = Quest(247,qn,"æ“æœ‰é«˜è²´éˆé­‚ä¹‹äººï¼Œè²´æ—  ç¬¬å››éƒ¨")
 
 QUEST.addStartNpc(CARADINE)
 QUEST.addTalkId(CARADINE)

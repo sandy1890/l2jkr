@@ -84,7 +84,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
     st = player.getQuestState(qn)
-    htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>" 
+    htmltext = "<html><body>ç›®å‰æ²’æœ‰åŸ·è¡Œä»»å‹™ï¼Œæˆ–æ¢ä»¶ä¸ç¬¦ã€‚</body></html>" 
     if not st: return htmltext
     npcId = npc.getNpcId()
     id = st.getState()
@@ -169,7 +169,7 @@ class Quest (JQuest) :
           htmltext = "theend.htm"
     return htmltext
 
-QUEST = Quest(126,qn,"¤¿¯«¤§¦W ²Ä¤G³¡")
+QUEST = Quest(126,qn,"å‡¶ç¥ä¹‹å ç¬¬äºŒéƒ¨")
 
 QUEST.addStartNpc(ASAMAH)
 QUEST.addTalkId(ASAMAH)
