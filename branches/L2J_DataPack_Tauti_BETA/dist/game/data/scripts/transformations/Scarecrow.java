@@ -22,32 +22,30 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class Scarecrow extends L2Transformation
-{
+public class Scarecrow extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		940, 942, 5437, 619
+		940,
+		942,
+		5437,
+		619
 	};
 	
-	public Scarecrow()
-	{
+	public Scarecrow() {
 		// id, colRadius, colHeight
 		super(115, 13, 30);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 115) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 115) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Fake Attack
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(940, 1), false);
 		// Special Motion
@@ -61,13 +59,11 @@ public class Scarecrow extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Fake Attack
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(940, 1), false);
 		// Special Motion
@@ -80,8 +76,7 @@ public class Scarecrow extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new Scarecrow());
 	}
 }

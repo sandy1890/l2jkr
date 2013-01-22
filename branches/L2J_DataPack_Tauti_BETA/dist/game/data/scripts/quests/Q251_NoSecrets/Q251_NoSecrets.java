@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.util.Util;
  * No Secrets (251)
  * @author Dumpster
  */
-public class Q251_NoSecrets extends Quest
-{
+public class Q251_NoSecrets extends Quest {
+	
 	public static final int PINAPS = 30201;
 	public static final int DIARY = 15508;
 	public static final int TABLE = 15509;
@@ -53,8 +53,7 @@ public class Q251_NoSecrets extends Quest
 		22778
 	};
 	
-	public Q251_NoSecrets(int id, String name, String descr)
-	{
+	public Q251_NoSecrets(int id, String name, String descr) {
 		super(id, name, descr);
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
@@ -68,86 +67,66 @@ public class Q251_NoSecrets extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		}
 		
-		if (event.equals("30201-03.htm"))
-		{
+		if (event.equals("30201-03.htm")) {
 			st.startQuest();
 		}
 		return event;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
 				htmltext = (player.getLevel() > 81) ? "30201-01.htm" : "30201-00.htm";
-				break;
+			break;
 			case State.STARTED:
 				int cond = st.getInt("cond");
-				if (cond == 1)
-				{
+				if (cond == 1) {
 					htmltext = "30201-05.htm";
-				}
-				else if ((cond == 2) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
-				{
+				} else if ((cond == 2) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5)) {
 					htmltext = "30201-04.htm";
 					st.rewardItems(57, 313355);
 					st.addExpAndSp(56787, 160578);
 					st.exitQuest(false, true);
 				}
-				break;
+			break;
 			case State.COMPLETED:
 				htmltext = "30201-06.htm";
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isStarted() && st.isCond(1))
-		{
+		if ((st != null) && st.isStarted() && st.isCond(1)) {
 			final int npcId = npc.getNpcId();
 			
-			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
-			{
+			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10)) {
 				st.giveItems(DIARY, 1);
-				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
-				{
+				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5)) {
 					st.setCond(2, true);
-				}
-				else
-				{
+				} else {
 					st.playSound("ItemSound.quest_itemget");
 				}
-			}
-			else if (Util.contains(MOBS2, npcId) && (getRandom(100) < 5) && (st.getQuestItemsCount(TABLE) < 5))
-			{
+			} else if (Util.contains(MOBS2, npcId) && (getRandom(100) < 5) && (st.getQuestItemsCount(TABLE) < 5)) {
 				st.giveItems(TABLE, 1);
-				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
-				{
+				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5)) {
 					st.setCond(2, true);
-				}
-				else
-				{
+				} else {
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
@@ -155,8 +134,8 @@ public class Q251_NoSecrets extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q251_NoSecrets(251, qn, "No Secrets");
 	}
+	
 }

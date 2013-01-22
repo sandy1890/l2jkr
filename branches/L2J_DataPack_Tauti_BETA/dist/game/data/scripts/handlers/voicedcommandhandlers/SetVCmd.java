@@ -18,18 +18,18 @@
  */
 package handlers.voicedcommandhandlers;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.model.L2CoreMessage;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.gameserver.datatables.MessageTable;
-import com.l2jserver.gameserver.model.L2CoreMessage;
 
 /**
  * @author Zoey76
  */
-public class SetVCmd implements IVoicedCommandHandler
-{
+public class SetVCmd implements IVoicedCommandHandler {
+	
 	private static final String[] VOICED_COMMANDS =
 	{
 		"set name",
@@ -38,44 +38,35 @@ public class SetVCmd implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
-	{
-		if (command.equals("set"))
-		{
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params) {
+		if (command.equals("set")) {
 			final L2Object target = activeChar.getTarget();
-			if ((target == null) || !target.isPlayer())
-			{
+			if ((target == null) || !target.isPlayer()) {
 				return false;
 			}
 			
 			final L2PcInstance player = activeChar.getTarget().getActingPlayer();
-			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getClanId() != player.getClan().getClanId()))
-			{
+			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getClanId() != player.getClan().getClanId())) {
 				return false;
 			}
 			
-			if (params.startsWith("privileges"))
-			{
+			if (params.startsWith("privileges")) {
 				final String val = params.substring(11);
-				if (!Util.isDigit(val))
-				{
+				if (!Util.isDigit(val)) {
 					return false;
 				}
 				
 				final int n = Integer.parseInt(val);
-				if (!((activeChar.getClanPrivileges() > n) || activeChar.isClanLeader()))
-				{
+				if (!((activeChar.getClanPrivileges() > n) || activeChar.isClanLeader())) {
 					return false;
 				}
 				
 				player.setClanPrivileges(n);
-				L2CoreMessage cm = new L2CoreMessage (MessageTable.Messages[1204]);
+				L2CoreMessage cm = new L2CoreMessage(MessageTable.Messages[1204]);
 				cm.addNumber(n);
 				cm.addString(activeChar.getName());
 				activeChar.sendMessage(cm.renderMsg());
-			}
-			else if (params.startsWith("title"))
-			{
+			} else if (params.startsWith("title")) {
 				
 			}
 		}
@@ -83,8 +74,8 @@ public class SetVCmd implements IVoicedCommandHandler
 	}
 	
 	@Override
-	public String[] getVoicedCommandList()
-	{
+	public String[] getVoicedCommandList() {
 		return VOICED_COMMANDS;
 	}
+	
 }

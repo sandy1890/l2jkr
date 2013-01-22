@@ -41,8 +41,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 /**
  * @author UnAfraid
  */
-public class StatusHandler implements ITelnetHandler
-{
+public class StatusHandler implements ITelnetHandler {
+	
 	private final String[] _commands =
 	{
 		"status",
@@ -54,23 +54,17 @@ public class StatusHandler implements ITelnetHandler
 	private int uptime;
 	
 	@Override
-	public boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int _uptime)
-	{
-		if (command.equals("status"))
-		{
+	public boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int _uptime) {
+		if (command.equals("status")) {
 			uptime = _uptime;
 			_print.print(getServerStatus());
 			_print.flush();
-		}
-		else if (command.equals("forcegc"))
-		{
+		} else if (command.equals("forcegc")) {
 			System.gc();
 			StringBuilder sb = new StringBuilder();
 			sb.append("RAM Used: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576)); // 1024 * 1024 = 1048576
 			_print.println(sb.toString());
-		}
-		else if (command.startsWith("memusage"))
-		{
+		} else if (command.startsWith("memusage")) {
 			double max = Runtime.getRuntime().maxMemory() / 1024; // maxMemory is the upper
 			// limit the jvm can use
 			double allocated = Runtime.getRuntime().totalMemory() / 1024; // totalMemory the
@@ -89,33 +83,30 @@ public class StatusHandler implements ITelnetHandler
 			
 			_print.println("+----");// ...
 			_print.println("| Allowed Memory:" + df2.format(max));
-			_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format(allocated / max * 100));
-			_print.println("|    |= Non-Allocated Memory:" + df2.format(nonAllocated) + df.format(nonAllocated / max * 100));
+			_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format((allocated / max) * 100));
+			_print.println("|    |= Non-Allocated Memory:" + df2.format(nonAllocated) + df.format((nonAllocated / max) * 100));
 			_print.println("| Allocated Memory:" + df2.format(allocated));
-			_print.println("|    |= Used Memory:" + df2.format(used) + df.format(used / max * 100));
-			_print.println("|    |= Unused (cached) Memory:" + df2.format(cached) + df.format(cached / max * 100));
-			_print.println("| Useable Memory:" + df2.format(useable) + df.format(useable / max * 100)); // ...
+			_print.println("|    |= Used Memory:" + df2.format(used) + df.format((used / max) * 100));
+			_print.println("|    |= Unused (cached) Memory:" + df2.format(cached) + df.format((cached / max) * 100));
+			_print.println("| Useable Memory:" + df2.format(useable) + df.format((useable / max) * 100)); // ...
 			_print.println("+----");
-		}
-		else if (command.equals("gmlist"))
-		{
+		} else if (command.equals("gmlist")) {
 			int igm = 0;
 			String gmList = "";
 			
-			for (String player : AdminTable.getInstance().getAllGmNames(true))
-			{
+			for (String player : AdminTable.getInstance().getAllGmNames(true)) {
 				gmList = gmList + ", " + player;
 				igm++;
 			}
 			_print.println("There are currently " + igm + " GM(s) online...");
-			if (!gmList.isEmpty())
+			if (!gmList.isEmpty()) {
 				_print.println(gmList);
+			}
 		}
 		return false;
 	}
 	
-	public String getServerStatus()
-	{
+	public String getServerStatus() {
 		int playerCount = 0, objectCount = 0;
 		int max = LoginServerThread.getInstance().getMaxPlayer();
 		
@@ -136,42 +127,41 @@ public class StatusHandler implements ITelnetHandler
 		int AICount = 0;
 		
 		L2Object[] objs = L2World.getInstance().getAllVisibleObjectsArray();
-		for (L2Object obj : objs)
-		{
-			if (obj == null)
+		for (L2Object obj : objs) {
+			if (obj == null) {
 				continue;
-			if (obj instanceof L2Character)
-				if (((L2Character) obj).hasAI())
+			}
+			if (obj instanceof L2Character) {
+				if (((L2Character) obj).hasAI()) {
 					AICount++;
-			if (obj instanceof L2ItemInstance)
-				if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
+				}
+			}
+			if (obj instanceof L2ItemInstance) {
+				if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID) {
 					itemVoidCount++;
-				else
+				} else {
 					itemCount++;
-			
-			else if (obj instanceof L2MonsterInstance)
-			{
+				}
+			} else if (obj instanceof L2MonsterInstance) {
 				monsterCount++;
-				if (((L2MonsterInstance) obj).hasMinions())
-				{
+				if (((L2MonsterInstance) obj).hasMinions()) {
 					minionCount += ((L2MonsterInstance) obj).getMinionList().countSpawnedMinions();
 					minionsGroupCount += ((L2MonsterInstance) obj).getMinionList().lazyCountSpawnedMinionsGroups();
 				}
-			}
-			else if (obj instanceof L2Npc)
+			} else if (obj instanceof L2Npc) {
 				npcCount++;
-			else if (obj instanceof L2PcInstance)
-			{
+			} else if (obj instanceof L2PcInstance) {
 				pcCount++;
-				if (((L2PcInstance) obj).getClient() != null && ((L2PcInstance) obj).getClient().isDetached())
+				if ((((L2PcInstance) obj).getClient() != null) && ((L2PcInstance) obj).getClient().isDetached()) {
 					detachedCount++;
-			}
-			else if (obj instanceof L2Summon)
+				}
+			} else if (obj instanceof L2Summon) {
 				summonCount++;
-			else if (obj instanceof L2DoorInstance)
+			} else if (obj instanceof L2DoorInstance) {
 				doorCount++;
-			else if (obj instanceof L2Character)
+			} else if (obj instanceof L2Character) {
 				charCount++;
+			}
 		}
 		StringBuilder sb = new StringBuilder();
 		sb.append("Server Status: ");
@@ -199,13 +189,11 @@ public class StatusHandler implements ITelnetHandler
 		return sb.toString();
 	}
 	
-	private int getOnlineGMS()
-	{
+	private int getOnlineGMS() {
 		return AdminTable.getInstance().getAllGms(true).size();
 	}
 	
-	private String getUptime(int time)
-	{
+	private String getUptime(int time) {
 		int uptime = (int) System.currentTimeMillis() - time;
 		uptime = uptime / 1000;
 		int h = uptime / 3600;
@@ -214,8 +202,7 @@ public class StatusHandler implements ITelnetHandler
 		return h + "hrs " + m + "mins " + s + "secs";
 	}
 	
-	private String gameTime()
-	{
+	private String gameTime() {
 		int t = GameTimeController.getInstance().getGameTime();
 		int h = t / 60;
 		int m = t % 60;
@@ -227,8 +214,8 @@ public class StatusHandler implements ITelnetHandler
 	}
 	
 	@Override
-	public String[] getCommandList()
-	{
+	public String[] getCommandList() {
 		return _commands;
 	}
+	
 }

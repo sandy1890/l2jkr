@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original Jython script by Gnacik on 2010-06-29
  * @author nonom
  */
-public class Q10281_MutatedKaneusRune extends Quest
-{
+public class Q10281_MutatedKaneusRune extends Quest {
+	
 	private static final String qn = "10281_MutatedKaneusRune";
 	
 	// NPCs
@@ -45,113 +45,86 @@ public class Q10281_MutatedKaneusRune extends Quest
 	private static final int TISSUE_WA = 13840;
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
-		{
+		switch (npc.getNpcId()) {
 			case MATHIAS:
-				if (st.isCompleted())
-				{
+				if (st.isCompleted()) {
 					htmltext = "31340-06.htm";
-				}
-				else if (st.isCreated())
-				{
+				} else if (st.isCreated()) {
 					htmltext = (player.getLevel() >= 68) ? "31340-01.htm" : "31340-00.htm";
-				}
-				else if (st.hasQuestItems(TISSUE_WA))
-				{
+				} else if (st.hasQuestItems(TISSUE_WA)) {
 					htmltext = "31340-05.htm";
-				}
-				else if (st.getInt("cond") == 1)
-				{
+				} else if (st.getInt("cond") == 1) {
 					htmltext = "31340-04.htm";
 				}
-				break;
+			break;
 			case KAYAN:
-				if (st.isCompleted())
-				{
+				if (st.isCompleted()) {
 					htmltext = "<html><body>這是已經完成的任務。</body></html>";
-				}
-				else if (st.hasQuestItems(TISSUE_WA))
-				{
+				} else if (st.hasQuestItems(TISSUE_WA)) {
 					htmltext = "31335-02.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "31335-01.htm";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 			case "31340-03.htm":
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "31335-03.htm":
 				st.rewardItems(57, 360000);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		QuestState st = killer.getQuestState(qn);
 		
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
 		final int npcId = npc.getNpcId();
-		if (killer.getParty() != null)
-		{
+		if (killer.getParty() != null) {
 			final List<QuestState> PartyMembers = new ArrayList<>();
-			for (L2PcInstance member : killer.getParty().getMembers())
-			{
+			for (L2PcInstance member : killer.getParty().getMembers()) {
 				st = member.getQuestState(qn);
-				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
-				{
-					if ((npcId == WHITE_ALLOSCE) && (!st.hasQuestItems(TISSUE_WA)))
-					{
+				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1)) {
+					if ((npcId == WHITE_ALLOSCE) && (!st.hasQuestItems(TISSUE_WA))) {
 						PartyMembers.add(st);
 					}
 				}
 			}
 			
-			if (!PartyMembers.isEmpty())
-			{
+			if (!PartyMembers.isEmpty()) {
 				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
-		}
-		else
-		{
+		} else {
 			rewardItem(npcId, st);
 		}
 		return null;
@@ -161,33 +134,27 @@ public class Q10281_MutatedKaneusRune extends Quest
 	 * @param npcId the killed monster Id.
 	 * @param st the quest state of the killer or party member.
 	 */
-	private final void rewardItem(int npcId, QuestState st)
-	{
-		if ((npcId == WHITE_ALLOSCE) && !st.hasQuestItems(TISSUE_WA))
-		{
+	private final void rewardItem(int npcId, QuestState st) {
+		if ((npcId == WHITE_ALLOSCE) && !st.hasQuestItems(TISSUE_WA)) {
 			st.giveItems(TISSUE_WA, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
 	}
 	
-	public Q10281_MutatedKaneusRune(int questId, String name, String descr)
-	{
+	public Q10281_MutatedKaneusRune(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(MATHIAS);
 		addTalkId(MATHIAS);
 		addTalkId(KAYAN);
-		
 		addKillId(WHITE_ALLOSCE);
-		
 		questItemIds = new int[]
 		{
 			TISSUE_WA
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10281_MutatedKaneusRune(10281, qn, "Mutated Kaneus - Rune");
 	}
+	
 }

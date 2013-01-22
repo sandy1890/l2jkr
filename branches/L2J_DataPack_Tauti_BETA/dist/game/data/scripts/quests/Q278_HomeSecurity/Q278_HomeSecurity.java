@@ -28,9 +28,10 @@ import com.l2jserver.gameserver.model.quest.State;
  * Home Security (278)
  * @author malyelfik
  */
-public class Q278_HomeSecurity extends Quest
-{
+public class Q278_HomeSecurity extends Quest {
+	
 	private static final String qn = "278_HomeSecurity";
+	
 	// NPC
 	private static final int Tunatun = 31537;
 	private static final int[] Monster =
@@ -39,83 +40,52 @@ public class Q278_HomeSecurity extends Quest
 		18906,
 		18907
 	};
+	
 	// Item
 	private static final int SelMahumMane = 15531;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("31537-02.htm"))
-		{
+		if (event.equalsIgnoreCase("31537-02.htm")) {
 			htmltext = (player.getLevel() >= 82) ? "31537-02.htm" : "31537-03.html";
-		}
-		else if (event.equalsIgnoreCase("31537-04.htm"))
-		{
+		} else if (event.equalsIgnoreCase("31537-04.htm")) {
 			st.set("cond", "1");
 			st.playSound("ItemSound.quest_accept");
 			st.setState(State.STARTED);
-		}
-		else if (event.equalsIgnoreCase("31537-07.html"))
-		{
+		} else if (event.equalsIgnoreCase("31537-07.html")) {
 			int i0 = getRandom(100);
 			
-			if (i0 < 10)
-			{
+			if (i0 < 10) {
 				st.giveItems(960, 1);
-			}
-			else if (i0 < 19)
-			{
+			} else if (i0 < 19) {
 				st.giveItems(960, 2);
-			}
-			else if (i0 < 27)
-			{
+			} else if (i0 < 27) {
 				st.giveItems(960, 3);
-			}
-			else if (i0 < 34)
-			{
+			} else if (i0 < 34) {
 				st.giveItems(960, 4);
-			}
-			else if (i0 < 40)
-			{
+			} else if (i0 < 40) {
 				st.giveItems(960, 5);
-			}
-			else if (i0 < 45)
-			{
+			} else if (i0 < 45) {
 				st.giveItems(960, 6);
-			}
-			else if (i0 < 49)
-			{
+			} else if (i0 < 49) {
 				st.giveItems(960, 7);
-			}
-			else if (i0 < 52)
-			{
+			} else if (i0 < 52) {
 				st.giveItems(960, 8);
-			}
-			else if (i0 < 54)
-			{
+			} else if (i0 < 54) {
 				st.giveItems(960, 9);
-			}
-			else if (i0 < 55)
-			{
+			} else if (i0 < 55) {
 				st.giveItems(960, 10);
-			}
-			else if (i0 < 75)
-			{
+			} else if (i0 < 75) {
 				st.giveItems(9553, 1);
-			}
-			else if (i0 < 90)
-			{
+			} else if (i0 < 90) {
 				st.giveItems(9553, 2);
-			}
-			else
-			{
+			} else {
 				st.giveItems(959, 1);
 			}
 			
@@ -129,120 +99,94 @@ public class Q278_HomeSecurity extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
 				htmltext = "31537-01.htm";
-				break;
+			break;
 			case State.STARTED:
-				if ((st.getInt("cond") == 1) || (st.getQuestItemsCount(SelMahumMane) < 300))
-				{
+				if ((st.getInt("cond") == 1) || (st.getQuestItemsCount(SelMahumMane) < 300)) {
 					htmltext = "31537-06.html";
-				}
-				else if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(SelMahumMane) >= 300))
-				{
+				} else if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(SelMahumMane) >= 300)) {
 					htmltext = "31537-05.html";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
+		if (partyMember == null) {
 			return null;
 		}
 		final QuestState st = partyMember.getQuestState(qn);
 		
 		int chance, i1;
-		if (st.getInt("cond") == 1)
-		{
-			switch (npc.getNpcId())
-			{
+		if (st.getInt("cond") == 1) {
+			switch (npc.getNpcId()) {
 				case 18907: // Beast Devourer
 				case 18906: // Farm Bandit
 					chance = getRandom(1000);
-					if (chance < 85)
-					{
+					if (chance < 85) {
 						st.giveItems(SelMahumMane, 1);
-						if (st.getQuestItemsCount(SelMahumMane) >= 300)
-						{
+						if (st.getQuestItemsCount(SelMahumMane) >= 300) {
 							st.set("cond", "2");
 							st.playSound("ItemSound.quest_middle");
-						}
-						else
-						{
+						} else {
 							st.playSound("ItemSound.quest_itemget");
 						}
 					}
-					break;
+				break;
 				case 18905: // Farm Ravager (Crazy)
 					chance = getRandom(1000);
-					if (chance < 486)
-					{
+					if (chance < 486) {
 						i1 = getRandom(6) + 1;
-						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
-						{
+						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300) {
 							st.set("cond", "2");
 							st.playSound("ItemSound.quest_middle");
 							st.giveItems(SelMahumMane, (300 - st.getQuestItemsCount(SelMahumMane)));
-						}
-						else
-						{
+						} else {
 							st.giveItems(SelMahumMane, i1);
 							st.playSound("ItemSound.quest_itemget");
 						}
-					}
-					else
-					{
+					} else {
 						i1 = (getRandom(5) + 1);
-						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
-						{
+						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300) {
 							st.set("cond", "2");
 							st.playSound("ItemSound.quest_middle");
 							st.giveItems(SelMahumMane, (300 - st.getQuestItemsCount(SelMahumMane)));
-						}
-						else
-						{
+						} else {
 							st.giveItems(SelMahumMane, i1);
 							st.playSound("ItemSound.quest_itemget");
 						}
 					}
-					break;
+				break;
 			}
 		}
 		return null;
 	}
 	
-	public Q278_HomeSecurity(int questId, String name, String descr)
-	{
+	public Q278_HomeSecurity(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(Tunatun);
 		addTalkId(Tunatun);
 		addKillId(Monster);
-		
 		questItemIds = new int[]
 		{
 			SelMahumMane
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q278_HomeSecurity(278, qn, "請用愛來守護我");
 	}
+	
 }

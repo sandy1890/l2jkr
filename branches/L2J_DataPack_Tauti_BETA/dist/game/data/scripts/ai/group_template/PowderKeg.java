@@ -27,23 +27,23 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * 火藥桶
  */
-public class PowderKeg extends L2AttackableAIScript
-{
-	private static final int[] NPC_IDS = { 18622 };
-
-	public PowderKeg(int questId, String name, String descr)
+public class PowderKeg extends L2AttackableAIScript {
+	
+	private static final int[] NPC_IDS =
 	{
+		18622
+	};
+	
+	public PowderKeg(int questId, String name, String descr) {
 		super(questId, name, descr);
 		this.registerMobs(NPC_IDS);
 	}
-
+	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		int npcId = npc.getNpcId();
-
-		if (Util.contains(NPC_IDS, npcId))
-		{
+		
+		if (Util.contains(NPC_IDS, npcId)) {
 			L2Skill _boom = SkillTable.getInstance().getInfo(5714, 1);
 			npc.disableCoreAI(true);
 			npc.doCast(_boom);
@@ -52,9 +52,9 @@ public class PowderKeg extends L2AttackableAIScript
 		}
 		return super.onKill(npc, killer, isPet);
 	}
-
-	public static void main(String[] args)
-	{
-		new PowderKeg(-1,"powderkeg","ai");
+	
+	public static void main(String[] args) {
+		new PowderKeg(-1, "powderkeg", "ai");
 	}
+	
 }

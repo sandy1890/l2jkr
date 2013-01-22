@@ -31,54 +31,51 @@ import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 /**
  * @author -Nemesiss-
  */
-public class TargetMe extends L2Effect
-{
-	public TargetMe(Env env, EffectTemplate template)
-	{
+public class TargetMe extends L2Effect {
+	
+	public TargetMe(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.TARGET_ME;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() instanceof L2Playable)
-		{
-			if (getEffected() instanceof L2SiegeSummonInstance)
+	public boolean onStart() {
+		if (getEffected() instanceof L2Playable) {
+			if (getEffected() instanceof L2SiegeSummonInstance) {
 				return false;
+			}
 			
-			if (getEffected().getTarget() != getEffector())
-			{
+			if (getEffected().getTarget() != getEffector()) {
 				// Target is different
 				getEffected().setTarget(getEffector());
-				if (getEffected() instanceof L2PcInstance)
+				if (getEffected() instanceof L2PcInstance) {
 					getEffected().sendPacket(new MyTargetSelected(getEffector().getObjectId(), 0));
+				}
 			}
-			((L2Playable)getEffected()).setLockedTarget(getEffector());
+			((L2Playable) getEffected()).setLockedTarget(getEffector());
+			return true;
+		} else if ((getEffected() instanceof L2Attackable) && !getEffected().isRaid()) {
 			return true;
 		}
-		else if (getEffected() instanceof L2Attackable && !getEffected().isRaid())
-			return true;
 		
 		return false;
 	}
 	
 	@Override
-	public void onExit()
-	{
-		if (getEffected() instanceof L2Playable)
-			((L2Playable)getEffected()).setLockedTarget(null);
+	public void onExit() {
+		if (getEffected() instanceof L2Playable) {
+			((L2Playable) getEffected()).setLockedTarget(null);
+		}
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// nothing
 		return false;
 	}
+	
 }

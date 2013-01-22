@@ -23,28 +23,21 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 
-public class AdminCamera implements IAdminCommandHandler
-{
+public class AdminCamera implements IAdminCommandHandler {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_camera"
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
-		try
-		{
-			final L2Character target = (L2Character)activeChar.getTarget();
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+		try {
+			final L2Character target = (L2Character) activeChar.getTarget();
 			final String[] com = command.split(" ");
 			
-			target.broadcastPacket(new SpecialCamera(target.getObjectId(), Integer.parseInt(com[1]),
-					Integer.parseInt(com[2]), Integer.parseInt(com[3]), Integer.parseInt(com[4]),
-					Integer.parseInt(com[5]), Integer.parseInt(com[6]), Integer.parseInt(com[7]),
-					Integer.parseInt(com[8]), Integer.parseInt(com[9])));
-		}
-		catch (Exception e)
-		{
+			target.broadcastPacket(new SpecialCamera(target.getObjectId(), Integer.parseInt(com[1]), Integer.parseInt(com[2]), Integer.parseInt(com[3]), Integer.parseInt(com[4]), Integer.parseInt(com[5]), Integer.parseInt(com[6]), Integer.parseInt(com[7]), Integer.parseInt(com[8]), Integer.parseInt(com[9])));
+		} catch (Exception e) {
 			activeChar.sendMessage("Usage: //camera dist yaw pitch time duration turn rise widescreen unknown");
 			return false;
 		}
@@ -52,8 +45,8 @@ public class AdminCamera implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
+	
 }

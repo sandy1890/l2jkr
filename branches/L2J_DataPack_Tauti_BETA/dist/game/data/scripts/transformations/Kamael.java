@@ -22,32 +22,32 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class Kamael extends L2Transformation
-{
+public class Kamael extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		539, 540, 1471, 1472, 5491, 619
+		539,
+		540,
+		1471,
+		1472,
+		5491,
+		619
 	};
 	
-	public Kamael()
-	{
+	public Kamael() {
 		// id, duration (secs), colRadius, colHeight
 		super(251, 9, 38);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 251) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 251) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Nail Attack
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(539, 1), false);
 		// Wing Assault
@@ -65,13 +65,11 @@ public class Kamael extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Nail Attack
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(539, 1), false);
 		// Wing Assault
@@ -88,8 +86,7 @@ public class Kamael extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new Kamael());
 	}
 }

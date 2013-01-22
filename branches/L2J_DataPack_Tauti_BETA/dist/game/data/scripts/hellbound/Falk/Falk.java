@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author DS
  */
-public class Falk extends Quest
-{
+public class Falk extends Quest {
+	
 	private static final int FALK = 32297;
 	private static final int BASIC_CERT = 9850;
 	private static final int STANDART_CERT = 9851;
@@ -35,52 +35,41 @@ public class Falk extends Quest
 	private static final int DARION_BADGE = 9674;
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
+		if (qs == null) {
 			qs = newQuestState(player);
 		}
 		
-		if (qs.hasQuestItems(BASIC_CERT) || qs.hasQuestItems(STANDART_CERT) || qs.hasQuestItems(PREMIUM_CERT))
-		{
+		if (qs.hasQuestItems(BASIC_CERT) || qs.hasQuestItems(STANDART_CERT) || qs.hasQuestItems(PREMIUM_CERT)) {
 			return "32297-01a.htm";
 		}
 		return "32297-01.htm";
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public final String onTalk(L2Npc npc, L2PcInstance player) {
 		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
+		if (qs == null) {
 			qs = newQuestState(player);
 		}
 		
-		if (qs.hasQuestItems(BASIC_CERT) || qs.hasQuestItems(STANDART_CERT) || qs.hasQuestItems(PREMIUM_CERT))
-		{
+		if (qs.hasQuestItems(BASIC_CERT) || qs.hasQuestItems(STANDART_CERT) || qs.hasQuestItems(PREMIUM_CERT)) {
 			return "32297-01a.htm";
 		}
 		return "32297-02.htm";
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
+		if (qs == null) {
 			qs = newQuestState(player);
 		}
 		
-		if (event.equalsIgnoreCase("badges"))
-		{
-			if (!qs.hasQuestItems(BASIC_CERT) && !qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT))
-			{
-				if (qs.getQuestItemsCount(DARION_BADGE) >= 20)
-				{
+		if (event.equalsIgnoreCase("badges")) {
+			if (!qs.hasQuestItems(BASIC_CERT) && !qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT)) {
+				if (qs.getQuestItemsCount(DARION_BADGE) >= 20) {
 					qs.takeItems(DARION_BADGE, 20);
 					qs.giveItems(BASIC_CERT, 1);
 					return "32297-02a.htm";
@@ -91,16 +80,15 @@ public class Falk extends Quest
 		return event;
 	}
 	
-	public Falk(int questId, String name, String descr)
-	{
+	public Falk(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addFirstTalkId(FALK);
 		addStartNpc(FALK);
 		addTalkId(FALK);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Falk(-1, "Falk", "hellbound");
 	}
+	
 }

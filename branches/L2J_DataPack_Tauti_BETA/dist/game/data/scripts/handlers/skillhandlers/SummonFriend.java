@@ -35,72 +35,60 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author BiTi, Sami, Zoey76
  */
-public class SummonFriend implements ISkillHandler
-{
-	private static final L2SkillType[] SKILL_IDS = { L2SkillType.SUMMON_FRIEND };
+public class SummonFriend implements ISkillHandler {
+	
+	private static final L2SkillType[] SKILL_IDS =
+	{
+		L2SkillType.SUMMON_FRIEND
+	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!(activeChar instanceof L2PcInstance))
-		{
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!(activeChar instanceof L2PcInstance)) {
 			return;
 		}
 		final boolean isMastersCall = skill.getId() == 23249;
 		final L2PcInstance activePlayer = activeChar.getActingPlayer();
-		if (!isMastersCall && !L2PcInstance.checkSummonerStatus(activePlayer))
-		{
+		if (!isMastersCall && !L2PcInstance.checkSummonerStatus(activePlayer)) {
 			return;
 		}
 		
-		try
-		{
-			for (L2Character target : (L2Character[]) targets)
-			{
-				if ((target == null) || (activeChar == target))
-				{
+		try {
+			for (L2Character target : (L2Character[]) targets) {
+				if ((target == null) || (activeChar == target)) {
 					continue;
 				}
 				
-				if (target instanceof L2PcInstance)
-				{
-					if (isMastersCall) //Master's Call
+				if (target instanceof L2PcInstance) {
+					if (isMastersCall) // Master's Call
 					{
 						final L2Party party = target.getParty();
-						if (party != null)
-						{
-							for (L2PcInstance partyMember : party.getMembers())
-							{
-								if (target != partyMember)
-								{
+						if (party != null) {
+							for (L2PcInstance partyMember : party.getMembers()) {
+								if (target != partyMember) {
 									partyMember.teleToLocation(target.getX(), target.getY(), target.getZ(), true);
 								}
 							}
-						}
-						else
-						{
+						} else {
 							activePlayer.sendMessage(target.getName() + " doesn't have a party.");
 						}
 						continue;
 					}
 					
 					final L2PcInstance targetPlayer = target.getActingPlayer();
-					if (!L2PcInstance.checkSummonTargetStatus(targetPlayer, activePlayer))
-					{
+					if (!L2PcInstance.checkSummonTargetStatus(targetPlayer, activePlayer)) {
 						continue;
 					}
 					
-					if (!Util.checkIfInRange(0, activeChar, target, false))
-					{
-						if (!targetPlayer.teleportRequest(activePlayer, skill))
-						{
+					if (!Util.checkIfInRange(0, activeChar, target, false)) {
+						if (!targetPlayer.teleportRequest(activePlayer, skill)) {
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ALREADY_SUMMONED);
 							sm.addString(target.getName());
 							activePlayer.sendPacket(sm);
 							continue;
 						}
 						
-						if (skill.getId() == 1403) //Summon Friend
+						if (skill.getId() == 1403) // Summon Friend
 						{
 							// Send message
 							final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
@@ -109,25 +97,21 @@ public class SummonFriend implements ISkillHandler
 							confirm.addTime(30000);
 							confirm.addRequesterId(activePlayer.getObjectId());
 							target.sendPacket(confirm);
-						}
-						else
-						{
+						} else {
 							L2PcInstance.teleToTarget(targetPlayer, activePlayer, skill);
 							targetPlayer.teleportRequest(null, null);
 						}
 					}
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.SEVERE, "", e);
 		}
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.util.Util;
  * Jython script by Gnacik.
  * @author nonom
  */
-public class Q376_ExplorationOfTheGiantsCavePart1 extends Quest
-{
+public class Q376_ExplorationOfTheGiantsCavePart1 extends Quest {
+	
 	private static final String qn = "376_ExplorationOfTheGiantsCavePart1";
 	
 	// NPC's
@@ -78,119 +78,102 @@ public class Q376_ExplorationOfTheGiantsCavePart1 extends Quest
 	private static final int ORICHALCUM = 9630;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("31147-02.htm"))
-		{
+		if (event.equalsIgnoreCase("31147-02.htm")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.playSound("ItemSound.quest_accept");
 			player.sendPacket(new RadarControl(0, 2, 185712, 47414, -4350));
-		}
-		else if (event.equalsIgnoreCase("31147-quit.html"))
-		{
+		} else if (event.equalsIgnoreCase("31147-quit.html")) {
 			st.playSound("ItemSound.quest_finish");
 			st.exitQuest(true);
-		}
-		else if (Util.isDigit(event))
-		{
+		} else if (Util.isDigit(event)) {
 			final int val = Integer.parseInt(event);
-			switch (val)
-			{
+			switch (val) {
 				case RECIPE_DYNASTY_SWORD_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Sword (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_BLADE_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Blade (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_PHANTOM_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Phantom (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_BOW_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Bow (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_KNIFE_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Knife (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_HALBERD_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Halberd (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_CUDGEL_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Cudgel (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_MACE_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Mace (60%)
-					break;
+				break;
 				case RECIPE_DYNASTY_BAGHNAKH_60:
 					htmltext = onExchangeRequest(st, val, 1, 10); // Recipe Dynasty Bagh-Nakh (60%)
-					break;
+				break;
 				case LEONARD:
 					htmltext = onExchangeRequest(st, val, 6, 1); // Leonard
-					break;
+				break;
 				case ADAMANTINE:
 					htmltext = onExchangeRequest(st, val, 3, 1); // Adamantine
-					break;
+				break;
 				case ORICHALCUM:
 					htmltext = onExchangeRequest(st, val, 4, 1); // Orichalcum
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == SOBLING)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == SOBLING) {
+			switch (st.getState()) {
 				case State.CREATED:
 					htmltext = (player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html";
-					break;
+				break;
 				case State.STARTED:
 					htmltext = (st.hasQuestItems(BOOK1) && st.hasQuestItems(BOOK2) && st.hasQuestItems(BOOK3) && st.hasQuestItems(BOOK4) && st.hasQuestItems(BOOK5)) ? "31147-03.html" : "31147-02a.html";
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
-		if ((st.getInt("cond") == 1) && (getRandom(100) < DROP_CHANCE))
-		{
+		if ((st.getInt("cond") == 1) && (getRandom(100) < DROP_CHANCE)) {
 			st.giveItems(ANCIENT_PARCHMENT, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
 		return super.onKill(npc, player, isPet);
 	}
 	
-	private String onExchangeRequest(QuestState st, int giveid, int qty, int rem)
-	{
-		if ((st.getQuestItemsCount(BOOK1) >= rem) && (st.getQuestItemsCount(BOOK2) >= rem) && (st.getQuestItemsCount(BOOK3) >= rem) && (st.getQuestItemsCount(BOOK4) >= rem) && (st.getQuestItemsCount(BOOK5) >= rem))
-		{
+	private String onExchangeRequest(QuestState st, int giveid, int qty, int rem) {
+		if ((st.getQuestItemsCount(BOOK1) >= rem) && (st.getQuestItemsCount(BOOK2) >= rem) && (st.getQuestItemsCount(BOOK3) >= rem) && (st.getQuestItemsCount(BOOK4) >= rem) && (st.getQuestItemsCount(BOOK5) >= rem)) {
 			st.takeItems(BOOK1, rem);
 			st.takeItems(BOOK2, rem);
 			st.takeItems(BOOK3, rem);
@@ -203,22 +186,19 @@ public class Q376_ExplorationOfTheGiantsCavePart1 extends Quest
 		return "31147-no.html";
 	}
 	
-	public Q376_ExplorationOfTheGiantsCavePart1(int id, String name, String descr)
-	{
+	public Q376_ExplorationOfTheGiantsCavePart1(int id, String name, String descr) {
 		super(id, name, descr);
-		
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
 		addKillId(_mobs);
-		
 		questItemIds = new int[]
 		{
 			ANCIENT_PARCHMENT
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q376_ExplorationOfTheGiantsCavePart1(376, qn, "Exploration of the Giants' Cave - Part 1");
 	}
+	
 }

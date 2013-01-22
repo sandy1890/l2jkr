@@ -39,29 +39,24 @@ import com.l2jserver.util.Rnd;
  * This effect has been unhardcoded in order to work on targets as well.
  * @author Zoey76
  */
-public class RestorationRandom extends L2Effect
-{
-	public RestorationRandom(Env env, EffectTemplate template)
-	{
+public class RestorationRandom extends L2Effect {
+	
+	public RestorationRandom(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer())
-		{
+	public boolean onStart() {
+		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer()) {
 			return false;
 		}
 		
 		final L2ExtractableSkill exSkill = getSkill().getExtractableSkill();
-		if (exSkill == null)
-		{
+		if (exSkill == null) {
 			return false;
 		}
 		
-		if (exSkill.getProductItems().isEmpty())
-		{
+		if (exSkill.getProductItems().isEmpty()) {
 			_log.warning("Extractable Skill with no data, probably wrong/empty table in Skill Id: " + getSkill().getId());
 			return false;
 		}
@@ -80,11 +75,9 @@ public class RestorationRandom extends L2Effect
 		// If you get chance equal 45% you fall into the second zone 30-80.
 		// Meaning you get the second production list.
 		// Calculate extraction
-		for (L2ExtractableProductItem expi : exSkill.getProductItems())
-		{
+		for (L2ExtractableProductItem expi : exSkill.getProductItems()) {
 			chance = expi.getChance();
-			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
-			{
+			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom))) {
 				creationList.addAll(expi.getItems());
 				break;
 			}
@@ -92,16 +85,13 @@ public class RestorationRandom extends L2Effect
 		}
 		
 		final L2PcInstance player = getEffected().getActingPlayer();
-		if (creationList.isEmpty())
-		{
+		if (creationList.isEmpty()) {
 			player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 			return false;
 		}
 		
-		for (ItemHolder item : creationList)
-		{
-			if ((item.getId() <= 0) || (item.getCount() <= 0))
-			{
+		for (ItemHolder item : creationList) {
+			if ((item.getId() <= 0) || (item.getCount() <= 0)) {
 				continue;
 			}
 			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), getEffector(), true);
@@ -110,14 +100,13 @@ public class RestorationRandom extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.RESTORATION_RANDOM;
 	}
+	
 }

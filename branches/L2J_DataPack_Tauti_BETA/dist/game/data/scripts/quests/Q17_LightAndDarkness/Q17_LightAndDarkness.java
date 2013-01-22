@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original jython script by disKret, Skeleton & DrLecter.
  * @author nonom
  */
-public class Q17_LightAndDarkness extends Quest
-{
+public class Q17_LightAndDarkness extends Quest {
+	
 	private static final String qn = "17_LightAndDarkness";
 	
 	// NPCs
@@ -44,117 +44,97 @@ public class Q17_LightAndDarkness extends Quest
 	private static final int BLOOD_OF_SAINT = 7168;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 		
 			case "31517-02.html":
-				if (player.getLevel() >= 61)
-				{
+				if (player.getLevel() >= 61) {
 					st.giveItems(BLOOD_OF_SAINT, 4);
 					st.set("cond", "1");
 					st.setState(State.STARTED);
 					st.playSound("ItemSound.quest_accept");
-				}
-				else
-				{
+				} else {
 					htmltext = "31517-02a.html";
 				}
-				break;
+			break;
 			case "31508-02.html":
 			case "31509-02.html":
 			case "31510-02.html":
 			case "31511-02.html":
 				final int cond = st.getInt("cond");
 				final int npcId = Integer.parseInt(event.replace("-02.html", ""));
-				if ((cond == (npcId - 31507)) && st.hasQuestItems(BLOOD_OF_SAINT))
-				{
+				if ((cond == (npcId - 31507)) && st.hasQuestItems(BLOOD_OF_SAINT)) {
 					htmltext = npcId + "-01.html";
 					st.takeItems(BLOOD_OF_SAINT, 1);
 					st.set("cond", String.valueOf(cond + 1));
 					st.playSound("ItemSound.quest_middle");
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = getAlreadyCompletedMsg(player);
-				break;
+			break;
 			case State.CREATED:
 				final QuestState st2 = player.getQuestState("15_SweetWhispers");
 				htmltext = ((st2 != null) && (st2.isCompleted())) ? "31517-00.htm" : "31517-06.html";
-				break;
+			break;
 			case State.STARTED:
 				final long blood = st.getQuestItemsCount(BLOOD_OF_SAINT);
 				final int cond = st.getInt("cond");
 				final int npcId = npc.getNpcId();
-				switch (npcId)
-				{
+				switch (npcId) {
 					case HIERARCH:
-						if (cond < 5)
-						{
+						if (cond < 5) {
 							htmltext = (blood >= 5) ? "31517-05.html" : "31517-04.html";
-						}
-						else
-						{
+						} else {
 							htmltext = "31517-03.html";
 							st.addExpAndSp(697040, 54887);
 							st.playSound("ItemSound.quest_finish");
 							st.exitQuest(false);
 						}
-						break;
+					break;
 					case SAINT_ALTAR_1:
 					case SAINT_ALTAR_2:
 					case SAINT_ALTAR_3:
 					case SAINT_ALTAR_4:
-						if ((npcId - 31507) == cond)
-						{
+						if ((npcId - 31507) == cond) {
 							htmltext = npcId + ((blood > 0) ? "-00.html" : "-02.html");
-						}
-						else if (cond > (npcId - 31507))
-						{
+						} else if (cond > (npcId - 31507)) {
 							htmltext = npcId + "-03.html";
 						}
-						break;
+					break;
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q17_LightAndDarkness(int questId, String name, String descr)
-	{
+	public Q17_LightAndDarkness(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(HIERARCH);
-		
 		addTalkId(HIERARCH, SAINT_ALTAR_1, SAINT_ALTAR_2, SAINT_ALTAR_3, SAINT_ALTAR_4);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q17_LightAndDarkness(17, qn, "Light and Darkness");
 	}
+	
 }

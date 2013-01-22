@@ -33,24 +33,28 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.*;
+import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author lewzer
- * @author d0S. Fixs by Plim
- * update by pmq 20-05-2011
+ * @author d0S. Fixs by Plim update by pmq 20-05-2011
  */
-public class SanctumOftheLordsOfDawn extends Quest
-{
-	private class HSWorld extends InstanceWorld
-	{
-		public long[] storeTime = { 0, 0 }; // 0: instance start, 1: finish time
+public class SanctumOftheLordsOfDawn extends Quest {
+	
+	private class HSWorld extends InstanceWorld {
+		public long[] storeTime =
+		{
+			0,
+			0
+		}; // 0: instance start, 1: finish time
 		
-		private L2Npc	NPC_1, NPC_2, NPC_3, NPC_4, NPC_5, NPC_6, NPC_7, NPC_8, NPC_9, NPC_10, NPC_11, NPC_12, NPC_13, NPC_14, NPC_15, NPC_16, NPC_17, NPC_18,
-				NPC_19, NPC_20, NPC_21, NPC_22, NPC_23, NPC_24, NPC_25, NPC_26, NPC_27, NPC_28, NPC_29, NPC_30, NPC_31, NPC_32, NPC_33, NPC_34, NPC_35, S_C_NPC_1, S_C_NPC_2,
-				S_C_NPC_3, S_C_NPC_4, S_C_NPC_5, S_C_NPC_6;
+		protected L2Npc NPC_1, NPC_2, NPC_3, NPC_4, NPC_5, NPC_6, NPC_7, NPC_8, NPC_9, NPC_10, NPC_11, NPC_12, NPC_13, NPC_14, NPC_15, NPC_16, NPC_17, NPC_18, NPC_19, NPC_20, NPC_21, NPC_22, NPC_23, NPC_24, NPC_25, NPC_26, NPC_27, NPC_28, NPC_29, NPC_30, NPC_31, NPC_32, NPC_33, NPC_34, NPC_35,
+			S_C_NPC_1, S_C_NPC_2, S_C_NPC_3, S_C_NPC_4, S_C_NPC_5, S_C_NPC_6;
 		
-		public HSWorld() {}
+		public HSWorld() {
+		}
 	}
 	
 	private static final String qn = "SanctumOftheLordsOfDawn";
@@ -61,52 +65,52 @@ public class SanctumOftheLordsOfDawn extends Quest
 	private static final int IDENTITY_CARD = 13822;
 	
 	// NPCs
-	private static final int LIGHTOFDAWN = 32575;  // 傳送師 黎明之光
-	private static final int PWDEVICE    = 32577;  // 暗號輸入裝置
-	private static final int DEVICE      = 32578;  // 身份確認裝置
-	private static final int BLACK       = 32579;  // 傳送師 黎明的黑暗
-	private static final int SHELF       = 32580;  // 黎明的書櫃
-	private static final int PRIESTS     = 18828;  // 黎明的上位祭司
-	private static final int GUARD       = 18834;  // 黎明的警衛隊員
-	private static final int WPRIEST     = 18835;  // 黎明的警衛隊員
-	private static final int WGUARD      = 27351;  // 黎明的警衛隊員
+	private static final int LIGHTOFDAWN = 32575; // 傳送師 黎明之光
+	private static final int PWDEVICE = 32577; // 暗號輸入裝置
+	private static final int DEVICE = 32578; // 身份確認裝置
+	private static final int BLACK = 32579; // 傳送師 黎明的黑暗
+	private static final int SHELF = 32580; // 黎明的書櫃
+	private static final int PRIESTS = 18828; // 黎明的上位祭司
+	private static final int GUARD = 18834; // 黎明的警衛隊員
+	private static final int WPRIEST = 18835; // 黎明的警衛隊員
+	private static final int WGUARD = 27351; // 黎明的警衛隊員
 	
-	private static final int ONE         = 17240001;
-	private static final int TWO         = 17240003;
-	private static final int THREE       = 17240005;
+	private static final int ONE = 17240001;
+	private static final int TWO = 17240003;
+	private static final int THREE = 17240005;
 	
 	// TRANSFORM SKILL
 	private static final int GUARD_AMBUSH = 963;
 	
 	// GUARD_SKILL
-	private static final int GUARD_SKILL  = 5978;
+	private static final int GUARD_SKILL = 5978;
 	
 	// WALK TIMERS
-	private static final int SHORT        = 3500;
-	private static final int MID          = 6000;
-	private static final int MID2         = 7500;
-	private static final int LONG         = 14000;
-	private static final int HUGE         = 29000;
+	private static final int SHORT = 3500;
+	private static final int MID = 6000;
+	private static final int MID2 = 7500;
+	private static final int LONG = 14000;
+	private static final int HUGE = 29000;
 	
 	// MOVE PATHS
-	private static final L2CharPosition MOVE_TO_1_A  = new L2CharPosition(-75022, 212090, -7317, 0);
-	private static final L2CharPosition MOVE_TO_1_B  = new L2CharPosition(-74876, 212091, -7317, 0);
-	private static final L2CharPosition MOVE_TO_2_A  = new L2CharPosition(-75334, 212109, -7317, 0);
-	private static final L2CharPosition MOVE_TO_2_B  = new L2CharPosition(-75661, 212109, -7319, 0);
-	private static final L2CharPosition MOVE_TO_3_A  = new L2CharPosition(-74205, 212102, -7319, 0);
-	private static final L2CharPosition MOVE_TO_3_B  = new L2CharPosition(-74576, 212102, -7319, 0);
-	private static final L2CharPosition MOVE_TO_4_A  = new L2CharPosition(-75228, 211458, -7317, 0);
-	private static final L2CharPosition MOVE_TO_4_B  = new L2CharPosition(-75233, 211125, -7319, 0);
-	private static final L2CharPosition MOVE_TO_5_A  = new L2CharPosition(-74673, 211129, -7321, 0);
-	private static final L2CharPosition MOVE_TO_5_B  = new L2CharPosition(-74686, 211494, -7321, 0);
-	private static final L2CharPosition MOVE_TO_6_A  = new L2CharPosition(-75230, 210171, -7415, 0);
-	private static final L2CharPosition MOVE_TO_6_B  = new L2CharPosition(-74689, 210157, -7418, 0);
-	private static final L2CharPosition MOVE_TO_7_A  = new L2CharPosition(-74685, 209824, -7415, 0);
-	private static final L2CharPosition MOVE_TO_7_B  = new L2CharPosition(-75215, 209817, -7415, 0);
-	private static final L2CharPosition MOVE_TO_8_A  = new L2CharPosition(-75545, 207553, -7511, 0);
-	private static final L2CharPosition MOVE_TO_8_B  = new L2CharPosition(-75558, 208834, -7514, 0);
-	private static final L2CharPosition MOVE_TO_9_A  = new L2CharPosition(-75412, 207137, -7511, 0);
-	private static final L2CharPosition MOVE_TO_9_B  = new L2CharPosition(-75691, 207140, -7511, 0);
+	private static final L2CharPosition MOVE_TO_1_A = new L2CharPosition(-75022, 212090, -7317, 0);
+	private static final L2CharPosition MOVE_TO_1_B = new L2CharPosition(-74876, 212091, -7317, 0);
+	private static final L2CharPosition MOVE_TO_2_A = new L2CharPosition(-75334, 212109, -7317, 0);
+	private static final L2CharPosition MOVE_TO_2_B = new L2CharPosition(-75661, 212109, -7319, 0);
+	private static final L2CharPosition MOVE_TO_3_A = new L2CharPosition(-74205, 212102, -7319, 0);
+	private static final L2CharPosition MOVE_TO_3_B = new L2CharPosition(-74576, 212102, -7319, 0);
+	private static final L2CharPosition MOVE_TO_4_A = new L2CharPosition(-75228, 211458, -7317, 0);
+	private static final L2CharPosition MOVE_TO_4_B = new L2CharPosition(-75233, 211125, -7319, 0);
+	private static final L2CharPosition MOVE_TO_5_A = new L2CharPosition(-74673, 211129, -7321, 0);
+	private static final L2CharPosition MOVE_TO_5_B = new L2CharPosition(-74686, 211494, -7321, 0);
+	private static final L2CharPosition MOVE_TO_6_A = new L2CharPosition(-75230, 210171, -7415, 0);
+	private static final L2CharPosition MOVE_TO_6_B = new L2CharPosition(-74689, 210157, -7418, 0);
+	private static final L2CharPosition MOVE_TO_7_A = new L2CharPosition(-74685, 209824, -7415, 0);
+	private static final L2CharPosition MOVE_TO_7_B = new L2CharPosition(-75215, 209817, -7415, 0);
+	private static final L2CharPosition MOVE_TO_8_A = new L2CharPosition(-75545, 207553, -7511, 0);
+	private static final L2CharPosition MOVE_TO_8_B = new L2CharPosition(-75558, 208834, -7514, 0);
+	private static final L2CharPosition MOVE_TO_9_A = new L2CharPosition(-75412, 207137, -7511, 0);
+	private static final L2CharPosition MOVE_TO_9_B = new L2CharPosition(-75691, 207140, -7511, 0);
 	private static final L2CharPosition MOVE_TO_10_A = new L2CharPosition(-74512, 208266, -7511, 0);
 	private static final L2CharPosition MOVE_TO_10_B = new L2CharPosition(-74197, 208271, -7511, 0);
 	private static final L2CharPosition MOVE_TO_11_A = new L2CharPosition(-74515, 207060, -7509, 0);
@@ -160,56 +164,45 @@ public class SanctumOftheLordsOfDawn extends Quest
 	private static final L2CharPosition MOVE_TO_35_A = new L2CharPosition(-77048, 207800, -7709, 0);
 	private static final L2CharPosition MOVE_TO_35_B = new L2CharPosition(-78324, 207800, -7709, 0);
 	
-	private class teleCoord
-	{
+	protected class teleCoord {
 		int instanceId;
 		int x;
 		int y;
 		int z;
 	}
 	
-	private void teleportplayer(L2PcInstance player, teleCoord teleto)
-	{
+	private void teleportplayer(L2PcInstance player, teleCoord teleto) {
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(teleto.instanceId);
 		player.teleToLocation(teleto.x, teleto.y, teleto.z);
 		return;
 	}
 	
-	protected void exitInstance(L2PcInstance player, teleCoord tele)
-	{
+	protected void exitInstance(L2PcInstance player, teleCoord tele) {
 		player.setInstanceId(0);
 		player.teleToLocation(-12585, 122305, -2989);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("Group_SHORT_B"))
-		{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("Group_SHORT_B")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_1.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_1_B);
 				startQuestTimer("Group_SHORT_A", SHORT, world.NPC_1, null);
 			}
-		}
-		else if (event.equalsIgnoreCase("Group_SHORT_A"))
-		{
+		} else if (event.equalsIgnoreCase("Group_SHORT_A")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_1.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_1_A);
 				startQuestTimer("Group_SHORT_B", SHORT, world.NPC_1, null);
 			}
 		}
-		if (event.equalsIgnoreCase("Group_MID_B"))
-		{
+		if (event.equalsIgnoreCase("Group_MID_B")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_2.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_2_B);
 				world.NPC_3.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_3_B);
@@ -232,12 +225,9 @@ public class SanctumOftheLordsOfDawn extends Quest
 				world.NPC_33.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_33_B);
 				startQuestTimer("Group_MID_A", MID, world.NPC_2, null);
 			}
-		}
-		else if (event.equalsIgnoreCase("Group_MID_A"))
-		{
+		} else if (event.equalsIgnoreCase("Group_MID_A")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_2.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_2_A);
 				world.NPC_3.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_3_A);
@@ -261,11 +251,9 @@ public class SanctumOftheLordsOfDawn extends Quest
 				startQuestTimer("Group_MID_B", MID, world.NPC_2, null);
 			}
 		}
-		if (event.equalsIgnoreCase("Group_MID2_B"))
-		{
+		if (event.equalsIgnoreCase("Group_MID2_B")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_14.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_14_B);
 				world.NPC_17.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_17_B);
@@ -276,12 +264,9 @@ public class SanctumOftheLordsOfDawn extends Quest
 				world.NPC_34.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_34_B);
 				startQuestTimer("Group_MID2_A", MID2, world.NPC_14, null);
 			}
-		}
-		else if (event.equalsIgnoreCase("Group_MID2_A"))
-		{
+		} else if (event.equalsIgnoreCase("Group_MID2_A")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_14.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_14_A);
 				world.NPC_17.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_17_A);
@@ -293,11 +278,9 @@ public class SanctumOftheLordsOfDawn extends Quest
 				startQuestTimer("Group_MID2_B", MID2, world.NPC_14, null);
 			}
 		}
-		if (event.equalsIgnoreCase("Group_LONG_B"))
-		{
+		if (event.equalsIgnoreCase("Group_LONG_B")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_6.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_6_B);
 				world.NPC_7.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_7_B);
@@ -306,12 +289,9 @@ public class SanctumOftheLordsOfDawn extends Quest
 				world.NPC_32.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_32_B);
 				startQuestTimer("Group_LONG_A", LONG, world.NPC_6, null);
 			}
-		}
-		else if (event.equalsIgnoreCase("Group_LONG_A"))
-		{
+		} else if (event.equalsIgnoreCase("Group_LONG_A")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_6.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_6_A);
 				world.NPC_7.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_7_A);
@@ -321,23 +301,18 @@ public class SanctumOftheLordsOfDawn extends Quest
 				startQuestTimer("Group_LONG_B", LONG, world.NPC_6, null);
 			}
 		}
-		if (event.equalsIgnoreCase("Group_HUGE_A"))
-		{
+		if (event.equalsIgnoreCase("Group_HUGE_A")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_12.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_12_A);
 				world.NPC_8.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_8_A);
 				world.NPC_35.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_35_A);
 				startQuestTimer("Group_HUGE_B", HUGE, world.NPC_12, null);
 			}
-		}
-		else if (event.equalsIgnoreCase("Group_HUGE_B"))
-		{
+		} else if (event.equalsIgnoreCase("Group_HUGE_B")) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
+			if (tmpworld instanceof HSWorld) {
 				HSWorld world = (HSWorld) tmpworld;
 				world.NPC_12.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_12_B);
 				world.NPC_8.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_8_B);
@@ -345,81 +320,53 @@ public class SanctumOftheLordsOfDawn extends Quest
 				startQuestTimer("Group_HUGE_A", HUGE, world.NPC_12, null);
 			}
 		}
-		/*else if (event.equalsIgnoreCase("circle"))
-		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmpworld instanceof HSWorld)
-			{
-				HSWorld world = (HSWorld) tmpworld;
-				// STATIC NPCS IN CIRCLE
-				world.S_C_NPC_1 = addSpawn(PRIESTS, -79225, 205933, -7908, 38276, false, 0, false, world.instanceId);
-				world.S_C_NPC_1.setIsNoRndWalk(true);
-				world.S_C_NPC_2 = addSpawn(PRIESTS, -79229, 205780, -7908, 27559, false, 0, false, world.instanceId);
-				world.S_C_NPC_2.setIsNoRndWalk(true);
-				world.S_C_NPC_3 = addSpawn(PRIESTS, -79360, 205705, -7908, 16383, false, 0, false, world.instanceId);
-				world.S_C_NPC_3.setIsNoRndWalk(true);
-				world.S_C_NPC_4 = addSpawn(PRIESTS, -79491, 205780, -7908, 5208, false, 0, false, world.instanceId);
-				world.S_C_NPC_4.setIsNoRndWalk(true);
-				world.S_C_NPC_5 = addSpawn(PRIESTS, -79488, 205929, -7908, 60699, false, 0, false, world.instanceId);
-				world.S_C_NPC_5.setIsNoRndWalk(true);
-				world.S_C_NPC_6 = addSpawn(PRIESTS, -79361, 206006, -7908, 48480, false, 0, false, world.instanceId);
-				world.S_C_NPC_6.setIsNoRndWalk(true);
-			}
-		}*/
-		else if (event.equalsIgnoreCase("password"))
-		{
+		/*
+		 * else if (event.equalsIgnoreCase("circle")) { InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId()); if (tmpworld instanceof HSWorld) { HSWorld world = (HSWorld) tmpworld; // STATIC NPCS IN CIRCLE world.S_C_NPC_1 = addSpawn(PRIESTS, -79225, 205933, -7908,
+		 * 38276, false, 0, false, world.instanceId); world.S_C_NPC_1.setIsNoRndWalk(true); world.S_C_NPC_2 = addSpawn(PRIESTS, -79229, 205780, -7908, 27559, false, 0, false, world.instanceId); world.S_C_NPC_2.setIsNoRndWalk(true); world.S_C_NPC_3 = addSpawn(PRIESTS, -79360, 205705, -7908, 16383,
+		 * false, 0, false, world.instanceId); world.S_C_NPC_3.setIsNoRndWalk(true); world.S_C_NPC_4 = addSpawn(PRIESTS, -79491, 205780, -7908, 5208, false, 0, false, world.instanceId); world.S_C_NPC_4.setIsNoRndWalk(true); world.S_C_NPC_5 = addSpawn(PRIESTS, -79488, 205929, -7908, 60699, false, 0,
+		 * false, world.instanceId); world.S_C_NPC_5.setIsNoRndWalk(true); world.S_C_NPC_6 = addSpawn(PRIESTS, -79361, 206006, -7908, 48480, false, 0, false, world.instanceId); world.S_C_NPC_6.setIsNoRndWalk(true); } }
+		 */
+		else if (event.equalsIgnoreCase("password")) {
 			InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 			openDoor(player, world.instanceId);
 			return "32577-03.htm";
-		}
-		else if (event.equalsIgnoreCase("nopass"))
-		{
+		} else if (event.equalsIgnoreCase("nopass")) {
 			InstanceWorld tmworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (tmworld instanceof HSWorld)
-			{
+			if (tmworld instanceof HSWorld) {
 				player.teleToLocation(-78198, 205852, -7865);
 				return "32577-02.htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("sc2"))
-		{
+		} else if (event.equalsIgnoreCase("sc2")) {
 			return "32580-02.htm";
-		}
-		else if (event.equalsIgnoreCase("sc"))
-		{
+		} else if (event.equalsIgnoreCase("sc")) {
 			QuestState st = player.getQuestState(qn);
-			if (st == null)
+			if (st == null) {
 				st = newQuestState(player);
+			}
 			
-			if (st.getQuestItemsCount(SHUNAIMAN_CONTRACT) == 0)
-			{
-				st.giveItems(SHUNAIMAN_CONTRACT,1);
+			if (st.getQuestItemsCount(SHUNAIMAN_CONTRACT) == 0) {
+				st.giveItems(SHUNAIMAN_CONTRACT, 1);
 				st.playSound("ItemSound.quest_itemget");
 				return "32580-03.htm";
 			}
 			return "";
-		}
-		else if (event.equalsIgnoreCase("reTele"))
-		{
+		} else if (event.equalsIgnoreCase("reTele")) {
 			((L2Attackable) npc).clearAggroList();
 			player.teleToLocation(-75711, 213421, -7125);
-			//player.teleToLocation(-74959, 209294, -7459);
-			//player.teleToLocation(-77705, 208898, -7647);
+			// player.teleToLocation(-74959, 209294, -7459);
+			// player.teleToLocation(-77705, 208898, -7647);
 			return null;
 		}
 		return "";
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, teleCoord teleto)
-	{
+	protected int enterInstance(L2PcInstance player, String template, teleCoord teleto) {
 		int instanceId = 0;
-		//check for existing instances for this player
+		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		//existing instance
-		if (world != null)
-		{
-			if (!(world instanceof HSWorld))
-			{
+		// existing instance
+		if (world != null) {
+			if (!(world instanceof HSWorld)) {
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
 				return 0;
 			}
@@ -427,7 +374,7 @@ public class SanctumOftheLordsOfDawn extends Quest
 			teleportplayer(player, teleto);
 			return instanceId;
 		}
-		//New instance
+		// New instance
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new HSWorld();
 		world.instanceId = instanceId;
@@ -444,8 +391,7 @@ public class SanctumOftheLordsOfDawn extends Quest
 		return instanceId;
 	}
 	
-	private void spawnState(HSWorld world)
-	{
+	private void spawnState(HSWorld world) {
 		// STATIC NPC's
 		L2Npc S_NPC_0 = addSpawn(DEVICE, -75710, 213535, -7126, 0, false, 0, false, world.instanceId);
 		S_NPC_0.setIsNoRndWalk(true);
@@ -565,75 +511,62 @@ public class SanctumOftheLordsOfDawn extends Quest
 		startQuestTimer("Group_HUGE_B", HUGE, world.NPC_12, null);
 	}
 	
-	private synchronized void openDoor(L2PcInstance player, int instanceId)
-	{
+	private synchronized void openDoor(L2PcInstance player, int instanceId) {
 		final ArrayList<L2DoorInstance> doors = InstanceManager.getInstance().getInstance(instanceId).getDoors();
-		for (L2DoorInstance door : doors)
-		{
-			switch (door.getDoorId())
-			{
+		for (L2DoorInstance door : doors) {
+			switch (door.getDoorId()) {
 				case ONE:
 					Collection<L2PcInstance> knows = door.getKnownList().getKnownPlayersInRadius(500);
-					for (L2PcInstance pc : knows)
-					{
-						if (pc == player && !door.getOpen())
-						{
+					for (L2PcInstance pc : knows) {
+						if ((pc == player) && !door.getOpen()) {
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USING_INVISIBLE_SKILL_SNEAK_IN));
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MALE_GUARDS_CAN_DETECT_FEMALE_CANT));
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FEMALE_GUARDS_NOTICE_FROM_FAR_AWAY_BEWARE));
 							door.openMe();
-						}
-						else
-						{
+						} else {
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USING_INVISIBLE_SKILL_SNEAK_IN));
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MALE_GUARDS_CAN_DETECT_FEMALE_CANT));
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FEMALE_GUARDS_NOTICE_FROM_FAR_AWAY_BEWARE));
 						}
 					}
-					break;
+				break;
 				case TWO:
 					knows = door.getKnownList().getKnownPlayersInRadius(500);
-					for (L2PcInstance pc : knows)
-					{
-						if (pc == player && !door.getOpen())
-						{
+					for (L2PcInstance pc : knows) {
+						if ((pc == player) && !door.getOpen()) {
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DOOR_IS_ENTRANCE_APPROACH_DEVICE));
 							door.openMe();
 							player.showQuestMovie(11);
-							//startQuestTimer("circle", 30000, null, null);
-						}
-						else
-						{
+							// startQuestTimer("circle", 30000, null, null);
+						} else {
 							player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DOOR_IS_ENTRANCE_APPROACH_DEVICE));
 							door.openMe();
 							player.showQuestMovie(11);
 						}
 					}
-					break;
+				break;
 				case THREE:
 					knows = door.getKnownList().getKnownPlayersInRadius(500);
-					for (L2PcInstance pc : knows)
-					{
-						if (pc == player && !door.getOpen())
+					for (L2PcInstance pc : knows) {
+						if ((pc == player) && !door.getOpen()) {
 							door.openMe();
+						}
 					}
-					break;
+				break;
 			}
 		}
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			st = newQuestState(player);
+		}
 		
-		switch (npc.getNpcId())
-		{
+		switch (npc.getNpcId()) {
 			case LIGHTOFDAWN:
-				if (player.getTransformationId() == 113 && st.hasQuestItems(IDENTITY_CARD))
-				{
+				if ((player.getTransformationId() == 113) && st.hasQuestItems(IDENTITY_CARD)) {
 					teleCoord tele = new teleCoord();
 					tele.x = -76156;
 					tele.y = 213409;
@@ -643,22 +576,19 @@ public class SanctumOftheLordsOfDawn extends Quest
 				}
 				return "32575-01.htm";
 			case DEVICE:
-				if (player.getTransformationId() == 113 && st.hasQuestItems(IDENTITY_CARD))
-				{
+				if ((player.getTransformationId() == 113) && st.hasQuestItems(IDENTITY_CARD)) {
 					InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 					openDoor(player, world.instanceId);
 					return "32578-03.htm";
 				}
 				return null;
 			case PWDEVICE:
-				if (player.getTransformationId() == 113 && st.hasQuestItems(IDENTITY_CARD))
-				{
+				if ((player.getTransformationId() == 113) && st.hasQuestItems(IDENTITY_CARD)) {
 					return "32577-01.htm";
 				}
 				return null;
 			case BLACK:
-				if (player.getTransformationId() == 113 && st.hasQuestItems(IDENTITY_CARD))
-				{
+				if ((player.getTransformationId() == 113) && st.hasQuestItems(IDENTITY_CARD)) {
 					InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 					world.allowed.remove(world.allowed.indexOf(player.getObjectId()));
 					teleCoord tele = new teleCoord();
@@ -668,8 +598,7 @@ public class SanctumOftheLordsOfDawn extends Quest
 				}
 				return null;
 			case SHELF:
-				if (player.getTransformationId() == 113 && st.hasQuestItems(IDENTITY_CARD))
-				{
+				if ((player.getTransformationId() == 113) && st.hasQuestItems(IDENTITY_CARD)) {
 					InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 					world.allowed.remove(world.allowed.indexOf(player.getObjectId()));
 					teleCoord tele = new teleCoord();
@@ -683,15 +612,11 @@ public class SanctumOftheLordsOfDawn extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if (tmpworld instanceof HSWorld)
-		{
-			if (npc.getNpcId() == WGUARD)
-			{
-				if (player.getFirstEffect(GUARD_AMBUSH) == null)
-				{
+		if (tmpworld instanceof HSWorld) {
+			if (npc.getNpcId() == WGUARD) {
+				if (player.getFirstEffect(GUARD_AMBUSH) == null) {
 					((L2Attackable) npc).abortAttack();
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CANT_APPROACH_THIS_PLACE));
 					npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL, 1, 2500, 1));
@@ -699,16 +624,14 @@ public class SanctumOftheLordsOfDawn extends Quest
 					startQuestTimer("reTele", 3000, npc, player);
 				}
 			}
-			if (npc.getNpcId() == WPRIEST)
-			{
+			if (npc.getNpcId() == WPRIEST) {
 				((L2Attackable) npc).abortAttack();
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.HOW_DARE_YOU_INTRUDE_WITH_THAT_TRANSFORMATION_GET_LOST));
 				npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL, 1, 2500, 1));
 				npc.disableCoreAI(true);
 				startQuestTimer("reTele", 3000, npc, player);
 			}
-			if (npc.getNpcId() == GUARD)
-			{
+			if (npc.getNpcId() == GUARD) {
 				((L2Attackable) npc).abortAttack();
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.INTRUDER_PROTECT_THE_PRIESTS_OF_DAWN));
 				npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL, 1, 2500, 1));
@@ -720,8 +643,7 @@ public class SanctumOftheLordsOfDawn extends Quest
 		return null;
 	}
 	
-	public SanctumOftheLordsOfDawn(int questId, String name, String descr)
-	{
+	public SanctumOftheLordsOfDawn(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(LIGHTOFDAWN);
@@ -735,9 +657,9 @@ public class SanctumOftheLordsOfDawn extends Quest
 		addAggroRangeEnterId(WGUARD);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		// now call the constructor (starts up the)
 		new SanctumOftheLordsOfDawn(-1, qn, "instances");
 	}
+	
 }

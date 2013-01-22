@@ -36,11 +36,12 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 /**
  * @author DS
  */
-public class AirShipGludioGracia extends Quest implements Runnable
-{
+public class AirShipGludioGracia extends Quest implements Runnable {
+	
 	private static final int[] CONTROLLERS =
 	{
-		32607, 32609
+		32607,
+		32609
 	};
 	
 	private static final int GLUDIO_DOCK_ID = 10;
@@ -92,7 +93,12 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	
 	private static final VehiclePathPoint[] WARPGATE_TO_GLUDIO =
 	{
-		new VehiclePathPoint(-153414, 255385, 221), new VehiclePathPoint(-149548, 258172, 221), new VehiclePathPoint(-146884, 257097, 221), new VehiclePathPoint(-146672, 254239, 221), new VehiclePathPoint(-147855, 252712, 206), new VehiclePathPoint(-149378, 252552, 198)
+		new VehiclePathPoint(-153414, 255385, 221),
+		new VehiclePathPoint(-149548, 258172, 221),
+		new VehiclePathPoint(-146884, 257097, 221),
+		new VehiclePathPoint(-146672, 254239, 221),
+		new VehiclePathPoint(-147855, 252712, 206),
+		new VehiclePathPoint(-149378, 252552, 198)
 	};
 	
 	private final L2AirShipInstance _ship;
@@ -104,83 +110,59 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	private L2Npc _atcGracia = null;
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (player.isTransformed())
-		{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (player.isTransformed()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_TRANSFORMED);
 			return null;
-		}
-		else if (player.isParalyzed())
-		{
+		} else if (player.isParalyzed()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_PETRIFIED);
 			return null;
-		}
-		else if (player.isDead() || player.isFakeDeath())
-		{
+		} else if (player.isDead() || player.isFakeDeath()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_DEAD);
 			return null;
-		}
-		else if (player.isFishing())
-		{
+		} else if (player.isFishing()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_FISHING);
 			return null;
-		}
-		else if (player.isInCombat())
-		{
+		} else if (player.isInCombat()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_BATTLE);
 			return null;
-		}
-		else if (player.isInDuel())
-		{
+		} else if (player.isInDuel()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_A_DUEL);
 			return null;
-		}
-		else if (player.isSitting())
-		{
+		} else if (player.isSitting()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_SITTING);
 			return null;
-		}
-		else if (player.isCastingNow())
-		{
+		} else if (player.isCastingNow()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_CASTING);
 			return null;
-		}
-		else if (player.isCursedWeaponEquipped())
-		{
+		} else if (player.isCursedWeaponEquipped()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
 			return null;
-		}
-		else if (player.isCombatFlagEquipped())
-		{
+		} else if (player.isCombatFlagEquipped()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_HOLDING_A_FLAG);
 			return null;
-		}
-		else if (player.getPet() != null || player.isMounted())
-		{
+		} else if ((player.getPet() != null) || player.isMounted()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
 			return null;
-		}
-		else if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false))
+		} else if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false)) {
 			_ship.addPassenger(player);
+		}
 		
 		return null;
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
+		}
 		
 		return npc.getNpcId() + ".htm";
 	}
 	
-	public AirShipGludioGracia(int questId, String name, String descr)
-	{
+	public AirShipGludioGracia(int questId, String name, String descr) {
 		super(questId, name, descr);
-		for (int id : CONTROLLERS)
-		{
+		for (int id : CONTROLLERS) {
 			addStartNpc(id);
 			addFirstTalkId(id);
 			addTalkId(id);
@@ -192,102 +174,93 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	}
 	
 	@Override
-	public void run()
-	{
-		try
-		{
-			switch (_cycle)
-			{
+	public void run() {
+		try {
+			switch (_cycle) {
 				case 0:
 					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_GRACIA_CONTINENT_HAS_DEPARTED);
 					_ship.setInDock(0);
 					_ship.executePath(GLUDIO_TO_WARPGATE);
-					break;
+				break;
 				case 1:
 					// _ship.teleToLocation(-167874, 256731, -509, 41035, false);
 					_ship.setOustLoc(OUST_GRACIA);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
-					break;
+				break;
 				case 2:
 					_ship.executePath(WARPGATE_TO_GRACIA);
-					break;
+				break;
 				case 3:
 					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
-					break;
+				break;
 				case 4:
 					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_ADEN_CONTINENT_HAS_DEPARTED);
 					_ship.setInDock(0);
 					_ship.executePath(GRACIA_TO_WARPGATE);
-					break;
+				break;
 				case 5:
 					// _ship.teleToLocation(-157261, 255664, 221, 64781, false);
 					_ship.setOustLoc(OUST_GLUDIO);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
-					break;
+				break;
 				case 6:
 					_ship.executePath(WARPGATE_TO_GLUDIO);
-					break;
+				break;
 				case 7:
 					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GLUDIO_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
-					break;
+				break;
 			}
 			_cycle++;
-			if (_cycle > 7)
+			if (_cycle > 7) {
 				_cycle = 0;
-		}
-		catch (Exception e)
-		{
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	private final void broadcastInGludio(NpcStringId npcString)
-	{
-		if (!_foundAtcGludio)
-		{
+	private final void broadcastInGludio(NpcStringId npcString) {
+		if (!_foundAtcGludio) {
 			_foundAtcGludio = true;
 			_atcGludio = findController();
 		}
-		if (_atcGludio != null)
+		if (_atcGludio != null) {
 			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.SHOUT, _atcGludio.getNpcId(), npcString));
+		}
 	}
 	
-	private final void broadcastInGracia(NpcStringId npcStringId)
-	{
-		if (!_foundAtcGracia)
-		{
+	private final void broadcastInGracia(NpcStringId npcStringId) {
+		if (!_foundAtcGracia) {
 			_foundAtcGracia = true;
 			_atcGracia = findController();
 		}
-		if (_atcGracia != null)
+		if (_atcGracia != null) {
 			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.SHOUT, _atcGracia.getNpcId(), npcStringId));
+		}
 	}
 	
-	private final L2Npc findController()
-	{
+	private final L2Npc findController() {
 		// check objects around the ship
-		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600))
-		{
-			if (obj instanceof L2Npc)
-			{
-				for (int id : CONTROLLERS)
-				{
-					if (((L2Npc) obj).getNpcId() == id)
+		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600)) {
+			if (obj instanceof L2Npc) {
+				for (int id : CONTROLLERS) {
+					if (((L2Npc) obj).getNpcId() == id) {
 						return (L2Npc) obj;
+					}
 				}
 			}
 		}
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new AirShipGludioGracia(-1, AirShipGludioGracia.class.getSimpleName(), "vehicles");
 	}
+	
 }

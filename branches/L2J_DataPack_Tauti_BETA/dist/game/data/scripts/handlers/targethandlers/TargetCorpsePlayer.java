@@ -35,85 +35,79 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author UnAfraid
  */
-public class TargetCorpsePlayer implements ITargetTypeHandler
-{
+public class TargetCorpsePlayer implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		List<L2Character> targetList = new FastList<>();
-		if (target != null && target.isDead())
-		{
+		if ((target != null) && target.isDead()) {
 			final L2PcInstance player;
-			if (activeChar instanceof L2PcInstance)
+			if (activeChar instanceof L2PcInstance) {
 				player = (L2PcInstance) activeChar;
-			else
+			} else {
 				player = null;
+			}
 			
 			final L2PcInstance targetPlayer;
-			if (target instanceof L2PcInstance)
+			if (target instanceof L2PcInstance) {
 				targetPlayer = (L2PcInstance) target;
-			else
+			} else {
 				targetPlayer = null;
+			}
 			
 			final L2PetInstance targetPet;
-			if (target instanceof L2PetInstance)
+			if (target instanceof L2PetInstance) {
 				targetPet = (L2PetInstance) target;
-			else
+			} else {
 				targetPet = null;
+			}
 			
-			if (player != null && (targetPlayer != null || targetPet != null))
-			{
+			if ((player != null) && ((targetPlayer != null) || (targetPet != null))) {
 				boolean condGood = true;
 				
-				if (skill.getSkillType() == L2SkillType.RESURRECT)
-				{
-					if (targetPlayer != null)
-					{
+				if (skill.getSkillType() == L2SkillType.RESURRECT) {
+					if (targetPlayer != null) {
 						// check target is not in a active siege zone
-						if (targetPlayer.isInsideZone(L2Character.ZONE_SIEGE) && !targetPlayer.isInSiege())
-						{
+						if (targetPlayer.isInsideZone(L2Character.ZONE_SIEGE) && !targetPlayer.isInSiege()) {
 							condGood = false;
 							activeChar.sendPacket(SystemMessageId.CANNOT_BE_RESURRECTED_DURING_SIEGE);
 						}
 						
-						if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
-						{
+						if (targetPlayer.isFestivalParticipant()) { // Check to see if the current player target is in a festival.
 							condGood = false;
 							activeChar.sendMessage("You may not resurrect participants in a festival.");
 						}
-						if (targetPlayer.isReviveRequested())
-						{
-							if (targetPlayer.isRevivingPet())
+						if (targetPlayer.isReviveRequested()) {
+							if (targetPlayer.isRevivingPet()) {
 								player.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
-							else
+							} else {
 								player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+							}
 							condGood = false;
 						}
-					}
-					else if (targetPet != null)
-					{
-						if (targetPet.getOwner() != player)
-						{
-							if (targetPet.getOwner().isReviveRequested())
-							{
-								if (targetPet.getOwner().isRevivingPet())
+					} else if (targetPet != null) {
+						if (targetPet.getOwner() != player) {
+							if (targetPet.getOwner().isReviveRequested()) {
+								if (targetPet.getOwner().isRevivingPet()) {
 									player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
-								else
+								} else {
 									player.sendPacket(SystemMessageId.CANNOT_RES_PET2); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+								}
 								condGood = false;
 							}
 						}
 					}
 				}
 				
-				if (condGood)
-				{
-					if (!onlyFirst)
-					{
+				if (condGood) {
+					if (!onlyFirst) {
 						targetList.add(target);
 						return targetList.toArray(new L2Object[targetList.size()]);
 					}
-					return new L2Character[] { target };
+					return new L2Character[]
+					{
+						target
+					};
 				}
 			}
 		}
@@ -122,8 +116,8 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_CORPSE_PLAYER;
 	}
+	
 }

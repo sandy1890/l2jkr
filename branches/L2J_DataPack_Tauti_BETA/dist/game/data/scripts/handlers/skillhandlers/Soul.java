@@ -31,41 +31,37 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author nBd
  */
-public class Soul implements ISkillHandler
-{
+public class Soul implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.CHARGESOUL
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!(activeChar instanceof L2PcInstance) || activeChar.isAlikeDead())
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!(activeChar instanceof L2PcInstance) || activeChar.isAlikeDead()) {
 			return;
+		}
 		
 		L2PcInstance player = (L2PcInstance) activeChar;
-
+		
 		int level = player.getSkillLevel(467);
-		if (level > 0)
-		{
+		if (level > 0) {
 			L2Skill soulmastery = SkillTable.getInstance().getInfo(467, level);
 			
-			if (soulmastery != null)
-			{
-				if (player.getSouls() < soulmastery.getNumSouls())
-				{
+			if (soulmastery != null) {
+				if (player.getSouls() < soulmastery.getNumSouls()) {
 					int count = 0;
 					
-					if (player.getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
+					if ((player.getSouls() + skill.getNumSouls()) <= soulmastery.getNumSouls()) {
 						count = skill.getNumSouls();
-					else
+					} else {
 						count = soulmastery.getNumSouls() - player.getSouls();
+					}
 					
 					player.increaseSouls(count);
-				}
-				else
-				{
+				} else {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
 					player.sendPacket(sm);
 					return;
@@ -75,8 +71,8 @@ public class Soul implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

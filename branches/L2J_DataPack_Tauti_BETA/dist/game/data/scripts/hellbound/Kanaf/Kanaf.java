@@ -25,30 +25,27 @@ import com.l2jserver.gameserver.model.quest.Quest;
 /**
  * @author GKR
  */
-public class Kanaf extends Quest
-{
+public class Kanaf extends Quest {
+	
 	private static final int KANAF = 32346;
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("info"))
-		{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("info")) {
 			return "32346-0" + getRandom(1, 3) + ".htm";
 		}
 		
 		return null;
 	}
 	
-	public Kanaf(int questId, String name, String descr)
-	{
+	public Kanaf(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(KANAF);
 		addTalkId(KANAF);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Kanaf(-1, "Kanaf", "hellbound");
 	}
+	
 }

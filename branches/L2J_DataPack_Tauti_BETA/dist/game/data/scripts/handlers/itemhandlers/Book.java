@@ -19,6 +19,7 @@
 package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -26,15 +27,12 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class Book implements IItemHandler
-{
+public class Book implements IItemHandler {
+	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
-	{
-		if (!playable.isPlayer())
-		{
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse) {
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
@@ -45,14 +43,11 @@ public class Book implements IItemHandler
 		String filename = "data/html/help/" + itemId + ".htm";
 		String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 		
-		if (content == null)
-		{
+		if (content == null) {
 			NpcHtmlMessage html = new NpcHtmlMessage(1);
-			html.setHtml("<html><body>"+ MessageTable.Messages[1114].getMessage() +"<br>" + filename + "</body></html>");
+			html.setHtml("<html><body>" + MessageTable.Messages[1114].getMessage() + "<br>" + filename + "</body></html>");
 			activeChar.sendPacket(html);
-		}
-		else
-		{
+		} else {
 			NpcHtmlMessage itemReply = new NpcHtmlMessage(5, itemId);
 			itemReply.setHtml(content);
 			itemReply.disableValidation();
@@ -62,4 +57,5 @@ public class Book implements IItemHandler
 		activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		return true;
 	}
+	
 }

@@ -28,10 +28,10 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
 /**
- * @author  Julian
+ * @author Julian
  */
-public class DeluxeKey implements ISkillHandler
-{
+public class DeluxeKey implements ISkillHandler {
+	
 	private static Logger _log = Logger.getLogger(DeluxeKey.class.getName());
 	
 	private static final L2SkillType[] SKILL_IDS =
@@ -40,15 +40,14 @@ public class DeluxeKey implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!(activeChar instanceof L2PcInstance))
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!(activeChar instanceof L2PcInstance)) {
 			return;
+		}
 		
 		L2Object[] targetList = skill.getTargetList(activeChar);
 		
-		if (targetList == null)
-		{
+		if (targetList == null) {
 			return;
 		}
 		
@@ -60,8 +59,8 @@ public class DeluxeKey implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

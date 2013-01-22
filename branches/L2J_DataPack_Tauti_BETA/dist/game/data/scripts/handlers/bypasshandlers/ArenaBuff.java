@@ -31,11 +31,11 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 /**
  * @author Xaras2
  */
-public class ArenaBuff implements IBypassHandler
-{
+public class ArenaBuff implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
-		"ArenaBuffs", 
+		"ArenaBuffs",
 		"HPRecovery",
 		"CPRecovery"
 	};
@@ -43,95 +43,85 @@ public class ArenaBuff implements IBypassHandler
 	private final int[][] _Buffs =
 	{
 		{ // Fighter Buffs
-			6803, 6804, 6808, 6809, 6811, 6812
+			6803,
+			6804,
+			6808,
+			6809,
+			6811,
+			6812
 		},
 		{ // Mage Buffs
-			6804, 6805, 6806, 6807, 6812
+			6804,
+			6805,
+			6806,
+			6807,
+			6812
 		}
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
 		final L2Npc npc = (L2Npc) target;
 		final StringTokenizer st = new StringTokenizer(command);
-		try
-		{
+		try {
 			String cmd = st.nextToken();
 			
-			if (cmd.equalsIgnoreCase(COMMANDS[0]))
-			{	
-				if (!activeChar.reduceAdena("ArenaBuffs", 2000, activeChar.getLastFolkNPC(), true))
-				{
+			if (cmd.equalsIgnoreCase(COMMANDS[0])) {
+				if (!activeChar.reduceAdena("ArenaBuffs", 2000, activeChar.getLastFolkNPC(), true)) {
 					return false;
 				}
 				
-				for (int skillId : _Buffs[activeChar.isMageClass() ? 1 : 0])
-				{
+				for (int skillId : _Buffs[activeChar.isMageClass() ? 1 : 0]) {
 					L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
 					
-					if (skill != null)
-					{
+					if (skill != null) {
 						npc.setTarget(activeChar);
 						npc.doCast(skill);
 					}
 				}
 				return true;
-			}
-			else if (cmd.equalsIgnoreCase(COMMANDS[1]))
-			{
+			} else if (cmd.equalsIgnoreCase(COMMANDS[1])) {
 				if (activeChar.isInsideZone(L2Character.ZONE_PVP)) // Cannot be used while inside the pvp zone
 				{
 					return false;
-				}
-				else if (!activeChar.reduceAdena("RestoreHP", 1000, activeChar.getLastFolkNPC(), true))
-				{
+				} else if (!activeChar.reduceAdena("RestoreHP", 1000, activeChar.getLastFolkNPC(), true)) {
 					return false;
 				}
 				
 				L2Skill skill = SkillTable.getInstance().getInfo(6817, 1);
-				if (skill != null)
-				{
+				if (skill != null) {
 					npc.setTarget(activeChar);
 					npc.doCast(skill);
 				}
 				return true;
-			}
-			else if (cmd.equalsIgnoreCase(COMMANDS[2]))
-			{
+			} else if (cmd.equalsIgnoreCase(COMMANDS[2])) {
 				if (activeChar.isInsideZone(L2Character.ZONE_PVP)) // Cannot be used while inside the pvp zone
 				{
 					return false;
-				}
-				else if (!activeChar.reduceAdena("RestoreCP", 1000, activeChar.getLastFolkNPC(), true))
-				{
+				} else if (!activeChar.reduceAdena("RestoreCP", 1000, activeChar.getLastFolkNPC(), true)) {
 					return false;
 				}
 				
 				L2Skill skill = SkillTable.getInstance().getInfo(4380, 1);
-				if (skill != null)
-				{
+				if (skill != null) {
 					npc.setTarget(activeChar);
 					npc.doCast(skill);
 				}
 				return true;
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

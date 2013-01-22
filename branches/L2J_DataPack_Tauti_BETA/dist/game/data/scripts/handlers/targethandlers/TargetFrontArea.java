@@ -36,14 +36,12 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class TargetFrontArea implements ITargetTypeHandler
-{
+public class TargetFrontArea implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		List<L2Character> targetList = new FastList<>();
-		if (((target == null || target == activeChar || target.isAlikeDead()) && skill.getCastRange() >= 0) || (!(target instanceof L2Attackable || target instanceof L2Playable)))
-		{
+		if ((((target == null) || (target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!((target instanceof L2Attackable) || (target instanceof L2Playable)))) {
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
@@ -52,53 +50,61 @@ public class TargetFrontArea implements ITargetTypeHandler
 		final boolean srcInArena = (activeChar.isInsideZone(L2Character.ZONE_PVP) && !activeChar.isInsideZone(L2Character.ZONE_SIEGE));
 		final int radius = skill.getSkillRadius();
 		
-		if (skill.getCastRange() >= 0)
-		{
-			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, target, skill, srcInArena))
+		if (skill.getCastRange() >= 0) {
+			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, target, skill, srcInArena)) {
 				return _emptyTargetList;
+			}
 			
-			if (onlyFirst)
-				return new L2Character[] { target };
+			if (onlyFirst) {
+				return new L2Character[]
+				{
+					target
+				};
+			}
 			
 			origin = target;
 			targetList.add(origin); // Add target to target list
-		}
-		else
+		} else {
 			origin = activeChar;
+		}
 		
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
-		for (L2Character obj : objs)
-		{
-			if (!(obj instanceof L2Attackable || obj instanceof L2Playable))
+		for (L2Character obj : objs) {
+			if (!((obj instanceof L2Attackable) || (obj instanceof L2Playable))) {
 				continue;
+			}
 			
-			if (obj == origin)
+			if (obj == origin) {
 				continue;
+			}
 			
-			if (Util.checkIfInRange(radius, origin, obj, true))
-			{
-				if (!obj.isInFrontOf(activeChar))
+			if (Util.checkIfInRange(radius, origin, obj, true)) {
+				if (!obj.isInFrontOf(activeChar)) {
 					continue;
+				}
 				
-				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena)) {
 					continue;
+				}
 				
-				if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets())) {
 					break;
+				}
 				
 				targetList.add(obj);
 			}
 		}
 		
-		if (targetList.isEmpty())
+		if (targetList.isEmpty()) {
 			return _emptyTargetList;
+		}
 		
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_FRONT_AREA;
 	}
+	
 }

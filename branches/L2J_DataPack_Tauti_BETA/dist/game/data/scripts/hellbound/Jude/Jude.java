@@ -27,27 +27,22 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author DS
  */
-public class Jude extends Quest
-{
+public class Jude extends Quest {
+	
 	private static final int JUDE = 32356;
 	private static final int NativeTreasure = 9684;
 	private static final int RingOfWindMastery = 9677;
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
+		if (qs == null) {
 			qs = newQuestState(player);
 		}
 		
-		if ("TreasureSacks".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() == 3)
-			{
-				if (qs.getQuestItemsCount(NativeTreasure) >= 40)
-				{
+		if ("TreasureSacks".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() == 3) {
+				if (qs.getQuestItemsCount(NativeTreasure) >= 40) {
 					qs.takeItems(NativeTreasure, 40);
 					qs.giveItems(RingOfWindMastery, 1);
 					return "32356-02.htm";
@@ -59,15 +54,12 @@ public class Jude extends Quest
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-		{
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
 		}
 		
-		switch (HellboundManager.getInstance().getLevel())
-		{
+		switch (HellboundManager.getInstance().getLevel()) {
 			case 0:
 			case 1:
 			case 2:
@@ -82,16 +74,15 @@ public class Jude extends Quest
 		}
 	}
 	
-	public Jude(int questId, String name, String descr)
-	{
+	public Jude(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addFirstTalkId(JUDE);
 		addStartNpc(JUDE);
 		addTalkId(JUDE);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Jude(-1, "Jude", "hellbound");
 	}
+	
 }

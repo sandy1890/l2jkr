@@ -29,11 +29,10 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
- *
- * @author  Gigiikun
+ * @author Gigiikun
  */
-public class ChatBattlefield implements IChatHandler
-{
+public class ChatBattlefield implements IChatHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		20
@@ -43,20 +42,19 @@ public class ChatBattlefield implements IChatHandler
 	 * Handle chat type 'battlefield'
 	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
-	{
-		if (TerritoryWarManager.getInstance().isTWChannelOpen() && activeChar.getSiegeSide() > 0)
-		{
-			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
-			{
+	public void handleChat(int type, L2PcInstance activeChar, String target, String text) {
+		if (TerritoryWarManager.getInstance().isTWChannelOpen() && (activeChar.getSiegeSide() > 0)) {
+			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type)) {
 				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 				return;
 			}
 			
 			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
-				if (player.getSiegeSide() == activeChar.getSiegeSide())
+			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray()) {
+				if (player.getSiegeSide() == activeChar.getSiegeSide()) {
 					player.sendPacket(cs);
+				}
+			}
 		}
 	}
 	
@@ -64,8 +62,8 @@ public class ChatBattlefield implements IChatHandler
 	 * Returns the chat types registered to this handler.
 	 */
 	@Override
-	public int[] getChatTypeList()
-	{
+	public int[] getChatTypeList() {
 		return COMMAND_IDS;
 	}
+	
 }

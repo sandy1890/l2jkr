@@ -18,6 +18,7 @@
  */
 package handlers.voicedcommandhandlers;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -26,54 +27,44 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
 /**
  * @author Zoey76.
  */
-public class StatsVCmd implements IVoicedCommandHandler
-{
+public class StatsVCmd implements IVoicedCommandHandler {
+	
 	private static final String[] VOICED_COMMANDS =
 	{
 		"stats"
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
-	{
-		if (!command.equals("stats") || (params == null) || params.isEmpty())
-		{
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params) {
+		if (!command.equals("stats") || (params == null) || params.isEmpty()) {
 			activeChar.sendMessage("Syntax: .stats <player name>");
 			return false;
 		}
 		
 		final L2PcInstance pc = L2World.getInstance().getPlayer(params);
-		if ((pc == null))
-		{
+		if ((pc == null)) {
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			return false;
 		}
 		
-		if (pc.getClient().isDetached())
-		{
+		if (pc.getClient().isDetached()) {
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_OFFLINE);
 			sm.addPcName(pc);
 			activeChar.sendPacket(sm);
 			return false;
 		}
 		
-		if (!L2Event.isParticipant(pc) || (pc.getEventStatus() == null))
-		{
+		if (!L2Event.isParticipant(pc) || (pc.getEventStatus() == null)) {
 			activeChar.sendMessage("That player is not an event participant.");
 			return false;
 		}
 		
-		/*
-		final StringBuilder replyMSG = StringUtil.startAppend(300 + (pc.getEventStatus().kills.size() * 50), "<html><body>" + "<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br><br>Statistics for player <font color=\"LEVEL\">", pc.getName(), "</font><br>Total kills <font color=\"FF0000\">", String.valueOf(pc.getEventStatus().kills.size()), "</font><br><br>Detailed list: <br>");
-		*/
-		final StringBuilder replyMSG = StringUtil.startAppend(300 + (pc.getEventStatus().kills.size() * 50), "<html><body>" + "<center><font color=\"LEVEL\">[ "+MessageTable.Messages[1208].getMessage()+" ]</font></center><br>" +"<br>"+ MessageTable.Messages[1209].getMessage() +"<font color=\"LEVEL\">", pc.getName(), "</font><br>" +	MessageTable.Messages[1210].getMessage()+"<font color=\"FF0000\">",	String.valueOf(pc.getEventStatus().kills.size()),"</font><br>" +"<br>"+ MessageTable.Messages[1211].getMessage() +"<br>");
-		for (L2PcInstance plr : pc.getEventStatus().kills)
-		{
+		final StringBuilder replyMSG = StringUtil.startAppend(300 + (pc.getEventStatus().kills.size() * 50), "<html><body>" + "<center><font color=\"LEVEL\">[ " + MessageTable.Messages[1208].getMessage() + " ]</font></center><br>" + "<br>" + MessageTable.Messages[1209].getMessage() + "<font color=\"LEVEL\">", pc.getName(), "</font><br>" + MessageTable.Messages[1210].getMessage() + "<font color=\"FF0000\">", String.valueOf(pc.getEventStatus().kills.size()), "</font><br>" + "<br>" + MessageTable.Messages[1211].getMessage() + "<br>");
+		for (L2PcInstance plr : pc.getEventStatus().kills) {
 			StringUtil.append(replyMSG, "<font color=\"FF0000\">", plr.getName(), "</font><br>");
 		}
 		replyMSG.append("</body></html>");
@@ -84,8 +75,8 @@ public class StatsVCmd implements IVoicedCommandHandler
 	}
 	
 	@Override
-	public String[] getVoicedCommandList()
-	{
+	public String[] getVoicedCommandList() {
 		return VOICED_COMMANDS;
 	}
+	
 }

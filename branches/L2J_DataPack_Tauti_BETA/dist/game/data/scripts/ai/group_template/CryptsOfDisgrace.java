@@ -26,19 +26,20 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
- * 被污染的莫列克戰士
- * 被污染的巴吐戰士
- * 被污染的巴吐指揮官
- * 圖魯卡部下怨靈
- * 圖魯卡首領怨靈 墓地守護靈
+ * 被污染的莫列克戰士 被污染的巴吐戰士 被污染的巴吐指揮官 圖魯卡部下怨靈 圖魯卡首領怨靈 墓地守護靈
  */
-public class CryptsOfDisgrace extends L2AttackableAIScript
-{
+public class CryptsOfDisgrace extends L2AttackableAIScript {
+	
 	public static final int[] MOBS =
 	{
-		22703, 22704, 22705, 22706, 22707
+		22703,
+		22704,
+		22705,
+		22706,
+		22707
 	};
 	
+	//@formatter:off
 	private static final int[][] MobSpawns =
 	{
 		{18464, -28681, 255110, -2160, 10},
@@ -49,36 +50,30 @@ public class CryptsOfDisgrace extends L2AttackableAIScript
 		{18463, -27362, 256282, -1935, 10},
 		{18464, -25441, 256441, -2147, 10}
 	};
+	//@formatter:on
 	
-	public CryptsOfDisgrace(int questId, String name, String descr)
-	{
+	public CryptsOfDisgrace(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
-		for (int i : MOBS)
-		{
+		for (int i : MOBS) {
 			addKillId(i);
 		}
 		
-		for (int i = 0; i < MobSpawns.length; i++)
-		{
-			int[] loc = MobSpawns[i];
+		for (int[] loc : MobSpawns) {
 			addSpawn(loc[0], loc[1], loc[2], loc[3], loc[4]);
 		}
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public void addSpawn(int mobId, int x, int y, int z, int respTime)
-	{
+	public void addSpawn(int mobId, int x, int y, int z, int respTime) {
 		L2NpcTemplate template1;
 		template1 = NpcTable.getInstance().getTemplate(mobId);
 		L2Spawn spawn = null;
-		try
-		{
+		try {
 			spawn = new L2Spawn(template1);
 			spawn.setLocx(x);
 			spawn.setLocy(y);
@@ -91,17 +86,16 @@ public class CryptsOfDisgrace extends L2AttackableAIScript
 			SpawnTable.getInstance().addNewSpawn(spawn, false);
 			spawn.init();
 			spawn.startRespawn();
-			if (respTime == 0)
+			if (respTime == 0) {
 				spawn.stopRespawn();
-		}
-		catch (Exception e)
-		{
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new CryptsOfDisgrace(-1, "CryptsOfDisgrace", "ai");
 	}
+	
 }

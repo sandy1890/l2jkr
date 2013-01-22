@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class TheTerritorySchuttgart extends TerritoryWarSuperClass
-{
+public class TheTerritorySchuttgart extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "725_FortheSakeoftheTerritorySchuttgart";
 	public static int qnu = 725;
 	public static String qna = "For the Sake of the Territory - Schuttgart";
 	
-	public TheTerritorySchuttgart()
-	{
+	public TheTerritorySchuttgart() {
 		super(qnu, qn1, qna);
 		CATAPULT_ID = 36507;
 		TERRITORY_ID = 89;
@@ -55,4 +54,5 @@ public class TheTerritorySchuttgart extends TerritoryWarSuperClass
 		};
 		registerKillIds();
 	}
+	
 }

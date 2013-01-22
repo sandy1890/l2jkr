@@ -18,8 +18,6 @@
  */
 package quests.Q692_HowtoOpposeEvil;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,13 +25,16 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * How to Oppose Evil(692)
  * @author Gigiikun
  */
-public final class Q692_HowtoOpposeEvil extends Quest
-{
+public final class Q692_HowtoOpposeEvil extends Quest {
+	
 	private static final String qn = "692_HowtoOpposeEvil";
+	
 	private static final int DILIOS = 32549;
 	private static final int LEKONS_CERTIFICATE = 13857;
 	private static final int[] QUEST_ITEMS =
@@ -103,11 +104,9 @@ public final class Q692_HowtoOpposeEvil extends Quest
 	}
 	//@formatter:on
 	
-	private static final boolean giveReward(QuestState st, int itemId, int minCount, int rewardItemId, long rewardCount)
-	{
+	private static final boolean giveReward(QuestState st, int itemId, int minCount, int rewardItemId, long rewardCount) {
 		long count = st.getQuestItemsCount(itemId);
-		if (count < minCount)
-		{
+		if (count < minCount) {
 			return false;
 		}
 		
@@ -118,62 +117,39 @@ public final class Q692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		}
-		if (event.equalsIgnoreCase("32549-03.htm"))
-		{
+		if (event.equalsIgnoreCase("32549-03.htm")) {
 			st.set("cond", "1");
 			st.setState(State.STARTED);
 			st.playSound("ItemSound.quest_accept");
-		}
-		else if (event.equalsIgnoreCase("32550-04.htm"))
-		{
+		} else if (event.equalsIgnoreCase("32550-04.htm")) {
 			st.set("cond", "3");
-		}
-		else if (event.equalsIgnoreCase("32550-07.htm"))
-		{
-			if (!giveReward(st, 13863, 5, 13796, 1))
-			{
+		} else if (event.equalsIgnoreCase("32550-07.htm")) {
+			if (!giveReward(st, 13863, 5, 13796, 1)) {
 				return "32550-08.htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-09.htm"))
-		{
-			if (!giveReward(st, 13798, 1, 57, 5000))
-			{
+		} else if (event.equalsIgnoreCase("32550-09.htm")) {
+			if (!giveReward(st, 13798, 1, 57, 5000)) {
 				return "32550-10.htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-12.htm"))
-		{
-			if (!giveReward(st, 13865, 5, 13841, 1))
-			{
+		} else if (event.equalsIgnoreCase("32550-12.htm")) {
+			if (!giveReward(st, 13865, 5, 13841, 1)) {
 				return "32550-13.htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-14.htm"))
-		{
-			if (!giveReward(st, 13867, 1, 57, 5000))
-			{
+		} else if (event.equalsIgnoreCase("32550-14.htm")) {
+			if (!giveReward(st, 13867, 1, 57, 5000)) {
 				return "32550-15.htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-17.htm"))
-		{
-			if (!giveReward(st, 15536, 5, 15486, 1))
-			{
+		} else if (event.equalsIgnoreCase("32550-17.htm")) {
+			if (!giveReward(st, 15536, 5, 15486, 1)) {
 				return "32550-18.htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-19.htm"))
-		{
-			if (!giveReward(st, 15535, 1, 57, 5000))
-			{
+		} else if (event.equalsIgnoreCase("32550-19.htm")) {
+			if (!giveReward(st, 15535, 1, 57, 5000)) {
 				return "32550-20.htm";
 			}
 		}
@@ -181,47 +157,31 @@ public final class Q692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public final String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (st.isCreated())
-		{
+		if (st.isCreated()) {
 			htmltext = (player.getLevel() >= 75) ? "32549-01.htm" : "32549-00.htm";
-		}
-		else
-		{
+		} else {
 			final int cond = st.getInt("cond");
-			if (npc.getNpcId() == DILIOS)
-			{
-				if ((cond == 1) && st.hasQuestItems(LEKONS_CERTIFICATE))
-				{
+			if (npc.getNpcId() == DILIOS) {
+				if ((cond == 1) && st.hasQuestItems(LEKONS_CERTIFICATE)) {
 					htmltext = "32549-04.htm";
 					st.takeItems(LEKONS_CERTIFICATE, -1);
 					st.set("cond", "2");
-				}
-				else if (cond == 2)
-				{
+				} else if (cond == 2) {
 					htmltext = "32549-05.htm";
 				}
-			}
-			else
-			{
-				if (cond == 2)
-				{
+			} else {
+				if (cond == 2) {
 					htmltext = "32550-01.htm";
-				}
-				else if (cond == 3)
-				{
-					for (int i : QUEST_ITEMS)
-					{
-						if (st.getQuestItemsCount(i) > 0)
-						{
+				} else if (cond == 3) {
+					for (int i : QUEST_ITEMS) {
+						if (st.getQuestItemsCount(i) > 0) {
 							return "32550-05.htm";
 						}
 					}
@@ -233,26 +193,21 @@ public final class Q692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final L2PcInstance partyMember = getRandomPartyMember(player, "3");
-		if (partyMember == null)
-		{
+		if (partyMember == null) {
 			return null;
 		}
 		final QuestState st = partyMember.getQuestState(qn);
 		final int npcId = npc.getNpcId();
-		if ((st != null) && _questMobs.containsKey(npcId))
-		{
+		if ((st != null) && _questMobs.containsKey(npcId)) {
 			int chance = (int) (_questMobs.get(npcId)[1] * Config.RATE_QUEST_DROP);
 			int numItems = chance / 1000;
 			chance = chance % 1000;
-			if (getRandom(1000) < chance)
-			{
+			if (getRandom(1000) < chance) {
 				numItems++;
 			}
-			if (numItems > 0)
-			{
+			if (numItems > 0) {
 				st.giveItems(_questMobs.get(npcId)[0], numItems);
 				st.playSound("ItemSound.quest_itemget");
 			}
@@ -260,8 +215,7 @@ public final class Q692_HowtoOpposeEvil extends Quest
 		return null;
 	}
 	
-	public Q692_HowtoOpposeEvil(int questId, String name, String descr)
-	{
+	public Q692_HowtoOpposeEvil(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(DILIOS);
 		addTalkId(DILIOS);
@@ -269,8 +223,8 @@ public final class Q692_HowtoOpposeEvil extends Quest
 		addKillId(_questMobs.keys());
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q692_HowtoOpposeEvil(692, qn, "對抗惡的方法");
 	}
+	
 }

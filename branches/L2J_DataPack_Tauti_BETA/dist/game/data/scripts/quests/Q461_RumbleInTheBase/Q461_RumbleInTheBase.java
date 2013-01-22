@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Rumble in the Base (461).
  * @author malyelfik
  */
-public class Q461_RumbleInTheBase extends Quest
-{
+public class Q461_RumbleInTheBase extends Quest {
+	
 	public static final String qn = "461_RumbleInTheBase";
 	
 	// NPC
@@ -51,17 +51,14 @@ public class Q461_RumbleInTheBase extends Quest
 	public static final int ShoesStringOfSelMahum = 16382;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("30200-05.htm"))
-		{
+		if (event.equalsIgnoreCase("30200-05.htm")) {
 			st.set("cond", "1");
 			st.setState(State.STARTED);
 			st.playSound("ItemSound.quest_accept");
@@ -70,28 +67,22 @@ public class Q461_RumbleInTheBase extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final QuestState prev = player.getQuestState("252_ItSmellsDelicious");
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
 				htmltext = ((player.getLevel() >= 82) && (prev != null) && prev.isCompleted()) ? "30200-01.htm" : "30200-02.htm";
-				break;
+			break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
-				{
+				if (st.getInt("cond") == 1) {
 					htmltext = "30200-06.html";
-				}
-				else
-				{
+				} else {
 					st.takeItems(ShinySalmon, -1);
 					st.takeItems(ShoesStringOfSelMahum, -1);
 					st.addExpAndSp(224784, 342528);
@@ -99,102 +90,85 @@ public class Q461_RumbleInTheBase extends Quest
 					st.exitQuest(QuestType.DAILY);
 					htmltext = "30200-07.html";
 				}
-				break;
+			break;
 			case State.COMPLETED:
-				if (!st.isNowAvailable())
-				{
+				if (!st.isNowAvailable()) {
 					htmltext = "30200-03.htm";
-				}
-				else
-				{
+				} else {
 					st.setState(State.CREATED);
 					htmltext = ((player.getLevel() >= 82) && (prev != null) && (prev.getState() == State.COMPLETED)) ? "30200-01.htm" : "30200-02.htm";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
+		if (partyMember == null) {
 			return null;
 		}
 		
 		final QuestState st = partyMember.getQuestState(qn);
 		int chance = getRandom(1000);
 		boolean giveItem = false;
-		switch (npc.getNpcId())
-		{
+		switch (npc.getNpcId()) {
 			case 22780:
-				if (chance < 581)
-				{
+				if (chance < 581) {
 					giveItem = true;
 				}
-				break;
+			break;
 			case 22781:
-				if (chance < 772)
-				{
+				if (chance < 772) {
 					giveItem = true;
 				}
-				break;
+			break;
 			case 22782:
-				if (chance < 581)
-				{
+				if (chance < 581) {
 					giveItem = true;
 				}
-				break;
+			break;
 			case 22783:
-				if (chance < 563)
-				{
+				if (chance < 563) {
 					giveItem = true;
 				}
-				break;
+			break;
 			case 22784:
-				if (chance < 581)
-				{
+				if (chance < 581) {
 					giveItem = true;
 				}
-				break;
+			break;
 			case 22785:
-				if (chance < 271)
-				{
+				if (chance < 271) {
 					giveItem = true;
 				}
-				break;
+			break;
 			case 18908:
-				if ((chance < 271) && (st.getQuestItemsCount(ShinySalmon) < 5))
-				{
+				if ((chance < 271) && (st.getQuestItemsCount(ShinySalmon) < 5)) {
 					st.giveItems(ShinySalmon, 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
-				break;
+			break;
 		}
 		
-		if (giveItem && (st.getQuestItemsCount(ShoesStringOfSelMahum) < 10))
-		{
+		if (giveItem && (st.getQuestItemsCount(ShoesStringOfSelMahum) < 10)) {
 			st.giveItems(ShoesStringOfSelMahum, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
 		
-		if ((st.getQuestItemsCount(ShinySalmon) == 5) && (st.getQuestItemsCount(ShoesStringOfSelMahum) == 10))
-		{
+		if ((st.getQuestItemsCount(ShinySalmon) == 5) && (st.getQuestItemsCount(ShoesStringOfSelMahum) == 10)) {
 			st.set("cond", "2");
 			st.playSound("ItemSound.quest_middle");
 		}
 		return null;
 	}
 	
-	public Q461_RumbleInTheBase(int questId, String name, String descr)
-	{
+	public Q461_RumbleInTheBase(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(Stan);
 		addTalkId(Stan);
 		addKillId(Monsters);
-		
 		questItemIds = new int[]
 		{
 			ShinySalmon,
@@ -202,8 +176,8 @@ public class Q461_RumbleInTheBase extends Quest
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q461_RumbleInTheBase(461, qn, "Rumble in the Base");
 	}
+	
 }

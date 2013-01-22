@@ -33,47 +33,41 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 /**
  * @author l3x
  */
-public class Harvester implements IItemHandler
-{
+public class Harvester implements IItemHandler {
+	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
-	{
-		if (!playable.isPlayer())
-		{
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse) {
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
-		if (CastleManorManager.getInstance().isDisabled())
-		{
+		if (CastleManorManager.getInstance().isDisabled()) {
 			return false;
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		L2MonsterInstance target = null;
-		if (activeChar.getTarget() != null && activeChar.getTarget().isMonster())
-		{
+		if ((activeChar.getTarget() != null) && activeChar.getTarget().isMonster()) {
 			target = (L2MonsterInstance) activeChar.getTarget();
 		}
 		
-		if (skills == null)
-		{
+		if (skills == null) {
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		
-		if (target == null || !target.isDead())
-		{
+		if ((target == null) || !target.isDead()) {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
-		for (SkillHolder sk : skills)
-		{
+		for (SkillHolder sk : skills) {
 			activeChar.useMagic(sk.getSkill(), false, false);
 		}
 		return true;
 	}
+	
 }

@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.quest.State;
 /**
  * @author GKR, Gladicek
  */
-public final class Q132_MatrasCuriosity extends Quest
-{
+public final class Q132_MatrasCuriosity extends Quest {
+	
 	private static final String qn = "132_MatrasCuriosity";
 	
 	// NPCs
@@ -47,33 +47,25 @@ public final class Q132_MatrasCuriosity extends Quest
 	private static final int BLUEPRINT_PRINCE = 9801;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("32245-03.htm") && (player.getLevel() >= 76) && !st.isCompleted())
-		{
-			if (st.isCreated())
-			{
+		if (event.equalsIgnoreCase("32245-03.htm") && (player.getLevel() >= 76) && !st.isCompleted()) {
+			if (st.isCreated()) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.set("rewarded_prince", "1");
 				st.set("rewarded_ranku", "1");
 				st.playSound("ItemSound.quest_accept");
-			}
-			else
-			{
+			} else {
 				htmltext = "32245-03a.htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("32245-07.htm") && (st.getInt("cond") == 3) && !st.isCompleted())
-		{
+		} else if (event.equalsIgnoreCase("32245-07.htm") && (st.getInt("cond") == 3) && !st.isCompleted()) {
 			st.giveAdena(65884, true);
 			st.addExpAndSp(50541, 5094);
 			st.giveItems(FIRE, 1);
@@ -89,43 +81,32 @@ public final class Q132_MatrasCuriosity extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public final String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (st.isCreated())
-		{
+		if (st.isCreated()) {
 			htmltext = (player.getLevel() >= 76) ? "32245-01.htm" : "32245-02.htm";
-		}
-		else if (st.isCompleted())
-		{
+		} else if (st.isCompleted()) {
 			htmltext = getAlreadyCompletedMsg(player);
-		}
-		else if (st.isStarted())
-		{
-			switch (st.getInt("cond"))
-			{
+		} else if (st.isStarted()) {
+			switch (st.getInt("cond")) {
 				case 1:
 				case 2:
-					if (st.hasQuestItems(BLUEPRINT_RANKU) && st.hasQuestItems(BLUEPRINT_PRINCE))
-					{
+					if (st.hasQuestItems(BLUEPRINT_RANKU) && st.hasQuestItems(BLUEPRINT_PRINCE)) {
 						st.takeItems(BLUEPRINT_RANKU, -1);
 						st.takeItems(BLUEPRINT_PRINCE, -1);
 						st.set("cond", "3");
 						st.playSound("ItemSound.quest_middle");
 						htmltext = "32245-05.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "32245-04.htm";
 					}
-					
-					break;
+				
+				break;
 				case 3:
 					htmltext = "32245-06.htm";
 			}
@@ -134,55 +115,44 @@ public final class Q132_MatrasCuriosity extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		L2PcInstance pl = null;
-		switch (npc.getNpcId())
-		{
+		switch (npc.getNpcId()) {
 			case DEMON_PRINCE:
 				pl = getRandomPartyMember(player, "rewarded_prince", "1");
-				if (pl != null)
-				{
+				if (pl != null) {
 					final QuestState st = pl.getQuestState(qn);
 					st.giveItems(BLUEPRINT_PRINCE, 1);
 					st.set("rewarded_prince", "2");
 					
-					if (st.hasQuestItems(BLUEPRINT_RANKU))
-					{
+					if (st.hasQuestItems(BLUEPRINT_RANKU)) {
 						st.set("cond", "2");
 						st.playSound("ItemSound.quest_middle");
-					}
-					else
-					{
+					} else {
 						st.playSound("ItemSound.quest_itemget");
 					}
 				}
-				break;
+			break;
 			case RANKU:
 				pl = getRandomPartyMember(player, "rewarded_ranku", "1");
-				if (pl != null)
-				{
+				if (pl != null) {
 					final QuestState st = pl.getQuestState(qn);
 					st.giveItems(BLUEPRINT_RANKU, 1);
 					st.set("rewarded_ranku", "2");
 					
-					if (st.hasQuestItems(BLUEPRINT_PRINCE))
-					{
+					if (st.hasQuestItems(BLUEPRINT_PRINCE)) {
 						st.set("cond", "2");
 						st.playSound("ItemSound.quest_middle");
-					}
-					else
-					{
+					} else {
 						st.playSound("ItemSound.quest_itemget");
 					}
 				}
-				break;
+			break;
 		}
 		return null;
 	}
 	
-	public Q132_MatrasCuriosity(int questId, String name, String descr)
-	{
+	public Q132_MatrasCuriosity(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(MATRAS);
@@ -191,8 +161,8 @@ public final class Q132_MatrasCuriosity extends Quest
 		addKillId(RANKU, DEMON_PRINCE);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q132_MatrasCuriosity(132, qn, "Matras' Curiosity");
 	}
+	
 }

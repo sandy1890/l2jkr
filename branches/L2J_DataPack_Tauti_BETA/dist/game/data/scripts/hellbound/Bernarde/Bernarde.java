@@ -26,68 +26,52 @@ import com.l2jserver.gameserver.model.quest.Quest;
 /**
  * @author DS
  */
-public class Bernarde extends Quest
-{
+public class Bernarde extends Quest {
+	
 	private static final int BERNARDE = 32300;
 	private static final int NATIVE_TRANSFORM = 101;
 	private static final int HOLY_WATER = 9673;
 	private static final int DARION_BADGE = 9674;
 	private static final int TREASURE = 9684;
 	
-	private static final boolean isTransformed(L2PcInstance player)
-	{
+	private static final boolean isTransformed(L2PcInstance player) {
 		return player.isTransformed() && (player.getTransformation().getId() == NATIVE_TRANSFORM);
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if ("HolyWater".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() == 2)
-			{
-				if (player.getInventory().getInventoryItemCount(DARION_BADGE, -1, false) >= 5)
-				{
-					if (player.exchangeItemsById("Quest", npc, DARION_BADGE, 5, HOLY_WATER, 1, true))
-					{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if ("HolyWater".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() == 2) {
+				if (player.getInventory().getInventoryItemCount(DARION_BADGE, -1, false) >= 5) {
+					if (player.exchangeItemsById("Quest", npc, DARION_BADGE, 5, HOLY_WATER, 1, true)) {
 						return "32300-02b.htm";
 					}
 				}
 			}
 			event = "32300-02c.htm";
-		}
-		else if ("Treasure".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() == 3)
-			{
-				if (player.getInventory().getInventoryItemCount(TREASURE, -1, false) > 0)
-				{
-					if (player.destroyItemByItemId("Quest", TREASURE, player.getInventory().getInventoryItemCount(TREASURE, -1, false), npc, true))
-					{
+		} else if ("Treasure".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() == 3) {
+				if (player.getInventory().getInventoryItemCount(TREASURE, -1, false) > 0) {
+					if (player.destroyItemByItemId("Quest", TREASURE, player.getInventory().getInventoryItemCount(TREASURE, -1, false), npc, true)) {
 						HellboundManager.getInstance().updateTrust((int) (player.getInventory().getInventoryItemCount(TREASURE, -1, false) * 1000), true);
 						return "32300-02d.htm";
 					}
 				}
 			}
 			event = "32300-02e.htm";
-		}
-		else if ("rumors".equalsIgnoreCase(event))
-		{
+		} else if ("rumors".equalsIgnoreCase(event)) {
 			event = "32300-" + HellboundManager.getInstance().getLevel() + "r.htm";
 		}
 		return event;
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-		{
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
 		}
 		
-		switch (HellboundManager.getInstance().getLevel())
-		{
+		switch (HellboundManager.getInstance().getLevel()) {
 			case 0:
 			case 1:
 				return isTransformed(player) ? "32300-01a.htm" : "32300-01.htm";
@@ -102,16 +86,15 @@ public class Bernarde extends Quest
 		}
 	}
 	
-	public Bernarde(int questId, String name, String descr)
-	{
+	public Bernarde(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addFirstTalkId(BERNARDE);
 		addStartNpc(BERNARDE);
 		addTalkId(BERNARDE);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Bernarde(-1, Bernarde.class.getSimpleName(), "hellbound");
 	}
+	
 }

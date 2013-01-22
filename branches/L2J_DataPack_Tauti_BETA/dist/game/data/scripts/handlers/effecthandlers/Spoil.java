@@ -33,48 +33,45 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * This was originally done by _drunk_
  * @author Ahmed
  */
-public class Spoil extends L2Effect
-{
-	public Spoil(Env env, EffectTemplate template)
-	{
+public class Spoil extends L2Effect {
+	
+	public Spoil(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.SPOIL;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		
-		if (!(getEffector() instanceof L2PcInstance))
+		if (!(getEffector() instanceof L2PcInstance)) {
 			return false;
+		}
 		
-		if (!(getEffected() instanceof L2MonsterInstance))
+		if (!(getEffected() instanceof L2MonsterInstance)) {
 			return false;
+		}
 		
 		L2MonsterInstance target = (L2MonsterInstance) getEffected();
 		
-		if (target == null)
+		if (target == null) {
 			return false;
+		}
 		
-		if (target.isSpoil())
-		{
+		if (target.isSpoil()) {
 			getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
 			return false;
 		}
 		
 		// SPOIL SYSTEM by Lbaldi
 		boolean spoil = false;
-		if (target.isDead() == false)
-		{
+		if (target.isDead() == false) {
 			spoil = Formulas.calcMagicSuccess(getEffector(), target, getSkill());
 			
-			if (spoil)
-			{
+			if (spoil) {
 				target.setSpoil(true);
 				target.setIsSpoiledBy(getEffector().getObjectId());
 				getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
@@ -86,8 +83,8 @@ public class Spoil extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

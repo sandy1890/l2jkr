@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author Plim Original python script by DraX
  */
-public class TeleportWithCharm extends Quest
-{
+public class TeleportWithCharm extends Quest {
+	
 	// NPCs
 	private final static int WHIRPY = 30540;
 	private final static int TAMIL = 30576;
@@ -37,41 +37,32 @@ public class TeleportWithCharm extends Quest
 	private final static int DWARF_GATEKEEPER_TOKEN = 1659;
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		if (st == null)
+		if (st == null) {
 			return null;
+		}
 		
-		switch (npc.getNpcId())
-		{
-			case WHIRPY:
-			{
-				if (st.hasQuestItems(DWARF_GATEKEEPER_TOKEN))
-				{
+		switch (npc.getNpcId()) {
+			case WHIRPY: {
+				if (st.hasQuestItems(DWARF_GATEKEEPER_TOKEN)) {
 					st.takeItems(DWARF_GATEKEEPER_TOKEN, 1);
 					st.getPlayer().teleToLocation(-80826, 149775, -3043);
 					st.exitQuest(true);
-				}
-				else
-				{
+				} else {
 					st.exitQuest(true);
 					htmltext = "30540-01.htm";
 				}
 				break;
 			}
-			case TAMIL:
-			{
-				if (st.hasQuestItems(ORC_GATEKEEPER_CHARM))
-				{
+			case TAMIL: {
+				if (st.hasQuestItems(ORC_GATEKEEPER_CHARM)) {
 					st.takeItems(ORC_GATEKEEPER_CHARM, 1);
 					st.getPlayer().teleToLocation(-80826, 149775, -3043);
 					st.exitQuest(true);
-				}
-				else
-				{
+				} else {
 					st.exitQuest(true);
 					htmltext = "30576-01.htm";
 				}
@@ -82,8 +73,7 @@ public class TeleportWithCharm extends Quest
 		return htmltext;
 	}
 	
-	public TeleportWithCharm(int questId, String name, String descr)
-	{
+	public TeleportWithCharm(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(WHIRPY);
 		addStartNpc(TAMIL);
@@ -91,8 +81,8 @@ public class TeleportWithCharm extends Quest
 		addTalkId(TAMIL);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new TeleportWithCharm(-1, TeleportWithCharm.class.getSimpleName(), "teleports");
 	}
+	
 }

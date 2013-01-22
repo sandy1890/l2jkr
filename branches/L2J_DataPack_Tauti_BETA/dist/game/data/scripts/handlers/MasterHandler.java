@@ -18,6 +18,23 @@
  */
 package handlers;
 
+import java.lang.reflect.Method;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.ActionHandler;
+import com.l2jserver.gameserver.handler.ActionShiftHandler;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
+import com.l2jserver.gameserver.handler.BypassHandler;
+import com.l2jserver.gameserver.handler.ChatHandler;
+import com.l2jserver.gameserver.handler.ItemHandler;
+import com.l2jserver.gameserver.handler.SkillHandler;
+import com.l2jserver.gameserver.handler.TargetHandler;
+import com.l2jserver.gameserver.handler.TelnetHandler;
+import com.l2jserver.gameserver.handler.UserCommandHandler;
+import com.l2jserver.gameserver.handler.VoicedCommandHandler;
+
 import handlers.actionhandlers.L2ArtefactInstanceAction;
 import handlers.actionhandlers.L2DecoyAction;
 import handlers.actionhandlers.L2DoorInstanceAction;
@@ -105,7 +122,7 @@ import handlers.admincommandhandlers.AdminTest;
 import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
-import handlers.admincommandhandlers.AdminVitaminItem; // Add PI by pmq
+import handlers.admincommandhandlers.AdminVitaminItem;
 import handlers.admincommandhandlers.AdminZone;
 import handlers.bypasshandlers.ArenaBuff;
 import handlers.bypasshandlers.Augment;
@@ -300,28 +317,11 @@ import handlers.voicedcommandhandlers.StatsVCmd;
 import handlers.voicedcommandhandlers.TvTVoicedInfo;
 import handlers.voicedcommandhandlers.Wedding;
 
-import java.lang.reflect.Method;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.ActionHandler;
-import com.l2jserver.gameserver.handler.ActionShiftHandler;
-import com.l2jserver.gameserver.handler.AdminCommandHandler;
-import com.l2jserver.gameserver.handler.BypassHandler;
-import com.l2jserver.gameserver.handler.ChatHandler;
-import com.l2jserver.gameserver.handler.ItemHandler;
-import com.l2jserver.gameserver.handler.SkillHandler;
-import com.l2jserver.gameserver.handler.TargetHandler;
-import com.l2jserver.gameserver.handler.TelnetHandler;
-import com.l2jserver.gameserver.handler.UserCommandHandler;
-import com.l2jserver.gameserver.handler.VoicedCommandHandler;
-
 /**
  * @author UnAfraid
  */
-public class MasterHandler
-{
+public class MasterHandler {
+	
 	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
 	
 	private static final Class<?>[] _loadInstances =
@@ -339,7 +339,7 @@ public class MasterHandler
 		TelnetHandler.class,
 	};
 	
-	private static final Class<?>[][] _handlers = 
+	private static final Class<?>[][] _handlers =
 	{
 		{
 			// Action Handlers
@@ -663,68 +663,57 @@ public class MasterHandler
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		_log.log(Level.INFO, "Loading Handlers...");
 		
 		Object loadInstance = null;
 		Method method = null;
-		Class<?>[]  interfaces = null;
+		Class<?>[] interfaces = null;
 		Object handler = null;
 		
-		for (int i = 0; i < _loadInstances.length; i++)
-		{
-			try
-			{
+		for (int i = 0; i < _loadInstances.length; i++) {
+			try {
 				method = _loadInstances[i].getMethod("getInstance");
 				loadInstance = method.invoke(_loadInstances[i]);
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances[i].getSimpleName(), e);
 				continue;
 			}
 			
 			method = null;
 			
-			for (Class<?> c : _handlers[i])
-			{
-				try
-				{
-					if (c == null)
+			for (Class<?> c : _handlers[i]) {
+				try {
+					if (c == null) {
 						continue; // Disabled handler
+					}
 					// Don't wtf some classes extending anothers like ItemHandler, Elixir, etc.. and we need to find where the hell is interface xD
 					interfaces = c.getInterfaces().length > 0 ? // Standartly handler has implementation
-						c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
-							c.getSuperclass().getInterfaces() : c.getSuperclass().getSuperclass().getInterfaces(); // O noh that's Elixir->ItemSkills->ItemSkillsTemplate
-					if (method == null)
+					c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
+					c.getSuperclass().getInterfaces() : c.getSuperclass().getSuperclass().getInterfaces(); // O noh that's Elixir->ItemSkills->ItemSkillsTemplate
+					if (method == null) {
 						method = loadInstance.getClass().getMethod("registerHandler", interfaces);
+					}
 					handler = c.newInstance();
-					if (method.getParameterTypes()[0].isInstance(handler))
-					{
+					if (method.getParameterTypes()[0].isInstance(handler)) {
 						method.invoke(loadInstance, handler);
 					}
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 					_log.log(Level.WARNING, "Failed loading handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
 					continue;
 				}
 			}
 			// And lets try get size
-			try
-			{
+			try {
 				method = loadInstance.getClass().getMethod("size");
 				Object returnVal = method.invoke(loadInstance);
-				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");	
-			}
-			catch (Exception e)
-			{
+				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
 				continue;
 			}
 		}
-		
 		_log.log(Level.INFO, "Handlers Loaded...");
 	}
+	
 }

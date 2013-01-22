@@ -30,31 +30,31 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author BiggBoss
  */
-public class QuestItems implements IItemHandler
-{
+public class QuestItems implements IItemHandler {
+	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceuse)
-	{
-		if (!playable.isPlayer())
-		{
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceuse) {
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
 		L2PcInstance player = playable.getActingPlayer();
 		
-		if (!player.destroyItem("Item Handler - QuestItems", item, player, true))
+		if (!player.destroyItem("Item Handler - QuestItems", item, player, true)) {
 			return false;
+		}
 		
 		L2Item itm = item.getItem();
-		for (Quest quest : itm.getQuestEvents())
-		{
+		for (Quest quest : itm.getQuestEvents()) {
 			QuestState state = player.getQuestState(quest.getName());
-			if (state == null || !state.isStarted())
+			if ((state == null) || !state.isStarted()) {
 				continue;
+			}
 			
 			quest.notifyItemUse(itm, player);
 		}
 		return true;
 	}
+	
 }

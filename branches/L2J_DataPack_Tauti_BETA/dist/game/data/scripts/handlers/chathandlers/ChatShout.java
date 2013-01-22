@@ -30,10 +30,10 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Shout chat handler.
- * @author  durgus
+ * @author durgus
  */
-public class ChatShout implements IChatHandler
-{
+public class ChatShout implements IChatHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		1
@@ -43,10 +43,8 @@ public class ChatShout implements IChatHandler
 	 * Handle chat type 'shout'
 	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
-	{
-		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
-		{
+	public void handleChat(int type, L2PcInstance activeChar, String target, String text) {
+		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type)) {
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 			return;
 		}
@@ -55,27 +53,23 @@ public class ChatShout implements IChatHandler
 		
 		L2PcInstance[] pls = L2World.getInstance().getAllPlayersArray();
 		
-		if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("gm") && activeChar.isGM()))
-		{
+		if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("gm") && activeChar.isGM())) {
 			int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
-			for (L2PcInstance player : pls)
-			{
-				if (region == MapRegionManager.getInstance().getMapRegionLocId(player) && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
+			for (L2PcInstance player : pls) {
+				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId())) {
 					player.sendPacket(cs);
+				}
 			}
-		}
-		else if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("global"))
-		{
-			if (!activeChar.isGM() && !activeChar.getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
-			{
+		} else if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("global")) {
+			if (!activeChar.isGM() && !activeChar.getFloodProtectors().getGlobalChat().tryPerformAction("global chat")) {
 				activeChar.sendMessage(1101);
 				return;
 			}
 			
-			for (L2PcInstance player : pls)
-			{
-				if (!BlockList.isBlocked(player, activeChar))
+			for (L2PcInstance player : pls) {
+				if (!BlockList.isBlocked(player, activeChar)) {
 					player.sendPacket(cs);
+				}
 			}
 		}
 	}
@@ -84,8 +78,8 @@ public class ChatShout implements IChatHandler
 	 * Returns the chat types registered to this handler.
 	 */
 	@Override
-	public int[] getChatTypeList()
-	{
+	public int[] getChatTypeList() {
 		return COMMAND_IDS;
 	}
+	
 }

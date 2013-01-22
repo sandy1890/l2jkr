@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original Jython script by Kilkenny
  * @author nonom
  */
-public class Q51_OFullesSpecialBait extends Quest
-{
+public class Q51_OFullesSpecialBait extends Quest {
+	
 	private static final String qn = "51_OFullesSpecialBait";
 	
 	// NPCs
@@ -43,117 +43,98 @@ public class Q51_OFullesSpecialBait extends Quest
 	private static final int ICY_AIR_LURE = 7611;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 			case "31572-03.htm":
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "31572-07.html":
-				if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(LOST_BAIT) >= 100))
-				{
+				if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(LOST_BAIT) >= 100)) {
 					htmltext = "31572-06.htm";
 					st.giveItems(ICY_AIR_LURE, 4);
 					st.takeItems(LOST_BAIT, -1);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = "<html><body>這是已經完成的任務。</body></html>";
-				break;
+			break;
 			case State.CREATED:
 				htmltext = (player.getLevel() >= 36) ? "31572-01.htm" : "31572-02.html";
-				break;
+			break;
 			case State.STARTED:
 				htmltext = (st.getInt("cond") == 1) ? "31572-04.html" : "31572-05.html";
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
+		if (partyMember == null) {
 			return null;
 		}
 		
 		final QuestState st = partyMember.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
 		final long count = st.getQuestItemsCount(LOST_BAIT);
-		if ((st.getInt("cond") == 1) && (count < 100))
-		{
+		if ((st.getInt("cond") == 1) && (count < 100)) {
 			float chance = 33 * Config.RATE_QUEST_DROP;
 			float numItems = chance / 100;
 			chance = chance % 100;
 			
-			if (getRandom(100) < chance)
-			{
+			if (getRandom(100) < chance) {
 				numItems += 1;
 			}
-			if (numItems > 0)
-			{
-				if ((count + numItems) >= 100)
-				{
+			if (numItems > 0) {
+				if ((count + numItems) >= 100) {
 					numItems = 100 - count;
 				}
 				st.set("cond", "2");
 				st.playSound("ItemSound.quest_middle");
-			}
-			else
-			{
+			} else {
 				st.playSound("ItemSound.quest_itemget");
 			}
 			st.giveItems(LOST_BAIT, (int) numItems);
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q51_OFullesSpecialBait(int questId, String name, String descr)
-	{
+	public Q51_OFullesSpecialBait(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE);
 		addKillId(FETTERED_SOUL);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q51_OFullesSpecialBait(51, qn, "O'Fulle's Special Bait");
 	}
+	
 }

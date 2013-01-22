@@ -39,24 +39,35 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
  * MC show script
  * @author Kerberos
  */
-public class MC_Show extends L2AttackableAIScript
-{
+public class MC_Show extends L2AttackableAIScript {
+	
 	private static int mc = 32433;
 	private static int[] singers =
 	{
-		32431, 32432
+		32431,
+		32432
 	};
 	private static int[] circus =
 	{
-		32442, 32443, 32444, 32445, 32446
+		32442,
+		32443,
+		32444,
+		32445,
+		32446
 	};
 	private static int[] individuals =
 	{
-		32439, 32440, 32441
+		32439,
+		32440,
+		32441
 	};
 	private static int[] showstuff =
 	{
-		32424, 32425, 32426, 32427, 32428
+		32424,
+		32425,
+		32426,
+		32427,
+		32428
 	};
 	private static boolean isStarted = false;
 	private static NpcStringId[] messages =
@@ -88,14 +99,12 @@ public class MC_Show extends L2AttackableAIScript
 	
 	};
 	
-	private class ShoutInfo
-	{
+	private class ShoutInfo {
 		private final NpcStringId _npcStringId;
 		private final String _nextEvent;
 		private final int _time;
 		
-		public ShoutInfo(NpcStringId npcStringId, String nextEvent, int time)
-		{
+		public ShoutInfo(NpcStringId npcStringId, String nextEvent, int time) {
 			_npcStringId = npcStringId;
 			_nextEvent = nextEvent;
 			_time = time;
@@ -104,36 +113,31 @@ public class MC_Show extends L2AttackableAIScript
 		/**
 		 * @return the _npcStringId
 		 */
-		public NpcStringId getNpcStringId()
-		{
+		public NpcStringId getNpcStringId() {
 			return _npcStringId;
 		}
 		
 		/**
 		 * @return the _nextEvent
 		 */
-		public String getNextEvent()
-		{
+		public String getNextEvent() {
 			return _nextEvent;
 		}
 		
 		/**
 		 * @return the _time
 		 */
-		public int getTime()
-		{
+		public int getTime() {
 			return _time;
 		}
 	}
 	
-	private class WalkInfo
-	{
+	private class WalkInfo {
 		private final L2CharPosition _charPos;
 		private final String _nextEvent;
 		private final int _time;
 		
-		public WalkInfo(L2CharPosition charPos, String nextEvent, int time)
-		{
+		public WalkInfo(L2CharPosition charPos, String nextEvent, int time) {
 			_charPos = charPos;
 			_nextEvent = nextEvent;
 			_time = time;
@@ -142,24 +146,21 @@ public class MC_Show extends L2AttackableAIScript
 		/**
 		 * @return the _charPos
 		 */
-		public L2CharPosition getCharPos()
-		{
+		public L2CharPosition getCharPos() {
 			return _charPos;
 		}
 		
 		/**
 		 * @return the _nextEvent
 		 */
-		public String getNextEvent()
-		{
+		public String getNextEvent() {
 			return _nextEvent;
 		}
 		
 		/**
 		 * @return the _time
 		 */
-		public int getTime()
-		{
+		public int getTime() {
 			return _time;
 		}
 	}
@@ -167,8 +168,7 @@ public class MC_Show extends L2AttackableAIScript
 	private static Map<String, ShoutInfo> talks = new FastMap<>();
 	private static Map<String, WalkInfo> walks = new FastMap<>();
 	
-	private void load()
-	{
+	private void load() {
 		talks.put("1", new ShoutInfo(messages[1], "2", 1000));
 		talks.put("2", new ShoutInfo(messages[2], "3", 6000));
 		talks.put("3", new ShoutInfo(messages[3], "4", 4000));
@@ -277,44 +277,50 @@ public class MC_Show extends L2AttackableAIScript
 		walks.put("27", new WalkInfo(new L2CharPosition(-56702, -56340, -2008, 0), "29", 1800));
 	}
 	
-	public MC_Show(int id, String name, String descr)
-	{
+	public MC_Show(int id, String name, String descr) {
 		super(id, name, descr);
 		registerMobs(new int[]
 		{
-			32433, 32431, 32432, 32442, 32443, 32444, 32445, 32446, 32424, 32425, 32426, 32427, 32428
+			32433,
+			32431,
+			32432,
+			32442,
+			32443,
+			32444,
+			32445,
+			32446,
+			32424,
+			32425,
+			32426,
+			32427,
+			32428
 		}, QuestEventType.ON_SPAWN);
 		load();
 		scheduleTimer();
 	}
 	
-	private int getGameTime()
-	{
+	private int getGameTime() {
 		return GameTimeController.getInstance().getGameTime();
 	}
 	
-	private void scheduleTimer()
-	{
+	private void scheduleTimer() {
 		int gameTime = getGameTime();
 		int hours = (gameTime / 60) % 24;
 		int minutes = gameTime % 60;
 		int hourDiff, minDiff;
 		hourDiff = (20 - hours);
-		if (hourDiff < 0)
-		{
+		if (hourDiff < 0) {
 			hourDiff = 24 - (hourDiff *= -1);
 		}
 		minDiff = (30 - minutes);
-		if (minDiff < 0)
-		{
+		if (minDiff < 0) {
 			minDiff = 60 - (minDiff *= -1);
 		}
 		long diff;
 		hourDiff *= 60 * 60 * 1000;
 		minDiff *= 60 * 1000;
 		diff = hourDiff + minDiff;
-		if (Config.DEBUG)
-		{
+		if (Config.DEBUG) {
 			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 			_log.info("Fantasy Isle: MC show script starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
 		}
@@ -322,38 +328,34 @@ public class MC_Show extends L2AttackableAIScript
 		
 	}
 	
-	private void autoChat(L2Npc npc, NpcStringId npcString, int type)
-	{
+	private void autoChat(L2Npc npc, NpcStringId npcString, int type) {
 		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getNpcId(), npcString));
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
-	{
-		if (isStarted)
-		{
-			switch (npc.getNpcId())
-			{
+	public String onSpawn(L2Npc npc) {
+		if (isStarted) {
+			switch (npc.getNpcId()) {
 				case 32433:
 					autoChat(npc, messages[0], 1);
 					startQuestTimer("1", 30000, npc, null);
-					break;
+				break;
 				case 32431:
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56657, -56338, -2008, 33102));
 					startQuestTimer("social1", 6000, npc, null, true);
 					startQuestTimer("7", 215000, npc, null);
-					break;
+				break;
 				case 32432:
 					startQuestTimer("social1", 6000, npc, null, true);
 					startQuestTimer("7", 215000, npc, null);
-					break;
+				break;
 				case 32442:
 				case 32443:
 				case 32444:
 				case 32445:
 				case 32446:
 					startQuestTimer("11", 100000, npc, null);
-					break;
+				break;
 				case 32424:
 				case 32425:
 				case 32426:
@@ -362,30 +364,24 @@ public class MC_Show extends L2AttackableAIScript
 					startQuestTimer("social1", 5500, npc, null);
 					startQuestTimer("social1", 12500, npc, null);
 					startQuestTimer("28", 19700, npc, null);
-					break;
+				break;
 			}
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if ((event == null) || event.isEmpty())
-		{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if ((event == null) || event.isEmpty()) {
 			_log.warning("MC_Show: Null/Empty event for npc " + npc + " and player " + player + "!");
 			return null;
 		}
 		
-		if (event.equalsIgnoreCase("Start"))
-		{
+		if (event.equalsIgnoreCase("Start")) {
 			isStarted = true;
 			addSpawn(mc, -56698, -56430, -2008, 32768, false, 0);
-		}
-		else if ((npc != null) && isStarted)
-		{
-			if (event.equalsIgnoreCase("6"))
-			{
+		} else if ((npc != null) && isStarted) {
+			if (event.equalsIgnoreCase("6")) {
 				autoChat(npc, messages[6], 1);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56511, -56647, -2008, 36863));
 				npc.broadcastPacket(new PlaySound(1, "NS22_F", 0, 0, 0, 0, 0));
@@ -397,24 +393,19 @@ public class MC_Show extends L2AttackableAIScript
 				addSpawn(singers[1], -56580, -56203, -2008, 36863, false, 224000);
 				addSpawn(singers[1], -56606, -56157, -2008, 36863, false, 224000);
 				startQuestTimer("7", 215000, npc, null);
-			}
-			else if (event.equalsIgnoreCase("7"))
-			{
-				switch (npc.getNpcId())
-				{
+			} else if (event.equalsIgnoreCase("7")) {
+				switch (npc.getNpcId()) {
 					case 32433:
 						autoChat(npc, messages[7], 1);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56698, -56430, -2008, 32768));
 						startQuestTimer("8", 12000, npc, null);
-						break;
+					break;
 					default:
 						cancelQuestTimer("social1", npc, null);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56594, -56064, -2008, 32768));
-						break;
+					break;
 				}
-			}
-			else if (event.equalsIgnoreCase("10"))
-			{
+			} else if (event.equalsIgnoreCase("10")) {
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56483, -56665, -2034, 32768));
 				npc.broadcastPacket(new PlaySound(1, "TP05_F", 0, 0, 0, 0, 0));
 				startQuestTimer("npc1_1", 3000, addSpawn(circus[0], -56495, -56375, -2008, 32768, false, 101000), null);
@@ -427,39 +418,28 @@ public class MC_Show extends L2AttackableAIScript
 				startQuestTimer("npc8_1", 3000, addSpawn(circus[4], -56493, -56473, -2008, 32768, false, 101000), null);
 				startQuestTimer("npc9_1", 3000, addSpawn(circus[4], -56504, -56201, -2008, 32768, false, 101000), null);
 				startQuestTimer("11", 100000, npc, null);
-			}
-			else if (event.equalsIgnoreCase("11"))
-			{
-				switch (npc.getNpcId())
-				{
+			} else if (event.equalsIgnoreCase("11")) {
+				switch (npc.getNpcId()) {
 					case 32433:
 						autoChat(npc, messages[10], 1);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56698, -56430, -2008, 32768));
 						startQuestTimer("12", 5000, npc, null);
-						break;
+					break;
 					default:
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56343, -56330, -2008, 32768));
-						break;
+					break;
 				}
-			}
-			else if (event.equalsIgnoreCase("14"))
-			{
+			} else if (event.equalsIgnoreCase("14")) {
 				startQuestTimer("social1", 2000, addSpawn(individuals[0], -56700, -56385, -2008, 32768, false, 49000), null);
 				startQuestTimer("15", 7000, npc, null);
-			}
-			else if (event.equalsIgnoreCase("17"))
-			{
+			} else if (event.equalsIgnoreCase("17")) {
 				autoChat(npc, messages[15], 1);
 				startQuestTimer("social1", 2000, addSpawn(individuals[1], -56700, -56340, -2008, 32768, false, 32000), null);
 				startQuestTimer("18", 9000, npc, null);
-			}
-			else if (event.equalsIgnoreCase("20"))
-			{
+			} else if (event.equalsIgnoreCase("20")) {
 				startQuestTimer("social1", 2000, addSpawn(individuals[2], -56703, -56296, -2008, 32768, false, 13000), null);
 				startQuestTimer("21", 8000, npc, null);
-			}
-			else if (event.equalsIgnoreCase("23"))
-			{
+			} else if (event.equalsIgnoreCase("23")) {
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56702, -56340, -2008, 32768));
 				startQuestTimer("24", 2800, npc, null);
 				addSpawn(showstuff[0], -56672, -56406, -2000, 32768, false, 20900);
@@ -467,43 +447,28 @@ public class MC_Show extends L2AttackableAIScript
 				addSpawn(showstuff[2], -56608, -56338, -2000, 32768, false, 20900);
 				addSpawn(showstuff[3], -56652, -56307, -2000, 32768, false, 20900);
 				addSpawn(showstuff[4], -56672, -56272, -2000, 32768, false, 20900);
-			}
-			else if (event.equalsIgnoreCase("28"))
-			{
+			} else if (event.equalsIgnoreCase("28")) {
 				autoChat(npc, messages[22], 0);
 				startQuestTimer("social1", 1, npc, null);
-			}
-			else if (event.equalsIgnoreCase("29"))
-			{
+			} else if (event.equalsIgnoreCase("29")) {
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56730, -56340, -2008, 32768));
 				startQuestTimer("clean_npc", 4100, npc, null);
 				startQuestTimer("timer_check", 60000, null, null, true);
-			}
-			else if (event.equalsIgnoreCase("social1"))
-			{
+			} else if (event.equalsIgnoreCase("social1")) {
 				npc.broadcastSocialAction(1);
-			}
-			else if (event.equalsIgnoreCase("clean_npc"))
-			{
+			} else if (event.equalsIgnoreCase("clean_npc")) {
 				isStarted = false;
 				npc.deleteMe();
-			}
-			else
-			{
-				if (talks.containsKey(event))
-				{
+			} else {
+				if (talks.containsKey(event)) {
 					final ShoutInfo si = talks.get(event);
-					if (si != null)
-					{
+					if (si != null) {
 						autoChat(npc, si.getNpcStringId(), 1);
 						startQuestTimer(si.getNextEvent(), si.getTime(), npc, null);
 					}
-				}
-				else if (walks.containsKey(event))
-				{
+				} else if (walks.containsKey(event)) {
 					final WalkInfo wi = walks.get(event);
-					if (wi != null)
-					{
+					if (wi != null) {
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, wi.getCharPos());
 						startQuestTimer(wi.getNextEvent(), wi.getTime(), npc, null);
 					}
@@ -513,8 +478,8 @@ public class MC_Show extends L2AttackableAIScript
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new MC_Show(-1, "MC_Show", "fantasy_isle");
 	}
+	
 }

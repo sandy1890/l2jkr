@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original jython script by disKret.
  * @author nonom
  */
-public class Q18_MeetingWithTheGoldenRam extends Quest
-{
+public class Q18_MeetingWithTheGoldenRam extends Quest {
+	
 	private static final String qn = "18_MeetingWithTheGoldenRam";
 	
 	// NPCs
@@ -42,99 +42,80 @@ public class Q18_MeetingWithTheGoldenRam extends Quest
 	private static final int BOX = 7245;
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int npcId = npc.getNpcId();
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = getAlreadyCompletedMsg(player);
-				break;
+			break;
 			case State.CREATED:
-				if (npcId == DONAL)
-				{
+				if (npcId == DONAL) {
 					htmltext = "31314-01.htm";
 				}
-				break;
+			break;
 			case State.STARTED:
 				final int cond = st.getInt("cond");
-				if (npcId == DONAL)
-				{
+				if (npcId == DONAL) {
 					htmltext = "31314-04.html";
-				}
-				else if (npcId == DAISY)
-				{
+				} else if (npcId == DAISY) {
 					htmltext = (cond < 2) ? "31315-01.html" : "31315-03.html";
-				}
-				else if ((npcId == ABERCROMBIE) && (cond == 2) && st.hasQuestItems(BOX))
-				{
+				} else if ((npcId == ABERCROMBIE) && (cond == 2) && st.hasQuestItems(BOX)) {
 					htmltext = "31555-01.html";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 			case "31314-03.html":
-				if (player.getLevel() >= 66)
-				{
+				if (player.getLevel() >= 66) {
 					st.set("cond", "1");
 					st.setState(State.STARTED);
 					st.playSound("ItemSound.quest_accept");
-				}
-				else
-				{
+				} else {
 					htmltext = "31314-02.html";
 				}
-				break;
+			break;
 			case "31315-02.html":
 				st.set("cond", "2");
 				st.giveItems(BOX, 1);
-				break;
+			break;
 			case "31555-02.html":
-				if (st.hasQuestItems(BOX))
-				{
+				if (st.hasQuestItems(BOX)) {
 					st.giveAdena(40000, true);
 					st.takeItems(BOX, -1);
 					st.addExpAndSp(126668, 11731);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q18_MeetingWithTheGoldenRam(int questId, String name, String descr)
-	{
+	public Q18_MeetingWithTheGoldenRam(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(DONAL);
-		
 		addTalkId(DONAL, DAISY, ABERCROMBIE);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q18_MeetingWithTheGoldenRam(18, qn, "Meeting With The Golden Ram");
 	}
+	
 }

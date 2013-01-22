@@ -26,34 +26,29 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
-public class Paralyze extends L2Effect
-{
-	public Paralyze(Env env, EffectTemplate template)
-	{
+public class Paralyze extends L2Effect {
+	
+	public Paralyze(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	// Special constructor to steal this effect
-	public Paralyze(Env env, L2Effect effect)
-	{
+	public Paralyze(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
-	{
+	protected boolean effectCanBeStolen() {
 		return true;
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.PARALYZE;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_1);
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
 		getEffected().startParalyze();
@@ -61,22 +56,20 @@ public class Paralyze extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopAbnormalEffect(AbnormalEffect.HOLD_1);
 		getEffected().stopParalyze(false);
 		super.onExit();
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_PARALYZED;
 	}
+	
 }

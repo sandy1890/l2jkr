@@ -25,29 +25,34 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * @author Ectis
  */
-public class Sandstorms extends L2AttackableAIScript
-{
+public class Sandstorms extends L2AttackableAIScript {
+	
 	private static final int SANDSTORM = 32350;
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (npc.getNpcId() == SANDSTORM)
-		{
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet) {
+		if (npc.getNpcId() == SANDSTORM) {
 			npc.setTarget(player);
 			npc.doCast(SkillTable.getInstance().getInfo(5435, 1));
 		}
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
-	public Sandstorms(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public Sandstorms(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addAttackId(SANDSTORM);
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new Sandstorms(-1, "Sandstorms", "ai");
 	}
+	
 }

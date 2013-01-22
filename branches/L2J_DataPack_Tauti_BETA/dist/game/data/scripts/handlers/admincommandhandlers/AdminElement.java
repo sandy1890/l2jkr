@@ -18,6 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2Object;
@@ -26,16 +27,14 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
 /**
  * This class handles following admin commands: - delete = deletes target
- * 
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/04/11 10:05:56 $
  */
-public class AdminElement implements IAdminCommandHandler
-{
-	private static final String[]	ADMIN_COMMANDS	=
+public class AdminElement implements IAdminCommandHandler {
+	
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_setlh",
 		"admin_setlc",
@@ -47,43 +46,38 @@ public class AdminElement implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
 		int armorType = -1;
 		
-		if (command.startsWith("admin_setlh"))
+		if (command.startsWith("admin_setlh")) {
 			armorType = Inventory.PAPERDOLL_HEAD;
-		else if (command.startsWith("admin_setlc"))
+		} else if (command.startsWith("admin_setlc")) {
 			armorType = Inventory.PAPERDOLL_CHEST;
-		else if (command.startsWith("admin_setlg"))
+		} else if (command.startsWith("admin_setlg")) {
 			armorType = Inventory.PAPERDOLL_GLOVES;
-		else if (command.startsWith("admin_setlb"))
+		} else if (command.startsWith("admin_setlb")) {
 			armorType = Inventory.PAPERDOLL_FEET;
-		else if (command.startsWith("admin_setll"))
+		} else if (command.startsWith("admin_setll")) {
 			armorType = Inventory.PAPERDOLL_LEGS;
-		else if (command.startsWith("admin_setlw"))
+		} else if (command.startsWith("admin_setlw")) {
 			armorType = Inventory.PAPERDOLL_RHAND;
-		else if (command.startsWith("admin_setls"))
+		} else if (command.startsWith("admin_setls")) {
 			armorType = Inventory.PAPERDOLL_LHAND;
+		}
 		
-		if (armorType != -1)
-		{
-			try
-			{
+		if (armorType != -1) {
+			try {
 				String[] args = command.split(" ");
 				
 				byte element = Elementals.getElementId(args[1]);
 				int value = Integer.parseInt(args[2]);
-				if (element < -1 || element > 5 || value < 0 || value > 450)
-				{
+				if ((element < -1) || (element > 5) || (value < 0) || (value > 450)) {
 					activeChar.sendMessage("Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element> <value>[0-450]");
 					return false;
 				}
 				
 				setElement(activeChar, element, value, armorType);
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				activeChar.sendMessage("Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element>[0-5] <value>[0-450]");
 				return false;
 			}
@@ -93,24 +87,26 @@ public class AdminElement implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
 	
-	private void setElement(L2PcInstance activeChar, byte type, int value, int armorType)
-	{
+	/**
+	 * @param activeChar
+	 * @param type
+	 * @param value
+	 * @param armorType
+	 */
+	private void setElement(L2PcInstance activeChar, byte type, int value, int armorType) {
 		// get the target
 		L2Object target = activeChar.getTarget();
-		if (target == null)
+		if (target == null) {
 			target = activeChar;
-		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
-		{
-			player = (L2PcInstance) target;
 		}
-		else
-		{
+		L2PcInstance player = null;
+		if (target instanceof L2PcInstance) {
+			player = (L2PcInstance) target;
+		} else {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
@@ -119,34 +115,33 @@ public class AdminElement implements IAdminCommandHandler
 		
 		// only attempt to enchant if there is a weapon equipped
 		L2ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
-		if (parmorInstance != null && parmorInstance.getLocationSlot() == armorType)
-		{
+		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType)) {
 			itemInstance = parmorInstance;
 		}
 		
-		if (itemInstance != null)
-		{
+		if (itemInstance != null) {
 			String old, current;
 			Elementals element = itemInstance.getElemental(type);
-			if (element == null)
+			if (element == null) {
 				old = MessageTable.Messages[1660].getMessage();
-			else
-			{
+			} else {
 				old = element.toString();
 			}
 			
 			// set enchant value
 			player.getInventory().unEquipItemInSlot(armorType);
-			if (type == -1)
+			if (type == -1) {
 				itemInstance.clearElementAttr(type);
-			else
+			} else {
 				itemInstance.setElementAttr(type, value);
+			}
 			player.getInventory().equipItem(itemInstance);
 			
-			if (itemInstance.getElementals() == null)
+			if (itemInstance.getElementals() == null) {
 				current = MessageTable.Messages[1660].getMessage();
-			else
+			} else {
 				current = itemInstance.getElemental(type).toString();
+			}
 			
 			// send packets
 			InventoryUpdate iu = new InventoryUpdate();
@@ -154,13 +149,11 @@ public class AdminElement implements IAdminCommandHandler
 			player.sendPacket(iu);
 			
 			// informations
-			activeChar.sendMessage(MessageTable.Messages[1661].getExtra(1) + player.getName() + MessageTable.Messages[1661].getExtra(2)
-					+ itemInstance.getItem().getName() + MessageTable.Messages[1661].getExtra(3) + old + MessageTable.Messages[1661].getExtra(4) + current + MessageTable.Messages[1661].getExtra(5));
-			if (player != activeChar)
-			{
-				player.sendMessage(MessageTable.Messages[1662].getExtra(1) + activeChar.getName()+MessageTable.Messages[1662].getExtra(2)
-						+ itemInstance.getItem().getName() + MessageTable.Messages[1662].getExtra(3) + old + MessageTable.Messages[1662].getExtra(4) + current + MessageTable.Messages[1662].getExtra(5));
+			activeChar.sendMessage(MessageTable.Messages[1661].getExtra(1) + player.getName() + MessageTable.Messages[1661].getExtra(2) + itemInstance.getItem().getName() + MessageTable.Messages[1661].getExtra(3) + old + MessageTable.Messages[1661].getExtra(4) + current + MessageTable.Messages[1661].getExtra(5));
+			if (player != activeChar) {
+				player.sendMessage(MessageTable.Messages[1662].getExtra(1) + activeChar.getName() + MessageTable.Messages[1662].getExtra(2) + itemInstance.getItem().getName() + MessageTable.Messages[1662].getExtra(3) + old + MessageTable.Messages[1662].getExtra(4) + current + MessageTable.Messages[1662].getExtra(5));
 			}
 		}
 	}
+	
 }

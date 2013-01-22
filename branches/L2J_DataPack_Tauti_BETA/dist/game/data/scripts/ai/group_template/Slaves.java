@@ -34,18 +34,18 @@ import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 /**
  * @author DS
  */
-public class Slaves extends L2AttackableAIScript
-{
+public class Slaves extends L2AttackableAIScript {
+	
 	private static final int[] MASTERS =
 	{
-		22320, 22321
+		22320,
+		22321
 	};
 	private static final L2CharPosition MOVE_TO = new L2CharPosition(-25451, 252291, -3252, 3500);
 	private static final int TRUST_REWARD = 10;
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
+	public final String onSpawn(L2Npc npc) {
 		((L2MonsterInstance) npc).enableMinions(HellboundManager.getInstance().getLevel() < 5);
 		((L2MonsterInstance) npc).setOnKillDelay(1000);
 		
@@ -54,17 +54,12 @@ public class Slaves extends L2AttackableAIScript
 	
 	// Let's count trust points for killing in Engine
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (((L2MonsterInstance) npc).getMinionList() != null)
-		{
+	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
+		if (((L2MonsterInstance) npc).getMinionList() != null) {
 			final List<L2MonsterInstance> slaves = ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions();
-			if ((slaves != null) && !slaves.isEmpty())
-			{
-				for (L2MonsterInstance slave : slaves)
-				{
-					if ((slave == null) || slave.isDead())
-					{
+			if ((slaves != null) && !slaves.isEmpty()) {
+				for (L2MonsterInstance slave : slaves) {
+					if ((slave == null) || slave.isDead()) {
 						continue;
 					}
 					
@@ -73,8 +68,7 @@ public class Slaves extends L2AttackableAIScript
 					slave.abortCast();
 					slave.broadcastPacket(new NpcSay(slave.getObjectId(), Say2.ALL, slave.getNpcId(), NpcStringId.THANK_YOU_FOR_SAVING_ME_FROM_THE_CLUTCHES_OF_EVIL));
 					
-					if ((HellboundManager.getInstance().getLevel() >= 1) && (HellboundManager.getInstance().getLevel() <= 2))
-					{
+					if ((HellboundManager.getInstance().getLevel() >= 1) && (HellboundManager.getInstance().getLevel() <= 2)) {
 						HellboundManager.getInstance().updateTrust(TRUST_REWARD, false);
 					}
 					
@@ -86,18 +80,24 @@ public class Slaves extends L2AttackableAIScript
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public Slaves(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public Slaves(int questId, String name, String descr) {
 		super(questId, name, descr);
-		for (int npcId : MASTERS)
-		{
+		for (int npcId : MASTERS) {
 			addSpawnId(npcId);
 			addKillId(npcId);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new Slaves(-1, "Slaves", "ai");
 	}
+	
 }

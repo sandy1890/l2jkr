@@ -18,8 +18,6 @@
  */
 package conquerablehalls.DevastatedCastle;
 
-import gnu.trove.map.hash.TIntIntHashMap;
-
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.ClanTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -30,12 +28,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 
+import gnu.trove.map.hash.TIntIntHashMap;
+
 /**
  * Devastated Castle clan hall siege script.
  * @author BiggBoss
  */
-public final class DevastatedCastle extends ClanHallSiegeEngine
-{		
+public final class DevastatedCastle extends ClanHallSiegeEngine {
+	
 	private static final String qn = "DevastatedCastle";
 	
 	private static final int GUSTAV = 35410;
@@ -44,54 +44,52 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	private static final double GUSTAV_TRIGGER_HP = NpcTable.getInstance().getTemplate(GUSTAV).getBaseHpMax() / 12;
 	
 	private static TIntIntHashMap _damageToGustav = new TIntIntHashMap();
-
-	public DevastatedCastle(int questId, String name, String descr, int hallId)
-	{
+	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 * @param hallId
+	 */
+	public DevastatedCastle(int questId, String name, String descr, int hallId) {
 		super(questId, name, descr, hallId);
 		addKillId(GUSTAV);
-		
 		addSpawnId(MIKHAIL);
 		addSpawnId(DIETRICH);
-		
-		addAttackId(GUSTAV);	
+		addAttackId(GUSTAV);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
-	{
-		if(npc.getNpcId() == MIKHAIL)
+	public String onSpawn(L2Npc npc) {
+		if (npc.getNpcId() == MIKHAIL) {
 			broadcastNpcSay(npc, Say2.SHOUT, 1000276);
-		else if(npc.getNpcId() == DIETRICH)
+		} else if (npc.getNpcId() == DIETRICH) {
 			broadcastNpcSay(npc, Say2.SHOUT, 1000277);
+		}
 		return null;
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
-		if(!_hall.isInSiege())
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet) {
+		if (!_hall.isInSiege()) {
 			return null;
+		}
 		
-		synchronized(this)
-		{
+		synchronized (this) {
 			final L2Clan clan = attacker.getClan();
-				
-			if(clan != null && checkIsAttacker(clan))
-			{
+			
+			if ((clan != null) && checkIsAttacker(clan)) {
 				final int id = clan.getClanId();
-				if(_damageToGustav.containsKey(id))
-				{
+				if (_damageToGustav.containsKey(id)) {
 					int newDamage = _damageToGustav.get(id);
 					newDamage += damage;
 					_damageToGustav.put(id, newDamage);
-				}
-				else
+				} else {
 					_damageToGustav.put(id, damage);
+				}
 			}
 			
-			if(npc.getCurrentHp() < GUSTAV_TRIGGER_HP
-					&& npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST)
-			{
+			if ((npc.getCurrentHp() < GUSTAV_TRIGGER_HP) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST)) {
 				broadcastNpcSay(npc, Say2.ALL, 1000278);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, SkillTable.getInstance().getInfo(4235, 1), npc);
 			}
@@ -100,35 +98,30 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if(!_hall.isInSiege()) 
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
+		if (!_hall.isInSiege()) {
 			return null;
+		}
 		
 		_missionAccomplished = true;
-
-		if(npc.getNpcId() == GUSTAV)
-		{
-			synchronized(this)
-			{
+		
+		if (npc.getNpcId() == GUSTAV) {
+			synchronized (this) {
 				cancelSiegeTask();
 				endSiege();
 			}
 		}
-			
+		
 		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
-	public L2Clan getWinner()
-	{
+	public L2Clan getWinner() {
 		double counter = 0;
 		int damagest = 0;
-		for(int clan : _damageToGustav.keys())
-		{
+		for (int clan : _damageToGustav.keys()) {
 			final double damage = _damageToGustav.get(clan);
-			if(damage > counter)
-			{
+			if (damage > counter) {
 				counter = damage;
 				damagest = clan;
 			}
@@ -137,8 +130,11 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 		return winner;
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new DevastatedCastle(-1, qn, "conquerablehalls", DEVASTATED_CASTLE);
 	}
+	
 }

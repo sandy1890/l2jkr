@@ -36,8 +36,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Darion's Enforcer's and Darion's Executioner spawn/despawn
  * @author GKR
  */
-public class Keltas extends Quest
-{
+public class Keltas extends Quest {
+	
 	private static final int KELTAS = 22341;
 	private static final int ENFORCER = 22342;
 	private static final int EXECUTIONER = 22343;
@@ -105,10 +105,8 @@ public class Keltas extends Quest
 		new Location(-28492, 250704, -3523)
 	};
 	
-	private void spawnMinions()
-	{
-		for (Location loc : ENFORCER_SPAWN_POINTS)
-		{
+	private void spawnMinions() {
+		for (Location loc : ENFORCER_SPAWN_POINTS) {
 			L2MonsterInstance minion = (L2MonsterInstance) addSpawn(ENFORCER, loc, false, 0, false);
 			minion.getSpawn().setRespawnDelay(60);
 			minion.getSpawn().setAmount(1);
@@ -116,8 +114,7 @@ public class Keltas extends Quest
 			spawnedMonsters.add(minion.getSpawn());
 		}
 		
-		for (Location loc : EXECUTIONER_SPAWN_POINTS)
-		{
+		for (Location loc : EXECUTIONER_SPAWN_POINTS) {
 			L2MonsterInstance minion = (L2MonsterInstance) addSpawn(EXECUTIONER, loc, false, 0, false);
 			minion.getSpawn().setRespawnDelay(80);
 			minion.getSpawn().setAmount(1);
@@ -126,19 +123,15 @@ public class Keltas extends Quest
 		}
 	}
 	
-	private void despawnMinions()
-	{
-		if ((spawnedMonsters == null) || spawnedMonsters.isEmpty())
-		{
+	private void despawnMinions() {
+		if ((spawnedMonsters == null) || spawnedMonsters.isEmpty()) {
 			return;
 		}
 		
-		for (L2Spawn spawn : spawnedMonsters)
-		{
+		for (L2Spawn spawn : spawnedMonsters) {
 			spawn.stopRespawn();
 			L2Npc minion = spawn.getLastSpawn();
-			if ((minion != null) && !minion.isDead())
-			{
+			if ((minion != null) && !minion.isDead()) {
 				minion.deleteMe();
 			}
 		}
@@ -146,12 +139,9 @@ public class Keltas extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("despawn"))
-		{
-			if ((spawnedKeltas != null) && !spawnedKeltas.isDead())
-			{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("despawn")) {
+			if ((spawnedKeltas != null) && !spawnedKeltas.isDead()) {
 				spawnedKeltas.broadcastPacket(new NpcSay(spawnedKeltas.getObjectId(), Say2.SHOUT, spawnedKeltas.getNpcId(), NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK));
 				spawnedKeltas.deleteMe();
 				spawnedKeltas.getSpawn().decreaseCount(spawnedKeltas);
@@ -162,8 +152,7 @@ public class Keltas extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		cancelQuestTimers("despawn");
 		despawnMinions();
 		
@@ -171,10 +160,8 @@ public class Keltas extends Quest
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
-		if (!npc.isTeleporting())
-		{
+	public final String onSpawn(L2Npc npc) {
+		if (!npc.isTeleporting()) {
 			spawnedKeltas = (L2MonsterInstance) npc;
 			npc.broadcastPacket(new NpcSay(spawnedKeltas.getObjectId(), Say2.SHOUT, spawnedKeltas.getNpcId(), NpcStringId.GUYS_SHOW_THEM_OUR_POWER));
 			spawnMinions();
@@ -183,18 +170,23 @@ public class Keltas extends Quest
 		return super.onSpawn(npc);
 	}
 	
-	public Keltas(int id, String name, String descr)
-	{
+	/**
+	 * @param id
+	 * @param name
+	 * @param descr
+	 */
+	public Keltas(int id, String name, String descr) {
 		super(id, name, descr);
-		
 		addKillId(KELTAS);
 		addSpawnId(KELTAS);
-		
 		spawnedMonsters = new FastList<>();
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new Keltas(-1, "keltas", "ai");
 	}
+	
 }

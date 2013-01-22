@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
+//@formatter:off
 /**
  *【ID】   【ITEM_NAME】
  * 17094	奈比特之聲		內含奈比特之聲的貝殼，此道具可以提升自己的評價值10。無法交易或丟棄。
@@ -65,179 +66,164 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * 17128	奈比特沙漏-2.5小時	80~85	可以延長奈比特祝福2.5小時的奈比特沙漏。僅限等級80~85使用。無法交易或丟棄。
  * 17129	奈比特沙漏-3小時	80~85	可以延長奈比特祝福3小時的奈比特沙漏。僅限等級80~85使用。無法交易或丟棄。
  */
+//@formatter:on
 
 /**
  * Event Code for "Blessing"
- * @author  Gnat
- * Update by pmq 12-10-2010
+ * @author Gnat Update by pmq 12-10-2010
  */
-public class Blessing extends Quest
-{
-	private static final int BLESSING               = 32783;    // 祝福的神官
-	private static final int NEVITS_VOICE           = 17094;    // 奈比特之聲
-	private static final int NEVITS_HOURGLASS       = 17129;    // 奈比特沙漏
-
-	private static final int ADENA                  = 57;       // 金幣
-	private static final int NEVITS_VOICE_PRICE     = 100000;   // 奈比特之聲價錢
-	private static final int NEVITS_VOICE_TIME      = 20;       // 奈比特之聲可再買時間【已小時為單位】
-	private static final int NEVITS_HOURGLASS_PRICE = 5000000;  // 奈比特沙漏價錢
-	private static final int NEVITS_HOURGLASS_TIME  = 20;       // 奈比特沙漏可再買時間【已小時為單位】
-
-	public Blessing(int questId, String name, String descr)
-	{
+public class Blessing extends Quest {
+	
+	private static final int BLESSING = 32783; // 祝福的神官
+	private static final int NEVITS_VOICE = 17094; // 奈比特之聲
+	private static final int NEVITS_HOURGLASS = 17129; // 奈比特沙漏
+	
+	private static final int ADENA = 57; // 金幣
+	private static final int NEVITS_VOICE_PRICE = 100000; // 奈比特之聲價錢
+	private static final int NEVITS_VOICE_TIME = 20; // 奈比特之聲可再買時間【已小時為單位】
+	private static final int NEVITS_HOURGLASS_PRICE = 5000000; // 奈比特沙漏價錢
+	private static final int NEVITS_HOURGLASS_TIME = 20; // 奈比特沙漏可再買時間【已小時為單位】
+	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public Blessing(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(BLESSING);
 		addFirstTalkId(BLESSING);
 		addTalkId(BLESSING);
 	}
-
+	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		Quest q = QuestManager.getInstance().getQuest(getName());
-
+		
 		htmltext = event;
-		if (event.equalsIgnoreCase("voice"))
-		{
+		if (event.equalsIgnoreCase("voice")) {
 			long _curr_time = System.currentTimeMillis();
 			String value = q.loadGlobalQuestVar(player.getAccountName());
 			long _reuse_time = value == "" ? 0 : Long.parseLong(value);
-			if (_curr_time > _reuse_time)
-			{
-				if (st.getQuestItemsCount(ADENA) > NEVITS_VOICE_PRICE)
-				{
+			if (_curr_time > _reuse_time) {
+				if (st.getQuestItemsCount(ADENA) > NEVITS_VOICE_PRICE) {
 					st.takeItems(ADENA, NEVITS_VOICE_PRICE);
 					st.giveItems(NEVITS_VOICE, 1);
 					q.saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (NEVITS_VOICE_TIME * 3600000)));
 					htmltext = "";
+				} else {
+					htmltext = "<html><body>祝福的神官:<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
 				}
-				else
-					htmltext = "<html><body>祝福的神官：<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
-			}
-			else
-			{
+			} else {
 				long _remaining_time = (_reuse_time - _curr_time) / 1000;
 				int hours = (int) _remaining_time / 3600;
 				int minutes = ((int) _remaining_time % 3600) / 60;
-				if (hours > 0)
-				{
+				if (hours > 0) {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_HOURS_S2_MINUTES);
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
 					htmltext = "";
-				}
-				else if (minutes > 0)
-				{
+				} else if (minutes > 0) {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_MINUTES);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
 					htmltext = "";
-				}
-				else
-				{
+				} else {
 					// Little glitch. There is no SystemMessage with seconds only.
 					// If time is less than 1 minute player can buy scrolls
-					if (st.getQuestItemsCount(ADENA) > NEVITS_VOICE_PRICE)
-					{
+					if (st.getQuestItemsCount(ADENA) > NEVITS_VOICE_PRICE) {
 						st.takeItems(ADENA, NEVITS_VOICE_PRICE);
 						st.giveItems(NEVITS_VOICE, 1);
 						q.saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (NEVITS_VOICE_TIME * 3600000)));
 						htmltext = "";
+					} else {
+						htmltext = "<html><body>祝福的神官:<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
 					}
-					else
-						htmltext = "<html><body>祝福的神官：<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
 				}
 			}
-		}
-		else if (event.equalsIgnoreCase("hourglass"))
-		{
+		} else if (event.equalsIgnoreCase("hourglass")) {
 			long _curr_time = System.currentTimeMillis();
 			String value = q.loadGlobalQuestVar(player.getAccountName());
 			long _reuse_time = value == "" ? 0 : Long.parseLong(value);
-			if (_curr_time > _reuse_time)
-			{
-				if (st.getQuestItemsCount(ADENA) > NEVITS_HOURGLASS_PRICE)
-				{
+			if (_curr_time > _reuse_time) {
+				if (st.getQuestItemsCount(ADENA) > NEVITS_HOURGLASS_PRICE) {
 					st.takeItems(ADENA, NEVITS_HOURGLASS_PRICE);
 					st.giveItems(NEVITS_HOURGLASS, 1);
 					q.saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (NEVITS_HOURGLASS_TIME * 3600000)));
 					htmltext = "";
+				} else {
+					htmltext = "<html><body>祝福的神官:<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
 				}
-				else
-					htmltext = "<html><body>祝福的神官：<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
-			}
-			else
-			{
+			} else {
 				long _remaining_time = (_reuse_time - _curr_time) / 1000;
 				int hours = (int) _remaining_time / 3600;
 				int minutes = ((int) _remaining_time % 3600) / 60;
-				if (hours > 0)
-				{
+				if (hours > 0) {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_HOURS_S2_MINUTES);
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
 					htmltext = "";
-				}
-				else if (minutes > 0)
-				{
+				} else if (minutes > 0) {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_MINUTES);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
 					htmltext = "";
-				}
-				else
-				{
+				} else {
 					// Little glitch. There is no SystemMessage with seconds only.
 					// If time is less than 1 minute player can buy scrolls
-					if (st.getQuestItemsCount(ADENA) > NEVITS_HOURGLASS_PRICE)
-					{
+					if (st.getQuestItemsCount(ADENA) > NEVITS_HOURGLASS_PRICE) {
 						st.takeItems(ADENA, NEVITS_HOURGLASS_PRICE);
 						st.giveItems(NEVITS_HOURGLASS, 1);
 						q.saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (NEVITS_HOURGLASS_TIME * 3600000)));
 						htmltext = "";
+					} else {
+						htmltext = "<html><body>祝福的神官:<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
 					}
-					else
-						htmltext = "<html><body>祝福的神官：<br>您的好意我心領了，但您要捐獻的金幣好像還不太夠呢。協助貧困人們的機會一直都為您敞開著，等您有能力協助的時候，請隨時來找我。願神的祝福與您同在...</body></html>";
 				}
 			}
 		}
-
+		
 		return htmltext;
 	}
-
+	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			Quest q = QuestManager.getInstance().getQuest(getName());
 			st = q.newQuestState(player);
 		}
-		if (player.getLevel() <= 19)
+		if (player.getLevel() <= 19) {
 			htmltext = "32783-l1.htm";
-		if (player.getLevel() >= 20 && player.getLevel() <= 39)
+		}
+		if ((player.getLevel() >= 20) && (player.getLevel() <= 39)) {
 			htmltext = "32783-l2.htm";
-		if (player.getLevel() >= 40 && player.getLevel() <= 51)
+		}
+		if ((player.getLevel() >= 40) && (player.getLevel() <= 51)) {
 			htmltext = "32783-l3.htm";
-		if (player.getLevel() >= 52 && player.getLevel() <= 60)
+		}
+		if ((player.getLevel() >= 52) && (player.getLevel() <= 60)) {
 			htmltext = "32783-l4.htm";
-		if (player.getLevel() >= 61 && player.getLevel() <= 75)
+		}
+		if ((player.getLevel() >= 61) && (player.getLevel() <= 75)) {
 			htmltext = "32783-l5.htm";
-		if (player.getLevel() >= 76 && player.getLevel() <= 79)
+		}
+		if ((player.getLevel() >= 76) && (player.getLevel() <= 79)) {
 			htmltext = "32783-l6.htm";
-		if (player.getLevel() >= 80 && player.getLevel() <= 85)
+		}
+		if ((player.getLevel() >= 80) && (player.getLevel() <= 85)) {
 			htmltext = "32783-l7.htm";
+		}
 		return htmltext;
 	}
-
-	public static void main(String[] args)
-	{
+	
+	public static void main(String[] args) {
 		new Blessing(-1, "Blessing", "custom");
 	}
+	
 }

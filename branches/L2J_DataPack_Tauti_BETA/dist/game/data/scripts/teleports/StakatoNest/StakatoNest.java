@@ -24,8 +24,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
-public class StakatoNest extends Quest
-{
+public class StakatoNest extends Quest {
+	
 	private final static Location[] _locs =
 	{
 		new Location(80456, -52322, -5640),
@@ -37,33 +37,30 @@ public class StakatoNest extends Quest
 	
 	private final static int npcId = 32640;
 	
-	public StakatoNest(int questId, String name, String descr)
-	{
+	public StakatoNest(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(npcId);
 		addTalkId(npcId);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (st == null) {
 			st = newQuestState(player);
+		}
 		
 		int index = Integer.parseInt(event) - 1;
 		
-		if (_locs.length > index)
-		{
+		if (_locs.length > index) {
 			Location loc = _locs[index];
 			
-			if (player.getParty() != null)
-			{
-				for (L2PcInstance partyMember : player.getParty().getMembers())
-				{
-					if (partyMember.isInsideRadius(player, 1000, true, true))
+			if (player.getParty() != null) {
+				for (L2PcInstance partyMember : player.getParty().getMembers()) {
+					if (partyMember.isInsideRadius(player, 1000, true, true)) {
 						partyMember.teleToLocation(loc, true);
+					}
 				}
 			}
 			player.teleToLocation(loc, false);
@@ -74,20 +71,20 @@ public class StakatoNest extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState accessQuest = player.getQuestState("240_ImTheOnlyOneYouCanTrust");
-		if ((accessQuest != null) && accessQuest.isCompleted())
+		if ((accessQuest != null) && accessQuest.isCompleted()) {
 			htmltext = "32640.htm";
-		else
+		} else {
 			htmltext = "32640-no.htm";
+		}
 		
 		return htmltext;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new StakatoNest(-1, "StakatoNest", "teleports");
 	}
+	
 }

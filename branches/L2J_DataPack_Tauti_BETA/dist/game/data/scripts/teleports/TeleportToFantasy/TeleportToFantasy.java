@@ -34,8 +34,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 /**
  * @author Plim Original python script by Kerberos
  */
-public class TeleportToFantasy extends Quest
-{
+public class TeleportToFantasy extends Quest {
+	
 	private static final int PADDIES = 32378;
 	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
 	
@@ -64,46 +64,35 @@ public class TeleportToFantasy extends Quest
 	};
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		if (st == null)
+		if (st == null) {
 			return null;
+		}
 		
-		if (TELEPORTERS.containsKey(npc.getNpcId()))
-		{
+		if (TELEPORTERS.containsKey(npc.getNpcId())) {
 			int random_id = getRandom(ISLE_LOCS.length);
-			
 			player.teleToLocation(ISLE_LOCS[random_id], false);
 			st.setState(State.STARTED);
 			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
-		}
-		
-		else if (npc.getNpcId() == PADDIES)
-		{
-			if (st.getState() == State.STARTED && st.getInt("id") > 0)
-			{
+		} else if (npc.getNpcId() == PADDIES) {
+			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0)) {
 				int return_id = st.getInt("id") - 1;
 				player.teleToLocation(RETURN_LOCS[return_id], false);
 				st.unset("id");
-			}
-			
-			else
-			{
+			} else {
 				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
 				player.teleToLocation(43835, -47749, -792);
 			}
-			
 			st.exitQuest(true);
 		}
 		
 		return htmltext;
 	}
 	
-	public TeleportToFantasy(int questId, String name, String descr)
-	{
+	public TeleportToFantasy(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		TELEPORTERS.put(30059, 3); // TRISHA
@@ -118,8 +107,7 @@ public class TeleportToFantasy extends Quest
 		TELEPORTERS.put(31275, 10); // TATIANA
 		TELEPORTERS.put(31964, 11); // BILIA
 		
-		for (int npcId : TELEPORTERS.keySet())
-		{
+		for (int npcId : TELEPORTERS.keySet()) {
 			addStartNpc(npcId);
 			addTalkId(npcId);
 		}
@@ -128,8 +116,8 @@ public class TeleportToFantasy extends Quest
 		addTalkId(PADDIES);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new TeleportToFantasy(-1, TeleportToFantasy.class.getSimpleName(), "teleports");
 	}
+	
 }

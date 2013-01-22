@@ -22,32 +22,32 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class DoomWraith extends L2Transformation
-{
+public class DoomWraith extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		586, 587, 588, 589, 5491, 619
+		586,
+		587,
+		588,
+		589,
+		5491,
+		619
 	};
 	
-	public DoomWraith()
-	{
+	public DoomWraith() {
 		// id, colRadius, colHeight
 		super(2, 13, 25);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 2) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 2) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Rolling Attack (up to 2 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(586, 2), false);
 		// Earth Storm (up to 2 levels)
@@ -65,13 +65,11 @@ public class DoomWraith extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Rolling Attack (up to 2 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(586, 2), false);
 		// Earth Storm (up to 2 levels)
@@ -88,8 +86,7 @@ public class DoomWraith extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new DoomWraith());
 	}
 }

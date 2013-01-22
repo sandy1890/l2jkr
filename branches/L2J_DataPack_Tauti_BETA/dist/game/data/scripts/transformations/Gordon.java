@@ -22,32 +22,31 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class Gordon extends L2Transformation
-{
+public class Gordon extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		728, 729, 730, 5491, 619
+		728,
+		729,
+		730,
+		5491,
+		619
 	};
 	
-	public Gordon()
-	{
+	public Gordon() {
 		// id, colRadius, colHeight
 		super(308, 30, 46.6);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 308) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 308) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Gordon Beast Attack
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(728, 1), false);
 		// Gordon Sword Stab
@@ -63,13 +62,11 @@ public class Gordon extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Gordon Beast Attack
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(728, 1), false);
 		// Gordon Sword Stab
@@ -84,8 +81,7 @@ public class Gordon extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new Gordon());
 	}
 }

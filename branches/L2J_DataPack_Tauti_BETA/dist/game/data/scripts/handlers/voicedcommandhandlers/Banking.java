@@ -19,17 +19,17 @@
 package handlers.voicedcommandhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.datatables.MessageTable;
+import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.L2CoreMessage;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class trades Gold Bars for Adena and vice versa.
  * @author Ahmed
  */
-public class Banking implements IVoicedCommandHandler
-{
+public class Banking implements IVoicedCommandHandler {
+	
 	private static final String[] _voicedCommands =
 	{
 		"bank",
@@ -38,57 +38,43 @@ public class Banking implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
-	{
-		if (command.equals("bank"))
-		{
-			L2CoreMessage cm = new L2CoreMessage (MessageTable.Messages[1179]);
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params) {
+		if (command.equals("bank")) {
+			L2CoreMessage cm = new L2CoreMessage(MessageTable.Messages[1179]);
 			cm.addNumber(Config.BANKING_SYSTEM_ADENA);
 			cm.addNumber(Config.BANKING_SYSTEM_GOLDBARS);
 			cm.addNumber(Config.BANKING_SYSTEM_GOLDBARS);
 			cm.addNumber(Config.BANKING_SYSTEM_ADENA);
 			activeChar.sendMessage(cm.renderMsg());
-		}
-		else if (command.equals("deposit"))
-		{
-			if (activeChar.getInventory().getInventoryItemCount(57, 0) >= Config.BANKING_SYSTEM_ADENA)
-			{
-				if (!activeChar.reduceAdena("Goldbar", Config.BANKING_SYSTEM_ADENA, activeChar, false))
-				{
+		} else if (command.equals("deposit")) {
+			if (activeChar.getInventory().getInventoryItemCount(57, 0) >= Config.BANKING_SYSTEM_ADENA) {
+				if (!activeChar.reduceAdena("Goldbar", Config.BANKING_SYSTEM_ADENA, activeChar, false)) {
 					return false;
 				}
 				activeChar.getInventory().addItem("Goldbar", 3470, Config.BANKING_SYSTEM_GOLDBARS, activeChar, null);
 				activeChar.getInventory().updateDatabase();
-				L2CoreMessage cm = new L2CoreMessage (MessageTable.Messages[1180]);
+				L2CoreMessage cm = new L2CoreMessage(MessageTable.Messages[1180]);
 				cm.addNumber(Config.BANKING_SYSTEM_GOLDBARS);
 				cm.addNumber(Config.BANKING_SYSTEM_ADENA);
 				activeChar.sendMessage(cm.renderMsg());
-			}
-			else
-			{
-				L2CoreMessage cm = new L2CoreMessage (MessageTable.Messages[1181]);
+			} else {
+				L2CoreMessage cm = new L2CoreMessage(MessageTable.Messages[1181]);
 				cm.addNumber(Config.BANKING_SYSTEM_ADENA);
 				activeChar.sendMessage(cm.renderMsg());
 			}
-		}
-		else if (command.equals("withdraw"))
-		{
-			if (activeChar.getInventory().getInventoryItemCount(3470, 0) >= Config.BANKING_SYSTEM_GOLDBARS)
-			{
-				if (!activeChar.destroyItemByItemId("Adena", 3470, Config.BANKING_SYSTEM_GOLDBARS, activeChar, false))
-				{
+		} else if (command.equals("withdraw")) {
+			if (activeChar.getInventory().getInventoryItemCount(3470, 0) >= Config.BANKING_SYSTEM_GOLDBARS) {
+				if (!activeChar.destroyItemByItemId("Adena", 3470, Config.BANKING_SYSTEM_GOLDBARS, activeChar, false)) {
 					return false;
 				}
 				activeChar.getInventory().addAdena("Adena", Config.BANKING_SYSTEM_ADENA, activeChar, null);
 				activeChar.getInventory().updateDatabase();
-				L2CoreMessage cm = new L2CoreMessage (MessageTable.Messages[1182]);
+				L2CoreMessage cm = new L2CoreMessage(MessageTable.Messages[1182]);
 				cm.addNumber(Config.BANKING_SYSTEM_ADENA);
 				cm.addNumber(Config.BANKING_SYSTEM_GOLDBARS);
 				activeChar.sendMessage(cm.renderMsg());
-			}
-			else
-			{
-				L2CoreMessage cm = new L2CoreMessage (MessageTable.Messages[1183]);
+			} else {
+				L2CoreMessage cm = new L2CoreMessage(MessageTable.Messages[1183]);
 				cm.addNumber(Config.BANKING_SYSTEM_ADENA);
 				activeChar.sendMessage(cm.renderMsg());
 			}
@@ -97,8 +83,8 @@ public class Banking implements IVoicedCommandHandler
 	}
 	
 	@Override
-	public String[] getVoicedCommandList()
-	{
+	public String[] getVoicedCommandList() {
 		return _voicedCommands;
 	}
+	
 }

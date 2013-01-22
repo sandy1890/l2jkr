@@ -26,11 +26,10 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * To The Seed Of Annihilation (10282)
- * @author pmq
- * 2011-09-20 Based on High Five
+ * @author pmq 2011-09-20 Based on High Five
  */
-public class Q10282_ToTheSeedOfAnnihilation extends Quest
-{
+public class Q10282_ToTheSeedOfAnnihilation extends Quest {
+	
 	private static final String qn = "10282_ToTheSeedOfAnnihilation";
 	
 	// NPCs
@@ -41,70 +40,58 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	private static final int SOA_ORDERS = 15512;
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
-		
-		if (npc.getNpcId() == KBALDIR)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == KBALDIR) {
+			switch (st.getState()) {
 				case State.CREATED:
-					if (player.getLevel() >= 84)
+					if (player.getLevel() >= 84) {
 						htmltext = "32733-01.htm";
-					else
+					} else {
 						htmltext = "32733-00.htm";
-					break;
+					}
+				break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.getInt("cond") == 1) {
 						htmltext = "32733-08.html";
-					break;
+					}
+				break;
 				case State.COMPLETED:
 					htmltext = "32733-09.html";
-					break;
+				break;
 			}
-		}
-		
-		else if (npc.getNpcId() == KLEMIS)
-		{
-			switch (st.getState())
-			{
+		} else if (npc.getNpcId() == KLEMIS) {
+			switch (st.getState()) {
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.getInt("cond") == 1) {
 						htmltext = "32734-01.html";
-					break;
+					}
+				break;
 				case State.COMPLETED:
 					htmltext = "32734-03.html";
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
-		
-		if (npc.getNpcId() == KBALDIR && event.equalsIgnoreCase("32733-07.html"))
-		{
+		if ((npc.getNpcId() == KBALDIR) && event.equalsIgnoreCase("32733-07.html")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.giveItems(SOA_ORDERS, 1);
 			st.playSound("ItemSound.quest_accept");
-		}
-		else if (npc.getNpcId() == KLEMIS && event.equalsIgnoreCase("32734-02.html"))
-		{
+		} else if ((npc.getNpcId() == KLEMIS) && event.equalsIgnoreCase("32734-02.html")) {
 			st.giveItems(57, 212182);
 			st.takeItems(SOA_ORDERS, 1);
 			st.addExpAndSp(1148480, 99110);
@@ -115,18 +102,18 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 		return htmltext;
 	}
 	
-	public Q10282_ToTheSeedOfAnnihilation(int questId, String name, String descr)
-	{
+	public Q10282_ToTheSeedOfAnnihilation(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(KBALDIR);
 		addTalkId(KBALDIR, KLEMIS);
-		
-		questItemIds = new int[] { SOA_ORDERS };
+		questItemIds = new int[]
+		{
+			SOA_ORDERS
+		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10282_ToTheSeedOfAnnihilation(10282, qn, "To the Seed of Annihilation");
 	}
+	
 }

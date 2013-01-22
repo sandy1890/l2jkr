@@ -21,6 +21,7 @@ package handlers.bypasshandlers;
 import java.text.DateFormat;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.games.Lottery;
@@ -33,44 +34,32 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class Loto implements IBypassHandler
-{
+public class Loto implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"Loto"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
-		
 		int val = 0;
-		try
-		{
+		try {
 			val = Integer.parseInt(command.substring(5));
+		} catch (IndexOutOfBoundsException ioobe) {
+		} catch (NumberFormatException nfe) {
 		}
-		catch (IndexOutOfBoundsException ioobe)
-		{
-		}
-		catch (NumberFormatException nfe)
-		{
-		}
-		if (val == 0)
-		{
+		if (val == 0) {
 			// new loto ticket
-			for (int i = 0; i < 5; i++)
-			{
+			for (int i = 0; i < 5; i++) {
 				activeChar.setLoto(i, 0);
 			}
 		}
 		showLotoWindow(activeChar, (L2Npc) target, val);
-		
 		return false;
 	}
 	
@@ -92,28 +81,22 @@ public class Loto implements IBypassHandler
 	// 23 - current lottery jackpot
 	// 24 - Previous winning numbers/Prize claim
 	// >24 - check lottery ticket by item object id
-	public static final void showLotoWindow(L2PcInstance player, L2Npc npc, int val)
-	{
+	public static final void showLotoWindow(L2PcInstance player, L2Npc npc, int val) {
 		int npcId = npc.getTemplate().getNpcId();
 		String filename;
 		SystemMessage sm;
 		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
-		if (val == 0) // 0 - first buy lottery ticket window
-		{
+		if (val == 0) { // 0 - first buy lottery ticket window
 			filename = (npc.getHtmlPath(npcId, 1));
 			html.setFile(player.getHtmlPrefix(), filename);
-		}
-		else if ((val >= 1) && (val <= 21)) // 1-20 - buttons, 21 - second buy lottery ticket window
-		{
-			if (!Lottery.getInstance().isStarted())
-			{
+		} else if ((val >= 1) && (val <= 21)) { // 1-20 - buttons, 21 - second buy lottery ticket window
+			if (!Lottery.getInstance().isStarted()) {
 				// tickets can't be sold
 				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
 				return;
 			}
-			if (!Lottery.getInstance().isSellableTickets())
-			{
+			if (!Lottery.getInstance().isSellableTickets()) {
 				// tickets can't be sold
 				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
 				return;
@@ -125,27 +108,20 @@ public class Loto implements IBypassHandler
 			int count = 0;
 			int found = 0;
 			// counting buttons and unsetting button if found
-			for (int i = 0; i < 5; i++)
-			{
-				if (player.getLoto(i) == val)
-				{
+			for (int i = 0; i < 5; i++) {
+				if (player.getLoto(i) == val) {
 					// unsetting button
 					player.setLoto(i, 0);
 					found = 1;
-				}
-				else if (player.getLoto(i) > 0)
-				{
+				} else if (player.getLoto(i) > 0) {
 					count++;
 				}
 			}
 			
 			// if not rearched limit 5 and not unseted value
-			if ((count < 5) && (found == 0) && (val <= 20))
-			{
-				for (int i = 0; i < 5; i++)
-				{
-					if (player.getLoto(i) == 0)
-					{
+			if ((count < 5) && (found == 0) && (val <= 20)) {
+				for (int i = 0; i < 5; i++) {
+					if (player.getLoto(i) == 0) {
 						player.setLoto(i, val);
 						break;
 					}
@@ -154,14 +130,11 @@ public class Loto implements IBypassHandler
 			
 			// setting pusshed buttons
 			count = 0;
-			for (int i = 0; i < 5; i++)
-			{
-				if (player.getLoto(i) > 0)
-				{
+			for (int i = 0; i < 5; i++) {
+				if (player.getLoto(i) > 0) {
 					count++;
 					String button = String.valueOf(player.getLoto(i));
-					if (player.getLoto(i) < 10)
-					{
+					if (player.getLoto(i) < 10) {
 						button = "0" + button;
 					}
 					String search = "fore=\"L2UI.lottoNum" + button + "\" back=\"L2UI.lottoNum" + button + "a_check\"";
@@ -170,23 +143,18 @@ public class Loto implements IBypassHandler
 				}
 			}
 			
-			if (count == 5)
-			{
-				String search = "0\">"+MessageTable.Messages[1004].getMessage();
-				String replace = "22\">"+MessageTable.Messages[1005].getMessage();
+			if (count == 5) {
+				String search = "0\">" + MessageTable.Messages[1004].getMessage();
+				String replace = "22\">" + MessageTable.Messages[1005].getMessage();
 				html.replace(search, replace);
 			}
-		}
-		else if (val == 22) // 22 - selected ticket with 5 numbers
-		{
-			if (!Lottery.getInstance().isStarted())
-			{
+		} else if (val == 22) { // 22 - selected ticket with 5 numbers
+			if (!Lottery.getInstance().isStarted()) {
 				// tickets can't be sold
 				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_CURRENT_SOLD);
 				return;
 			}
-			if (!Lottery.getInstance().isSellableTickets())
-			{
+			if (!Lottery.getInstance().isSellableTickets()) {
 				// tickets can't be sold
 				player.sendPacket(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE);
 				return;
@@ -197,30 +165,23 @@ public class Loto implements IBypassHandler
 			int enchant = 0;
 			int type2 = 0;
 			
-			for (int i = 0; i < 5; i++)
-			{
-				if (player.getLoto(i) == 0)
-				{
+			for (int i = 0; i < 5; i++) {
+				if (player.getLoto(i) == 0) {
 					return;
 				}
 				
-				if (player.getLoto(i) < 17)
-				{
+				if (player.getLoto(i) < 17) {
 					enchant += Math.pow(2, player.getLoto(i) - 1);
-				}
-				else
-				{
+				} else {
 					type2 += Math.pow(2, player.getLoto(i) - 17);
 				}
 			}
-			if (player.getAdena() < price)
-			{
+			if (player.getAdena() < price) {
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
 				player.sendPacket(sm);
 				return;
 			}
-			if (!player.reduceAdena("Loto", price, npc, true))
-			{
+			if (!player.reduceAdena("Loto", price, npc, true)) {
 				return;
 			}
 			Lottery.getInstance().increasePrize(price);
@@ -245,73 +206,57 @@ public class Loto implements IBypassHandler
 			
 			filename = (npc.getHtmlPath(npcId, 6));
 			html.setFile(player.getHtmlPrefix(), filename);
-		}
-		else if (val == 23) // 23 - current lottery jackpot
-		{
+		} else if (val == 23) { // 23 - current lottery jackpot
 			filename = (npc.getHtmlPath(npcId, 3));
 			html.setFile(player.getHtmlPrefix(), filename);
-		}
-		else if (val == 24) // 24 - Previous winning numbers/Prize claim
-		{
+		} else if (val == 24) { // 24 - Previous winning numbers/Prize claim
 			filename = (npc.getHtmlPath(npcId, 4));
 			html.setFile(player.getHtmlPrefix(), filename);
 			
 			int lotonumber = Lottery.getInstance().getId();
 			String message = "";
-			for (L2ItemInstance item : player.getInventory().getItems())
-			{
-				if (item == null)
-				{
+			for (L2ItemInstance item : player.getInventory().getItems()) {
+				if (item == null) {
 					continue;
 				}
-				if ((item.getItemId() == 4442) && (item.getCustomType1() < lotonumber))
-				{
+				if ((item.getItemId() == 4442) && (item.getCustomType1() < lotonumber)) {
 					message = message + "<a action=\"bypass -h npc_%objectId%_Loto " + item.getObjectId() + "\">" + item.getCustomType1() + MessageTable.Messages[1006].getMessage();
 					int[] numbers = Lottery.getInstance().decodeNumbers(item.getEnchantLevel(), item.getCustomType2());
-					for (int i = 0; i < 5; i++)
-					{
+					for (int i = 0; i < 5; i++) {
 						message += numbers[i] + " ";
 					}
 					long[] check = Lottery.getInstance().checkTicket(item);
-					if (check[0] > 0)
-					{
-						switch ((int) check[0])
-						{
+					if (check[0] > 0) {
+						switch ((int) check[0]) {
 							case 1:
 								message += MessageTable.Messages[1007].getMessage();
-								break;
+							break;
 							case 2:
 								message += MessageTable.Messages[1008].getMessage();
-								break;
+							break;
 							case 3:
 								message += MessageTable.Messages[1009].getMessage();
-								break;
+							break;
 							case 4:
 								message += MessageTable.Messages[1010].getMessage();
-								break;
+							break;
 						}
 						message += " " + check[1] + MessageTable.Messages[1011].getMessage();
 					}
 					message += "</a><br>";
 				}
 			}
-			if (message.isEmpty())
-			{
-				message += MessageTable.Messages[1012].getMessage()+"<br>";
+			if (message.isEmpty()) {
+				message += MessageTable.Messages[1012].getMessage() + "<br>";
 			}
 			html.replace("%result%", message);
-		}
-		else if (val == 25) // 25 - lottery instructions
-		{
+		} else if (val == 25) { // 25 - lottery instructions
 			filename = (npc.getHtmlPath(npcId, 2));
 			html.setFile(player.getHtmlPrefix(), filename);
-		}
-		else if (val > 25) // >25 - check lottery ticket by item object id
-		{
+		} else if (val > 25) { // >25 - check lottery ticket by item object id
 			int lotonumber = Lottery.getInstance().getId();
 			L2ItemInstance item = player.getInventory().getItemByObjectId(val);
-			if ((item == null) || (item.getItemId() != 4442) || (item.getCustomType1() >= lotonumber))
-			{
+			if ((item == null) || (item.getItemId() != 4442) || (item.getCustomType1() >= lotonumber)) {
 				return;
 			}
 			long[] check = Lottery.getInstance().checkTicket(item);
@@ -321,8 +266,7 @@ public class Loto implements IBypassHandler
 			player.sendPacket(sm);
 			
 			long adena = check[1];
-			if (adena > 0)
-			{
+			if (adena > 0) {
 				player.addAdena("Loto", adena, npc, true);
 			}
 			player.destroyItem("Loto", item, npc, false);
@@ -344,8 +288,8 @@ public class Loto implements IBypassHandler
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

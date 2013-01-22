@@ -27,52 +27,45 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author earendil
  */
-public class NoblesseBless extends L2Effect
-{
-	public NoblesseBless(Env env, EffectTemplate template)
-	{
+public class NoblesseBless extends L2Effect {
+	
+	public NoblesseBless(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	// Special constructor to steal this effect
-	public NoblesseBless(Env env, L2Effect effect)
-	{
+	public NoblesseBless(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
-	{
+	protected boolean effectCanBeStolen() {
 		return true;
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.NOBLESSE_BLESSING;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_NOBLESS_BLESSING;
 	}
+	
 }

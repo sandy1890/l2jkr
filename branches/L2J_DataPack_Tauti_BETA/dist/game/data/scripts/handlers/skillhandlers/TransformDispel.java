@@ -29,39 +29,41 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author Ahmed
  */
-public class TransformDispel implements ISkillHandler
-{
+public class TransformDispel implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.TRANSFORMDISPEL
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (activeChar.isAlikeDead())
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (activeChar.isAlikeDead()) {
 			return;
+		}
 		
-		if (!(activeChar instanceof L2PcInstance))
+		if (!(activeChar instanceof L2PcInstance)) {
 			return;
+		}
 		
 		L2PcInstance pc = (L2PcInstance) activeChar;
 		
-		if (pc.isAlikeDead() || pc.isCursedWeaponEquipped())
+		if (pc.isAlikeDead() || pc.isCursedWeaponEquipped()) {
 			return;
+		}
 		
-		if (pc.isTransformed() || pc.isInStance())
-		{
-			if (pc.isFlyingMounted() && !pc.isInsideZone(L2Character.ZONE_LANDING))
+		if (pc.isTransformed() || pc.isInStance()) {
+			if (pc.isFlyingMounted() && !pc.isInsideZone(L2Character.ZONE_LANDING)) {
 				pc.sendPacket(SystemMessageId.BOARD_OR_CANCEL_NOT_POSSIBLE_HERE);
-			else
+			} else {
 				pc.stopTransformation(true);
+			}
 		}
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

@@ -29,17 +29,15 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 /**
  * @author GKR
  */
-public class Typhoon extends L2AttackableAIScript
-{
+public class Typhoon extends L2AttackableAIScript {
+	
 	private static final int TYPHOON = 25539;
 	
 	private static SkillHolder STORM = new SkillHolder(5434, 1);
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("cast") && (npc != null) && !npc.isDead())
-		{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("cast") && (npc != null) && !npc.isDead()) {
 			npc.doSimultaneousCast(STORM.getSkill());
 			startQuestTimer("cast", 5000, npc, null);
 		}
@@ -47,39 +45,39 @@ public class Typhoon extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet) {
 		npc.doSimultaneousCast(STORM.getSkill());
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
-		if (!npc.isTeleporting())
-		{
+	public final String onSpawn(L2Npc npc) {
+		if (!npc.isTeleporting()) {
 			startQuestTimer("cast", 5000, npc, null);
 		}
-		
 		return super.onSpawn(npc);
 	}
 	
-	public Typhoon(int id, String name, String descr)
-	{
+	/**
+	 * @param id
+	 * @param name
+	 * @param descr
+	 */
+	public Typhoon(int id, String name, String descr) {
 		super(id, name, descr);
-		
 		addAggroRangeEnterId(TYPHOON);
 		addSpawnId(TYPHOON);
-		
 		final L2RaidBossInstance boss = RaidBossSpawnManager.getInstance().getBosses().get(TYPHOON);
-		if (boss != null)
-		{
+		if (boss != null) {
 			onSpawn(boss);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new Typhoon(-1, "typhoon", "ai");
 	}
+	
 }

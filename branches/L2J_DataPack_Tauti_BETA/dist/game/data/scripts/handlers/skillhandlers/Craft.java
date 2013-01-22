@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @version $Revision: 1.1.2.2.2.4 $ $Date: 2005/04/06 16:13:48 $
  */
-public class Craft implements ISkillHandler
-{
+public class Craft implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.COMMON_CRAFT,
@@ -39,15 +39,14 @@ public class Craft implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!(activeChar instanceof L2PcInstance))
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!(activeChar instanceof L2PcInstance)) {
 			return;
+		}
 		
 		L2PcInstance player = (L2PcInstance) activeChar;
 		
-		if (player.getPrivateStoreType() != 0)
-		{
+		if (player.getPrivateStoreType() != 0) {
 			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);
 			return;
 		}
@@ -55,8 +54,8 @@ public class Craft implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

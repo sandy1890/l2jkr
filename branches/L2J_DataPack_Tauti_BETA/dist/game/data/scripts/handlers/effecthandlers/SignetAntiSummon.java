@@ -33,56 +33,50 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author Forsaiken
  */
-public class SignetAntiSummon extends L2Effect
-{
+public class SignetAntiSummon extends L2Effect {
+	
 	private L2EffectPointInstance _actor;
 	
-	public SignetAntiSummon(Env env, EffectTemplate template)
-	{
+	public SignetAntiSummon(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.SIGNET_GROUND;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		_actor = (L2EffectPointInstance) getEffected();
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getCount() == getTotalCount() - 1)
+	public boolean onActionTime() {
+		if (getCount() == (getTotalCount() - 1)) {
 			return true; // do nothing first time
+		}
 		int mpConsume = getSkill().getMpConsume();
 		
 		L2PcInstance caster = (L2PcInstance) getEffector();
 		
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
-		{
-			if (cha == null)
+		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius())) {
+			if (cha == null) {
 				continue;
+			}
 			
-			if (cha instanceof L2Playable)
-			{
-				if (caster.canAttackCharacter(cha))
-				{
+			if (cha instanceof L2Playable) {
+				if (caster.canAttackCharacter(cha)) {
 					L2PcInstance owner = null;
-					if (cha instanceof L2Summon)
+					if (cha instanceof L2Summon) {
 						owner = ((L2Summon) cha).getOwner();
-					else
+					} else {
 						owner = (L2PcInstance) cha;
+					}
 					
-					if (owner != null && owner.getPet() != null)
-					{
-						if (mpConsume > getEffector().getCurrentMp())
-						{
+					if ((owner != null) && (owner.getPet() != null)) {
+						if (mpConsume > getEffector().getCurrentMp()) {
 							getEffector().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 							return false;
 						}
@@ -98,9 +92,10 @@ public class SignetAntiSummon extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
-		if (_actor != null)
+	public void onExit() {
+		if (_actor != null) {
 			_actor.deleteMe();
+		}
 	}
+	
 }

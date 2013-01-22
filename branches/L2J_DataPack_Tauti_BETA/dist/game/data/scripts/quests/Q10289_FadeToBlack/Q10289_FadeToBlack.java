@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Plim
  */
-public class Q10289_FadeToBlack extends Quest
-{
+public class Q10289_FadeToBlack extends Quest {
+	
 	private static final String qn = "10289_FadeToBlack";
 	
 	// NPCs
@@ -43,26 +43,20 @@ public class Q10289_FadeToBlack extends Quest
 	private static final int ANAYS = 25701;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == GREYMORE)
-		{
-			if (event.equalsIgnoreCase("32757-04.htm"))
-			{
+		if (npc.getNpcId() == GREYMORE) {
+			if (event.equalsIgnoreCase("32757-04.htm")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-			}
-			else if (Util.isDigit(event) && st.hasQuestItems(MARK_OF_SPLENDOR))
-			{
+			} else if (Util.isDigit(event) && st.hasQuestItems(MARK_OF_SPLENDOR)) {
 				int itemId = Integer.parseInt(event);
 				st.takeItems(MARK_OF_SPLENDOR, 1);
 				st.giveItems(itemId, 1);
@@ -75,83 +69,64 @@ public class Q10289_FadeToBlack extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState secretMission = player.getQuestState("10288_SecretMission");
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == GREYMORE)
-		{
+		if (npc.getNpcId() == GREYMORE) {
 			final int cond = st.getInt("cond");
-			switch (st.getState())
-			{
+			switch (st.getState()) {
 				case State.CREATED:
-					if ((player.getLevel() >= 82) && (secretMission != null) && secretMission.isCompleted())
-					{
+					if ((player.getLevel() >= 82) && (secretMission != null) && secretMission.isCompleted()) {
 						htmltext = "32757-02.htm";
-					}
-					else if (player.getLevel() < 82)
-					{
+					} else if (player.getLevel() < 82) {
 						htmltext = "32757-00.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "32757-01.htm";
 					}
-					break;
+				break;
 				case State.STARTED:
-					if (cond == 1)
-					{
+					if (cond == 1) {
 						htmltext = "32757-04b.htm";
 					}
-					if ((cond == 2) && st.hasQuestItems(MARK_OF_DARKNESS))
-					{
+					if ((cond == 2) && st.hasQuestItems(MARK_OF_DARKNESS)) {
 						htmltext = "32757-05.htm";
 						st.takeItems(MARK_OF_DARKNESS, 1);
 						player.addExpAndSp(55983, 136500);
 						st.set("cond", "1");
 						st.playSound("ItemSound.quest_middle");
-					}
-					else if (cond == 3)
-					{
+					} else if (cond == 3) {
 						htmltext = "32757-06.htm";
 					}
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final L2PcInstance randomPartyMember = getRandomPartyMember(player, "1");
-		if (randomPartyMember == null)
-		{
+		if (randomPartyMember == null) {
 			return super.onKill(npc, player, isPet);
 		}
 		
 		final QuestState st = randomPartyMember.getQuestState(qn);
-		if (st != null)
-		{
+		if (st != null) {
 			st.giveItems(MARK_OF_SPLENDOR, 1);
 			st.playSound("ItemSound.quest_itemget");
 			st.set("cond", "3");
 		}
 		
-		if (player.getParty() != null)
-		{
+		if (player.getParty() != null) {
 			QuestState st2;
-			for (L2PcInstance partyMember : player.getParty().getMembers())
-			{
+			for (L2PcInstance partyMember : player.getParty().getMembers()) {
 				st2 = partyMember.getQuestState(qn);
-				if ((st2 != null) && (st2.getInt("cond") == 1) && (partyMember.getObjectId() != randomPartyMember.getObjectId()))
-				{
+				if ((st2 != null) && (st2.getInt("cond") == 1) && (partyMember.getObjectId() != randomPartyMember.getObjectId())) {
 					st2.giveItems(MARK_OF_DARKNESS, 1);
 					st2.playSound("ItemSound.quest_itemget");
 					st2.set("cond", "2");
@@ -161,17 +136,15 @@ public class Q10289_FadeToBlack extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q10289_FadeToBlack(int questId, String name, String descr)
-	{
+	public Q10289_FadeToBlack(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(GREYMORE);
 		addTalkId(GREYMORE);
 		addKillId(ANAYS);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10289_FadeToBlack(10289, qn, "消滅光明之人");
 	}
+	
 }

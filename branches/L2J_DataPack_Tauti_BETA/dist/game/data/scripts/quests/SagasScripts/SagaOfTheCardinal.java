@@ -22,14 +22,13 @@ package quests.SagasScripts;
  * @author Emperorc
  */
 
-public class SagaOfTheCardinal extends SagasSuperClass
-{
+public class SagaOfTheCardinal extends SagasSuperClass {
+	
 	public static String qn1 = "85_SagaOfTheCardinal";
 	public static int qnu = 85;
 	public static String qna = "Saga of the Cardinal";
 	
-	public SagaOfTheCardinal()
-	{
+	public SagaOfTheCardinal() {
 		super(qnu, qn1, qna);
 		NPC = new int[]
 		{
@@ -117,4 +116,5 @@ public class SagaOfTheCardinal extends SagasSuperClass
 		};
 		registerNPCs();
 	}
+	
 }

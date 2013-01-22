@@ -18,6 +18,12 @@
  */
 package handlers;
 
+import java.lang.reflect.Method;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.l2jserver.gameserver.handler.EffectHandler;
+
 import handlers.effecthandlers.AbortCast;
 import handlers.effecthandlers.Betray;
 import handlers.effecthandlers.BigHead;
@@ -70,9 +76,9 @@ import handlers.effecthandlers.PhoenixBless;
 import handlers.effecthandlers.PhysicalAttackMute;
 import handlers.effecthandlers.PhysicalMute;
 import handlers.effecthandlers.ProtectionBlessing;
-import handlers.effecthandlers.Pull; // l2jtw add
+import handlers.effecthandlers.Pull;
 import handlers.effecthandlers.RandomizeHate;
-import handlers.effecthandlers.RecoBonus; // Add By pmq
+import handlers.effecthandlers.RecoBonus;
 import handlers.effecthandlers.Recovery;
 import handlers.effecthandlers.Relax;
 import handlers.effecthandlers.RemoveTarget;
@@ -92,17 +98,11 @@ import handlers.effecthandlers.TransferDamage;
 import handlers.effecthandlers.Transformation;
 import handlers.effecthandlers.Warp;
 
-import java.lang.reflect.Method;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.gameserver.handler.EffectHandler;
-
 /**
  * @author BiggBoss
  */
-public final class EffectMasterHandler
-{
+public final class EffectMasterHandler {
+	
 	private static final Logger _log = Logger.getLogger(EffectMasterHandler.class.getName());
 	
 	private static final Class<?> _loadInstances = EffectHandler.class;
@@ -184,54 +184,49 @@ public final class EffectMasterHandler
 		Warp.class,
 	};
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		Object loadInstance = null;
 		Method method = null;
 		
-		try
-		{
+		try {
 			method = _loadInstances.getMethod("getInstance");
 			loadInstance = method.invoke(_loadInstances);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances.getSimpleName(), e);
 			return;
 		}
 		
 		method = null; // Releasing variable for next method
 		
-		for (Class<?> c : _effects)
-		{
-			try
-			{
-				if (c == null)
+		for (Class<?> c : _effects) {
+			try {
+				if (c == null) {
 					continue; // Disabled handler
-					
-				if (method == null)
+				}
+				
+				if (method == null) {
 					method = loadInstance.getClass().getMethod("registerHandler", String.class, Class.class);
+				}
 				
 				method.invoke(loadInstance, c.getSimpleName(), c);
 				
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "Failed loading effect handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
 				continue;
 			}
 		}
 		
 		// And lets try get size
-		try
-		{
+		try {
 			method = loadInstance.getClass().getMethod("size");
 			Object returnVal = method.invoke(loadInstance);
 			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
 		}
 	}
+	
 }

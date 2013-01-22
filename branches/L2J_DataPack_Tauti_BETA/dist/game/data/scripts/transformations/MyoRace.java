@@ -25,37 +25,37 @@ import com.l2jserver.gameserver.model.L2Transformation;
 /*
  * TODO: Skill levels. How do they work? Transformation is given at level 83, there are 6 levels of the skill. How are they assigned? Based on player level somehow? Based on servitor?
  */
-public class MyoRace extends L2Transformation
-{
+public class MyoRace extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		896, 897, 898, 899, 900, 5491, 619
+		896,
+		897,
+		898,
+		899,
+		900,
+		5491,
+		619
 	};
 	
-	public MyoRace()
-	{
+	public MyoRace() {
 		// id, colRadius, colHeight
 		super(219, 10, 23);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 219) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 219) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
-		if (getPlayer().getPet() != null)
-		{
+		if (getPlayer().getPet() != null) {
 			getPlayer().getPet().unSummon(getPlayer());
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Rolling Step (up to 6 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(896, 4), false);
 		// Double Blast (up to 6 levels)
@@ -75,13 +75,11 @@ public class MyoRace extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Rolling Step (up to 6 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(896, 4), false);
 		// Double Blast (up to 6 levels)
@@ -100,8 +98,7 @@ public class MyoRace extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new MyoRace());
 	}
 }

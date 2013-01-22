@@ -28,9 +28,10 @@ import com.l2jserver.gameserver.model.quest.State;
  * 2010-09-30 Based on official server Franz
  * @author Gnacik
  */
-public class Q148_PathtoBecominganExaltedMercenary extends Quest
-{
+public class Q148_PathtoBecominganExaltedMercenary extends Quest {
+	
 	private static final String qn = "148_PathtoBecominganExaltedMercenary";
+	
 	// NPCs
 	private static final int[] _merc =
 	{
@@ -49,21 +50,16 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 	private static final int _cert_top_elite = 13768;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("exalted-00b.htm"))
-		{
+		if (event.equalsIgnoreCase("exalted-00b.htm")) {
 			st.giveItems(_cert_elite, 1);
-		}
-		else if (event.equalsIgnoreCase("exalted-03.htm"))
-		{
+		} else if (event.equalsIgnoreCase("exalted-03.htm")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.playSound("ItemSound.quest_accept");
@@ -72,69 +68,53 @@ public class Q148_PathtoBecominganExaltedMercenary extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
 				QuestState _prev = player.getQuestState("147_PathtoBecominganEliteMercenary");
-				if ((player.getClan() != null) && (player.getClan().getCastleId() > 0))
-				{
+				if ((player.getClan() != null) && (player.getClan().getCastleId() > 0)) {
 					htmltext = "castle.htm";
-				}
-				else if (st.hasQuestItems(_cert_elite))
-				{
+				} else if (st.hasQuestItems(_cert_elite)) {
 					htmltext = "exalted-01.htm";
-				}
-				else
-				{
-					if ((_prev != null) && _prev.isCompleted())
-					{
+				} else {
+					if ((_prev != null) && _prev.isCompleted()) {
 						htmltext = "exalted-00a.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "exalted-00.htm";
 					}
 				}
-				break;
+			break;
 			case State.STARTED:
-				if (st.getInt("cond") < 4)
-				{
+				if (st.getInt("cond") < 4) {
 					htmltext = "exalted-04.htm";
-				}
-				else if (st.getInt("cond") == 4)
-				{
+				} else if (st.getInt("cond") == 4) {
 					st.takeItems(_cert_elite, -1);
 					st.giveItems(_cert_top_elite, 1);
 					st.exitQuest(false);
 					htmltext = "exalted-05.htm";
 				}
-				break;
+			break;
 			case State.COMPLETED:
 				htmltext = "<html><body>這是已經完成的任務。</body></html>";
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q148_PathtoBecominganExaltedMercenary(int questId, String name, String descr)
-	{
+	public Q148_PathtoBecominganExaltedMercenary(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(_merc);
 		addTalkId(_merc);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q148_PathtoBecominganExaltedMercenary(148, qn, "成為最高精銳傭兵的路");
 	}
+	
 }

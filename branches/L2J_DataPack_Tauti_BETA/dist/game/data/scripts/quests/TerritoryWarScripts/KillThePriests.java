@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class KillThePriests extends TerritoryWarSuperClass
-{
+public class KillThePriests extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "737_DenyBlessings";
 	public static int qnu = 737;
 	public static String qna = "Deny Blessings";
 	
-	public KillThePriests()
-	{
+	public KillThePriests() {
 		super(qnu, qn1, qna);
 		CLASS_IDS = new int[]
 		{
@@ -55,4 +54,5 @@ public class KillThePriests extends TerritoryWarSuperClass
 			NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK
 		};
 	}
+	
 }

@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * @version $Revision: 1.1.2.2.2.1 $ $Date: 2005/03/02 15:38:36 $
  */
-public class ManaHeal implements ISkillHandler
-{
+public class ManaHeal implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.MANAHEAL,
@@ -43,59 +43,57 @@ public class ManaHeal implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
-	{
-		for (L2Character target: (L2Character[]) targets)
-		{
-			if (target.isInvul())
+	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets) {
+		for (L2Character target : (L2Character[]) targets) {
+			if (target.isInvul()) {
 				continue;
+			}
 			
 			double mp = skill.getPower();
 			
-			switch (skill.getSkillType())
-			{
+			switch (skill.getSkillType()) {
 				case MANARECHARGE:
 					mp = target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null);
-					break;
-				case MANA_BY_LEVEL:	
-				//recharged mp influenced by difference between target level and skill level
-				//if target is within 5 levels or lower then skill level there's no penalty.
-					mp = target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null);  
-					if (target.getLevel() > skill.getMagicLevel())
-					{
+				break;
+				case MANA_BY_LEVEL:
+					// recharged mp influenced by difference between target level and skill level
+					// if target is within 5 levels or lower then skill level there's no penalty.
+					mp = target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null);
+					if (target.getLevel() > skill.getMagicLevel()) {
 						int lvlDiff = target.getLevel() - skill.getMagicLevel();
-						//if target is too high compared to skill level, the amount of recharged mp gradually decreases.
-						if (lvlDiff == 6)		//6 levels difference:
-							mp *= 0.9;			//only 90% effective
-						else if (lvlDiff == 7)
-							mp *= 0.8;			//80%
-						else if (lvlDiff == 8)
-							mp *= 0.7;			//70%
-						else if (lvlDiff == 9)
-							mp *= 0.6;			//60%
-						else if (lvlDiff == 10)
-							mp *= 0.5;			//50%
-						else if (lvlDiff == 11)
-							mp *= 0.4;			//40%
-						else if (lvlDiff == 12)
-							mp *= 0.3;			//30%
-						else if (lvlDiff == 13)
-							mp *= 0.2;			//20%
-						else if (lvlDiff == 14)
-							mp *= 0.1;			//10%
-						
-						else if (lvlDiff >= 15)	//15 levels or more:
-							mp = 0;				//0mp recharged
+						// if target is too high compared to skill level, the amount of recharged mp gradually decreases.
+						if (lvlDiff == 6) {
+							mp *= 0.9; // only 90% effective
+						} else if (lvlDiff == 7) {
+							mp *= 0.8; // 80%
+						} else if (lvlDiff == 8) {
+							mp *= 0.7; // 70%
+						} else if (lvlDiff == 9) {
+							mp *= 0.6; // 60%
+						} else if (lvlDiff == 10) {
+							mp *= 0.5; // 50%
+						} else if (lvlDiff == 11) {
+							mp *= 0.4; // 40%
+						} else if (lvlDiff == 12) {
+							mp *= 0.3; // 30%
+						} else if (lvlDiff == 13) {
+							mp *= 0.2; // 20%
+						} else if (lvlDiff == 14) {
+							mp *= 0.1; // 10%
+						} else if (lvlDiff >= 15) {
+							mp = 0; // 0mp recharged
+						}
 					}
 					
 			}
 			
-			//from CT2 u will receive exact MP, u can't go over it, if u have full MP and u get MP buff, u will receive 0MP restored message
+			// from CT2 u will receive exact MP, u can't go over it, if u have full MP and u get MP buff, u will receive 0MP restored message
 			mp = Math.min(mp, target.getMaxRecoverableMp() - target.getCurrentMp());
 			
 			// Prevent negative amounts
-			if (mp < 0)
+			if (mp < 0) {
 				mp = 0;
+			}
 			
 			target.setCurrentMp(mp + target.getCurrentMp());
 			StatusUpdate sump = new StatusUpdate(target);
@@ -103,22 +101,18 @@ public class ManaHeal implements ISkillHandler
 			target.sendPacket(sump);
 			
 			SystemMessage sm;
-			if (actChar instanceof L2PcInstance && actChar != target)
-			{
+			if ((actChar instanceof L2PcInstance) && (actChar != target)) {
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
 				sm.addString(actChar.getName());
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
-			}
-			else
-			{
+			} else {
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 			}
 			
-			if (skill.hasEffects())
-			{
+			if (skill.hasEffects()) {
 				target.stopSkillEffects(skill.getId());
 				skill.getEffects(actChar, target);
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
@@ -127,12 +121,10 @@ public class ManaHeal implements ISkillHandler
 			}
 		}
 		
-		if (skill.hasSelfEffects())
-		{
+		if (skill.hasSelfEffects()) {
 			L2Effect effect = actChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
-			{
-				//Replace old effect with new one.
+			if ((effect != null) && effect.isSelfEffect()) {
+				// Replace old effect with new one.
 				effect.exit();
 			}
 			// cast self effect if any
@@ -141,8 +133,8 @@ public class ManaHeal implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
-public class ChanceSkillTrigger extends L2Effect
-{
+public class ChanceSkillTrigger extends L2Effect {
+	
 	private final int _triggeredId;
 	private final int _triggeredLevel;
 	private final ChanceCondition _chanceCondition;
 	
-	public ChanceSkillTrigger(Env env, EffectTemplate template)
-	{
+	public ChanceSkillTrigger(Env env, EffectTemplate template) {
 		super(env, template);
 		
 		_triggeredId = template.triggeredId;
@@ -40,8 +39,7 @@ public class ChanceSkillTrigger extends L2Effect
 	}
 	
 	// Special constructor to steal this effect
-	public ChanceSkillTrigger(Env env, L2Effect effect)
-	{
+	public ChanceSkillTrigger(Env env, L2Effect effect) {
 		super(env, effect);
 		
 		_triggeredId = effect.getEffectTemplate().triggeredId;
@@ -50,63 +48,56 @@ public class ChanceSkillTrigger extends L2Effect
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
-	{
+	protected boolean effectCanBeStolen() {
 		return true;
 	}
-
+	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CHANCE_SKILL_TRIGGER;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().addChanceTrigger(this);
 		getEffected().onStartChanceEffect(getSkill().getElement());
 		return super.onStart();
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		getEffected().onActionTimeChanceEffect(getSkill().getElement());
 		return false;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		// trigger only if effect in use and successfully ticked to the end
-		if (getInUse() && getCount() == 0)
+		if (getInUse() && (getCount() == 0)) {
 			getEffected().onExitChanceEffect(getSkill().getElement());
+		}
 		getEffected().removeChanceEffect(this);
 		super.onExit();
 	}
 	
 	@Override
-	public int getTriggeredChanceId()
-	{
+	public int getTriggeredChanceId() {
 		return _triggeredId;
 	}
 	
 	@Override
-	public int getTriggeredChanceLevel()
-	{
+	public int getTriggeredChanceLevel() {
 		return _triggeredLevel;
 	}
 	
 	@Override
-	public boolean triggersChanceSkill()
-	{
+	public boolean triggersChanceSkill() {
 		return _triggeredId > 1;
 	}
 	
 	@Override
-	public ChanceCondition getTriggeredChanceCondition()
-	{
+	public ChanceCondition getTriggeredChanceCondition() {
 		return _chanceCondition;
 	}
+	
 }

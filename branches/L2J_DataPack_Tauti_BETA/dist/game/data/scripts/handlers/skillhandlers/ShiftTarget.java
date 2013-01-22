@@ -25,38 +25,40 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
-public class ShiftTarget implements ISkillHandler
-{
+public class ShiftTarget implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.SHIFT_TARGET
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (targets == null)
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (targets == null) {
 			return;
+		}
 		L2Character target = (L2Character) targets[0];
 		
-		if (activeChar.isAlikeDead() || target == null)
+		if (activeChar.isAlikeDead() || (target == null)) {
 			return;
+		}
 		
-		for (L2Character obj : activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius()))
-		{
-			if (!(obj instanceof L2Attackable) || obj.isDead())
+		for (L2Character obj : activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius())) {
+			if (!(obj instanceof L2Attackable) || obj.isDead()) {
 				continue;
+			}
 			L2Attackable hater = ((L2Attackable) obj);
-			if (hater.getHating(activeChar) == 0)
+			if (hater.getHating(activeChar) == 0) {
 				continue;
+			}
 			hater.addDamageHate(target, 0, hater.getHating(activeChar));
 			
 		}
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

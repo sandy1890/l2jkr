@@ -24,29 +24,26 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
-public class Invincible extends L2Effect
-{
-	public Invincible(Env env, EffectTemplate template)
-	{
+public class Invincible extends L2Effect {
+	
+	public Invincible(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.INVINCIBLE;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// Simply stop the effect
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_INVUL;
 	}
+	
 }

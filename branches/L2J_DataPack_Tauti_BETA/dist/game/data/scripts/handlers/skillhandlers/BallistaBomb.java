@@ -27,30 +27,27 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 
-public class BallistaBomb implements ISkillHandler
-{
+public class BallistaBomb implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.BALLISTA
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!(activeChar instanceof L2PcInstance))
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!(activeChar instanceof L2PcInstance)) {
 			return;
+		}
 		
 		L2Object[] targetList = skill.getTargetList(activeChar);
 		
-		if (targetList == null || targetList.length == 0)
-		{
+		if ((targetList == null) || (targetList.length == 0)) {
 			return;
 		}
 		L2Character target = (L2Character) targetList[0];
-		if (target instanceof L2FortBallistaInstance)
-		{
-			if (Rnd.get(3) == 0)
-			{
+		if (target instanceof L2FortBallistaInstance) {
+			if (Rnd.get(3) == 0) {
 				target.setIsInvul(false);
 				target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, skill);
 			}
@@ -58,8 +55,8 @@ public class BallistaBomb implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * @version 2011-02-04
  * @author Gnacik
  */
-public class Q551_OlympiadStarter extends Quest
-{
+public class Q551_OlympiadStarter extends Quest {
+	
 	private static final String qn = "551_OlympiadStarter";
 	
 	private static final int MANAGER = 31688;
@@ -46,8 +46,7 @@ public class Q551_OlympiadStarter extends Quest
 	private static final int OLY_CHEST = 17169;
 	private static final int MEDAL_OF_GLORY = 21874;
 	
-	public Q551_OlympiadStarter(int questId, String name, String descr)
-	{
+	public Q551_OlympiadStarter(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(MANAGER);
@@ -62,36 +61,27 @@ public class Q551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return getNoQuestMsg(player);
 		}
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("31688-03.html"))
-		{
+		if (event.equalsIgnoreCase("31688-03.html")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.playSound("ItemSound.quest_accept");
-		}
-		else if (event.equalsIgnoreCase("31688-04.html"))
-		{
+		} else if (event.equalsIgnoreCase("31688-04.html")) {
 			final long count = st.getQuestItemsCount(CERT_3) + st.getQuestItemsCount(CERT_5);
-			if (count > 0)
-			{
+			if (count > 0) {
 				st.giveItems(OLY_CHEST, count); // max 2
-				if (count == 2)
-				{
+				if (count == 2) {
 					st.giveItems(MEDAL_OF_GLORY, 3);
 				}
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(QuestType.DAILY);
-			}
-			else
-			{
+			} else {
 				htmltext = super.getNoQuestMsg(player); // missing items
 			}
 		}
@@ -99,51 +89,35 @@ public class Q551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if ((player.getLevel() < 75) || !player.isNoble())
-		{
+		if ((player.getLevel() < 75) || !player.isNoble()) {
 			htmltext = "31688-00.htm";
-		}
-		else if (st.isCreated())
-		{
+		} else if (st.isCreated()) {
 			htmltext = "31688-01.htm";
-		}
-		else if (st.isCompleted())
-		{
-			if(st.isNowAvailable())
-			{
+		} else if (st.isCompleted()) {
+			if (st.isNowAvailable()) {
 				st.setState(State.CREATED); // Not required, but it'll set the proper state.
-				if ((player.getLevel() < 75) || !player.isNoble())
-				{
+				if ((player.getLevel() < 75) || !player.isNoble()) {
 					htmltext = "31688-00.htm";
 				}
-			}
-			else
-			{
+			} else {
 				htmltext = "31688-05.html";
 			}
-		}
-		else if (st.isStarted())
-		{
+		} else if (st.isStarted()) {
 			final long count = st.getQuestItemsCount(CERT_3) + st.getQuestItemsCount(CERT_5) + st.getQuestItemsCount(CERT_10);
-			if (count == 3)
-			{
+			if (count == 3) {
 				htmltext = "31688-04.html"; // reusing the same html
 				st.giveItems(OLY_CHEST, 4);
 				st.giveItems(MEDAL_OF_GLORY, 5);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(QuestType.DAILY);
-			}
-			else
-			{
+			} else {
 				htmltext = "31688-s" + count + ".html";
 			}
 		}
@@ -151,34 +125,27 @@ public class Q551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
-	{
-		if (winner != null)
-		{
+	public void onOlympiadWin(L2PcInstance winner, CompetitionType type) {
+		if (winner != null) {
 			final QuestState st = winner.getQuestState(getName());
-			if ((st != null) && st.isStarted())
-			{
+			if ((st != null) && st.isStarted()) {
 				final int matches = st.getInt("matches") + 1;
-				switch (matches)
-				{
+				switch (matches) {
 					case 3:
-						if (!st.hasQuestItems(CERT_3))
-						{
+						if (!st.hasQuestItems(CERT_3)) {
 							st.giveItems(CERT_3, 1);
 						}
-						break;
+					break;
 					case 5:
-						if (!st.hasQuestItems(CERT_5))
-						{
+						if (!st.hasQuestItems(CERT_5)) {
 							st.giveItems(CERT_5, 1);
 						}
-						break;
+					break;
 					case 10:
-						if (!st.hasQuestItems(CERT_10))
-						{
+						if (!st.hasQuestItems(CERT_10)) {
 							st.giveItems(CERT_10, 1);
 						}
-						break;
+					break;
 				}
 				st.set("matches", String.valueOf(matches));
 			}
@@ -186,42 +153,35 @@ public class Q551_OlympiadStarter extends Quest
 	}
 	
 	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
-	{
-		if (loser != null)
-		{
+	public void onOlympiadLose(L2PcInstance loser, CompetitionType type) {
+		if (loser != null) {
 			final QuestState st = loser.getQuestState(getName());
-			if ((st != null) && st.isStarted())
-			{
+			if ((st != null) && st.isStarted()) {
 				final int matches = st.getInt("matches") + 1;
-				switch (matches)
-				{
+				switch (matches) {
 					case 3:
-						if (!st.hasQuestItems(CERT_3))
-						{
+						if (!st.hasQuestItems(CERT_3)) {
 							st.giveItems(CERT_3, 1);
 						}
-						break;
+					break;
 					case 5:
-						if (!st.hasQuestItems(CERT_5))
-						{
+						if (!st.hasQuestItems(CERT_5)) {
 							st.giveItems(CERT_5, 1);
 						}
-						break;
+					break;
 					case 10:
-						if (!st.hasQuestItems(CERT_10))
-						{
+						if (!st.hasQuestItems(CERT_10)) {
 							st.giveItems(CERT_10, 1);
 						}
-						break;
+					break;
 				}
 				st.set("matches", String.valueOf(matches));
 			}
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q551_OlympiadStarter(551, qn, "Olympiad Starter");
 	}
+	
 }

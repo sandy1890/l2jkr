@@ -39,8 +39,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 
-public class Engine extends Quest implements Runnable
-{
+public class Engine extends Quest implements Runnable {
+	
 	private static final String pointsInfoFile = "data/hellboundTrustPoints.xml";
 	
 	private static final int UPDATE_INTERVAL = 10000;
@@ -48,22 +48,37 @@ public class Engine extends Quest implements Runnable
 	private static final int[][] DOOR_LIST =
 	{
 		{
-			19250001, 5
+			19250001,
+			5
 		},
 		{
-			19250002, 5
+			19250002,
+			5
 		},
 		{
-			20250001, 9
+			20250001,
+			9
 		},
 		{
-			20250002, 7
+			20250002,
+			7
 		}
 	};
 	
 	private static final int[] MAX_TRUST =
 	{
-		0, 300000, 600000, 1000000, 1010000, 1400000, 1490000, 2000000, 2000001, 2500000, 4000000, 0
+		0,
+		300000,
+		600000,
+		1000000,
+		1010000,
+		1400000,
+		1490000,
+		2000000,
+		2000001,
+		2500000,
+		4000000,
+		0
 	};
 	
 	private static final String ANNOUNCE = "Hellbound now has reached level: %lvl%";
@@ -73,15 +88,13 @@ public class Engine extends Quest implements Runnable
 	private static Map<Integer, PointsInfoHolder> pointsInfo = new FastMap<>();
 	
 	// Holds info about points for mob killing
-	private class PointsInfoHolder
-	{
+	private class PointsInfoHolder {
 		protected int pointsAmount;
 		protected int minHbLvl;
 		protected int maxHbLvl;
 		protected int lowestTrustLimit;
 		
-		protected PointsInfoHolder(int points, int min, int max, int trust)
-		{
+		protected PointsInfoHolder(int points, int min, int max, int trust) {
 			pointsAmount = points;
 			minHbLvl = min;
 			maxHbLvl = max;
@@ -89,15 +102,11 @@ public class Engine extends Quest implements Runnable
 		}
 	}
 	
-	private final void onLevelChange(int newLevel)
-	{
-		try
-		{
+	private final void onLevelChange(int newLevel) {
+		try {
 			HellboundManager.getInstance().setMaxTrust(MAX_TRUST[newLevel]);
 			HellboundManager.getInstance().setMinTrust(MAX_TRUST[newLevel - 1]);
-		}
-		catch (ArrayIndexOutOfBoundsException e)
-		{
+		} catch (ArrayIndexOutOfBoundsException e) {
 			HellboundManager.getInstance().setMaxTrust(0);
 			HellboundManager.getInstance().setMinTrust(0);
 		}
@@ -105,77 +114,57 @@ public class Engine extends Quest implements Runnable
 		HellboundManager.getInstance().updateTrust(0, false);
 		HellboundManager.getInstance().doSpawn();
 		
-		for (int[] doorData : DOOR_LIST)
-		{
-			try
-			{
+		for (int[] doorData : DOOR_LIST) {
+			try {
 				L2DoorInstance door = DoorTable.getInstance().getDoor(doorData[0]);
-				if (door.getOpen())
-				{
-					if (newLevel < doorData[1])
-					{
+				if (door.getOpen()) {
+					if (newLevel < doorData[1]) {
 						door.closeMe();
 					}
-				}
-				else
-				{
-					if (newLevel >= doorData[1])
-					{
+				} else {
+					if (newLevel >= doorData[1]) {
 						door.openMe();
 					}
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "Hellbound doors problem!", e);
 			}
 		}
 		
-		if (_cachedLevel > 0)
-		{
+		if (_cachedLevel > 0) {
 			Announcements.getInstance().announceToAll(ANNOUNCE.replace("%lvl%", String.valueOf(newLevel)));
 			_log.info("HellboundEngine: New Level: " + newLevel);
 		}
 		_cachedLevel = newLevel;
 	}
 	
-	private void loadPointsInfoData()
-	{
+	private void loadPointsInfoData() {
 		final File file = new File(Config.DATAPACK_ROOT, pointsInfoFile);
-		if (!file.exists())
-		{
+		if (!file.exists()) {
 			_log.warning("Cannot locate points info file: " + pointsInfoFile);
 			return;
 		}
 		
 		Document doc = null;
-		try
-		{
+		try {
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			doc = factory.newDocumentBuilder().parse(file);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Could not parse " + pointsInfoFile + " file: " + e.getMessage(), e);
 			return;
 		}
 		
-		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
-		{
-			if ("list".equalsIgnoreCase(n.getNodeName()))
-			{
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					if ("npc".equalsIgnoreCase(d.getNodeName()))
-					{
+		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
+			if ("list".equalsIgnoreCase(n.getNodeName())) {
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+					if ("npc".equalsIgnoreCase(d.getNodeName())) {
 						NamedNodeMap attrs = d.getAttributes();
 						Node att;
 						
 						att = attrs.getNamedItem("id");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe("[Hellbound Trust Points Info] Missing NPC ID, skipping record");
 							continue;
 						}
@@ -183,24 +172,21 @@ public class Engine extends Quest implements Runnable
 						int npcId = Integer.parseInt(att.getNodeValue());
 						
 						att = attrs.getNamedItem("points");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe("[Hellbound Trust Points Info] Missing reward point info for NPC ID " + npcId + ", skipping record");
 							continue;
 						}
 						int points = Integer.parseInt(att.getNodeValue());
 						
 						att = attrs.getNamedItem("minHellboundLvl");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe("[Hellbound Trust Points Info] Missing minHellboundLvl info for NPC ID " + npcId + ", skipping record");
 							continue;
 						}
 						int minHbLvl = Integer.parseInt(att.getNodeValue());
 						
 						att = attrs.getNamedItem("maxHellboundLvl");
-						if (att == null)
-						{
+						if (att == null) {
 							_log.severe("[Hellbound Trust Points Info] Missing maxHellboundLvl info for NPC ID " + npcId + ", skipping record");
 							continue;
 						}
@@ -208,8 +194,7 @@ public class Engine extends Quest implements Runnable
 						
 						att = attrs.getNamedItem("lowestTrustLimit");
 						int lowestTrustLimit = 0;
-						if (att != null)
-						{
+						if (att != null) {
 							lowestTrustLimit = Integer.parseInt(att.getNodeValue());
 						}
 						
@@ -222,40 +207,32 @@ public class Engine extends Quest implements Runnable
 	}
 	
 	@Override
-	public void run()
-	{
+	public void run() {
 		int level = HellboundManager.getInstance().getLevel();
-		if ((level > 0) && (level == _cachedLevel))
-		{
+		if ((level > 0) && (level == _cachedLevel)) {
 			if ((HellboundManager.getInstance().getTrust() == HellboundManager.getInstance().getMaxTrust()) && (level != 4)) // only exclusion is kill of Derek
 			{
 				level++;
 				HellboundManager.getInstance().setLevel(level);
 				onLevelChange(level);
 			}
-		}
-		else
-		{
+		} else {
 			onLevelChange(level); // first run or changed by admin
 		}
 	}
 	
 	// Let's try to manage all trust changes for killing here
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		int npcId = npc.getNpcId();
-		if (pointsInfo.containsKey(npcId))
-		{
+		if (pointsInfo.containsKey(npcId)) {
 			PointsInfoHolder npcInfo = pointsInfo.get(npcId);
 			
-			if ((HellboundManager.getInstance().getLevel() >= npcInfo.minHbLvl) && (HellboundManager.getInstance().getLevel() <= npcInfo.maxHbLvl) && ((npcInfo.lowestTrustLimit == 0) || (HellboundManager.getInstance().getTrust() > npcInfo.lowestTrustLimit)))
-			{
+			if ((HellboundManager.getInstance().getLevel() >= npcInfo.minHbLvl) && (HellboundManager.getInstance().getLevel() <= npcInfo.maxHbLvl) && ((npcInfo.lowestTrustLimit == 0) || (HellboundManager.getInstance().getTrust() > npcInfo.lowestTrustLimit))) {
 				HellboundManager.getInstance().updateTrust(npcInfo.pointsAmount, true);
 			}
 			
-			if ((npc.getNpcId() == 18465) && (HellboundManager.getInstance().getLevel() == 4))
-			{
+			if ((npc.getNpcId() == 18465) && (HellboundManager.getInstance().getLevel() == 4)) {
 				HellboundManager.getInstance().setLevel(5);
 			}
 		}
@@ -263,33 +240,28 @@ public class Engine extends Quest implements Runnable
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public Engine(int questId, String name, String descr)
-	{
+	public Engine(int questId, String name, String descr) {
 		super(questId, name, descr);
 		HellboundManager.getInstance().registerEngine(this, UPDATE_INTERVAL);
 		loadPointsInfoData();
 		
 		// Register onKill for all rewardable monsters
-		for (int npcId : pointsInfo.keySet())
-		{
+		for (int npcId : pointsInfo.keySet()) {
 			addKillId(npcId);
 		}
 		
 		_log.info("HellboundEngine: Mode: levels 0-3");
 		_log.info("HellboundEngine: Level: " + HellboundManager.getInstance().getLevel());
 		_log.info("HellboundEngine: Trust: " + HellboundManager.getInstance().getTrust());
-		if (HellboundManager.getInstance().isLocked())
-		{
+		if (HellboundManager.getInstance().isLocked()) {
 			_log.info("HellboundEngine: State: locked");
-		}
-		else
-		{
+		} else {
 			_log.info("HellboundEngine: State: unlocked");
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Engine(-1, Engine.class.getSimpleName(), "hellbound");
 	}
+	
 }

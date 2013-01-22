@@ -27,15 +27,14 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * @author Plim
- * Update by pmq High Five 12-06-2011
+ * @author Plim Update by pmq High Five 12-06-2011
  */
 
-public class Q194_SevenSignContractOfMammon extends Quest
-{
+public class Q194_SevenSignContractOfMammon extends Quest {
+	
 	private static final String qn = "194_SevenSignContractOfMammon";
 	
-	//NPCs
+	// NPCs
 	private static final int ATHEBALDT = 30760;
 	private static final int COLIN = 32571;
 	private static final int FROG = 32572;
@@ -43,143 +42,92 @@ public class Q194_SevenSignContractOfMammon extends Quest
 	private static final int KUTA = 32574;
 	private static final int CLAUDIA = 31001;
 	
-	//ITEMS
+	// ITEMS
 	private static final int INTRODUCTION = 13818;
 	private static final int FROG_KING_BEAD = 13820;
 	private static final int CANDY_POUCH = 13821;
 	private static final int NATIVES_GLOVE = 13819;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		if (npc.getNpcId() == ATHEBALDT)
-		{
-			if (event.equalsIgnoreCase("30760-02.htm"))
-			{
+		}
+		if (npc.getNpcId() == ATHEBALDT) {
+			if (event.equalsIgnoreCase("30760-02.htm")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-			}
-			
-			else if (event.equalsIgnoreCase("30760-07.htm"))
-			{
+			} else if (event.equalsIgnoreCase("30760-07.htm")) {
 				st.set("cond", "3");
 				st.giveItems(INTRODUCTION, 1);
 				st.playSound("ItemSound.quest_middle");
-			}
-			
-			else if (event.equalsIgnoreCase("10"))
-			{
+			} else if (event.equalsIgnoreCase("10")) {
 				st.set("cond", "2");
 				st.playSound("ItemSound.quest_middle");
 				player.showQuestMovie(10);
 				return "";
 			}
-		}
-		
-		else if (npc.getNpcId() == COLIN)
-		{
-			if (event.equalsIgnoreCase("32571-04.htm"))
-			{
+		} else if (npc.getNpcId() == COLIN) {
+			if (event.equalsIgnoreCase("32571-04.htm")) {
 				st.set("cond", "4");
 				st.takeItems(INTRODUCTION, 1);
 				transformPlayer(npc, player, 6201);
 				st.playSound("ItemSound.quest_middle");
 			}
-			
-			if (event.equalsIgnoreCase("32571-06.htm") || event.equalsIgnoreCase("32571-14.htm") || event.equalsIgnoreCase("32571-22.htm"))
-			{
-				if (player.isTransformed())
+			if (event.equalsIgnoreCase("32571-06.htm") || event.equalsIgnoreCase("32571-14.htm") || event.equalsIgnoreCase("32571-22.htm")) {
+				if (player.isTransformed()) {
 					player.untransform();
-			}
-			
-			else if (event.equalsIgnoreCase("32571-08.htm"))
-			{
+				}
+			} else if (event.equalsIgnoreCase("32571-08.htm")) {
 				transformPlayer(npc, player, 6201);
-			}
-			
-			else if (event.equalsIgnoreCase("32571-10.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32571-10.htm")) {
 				st.set("cond", "6");
 				st.takeItems(FROG_KING_BEAD, 1);
 				st.playSound("ItemSound.quest_middle");
-			}
-			
-			else if (event.equalsIgnoreCase("32571-12.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32571-12.htm")) {
 				st.set("cond", "7");
 				transformPlayer(npc, player, 6202);
 				st.playSound("ItemSound.quest_middle");
-			}
-			
-			else if (event.equalsIgnoreCase("32571-16.htm"))
+			} else if (event.equalsIgnoreCase("32571-16.htm")) {
 				transformPlayer(npc, player, 6202);
-			
-			else if (event.equalsIgnoreCase("32571-18.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32571-18.htm")) {
 				st.set("cond", "9");
 				st.takeItems(CANDY_POUCH, 1);
 				st.playSound("ItemSound.quest_middle");
-			}
-			
-			else if (event.equalsIgnoreCase("32571-20.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32571-20.htm")) {
 				st.set("cond", "10");
 				transformPlayer(npc, player, 6203);
 				st.playSound("ItemSound.quest_middle");
-			}
-			
-			else if (event.equalsIgnoreCase("32571-24.htm"))
+			} else if (event.equalsIgnoreCase("32571-24.htm")) {
 				transformPlayer(npc, player, 6203);
-			
-			else if (event.equalsIgnoreCase("32571-26.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32571-26.htm")) {
 				st.set("cond", "12");
 				st.takeItems(NATIVES_GLOVE, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == FROG)
-		{
-			if (event.equalsIgnoreCase("32572-04.htm"))
-			{
+		} else if (npc.getNpcId() == FROG) {
+			if (event.equalsIgnoreCase("32572-04.htm")) {
 				st.set("cond", "5");
 				st.giveItems(FROG_KING_BEAD, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == TESS)
-		{
-			if (event.equalsIgnoreCase("32573-03.htm"))
-			{
+		} else if (npc.getNpcId() == TESS) {
+			if (event.equalsIgnoreCase("32573-03.htm")) {
 				st.set("cond", "8");
 				st.giveItems(CANDY_POUCH, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == KUTA)
-		{
-			if (event.equalsIgnoreCase("32574-04.htm"))
-			{
+		} else if (npc.getNpcId() == KUTA) {
+			if (event.equalsIgnoreCase("32574-04.htm")) {
 				st.set("cond", "11");
 				st.giveItems(NATIVES_GLOVE, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == CLAUDIA)
-		{
-			if (event.equalsIgnoreCase("31001-03.htm"))
-			{
+		} else if (npc.getNpcId() == CLAUDIA) {
+			if (event.equalsIgnoreCase("31001-03.htm")) {
 				st.addExpAndSp(25000000, 2500000);
 				st.unset("cond");
 				st.setState(State.COMPLETED);
@@ -187,30 +135,24 @@ public class Q194_SevenSignContractOfMammon extends Quest
 				st.playSound("ItemSound.quest_finish");
 			}
 		}
-		
 		return htmltext;
 	}
 	
-	private void transformPlayer(L2Npc npc, L2PcInstance player, int transId)
-	{
-		if (player.isTransformed())
-		{
+	private void transformPlayer(L2Npc npc, L2PcInstance player, int transId) {
+		if (player.isTransformed()) {
 			player.untransform();
 			
-			try
-			{
+			try {
 				Thread.sleep(2000);
-			}
-			catch (InterruptedException e)
-			{
+			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		
-		for (L2Effect effect : player.getAllEffects())
-		{
-			if (effect.getAbnormalType().equalsIgnoreCase("speed_up"))
+		for (L2Effect effect : player.getAllEffects()) {
+			if (effect.getAbnormalType().equalsIgnoreCase("speed_up")) {
 				effect.exit();
+			}
 		}
 		
 		npc.setTarget(player);
@@ -218,166 +160,126 @@ public class Q194_SevenSignContractOfMammon extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState second = player.getQuestState("193_SevenSignDyingMessage");
 		
-		if (st == null)
+		if (st == null) {
 			return htmltext;
+		}
 		
-		if (npc.getNpcId() == ATHEBALDT)
-		{
-			switch (st.getState())
-			{
-				case State.CREATED :
-					if (second != null && second.getState() == State.COMPLETED && player.getLevel() >= 79)
+		if (npc.getNpcId() == ATHEBALDT) {
+			switch (st.getState()) {
+				case State.CREATED:
+					if ((second != null) && (second.getState() == State.COMPLETED) && (player.getLevel() >= 79)) {
 						htmltext = "30760-01.htm";
-					
-					else
-					{
+					} else {
 						htmltext = "30760-00.htm";
 						st.exitQuest(true);
 					}
-					break;
-					
-				case State.STARTED :
-					if (st.getInt("cond") == 1)
+				break;
+				
+				case State.STARTED:
+					if (st.getInt("cond") == 1) {
 						htmltext = "30760-03.htm";
-					
-					else if (st.getInt("cond") == 2)
+					} else if (st.getInt("cond") == 2) {
 						htmltext = "30760-05.htm";
-					
-					else if (st.getInt("cond") == 3 && st.getQuestItemsCount(INTRODUCTION) >= 1)
+					} else if ((st.getInt("cond") == 3) && (st.getQuestItemsCount(INTRODUCTION) >= 1)) {
 						htmltext = "30760-08.htm";
-					break;
-				case State.COMPLETED :
+					}
+				break;
+				case State.COMPLETED:
 					htmltext = "<html><body>這是已經完成的任務。</body></html>";
 			}
-		}
-		
-		else if (npc.getNpcId() == COLIN)
-		{
-			if (st.getState() == State.STARTED)
-			{
-				if (st.getInt("cond") == 3)
+		} else if (npc.getNpcId() == COLIN) {
+			if (st.getState() == State.STARTED) {
+				if (st.getInt("cond") == 3) {
 					htmltext = "32571-01.htm";
-				
-				else if (st.getInt("cond") == 4)
-				{
-					if (checkPlayer(player, 6201))
+				} else if (st.getInt("cond") == 4) {
+					if (checkPlayer(player, 6201)) {
 						htmltext = "32571-05.htm";
-					
-					else
+					} else {
 						htmltext = "32571-07.htm";
+					}
 				}
 				
-				else if (st.getInt("cond") == 5)
+				else if (st.getInt("cond") == 5) {
 					htmltext = "32571-09.htm";
-				
-				else if (st.getInt("cond") == 6)
+				} else if (st.getInt("cond") == 6) {
 					htmltext = "32571-11.htm";
-				
-				else if (st.getInt("cond") == 7)
-				{
-					if (checkPlayer(player, 6202))
+				} else if (st.getInt("cond") == 7) {
+					if (checkPlayer(player, 6202)) {
 						htmltext = "32571-13.htm";
-					
-					else
+					} else {
 						htmltext = "32571-15.htm";
-				}
-				else if (st.getInt("cond") == 8)
+					}
+				} else if (st.getInt("cond") == 8) {
 					htmltext = "32571-17.htm";
-				
-				else if (st.getInt("cond") == 9)
+				} else if (st.getInt("cond") == 9) {
 					htmltext = "32571-19.htm";
-				
-				else if (st.getInt("cond") == 10)
-				{
-					if (checkPlayer(player, 6203))
+				} else if (st.getInt("cond") == 10) {
+					if (checkPlayer(player, 6203)) {
 						htmltext = "32571-21.htm";
-					
-					else
+					} else {
 						htmltext = "32571-23.htm";
+					}
 				}
 				
-				else if (st.getInt("cond") == 11)
+				else if (st.getInt("cond") == 11) {
 					htmltext = "32571-25.htm";
-				
-				else if (st.getInt("cond") == 12)
+				} else if (st.getInt("cond") == 12) {
 					htmltext = "32571-27.htm";
+				}
 			}
-		}
-		
-		else if (npc.getNpcId() == FROG)
-		{
-			if (checkPlayer(player, 6201))
-			{
-				if (st.getInt("cond") == 4)
+		} else if (npc.getNpcId() == FROG) {
+			if (checkPlayer(player, 6201)) {
+				if (st.getInt("cond") == 4) {
 					htmltext = "32572-01.htm";
-				
-				else if (st.getInt("cond") == 5)
+				} else if (st.getInt("cond") == 5) {
 					htmltext = "32572-05.htm";
-			}
-			
-			else
+				}
+			} else {
 				htmltext = "32572-00.htm";
-		}
-		
-		else if (npc.getNpcId() == TESS)
-		{
-			if (checkPlayer(player, 6202))
-			{
-				if (st.getInt("cond") == 7)
+			}
+		} else if (npc.getNpcId() == TESS) {
+			if (checkPlayer(player, 6202)) {
+				if (st.getInt("cond") == 7) {
 					htmltext = "32573-01.htm";
-				
-				else if (st.getInt("cond") == 8)
+				} else if (st.getInt("cond") == 8) {
 					htmltext = "32573-04.htm";
-			}
-			
-			else
+				}
+			} else {
 				htmltext = "32573-00.htm";
-		}
-		
-		else if (npc.getNpcId() == KUTA)
-		{
-			if (checkPlayer(player, 6203))
-			{
-				if (st.getInt("cond") == 10)
-					htmltext = "32574-01.htm";
-				
-				else if (st.getInt("cond") == 11)
-					htmltext = "32574-05.htm";
 			}
-			
-			else
+		} else if (npc.getNpcId() == KUTA) {
+			if (checkPlayer(player, 6203)) {
+				if (st.getInt("cond") == 10) {
+					htmltext = "32574-01.htm";
+				} else if (st.getInt("cond") == 11) {
+					htmltext = "32574-05.htm";
+				}
+			} else {
 				htmltext = "32574-00.htm";
-		}
-		
-		else if (npc.getNpcId() == CLAUDIA)
-		{
-			if (st.getInt("cond") == 12)
+			}
+		} else if (npc.getNpcId() == CLAUDIA) {
+			if (st.getInt("cond") == 12) {
 				htmltext = "31001-01.htm";
+			}
 		}
-		
 		return htmltext;
 	}
 	
-	private boolean checkPlayer(L2PcInstance player, int transId)
-	{
+	private boolean checkPlayer(L2PcInstance player, int transId) {
 		L2Effect effect = player.getFirstEffect(transId);
-		
-		if (effect != null)
+		if (effect != null) {
 			return true;
-		
+		}
 		return false;
 	}
 	
-	public Q194_SevenSignContractOfMammon(int questId, String name, String descr)
-	{
+	public Q194_SevenSignContractOfMammon(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(ATHEBALDT);
 		addTalkId(ATHEBALDT);
 		addTalkId(COLIN);
@@ -385,13 +287,17 @@ public class Q194_SevenSignContractOfMammon extends Quest
 		addTalkId(TESS);
 		addTalkId(KUTA);
 		addTalkId(CLAUDIA);
-		
 		questItemIds = new int[]
-		{ INTRODUCTION, FROG_KING_BEAD, CANDY_POUCH, NATIVES_GLOVE };
+		{
+			INTRODUCTION,
+			FROG_KING_BEAD,
+			CANDY_POUCH,
+			NATIVES_GLOVE
+		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q194_SevenSignContractOfMammon(194, qn, "Seven Sign Contract Of Mammon");
 	}
+	
 }

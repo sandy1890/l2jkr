@@ -32,15 +32,13 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 /**
  * @author chris
  */
-public class PaganKeys implements IItemHandler
-{
+public class PaganKeys implements IItemHandler {
+	
 	public static final int INTERACTION_DISTANCE = 100;
 	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
-	{
-		if (!playable.isPlayer())
-		{
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse) {
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
@@ -49,93 +47,72 @@ public class PaganKeys implements IItemHandler
 		final L2PcInstance activeChar = (L2PcInstance) playable;
 		final L2Object target = activeChar.getTarget();
 		
-		if (!(target instanceof L2DoorInstance))
-		{
+		if (!(target instanceof L2DoorInstance)) {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		L2DoorInstance door = (L2DoorInstance) target;
 		
-		if (!(activeChar.isInsideRadius(door, INTERACTION_DISTANCE, false, false)))
-		{
+		if (!(activeChar.isInsideRadius(door, INTERACTION_DISTANCE, false, false))) {
 			activeChar.sendPacket(SystemMessageId.TARGET_TOO_FAR);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		if (activeChar.getAbnormalEffect() > 0 || activeChar.isInCombat())
-		{
+		if ((activeChar.getAbnormalEffect() > 0) || activeChar.isInCombat()) {
 			activeChar.sendMessage(1123);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
-		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
+		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false)) {
 			return false;
+		}
 		
 		// TODO: Unhardcode these!
-		switch (itemId)
-		{
+		switch (itemId) {
 			case 9698:
-				if (door.getDoorId() == 24220020)
-				{
-					if (activeChar.getInstanceId() != door.getInstanceId())
-					{
-						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
-						{
-							if (instanceDoor.getDoorId() == door.getDoorId())
-							{
+				if (door.getDoorId() == 24220020) {
+					if (activeChar.getInstanceId() != door.getInstanceId()) {
+						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors()) {
+							if (instanceDoor.getDoorId() == door.getDoorId()) {
 								instanceDoor.openMe();
 								break;
 							}
 						}
-					}
-					else
-					{
+					} else {
 						door.openMe();
 					}
-				}
-				else
-				{
+				} else {
 					activeChar.sendMessage(1124);
 				}
-				break;
+			break;
 			case 9699:
-				if (door.getDoorId() == 24220022)
-				{
-					if (activeChar.getInstanceId() != door.getInstanceId())
-					{
-						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
-						{
-							if (instanceDoor.getDoorId() == door.getDoorId())
-							{
+				if (door.getDoorId() == 24220022) {
+					if (activeChar.getInstanceId() != door.getInstanceId()) {
+						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors()) {
+							if (instanceDoor.getDoorId() == door.getDoorId()) {
 								instanceDoor.openMe();
 								break;
 							}
 						}
-					}
-					else
-					{
+					} else {
 						door.openMe();
 					}
-				}
-				else
-				{
+				} else {
 					activeChar.sendMessage(1124);
 				}
-				break;
+			break;
 			case 8056:
-				if (door.getDoorId() == 23150004 || door.getDoorId() == 23150003)
-				{
+				if ((door.getDoorId() == 23150004) || (door.getDoorId() == 23150003)) {
 					DoorTable.getInstance().getDoor(23150003).openMe();
 					DoorTable.getInstance().getDoor(23150004).openMe();
-				}
-				else
-				{
+				} else {
 					activeChar.sendMessage(1124);
 				}
-				break;
+			break;
 		}
 		return true;
 	}
+	
 }

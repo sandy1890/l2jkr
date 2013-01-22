@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * @author Emperorc
  */
 
-public class SagaOfTheDuelist extends SagasSuperClass
-{
+public class SagaOfTheDuelist extends SagasSuperClass {
+	
 	public static String qn1 = "73_SagaOfTheDuelist";
 	public static int qnu = 73;
 	public static String qna = "Saga of the Duelist";
@@ -38,8 +38,7 @@ public class SagaOfTheDuelist extends SagasSuperClass
 	private final int TUNATUN = 31537;
 	private final int TOPQUALITYMEAT = 7546;
 	
-	public SagaOfTheDuelist()
-	{
+	public SagaOfTheDuelist() {
 		super(qnu, qn1, qna);
 		NPC = new int[]
 		{
@@ -131,19 +130,14 @@ public class SagaOfTheDuelist extends SagasSuperClass
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (npc.getNpcId() == TUNATUN)
-		{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
+		if (npc.getNpcId() == TUNATUN) {
 			String htmltext = getNoQuestMsg(player);
 			QuestState st = player.getQuestState(qn);
-			if (st != null)
-			{
+			if (st != null) {
 				int cond = st.getInt("cond");
-				if (cond == 3)
-				{
-					if (!st.hasQuestItems(TOPQUALITYMEAT))
-					{
+				if (cond == 3) {
+					if (!st.hasQuestItems(TOPQUALITYMEAT)) {
 						st.giveItems(TOPQUALITYMEAT, 1);
 						return "tunatun_01.htm";
 					}
@@ -154,4 +148,5 @@ public class SagaOfTheDuelist extends SagasSuperClass
 		}
 		return super.onTalk(npc, player);
 	}
+	
 }

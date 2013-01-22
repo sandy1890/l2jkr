@@ -18,32 +18,30 @@
  */
 package handlers.usercommandhandlers;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
 /**
- * Support for /partyinfo command
- * Added by Tempy - 28 Jul 05
+ * Support for /partyinfo command Added by Tempy - 28 Jul 05
  */
-public class PartyInfo implements IUserCommandHandler
-{
+public class PartyInfo implements IUserCommandHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		81
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
-	{
-		if (id != COMMAND_IDS[0])
+	public boolean useUserCommand(int id, L2PcInstance activeChar) {
+		if (id != COMMAND_IDS[0]) {
 			return false;
+		}
 		
-		if (!activeChar.isInParty())
-		{
+		if (!activeChar.isInParty()) {
 			activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
 			activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 			return false;
@@ -56,23 +54,22 @@ public class PartyInfo implements IUserCommandHandler
 		
 		activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
 		
-		switch (lootDistribution)
-		{
+		switch (lootDistribution) {
 			case L2Party.ITEM_LOOTER:
 				activeChar.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
-				break;
+			break;
 			case L2Party.ITEM_ORDER:
 				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
-				break;
+			break;
 			case L2Party.ITEM_ORDER_SPOIL:
 				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
-				break;
+			break;
 			case L2Party.ITEM_RANDOM:
 				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM);
-				break;
+			break;
 			case L2Party.ITEM_RANDOM_SPOIL:
 				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
-				break;
+			break;
 		}
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_C1);
@@ -86,8 +83,8 @@ public class PartyInfo implements IUserCommandHandler
 	}
 	
 	@Override
-	public int[] getUserCommandList()
-	{
+	public int[] getUserCommandList() {
 		return COMMAND_IDS;
 	}
+	
 }

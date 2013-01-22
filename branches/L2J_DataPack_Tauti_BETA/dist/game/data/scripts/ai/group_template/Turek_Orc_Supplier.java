@@ -18,8 +18,6 @@
  */
 package ai.group_template;
 
-import ai.group_template.L2AttackableAIScript;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -28,58 +26,52 @@ import com.l2jserver.util.Rnd;
 /**
  * 土瑞克獸人補充兵
  */
-public class Turek_Orc_Supplier extends L2AttackableAIScript
-{
+public class Turek_Orc_Supplier extends L2AttackableAIScript {
+	
 	private static final int Turek_Orc_Supplier = 20498;
-
+	
 	private static boolean _FirstAttacked;
-
-	public Turek_Orc_Supplier(int questId, String name, String descr)
-	{
+	
+	public Turek_Orc_Supplier(int questId, String name, String descr) {
 		super(questId, name, descr);
-		int[] mobs = {Turek_Orc_Supplier};
+		int[] mobs =
+		{
+			Turek_Orc_Supplier
+		};
 		registerMobs(mobs, QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
 		_FirstAttacked = false;
 	}
-
+	
 	@Override
-	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
-		if (npc.getNpcId() == Turek_Orc_Supplier)
-		{
-			if (_FirstAttacked)
-			{
-				if (Rnd.get(100) == 50)
-				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"撤退！"));
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet) {
+		if (npc.getNpcId() == Turek_Orc_Supplier) {
+			if (_FirstAttacked) {
+				if (Rnd.get(100) == 50) {
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "撤退！"));
 				}
-				if (Rnd.get(100) == 50)
-				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"先退再說！"));
+				if (Rnd.get(100) == 50) {
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "先退再說！"));
 				}
-				if (Rnd.get(100) == 50)
-				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"有入侵者！"));
+				if (Rnd.get(100) == 50) {
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "有入侵者！"));
 				}
 			}
 			_FirstAttacked = true;
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
-
+	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		int npcId = npc.getNpcId();
-		if (npcId == Turek_Orc_Supplier)
-		{
+		if (npcId == Turek_Orc_Supplier) {
 			_FirstAttacked = false;
 		}
-		return super.onKill(npc,killer,isPet);
+		return super.onKill(npc, killer, isPet);
 	}
-
-	public static void main(String[] args)
-	{
+	
+	public static void main(String[] args) {
 		new Turek_Orc_Supplier(-1, "Turek_Orc_Supplier", "ai");
 	}
+	
 }

@@ -45,16 +45,14 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author GKR
  */
-public class HellboundTown extends Quest
-{
-	private class TownWorld extends InstanceWorld
-	{
+public class HellboundTown extends Quest {
+	
+	private class TownWorld extends InstanceWorld {
 		protected L2MonsterInstance spawnedAmaskari;
 		protected ScheduledFuture<?> activeAmaskariCall = null;
 		public boolean isAmaskariDead = false;
 		
-		public TownWorld()
-		{
+		public TownWorld() {
 			super();
 		}
 	}
@@ -64,27 +62,34 @@ public class HellboundTown extends Quest
 	
 	private static final NpcStringId[] NPCSTRING_ID =
 	{
-		NpcStringId.INVADER, NpcStringId.YOU_HAVE_DONE_WELL_IN_FINDING_ME_BUT_I_CANNOT_JUST_HAND_YOU_THE_KEY
+		NpcStringId.INVADER,
+		NpcStringId.YOU_HAVE_DONE_WELL_IN_FINDING_ME_BUT_I_CANNOT_JUST_HAND_YOU_THE_KEY
 	};
 	
 	private static final NpcStringId[] NATIVES_NPCSTRING_ID =
 	{
-		NpcStringId.THANK_YOU_FOR_SAVING_ME, NpcStringId.GUARDS_ARE_COMING_RUN, NpcStringId.NOW_I_CAN_ESCAPE_ON_MY_OWN
+		NpcStringId.THANK_YOU_FOR_SAVING_ME,
+		NpcStringId.GUARDS_ARE_COMING_RUN,
+		NpcStringId.NOW_I_CAN_ESCAPE_ON_MY_OWN
 	};
 	
 	private static final int[][] ROUTE_DATA =
 	{
 		{
-			14840, 251949
+			14840,
+			251949
 		},
 		{
-			16082, 251790
+			16082,
+			251790
 		},
 		{
-			16524, 255244
+			16524,
+			255244
 		},
 		{
-			17670, 252256
+			17670,
+			252256
 		}
 	};
 	
@@ -98,25 +103,31 @@ public class HellboundTown extends Quest
 	
 	private static final int[] AMASKARI_SPAWN_POINT =
 	{
-		19424, 253360, -2032, 16860
+		19424,
+		253360,
+		-2032,
+		16860
 	};
 	
 	private static final int[] ENTRY_POINT =
 	{
-		14117, 255434, -2016
+		14117,
+		255434,
+		-2016
 	};
 	
 	protected static final int[] EXIT_POINT =
 	{
-		16262, 283651, -9700
+		16262,
+		283651,
+		-9700
 	};
 	
 	private static final SkillHolder STONE = new SkillHolder(4616, 1);
 	
 	private static final int KEY = 9714;
 	
-	public HellboundTown(int questId, String name, String descr)
-	{
+	public HellboundTown(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addFirstTalkId(DOWNTOWN_NATIVE);
@@ -139,57 +150,41 @@ public class HellboundTown extends Quest
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (npc.getFirstEffect(STONE.getSkill()) == null)
-		{
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (npc.getFirstEffect(STONE.getSkill()) == null) {
 			return "32358-02.htm";
 		}
 		return "32358-01.htm";
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = null;
-		if (npc.getNpcId() == KANAF)
-		{
+		if (npc.getNpcId() == KANAF) {
 			htmltext = checkConditions(player);
 			
-			if (htmltext == null)
-			{
+			if (htmltext == null) {
 				enterInstance(player, "HellboundTown.xml");
 			}
-		}
-		else if (npc.getNpcId() == TOMBSTONE)
-		{
+		} else if (npc.getNpcId() == TOMBSTONE) {
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if ((tmpworld != null) && (tmpworld instanceof TownWorld))
-			{
+			if ((tmpworld != null) && (tmpworld instanceof TownWorld)) {
 				TownWorld world = (TownWorld) tmpworld;
 				
 				L2Party party = player.getParty();
 				
-				if (party == null)
-				{
+				if (party == null) {
 					htmltext = "32343-02.htm";
-				}
-				else if (npc.isBusy())
-				{
+				} else if (npc.isBusy()) {
 					htmltext = "32343-02c.htm";
-				}
-				else if (player.getInventory().getInventoryItemCount(KEY, -1, false) >= 1)
-				{
-					for (L2PcInstance partyMember : party.getMembers())
-					{
-						if (!Util.checkIfInRange(300, npc, partyMember, true))
-						{
+				} else if (player.getInventory().getInventoryItemCount(KEY, -1, false) >= 1) {
+					for (L2PcInstance partyMember : party.getMembers()) {
+						if (!Util.checkIfInRange(300, npc, partyMember, true)) {
 							return "32343-02b.htm";
 						}
 					}
 					
-					if (player.destroyItemByItemId("Quest", KEY, 1, npc, true))
-					{
+					if (player.destroyItemByItemId("Quest", KEY, 1, npc, true)) {
 						npc.setBusy(true);
 						// destroy instance after 5 min
 						Instance inst = InstanceManager.getInstance().getInstance(world.instanceId);
@@ -198,9 +193,7 @@ public class HellboundTown extends Quest
 						ThreadPoolManager.getInstance().scheduleGeneral(new ExitInstance(party, world), 285000);
 						htmltext = "32343-02d.htm";
 					}
-				}
-				else
-				{
+				} else {
 					htmltext = "32343-02a.htm";
 				}
 			}
@@ -209,33 +202,22 @@ public class HellboundTown extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if ((tmpworld != null) && (tmpworld instanceof TownWorld))
-		{
+		if ((tmpworld != null) && (tmpworld instanceof TownWorld)) {
 			TownWorld world = (TownWorld) tmpworld;
 			
-			if (npc.getNpcId() == DOWNTOWN_NATIVE)
-			{
-				if (event.equalsIgnoreCase("rebuff") && !world.isAmaskariDead)
-				{
+			if (npc.getNpcId() == DOWNTOWN_NATIVE) {
+				if (event.equalsIgnoreCase("rebuff") && !world.isAmaskariDead) {
 					STONE.getSkill().getEffects(npc, npc);
-				}
-				else if (event.equalsIgnoreCase("break_chains"))
-				{
-					if ((npc.getFirstEffect(STONE.getSkill()) == null) || world.isAmaskariDead)
-					{
+				} else if (event.equalsIgnoreCase("break_chains")) {
+					if ((npc.getFirstEffect(STONE.getSkill()) == null) || world.isAmaskariDead) {
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NATIVES_NPCSTRING_ID[0]));
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NATIVES_NPCSTRING_ID[2]));
-					}
-					else
-					{
+					} else {
 						cancelQuestTimer("rebuff", npc, null);
-						for (L2Effect e : npc.getAllEffects())
-						{
-							if (e.getSkill() == STONE.getSkill())
-							{
+						for (L2Effect e : npc.getAllEffects()) {
+							if (e.getSkill() == STONE.getSkill()) {
 								e.exit();
 							}
 						}
@@ -244,10 +226,8 @@ public class HellboundTown extends Quest
 						HellboundManager.getInstance().updateTrust(10, true);
 						npc.scheduleDespawn(3000);
 						// Try to call Amaskari
-						if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(5000, npc, world.spawnedAmaskari, false))
-						{
-							if (world.activeAmaskariCall != null)
-							{
+						if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(5000, npc, world.spawnedAmaskari, false)) {
+							if (world.activeAmaskariCall != null) {
 								world.activeAmaskariCall.cancel(true);
 							}
 							
@@ -261,44 +241,33 @@ public class HellboundTown extends Quest
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
-		if (npc.getNpcId() == DOWNTOWN_NATIVE)
-		{
+	public final String onSpawn(L2Npc npc) {
+		if (npc.getNpcId() == DOWNTOWN_NATIVE) {
 			((L2QuestGuardInstance) npc).setPassive(true);
 			((L2QuestGuardInstance) npc).setAutoAttackable(false);
 			STONE.getSkill().getEffects(npc, npc);
 			startQuestTimer("rebuff", 357000, npc, null);
-		}
-		else if ((npc.getNpcId() == TOWN_GUARD) || (npc.getNpcId() == KEYMASTER))
-		{
+		} else if ((npc.getNpcId() == TOWN_GUARD) || (npc.getNpcId() == KEYMASTER)) {
 			npc.setBusy(false);
 			npc.setBusyMessage("");
-		}
-		else if ((npc.getNpcId() == TOWN_PATROL) && (getRoute(npc) > 0))
-		{
+		} else if ((npc.getNpcId() == TOWN_PATROL) && (getRoute(npc) > 0)) {
 			WalkingManager.getInstance().startMoving(npc, getRoute(npc));
 		}
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if ((tmpworld != null) && (tmpworld instanceof TownWorld))
-		{
+		if ((tmpworld != null) && (tmpworld instanceof TownWorld)) {
 			TownWorld world = (TownWorld) tmpworld;
 			
-			if (!npc.isBusy())
-			{
+			if (!npc.isBusy()) {
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NPCSTRING_ID[0]));
 				npc.setBusy(true);
 				
-				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false))
-				{
-					if (world.activeAmaskariCall != null)
-					{
+				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false)) {
+					if (world.activeAmaskariCall != null) {
 						world.activeAmaskariCall.cancel(true);
 					}
 					
@@ -310,42 +279,35 @@ public class HellboundTown extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
-	{
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if ((tmpworld != null) && (tmpworld instanceof TownWorld))
-		{
+		if ((tmpworld != null) && (tmpworld instanceof TownWorld)) {
 			TownWorld world = (TownWorld) tmpworld;
 			
-			if (!world.isAmaskariDead && !(npc.getBusyMessage().equalsIgnoreCase("atk") || npc.isBusy()))
-			{
+			if (!world.isAmaskariDead && !(npc.getBusyMessage().equalsIgnoreCase("atk") || npc.isBusy())) {
 				int msgId;
 				int range;
-				switch (npc.getNpcId())
-				{
+				switch (npc.getNpcId()) {
 					case TOWN_GUARD:
 						msgId = 0;
 						range = 1000;
-						break;
+					break;
 					case KEYMASTER:
 						msgId = 1;
 						range = 5000;
-						break;
+					break;
 					default:
 						msgId = -1;
 						range = 0;
 				}
-				if (msgId >= 0)
-				{
+				if (msgId >= 0) {
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NPCSTRING_ID[msgId]));
 				}
 				npc.setBusy(true);
 				npc.setBusyMessage("atk");
 				
-				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(range, npc, world.spawnedAmaskari, false))
-				{
-					if (world.activeAmaskariCall != null)
-					{
+				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(range, npc, world.spawnedAmaskari, false)) {
+					if (world.activeAmaskariCall != null) {
 						world.activeAmaskariCall.cancel(true);
 					}
 					
@@ -357,66 +319,54 @@ public class HellboundTown extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if ((tmpworld != null) && (tmpworld instanceof TownWorld))
-		{
+		if ((tmpworld != null) && (tmpworld instanceof TownWorld)) {
 			TownWorld world = (TownWorld) tmpworld;
 			world.isAmaskariDead = true;
 		}
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	private String checkConditions(L2PcInstance player)
-	{
-		if (HellboundManager.getInstance().getLevel() < 10)
-		{
+	private String checkConditions(L2PcInstance player) {
+		if (HellboundManager.getInstance().getLevel() < 10) {
 			return "32346-lvl.htm";
 		}
 		
-		if (player.getParty() == null)
-		{
+		if (player.getParty() == null) {
 			return "32346-party.htm";
 		}
 		return null;
 	}
 	
-	private boolean checkTeleport(L2PcInstance player)
-	{
+	private boolean checkTeleport(L2PcInstance player) {
 		L2Party party = player.getParty();
 		
-		if (party == null)
-		{
+		if (party == null) {
 			return false;
 		}
 		
-		if (player.getObjectId() != party.getLeaderObjectId())
-		{
+		if (player.getObjectId() != party.getLeaderObjectId()) {
 			player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
 			return false;
 		}
 		
-		for (L2PcInstance partyMember : party.getMembers())
-		{
-			if (partyMember.getLevel() < 78)
-			{
+		for (L2PcInstance partyMember : party.getMembers()) {
+			if (partyMember.getLevel() < 78) {
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			
-			if (!Util.checkIfInRange(1000, player, partyMember, true))
-			{
+			if (!Util.checkIfInRange(1000, player, partyMember, true)) {
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			
-			if (InstanceManager.getInstance().getPlayerWorld(player) != null)
-			{
+			if (InstanceManager.getInstance().getPlayerWorld(player) != null) {
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
@@ -426,22 +376,18 @@ public class HellboundTown extends Quest
 		return true;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId)
-	{
+	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId) {
 		player.setInstanceId(instanceId);
 		player.teleToLocation((tele[0] - 50) + getRandom(100), (tele[1] - 50) + getRandom(100), tele[2]);
 	}
 	
-	private int enterInstance(L2PcInstance player, String template)
-	{
+	private int enterInstance(L2PcInstance player, String template) {
 		int instanceId = 0;
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		// existing instance
-		if (world != null)
-		{
-			if (!(world instanceof TownWorld))
-			{
+		if (world != null) {
+			if (!(world instanceof TownWorld)) {
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
@@ -449,8 +395,7 @@ public class HellboundTown extends Quest
 			return world.instanceId;
 		}
 		
-		if (!checkTeleport(player))
-		{
+		if (!checkTeleport(player)) {
 			return 0;
 		}
 		
@@ -462,8 +407,7 @@ public class HellboundTown extends Quest
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Hellbound Town started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		
-		for (L2PcInstance partyMember : player.getParty().getMembers())
-		{
+		for (L2PcInstance partyMember : player.getParty().getMembers()) {
 			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
 			world.allowed.add(partyMember.getObjectId());
 		}
@@ -472,27 +416,21 @@ public class HellboundTown extends Quest
 		return instanceId;
 	}
 	
-	private static class CallAmaskari implements Runnable
-	{
+	private static class CallAmaskari implements Runnable {
 		private final L2Npc _caller;
 		
-		public CallAmaskari(L2Npc caller)
-		{
+		public CallAmaskari(L2Npc caller) {
 			_caller = caller;
 		}
 		
 		@Override
-		public void run()
-		{
-			if ((_caller != null) && !_caller.isDead())
-			{
+		public void run() {
+			if ((_caller != null) && !_caller.isDead()) {
 				InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(_caller.getInstanceId());
-				if ((tmpworld != null) && (tmpworld instanceof TownWorld))
-				{
+				if ((tmpworld != null) && (tmpworld instanceof TownWorld)) {
 					TownWorld world = (TownWorld) tmpworld;
 					
-					if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead())
-					{
+					if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead()) {
 						world.spawnedAmaskari.teleToLocation(_caller.getX(), _caller.getY(), _caller.getZ());
 						world.spawnedAmaskari.broadcastPacket(new NpcSay(world.spawnedAmaskari.getObjectId(), Say2.ALL, world.spawnedAmaskari.getNpcId(), NpcStringId.ILL_MAKE_YOU_FEEL_SUFFERING_LIKE_A_FLAME_THAT_IS_NEVER_EXTINGUISHED));
 					}
@@ -501,17 +439,14 @@ public class HellboundTown extends Quest
 		}
 	}
 	
-	private static int getRoute(L2Npc npc)
-	{
+	private static int getRoute(L2Npc npc) {
 		int ret = -1;
 		int[] coords = new int[2];
 		coords[0] = npc.getSpawn().getLocx();
 		coords[1] = npc.getSpawn().getLocy();
 		
-		for (int i = 0; i < 4; i++)
-		{
-			if ((ROUTE_DATA[i][0] == coords[0]) && (ROUTE_DATA[i][1] == coords[1]))
-			{
+		for (int i = 0; i < 4; i++) {
+			if ((ROUTE_DATA[i][0] == coords[0]) && (ROUTE_DATA[i][1] == coords[1])) {
 				ret = i;
 				break;
 			}
@@ -520,26 +455,20 @@ public class HellboundTown extends Quest
 		return ret >= 0 ? ret + 2 : -1;
 	}
 	
-	private static class ExitInstance implements Runnable
-	{
+	private static class ExitInstance implements Runnable {
 		private final L2Party _party;
 		private final TownWorld _world;
 		
-		public ExitInstance(L2Party party, TownWorld world)
-		{
+		public ExitInstance(L2Party party, TownWorld world) {
 			_party = party;
 			_world = world;
 		}
 		
 		@Override
-		public void run()
-		{
-			if ((_party != null) && (_world != null))
-			{
-				for (L2PcInstance partyMember : _party.getMembers())
-				{
-					if ((partyMember != null) && !partyMember.isDead())
-					{
+		public void run() {
+			if ((_party != null) && (_world != null)) {
+				for (L2PcInstance partyMember : _party.getMembers()) {
+					if ((partyMember != null) && !partyMember.isDead()) {
 						_world.allowed.remove(_world.allowed.indexOf(partyMember.getObjectId()));
 						partyMember.setInstanceId(0);
 						partyMember.teleToLocation((EXIT_POINT[0] - 100) + getRandom(50), (EXIT_POINT[1] - 100) + getRandom(50), EXIT_POINT[2]);
@@ -549,8 +478,8 @@ public class HellboundTown extends Quest
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new HellboundTown(-1, qn, "instances");
 	}
+	
 }

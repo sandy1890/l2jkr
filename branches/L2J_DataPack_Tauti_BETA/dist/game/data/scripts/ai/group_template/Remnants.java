@@ -26,11 +26,13 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 /**
  * @author DS
  */
-public class Remnants extends L2AttackableAIScript
-{
+public class Remnants extends L2AttackableAIScript {
+	
 	private static final int[] NPCS =
 	{
-		18463, 18464, 18465
+		18463,
+		18464,
+		18465
 	};
 	
 	private static final int HOLY_WATER = 2358;
@@ -40,33 +42,27 @@ public class Remnants extends L2AttackableAIScript
 	// private static final String MSG_DEREK = "The holy water affects Derek. You have freed his soul.";
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
+	public final String onSpawn(L2Npc npc) {
 		npc.setIsMortal(false);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
-	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
-		if (skill.getId() == HOLY_WATER)
-		{
-			if (!npc.isDead())
-			{
-				if ((targets.length > 0) && (targets[0] == npc))
-				{
+	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) {
+		if (skill.getId() == HOLY_WATER) {
+			if (!npc.isDead()) {
+				if ((targets.length > 0) && (targets[0] == npc)) {
 					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.02)) // Lower, than 2%
 					{
 						npc.doDie(caster);
 						//@formatter:off
-						/*if (npc.getNpcId() == DEREK)
-						{
+						/*
+						if (npc.getNpcId() == DEREK) {
 							caster.sendMessage(MSG_DEREK);
-						}
-						else
-						{
+						} else {
 							caster.sendMessage(MSG);
-						}*/
+						}
+						*/
 						//@formatter:on
 					}
 				}
@@ -78,18 +74,24 @@ public class Remnants extends L2AttackableAIScript
 	
 	// Do not override onKill for Derek here. Let's make global Hellbound manipulations in Engine where it is possible.
 	
-	public Remnants(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public Remnants(int questId, String name, String descr) {
 		super(questId, name, descr);
-		for (int npcId : NPCS)
-		{
+		for (int npcId : NPCS) {
 			addSpawnId(npcId);
 			addSkillSeeId(npcId);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new Remnants(-1, Remnants.class.getSimpleName(), "ai");
 	}
+	
 }

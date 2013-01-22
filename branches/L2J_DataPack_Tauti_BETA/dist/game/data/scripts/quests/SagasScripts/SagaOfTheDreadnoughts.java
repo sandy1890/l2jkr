@@ -22,14 +22,13 @@ package quests.SagasScripts;
  * @author Emperorc
  */
 
-public class SagaOfTheDreadnoughts extends SagasSuperClass
-{
+public class SagaOfTheDreadnoughts extends SagasSuperClass {
+	
 	public static String qn1 = "74_SagaOfTheDreadnoughts";
 	public static int qnu = 74;
 	public static String qna = "Saga of the Dreadnoughts";
 	
-	public SagaOfTheDreadnoughts()
-	{
+	public SagaOfTheDreadnoughts() {
 		super(qnu, qn1, qna);
 		NPC = new int[]
 		{
@@ -117,4 +116,5 @@ public class SagaOfTheDreadnoughts extends SagasSuperClass
 		};
 		registerNPCs();
 	}
+	
 }

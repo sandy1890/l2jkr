@@ -31,8 +31,7 @@ import com.l2jserver.gameserver.util.Util;
  * Chest AI implementation.
  * @author Fulminus
  */
-public class Chests extends L2AttackableAIScript
-{
+public class Chests extends L2AttackableAIScript {
 	
 	private static final int SKILL_DELUXE_KEY = 2229;
 	
@@ -111,8 +110,7 @@ public class Chests extends L2AttackableAIScript
 		21822
 	};
 	
-	public Chests(int questId, String name, String descr)
-	{
+	public Chests(int questId, String name, String descr) {
 		// firstly, don't forget to call the parent constructor to prepare the event triggering
 		// mechanisms etc.
 		super(questId, name, descr);
@@ -120,14 +118,11 @@ public class Chests extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
-		if (npc instanceof L2ChestInstance)
-		{
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) {
+		if (npc instanceof L2ChestInstance) {
 			// this behavior is only run when the target of skill is the passed npc (chest)
 			// i.e. when the player is attempting to open the chest using a skill
-			if (!Util.contains(targets, npc))
-			{
+			if (!Util.contains(targets, npc)) {
 				return super.onSkillSee(npc, caster, skill, targets, isPet);
 			}
 			L2ChestInstance chest = ((L2ChestInstance) npc);
@@ -136,30 +131,26 @@ public class Chests extends L2AttackableAIScript
 			int skillLevel = skill.getLevel();
 			
 			// check if the chest and skills used are valid for this script. Exit if invalid.
-			if (!Util.contains(NPC_IDS, npcId))
-			{
+			if (!Util.contains(NPC_IDS, npcId)) {
 				return super.onSkillSee(npc, caster, skill, targets, isPet);
 			}
 			// if this has already been interacted, no further ai decisions are needed
 			// if it's the first interaction, check if this is a box or mimic
-			if (!chest.isInteracted())
-			{
+			if (!chest.isInteracted()) {
 				chest.setInteracted();
-				if (getRandom(100) < IS_BOX)
-				{
+				if (getRandom(100) < IS_BOX) {
 					// if it's a box, either it will be successfully openned by a proper key, or instantly disappear
-					if (skillId == SKILL_DELUXE_KEY)
-					{
+					if (skillId == SKILL_DELUXE_KEY) {
 						// check the chance to open the box
 						int keyLevelNeeded = chest.getLevel() / 10;
 						keyLevelNeeded -= skillLevel;
-						if (keyLevelNeeded < 0)
+						if (keyLevelNeeded < 0) {
 							keyLevelNeeded *= -1;
-						int chance = BASE_CHANCE - keyLevelNeeded * LEVEL_DECREASE;
+						}
+						int chance = BASE_CHANCE - (keyLevelNeeded * LEVEL_DECREASE);
 						
 						// success, pretend-death with rewards: chest.reduceCurrentHp(99999999, player)
-						if (getRandom(100) < chance)
-						{
+						if (getRandom(100) < chance) {
 							chest.setMustRewardExpSp(false);
 							chest.setSpecialDrop();
 							chest.reduceCurrentHp(99999999, caster, null);
@@ -168,9 +159,7 @@ public class Chests extends L2AttackableAIScript
 					}
 					// used a skill other than chest-key, or used a chest-key but failed to open: disappear with no rewards
 					chest.deleteMe();
-				}
-				else
-				{
+				} else {
 					L2Character originalCaster = isPet ? caster.getPet() : caster;
 					chest.setRunning();
 					chest.addDamageHate(originalCaster, 0, 999);
@@ -182,28 +171,21 @@ public class Chests extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
-		if (npc instanceof L2ChestInstance)
-		{
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet) {
+		if (npc instanceof L2ChestInstance) {
 			L2ChestInstance chest = ((L2ChestInstance) npc);
 			int npcId = chest.getNpcId();
 			// check if the chest and skills used are valid for this script. Exit if invalid.
-			if (!Util.contains(NPC_IDS, npcId))
-			{
+			if (!Util.contains(NPC_IDS, npcId)) {
 				return super.onAttack(npc, attacker, damage, isPet);
 			}
 			
 			// if this was a mimic, set the target, start the skills and become agro
-			if (!chest.isInteracted())
-			{
+			if (!chest.isInteracted()) {
 				chest.setInteracted();
-				if (getRandom(100) < IS_BOX)
-				{
+				if (getRandom(100) < IS_BOX) {
 					chest.deleteMe();
-				}
-				else
-				{
+				} else {
 					// if this weren't a box, upon interaction start the mimic behaviors...
 					// todo: perhaps a self-buff (skill id 4245) with random chance goes here?
 					L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
@@ -216,9 +198,9 @@ public class Chests extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		// now call the constructor (starts up the ai)
 		new Chests(-1, "chests", "ai");
 	}
+	
 }

@@ -31,26 +31,23 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
-public class EnemyCharge extends L2Effect
-{
+public class EnemyCharge extends L2Effect {
+	
 	static final Logger _log = Logger.getLogger(EnemyCharge.class.getName());
 	
 	private int _x, _y, _z;
 	
-	public EnemyCharge(Env env, EffectTemplate template)
-	{
+	public EnemyCharge(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BUFF;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		// Get current position of the L2Character
 		final int curX = getEffector().getX();
 		final int curY = getEffector().getY();
@@ -60,10 +57,9 @@ public class EnemyCharge extends L2Effect
 		double dx = getEffected().getX() - curX;
 		double dy = getEffected().getY() - curY;
 		double dz = getEffected().getZ() - curZ;
-		double distance = Math.sqrt(dx * dx + dy * dy);
-		if (distance > 2000)
-		{
-			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: "+curX+","+curY+" and getEffected: "+getEffected().getX()+","+getEffected().getY());
+		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		if (distance > 2000) {
+			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + getEffected().getX() + "," + getEffected().getY());
 			return false;
 		}
 		int offset = Math.max((int) distance - getSkill().getFlyRadius(), 30);
@@ -74,12 +70,14 @@ public class EnemyCharge extends L2Effect
 		// approximation for moving closer when z coordinates are different
 		// TODO: handle Z axis movement better
 		offset -= Math.abs(dz);
-		if (offset < 5)
+		if (offset < 5) {
 			offset = 5;
+		}
 		
 		// If no distance
-		if (distance < 1 || distance - offset <= 0)
+		if ((distance < 1) || ((distance - offset) <= 0)) {
 			return false;
+		}
 		
 		// Calculate movement angles needed
 		sin = dy / distance;
@@ -90,8 +88,7 @@ public class EnemyCharge extends L2Effect
 		_y = curY + (int) ((distance - offset) * sin);
 		_z = getEffected().getZ();
 		
-		if (Config.GEODATA > 0)
-		{
+		if (Config.GEODATA > 0) {
 			Location destiny = GeoData.getInstance().moveCheck(getEffector().getX(), getEffector().getY(), getEffector().getZ(), _x, _y, _z, getEffector().getInstanceId());
 			_x = destiny.getX();
 			_y = destiny.getY();
@@ -106,8 +103,8 @@ public class EnemyCharge extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

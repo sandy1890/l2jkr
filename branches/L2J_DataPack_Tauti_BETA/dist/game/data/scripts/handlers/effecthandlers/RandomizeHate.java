@@ -31,28 +31,27 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
-public class RandomizeHate extends L2Effect
-{
-	public RandomizeHate(Env env, EffectTemplate template)
-	{
+public class RandomizeHate extends L2Effect {
+	
+	public RandomizeHate(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.RANDOMIZE_HATE;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() == null || getEffected() == getEffector())
+	public boolean onStart() {
+		if ((getEffected() == null) || (getEffected() == getEffector())) {
 			return false;
+		}
 		
 		// Effect is for mobs only.
-		if (!(getEffected() instanceof L2Attackable))
+		if (!(getEffected() instanceof L2Attackable)) {
 			return false;
+		}
 		
 		L2Attackable effectedMob = (L2Attackable) getEffected();
 		
@@ -61,20 +60,20 @@ public class RandomizeHate extends L2Effect
 		// Getting the possible targets
 		
 		Collection<L2Character> chars = getEffected().getKnownList().getKnownCharacters();
-		for (L2Character cha : chars)
-		{
-			if (cha != null && (cha != effectedMob) && (cha != getEffector()))
-			{
+		for (L2Character cha : chars) {
+			if ((cha != null) && (cha != effectedMob) && (cha != getEffector())) {
 				// Aggro cannot be transfered to a mob of the same faction.
-				if (cha instanceof L2Attackable && ((L2Attackable) cha).getFactionId() != null && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
+				if ((cha instanceof L2Attackable) && (((L2Attackable) cha).getFactionId() != null) && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId())) {
 					continue;
+				}
 				
 				targetList.add(cha);
 			}
 		}
 		// if there is no target, exit function
-		if (targetList.isEmpty())
+		if (targetList.isEmpty()) {
 			return true;
+		}
 		
 		// Choosing randomly a new target
 		final L2Character target = targetList.get(Rnd.get(targetList.size()));
@@ -87,8 +86,8 @@ public class RandomizeHate extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

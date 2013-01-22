@@ -22,30 +22,24 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class VanguardPaladin extends L2Transformation
-{
-	public VanguardPaladin()
-	{
+public class VanguardPaladin extends L2Transformation {
+	public VanguardPaladin() {
 		// id
 		super(312);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 312) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 312) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		int lvl = 1;
-		if (getPlayer().getLevel() > 42)
-		{
+		if (getPlayer().getLevel() > 42) {
 			lvl = (getPlayer().getLevel() - 42);
 		}
 		
@@ -64,21 +58,29 @@ public class VanguardPaladin extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			18, 28, 196, 197, 293, 400, 406, 814, 816, 838, 956, 957
+			18,
+			28,
+			196,
+			197,
+			293,
+			400,
+			406,
+			814,
+			816,
+			838,
+			956,
+			957
 		});
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		int lvl = 1;
-		if (getPlayer().getLevel() > 42)
-		{
+		if (getPlayer().getLevel() > 42) {
 			lvl = (getPlayer().getLevel() - 42);
 		}
 		
@@ -98,8 +100,7 @@ public class VanguardPaladin extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new VanguardPaladin());
 	}
 }

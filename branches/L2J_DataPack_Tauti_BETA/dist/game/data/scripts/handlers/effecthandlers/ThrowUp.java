@@ -32,26 +32,23 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
-public class ThrowUp extends L2Effect
-{
+public class ThrowUp extends L2Effect {
+	
 	private static final Logger _log = Logger.getLogger(ThrowUp.class.getName());
 	
 	private int _x, _y, _z;
 	
-	public ThrowUp(Env env, EffectTemplate template)
-	{
+	public ThrowUp(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.THROW_UP;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		// Get current position of the L2Character
 		final int curX = getEffected().getX();
 		final int curY = getEffected().getY();
@@ -61,10 +58,9 @@ public class ThrowUp extends L2Effect
 		double dx = getEffector().getX() - curX;
 		double dy = getEffector().getY() - curY;
 		double dz = getEffector().getZ() - curZ;
-		double distance = Math.sqrt(dx * dx + dy * dy);
-		if (distance > 2000)
-		{
-			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: "+curX+","+curY+" and getEffector: "+getEffector().getX()+","+getEffector().getY());
+		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		if (distance > 2000) {
+			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + getEffector().getX() + "," + getEffector().getY());
 			return false;
 		}
 		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
@@ -75,12 +71,14 @@ public class ThrowUp extends L2Effect
 		// approximation for moving futher when z coordinates are different
 		// TODO: handle Z axis movement better
 		offset += Math.abs(dz);
-		if (offset < 5)
+		if (offset < 5) {
 			offset = 5;
+		}
 		
 		// If no distance
-		if (distance < 1)
+		if (distance < 1) {
 			return false;
+		}
 		
 		// Calculate movement angles needed
 		sin = dy / distance;
@@ -91,8 +89,7 @@ public class ThrowUp extends L2Effect
 		_y = getEffector().getY() - (int) (offset * sin);
 		_z = getEffected().getZ();
 		
-		if (Config.GEODATA > 0)
-		{
+		if (Config.GEODATA > 0) {
 			Location destiny = GeoData.getInstance().moveCheck(getEffected().getX(), getEffected().getY(), getEffected().getZ(), _x, _y, _z, getEffected().getInstanceId());
 			_x = destiny.getX();
 			_y = destiny.getY();
@@ -103,22 +100,20 @@ public class ThrowUp extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopStunning(false);
 		getEffected().setXYZ(_x, _y, _z);
 		getEffected().broadcastPacket(new ValidateLocation(getEffected()));
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_STUNNED;
 	}
+	
 }

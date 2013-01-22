@@ -31,17 +31,18 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Gnacik
  */
-public class PriestOfBlessing extends Quest
-{
+public class PriestOfBlessing extends Quest {
+	
 	// Spawn state
 	private static boolean _spawned = false;
+	
 	// NPC
 	private static final int _priest = 32783;
+	
 	// Prices
 	private static final int _price_voice = 100000;
-	//
+	
 	private static final int _nevit_voice = 17094;
-	//
 	private static final int[] _prices_hourglass =
 	{
 		4000,
@@ -213,31 +214,24 @@ public class PriestOfBlessing extends Quest
 	};
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
-		if (event.equalsIgnoreCase("buy_voice"))
-		{
-			if (st.getQuestItemsCount(57) >= _price_voice)
-			{
+		if (event.equalsIgnoreCase("buy_voice")) {
+			if (st.getQuestItemsCount(57) >= _price_voice) {
 				String value = loadGlobalQuestVar(player.getAccountName() + "_voice");
 				long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
-				if (System.currentTimeMillis() > _reuse_time)
-				{
+				if (System.currentTimeMillis() > _reuse_time) {
 					st.setState(State.STARTED);
 					st.takeItems(57, _price_voice);
 					st.giveItems(_nevit_voice, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_voice", Long.toString(System.currentTimeMillis() + (20 * 3600000)));
-				}
-				else
-				{
+				} else {
 					long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
@@ -250,19 +244,15 @@ public class PriestOfBlessing extends Quest
 				return null;
 			}
 			htmltext = "32783-adena.htm";
-		}
-		else if (event.equalsIgnoreCase("buy_hourglass"))
-		{
+		} else if (event.equalsIgnoreCase("buy_hourglass")) {
 			int _index = getHGIndex(player.getLevel());
 			int _price_hourglass = _prices_hourglass[_index];
 			
-			if (st.getQuestItemsCount(57) >= _price_hourglass)
-			{
+			if (st.getQuestItemsCount(57) >= _price_hourglass) {
 				String value = loadGlobalQuestVar(player.getAccountName() + "_hg_" + _index);
 				long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
-				if (System.currentTimeMillis() > _reuse_time)
-				{
+				if (System.currentTimeMillis() > _reuse_time) {
 					int[] _hg = _hourglasses[_index];
 					int _nevit_hourglass = _hg[getRandom(0, _hg.length - 1)];
 					
@@ -270,9 +260,7 @@ public class PriestOfBlessing extends Quest
 					st.takeItems(57, _price_hourglass);
 					st.giveItems(_nevit_hourglass, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_hg_" + _index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
-				}
-				else
-				{
+				} else {
 					long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
@@ -290,75 +278,56 @@ public class PriestOfBlessing extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			st = newQuestState(player);
 		}
 		final NpcHtmlMessage html = new NpcHtmlMessage(0);
 		final String content = getHtm(player.getHtmlPrefix(), "32783.htm");
 		html.setHtml(content);
 		html.replace("%donate%", Util.formatAdena(_prices_hourglass[getHGIndex(player.getLevel())]));
-		html.replace("%lv%", String.valueOf(player.getLevel())); //pmq
+		html.replace("%lv%", String.valueOf(player.getLevel())); // pmq
 		player.sendPacket(html);
 		return null;
 	}
 	
-	private int getHGIndex(int lvl)
-	{
+	private int getHGIndex(int lvl) {
 		int index = 0;
-		if (lvl < 20)
-		{
+		if (lvl < 20) {
 			index = 0;
-		}
-		else if (lvl < 40)
-		{
+		} else if (lvl < 40) {
 			index = 1;
-		}
-		else if (lvl < 52)
-		{
+		} else if (lvl < 52) {
 			index = 2;
-		}
-		else if (lvl < 61)
-		{
+		} else if (lvl < 61) {
 			index = 3;
-		}
-		else if (lvl < 76)
-		{
+		} else if (lvl < 76) {
 			index = 4;
-		}
-		else if (lvl < 80)
-		{
+		} else if (lvl < 80) {
 			index = 5;
-		}
-		else if (lvl < 86)
-		{
+		} else if (lvl < 86) {
 			index = 6;
 		}
 		return index;
 	}
 	
-	public PriestOfBlessing(int questId, String name, String descr)
-	{
+	public PriestOfBlessing(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(_priest);
 		addFirstTalkId(_priest);
 		addTalkId(_priest);
-		if (!_spawned)
-		{
-			for (int[] _spawn : _spawns)
-			{
+		if (!_spawned) {
+			for (int[] _spawn : _spawns) {
 				addSpawn(_priest, _spawn[0], _spawn[1], _spawn[2], _spawn[3], false, 0);
 			}
 			_spawned = true;
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new PriestOfBlessing(-1, "PriestOfBlessing", "retail");
 	}
+	
 }

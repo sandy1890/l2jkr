@@ -32,9 +32,10 @@ import com.l2jserver.util.Rnd;
  * Not Strong Enough Alone (453)
  * @author malyelfik
  */
-public class Q453_NotStrongEnoughAlone extends Quest
-{
+public class Q453_NotStrongEnoughAlone extends Quest {
+	
 	private static final String qn = "453_NotStrongEnoughAlone";
+	
 	// NPC
 	private static final int Klemis = 32734;
 	private static final int[] Monsters1 =
@@ -103,34 +104,25 @@ public class Q453_NotStrongEnoughAlone extends Quest
 	private static final int ResetMin = 30;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("32734-06.htm"))
-		{
+		if (event.equalsIgnoreCase("32734-06.htm")) {
 			st.set("cond", "1");
 			st.setState(State.STARTED);
 			st.playSound("ItemSound.quest_accept");
-		}
-		else if (event.equalsIgnoreCase("32734-07.html"))
-		{
+		} else if (event.equalsIgnoreCase("32734-07.html")) {
 			st.set("cond", "2");
 			st.playSound("ItemSound.quest_middle");
-		}
-		else if (event.equalsIgnoreCase("32734-08.html"))
-		{
+		} else if (event.equalsIgnoreCase("32734-08.html")) {
 			st.set("cond", "3");
 			st.playSound("ItemSound.quest_middle");
-		}
-		else if (event.equalsIgnoreCase("32734-09.html"))
-		{
+		} else if (event.equalsIgnoreCase("32734-09.html")) {
 			st.set("cond", "4");
 			st.playSound("ItemSound.quest_middle");
 		}
@@ -138,53 +130,35 @@ public class Q453_NotStrongEnoughAlone extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
 		QuestState prev = player.getQuestState("10282_ToTheSeedOfAnnihilation");
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
-				if ((player.getLevel() >= 84) && (prev != null) && prev.isCompleted())
-				{
+				if ((player.getLevel() >= 84) && (prev != null) && prev.isCompleted()) {
 					htmltext = "32734-01.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "32734-03.html";
 				}
-				break;
+			break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
-				{
+				if (st.getInt("cond") == 1) {
 					htmltext = "32734-10.html";
-				}
-				else if (st.getInt("cond") == 2)
-				{
+				} else if (st.getInt("cond") == 2) {
 					htmltext = "32734-11.html";
-				}
-				else if (st.getInt("cond") == 3)
-				{
+				} else if (st.getInt("cond") == 3) {
 					htmltext = "32734-12.html";
-				}
-				else if (st.getInt("cond") == 4)
-				{
+				} else if (st.getInt("cond") == 4) {
 					htmltext = "32734-13.html";
-				}
-				else if (st.getInt("cond") == 5)
-				{
-					if (Rnd.nextBoolean())
-					{
+				} else if (st.getInt("cond") == 5) {
+					if (Rnd.nextBoolean()) {
 						st.giveItems(Reward[0][getRandom(Reward[0].length)], 1);
-					}
-					else
-					{
+					} else {
 						st.giveItems(Reward[1][getRandom(Reward[1].length)], 1);
 					}
 					st.playSound("ItemSound.quest_finish");
@@ -192,137 +166,97 @@ public class Q453_NotStrongEnoughAlone extends Quest
 					
 					Calendar reset = Calendar.getInstance();
 					reset.set(Calendar.MINUTE, ResetMin);
-					if (reset.get(Calendar.HOUR_OF_DAY) >= ResetHour)
-					{
+					if (reset.get(Calendar.HOUR_OF_DAY) >= ResetHour) {
 						reset.add(Calendar.DATE, 1);
 					}
 					reset.set(Calendar.HOUR_OF_DAY, ResetHour);
 					st.set("reset", String.valueOf(reset.getTimeInMillis()));
 					st.exitQuest(false);
 				}
-				break;
+			break;
 			case State.COMPLETED:
-				if (Long.parseLong(st.get("reset")) > System.currentTimeMillis())
-				{
+				if (Long.parseLong(st.get("reset")) > System.currentTimeMillis()) {
 					htmltext = "32734-02.htm";
-				}
-				else
-				{
+				} else {
 					st.setState(State.CREATED);
-					if ((player.getLevel() >= 84) && (prev != null) && (prev.getState() == State.COMPLETED))
-					{
+					if ((player.getLevel() >= 84) && (prev != null) && (prev.getState() == State.COMPLETED)) {
 						htmltext = "32734-01.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "32734-03.html";
 					}
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (player.getParty() != null)
-		{
-			for (L2PcInstance member : player.getParty().getMembers())
-			{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
+		if (player.getParty() != null) {
+			for (L2PcInstance member : player.getParty().getMembers()) {
 				increaseKill(member, npc);
 			}
-		}
-		else
-		{
+		} else {
 			increaseKill(player, npc);
 		}
 		return null;
 	}
 	
-	private static void increaseKill(L2PcInstance player, L2Npc npc)
-	{
+	private static void increaseKill(L2PcInstance player, L2Npc npc) {
 		QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
-		{
+		if (st == null) {
 			return;
 		}
 		
 		int npcId = npc.getNpcId();
 		
-		if (Util.checkIfInRange(1500, npc, player, false))
-		{
-			if (Util.contains(Monsters1, npcId) && (st.getInt("cond") == 2))
-			{
-				if (npcId == Monsters1[4])
-				{
+		if (Util.checkIfInRange(1500, npc, player, false)) {
+			if (Util.contains(Monsters1, npcId) && (st.getInt("cond") == 2)) {
+				if (npcId == Monsters1[4]) {
 					npcId = Monsters1[0];
-				}
-				else if (npcId == Monsters1[5])
-				{
+				} else if (npcId == Monsters1[5]) {
 					npcId = Monsters1[1];
-				}
-				else if (npcId == Monsters1[6])
-				{
+				} else if (npcId == Monsters1[6]) {
 					npcId = Monsters1[2];
-				}
-				else if (npcId == Monsters1[7])
-				{
+				} else if (npcId == Monsters1[7]) {
 					npcId = Monsters1[3];
 				}
 				
 				int i = st.getInt(String.valueOf(npcId));
-				if (i < 15)
-				{
+				if (i < 15) {
 					st.set(String.valueOf(npcId), String.valueOf(i + 1));
 					st.playSound("ItemSound.quest_itemget");
 				}
 				
 				checkProgress(st, 15, Monsters1[0], Monsters1[1], Monsters1[2], Monsters1[3]);
-			}
-			else if (Util.contains(Monsters2, npcId) && (st.getInt("cond") == 3))
-			{
-				if (npcId == Monsters2[3])
-				{
+			} else if (Util.contains(Monsters2, npcId) && (st.getInt("cond") == 3)) {
+				if (npcId == Monsters2[3]) {
 					npcId = Monsters2[0];
-				}
-				else if (npcId == Monsters2[4])
-				{
+				} else if (npcId == Monsters2[4]) {
 					npcId = Monsters2[1];
-				}
-				else if (npcId == Monsters2[5])
-				{
+				} else if (npcId == Monsters2[5]) {
 					npcId = Monsters2[2];
 				}
 				
 				int i = st.getInt(String.valueOf(npcId));
-				if (i < 20)
-				{
+				if (i < 20) {
 					st.set(String.valueOf(npcId), String.valueOf(i + 1));
 					st.playSound("ItemSound.quest_itemget");
 				}
 				
 				checkProgress(st, 20, Monsters2[0], Monsters2[1], Monsters2[2]);
-			}
-			else if (Util.contains(Monsters3, npcId) && (st.getInt("cond") == 4))
-			{
-				if (npcId == Monsters3[3])
-				{
+			} else if (Util.contains(Monsters3, npcId) && (st.getInt("cond") == 4)) {
+				if (npcId == Monsters3[3]) {
 					npcId = Monsters3[0];
-				}
-				else if (npcId == Monsters3[4])
-				{
+				} else if (npcId == Monsters3[4]) {
 					npcId = Monsters3[1];
-				}
-				else if (npcId == Monsters3[5])
-				{
+				} else if (npcId == Monsters3[5]) {
 					npcId = Monsters3[2];
 				}
 				
 				int i = st.getInt(String.valueOf(npcId));
-				if (i < 20)
-				{
+				if (i < 20) {
 					st.set(String.valueOf(npcId), String.valueOf(i + 1));
 					st.playSound("ItemSound.quest_itemget");
 				}
@@ -332,42 +266,33 @@ public class Q453_NotStrongEnoughAlone extends Quest
 		}
 	}
 	
-	private static void checkProgress(QuestState st, int count, int... mobs)
-	{
-		for (int mob : mobs)
-		{
-			if (st.getInt(String.valueOf(mob)) < count)
-			{
+	private static void checkProgress(QuestState st, int count, int... mobs) {
+		for (int mob : mobs) {
+			if (st.getInt(String.valueOf(mob)) < count) {
 				return;
 			}
 		}
-		
 		st.set("cond", "5");
 		st.playSound("ItemSound.quest_middle");
 	}
 	
-	public Q453_NotStrongEnoughAlone(int questId, String name, String descr)
-	{
+	public Q453_NotStrongEnoughAlone(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(Klemis);
 		addTalkId(Klemis);
-		
-		for (int i : Monsters1)
-		{
+		for (int i : Monsters1) {
 			addKillId(i);
 		}
-		for (int i : Monsters2)
-		{
+		for (int i : Monsters2) {
 			addKillId(i);
 		}
-		for (int i : Monsters3)
-		{
+		for (int i : Monsters3) {
 			addKillId(i);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q453_NotStrongEnoughAlone(453, qn, "Not Strong Enought Alone");
 	}
+	
 }

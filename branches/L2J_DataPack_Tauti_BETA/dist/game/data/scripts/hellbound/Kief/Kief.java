@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author DS
  */
-public class Kief extends Quest
-{
+public class Kief extends Quest {
+	
 	private static final int KIEF = 32354;
 	
 	private static final int BOTTLE = 9672;
@@ -39,74 +39,53 @@ public class Kief extends Quest
 	private static final int STINGER = 10012;
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
+		if (qs == null) {
 			qs = newQuestState(player);
 		}
 		
-		if ("Badges".equalsIgnoreCase(event))
-		{
-			switch (HellboundManager.getInstance().getLevel())
-			{
+		if ("Badges".equalsIgnoreCase(event)) {
+			switch (HellboundManager.getInstance().getLevel()) {
 				case 2:
 				case 3:
-					if (qs.hasQuestItems(DARION_BADGE))
-					{
+					if (qs.hasQuestItems(DARION_BADGE)) {
 						HellboundManager.getInstance().updateTrust((int) qs.getQuestItemsCount(DARION_BADGE) * 10, true);
 						qs.takeItems(DARION_BADGE, -1);
 						return "32354-10.htm";
 					}
 			}
 			return "32354-10a.htm";
-		}
-		else if ("Bottle".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() >= 7)
-			{
-				if (qs.getQuestItemsCount(STINGER) >= 20)
-				{
+		} else if ("Bottle".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() >= 7) {
+				if (qs.getQuestItemsCount(STINGER) >= 20) {
 					qs.takeItems(STINGER, 20);
 					qs.giveItems(BOTTLE, 1);
 					return "32354-11h.htm";
 				}
 				return "32354-11i.htm";
 			}
-		}
-		else if ("dlf".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() == 7)
-			{
-				if (qs.hasQuestItems(DIM_LIFE_FORCE))
-				{
+		} else if ("dlf".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() == 7) {
+				if (qs.hasQuestItems(DIM_LIFE_FORCE)) {
 					HellboundManager.getInstance().updateTrust((int) qs.getQuestItemsCount(DIM_LIFE_FORCE) * 20, true);
 					qs.takeItems(DIM_LIFE_FORCE, -1);
 					return "32354-11a.htm";
 				}
 				return "32354-11b.htm";
 			}
-		}
-		else if ("lf".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() == 7)
-			{
-				if (qs.hasQuestItems(LIFE_FORCE))
-				{
+		} else if ("lf".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() == 7) {
+				if (qs.hasQuestItems(LIFE_FORCE)) {
 					HellboundManager.getInstance().updateTrust((int) qs.getQuestItemsCount(LIFE_FORCE) * 80, true);
 					qs.takeItems(LIFE_FORCE, -1);
 					return "32354-11c.htm";
 				}
 				return "32354-11d.htm";
 			}
-		}
-		else if ("clf".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() == 7)
-			{
-				if (qs.hasQuestItems(CONTAINED_LIFE_FORCE))
-				{
+		} else if ("clf".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() == 7) {
+				if (qs.hasQuestItems(CONTAINED_LIFE_FORCE)) {
 					HellboundManager.getInstance().updateTrust((int) qs.getQuestItemsCount(CONTAINED_LIFE_FORCE) * 200, true);
 					qs.takeItems(CONTAINED_LIFE_FORCE, -1);
 					return "32354-11e.htm";
@@ -118,15 +97,12 @@ public class Kief extends Quest
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-		{
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
 		}
 		
-		switch (HellboundManager.getInstance().getLevel())
-		{
+		switch (HellboundManager.getInstance().getLevel()) {
 			case 1:
 				return "32354-01.htm";
 			case 2:
@@ -145,16 +121,15 @@ public class Kief extends Quest
 		}
 	}
 	
-	public Kief(int questId, String name, String descr)
-	{
+	public Kief(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addFirstTalkId(KIEF);
 		addStartNpc(KIEF);
 		addTalkId(KIEF);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Kief(-1, "Kief", "hellbound");
 	}
+	
 }

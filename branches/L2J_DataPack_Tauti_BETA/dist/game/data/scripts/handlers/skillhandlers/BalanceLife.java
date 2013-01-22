@@ -31,43 +31,44 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
  * @author earendil
  * @version $Revision: 1.1.2.2.2.4 $ $Date: 2005/04/06 16:13:48 $
  */
-public class BalanceLife implements ISkillHandler
-{
+public class BalanceLife implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.BALANCE_LIFE
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
 		// L2Character activeChar = activeChar;
 		// check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getHandler(L2SkillType.BUFF);
 		
-		if (handler != null)
+		if (handler != null) {
 			handler.useSkill(activeChar, skill, targets);
+		}
 		
 		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
+		if (activeChar instanceof L2PcInstance) {
 			player = (L2PcInstance) activeChar;
+		}
 		
 		double fullHP = 0;
 		double currentHPs = 0;
 		
-		for (L2Character target: (L2Character[]) targets)
-		{
+		for (L2Character target : (L2Character[]) targets) {
 			// We should not heal if char is dead/
-			if (target == null || target.isDead())
+			if ((target == null) || target.isDead()) {
 				continue;
+			}
 			
 			// Player holding a cursed weapon can't be healed and can't heal
-			if (target != activeChar)
-			{
-				if (target instanceof L2PcInstance && ((L2PcInstance) target).isCursedWeaponEquipped())
+			if (target != activeChar) {
+				if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isCursedWeaponEquipped()) {
 					continue;
-				else if (player != null && player.isCursedWeaponEquipped())
+				} else if ((player != null) && player.isCursedWeaponEquipped()) {
 					continue;
+				}
 			}
 			
 			fullHP += target.getMaxHp();
@@ -76,30 +77,29 @@ public class BalanceLife implements ISkillHandler
 		
 		double percentHP = currentHPs / fullHP;
 		
-		for (L2Character target: (L2Character[]) targets)
-		{
-			if (target == null || target.isDead())
+		for (L2Character target : (L2Character[]) targets) {
+			if ((target == null) || target.isDead()) {
 				continue;
+			}
 			
 			// Player holding a cursed weapon can't be healed and can't heal
-			if (target != activeChar)
-			{
-				if (target instanceof L2PcInstance && ((L2PcInstance) target).isCursedWeaponEquipped())
+			if (target != activeChar) {
+				if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isCursedWeaponEquipped()) {
 					continue;
-				else if (player != null && player.isCursedWeaponEquipped())
+				} else if ((player != null) && player.isCursedWeaponEquipped()) {
 					continue;
+				}
 			}
 			
 			double newHP = target.getMaxHp() * percentHP;
 			
-			if (newHP > target.getCurrentHp()) // The target gets healed
-			{
+			if (newHP > target.getCurrentHp()) { // The target gets healed
 				// The heal will be blocked if the current hp passes the limit
-				if (target.getCurrentHp() > target.getMaxRecoverableHp())
+				if (target.getCurrentHp() > target.getMaxRecoverableHp()) {
 					newHP = target.getCurrentHp();
-				// Else dont let the newHP pass the limit
-				else if (newHP > target.getMaxRecoverableHp())
+				} else if (newHP > target.getMaxRecoverableHp()) {
 					newHP = target.getMaxRecoverableHp();
+				}
 			}
 			
 			target.setCurrentHp(newHP);
@@ -110,8 +110,8 @@ public class BalanceLife implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

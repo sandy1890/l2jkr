@@ -28,15 +28,12 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author UnAfraid
  */
-public class TargetOne implements ITargetTypeHandler
-{
+public class TargetOne implements ITargetTypeHandler {
 	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		boolean canTargetSelf = false;
-		switch (skill.getSkillType())
-		{
+		switch (skill.getSkillType()) {
 			case BUFF:
 			case HEAL:
 			case HOT:
@@ -53,23 +50,25 @@ public class TargetOne implements ITargetTypeHandler
 			case HPCPHEAL_PERCENT:
 			case DUMMY:
 				canTargetSelf = true;
-				break;
+			break;
 		}
 		
 		// Check for null target or any other invalid target
-		if (target == null || target.isDead() || (target == activeChar && !canTargetSelf))
-		{
+		if ((target == null) || target.isDead() || ((target == activeChar) && !canTargetSelf)) {
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
 		
 		// If a target is found, return it in a table else send a system message TARGET_IS_INCORRECT
-		return new L2Character[] { target };
+		return new L2Character[]
+		{
+			target
+		};
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_ONE;
 	}
+	
 }

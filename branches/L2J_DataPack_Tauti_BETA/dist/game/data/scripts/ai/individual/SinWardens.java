@@ -34,34 +34,41 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Sin Wardens disappearing and chat
  * @author GKR
  */
-public class SinWardens extends L2AttackableAIScript
-{
+public class SinWardens extends L2AttackableAIScript {
+	
 	private static final int[] SIN_WARDEN_MINIONS =
 	{
-		22424, 22425, 22426, 22427, 22428, 22429, 22430, 22432, 22433, 22434, 22435, 22436, 22437, 22438
+		22424,
+		22425,
+		22426,
+		22427,
+		22428,
+		22429,
+		22430,
+		22432,
+		22433,
+		22434,
+		22435,
+		22436,
+		22437,
+		22438
 	};
 	
 	private final Map<Integer, Integer> killedMinionsCount = new FastMap<>();
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (npc.isMinion())
-		{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
+		if (npc.isMinion()) {
 			L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
-			if ((master != null) && !master.isDead())
-			{
+			if ((master != null) && !master.isDead()) {
 				int killedCount = killedMinionsCount.containsKey(master.getObjectId()) ? killedMinionsCount.get(master.getObjectId()) : 0;
 				killedCount++;
 				
-				if ((killedCount) == 5)
-				{
+				if ((killedCount) == 5) {
 					master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.ALL, master.getNpcId(), NpcStringId.WE_MIGHT_NEED_NEW_SLAVES_ILL_BE_BACK_SOON_SO_WAIT));
 					master.doDie(killer);
 					killedMinionsCount.remove(master.getObjectId());
-				}
-				else
-				{
+				} else {
 					killedMinionsCount.put(master.getObjectId(), killedCount);
 				}
 			}
@@ -69,18 +76,23 @@ public class SinWardens extends L2AttackableAIScript
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public SinWardens(int id, String name, String descr)
-	{
+	/**
+	 * @param id
+	 * @param name
+	 * @param descr
+	 */
+	public SinWardens(int id, String name, String descr) {
 		super(id, name, descr);
-		
-		for (int monsterId : SIN_WARDEN_MINIONS)
-		{
+		for (int monsterId : SIN_WARDEN_MINIONS) {
 			addKillId(monsterId);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new SinWardens(-1, "SinWardens", "ai");
 	}
+	
 }

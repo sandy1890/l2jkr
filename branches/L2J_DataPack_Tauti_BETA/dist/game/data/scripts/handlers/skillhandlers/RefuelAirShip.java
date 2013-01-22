@@ -27,32 +27,31 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
-public class RefuelAirShip implements ISkillHandler
-{
+public class RefuelAirShip implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.REFUEL
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!(activeChar instanceof L2PcInstance))
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!(activeChar instanceof L2PcInstance)) {
 			return;
+		}
 		
-		final L2AirShipInstance ship = ((L2PcInstance)activeChar).getAirShip();
-		if (ship == null
-				|| !(ship instanceof L2ControllableAirShipInstance)
-				|| ship.getFuel() >= ship.getMaxFuel())
+		final L2AirShipInstance ship = ((L2PcInstance) activeChar).getAirShip();
+		if ((ship == null) || !(ship instanceof L2ControllableAirShipInstance) || (ship.getFuel() >= ship.getMaxFuel())) {
 			return;
+		}
 		
-		ship.setFuel(ship.getFuel() + (int)skill.getPower());
+		ship.setFuel(ship.getFuel() + (int) skill.getPower());
 		ship.updateAbnormalEffect(); // broadcast new fuel
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

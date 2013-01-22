@@ -20,13 +20,13 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class AdminKick implements IAdminCommandHandler
-{
+public class AdminKick implements IAdminCommandHandler {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_kick",
@@ -34,30 +34,23 @@ public class AdminKick implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
-		if (command.startsWith("admin_kick"))
-		{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+		if (command.startsWith("admin_kick")) {
 			StringTokenizer st = new StringTokenizer(command);
-			if (st.countTokens() > 1)
-			{
+			if (st.countTokens() > 1) {
 				st.nextToken();
 				String player = st.nextToken();
 				L2PcInstance plyr = L2World.getInstance().getPlayer(player);
-				if (plyr != null)
-				{
+				if (plyr != null) {
 					plyr.logout();
 					activeChar.sendMessage(MessageTable.Messages[1721].getExtra(1) + plyr.getName() + MessageTable.Messages[1721].getExtra(2));
 				}
 			}
 		}
-		if (command.startsWith("admin_kick_non_gm"))
-		{
+		if (command.startsWith("admin_kick_non_gm")) {
 			int counter = 0;
-			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
-			{
-				if (!player.isGM())
-				{
+			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray()) {
+				if (!player.isGM()) {
 					counter++;
 					player.logout();
 				}
@@ -68,8 +61,8 @@ public class AdminKick implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
+	
 }

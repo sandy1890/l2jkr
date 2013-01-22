@@ -27,13 +27,11 @@ import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
 
-public class L2DoorInstanceActionShift implements IActionHandler
-{
+public class L2DoorInstanceActionShift implements IActionHandler {
+	
 	@Override
-	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
-	{
-		if (activeChar.getAccessLevel().isGm())
-		{
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact) {
+		if (activeChar.getAccessLevel().isGm()) {
 			activeChar.setTarget(target);
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel()));
 			
@@ -64,8 +62,8 @@ public class L2DoorInstanceActionShift implements IActionHandler
 	}
 	
 	@Override
-	public InstanceType getInstanceType()
-	{
+	public InstanceType getInstanceType() {
 		return InstanceType.L2DoorInstance;
 	}
+	
 }

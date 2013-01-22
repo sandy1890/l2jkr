@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 /**
  * @author Plim Original python script by DraX & updated by DrLecter
  */
-public class TeleportToRaceTrack extends Quest
-{
+public class TeleportToRaceTrack extends Quest {
+	
 	private static final int RACE_MANAGER = 30995;
 	
 	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
@@ -56,47 +56,35 @@ public class TeleportToRaceTrack extends Quest
 	};
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		if (st == null)
+		if (st == null) {
 			return null;
+		}
 		
-		if (TELEPORTERS.containsKey(npc.getNpcId()))
-		{
+		if (TELEPORTERS.containsKey(npc.getNpcId())) {
 			st.getPlayer().teleToLocation(12661, 181687, -3560);
 			st.setState(State.STARTED);
 			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
-		}
-		
-		else if (npc.getNpcId() == RACE_MANAGER)
-		{
-			if (st.getState() == State.STARTED && st.getInt("id") > 0)
-			{
+		} else if (npc.getNpcId() == RACE_MANAGER) {
+			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0)) {
 				int return_id = st.getInt("id") - 1;
-				if (return_id < 13)
-				{
+				if (return_id < 13) {
 					st.getPlayer().teleToLocation(RETURN_LOCS[return_id], false);
 					st.unset("id");
 				}
-			}
-			
-			else
-			{
+			} else {
 				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "你是用其它的方法來到這裡，因此將傳送到最近的狄恩城鎮。"));
 				st.getPlayer().teleToLocation(15670, 142983, -2700);
 			}
-			
 			st.exitQuest(true);
 		}
-		
 		return htmltext;
 	}
 	
-	public TeleportToRaceTrack(int questId, String name, String descr)
-	{
+	public TeleportToRaceTrack(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		TELEPORTERS.put(30059, 3); // TRISHA
@@ -112,8 +100,7 @@ public class TeleportToRaceTrack extends Quest
 		TELEPORTERS.put(31964, 11); // BILIA
 		TELEPORTERS.put(31210, 12); // RACE TRACK GK
 		
-		for (int npcId : TELEPORTERS.keySet())
-		{
+		for (int npcId : TELEPORTERS.keySet()) {
 			addStartNpc(npcId);
 			addTalkId(npcId);
 		}
@@ -122,8 +109,8 @@ public class TeleportToRaceTrack extends Quest
 		addTalkId(RACE_MANAGER);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new TeleportToRaceTrack(-1, TeleportToRaceTrack.class.getSimpleName(), "teleports");
 	}
+	
 }

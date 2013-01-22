@@ -22,30 +22,24 @@ import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public class Debug implements IVoicedCommandHandler
-{
+public class Debug implements IVoicedCommandHandler {
+	
 	private static final String[] VOICED_COMMANDS =
 	{
 		"debug"
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
-	{
-		if (!AdminTable.getInstance().hasAccess(command, activeChar.getAccessLevel()))
-		{
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params) {
+		if (!AdminTable.getInstance().hasAccess(command, activeChar.getAccessLevel())) {
 			return false;
 		}
 		
-		if (VOICED_COMMANDS[0].equalsIgnoreCase(command))
-		{
-			if (activeChar.isDebug())
-			{
+		if (VOICED_COMMANDS[0].equalsIgnoreCase(command)) {
+			if (activeChar.isDebug()) {
 				activeChar.setDebug(null);
 				activeChar.sendMessage("Debugging disabled.");
-			}
-			else
-			{
+			} else {
 				activeChar.setDebug(activeChar);
 				activeChar.sendMessage("Debugging enabled.");
 			}
@@ -54,8 +48,8 @@ public class Debug implements IVoicedCommandHandler
 	}
 	
 	@Override
-	public String[] getVoicedCommandList()
-	{
+	public String[] getVoicedCommandList() {
 		return VOICED_COMMANDS;
 	}
+	
 }

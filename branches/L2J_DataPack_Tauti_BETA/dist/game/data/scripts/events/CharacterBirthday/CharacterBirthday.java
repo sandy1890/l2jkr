@@ -29,55 +29,69 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Gnacik. Updated to H5 by Nyaran
  */
-public class CharacterBirthday extends Quest
-{
+public class CharacterBirthday extends Quest {
+	
 	private static final int _npc = 32600;
 	private static int _spawns = 0;
 	
 	private final static int[] _gk =
 	{
-		30006, 30059, 30080, 30134, 30146, 30177, 30233, 30256, 30320, 30540, 30576, 30836, 30848, 30878, 30899, 31275, 31320, 31964, 32163
+		30006,
+		30059,
+		30080,
+		30134,
+		30146,
+		30177,
+		30233,
+		30256,
+		30320,
+		30540,
+		30576,
+		30836,
+		30848,
+		30878,
+		30899,
+		31275,
+		31320,
+		31964,
+		32163
 	};
 	
-	public CharacterBirthday(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public CharacterBirthday(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(_npc);
 		addTalkId(_npc);
-		for (int id : _gk)
-		{
+		for (int id : _gk) {
 			addStartNpc(id);
 			addTalkId(id);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
 		
-		if (event.equalsIgnoreCase("despawn_npc"))
-		{
+		if (event.equalsIgnoreCase("despawn_npc")) {
 			npc.doDie(player);
 			_spawns--;
 			
 			htmltext = null;
-		}
-		else if (event.equalsIgnoreCase("change"))
-		{
+		} else if (event.equalsIgnoreCase("change")) {
 			// Change Hat
-			if (st.hasQuestItems(10250))
-			{
+			if (st.hasQuestItems(10250)) {
 				st.takeItems(10250, 1); // Adventurer Hat (Event)
 				st.giveItems(21594, 1); // Birthday Hat
 				htmltext = null; // FIXME: Probably has html
 				// Despawn npc
 				npc.doDie(player);
 				_spawns--;
-			}
-			else
-			{
+			} else {
 				htmltext = "32600-nohat.htm";
 			}
 		}
@@ -85,36 +99,30 @@ public class CharacterBirthday extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (_spawns >= 3)
-		{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
+		if (_spawns >= 3) {
 			return "busy.htm";
 		}
 		
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			st = newQuestState(player);
 		}
 		
-		if (!Util.checkIfInRange(10, npc, player, true))
-		{
+		if (!Util.checkIfInRange(10, npc, player, true)) {
 			L2Npc spawned = st.addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
 			player.sendPacket(new PlaySound(1, "HB01", 0, 0, 0, 0, 0));
 			st.setState(State.STARTED);
 			st.startQuestTimer("despawn_npc", 180000, spawned);
 			_spawns++;
-		}
-		else
-		{
+		} else {
 			return "tooclose.htm";
 		}
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new CharacterBirthday(-1, "CharacterBirthday", "events");
 	}
+	
 }

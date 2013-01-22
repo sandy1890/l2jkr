@@ -31,34 +31,35 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * @version $Revision: 1.1.2.2.2.1 $ $Date: 2005/03/02 15:38:36 $
  */
-public class CombatPointHeal implements ISkillHandler
-{
+public class CombatPointHeal implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.COMBATPOINTHEAL
 	};
 	
 	@Override
-	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
-	{
-		//check for other effects
+	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets) {
+		// check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getHandler(L2SkillType.BUFF);
 		
-		if (handler != null)
+		if (handler != null) {
 			handler.useSkill(actChar, skill, targets);
+		}
 		
-		for (L2Character target: (L2Character[]) targets)
-		{
-			if (target.isInvul())
+		for (L2Character target : (L2Character[]) targets) {
+			if (target.isInvul()) {
 				continue;
+			}
 			
 			double cp = skill.getPower();
 			
 			cp = Math.min(cp, target.getMaxRecoverableCp() - target.getCurrentCp());
 			
 			// Prevent negative amounts
-			if (cp < 0)
+			if (cp < 0) {
 				cp = 0;
+			}
 			
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 			sm.addNumber((int) cp);
@@ -71,8 +72,8 @@ public class CombatPointHeal implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

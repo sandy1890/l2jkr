@@ -32,26 +32,31 @@ import com.l2jserver.util.Rnd;
  * 帝雷歐執政官 貝諾姆
  * @author Lunawang
  */
-public class Benom extends L2AttackableAIScript
-{
+public class Benom extends L2AttackableAIScript {
+	
 	private final static int BENOM = 29054;
 	
-	public Benom(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public Benom(int questId, String name, String descr) {
 		super(questId, name, descr);
-		int[] mobs = new int[] { BENOM };
+		int[] mobs = new int[]
+		{
+			BENOM
+		};
 		this.registerMobs(mobs);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
-	{
-		if (npc == null || attacker == null)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill) {
+		if ((npc == null) || (attacker == null)) {
 			return super.onAttack(npc, attacker, damage, isPet);
-		if (npc.getNpcId() == 29054)
-		{
-			if (!npc.isCastingNow() && attacker.getClassId().isMage() && Rnd.get(1000) < 15)
-			{
+		}
+		if (npc.getNpcId() == 29054) {
+			if (!npc.isCastingNow() && attacker.getClassId().isMage() && (Rnd.get(1000) < 15)) {
 				SkillTable.getInstance().getInfo(4996, 1);
 				npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 50000);
 				npc.setTarget(attacker);
@@ -62,18 +67,19 @@ public class Benom extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (npc != null && npc.getNpcId() == 29054)
-		{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
+		if ((npc != null) && (npc.getNpcId() == 29054)) {
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, "Benom", "I leave my house this time."));
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, "Benom", "But you can not take it to paradise."));
 		}
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new Benom(-1, "benom", "ai");
 	}
+	
 }

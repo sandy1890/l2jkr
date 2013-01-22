@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.entity.TvTManager;
 /**
  * @author FBIagent
  */
-public class AdminTvTEvent implements IAdminCommandHandler
-{
+public class AdminTvTEvent implements IAdminCommandHandler {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_tvt_add",
@@ -39,74 +39,61 @@ public class AdminTvTEvent implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
-		if (command.equals("admin_tvt_add"))
-		{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+		if (command.equals("admin_tvt_add")) {
 			L2Object target = activeChar.getTarget();
-			
-			if (!(target instanceof L2PcInstance))
-			{
+			if (!(target instanceof L2PcInstance)) {
 				activeChar.sendMessage(1901);
 				return true;
 			}
-			
 			add(activeChar, (L2PcInstance) target);
-		}
-		else if (command.equals("admin_tvt_remove"))
-		{
+		} else if (command.equals("admin_tvt_remove")) {
 			L2Object target = activeChar.getTarget();
 			
-			if (!(target instanceof L2PcInstance))
-			{
+			if (!(target instanceof L2PcInstance)) {
 				activeChar.sendMessage(1901);
 				return true;
 			}
-			
 			remove(activeChar, (L2PcInstance) target);
-		}
-		else if ( command.equals( "admin_tvt_advance" ) )
-		{
+		} else if (command.equals("admin_tvt_advance")) {
 			TvTManager.getInstance().skipDelay();
 		}
-		
 		return true;
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
 	
-	private void add(L2PcInstance activeChar, L2PcInstance playerInstance)
-	{
-		if (TvTEvent.isPlayerParticipant(playerInstance.getObjectId()))
-		{
+	/**
+	 * @param activeChar
+	 * @param playerInstance
+	 */
+	private void add(L2PcInstance activeChar, L2PcInstance playerInstance) {
+		if (TvTEvent.isPlayerParticipant(playerInstance.getObjectId())) {
 			activeChar.sendMessage(1902);
 			return;
 		}
-		
-		if (!TvTEvent.addParticipant(playerInstance))
-		{
+		if (!TvTEvent.addParticipant(playerInstance)) {
 			activeChar.sendMessage(1903);
 			return;
 		}
-		
-		if (TvTEvent.isStarted())
-		{
+		if (TvTEvent.isStarted()) {
 			new TvTEventTeleporter(playerInstance, TvTEvent.getParticipantTeamCoordinates(playerInstance.getObjectId()), true, false);
 		}
 	}
 	
-	private void remove(L2PcInstance activeChar, L2PcInstance playerInstance)
-	{
-		if (!TvTEvent.removeParticipant(playerInstance.getObjectId()))
-		{
+	/**
+	 * @param activeChar
+	 * @param playerInstance
+	 */
+	private void remove(L2PcInstance activeChar, L2PcInstance playerInstance) {
+		if (!TvTEvent.removeParticipant(playerInstance.getObjectId())) {
 			activeChar.sendMessage(1904);
 			return;
 		}
-		
 		new TvTEventTeleporter(playerInstance, Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES, true, true);
 	}
+	
 }

@@ -26,26 +26,22 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
-public class Link implements IBypassHandler
-{
+public class Link implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"Link"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
-		try
-		{
+		try {
 			String path = command.substring(5).trim();
-			if (path.indexOf("..") != -1)
-			{
+			if (path.indexOf("..") != -1) {
 				return false;
 			}
 			String filename = "data/html/" + path;
@@ -54,17 +50,15 @@ public class Link implements IBypassHandler
 			html.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
 			activeChar.sendPacket(html);
 			return true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

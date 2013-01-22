@@ -30,12 +30,15 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 /**
  * @author DS
  */
-public class Chimeras extends L2AttackableAIScript
-{
+public class Chimeras extends L2AttackableAIScript {
+	
 	// NPCs
 	private static final int[] NPCS =
 	{
-		22349, 22350, 22351, 22352
+		22349,
+		22350,
+		22351,
+		22352
 	};
 	private static final int CELTUS = 22353;
 	
@@ -55,13 +58,10 @@ public class Chimeras extends L2AttackableAIScript
 	private static final int CONTAINED_LIFE_FORCE = 9682;
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
-		if ((HellboundManager.getInstance().getLevel() == 7) && !npc.isTeleporting()) // Have random spawn points only in 7 lvl
-		{
+	public final String onSpawn(L2Npc npc) {
+		if ((HellboundManager.getInstance().getLevel() == 7) && !npc.isTeleporting()) { // Have random spawn points only in 7 lvl
 			final Location loc = LOCATIONS[getRandom(LOCATIONS.length)];
-			if (!npc.isInsideRadius(loc, 200, false, false))
-			{
+			if (!npc.isInsideRadius(loc, 200, false, false)) {
 				npc.getSpawn().setLocation(loc);
 				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(npc, loc), 100);
 			}
@@ -70,32 +70,21 @@ public class Chimeras extends L2AttackableAIScript
 	}
 	
 	@Override
-	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
-		if ((skill.getId() == BOTTLE) && !npc.isDead())
-		{
-			if ((targets.length > 0) && (targets[0] == npc))
-			{
-				if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1))
-				{
-					if (HellboundManager.getInstance().getLevel() == 7)
-					{
+	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) {
+		if ((skill.getId() == BOTTLE) && !npc.isDead()) {
+			if ((targets.length > 0) && (targets[0] == npc)) {
+				if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)) {
+					if (HellboundManager.getInstance().getLevel() == 7) {
 						HellboundManager.getInstance().updateTrust(3, true);
 					}
 					
 					npc.setIsDead(true);
-					if (npc.getNpcId() == CELTUS)
-					{
+					if (npc.getNpcId() == CELTUS) {
 						((L2Attackable) npc).dropItem(caster, CONTAINED_LIFE_FORCE, 1);
-					}
-					else
-					{
-						if (getRandom(100) < 80)
-						{
+					} else {
+						if (getRandom(100) < 80) {
 							((L2Attackable) npc).dropItem(caster, DIM_LIFE_FORCE, 1);
-						}
-						else if (getRandom(100) < 80)
-						{
+						} else if (getRandom(100) < 80) {
 							((L2Attackable) npc).dropItem(caster, LIFE_FORCE, 1);
 						}
 					}
@@ -106,38 +95,32 @@ public class Chimeras extends L2AttackableAIScript
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
-	private static class Teleport implements Runnable
-	{
+	private static class Teleport implements Runnable {
 		private final L2Npc _npc;
 		private final Location _loc;
 		
-		public Teleport(L2Npc npc, Location loc)
-		{
+		public Teleport(L2Npc npc, Location loc) {
 			_npc = npc;
 			_loc = loc;
 		}
 		
 		@Override
-		public void run()
-		{
+		public void run() {
 			_npc.teleToLocation(_loc, false);
 		}
 	}
 	
-	public Chimeras(int questId, String name, String descr)
-	{
+	public Chimeras(int questId, String name, String descr) {
 		super(questId, name, descr);
-		for (int npcId : NPCS)
-		{
+		for (int npcId : NPCS) {
 			addSkillSeeId(npcId);
 		}
-		
 		addSpawnId(CELTUS);
 		addSkillSeeId(CELTUS);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Chimeras(-1, "Chimeras", "ai");
 	}
+	
 }

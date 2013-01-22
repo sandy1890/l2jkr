@@ -26,23 +26,21 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author Plim Original python script by Kerberos
  */
-public class Survivor extends Quest
-{
+public class Survivor extends Quest {
+	
 	private static final int SURVIVOR = 32632;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (st == null) {
 			st = newQuestState(player);
+		}
 		
-		if (!event.isEmpty())
-		{
-			if (player.getLevel() < 75)
+		if (!event.isEmpty()) {
+			if (player.getLevel() < 75) {
 				event = "32632-3.htm";
-			else if (st.getQuestItemsCount(57) >= 150000)
-			{
+			} else if (st.getQuestItemsCount(57) >= 150000) {
 				st.takeItems(57, 150000);
 				player.teleToLocation(-149406, 255247, -80);
 			}
@@ -52,25 +50,24 @@ public class Survivor extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
 		
-		if (st == null)
+		if (st == null) {
 			return null;
+		}
 		
 		return "32632-1.htm";
 	}
 	
-	public Survivor(int questId, String name, String descr)
-	{
+	public Survivor(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(SURVIVOR);
 		addTalkId(SURVIVOR);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Survivor(-1, Survivor.class.getSimpleName(), "teleports");
 	}
+	
 }

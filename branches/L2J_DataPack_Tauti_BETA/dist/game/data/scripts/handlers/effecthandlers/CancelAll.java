@@ -24,32 +24,28 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * @author UnAfraid
- * Removes all effects.
+ * @author UnAfraid Removes all effects.
  */
-public class CancelAll extends L2Effect
-{
-	public CancelAll(Env env, EffectTemplate template)
-	{
+public class CancelAll extends L2Effect {
+	
+	public CancelAll(Env env, EffectTemplate template) {
 		super(env, template);
 	}
-
+	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CANCEL_ALL;
 	}
-
+	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().stopAllEffects();
 		return false;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * 2010-09-30 Based on official server Franz
  * @author Gnacik
  */
-public class Q147_PathtoBecominganEliteMercenary extends Quest
-{
+public class Q147_PathtoBecominganEliteMercenary extends Quest {
+	
 	private static final String qn = "147_PathtoBecominganEliteMercenary";
 	
 	// NPCs
@@ -45,31 +45,26 @@ public class Q147_PathtoBecominganEliteMercenary extends Quest
 		36488,
 		36489
 	};
+	
 	// Items
 	private static final int _cert_ordinary = 13766;
 	private static final int _cert_elite = 13767;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("elite-02.htm"))
-		{
-			if (st.hasQuestItems(_cert_ordinary))
-			{
+		if (event.equalsIgnoreCase("elite-02.htm")) {
+			if (st.hasQuestItems(_cert_ordinary)) {
 				return "elite-02a.htm";
 			}
 			st.giveItems(_cert_ordinary, 1);
-		}
-		else if (event.equalsIgnoreCase("elite-04.htm"))
-		{
+		} else if (event.equalsIgnoreCase("elite-04.htm")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.playSound("ItemSound.quest_accept");
@@ -78,58 +73,47 @@ public class Q147_PathtoBecominganEliteMercenary extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
-				if ((player.getClan() != null) && (player.getClan().getCastleId() > 0))
-				{
+				if ((player.getClan() != null) && (player.getClan().getCastleId() > 0)) {
 					htmltext = "castle.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "elite-01.htm";
 				}
-				break;
+			break;
 			case State.STARTED:
 				final int cond = st.getInt("cond");
-				if (cond < 4)
-				{
+				if (cond < 4) {
 					htmltext = "elite-05.htm";
-				}
-				else if (cond == 4)
-				{
+				} else if (cond == 4) {
 					st.takeItems(_cert_ordinary, -1);
 					st.giveItems(_cert_elite, 1);
 					st.exitQuest(false);
 					htmltext = "elite-06.htm";
 				}
-				break;
+			break;
 			case State.COMPLETED:
 				htmltext = "<html><body>這是已經完成的任務。</body></html>";
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q147_PathtoBecominganEliteMercenary(int questId, String name, String descr)
-	{
+	public Q147_PathtoBecominganEliteMercenary(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(_merc);
 		addTalkId(_merc);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q147_PathtoBecominganEliteMercenary(147, qn, "成為精銳傭兵的路");
 	}
+	
 }

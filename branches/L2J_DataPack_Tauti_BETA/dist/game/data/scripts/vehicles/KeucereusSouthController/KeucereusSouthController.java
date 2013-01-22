@@ -23,8 +23,8 @@ import vehicles.AirShipController;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
 
-public class KeucereusSouthController extends AirShipController
-{
+public class KeucereusSouthController extends AirShipController {
+	
 	private static final int DOCK_ZONE = 50603;
 	private static final int LOCATION = 100;
 	private static final int CONTROLLER_ID = 32517;
@@ -62,11 +62,12 @@ public class KeucereusSouthController extends AirShipController
 	
 	private static final int[] FUEL =
 	{
-		0, 50, 100
+		0,
+		50,
+		100
 	};
 	
-	public KeucereusSouthController(int questId, String name, String descr)
-	{
+	public KeucereusSouthController(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(CONTROLLER_ID);
 		addFirstTalkId(CONTROLLER_ID);
@@ -93,8 +94,8 @@ public class KeucereusSouthController extends AirShipController
 		validityCheck();
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new KeucereusSouthController(-1, KeucereusSouthController.class.getSimpleName(), "vehicles");
 	}
+	
 }

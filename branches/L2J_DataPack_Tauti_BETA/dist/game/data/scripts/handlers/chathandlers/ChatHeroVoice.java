@@ -29,10 +29,10 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Hero chat handler.
- * @author  durgus
+ * @author durgus
  */
-public class ChatHeroVoice implements IChatHandler
-{
+public class ChatHeroVoice implements IChatHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		17
@@ -42,27 +42,24 @@ public class ChatHeroVoice implements IChatHandler
 	 * Handle chat type 'hero voice'
 	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
-	{
-		if (activeChar.isHero() || activeChar.isGM())
-		{
-			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
-			{
+	public void handleChat(int type, L2PcInstance activeChar, String target, String text) {
+		if (activeChar.isHero() || activeChar.isGM()) {
+			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type)) {
 				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 				return;
 			}
 			
-			if (!activeChar.getFloodProtectors().getHeroVoice().tryPerformAction("hero voice") && !activeChar.isGM()) //modify By Tiger 091020
+			if (!activeChar.getFloodProtectors().getHeroVoice().tryPerformAction("hero voice") && !activeChar.isGM()) // modify By Tiger 091020
 			{
 				activeChar.sendMessage(1097);
 				return;
 			}
 			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 			
-			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
-			{
-				if (player != null && !BlockList.isBlocked(player, activeChar))
+			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray()) {
+				if ((player != null) && !BlockList.isBlocked(player, activeChar)) {
 					player.sendPacket(cs);
+				}
 			}
 		}
 	}
@@ -71,8 +68,8 @@ public class ChatHeroVoice implements IChatHandler
 	 * Returns the chat types registered to this handler.
 	 */
 	@Override
-	public int[] getChatTypeList()
-	{
+	public int[] getChatTypeList() {
 		return COMMAND_IDS;
 	}
+	
 }

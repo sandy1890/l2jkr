@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2WyvernManagerInstance;
 import com.l2jserver.gameserver.util.Util;
 
-public class RideWyvern implements IBypassHandler
-{
+public class RideWyvern implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"RideWyvern"
@@ -36,73 +36,60 @@ public class RideWyvern implements IBypassHandler
 	
 	private static final int[] STRIDERS =
 	{
-		12526, 12527, 12528, 16038, 16039, 16040, 16068, 13197
+		12526,
+		12527,
+		12528,
+		16038,
+		16039,
+		16040,
+		16068,
+		13197
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2WyvernManagerInstance))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2WyvernManagerInstance)) {
 			return false;
 		}
 		
 		L2WyvernManagerInstance npc = (L2WyvernManagerInstance) target;
-		if (!npc.isOwnerClan(activeChar))
-		{
+		if (!npc.isOwnerClan(activeChar)) {
 			return false;
 		}
 		
-		if (!Config.ALLOW_WYVERN_DURING_SIEGE && (npc.isInSiege() || activeChar.isInSiege()))
-		{
+		if (!Config.ALLOW_WYVERN_DURING_SIEGE && (npc.isInSiege() || activeChar.isInSiege())) {
 			activeChar.sendMessage(1050);
 			return false;
 		}
 		
-		if ((SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DUSK) && SevenSigns.getInstance().isSealValidationPeriod())
-		{
+		if ((SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DUSK) && SevenSigns.getInstance().isSealValidationPeriod()) {
 			activeChar.sendMessage(1051);
 			return false;
 		}
 		
-		if (activeChar.getPet() == null)
-		{
-			if (activeChar.isMounted())
-			{
+		if (activeChar.getPet() == null) {
+			if (activeChar.isMounted()) {
 				activeChar.sendMessage(1052);
-			}
-			else
-			{
+			} else {
 				activeChar.sendMessage(1053);
 			}
-		}
-		else if (Util.contains(STRIDERS, activeChar.getPet().getNpcId()))
-		{
-			if ((activeChar.getInventory().getItemByItemId(1460) != null) && (activeChar.getInventory().getItemByItemId(1460).getCount() >= 25))
-			{
-				if (activeChar.getPet().getLevel() < 55)
-				{
+		} else if (Util.contains(STRIDERS, activeChar.getPet().getNpcId())) {
+			if ((activeChar.getInventory().getItemByItemId(1460) != null) && (activeChar.getInventory().getItemByItemId(1460).getCount() >= 25)) {
+				if (activeChar.getPet().getLevel() < 55) {
 					activeChar.sendMessage(1054);
-				}
-				else
-				{
+				} else {
 					activeChar.getPet().unSummon(activeChar);
-					if (activeChar.mount(12621, 0, true))
-					{
+					if (activeChar.mount(12621, 0, true)) {
 						activeChar.getInventory().destroyItemByItemId("Wyvern", 1460, 25, activeChar, npc);
 						activeChar.addSkill(SkillTable.FrequentSkill.WYVERN_BREATH.getSkill());
 						activeChar.sendMessage(1055);
 					}
 					return true;
 				}
-			}
-			else
-			{
+			} else {
 				activeChar.sendMessage(1056);
 			}
-		}
-		else
-		{
+		} else {
 			activeChar.sendMessage(1057);
 		}
 		
@@ -110,8 +97,8 @@ public class RideWyvern implements IBypassHandler
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

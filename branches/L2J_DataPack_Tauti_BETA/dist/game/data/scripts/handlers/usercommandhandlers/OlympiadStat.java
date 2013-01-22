@@ -29,34 +29,29 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Support for /olympiadstat command
  * @author kamy, Zoey76
  */
-public class OlympiadStat implements IUserCommandHandler
-{
-	private static final int[] COMMAND_IDS = { 109 };
+public class OlympiadStat implements IUserCommandHandler {
+	
+	private static final int[] COMMAND_IDS =
+	{
+		109
+	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
-	{
-		if (id != COMMAND_IDS[0])
-		{
+	public boolean useUserCommand(int id, L2PcInstance activeChar) {
+		if (id != COMMAND_IDS[0]) {
 			return false;
 		}
 		
 		int nobleObjId = activeChar.getObjectId();
 		final L2Object target = activeChar.getTarget();
-		if (target != null)
-		{
-			if ((target instanceof L2PcInstance) && target.getActingPlayer().isNoble())
-			{
+		if (target != null) {
+			if ((target instanceof L2PcInstance) && target.getActingPlayer().isNoble()) {
 				nobleObjId = target.getObjectId();
-			}
-			else
-			{
+			} else {
 				activeChar.sendPacket(SystemMessageId.NOBLESSE_ONLY);
 				return false;
 			}
-		}
-		else if (!activeChar.isNoble())
-		{
+		} else if (!activeChar.isNoble()) {
 			activeChar.sendPacket(SystemMessageId.NOBLESSE_ONLY);
 			return false;
 		}
@@ -78,8 +73,8 @@ public class OlympiadStat implements IUserCommandHandler
 	}
 	
 	@Override
-	public int[] getUserCommandList()
-	{
+	public int[] getUserCommandList() {
 		return COMMAND_IDS;
 	}
+	
 }

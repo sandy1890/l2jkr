@@ -24,6 +24,7 @@ import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -36,37 +37,28 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.util.StringUtil;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class QuestLink implements IBypassHandler
-{
+public class QuestLink implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"Quest"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
 		String quest = "";
-		try
-		{
+		try {
 			quest = command.substring(5).trim();
+		} catch (IndexOutOfBoundsException ioobe) {
 		}
-		catch (IndexOutOfBoundsException ioobe)
-		{
-		}
-		if (quest.length() == 0)
-		{
+		if (quest.length() == 0) {
 			showQuestWindow(activeChar, (L2Npc) target);
-		}
-		else
-		{
+		} else {
 			showQuestWindow(activeChar, (L2Npc) target, quest);
 		}
 		
@@ -84,46 +76,32 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
 	 */
-	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Quest[] quests)
-	{
+	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Quest[] quests) {
 		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
 		String state = "";
 		int questId = -1;
-		for (Quest q : quests)
-		{
-			if (q == null)
-			{
+		for (Quest q : quests) {
+			if (q == null) {
 				continue;
 			}
 			
 			StringUtil.append(sb, "<a action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", q.getName(), "\">[");
 			final QuestState qs = player.getQuestState(q.getScriptName());
-			if ((qs == null) || qs.isCreated())
-			{
+			if ((qs == null) || qs.isCreated()) {
 				state = q.isCustomQuest() ? "" : "01";
-			}
-			else if (qs.isStarted() && (qs.getInt("cond") > 0))
-			{
+			} else if (qs.isStarted() && (qs.getInt("cond") > 0)) {
 				state = q.isCustomQuest() ? MessageTable.Messages[1016].getMessage() : "02";
-			}
-			else if (qs.isCompleted())
-			{
+			} else if (qs.isCompleted()) {
 				state = q.isCustomQuest() ? MessageTable.Messages[1017].getMessage() : "03";
 			}
 			
-			if (q.isCustomQuest())
-			{
+			if (q.isCustomQuest()) {
 				StringUtil.append(sb, q.getDescr(), state);
-			}
-			else
-			{
+			} else {
 				questId = q.getQuestIntId();
-				if (q.getQuestIntId() > 10000)
-				{
+				if (q.getQuestIntId() > 10000) {
 					questId -= 5000;
-				}
-				else if (questId == 146)
-				{
+				} else if (questId == 146) {
 					questId = 640;
 				}
 				StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
@@ -148,8 +126,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc the L2NpcInstance that chats with the {@code player}.
 	 * @param questId the Id of the quest to display the message.
 	 */
-	public static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
-	{
+	public static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId) {
 		String content = null;
 		
 		Quest q = QuestManager.getInstance().getQuest(questId);
@@ -157,18 +134,14 @@ public class QuestLink implements IBypassHandler
 		// Get the state of the selected quest
 		QuestState qs = player.getQuestState(questId);
 		
-		if (q != null)
-		{
-			if (((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder80(true)))
-			{
+		if (q != null) {
+			if (((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder80(true))) {
 				player.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
 				return;
 			}
 			
-			if (qs == null)
-			{
-				if ((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000))
-				{
+			if (qs == null) {
+				if ((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000)) {
 					if (player.getAllActiveQuests().length > 40) // if too many ongoing quests, don't show window and send message
 					{
 						player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
@@ -178,29 +151,22 @@ public class QuestLink implements IBypassHandler
 				// check for start point
 				List<Quest> qlst = npc.getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START);
 				
-				if ((qlst != null) && !qlst.isEmpty())
-				{
-					for (Quest temp : qlst)
-					{
-						if (temp == q)
-						{
+				if ((qlst != null) && !qlst.isEmpty()) {
+					for (Quest temp : qlst) {
+						if (temp == q) {
 							qs = q.newQuestState(player);
 							break;
 						}
 					}
 				}
 			}
-		}
-		else
-		{
+		} else {
 			content = Quest.getNoQuestMsg(player); // no quests found
 		}
 		
-		if (qs != null)
-		{
+		if (qs != null) {
 			// If the quest is alreday started, no need to show a window
-			if (!qs.getQuest().notifyTalk(npc, qs))
-			{
+			if (!qs.getQuest().notifyTalk(npc, qs)) {
 				return;
 			}
 			
@@ -209,22 +175,17 @@ public class QuestLink implements IBypassHandler
 			String path = "data/scripts/quests/" + questId + "/" + stateId + ".htm";
 			content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), path); // TODO path for quests html
 			
-			if (Config.DEBUG)
-			{
-				if (content != null)
-				{
+			if (Config.DEBUG) {
+				if (content != null) {
 					_log.fine("Showing quest window for quest " + questId + " html path: " + path);
-				}
-				else
-				{
+				} else {
 					_log.fine("File not exists for quest " + questId + " html path: " + path);
 				}
 			}
 		}
 		
 		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2NpcInstance
-		if (content != null)
-		{
+		if (content != null) {
 			npc.insertObjectIdAndShowChatWindow(player, content);
 		}
 		
@@ -237,8 +198,7 @@ public class QuestLink implements IBypassHandler
 	 * @param player the L2PcInstance that talk with the {@code npc}.
 	 * @param npc the L2NpcInstance that chats with the {@code player}.
 	 */
-	public static void showQuestWindow(L2PcInstance player, L2Npc npc)
-	{
+	public static void showQuestWindow(L2PcInstance player, L2Npc npc) {
 		// collect awaiting quests and start points
 		List<Quest> options = new FastList<>();
 		
@@ -247,28 +207,20 @@ public class QuestLink implements IBypassHandler
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
 		// By limiting them there, we are allowed to create custom quests at higher IDs without interfering
-		if (awaits != null)
-		{
-			for (QuestState x : awaits)
-			{
-				if (!options.contains(x.getQuest()))
-				{
-					if ((x.getQuest().getQuestIntId() > 0) && (x.getQuest().getQuestIntId() < 20000))
-					{
+		if (awaits != null) {
+			for (QuestState x : awaits) {
+				if (!options.contains(x.getQuest())) {
+					if ((x.getQuest().getQuestIntId() > 0) && (x.getQuest().getQuestIntId() < 20000)) {
 						options.add(x.getQuest());
 					}
 				}
 			}
 		}
 		
-		if (starts != null)
-		{
-			for (Quest x : starts)
-			{
-				if (!options.contains(x))
-				{
-					if ((x.getQuestIntId() > 0) && (x.getQuestIntId() < 20000))
-					{
+		if (starts != null) {
+			for (Quest x : starts) {
+				if (!options.contains(x)) {
+					if ((x.getQuestIntId() > 0) && (x.getQuestIntId() < 20000)) {
 						options.add(x);
 					}
 				}
@@ -276,23 +228,18 @@ public class QuestLink implements IBypassHandler
 		}
 		
 		// Display a QuestChooseWindow (if several quests are available) or QuestWindow
-		if (options.size() > 1)
-		{
+		if (options.size() > 1) {
 			showQuestChooseWindow(player, npc, options.toArray(new Quest[options.size()]));
-		}
-		else if (options.size() == 1)
-		{
+		} else if (options.size() == 1) {
 			showQuestWindow(player, npc, options.get(0).getName());
-		}
-		else
-		{
+		} else {
 			showQuestWindow(player, npc, "");
 		}
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

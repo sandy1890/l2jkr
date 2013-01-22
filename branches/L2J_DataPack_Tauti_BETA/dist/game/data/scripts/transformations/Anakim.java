@@ -22,32 +22,34 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class Anakim extends L2Transformation
-{
+public class Anakim extends L2Transformation {
+	
 	private static final int[] SKILLS = new int[]
 	{
-		720, 721, 722, 723, 724, 5491, 619
+		720,
+		721,
+		722,
+		723,
+		724,
+		5491,
+		619
 	};
 	
-	public Anakim()
-	{
+	public Anakim() {
 		// id, colRadius, colHeight
 		super(306, 15.5, 29);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 306) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 306) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Anakim Holy Light Burst (up to 2 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(720, 2), false);
 		// Anakim Energy Attack (up to 2 levels)
@@ -67,13 +69,11 @@ public class Anakim extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Anakim Holy Light Burst (up to 2 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(720, 2), false);
 		// Anakim Energy Attack (up to 2 levels)
@@ -92,8 +92,8 @@ public class Anakim extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new Anakim());
 	}
+	
 }

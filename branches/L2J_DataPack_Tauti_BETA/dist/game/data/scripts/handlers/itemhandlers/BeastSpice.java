@@ -28,13 +28,11 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class BeastSpice implements IItemHandler
-{
+public class BeastSpice implements IItemHandler {
+	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
-	{
-		if (!playable.isPlayer())
-		{
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse) {
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
@@ -42,22 +40,20 @@ public class BeastSpice implements IItemHandler
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		
-		if (skills == null)
-		{
+		if (skills == null) {
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		
-		if (!(activeChar.getTarget() instanceof L2FeedableBeastInstance))
-		{
+		if (!(activeChar.getTarget() instanceof L2FeedableBeastInstance)) {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return false;
 		}
 		
-		for (SkillHolder sk : skills)
-		{
+		for (SkillHolder sk : skills) {
 			activeChar.useMagic(sk.getSkill(), false, false);
 		}
 		return true;
 	}
+	
 }

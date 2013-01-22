@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class KillTheWizards extends TerritoryWarSuperClass
-{
+public class KillTheWizards extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "736_Weakenmagic";
 	public static int qnu = 736;
 	public static String qna = "Weaken magic";
 	
-	public KillTheWizards()
-	{
+	public KillTheWizards() {
 		super(qnu, qn1, qna);
 		CLASS_IDS = new int[]
 		{
@@ -59,4 +58,5 @@ public class KillTheWizards extends TerritoryWarSuperClass
 			NpcStringId.YOU_WEAKENED_THE_ENEMYS_MAGIC
 		};
 	}
+	
 }

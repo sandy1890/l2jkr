@@ -28,25 +28,31 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Removes minions after master's death
  * @author GKR
  */
-public class NaiaLock extends L2AttackableAIScript
-{
+public class NaiaLock extends L2AttackableAIScript {
+	
 	private static final int LOCK = 18491;
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		((L2MonsterInstance) npc).getMinionList().onMasterDie(true);
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public NaiaLock(int id, String name, String descr)
-	{
+	/**
+	 * @param id
+	 * @param name
+	 * @param descr
+	 */
+	public NaiaLock(int id, String name, String descr) {
 		super(id, name, descr);
 		addKillId(LOCK);
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new NaiaLock(-1, "NaiaLock", "ai");
 	}
+	
 }

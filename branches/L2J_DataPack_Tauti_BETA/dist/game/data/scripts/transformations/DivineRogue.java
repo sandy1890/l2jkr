@@ -22,32 +22,35 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class DivineRogue extends L2Transformation
-{
+public class DivineRogue extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		686, 687, 688, 689, 690, 691, 797, 5491, 619
+		686,
+		687,
+		688,
+		689,
+		690,
+		691,
+		797,
+		5491,
+		619
 	};
 	
-	public DivineRogue()
-	{
+	public DivineRogue() {
 		// id, colRadius, colHeight
 		super(254, 10, 28);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 254) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 254) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Divine Rogue Stun Shot
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(686, 1), false);
 		// Divine Rogue Double Shot
@@ -71,13 +74,11 @@ public class DivineRogue extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Divine Rogue Stun Shot
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(686, 1), false);
 		// Divine Rogue Double Shot
@@ -100,8 +101,7 @@ public class DivineRogue extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new DivineRogue());
 	}
 }

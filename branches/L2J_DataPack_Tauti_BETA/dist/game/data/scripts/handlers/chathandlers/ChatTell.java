@@ -29,10 +29,10 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Tell chat handler.
- * @author  durgus
+ * @author durgus
  */
-public class ChatTell implements IChatHandler
-{
+public class ChatTell implements IChatHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		2
@@ -42,68 +42,62 @@ public class ChatTell implements IChatHandler
 	 * Handle chat type 'tell'
 	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
-	{
-		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
-		{
+	public void handleChat(int type, L2PcInstance activeChar, String target, String text) {
+		if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type)) {
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 			return;
 		}
 		
-		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail() && !activeChar.isGM())
-		{
+		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail() && !activeChar.isGM()) {
 			activeChar.sendPacket(SystemMessageId.CHATTING_PROHIBITED);
 			return;
 		}
 		
 		// Return if no target is set
-		if (target == null)
+		if (target == null) {
 			return;
+		}
 		
 		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		L2PcInstance receiver = null;
 		
 		receiver = L2World.getInstance().getPlayer(target);
 		
-		if (receiver != null && !receiver.isSilenceMode(activeChar.getObjectId()))
-		{
-			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.isGM())
-			{
+		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId())) {
+			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.isGM()) {
 				activeChar.sendMessage(1105);
 				return;
 			}
-			if (receiver.isChatBanned())
-			{
+			if (receiver.isChatBanned()) {
 				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 				return;
 			}
-			if (receiver.getClient() == null || receiver.getClient().isDetached())
-			{
+			if ((receiver.getClient() == null) || receiver.getClient().isDetached()) {
 				activeChar.sendMessage(1106);
 				return;
 			}
-			if (!BlockList.isBlocked(receiver, activeChar))
-			{
+			if (!BlockList.isBlocked(receiver, activeChar)) {
 				// Allow reciever to send PMs to this char, which is in silence mode.
-				if (Config.SILENCE_MODE_EXCLUDE && activeChar.isSilenceMode())
+				if (Config.SILENCE_MODE_EXCLUDE && activeChar.isSilenceMode()) {
 					activeChar.addSilenceModeExcluded(receiver.getObjectId());
+				}
 				
 				receiver.sendPacket(cs);
 				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
-			}
-			else
+			} else {
 				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
-		}
-		else
+			}
+		} else {
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+		}
 	}
 	
 	/**
 	 * Returns the chat types registered to this handler.
 	 */
 	@Override
-	public int[] getChatTypeList()
-	{
+	public int[] getChatTypeList() {
 		return COMMAND_IDS;
 	}
+	
 }

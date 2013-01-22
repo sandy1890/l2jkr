@@ -26,38 +26,32 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author GKR
  */
-public class Deltuva extends Quest
-{
+public class Deltuva extends Quest {
+	
 	private static final int DELTUVA = 32313;
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = null;
-		if (event.equalsIgnoreCase("teleport"))
-		{
+		if (event.equalsIgnoreCase("teleport")) {
 			final QuestState hostQuest = player.getQuestState("132_MatrasCuriosity");
-			if ((hostQuest == null) || !hostQuest.isCompleted())
-			{
+			if ((hostQuest == null) || !hostQuest.isCompleted()) {
 				htmltext = "32313-02.htm";
-			}
-			else
-			{
+			} else {
 				player.teleToLocation(17934, 283189, -9701);
 			}
 		}
 		return htmltext;
 	}
 	
-	public Deltuva(int questId, String name, String descr)
-	{
+	public Deltuva(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(DELTUVA);
 		addTalkId(DELTUVA);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Deltuva(-1, "Deltuva", "hellbound");
 	}
+	
 }

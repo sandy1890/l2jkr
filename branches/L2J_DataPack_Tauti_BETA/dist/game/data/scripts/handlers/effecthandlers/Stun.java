@@ -27,42 +27,37 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author mkizub
  */
-public class Stun extends L2Effect
-{
-	public Stun(Env env, EffectTemplate template)
-	{
+public class Stun extends L2Effect {
+	
+	public Stun(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.STUN;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startStunning();
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopStunning(false);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_STUNNED;
 	}
+	
 }

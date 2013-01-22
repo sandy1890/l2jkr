@@ -30,72 +30,58 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * @author Plim
- * Update by pmq High Five 29-09-2011
+ * @author Plim Update by pmq High Five 29-09-2011
  */
 
-public class Q193_SevenSignDyingMessage extends Quest
-{
+public class Q193_SevenSignDyingMessage extends Quest {
+	
 	private static final String qn = "193_SevenSignDyingMessage";
 	
-	//NPCs
+	// NPCs
 	private static final int HOLLINT = 30191;
 	private static final int CAIN = 32569;
 	private static final int ERIC = 32570;
 	private static final int ATHEBALDT = 30760;
 	private static final int SHILENSEVIL = 27343;
 	
-	//ITEMS
+	// ITEMS
 	private static final int JACOB_NECK = 13814;
 	private static final int DEADMANS_HERB = 13816;
 	private static final int SCULPTURE = 14353;
 	
 	private boolean ShilensevilOnSpawn = false;
-
+	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
+		if (st == null) {
 			return htmltext;
+		}
 		
-		if (npc.getNpcId() == HOLLINT)
-		{
-			if (event.equalsIgnoreCase("30191-02.htm"))
-			{
+		if (npc.getNpcId() == HOLLINT) {
+			if (event.equalsIgnoreCase("30191-02.htm")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.giveItems(JACOB_NECK, 1);
 				st.playSound("ItemSound.quest_accept");
 			}
-		}
-		
-		else if (npc.getNpcId() == CAIN)
-		{
-			if (event.equalsIgnoreCase("32569-05.htm"))
-			{
+		} else if (npc.getNpcId() == CAIN) {
+			if (event.equalsIgnoreCase("32569-05.htm")) {
 				st.set("cond", "2");
 				st.takeItems(JACOB_NECK, 1);
 				st.playSound("ItemSound.quest_middle");
-			}
-			
-			else if (event.equalsIgnoreCase("9"))
-			{
+			} else if (event.equalsIgnoreCase("9")) {
 				st.takeItems(DEADMANS_HERB, 1);
 				st.set("cond", "4");
 				st.playSound("ItemSound.quest_middle");
 				player.showQuestMovie(9);
 				return null;
-			}
-			
-			else if (event.equalsIgnoreCase("32569-09.htm"))
-			{
-				if (ShilensevilOnSpawn)
+			} else if (event.equalsIgnoreCase("32569-09.htm")) {
+				if (ShilensevilOnSpawn) {
 					htmltext = "32569-09a.htm";
-				else
-				{
+				} else {
 					NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP);
 					packet.addStringParameter(player.getName().toString());
 					npc.broadcastPacket(packet);
@@ -108,25 +94,17 @@ public class Q193_SevenSignDyingMessage extends Quest
 					startQuestTimer("spawnS", 300000, npc, player);
 					startQuestTimer("aiplayer", 20000, npc, player);
 				}
-			}
-			else if (event.equalsIgnoreCase("spawnS"))
-			{
-				if (ShilensevilOnSpawn)
-				{
+			} else if (event.equalsIgnoreCase("spawnS")) {
+				if (ShilensevilOnSpawn) {
 					ShilensevilOnSpawn = false;
 					npc.broadcastPacket(new NpcSay(SHILENSEVIL, 0, SHILENSEVIL, NpcStringId.NEXT_TIME_YOU_WILL_NOT_ESCAPE));
 					htmltext = null;
-				}
-				else
+				} else {
 					htmltext = null;
-			}
-			
-			else if (event.equalsIgnoreCase("aiplayer"))
-			{
-				if (ShilensevilOnSpawn == true)
-				{
-					if (!npc.isInsideRadius(player, 600, true, true))
-					{
+				}
+			} else if (event.equalsIgnoreCase("aiplayer")) {
+				if (ShilensevilOnSpawn == true) {
+					if (!npc.isInsideRadius(player, 600, true, true)) {
 						NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.LOOK_HERE_S1_DONT_FALL_TOO_FAR_BEHIND);
 						packet.addStringParameter(player.getName().toString());
 						npc.broadcastPacket(packet);
@@ -134,36 +112,25 @@ public class Q193_SevenSignDyingMessage extends Quest
 						return null;
 					}
 					npc.setTarget(player);
-					npc.doCast(SkillTable.getInstance().getInfo(1011, 18));  // Guess Skill
+					npc.doCast(SkillTable.getInstance().getInfo(1011, 18)); // Guess Skill
 					startQuestTimer("aiplayer", 20000, npc, player);
 					return null;
 				}
 				cancelQuestTimer("aiplayer", npc, player);
 				return "";
-			}
-			
-			else if (event.equalsIgnoreCase("32569-13.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32569-13.htm")) {
 				st.set("cond", "6");
 				st.takeItems(SCULPTURE, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == ERIC)
-		{
-			if (event.equalsIgnoreCase("32570-02.htm"))
-			{
+		} else if (npc.getNpcId() == ERIC) {
+			if (event.equalsIgnoreCase("32570-02.htm")) {
 				st.set("cond", "3");
 				st.giveItems(DEADMANS_HERB, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == ATHEBALDT)
-		{
-			if (event.equalsIgnoreCase("30760-02.htm"))
-			{
+		} else if (npc.getNpcId() == ATHEBALDT) {
+			if (event.equalsIgnoreCase("30760-02.htm")) {
 				st.addExpAndSp(25000000, 2500000);
 				st.unset("cond");
 				st.setState(State.COMPLETED);
@@ -171,112 +138,90 @@ public class Q193_SevenSignDyingMessage extends Quest
 				st.playSound("ItemSound.quest_finish");
 			}
 		}
-		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
 		QuestState first = player.getQuestState("192_SevenSignSeriesOfDoubt");
-		
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-		
-		if (npc.getNpcId() == HOLLINT)
-		{
-			switch (st.getState())
-			{
-				case State.CREATED :
-					if(first != null && first.getState() == State.COMPLETED && player.getLevel() >= 79)
+		}
+		if (npc.getNpcId() == HOLLINT) {
+			switch (st.getState()) {
+				case State.CREATED:
+					if ((first != null) && (first.getState() == State.COMPLETED) && (player.getLevel() >= 79)) {
 						htmltext = "30191-01.htm";
-					else
-					{
+					} else {
 						htmltext = "30191-00.htm";
 						st.exitQuest(true);
 					}
-					break;
+				break;
 				
-				case State.STARTED :
-					if (st.getInt("cond") == 1)
+				case State.STARTED:
+					if (st.getInt("cond") == 1) {
 						htmltext = "30191-03.htm";
-					break;
-					
-				case State.COMPLETED :
+					}
+				break;
+				
+				case State.COMPLETED:
 					htmltext = "<html><body>這是已經完成的任務。</body></html>";
 			}
-		}
-		
-		else if (npc.getNpcId() == CAIN)
-		{
-			if (st.getState() == State.STARTED)
-			{
-				switch (st.getInt("cond"))
-				{
-					case 1 :
+		} else if (npc.getNpcId() == CAIN) {
+			if (st.getState() == State.STARTED) {
+				switch (st.getInt("cond")) {
+					case 1:
 						htmltext = "32569-01.htm";
-						break;
-				
-					case 2 :
-						htmltext = "32569-06.htm";
-						break;
-				
-					case 3 :
-						htmltext = "32569-07.htm";
-						break;
-						
-					case 4 :
-						htmltext = "32569-08.htm";
-						break;
-						
-					case 5 :
-						htmltext = "32569-10.htm";
-						break;
-				}
-			}
-		}
-		
-		else if (npc.getNpcId() == ERIC)
-		{
-			if (st.getState() == State.STARTED)
-			{
-				switch (st.getInt("cond"))
-				{
-					case 2 :
-						htmltext = "32570-01.htm";
-						break;
+					break;
 					
-					case 3 :
+					case 2:
+						htmltext = "32569-06.htm";
+					break;
+					
+					case 3:
+						htmltext = "32569-07.htm";
+					break;
+					
+					case 4:
+						htmltext = "32569-08.htm";
+					break;
+					
+					case 5:
+						htmltext = "32569-10.htm";
+					break;
+				}
+			}
+		} else if (npc.getNpcId() == ERIC) {
+			if (st.getState() == State.STARTED) {
+				switch (st.getInt("cond")) {
+					case 2:
+						htmltext = "32570-01.htm";
+					break;
+					
+					case 3:
 						htmltext = "32570-03.htm";
-						break;
+					break;
+				}
+			}
+		} else if (npc.getNpcId() == ATHEBALDT) {
+			if (st.getState() == State.STARTED) {
+				if (st.getInt("cond") == 6) {
+					htmltext = "30760-01.htm";
 				}
 			}
 		}
-		
-		else if (npc.getNpcId() == ATHEBALDT)
-		{
-			if (st.getState() == State.STARTED)
-			{
-				if (st.getInt("cond") == 6)
-					htmltext = "30760-01.htm";
-			}
-		}
-		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		QuestState st = player.getQuestState(qn);
-		
-		if (st == null)
+		if (st == null) {
 			return super.onKill(npc, player, isPet);
-		
-		if (npc.getNpcId() == SHILENSEVIL && st.getInt("cond") == 4)
-		{
+		}
+		if ((npc.getNpcId() == SHILENSEVIL) && (st.getInt("cond") == 4)) {
 			ShilensevilOnSpawn = false;
 			NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
 			packet.addStringParameter(player.getName().toString());
@@ -288,27 +233,27 @@ public class Q193_SevenSignDyingMessage extends Quest
 			st.set("cond", "5");
 			st.playSound("ItemSound.quest_middle");
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q193_SevenSignDyingMessage(int questId, String name, String descr)
-	{
+	public Q193_SevenSignDyingMessage(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(HOLLINT);
 		addTalkId(HOLLINT);
 		addTalkId(CAIN);
 		addTalkId(ERIC);
 		addTalkId(ATHEBALDT);
 		addKillId(SHILENSEVIL);
-		
 		questItemIds = new int[]
-		{ JACOB_NECK, DEADMANS_HERB, SCULPTURE };
+		{
+			JACOB_NECK,
+			DEADMANS_HERB,
+			SCULPTURE
+		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q193_SevenSignDyingMessage(193, qn, "Seven Signs Dying Message");
 	}
+	
 }

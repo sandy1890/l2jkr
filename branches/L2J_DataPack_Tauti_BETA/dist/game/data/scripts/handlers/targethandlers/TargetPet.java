@@ -27,21 +27,24 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 /**
  * @author UnAfraid
  */
-public class TargetPet implements ITargetTypeHandler
-{
+public class TargetPet implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		target = activeChar.getPet();
-		if (target != null && !target.isDead())
-			return new L2Character[] { target };
+		if ((target != null) && !target.isDead()) {
+			return new L2Character[]
+			{
+				target
+			};
+		}
 		
 		return _emptyTargetList;
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_PET;
 	}
+	
 }

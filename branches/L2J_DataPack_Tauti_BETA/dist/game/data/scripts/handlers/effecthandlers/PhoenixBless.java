@@ -28,42 +28,38 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author Faror
  */
-public class PhoenixBless extends L2Effect
-{
-	public PhoenixBless(Env env, EffectTemplate template)
-	{
+public class PhoenixBless extends L2Effect {
+	
+	public PhoenixBless(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.PHOENIX_BLESSING;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
-		if (getEffected() instanceof L2Playable)
+	public void onExit() {
+		if (getEffected() instanceof L2Playable) {
 			((L2Playable) getEffected()).stopPhoenixBlessing(this);
+		}
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_PHOENIX_BLESSING;
 	}
+	
 }

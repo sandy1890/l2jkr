@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
-public class Q290_ThreatRemoval extends Quest
-{
+public class Q290_ThreatRemoval extends Quest {
+	
 	public static final int PINAPS = 30201;
 	public static final int TAGS = 15714;
 	
@@ -87,63 +87,48 @@ public class Q290_ThreatRemoval extends Quest
 		}
 	};
 	
-	public Q290_ThreatRemoval(int id, String name, String descr)
-	{
+	public Q290_ThreatRemoval(int id, String name, String descr) {
 		super(id, name, descr);
 		
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		
-		for (int i : MOBS1)
-		{
+		for (int i : MOBS1) {
 			addKillId(i);
 		}
-		for (int i : MOBS2)
-		{
+		for (int i : MOBS2) {
 			addKillId(i);
 		}
-		for (int i : MOBS3)
-		{
+		for (int i : MOBS3) {
 			addKillId(i);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		int[][] i = REWARD[getRandom(REWARD.length)];
 		int b = getRandom(i.length);
 		
-		if (npc.getNpcId() == PINAPS)
-		{
-			if (event.equalsIgnoreCase("30201-02.htm"))
-			{
+		if (npc.getNpcId() == PINAPS) {
+			if (event.equalsIgnoreCase("30201-02.htm")) {
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-			}
-			else if (event.equalsIgnoreCase("30201-05.htm"))
-			{
-				if (st.getQuestItemsCount(TAGS) >= 400)
-				{
+			} else if (event.equalsIgnoreCase("30201-05.htm")) {
+				if (st.getQuestItemsCount(TAGS) >= 400) {
 					st.giveItems(i[b][0], i[b][1]);
 					st.takeItems(TAGS, 400);
 					st.playSound("ItemSound.quest_finish");
 					htmltext = "30201-05.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "30201-03.htm";
 				}
-			}
-			else if (event.equalsIgnoreCase("30201-08.htm"))
-			{
+			} else if (event.equalsIgnoreCase("30201-08.htm")) {
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(true);
 			}
@@ -152,98 +137,74 @@ public class Q290_ThreatRemoval extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
 		QuestState _prev = player.getQuestState("251_NoSecrets");
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == PINAPS)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == PINAPS) {
+			switch (st.getState()) {
 				case State.CREATED:
-					if ((player.getLevel() >= 82) && (_prev != null) && _prev.isCompleted())
-					{
+					if ((player.getLevel() >= 82) && (_prev != null) && _prev.isCompleted()) {
 						htmltext = "30201-01.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "30201-00.htm";
 					}
-					break;
+				break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
-					{
-						if (st.getQuestItemsCount(TAGS) >= 400)
-						{
+					if (st.getInt("cond") == 1) {
+						if (st.getQuestItemsCount(TAGS) >= 400) {
 							htmltext = "30201-04.htm";
-						}
-						else
-						{
+						} else {
 							htmltext = "30201-03.htm";
 						}
 					}
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		QuestState st = player.getQuestState(getName());
 		int npcId = npc.getNpcId();
-		if ((st == null) || (st.getState() != State.STARTED))
-		{
+		if ((st == null) || (st.getState() != State.STARTED)) {
 			return null;
 		}
-		if (Util.contains(MOBS1, npcId))
-		{
+		if (Util.contains(MOBS1, npcId)) {
 			int chance = (int) (25 * Config.RATE_QUEST_DROP);
 			int numItems = (chance / 100);
 			chance = chance % 100;
-			if (getRandom(100) < chance)
-			{
+			if (getRandom(100) < chance) {
 				numItems++;
 			}
-			if (numItems > 0)
-			{
+			if (numItems > 0) {
 				st.playSound("ItemSound.quest_itemget");
 				st.giveItems(TAGS, numItems);
 			}
-		}
-		else if (Util.contains(MOBS2, npcId))
-		{
+		} else if (Util.contains(MOBS2, npcId)) {
 			int chance = (int) (30 * Config.RATE_QUEST_DROP);
 			int numItems = (chance / 100);
 			chance = chance % 100;
-			if (getRandom(100) < chance)
-			{
+			if (getRandom(100) < chance) {
 				numItems++;
 			}
-			if (numItems > 0)
-			{
+			if (numItems > 0) {
 				st.playSound("ItemSound.quest_itemget");
 				st.giveItems(TAGS, numItems);
 			}
-		}
-		else if (Util.contains(MOBS3, npcId))
-		{
+		} else if (Util.contains(MOBS3, npcId)) {
 			int chance = (int) (50 * Config.RATE_QUEST_DROP);
 			int numItems = (chance / 100);
 			chance = chance % 100;
-			if (getRandom(100) < chance)
-			{
+			if (getRandom(100) < chance) {
 				numItems++;
 			}
-			if (numItems > 0)
-			{
+			if (numItems > 0) {
 				st.playSound("ItemSound.quest_itemget");
 				st.giveItems(TAGS, numItems);
 			}
@@ -251,8 +212,8 @@ public class Q290_ThreatRemoval extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q290_ThreatRemoval(290, qn, "Threat Removal");
 	}
+	
 }

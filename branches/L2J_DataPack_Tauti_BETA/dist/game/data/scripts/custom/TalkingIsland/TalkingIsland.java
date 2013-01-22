@@ -20,52 +20,51 @@ package custom.TalkingIsland;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
  * @author rocknow
  */
-public class TalkingIsland extends Quest
-{
+public class TalkingIsland extends Quest {
+	
 	private static final String qn = "TalkingIsland";
 	private static final int[] NPCs =
 	{
-		32972, 33123, 33180
+		32972,
+		33123,
+		33180
 	};
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			st = newQuestState(player);
-		int npcId = npc.getNpcId();
-		if (npcId == 32972)
-		{
-			if (player.getClassId().level() == 0 && player.getLevel() < 21)
-				player.sendPacket(new ExShowScreenMessage(1,-1,2,0,0,0,1,false,5000,false,"",NpcStringId.BEGIN_TUTORIAL_QUESTS));
-			npc.showChatWindow(player);
 		}
-		else if (npcId == 33123)
-		{
-			if (st.getState() == State.STARTED)
+		int npcId = npc.getNpcId();
+		if (npcId == 32972) {
+			if ((player.getClassId().level() == 0) && (player.getLevel() < 21)) {
+				player.sendPacket(new ExShowScreenMessage(1, -1, 2, 0, 0, 0, 1, false, 5000, false, "", NpcStringId.BEGIN_TUTORIAL_QUESTS));
+			}
+			npc.showChatWindow(player);
+		} else if (npcId == 33123) {
+			if (st.getState() == State.STARTED) {
 				npc.showChatWindow(player, 1);
-			else 
+			} else {
 				npc.showChatWindow(player);
+			}
 		}
 		return null;
 		
 	}
 	
-	public TalkingIsland(int questId, String name, String descr)
-	{
+	public TalkingIsland(int questId, String name, String descr) {
 		super(questId, name, descr);
-		for (int i : NPCs)
-		{
+		for (int i : NPCs) {
 			addStartNpc(i);
 			addTalkId(i);
 		}
@@ -74,29 +73,24 @@ public class TalkingIsland extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			st = newQuestState(player);
-		if (event.equalsIgnoreCase("Museum"))
-		{
-			player.teleToLocation(-114711,243911,-7968);
 		}
-		else if (event.equalsIgnoreCase("Enter"))
-		{
-			player.teleToLocation(-114675,230171,-1648);
+		if (event.equalsIgnoreCase("Museum")) {
+			player.teleToLocation(-114711, 243911, -7968);
+		} else if (event.equalsIgnoreCase("Enter")) {
+			player.teleToLocation(-114675, 230171, -1648);
 			st.setState(State.STARTED);
-		}
-		else if (event.equalsIgnoreCase("Remains"))
-		{
-			player.teleToLocation(-109300,237498,-2944);
+		} else if (event.equalsIgnoreCase("Remains")) {
+			player.teleToLocation(-109300, 237498, -2944);
 		}
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new TalkingIsland(-1, qn, "custom");
 	}
+	
 }

@@ -26,29 +26,36 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * 孟塔那的手下
  */
-public class FollowerOfMontagnar extends L2AttackableAIScript
-{
+public class FollowerOfMontagnar extends L2AttackableAIScript {
+	
 	private static final int FOFMONTAGNAR = 18569;
-
-	public FollowerOfMontagnar(int questId, String name, String descr)
-	{
+	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public FollowerOfMontagnar(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addAggroRangeEnterId(FOFMONTAGNAR);
 	}
-
+	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet) {
 		int npcId = npc.getNpcId();
-
-		if (npcId == FOFMONTAGNAR)
+		
+		if (npcId == FOFMONTAGNAR) {
 			npc.setIsInvul(true);
-
+		}
+		
 		return "";
 	}
-
-	public static void main(String[] args)
-	{
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new FollowerOfMontagnar(-1, "FollowerOfMontagnar", "ai");
 	}
+	
 }

@@ -44,50 +44,40 @@ import com.l2jserver.gameserver.util.GMAudit;
 /**
  * @author UnAfraid
  */
-public class PlayerHandler implements ITelnetHandler
-{
+public class PlayerHandler implements ITelnetHandler {
+	
 	private final String[] _commands =
 	{
 		"kick",
-		"give", 
+		"give",
 		"enchant",
 		"jail",
 		"unjail"
 	};
 	
 	@Override
-	public boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int _uptime)
-	{
-		if (command.startsWith("kick"))
-		{
-			try
-			{
+	public boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int _uptime) {
+		if (command.startsWith("kick")) {
+			try {
 				command = command.substring(5);
 				L2PcInstance player = L2World.getInstance().getPlayer(command);
-				if (player != null)
-				{
+				if (player != null) {
 					player.sendMessage("You are kicked by gm");
 					player.logout();
 					_print.println("Player kicked");
 				}
-			}
-			catch (StringIndexOutOfBoundsException e)
-			{
+			} catch (StringIndexOutOfBoundsException e) {
 				_print.println("Please enter player name to kick");
 			}
-		}
-		else if (command.startsWith("give"))
-		{
+		} else if (command.startsWith("give")) {
 			StringTokenizer st = new StringTokenizer(command.substring(5));
 			
-			try
-			{
+			try {
 				L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
 				int itemId = Integer.parseInt(st.nextToken());
 				int amount = Integer.parseInt(st.nextToken());
 				
-				if (player != null)
-				{
+				if (player != null) {
 					L2ItemInstance item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
 					InventoryUpdate iu = new InventoryUpdate();
 					iu.addItem(item);
@@ -98,130 +88,109 @@ public class PlayerHandler implements ITelnetHandler
 					player.sendPacket(sm);
 					_print.println("ok");
 					GMAudit.auditGMAction("Telnet Admin", "Give Item", player.getName(), "item: " + itemId + " amount: " + amount);
-				}
-				else
-				{
+				} else {
 					_print.println("Player not found");
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				
 			}
-		}
-		else if (command.startsWith("enchant"))
-		{
+		} else if (command.startsWith("enchant")) {
 			StringTokenizer st = new StringTokenizer(command.substring(8), " ");
 			int enchant = 0, itemType = 0;
 			
-			try
-			{
+			try {
 				L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
 				itemType = Integer.parseInt(st.nextToken());
 				enchant = Integer.parseInt(st.nextToken());
 				
-				switch (itemType)
-				{
+				switch (itemType) {
 					case 1:
 						itemType = Inventory.PAPERDOLL_HEAD;
-						break;
+					break;
 					case 2:
 						itemType = Inventory.PAPERDOLL_CHEST;
-						break;
+					break;
 					case 3:
 						itemType = Inventory.PAPERDOLL_GLOVES;
-						break;
+					break;
 					case 4:
 						itemType = Inventory.PAPERDOLL_FEET;
-						break;
+					break;
 					case 5:
 						itemType = Inventory.PAPERDOLL_LEGS;
-						break;
+					break;
 					case 6:
 						itemType = Inventory.PAPERDOLL_RHAND;
-						break;
+					break;
 					case 7:
 						itemType = Inventory.PAPERDOLL_LHAND;
-						break;
+					break;
 					case 8:
 						itemType = Inventory.PAPERDOLL_LEAR;
-						break;
+					break;
 					case 9:
 						itemType = Inventory.PAPERDOLL_REAR;
-						break;
+					break;
 					case 10:
 						itemType = Inventory.PAPERDOLL_LFINGER;
-						break;
+					break;
 					case 11:
 						itemType = Inventory.PAPERDOLL_RFINGER;
-						break;
+					break;
 					case 12:
 						itemType = Inventory.PAPERDOLL_NECK;
-						break;
+					break;
 					case 13:
 						itemType = Inventory.PAPERDOLL_UNDER;
-						break;
+					break;
 					case 14:
 						itemType = Inventory.PAPERDOLL_CLOAK;
-						break;
+					break;
 					case 15:
 						itemType = Inventory.PAPERDOLL_BELT;
-						break;
+					break;
 					default:
 						itemType = 0;
 				}
 				
-				if (enchant > 65535)
+				if (enchant > 65535) {
 					enchant = 65535;
-				else if (enchant < 0)
+				} else if (enchant < 0) {
 					enchant = 0;
+				}
 				
 				boolean success = false;
 				
-				if (player != null && itemType > 0)
-				{
+				if ((player != null) && (itemType > 0)) {
 					success = setEnchant(player, enchant, itemType);
-					if (success)
+					if (success) {
 						_print.println("Item enchanted successfully.");
-				}
-				else if (!success)
+					}
+				} else if (!success) {
 					_print.println("Item failed to enchant.");
-			}
-			catch (Exception e)
-			{
+				}
+			} catch (Exception e) {
 				
 			}
-		}
-		else if (command.startsWith("jail"))
-		{
+		} else if (command.startsWith("jail")) {
 			StringTokenizer st = new StringTokenizer(command.substring(5));
-			try
-			{
+			try {
 				String name = st.nextToken();
 				L2PcInstance playerObj = L2World.getInstance().getPlayer(name);
 				int delay = 0;
-				try
-				{
+				try {
 					delay = Integer.parseInt(st.nextToken());
-				}
-				catch (NumberFormatException nfe)
-				{
-				}
-				catch (NoSuchElementException nsee)
-				{
+				} catch (NumberFormatException nfe) {
+				} catch (NoSuchElementException nsee) {
 				}
 				// L2PcInstance playerObj = L2World.getInstance().getPlayer(player);
 				
-				if (playerObj != null)
-				{
+				if (playerObj != null) {
 					playerObj.setPunishLevel(L2PcInstance.PunishLevel.JAIL, delay);
 					_print.println("Character " + playerObj.getName() + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
-				}
-				else
-				{
+				} else {
 					Connection con = null;
-					try
-					{
+					try {
 						con = L2DatabaseFactory.getInstance().getConnection();
 						
 						PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
@@ -236,51 +205,39 @@ public class PlayerHandler implements ITelnetHandler
 						int count = statement.getUpdateCount();
 						statement.close();
 						
-						if (count == 0)
+						if (count == 0) {
 							_print.println("Character not found!");
-						else
+						} else {
 							_print.println("Character " + name + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
-					}
-					catch (SQLException se)
-					{
+						}
+					} catch (SQLException se) {
 						_print.println("SQLException while jailing player");
-						if (Config.DEBUG)
+						if (Config.DEBUG) {
 							se.printStackTrace();
-					}
-					finally
-					{
+						}
+					} finally {
 						L2DatabaseFactory.close(con);
 					}
 				}
-			}
-			catch (NoSuchElementException nsee)
-			{
+			} catch (NoSuchElementException nsee) {
 				_print.println("Specify a character name.");
-			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
+			} catch (Exception e) {
+				if (Config.DEBUG) {
 					e.printStackTrace();
+				}
 			}
-		}
-		else if (command.startsWith("unjail"))
-		{
+		} else if (command.startsWith("unjail")) {
 			StringTokenizer st = new StringTokenizer(command.substring(7));
-			try
-			{
+			try {
 				String name = st.nextToken();
 				L2PcInstance playerObj = L2World.getInstance().getPlayer(name);
 				
-				if (playerObj != null)
-				{
+				if (playerObj != null) {
 					playerObj.setPunishLevel(L2PcInstance.PunishLevel.NONE, 0);
 					_print.println("Character " + playerObj.getName() + " removed from jail");
-				}
-				else
-				{
+				} else {
 					Connection con = null;
-					try
-					{
+					try {
 						con = L2DatabaseFactory.getInstance().getConnection();
 						
 						PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
@@ -295,58 +252,49 @@ public class PlayerHandler implements ITelnetHandler
 						int count = statement.getUpdateCount();
 						statement.close();
 						
-						if (count == 0)
+						if (count == 0) {
 							_print.println("Character not found!");
-						else
+						} else {
 							_print.println("Character " + name + " set free.");
-					}
-					catch (SQLException se)
-					{
+						}
+					} catch (SQLException se) {
 						_print.println("SQLException while jailing player");
-						if (Config.DEBUG)
+						if (Config.DEBUG) {
 							se.printStackTrace();
-					}
-					finally
-					{
+						}
+					} finally {
 						L2DatabaseFactory.close(con);
 					}
 				}
-			}
-			catch (NoSuchElementException nsee)
-			{
+			} catch (NoSuchElementException nsee) {
 				_print.println("Specify a character name.");
-			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
+			} catch (Exception e) {
+				if (Config.DEBUG) {
 					e.printStackTrace();
+				}
 			}
 		}
 		return false;
 	}
 	
-	private boolean setEnchant(L2PcInstance activeChar, int ench, int armorType)
-	{
+	private boolean setEnchant(L2PcInstance activeChar, int ench, int armorType) {
 		// now we need to find the equipped weapon of the targeted character...
 		int curEnchant = 0; // display purposes only
 		L2ItemInstance itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
 		L2ItemInstance parmorInstance = activeChar.getInventory().getPaperdollItem(armorType);
-		if (parmorInstance != null && parmorInstance.getLocationSlot() == armorType)
-		{
+		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType)) {
 			itemInstance = parmorInstance;
-		}
-		else
-		{
+		} else {
 			// for bows/crossbows and double handed weapons
 			parmorInstance = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-			if (parmorInstance != null && parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_RHAND)
+			if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_RHAND)) {
 				itemInstance = parmorInstance;
+			}
 		}
 		
-		if (itemInstance != null)
-		{
+		if (itemInstance != null) {
 			curEnchant = itemInstance.getEnchantLevel();
 			
 			// set enchant value
@@ -374,8 +322,8 @@ public class PlayerHandler implements ITelnetHandler
 	}
 	
 	@Override
-	public String[] getCommandList()
-	{
+	public String[] getCommandList() {
 		return _commands;
 	}
+	
 }

@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.util.Util;
  * Thanks to Belgarion.
  * @author nonom, Zoey76
  */
-public class Q309_ForAGoodCause extends Quest
-{
+public class Q309_ForAGoodCause extends Quest {
+	
 	private static final String qn = "309_ForAGoodCause";
 	
 	// NPC's
@@ -87,172 +87,108 @@ public class Q309_ForAGoodCause extends Quest
 	};
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = event;
-		if (event.equalsIgnoreCase("32647-05.html"))
-		{
+		if (event.equalsIgnoreCase("32647-05.html")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.playSound("ItemSound.quest_accept");
 			player.sendPacket(new RadarControl(0, 2, 77325, 205773, -3432));
-		}
-		else if (event.equalsIgnoreCase("claimreward"))
-		{
+		} else if (event.equalsIgnoreCase("claimreward")) {
 			final QuestState qs = player.getQuestState("239_WontYouJoinUs");
-			if (qs != null)
-			{
+			if (qs != null) {
 				htmltext = (qs.isCompleted()) ? "32647-11.html" : "32647-10.html";
-			}
-			else
-			{
+			} else {
 				htmltext = "32647-09.html";
 			}
-		}
-		else if (event.equalsIgnoreCase("receivepieces"))
-		{
+		} else if (event.equalsIgnoreCase("receivepieces")) {
 			htmltext = onPiecesExchangeRequest(st, MOIRAI_PIECES[getRandom(MOIRAI_PIECES.length - 1)], 100);
-		}
-		else if (Util.isDigit(event))
-		{
+		} else if (Util.isDigit(event)) {
 			int val = Integer.parseInt(event);
-			switch (val)
-			{
+			switch (val) {
 				case 96:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_EARRINGS_70, FALLEN_MUCROKIAN_HIDE, Integer.parseInt(event));
-					break;
+				break;
 				case 192:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_EARRINGS_70, MUCROKIAN_HIDE, Integer.parseInt(event));
-					break;
+				break;
 				case 256:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_NECKLACE_70, MUCROKIAN_HIDE, Integer.parseInt(event));
-					break;
+				break;
 				case 64:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_RING_70, FALLEN_MUCROKIAN_HIDE, Integer.parseInt(event));
-					break;
+				break;
 				case 103:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_SIGIL_60, FALLEN_MUCROKIAN_HIDE, Integer.parseInt(event));
-					break;
+				break;
 				case 206:
 					htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_SIGIL_60, MUCROKIAN_HIDE, Integer.parseInt(event));
-					break;
+				break;
 			}
-		}
-		else if (event.startsWith("circlet"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("circlet")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_CIRCLET_60, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_CIRCLET_60, MUCROKIAN_HIDE, 180);
 			}
-		}
-		else if (event.startsWith("stockings"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("stockings")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_STOCKINGS_60, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_STOCKINGS_60, MUCROKIAN_HIDE, 180);
 			}
-		}
-		else if (event.startsWith("tunic"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("tunic")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_TUNIC_60, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_TUNIC_60, FALLEN_MUCROKIAN_HIDE, 180);
 			}
-		}
-		else if (event.startsWith("gloves"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("gloves")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_GLOVES_60, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_GLOVES_60, MUCROKIAN_HIDE, 180);
 			}
-		}
-		else if (event.startsWith("shoes"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("shoes")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SHOES_60, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SHOES_60, MUCROKIAN_HIDE, 180);
 			}
-		}
-		else if (event.startsWith("sigil"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("sigil")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SIGIL_60, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_SIGIL_60, MUCROKIAN_HIDE, 180);
 			}
-		}
-		else if (event.startsWith("earring"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("earring")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_EARRING_70, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_EARRING_70, MUCROKIAN_HIDE, 180);
 			}
-		}
-		else if (event.startsWith("necklace"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("necklace")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_NECKLACE_70, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_NECKLACE_70, MUCROKIAN_HIDE, 180);
-			}
-			else if (event.endsWith("128"))
-			{
+			} else if (event.endsWith("128")) {
 				htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_NECKLACE_70, MUCROKIAN_HIDE, 128);
 			}
-		}
-		else if (event.startsWith("ring"))
-		{
-			if (event.endsWith("90"))
-			{
+		} else if (event.startsWith("ring")) {
+			if (event.endsWith("90")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_RING_70, FALLEN_MUCROKIAN_HIDE, 90);
-			}
-			else if (event.endsWith("180"))
-			{
+			} else if (event.endsWith("180")) {
 				htmltext = onRecipeExchangeRequest(st, REC_MOIRAI_RING_70, MUCROKIAN_HIDE, 180);
-			}
-			else if (event.endsWith("128"))
-			{
+			} else if (event.endsWith("128")) {
 				htmltext = onRecipeExchangeRequest(st, REC_DYNASTY_RING_70, MUCROKIAN_HIDE, 128);
 			}
-		}
-		else if (event.equalsIgnoreCase("32647-14.html") || event.equalsIgnoreCase("32647-07.html"))
-		{
+		} else if (event.equalsIgnoreCase("32647-14.html") || event.equalsIgnoreCase("32647-07.html")) {
 			st.playSound("ItemSound.quest_finish");
 			st.exitQuest(true);
 		}
@@ -260,28 +196,20 @@ public class Q309_ForAGoodCause extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == ATRA)
-		{
+		if (npc.getNpcId() == ATRA) {
 			final QuestState qs = player.getQuestState("308_ReedFieldMaintenance");
-			if ((qs != null) && qs.isStarted())
-			{
+			if ((qs != null) && qs.isStarted()) {
 				htmltext = "32647-17.html";
-			}
-			else if (st.isStarted())
-			{
+			} else if (st.isStarted()) {
 				htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE)) ? "32647-08.htm" : "32647-06.htm";
-			}
-			else
-			{
+			} else {
 				htmltext = (player.getLevel() >= 82) ? "32647-01.htm" : "32647-00.html";
 			}
 		}
@@ -289,25 +217,17 @@ public class Q309_ForAGoodCause extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final QuestState st = player.getQuestState(qn);
-		if ((st != null) && (st.getInt("cond") == 1))
-		{
-			if (Util.contains(MUCROKIANS, npc.getNpcId()))
-			{
-				if (getRandom(100) < MUCROKIAN_HIDE_CHANCE)
-				{
+		if ((st != null) && (st.getInt("cond") == 1)) {
+			if (Util.contains(MUCROKIANS, npc.getNpcId())) {
+				if (getRandom(100) < MUCROKIAN_HIDE_CHANCE) {
 					st.giveItems(MUCROKIAN_HIDE, 1);
 					st.playSound("ItemSound.quest_itemget");
-				}
-				else if ((npc.getNpcId() == CHANGED_MUCROKIAN) && (getRandom(100) < FALLEN_HIDE_CHANCE))
-				{
+				} else if ((npc.getNpcId() == CHANGED_MUCROKIAN) && (getRandom(100) < FALLEN_HIDE_CHANCE)) {
 					st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
 					st.playSound("ItemSound.quest_itemget");
-				}
-				else if ((npc.getNpcId() == CONTAMINATED_MUCROKIAN) && (getRandom(100) < 10))
-				{
+				} else if ((npc.getNpcId() == CONTAMINATED_MUCROKIAN) && (getRandom(100) < 10)) {
 					st.giveItems(MUCROKIAN_HIDE, 1);
 					st.playSound("ItemSound.quest_itemget");
 				}
@@ -316,10 +236,8 @@ public class Q309_ForAGoodCause extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	private String onPiecesExchangeRequest(QuestState st, int pieces, int event)
-	{
-		if (st.getQuestItemsCount(MUCROKIAN_HIDE) >= event)
-		{
+	private String onPiecesExchangeRequest(QuestState st, int pieces, int event) {
+		if (st.getQuestItemsCount(MUCROKIAN_HIDE) >= event) {
 			st.giveItems(pieces, getRandom(1, 4));
 			st.takeItems(MUCROKIAN_HIDE, event);
 			st.playSound("ItemSound.quest_finish");
@@ -328,10 +246,8 @@ public class Q309_ForAGoodCause extends Quest
 		return "32647-15.html";
 	}
 	
-	private String onRecipeExchangeRequest(QuestState st, int recipe, int takeid, int quanty)
-	{
-		if (st.getQuestItemsCount(takeid) >= quanty)
-		{
+	private String onRecipeExchangeRequest(QuestState st, int recipe, int takeid, int quanty) {
+		if (st.getQuestItemsCount(takeid) >= quanty) {
 			st.giveItems(recipe, 1);
 			st.takeItems(takeid, quanty);
 			st.playSound("ItemSound.quest_finish");
@@ -340,17 +256,15 @@ public class Q309_ForAGoodCause extends Quest
 		return "32647-15.html";
 	}
 	
-	public Q309_ForAGoodCause(int id, String name, String descr)
-	{
+	public Q309_ForAGoodCause(int id, String name, String descr) {
 		super(id, name, descr);
-		
 		addStartNpc(ATRA);
 		addTalkId(ATRA);
 		addKillId(MUCROKIANS);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q309_ForAGoodCause(309, qn, "For A Good Cause");
 	}
+	
 }

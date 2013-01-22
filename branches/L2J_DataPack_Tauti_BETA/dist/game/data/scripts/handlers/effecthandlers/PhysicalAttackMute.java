@@ -27,42 +27,37 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author -Rnn-
  */
-public class PhysicalAttackMute extends L2Effect
-{
-	public PhysicalAttackMute(Env env, EffectTemplate template)
-	{
+public class PhysicalAttackMute extends L2Effect {
+	
+	public PhysicalAttackMute(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.PHYSICAL_ATTACK_MUTE;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startPhysicalAttackMuted();
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// Simply stop the effect
 		return false;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopPhysicalAttackMuted(this);
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_PSYCHICAL_ATTACK_MUTED;
 	}
+	
 }

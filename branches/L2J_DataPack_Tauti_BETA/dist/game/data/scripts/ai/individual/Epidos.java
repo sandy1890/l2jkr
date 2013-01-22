@@ -34,49 +34,48 @@ import com.l2jserver.gameserver.util.MinionList;
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
  * @author GKR
  */
-public class Epidos extends L2AttackableAIScript
-{
+public class Epidos extends L2AttackableAIScript {
+	
 	private static final int[] EPIDOSES =
 	{
-		25609, 25610, 25611, 25612
+		25609,
+		25610,
+		25611,
+		25612
 	};
 	private static final int[] MINIONS =
 	{
-		25605, 25606, 25607, 25608
+		25605,
+		25606,
+		25607,
+		25608
 	};
 	private static final int[] MINIONS_COUNT =
 	{
-		3, 6, 11
+		3,
+		6,
+		11
 	};
 	
 	private final Map<Integer, Double> _lastHp = new FastMap<>();
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("check_minions"))
-		{
-			if ((getRandom(1000) > 250) && _lastHp.containsKey(npc.getObjectId()))
-			{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("check_minions")) {
+			if ((getRandom(1000) > 250) && _lastHp.containsKey(npc.getObjectId())) {
 				int hpDecreasePercent = (int) (((_lastHp.get(npc.getObjectId()) - npc.getCurrentHp()) * 100) / npc.getMaxHp());
 				int minionsCount = 0;
 				int spawnedMinions = ((L2MonsterInstance) npc).getMinionList().countSpawnedMinions();
 				
-				if ((hpDecreasePercent > 5) && (hpDecreasePercent <= 15) && (spawnedMinions <= 9))
-				{
+				if ((hpDecreasePercent > 5) && (hpDecreasePercent <= 15) && (spawnedMinions <= 9)) {
 					minionsCount = MINIONS_COUNT[0];
-				}
-				else if ((((hpDecreasePercent > 1) && (hpDecreasePercent <= 5)) || ((hpDecreasePercent > 15) && (hpDecreasePercent <= 30))) && (spawnedMinions <= 6))
-				{
+				} else if ((((hpDecreasePercent > 1) && (hpDecreasePercent <= 5)) || ((hpDecreasePercent > 15) && (hpDecreasePercent <= 30))) && (spawnedMinions <= 6)) {
 					minionsCount = MINIONS_COUNT[1];
-				}
-				else if (spawnedMinions == 0)
-				{
+				} else if (spawnedMinions == 0) {
 					minionsCount = MINIONS_COUNT[2];
 				}
 				
-				for (int i = 0; i < minionsCount; i++)
-				{
+				for (int i = 0; i < minionsCount; i++) {
 					MinionList.spawnMinion((L2MonsterInstance) npc, MINIONS[Arrays.binarySearch(EPIDOSES, npc.getNpcId())]);
 				}
 				
@@ -84,15 +83,10 @@ public class Epidos extends L2AttackableAIScript
 			}
 			
 			startQuestTimer("check_minions", 10000, npc, null);
-		}
-		else if (event.equalsIgnoreCase("check_idle"))
-		{
-			if (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
-			{
+		} else if (event.equalsIgnoreCase("check_idle")) {
+			if (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) {
 				npc.deleteMe();
-			}
-			else
-			{
+			} else {
 				startQuestTimer("check_idle", 600000, npc, null);
 			}
 		}
@@ -100,10 +94,8 @@ public class Epidos extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (npc.isInsideRadius(-45474, 247450, -13994, 2000, true, false))
-		{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
+		if (npc.isInsideRadius(-45474, 247450, -13994, 2000, true, false)) {
 			addSpawn(32376, -45482, 246277, -14184, 0, false, 0, false);
 		}
 		
@@ -112,8 +104,7 @@ public class Epidos extends L2AttackableAIScript
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
+	public final String onSpawn(L2Npc npc) {
 		startQuestTimer("check_minions", 10000, npc, null);
 		startQuestTimer("check_idle", 600000, npc, null);
 		_lastHp.put(npc.getObjectId(), (double) npc.getMaxHp());
@@ -121,19 +112,25 @@ public class Epidos extends L2AttackableAIScript
 		return super.onSpawn(npc);
 	}
 	
-	public Epidos(int id, String name, String descr)
-	{
+	/**
+	 * @param id
+	 * @param name
+	 * @param descr
+	 */
+	public Epidos(int id, String name, String descr) {
 		super(id, name, descr);
 		
-		for (int i : EPIDOSES)
-		{
+		for (int i : EPIDOSES) {
 			addKillId(i);
 			addSpawnId(i);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new Epidos(-1, "Epidos", "ai");
 	}
+	
 }

@@ -27,44 +27,38 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author mkizub
  */
-public class FakeDeath extends L2Effect
-{
-	public FakeDeath(Env env, EffectTemplate template)
-	{
+public class FakeDeath extends L2Effect {
+	
+	public FakeDeath(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.FAKE_DEATH;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startFakeDeath();
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopFakeDeath(false);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		double manaDam = calc();
 		
-		if (manaDam > getEffected().getCurrentMp())
-		{
-			if (getSkill().isToggle())
-			{
+		if (manaDam > getEffected().getCurrentMp()) {
+			if (getSkill().isToggle()) {
 				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 				return false;
 			}
@@ -73,4 +67,5 @@ public class FakeDeath extends L2Effect
 		getEffected().reduceCurrentMp(manaDam);
 		return true;
 	}
+	
 }

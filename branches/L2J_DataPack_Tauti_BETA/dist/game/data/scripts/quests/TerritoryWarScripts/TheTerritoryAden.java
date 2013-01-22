@@ -23,15 +23,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
 /**
  * @author Gigiikun
  */
-
-public class TheTerritoryAden extends TerritoryWarSuperClass
-{
+public class TheTerritoryAden extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "721_FortheSakeoftheTerritoryAden";
 	public static int qnu = 721;
 	public static String qna = "For the Sake of the Territory - Aden";
 	
-	public TheTerritoryAden()
-	{
+	public TheTerritoryAden() {
 		super(qnu, qn1, qna);
 		CATAPULT_ID = 36503;
 		TERRITORY_ID = 85;
@@ -55,4 +53,5 @@ public class TheTerritoryAden extends TerritoryWarSuperClass
 		};
 		registerKillIds();
 	}
+	
 }

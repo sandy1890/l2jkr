@@ -36,75 +36,88 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 /**
  * @author UnAfraid
  */
-public class TargetCorpseAlly implements ITargetTypeHandler
-{
+public class TargetCorpseAlly implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		List<L2Character> targetList = new FastList<>();
-		if (activeChar instanceof L2Playable)
-		{
+		if (activeChar instanceof L2Playable) {
 			final L2PcInstance player = activeChar.getActingPlayer();
 			
-			if (player == null)
+			if (player == null) {
 				return _emptyTargetList;
+			}
 			
-			if (player.isInOlympiadMode())
-				return new L2Character[] {player};
+			if (player.isInOlympiadMode()) {
+				return new L2Character[]
+				{
+					player
+				};
+			}
 			
 			final int radius = skill.getSkillRadius();
 			
-			if (L2Skill.addSummon(activeChar, player, radius, true))
+			if (L2Skill.addSummon(activeChar, player, radius, true)) {
 				targetList.add(player.getPet());
+			}
 			
-			if (player.getClan() != null)
-			{
+			if (player.getClan() != null) {
 				// Get all visible objects in a spherical area near the L2Character
 				final Collection<L2PcInstance> objs = activeChar.getKnownList().getKnownPlayersInRadius(radius);
-				//synchronized (activeChar.getKnownList().getKnownObjects())
+				// synchronized (activeChar.getKnownList().getKnownObjects())
 				{
-					for (L2PcInstance obj : objs)
-					{
-						if (obj == null)
+					for (L2PcInstance obj : objs) {
+						if (obj == null) {
 							continue;
-						if ((obj.getAllyId() == 0 || obj.getAllyId() != player.getAllyId())
-								&& (obj.getClan() == null || obj.getClanId() != player.getClanId()))
+						}
+						if (((obj.getAllyId() == 0) || (obj.getAllyId() != player.getAllyId())) && ((obj.getClan() == null) || (obj.getClanId() != player.getClanId()))) {
 							continue;
+						}
 						
-						if (player.isInDuel())
-						{
-							if (player.getDuelId() != obj.getDuelId())
+						if (player.isInDuel()) {
+							if (player.getDuelId() != obj.getDuelId()) {
 								continue;
-							if (player.isInParty() && obj.isInParty() && player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())
+							}
+							if (player.isInParty() && obj.isInParty() && (player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())) {
 								continue;
+							}
 						}
 						
 						// Don't add this target if this is a Pc->Pc pvp
 						// casting and pvp condition not met
-						if (!player.checkPvpSkill(obj, skill))
+						if (!player.checkPvpSkill(obj, skill)) {
 							continue;
-						
-						if (!TvTEvent.checkForTvTSkill(player, obj, skill))
-							continue;
-						
-						if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, true))
-							targetList.add(obj.getPet());
-						
-						if (!L2Skill.addCharacter(activeChar, obj, radius, true))
-							continue;
-						
-						// Siege battlefield resurrect has been made possible for participants
-						if (skill.getSkillType() == L2SkillType.RESURRECT)
-						{
-							if (obj.isInsideZone(L2Character.ZONE_SIEGE) && !obj.isInSiege())
-								continue;
 						}
 						
-						if (onlyFirst)
-							return new L2Character[] { obj };
+						if (!TvTEvent.checkForTvTSkill(player, obj, skill)) {
+							continue;
+						}
 						
-						if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+						if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, true)) {
+							targetList.add(obj.getPet());
+						}
+						
+						if (!L2Skill.addCharacter(activeChar, obj, radius, true)) {
+							continue;
+						}
+						
+						// Siege battlefield resurrect has been made possible for participants
+						if (skill.getSkillType() == L2SkillType.RESURRECT) {
+							if (obj.isInsideZone(L2Character.ZONE_SIEGE) && !obj.isInSiege()) {
+								continue;
+							}
+						}
+						
+						if (onlyFirst) {
+							return new L2Character[]
+							{
+								obj
+							};
+						}
+						
+						if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets())) {
 							break;
+						}
 						
 						targetList.add(obj);
 					}
@@ -115,8 +128,8 @@ public class TargetCorpseAlly implements ITargetTypeHandler
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_CORPSE_ALLY;
 	}
+	
 }

@@ -26,20 +26,17 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-public class EnergyStarStone extends ItemSkills
-{
+public class EnergyStarStone extends ItemSkills {
+	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
-	{
-		if (!playable.isPlayer())
-		{
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse) {
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
 		final L2AirShipInstance ship = playable.getActingPlayer().getAirShip();
-		if (ship == null || !(ship instanceof L2ControllableAirShipInstance) || ship.getFuel() >= ship.getMaxFuel())
-		{
+		if ((ship == null) || !(ship instanceof L2ControllableAirShipInstance) || (ship.getFuel() >= ship.getMaxFuel())) {
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addItemName(item);
 			playable.sendPacket(sm);
@@ -48,4 +45,5 @@ public class EnergyStarStone extends ItemSkills
 		}
 		return super.useItem(playable, item, forceUse);
 	}
+	
 }

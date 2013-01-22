@@ -27,53 +27,46 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class Relax extends L2Effect
-{
-	public Relax(Env env, EffectTemplate template)
-	{
+public class Relax extends L2Effect {
+	
+	public Relax(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.RELAXING;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() instanceof L2PcInstance)
-		{
+	public boolean onStart() {
+		if (getEffected() instanceof L2PcInstance) {
 			((L2PcInstance) getEffected()).sitDown(false);
-		}
-		else
+		} else {
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
 		return super.onStart();
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		super.onExit();
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
-		
-		if (getEffected() instanceof L2PcInstance)
-		{
-			if (!((L2PcInstance) getEffected()).isSitting())
-				return false;
 		}
 		
-		if (getEffected().getCurrentHp() + 1 > getEffected().getMaxRecoverableHp())
-		{
-			if (getSkill().isToggle())
-			{
+		if (getEffected() instanceof L2PcInstance) {
+			if (!((L2PcInstance) getEffected()).isSitting()) {
+				return false;
+			}
+		}
+		
+		if ((getEffected().getCurrentHp() + 1) > getEffected().getMaxRecoverableHp()) {
+			if (getSkill().isToggle()) {
 				getEffected().sendPacket(SystemMessageId.SKILL_DEACTIVATED_HP_FULL);
 				return false;
 			}
@@ -81,10 +74,8 @@ public class Relax extends L2Effect
 		
 		double manaDam = calc();
 		
-		if (manaDam > getEffected().getCurrentMp())
-		{
-			if (getSkill().isToggle())
-			{
+		if (manaDam > getEffected().getCurrentMp()) {
+			if (getSkill().isToggle()) {
 				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 				return false;
 			}
@@ -95,8 +86,8 @@ public class Relax extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_RELAXING;
 	}
+	
 }

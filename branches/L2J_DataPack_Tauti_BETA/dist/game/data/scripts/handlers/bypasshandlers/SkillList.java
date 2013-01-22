@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.ClassListData;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -31,85 +33,69 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.datatables.MessageTable;
-import com.l2jserver.gameserver.datatables.ClassListData; //Update by rocknow (Class Name)
 
-public class SkillList implements IBypassHandler
-{
+//Update by rocknow (Class Name)
+
+public class SkillList implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"SkillList"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2NpcInstance))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2NpcInstance)) {
 			return false;
 		}
 		
-		if (Config.ALT_GAME_SKILL_LEARN)
-		{
-			try
-			{
+		if (Config.ALT_GAME_SKILL_LEARN) {
+			try {
 				String id = command.substring(9).trim();
-				if (id.length() != 0)
-				{
+				if (id.length() != 0) {
 					L2NpcInstance.showSkillList(activeChar, (L2Npc) target, ClassId.getClassId(Integer.parseInt(id)));
-				}
-				else
-				{
+				} else {
 					boolean own_class = false;
 					
 					final List<ClassId> classesToTeach = ((L2NpcInstance) target).getClassesToTeach();
-					for (ClassId cid : classesToTeach)
-					{
-						if (cid.equalsOrChildOf(activeChar.getClassId()))
-						{
+					for (ClassId cid : classesToTeach) {
+						if (cid.equalsOrChildOf(activeChar.getClassId())) {
 							own_class = true;
 							break;
 						}
 					}
 					
-					String text = "<html><body><center>"+ MessageTable.Messages[1061].getMessage() +"</center><br>";
+					String text = "<html><body><center>" + MessageTable.Messages[1061].getMessage() + "</center><br>";
 					
-					if (!own_class)
-					{
+					if (!own_class) {
 						String charType = activeChar.getClassId().isMage() ? MessageTable.Messages[1062].getMessage() : MessageTable.Messages[1063].getMessage();
-						text += MessageTable.Messages[1064].getMessage() +"<br>"+ MessageTable.Messages[1065].getMessage() +"<br>"+ MessageTable.Messages[1066].getMessage() +"<br>"+ MessageTable.Messages[1067].getMessage() + charType + MessageTable.Messages[1068].getMessage() +"<br>";
+						text += MessageTable.Messages[1064].getMessage() + "<br>" + MessageTable.Messages[1065].getMessage() + "<br>" + MessageTable.Messages[1066].getMessage() + "<br>" + MessageTable.Messages[1067].getMessage() + charType + MessageTable.Messages[1068].getMessage() + "<br>";
 					}
 					
 					// make a list of classes
-					if (!classesToTeach.isEmpty())
-					{
+					if (!classesToTeach.isEmpty()) {
 						int count = 0;
 						ClassId classCheck = activeChar.getClassId();
 						
-						while ((count == 0) && (classCheck != null))
-						{
-							for (ClassId cid : classesToTeach)
-							{
-								if (cid.level() > classCheck.level())
-								{
+						while ((count == 0) && (classCheck != null)) {
+							for (ClassId cid : classesToTeach) {
+								if (cid.level() > classCheck.level()) {
 									continue;
 								}
 								
-								if (SkillTreesData.getInstance().getAvailableSkills(activeChar, cid, false, false).isEmpty())
-								{
+								if (SkillTreesData.getInstance().getAvailableSkills(activeChar, cid, false, false).isEmpty()) {
 									continue;
 								}
 								
-								text += "<a action=\"bypass -h npc_%objectId%_SkillList " + cid.getId() + "\">"+ MessageTable.Messages[1069].getExtra(1) + ClassListData.getInstance().getClass(cid.getId()).getClassName() + MessageTable.Messages[1069].getExtra(2) +"</a><br>\n"; //Update by rocknow (Class Name)
+								text += "<a action=\"bypass -h npc_%objectId%_SkillList " + cid.getId() + "\">" + MessageTable.Messages[1069].getExtra(1) + ClassListData.getInstance().getClass(cid.getId()).getClassName() + MessageTable.Messages[1069].getExtra(2) + "</a><br>\n"; // Update by rocknow
+																																																																						// (Class Name)
 								count++;
 							}
 							classCheck = classCheck.getParent();
 						}
 						classCheck = null;
-					}
-					else
-					{
-						text += MessageTable.Messages[1070].getMessage() +"<br>";
+					} else {
+						text += MessageTable.Messages[1070].getMessage() + "<br>";
 					}
 					text += "</body></html>";
 					
@@ -120,22 +106,18 @@ public class SkillList implements IBypassHandler
 					
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 			}
-		}
-		else
-		{
+		} else {
 			L2NpcInstance.showSkillList(activeChar, (L2Npc) target, activeChar.getClassId());
 		}
 		return true;
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

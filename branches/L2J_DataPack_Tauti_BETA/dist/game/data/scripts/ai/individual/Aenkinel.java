@@ -18,17 +18,17 @@
  */
 package ai.individual;
 
+import ai.group_template.L2AttackableAIScript;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
-import ai.group_template.L2AttackableAIScript;
-
 /**
  * 夢境的侵蝕者 亞恩奇奈爾【夢幻結界】
  */
-public class Aenkinel extends L2AttackableAIScript
-{
+public class Aenkinel extends L2AttackableAIScript {
+	
 	private final int GK1 = 32658;
 	private final int GK2 = 32659;
 	private final int GK3 = 32660;
@@ -41,8 +41,8 @@ public class Aenkinel extends L2AttackableAIScript
 	private final int AENKINEL4 = 25693;
 	private final int AENKINEL5 = 25694;
 	private final int AENKINEL6 = 25695;
-	public Aenkinel(int questId, String name, String descr)
-	{
+	
+	public Aenkinel(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(GK1);
 		addKillId(AENKINEL1);
@@ -57,28 +57,27 @@ public class Aenkinel extends L2AttackableAIScript
 		addStartNpc(GK6);
 		addKillId(AENKINEL6);
 	}
-
+	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		QuestState st = player.getQuestState("aenkinel");
 		int npcId = npc.getNpcId();
-		if (npcId == AENKINEL1 || npcId == AENKINEL2 || npcId == AENKINEL3 || npcId == AENKINEL4 || npcId == AENKINEL5 || npcId == AENKINEL6)
-		{
+		if ((npcId == AENKINEL1) || (npcId == AENKINEL2) || (npcId == AENKINEL3) || (npcId == AENKINEL4) || (npcId == AENKINEL5) || (npcId == AENKINEL6)) {
 			int instanceId = npc.getInstanceId();
-			addSpawn(18820, -121524,-155073,-6752, 64792, false, 0, false, instanceId);
-			addSpawn(18819, -121486,-155070,-6752, 57739, false, 0, false, instanceId);
-			addSpawn(18819, -121457,-155071,-6752, 49471, false, 0, false, instanceId);
-			addSpawn(18819, -121428,-155070,-6752, 41113, false, 0, false, instanceId);
-			if (st == null)
+			addSpawn(18820, -121524, -155073, -6752, 64792, false, 0, false, instanceId);
+			addSpawn(18819, -121486, -155070, -6752, 57739, false, 0, false, instanceId);
+			addSpawn(18819, -121457, -155071, -6752, 49471, false, 0, false, instanceId);
+			addSpawn(18819, -121428, -155070, -6752, 41113, false, 0, false, instanceId);
+			if (st == null) {
 				return "";
+			}
 			st.exitQuest(true);
 		}
 		return "";
 	}
-
-	public static void main(String[] args)
-	{
+	
+	public static void main(String[] args) {
 		new Aenkinel(-1, "aenlinel", "ai");
 	}
+	
 }

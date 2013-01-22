@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original jython script by disKret.
  * @author nonom
  */
-public class Q15_SweetWhispers extends Quest
-{
+public class Q15_SweetWhispers extends Quest {
+	
 	private static final String qn = "15_SweetWhispers";
 	
 	// NPCs
@@ -39,108 +39,92 @@ public class Q15_SweetWhispers extends Quest
 	private static final int M_NECROMANCER = 31518;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int cond = st.getInt("cond");
-		switch (event)
-		{
+		switch (event) {
 			case "31302-01.html":
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "31518-01.html":
-				if (cond == 1)
-				{
+				if (cond == 1) {
 					st.set("cond", "2");
 					st.playSound("ItemSound.quest_middle");
 				}
-				break;
+			break;
 			case "31517-01.html":
-				if (cond == 2)
-				{
+				if (cond == 2) {
 					st.addExpAndSp(350531, 28204);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int npcId = npc.getNpcId();
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = getAlreadyCompletedMsg(player);
-				break;
+			break;
 			case State.CREATED:
-				if (npcId == VLADIMIR)
-				{
+				if (npcId == VLADIMIR) {
 					htmltext = (player.getLevel() >= 60) ? "31302-00.htm" : "31302-00a.html";
 				}
-				break;
+			break;
 			case State.STARTED:
 				final int cond = st.getInt("cond");
-				switch (npcId)
-				{
+				switch (npcId) {
 					case VLADIMIR:
-						if (cond == 1)
-						{
+						if (cond == 1) {
 							htmltext = "31302-01a.html";
 						}
-						break;
+					break;
 					case M_NECROMANCER:
-						switch (cond)
-						{
+						switch (cond) {
 							case 1:
 								htmltext = "31518-00.html";
-								break;
+							break;
 							case 2:
 								htmltext = "31518-01a.html";
-								break;
+							break;
 						}
-						break;
+					break;
 					case HIERARCH:
-						if (cond == 2)
-						{
+						if (cond == 2) {
 							htmltext = "31517-00.html";
 						}
-						break;
+					break;
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q15_SweetWhispers(int questId, String name, String descr)
-	{
+	public Q15_SweetWhispers(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(VLADIMIR);
-		
 		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q15_SweetWhispers(15, qn, "Sweet Whispers");
 	}
+	
 }

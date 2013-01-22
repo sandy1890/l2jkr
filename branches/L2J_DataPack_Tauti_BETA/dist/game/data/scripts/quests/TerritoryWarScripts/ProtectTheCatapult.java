@@ -22,14 +22,13 @@ package quests.TerritoryWarScripts;
  * @author Gigiikun
  */
 
-public class ProtectTheCatapult extends TerritoryWarSuperClass
-{
+public class ProtectTheCatapult extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "729_Protecttheterritorycatapult";
 	public static int qnu = 729;
 	public static String qna = "Protect the territory catapult";
 	
-	public ProtectTheCatapult()
-	{
+	public ProtectTheCatapult() {
 		super(qnu, qn1, qna);
 		NPC_IDS = new int[]
 		{
@@ -48,8 +47,8 @@ public class ProtectTheCatapult extends TerritoryWarSuperClass
 	}
 	
 	@Override
-	public int getTerritoryIdForThisNPCId(int npcid)
-	{
+	public int getTerritoryIdForThisNPCId(int npcid) {
 		return npcid - 36418;
 	}
+	
 }
