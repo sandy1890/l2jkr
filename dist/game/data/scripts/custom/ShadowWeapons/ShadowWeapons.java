@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package custom.ShadowWeapons;
 
@@ -38,7 +42,7 @@ public class ShadowWeapons extends Quest
 		31285, 31958, 31961, 31996, 31968, 31977, 32092, 32093, 32094, 32095, 32096,
 		32097, 32098, 32193, 32196, 32199, 32202, 32205, 32206, 32213, 32214, 32221,
 		32222, 32229, 32230, 32233, 32234 ,30508, 30594, 31279, 31755, 32209, 32210, 
-		32217, 32218, 32225, 32226 // �ɥRNPC
+		32217, 32218, 32225, 32226 // �ɥRNPC
 	};
 
 	// itemId for shadow weapon coupons, it's not used more than once but increases readability

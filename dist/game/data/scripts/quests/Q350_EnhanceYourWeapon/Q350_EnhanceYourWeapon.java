@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2013 L2J DataPack
+ * 
+ * This file is part of L2J DataPack.
+ * 
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package quests.Q350_EnhanceYourWeapon;
 
@@ -383,7 +387,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>¥Ø«e¨S¦³°õ¦æ¥ô°È¡A©Î±ø¥ó¤£²Å¡C</body></html>";
+		String htmltext = "<html><body>ï¿½Ø«eï¿½Sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Aï¿½Î±ï¿½ó¤£²Å¡C</body></html>";
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -418,7 +422,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q350_EnhanceYourWeapon(350, qn, "¤O¶q¶°¤¤¦b¤M¦y");
+		new Q350_EnhanceYourWeapon(350, qn, "ï¿½Oï¿½qï¿½ï¿½ï¿½ï¿½ï¿½bï¿½Mï¿½y");
 	}
 	
 	/**
