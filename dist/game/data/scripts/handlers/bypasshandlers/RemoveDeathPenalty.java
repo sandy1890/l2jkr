@@ -18,6 +18,7 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -26,10 +27,9 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class RemoveDeathPenalty implements IBypassHandler
-{
+public class RemoveDeathPenalty implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"remove_dp"
@@ -37,23 +37,26 @@ public class RemoveDeathPenalty implements IBypassHandler
 	
 	private static final int[] pen_clear_price =
 	{
-		3600, 8640, 25200, 50400, 86400, 144000, 144000, 144000
+		3600,
+		8640,
+		25200,
+		50400,
+		86400,
+		144000,
+		144000,
+		144000
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
-		try
-		{
+		try {
 			final int cmdChoice = Integer.parseInt(command.substring(10, 11).trim());
 			final L2Npc npc = (L2Npc) target;
-			switch (cmdChoice)
-			{
+			switch (cmdChoice) {
 				case 1:
 					String filename = "data/html/default/30981-1.htm";
 					NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
@@ -61,17 +64,14 @@ public class RemoveDeathPenalty implements IBypassHandler
 					html.replace("%objectId%", String.valueOf(npc.getObjectId()));
 					html.replace("%dp_price%", String.valueOf(pen_clear_price[activeChar.getExpertiseLevel()]));
 					activeChar.sendPacket(html);
-					break;
+				break;
 				case 2:
 					NpcHtmlMessage Reply = new NpcHtmlMessage(npc.getObjectId());
-					final StringBuilder replyMSG = StringUtil.startAppend(400, "<html><body>"+ MessageTable.Messages[1022].getMessage() +"<br>");
+					final StringBuilder replyMSG = StringUtil.startAppend(400, "<html><body>" + MessageTable.Messages[1022].getMessage() + "<br>");
 					
-					if (activeChar.getDeathPenaltyBuffLevel() > 0)
-					{
-						if (activeChar.getAdena() >= pen_clear_price[activeChar.getExpertiseLevel()])
-						{
-							if (!activeChar.reduceAdena("DeathPenality", pen_clear_price[activeChar.getExpertiseLevel()], npc, true))
-							{
+					if (activeChar.getDeathPenaltyBuffLevel() > 0) {
+						if (activeChar.getAdena() >= pen_clear_price[activeChar.getExpertiseLevel()]) {
+							if (!activeChar.reduceAdena("DeathPenality", pen_clear_price[activeChar.getExpertiseLevel()], npc, true)) {
 								return false;
 							}
 							activeChar.setDeathPenaltyBuffLevel(activeChar.getDeathPenaltyBuffLevel() - 1);
@@ -80,29 +80,25 @@ public class RemoveDeathPenalty implements IBypassHandler
 							return true;
 						}
 						replyMSG.append(MessageTable.Messages[1023].getMessage());
-					}
-					else
-					{
-						replyMSG.append(MessageTable.Messages[1024].getMessage()+"<br>" + MessageTable.Messages[1025].getMessage());
+					} else {
+						replyMSG.append(MessageTable.Messages[1024].getMessage() + "<br>" + MessageTable.Messages[1025].getMessage());
 					}
 					
 					replyMSG.append("</body></html>");
 					Reply.setHtml(replyMSG.toString());
 					activeChar.sendPacket(Reply);
-					break;
+				break;
 			}
 			return true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.info("Exception in " + getClass().getSimpleName());
 		}
 		return false;
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

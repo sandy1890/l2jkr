@@ -31,39 +31,35 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
-public class Pull extends L2Effect
-{
+public class Pull extends L2Effect {
+	
 	private static final Logger _log = Logger.getLogger(Pull.class.getName());
 	
 	private int _x, _y, _z;
 	
-	public Pull(Env env, EffectTemplate template)
-	{
+	public Pull(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.THROW_UP;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		// Get current position of the L2Character
 		final int curX = getEffected().getX();
 		final int curY = getEffected().getY();
-		//final int curZ = getEffected().getZ();
+		// final int curZ = getEffected().getZ();
 		
 		// Calculate distance between effector and effected current position
 		double dx = getEffector().getX() - curX;
 		double dy = getEffector().getY() - curY;
-		//double dz = getEffector().getZ() - curZ;
-		double distance = Math.sqrt(dx * dx + dy * dy);
-		if (distance > 2000)
-		{
-			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: "+curX+","+curY+" and getEffector: "+getEffector().getX()+","+getEffector().getY());
+		// double dz = getEffector().getZ() - curZ;
+		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		if (distance > 2000) {
+			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + getEffector().getX() + "," + getEffector().getY());
 			return false;
 		}
 		int offset = 50;
@@ -72,8 +68,9 @@ public class Pull extends L2Effect
 		double sin;
 		
 		// If no distance
-		if (distance < 1)
+		if (distance < 1) {
 			return false;
+		}
 		
 		// Calculate movement angles needed
 		sin = dy / distance;
@@ -84,25 +81,22 @@ public class Pull extends L2Effect
 		_y = getEffector().getY() - (int) (offset * sin);
 		_z = getEffector().getZ();
 		
-		if (Config.GEODATA > 0)
-		{
+		if (Config.GEODATA > 0) {
 			Location destiny = GeoData.getInstance().moveCheck(getEffected().getX(), getEffected().getY(), getEffected().getZ(), _x, _y, _z, getEffected().getInstanceId());
 			_x = destiny.getX();
 			_y = destiny.getY();
 		}
-		getEffected().broadcastPacket(new FlyToLocation(getEffected(), _x, _y, _z, FlyType.UNKNOW9)); //FlyType.THROW_HORIZONTAL));
+		getEffected().broadcastPacket(new FlyToLocation(getEffected(), _x, _y, _z, FlyType.UNKNOW9)); // FlyType.THROW_HORIZONTAL));
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().setXYZ(_x, _y, _z);
 		getEffected().broadcastPacket(new ValidateLocation(getEffected()));
 	}

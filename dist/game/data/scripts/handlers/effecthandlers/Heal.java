@@ -38,135 +38,119 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author UnAfraid
  */
-public class Heal extends L2Effect
-{
-	public Heal(Env env, EffectTemplate template)
-	{
+public class Heal extends L2Effect {
+	
+	public Heal(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.HEAL;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		L2Character target = getEffected();
 		L2Character activeChar = getEffector();
-		if (target == null || target.isDead() || target instanceof L2DoorInstance)
+		if ((target == null) || target.isDead() || (target instanceof L2DoorInstance)) {
 			return false;
+		}
 		
 		double amount = calc();
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		double staticShotBonus = 0;
 		int mAtkMul = 1;
 		
-		if (weaponInst != null && weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
-		{
-			if (activeChar instanceof L2PcInstance && ((L2PcInstance) activeChar).isMageClass())
-			{
+		if ((weaponInst != null) && (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)) {
+			if ((activeChar instanceof L2PcInstance) && ((L2PcInstance) activeChar).isMageClass()) {
 				staticShotBonus = getSkill().getMpConsume(); // static bonus for spiritshots
 				
-				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-				{
+				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 					mAtkMul = 4;
 					staticShotBonus *= 2.4; // static bonus for blessed spiritshots
-				}
-				else
+				} else {
 					mAtkMul = 2;
-			}
-			else
-			{
+				}
+			} else {
 				// no static bonus
 				// grade dynamic bonus
-				switch (weaponInst.getItem().getItemGrade())
-				{
+				switch (weaponInst.getItem().getItemGrade()) {
 					case L2Item.CRYSTAL_S84:
 						mAtkMul = 4;
-						break;
+					break;
 					case L2Item.CRYSTAL_S80:
 						mAtkMul = 2;
-						break;
+					break;
 				}
 				// shot dynamic bonus
-				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 					mAtkMul *= 4; // 16x/8x/4x s84/s80/other
-				else
+				} else {
 					mAtkMul += 1; // 5x/3x/1x s84/s80/other
+				}
 			}
 			
 			weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 		}
 		// If there is no weapon equipped, check for an active summon.
-		else if (activeChar instanceof L2Summon && ((L2Summon) activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
-		{
+		else if ((activeChar instanceof L2Summon) && (((L2Summon) activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)) {
 			staticShotBonus = getSkill().getMpConsume(); // static bonus for spiritshots
 			
-			if (((L2Summon) activeChar).getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-			{
+			if (((L2Summon) activeChar).getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 				staticShotBonus *= 2.4; // static bonus for blessed spiritshots
 				mAtkMul = 4;
-			}
-			else
+			} else {
 				mAtkMul = 2;
+			}
 			
 			((L2Summon) activeChar).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-		}
-		else if (activeChar instanceof L2Npc && ((L2Npc) activeChar)._spiritshotcharged)
-		{
+		} else if ((activeChar instanceof L2Npc) && ((L2Npc) activeChar)._spiritshotcharged) {
 			staticShotBonus = 2.4 * getSkill().getMpConsume(); // always blessed spiritshots
 			mAtkMul = 4;
 			
 			((L2Npc) activeChar)._spiritshotcharged = false;
 		}
 		
-		if (!getSkill().isStaticHeal())
-		{
+		if (!getSkill().isStaticHeal()) {
 			amount += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
 			amount *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
 			// Healer proficiency (since CT1)
 			amount *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
-			if (!getSkill().isStatic())
+			if (!getSkill().isStatic()) {
 				amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
+			}
 			
 			// Heal critic, since CT2.3 Gracia Final
-			if (!getSkill().isStatic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
+			if (!getSkill().isStatic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()))) {
 				amount *= 3;
+			}
 		}
 		
 		amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
 		
 		// Prevent negative amounts
-		if (amount < 0)
+		if (amount < 0) {
 			amount = 0;
+		}
 		
 		target.setCurrentHp(amount + target.getCurrentHp());
 		StatusUpdate su = new StatusUpdate(target);
 		su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 		target.sendPacket(su);
 		
-		if (target instanceof L2PcInstance)
-		{
-			if (getSkill().getId() == 4051)
-			{
+		if (target instanceof L2PcInstance) {
+			if (getSkill().getId() == 4051) {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REJUVENATING_HP);
 				target.sendPacket(sm);
-			}
-			else
-			{
-				if (activeChar instanceof L2PcInstance && activeChar != target)
-				{
+			} else {
+				if ((activeChar instanceof L2PcInstance) && (activeChar != target)) {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());
 					sm.addNumber((int) amount);
 					target.sendPacket(sm);
-				}
-				else
-				{
+				} else {
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 					sm.addNumber((int) amount);
 					target.sendPacket(sm);
@@ -178,8 +162,8 @@ public class Heal extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

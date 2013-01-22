@@ -24,47 +24,45 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 
-public class CpHealOverTime extends L2Effect
-{
-	public CpHealOverTime(Env env, EffectTemplate template)
-	{
+public class CpHealOverTime extends L2Effect {
+	
+	public CpHealOverTime(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	// Special constructor to steal this effect
-	public CpHealOverTime(Env env, L2Effect effect)
-	{
+	public CpHealOverTime(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
-	{
+	protected boolean effectCanBeStolen() {
 		return true;
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CPHEAL_OVER_TIME;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		double cp = getEffected().getCurrentCp();
 		double maxcp = getEffected().getMaxRecoverableCp();
 		
 		// Not needed to set the CP and send update packet if player is already at max CP
-		if (cp >= maxcp)
+		if (cp >= maxcp) {
 			return true;
+		}
 		
 		cp += calc();
-		if (cp > maxcp)
+		if (cp > maxcp) {
 			cp = maxcp;
+		}
 		
 		getEffected().setCurrentCp(cp);
 		StatusUpdate sump = new StatusUpdate(getEffected());
@@ -72,4 +70,5 @@ public class CpHealOverTime extends L2Effect
 		getEffected().sendPacket(sump);
 		return true;
 	}
+	
 }

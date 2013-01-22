@@ -29,24 +29,20 @@ import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 /**
  * @author nBd
  */
-public class CharmOfCourage extends L2Effect
-{
-	public CharmOfCourage(Env env, EffectTemplate template)
-	{
+public class CharmOfCourage extends L2Effect {
+	
+	public CharmOfCourage(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CHARMOFCOURAGE;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() instanceof L2PcInstance)
-		{
+	public boolean onStart() {
+		if (getEffected() instanceof L2PcInstance) {
 			getEffected().broadcastPacket(new EtcStatusUpdate((L2PcInstance) getEffected()));
 			return true;
 		}
@@ -54,23 +50,20 @@ public class CharmOfCourage extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
-		if (getEffected() instanceof L2PcInstance)
-		{
+	public void onExit() {
+		if (getEffected() instanceof L2PcInstance) {
 			getEffected().broadcastPacket(new EtcStatusUpdate((L2PcInstance) getEffected()));
 		}
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_CHARM_OF_COURAGE;
 	}
+	
 }

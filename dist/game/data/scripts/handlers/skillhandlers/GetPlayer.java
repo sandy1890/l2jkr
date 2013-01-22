@@ -30,26 +30,25 @@ import com.l2jserver.util.Rnd;
 /**
  * Mobs can teleport players to them
  */
-public class GetPlayer implements ISkillHandler
-{
+public class GetPlayer implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.GET_PLAYER
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (activeChar.isAlikeDead())
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (activeChar.isAlikeDead()) {
 			return;
-		for (L2Object target : targets)
-		{
-			if (target instanceof L2PcInstance)
-			{
+		}
+		for (L2Object target : targets) {
+			if (target instanceof L2PcInstance) {
 				L2PcInstance trg = (L2PcInstance) target;
-				if (trg.isAlikeDead())
+				if (trg.isAlikeDead()) {
 					continue;
-				//trg.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
+				}
+				// trg.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
 				trg.setXYZ(activeChar.getX() + Rnd.get(-10, 10), activeChar.getY() + Rnd.get(-10, 10), activeChar.getZ());
 				trg.sendPacket(new ValidateLocation(trg));
 			}
@@ -57,8 +56,8 @@ public class GetPlayer implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

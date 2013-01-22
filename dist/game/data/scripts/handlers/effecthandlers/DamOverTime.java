@@ -24,40 +24,36 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class DamOverTime extends L2Effect
-{
-	public DamOverTime(Env env, EffectTemplate template)
-	{
+public class DamOverTime extends L2Effect {
+	
+	public DamOverTime(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.DMG_OVER_TIME;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		double damage = calc();
-		if (damage >= getEffected().getCurrentHp() - 1)
-		{
-			if (getSkill().isToggle())
-			{
+		if (damage >= (getEffected().getCurrentHp() - 1)) {
+			if (getSkill().isToggle()) {
 				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_HP);
 				return false;
 			}
 			
 			// For DOT skills that will not kill effected player.
-			if (!getSkill().killByDOT())
-			{
+			if (!getSkill().killByDOT()) {
 				// Fix for players dying by DOTs if HP < 1 since reduceCurrentHP method will kill them
-				if (getEffected().getCurrentHp() <= 1)
+				if (getEffected().getCurrentHp() <= 1) {
 					return true;
+				}
 				
 				damage = getEffected().getCurrentHp() - 1;
 			}
@@ -66,4 +62,5 @@ public class DamOverTime extends L2Effect
 		
 		return true;
 	}
+	
 }

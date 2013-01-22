@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.util.Util;
  * Original Jython script by Kerberos v1.0 on 2009/04/26
  * @author nonom
  */
-public class Q10274_CollectingInTheAir extends Quest
-{
+public class Q10274_CollectingInTheAir extends Quest {
+	
 	private static final String qn = "10274_CollectingInTheAir";
 	
 	// NPCs
@@ -59,61 +59,49 @@ public class Q10274_CollectingInTheAir extends Quest
 	};
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = "32557-0a.htm";
-				break;
+			break;
 			case State.CREATED:
 				QuestState qs = player.getQuestState("10273_GoodDayToFly");
-				if (qs != null)
-				{
+				if (qs != null) {
 					htmltext = (qs.isCompleted() && (player.getLevel() >= 75)) ? "32557-01.htm" : "32557-00.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "32557-00.htm";
 				}
-				break;
+			break;
 			case State.STARTED:
-				if ((st.getQuestItemsCount(RED) + st.getQuestItemsCount(BLUE) + st.getQuestItemsCount(GREEN)) >= 8)
-				{
+				if ((st.getQuestItemsCount(RED) + st.getQuestItemsCount(BLUE) + st.getQuestItemsCount(GREEN)) >= 8) {
 					htmltext = "32557-05.htm";
 					st.giveItems(13728, 1);
 					st.addExpAndSp(25160, 2525);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
-				}
-				else
-				{
+				} else {
 					htmltext = "32557-04.htm";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("32557-03.htm"))
-		{
+		if (event.equalsIgnoreCase("32557-03.htm")) {
 			st.set("cond", "1");
 			st.giveItems(SCROLL, 8);
 			st.setState(State.STARTED);
@@ -123,31 +111,25 @@ public class Q10274_CollectingInTheAir extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) {
 		final QuestState st = caster.getQuestState(qn);
-		if ((st == null) || !st.isStarted())
-		{
+		if ((st == null) || !st.isStarted()) {
 			return null;
 		}
 		
-		if (Util.contains(targets, npc) && (st.getInt("cond") == 1) && (skill.getId() == 2630))
-		{
+		if (Util.contains(targets, npc) && (st.getInt("cond") == 1) && (skill.getId() == 2630)) {
 			st.playSound("ItemSound.quest_itemget");
 			final int npcId = npc.getNpcId();
 			// Red Star Stones
-			if ((npcId >= 18684) && (npcId <= 18686))
-			{
+			if ((npcId >= 18684) && (npcId <= 18686)) {
 				st.giveItems(RED, 1);
 			}
 			// Blue Star Stones
-			else if ((npcId >= 18687) && (npcId <= 18689))
-			{
+			else if ((npcId >= 18687) && (npcId <= 18689)) {
 				st.giveItems(BLUE, 1);
 			}
 			// Green Star Stones
-			else if ((npcId >= 18690) && (npcId <= 18692))
-			{
+			else if ((npcId >= 18690) && (npcId <= 18692)) {
 				st.giveItems(GREEN, 1);
 			}
 			npc.doDie(caster);
@@ -155,8 +137,7 @@ public class Q10274_CollectingInTheAir extends Quest
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
-	public Q10274_CollectingInTheAir(int questId, String name, String descr)
-	{
+	public Q10274_CollectingInTheAir(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(LEKON);
@@ -173,8 +154,8 @@ public class Q10274_CollectingInTheAir extends Quest
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10274_CollectingInTheAir(10274, qn, "Collecting in the Air");
 	}
+	
 }

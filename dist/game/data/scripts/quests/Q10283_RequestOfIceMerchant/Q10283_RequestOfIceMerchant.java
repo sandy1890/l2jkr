@@ -28,12 +28,12 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * 2010-08-07 Based on Freya PTS
- * @author Gnacik
- * 2011-10-27 Update to High Five
+ * @author Gnacik 2011-10-27 Update to High Five
  */
-public class Q10283_RequestOfIceMerchant extends Quest
-{
+public class Q10283_RequestOfIceMerchant extends Quest {
+	
 	private static final String qn = "10283_RequestOfIceMerchant";
+	
 	// NPC's
 	private static final int _rafforty = 32020;
 	private static final int _kier = 32022;
@@ -44,8 +44,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	
 	private boolean JiniaOnSpawn = false;
 	
-	public Q10283_RequestOfIceMerchant(int questId, String name, String descr)
-	{
+	public Q10283_RequestOfIceMerchant(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(_rafforty);
@@ -54,48 +53,35 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _rafforty)
-		{
-			if (event.equalsIgnoreCase("32020-03.htm"))
-			{
+		if (npc.getNpcId() == _rafforty) {
+			if (event.equalsIgnoreCase("32020-03.htm")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-			}
-			else if (event.equalsIgnoreCase("32020-07.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32020-07.htm")) {
 				st.set("cond", "2");
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		else if ((npc.getNpcId() == _kier) && event.equalsIgnoreCase("spawn"))
-		{
-			if (JiniaOnSpawn)
+		} else if ((npc.getNpcId() == _kier) && event.equalsIgnoreCase("spawn")) {
+			if (JiniaOnSpawn) {
 				htmltext = "32022-02.html";
-			else
-			{
+			} else {
 				addSpawn(_jinia, 104473, -107549, -3695, 44954, false, 120000);
 				JiniaOnSpawn = true;
 				startQuestTimer("despawn", 120000, npc, player);
 				return null;
 			}
-		}
-		else if (event.equalsIgnoreCase("despawn"))
-		{
+		} else if (event.equalsIgnoreCase("despawn")) {
 			JiniaOnSpawn = false;
 			return null;
-		}
-		else if ((npc.getNpcId() == _jinia) && event.equalsIgnoreCase("32760-04.html"))
-		{
+		} else if ((npc.getNpcId() == _jinia) && event.equalsIgnoreCase("32760-04.html")) {
 			st.giveItems(57, 190000);
 			st.addExpAndSp(627000, 50300);
 			st.playSound("ItemSound.quest_finish");
@@ -108,81 +94,66 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		final int npcId = npc.getNpcId();
 		final int cond = st.getInt("cond");
-		switch (npcId)
-		{
+		switch (npcId) {
 			case _rafforty:
-				switch (st.getState())
-				{
+				switch (st.getState()) {
 					case State.CREATED:
 						QuestState _prev = player.getQuestState("115_TheOtherSideOfTruth");
-						if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
-						{
+						if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) {
 							htmltext = "32020-01.htm";
-						}
-						else
-						{
+						} else {
 							htmltext = "32020-00.htm";
 						}
-						break;
+					break;
 					case State.STARTED:
-						if (cond == 1)
-						{
+						if (cond == 1) {
 							htmltext = "32020-04.htm";
-						}
-						else if (cond == 2)
-						{
+						} else if (cond == 2) {
 							htmltext = "32020-08.htm";
 						}
-						break;
+					break;
 					case State.COMPLETED:
 						htmltext = "32020-09.htm";
-						break;
+					break;
 				}
-				break;
+			break;
 			case _kier:
-				if (cond == 2)
-				{
+				if (cond == 2) {
 					htmltext = "32022-01.html";
 				}
-				break;
+			break;
 			case _jinia:
-				if (cond == 2)
-				{
+				if (cond == 2) {
 					htmltext = "32760-02.html";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (npc.getInstanceId() > 0)
-		{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (npc.getInstanceId() > 0) {
 			return "32760-10.html";
 		}
 		
 		final QuestState st = player.getQuestState(qn);
-		if ((npc.getNpcId() == _jinia) && (st != null) && (st.getInt("cond") == 2))
-		{
+		if ((npc.getNpcId() == _jinia) && (st != null) && (st.getInt("cond") == 2)) {
 			return "32760-01.html";
 		}
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10283_RequestOfIceMerchant(10283, qn, "賣冰人的委託");
 	}
+	
 }

@@ -22,6 +22,7 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.datatables.ClanTable;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
@@ -29,119 +30,95 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.GMViewPledgeInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
 /**
  * <B>Pledge Manipulation:</B><BR>
  * <LI>With target in a character without clan:<BR>
- * //pledge create clanname
- * <LI>With target in a clan leader:<BR>
+ * //pledge create clanname <LI>With target in a clan leader:<BR>
  * //pledge info<BR>
  * //pledge dismiss<BR>
  * //pledge setlevel level<BR>
  * //pledge rep reputation_points<BR>
  */
-public class AdminPledge implements IAdminCommandHandler
-{
+public class AdminPledge implements IAdminCommandHandler {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_pledge"
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
 		L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
+		if (target instanceof L2PcInstance) {
 			player = (L2PcInstance) target;
-		else
-		{
+		} else {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			showMainPage(activeChar);
 			return false;
 		}
 		String name = player.getName();
-		if (command.startsWith("admin_pledge"))
-		{
+		if (command.startsWith("admin_pledge")) {
 			String action = null;
 			String parameter = null;
 			StringTokenizer st = new StringTokenizer(command);
-			try
-			{
+			try {
 				st.nextToken();
 				action = st.nextToken(); // create|info|dismiss|setlevel|rep
 				parameter = st.nextToken(); // clanname|nothing|nothing|level|rep_points
-			}
-			catch (NoSuchElementException nse)
-			{
+			} catch (NoSuchElementException nse) {
 				// TODO: Send some message.
 				return false;
 			}
-			if (action.equals("create"))
-			{
+			if (action.equals("create")) {
 				long cet = player.getClanCreateExpiryTime();
 				player.setClanCreateExpiryTime(0);
 				L2Clan clan = ClanTable.getInstance().createClan(player, parameter);
-				if (clan != null)
+				if (clan != null) {
 					activeChar.sendMessage(MessageTable.Messages[1790].getExtra(1) + parameter + MessageTable.Messages[1790].getExtra(2) + player.getName());
-				else
-				{
+				} else {
 					player.setClanCreateExpiryTime(cet);
 					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_CREATE_CLAN));
 				}
-			}
-			else if (!player.isClanLeader())
-			{
+			} else if (!player.isClanLeader()) {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
 				sm.addString(name);
 				activeChar.sendPacket(sm);
 				showMainPage(activeChar);
 				return false;
-			}
-			else if (action.equals("dismiss"))
-			{
+			} else if (action.equals("dismiss")) {
 				ClanTable.getInstance().destroyClan(player.getClanId());
 				L2Clan clan = player.getClan();
-				if (clan == null)
+				if (clan == null) {
 					activeChar.sendMessage(1791);
-				else
+				} else {
 					activeChar.sendMessage(1792);
-			}
-			else if (action.equals("info"))
-			{
+				}
+			} else if (action.equals("info")) {
 				activeChar.sendPacket(new GMViewPledgeInfo(player.getClan(), player));
-			}
-			else if (parameter == null)
+			} else if (parameter == null) {
 				activeChar.sendMessage("Usage: //pledge <setlevel|rep> <number>");
-			else if (action.equals("setlevel"))
-			{
+			} else if (action.equals("setlevel")) {
 				int level = Integer.parseInt(parameter);
-				if (level >= 0 && level < 12)
-				{
+				if ((level >= 0) && (level < 12)) {
 					player.getClan().changeLevel(level);
 					activeChar.sendMessage(MessageTable.Messages[1793].getExtra(1) + level + MessageTable.Messages[1793].getExtra(2) + player.getClan().getName());
-				}
-				else
+				} else {
 					activeChar.sendMessage(1794);
-			}
-			else if (action.startsWith("rep"))
-			{
-				try
-				{
+				}
+			} else if (action.startsWith("rep")) {
+				try {
 					int points = Integer.parseInt(parameter);
 					L2Clan clan = player.getClan();
-					if (clan.getLevel() < 5)
-					{
+					if (clan.getLevel() < 5) {
 						activeChar.sendMessage(1795);
 						showMainPage(activeChar);
 						return false;
 					}
 					clan.addReputationScore(points, true);
 					activeChar.sendMessage(MessageTable.Messages[1796].getExtra(1) + (points > 0 ? MessageTable.Messages[1796].getExtra(2) : MessageTable.Messages[1796].getExtra(3)) + Math.abs(points) + MessageTable.Messages[1796].getExtra(4) + (points > 0 ? MessageTable.Messages[1796].getExtra(5) : MessageTable.Messages[1796].getExtra(6)) + clan.getName() + MessageTable.Messages[1796].getExtra(7) + clan.getReputationScore());
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 					activeChar.sendMessage("Usage: //pledge <rep> <number>");
 				}
 			}
@@ -151,13 +128,14 @@ public class AdminPledge implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
-	{
+	/**
+	 * @param activeChar
+	 */
+	private void showMainPage(L2PcInstance activeChar) {
 		AdminHelpPage.showHelpPage(activeChar, "game_menu.htm");
 	}
 	

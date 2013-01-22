@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author DS
  */
-public class Buron extends Quest
-{
+public class Buron extends Quest {
+	
 	private static final int BURON = 32345;
 	private static final int HELMET = 9669;
 	private static final int TUNIC = 9670;
@@ -36,46 +36,30 @@ public class Buron extends Quest
 	private static final int DARION_BADGE = 9674;
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
-		if ("Rumor".equalsIgnoreCase(event))
-		{
+		if ("Rumor".equalsIgnoreCase(event)) {
 			htmltext = "32345-" + HellboundManager.getInstance().getLevel() + "r.htm";
-		}
-		else
-		{
-			if (HellboundManager.getInstance().getLevel() < 2)
-			{
+		} else {
+			if (HellboundManager.getInstance().getLevel() < 2) {
 				htmltext = "32345-lowlvl.htm";
-			}
-			else
-			{
+			} else {
 				QuestState qs = player.getQuestState(getName());
-				if (qs == null)
-				{
+				if (qs == null) {
 					qs = newQuestState(player);
 				}
 				
-				if (qs.getQuestItemsCount(DARION_BADGE) >= 10)
-				{
+				if (qs.getQuestItemsCount(DARION_BADGE) >= 10) {
 					qs.takeItems(DARION_BADGE, 10);
-					if (event.equalsIgnoreCase("Tunic"))
-					{
+					if (event.equalsIgnoreCase("Tunic")) {
 						player.addItem("Quest", TUNIC, 1, npc, true);
-					}
-					else if (event.equalsIgnoreCase("Helmet"))
-					{
+					} else if (event.equalsIgnoreCase("Helmet")) {
 						player.addItem("Quest", HELMET, 1, npc, true);
-					}
-					else if (event.equalsIgnoreCase("Pants"))
-					{
+					} else if (event.equalsIgnoreCase("Pants")) {
 						player.addItem("Quest", PANTS, 1, npc, true);
 					}
 					htmltext = null;
-				}
-				else
-				{
+				} else {
 					htmltext = "32345-noitems.htm";
 				}
 			}
@@ -84,15 +68,12 @@ public class Buron extends Quest
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-		{
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
 		}
 		
-		switch (HellboundManager.getInstance().getLevel())
-		{
+		switch (HellboundManager.getInstance().getLevel()) {
 			case 1:
 				return "32345-01.htm";
 			case 2:
@@ -104,16 +85,15 @@ public class Buron extends Quest
 		}
 	}
 	
-	public Buron(int questId, String name, String descr)
-	{
+	public Buron(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addFirstTalkId(BURON);
 		addStartNpc(BURON);
 		addTalkId(BURON);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Buron(-1, "Buron", "hellbound");
 	}
+	
 }

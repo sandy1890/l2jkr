@@ -28,34 +28,28 @@ import com.l2jserver.gameserver.model.quest.State;
  * 2010-08-04 Based on Freya PTS
  * @author Gnacik
  */
-public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
-{
+public class Q249_PoisonedPlainsOfTheLizardmen extends Quest {
+	
 	private static final String qn = "249_PoisonedPlainsOfTheLizardmen";
 	
 	private static final int _mouen = 30196;
 	private static final int _johnny = 32744;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _mouen)
-		{
-			if (event.equalsIgnoreCase("30196-03.htm"))
-			{
+		if (npc.getNpcId() == _mouen) {
+			if (event.equalsIgnoreCase("30196-03.htm")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
 			}
-		}
-		else if ((npc.getNpcId() == _johnny) && event.equalsIgnoreCase("32744-03.htm"))
-		{
+		} else if ((npc.getNpcId() == _johnny) && event.equalsIgnoreCase("32744-03.htm")) {
 			st.giveAdena(83056, true);
 			st.addExpAndSp(477496, 58743);
 			st.playSound("ItemSound.quest_finish");
@@ -65,64 +59,50 @@ public class Q249_PoisonedPlainsOfTheLizardmen extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _mouen)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == _mouen) {
+			switch (st.getState()) {
 				case State.CREATED:
-					if (player.getLevel() >= 82)
-					{
+					if (player.getLevel() >= 82) {
 						htmltext = "30196-01.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "30196-00.htm";
 					}
-					break;
+				break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
-					{
+					if (st.getInt("cond") == 1) {
 						htmltext = "30196-04.htm";
 					}
-					break;
+				break;
 				case State.COMPLETED:
 					htmltext = "30196-05.htm";
-					break;
+				break;
 			}
-		}
-		else if (npc.getNpcId() == _johnny)
-		{
-			if (st.getInt("cond") == 1)
-			{
+		} else if (npc.getNpcId() == _johnny) {
+			if (st.getInt("cond") == 1) {
 				htmltext = "32744-01.htm";
-			}
-			else if (st.isCompleted())
-			{
+			} else if (st.isCompleted()) {
 				htmltext = "32744-04.htm";
 			}
 		}
 		return htmltext;
 	}
 	
-	public Q249_PoisonedPlainsOfTheLizardmen(int questId, String name, String descr)
-	{
+	public Q249_PoisonedPlainsOfTheLizardmen(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(_mouen);
 		addTalkId(_mouen, _johnny);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q249_PoisonedPlainsOfTheLizardmen(249, qn, "中毒的蜥蝪草原");
 	}
+	
 }

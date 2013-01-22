@@ -38,10 +38,9 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Some parts taken from EffectWarp, which cannot be used for this case.
- * @author  Didldak
+ * @author Didldak
  */
-public class InstantJump implements ISkillHandler
-{
+public class InstantJump implements ISkillHandler {
 	
 	private static final L2SkillType[] SKILL_IDS =
 	{
@@ -49,20 +48,16 @@ public class InstantJump implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
 		L2Character target = (L2Character) targets[0];
 		
-		if (Formulas.calcPhysicalSkillEvasion(target, skill))
-		{
-			if (activeChar instanceof L2PcInstance)
-			{
+		if (Formulas.calcPhysicalSkillEvasion(target, skill)) {
+			if (activeChar instanceof L2PcInstance) {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGES_ATTACK);
 				sm.addString(target.getName());
 				((L2PcInstance) activeChar).sendPacket(sm);
 			}
-			if (target instanceof L2PcInstance)
-			{
+			if (target instanceof L2PcInstance) {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVOIDED_C1_ATTACK);
 				sm.addString(activeChar.getName());
 				((L2PcInstance) target).sendPacket(sm);
@@ -78,8 +73,9 @@ public class InstantJump implements ISkillHandler
 		
 		ph += 180;
 		
-		if (ph > 360)
+		if (ph > 360) {
 			ph -= 360;
+		}
 		
 		ph = (Math.PI * ph) / 180;
 		
@@ -89,8 +85,9 @@ public class InstantJump implements ISkillHandler
 		
 		Location loc = new Location(x, y, z);
 		
-		if (Config.GEODATA > 0)
+		if (Config.GEODATA > 0) {
 			loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
+		}
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
@@ -100,19 +97,15 @@ public class InstantJump implements ISkillHandler
 		activeChar.setXYZ(loc.getX(), loc.getY(), loc.getZ());
 		activeChar.broadcastPacket(new ValidateLocation(activeChar));
 		
-		if (skill.hasEffects())
-		{
-			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
-			{
+		if (skill.hasEffects()) {
+			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED) {
 				activeChar.stopSkillEffects(skill.getId());
 				skill.getEffects(target, activeChar);
 				
-				//SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-				//sm.addSkillName(skill);
-				//activeChar.sendPacket(sm);
-			}
-			else
-			{
+				// SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+				// sm.addSkillName(skill);
+				// activeChar.sendPacket(sm);
+			} else {
 				// activate attacked effects, if any
 				target.stopSkillEffects(skill.getId());
 				skill.getEffects(activeChar, target);
@@ -122,8 +115,8 @@ public class InstantJump implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

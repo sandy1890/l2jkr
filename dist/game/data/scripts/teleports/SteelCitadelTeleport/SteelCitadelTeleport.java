@@ -31,13 +31,12 @@ import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 /**
  * @author GKR
  */
-public class SteelCitadelTeleport extends Quest
-{
+public class SteelCitadelTeleport extends Quest {
+	
 	private static final int BELETH = 29118;
 	private static final int NAIA_CUBE = 32376;
 	
-	public SteelCitadelTeleport(int questId, String name, String descr)
-	{
+	public SteelCitadelTeleport(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(NAIA_CUBE);
@@ -45,44 +44,34 @@ public class SteelCitadelTeleport extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		switch (npc.getNpcId())
-		{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
+		switch (npc.getNpcId()) {
 			case NAIA_CUBE:
-				if (GrandBossManager.getInstance().getBossStatus(BELETH) == 3)
-				{
+				if (GrandBossManager.getInstance().getBossStatus(BELETH) == 3) {
 					return "32376-02.htm";
 				}
 				
 				final L2CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
 				
-				if ((channel == null) || (channel.getLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS))
-				{
+				if ((channel == null) || (channel.getLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS)) {
 					return "32376-02a.htm";
 				}
 				
-				if (GrandBossManager.getInstance().getBossStatus(BELETH) > 0)
-				{
+				if (GrandBossManager.getInstance().getBossStatus(BELETH) > 0) {
 					return "32376-03.htm";
 				}
 				
 				final L2BossZone zone = (L2BossZone) ZoneManager.getInstance().getZoneById(12018);
-				if (zone != null)
-				{
+				if (zone != null) {
 					GrandBossManager.getInstance().setBossStatus(BELETH, 1);
 					
-					for (L2Party party : channel.getPartys())
-					{
-						if (party == null)
-						{
+					for (L2Party party : channel.getPartys()) {
+						if (party == null) {
 							continue;
 						}
 						
-						for (L2PcInstance pl : party.getMembers())
-						{
-							if (pl.isInsideRadius(npc.getX(), npc.getY(), npc.getZ(), 3000, true, false))
-							{
+						for (L2PcInstance pl : party.getMembers()) {
+							if (pl.isInsideRadius(npc.getX(), npc.getY(), npc.getZ(), 3000, true, false)) {
 								zone.allowPlayerEntry(pl, 30);
 								pl.teleToLocation(16342, 209557, -9352, true);
 							}
@@ -93,8 +82,8 @@ public class SteelCitadelTeleport extends Quest
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new SteelCitadelTeleport(-1, "SteelCitadelTeleport", "teleports");
 	}
+	
 }

@@ -22,14 +22,13 @@ package quests.SagasScripts;
  * @author Emperorc
  */
 
-public class SagaOfTheSpectralMaster extends SagasSuperClass
-{
+public class SagaOfTheSpectralMaster extends SagasSuperClass {
+	
 	public static String qn1 = "93_SagaOfTheSpectralMaster";
 	public static int qnu = 93;
 	public static String qna = "Saga of the Spectral Master";
 	
-	public SagaOfTheSpectralMaster()
-	{
+	public SagaOfTheSpectralMaster() {
 		super(qnu, qn1, qna);
 		NPC = new int[]
 		{
@@ -117,4 +116,5 @@ public class SagaOfTheSpectralMaster extends SagasSuperClass
 		};
 		registerNPCs();
 	}
+	
 }

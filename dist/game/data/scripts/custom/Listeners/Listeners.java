@@ -53,12 +53,15 @@ import com.l2jserver.gameserver.scripting.scriptengine.impl.L2Script;
  * An example class of using Listeners.
  * @author UnAfraid
  */
-public class Listeners extends L2Script
-{
+public class Listeners extends L2Script {
+	
 	private static final Logger _log = Logger.getLogger(Listeners.class.getName());
 	
-	public Listeners(String name, String descr)
-	{
+	/**
+	 * @param name
+	 * @param descr
+	 */
+	public Listeners(String name, String descr) {
 		super(name, descr);
 		addLoginLogoutNotify();
 		addClanCreationLevelUpNotify();
@@ -75,12 +78,10 @@ public class Listeners extends L2Script
 	 * @param player
 	 */
 	@Override
-	public void onPlayerLogin(L2PcInstance player)
-	{
+	public void onPlayerLogin(L2PcInstance player) {
 		_log.log(Level.INFO, "Player " + player.getName() + " just logged in!");
 		List<Integer> items = new ArrayList<>();
-		for (L2ItemInstance item : player.getInventory().getItems())
-		{
+		for (L2ItemInstance item : player.getInventory().getItems()) {
 			items.add(item.getItemId());
 		}
 		addItemTracker(items);
@@ -94,8 +95,7 @@ public class Listeners extends L2Script
 	 * @param player
 	 */
 	@Override
-	public void onPlayerLogout(L2PcInstance player)
-	{
+	public void onPlayerLogout(L2PcInstance player) {
 		_log.log(Level.INFO, "Player " + player.getName() + " just logged out!");
 		removeTransformNotify(player);
 		removeSkillUseNotify(player);
@@ -107,8 +107,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public void onClanCreated(ClanCreationEvent event)
-	{
+	public void onClanCreated(ClanCreationEvent event) {
 		_log.log(Level.INFO, "Clan " + event.getClan().getName() + " has been created by " + event.getClan().getLeaderName() + "!");
 	}
 	
@@ -118,8 +117,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onClanLeveledUp(ClanLevelUpEvent event)
-	{
+	public boolean onClanLeveledUp(ClanLevelUpEvent event) {
 		_log.log(Level.INFO, "Clan " + event.getClan().getName() + " has leveled up!");
 		return true;
 	}
@@ -130,8 +128,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onClanJoin(ClanJoinEvent event)
-	{
+	public boolean onClanJoin(ClanJoinEvent event) {
 		_log.log(Level.INFO, "Player " + event.getPlayer().getName() + " has joined clan: " + event.getPlayer().getName() + "!");
 		return true;
 	}
@@ -142,8 +139,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onClanLeave(ClanLeaveEvent event)
-	{
+	public boolean onClanLeave(ClanLeaveEvent event) {
 		String name = CharNameTable.getInstance().getNameById(event.getPlayerId());
 		_log.log(Level.INFO, "Player " + name + " has leaved clan: " + event.getClan().getName() + "!");
 		return true;
@@ -154,8 +150,7 @@ public class Listeners extends L2Script
 	 * Register the listener with addClanJoinLeaveNotify()<br>
 	 */
 	@Override
-	public boolean onClanLeaderChange(ClanLeaderChangeEvent event)
-	{
+	public boolean onClanLeaderChange(ClanLeaderChangeEvent event) {
 		_log.log(Level.INFO, "Player " + event.getNewLeader().getName() + " become the new leader of clan: " + event.getClan().getName() + "!");
 		return true;
 	}
@@ -166,8 +161,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onClanWarehouseAddItem(ClanWarehouseAddItemEvent event)
-	{
+	public boolean onClanWarehouseAddItem(ClanWarehouseAddItemEvent event) {
 		_log.log(Level.INFO, "Player " + event.getActor().getName() + " added an item (" + event.getItem() + ") to clan warehouse (" + event.getProcess() + ")!");
 		return true;
 	}
@@ -178,8 +172,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onClanWarehouseDeleteItem(ClanWarehouseDeleteItemEvent event)
-	{
+	public boolean onClanWarehouseDeleteItem(ClanWarehouseDeleteItemEvent event) {
 		_log.log(Level.INFO, "Player " + event.getActor().getName() + " removed an item (" + event.getItem() + ") from clan warehouse (" + event.getProcess() + ")!");
 		return true;
 	}
@@ -190,8 +183,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onClanWarehouseTransferItem(ClanWarehouseTransferEvent event)
-	{
+	public boolean onClanWarehouseTransferItem(ClanWarehouseTransferEvent event) {
 		_log.log(Level.INFO, "Player " + event.getActor().getName() + " transfered an item (" + event.getItem() + ") from clan warehouse to " + event.getTarget() + " (" + event.getProcess() + ")!");
 		return true;
 	}
@@ -202,8 +194,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onClanWarEvent(ClanWarEvent event)
-	{
+	public boolean onClanWarEvent(ClanWarEvent event) {
 		_log.log(Level.INFO, "Clan " + event.getClan1().getName() + " challanges " + event.getClan2().getName() + " stage: " + event.getStage().toString() + "!");
 		return true;
 	}
@@ -214,8 +205,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onFortSiegeEvent(FortSiegeEvent event)
-	{
+	public boolean onFortSiegeEvent(FortSiegeEvent event) {
 		_log.log(Level.INFO, "FortSiege event: " + event.getSiege().getFort().getName() + " " + event.getSiege() + " " + event.getStage().toString() + "!");
 		return true;
 	}
@@ -226,8 +216,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onSiegeEvent(SiegeEvent event)
-	{
+	public boolean onSiegeEvent(SiegeEvent event) {
 		_log.log(Level.INFO, "Siege event: " + event.getSiege().getCastle().getName() + " " + event.getSiege() + " " + event.getStage().toString() + "!");
 		return true;
 	}
@@ -238,8 +227,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public void onCastleControlChange(SiegeEvent event)
-	{
+	public void onCastleControlChange(SiegeEvent event) {
 		_log.log(Level.INFO, "Castle control change: " + event.getSiege().getCastle().getName() + " " + event.getSiege() + "!");
 	}
 	
@@ -249,8 +237,7 @@ public class Listeners extends L2Script
 	 * @param stage
 	 */
 	@Override
-	public void onTvtEvent(EventStage stage)
-	{
+	public void onTvtEvent(EventStage stage) {
 		_log.log(Level.INFO, "TvT event: " + stage.toString() + "!");
 	}
 	
@@ -260,8 +247,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public void onTvtKill(TvtKillEvent event)
-	{
+	public void onTvtKill(TvtKillEvent event) {
 		_log.log(Level.INFO, "TvT event killed " + event.getVictim().getName() + " killer " + event.getKiller().getName() + " killer team: " + event.getKillerTeam().getName() + "!");
 	}
 	
@@ -271,8 +257,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onItemAugment(AugmentEvent event)
-	{
+	public boolean onItemAugment(AugmentEvent event) {
 		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been augumented added = " + event.getAugmentation() + "!");
 		return true;
 	}
@@ -283,8 +268,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onItemDrop(ItemDropEvent event)
-	{
+	public boolean onItemDrop(ItemDropEvent event) {
 		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been dropped by (" + event.getDropper().getName() + " ) at: " + event.getLocation() + "!");
 		return true;
 	}
@@ -295,8 +279,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onItemPickup(ItemPickupEvent event)
-	{
+	public boolean onItemPickup(ItemPickupEvent event) {
 		_log.log(Level.INFO, "Item (" + event.getItem().getName() + " has been pickup by (" + event.getPicker().getName() + " ) from: " + event.getLocation() + "!");
 		return true;
 	}
@@ -307,8 +290,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onHennaModify(HennaEvent event)
-	{
+	public boolean onHennaModify(HennaEvent event) {
 		_log.log(Level.INFO, "Henna Modify: player: " + event.getPlayer().getName() + " henna: " + event.getHenna().getDyeName() + " added: " + event.isAdd());
 		return true;
 	}
@@ -319,9 +301,8 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public void onItemTrackerEvent(L2Event event)
-	{
-		//_log.log(Level.INFO, "ItemTrackerEvent: " + event.getName() + " has been " + event + " owner: " + player + " target: " + target);
+	public void onItemTrackerEvent(L2Event event) {
+		// _log.log(Level.INFO, "ItemTrackerEvent: " + event.getName() + " has been " + event + " owner: " + player + " target: " + target);
 		// TODO: Fix it?
 	}
 	
@@ -331,8 +312,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onItemCreate(ItemCreateEvent event)
-	{
+	public boolean onItemCreate(ItemCreateEvent event) {
 		_log.log(Level.INFO, "ItemTrackerEvent: " + event.getItemId() + " has been created owner: " + event.getPlayer().getName());
 		return true;
 	}
@@ -343,8 +323,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onPlayerTransform(TransformEvent event)
-	{
+	public boolean onPlayerTransform(TransformEvent event) {
 		_log.log(Level.INFO, "Player (" + event.getTransformation().getPlayer() + ") has been transformed to " + event.getTransformation().toString() + " transform: " + event.isTransforming());
 		return true;
 	}
@@ -354,8 +333,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onAttack(AttackEvent event)
-	{
+	public boolean onAttack(AttackEvent event) {
 		_log.log(Level.INFO, event.getTarget() + " has been attacked by " + event.getAttacker());
 		return true;
 	}
@@ -366,14 +344,13 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onUseSkill(SkillUseEvent event)
-	{
+	public boolean onUseSkill(SkillUseEvent event) {
 		_log.log(Level.INFO, event.getTargets() + " has been used by " + event.getCaster());
 		return true;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Listeners(Listeners.class.getSimpleName(), "custom");
 	}
+	
 }

@@ -32,55 +32,46 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 /**
  * @author ZaKaX - nBd
  */
-public class Hide extends L2Effect
-{
-	public Hide(Env env, EffectTemplate template)
-	{
+public class Hide extends L2Effect {
+	
+	public Hide(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
-	public Hide(Env env, L2Effect effect)
-	{
+	public Hide(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.HIDE;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() instanceof L2PcInstance)
-		{
+	public boolean onStart() {
+		if (getEffected() instanceof L2PcInstance) {
 			L2PcInstance activeChar = ((L2PcInstance) getEffected());
 			activeChar.getAppearance().setInvisible();
 			activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
 			
-			if (activeChar.getAI().getNextIntention() != null
-					&& activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK)
+			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK)) {
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			}
 			
 			L2GameServerPacket del = new DeleteObject(activeChar);
-			for (L2Character target : activeChar.getKnownList().getKnownCharacters())
-			{
-				try
-				{
-					if (target.getTarget() == activeChar)
-					{
+			for (L2Character target : activeChar.getKnownList().getKnownCharacters()) {
+				try {
+					if (target.getTarget() == activeChar) {
 						target.setTarget(null);
 						target.abortAttack();
 						target.abortCast();
 						target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					}
 					
-					if (target instanceof L2PcInstance)
+					if (target instanceof L2PcInstance) {
 						target.sendPacket(del);
-				}
-				catch (NullPointerException e)
-				{
+					}
+				} catch (NullPointerException e) {
 				}
 			}
 		}
@@ -88,20 +79,19 @@ public class Hide extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
-		if (getEffected() instanceof L2PcInstance)
-		{
+	public void onExit() {
+		if (getEffected() instanceof L2PcInstance) {
 			L2PcInstance activeChar = ((L2PcInstance) getEffected());
-			if (!activeChar.inObserverMode())
+			if (!activeChar.inObserverMode()) {
 				activeChar.getAppearance().setVisible();
+			}
 			activeChar.stopAbnormalEffect(AbnormalEffect.STEALTH);
 		}
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

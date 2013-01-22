@@ -24,28 +24,25 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
 
-public class ReleaseAttribute implements IBypassHandler
-{
+public class ReleaseAttribute implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"ReleaseAttribute"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
-		
 		activeChar.sendPacket(new ExShowBaseAttributeCancelWindow(activeChar));
 		return true;
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

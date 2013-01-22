@@ -21,6 +21,7 @@ package handlers.bypasshandlers;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -28,67 +29,57 @@ import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class RentPet implements IBypassHandler
-{
+public class RentPet implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"RentPet"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2MerchantInstance))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2MerchantInstance)) {
 			return false;
 		}
 		
-		if (!Config.ALLOW_RENTPET)
-		{
+		if (!Config.ALLOW_RENTPET) {
 			return false;
 		}
 		
-		if (!Config.LIST_PET_RENT_NPC.contains(((L2Npc) target).getTemplate().getNpcId()))
-		{
+		if (!Config.LIST_PET_RENT_NPC.contains(((L2Npc) target).getTemplate().getNpcId())) {
 			return false;
 		}
 		
-		try
-		{
+		try {
 			StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
 			
-			if (st.countTokens() < 1)
-			{
+			if (st.countTokens() < 1) {
 				NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
-				msg.setHtml("<html><body>"+ MessageTable.Messages[1029].getMessage() +"<br>"+ MessageTable.Messages[1030].getMessage() +"<br>"+ MessageTable.Messages[1031].getMessage() +"<br1>"+"<table border=0><tr><td>"+ MessageTable.Messages[1032].getMessage() +"</td></tr>"+"<tr><td>"+ MessageTable.Messages[1033].getMessage() +"</td><td>"+ MessageTable.Messages[1034].getMessage() +"</td></tr>"+"<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 1\">"+ MessageTable.Messages[1035].getMessage() +"</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 11\">"+ MessageTable.Messages[1036].getMessage() +"</a></td></tr>"+"<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 2\">"+ MessageTable.Messages[1037].getMessage() +"</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 12\">"+ MessageTable.Messages[1038].getMessage() +"</a></td></tr>" + "<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 3\">"+ MessageTable.Messages[1039].getMessage() +"</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 13\">"+ MessageTable.Messages[1040].getMessage() +"</a></td></tr>"+"<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 4\">"+ MessageTable.Messages[1041].getMessage() +"</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 14\">"+ MessageTable.Messages[1042].getMessage() +"</a></td></tr>"+"</table>"+"</body></html>");
+				msg.setHtml("<html><body>" + MessageTable.Messages[1029].getMessage() + "<br>" + MessageTable.Messages[1030].getMessage() + "<br>" + MessageTable.Messages[1031].getMessage() + "<br1>" + "<table border=0><tr><td>" + MessageTable.Messages[1032].getMessage() + "</td></tr>" + "<tr><td>" + MessageTable.Messages[1033].getMessage() + "</td><td>" + MessageTable.Messages[1034].getMessage() + "</td></tr>" + "<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 1\">" + MessageTable.Messages[1035].getMessage() + "</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 11\">" + MessageTable.Messages[1036].getMessage() + "</a></td></tr>" + "<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 2\">" + MessageTable.Messages[1037].getMessage() + "</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 12\">" + MessageTable.Messages[1038].getMessage() + "</a></td></tr>" + "<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 3\">" + MessageTable.Messages[1039].getMessage() + "</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 13\">" + MessageTable.Messages[1040].getMessage() + "</a></td></tr>" + "<tr><td><a action=\"bypass -h npc_%objectId%_RentPet 4\">" + MessageTable.Messages[1041].getMessage() + "</a></td><td><a action=\"bypass -h npc_%objectId%_RentPet 14\">" + MessageTable.Messages[1042].getMessage() + "</a></td></tr>" + "</table>" + "</body></html>");
 				msg.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
 				activeChar.sendPacket(msg);
-			}
-			else
-			{
+			} else {
 				tryRentPet(activeChar, Integer.parseInt(st.nextToken()));
 			}
 			
 			return true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.info("Exception in " + getClass().getSimpleName());
 		}
 		return false;
 	}
 	
-	public static final void tryRentPet(L2PcInstance player, int val)
-	{
-		if ((player == null) || (player.getPet() != null) || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
-		{
+	/**
+	 * @param player
+	 * @param val
+	 */
+	public static final void tryRentPet(L2PcInstance player, int val) {
+		if ((player == null) || (player.getPet() != null) || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped()) {
 			return;
 		}
-		if (!player.disarmWeapons())
-		{
+		if (!player.disarmWeapons()) {
 			return;
 		}
 		
@@ -96,34 +87,35 @@ public class RentPet implements IBypassHandler
 		double price = 1;
 		int cost[] =
 		{
-			1800, 7200, 720000, 6480000
+			1800,
+			7200,
+			720000,
+			6480000
 		};
 		int ridetime[] =
 		{
-			30, 60, 600, 1800
+			30,
+			60,
+			600,
+			1800
 		};
 		
-		if (val > 10)
-		{
+		if (val > 10) {
 			petId = 12526;
 			val -= 10;
 			price /= 2;
-		}
-		else
-		{
+		} else {
 			petId = 12621;
 		}
 		
-		if ((val < 1) || (val > 4))
-		{
+		if ((val < 1) || (val > 4)) {
 			return;
 		}
 		
 		price *= cost[val - 1];
 		int time = ridetime[val - 1];
 		
-		if (!player.reduceAdena("Rent", (long) price, player.getLastFolkNPC(), true))
-		{
+		if (!player.reduceAdena("Rent", (long) price, player.getLastFolkNPC(), true)) {
 			return;
 		}
 		
@@ -134,8 +126,8 @@ public class RentPet implements IBypassHandler
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

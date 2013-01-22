@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class KillTheWarriors extends TerritoryWarSuperClass
-{
+public class KillTheWarriors extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "735_Makespearsdull";
 	public static int qnu = 735;
 	public static String qna = "Make spears dull";
 	
-	public KillTheWarriors()
-	{
+	public KillTheWarriors() {
 		super(qnu, qn1, qna);
 		CLASS_IDS = new int[]
 		{
@@ -81,4 +80,5 @@ public class KillTheWarriors extends TerritoryWarSuperClass
 			NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK
 		};
 	}
+	
 }

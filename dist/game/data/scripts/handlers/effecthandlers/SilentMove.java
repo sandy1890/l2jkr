@@ -26,58 +26,52 @@ import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class SilentMove extends L2Effect
-{
-	public SilentMove(Env env, EffectTemplate template)
-	{
+public class SilentMove extends L2Effect {
+	
+	public SilentMove(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	// Special constructor to steal this effect
-	public SilentMove(Env env, L2Effect effect)
-	{
+	public SilentMove(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
-	{
+	protected boolean effectCanBeStolen() {
 		return true;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		super.onStart();
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		super.onExit();
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.SILENT_MOVE;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// Only cont skills shouldn't end
-		if (getSkill().getSkillType() != L2SkillType.CONT)
+		if (getSkill().getSkillType() != L2SkillType.CONT) {
 			return false;
+		}
 		
-		if (getEffected().isDead())
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		double manaDam = calc();
 		
-		if (manaDam > getEffected().getCurrentMp())
-		{
+		if (manaDam > getEffected().getCurrentMp()) {
 			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
@@ -87,8 +81,8 @@ public class SilentMove extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_SILENT_MOVE;
 	}
+	
 }

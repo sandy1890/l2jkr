@@ -25,113 +25,84 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * @author Plim
- * Update by pmq High Five 06-10-2011
+ * @author Plim Update by pmq High Five 06-10-2011
  */
 
-public class Q192_SevenSignSeriesOfDoubt extends Quest
-{
+public class Q192_SevenSignSeriesOfDoubt extends Quest {
+	
 	private static final String qn = "192_SevenSignSeriesOfDoubt";
 	
-	//NPCs
+	// NPCs
 	private static final int CROOP = 30676;
 	private static final int HECTOR = 30197;
 	private static final int STAN = 30200;
 	private static final int CORPSE = 32568;
 	private static final int HOLLINT = 30191;
 	
-	//ITEMS
+	// ITEMS
 	private static final int CROOP_INTRO = 13813;
 	private static final int JACOB_NECK = 13814;
 	private static final int CROOP_LETTER = 13815;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
+		if (st == null) {
 			return htmltext;
+		}
 		
-		if (npc.getNpcId() == CROOP)
-		{
-			if (event.equalsIgnoreCase("30676-03.htm"))
-			{
+		if (npc.getNpcId() == CROOP) {
+			if (event.equalsIgnoreCase("30676-03.htm")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-			}
-			
-			else if (event.equals("8"))
-			{
+			} else if (event.equals("8")) {
 				st.set("cond", "2");
 				st.playSound("ItemSound.quest_middle");
 				player.showQuestMovie(8);
 				startQuestTimer("playertele", 32000, npc, player);
 				return "";
-			}
-			
-			else if (event.equalsIgnoreCase("playertele"))
-			{
-				player.teleToLocation(81654,54848,-1514);
+			} else if (event.equalsIgnoreCase("playertele")) {
+				player.teleToLocation(81654, 54848, -1514);
 				return "";
-			}
-			
-			else if (event.equalsIgnoreCase("30676-12.htm"))
-			{
+			} else if (event.equalsIgnoreCase("30676-12.htm")) {
 				st.set("cond", "7");
 				st.takeItems(JACOB_NECK, 1);
 				st.giveItems(CROOP_LETTER, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == HECTOR)
-		{
-			if (event.equalsIgnoreCase("30197-03.htm"))
-			{
+		} else if (npc.getNpcId() == HECTOR) {
+			if (event.equalsIgnoreCase("30197-03.htm")) {
 				st.set("cond", "4");
 				st.takeItems(CROOP_INTRO, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == STAN)
-		{
-			if (event.equalsIgnoreCase("30200-04.htm"))
-			{
+		} else if (npc.getNpcId() == STAN) {
+			if (event.equalsIgnoreCase("30200-04.htm")) {
 				st.set("cond", "5");
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == CORPSE)
-		{
-			if (event.equalsIgnoreCase("32568-02.htm"))
-			{
+		} else if (npc.getNpcId() == CORPSE) {
+			if (event.equalsIgnoreCase("32568-02.htm")) {
 				st.set("cond", "6");
 				st.giveItems(JACOB_NECK, 1);
 				st.playSound("ItemSound.quest_middle");
 			}
-		}
-		
-		else if (npc.getNpcId() == HOLLINT)
-		{
-			if (event.equalsIgnoreCase("30191-03.htm"))
-			{
-				if (st.getQuestItemsCount(CROOP_LETTER) >= 1 && player.getLevel() >= 79)
-				{
+		} else if (npc.getNpcId() == HOLLINT) {
+			if (event.equalsIgnoreCase("30191-03.htm")) {
+				if ((st.getQuestItemsCount(CROOP_LETTER) >= 1) && (player.getLevel() >= 79)) {
 					st.addExpAndSp(25000000, 2500000);
 					st.takeItems(CROOP_LETTER, 1);
 					st.unset("cond");
 					st.setState(State.COMPLETED);
 					st.exitQuest(false);
 					st.playSound("ItemSound.quest_finish");
-				}
-				else if(st.getQuestItemsCount(CROOP_LETTER) >= 1 && player.getLevel() < 79)
+				} else if ((st.getQuestItemsCount(CROOP_LETTER) >= 1) && (player.getLevel() < 79)) {
 					htmltext = "30191-00.htm";
-					
+				}
+				
 			}
 		}
 		
@@ -139,92 +110,74 @@ public class Q192_SevenSignSeriesOfDoubt extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
 		
-		if (st == null)
+		if (st == null) {
 			return htmltext;
+		}
 		
-		if (npc.getNpcId() == CROOP)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == CROOP) {
+			switch (st.getState()) {
 				case State.CREATED:
-					if (st.getState() == State.CREATED && player.getLevel() >= 79)
+					if ((st.getState() == State.CREATED) && (player.getLevel() >= 79)) {
 						htmltext = "30676-01.htm";
-					else
-					{
+					} else {
 						htmltext = "30676-00.htm";
 						st.exitQuest(true);
 					}
-					break;
+				break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.getInt("cond") == 1) {
 						htmltext = "30676-04.htm";
-					else if (st.getInt("cond") == 2)
-					{
+					} else if (st.getInt("cond") == 2) {
 						htmltext = "30676-05.htm";
 						st.set("cond", "3");
 						st.playSound("ItemSound.quest_middle");
 						st.giveItems(CROOP_INTRO, 1);
-					}
-					else if (st.getInt("cond") >= 3 && st.getInt("cond") <= 5)
+					} else if ((st.getInt("cond") >= 3) && (st.getInt("cond") <= 5)) {
 						htmltext = "30676-06.htm";
-					else if (st.getInt("cond") == 6)
+					} else if (st.getInt("cond") == 6) {
 						htmltext = "30676-07.htm";
-					break;
+					}
+				break;
 				case State.COMPLETED:
 					htmltext = "30676-13.htm";
 			}
-		}
-		
-		else if (npc.getNpcId() == HECTOR)
-		{
-			if (st.getState() == State.STARTED)
-			{
-				if (st.getInt("cond") == 3)
+		} else if (npc.getNpcId() == HECTOR) {
+			if (st.getState() == State.STARTED) {
+				if (st.getInt("cond") == 3) {
 					htmltext = "30197-01.htm";
-				else if (st.getInt("cond") >= 4 && st.getInt("cond") <= 7)
+				} else if ((st.getInt("cond") >= 4) && (st.getInt("cond") <= 7)) {
 					htmltext = "30197-04.htm";
+				}
 			}
-		}
-		
-		else if (npc.getNpcId() == STAN)
-		{
-			if (st.getInt("cond") == 4)
+		} else if (npc.getNpcId() == STAN) {
+			if (st.getInt("cond") == 4) {
 				htmltext = "30200-01.htm";
-			else if (st.getInt("cond") >= 5 && st.getInt("cond") <= 7)
+			} else if ((st.getInt("cond") >= 5) && (st.getInt("cond") <= 7)) {
 				htmltext = "30200-05.htm";
-		}
-		
-		else if (npc.getNpcId() == CORPSE)
-		{
-			if (st.getInt("cond") == 0)
-			{
+			}
+		} else if (npc.getNpcId() == CORPSE) {
+			if (st.getInt("cond") == 0) {
 				htmltext = "32568-04.htm";
 				st.exitQuest(true);
-			}
-			else if (st.getInt("cond") >= 1 && st.getInt("cond") <= 4)
+			} else if ((st.getInt("cond") >= 1) && (st.getInt("cond") <= 4)) {
 				htmltext = "32568-03.htm";
-			else if (st.getInt("cond") == 5)
+			} else if (st.getInt("cond") == 5) {
 				htmltext = "32568-01.htm";
-		}
-		
-		else if (npc.getNpcId() == HOLLINT)
-		{
-			if (st.getInt("cond") == 7)
+			}
+		} else if (npc.getNpcId() == HOLLINT) {
+			if (st.getInt("cond") == 7) {
 				htmltext = "30191-01.htm";
+			}
 		}
-		
 		return htmltext;
 	}
 	
-	public Q192_SevenSignSeriesOfDoubt(int questId, String name, String descr)
-	{
+	public Q192_SevenSignSeriesOfDoubt(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(CROOP);
 		addStartNpc(CORPSE);
 		addTalkId(CROOP);
@@ -232,13 +185,16 @@ public class Q192_SevenSignSeriesOfDoubt extends Quest
 		addTalkId(STAN);
 		addTalkId(CORPSE);
 		addTalkId(HOLLINT);
-		
 		questItemIds = new int[]
-		{ CROOP_INTRO, JACOB_NECK, CROOP_LETTER };
+		{
+			CROOP_INTRO,
+			JACOB_NECK,
+			CROOP_LETTER
+		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q192_SevenSignSeriesOfDoubt(192, qn, "Seven Sign Series of Doubt");
 	}
+	
 }

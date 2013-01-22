@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author centrio, Zoey76
  */
-public class Q458_PerfectForm extends Quest
-{
+public class Q458_PerfectForm extends Quest {
+	
 	private static final String qn = "458_PerfectForm";
 	
 	// NPCs
@@ -108,13 +108,10 @@ public class Q458_PerfectForm extends Quest
 		new ItemHolder(10381, 1)
 	};
 	
-	public Q458_PerfectForm(int questId, String name, String descr)
-	{
+	public Q458_PerfectForm(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(_Kelleyia);
 		addTalkId(_Kelleyia);
-		
 		addKillId(_mobs1);
 		addKillId(_mobs2);
 		addKillId(_mobs3);
@@ -122,56 +119,38 @@ public class Q458_PerfectForm extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _Kelleyia)
-		{
+		if (npc.getNpcId() == _Kelleyia) {
 			final int overHits = st.getInt("overHits");
-			if (event.equalsIgnoreCase("32768-12.html"))
-			{
+			if (event.equalsIgnoreCase("32768-12.html")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-			}
-			else if (event.equalsIgnoreCase("32768-16.html"))
-			{
-				if ((overHits >= 0) && (overHits <= 6))
-				{
+			} else if (event.equalsIgnoreCase("32768-16.html")) {
+				if ((overHits >= 0) && (overHits <= 6)) {
 					htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32768-16c.html");
 					htmltext = htmltext.replace("%overhits%", "" + overHits);
-				}
-				else if ((overHits >= 7) && (overHits <= 19))
-				{
+				} else if ((overHits >= 7) && (overHits <= 19)) {
 					htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32768-16b.html");
 					htmltext = htmltext.replace("%overhits%", "" + overHits);
-				}
-				else if (overHits >= 20)
-				{
+				} else if (overHits >= 20) {
 					htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32768-16a.html");
 					htmltext = htmltext.replace("%overhits%", "" + overHits);
 				}
-			}
-			else if (event.equalsIgnoreCase("32768-17.html"))
-			{
-				if ((overHits >= 0) && (overHits <= 6))
-				{
+			} else if (event.equalsIgnoreCase("32768-17.html")) {
+				if ((overHits >= 0) && (overHits <= 6)) {
 					final int rnd = getRandom(_rewards1.length);
 					st.giveItems(_rewards1[rnd].getId(), _rewards1[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
-				}
-				else if ((overHits >= 7) && (overHits <= 19))
-				{
+				} else if ((overHits >= 7) && (overHits <= 19)) {
 					final int rnd = getRandom(_rewards2.length);
 					st.giveItems(_rewards2[rnd].getId(), _rewards2[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
-				}
-				else if (overHits >= 20)
-				{
+				} else if (overHits >= 20) {
 					final int rnd = getRandom(_rewards3.length);
 					st.giveItems(_rewards3[rnd].getId(), _rewards3[rnd].getCount() * (long) Config.RATE_QUEST_REWARD);
 				}
@@ -186,80 +165,60 @@ public class Q458_PerfectForm extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _Kelleyia)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == _Kelleyia) {
+			switch (st.getState()) {
 				case State.CREATED:
 					htmltext = (player.getLevel() >= 82) ? "32768-01.htm" : "32768-03.html";
-					break;
+				break;
 				case State.STARTED:
 					final int cond = st.getInt("cond");
-					if (cond == 1)
-					{
-						if ((st.getInt("mobs1") == 0) && (st.getInt("mobs2") == 0) && (st.getInt("mobs3") == 0) && (st.getInt("mobs4") == 0))
-						{
+					if (cond == 1) {
+						if ((st.getInt("mobs1") == 0) && (st.getInt("mobs2") == 0) && (st.getInt("mobs3") == 0) && (st.getInt("mobs4") == 0)) {
 							htmltext = "32768-13.html";
-						}
-						else
-						{
+						} else {
 							htmltext = "32768-14.html";
 						}
-					}
-					else if (cond == 2)
-					{
+					} else if (cond == 2) {
 						htmltext = "32768-15.html";
 					}
-					break;
+				break;
 				case State.COMPLETED:
-					if (st.isNowAvailable())
-					{
+					if (st.isNowAvailable()) {
 						st.setState(State.CREATED); // Not required, but it'll set the proper state.
 						htmltext = (player.getLevel() >= 82) ? "32768-01.htm" : "32768-03.html";
-					}
-					else
-					{
+					} else {
 						htmltext = "32768-02.html";
 					}
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
-		if (st.getInt("cond") == 1)
-		{
+		if (st.getInt("cond") == 1) {
 			final int npcId = npc.getNpcId();
-			for (int m = 0; m < _mobs.length; m++)
-			{
-				if (Util.contains(_mobs[m], npcId))
-				{
+			for (int m = 0; m < _mobs.length; m++) {
+				if (Util.contains(_mobs[m], npcId)) {
 					st.set("mobs" + (m + 1), String.valueOf(st.getInt("mobs" + (m + 1)) + 1));
-					if (((L2Attackable) npc).isOverhit())
-					{
+					if (((L2Attackable) npc).isOverhit()) {
 						st.set("overHits", String.valueOf(st.getInt("overHits") + 1));
 					}
 					
-					if ((st.getInt("mobs1") >= 10) && (st.getInt("mobs2") >= 10) && (st.getInt("mobs3") >= 10) && (st.getInt("mobs4") >= 10))
-					{
+					if ((st.getInt("mobs1") >= 10) && (st.getInt("mobs2") >= 10) && (st.getInt("mobs3") >= 10) && (st.getInt("mobs4") >= 10)) {
 						st.set("cond", "2");
 					}
 					break;
@@ -269,8 +228,8 @@ public class Q458_PerfectForm extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q458_PerfectForm(458, qn, "Perfect Form");
 	}
+	
 }

@@ -31,8 +31,8 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  * Original Jython script by Kerberos v1.0 on 2009/04/25
  * @author nonom
  */
-public class Q10273_GoodDayToFly extends Quest
-{
+public class Q10273_GoodDayToFly extends Quest {
+	
 	private static final String qn = "10273_GoodDayToFly";
 	
 	// NPCs
@@ -52,121 +52,97 @@ public class Q10273_GoodDayToFly extends Quest
 	private static final L2Skill AuraBirdOwl = SkillTable.getInstance().getInfo(5983, 1);
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int transform = st.getInt("transform");
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = "32557-0a.htm";
-				break;
+			break;
 			case State.CREATED:
 				htmltext = (player.getLevel() < 75) ? "32557-00.htm" : "32557-01.htm";
-				break;
+			break;
 			default:
-				if (st.getQuestItemsCount(MARK) >= 5)
-				{
+				if (st.getQuestItemsCount(MARK) >= 5) {
 					htmltext = "32557-14.htm";
-					if (transform == 1)
-					{
+					if (transform == 1) {
 						st.giveItems(13553, 1);
-					}
-					else if (transform == 2)
-					{
+					} else if (transform == 2) {
 						st.giveItems(13554, 1);
 					}
 					st.giveItems(13857, 1);
 					st.addExpAndSp(25160, 2525);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
-				}
-				else if (transform == 0)
-				{
+				} else if (transform == 0) {
 					htmltext = "32557-07.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "32557-11.htm";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 			case "32557-06.htm":
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "32557-09.htm":
 				st.set("transform", "1");
 				AuraBirdFalcon.getEffects(player, player);
-				break;
+			break;
 			case "32557-10.htm":
 				st.set("transform", "2");
 				AuraBirdOwl.getEffects(player, player);
-				break;
+			break;
 			case "32557-13.htm":
-				if (st.getInt("transform") == 1)
-				{
+				if (st.getInt("transform") == 1) {
 					AuraBirdFalcon.getEffects(player, player);
-				}
-				else if (st.getInt("transform") == 2)
-				{
+				} else if (st.getInt("transform") == 2) {
 					AuraBirdOwl.getEffects(player, player);
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		final QuestState st = killer.getQuestState(qn);
-		if ((st == null) || !st.isStarted())
-		{
+		if ((st == null) || !st.isStarted()) {
 			return null;
 		}
 		
 		final long count = st.getQuestItemsCount(MARK);
-		if ((st.getInt("cond") == 1) && (count < 5))
-		{
+		if ((st.getInt("cond") == 1) && (count < 5)) {
 			st.giveItems(MARK, 1);
-			if (count == 4)
-			{
+			if (count == 4) {
 				st.playSound("ItemSound.quest_middle");
 				st.set("cond", "2");
-			}
-			else
-			{
+			} else {
 				st.playSound("ItemSound.quest_itemget");
 			}
 		}
 		return null;
 	}
 	
-	public Q10273_GoodDayToFly(int questId, String name, String descr)
-	{
+	public Q10273_GoodDayToFly(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
@@ -178,8 +154,8 @@ public class Q10273_GoodDayToFly extends Quest
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10273_GoodDayToFly(10273, qn, "Good Day to Fly");
 	}
+	
 }

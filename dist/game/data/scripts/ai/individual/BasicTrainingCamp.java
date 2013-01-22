@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.util.Rnd;
 
-public class BasicTrainingCamp extends L2AttackableAIScript
-{
+public class BasicTrainingCamp extends L2AttackableAIScript {
+	
 	private static final int drillsergeantId = 33007;
 	private static final int studentId = 33018;
 	private static final int soldierId = 33201;
@@ -42,162 +42,123 @@ public class BasicTrainingCamp extends L2AttackableAIScript
 	private final List<L2Npc> _students = new ArrayList<>();
 	private final List<L2Npc> _soldiers = new ArrayList<>();
 	
-	public BasicTrainingCamp(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public BasicTrainingCamp(int questId, String name, String descr) {
 		super(questId, name, descr);
 		findNpcs();
-		if (_drillsergeant.isEmpty() || _students.isEmpty() || _soldiers.isEmpty())
+		if (_drillsergeant.isEmpty() || _students.isEmpty() || _soldiers.isEmpty()) {
 			throw new NullPointerException("Cannot find npcs!");
+		}
 		startQuestTimer("basic_0", 60000, null, null);
 		startQuestTimer("training", 60000, null, null);
 	}
 	
-	public void findNpcs()
-	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-			if (spawn != null)
-				if (spawn.getNpcid() == drillsergeantId)
+	public void findNpcs() {
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable()) {
+			if (spawn != null) {
+				if (spawn.getNpcid() == drillsergeantId) {
 					_drillsergeant.add(spawn.getLastSpawn());
-				else if (spawn.getNpcid() == studentId)
+				} else if (spawn.getNpcid() == studentId) {
 					_students.add(spawn.getLastSpawn());
-				else if (spawn.getNpcid() == soldierId)
+				} else if (spawn.getNpcid() == soldierId) {
 					_soldiers.add(spawn.getLastSpawn());
+				}
+			}
+		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.startsWith("basic_0"))
-		{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.startsWith("basic_0")) {
 			int value = Rnd.get(85);
-			if (_wrong == 1)
-			{
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+			if (_wrong == 1) {
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(1);
 					_wrong = 0;
 				}
 				startQuestTimer("basic_0", 5800, null, null);
-			}
-			else if (value == 2)
-			{
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+			} else if (value == 2) {
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(2);
 				}
 				startQuestTimer("basic_0", 5800, null, null);
-			}
-			else if (value == 3)
-			{
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+			} else if (value == 3) {
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(3);
 				}
 				startQuestTimer("basic_0", 6200, null, null);
-			}
-			else if (value == 7)
-			{
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+			} else if (value == 7) {
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(7);
 				}
 				startQuestTimer("basic_0", 5800, null, null);
-			}
-			else if (value < 10)
-			{
+			} else if (value < 10) {
 				_social = 6;
 				_wait = 6100;
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(_social);
 				}
 				startQuestTimer("student_0", _wait, null, null);
-			}
-			else if (value < 40)
-			{
+			} else if (value < 40) {
 				_social = 5;
 				_wait = 2500;
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(_social);
 				}
 				startQuestTimer("student_0", _wait, null, null);
-			}
-			else if (value < 55)
-			{
+			} else if (value < 55) {
 				_social = 8;
 				_wait = 3200;
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(_social);
 				}
 				startQuestTimer("student_0", _wait, null, null);
-			}
-			else if (value < 70)
-			{
+			} else if (value < 70) {
 				_social = 9;
 				_wait = 4400;
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(_social);
 				}
 				startQuestTimer("student_0", _wait, null, null);
-			}
-			else if (value < 85)
-			{
+			} else if (value < 85) {
 				_social = 10;
 				_wait = 3100;
-				for (L2Npc drillsergeant : _drillsergeant)
-				{
+				for (L2Npc drillsergeant : _drillsergeant) {
 					drillsergeant.broadcastSocialAction(_social);
 				}
 				startQuestTimer("student_0", _wait, null, null);
-			}
-			else
-			{
+			} else {
 				startQuestTimer("basic_0", 3000, null, null);
 			}
-		}
-		else if (event.startsWith("student_0"))
-		{
+		} else if (event.startsWith("student_0")) {
 			int value = Rnd.get(200);
-			if (value == 1)
-			{
-				for (L2Npc student : _students)
-				{
-					student.broadcastSocialAction(Rnd.get(8,10));
+			if (value == 1) {
+				for (L2Npc student : _students) {
+					student.broadcastSocialAction(Rnd.get(8, 10));
 					_wrong = 1;
 				}
 				startQuestTimer("basic_0", 4000, null, null);
-			}
-			else
-			{
-				for (L2Npc student : _students)
-				{
+			} else {
+				for (L2Npc student : _students) {
 					student.broadcastSocialAction(_social);
 				}
-				startQuestTimer("basic_0", _wait+500, null, null);
+				startQuestTimer("basic_0", _wait + 500, null, null);
 			}
-		}
-		else if (event.startsWith("training"))
-		{
+		} else if (event.startsWith("training")) {
 			int value = Rnd.get(200);
-			if (value == 0)
-			{
+			if (value == 0) {
 				startQuestTimer("training", 2000, null, null);
-			}
-			else if (value == 1)
-			{
-				for (L2Npc soldier : _soldiers)
-				{
+			} else if (value == 1) {
+				for (L2Npc soldier : _soldiers) {
 					soldier.broadcastSocialAction(2);
 				}
 				startQuestTimer("training", 5700, null, null);
-			}
-			else
-			{
-				for (L2Npc soldier : _soldiers)
-				{
+			} else {
+				for (L2Npc soldier : _soldiers) {
 					soldier.broadcastSocialAction(5);
 				}
 				startQuestTimer("training", 1800, null, null);
@@ -206,8 +167,11 @@ public class BasicTrainingCamp extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new BasicTrainingCamp(-1, "BasicTrainingCamp", "ai");
 	}
+	
 }

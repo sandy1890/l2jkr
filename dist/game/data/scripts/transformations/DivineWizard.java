@@ -22,32 +22,34 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class DivineWizard extends L2Transformation
-{
+public class DivineWizard extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		692, 693, 694, 695, 696, 697, 5491, 619
+		692,
+		693,
+		694,
+		695,
+		696,
+		697,
+		5491,
+		619
 	};
 	
-	public DivineWizard()
-	{
+	public DivineWizard() {
 		// id, colRadius, colHeight
 		super(256, 10, 26);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 256) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 256) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Divine Wizard Holy Flare
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(692, 1), false);
 		// Divine Wizard Holy Strike
@@ -69,13 +71,11 @@ public class DivineWizard extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Divine Wizard Holy Flare
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(692, 1), false);
 		// Divine Wizard Holy Strike
@@ -96,8 +96,7 @@ public class DivineWizard extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new DivineWizard());
 	}
 }

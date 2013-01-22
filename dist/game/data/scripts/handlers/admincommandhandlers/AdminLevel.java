@@ -21,15 +21,15 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.datatables.ExperienceTable;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class AdminLevel implements IAdminCommandHandler
-{
+public class AdminLevel implements IAdminCommandHandler {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_add_level",
@@ -37,64 +37,47 @@ public class AdminLevel implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
 		L2Object targetChar = activeChar.getTarget();
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken(); // Get actual command
 		
 		String val = "";
-		if (st.countTokens() >= 1)
-		{
+		if (st.countTokens() >= 1) {
 			val = st.nextToken();
 		}
 		
-		if (actualCommand.equalsIgnoreCase("admin_add_level"))
-		{
-			try
-			{
-				if (targetChar instanceof L2Playable)
+		if (actualCommand.equalsIgnoreCase("admin_add_level")) {
+			try {
+				if (targetChar instanceof L2Playable) {
 					((L2Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
-			}
-			catch (NumberFormatException e)
-			{
+				}
+			} catch (NumberFormatException e) {
 				activeChar.sendMessage("Wrong Number Format");
 			}
-		}
-		else if (actualCommand.equalsIgnoreCase("admin_set_level"))
-		{
-			try
-			{
-				if (!(targetChar instanceof L2PcInstance))
-				{
+		} else if (actualCommand.equalsIgnoreCase("admin_set_level")) {
+			try {
+				if (!(targetChar instanceof L2PcInstance)) {
 					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT); // incorrect target!
 					return false;
 				}
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
 				
 				byte lvl = Byte.parseByte(val);
-				if (lvl >= 1 && lvl <= ExperienceTable.getInstance().getMaxLevel())
-				{
+				if ((lvl >= 1) && (lvl <= ExperienceTable.getInstance().getMaxLevel())) {
 					long pXp = targetPlayer.getExp();
 					long tXp = ExperienceTable.getInstance().getExpForLevel(lvl);
 					
-					if (pXp > tXp)
-					{
+					if (pXp > tXp) {
 						targetPlayer.removeExpAndSp(pXp - tXp, 0);
-					}
-					else if (pXp < tXp)
-					{
+					} else if (pXp < tXp) {
 						targetPlayer.addExpAndSp(tXp - pXp, 0);
 					}
-				}
-				else
-				{
+				} else {
 					activeChar.sendMessage(MessageTable.Messages[1728].getExtra(1) + ExperienceTable.getInstance().getMaxLevel() + MessageTable.Messages[1728].getExtra(2));
 					return false;
 				}
-			}
-			catch (NumberFormatException e)
-			{
+			} catch (NumberFormatException e) {
 				activeChar.sendMessage("You must specify level between 1 and " + ExperienceTable.getInstance().getMaxLevel() + ".");
 				return false;
 			}
@@ -103,8 +86,8 @@ public class AdminLevel implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
+	
 }

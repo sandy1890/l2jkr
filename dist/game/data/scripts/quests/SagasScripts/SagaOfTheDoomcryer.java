@@ -22,14 +22,13 @@ package quests.SagasScripts;
  * @author Emperorc
  */
 
-public class SagaOfTheDoomcryer extends SagasSuperClass
-{
+public class SagaOfTheDoomcryer extends SagasSuperClass {
+	
 	public static String qn1 = "78_SagaOfTheDoomcryer";
 	public static int qnu = 78;
 	public static String qna = "Saga of the Doomcryer";
 	
-	public SagaOfTheDoomcryer()
-	{
+	public SagaOfTheDoomcryer() {
 		super(qnu, qn1, qna);
 		NPC = new int[]
 		{
@@ -117,4 +116,5 @@ public class SagaOfTheDoomcryer extends SagasSuperClass
 		};
 		registerNPCs();
 	}
+	
 }

@@ -28,32 +28,29 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author UnAfraid
  */
-public class TargetPartyMember implements ITargetTypeHandler
-{
+public class TargetPartyMember implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
-		if (target == null)
-		{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
+		if (target == null) {
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
-		if (!target.isDead())
-		{
-			if ((target == activeChar) ||
-				(activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())) ||
-				(activeChar.isPlayer() && target.isSummon() && (activeChar.getPet() == target)) ||
-				(activeChar.isSummon() && target.isPlayer() && (activeChar == target.getPet())))
+		if (!target.isDead()) {
+			if ((target == activeChar) || (activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())) || (activeChar.isPlayer() && target.isSummon() && (activeChar.getPet() == target)) || (activeChar.isSummon() && target.isPlayer() && (activeChar == target.getPet())))
 			{
-				return new L2Character[] { target };
+				return new L2Character[]
+				{
+					target
+				};
 			}
 		}
 		return _emptyTargetList;
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_PARTY_MEMBER;
 	}
+	
 }

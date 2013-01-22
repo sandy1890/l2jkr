@@ -34,8 +34,8 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Zoey76
  */
-public final class SkillTransferValidator extends L2Script
-{
+public final class SkillTransferValidator extends L2Script {
+	
 	private static final String qn = "SkillTransfer";
 	
 	private static final ItemHolder[] PORMANDERS =
@@ -48,17 +48,14 @@ public final class SkillTransferValidator extends L2Script
 		new ItemHolder(15309, 4)
 	};
 	
-	public SkillTransferValidator(int id, String name, String descr)
-	{
+	public SkillTransferValidator(int id, String name, String descr) {
 		super(id, name, descr);
 		setOnEnterWorld(true);
 	}
 	
 	@Override
-	public String onEnterWorld(L2PcInstance player)
-	{
-		if (getTransferClassIndex(player) >= 0)
-		{
+	public String onEnterWorld(L2PcInstance player) {
+		if (getTransferClassIndex(player) >= 0) {
 			addProfessionChangeNotify(player);
 			startQuestTimer("givePormanders", 2000, null, player);
 		}
@@ -66,58 +63,44 @@ public final class SkillTransferValidator extends L2Script
 	}
 	
 	@Override
-	public void onProfessionChange(ProfessionChangeEvent event)
-	{
+	public void onProfessionChange(ProfessionChangeEvent event) {
 		startQuestTimer("givePormanders", 2000, null, event.getPlayer());
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equals("givePormanders"))
-		{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equals("givePormanders")) {
 			final int index = getTransferClassIndex(player);
-			if (index >= 0)
-			{
+			if (index >= 0) {
 				QuestState st = player.getQuestState(qn);
-				if (st == null)
-				{
+				if (st == null) {
 					st = newQuestState(player);
 				}
 				
 				final String name = qn + String.valueOf(player.getClassId().getId());
-				if (st.getInt(name) == 0)
-				{
+				if (st.getInt(name) == 0) {
 					st.setInternal(name, "1");
-					if (st.getGlobalQuestVar(name).isEmpty())
-					{
+					if (st.getGlobalQuestVar(name).isEmpty()) {
 						st.saveGlobalQuestVar(name, "1");
 						player.addItem(qn, PORMANDERS[index].getId(), PORMANDERS[index].getCount(), null, true);
 					}
 				}
 				
-				if (Config.SKILL_CHECK_ENABLE && (!player.isGM() || Config.SKILL_CHECK_GM))
-				{
+				if (Config.SKILL_CHECK_ENABLE && (!player.isGM() || Config.SKILL_CHECK_GM)) {
 					long count = PORMANDERS[index].getCount() - player.getInventory().getInventoryItemCount(PORMANDERS[index].getId(), -1, false);
-					for (L2Skill sk : player.getAllSkills())
-					{
-						for (L2SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values())
-						{
-							if (s.getSkillId() == sk.getId())
-							{
+					for (L2Skill sk : player.getAllSkills()) {
+						for (L2SkillLearn s : SkillTreesData.getInstance().getTransferSkillTree(player.getClassId()).values()) {
+							if (s.getSkillId() == sk.getId()) {
 								// Holy Weapon allowed for Shilien Saint/Inquisitor stance
-								if ((sk.getId() == 1043) && (index == 2) && player.isInStance())
-								{
+								if ((sk.getId() == 1043) && (index == 2) && player.isInStance()) {
 									continue;
 								}
 								
 								count--;
-								if (count < 0)
-								{
+								if (count < 0) {
 									final String className = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 									Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + className, 1);
-									if (Config.SKILL_CHECK_REMOVE)
-									{
+									if (Config.SKILL_CHECK_REMOVE) {
 										player.removeSkill(sk);
 									}
 								}
@@ -130,10 +113,8 @@ public final class SkillTransferValidator extends L2Script
 		return null;
 	}
 	
-	private int getTransferClassIndex(L2PcInstance player)
-	{
-		switch (player.getClassId().getId())
-		{
+	private int getTransferClassIndex(L2PcInstance player) {
+		switch (player.getClassId().getId()) {
 			case 97: // Cardinal
 				return 0;
 			case 105: // Eva's Saint
@@ -145,8 +126,8 @@ public final class SkillTransferValidator extends L2Script
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new SkillTransferValidator(-1, qn, "custom");
 	}
+	
 }

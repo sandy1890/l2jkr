@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
 /**
  * @author UnAfraid
  */
-public class Freight implements IBypassHandler
-{
+public class Freight implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"package_withdraw",
@@ -39,37 +39,25 @@ public class Freight implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
-		if (command.equalsIgnoreCase(COMMANDS[0]))
-		{
+		if (command.equalsIgnoreCase(COMMANDS[0])) {
 			PcFreight freight = activeChar.getFreight();
-			if (freight != null)
-			{
-				if (freight.getSize() > 0)
-				{
+			if (freight != null) {
+				if (freight.getSize() > 0) {
 					activeChar.setActiveWarehouse(freight);
 					activeChar.sendPacket(new WareHouseWithdrawalList(activeChar, WareHouseWithdrawalList.FREIGHT));
-				}
-				else
-				{
+				} else {
 					activeChar.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
 				}
 			}
-		}
-		else if (command.equalsIgnoreCase(COMMANDS[1]))
-		{
-			if (activeChar.getAccountChars().size() < 1)
-			{
+		} else if (command.equalsIgnoreCase(COMMANDS[1])) {
+			if (activeChar.getAccountChars().size() < 1) {
 				activeChar.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
-			}
-			else
-			{
+			} else {
 				activeChar.sendPacket(new PackageToList(activeChar.getAccountChars()));
 			}
 		}
@@ -77,8 +65,8 @@ public class Freight implements IBypassHandler
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

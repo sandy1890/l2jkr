@@ -28,30 +28,24 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author demonia
  */
-public class ImmobilePetBuff extends L2Effect
-{
+public class ImmobilePetBuff extends L2Effect {
+	
 	private L2Summon _pet;
 	
-	public ImmobilePetBuff(Env env, EffectTemplate template)
-	{
+	public ImmobilePetBuff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BUFF;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		_pet = null;
 		
-		if (getEffected() instanceof L2Summon
-				&& getEffector() instanceof L2PcInstance
-				&& ((L2Summon) getEffected()).getOwner() == getEffector())
-		{
+		if ((getEffected() instanceof L2Summon) && (getEffector() instanceof L2PcInstance) && (((L2Summon) getEffected()).getOwner() == getEffector())) {
 			_pet = (L2Summon) getEffected();
 			_pet.setIsImmobilized(true);
 			return true;
@@ -60,16 +54,16 @@ public class ImmobilePetBuff extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
-		if (_pet != null)
+	public void onExit() {
+		if (_pet != null) {
 			_pet.setIsImmobilized(false);
+		}
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
+	
 }

@@ -27,24 +27,20 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author Kerberos
  */
-public class Recovery extends L2Effect
-{
-	public Recovery(Env env, EffectTemplate template)
-	{
+public class Recovery extends L2Effect {
+	
+	public Recovery(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BUFF;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() instanceof L2PcInstance)
-		{
+	public boolean onStart() {
+		if (getEffected() instanceof L2PcInstance) {
 			((L2PcInstance) getEffected()).reduceDeathPenaltyBuffLevel();
 			return true;
 		}
@@ -52,13 +48,12 @@ public class Recovery extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

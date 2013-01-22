@@ -28,20 +28,19 @@ import com.l2jserver.gameserver.model.quest.Quest;
 /**
  * @author DS
  */
-public class OutpostCaptain extends Quest
-{
+public class OutpostCaptain extends Quest {
+	
 	private static final int CAPTAIN = 18466;
 	private static final int[] DEFENDERS =
 	{
-		22357, 22358
+		22357,
+		22358
 	};
 	private static final int DOORKEEPER = 32351;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("level_up"))
-		{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("level_up")) {
 			npc.deleteMe();
 			HellboundManager.getInstance().setLevel(9);
 		}
@@ -49,10 +48,8 @@ public class OutpostCaptain extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (HellboundManager.getInstance().getLevel() == 8)
-		{
+	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
+		if (HellboundManager.getInstance().getLevel() == 8) {
 			addSpawn(DOORKEEPER, npc.getSpawn().getSpawnLocation(), false, 0, false);
 		}
 		
@@ -60,41 +57,41 @@ public class OutpostCaptain extends Quest
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
+	public final String onSpawn(L2Npc npc) {
 		npc.setIsNoRndWalk(true);
 		
-		if (npc.getNpcId() == CAPTAIN)
-		{
+		if (npc.getNpcId() == CAPTAIN) {
 			L2DoorInstance door = DoorTable.getInstance().getDoor(20250001);
-			if (door != null)
-			{
+			if (door != null) {
 				door.closeMe();
 			}
-		}
-		else if (npc.getNpcId() == DOORKEEPER)
-		{
+		} else if (npc.getNpcId() == DOORKEEPER) {
 			startQuestTimer("level_up", 3000, npc, null);
 		}
 		
 		return super.onSpawn(npc);
 	}
 	
-	public OutpostCaptain(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public OutpostCaptain(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addKillId(CAPTAIN);
 		addSpawnId(CAPTAIN);
 		addSpawnId(DOORKEEPER);
-		
-		for (int i : DEFENDERS)
-		{
+		for (int i : DEFENDERS) {
 			addSpawnId(i);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new OutpostCaptain(-1, OutpostCaptain.class.getSimpleName(), "ai");
 	}
+	
 }

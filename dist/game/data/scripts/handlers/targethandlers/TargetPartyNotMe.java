@@ -34,48 +34,46 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class TargetPartyNotMe implements ITargetTypeHandler
-{
+public class TargetPartyNotMe implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		List<L2Character> targetList = new FastList<>();
-		if (onlyFirst)
-			return new L2Character[] { activeChar };
+		if (onlyFirst) {
+			return new L2Character[]
+			{
+				activeChar
+			};
+		}
 		
 		L2PcInstance player = null;
 		
-		if (activeChar instanceof L2Summon)
-		{
+		if (activeChar instanceof L2Summon) {
 			player = ((L2Summon) activeChar).getOwner();
 			targetList.add(player);
-		}
-		else if (activeChar instanceof L2PcInstance)
-		{
+		} else if (activeChar instanceof L2PcInstance) {
 			player = (L2PcInstance) activeChar;
-			if (activeChar.getPet() != null)
+			if (activeChar.getPet() != null) {
 				targetList.add(activeChar.getPet());
+			}
 		}
 		
-		if (activeChar.getParty() != null)
-		{
+		if (activeChar.getParty() != null) {
 			List<L2PcInstance> partyList = activeChar.getParty().getMembers();
 			
-			for (L2PcInstance partyMember : partyList)
-			{
-				if (partyMember == null)
+			for (L2PcInstance partyMember : partyList) {
+				if (partyMember == null) {
 					continue;
-				else if (partyMember == player)
+				} else if (partyMember == player) {
 					continue;
-				else if (!partyMember.isDead() && Util.checkIfInRange(skill.getSkillRadius(), activeChar, partyMember, true))
-				{
-					if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+				} else if (!partyMember.isDead() && Util.checkIfInRange(skill.getSkillRadius(), activeChar, partyMember, true)) {
+					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets())) {
 						break;
+					}
 					
 					targetList.add(partyMember);
 					
-					if (partyMember.getPet() != null && !partyMember.getPet().isDead())
-					{
+					if ((partyMember.getPet() != null) && !partyMember.getPet().isDead()) {
 						targetList.add(partyMember.getPet());
 					}
 				}
@@ -85,8 +83,8 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_PARTY_NOTME;
 	}
+	
 }

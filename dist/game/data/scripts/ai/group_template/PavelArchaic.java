@@ -27,20 +27,24 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Gnacik
  */
-public class PavelArchaic extends L2AttackableAIScript
-{
-	private static final int[] _mobs1 = { 22801, 22804 };
-	private static final int[] _mobs2 = { 18917 };
+public class PavelArchaic extends L2AttackableAIScript {
+	
+	private static final int[] _mobs1 =
+	{
+		22801,
+		22804
+	};
+	private static final int[] _mobs2 =
+	{
+		18917
+	};
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
-		if (!npc.isDead() && Util.contains(_mobs2, npc.getNpcId()))
-		{
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet) {
+		if (!npc.isDead() && Util.contains(_mobs2, npc.getNpcId())) {
 			npc.doDie(attacker);
 			
-			if (getRandom(100) < 40)
-			{
+			if (getRandom(100) < 40) {
 				L2Attackable _golem1 = (L2Attackable) addSpawn(22801, npc.getLocation(), false, 0);
 				attackPlayer(_golem1, attacker);
 				
@@ -52,32 +56,40 @@ public class PavelArchaic extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (Util.contains(_mobs1, npc.getNpcId()))
-		{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
+		if (Util.contains(_mobs1, npc.getNpcId())) {
 			L2Attackable _golem = (L2Attackable) addSpawn(npc.getNpcId() + 1, npc.getLocation(), false, 0);
 			attackPlayer(_golem, killer);
 		}
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	private void attackPlayer(L2Attackable npc, L2PcInstance player)
-	{
+	/**
+	 * @param npc
+	 * @param player
+	 */
+	private void attackPlayer(L2Attackable npc, L2PcInstance player) {
 		npc.setIsRunning(true);
 		npc.addDamageHate(player, 0, 999);
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 	}
 	
-	public PavelArchaic(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public PavelArchaic(int questId, String name, String descr) {
 		super(questId, name, descr);
 		registerMobs(_mobs1, QuestEventType.ON_KILL);
 		registerMobs(_mobs2, QuestEventType.ON_ATTACK);
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new PavelArchaic(-1, "PavelArchaic", "ai");
 	}
+	
 }

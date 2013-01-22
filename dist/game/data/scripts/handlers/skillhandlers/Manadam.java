@@ -37,73 +37,60 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Class handling the Mana damage skill
  * @author slyce
  */
-public class Manadam implements ISkillHandler
-{
+public class Manadam implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.MANADAM
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (activeChar.isAlikeDead())
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (activeChar.isAlikeDead()) {
 			return;
+		}
 		
 		boolean ss = false;
 		boolean bss = false;
 		
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		
-		if (weaponInst != null)
-		{
-			if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-			{
+		if (weaponInst != null) {
+			if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 				bss = true;
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-			}
-			else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-			{
+			} else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 				ss = true;
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
 		// If there is no weapon equipped, check for an active summon.
-		else if (activeChar instanceof L2Summon)
-		{
+		else if (activeChar instanceof L2Summon) {
 			L2Summon activeSummon = (L2Summon) activeChar;
 			
-			if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-			{
+			if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 				bss = true;
 				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-			}
-			else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-			{
+			} else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 				ss = true;
 				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
-		for (L2Character target: (L2Character[]) targets)
-		{
-			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
+		for (L2Character target : (L2Character[]) targets) {
+			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED) {
 				target = activeChar;
+			}
 			
 			boolean acted = Formulas.calcMagicAffected(activeChar, target, skill);
-			if (target.isInvul() || !acted)
-			{
+			if (target.isInvul() || !acted) {
 				activeChar.sendPacket(SystemMessageId.MISSED_TARGET);
-			}
-			else
-			{
-				if (skill.hasEffects())
-				{
+			} else {
+				if (skill.hasEffects()) {
 					byte shld = Formulas.calcShldUse(activeChar, target, skill);
 					target.stopSkillEffects(skill.getId());
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, ss, bss))
+					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, ss, bss)) {
 						skill.getEffects(activeChar, target, new Env(shld, ss, false, bss));
-					else
-					{
+					} else {
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 						sm.addCharName(target);
 						sm.addSkillName(skill);
@@ -113,19 +100,18 @@ public class Manadam implements ISkillHandler
 				
 				double damage = skill.isStaticDamage() ? skill.getPower() : Formulas.calcManaDam(activeChar, target, skill, ss, bss);
 				
-				if (!skill.isStaticDamage() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
-				{
+				if (!skill.isStaticDamage() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill))) {
 					damage *= 3.;
 					activeChar.sendPacket(SystemMessageId.CRITICAL_HIT_MAGIC);
 				}
 				
 				double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
 				target.reduceCurrentMp(mp);
-				if (damage > 0)
+				if (damage > 0) {
 					target.stopEffectsOnDamage(true);
+				}
 				
-				if (target instanceof L2PcInstance)
-				{
+				if (target instanceof L2PcInstance) {
 					StatusUpdate sump = new StatusUpdate(target);
 					sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 					// [L2J_JP EDIT START - TSL]
@@ -137,8 +123,7 @@ public class Manadam implements ISkillHandler
 					target.sendPacket(sm);
 				}
 				
-				if (activeChar instanceof L2PcInstance)
-				{
+				if (activeChar instanceof L2PcInstance) {
 					SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
 					sm2.addNumber((int) mp);
 					activeChar.sendPacket(sm2);
@@ -147,12 +132,10 @@ public class Manadam implements ISkillHandler
 			}
 		}
 		
-		if (skill.hasSelfEffects())
-		{
+		if (skill.hasSelfEffects()) {
 			L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
-			{
-				//Replace old effect with new one.
+			if ((effect != null) && effect.isSelfEffect()) {
+				// Replace old effect with new one.
 				effect.exit();
 			}
 			// cast self effect if any
@@ -161,8 +144,8 @@ public class Manadam implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

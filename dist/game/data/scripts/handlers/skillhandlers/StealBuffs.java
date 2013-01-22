@@ -36,50 +36,36 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-public class StealBuffs implements ISkillHandler
-{
+public class StealBuffs implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.STEAL_BUFF
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
 		// discharge shots
 		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		if (weaponInst != null)
-		{
-			if (skill.isMagic())
-			{
-				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-				{
+		if (weaponInst != null) {
+			if (skill.isMagic()) {
+				if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-				}
-				else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-				{
+				} else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 				}
 			}
-		}
-		else if (activeChar instanceof L2Summon)
-		{
+		} else if (activeChar instanceof L2Summon) {
 			final L2Summon activeSummon = (L2Summon) activeChar;
 			
-			if (skill.isMagic())
-			{
-				if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-				{
+			if (skill.isMagic()) {
+				if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 					activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-				}
-				else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-				{
+				} else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 					activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 				}
 			}
-		}
-		else if (activeChar instanceof L2Npc)
-		{
+		} else if (activeChar instanceof L2Npc) {
 			((L2Npc) activeChar)._spiritshotcharged = false;
 		}
 		
@@ -87,21 +73,17 @@ public class StealBuffs implements ISkillHandler
 		L2Effect effect;
 		
 		int count = skill.getMaxNegatedEffects();
-		for (L2Object obj : targets)
-		{
-			if (!(obj instanceof L2Character))
-			{
+		for (L2Object obj : targets) {
+			if (!(obj instanceof L2Character)) {
 				continue;
 			}
 			target = (L2Character) obj;
 			
-			if (target.isDead())
-			{
+			if (target.isDead()) {
 				continue;
 			}
 			
-			if (!(target instanceof L2PcInstance))
-			{
+			if (!(target instanceof L2PcInstance)) {
 				continue;
 			}
 			
@@ -110,98 +92,80 @@ public class StealBuffs implements ISkillHandler
 			final L2Effect[] effects = target.getAllEffects();
 			final ArrayList<L2Effect> toSteal = new ArrayList<>(count);
 			
-			for (int i = effects.length; --i >= 0;) // reverse order
-			{
+			for (int i = effects.length; --i >= 0;) { // reverse order
 				effect = effects[i];
-				if (effect == null)
-				{
+				if (effect == null) {
 					continue;
 				}
 				
-				if (!effect.canBeStolen()) // remove effect if can't be stolen
-				{
+				if (!effect.canBeStolen()) { // remove effect if can't be stolen
 					effects[i] = null;
 					continue;
 				}
 				
 				// if eff time is smaller than 5 sec, will not be stolen, just to save CPU,
 				// avoid synchronization(?) problems and NPEs
-				if ((effect.getAbnormalTime() - effect.getTime()) < 5)
-				{
+				if ((effect.getAbnormalTime() - effect.getTime()) < 5) {
 					effects[i] = null;
 					continue;
 				}
 				
 				// first pass - only dances/songs
-				if (!effect.getSkill().isDance())
-				{
+				if (!effect.getSkill().isDance()) {
 					continue;
 				}
 				
-				if (effect.getSkill().getId() != lastSkillId)
-				{
+				if (effect.getSkill().getId() != lastSkillId) {
 					lastSkillId = effect.getSkill().getId();
 					count--;
 				}
 				
 				toSteal.add(effect);
-				if (count == 0)
-				{
+				if (count == 0) {
 					break;
 				}
 			}
 			
-			if (count > 0) // second pass
-			{
+			if (count > 0) { // second pass
 				lastSkillId = 0;
-				for (int i = effects.length; --i >= 0;)
-				{
+				for (int i = effects.length; --i >= 0;) {
 					effect = effects[i];
-					if (effect == null)
-					{
+					if (effect == null) {
 						continue;
 					}
 					
 					// second pass - all except dances/songs
-					if (effect.getSkill().isDance())
-					{
+					if (effect.getSkill().isDance()) {
 						continue;
 					}
 					
-					if (effect.getSkill().getId() != lastSkillId)
-					{
+					if (effect.getSkill().getId() != lastSkillId) {
 						lastSkillId = effect.getSkill().getId();
 						count--;
 					}
 					
 					toSteal.add(effect);
-					if (count == 0)
-					{
+					if (count == 0) {
 						break;
 					}
 				}
 			}
 			
-			if (toSteal.size() == 0)
-			{
+			if (toSteal.size() == 0) {
 				continue;
 			}
 			
 			// stealing effects
-			for (L2Effect eff : toSteal)
-			{
+			for (L2Effect eff : toSteal) {
 				env = new Env();
 				env.setCharacter(target);
 				env.setTarget(activeChar);
 				env.setSkill(eff.getSkill());
-				try
-				{
+				try {
 					effect = eff.getEffectTemplate().getStolenEffect(env, eff);
-					if (effect != null)
-					{
+					if (effect != null) {
 						effect.scheduleEffect();
-						if (effect.getShowIcon() && (activeChar instanceof L2PcInstance))
-						{
+						if (effect.getShowIcon() && (activeChar instanceof L2PcInstance)) {
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 							sm.addSkillName(effect);
 							activeChar.sendPacket(sm);
@@ -209,9 +173,7 @@ public class StealBuffs implements ISkillHandler
 					}
 					// Finishing stolen effect
 					eff.exit();
-				}
-				catch (RuntimeException e)
-				{
+				} catch (RuntimeException e) {
 					_log.log(Level.WARNING, "Cannot steal effect: " + eff + " Stealer: " + activeChar + " Stolen: " + target, e);
 				}
 			}
@@ -220,12 +182,10 @@ public class StealBuffs implements ISkillHandler
 			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 		
-		if (skill.hasSelfEffects())
-		{
+		if (skill.hasSelfEffects()) {
 			// Applying self-effects
 			effect = activeChar.getFirstEffect(skill.getId());
-			if ((effect != null) && effect.isSelfEffect())
-			{
+			if ((effect != null) && effect.isSelfEffect()) {
 				// Replace old effect with new one.
 				effect.exit();
 			}
@@ -234,8 +194,8 @@ public class StealBuffs implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

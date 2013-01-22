@@ -31,72 +31,64 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ShopPreviewList;
 
-public class Wear implements IBypassHandler
-{
+public class Wear implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"Wear"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
-		if (!Config.ALLOW_WEAR)
-		{
+		if (!Config.ALLOW_WEAR) {
 			return false;
 		}
 		
-		try
-		{
+		try {
 			StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
 			
-			if (st.countTokens() < 1)
-			{
+			if (st.countTokens() < 1) {
 				return false;
 			}
 			
 			showWearWindow(activeChar, Integer.parseInt(st.nextToken()));
 			return true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
-	private static final void showWearWindow(L2PcInstance player, int val)
-	{
+	/**
+	 * @param player
+	 * @param val
+	 */
+	private static final void showWearWindow(L2PcInstance player, int val) {
 		player.tempInventoryDisable();
 		
-		if (Config.DEBUG)
-		{
+		if (Config.DEBUG) {
 			_log.fine("Showing wearlist");
 		}
 		
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
 		
-		if (list != null)
-		{
+		if (list != null) {
 			ShopPreviewList bl = new ShopPreviewList(list, player.getAdena(), player.getExpertiseLevel());
 			player.sendPacket(bl);
-		}
-		else
-		{
+		} else {
 			_log.warning("no buylist with id:" + val);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

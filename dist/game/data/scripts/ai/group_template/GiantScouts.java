@@ -35,25 +35,27 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 /**
  * @author Gnacik
  */
-public class GiantScouts extends L2AttackableAIScript
-{
-	final private static int _scouts[] = { 22668, 22669 };
+public class GiantScouts extends L2AttackableAIScript {
 	
-	public GiantScouts(int questId, String name, String descr)
+	final private static int _scouts[] =
 	{
+		22668,
+		22669
+	};
+	
+	public GiantScouts(int questId, String name, String descr) {
 		super(questId, name, descr);
 		registerMobs(_scouts, QuestEventType.ON_AGGRO_RANGE_ENTER);
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet) {
 		L2Character target = isPet ? player.getPet() : player;
 		
-		if(GeoData.getInstance().canSeeTarget(npc, target))
-		{
-			if (!npc.isInCombat() && npc.getTarget() == null)
+		if (GeoData.getInstance().canSeeTarget(npc, target)) {
+			if (!npc.isInCombat() && (npc.getTarget() == null)) {
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.SHOUT, npc.getName(), NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED));
+			}
 			
 			npc.setTarget(target);
 			npc.setRunning();
@@ -62,15 +64,11 @@ public class GiantScouts extends L2AttackableAIScript
 			
 			// Notify clan
 			Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-			for(L2Object obj : objs)
-			{
-				if (obj != null)
-				{
-					if (obj instanceof L2MonsterInstance)
-					{
+			for (L2Object obj : objs) {
+				if (obj != null) {
+					if (obj instanceof L2MonsterInstance) {
 						L2MonsterInstance monster = (L2MonsterInstance) obj;
-						if (( npc.getClan() != null && monster.getClan() != null) && monster.getClan().equals(npc.getClan()) && GeoData.getInstance().canSeeTarget(npc, monster))
-						{
+						if (((npc.getClan() != null) && (monster.getClan() != null)) && monster.getClan().equals(npc.getClan()) && GeoData.getInstance().canSeeTarget(npc, monster)) {
 							monster.setTarget(target);
 							monster.setRunning();
 							monster.addDamageHate(target, 0, 999);
@@ -84,8 +82,8 @@ public class GiantScouts extends L2AttackableAIScript
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new GiantScouts(-1, "GiantScouts", "ai");
 	}
+	
 }

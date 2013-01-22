@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original jython script by Kerberos v1.0 on 2009/05/1
  * @author nonom
  */
-public class Q10268_ToTheSeedOfInfinity extends Quest
-{
+public class Q10268_ToTheSeedOfInfinity extends Quest {
+	
 	private static final String qn = "10268_ToTheSeedOfInfinity";
 	
 	// NPCs
@@ -41,57 +41,47 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	private static final int INTRODUCTION = 13811;
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int npcId = npc.getNpcId();
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = (npcId == TEPIOS) ? "32603-02.htm" : "32548-0a.htm";
-				break;
+			break;
 			case State.CREATED:
-				if (npcId == KEUCEREUS)
-				{
+				if (npcId == KEUCEREUS) {
 					htmltext = (player.getLevel() < 75) ? "32548-00.htm" : "32548-01.htm";
 				}
-				break;
+			break;
 			case State.STARTED:
-				if (npcId == KEUCEREUS)
-				{
+				if (npcId == KEUCEREUS) {
 					htmltext = "32548-06.htm";
-				}
-				else if (npcId == TEPIOS)
-				{
+				} else if (npcId == TEPIOS) {
 					htmltext = "32603-01.htm";
 					st.giveAdena(16671, true);
 					st.addExpAndSp(100640, 10098);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("32548-05.htm"))
-		{
+		if (event.equalsIgnoreCase("32548-05.htm")) {
 			st.set("cond", "1");
 			st.setState(State.STARTED);
 			st.playSound("ItemSound.quest_accept");
@@ -100,8 +90,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 		return htmltext;
 	}
 	
-	public Q10268_ToTheSeedOfInfinity(int questId, String name, String descr)
-	{
+	public Q10268_ToTheSeedOfInfinity(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(KEUCEREUS);
@@ -113,8 +102,8 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10268_ToTheSeedOfInfinity(10268, qn, "To the Seed of Infinity");
 	}
+	
 }

@@ -27,77 +27,67 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 /**
  * @authors Kerberos (python), Nyaran (java)
  */
-public class Nottingale extends Quest
-{
+public class Nottingale extends Quest {
+	
 	private static final String qn = "Nottingale";
-
+	
 	private static final int NPC = 32627;
-
-	public Nottingale(int questId, String name, String descr)
-	{
+	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public Nottingale(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(NPC);
 		addFirstTalkId(NPC);
 		addTalkId(NPC);
 	}
-
+	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState qs = player.getQuestState("10273_GoodDayToFly");
-		if (qs == null || !qs.isCompleted())
-		{
+		if ((qs == null) || !qs.isCompleted()) {
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -184545, 243120, 1581));
 			htmltext = "32627.htm";
-		}
-		else if (event.equals("32627-3.htm"))
-		{
+		} else if (event.equals("32627-3.htm")) {
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -192361, 254528, 3598));
-		}
-		else if (event.equals("32627-4.htm"))
-		{
+		} else if (event.equals("32627-4.htm")) {
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -174600, 219711, 4424));
-		}
-		else if (event.equals("32627-5.htm"))
-		{
+		} else if (event.equals("32627-5.htm")) {
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -181989, 208968, 4424));
-		}
-		else if (event.equals("32627-6.htm"))
-		{
+		} else if (event.equals("32627-6.htm")) {
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -252898, 235845, 5343));
-		}
-		else if (event.equals("32627-8.htm"))
-		{
+		} else if (event.equals("32627-8.htm")) {
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -212819, 209813, 4288));
-		}
-		else if (event.equals("32627-9.htm"))
-		{
+		} else if (event.equals("32627-9.htm")) {
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -246899, 251918, 4352));
 		}
 		return htmltext;
 	}
-
+	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			st = this.newQuestState(player);
+		}
 		player.setLastQuestNpcObject(npc.getObjectId());
 		npc.showChatWindow(player);
 		return null;
 	}
-
-	public static void main(String[] args)
-	{
+	
+	public static void main(String[] args) {
 		new Nottingale(-1, qn, "custom");
 	}
+	
 }

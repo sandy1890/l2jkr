@@ -27,22 +27,19 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author -Nemesiss-
  */
-public class RemoveTarget extends L2Effect
-{
-	public RemoveTarget(Env env, EffectTemplate template)
-	{
+public class RemoveTarget extends L2Effect {
+	
+	public RemoveTarget(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.REMOVE_TARGET;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().setTarget(null);
 		getEffected().abortAttack();
 		getEffected().abortCast();
@@ -51,15 +48,14 @@ public class RemoveTarget extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		// nothing
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// nothing
 		return false;
 	}
+	
 }

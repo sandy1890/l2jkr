@@ -21,6 +21,7 @@ package handlers.admincommandhandlers;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -29,17 +30,15 @@ import com.l2jserver.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
 /**
- * This class handles following admin commands:
- * - res = resurrects target L2Character
- *
+ * This class handles following admin commands: - res = resurrects target L2Character
  * @version $Revision: 1.2.4.5 $ $Date: 2005/04/11 10:06:06 $
  */
-public class AdminRes implements IAdminCommandHandler
-{
+public class AdminRes implements IAdminCommandHandler {
+	
 	private static Logger _log = Logger.getLogger(AdminRes.class.getName());
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_res",
@@ -47,132 +46,122 @@ public class AdminRes implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
-		if (command.startsWith("admin_res "))
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+		if (command.startsWith("admin_res ")) {
 			handleRes(activeChar, command.split(" ")[1]);
-		else if (command.equals("admin_res"))
+		} else if (command.equals("admin_res")) {
 			handleRes(activeChar);
-		else if (command.startsWith("admin_res_monster "))
+		} else if (command.startsWith("admin_res_monster ")) {
 			handleNonPlayerRes(activeChar, command.split(" ")[1]);
-		else if (command.equals("admin_res_monster"))
+		} else if (command.equals("admin_res_monster")) {
 			handleNonPlayerRes(activeChar);
+		}
 		
 		return true;
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleRes(L2PcInstance activeChar)
-	{
+	/**
+	 * @param activeChar
+	 */
+	private void handleRes(L2PcInstance activeChar) {
 		handleRes(activeChar, null);
 	}
 	
-	private void handleRes(L2PcInstance activeChar, String resParam)
-	{
+	/**
+	 * @param activeChar
+	 * @param resParam
+	 */
+	private void handleRes(L2PcInstance activeChar, String resParam) {
 		L2Object obj = activeChar.getTarget();
-		
-		if (resParam != null)
-		{
+		if (resParam != null) {
 			// Check if a player name was specified as a param.
 			L2PcInstance plyr = L2World.getInstance().getPlayer(resParam);
-			
-			if (plyr != null)
-			{
+			if (plyr != null) {
 				obj = plyr;
-			}
-			else
-			{
+			} else {
 				// Otherwise, check if the param was a radius.
-				try
-				{
+				try {
 					int radius = Integer.parseInt(resParam);
 					
-					for (L2PcInstance knownPlayer : activeChar.getKnownList().getKnownPlayersInRadius(radius))
+					for (L2PcInstance knownPlayer : activeChar.getKnownList().getKnownPlayersInRadius(radius)) {
 						doResurrect(knownPlayer);
+					}
 					
 					activeChar.sendMessage(MessageTable.Messages[1812].getExtra(1) + radius + MessageTable.Messages[1812].getExtra(2));
 					return;
-				}
-				catch (NumberFormatException e)
-				{
+				} catch (NumberFormatException e) {
 					activeChar.sendMessage("Enter a valid player name or radius.");
 					return;
 				}
 			}
 		}
-		
-		if (obj == null)
+		if (obj == null) {
 			obj = activeChar;
-		
-		if (obj instanceof L2ControllableMobInstance)
-		{
+		}
+		if (obj instanceof L2ControllableMobInstance) {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		
 		doResurrect((L2Character) obj);
-		
-		if (Config.DEBUG)
+		if (Config.DEBUG) {
 			_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") resurrected character " + obj.getObjectId());
+		}
 	}
 	
-	private void handleNonPlayerRes(L2PcInstance activeChar)
-	{
+	/**
+	 * @param activeChar
+	 */
+	private void handleNonPlayerRes(L2PcInstance activeChar) {
 		handleNonPlayerRes(activeChar, "");
 	}
 	
-	private void handleNonPlayerRes(L2PcInstance activeChar, String radiusStr)
-	{
+	/**
+	 * @param activeChar
+	 * @param radiusStr
+	 */
+	private void handleNonPlayerRes(L2PcInstance activeChar, String radiusStr) {
 		L2Object obj = activeChar.getTarget();
-		
-		try
-		{
+		try {
 			int radius = 0;
-			
-			if (!radiusStr.isEmpty())
-			{
+			if (!radiusStr.isEmpty()) {
 				radius = Integer.parseInt(radiusStr);
-				
-				for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
-					if (!(knownChar instanceof L2PcInstance) && !(knownChar instanceof L2ControllableMobInstance))
+				for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius)) {
+					if (!(knownChar instanceof L2PcInstance) && !(knownChar instanceof L2ControllableMobInstance)) {
 						doResurrect(knownChar);
-				
+					}
+				}
 				activeChar.sendMessage(MessageTable.Messages[1813].getExtra(1) + radius + MessageTable.Messages[1813].getExtra(2));
 			}
-		}
-		catch (NumberFormatException e)
-		{
+		} catch (NumberFormatException e) {
 			activeChar.sendMessage("Enter a valid radius.");
 			return;
 		}
-		
-		if (obj instanceof L2PcInstance || obj instanceof L2ControllableMobInstance)
-		{
+		if ((obj instanceof L2PcInstance) || (obj instanceof L2ControllableMobInstance)) {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		
 		doResurrect((L2Character) obj);
 	}
 	
-	private void doResurrect(L2Character targetChar)
-	{
-		if (!targetChar.isDead())
+	/**
+	 * @param targetChar
+	 */
+	private void doResurrect(L2Character targetChar) {
+		if (!targetChar.isDead()) {
 			return;
-		
+		}
 		// If the target is a player, then restore the XP lost on death.
-		if (targetChar instanceof L2PcInstance)
+		if (targetChar instanceof L2PcInstance) {
 			((L2PcInstance) targetChar).restoreExp(100.0);
-		
-		// If the target is an NPC, then abort it's auto decay and respawn.
-		else
+		} else {
 			DecayTaskManager.getInstance().cancelDecayTask(targetChar);
-		
+		}
 		targetChar.doRevive();
 	}
+	
 }

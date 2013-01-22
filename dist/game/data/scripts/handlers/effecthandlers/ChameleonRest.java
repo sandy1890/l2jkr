@@ -28,57 +28,52 @@ import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class ChameleonRest extends L2Effect
-{
-	public ChameleonRest(Env env, EffectTemplate template)
-	{
+public class ChameleonRest extends L2Effect {
+	
+	public ChameleonRest(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.RELAXING;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() instanceof L2PcInstance)
-		{
+	public boolean onStart() {
+		if (getEffected() instanceof L2PcInstance) {
 			((L2PcInstance) getEffected()).sitDown(false);
-		}
-		else
+		} else {
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
 		return super.onStart();
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		super.onExit();
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		// Only cont skills shouldn't end
-		if (getSkill().getSkillType() != L2SkillType.CONT)
+		if (getSkill().getSkillType() != L2SkillType.CONT) {
 			return false;
+		}
 		
-		if (getEffected() instanceof L2PcInstance)
-		{
-			if (!((L2PcInstance) getEffected()).isSitting())
+		if (getEffected() instanceof L2PcInstance) {
+			if (!((L2PcInstance) getEffected()).isSitting()) {
 				return false;
+			}
 		}
 		
 		double manaDam = calc();
 		
-		if (manaDam > getEffected().getCurrentMp())
-		{
+		if (manaDam > getEffected().getCurrentMp()) {
 			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
@@ -88,8 +83,8 @@ public class ChameleonRest extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return (CharEffectList.EFFECT_FLAG_SILENT_MOVE | CharEffectList.EFFECT_FLAG_RELAXING);
 	}
+	
 }

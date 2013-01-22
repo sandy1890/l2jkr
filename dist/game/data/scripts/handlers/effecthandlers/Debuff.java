@@ -23,23 +23,21 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
-public class Debuff extends L2Effect
-{
-	public Debuff(Env env, EffectTemplate template)
-	{
+public class Debuff extends L2Effect {
+	
+	public Debuff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.DEBUFF;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
+	
 }

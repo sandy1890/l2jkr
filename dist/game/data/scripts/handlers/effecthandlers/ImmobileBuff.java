@@ -26,43 +26,38 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author mkizub
  */
-public class ImmobileBuff extends Buff
-{
-	public ImmobileBuff(Env env, EffectTemplate template)
-	{
+public class ImmobileBuff extends Buff {
+	
+	public ImmobileBuff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	// Special constructor to steal this effect
-	public ImmobileBuff(Env env, L2Effect effect)
-	{
+	public ImmobileBuff(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BUFF;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().setIsImmobilized(true);
 		return super.onStart();
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().setIsImmobilized(false);
 		super.onExit();
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
+	
 }

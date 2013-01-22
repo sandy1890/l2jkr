@@ -23,35 +23,34 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
-public class AbortCast extends L2Effect
-{
-	public AbortCast(Env env, EffectTemplate template)
-	{
+public class AbortCast extends L2Effect {
+	
+	public AbortCast(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.ABORT_CAST;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() == null || getEffected() == getEffector())
+	public boolean onStart() {
+		if ((getEffected() == null) || (getEffected() == getEffector())) {
 			return false;
+		}
 		
-		if (getEffected().isRaid())
+		if (getEffected().isRaid()) {
 			return false;
+		}
 		
 		getEffected().breakCast();
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

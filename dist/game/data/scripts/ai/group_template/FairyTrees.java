@@ -31,8 +31,8 @@ import com.l2jserver.util.Rnd;
 /**
  * @author Charus
  */
-public class FairyTrees extends L2AttackableAIScript
-{
+public class FairyTrees extends L2AttackableAIScript {
+	
 	private static final int[] mobs =
 	{
 		27185,
@@ -41,31 +41,25 @@ public class FairyTrees extends L2AttackableAIScript
 		27188
 	};
 	
-	public FairyTrees(int questId, String name, String descr)
-	{
+	public FairyTrees(int questId, String name, String descr) {
 		super(questId, name, descr);
 		registerMobs(mobs, QuestEventType.ON_KILL);
 		addSpawnId(27189);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		int npcId = npc.getNpcId();
-		if (Util.contains(mobs, npcId))
-		{
-			for (int i = 0; i < 20; i++)
-			{
+		if (Util.contains(mobs, npcId)) {
+			for (int i = 0; i < 20; i++) {
 				L2Attackable newNpc = (L2Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), 0, false, 30000);
 				L2Character originalKiller = isPet ? killer.getPet() : killer;
 				newNpc.setRunning();
 				newNpc.addDamageHate(originalKiller, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);
-				if (Rnd.nextBoolean())
-				{
+				if (Rnd.nextBoolean()) {
 					L2Skill skill = SkillTable.getInstance().getInfo(4243, 1);
-					if ((skill != null) && (originalKiller != null))
-					{
+					if ((skill != null) && (originalKiller != null)) {
 						skill.getEffects(newNpc, originalKiller);
 					}
 				}
@@ -74,8 +68,8 @@ public class FairyTrees extends L2AttackableAIScript
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new FairyTrees(-1, "fairy_trees", "ai");
 	}
+	
 }

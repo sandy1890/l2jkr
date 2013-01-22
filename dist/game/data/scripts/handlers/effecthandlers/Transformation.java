@@ -30,64 +30,53 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author nBd
  */
-public class Transformation extends L2Effect
-{
-	public Transformation(Env env, EffectTemplate template)
-	{
+public class Transformation extends L2Effect {
+	
+	public Transformation(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	// Special constructor to steal this effect
-	public Transformation(Env env, L2Effect effect)
-	{
+	public Transformation(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.TRANSFORMATION;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (!(getEffected() instanceof L2PcInstance))
-		{
+	public boolean onStart() {
+		if (!(getEffected() instanceof L2PcInstance)) {
 			return false;
 		}
 		
 		L2PcInstance trg = (L2PcInstance) getEffected();
-		if (trg == null)
-		{
+		if (trg == null) {
 			return false;
 		}
 		
-		if (trg.isAlikeDead() || trg.isCursedWeaponEquipped())
-		{
+		if (trg.isAlikeDead() || trg.isCursedWeaponEquipped()) {
 			return false;
 		}
 		
-		if (trg.isSitting())
-		{
+		if (trg.isSitting()) {
 			trg.sendPacket(SystemMessageId.CANNOT_TRANSFORM_WHILE_SITTING);
 			return false;
 		}
 		
-		if (trg.isTransformed() || trg.isInStance())
-		{
+		if (trg.isTransformed() || trg.isInStance()) {
 			trg.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 			return false;
 		}
 		
-		if (trg.isInWater())
-		{
+		if (trg.isInWater()) {
 			trg.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
 			return false;
 		}
 		
-		if (trg.isFlyingMounted() || trg.isMounted() || trg.isRidingStrider())
-		{
+		if (trg.isFlyingMounted() || trg.isMounted() || trg.isRidingStrider()) {
 			trg.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
 			return false;
 		}
@@ -97,14 +86,13 @@ public class Transformation extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopTransformation(false);
 	}
+	
 }

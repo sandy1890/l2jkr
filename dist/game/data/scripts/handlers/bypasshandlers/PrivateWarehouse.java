@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalL
 import com.l2jserver.gameserver.network.serverpackets.WareHouseDepositList;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
 
-public class PrivateWarehouse implements IBypassHandler
-{
+public class PrivateWarehouse implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"withdrawp",
@@ -43,106 +43,78 @@ public class PrivateWarehouse implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
-		if (activeChar.isEnchanting())
-		{
+		if (activeChar.isEnchanting()) {
 			return false;
 		}
 		
-		try
-		{
-			if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawP
-			{
-				if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE)
-				{
+		try {
+			if (command.toLowerCase().startsWith(COMMANDS[0])) { // WithdrawP
+				if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE) {
 					NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
 					msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/WhSortedP.htm");
 					msg.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
 					activeChar.sendPacket(msg);
-				}
-				else
-				{
+				} else {
 					showWithdrawWindow(activeChar, null, (byte) 0);
 				}
 				return true;
-			}
-			else if (command.toLowerCase().startsWith(COMMANDS[1])) // WithdrawSortedP
-			{
+			} else if (command.toLowerCase().startsWith(COMMANDS[1])) { // WithdrawSortedP
 				final String param[] = command.split(" ");
-				
-				if (param.length > 2)
-				{
+				if (param.length > 2) {
 					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
-				}
-				else if (param.length > 1)
-				{
+				} else if (param.length > 1) {
 					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.A2Z);
-				}
-				else
-				{
+				} else {
 					showWithdrawWindow(activeChar, WarehouseListType.ALL, SortedWareHouseWithdrawalList.A2Z);
 				}
 				return true;
-			}
-			else if (command.toLowerCase().startsWith(COMMANDS[2])) // DepositP
-			{
+			} else if (command.toLowerCase().startsWith(COMMANDS[2])) { // DepositP
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getWarehouse());
 				activeChar.tempInventoryDisable();
-				
-				if (Config.DEBUG)
-				{
+				if (Config.DEBUG) {
 					_log.fine("Source: L2WarehouseInstance.java; Player: " + activeChar.getName() + "; Command: showDepositWindow; Message: Showing items to deposit.");
 				}
-				
 				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.PRIVATE));
 				return true;
 			}
-			
 			return false;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
-	private static final void showWithdrawWindow(L2PcInstance player, WarehouseListType itemtype, byte sortorder)
-	{
+	/**
+	 * @param player
+	 * @param itemtype
+	 * @param sortorder
+	 */
+	private static final void showWithdrawWindow(L2PcInstance player, WarehouseListType itemtype, byte sortorder) {
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getWarehouse());
-		
-		if (player.getActiveWarehouse().getSize() == 0)
-		{
+		if (player.getActiveWarehouse().getSize() == 0) {
 			player.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
 			return;
 		}
-		
-		if (itemtype != null)
-		{
+		if (itemtype != null) {
 			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE, itemtype, sortorder));
-		}
-		else
-		{
+		} else {
 			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE));
 		}
-		
-		if (Config.DEBUG)
-		{
+		if (Config.DEBUG) {
 			_log.fine("Source: L2WarehouseInstance.java; Player: " + player.getName() + "; Command: showRetrieveWindow; Message: Showing stored items.");
 		}
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

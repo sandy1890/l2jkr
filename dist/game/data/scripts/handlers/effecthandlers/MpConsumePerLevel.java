@@ -24,31 +24,27 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class MpConsumePerLevel extends L2Effect
-{
-	public MpConsumePerLevel(Env env, EffectTemplate template)
-	{
+public class MpConsumePerLevel extends L2Effect {
+	
+	public MpConsumePerLevel(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.MP_CONSUME_PER_LEVEL;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		double base = calc();
-		double consume = (getEffected().getLevel() - 1) / 7.5 * base
-		* getAbnormalTime();
+		double consume = ((getEffected().getLevel() - 1) / 7.5) * base * getAbnormalTime();
 		
-		if (consume > getEffected().getCurrentMp())
-		{
+		if (consume > getEffected().getCurrentMp()) {
 			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
@@ -56,4 +52,5 @@ public class MpConsumePerLevel extends L2Effect
 		getEffected().reduceCurrentMp(consume);
 		return true;
 	}
+	
 }

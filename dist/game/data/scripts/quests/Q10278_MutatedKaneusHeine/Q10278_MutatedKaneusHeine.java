@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original Jython script by Gnacik on 2010-06-29
  * @author nonom
  */
-public class Q10278_MutatedKaneusHeine extends Quest
-{
+public class Q10278_MutatedKaneusHeine extends Quest {
+	
 	private static final String qn = "10278_MutatedKaneusHeine";
 	
 	// NPCs
@@ -47,108 +47,82 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	private static final int TISSUE_WB = 13835;
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
-		{
+		switch (npc.getNpcId()) {
 			case GOSTA:
-				if (st.isCompleted())
-				{
+				if (st.isCompleted()) {
 					htmltext = "30916-06.htm";
-				}
-				else if (st.isCreated())
-				{
+				} else if (st.isCreated()) {
 					htmltext = (player.getLevel() >= 38) ? "30916-01.htm" : "30916-00.htm";
-				}
-				else if (st.hasQuestItems(TISSUE_BO) && st.hasQuestItems(TISSUE_WB))
-				{
+				} else if (st.hasQuestItems(TISSUE_BO) && st.hasQuestItems(TISSUE_WB)) {
 					htmltext = "30916-05.htm";
-				}
-				else if (st.getInt("cond") == 1)
-				{
+				} else if (st.getInt("cond") == 1) {
 					htmltext = "30916-04.htm";
 				}
-				break;
+			break;
 			case MINEVIA:
-				if (st.isCompleted())
-				{
+				if (st.isCompleted()) {
 					htmltext = "<html><body>這是已經完成的任務。</body></html>";
-				}
-				else if (st.hasQuestItems(TISSUE_BO) && !st.hasQuestItems(TISSUE_WB))
-				{
+				} else if (st.hasQuestItems(TISSUE_BO) && !st.hasQuestItems(TISSUE_WB)) {
 					htmltext = "30907-02.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "30907-01.htm";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 			case "30916-03.htm":
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "30907-03.htm":
 				st.rewardItems(57, 50000);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		QuestState st = killer.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
 		final int npcId = npc.getNpcId();
-		if (killer.getParty() != null)
-		{
+		if (killer.getParty() != null) {
 			final List<QuestState> PartyMembers = new ArrayList<>();
-			for (L2PcInstance member : killer.getParty().getMembers())
-			{
+			for (L2PcInstance member : killer.getParty().getMembers()) {
 				st = member.getQuestState(qn);
-				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO)) || ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB))))
-				{
+				if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO)) || ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB)))) {
 					PartyMembers.add(st);
 				}
 			}
 			
-			if (!PartyMembers.isEmpty())
-			{
+			if (!PartyMembers.isEmpty()) {
 				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
 			}
-		}
-		else
-		{
+		} else {
 			rewardItem(npcId, st);
 		}
 		return null;
@@ -158,31 +132,23 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	 * @param npcId the killed monster Id.
 	 * @param st the quest state of the killer or party member.
 	 */
-	private final void rewardItem(int npcId, QuestState st)
-	{
-		if ((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO))
-		{
+	private final void rewardItem(int npcId, QuestState st) {
+		if ((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO)) {
 			st.giveItems(TISSUE_BO, 1);
 			st.playSound("ItemSound.quest_itemget");
-		}
-		else if ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB))
-		{
+		} else if ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB)) {
 			st.giveItems(TISSUE_WB, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
 	}
 	
-	public Q10278_MutatedKaneusHeine(int questId, String name, String descr)
-	{
+	public Q10278_MutatedKaneusHeine(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(GOSTA);
 		addTalkId(MINEVIA);
 		addTalkId(MINEVIA);
-		
 		addKillId(BLADE_OTIS);
 		addKillId(WEIRD_BUNEI);
-		
 		questItemIds = new int[]
 		{
 			TISSUE_BO,
@@ -190,8 +156,8 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q10278_MutatedKaneusHeine(10278, qn, "Mutated Kaneus - Heine");
 	}
+	
 }

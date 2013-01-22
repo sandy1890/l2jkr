@@ -27,53 +27,48 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author Kerberos
  */
-public class Fusion extends L2Effect
-{
+public class Fusion extends L2Effect {
+	
 	public int _effect;
 	public int _maxEffect;
 	
-	public Fusion(Env env, EffectTemplate template)
-	{
+	public Fusion(Env env, EffectTemplate template) {
 		super(env, template);
 		_effect = getSkill().getLevel();
 		_maxEffect = SkillTable.getInstance().getMaxLevel(getSkill().getId());
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return true;
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.FUSION;
 	}
 	
 	@Override
-	public void increaseEffect()
-	{
-		if (_effect < _maxEffect)
-		{
+	public void increaseEffect() {
+		if (_effect < _maxEffect) {
 			_effect++;
 			updateBuff();
 		}
 	}
 	
 	@Override
-	public void decreaseForce()
-	{
+	public void decreaseForce() {
 		_effect--;
-		if (_effect < 1)
+		if (_effect < 1) {
 			exit();
-		else
+		} else {
 			updateBuff();
+		}
 	}
 	
-	private void updateBuff()
-	{
+	private void updateBuff() {
 		exit();
 		SkillTable.getInstance().getInfo(getSkill().getId(), _effect).getEffects(getEffector(), getEffected());
 	}
+	
 }

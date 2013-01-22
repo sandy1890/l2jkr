@@ -28,26 +28,25 @@ import com.l2jserver.gameserver.model.quest.State;
  * The Zero Hour (146)
  * @author Gnacik, malyelfik
  */
-public class Q146_TheZeroHour extends Quest
-{
+public class Q146_TheZeroHour extends Quest {
+	
 	private static final String qn = "146_TheZeroHour";
+	
 	// Npc
 	private static final int Kahman = 31554;
 	private static final int QueenShyeed = 25671;
+	
 	// Item
 	private static final int Fang = 14859;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		}
 		
-		if (event.equalsIgnoreCase("31554-03.htm"))
-		{
+		if (event.equalsIgnoreCase("31554-03.htm")) {
 			st.set("cond", "1");
 			st.setState(State.STARTED);
 			st.playSound("ItemSound.quest_accept");
@@ -56,42 +55,30 @@ public class Q146_TheZeroHour extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
-				if (player.getLevel() < 81)
-				{
+				if (player.getLevel() < 81) {
 					htmltext = "31554-02.htm";
-				}
-				else
-				{
+				} else {
 					final QuestState prev = player.getQuestState("109_InSearchOfTheNest");
-					if ((prev != null) && prev.isCompleted())
-					{
+					if ((prev != null) && prev.isCompleted()) {
 						htmltext = "31554-01a.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "31554-04.html";
 					}
 				}
-				break;
+			break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
-				{
+				if (st.getInt("cond") == 1) {
 					htmltext = "31554-06.html";
-				}
-				else
-				{
+				} else {
 					st.giveItems(14849, 1);
 					st.addExpAndSp(154616, 12500);
 					st.takeItems(Fang, 1);
@@ -99,25 +86,22 @@ public class Q146_TheZeroHour extends Quest
 					st.exitQuest(false);
 					htmltext = "31554-05.html";
 				}
-				break;
+			break;
 			case State.COMPLETED:
 				htmltext = "31554-01b.htm";
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
+		if (partyMember == null) {
 			return null;
 		}
 		QuestState st = partyMember.getQuestState(qn);
-		if (!st.hasQuestItems(Fang))
-		{
+		if (!st.hasQuestItems(Fang)) {
 			st.giveItems(Fang, 1);
 			st.set("cond", "2");
 			st.playSound("ItemSound.quest_middle");
@@ -125,21 +109,19 @@ public class Q146_TheZeroHour extends Quest
 		return null;
 	}
 	
-	public Q146_TheZeroHour(int questId, String name, String descr)
-	{
+	public Q146_TheZeroHour(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(Kahman);
 		addTalkId(Kahman);
 		addKillId(QueenShyeed);
-		
 		questItemIds = new int[]
 		{
 			Fang
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q146_TheZeroHour(146, qn, "The Zero Hour");
 	}
+	
 }

@@ -31,22 +31,18 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author ZaKaX (Ghost @ L2D)
  */
-public class ClanGate extends L2Effect
-{
-	public ClanGate(Env env, EffectTemplate template)
-	{
+public class ClanGate extends L2Effect {
+	
+	public ClanGate(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
-		if (getEffected() instanceof L2PcInstance)
-		{
+		if (getEffected() instanceof L2PcInstance) {
 			L2Clan clan = ((L2PcInstance) getEffected()).getClan();
-			if (clan != null)
-			{
+			if (clan != null) {
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
 				clan.broadcastToOtherOnlineMembers(msg, ((L2PcInstance) getEffected()));
 			}
@@ -56,20 +52,18 @@ public class ClanGate extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CLAN_GATE;
 	}
+	
 }

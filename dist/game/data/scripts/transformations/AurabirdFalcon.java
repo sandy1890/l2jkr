@@ -22,24 +22,29 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class AurabirdFalcon extends L2Transformation
-{
+public class AurabirdFalcon extends L2Transformation {
 	private static final int[] SKILLS = new int[]
 	{
-		884, 885, 886, 888, 890, 891, 894, 911, 932, 619
+		884,
+		885,
+		886,
+		888,
+		890,
+		891,
+		894,
+		911,
+		932,
+		619
 	};
 	
-	public AurabirdFalcon()
-	{
+	public AurabirdFalcon() {
 		// id, colRadius, colHeight
 		super(8, 30, 14.25);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 8) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 8) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		getPlayer().setIsFlyingMounted(true);
@@ -47,25 +52,21 @@ public class AurabirdFalcon extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Air Blink
-		if (getPlayer().getLevel() >= 75)
-		{
+		if (getPlayer().getLevel() >= 75) {
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(885, 1), false);
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(932, 1), false);//Update by rocknow
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(932, 1), false);// Update by rocknow
 		}
 		
 		// Exhilarate
-		if (getPlayer().getLevel() >= 83)
-		{
+		if (getPlayer().getLevel() >= 83) {
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(894, 1), false);
 		}
 		
 		int lvl = getPlayer().getLevel() - 74;
 		
-		if (lvl > 0)
-		{
+		if (lvl > 0) {
 			// Air Assault (up to 11 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(884, lvl), false);
 			// Air Shock Bomb (up to 11 levels)
@@ -86,26 +87,23 @@ public class AurabirdFalcon extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		getPlayer().setIsFlyingMounted(false);
 		
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Air Blink
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(885, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(932, 1), false);//Update by rocknow
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(932, 1), false);// Update by rocknow
 		
 		// Exhilarate
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(894, 1), false);
 		
 		int lvl = getPlayer().getLevel() - 74;
 		
-		if (lvl > 0)
-		{
+		if (lvl > 0) {
 			// Air Assault (up to 11 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(884, lvl), false);
 			// Air Shock Bomb (up to 11 levels)
@@ -125,8 +123,7 @@ public class AurabirdFalcon extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new AurabirdFalcon());
 	}
 }

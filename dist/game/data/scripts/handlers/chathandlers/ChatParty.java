@@ -27,10 +27,10 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
- * @author  durgus
+ * @author durgus
  */
-public class ChatParty implements IChatHandler
-{
+public class ChatParty implements IChatHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		3
@@ -40,12 +40,9 @@ public class ChatParty implements IChatHandler
 	 * Handle chat type 'party'
 	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
-	{
-		if (activeChar.isInParty())
-		{
-			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
-			{
+	public void handleChat(int type, L2PcInstance activeChar, String target, String text) {
+		if (activeChar.isInParty()) {
+			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type)) {
 				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 				return;
 			}
@@ -59,8 +56,8 @@ public class ChatParty implements IChatHandler
 	 * Returns the chat types registered to this handler.
 	 */
 	@Override
-	public int[] getChatTypeList()
-	{
+	public int[] getChatTypeList() {
 		return COMMAND_IDS;
 	}
+	
 }

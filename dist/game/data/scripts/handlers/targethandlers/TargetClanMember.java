@@ -34,44 +34,45 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author UnAfraid
  */
-public class TargetClanMember implements ITargetTypeHandler
-{
+public class TargetClanMember implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		List<L2Character> targetList = new FastList<>();
-		if (activeChar instanceof L2Npc)
-		{
+		if (activeChar instanceof L2Npc) {
 			// for buff purposes, returns friendly mobs nearby and mob itself
 			final L2Npc npc = (L2Npc) activeChar;
-			if (npc.getFactionId() == null || npc.getFactionId().isEmpty())
-			{
-				return new L2Character[] { activeChar };
+			if ((npc.getFactionId() == null) || npc.getFactionId().isEmpty()) {
+				return new L2Character[]
+				{
+					activeChar
+				};
 			}
 			final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-			for (L2Object newTarget : objs)
-			{
-				if (newTarget instanceof L2Npc && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId()))
-				{
-					if (!Util.checkIfInRange(skill.getCastRange(), activeChar, newTarget, true))
+			for (L2Object newTarget : objs) {
+				if ((newTarget instanceof L2Npc) && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId())) {
+					if (!Util.checkIfInRange(skill.getCastRange(), activeChar, newTarget, true)) {
 						continue;
-					if (((L2Npc) newTarget).getFirstEffect(skill) != null)
+					}
+					if (((L2Npc) newTarget).getFirstEffect(skill) != null) {
 						continue;
+					}
 					targetList.add((L2Npc) newTarget);
 					break;
 				}
 			}
-			if (targetList.isEmpty())
+			if (targetList.isEmpty()) {
 				targetList.add(npc);
-		}
-		else
+			}
+		} else {
 			return _emptyTargetList;
+		}
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_CLAN_MEMBER;
 	}
+	
 }

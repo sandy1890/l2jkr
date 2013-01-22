@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public class Rift implements IBypassHandler
-{
+public class Rift implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"enterrift",
@@ -36,51 +36,34 @@ public class Rift implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
-		if (command.toLowerCase().startsWith(COMMANDS[0])) // EnterRift
-		{
-			try
-			{
+		if (command.toLowerCase().startsWith(COMMANDS[0])) { // EnterRift
+			try {
 				Byte b1 = Byte.parseByte(command.substring(10)); // Selected Area: Recruit, Soldier etc
 				DimensionalRiftManager.getInstance().start(activeChar, b1, (L2Npc) target);
 				return true;
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 			}
-		}
-		else
-		{
+		} else {
 			final boolean inRift = activeChar.isInParty() && activeChar.getParty().isInDimensionalRift();
 			
-			if (command.toLowerCase().startsWith(COMMANDS[1])) // ChangeRiftRoom
-			{
-				if (inRift)
-				{
+			if (command.toLowerCase().startsWith(COMMANDS[1])) { // ChangeRiftRoom
+				if (inRift) {
 					activeChar.getParty().getDimensionalRift().manualTeleport(activeChar, (L2Npc) target);
-				}
-				else
-				{
+				} else {
 					DimensionalRiftManager.getInstance().handleCheat(activeChar, (L2Npc) target);
 				}
 				
 				return true;
-			}
-			else if (command.toLowerCase().startsWith(COMMANDS[2])) // ExitRift
-			{
-				if (inRift)
-				{
+			} else if (command.toLowerCase().startsWith(COMMANDS[2])) { // ExitRift
+				if (inRift) {
 					activeChar.getParty().getDimensionalRift().manualExitRift(activeChar, (L2Npc) target);
-				}
-				else
-				{
+				} else {
 					DimensionalRiftManager.getInstance().handleCheat(activeChar, (L2Npc) target);
 				}
 				
@@ -91,8 +74,8 @@ public class Rift implements IBypassHandler
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

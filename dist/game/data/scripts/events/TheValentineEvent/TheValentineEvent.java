@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * http://www.lineage2.com/archive/2009/01/the_valentine_e.html
  * @author Gnacik
  */
-public class TheValentineEvent extends Quest
-{
+public class TheValentineEvent extends Quest {
+	
 	private static final int _npc = 4301;
 	private static final int _recipe = 20191;
 	
@@ -80,36 +80,33 @@ public class TheValentineEvent extends Quest
 		new Location(-116677, 46824, 360, 34828)
 	};
 	
-	public TheValentineEvent(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public TheValentineEvent(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(_npc);
 		addFirstTalkId(_npc);
 		addTalkId(_npc);
-		for (Location loc : _spawns)
-		{
+		for (Location loc : _spawns) {
 			addSpawn(_npc, loc, false, 0);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = event;
-		if (event.equalsIgnoreCase("4301-3.htm"))
-		{
-			if (st.isCompleted())
-			{
+		if (event.equalsIgnoreCase("4301-3.htm")) {
+			if (st.isCompleted()) {
 				htmltext = "4301-4.htm";
-			}
-			else
-			{
+			} else {
 				st.giveItems(_recipe, 1);
 				st.playSound("Itemsound.quest_itemget");
 				st.setState(State.COMPLETED);
@@ -119,17 +116,15 @@ public class TheValentineEvent extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-		{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
 		}
 		return npc.getNpcId() + ".htm";
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new TheValentineEvent(-1, "TheValentineEvent", "events");
 	}
+	
 }

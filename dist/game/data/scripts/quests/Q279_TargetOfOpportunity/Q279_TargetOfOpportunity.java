@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.model.quest.State;
 /**
  * @author GKR
  */
-public final class Q279_TargetOfOpportunity extends Quest
-{
+public final class Q279_TargetOfOpportunity extends Quest {
+	
 	private static final String qn = "279_TargetOfOpportunity";
 	
 	// NPC's
@@ -58,34 +58,27 @@ public final class Q279_TargetOfOpportunity extends Quest
 		15516
 	};
 	
-	public Q279_TargetOfOpportunity(int questId, String name, String descr)
-	{
+	public Q279_TargetOfOpportunity(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
 		addKillId(MONSTERS);
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if ((st == null) || (player.getLevel() < 82))
-		{
+		if ((st == null) || (player.getLevel() < 82)) {
 			return getNoQuestMsg(player);
 		}
 		
-		if (event.equalsIgnoreCase("32302-05.htm"))
-		{
+		if (event.equalsIgnoreCase("32302-05.htm")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.set("progress", "1");
 			st.playSound("ItemSound.quest_accept");
-		}
-		else if (event.equalsIgnoreCase("32302-08.htm") && (st.getInt("progress") == 1) && st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3]))
-		{
+		} else if (event.equalsIgnoreCase("32302-08.htm") && (st.getInt("progress") == 1) && st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) {
 			st.takeItems(SEAL_COMPONENTS[0], -1);
 			st.takeItems(SEAL_COMPONENTS[1], -1);
 			st.takeItems(SEAL_COMPONENTS[2], -1);
@@ -99,49 +92,36 @@ public final class Q279_TargetOfOpportunity extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public final String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (st.getState() == State.CREATED)
-		{
+		if (st.getState() == State.CREATED) {
 			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.htm";
-		}
-		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
-		{
+		} else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1)) {
 			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.htm" : "32302-06.htm";
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
 		final int idx = Arrays.binarySearch(MONSTERS, npc.getNpcId());
-		if ((pl == null) || (idx < 0))
-		{
+		if ((pl == null) || (idx < 0)) {
 			return null;
 		}
-		
 		final QuestState st = pl.getQuestState(qn);
-		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
-		{
-			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))
-			{
+		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP)) {
+			if (!st.hasQuestItems(SEAL_COMPONENTS[idx])) {
 				st.giveItems(SEAL_COMPONENTS[idx], 1);
-				if (haveAllExceptThis(st, idx))
-				{
+				if (haveAllExceptThis(st, idx)) {
 					st.set("cond", "2");
 					st.playSound("ItemSound.quest_middle");
-				}
-				else
-				{
+				} else {
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
@@ -149,25 +129,20 @@ public final class Q279_TargetOfOpportunity extends Quest
 		return null;
 	}
 	
-	private static final boolean haveAllExceptThis(QuestState st, int idx)
-	{
-		for (int i = 0; i < SEAL_COMPONENTS.length; i++)
-		{
-			if (i == idx)
-			{
+	private static final boolean haveAllExceptThis(QuestState st, int idx) {
+		for (int i = 0; i < SEAL_COMPONENTS.length; i++) {
+			if (i == idx) {
 				continue;
 			}
-			
-			if (!st.hasQuestItems(SEAL_COMPONENTS[i]))
-			{
+			if (!st.hasQuestItems(SEAL_COMPONENTS[i])) {
 				return false;
 			}
 		}
 		return true;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q279_TargetOfOpportunity(279, qn, "Target of Opportunity");
 	}
+	
 }

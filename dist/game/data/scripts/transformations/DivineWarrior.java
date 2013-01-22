@@ -22,32 +22,34 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class DivineWarrior extends L2Transformation
-{
+public class DivineWarrior extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		675, 676, 677, 678, 679, 798, 5491, 619
+		675,
+		676,
+		677,
+		678,
+		679,
+		798,
+		5491,
+		619
 	};
 	
-	public DivineWarrior()
-	{
+	public DivineWarrior() {
 		// id, colRadius, colHeight
 		super(253, 14.5, 29);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 253) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 253) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Cross Slash
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(675, 1), false);
 		// Sonic Blaster
@@ -69,13 +71,11 @@ public class DivineWarrior extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Cross Slash
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(675, 1), false);
 		// Sonic Blaster
@@ -96,8 +96,7 @@ public class DivineWarrior extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new DivineWarrior());
 	}
 }

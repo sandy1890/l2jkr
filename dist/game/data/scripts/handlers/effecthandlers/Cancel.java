@@ -33,37 +33,31 @@ import com.l2jserver.util.StringUtil;
 /**
  * @author DS
  */
-public class Cancel extends L2Effect
-{
+public class Cancel extends L2Effect {
+	
 	protected static final Logger _log = Logger.getLogger(Cancel.class.getName());
 	
-	public Cancel(Env env, EffectTemplate template)
-	{
+	public Cancel(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CANCEL;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return cancel(getEffector(), getEffected(), this);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
-	private static boolean cancel(L2Character caster, L2Character target, L2Effect effect)
-	{
-		if (target.isDead())
-		{
+	private static boolean cancel(L2Character caster, L2Character target, L2Effect effect) {
+		if (target.isDead()) {
 			return false;
 		}
 		
@@ -75,32 +69,25 @@ public class Cancel extends L2Effect
 		final double profModifier = caster.calcStat(Stats.CANCEL_PROF, 0, target, null);
 		double res = vulnModifier + profModifier;
 		double resMod = 1;
-		if (res != 0)
-		{
-			if (res < 0)
-			{
+		if (res != 0) {
+			if (res < 0) {
 				resMod = 1 - (0.075 * res);
 				resMod = 1 / resMod;
-			}
-			else
-			{
+			} else {
 				resMod = 1 + (0.02 * res);
 			}
 			
 			rate *= resMod;
 		}
 		
-		if (caster.isDebug())
-		{
+		if (caster.isDebug()) {
 			final StringBuilder stat = new StringBuilder(100);
 			StringUtil.append(stat, effect.getSkill().getName(), " power:", String.valueOf((int) effect.getEffectPower()), " lvl:", String.valueOf(cancelLvl), " res:", String.format("%1.2f", resMod), "(", String.format("%1.2f", profModifier), "/", String.format("%1.2f", vulnModifier), ") total:", String.valueOf(rate));
 			final String result = stat.toString();
-			if (caster.isDebug())
-			{
+			if (caster.isDebug()) {
 				caster.sendDebugMessage(result);
 			}
-			if (Config.DEVELOPER)
-			{
+			if (Config.DEVELOPER) {
 				_log.info(result);
 			}
 		}
@@ -109,58 +96,45 @@ public class Cancel extends L2Effect
 		
 		if (effect.getSkill().getNegateAbnormals() != null) // Cancel for abnormals
 		{
-			for (L2Effect eff : effects)
-			{
-				if (eff == null)
-				{
+			for (L2Effect eff : effects) {
+				if (eff == null) {
 					continue;
 				}
 				
-				for (String negateAbnormalType : effect.getSkill().getNegateAbnormals().keySet())
-				{
-					if (negateAbnormalType.equalsIgnoreCase(eff.getAbnormalType()) && (effect.getSkill().getNegateAbnormals().get(negateAbnormalType) >= eff.getAbnormalLvl()))
-					{
-						if (calcCancelSuccess(eff, cancelLvl, (int) rate))
-						{
+				for (String negateAbnormalType : effect.getSkill().getNegateAbnormals().keySet()) {
+					if (negateAbnormalType.equalsIgnoreCase(eff.getAbnormalType()) && (effect.getSkill().getNegateAbnormals().get(negateAbnormalType) >= eff.getAbnormalLvl())) {
+						if (calcCancelSuccess(eff, cancelLvl, (int) rate)) {
 							eff.exit();
 						}
 					}
 				}
 			}
-		}
-		else
-		{
+		} else {
 			L2Effect eff;
 			int lastCanceledSkillId = 0;
 			
-			for (int i = effects.length; --i >= 0;)
-			{
+			for (int i = effects.length; --i >= 0;) {
 				eff = effects[i];
-				if (eff == null)
-				{
+				if (eff == null) {
 					continue;
 				}
 				
-				if (!eff.canBeStolen())
-				{
+				if (!eff.canBeStolen()) {
 					effects[i] = null;
 					continue;
 				}
 				
 				// first pass - dances/songs only
-				if (!eff.getSkill().isDance())
-				{
+				if (!eff.getSkill().isDance()) {
 					continue;
 				}
 				
-				if (eff.getSkill().getId() == lastCanceledSkillId)
-				{
+				if (eff.getSkill().getId() == lastCanceledSkillId) {
 					eff.exit(); // this skill already canceled
 					continue;
 				}
 				
-				if (!calcCancelSuccess(eff, cancelLvl, (int) rate))
-				{
+				if (!calcCancelSuccess(eff, cancelLvl, (int) rate)) {
 					continue;
 				}
 				
@@ -169,37 +143,30 @@ public class Cancel extends L2Effect
 				eff.exit();
 				count--;
 				
-				if (count == 0)
-				{
+				if (count == 0) {
 					break;
 				}
 			}
 			
-			if (count != 0)
-			{
+			if (count != 0) {
 				lastCanceledSkillId = 0;
-				for (int i = effects.length; --i >= 0;)
-				{
+				for (int i = effects.length; --i >= 0;) {
 					eff = effects[i];
-					if (eff == null)
-					{
+					if (eff == null) {
 						continue;
 					}
 					
 					// second pass - all except dances/songs
-					if (eff.getSkill().isDance())
-					{
+					if (eff.getSkill().isDance()) {
 						continue;
 					}
 					
-					if (eff.getSkill().getId() == lastCanceledSkillId)
-					{
+					if (eff.getSkill().getId() == lastCanceledSkillId) {
 						eff.exit(); // this skill already canceled
 						continue;
 					}
 					
-					if (!calcCancelSuccess(eff, cancelLvl, (int) rate))
-					{
+					if (!calcCancelSuccess(eff, cancelLvl, (int) rate)) {
 						continue;
 					}
 					
@@ -207,8 +174,7 @@ public class Cancel extends L2Effect
 					eff.exit();
 					count--;
 					
-					if (count == 0)
-					{
+					if (count == 0) {
 						break;
 					}
 				}
@@ -218,21 +184,18 @@ public class Cancel extends L2Effect
 		return true;
 	}
 	
-	private static boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate)
-	{
+	private static boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate) {
 		int rate = 2 * (cancelLvl - effect.getSkill().getMagicLevel());
 		rate += effect.getAbnormalTime() / 120;
 		rate += baseRate;
 		
-		if (rate < 25)
-		{
+		if (rate < 25) {
 			rate = 25;
-		}
-		else if (rate > 75)
-		{
+		} else if (rate > 75) {
 			rate = 75;
 		}
 		
 		return Rnd.get(100) < rate;
 	}
+	
 }

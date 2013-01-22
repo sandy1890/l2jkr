@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class TheTerritoryInnadril extends TerritoryWarSuperClass
-{
+public class TheTerritoryInnadril extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "722_FortheSakeoftheTerritoryInnadril";
 	public static int qnu = 722;
 	public static String qna = "For the Sake of the Territory - Innadril";
 	
-	public TheTerritoryInnadril()
-	{
+	public TheTerritoryInnadril() {
 		super(qnu, qn1, qna);
 		CATAPULT_ID = 36504;
 		TERRITORY_ID = 86;
@@ -55,4 +54,5 @@ public class TheTerritoryInnadril extends TerritoryWarSuperClass
 		};
 		registerKillIds();
 	}
+	
 }

@@ -25,32 +25,31 @@ import com.l2jserver.gameserver.model.L2Transformation;
 /**
  * @author Tan
  */
-public class DragonMasterKarin extends L2Transformation
-{
+public class DragonMasterKarin extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		5491, 619, 20003, 20004, 20005
+		5491,
+		619,
+		20003,
+		20004,
+		20005
 	};
 	
-	public DragonMasterKarin()
-	{
+	public DragonMasterKarin() {
 		// id, colRadius, colHeight
 		super(20006, 8, 18.6);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 20006) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 20006) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
@@ -66,13 +65,11 @@ public class DragonMasterKarin extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
@@ -87,8 +84,7 @@ public class DragonMasterKarin extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new DragonMasterKarin());
 	}
 }

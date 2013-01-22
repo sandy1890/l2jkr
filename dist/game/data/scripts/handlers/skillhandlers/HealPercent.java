@@ -31,8 +31,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-public class HealPercent implements ISkillHandler
-{
+public class HealPercent implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.HEAL_PERCENT,
@@ -44,37 +44,36 @@ public class HealPercent implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		//check for other effects
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		// check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getHandler(L2SkillType.BUFF);
 		
-		if (handler != null)
+		if (handler != null) {
 			handler.useSkill(activeChar, skill, targets);
+		}
 		
 		boolean cp = false;
 		boolean hp = false;
 		boolean mp = false;
-		switch (skill.getSkillType())
-		{
+		switch (skill.getSkillType()) {
 			case CPHEAL_PERCENT:
 				cp = true;
-				break;
+			break;
 			case HEAL_PERCENT:
 				hp = true;
-				break;
+			break;
 			case MANAHEAL_PERCENT:
 				mp = true;
-				break;
+			break;
 			case HPMPHEAL_PERCENT:
 				mp = true;
 				hp = true;
-				break;
+			break;
 			case HPMPCPHEAL_PERCENT:
 				cp = true;
 				hp = true;
 				mp = true;
-				break;
+			break;
 			case HPCPHEAL_PERCENT:
 				hp = true;
 				cp = true;
@@ -86,126 +85,149 @@ public class HealPercent implements ISkillHandler
 		boolean full = skill.getPower() == 100.0;
 		boolean targetPlayer = false;
 		
-		for (L2Character target: (L2Character[]) targets)
-		{
-			//1505 - sublime self sacrifice
-			if ((target == null || target.isDead() || target.isInvul()) && skill.getId() != 1505)
+		for (L2Character target : (L2Character[]) targets) {
+			// 1505 - sublime self sacrifice
+			if (((target == null) || target.isDead() || target.isInvul()) && (skill.getId() != 1505)) {
 				continue;
+			}
 			
 			targetPlayer = target instanceof L2PcInstance;
 			
 			// Cursed weapon owner can't heal or be healed
-			if (target != activeChar)
-			{
-				if (activeChar instanceof L2PcInstance && ((L2PcInstance)activeChar).isCursedWeaponEquipped())
+			if (target != activeChar) {
+				if ((activeChar instanceof L2PcInstance) && ((L2PcInstance) activeChar).isCursedWeaponEquipped()) {
 					continue;
-				if (targetPlayer && ((L2PcInstance)target).isCursedWeaponEquipped())
-					continue;
+				}
+				L2PcInstance player = ((L2PcInstance) target);
+				if (player != null) {
+					if (targetPlayer && player.isCursedWeaponEquipped()) {
+						continue;
+					}
+				}
 			}
 			
 			// Doors and flags can't be healed in any way
-			if (hp && (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance))
+			if (hp && ((target instanceof L2DoorInstance) || (target instanceof L2SiegeFlagInstance))) {
 				continue;
+			}
 			
-			if (targetPlayer)
+			if (targetPlayer) {
 				su = new StatusUpdate(target);
+			}
 			
 			// Only players have CP
-			if (cp && targetPlayer)
-			{
-				if (full)
-					amount = target.getMaxCp();
-				else
-					amount = target.getMaxCp() * skill.getPower() / 100.0;
-				
-				amount = Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp());
-				
-				// Prevent negative amounts
-				if (amount < 0)
-					amount = 0;
-				
-				// To prevent -value heals, set the value only if current cp is less than max recoverable.
-				if (target.getCurrentCp() < target.getMaxRecoverableCp())
-					target.setCurrentCp(amount + target.getCurrentCp());
-				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
-				sm.addNumber((int)amount);
-				target.sendPacket(sm);
-				su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
-			}
-			
-			if (hp)
-			{
-				if (full)
-					amount = target.getMaxHp();
-				else
-					amount = target.getMaxHp() * skill.getPower() / 100.0;
-				
-				amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
-				
-				// Prevent negative amounts
-				if (amount < 0)
-					amount = 0;
-				
-				// To prevent -value heals, set the value only if current hp is less than max recoverable.
-				if (target.getCurrentHp() < target.getMaxRecoverableHp())
-					target.setCurrentHp(amount + target.getCurrentHp());
-				
-				if (targetPlayer)
-				{
-					if (activeChar != target)
-					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
-						sm.addCharName(activeChar);
+			if (cp && targetPlayer) {
+				if (target != null) {
+					if (full) {
+						amount = target.getMaxCp();
+					} else {
+						amount = (target.getMaxCp() * skill.getPower()) / 100.0;
 					}
-					else
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
-					sm.addNumber((int)amount);
+					
+					amount = Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp());
+					
+					// Prevent negative amounts
+					if (amount < 0) {
+						amount = 0;
+					}
+					
+					// To prevent -value heals, set the value only if current cp is less than max recoverable.
+					if (target.getCurrentCp() < target.getMaxRecoverableCp()) {
+						target.setCurrentCp(amount + target.getCurrentCp());
+					}
+					
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
+					sm.addNumber((int) amount);
 					target.sendPacket(sm);
-					su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
+					if (su != null) {
+						su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
+					}
 				}
 			}
 			
-			if (mp)
-			{
-				if (full)
-					amount = target.getMaxMp();
-				else
-					amount = target.getMaxMp() * skill.getPower() / 100.0;
-				
-				amount = Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp());
-				
-				// Prevent negative amounts
-				if (amount < 0)
-					amount = 0;
-				
-				// To prevent -value heals, set the value only if current mp is less than max recoverable.
-				if (target.getCurrentMp() < target.getMaxRecoverableMp())
-					target.setCurrentMp(amount + target.getCurrentMp());
-				
-				if (targetPlayer)
-				{
-					if (activeChar != target)
-					{
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-						sm.addCharName(activeChar);
+			if (hp) {
+				if (target != null) {
+					if (full) {
+						amount = target.getMaxHp();
+					} else {
+						amount = (target.getMaxHp() * skill.getPower()) / 100.0;
 					}
-					else
-						sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
-					sm.addNumber((int)amount);
-					target.sendPacket(sm);
-					su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
+					
+					amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
+					
+					// Prevent negative amounts
+					if (amount < 0) {
+						amount = 0;
+					}
+					
+					// To prevent -value heals, set the value only if current hp is less than max recoverable.
+					if (target.getCurrentHp() < target.getMaxRecoverableHp()) {
+						target.setCurrentHp(amount + target.getCurrentHp());
+					}
+					
+					if (targetPlayer) {
+						if (activeChar != target) {
+							sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
+							sm.addCharName(activeChar);
+						} else {
+							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
+						}
+						sm.addNumber((int) amount);
+						target.sendPacket(sm);
+						if (su != null) {
+							su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
+						}
+					}
 				}
 			}
 			
-			if (targetPlayer)
-				target.sendPacket(su);
+			if (mp) {
+				if (target != null) {
+					if (full) {
+						amount = target.getMaxMp();
+					} else {
+						amount = (target.getMaxMp() * skill.getPower()) / 100.0;
+					}
+					
+					amount = Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp());
+					
+					// Prevent negative amounts
+					if (amount < 0) {
+						amount = 0;
+					}
+					
+					// To prevent -value heals, set the value only if current mp is less than max recoverable.
+					if (target.getCurrentMp() < target.getMaxRecoverableMp()) {
+						target.setCurrentMp(amount + target.getCurrentMp());
+					}
+					
+					if (targetPlayer) {
+						if (activeChar != target) {
+							sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
+							sm.addCharName(activeChar);
+						} else {
+							sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
+						}
+						sm.addNumber((int) amount);
+						target.sendPacket(sm);
+						if (su != null) {
+							su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
+						}
+					}
+				}
+			}
+			
+			if (targetPlayer) {
+				if (target != null) {
+					target.sendPacket(su);
+				}
+			}
 		}
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

@@ -28,24 +28,22 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author nBd
  */
-public class Disarm extends L2Effect
-{
-	public Disarm(Env env, EffectTemplate template)
-	{
+public class Disarm extends L2Effect {
+	
+	public Disarm(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.DISARM;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (!(getEffected() instanceof L2PcInstance))
+	public boolean onStart() {
+		if (!(getEffected() instanceof L2PcInstance)) {
 			return false;
+		}
 		
 		((L2PcInstance) getEffected()).disarmWeapons();
 		return true;
@@ -53,19 +51,17 @@ public class Disarm extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_DISARMED;
 	}
+	
 }

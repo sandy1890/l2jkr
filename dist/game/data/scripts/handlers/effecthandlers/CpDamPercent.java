@@ -27,26 +27,24 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 /**
  * @author Zoey76
  */
-public class CpDamPercent extends L2Effect
-{
-	public CpDamPercent(Env env, EffectTemplate template)
-	{
+public class CpDamPercent extends L2Effect {
+	
+	public CpDamPercent(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CPDAMPERCENT;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
-		double cp = getEffected().getCurrentCp() * (100 - getEffectPower()) / 100;
+		double cp = (getEffected().getCurrentCp() * (100 - getEffectPower())) / 100;
 		getEffected().setCurrentCp(cp);
 		
 		StatusUpdate sucp = new StatusUpdate(getEffected());
@@ -54,4 +52,5 @@ public class CpDamPercent extends L2Effect
 		getEffected().sendPacket(sucp);
 		return false;
 	}
+	
 }

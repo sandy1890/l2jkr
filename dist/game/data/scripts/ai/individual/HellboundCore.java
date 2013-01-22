@@ -30,22 +30,18 @@ import com.l2jserver.gameserver.model.quest.Quest;
  * Manages Naia's cast on the Hellbound Core
  * @author GKR
  */
-public class HellboundCore extends Quest
-{
+public class HellboundCore extends Quest {
+	
 	private static final int NAIA = 18484;
 	private static final int HELLBOUND_CORE = 32331;
 	
 	private static SkillHolder BEAM = new SkillHolder(5493, 1);
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("cast") && (HellboundManager.getInstance().getLevel() <= 6))
-		{
-			for (L2Character naia : npc.getKnownList().getKnownCharactersInRadius(900))
-			{
-				if ((naia != null) && (naia instanceof L2MonsterInstance) && (((L2MonsterInstance) naia).getNpcId() == NAIA) && !naia.isDead())
-				{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("cast") && (HellboundManager.getInstance().getLevel() <= 6)) {
+			for (L2Character naia : npc.getKnownList().getKnownCharactersInRadius(900)) {
+				if ((naia != null) && (naia instanceof L2MonsterInstance) && (((L2MonsterInstance) naia).getNpcId() == NAIA) && !naia.isDead()) {
 					naia.setTarget(npc);
 					naia.doSimultaneousCast(BEAM.getSkill());
 				}
@@ -56,21 +52,26 @@ public class HellboundCore extends Quest
 	}
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
+	public final String onSpawn(L2Npc npc) {
 		startQuestTimer("cast", 10000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
-	public HellboundCore(int id, String name, String descr)
-	{
+	/**
+	 * @param id
+	 * @param name
+	 * @param descr
+	 */
+	public HellboundCore(int id, String name, String descr) {
 		super(id, name, descr);
-		
 		addSpawnId(HELLBOUND_CORE);
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new HellboundCore(-1, "HellboundCore", "ai");
 	}
+	
 }

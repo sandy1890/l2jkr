@@ -33,9 +33,10 @@ import com.l2jserver.gameserver.util.Util;
  * 2010-08-19 Based on Freya PTS.
  * @author Gnacik
  */
-public class Q463_IMustBeaGenius extends Quest
-{
+public class Q463_IMustBeaGenius extends Quest {
+	
 	private static final String qn = "463_IMustBeaGenius";
+	
 	private static final int _gutenhagen = 32069;
 	private static final int _corpse_log = 15510;
 	private static final int _collection = 15511;
@@ -54,19 +55,15 @@ public class Q463_IMustBeaGenius extends Quest
 	};
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _gutenhagen)
-		{
-			if (event.equalsIgnoreCase("32069-03.htm"))
-			{
+		if (npc.getNpcId() == _gutenhagen) {
+			if (event.equalsIgnoreCase("32069-03.htm")) {
 				st.playSound("ItemSound.quest_accept");
 				st.setState(State.STARTED);
 				st.set("cond", "1");
@@ -74,11 +71,9 @@ public class Q463_IMustBeaGenius extends Quest
 				int _number = getRandom(500, 600);
 				st.set("number", String.valueOf(_number));
 				// Set drop for mobs
-				for (int _mob : _mobs)
-				{
+				for (int _mob : _mobs) {
 					int _rand = getRandom(-2, 4);
-					if (_rand == 0)
-					{
+					if (_rand == 0) {
 						_rand = 5;
 					}
 					st.set(String.valueOf(_mob), String.valueOf(_rand));
@@ -87,19 +82,14 @@ public class Q463_IMustBeaGenius extends Quest
 				st.set(String.valueOf(_mobs[getRandom(_mobs.length)]), String.valueOf(getRandom(1, 100)));
 				htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32069-03.htm");
 				htmltext = htmltext.replace("%num%", String.valueOf(_number));
-			}
-			else if (event.equalsIgnoreCase("32069-05.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32069-05.htm")) {
 				htmltext = getHtm(st.getPlayer().getHtmlPrefix(), "32069-05.htm");
 				htmltext = htmltext.replace("%num%", st.get("number"));
-			}
-			else if (event.equalsIgnoreCase("32069-07.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32069-07.htm")) {
 				st.addExpAndSp(317961, 25427);
 				st.unset("cond");
 				st.unset("number");
-				for (int _mob : _mobs)
-				{
+				for (int _mob : _mobs) {
 					st.unset(String.valueOf(_mob));
 				}
 				st.takeItems(_collection, -1);
@@ -111,64 +101,50 @@ public class Q463_IMustBeaGenius extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _gutenhagen)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == _gutenhagen) {
+			switch (st.getState()) {
 				case State.CREATED:
 					htmltext = (player.getLevel() >= 70) ? "32069-01.htm" : "32069-00.htm";
-					break;
+				break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
-					{
+					if (st.getInt("cond") == 1) {
 						htmltext = "32069-04.htm";
-					}
-					else if (st.getInt("cond") == 2)
-					{
+					} else if (st.getInt("cond") == 2) {
 						htmltext = "32069-06.htm";
 					}
-					break;
+				break;
 				case State.COMPLETED:
-					if (st.isNowAvailable())
-					{
+					if (st.isNowAvailable()) {
 						st.setState(State.CREATED); // Not required, but it'll set the proper state.
 						htmltext = (player.getLevel() >= 70) ? "32069-01.htm" : "32069-00.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "32069-08.htm";
 					}
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
-		if (st.isStarted() && (st.getInt("cond") == 1) && Util.contains(_mobs, npc.getNpcId()))
-		{
+		if (st.isStarted() && (st.getInt("cond") == 1) && Util.contains(_mobs, npc.getNpcId())) {
 			int _day_number = st.getInt("number");
 			int _number = st.getInt(String.valueOf(npc.getNpcId()));
 			
-			if (_number > 0)
-			{
+			if (_number > 0) {
 				st.giveItems(_corpse_log, _number);
 				st.playSound("ItemSound.quest_itemget");
 				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
@@ -177,9 +153,7 @@ public class Q463_IMustBeaGenius extends Quest
 				
 				npc.broadcastPacket(ns);
 				
-			}
-			else if ((_number < 0) && ((st.getQuestItemsCount(_corpse_log) + _number) > 0))
-			{
+			} else if ((_number < 0) && ((st.getQuestItemsCount(_corpse_log) + _number) > 0)) {
 				st.takeItems(_corpse_log, Math.abs(_number));
 				st.playSound("ItemSound.quest_itemget");
 				NpcSay ns = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
@@ -190,8 +164,7 @@ public class Q463_IMustBeaGenius extends Quest
 				
 			}
 			
-			if (st.getQuestItemsCount(_corpse_log) == _day_number)
-			{
+			if (st.getQuestItemsCount(_corpse_log) == _day_number) {
 				st.takeItems(_corpse_log, -1);
 				st.giveItems(_collection, 1);
 				st.set("cond", "2");
@@ -201,17 +174,15 @@ public class Q463_IMustBeaGenius extends Quest
 		return null;
 	}
 	
-	public Q463_IMustBeaGenius(int questId, String name, String descr)
-	{
+	public Q463_IMustBeaGenius(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(_gutenhagen);
 		addTalkId(_gutenhagen);
 		addKillId(_mobs);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q463_IMustBeaGenius(463, qn, "看來我真是個天才");
 	}
+	
 }

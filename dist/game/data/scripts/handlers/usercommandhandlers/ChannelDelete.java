@@ -25,25 +25,23 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author  Chris
+ * @author Chris
  */
-public class ChannelDelete implements IUserCommandHandler
-{
+public class ChannelDelete implements IUserCommandHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		93
 	};
 	
 	@Override
-	public boolean useUserCommand(int id, L2PcInstance activeChar)
-	{
-		if (id != COMMAND_IDS[0])
+	public boolean useUserCommand(int id, L2PcInstance activeChar) {
+		if (id != COMMAND_IDS[0]) {
 			return false;
+		}
 		
-		if (activeChar.isInParty())
-		{
-			if (activeChar.getParty().isLeader(activeChar) && activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar))
-			{
+		if (activeChar.isInParty()) {
+			if (activeChar.getParty().isLeader(activeChar) && activeChar.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar)) {
 				L2CommandChannel channel = activeChar.getParty().getCommandChannel();
 				
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHANNEL_DISBANDED);
@@ -58,8 +56,8 @@ public class ChannelDelete implements IUserCommandHandler
 	}
 	
 	@Override
-	public int[] getUserCommandList()
-	{
+	public int[] getUserCommandList() {
 		return COMMAND_IDS;
 	}
+	
 }

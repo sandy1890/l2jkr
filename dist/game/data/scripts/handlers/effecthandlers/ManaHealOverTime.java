@@ -24,47 +24,45 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 
-public class ManaHealOverTime extends L2Effect
-{
-	public ManaHealOverTime(Env env, EffectTemplate template)
-	{
+public class ManaHealOverTime extends L2Effect {
+	
+	public ManaHealOverTime(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	// Special constructor to steal this effect
-	public ManaHealOverTime(Env env, L2Effect effect)
-	{
+	public ManaHealOverTime(Env env, L2Effect effect) {
 		super(env, effect);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
-	{
+	protected boolean effectCanBeStolen() {
 		return true;
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.MANA_HEAL_OVER_TIME;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		double mp = getEffected().getCurrentMp();
 		double maxmp = getEffected().getMaxRecoverableMp();
 		
 		// Not needed to set the MP and send update packet if player is already at max MP
-		if (mp >= maxmp)
+		if (mp >= maxmp) {
 			return true;
+		}
 		
 		mp += calc();
-		if (mp > maxmp)
+		if (mp > maxmp) {
 			mp = maxmp;
+		}
 		
 		getEffected().setCurrentMp(mp);
 		StatusUpdate sump = new StatusUpdate(getEffected());
@@ -72,4 +70,5 @@ public class ManaHealOverTime extends L2Effect
 		getEffected().sendPacket(sump);
 		return true;
 	}
+	
 }

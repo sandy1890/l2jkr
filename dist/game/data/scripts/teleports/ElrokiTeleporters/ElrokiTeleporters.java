@@ -24,39 +24,35 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * @author Plim
- * Original python script by kerberos_20
+ * @author Plim Original python script by kerberos_20
  */
-public class ElrokiTeleporters extends Quest
-{
+public class ElrokiTeleporters extends Quest {
+	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		if (st == null)
+		if (st == null) {
 			return null;
+		}
 		
-		switch (npc.getNpcId())
-		{
+		switch (npc.getNpcId()) {
 			case 32111:
-				if (player.isInCombat())
-				{
+				if (player.isInCombat()) {
 					return "32111-no.htm";
 				}
-				player.teleToLocation(4990,-1879,-3178);
-				break;
+				player.teleToLocation(4990, -1879, -3178);
+			break;
 			case 32112:
-				player.teleToLocation(7557,-5513,-3221);
-				break;
+				player.teleToLocation(7557, -5513, -3221);
+			break;
 		}
 		
 		return htmltext;
 	}
 	
-	public ElrokiTeleporters(int questId, String name, String descr)
-	{
+	public ElrokiTeleporters(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(32111);
@@ -65,8 +61,8 @@ public class ElrokiTeleporters extends Quest
 		addTalkId(32112);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new ElrokiTeleporters(-1, ElrokiTeleporters.class.getSimpleName(), "teleports");
 	}
+	
 }

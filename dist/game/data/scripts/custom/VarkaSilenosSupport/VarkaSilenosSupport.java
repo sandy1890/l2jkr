@@ -18,8 +18,6 @@
  */
 package custom.VarkaSilenosSupport;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -31,192 +29,185 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import com.l2jserver.gameserver.util.Util;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * @authors Emperorc (python), Nyaran (java)
  * @notes Finished by Kerberos_20 (python) 10/23/07
  */
-public class VarkaSilenosSupport extends Quest
-{
+public class VarkaSilenosSupport extends Quest {
+	
 	private static final String qn = "VarkaSilenosSupport";
-
-	private static final int ASHAS = 31377; //Hierarch
-	private static final int NARAN = 31378; //Messenger
-	private static final int UDAN  = 31379; //Buffer
-	private static final int DIYABU= 31380; //Grocer
-	private static final int HAGOS = 31381; //Warehouse Keeper
-	private static final int SHIKON= 31382; //Trader
-	private static final int TERANU= 31383; //Teleporter
+	
+	private static final int ASHAS = 31377; // Hierarch
+	private static final int NARAN = 31378; // Messenger
+	private static final int UDAN = 31379; // Buffer
+	private static final int DIYABU = 31380; // Grocer
+	private static final int HAGOS = 31381; // Warehouse Keeper
+	private static final int SHIKON = 31382; // Trader
+	private static final int TERANU = 31383; // Teleporter
 	private static final int[] NPCS =
 	{
-		ASHAS, NARAN, UDAN, DIYABU, HAGOS, SHIKON, TERANU
+		ASHAS,
+		NARAN,
+		UDAN,
+		DIYABU,
+		HAGOS,
+		SHIKON,
+		TERANU
 	};
-
+	
 	private static final int SEED = 7187;
-
+	
 	private static final TIntObjectHashMap<BuffsData> BUFF = new TIntObjectHashMap<>();
-
-	private class BuffsData
-	{
-		private int _skill;
-		private int _cost;
-
-		public BuffsData(int skill, int cost)
-		{
+	
+	private class BuffsData {
+		private final int _skill;
+		private final int _cost;
+		
+		public BuffsData(int skill, int cost) {
 			super();
 			_skill = skill;
 			_cost = cost;
 		}
-
-		public L2Skill getSkill()
-		{
+		
+		public L2Skill getSkill() {
 			return SkillTable.getInstance().getInfo(_skill, 1);
 		}
-
-		public int getCost()
-		{
+		
+		public int getCost() {
 			return _cost;
 		}
 	}
-
+	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			return htmltext;
-
+		}
+		
 		int Alevel = player.getAllianceWithVarkaKetra();
-		if (Util.isDigit(event) && BUFF.containsKey(Integer.parseInt(event)))
-		{
+		if (Util.isDigit(event) && BUFF.containsKey(Integer.parseInt(event))) {
 			BuffsData buff = BUFF.get(Integer.parseInt(event));
-			if (st.getQuestItemsCount(SEED) >= buff.getCost())
-			{
+			if (st.getQuestItemsCount(SEED) >= buff.getCost()) {
 				st.takeItems(SEED, buff.getCost());
 				npc.setTarget(player);
 				npc.doCast(buff.getSkill());
 				npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 				htmltext = "31379-4.htm";
 			}
-		}
-		else if (event.equals("Withdraw"))
-		{
-			if (player.getWarehouse().getSize() == 0)
+		} else if (event.equals("Withdraw")) {
+			if (player.getWarehouse().getSize() == 0) {
 				htmltext = "31381-0.htm";
-			else
-			{
+			} else {
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				player.setActiveWarehouse(player.getWarehouse());
 				player.sendPacket(new WareHouseWithdrawalList(player, 1));
 			}
-		}
-		else if (event.equals("Teleport"))
-		{
-			if (Alevel == -4)
+		} else if (event.equals("Teleport")) {
+			if (Alevel == -4) {
 				htmltext = "31383-4.htm";
-			else if (Alevel == -5)
+			} else if (Alevel == -5) {
 				htmltext = "31383-5.htm";
+			}
 		}
 		return htmltext;
 	}
-
+	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = Quest.getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
+		if (st == null) {
 			st = this.newQuestState(player);
+		}
 		int npcId = npc.getNpcId();
 		int Alevel = player.getAllianceWithVarkaKetra();
-		if (npcId == ASHAS)
-		{
-			if (Alevel < 0)
+		if (npcId == ASHAS) {
+			if (Alevel < 0) {
 				htmltext = "31377-friend.htm";
-			else
+			} else {
 				htmltext = "31377-no.htm";
-		}
-		else if (npcId == NARAN)
-		{
-			if (Alevel < 0)
+			}
+		} else if (npcId == NARAN) {
+			if (Alevel < 0) {
 				htmltext = "31378-friend.htm";
-			else
+			} else {
 				htmltext = "31378-no.htm";
-		}
-		else if (npcId == UDAN)
-		{
+			}
+		} else if (npcId == UDAN) {
 			st.setState(State.STARTED);
-			if (Alevel > -1)
+			if (Alevel > -1) {
 				htmltext = "31379-3.htm";
-			else if (Alevel > -3 && Alevel > 0)
+			} else if ((Alevel > -3) && (Alevel > 0)) {
 				htmltext = "31379-1.htm";
-			else if (Alevel < -2)
-				if (st.hasQuestItems(SEED))
+			} else if (Alevel < -2) {
+				if (st.hasQuestItems(SEED)) {
 					htmltext = "31379-4.htm";
-				else
+				} else {
 					htmltext = "31379-2.htm";
-		}
-		else if (npcId == DIYABU)
-		{
-			if (player.getKarma() >= 1)
+				}
+			}
+		} else if (npcId == DIYABU) {
+			if (player.getKarma() >= 1) {
 				htmltext = "31380-pk.htm";
-			else if (Alevel >= 0)
+			} else if (Alevel >= 0) {
 				htmltext = "31380-no.htm";
-			else if (Alevel == -1 || Alevel == -2)
+			} else if ((Alevel == -1) || (Alevel == -2)) {
 				htmltext = "31380-1.htm";
-			else
+			} else {
 				htmltext = "31380-2.htm";
-		}
-		else if (npcId == HAGOS)
-		{
-			if (Alevel >= 0)
+			}
+		} else if (npcId == HAGOS) {
+			if (Alevel >= 0) {
 				htmltext = "31381-no.htm";
-			else if (Alevel == -1)
+			} else if (Alevel == -1) {
 				htmltext = "31381-1.htm";
-			else if (player.getWarehouse().getSize() == 0)
+			} else if (player.getWarehouse().getSize() == 0) {
 				htmltext = "31381-3.htm";
-			else if (Alevel == -2 || Alevel == -3)
+			} else if ((Alevel == -2) || (Alevel == -3)) {
 				htmltext = "31381-2.htm";
-			else
+			} else {
 				htmltext = "31381-4.htm";
-		}
-		else if (npcId == SHIKON)
-		{
-			if (Alevel == -2)
+			}
+		} else if (npcId == SHIKON) {
+			if (Alevel == -2) {
 				htmltext = "31382-1.htm";
-			else if (Alevel == -3 || Alevel == -4)
+			} else if ((Alevel == -3) || (Alevel == -4)) {
 				htmltext = "31382-2.htm";
-			else if (Alevel == -5)
+			} else if (Alevel == -5) {
 				htmltext = "31382-3.htm";
-			else
+			} else {
 				htmltext = "31382-no.htm";
-		}
-		else if (npcId == TERANU)
-		{
-			if (Alevel >= 0)
+			}
+		} else if (npcId == TERANU) {
+			if (Alevel >= 0) {
 				htmltext = "31383-no.htm";
-			else if (Alevel < 0 && Alevel > -4)
+			} else if ((Alevel < 0) && (Alevel > -4)) {
 				htmltext = "31383-1.htm";
-			else if (Alevel == -4)
+			} else if (Alevel == -4) {
 				htmltext = "31383-2.htm";
-			else
+			} else {
 				htmltext = "31383-3.htm";
+			}
 		}
 		return htmltext;
 	}
-
-	public VarkaSilenosSupport(int id, String name, String descr)
-	{
+	
+	public VarkaSilenosSupport(int id, String name, String descr) {
 		super(id, name, descr);
-
-		for (int i : NPCS)
+		
+		for (int i : NPCS) {
 			addFirstTalkId(i);
+		}
 		addTalkId(UDAN);
 		addTalkId(HAGOS);
 		addTalkId(TERANU);
 		addStartNpc(HAGOS);
 		addStartNpc(TERANU);
-
+		
 		BUFF.put(1, new BuffsData(4359, 2)); // Focus: Requires 2 Nepenthese Seeds
 		BUFF.put(2, new BuffsData(4360, 2)); // Death Whisper: Requires 2 Nepenthese Seeds
 		BUFF.put(3, new BuffsData(4345, 3)); // Might: Requires 3 Nepenthese Seeds
@@ -226,9 +217,9 @@ public class VarkaSilenosSupport extends Quest
 		BUFF.put(7, new BuffsData(4356, 6)); // Empower: Requires 6 Nepenthese Seeds
 		BUFF.put(8, new BuffsData(4357, 6)); // Haste: Requires 6 Nepenthese Seeds
 	}
-
-	public static void main(String args[])
-	{
+	
+	public static void main(String args[]) {
 		new VarkaSilenosSupport(-1, qn, "custom");
 	}
+	
 }

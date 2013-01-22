@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original Jython script by Emperorc.
  * @author nonom
  */
-public class Q12_SecretMeetingWithVarkaSilenos extends Quest
-{
+public class Q12_SecretMeetingWithVarkaSilenos extends Quest {
+	
 	private static final String qn = "12_SecretMeetingWithVarkaSilenos";
 	
 	// NPCs
@@ -42,98 +42,78 @@ public class Q12_SecretMeetingWithVarkaSilenos extends Quest
 	private static final int BOX = 7232;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int cond = st.getInt("cond");
-		switch (event)
-		{
+		switch (event) {
 			case "31296-03.html":
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "31258-02.html":
-				if (cond == 1)
-				{
+				if (cond == 1) {
 					st.set("cond", "2");
 					st.giveItems(BOX, 1);
 					st.playSound("ItemSound.quest_middle");
 				}
-				break;
+			break;
 			case "31378-02.html":
-				if ((cond == 2) && (st.hasQuestItems(BOX)))
-				{
+				if ((cond == 2) && (st.hasQuestItems(BOX))) {
 					st.takeItems(BOX, -1);
 					st.addExpAndSp(233125, 18142);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
-				}
-				else
-				{
+				} else {
 					htmltext = "31378-03.html";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int npcId = npc.getNpcId();
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = getAlreadyCompletedMsg(player);
-				break;
+			break;
 			case State.CREATED:
-				if (npcId == CADMON)
-				{
+				if (npcId == CADMON) {
 					htmltext = (player.getLevel() >= 74) ? "31296-01.htm" : "31296-02.html";
 				}
-				break;
+			break;
 			case State.STARTED:
 				final int cond = st.getInt("cond");
-				if ((npcId == CADMON) && (cond == 1))
-				{
+				if ((npcId == CADMON) && (cond == 1)) {
 					htmltext = "31296-04.html";
-				}
-				else if (npcId == HELMUT)
-				{
-					if (cond == 1)
-					{
+				} else if (npcId == HELMUT) {
+					if (cond == 1) {
 						htmltext = "31258-01.html";
-					}
-					else if (cond == 2)
-					{
+					} else if (cond == 2) {
 						htmltext = "31258-03.html";
 					}
-				}
-				else if ((npcId == NARAN) && (cond == 2))
-				{
+				} else if ((npcId == NARAN) && (cond == 2)) {
 					htmltext = "31378-01.html";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q12_SecretMeetingWithVarkaSilenos(int questId, String name, String descr)
-	{
+	public Q12_SecretMeetingWithVarkaSilenos(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(CADMON);
@@ -141,8 +121,8 @@ public class Q12_SecretMeetingWithVarkaSilenos extends Quest
 		addTalkId(CADMON, HELMUT, NARAN);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q12_SecretMeetingWithVarkaSilenos(12, qn, "Secret Meeting With Varka Silenos");
 	}
+	
 }

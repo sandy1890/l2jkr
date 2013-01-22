@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  * Retail Event : 'Heavy Medals'
  * @author Gnacik
  */
-public class HeavyMedal extends Quest
-{
+public class HeavyMedal extends Quest {
+	
 	private final static int CAT_ROY = 31228;
 	private final static int CAT_WINNIE = 31229;
 	private final static int GLITTERING_MEDAL = 6393;
@@ -38,11 +38,17 @@ public class HeavyMedal extends Quest
 	
 	private final static int[] MEDALS =
 	{
-		5, 10, 20, 40
+		5,
+		10,
+		20,
+		40
 	};
 	private final static int[] BADGES =
 	{
-		6399, 6400, 6401, 6402
+		6399,
+		6400,
+		6401,
+		6402
 	};
 	
 	private static final Location[] _spawns_winnie =
@@ -131,8 +137,12 @@ public class HeavyMedal extends Quest
 		new Location(44319, -47640, -792, 50000)
 	};
 	
-	public HeavyMedal(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public HeavyMedal(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(CAT_ROY);
 		addStartNpc(CAT_WINNIE);
@@ -140,50 +150,36 @@ public class HeavyMedal extends Quest
 		addTalkId(CAT_WINNIE);
 		addFirstTalkId(CAT_ROY);
 		addFirstTalkId(CAT_WINNIE);
-		for (Location loc : _spawns_roy)
-		{
+		for (Location loc : _spawns_roy) {
 			addSpawn(CAT_ROY, loc, false, 0);
 		}
-		for (Location loc : _spawns_winnie)
-		{
+		for (Location loc : _spawns_winnie) {
 			addSpawn(CAT_WINNIE, loc, false, 0);
 		}
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return getNoQuestMsg(player);
 		}
 		
 		String htmltext = event;
 		int level = checkLevel(st);
 		
-		if (event.equalsIgnoreCase("game"))
-		{
+		if (event.equalsIgnoreCase("game")) {
 			htmltext = st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level] ? "31229-no.htm" : "31229-game.htm";
-		}
-		else if (event.equalsIgnoreCase("heads") || event.equalsIgnoreCase("tails"))
-		{
-			if (st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level])
-			{
+		} else if (event.equalsIgnoreCase("heads") || event.equalsIgnoreCase("tails")) {
+			if (st.getQuestItemsCount(GLITTERING_MEDAL) < MEDALS[level]) {
 				htmltext = "31229-" + event.toLowerCase() + "-10.htm";
-			}
-			else
-			{
+			} else {
 				st.takeItems(GLITTERING_MEDAL, MEDALS[level]);
 				
-				if (getRandom(100) > WIN_CHANCE)
-				{
+				if (getRandom(100) > WIN_CHANCE) {
 					level = 0;
-				}
-				else
-				{
-					if (level > 0)
-					{
+				} else {
+					if (level > 0) {
 						st.takeItems(BADGES[level - 1], -1);
 					}
 					st.giveItems(BADGES[level], 1);
@@ -192,48 +188,40 @@ public class HeavyMedal extends Quest
 				}
 				htmltext = "31229-" + event.toLowerCase() + "-" + String.valueOf(level) + ".htm";
 			}
-		}
-		else if (event.equalsIgnoreCase("talk"))
-		{
+		} else if (event.equalsIgnoreCase("talk")) {
 			htmltext = String.valueOf(npc.getNpcId()) + "-lvl-" + String.valueOf(level) + ".htm";
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-		{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
 		}
 		return npc.getNpcId() + ".htm";
 	}
 	
-	public int checkLevel(QuestState st)
-	{
+	/**
+	 * @param st
+	 * @return
+	 */
+	public int checkLevel(QuestState st) {
 		int _lev = 0;
-		if (st.hasQuestItems(6402))
-		{
+		if (st.hasQuestItems(6402)) {
 			_lev = 4;
-		}
-		else if (st.hasQuestItems(6401))
-		{
+		} else if (st.hasQuestItems(6401)) {
 			_lev = 3;
-		}
-		else if (st.hasQuestItems(6400))
-		{
+		} else if (st.hasQuestItems(6400)) {
 			_lev = 2;
-		}
-		else if (st.hasQuestItems(6399))
-		{
+		} else if (st.hasQuestItems(6399)) {
 			_lev = 1;
 		}
 		return _lev;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new HeavyMedal(-1, "HeavyMedal", "events");
 	}
+	
 }

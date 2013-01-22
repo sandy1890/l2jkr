@@ -25,13 +25,11 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * This class handles following admin commands:
- * - gm = turns gm mode off
- *
+ * This class handles following admin commands: - gm = turns gm mode off
  * @version $Revision: 1.2.4.4 $ $Date: 2005/04/11 10:06:06 $
  */
-public class AdminGm implements IAdminCommandHandler
-{
+public class AdminGm implements IAdminCommandHandler {
+	
 	private static Logger _log = Logger.getLogger(AdminGm.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -39,10 +37,8 @@ public class AdminGm implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
-		if (command.equals("admin_gm") && activeChar.isGM())
-		{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+		if (command.equals("admin_gm") && activeChar.isGM()) {
 			AdminTable.getInstance().deleteGm(activeChar);
 			activeChar.setAccessLevel(0);
 			activeChar.sendMessage(1685);
@@ -52,8 +48,8 @@ public class AdminGm implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
+	
 }

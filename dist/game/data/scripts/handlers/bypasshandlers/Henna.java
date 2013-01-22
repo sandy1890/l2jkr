@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.network.serverpackets.HennaRemoveList;
 /**
  * @author Zoey76
  */
-public class Henna implements IBypassHandler
-{
+public class Henna implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"Draw",
@@ -38,23 +38,16 @@ public class Henna implements IBypassHandler
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2SymbolMakerInstance))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2SymbolMakerInstance)) {
 			return false;
 		}
 		
-		if (command.equals("Draw"))
-		{
+		if (command.equals("Draw")) {
 			activeChar.sendPacket(new HennaEquipList(activeChar));
-		}
-		else if (command.equals("RemoveList"))
-		{
-			for (L2Henna henna : activeChar.getHennaList())
-			{
-				if (henna != null)
-				{
+		} else if (command.equals("RemoveList")) {
+			for (L2Henna henna : activeChar.getHennaList()) {
+				if (henna != null) {
 					activeChar.sendPacket(new HennaRemoveList(activeChar));
 					break;
 				}
@@ -64,8 +57,8 @@ public class Henna implements IBypassHandler
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

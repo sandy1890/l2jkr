@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original Jython script by Kilkenny
  * @author nonom
  */
-public class Q52_WilliesSpecialBait extends Quest
-{
+public class Q52_WilliesSpecialBait extends Quest {
+	
 	private static final String qn = "52_WilliesSpecialBait";
 	
 	// NPCs
@@ -43,98 +43,82 @@ public class Q52_WilliesSpecialBait extends Quest
 	private static final int EARTH_FISHING_LURE = 7612;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 			case "31574-03.htm":
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "31574-07.html":
-				if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(TARLK_EYE) >= 100))
-				{
+				if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(TARLK_EYE) >= 100)) {
 					htmltext = "31574-06.htm";
 					st.giveItems(EARTH_FISHING_LURE, 4);
 					st.takeItems(TARLK_EYE, -1);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = "<html><body>這是已經完成的任務。</body></html>";
-				break;
+			break;
 			case State.CREATED:
 				htmltext = (player.getLevel() >= 48) ? "31574-01.htm" : "31574-02.html";
-				break;
+			break;
 			case State.STARTED:
 				htmltext = (st.getInt("cond") == 1) ? "31574-04.html" : "31574-05.html";
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
+		if (partyMember == null) {
 			return null;
 		}
 		
 		final QuestState st = partyMember.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
 		final long count = st.getQuestItemsCount(TARLK_EYE);
-		if ((st.getInt("cond") == 1) && (count < 100))
-		{
+		if ((st.getInt("cond") == 1) && (count < 100)) {
 			float chance = 33 * Config.RATE_QUEST_DROP;
 			float numItems = chance / 100;
 			chance = chance % 100;
 			
-			if (getRandom(100) < chance)
-			{
+			if (getRandom(100) < chance) {
 				numItems += 1;
 			}
-			if (numItems > 0)
-			{
-				if ((count + numItems) >= 100)
-				{
+			if (numItems > 0) {
+				if ((count + numItems) >= 100) {
 					numItems = 100 - count;
 				}
 				st.set("cond", "2");
 				st.playSound("ItemSound.quest_middle");
-			}
-			else
-			{
+			} else {
 				st.playSound("ItemSound.quest_itemget");
 			}
 			st.giveItems(TARLK_EYE, (int) numItems);
@@ -143,17 +127,15 @@ public class Q52_WilliesSpecialBait extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q52_WilliesSpecialBait(int questId, String name, String descr)
-	{
+	public Q52_WilliesSpecialBait(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE);
 		addKillId(TARLK_BASILISK);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q52_WilliesSpecialBait(52, qn, "Willie's Special Bait");
 	}
+	
 }

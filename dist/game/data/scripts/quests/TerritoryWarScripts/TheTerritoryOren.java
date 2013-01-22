@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class TheTerritoryOren extends TerritoryWarSuperClass
-{
+public class TheTerritoryOren extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "720_FortheSakeoftheTerritoryOren";
 	public static int qnu = 720;
 	public static String qna = "For the Sake of the Territory - Oren";
 	
-	public TheTerritoryOren()
-	{
+	public TheTerritoryOren() {
 		super(qnu, qn1, qna);
 		CATAPULT_ID = 36502;
 		TERRITORY_ID = 84;
@@ -55,4 +54,5 @@ public class TheTerritoryOren extends TerritoryWarSuperClass
 		};
 		registerKillIds();
 	}
+	
 }

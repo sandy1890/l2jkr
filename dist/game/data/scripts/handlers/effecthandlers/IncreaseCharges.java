@@ -29,35 +29,34 @@ import com.l2jserver.gameserver.model.stats.Env;
  * Number of charges in "value", maximum number in "count" effect variables.
  * @author DS
  */
-public class IncreaseCharges extends L2Effect
-{
-	public IncreaseCharges(Env env, EffectTemplate template)
-	{
+public class IncreaseCharges extends L2Effect {
+	
+	public IncreaseCharges(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.INCREASE_CHARGES;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() == null)
+	public boolean onStart() {
+		if (getEffected() == null) {
 			return false;
+		}
 		
-		if (!(getEffected() instanceof L2PcInstance))
+		if (!(getEffected() instanceof L2PcInstance)) {
 			return false;
+		}
 		
-		((L2PcInstance)getEffected()).increaseCharges((int)calc(), getCount());
+		((L2PcInstance) getEffected()).increaseCharges((int) calc(), getCount());
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false; // abort effect even if count > 1
 	}
+	
 }

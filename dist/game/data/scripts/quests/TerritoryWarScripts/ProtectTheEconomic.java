@@ -22,14 +22,13 @@ package quests.TerritoryWarScripts;
  * @author Gigiikun
  */
 
-public class ProtectTheEconomic extends TerritoryWarSuperClass
-{
+public class ProtectTheEconomic extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "733_ProtecttheEconomicAssociationLeader";
 	public static int qnu = 733;
 	public static String qna = "Protect the Economic Association Leader";
 	
-	public ProtectTheEconomic()
-	{
+	public ProtectTheEconomic() {
 		super(qnu, qn1, qna);
 		NPC_IDS = new int[]
 		{
@@ -48,8 +47,8 @@ public class ProtectTheEconomic extends TerritoryWarSuperClass
 	}
 	
 	@Override
-	public int getTerritoryIdForThisNPCId(int npcid)
-	{
+	public int getTerritoryIdForThisNPCId(int npcid) {
 		return 81 + ((npcid - 36513) / 6);
 	}
+	
 }

@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class KillTheKnights extends TerritoryWarSuperClass
-{
+public class KillTheKnights extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "734_Piercethroughashield";
 	public static int qnu = 734;
 	public static String qna = "Pierce through a shield";
 	
-	public KillTheKnights()
-	{
+	public KillTheKnights() {
 		super(qnu, qn1, qna);
 		CLASS_IDS = new int[]
 		{
@@ -53,4 +52,5 @@ public class KillTheKnights extends TerritoryWarSuperClass
 			NpcStringId.YOU_WEAKENED_THE_ENEMYS_DEFENSE
 		};
 	}
+	
 }

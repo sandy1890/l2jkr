@@ -32,10 +32,10 @@ import com.l2jserver.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * @author  KKnD
+ * @author KKnD
  */
-public class AdminVitaminItem implements IAdminCommandHandler
-{
+public class AdminVitaminItem implements IAdminCommandHandler {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_vitaminitem",
@@ -43,20 +43,17 @@ public class AdminVitaminItem implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
-		if (command.equals("admin_vitaminitem"))
-		{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+		if (command.equals("admin_vitaminitem")) {
 			main_txt(activeChar);
-		}
-		else if (command.startsWith("admin_sendVitem"))
-		{
+		} else if (command.startsWith("admin_sendVitem")) {
 			String[] args = command.split(" ");
 			int itemId = Integer.parseInt(args[1]);
 			long itemcount = Long.parseLong(args[2]);
 			int online = 0;
-			if (args[3].equals("online"))
+			if (args[3].equals("online")) {
 				online = 1;
+			}
 			
 			add_vit_item(itemId, itemcount, online, activeChar);
 			main_txt(activeChar);
@@ -65,13 +62,14 @@ public class AdminVitaminItem implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
 	
-	public void main_txt(L2PcInstance player)
-	{
+	/**
+	 * @param player
+	 */
+	public void main_txt(L2PcInstance player) {
 		NpcHtmlMessage html = new NpcHtmlMessage(5);
 		TextBuilder sb = new TextBuilder();
 		sb.append("<html><title>��L�R�޲z</title><body>");
@@ -84,12 +82,7 @@ public class AdminVitaminItem implements IAdminCommandHandler
 		sb.append("<tr><td><td><edit width=120 var=\"tsCnt\"></td></tr>");
 		sb.append("<tr><td</td></tr>");
 		sb.append("<tr><td>����:</td></tr>");
-		/* l2jtw start
-		 * 3q overzero
-		sb.append("<tr><td><td><combobox width=120 var=tsPpl list=�������a;�����u�W���a></td></tr>");
-		 */
 		sb.append("<tr><td><td><combobox width=120 var=tsPpl list=online;�������a></td></tr>");
-		// l2jtw end
 		sb.append("</table>");
 		sb.append("<table width=270>");
 		sb.append("<tr>");
@@ -100,30 +93,30 @@ public class AdminVitaminItem implements IAdminCommandHandler
 		player.sendPacket(html);
 	}
 	
-	public void add_vit_item(int id, long count, int online, L2PcInstance player)
-	{
+	/**
+	 * @param id
+	 * @param count
+	 * @param online
+	 * @param player
+	 */
+	public void add_vit_item(int id, long count, int online, L2PcInstance player) {
 		Connection con = null;
-		try
-		{
+		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
-			if (online == 1)
+			if (online == 1) {
 				statement = con.prepareStatement("SELECT charId FROM characters WHERE online = 1 AND accesslevel > -1 AND deletetime = 0");
-			else
+			} else {
 				statement = con.prepareStatement("SELECT charId FROM characters WHERE accesslevel > -1 AND deletetime = 0");
-			
+			}
 			PreparedStatement statement2 = con.prepareStatement("SELECT itemNum FROM character_premium_items WHERE charId=? ORDER BY itemNum DESC");
 			PreparedStatement statement3 = con.prepareStatement("INSERT INTO character_premium_items (charId, itemNum, itemId, itemCount, itemSender) VALUES (?,?,?,?,?)");
-			
 			ResultSet set = statement.executeQuery();
-			
-			while (set.next())
-			{
+			while (set.next()) {
 				int charid = set.getInt("charId");
 				int lastnum = getlastnum(statement2, charid);
-				
 				statement3.setInt(1, charid);
-				statement3.setInt(2, lastnum+1);
+				statement3.setInt(2, lastnum + 1);
 				statement3.setInt(3, id);
 				statement3.setLong(4, count);
 				statement3.setString(5, "Server");
@@ -134,43 +127,38 @@ public class AdminVitaminItem implements IAdminCommandHandler
 			statement3.close();
 			set.close();
 			L2PcInstance[] pls = L2World.getInstance().getAllPlayersArray();
-			for (L2PcInstance pc : pls)
-			{
+			for (L2PcInstance pc : pls) {
 				pc.loadPremiumItemList();
-				if (!pc.getPremiumItemList().isEmpty())
+				if (!pc.getPremiumItemList().isEmpty()) {
 					pc.sendPacket(new ExNotifyPremiumItem());
+				}
 			}
 			player.sendMessage("���~�w�����a");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		finally
-		{
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
-	public int getlastnum(PreparedStatement statement, int charid)
-	{
+	/**
+	 * @param statement
+	 * @param charid
+	 * @return
+	 */
+	public int getlastnum(PreparedStatement statement, int charid) {
 		int i = 0;
-		
-		try
-		{
+		try {
 			statement.setInt(1, charid);
 			ResultSet set = statement.executeQuery();
-			if (set.next())
-			{
+			if (set.next()) {
 				i = set.getInt("itemNum");
 			}
 			set.close();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		return i;
 	}
+	
 }

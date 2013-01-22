@@ -24,49 +24,44 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
-
 /**
  * @author JaJa (l2.brick)
  */
 
-public class RecoBonus extends L2Effect
-{
-	public RecoBonus(Env env, EffectTemplate template)
-	{
+public class RecoBonus extends L2Effect {
+	
+	public RecoBonus(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BUFF;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (!(getEffected() instanceof L2PcInstance))
+	public boolean onStart() {
+		if (!(getEffected() instanceof L2PcInstance)) {
 			return false;
-			
+		}
+		
 		((L2PcInstance) getEffected()).setRecomBonusType(1).setRecoBonusActive(true);
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		((L2PcInstance) getEffected()).setRecomBonusType(0).setRecoBonusActive(false);
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
-	{
+	protected boolean effectCanBeStolen() {
 		return false;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
-	}       
+	}
+	
 }

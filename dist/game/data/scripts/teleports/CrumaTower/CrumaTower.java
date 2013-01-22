@@ -26,35 +26,35 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author Plim
  */
-public class CrumaTower extends Quest
-{
+public class CrumaTower extends Quest {
+	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		
-		if (st == null)
+		if (st == null) {
 			return getNoQuestMsg(player);
+		}
 		
-		if (player.getLevel() > 55)
+		if (player.getLevel() > 55) {
 			htmltext = "30483.htm";
-		else
-			player.teleToLocation(17728,114750,-11688);
+		} else {
+			player.teleToLocation(17728, 114750, -11688);
+		}
 		
 		return htmltext;
 	}
 	
-	public CrumaTower(int questId, String name, String descr)
-	{
+	public CrumaTower(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(30483);
 		addTalkId(30483);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new CrumaTower(-1, CrumaTower.class.getSimpleName(), "teleports");
 	}
+	
 }

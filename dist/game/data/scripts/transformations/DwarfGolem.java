@@ -22,32 +22,32 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class DwarfGolem extends L2Transformation
-{
+public class DwarfGolem extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		806, 807, 808, 809, 5491, 619
+		806,
+		807,
+		808,
+		809,
+		5491,
+		619
 	};
 	
-	public DwarfGolem()
-	{
+	public DwarfGolem() {
 		// id, colRadius, colHeight
 		super(259, 30, 51.8);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 259) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 259) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Magic Obstacle
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(806, 1), false);
 		// Over-hit
@@ -65,13 +65,11 @@ public class DwarfGolem extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Magic Obstacle
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(806, 1), false);
 		// Over-hit
@@ -88,8 +86,7 @@ public class DwarfGolem extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new DwarfGolem());
 	}
 }

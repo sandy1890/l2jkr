@@ -27,28 +27,25 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author UnAfraid
  */
-public class BlockResurrection extends L2Effect
-{
-	public BlockResurrection(Env env, EffectTemplate template)
-	{
+public class BlockResurrection extends L2Effect {
+	
+	public BlockResurrection(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BLOCK_RESURRECTION;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_BLOCK_RESURRECTION;
 	}
+	
 }

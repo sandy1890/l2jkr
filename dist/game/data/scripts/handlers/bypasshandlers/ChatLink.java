@@ -23,28 +23,23 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-public class ChatLink implements IBypassHandler
-{
+public class ChatLink implements IBypassHandler {
+	
 	private static final String[] COMMANDS =
 	{
 		"Chat"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
 		int val = 0;
-		try
-		{
+		try {
 			val = Integer.parseInt(command.substring(5));
-		}
-		catch (Exception ioobe)
-		{
+		} catch (Exception ioobe) {
 			
 		}
 		((L2Npc) target).showChatWindow(activeChar, val);
@@ -53,8 +48,8 @@ public class ChatLink implements IBypassHandler
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

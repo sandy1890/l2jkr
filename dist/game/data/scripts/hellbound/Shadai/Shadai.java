@@ -28,47 +28,44 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 /**
  * @author GKR
  */
-public class Shadai extends Quest
-{
+public class Shadai extends Quest {
+	
 	private static final int SHADAI = 32347;
 	
 	private static final int[] DAY_COORDS =
 	{
-		//16882, 238952, 9776
-		-5704, 256417, -3136
+		// 16882, 238952, 9776
+		-5704,
+		256417,
+		-3136
 	};
 	private static final int[] NIGHT_COORDS =
 	{
-		9064, 253037, -1928
+		9064,
+		253037,
+		-1928
 	};
 	
 	@Override
-	public final String onSpawn(L2Npc npc)
-	{
-		if (!npc.isTeleporting())
-		{
+	public final String onSpawn(L2Npc npc) {
+		if (!npc.isTeleporting()) {
 			ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new ValidatePosition(npc), 60000, 60000);
 		}
 		
 		return super.onSpawn(npc);
 	}
 	
-	protected static void validatePosition(L2Npc npc)
-	{
+	protected static void validatePosition(L2Npc npc) {
 		int[] coords = DAY_COORDS;
 		boolean mustRevalidate = false;
-		if ((npc.getX() != NIGHT_COORDS[0]) && GameTimeController.getInstance().isNowNight())
-		{
+		if ((npc.getX() != NIGHT_COORDS[0]) && GameTimeController.getInstance().isNowNight()) {
 			coords = NIGHT_COORDS;
 			mustRevalidate = true;
-		}
-		else if ((npc.getX() != DAY_COORDS[0]) && !GameTimeController.getInstance().isNowNight())
-		{
+		} else if ((npc.getX() != DAY_COORDS[0]) && !GameTimeController.getInstance().isNowNight()) {
 			mustRevalidate = true;
 		}
 		
-		if (mustRevalidate)
-		{
+		if (mustRevalidate) {
 			npc.getSpawn().setLocx(coords[0]);
 			npc.getSpawn().setLocy(coords[1]);
 			npc.getSpawn().setLocz(coords[2]);
@@ -77,31 +74,27 @@ public class Shadai extends Quest
 		}
 	}
 	
-	private static class ValidatePosition implements Runnable
-	{
+	private static class ValidatePosition implements Runnable {
 		private final L2Npc _npc;
 		
-		public ValidatePosition(L2Npc npc)
-		{
+		public ValidatePosition(L2Npc npc) {
 			_npc = npc;
 		}
 		
 		@Override
-		public void run()
-		{
+		public void run() {
 			validatePosition(_npc);
 		}
 	}
 	
-	public Shadai(int questId, String name, String descr)
-	{
+	public Shadai(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addSpawnId(SHADAI);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Shadai(-1, "Shadai", "hellbound");
 	}
+	
 }

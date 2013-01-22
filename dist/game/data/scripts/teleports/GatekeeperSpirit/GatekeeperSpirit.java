@@ -23,15 +23,14 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 
-public class GatekeeperSpirit extends Quest
-{
+public class GatekeeperSpirit extends Quest {
+	
 	private final static int EnterGk = 31111;
 	private final static int ExitGk = 31112;
 	private final static int Lilith = 25283;
 	private final static int Anakim = 25286;
 	
-	public GatekeeperSpirit(int questId, String name, String descr)
-	{
+	public GatekeeperSpirit(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(EnterGk);
 		addFirstTalkId(EnterGk);
@@ -41,30 +40,27 @@ public class GatekeeperSpirit extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
 		int sealAvariceOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_AVARICE);
 		int compWinner = SevenSigns.getInstance().getCabalHighestScore();
 		
-		if (playerCabal == sealAvariceOwner && playerCabal == compWinner)
-		{
-			switch (sealAvariceOwner)
-			{
+		if ((playerCabal == sealAvariceOwner) && (playerCabal == compWinner)) {
+			switch (sealAvariceOwner) {
 				case SevenSigns.CABAL_DAWN:
 					htmltext = "dawn.htm";
-					break;
+				break;
 				case SevenSigns.CABAL_DUSK:
 					htmltext = "dusk.htm";
-					break;
+				break;
 				case SevenSigns.CABAL_NULL:
 					npc.showChatWindow(player);
-					break;
+				break;
 			}
-		}
-		else
+		} else {
 			npc.showChatWindow(player);
+		}
 		
 		return htmltext;
 	}
@@ -73,24 +69,20 @@ public class GatekeeperSpirit extends Quest
 	/**
 	 * TODO: Should be spawned 10 seconds after boss dead
 	 */
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		int npcId = npc.getNpcId();
-		if (npcId == Lilith)
-		{
+		if (npcId == Lilith) {
 			// exit_necropolis_boss_lilith
 			addSpawn(ExitGk, 184410, -10111, -5488, 0, false, 900000);
-		}
-		else if (npcId == Anakim)
-		{
+		} else if (npcId == Anakim) {
 			// exit_necropolis_boss_anakim
 			addSpawn(ExitGk, 184410, -13102, -5488, 0, false, 900000);
 		}
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new GatekeeperSpirit(-1, "GatekeeperSpirit", "teleports");
 	}
+	
 }

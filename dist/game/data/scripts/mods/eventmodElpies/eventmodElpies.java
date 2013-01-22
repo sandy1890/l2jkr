@@ -32,14 +32,17 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
 
-public class eventmodElpies extends Event
-{
+public class eventmodElpies extends Event {
+	
 	// Event NPC's list
 	private List<L2Npc> _npclist;
+	
 	// Event Task
 	ScheduledFuture<?> _eventTask = null;
+	
 	// Event time
 	public static final int _event_time = 2;
+	
 	// Event state
 	private static boolean _isactive = false;
 	
@@ -47,8 +50,10 @@ public class eventmodElpies extends Event
 	
 	// NPc's
 	private static final int _elpy = 900100;
+	
 	// How much Elpy's
 	private static final int _option_howmuch = 100;
+	
 	// Elpy's count
 	private static int _elpies_count = 0;
 	
@@ -100,13 +105,11 @@ public class eventmodElpies extends Event
 	};
 	// @formatter:on
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new eventmodElpies(-1, "eventmodElpies", "mods");
 	}
 	
-	public eventmodElpies(int questId, String name, String descr)
-	{
+	public eventmodElpies(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addSpawnId(_elpy);
@@ -114,8 +117,7 @@ public class eventmodElpies extends Event
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
-	{
+	public String onSpawn(L2Npc npc) {
 		((L2EventMonsterInstance) npc).eventSetDropOnGround(true);
 		((L2EventMonsterInstance) npc).eventSetBlockOffensiveSkills(true);
 		
@@ -123,17 +125,14 @@ public class eventmodElpies extends Event
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		// Drop only if event is active
-		if (_isactive)
-		{
+		if (_isactive) {
 			dropItem(npc, killer, DROPLIST);
 			dropItem(npc, killer, DROPLIST_CRYSTALS);
 			_elpies_count--;
 			
-			if (_elpies_count <= 0)
-			{
+			if (_elpies_count <= 0) {
 				Announcements.getInstance().announceToAll("No more elpies...");
 				eventStop();
 			}
@@ -143,17 +142,14 @@ public class eventmodElpies extends Event
 	}
 	
 	@Override
-	public boolean eventStart()
-	{
+	public boolean eventStart() {
 		// Don't start event if its active
-		if (_isactive)
-		{
+		if (_isactive) {
 			return false;
 		}
 		
 		// Check Custom Table - we use custom NPC's
-		if (!Config.CUSTOM_NPC_TABLE)
-		{
+		if (!Config.CUSTOM_NPC_TABLE) {
 			return false;
 		}
 		
@@ -170,8 +166,7 @@ public class eventmodElpies extends Event
 		
 		_elpies_count = 0;
 		
-		for (int i = 0; i < _option_howmuch; i++)
-		{
+		for (int i = 0; i < _option_howmuch; i++) {
 			int x = getRandom(_spawndata[0], _spawndata[1]);
 			int y = getRandom(_spawndata[2], _spawndata[3]);
 			recordSpawn(_elpy, x, y, _spawndata[4], 0, true, _event_time * 60 * 1000);
@@ -185,11 +180,9 @@ public class eventmodElpies extends Event
 		Announcements.getInstance().announceToAll("You have " + _event_time + " min...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-		{
+		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
 			@Override
-			public void run()
-			{
+			public void run() {
 				timeUp();
 			}
 		}, _event_time * 60 * 1000);
@@ -197,18 +190,15 @@ public class eventmodElpies extends Event
 		return true;
 	}
 	
-	protected void timeUp()
-	{
+	protected void timeUp() {
 		Announcements.getInstance().announceToAll("Time up !");
 		eventStop();
 	}
 	
 	@Override
-	public boolean eventStop()
-	{
+	public boolean eventStop() {
 		// Don't stop inactive event
-		if (!_isactive)
-		{
+		if (!_isactive) {
 			return false;
 		}
 		
@@ -216,18 +206,14 @@ public class eventmodElpies extends Event
 		_isactive = false;
 		
 		// Cancel task if any
-		if (_eventTask != null)
-		{
+		if (_eventTask != null) {
 			_eventTask.cancel(true);
 			_eventTask = null;
 		}
 		// Despawn Npc's
-		if (!_npclist.isEmpty())
-		{
-			for (L2Npc _npc : _npclist)
-			{
-				if (_npc != null)
-				{
+		if (!_npclist.isEmpty()) {
+			for (L2Npc _npc : _npclist) {
+				if (_npc != null) {
 					_npc.deleteMe();
 				}
 			}
@@ -241,33 +227,28 @@ public class eventmodElpies extends Event
 		return true;
 	}
 	
-	private static final void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist)
-	{
+	private static final void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist) {
 		final int chance = getRandom(100);
 		
-		for (int[] drop : droplist)
-		{
-			if (chance > drop[1])
-			{
+		for (int[] drop : droplist) {
+			if (chance > drop[1]) {
 				((L2MonsterInstance) mob).dropItem(player, drop[0], getRandom(drop[2], drop[3]));
 				return;
 			}
 		}
 	}
 	
-	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
-	{
+	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay) {
 		L2Npc _tmp = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
-		if (_tmp != null)
-		{
+		if (_tmp != null) {
 			_npclist.add(_tmp);
 		}
 		return _tmp;
 	}
 	
 	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
-	{
+	public boolean eventBypass(L2PcInstance activeChar, String bypass) {
 		return false;
 	}
+	
 }

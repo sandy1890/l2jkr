@@ -22,13 +22,13 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.CharNameTable;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class ChatAdmin implements IVoicedCommandHandler
-{
+public class ChatAdmin implements IVoicedCommandHandler {
+	
 	private static final String[] VOICED_COMMANDS =
 	{
 		"banchat",
@@ -36,68 +36,52 @@ public class ChatAdmin implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
-	{
-		if (!AdminTable.getInstance().hasAccess(command, activeChar.getAccessLevel()))
-		{
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params) {
+		if (!AdminTable.getInstance().hasAccess(command, activeChar.getAccessLevel())) {
 			return false;
 		}
 		
-		if (command.equals(VOICED_COMMANDS[0])) // banchat
-		{
-			if (params == null)
-			{
+		if (command.equals(VOICED_COMMANDS[0])) { // banchat
+			if (params == null) {
 				activeChar.sendMessage(1187);
 				return true;
 			}
 			StringTokenizer st = new StringTokenizer(params);
-			if (st.hasMoreTokens())
-			{
+			if (st.hasMoreTokens()) {
 				String name = st.nextToken();
 				int length = 0;
-				if (st.hasMoreTokens())
-				{
-					try
-					{
+				if (st.hasMoreTokens()) {
+					try {
 						length = Integer.parseInt(st.nextToken());
-					}
-					catch (NumberFormatException e)
-					{
+					} catch (NumberFormatException e) {
 						activeChar.sendMessage(1188);
 						return false;
 					}
 				}
-				if (length < 0)
-				{
+				if (length < 0) {
 					length = 0;
 				}
 				
 				int objId = CharNameTable.getInstance().getIdByName(name);
-				if (objId > 0)
-				{
+				if (objId > 0) {
 					L2PcInstance player = L2World.getInstance().getPlayer(objId);
-					if ((player == null) || !player.isOnline())
-					{
+					if ((player == null) || !player.isOnline()) {
 						activeChar.sendMessage(1189);
 						return false;
 					}
-					if (player.getPunishLevel() != L2PcInstance.PunishLevel.NONE)
-					{
+					if (player.getPunishLevel() != L2PcInstance.PunishLevel.NONE) {
 						activeChar.sendMessage(1190);
 						return false;
 					}
-					if (player == activeChar)
-					{
+					if (player == activeChar) {
 						activeChar.sendMessage(1191);
 						return false;
 					}
-					if (player.isGM())
-					{
+					if (player.isGM()) {
 						activeChar.sendMessage(1192);
 						return false;
 					}
-					if (AdminTable.getInstance().hasAccess(command, player.getAccessLevel()))
-					{
+					if (AdminTable.getInstance().hasAccess(command, player.getAccessLevel())) {
 						activeChar.sendMessage(1193);
 						return false;
 					}
@@ -105,45 +89,33 @@ public class ChatAdmin implements IVoicedCommandHandler
 					player.setPunishLevel(L2PcInstance.PunishLevel.CHAT, length);
 					player.sendMessage(MessageTable.Messages[1194].getMessage() + activeChar.getName());
 					
-					if (length > 0)
-					{
+					if (length > 0) {
 						activeChar.sendMessage(MessageTable.Messages[1195].getExtra(1) + player.getName() + MessageTable.Messages[1195].getExtra(2) + length + MessageTable.Messages[1195].getExtra(3));
-					}
-					else
-					{
+					} else {
 						activeChar.sendMessage(MessageTable.Messages[1195].getExtra(1) + player.getName() + MessageTable.Messages[1195].getExtra(4));
 					}
-				}
-				else
-				{
+				} else {
 					activeChar.sendMessage(1196);
 					return false;
 				}
 			}
-		}
-		else if (command.equals(VOICED_COMMANDS[1])) // unbanchat
-		{
-			if (params == null)
-			{
+		} else if (command.equals(VOICED_COMMANDS[1])) { // unbanchat
+			if (params == null) {
 				activeChar.sendMessage(1197);
 				return true;
 			}
 			StringTokenizer st = new StringTokenizer(params);
-			if (st.hasMoreTokens())
-			{
+			if (st.hasMoreTokens()) {
 				String name = st.nextToken();
 				
 				int objId = CharNameTable.getInstance().getIdByName(name);
-				if (objId > 0)
-				{
+				if (objId > 0) {
 					L2PcInstance player = L2World.getInstance().getPlayer(objId);
-					if ((player == null) || !player.isOnline())
-					{
+					if ((player == null) || !player.isOnline()) {
 						activeChar.sendMessage(1198);
 						return false;
 					}
-					if (player.getPunishLevel() != L2PcInstance.PunishLevel.CHAT)
-					{
+					if (player.getPunishLevel() != L2PcInstance.PunishLevel.CHAT) {
 						activeChar.sendMessage(1199);
 						return false;
 					}
@@ -152,9 +124,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 					
 					activeChar.sendMessage(MessageTable.Messages[1195].getExtra(1) + player.getName() + MessageTable.Messages[1195].getExtra(5));
 					player.sendMessage(MessageTable.Messages[1200].getMessage() + activeChar.getName());
-				}
-				else
-				{
+				} else {
 					activeChar.sendMessage(1196);
 					return false;
 				}
@@ -164,8 +134,8 @@ public class ChatAdmin implements IVoicedCommandHandler
 	}
 	
 	@Override
-	public String[] getVoicedCommandList()
-	{
+	public String[] getVoicedCommandList() {
 		return VOICED_COMMANDS;
 	}
+	
 }

@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 /**
  * @author DS
  */
-public class BoatInnadrilTour implements Runnable
-{
+public class BoatInnadrilTour implements Runnable {
+	
 	private static final Logger _log = Logger.getLogger(BoatInnadrilTour.class.getName());
 	
 	// Time: 1867s
@@ -93,8 +93,7 @@ public class BoatInnadrilTour implements Runnable
 	
 	private final PlaySound INNADRIL_SOUND;
 	
-	public BoatInnadrilTour(L2BoatInstance boat)
-	{
+	public BoatInnadrilTour(L2BoatInstance boat) {
 		_boat = boat;
 		
 		ARRIVED_AT_INNADRIL = new CreatureSay(0, Say2.BOAT, 801, SystemMessageId.INNADRIL_BOAT_ANCHOR_10_MINUTES);
@@ -113,71 +112,66 @@ public class BoatInnadrilTour implements Runnable
 	}
 	
 	@Override
-	public void run()
-	{
-		try
-		{
-			switch (_cycle)
-			{
+	public void run() {
+		try {
+			switch (_cycle) {
 				case 0:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL5);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 240000);
-					break;
+				break;
 				case 1:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL1);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 40000);
-					break;
+				break;
 				case 2:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL0);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 20000);
-					break;
+				break;
 				case 3:
 					BoatManager.getInstance().broadcastPackets(DOCK, DOCK, LEAVING_INNADRIL, INNADRIL_SOUND);
 					_boat.payForRide(0, 1, 107092, 219098, -3952);
 					_boat.executePath(TOUR);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 650000);
-					break;
+				break;
 				case 4:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL20);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
-					break;
+				break;
 				case 5:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL15);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
-					break;
+				break;
 				case 6:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL10);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
-					break;
+				break;
 				case 7:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL5);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 240000);
-					break;
+				break;
 				case 8:
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL1);
-					break;
+				break;
 				case 9:
 					BoatManager.getInstance().broadcastPackets(DOCK, DOCK, ARRIVED_AT_INNADRIL, INNADRIL_SOUND);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
-					break;
+				break;
 			}
 			_cycle++;
-			if (_cycle > 9)
+			if (_cycle > 9) {
 				_cycle = 0;
-		}
-		catch (Exception e)
-		{
+			}
+		} catch (Exception e) {
 			_log.log(Level.WARNING, e.getMessage());
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		final L2BoatInstance boat = BoatManager.getInstance().getNewBoat(4, 111264, 226240, -3610, 32768);
-		if (boat != null)
-		{
+		if (boat != null) {
 			boat.registerEngine(new BoatInnadrilTour(boat));
 			boat.runEngine(180000);
 		}
 	}
+	
 }

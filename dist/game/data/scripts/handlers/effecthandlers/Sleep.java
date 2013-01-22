@@ -27,42 +27,37 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author mkizub
  */
-public class Sleep extends L2Effect
-{
-	public Sleep(Env env, EffectTemplate template)
-	{
+public class Sleep extends L2Effect {
+	
+	public Sleep(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.SLEEP;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startSleeping();
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopSleeping(false);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_SLEEP;
 	}
+	
 }

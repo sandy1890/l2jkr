@@ -35,17 +35,46 @@ import com.l2jserver.gameserver.util.Util;
 /**
  * @author Gnacik
  */
-public class StakatoNest extends L2AttackableAIScript
-{
+public class StakatoNest extends L2AttackableAIScript {
+	
 	// List of all mobs just for register
 	private static final int[] _stakato_mobs =
 	{
-		18793, 18794, 18795, 18796, 18797, 18798, 22617, 22618, 22619, 22620, 22621, 22622, 22623, 22624, 22625, 22626, 22627, 22628, 22629, 22630, 22631, 22632, 22633, 25667
+		18793,
+		18794,
+		18795,
+		18796,
+		18797,
+		18798,
+		22617,
+		22618,
+		22619,
+		22620,
+		22621,
+		22622,
+		22623,
+		22624,
+		22625,
+		22626,
+		22627,
+		22628,
+		22629,
+		22630,
+		22631,
+		22632,
+		22633,
+		25667
 	};
+	
 	// Coocons
 	private static final int[] _cocoons =
 	{
-		18793, 18794, 18795, 18796, 18797, 18798
+		18793,
+		18794,
+		18795,
+		18796,
+		18797,
+		18798
 	};
 	
 	// Cannibalistic Stakato Leader
@@ -53,46 +82,51 @@ public class StakatoNest extends L2AttackableAIScript
 	
 	// Spike Stakato Nurse
 	private static final int _stakato_nurse = 22630;
+	
 	// Spike Stakato Nurse (Changed)
 	private static final int _stakato_nurse_2 = 22631;
+	
 	// Spiked Stakato Baby
 	private static final int _stakato_baby = 22632;
+	
 	// Spiked Stakato Captain
 	private static final int _stakato_captain = 22629;
 	
 	// Female Spiked Stakato
 	private static final int _stakato_female = 22620;
+	
 	// Male Spiked Stakato
 	private static final int _stakato_male = 22621;
+	
 	// Male Spiked Stakato (Changed)
 	private static final int _stakato_male_2 = 22622;
+	
 	// Spiked Stakato Guard
 	private static final int _stakato_guard = 22619;
 	
 	// Cannibalistic Stakato Chief
 	private static final int _stakato_chief = 25667;
+	
 	// Growth Accelerator
 	private static final int _growth_accelerator = 2905;
+	
 	// Small Stakato Cocoon
 	private static final int _small_cocoon = 14833;
+	
 	// Large Stakato Cocoon
 	private static final int _large_cocoon = 14834;
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet) {
 		L2MonsterInstance _mob = (L2MonsterInstance) npc;
 		
-		if ((_mob.getNpcId() == _stakato_leader) && (getRandom(1000) < 100) && (_mob.getCurrentHp() < (_mob.getMaxHp() * 0.3)))
-		{
+		if ((_mob.getNpcId() == _stakato_leader) && (getRandom(1000) < 100) && (_mob.getCurrentHp() < (_mob.getMaxHp() * 0.3))) {
 			L2MonsterInstance _follower = checkMinion(npc);
 			
-			if (_follower != null)
-			{
+			if (_follower != null) {
 				double _hp = _follower.getCurrentHp();
 				
-				if (_hp > (_follower.getMaxHp() * 0.3))
-				{
+				if (_hp > (_follower.getMaxHp() * 0.3)) {
 					_mob.abortAttack();
 					_mob.abortCast();
 					_mob.setHeading(Util.calculateHeadingFrom(_mob, _follower));
@@ -107,63 +141,47 @@ public class StakatoNest extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		L2MonsterInstance _minion = checkMinion(npc);
 		
-		if (npc.getNpcId() == _stakato_nurse && _minion != null)
-		{
+		if ((npc.getNpcId() == _stakato_nurse) && (_minion != null)) {
 			Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
-			for (int i = 0; i < 3; i++)
-			{
+			for (int i = 0; i < 3; i++) {
 				L2Npc _spawned = addSpawn(_stakato_captain, _minion, true);
 				attackPlayer(killer, _spawned);
 			}
-		}
-		else if (npc.getNpcId() == _stakato_baby)
-		{
+		} else if (npc.getNpcId() == _stakato_baby) {
 			L2MonsterInstance _leader = ((L2MonsterInstance) npc).getLeader();
-			if (_leader != null && !_leader.isDead())
-			{
+			if ((_leader != null) && !_leader.isDead()) {
 				startQuestTimer("nurse_change", 5000, _leader, killer);
 			}
-		}
-		else if (npc.getNpcId() == _stakato_male && _minion != null)
-		{
+		} else if ((npc.getNpcId() == _stakato_male) && (_minion != null)) {
 			Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
-			for (int i = 0; i < 3; i++)
-			{
+			for (int i = 0; i < 3; i++) {
 				L2Npc _spawned = addSpawn(_stakato_guard, _minion, true);
 				attackPlayer(killer, _spawned);
 			}
-		}
-		else if (npc.getNpcId() == _stakato_female)
-		{
+		} else if (npc.getNpcId() == _stakato_female) {
 			L2MonsterInstance _leader = ((L2MonsterInstance) npc).getLeader();
-			if (_leader != null && !_leader.isDead())
-			{
+			if ((_leader != null) && !_leader.isDead()) {
 				startQuestTimer("male_change", 5000, _leader, killer);
 			}
-		}
-		else if (npc.getNpcId() == _stakato_chief)
-		{
-			if (killer.isInParty())
-			{
+		} else if (npc.getNpcId() == _stakato_chief) {
+			if (killer.isInParty()) {
 				List<L2PcInstance> party = killer.getParty().getMembers();
-				for (L2PcInstance member : party)
+				for (L2PcInstance member : party) {
 					giveCocoon(member, npc);
-			}
-			else
+				}
+			} else {
 				giveCocoon(killer, npc);
+			}
 		}
 		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
-		if (Util.contains(_cocoons, npc.getNpcId()) && Util.contains(targets, npc) && skill.getId() == _growth_accelerator)
-		{
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) {
+		if (Util.contains(_cocoons, npc.getNpcId()) && Util.contains(targets, npc) && (skill.getId() == _growth_accelerator)) {
 			npc.doDie(caster);
 			L2Npc _spawned = addSpawn(_stakato_chief, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
 			attackPlayer(caster, _spawned);
@@ -172,22 +190,20 @@ public class StakatoNest extends L2AttackableAIScript
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if ((npc == null) || (player == null))
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if ((npc == null) || (player == null)) {
 			return null;
-		if (npc.isDead())
+		}
+		if (npc.isDead()) {
 			return null;
+		}
 		
-		if (event.equalsIgnoreCase("nurse_change"))
-		{
+		if (event.equalsIgnoreCase("nurse_change")) {
 			npc.getSpawn().decreaseCount(npc);
 			npc.deleteMe();
 			L2Npc _spawned = addSpawn(_stakato_nurse_2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
 			attackPlayer(player, _spawned);
-		}
-		else if (event.equalsIgnoreCase("male_change"))
-		{
+		} else if (event.equalsIgnoreCase("male_change")) {
 			npc.getSpawn().decreaseCount(npc);
 			npc.deleteMe();
 			L2Npc _spawned = addSpawn(_stakato_male_2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
@@ -196,46 +212,61 @@ public class StakatoNest extends L2AttackableAIScript
 		return null;
 	}
 	
-	public StakatoNest(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public StakatoNest(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		this.registerMobs(_stakato_mobs);
 	}
 	
-	public static void main(String[] args)
-	{
-		new StakatoNest(-1, "StakatoNestAI", "ai");
-	}
-	
-	private L2MonsterInstance checkMinion(L2Npc npc)
-	{
+	/**
+	 * @param npc
+	 * @return
+	 */
+	private L2MonsterInstance checkMinion(L2Npc npc) {
 		L2MonsterInstance mob = (L2MonsterInstance) npc;
-		if (mob.hasMinions())
-		{
+		if (mob.hasMinions()) {
 			List<L2MonsterInstance> _minion = mob.getMinionList().getSpawnedMinions();
-			if ((_minion != null) && !_minion.isEmpty() && (_minion.get(0) != null) && !_minion.get(0).isDead())
+			if ((_minion != null) && !_minion.isEmpty() && (_minion.get(0) != null) && !_minion.get(0).isDead()) {
 				return _minion.get(0);
+			}
 		}
 		
 		return null;
 	}
 	
-	private void attackPlayer(L2PcInstance player, L2Npc npc)
-	{
-		if (npc != null && player != null)
-		{
+	/**
+	 * @param player
+	 * @param npc
+	 */
+	private void attackPlayer(L2PcInstance player, L2Npc npc) {
+		if ((npc != null) && (player != null)) {
 			((L2Attackable) npc).setIsRunning(true);
 			((L2Attackable) npc).addDamageHate(player, 0, 999);
 			((L2Attackable) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}
 	}
 	
-	private void giveCocoon(L2PcInstance player, L2Npc npc)
-	{
-		if (getRandom(100) > 80)
+	/**
+	 * @param player
+	 * @param npc
+	 */
+	private void giveCocoon(L2PcInstance player, L2Npc npc) {
+		if (getRandom(100) > 80) {
 			player.addItem("StakatoCocoon", _large_cocoon, 1, npc, true);
-		else
+		} else {
 			player.addItem("StakatoCocoon", _small_cocoon, 1, npc, true);
+		}
 	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new StakatoNest(-1, "StakatoNestAI", "ai");
+	}
+	
 }

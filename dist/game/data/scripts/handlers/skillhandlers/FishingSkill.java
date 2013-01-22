@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 
-public class FishingSkill implements ISkillHandler
-{
+public class FishingSkill implements ISkillHandler {
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.PUMPING,
@@ -42,25 +42,19 @@ public class FishingSkill implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!(activeChar instanceof L2PcInstance))
-		{
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!(activeChar instanceof L2PcInstance)) {
 			return;
 		}
 		
 		L2PcInstance player = (L2PcInstance) activeChar;
 		
 		L2Fishing fish = player.getFishCombat();
-		if (fish == null)
-		{
-			if (skill.getSkillType() == L2SkillType.PUMPING)
-			{
+		if (fish == null) {
+			if (skill.getSkillType() == L2SkillType.PUMPING) {
 				// Pumping skill is available only while fishing
 				player.sendPacket(SystemMessageId.CAN_USE_PUMPING_ONLY_WHILE_FISHING);
-			}
-			else if (skill.getSkillType() == L2SkillType.REELING)
-			{
+			} else if (skill.getSkillType() == L2SkillType.REELING) {
 				// Reeling skill is available only while fishing
 				player.sendPacket(SystemMessageId.CAN_USE_REELING_ONLY_WHILE_FISHING);
 			}
@@ -69,14 +63,12 @@ public class FishingSkill implements ISkillHandler
 		}
 		L2Weapon weaponItem = player.getActiveWeaponItem();
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		if ((weaponInst == null) || (weaponItem == null))
-		{
+		if ((weaponInst == null) || (weaponItem == null)) {
 			return;
 		}
 		int SS = 1;
 		int pen = 0;
-		if (weaponInst.getChargedFishshot())
-		{
+		if (weaponInst.getChargedFishshot()) {
 			SS = 2;
 		}
 		L2FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getItemId());
@@ -84,29 +76,24 @@ public class FishingSkill implements ISkillHandler
 		final L2Skill expertiseSkill = SkillTable.getInstance().getInfo(1315, player.getSkillLevel(1315));
 		int dmg = (int) ((fishingRod.getFishingRodDamage() + expertiseSkill.getPower() + skill.getPower()) * gradeBonus * SS);
 		// Penalty 5% less damage dealt
-		if (player.getSkillLevel(1315) <= (skill.getLevel() - 2)) // 1315 - Fish Expertise
-		{
+		if (player.getSkillLevel(1315) <= (skill.getLevel() - 2)) { // 1315 - Fish Expertise
 			player.sendPacket(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY);
 			pen = (int) (dmg * 0.05);
 			dmg = dmg - pen;
 		}
-		if (SS > 1)
-		{
+		if (SS > 1) {
 			weaponInst.setChargedFishshot(false);
 		}
-		if (skill.getSkillType() == L2SkillType.REELING)
-		{
+		if (skill.getSkillType() == L2SkillType.REELING) {
 			fish.useReeling(dmg, pen);
-		}
-		else
-		{
+		} else {
 			fish.usePumping(dmg, pen);
 		}
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

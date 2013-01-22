@@ -26,10 +26,10 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * @author  Luno, Dezmond
+ * @author Luno, Dezmond
  */
-public class AdminGeoEditor implements IAdminCommandHandler
-{
+public class AdminGeoEditor implements IAdminCommandHandler {
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_ge_status",
@@ -39,31 +39,23 @@ public class AdminGeoEditor implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
-		if (!Config.ACCEPT_GEOEDITOR_CONN)
-		{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
+		if (!Config.ACCEPT_GEOEDITOR_CONN) {
 			activeChar.sendMessage("Server do not accepts geoeditor connections now.");
 			return true;
 		}
-		if (command.startsWith("admin_ge_status"))
-		{
+		if (command.startsWith("admin_ge_status")) {
 			activeChar.sendMessage(GeoEditorListener.getInstance().getStatus());
-		}
-		else if (command.startsWith("admin_ge_mode"))
-		{
-			if (GeoEditorListener.getInstance().getThread() == null)
-			{
+		} else if (command.startsWith("admin_ge_mode")) {
+			if (GeoEditorListener.getInstance().getThread() == null) {
 				activeChar.sendMessage("Geoeditor not connected.");
 				return true;
 			}
-			try
-			{
+			try {
 				String val = command.substring("admin_ge_mode".length());
 				StringTokenizer st = new StringTokenizer(val);
 				
-				if (st.countTokens() < 1)
-				{
+				if (st.countTokens() < 1) {
 					activeChar.sendMessage("Usage: //ge_mode X");
 					activeChar.sendMessage("Mode 0: Don't send coordinates to geoeditor.");
 					activeChar.sendMessage("Mode 1: Send coordinates at ValidatePosition from clients.");
@@ -74,9 +66,7 @@ public class AdminGeoEditor implements IAdminCommandHandler
 				m = Integer.parseInt(st.nextToken());
 				GeoEditorListener.getInstance().getThread().setMode(m);
 				activeChar.sendMessage("Geoeditor connection mode set to " + m + ".");
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				activeChar.sendMessage("Usage: //ge_mode X");
 				activeChar.sendMessage("Mode 0: Don't send coordinates to geoeditor.");
 				activeChar.sendMessage("Mode 1: Send coordinates at ValidatePosition from clients.");
@@ -84,21 +74,15 @@ public class AdminGeoEditor implements IAdminCommandHandler
 				e.printStackTrace();
 			}
 			return true;
-		}
-		else if (command.equals("admin_ge_join"))
-		{
-			if (GeoEditorListener.getInstance().getThread() == null)
-			{
+		} else if (command.equals("admin_ge_join")) {
+			if (GeoEditorListener.getInstance().getThread() == null) {
 				activeChar.sendMessage("Geoeditor not connected.");
 				return true;
 			}
 			GeoEditorListener.getInstance().getThread().addGM(activeChar);
 			activeChar.sendMessage("You added to list for geoeditor.");
-		}
-		else if (command.equals("admin_ge_leave"))
-		{
-			if (GeoEditorListener.getInstance().getThread() == null)
-			{
+		} else if (command.equals("admin_ge_leave")) {
+			if (GeoEditorListener.getInstance().getThread() == null) {
 				activeChar.sendMessage("Geoeditor not connected.");
 				return true;
 			}
@@ -109,8 +93,8 @@ public class AdminGeoEditor implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}
+	
 }

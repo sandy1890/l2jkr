@@ -28,43 +28,38 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author kerberos_20
  */
-public class ProtectionBlessing extends L2Effect
-{
-	public ProtectionBlessing(Env env, EffectTemplate template)
-	{
+public class ProtectionBlessing extends L2Effect {
+	
+	public ProtectionBlessing(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.PROTECTION_BLESSING;
 	}
 	
 	/** Notify started */
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		return false;
 	}
 	
 	/** Notify exited */
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		((L2Playable) getEffected()).stopProtectionBlessing(this);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_PROTECTION_BLESSING;
 	}
+	
 }

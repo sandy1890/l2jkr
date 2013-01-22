@@ -37,8 +37,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 /**
  * @author Gigiikun
  */
-public class PrisonGuards extends L2AttackableAIScript
-{
+public class PrisonGuards extends L2AttackableAIScript {
+	
 	final private static int GUARD1 = 18367;
 	final private static int GUARD2 = 18368;
 	final private static int STAMP = 10013;
@@ -59,8 +59,12 @@ public class PrisonGuards extends L2AttackableAIScript
 	
 	private final Map<L2Npc, Integer> _guards = new FastMap<>();
 	
-	public PrisonGuards(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public PrisonGuards(int questId, String name, String descr) {
 		super(questId, name, descr);
 		int[] mob =
 		{
@@ -86,12 +90,10 @@ public class PrisonGuards extends L2AttackableAIScript
 		_guards.put(addSpawn(GUARD2, 155840, 159936, -3352, 0, false, 0), 3);
 		_guards.put(addSpawn(GUARD1, 155578, 160177, -3352, 0, false, 0), 3);
 		
-		for (L2Npc npc : _guards.keySet())
-		{
+		for (L2Npc npc : _guards.keySet()) {
 			npc.setIsNoRndWalk(true);
 			npc.setIsImmobilized(true);
-			if (npc.getNpcId() == GUARD1)
-			{
+			if (npc.getNpcId() == GUARD1) {
 				npc.setIsInvul(true);
 				npc.disableCoreAI(true);
 			}
@@ -99,15 +101,12 @@ public class PrisonGuards extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("Respawn"))
-		{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("Respawn")) {
 			L2Npc newGuard = addSpawn(npc.getNpcId(), npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false, 0);
 			newGuard.setIsNoRndWalk(true);
 			newGuard.setIsImmobilized(true);
-			if (npc.getNpcId() == GUARD1)
-			{
+			if (npc.getNpcId() == GUARD1) {
 				newGuard.setIsInvul(true);
 				newGuard.disableCoreAI(true);
 			}
@@ -115,11 +114,8 @@ public class PrisonGuards extends L2AttackableAIScript
 			int place = _guards.get(npc);
 			_guards.remove(npc);
 			_guards.put(newGuard, place);
-		}
-		else if (event.equalsIgnoreCase("attackEnd") && (npc.getNpcId() == GUARD2))
-		{
-			if ((npc.getX() != npc.getSpawn().getLocx()) || (npc.getY() != npc.getSpawn().getLocy()))
-			{
+		} else if (event.equalsIgnoreCase("attackEnd") && (npc.getNpcId() == GUARD2)) {
+			if ((npc.getX() != npc.getSpawn().getLocx()) || (npc.getY() != npc.getSpawn().getLocy())) {
 				npc.teleToLocation(npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false);
 				npc.setIsImmobilized(true);
 			}
@@ -131,16 +127,12 @@ public class PrisonGuards extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
+	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet) {
 		L2Character caster = isPet ? player.getPet() : player;
 		
-		if (npc.getNpcId() == GUARD2)
-		{
-			if (_firstAttacked && (caster.getFirstEffect(eventTimer) == null))
-			{
-				if (caster.getFirstEffect(silence) == null)
-				{
+		if (npc.getNpcId() == GUARD2) {
+			if (_firstAttacked && (caster.getFirstEffect(eventTimer) == null)) {
+				if (caster.getFirstEffect(silence) == null) {
 					castDebuff(npc, caster, silence, isPet, false, true);
 				}
 			}
@@ -150,14 +142,11 @@ public class PrisonGuards extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet) {
 		L2Character target = isPet ? player.getPet() : player;
 		
-		if (npc.getNpcId() == GUARD2)
-		{
-			if (target.getFirstEffect(eventTimer) != null)
-			{
+		if (npc.getNpcId() == GUARD2) {
+			if (target.getFirstEffect(eventTimer) != null) {
 				cancelQuestTimer("attackEnd", null, null);
 				startQuestTimer("attackEnd", 180000, npc, null);
 				
@@ -166,11 +155,8 @@ public class PrisonGuards extends L2AttackableAIScript
 				npc.setRunning();
 				((L2Attackable) npc).addDamageHate(target, 0, 999);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-			}
-			else
-			{
-				if ((npc.getX() != npc.getSpawn().getLocx()) || (npc.getY() != npc.getSpawn().getLocy()))
-				{
+			} else {
+				if ((npc.getX() != npc.getSpawn().getLocx()) || (npc.getY() != npc.getSpawn().getLocy())) {
 					npc.teleToLocation(npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false);
 					npc.setIsImmobilized(true);
 				}
@@ -184,16 +170,13 @@ public class PrisonGuards extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
-	{
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet) {
 		L2Character attacker = isPet ? player.getPet() : player;
 		
 		_firstAttacked = true;
 		
-		if (attacker.getFirstEffect(eventTimer) == null)
-		{
-			if (attacker.getFirstEffect(pertification) == null)
-			{
+		if (attacker.getFirstEffect(eventTimer) == null) {
+			if (attacker.getFirstEffect(pertification) == null) {
 				castDebuff(npc, attacker, pertification, isPet, true, false);
 			}
 			
@@ -205,8 +188,7 @@ public class PrisonGuards extends L2AttackableAIScript
 			return null;
 		}
 		
-		if (npc.getNpcId() == GUARD2)
-		{
+		if (npc.getNpcId() == GUARD2) {
 			cancelQuestTimer("attackEnd", null, null);
 			startQuestTimer("attackEnd", 180000, npc, null);
 			
@@ -215,12 +197,9 @@ public class PrisonGuards extends L2AttackableAIScript
 			npc.setRunning();
 			((L2Attackable) npc).addDamageHate(attacker, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
-		}
-		else if ((npc.getNpcId() == GUARD1) && (getRandom(100) < 5))
-		{
+		} else if ((npc.getNpcId() == GUARD1) && (getRandom(100) < 5)) {
 			final QuestState qs = player.getQuestState(qn);
-			if ((qs != null) && (qs.getInt(GUARDVARS[_guards.get(npc)]) != 1))
-			{
+			if ((qs != null) && (qs.getInt(GUARDVARS[_guards.get(npc)]) != 1)) {
 				qs.set(GUARDVARS[_guards.get(npc)], "1");
 				qs.giveItems(STAMP, 1);
 			}
@@ -230,34 +209,40 @@ public class PrisonGuards extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (_guards.containsKey(npc))
-		{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
+		if (_guards.containsKey(npc)) {
 			startQuestTimer("Respawn", 20000, npc, null);
 		}
 		
 		return super.onKill(npc, player, isPet);
 	}
 	
-	private void castDebuff(L2Npc npc, L2Character player, int effectId, boolean isSummon, boolean fromAttack, boolean isSpell)
-	{
-		if (fromAttack)
-		{
+	/**
+	 * @param npc
+	 * @param player
+	 * @param effectId
+	 * @param isSummon
+	 * @param fromAttack
+	 * @param isSpell
+	 */
+	private void castDebuff(L2Npc npc, L2Character player, int effectId, boolean isSummon, boolean fromAttack, boolean isSpell) {
+		if (fromAttack) {
 			NpcStringId npcString = (npc.getNpcId() == GUARD1 ? NpcStringId.ITS_NOT_EASY_TO_OBTAIN : NpcStringId.YOURE_OUT_OF_YOUR_MIND_COMING_HERE);
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), npcString));
 		}
 		
 		L2Skill skill = SkillTable.getInstance().getInfo(effectId, isSpell ? 9 : 1);
-		if (skill != null)
-		{
+		if (skill != null) {
 			npc.setTarget(isSummon ? player.getPet() : player);
 			npc.doCast(skill);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
 		new PrisonGuards(-1, "PrisonGuards", "ai");
 	}
+	
 }

@@ -38,8 +38,8 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-public class Mdam implements ISkillHandler
-{
+public class Mdam implements ISkillHandler {
+	
 	protected static final Logger _log = Logger.getLogger(Mdam.class.getName());
 	private static final Logger _logDamage = Logger.getLogger("damage");
 	
@@ -50,54 +50,42 @@ public class Mdam implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (activeChar.isAlikeDead())
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (activeChar.isAlikeDead()) {
 			return;
+		}
 		
 		boolean ss = false;
 		boolean bss = false;
 		
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		
-		if (weaponInst != null)
-		{
-			if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-			{
+		if (weaponInst != null) {
+			if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 				bss = true;
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-			}
-			else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-			{
+			} else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 				ss = true;
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
 		// If there is no weapon equipped, check for an active summon.
-		else if (activeChar instanceof L2Summon)
-		{
+		else if (activeChar instanceof L2Summon) {
 			L2Summon activeSummon = (L2Summon) activeChar;
 			
-			if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-			{
+			if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) {
 				bss = true;
 				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-			}
-			else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-			{
+			} else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT) {
 				ss = true;
 				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
 		
-		for (L2Character target: (L2Character[]) targets)
-		{
-			if (activeChar instanceof L2PcInstance && target instanceof L2PcInstance && ((L2PcInstance)target).isFakeDeath())
-			{
+		for (L2Character target : (L2Character[]) targets) {
+			if ((activeChar instanceof L2PcInstance) && (target instanceof L2PcInstance) && ((L2PcInstance) target).isFakeDeath()) {
 				target.stopFakeDeath(true);
-			}
-			else if (target.isDead())
-			{
+			} else if (target.isDead()) {
 				continue;
 			}
 			
@@ -105,43 +93,40 @@ public class Mdam implements ISkillHandler
 			final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			final byte reflect = Formulas.calcSkillReflect(target, skill);
 			
-			int damage = skill.isStaticDamage() ? (int)skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, ss, bss, mcrit);
+			int damage = skill.isStaticDamage() ? (int) skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, ss, bss, mcrit);
 			
-			if (!skill.isStaticDamage() && skill.getDependOnTargetBuff() != 0)
+			if (!skill.isStaticDamage() && (skill.getDependOnTargetBuff() != 0)) {
 				damage += (int) (damage * target.getBuffCount() * skill.getDependOnTargetBuff());
+			}
 			
-			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
-			{
-				switch (((L2PcInstance) activeChar).getSouls())
-				{
+			if (!skill.isStaticDamage() && (skill.getMaxSoulConsumeCount() > 0) && (activeChar instanceof L2PcInstance)) {
+				switch (((L2PcInstance) activeChar).getSouls()) {
 					case 0:
-						break;
+					break;
 					case 1:
 						damage *= 1.10;
-						break;
+					break;
 					case 2:
 						damage *= 1.12;
-						break;
+					break;
 					case 3:
 						damage *= 1.15;
-						break;
+					break;
 					case 4:
 						damage *= 1.18;
-						break;
+					break;
 					default:
 						damage *= 1.20;
-						break;
+					break;
 				}
 			}
 			
 			// Possibility of a lethal strike
 			Formulas.calcLethalHit(activeChar, target, skill);
 			
-			if (damage > 0)
-			{
+			if (damage > 0) {
 				// Manage attack or cast break of the target (calculating rate, sending message...)
-				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
-				{
+				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage)) {
 					target.breakAttack();
 					target.breakCast();
 				}
@@ -149,16 +134,14 @@ public class Mdam implements ISkillHandler
 				// vengeance reflected damage
 				// DS: because only skill using vengeanceMdam is Shield Deflect Magic
 				// and for this skill no damage should pass to target, just hardcode it for now
-				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
+				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0) {
 					activeChar.reduceCurrentHp(damage, target, skill);
-				else
-				{
+				} else {
 					activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 					target.reduceCurrentHp(damage, activeChar, skill);
 				}
 				
-				if (skill.hasEffects())
-				{
+				if (skill.hasEffects()) {
 					if ((reflect & Formulas.SKILL_REFLECT_SUCCEED) != 0) // reflect skill effects
 					{
 						activeChar.stopSkillEffects(skill.getId());
@@ -166,15 +149,12 @@ public class Mdam implements ISkillHandler
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 						sm.addSkillName(skill);
 						activeChar.sendPacket(sm);
-					}
-					else
-					{
+					} else {
 						// activate attacked effects, if any
 						target.stopSkillEffects(skill.getId());
-						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, ss, bss))
+						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, ss, bss)) {
 							skill.getEffects(activeChar, target, new Env(shld, ss, false, bss));
-						else
-						{
+						} else {
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 							sm.addCharName(target);
 							sm.addSkillName(skill);
@@ -184,12 +164,17 @@ public class Mdam implements ISkillHandler
 				}
 				
 				// Logging damage
-				if (Config.LOG_GAME_DAMAGE
-						&& activeChar instanceof L2Playable
-						&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
-				{
+				if (Config.LOG_GAME_DAMAGE && (activeChar instanceof L2Playable) && (damage > Config.LOG_GAME_DAMAGE_THRESHOLD)) {
 					LogRecord record = new LogRecord(Level.INFO, "");
-					record.setParameters(new Object[]{activeChar, " did damage ", damage, skill, " to ", target});
+					record.setParameters(new Object[]
+					{
+						activeChar,
+						" did damage ",
+						damage,
+						skill,
+						" to ",
+						target
+					});
 					record.setLoggerName("mdam");
 					_logDamage.log(record);
 				}
@@ -197,24 +182,23 @@ public class Mdam implements ISkillHandler
 		}
 		
 		// self Effect :]
-		if (skill.hasSelfEffects())
-		{
+		if (skill.hasSelfEffects()) {
 			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
-			{
-				//Replace old effect with new one.
+			if ((effect != null) && effect.isSelfEffect()) {
+				// Replace old effect with new one.
 				effect.exit();
 			}
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		if (skill.isSuicideAttack())
+		if (skill.isSuicideAttack()) {
 			activeChar.doDie(activeChar);
+		}
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

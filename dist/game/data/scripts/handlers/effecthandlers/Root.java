@@ -27,42 +27,37 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author mkizub
  */
-public class Root extends L2Effect
-{
-	public Root(Env env, EffectTemplate template)
-	{
+public class Root extends L2Effect {
+	
+	public Root(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.ROOT;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startRooted();
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopRooting(false);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		// just stop this effect
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_ROOTED;
 	}
+	
 }

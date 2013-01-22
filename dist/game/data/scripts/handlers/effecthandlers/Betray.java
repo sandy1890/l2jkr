@@ -30,25 +30,20 @@ import com.l2jserver.gameserver.model.stats.Env;
 /**
  * @author decad
  */
-public class Betray extends L2Effect
-{
-	public Betray(Env env, EffectTemplate template)
-	{
+public class Betray extends L2Effect {
+	
+	public Betray(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BETRAY;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffector() instanceof L2PcInstance &&
-				getEffected() instanceof L2Summon)
-		{
+	public boolean onStart() {
+		if ((getEffector() instanceof L2PcInstance) && (getEffected() instanceof L2Summon)) {
 			L2PcInstance targetOwner = getEffected().getActingPlayer();
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
 			return true;
@@ -57,20 +52,18 @@ public class Betray extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_BETRAYED;
 	}
+	
 }

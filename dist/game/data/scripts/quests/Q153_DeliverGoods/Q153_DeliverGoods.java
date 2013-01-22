@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * @author Zoey76
  * @version 1.0 Freya (11/16/2010)
  */
-public class Q153_DeliverGoods extends Quest
-{
+public class Q153_DeliverGoods extends Quest {
+	
 	private static final String qn = "153_DeliverGoods";
 	
 	// NPCs
@@ -52,8 +52,7 @@ public class Q153_DeliverGoods extends Quest
 	private static final int RingofKnowledgeId = 875;
 	private static final int XpRewardAmount = 600;
 	
-	public Q153_DeliverGoods(int questId, String name, String descr)
-	{
+	public Q153_DeliverGoods(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		questItemIds = new int[]
@@ -74,14 +73,11 @@ public class Q153_DeliverGoods extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if ((st != null) && (npc.getNpcId() == ArnoldId))
-		{
-			if (event.equalsIgnoreCase("30041-02.html"))
-			{
+		if ((st != null) && (npc.getNpcId() == ArnoldId)) {
+			if (event.equalsIgnoreCase("30041-02.html")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
@@ -95,27 +91,20 @@ public class Q153_DeliverGoods extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st != null)
-		{
-			if (npc.getNpcId() == ArnoldId)
-			{
-				switch (st.getState())
-				{
+		if (st != null) {
+			if (npc.getNpcId() == ArnoldId) {
+				switch (st.getState()) {
 					case State.CREATED:
 						htmltext = (player.getLevel() >= 2) ? "30041-01.htm" : "30041-00.htm";
-						break;
+					break;
 					case State.STARTED:
 						final int cond = st.getInt("cond");
-						if (cond == 1)
-						{
+						if (cond == 1) {
 							htmltext = "30041-03.html";
-						}
-						else if (cond == 2)
-						{
+						} else if (cond == 2) {
 							htmltext = "30041-04.html";
 							st.takeItems(DeliveryListId, -1);
 							st.takeItems(JacksonsReceipt, -1);
@@ -127,57 +116,40 @@ public class Q153_DeliverGoods extends Quest
 							st.addExpAndSp(XpRewardAmount, 0);
 							st.exitQuest(false);
 						}
-						break;
+					break;
 					case State.COMPLETED:
 						htmltext = "<html><body>這是已經完成的任務。</body></html>";
-						break;
+					break;
 				}
-			}
-			else
-			{
-				if (npc.getNpcId() == JacksonId)
-				{
-					if (st.hasQuestItems(HeavyWoodBoxId))
-					{
+			} else {
+				if (npc.getNpcId() == JacksonId) {
+					if (st.hasQuestItems(HeavyWoodBoxId)) {
 						htmltext = "30002-01.html";
 						st.takeItems(HeavyWoodBoxId, -1);
 						st.giveItems(JacksonsReceipt, 1);
-					}
-					else
-					{
+					} else {
 						htmltext = "30002-02.html";
 					}
-				}
-				else if (npc.getNpcId() == SilviaId)
-				{
-					if (st.hasQuestItems(ClothBundleId))
-					{
+				} else if (npc.getNpcId() == SilviaId) {
+					if (st.hasQuestItems(ClothBundleId)) {
 						htmltext = "30003-01.html";
 						st.takeItems(ClothBundleId, -1);
 						st.giveItems(SilviasReceipt, 1);
 						st.giveItems(SoulshotNoGradeId, 3);
-					}
-					else
-					{
+					} else {
 						htmltext = "30003-02.html";
 					}
-				}
-				else if (npc.getNpcId() == RantId)
-				{
-					if (st.hasQuestItems(ClayPotId))
-					{
+				} else if (npc.getNpcId() == RantId) {
+					if (st.hasQuestItems(ClayPotId)) {
 						htmltext = "30054-01.html";
 						st.takeItems(ClayPotId, -1);
 						st.giveItems(RantsReceipt, 1);
-					}
-					else
-					{
+					} else {
 						htmltext = "30054-02.html";
 					}
 				}
 				
-				if ((st.getInt("cond") == 1) && st.hasQuestItems(JacksonsReceipt) && st.hasQuestItems(SilviasReceipt) && st.hasQuestItems(RantsReceipt))
-				{
+				if ((st.getInt("cond") == 1) && st.hasQuestItems(JacksonsReceipt) && st.hasQuestItems(SilviasReceipt) && st.hasQuestItems(RantsReceipt)) {
 					st.set("cond", "2");
 					st.playSound("ItemSound.quest_middle");
 				}
@@ -186,8 +158,8 @@ public class Q153_DeliverGoods extends Quest
 		return htmltext;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q153_DeliverGoods(153, qn, "運送物品");
 	}
+	
 }

@@ -26,29 +26,28 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * 廣場的 達爾尼思 / 神諭引導者
  */
-public class Darnel extends L2AttackableAIScript
-{
+public class Darnel extends L2AttackableAIScript {
+	
 	private static final int DARNEL = 25531;
-
-	public Darnel(int questId, String name, String descr)
-	{
+	
+	public Darnel(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addKillId(DARNEL);
 	}
-
+	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		int npcId = npc.getNpcId();
-
-		if (npcId == DARNEL)
+		
+		if (npcId == DARNEL) {
 			addSpawn(32279, 152761, 145950, -12588, 0, false, 0, false, player.getInstanceId());
-
+		}
+		
 		return "";
 	}
-
-	public static void main(String[] args)
-	{
+	
+	public static void main(String[] args) {
 		new Darnel(-1, "Darnel", "ai");
 	}
+	
 }

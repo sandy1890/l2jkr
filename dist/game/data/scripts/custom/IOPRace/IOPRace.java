@@ -25,16 +25,15 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
-public class IOPRace extends Quest
-{
+public class IOPRace extends Quest {
+	
 	final private static int RIGNOS = 32349;
 	final private static int STAMP = 10013;
 	final private static int KEY = 9694;
 	
 	private int _player = -1;
 	
-	public IOPRace(int id, String name, String descr)
-	{
+	public IOPRace(int id, String name, String descr) {
 		super(id, name, descr);
 		addStartNpc(RIGNOS);
 		addTalkId(RIGNOS);
@@ -42,36 +41,37 @@ public class IOPRace extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (st == null) {
 			st = newQuestState(player);
+		}
 		
-		if (player.getLevel() < 78)
+		if (player.getLevel() < 78) {
 			return "32349-notavailable.htm";
-		else if ((_player != -1) && (_player == player.getObjectId()) && (st.getQuestItemsCount(STAMP) == 4))
+		} else if ((_player != -1) && (_player == player.getObjectId()) && (st.getQuestItemsCount(STAMP) == 4)) {
 			return "32349-return.htm";
-		else if (_player != -1)
+		} else if (_player != -1) {
 			return "32349-notavailable.htm";
+		}
 		
 		npc.showChatWindow(player);
 		return null;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (st == null) {
 			st = newQuestState(player);
+		}
 		
-		if (_player == -1)
-		{
+		if (_player == -1) {
 			// clean old data
 			player.stopSkillEffects(5239);
-			if (player.getPet() != null)
+			if (player.getPet() != null) {
 				player.getPet().stopSkillEffects(5239);
+			}
 			
 			st.takeItems(STAMP, -1);
 			st.set("1st", "0");
@@ -80,11 +80,11 @@ public class IOPRace extends Quest
 			st.set("4th", "0");
 			
 			L2Skill skill = SkillTable.getInstance().getInfo(5239, 5);
-			if (skill != null)
-			{
+			if (skill != null) {
 				skill.getEffects(npc, player);
-				if (player.getPet() != null)
+				if (player.getPet() != null) {
 					skill.getEffects(npc, player.getPet());
+				}
 			}
 			
 			startQuestTimer("timer", 1800000, null, null); // 30 min
@@ -95,19 +95,14 @@ public class IOPRace extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		
-		if (event.equalsIgnoreCase("timer"))
-		{
+		if (event.equalsIgnoreCase("timer")) {
 			_player = -1;
 			return null;
-		}
-		else if (event.equalsIgnoreCase("finish"))
-		{
-			if (_player == player.getObjectId())
-			{
+		} else if (event.equalsIgnoreCase("finish")) {
+			if (_player == player.getObjectId()) {
 				QuestState st = player.getQuestState(getName());
 				st.giveItems(KEY, 3);
 				st.takeItems(STAMP, -1);
@@ -118,8 +113,8 @@ public class IOPRace extends Quest
 		return htmltext;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new IOPRace(-1, "IOPRace", "custom");
 	}
+	
 }

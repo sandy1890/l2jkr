@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.util.Util;
 
-public class ChatAlliance implements IChatHandler
-{
+public class ChatAlliance implements IChatHandler {
+	
 	private static final int[] COMMAND_IDS =
 	{
 		9
@@ -36,12 +36,9 @@ public class ChatAlliance implements IChatHandler
 	 * Handle chat type 'alliance'
 	 */
 	@Override
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
-	{
-		if (activeChar.getClan() != null)
-		{
-			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
-			{
+	public void handleChat(int type, L2PcInstance activeChar, String target, String text) {
+		if (activeChar.getClan() != null) {
+			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type)) {
 				activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 				return;
 			}
@@ -55,8 +52,8 @@ public class ChatAlliance implements IChatHandler
 	 * Returns the chat types registered to this handler.
 	 */
 	@Override
-	public int[] getChatTypeList()
-	{
+	public int[] getChatTypeList() {
 		return COMMAND_IDS;
 	}
+	
 }

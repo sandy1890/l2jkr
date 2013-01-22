@@ -33,23 +33,25 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 /**
  * @author UnAfraid
  */
-public class TargetAuraCorpseMob implements ITargetTypeHandler
-{
+public class TargetAuraCorpseMob implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		List<L2Character> targetList = new FastList<>();
 		// Go through the L2Character _knownList
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius());
-		for (L2Character obj : objs)
-		{
-			if (obj instanceof L2Attackable && obj.isDead())
-			{
-				if (onlyFirst)
-					return new L2Character[] { obj };
+		for (L2Character obj : objs) {
+			if ((obj instanceof L2Attackable) && obj.isDead()) {
+				if (onlyFirst) {
+					return new L2Character[]
+					{
+						obj
+					};
+				}
 				
-				if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets())) {
 					break;
+				}
 				
 				targetList.add(obj);
 			}
@@ -58,8 +60,8 @@ public class TargetAuraCorpseMob implements ITargetTypeHandler
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_AURA_CORPSE_MOB;
 	}
+	
 }

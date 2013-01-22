@@ -37,11 +37,10 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 /**
  * @author UnAfraid
  */
-public class TargetFrontAura implements ITargetTypeHandler
-{
+public class TargetFrontAura implements ITargetTypeHandler {
+	
 	@Override
-	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
-	{
+	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target) {
 		List<L2Character> targetList = new FastList<>();
 		final boolean srcInArena = (activeChar.isInsideZone(L2Character.ZONE_PVP) && !activeChar.isInsideZone(L2Character.ZONE_SIEGE));
 		
@@ -49,40 +48,47 @@ public class TargetFrontAura implements ITargetTypeHandler
 		
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius());
 		
-		if (skill.getSkillType() == L2SkillType.DUMMY)
-		{
-			if (onlyFirst)
-				return new L2Character[] { activeChar };
+		if (skill.getSkillType() == L2SkillType.DUMMY) {
+			if (onlyFirst) {
+				return new L2Character[]
+				{
+					activeChar
+				};
+			}
 			
 			targetList.add(activeChar);
-			for (L2Character obj : objs)
-			{
-				if (!(obj == activeChar || obj == sourcePlayer || obj instanceof L2Npc || obj instanceof L2Attackable))
+			for (L2Character obj : objs) {
+				if (!((obj == activeChar) || (obj == sourcePlayer) || (obj instanceof L2Npc) || (obj instanceof L2Attackable))) {
 					continue;
+				}
 				
-				if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets())) {
 					break;
+				}
 				targetList.add(obj);
 			}
-		}
-		else
-		{
-			for (L2Character obj : objs)
-			{
-				if (obj instanceof L2Attackable || obj instanceof L2Playable)
-				{
+		} else {
+			for (L2Character obj : objs) {
+				if ((obj instanceof L2Attackable) || (obj instanceof L2Playable)) {
 					
-					if (!obj.isInFrontOf(activeChar))
+					if (!obj.isInFrontOf(activeChar)) {
 						continue;
+					}
 					
-					if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+					if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena)) {
 						continue;
+					}
 					
-					if (onlyFirst)
-						return new L2Character[] { obj };
+					if (onlyFirst) {
+						return new L2Character[]
+						{
+							obj
+						};
+					}
 					
-					if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets())) {
 						break;
+					}
 					targetList.add(obj);
 				}
 			}
@@ -91,8 +97,8 @@ public class TargetFrontAura implements ITargetTypeHandler
 	}
 	
 	@Override
-	public Enum<L2TargetType> getTargetType()
-	{
+	public Enum<L2TargetType> getTargetType() {
 		return L2TargetType.TARGET_FRONT_AURA;
 	}
+	
 }

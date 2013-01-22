@@ -22,30 +22,24 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class VanguardTempleKnight extends L2Transformation
-{
-	public VanguardTempleKnight()
-	{
+public class VanguardTempleKnight extends L2Transformation {
+	public VanguardTempleKnight() {
 		// id
 		super(314);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 314) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 314) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		int lvl = 1;
-		if (getPlayer().getLevel() > 42)
-		{
+		if (getPlayer().getLevel() > 42) {
 			lvl = (getPlayer().getLevel() - 42);
 		}
 		
@@ -64,21 +58,30 @@ public class VanguardTempleKnight extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			10, 18, 28, 67, 197, 293, 400, 449, 814, 816, 838, 956, 957
+			10,
+			18,
+			28,
+			67,
+			197,
+			293,
+			400,
+			449,
+			814,
+			816,
+			838,
+			956,
+			957
 		});
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		int lvl = 1;
-		if (getPlayer().getLevel() > 42)
-		{
+		if (getPlayer().getLevel() > 42) {
 			lvl = (getPlayer().getLevel() - 42);
 		}
 		
@@ -98,8 +101,7 @@ public class VanguardTempleKnight extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new VanguardTempleKnight());
 	}
 }

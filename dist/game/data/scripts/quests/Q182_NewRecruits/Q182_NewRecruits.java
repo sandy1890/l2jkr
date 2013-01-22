@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * 2010-10-15 Based on official server Naia
  * @author Gnacik
  */
-public class Q182_NewRecruits extends Quest
-{
+public class Q182_NewRecruits extends Quest {
+	
 	private static final String qn = "182_NewRecruits";
 	
 	// NPC's
@@ -38,34 +38,25 @@ public class Q182_NewRecruits extends Quest
 	private static final int _nornil = 32258;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _kekropus)
-		{
-			if (event.equalsIgnoreCase("32138-03.htm"))
-			{
+		if (npc.getNpcId() == _kekropus) {
+			if (event.equalsIgnoreCase("32138-03.htm")) {
 				st.setState(State.STARTED);
 				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
 			}
-		}
-		else if (npc.getNpcId() == _nornil)
-		{
-			if (event.equalsIgnoreCase("32258-04.htm"))
-			{
+		} else if (npc.getNpcId() == _nornil) {
+			if (event.equalsIgnoreCase("32258-04.htm")) {
 				st.giveItems(847, 2);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
-			}
-			else if (event.equalsIgnoreCase("32258-05.htm"))
-			{
+			} else if (event.equalsIgnoreCase("32258-05.htm")) {
 				st.giveItems(890, 2);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(false);
@@ -75,62 +66,49 @@ public class Q182_NewRecruits extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (player.getRace() == Race.Kamael)
-		{
+		if (player.getRace() == Race.Kamael) {
 			htmltext = "32138-00.htm";
 		}
-		if (player.getLevel() < 17)
-		{
+		if (player.getLevel() < 17) {
 			return "<html><body>長老凱克洛普斯：<br>我在尋找外來者來幫助我們一族的年輕人，您周圍有人選嗎？<br>（只有等級17以上、21以下且尚未完成一次轉職的闇天使種族以外的角色，才可以執行的任務。）</body></html>";
 		}
-		if (npc.getNpcId() == _kekropus)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == _kekropus) {
+			switch (st.getState()) {
 				case State.CREATED:
 					htmltext = "32138-01.htm";
-					break;
+				break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
-					{
+					if (st.getInt("cond") == 1) {
 						htmltext = "32138-04.htm";
 					}
-					break;
+				break;
 				case State.COMPLETED:
 					htmltext = "<html><body>這是已經完成的任務。</body></html>";
-					break;
+				break;
 			}
-		}
-		else if ((npc.getNpcId() == _nornil) && st.isStarted())
-		{
+		} else if ((npc.getNpcId() == _nornil) && st.isStarted()) {
 			htmltext = "32258-01.htm";
-		}
-		else if ((npc.getNpcId() == _nornil) && st.isCompleted())
-		{
+		} else if ((npc.getNpcId() == _nornil) && st.isCompleted()) {
 			htmltext = "32258-exit.htm";
 		}
 		return htmltext;
 	}
 	
-	public Q182_NewRecruits(int questId, String name, String descr)
-	{
+	public Q182_NewRecruits(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(_kekropus);
 		addTalkId(_kekropus, _nornil);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q182_NewRecruits(182, qn, "募集幫手");
 	}
+	
 }

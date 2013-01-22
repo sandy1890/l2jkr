@@ -18,6 +18,7 @@
  */
 package handlers.itemhandlers;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -27,15 +28,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
-public class ChristmasTree implements IItemHandler
-{
+public class ChristmasTree implements IItemHandler {
+	
 	@Override
-	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
-	{
-		if (!playable.isPlayer())
-		{
+	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse) {
+		if (!playable.isPlayer()) {
 			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
@@ -43,25 +41,25 @@ public class ChristmasTree implements IItemHandler
 		L2PcInstance activeChar = playable.getActingPlayer();
 		L2NpcTemplate template1 = null;
 		
-		switch (item.getItemId())
-		{
+		switch (item.getItemId()) {
 			case 5560:
 				template1 = NpcTable.getInstance().getTemplate(13006);
-				break;
+			break;
 			case 5561:
 				template1 = NpcTable.getInstance().getTemplate(13007);
-				break;
+			break;
 		}
 		
-		if (template1 == null)
+		if (template1 == null) {
 			return false;
+		}
 		
 		L2Object target = activeChar.getTarget();
-		if (target == null)
+		if (target == null) {
 			target = activeChar;
+		}
 		
-		try
-		{
+		try {
 			L2Spawn spawn = new L2Spawn(template1);
 			spawn.setLocx(target.getX());
 			spawn.setLocy(target.getY());
@@ -73,11 +71,10 @@ public class ChristmasTree implements IItemHandler
 			
 			activeChar.sendMessage(MessageTable.Messages[1118].getMessage() + template1.getName() + MessageTable.Messages[1119].getMessage() + " x: " + spawn.getLocx() + " y: " + spawn.getLocy() + " z: " + spawn.getLocz());
 			return true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
 			return false;
 		}
 	}
+	
 }

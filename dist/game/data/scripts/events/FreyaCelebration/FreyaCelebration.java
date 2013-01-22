@@ -38,8 +38,8 @@ import com.l2jserver.gameserver.util.Util;
  * Retail Event : 'Freya Celebration'
  * @author Gnacik
  */
-public class FreyaCelebration extends Quest
-{
+public class FreyaCelebration extends Quest {
+	
 	private static final int _freya = 13296;
 	private static final int _freya_potion = 15440;
 	private static final int _freya_gift = 17138;
@@ -47,7 +47,13 @@ public class FreyaCelebration extends Quest
 	
 	private static final int[] _skills =
 	{
-		9150, 9151, 9152, 9153, 9154, 9155, 9156
+		9150,
+		9151,
+		9152,
+		9153,
+		9154,
+		9155,
+		9156
 	};
 	
 	private static final NpcStringId[] _freya_texts =
@@ -94,31 +100,24 @@ public class FreyaCelebration extends Quest
 	};
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
-		if (event.equalsIgnoreCase("give_potion"))
-		{
-			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > 1)
-			{
+		if (event.equalsIgnoreCase("give_potion")) {
+			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > 1) {
 				long _curr_time = System.currentTimeMillis();
 				String value = loadGlobalQuestVar(player.getAccountName());
 				long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
-				if (_curr_time > _reuse_time)
-				{
+				if (_curr_time > _reuse_time) {
 					st.setState(State.STARTED);
 					st.takeItems(PcInventory.ADENA_ID, 1);
 					st.giveItems(_freya_potion, 1);
 					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_hours * 3600000)));
-				}
-				else
-				{
+				} else {
 					long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
@@ -128,9 +127,7 @@ public class FreyaCelebration extends Quest
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
 				}
-			}
-			else
-			{
+			} else {
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_UNIT_OF_THE_ITEM_S1_REQUIRED);
 				sm.addItemName(PcInventory.ADENA_ID);
 				sm.addNumber(1);
@@ -141,28 +138,21 @@ public class FreyaCelebration extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
-		if ((caster == null) || (npc == null))
-		{
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) {
+		if ((caster == null) || (npc == null)) {
 			return null;
 		}
 		
-		if ((npc.getNpcId() == _freya) && Util.contains(targets, npc) && Util.contains(_skills, skill.getId()))
-		{
-			if (getRandom(100) < 5)
-			{
+		if ((npc.getNpcId() == _freya) && Util.contains(targets, npc) && Util.contains(_skills, skill.getId())) {
+			if (getRandom(100) < 5) {
 				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERES_NOTHING_STRANGE_ABOUT_IT_ITS_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
 				cs.addStringParameter(caster.getName());
 				
 				npc.broadcastPacket(cs);
 				
 				caster.addItem("FreyaCelebration", _freya_gift, 1, npc, true);
-			}
-			else
-			{
-				if (getRandom(10) < 2)
-				{
+			} else {
+				if (getRandom(10) < 2) {
 					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), _freya_texts[getRandom(_freya_texts.length - 1)]));
 				}
 			}
@@ -171,31 +161,31 @@ public class FreyaCelebration extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (player.getQuestState(getName()) == null)
-		{
+	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
+		if (player.getQuestState(getName()) == null) {
 			newQuestState(player);
 		}
 		return "13296.htm";
 	}
 	
-	public FreyaCelebration(int questId, String name, String descr)
-	{
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public FreyaCelebration(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(_freya);
 		addFirstTalkId(_freya);
 		addTalkId(_freya);
 		addSkillSeeId(_freya);
-		for (Location loc : _spawns)
-		{
+		for (Location loc : _spawns) {
 			addSpawn(_freya, loc, false, 0);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new FreyaCelebration(-1, "FreyaCelebration", "events");
 	}
+	
 }

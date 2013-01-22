@@ -31,53 +31,52 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author UnAfraid
- *
  */
-public class ManaHeal extends L2Effect
-{
-	public ManaHeal(Env env, EffectTemplate template)
-	{
+public class ManaHeal extends L2Effect {
+	
+	public ManaHeal(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.MANAHEAL;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		L2Character target = getEffected();
-		if (target == null || target.isDead() || target instanceof L2DoorInstance)
+		if ((target == null) || target.isDead() || (target instanceof L2DoorInstance)) {
 			return false;
-	
+		}
+		
 		StatusUpdate su = new StatusUpdate(target);
 		
 		double amount = calc();
 		
-		if (!getSkill().isStaticHeal())
+		if (!getSkill().isStaticHeal()) {
 			amount = target.calcStat(Stats.RECHARGE_MP_RATE, amount, null, null);
+		}
 		
 		amount = Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp());
 		
 		// Prevent negative amounts
-		if (amount < 0)
+		if (amount < 0) {
 			amount = 0;
+		}
 		
 		// To prevent -value heals, set the value only if current mp is less than max recoverable.
-		if (target.getCurrentMp() < target.getMaxRecoverableMp())
+		if (target.getCurrentMp() < target.getMaxRecoverableMp()) {
 			target.setCurrentMp(amount + target.getCurrentMp());
+		}
 		
 		SystemMessage sm;
-		if (getEffector().getObjectId() != target.getObjectId())
-		{
+		if (getEffector().getObjectId() != target.getObjectId()) {
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
 			sm.addCharName(getEffector());
-		}
-		else
+		} else {
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
+		}
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
 		su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
@@ -87,8 +86,8 @@ public class ManaHeal extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

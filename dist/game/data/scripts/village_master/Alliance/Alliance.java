@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.model.quest.Quest;
 /**
  * @author UnAfraid
  */
-public class Alliance extends Quest
-{
+public class Alliance extends Quest {
+	
 	// @formatter:off
 	private static final int[] NPCS =
 	{
@@ -45,31 +45,27 @@ public class Alliance extends Quest
 	};
 	// @formatter:on
 	
-	public Alliance(int questId, String name, String descr)
-	{
+	public Alliance(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance talker) {
 		return "9001-01.htm";
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (!"9001-01.htm".equals(event) && player.getClan() == null)
-		{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (!"9001-01.htm".equals(event) && (player.getClan() == null)) {
 			return "9001-04.htm";
 		}
 		return event;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Alliance(-1, Alliance.class.getSimpleName(), "village_master");
 	}
+	
 }

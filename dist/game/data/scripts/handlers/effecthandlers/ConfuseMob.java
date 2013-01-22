@@ -38,36 +38,31 @@ import com.l2jserver.util.Rnd;
  * Implementation of the Confusion Effect
  * @author littlecrow
  */
-public class ConfuseMob extends L2Effect
-{
-	public ConfuseMob(Env env, EffectTemplate template)
-	{
+public class ConfuseMob extends L2Effect {
+	
+	public ConfuseMob(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.CONFUSE_MOB_ONLY;
 	}
 	
 	@Override
-	public boolean onStart()
-	{
+	public boolean onStart() {
 		getEffected().startConfused();
 		onActionTime();
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
+	public void onExit() {
 		getEffected().stopConfused(this);
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		List<L2Character> targetList = new FastList<>();
 		
 		// Getting the possible targets
@@ -75,15 +70,16 @@ public class ConfuseMob extends L2Effect
 		Collection<L2Object> objs = getEffected().getKnownList().getKnownObjects().values();
 		// synchronized (getEffected().getKnownList().getKnownObjects())
 		{
-			for (L2Object obj : objs)
-			{
-				if ((obj instanceof L2Attackable) && (obj != getEffected()))
+			for (L2Object obj : objs) {
+				if ((obj instanceof L2Attackable) && (obj != getEffected())) {
 					targetList.add((L2Character) obj);
+				}
 			}
 		}
 		// if there is no target, exit function
-		if (targetList.isEmpty())
+		if (targetList.isEmpty()) {
 			return true;
+		}
 		
 		// Choosing randomly a new target
 		int nextTargetIdx = Rnd.nextInt(targetList.size());
@@ -97,8 +93,8 @@ public class ConfuseMob extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
+	public int getEffectFlags() {
 		return CharEffectList.EFFECT_FLAG_CONFUSED;
 	}
+	
 }

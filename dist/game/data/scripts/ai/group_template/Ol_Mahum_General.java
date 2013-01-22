@@ -18,8 +18,6 @@
  */
 package ai.group_template;
 
-import ai.group_template.L2AttackableAIScript;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -28,54 +26,49 @@ import com.l2jserver.util.Rnd;
 /**
  * 豺狼將軍
  */
-public class Ol_Mahum_General extends L2AttackableAIScript
-{
+public class Ol_Mahum_General extends L2AttackableAIScript {
+	
 	private static final int Ol_Mahum_General = 20438;
-
+	
 	private static boolean _FirstAttacked;
-
-	public Ol_Mahum_General(int questId, String name, String descr)
-	{
+	
+	public Ol_Mahum_General(int questId, String name, String descr) {
 		super(questId, name, descr);
-		int[] mobs = {Ol_Mahum_General};
+		int[] mobs =
+		{
+			Ol_Mahum_General
+		};
 		registerMobs(mobs, QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
 		_FirstAttacked = false;
 	}
-
+	
 	@Override
-	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-	{
-		if (npc.getNpcId() == Ol_Mahum_General)
-		{
-			if (_FirstAttacked)
-			{
-				if (Rnd.get(100) == 50)
-				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"我們將看到這一點！"));
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet) {
+		if (npc.getNpcId() == Ol_Mahum_General) {
+			if (_FirstAttacked) {
+				if (Rnd.get(100) == 50) {
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "我們將看到這一點！"));
 				}
-				if (Rnd.get(100) == 50)
-				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(),0,npc.getNpcId(),"我一定會報答此羞辱！"));
+				if (Rnd.get(100) == 50) {
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "我一定會報答此羞辱！"));
 				}
 			}
 			_FirstAttacked = true;
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
-
+	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		int npcId = npc.getNpcId();
-		if (npcId == Ol_Mahum_General)
-		{
+		if (npcId == Ol_Mahum_General) {
 			_FirstAttacked = false;
 		}
-		return super.onKill(npc,killer,isPet);
+		return super.onKill(npc, killer, isPet);
 	}
-
-	public static void main(String[] args)
-	{
+	
+	public static void main(String[] args) {
 		new Ol_Mahum_General(-1, "Ol_Mahum_General", "ai");
 	}
+	
 }

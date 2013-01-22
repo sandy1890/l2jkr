@@ -24,31 +24,27 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-public class ManaDamOverTime extends L2Effect
-{
-	public ManaDamOverTime(Env env, EffectTemplate template)
-	{
+public class ManaDamOverTime extends L2Effect {
+	
+	public ManaDamOverTime(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.MANA_DMG_OVER_TIME;
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+	public boolean onActionTime() {
+		if (getEffected().isDead()) {
 			return false;
+		}
 		
 		double manaDam = calc();
 		
-		if (manaDam > getEffected().getCurrentMp())
-		{
-			if (getSkill().isToggle())
-			{
+		if (manaDam > getEffected().getCurrentMp()) {
+			if (getSkill().isToggle()) {
 				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 				return false;
 			}
@@ -57,4 +53,5 @@ public class ManaDamOverTime extends L2Effect
 		getEffected().reduceCurrentMp(manaDam);
 		return true;
 	}
+	
 }

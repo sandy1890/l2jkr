@@ -21,6 +21,7 @@ package handlers.admincommandhandlers;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
@@ -28,23 +29,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
-import com.l2jserver.gameserver.datatables.MessageTable;
 
 /**
- * Admin comand handler for Manor System
- * This class handles following admin commands:
- * - manor_info = shows info about current manor state
- * - manor_approve = approves settings for the next manor period
- * - manor_setnext = changes manor settings to the next day's
- * - manor_reset castle = resets all manor data for specified castle (or all)
- * - manor_setmaintenance = sets manor system under maintenance mode
- * - manor_save = saves all manor data into database
- * - manor_disable = disables manor system
- *
+ * Admin comand handler for Manor System This class handles following admin commands: - manor_info = shows info about current manor state - manor_approve = approves settings for the next manor period - manor_setnext = changes manor settings to the next day's - manor_reset castle = resets all manor
+ * data for specified castle (or all) - manor_setmaintenance = sets manor system under maintenance mode - manor_save = saves all manor data into database - manor_disable = disables manor system
  * @author l3x
  */
-public class AdminManor implements IAdminCommandHandler
-{
+public class AdminManor implements IAdminCommandHandler {
+	
 	private static final String[] _adminCommands =
 	{
 		"admin_manor",
@@ -57,82 +49,63 @@ public class AdminManor implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, L2PcInstance activeChar)
-	{
+	public boolean useAdminCommand(String command, L2PcInstance activeChar) {
 		StringTokenizer st = new StringTokenizer(command);
 		command = st.nextToken();
 		
-		if (command.equals("admin_manor"))
-		{
+		if (command.equals("admin_manor")) {
 			showMainPage(activeChar);
-		}
-		else if (command.equals("admin_manor_setnext"))
-		{
+		} else if (command.equals("admin_manor_setnext")) {
 			CastleManorManager.getInstance().setNextPeriod();
 			CastleManorManager.getInstance().setNewManorRefresh();
 			CastleManorManager.getInstance().updateManorRefresh();
 			activeChar.sendMessage(1748);
 			showMainPage(activeChar);
-		}
-		else if (command.equals("admin_manor_approve"))
-		{
+		} else if (command.equals("admin_manor_approve")) {
 			CastleManorManager.getInstance().approveNextPeriod();
 			CastleManorManager.getInstance().setNewPeriodApprove();
 			CastleManorManager.getInstance().updatePeriodApprove();
 			activeChar.sendMessage(1749);
 			showMainPage(activeChar);
-		}
-		else if (command.equals("admin_manor_reset"))
-		{
+		} else if (command.equals("admin_manor_reset")) {
 			int castleId = 0;
-			try
-			{
+			try {
 				castleId = Integer.parseInt(st.nextToken());
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 			}
 			
-			if (castleId > 0)
-			{
+			if (castleId > 0) {
 				Castle castle = CastleManager.getInstance().getCastleById(castleId);
 				castle.resetManor();
 				activeChar.sendMessage(MessageTable.Messages[1750].getExtra(1) + castle.getName() + MessageTable.Messages[1750].getExtra(2));
-			}
-			else
-			{
-				for (Castle castle : CastleManager.getInstance().getCastles())
-				{
+			} else {
+				for (Castle castle : CastleManager.getInstance().getCastles()) {
 					castle.resetManor();
 				}
 				activeChar.sendMessage(1751);
 			}
 			showMainPage(activeChar);
-		}
-		else if (command.equals("admin_manor_setmaintenance"))
-		{
+		} else if (command.equals("admin_manor_setmaintenance")) {
 			boolean mode = CastleManorManager.getInstance().isUnderMaintenance();
 			CastleManorManager.getInstance().setUnderMaintenance(!mode);
-			if (mode)
+			if (mode) {
 				activeChar.sendMessage(1752);
-			else
+			} else {
 				activeChar.sendMessage(1753);
+			}
 			showMainPage(activeChar);
-		}
-		else if (command.equals("admin_manor_save"))
-		{
+		} else if (command.equals("admin_manor_save")) {
 			CastleManorManager.getInstance().save();
 			activeChar.sendMessage(1754);
 			showMainPage(activeChar);
-		}
-		else if (command.equals("admin_manor_disable"))
-		{
+		} else if (command.equals("admin_manor_disable")) {
 			boolean mode = CastleManorManager.getInstance().isDisabled();
 			CastleManorManager.getInstance().setDisabled(!mode);
-			if (mode)
+			if (mode) {
 				activeChar.sendMessage(1755);
-			else
+			} else {
 				activeChar.sendMessage(1756);
+			}
 			showMainPage(activeChar);
 		}
 		
@@ -140,13 +113,15 @@ public class AdminManor implements IAdminCommandHandler
 	}
 	
 	@Override
-	public String[] getAdminCommandList()
-	{
+	public String[] getAdminCommandList() {
 		return _adminCommands;
 	}
 	
-	private String formatTime(long millis)
-	{
+	/**
+	 * @param millis
+	 * @return
+	 */
+	private String formatTime(long millis) {
 		String s = "";
 		int secs = (int) millis / 1000;
 		int mins = secs / 60;
@@ -154,74 +129,30 @@ public class AdminManor implements IAdminCommandHandler
 		int hours = mins / 60;
 		mins -= hours * 60;
 		
-		if (hours > 0)
+		if (hours > 0) {
 			s += hours + ":";
+		}
 		s += mins + ":";
 		s += secs;
 		return s;
 	}
 	
-	private void showMainPage(L2PcInstance activeChar)
-	{
+	/**
+	 * @param activeChar
+	 */
+	private void showMainPage(L2PcInstance activeChar) {
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final List<Castle> castles = CastleManager.getInstance().getCastles();
-		final StringBuilder replyMSG = StringUtil.startAppend(
-				1000 + castles.size() * 50,
-				"<html><body>" +
-				"<center><table width=270><tr>"+
-				"<td width=45><button value=\""+MessageTable.Messages[1757].getMessage()+"\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>"+
-				"<td width=180><center>"+MessageTable.Messages[1758].getMessage()+"</center></td>"+
-				"<td width=45><button value=\""+MessageTable.Messages[1759].getMessage()+"\" action=\"bypass -h admin_admin2\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>"+
-				"</tr></table><font color=\"LEVEL\">"+MessageTable.Messages[1760].getMessage()+"</font></center><br>"+
-				"<table width=\"100%\"><tr><td>" +
-				MessageTable.Messages[1761].getMessage(),
-				CastleManorManager.getInstance().isDisabled() ? MessageTable.Messages[1762].getExtra(1) : MessageTable.Messages[1762].getExtra(2),
-						"</td><td>" +
-						MessageTable.Messages[1763].getMessage(),
-						CastleManorManager.getInstance().isUnderMaintenance() ? MessageTable.Messages[1762].getExtra(1) : MessageTable.Messages[1762].getExtra(2),
-								"</td></tr><tr><td>" +
-								MessageTable.Messages[1764].getMessage(),
-								formatTime(CastleManorManager.getInstance().getMillisToManorRefresh()),
-								"</td><td>" +
-								MessageTable.Messages[1765].getMessage(),
-								formatTime(CastleManorManager.getInstance().getMillisToNextPeriodApprove()),
-								"</td></tr>" +
-								"</table>" +
-								"<center><table><tr><td>" +
-								"<button value=\""+MessageTable.Messages[1766].getMessage()+"\" action=\"bypass -h admin_manor_setnext\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" +
-								"<button value=\""+MessageTable.Messages[1767].getMessage()+"\" action=\"bypass -h admin_manor_approve\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td>" +
-								"<button value=\"",
-								CastleManorManager.getInstance().isUnderMaintenance() ? MessageTable.Messages[1768].getExtra(1) : MessageTable.Messages[1768].getExtra(2),
-										"\" action=\"bypass -h admin_manor_setmaintenance\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" +
-										"<button value=\"",
-										CastleManorManager.getInstance().isDisabled() ? MessageTable.Messages[1769].getExtra(1) : MessageTable.Messages[1769].getExtra(2),
-												"\" action=\"bypass -h admin_manor_disable\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td>" +
-												"<button value=\""+MessageTable.Messages[1770].getMessage()+"\" action=\"bypass -h admin_manor\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" +
-												"<button value=\""+MessageTable.Messages[1759].getMessage()+"\" action=\"bypass -h admin_admin\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" +
-												"</table></center>" +
-												"<br><center>"+MessageTable.Messages[1771].getMessage()+"<table width=\"100%\">" +
-												"<tr><td></td><td>"+MessageTable.Messages[1772].getMessage()+"</td><td>"+MessageTable.Messages[1773].getMessage()+"</td></tr>"
-		);
+		final StringBuilder replyMSG = StringUtil.startAppend(1000 + (castles.size() * 50), "<html><body>" + "<center><table width=270><tr>" + "<td width=45><button value=\"" + MessageTable.Messages[1757].getMessage() + "\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "<td width=180><center>" + MessageTable.Messages[1758].getMessage() + "</center></td>" + "<td width=45><button value=\"" + MessageTable.Messages[1759].getMessage() + "\" action=\"bypass -h admin_admin2\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "</tr></table><font color=\"LEVEL\">" + MessageTable.Messages[1760].getMessage() + "</font></center><br>" + "<table width=\"100%\"><tr><td>" + MessageTable.Messages[1761].getMessage(), CastleManorManager.getInstance().isDisabled() ? MessageTable.Messages[1762].getExtra(1) : MessageTable.Messages[1762].getExtra(2), "</td><td>" + MessageTable.Messages[1763].getMessage(), CastleManorManager.getInstance().isUnderMaintenance() ? MessageTable.Messages[1762].getExtra(1) : MessageTable.Messages[1762].getExtra(2), "</td></tr><tr><td>" + MessageTable.Messages[1764].getMessage(), formatTime(CastleManorManager.getInstance().getMillisToManorRefresh()), "</td><td>" + MessageTable.Messages[1765].getMessage(), formatTime(CastleManorManager.getInstance().getMillisToNextPeriodApprove()), "</td></tr>" + "</table>" + "<center><table><tr><td>" + "<button value=\"" + MessageTable.Messages[1766].getMessage() + "\" action=\"bypass -h admin_manor_setnext\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + "<button value=\"" + MessageTable.Messages[1767].getMessage() + "\" action=\"bypass -h admin_manor_approve\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td>" + "<button value=\"", CastleManorManager.getInstance().isUnderMaintenance() ? MessageTable.Messages[1768].getExtra(1) : MessageTable.Messages[1768].getExtra(2), "\" action=\"bypass -h admin_manor_setmaintenance\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + "<button value=\"", CastleManorManager.getInstance().isDisabled() ? MessageTable.Messages[1769].getExtra(1) : MessageTable.Messages[1769].getExtra(2), "\" action=\"bypass -h admin_manor_disable\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td>" + "<button value=\"" + MessageTable.Messages[1770].getMessage() + "\" action=\"bypass -h admin_manor\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + "<button value=\"" + MessageTable.Messages[1759].getMessage() + "\" action=\"bypass -h admin_admin\" width=110 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" + "</table></center>" + "<br><center>" + MessageTable.Messages[1771].getMessage() + "<table width=\"100%\">" + "<tr><td></td><td>" + MessageTable.Messages[1772].getMessage() + "</td><td>" + MessageTable.Messages[1773].getMessage() + "</td></tr>");
 		
 		for (Castle c : CastleManager.getInstance().getCastles()) {
-			StringUtil.append(replyMSG,
-					"<tr><td>",
-					c.getName(),
-					"</td>" +
-					"<td>",
-					String.valueOf(c.getManorCost(CastleManorManager.PERIOD_CURRENT)),
-					"a</td>" +
-					"<td>",
-					String.valueOf(c.getManorCost(CastleManorManager.PERIOD_NEXT)),
-					"a</td>" +
-			"</tr>");
+			StringUtil.append(replyMSG, "<tr><td>", c.getName(), "</td>" + "<td>", String.valueOf(c.getManorCost(CastleManorManager.PERIOD_CURRENT)), "a</td>" + "<td>", String.valueOf(c.getManorCost(CastleManorManager.PERIOD_NEXT)), "a</td>" + "</tr>");
 		}
 		
-		replyMSG.append(
-				"</table><br>" +
-		"</body></html>");
+		replyMSG.append("</table><br>" + "</body></html>");
 		
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
+	
 }

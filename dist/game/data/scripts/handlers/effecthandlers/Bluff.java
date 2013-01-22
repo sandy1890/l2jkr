@@ -32,30 +32,30 @@ import com.l2jserver.gameserver.network.serverpackets.StopRotation;
  * Implementation of the Bluff Effect
  * @author decad
  */
-public class Bluff extends L2Effect
-{
-	public Bluff(Env env, EffectTemplate template)
-	{
+public class Bluff extends L2Effect {
+	
+	public Bluff(Env env, EffectTemplate template) {
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
+	public L2EffectType getEffectType() {
 		return L2EffectType.BLUFF; // test for bluff effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected() instanceof L2NpcInstance)
+	public boolean onStart() {
+		if (getEffected() instanceof L2NpcInstance) {
 			return false;
+		}
 		
-		if (getEffected() instanceof L2Npc && ((L2Npc) getEffected()).getNpcId() == 35062)
+		if ((getEffected() instanceof L2Npc) && (((L2Npc) getEffected()).getNpcId() == 35062)) {
 			return false;
+		}
 		
-		if (getEffected() instanceof L2SiegeSummonInstance)
+		if (getEffected() instanceof L2SiegeSummonInstance) {
 			return false;
+		}
 		
 		getEffected().broadcastPacket(new StartRotation(getEffected().getObjectId(), getEffected().getHeading(), 1, 65535));
 		getEffected().broadcastPacket(new StopRotation(getEffected().getObjectId(), getEffector().getHeading(), 65535));
@@ -64,8 +64,8 @@ public class Bluff extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
+	public boolean onActionTime() {
 		return false;
 	}
+	
 }

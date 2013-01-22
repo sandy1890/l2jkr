@@ -29,32 +29,29 @@ import com.l2jserver.gameserver.model.L2Transformation;
  * ". I wasn't able to figure out what the bond did as it wasn't anything that seemed to go into your inventory. However, Landmine did appear in your inventory which allows you to use it before flipping a square which will give the other team a state of stun when they attempt to flip the same square (from what I can gather, it all happens so quickly ;) "
  * Shock - 5851 - Stun effect from 5849 More Info: http://l2vault.ign.com/wiki/index.php/Handy%E2%80%99s_Block_Checker
  */
-public class ScrollRed extends L2Transformation
-{
+public class ScrollRed extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		5853, 5491, 619
+		5853,
+		5491,
+		619
 	};
 	
-	public ScrollRed()
-	{
+	public ScrollRed() {
 		// id, colRadius, colHeight
 		super(121, 9, 28.3);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 121) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 121) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Flip Block
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5853, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -66,13 +63,11 @@ public class ScrollRed extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Flip Block
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5853, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
@@ -83,8 +78,7 @@ public class ScrollRed extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new ScrollRed());
 	}
 }

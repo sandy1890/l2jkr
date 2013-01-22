@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Tired Of Waiting (26)
  * @author corbin12
  */
-public class Q26_TiredOfWaiting extends Quest
-{
+public class Q26_TiredOfWaiting extends Quest {
+	
 	private static final String qn = "26_TiredOfWaiting";
 	
 	// NPCs
@@ -43,113 +43,92 @@ public class Q26_TiredOfWaiting extends Quest
 	private static final int SEALED_BLOOD_CRYSTAL = 17267;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int npcId = npc.getNpcId();
-		switch (npcId)
-		{
+		switch (npcId) {
 			case ISAEL_SILVERSHADOW:
-				if (event.equalsIgnoreCase("30655-04.html"))
-				{
+				if (event.equalsIgnoreCase("30655-04.html")) {
 					st.setState(State.STARTED);
 					st.set("cond", "1");
 					st.giveItems(DELIVERY_BOX, 1);
 					st.playSound("ItemSound.quest_accept");
 				}
-				break;
+			break;
 			case KITZKA:
-				if (event.equalsIgnoreCase("31045-04.html"))
-				{
+				if (event.equalsIgnoreCase("31045-04.html")) {
 					st.takeItems(DELIVERY_BOX, 1);
-				}
-				else if (event.equalsIgnoreCase("31045-10.html"))
-				{
+				} else if (event.equalsIgnoreCase("31045-10.html")) {
 					st.giveItems(LARGE_DRAGON_BONE, 1);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
-				}
-				else if (event.equalsIgnoreCase("31045-11.html"))
-				{
+				} else if (event.equalsIgnoreCase("31045-11.html")) {
 					st.giveItems(WILL_OF_ANTHARAS, 1);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
-				}
-				else if (event.equalsIgnoreCase("31045-12.html"))
-				{
+				} else if (event.equalsIgnoreCase("31045-12.html")) {
 					st.giveItems(SEALED_BLOOD_CRYSTAL, 1);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int npcId = npc.getNpcId();
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.CREATED:
-				if (npcId == ISAEL_SILVERSHADOW)
-				{
+				if (npcId == ISAEL_SILVERSHADOW) {
 					htmltext = (player.getLevel() >= 80) ? "30655-01.htm" : "30655-00.html";
 				}
-				break;
+			break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
-				{
-					switch (npcId)
-					{
+				if (st.getInt("cond") == 1) {
+					switch (npcId) {
 						case ISAEL_SILVERSHADOW:
 							htmltext = "30655-07.html";
-							break;
+						break;
 						case KITZKA:
 							htmltext = (st.hasQuestItems(DELIVERY_BOX)) ? "31045-01.html" : "31045-09.html";
-							break;
+						break;
 					}
 				}
-				break;
+			break;
 			case State.COMPLETED:
-				if (npcId == ISAEL_SILVERSHADOW)
-				{
+				if (npcId == ISAEL_SILVERSHADOW) {
 					htmltext = "30655-08.html";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q26_TiredOfWaiting(int questId, String name, String descr)
-	{
+	public Q26_TiredOfWaiting(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(ISAEL_SILVERSHADOW);
 		addTalkId(ISAEL_SILVERSHADOW, KITZKA);
-		
 		questItemIds = new int[]
 		{
 			DELIVERY_BOX
 		};
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q26_TiredOfWaiting(26, qn, "Tired of Waiting");
 	}
+	
 }

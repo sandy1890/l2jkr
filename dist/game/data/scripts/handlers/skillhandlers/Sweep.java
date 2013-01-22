@@ -34,16 +34,17 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author _drunk_, Zoey76
  */
-public class Sweep implements ISkillHandler
-{
-	private static final L2SkillType[] SKILL_IDS = { L2SkillType.SWEEP };
+public class Sweep implements ISkillHandler {
+	
+	private static final L2SkillType[] SKILL_IDS =
+	{
+		L2SkillType.SWEEP
+	};
 	private static final int maxSweepTime = 15000;
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{
-		if (!activeChar.isPlayer())
-		{
+	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets) {
+		if (!activeChar.isPlayer()) {
 			return;
 		}
 		final L2PcInstance player = activeChar.getActingPlayer();
@@ -54,10 +55,8 @@ public class Sweep implements ISkillHandler
 		SystemMessage sm;
 		boolean canSweep;
 		boolean isSweeping;
-		for (L2Object tgt : targets)
-		{
-			if (!tgt.isL2Attackable())
-			{
+		for (L2Object tgt : targets) {
+			if (!tgt.isL2Attackable()) {
 				continue;
 			}
 			target = (L2Attackable) tgt;
@@ -66,31 +65,22 @@ public class Sweep implements ISkillHandler
 			canSweep &= target.checkCorpseTime(player, maxSweepTime, true);
 			canSweep &= player.getInventory().checkInventorySlotsAndWeight(target.getSpoilLootItems(), true, false);
 			
-			if (canSweep)
-			{
+			if (canSweep) {
 				isSweeping = false;
-				synchronized (target)
-				{
-					if (target.isSweepActive())
-					{
+				synchronized (target) {
+					if (target.isSweepActive()) {
 						items = target.takeSweep();
 						isSweeping = true;
 					}
 				}
-				if (isSweeping)
-				{
-					if ((items == null) || (items.length == 0))
-					{
+				if (isSweeping) {
+					if ((items == null) || (items.length == 0)) {
 						continue;
 					}
-					for (RewardItem ritem : items)
-					{
-						if (player.isInParty())
-						{
+					for (RewardItem ritem : items) {
+						if (player.isInParty()) {
 							player.getParty().distributeItem(player, ritem, true, target);
-						}
-						else
-						{
+						} else {
 							player.addItem("Sweep", ritem.getItemId(), ritem.getCount(), player, true);
 						}
 					}
@@ -99,23 +89,19 @@ public class Sweep implements ISkillHandler
 			target.endDecayTask();
 			
 			sweep = (L2SkillSweeper) skill;
-			if (sweep.getAbsorbAbs() != -1)
-			{
+			if (sweep.getAbsorbAbs() != -1) {
 				int restored = 0;
 				double absorb = 0;
 				final StatusUpdate su = new StatusUpdate(activeChar);
 				final int abs = sweep.getAbsorbAbs();
-				if (sweep.isAbsorbHp())
-				{
+				if (sweep.isAbsorbHp()) {
 					absorb = ((activeChar.getCurrentHp() + abs) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + abs));
 					restored = (int) (absorb - activeChar.getCurrentHp());
 					activeChar.setCurrentHp(absorb);
 					
 					su.addAttribute(StatusUpdate.CUR_HP, (int) absorb);
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
-				}
-				else
-				{
+				} else {
 					absorb = ((activeChar.getCurrentMp() + abs) > activeChar.getMaxMp() ? activeChar.getMaxMp() : (activeChar.getCurrentMp() + abs));
 					restored = (int) (absorb - activeChar.getCurrentMp());
 					activeChar.setCurrentMp(absorb);
@@ -131,8 +117,8 @@ public class Sweep implements ISkillHandler
 	}
 	
 	@Override
-	public L2SkillType[] getSkillIds()
-	{
+	public L2SkillType[] getSkillIds() {
 		return SKILL_IDS;
 	}
+	
 }

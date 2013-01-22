@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.model.quest.State;
 /**
  * @author moved to java by DS, jython script by BiTi! and DrLecter
  */
-public final class Q637_ThroughOnceMore extends Quest
-{
+public final class Q637_ThroughOnceMore extends Quest {
+	
 	private static final String qn = "637_ThroughOnceMore";
 	
 	private static final int FLAURON = 32010;
@@ -46,14 +46,12 @@ public final class Q637_ThroughOnceMore extends Quest
 	
 	private static final double DROP_CHANCE = 90;
 	
-	public Q637_ThroughOnceMore(int questId, String name, String descr)
-	{
+	public Q637_ThroughOnceMore(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(FLAURON);
 		addTalkId(FLAURON);
-		for (int id : MOBS)
-		{
+		for (int id : MOBS) {
 			addKillId(id);
 		}
 		
@@ -64,22 +62,17 @@ public final class Q637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return null;
 		}
 		
-		if ("32010-03.htm".equalsIgnoreCase(event))
-		{
+		if ("32010-03.htm".equalsIgnoreCase(event)) {
 			st.set("cond", "1");
 			st.setState(State.STARTED);
 			st.playSound("ItemSound.quest_accept");
-		}
-		else if ("32010-10.htm".equalsIgnoreCase(event))
-		{
+		} else if ("32010-10.htm".equalsIgnoreCase(event)) {
 			st.exitQuest(true);
 		}
 		
@@ -87,41 +80,31 @@ public final class Q637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public final String onTalk(L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		}
 		
 		final byte id = st.getState();
-		if (id == State.CREATED)
-		{
-			if (player.getLevel() > 72)
-			{
-				if (st.hasQuestItems(FADED_MARK))
-				{
+		if (id == State.CREATED) {
+			if (player.getLevel() > 72) {
+				if (st.hasQuestItems(FADED_MARK)) {
 					return "32010-02.htm";
 				}
-				if (st.hasQuestItems(VISITOR_MARK))
-				{
+				if (st.hasQuestItems(VISITOR_MARK)) {
 					st.exitQuest(true);
 					return "32010-01a.htm";
 				}
-				if (st.hasQuestItems(MARK))
-				{
+				if (st.hasQuestItems(MARK)) {
 					st.exitQuest(true);
 					return "32010-0.htm";
 				}
 			}
 			st.exitQuest(true);
 			return "32010-01.htm";
-		}
-		else if (id == State.STARTED)
-		{
-			if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(NECRO_HEART) == 10))
-			{
+		} else if (id == State.STARTED) {
+			if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(NECRO_HEART) == 10)) {
 				st.takeItems(NECRO_HEART, 10);
 				st.takeItems(FADED_MARK, 1);
 				st.giveItems(MARK, 1);
@@ -136,31 +119,23 @@ public final class Q637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		final QuestState st = player.getQuestState(qn);
-		if ((st != null) && (st.getState() == State.STARTED))
-		{
+		if ((st != null) && (st.getState() == State.STARTED)) {
 			final long count = st.getQuestItemsCount(NECRO_HEART);
-			if (count < 10)
-			{
+			if (count < 10) {
 				int chance = (int) (Config.RATE_QUEST_DROP * DROP_CHANCE);
 				int numItems = chance / 100;
 				chance = chance % 100;
-				if (getRandom(100) < chance)
-				{
+				if (getRandom(100) < chance) {
 					numItems++;
 				}
-				if (numItems > 0)
-				{
-					if ((count + numItems) >= 10)
-					{
+				if (numItems > 0) {
+					if ((count + numItems) >= 10) {
 						numItems = 10 - (int) count;
 						st.playSound("ItemSound.quest_middle");
 						st.set("cond", "2");
-					}
-					else
-					{
+					} else {
 						st.playSound("ItemSound.quest_itemget");
 					}
 					
@@ -171,8 +146,8 @@ public final class Q637_ThroughOnceMore extends Quest
 		return null;
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q637_ThroughOnceMore(637, qn, "再次往那門扉之後");
 	}
+	
 }

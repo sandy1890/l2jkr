@@ -22,30 +22,24 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class InquisitorShilienElder extends L2Transformation
-{
-	public InquisitorShilienElder()
-	{
+public class InquisitorShilienElder extends L2Transformation {
+	public InquisitorShilienElder() {
 		// id
 		super(318);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 318) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 318) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		int lvl = 1;
-		if (getPlayer().getLevel() > 43)
-		{
+		if (getPlayer().getLevel() > 43) {
 			lvl = (getPlayer().getLevel() - 43);
 		}
 		
@@ -62,23 +56,28 @@ public class InquisitorShilienElder extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			838, 1523, 1528, 1524, 1525, 1430, 1303, 1059, 1043
+			838,
+			1523,
+			1528,
+			1524,
+			1525,
+			1430,
+			1303,
+			1059,
+			1043
 		});
 		// Switch Stance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
 	
 	@Override
-	public void onUntransform()
-	{
+	public void onUntransform() {
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		int lvl = 1;
-		if (getPlayer().getLevel() > 43)
-		{
+		if (getPlayer().getLevel() > 43) {
 			lvl = (getPlayer().getLevel() - 43);
 		}
 		
@@ -98,8 +97,7 @@ public class InquisitorShilienElder extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new InquisitorShilienElder());
 	}
 }

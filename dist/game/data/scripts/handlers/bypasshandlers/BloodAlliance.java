@@ -32,68 +32,50 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  * Castle Warehouse - Blood Alliance
  * @author malyelfik
  */
-public class BloodAlliance implements IBypassHandler
-{
+public class BloodAlliance implements IBypassHandler {
 	
 	private static final String[] COMMANDS =
 	{
 		"HonoraryItem",
-		"Receive", 
+		"Receive",
 		"Exchange"
 	};
 	
 	@Override
-	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
-	{
-		if (!(target instanceof L2Npc))
-		{
+	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target) {
+		if (!(target instanceof L2Npc)) {
 			return false;
 		}
 		
 		L2CastleWarehouseInstance npc = ((L2CastleWarehouseInstance) target);
 		
-		try
-		{
+		try {
 			NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 			StringTokenizer st = new StringTokenizer(command, " ");
 			String actualCommand = st.nextToken(); // Get actual command
 			
-			if (actualCommand.equalsIgnoreCase(COMMANDS[0]))
-			{
-				if (activeChar.isClanLeader())
-				{
+			if (actualCommand.equalsIgnoreCase(COMMANDS[0])) {
+				if (activeChar.isClanLeader()) {
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-4.htm");
 					html.replace("%blood%", Integer.toString(npc.getCastle().getBloodAlliance()));
-				}
-				else
-				{
+				} else {
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-3.htm");
 				}
-			}
-			else if (actualCommand.equalsIgnoreCase(COMMANDS[1]))
-			{
+			} else if (actualCommand.equalsIgnoreCase(COMMANDS[1])) {
 				int count = npc.getCastle().getBloodAlliance();
-				if (count == 0)
-				{
+				if (count == 0) {
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-5.htm");
-				}
-				else
-				{
+				} else {
 					activeChar.addItem("BloodAlliance", 9911, count, activeChar, true);
 					npc.getCastle().setBloodAlliance(0);
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-6.htm");
 				}
-			}
-			else if (actualCommand.equalsIgnoreCase(COMMANDS[2]))
-			{
-				if (activeChar.getInventory().getInventoryItemCount(9911, -1) > 0)
-				{
+			} else if (actualCommand.equalsIgnoreCase(COMMANDS[2])) {
+				if (activeChar.getInventory().getInventoryItemCount(9911, -1) > 0) {
 					activeChar.destroyItemByItemId("BloodAllianceExchange", 9911, 1, activeChar, true);
 					activeChar.addItem("BloodAllianceExchange", 9910, 30, activeChar, true);
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-7.htm");
-				}
-				else
-				{
+				} else {
 					html.setFile(activeChar.getHtmlPrefix(), "data/html/castlewarehouse/castlewarehouse-8.htm");
 				}
 				
@@ -101,17 +83,15 @@ public class BloodAlliance implements IBypassHandler
 			html.replace("%objectId%", String.valueOf(npc.getObjectId()));
 			activeChar.sendPacket(html);
 			return true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}
 	
 	@Override
-	public String[] getBypassList()
-	{
+	public String[] getBypassList() {
 		return COMMANDS;
 	}
+	
 }

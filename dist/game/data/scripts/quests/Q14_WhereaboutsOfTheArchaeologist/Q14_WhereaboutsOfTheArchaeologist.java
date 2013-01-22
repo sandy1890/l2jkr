@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * Original Jython script by disKret.
  * @author nonom
  */
-public class Q14_WhereaboutsOfTheArchaeologist extends Quest
-{
+public class Q14_WhereaboutsOfTheArchaeologist extends Quest {
+	
 	private static final String qn = "14_WhereaboutsOfTheArchaeologist";
 	
 	// NPCs
@@ -41,92 +41,78 @@ public class Q14_WhereaboutsOfTheArchaeologist extends Quest
 	private static final int LETTER = 7253;
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		switch (event)
-		{
+		switch (event) {
 			case "31263-02.html":
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.giveItems(LETTER, 1);
 				st.playSound("ItemSound.quest_accept");
-				break;
+			break;
 			case "31538-01.html":
-				if ((st.getInt("cond") == 1) && st.hasQuestItems(LETTER))
-				{
+				if ((st.getInt("cond") == 1) && st.hasQuestItems(LETTER)) {
 					st.takeItems(LETTER, -1);
 					st.giveItems(57, 136928);
 					st.addExpAndSp(325881, 32524);
 					st.playSound("ItemSound.quest_finish");
 					st.exitQuest(false);
-				}
-				else
-				{
+				} else {
 					htmltext = "31538-02.html";
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
 		final int npcId = npc.getNpcId();
-		switch (st.getState())
-		{
+		switch (st.getState()) {
 			case State.COMPLETED:
 				htmltext = getAlreadyCompletedMsg(player);
-				break;
+			break;
 			case State.CREATED:
-				if (npcId == LIESEL)
-				{
+				if (npcId == LIESEL) {
 					htmltext = (player.getLevel() < 74) ? "31263-01.html" : "31263-00.htm";
 				}
-				break;
+			break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
-				{
-					switch (npcId)
-					{
+				if (st.getInt("cond") == 1) {
+					switch (npcId) {
 						case LIESEL:
 							htmltext = "31263-02.html";
-							break;
+						break;
 						case GHOST_OF_ADVENTURER:
 							htmltext = "31538-00.html";
-							break;
+						break;
 					}
 				}
-				break;
+			break;
 		}
 		return htmltext;
 	}
 	
-	public Q14_WhereaboutsOfTheArchaeologist(int questId, String name, String descr)
-	{
+	public Q14_WhereaboutsOfTheArchaeologist(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(LIESEL);
 		addTalkId(LIESEL);
 		addTalkId(GHOST_OF_ADVENTURER);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q14_WhereaboutsOfTheArchaeologist(14, qn, "Whereabouts Of The Archaeologist");
 	}
+	
 }

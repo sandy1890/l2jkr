@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class TheTerritoryGoddard extends TerritoryWarSuperClass
-{
+public class TheTerritoryGoddard extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "723_FortheSakeoftheTerritoryGoddard";
 	public static int qnu = 723;
 	public static String qna = "For the Sake of the Territory - Goddard";
 	
-	public TheTerritoryGoddard()
-	{
+	public TheTerritoryGoddard() {
 		super(qnu, qn1, qna);
 		CATAPULT_ID = 36505;
 		TERRITORY_ID = 87;
@@ -55,4 +54,5 @@ public class TheTerritoryGoddard extends TerritoryWarSuperClass
 		};
 		registerKillIds();
 	}
+	
 }

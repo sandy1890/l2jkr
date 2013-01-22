@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
-public class Q289_NoMoreSoupForYou extends Quest
-{
+public class Q289_NoMoreSoupForYou extends Quest {
+	
 	public static final int STAN = 30200;
 	public static final int RATE = 5;
 	public static final int SOUP = 15712;
@@ -150,69 +150,52 @@ public class Q289_NoMoreSoupForYou extends Quest
 		}
 	};
 	
-	public Q289_NoMoreSoupForYou(int id, String name, String descr)
-	{
+	public Q289_NoMoreSoupForYou(int id, String name, String descr) {
 		super(id, name, descr);
 		
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		
-		for (int i : MOBS)
-		{
+		for (int i : MOBS) {
 			addKillId(i);
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q289_NoMoreSoupForYou(289, qn, "No More Soup For You");
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		int b = getRandom(18);
 		int c = getRandom(7);
 		
-		if (npc.getNpcId() == STAN)
-		{
-			if (event.equalsIgnoreCase("30200-03.htm"))
-			{
+		if (npc.getNpcId() == STAN) {
+			if (event.equalsIgnoreCase("30200-03.htm")) {
 				st.set("cond", "1");
 				st.setState(State.STARTED);
 				st.playSound("ItemSound.quest_accept");
-			}
-			else if (event.equalsIgnoreCase("30200-05.htm"))
-			{
-				if (st.getQuestItemsCount(SOUP) >= 500)
-				{
+			} else if (event.equalsIgnoreCase("30200-05.htm")) {
+				if (st.getQuestItemsCount(SOUP) >= 500) {
 					st.giveItems(WEAPONS[c][0], WEAPONS[c][1]);
 					st.takeItems(SOUP, 500);
 					st.playSound("ItemSound.quest_accept");
 					htmltext = "30200-04.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "30200-07.htm";
 				}
-			}
-			else if (event.equalsIgnoreCase("30200-06.htm"))
-			{
-				if (st.getQuestItemsCount(SOUP) >= 100)
-				{
+			} else if (event.equalsIgnoreCase("30200-06.htm")) {
+				if (st.getQuestItemsCount(SOUP) >= 100) {
 					st.giveItems(ARMORS[b][0], ARMORS[b][1]);
 					st.takeItems(SOUP, 100);
 					st.playSound("ItemSound.quest_accept");
 					htmltext = "30200-04.htm";
-				}
-				else
-				{
+				} else {
 					htmltext = "30200-07.htm";
 				}
 			}
@@ -221,62 +204,49 @@ public class Q289_NoMoreSoupForYou extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		QuestState st = player.getQuestState(qn);
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == STAN)
-		{
-			switch (st.getState())
-			{
+		if (npc.getNpcId() == STAN) {
+			switch (st.getState()) {
 				case State.CREATED:
 					QuestState _prev = player.getQuestState("252_ItSmellsDelicious");
-					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
-					{
+					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) {
 						htmltext = "30200-01.htm";
-					}
-					else
-					{
+					} else {
 						htmltext = "30200-00.htm";
 					}
-					break;
+				break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
-					{
-						if (st.getQuestItemsCount(SOUP) >= 100)
-						{
+					if (st.getInt("cond") == 1) {
+						if (st.getQuestItemsCount(SOUP) >= 100) {
 							htmltext = "30200-04.htm";
-						}
-						else
-						{
+						} else {
 							htmltext = "30200-03.htm";
 						}
 					}
-					break;
+				break;
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		QuestState st = player.getQuestState(getName());
 		int npcId = npc.getNpcId();
-		if ((st == null) || (st.getState() != State.STARTED))
-		{
+		if ((st == null) || (st.getState() != State.STARTED)) {
 			return null;
 		}
-		if (Util.contains(MOBS, npcId))
-		{
+		if (Util.contains(MOBS, npcId)) {
 			st.giveItems(SOUP, 1 * RATE);
 			st.playSound("ItemSound.quest_itemget");
 		}
 		return super.onKill(npc, player, isPet);
 	}
+	
 }

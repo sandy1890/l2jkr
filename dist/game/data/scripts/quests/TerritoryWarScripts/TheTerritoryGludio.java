@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.network.NpcStringId;
  * @author Gigiikun
  */
 
-public class TheTerritoryGludio extends TerritoryWarSuperClass
-{
+public class TheTerritoryGludio extends TerritoryWarSuperClass {
+	
 	public static String qn1 = "717_FortheSakeoftheTerritoryGludio";
 	public static int qnu = 717;
 	public static String qna = "For the Sake of the Territory - Gludio";
 	
-	public TheTerritoryGludio()
-	{
+	public TheTerritoryGludio() {
 		super(qnu, qn1, qna);
 		CATAPULT_ID = 36499;
 		TERRITORY_ID = 81;
@@ -55,4 +54,5 @@ public class TheTerritoryGludio extends TerritoryWarSuperClass
 		};
 		registerKillIds();
 	}
+	
 }

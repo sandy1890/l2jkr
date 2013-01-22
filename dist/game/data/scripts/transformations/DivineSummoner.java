@@ -22,37 +22,37 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Transformation;
 
-public class DivineSummoner extends L2Transformation
-{
+public class DivineSummoner extends L2Transformation {
 	private static final int[] SKILLS =
 	{
-		710, 711, 712, 713, 714, 5779, 619
+		710,
+		711,
+		712,
+		713,
+		714,
+		5779,
+		619
 	};
 	
-	public DivineSummoner()
-	{
+	public DivineSummoner() {
 		// id, colRadius, colHeight
 		super(258, 10, 25);
 	}
 	
 	@Override
-	public void onTransform()
-	{
-		if ((getPlayer().getTransformationId() != 258) || getPlayer().isCursedWeaponEquipped())
-		{
+	public void onTransform() {
+		if ((getPlayer().getTransformationId() != 258) || getPlayer().isCursedWeaponEquipped()) {
 			return;
 		}
 		
-		if (getPlayer().getPet() != null)
-		{
+		if (getPlayer().getPet() != null) {
 			getPlayer().getPet().unSummon(getPlayer());
 		}
 		
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
+	public void transformedSkills() {
 		// Divine Summoner Summon Divine Beast
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(710, 1), false);
 		// Divine Summoner Transfer Pain
@@ -72,18 +72,15 @@ public class DivineSummoner extends L2Transformation
 	}
 	
 	@Override
-	public void onUntransform()
-	{
-		if (getPlayer().getPet() != null)
-		{
+	public void onUntransform() {
+		if (getPlayer().getPet() != null) {
 			getPlayer().getPet().unSummon(getPlayer());
 		}
 		
 		removeSkills();
 	}
 	
-	public void removeSkills()
-	{
+	public void removeSkills() {
 		// Divine Summoner Summon Divine Beast
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(710, 1), false);
 		// Divine Summoner Transfer Pain
@@ -102,8 +99,7 @@ public class DivineSummoner extends L2Transformation
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		TransformationManager.getInstance().registerTransformation(new DivineSummoner());
 	}
 }

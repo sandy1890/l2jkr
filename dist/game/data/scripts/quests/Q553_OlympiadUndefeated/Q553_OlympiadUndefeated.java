@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.model.quest.State;
  * @version 2011-02-05
  * @author lion
  */
-public class Q553_OlympiadUndefeated extends Quest
-{
+public class Q553_OlympiadUndefeated extends Quest {
+	
 	private static final String qn = "553_OlympiadUndefeated";
 	
 	private static final int MANAGER = 31688;
@@ -46,8 +46,7 @@ public class Q553_OlympiadUndefeated extends Quest
 	private static final int OLY_CHEST = 17169;
 	private static final int MEDAL_OF_GLORY = 21874;
 	
-	public Q553_OlympiadUndefeated(int questId, String name, String descr)
-	{
+	public Q553_OlympiadUndefeated(int questId, String name, String descr) {
 		super(questId, name, descr);
 		
 		addStartNpc(MANAGER);
@@ -62,37 +61,28 @@ public class Q553_OlympiadUndefeated extends Quest
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		}
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("31688-03.html"))
-		{
+		if (event.equalsIgnoreCase("31688-03.html")) {
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.playSound("ItemSound.quest_accept");
-		}
-		else if (event.equalsIgnoreCase("31688-04.html"))
-		{
+		} else if (event.equalsIgnoreCase("31688-04.html")) {
 			final long count = st.getQuestItemsCount(WIN_CONF_2) + st.getQuestItemsCount(WIN_CONF_5);
 			
-			if (count > 0)
-			{
+			if (count > 0) {
 				st.giveItems(OLY_CHEST, count);
-				if (count == 2)
-				{
+				if (count == 2) {
 					st.giveItems(MEDAL_OF_GLORY, 3);
 				}
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(QuestType.DAILY);
-			}
-			else
-			{
+			} else {
 				htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"; // missing items
 			}
 		}
@@ -100,51 +90,35 @@ public class Q553_OlympiadUndefeated extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
+	public String onTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
+		if (st == null) {
 			return htmltext;
 		}
 		
-		if ((player.getLevel() < 75) || !player.isNoble())
-		{
+		if ((player.getLevel() < 75) || !player.isNoble()) {
 			htmltext = "31688-00.htm";
-		}
-		else if (st.isCreated())
-		{
+		} else if (st.isCreated()) {
 			htmltext = "31688-01.htm";
-		}
-		else if (st.isCompleted())
-		{
+		} else if (st.isCompleted()) {
 			st.setState(State.CREATED); // Not required, but it'll set the proper state.
-			if (st.isNowAvailable())
-			{
-				if ((player.getLevel() < 75) || !player.isNoble())
-				{
+			if (st.isNowAvailable()) {
+				if ((player.getLevel() < 75) || !player.isNoble()) {
 					htmltext = "31688-00.htm";
 				}
-			}
-			else
-			{
+			} else {
 				htmltext = "31688-05.html";
 			}
-		}
-		else
-		{
+		} else {
 			final long count = st.getQuestItemsCount(WIN_CONF_2) + st.getQuestItemsCount(WIN_CONF_5) + st.getQuestItemsCount(WIN_CONF_10);
-			if ((count == 3) && (st.getInt("cond") == 2))
-			{
+			if ((count == 3) && (st.getInt("cond") == 2)) {
 				htmltext = "31688-04.html";
 				st.giveItems(OLY_CHEST, 4);
 				st.giveItems(MEDAL_OF_GLORY, 5);
 				st.playSound("ItemSound.quest_finish");
 				st.exitQuest(QuestType.DAILY);
-			}
-			else
-			{
+			} else {
 				htmltext = "31688-w" + count + ".html";
 			}
 		}
@@ -152,49 +126,39 @@ public class Q553_OlympiadUndefeated extends Quest
 	}
 	
 	@Override
-	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
-	{
-		if (winner != null)
-		{
+	public void onOlympiadWin(L2PcInstance winner, CompetitionType type) {
+		if (winner != null) {
 			final QuestState st = winner.getQuestState(getName());
-			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
-			{
+			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1)) {
 				final int matches = st.getInt("undefeatable") + 1;
 				st.set("undefeatable", String.valueOf(matches));
-				switch (matches)
-				{
+				switch (matches) {
 					case 2:
-						if (!st.hasQuestItems(WIN_CONF_2))
-						{
+						if (!st.hasQuestItems(WIN_CONF_2)) {
 							st.giveItems(WIN_CONF_2, 1);
 						}
-						break;
+					break;
 					case 5:
-						if (!st.hasQuestItems(WIN_CONF_5))
-						{
+						if (!st.hasQuestItems(WIN_CONF_5)) {
 							st.giveItems(WIN_CONF_5, 1);
 						}
-						break;
+					break;
 					case 10:
-						if (!st.hasQuestItems(WIN_CONF_10))
-						{
+						if (!st.hasQuestItems(WIN_CONF_10)) {
 							st.giveItems(WIN_CONF_10, 1);
 							st.set("cond", "2");
 						}
-						break;
+					break;
 				}
 			}
 		}
 	}
 	
 	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
-	{
-		if (loser != null)
-		{
+	public void onOlympiadLose(L2PcInstance loser, CompetitionType type) {
+		if (loser != null) {
 			final QuestState st = loser.getQuestState(getName());
-			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
-			{
+			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1)) {
 				st.unset("undefeatable");
 				st.takeItems(WIN_CONF_2, -1);
 				st.takeItems(WIN_CONF_5, -1);
@@ -203,8 +167,8 @@ public class Q553_OlympiadUndefeated extends Quest
 		}
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Q553_OlympiadUndefeated(553, qn, "Olympiad Undefeated");
 	}
+	
 }

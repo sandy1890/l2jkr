@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 /**
  * @author DS
  */
-public class Hude extends Quest
-{
+public class Hude extends Quest {
+	
 	private static final int HUDE = 32298;
 	private static final int BASIC_CERT = 9850;
 	private static final int STANDART_CERT = 9851;
@@ -41,20 +41,15 @@ public class Hude extends Quest
 	private static final int STINGER = 10012;
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
+		if (qs == null) {
 			qs = newQuestState(player);
 		}
 		
-		if ("scertif".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() > 3)
-			{
-				if (qs.hasQuestItems(BASIC_CERT) && (qs.getQuestItemsCount(MARK_OF_BETRAYAL) >= 30) && (qs.getQuestItemsCount(STINGER) >= 60))
-				{
+		if ("scertif".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() > 3) {
+				if (qs.hasQuestItems(BASIC_CERT) && (qs.getQuestItemsCount(MARK_OF_BETRAYAL) >= 30) && (qs.getQuestItemsCount(STINGER) >= 60)) {
 					qs.takeItems(MARK_OF_BETRAYAL, 30);
 					qs.takeItems(STINGER, 60);
 					qs.takeItems(BASIC_CERT, 1);
@@ -63,13 +58,9 @@ public class Hude extends Quest
 				}
 			}
 			return "32298-04b.htm";
-		}
-		else if ("pcertif".equalsIgnoreCase(event))
-		{
-			if (HellboundManager.getInstance().getLevel() > 6)
-			{
-				if (qs.hasQuestItems(STANDART_CERT) && (qs.getQuestItemsCount(LIFE_FORCE) >= 56) && (qs.getQuestItemsCount(CONTAINED_LIFE_FORCE) >= 14))
-				{
+		} else if ("pcertif".equalsIgnoreCase(event)) {
+			if (HellboundManager.getInstance().getLevel() > 6) {
+				if (qs.hasQuestItems(STANDART_CERT) && (qs.getQuestItemsCount(LIFE_FORCE) >= 56) && (qs.getQuestItemsCount(CONTAINED_LIFE_FORCE) >= 14)) {
 					qs.takeItems(LIFE_FORCE, 56);
 					qs.takeItems(CONTAINED_LIFE_FORCE, 14);
 					qs.takeItems(STANDART_CERT, 1);
@@ -79,18 +70,12 @@ public class Hude extends Quest
 				}
 			}
 			return "32298-06b.htm";
-		}
-		else if ("multisell1".equalsIgnoreCase(event))
-		{
-			if (qs.hasQuestItems(STANDART_CERT) || qs.hasQuestItems(PREMIUM_CERT))
-			{
+		} else if ("multisell1".equalsIgnoreCase(event)) {
+			if (qs.hasQuestItems(STANDART_CERT) || qs.hasQuestItems(PREMIUM_CERT)) {
 				MultiSell.getInstance().separateAndSend(322980001, player, npc, false);
 			}
-		}
-		else if ("multisell2".equalsIgnoreCase(event))
-		{
-			if (qs.hasQuestItems(PREMIUM_CERT))
-			{
+		} else if ("multisell2".equalsIgnoreCase(event)) {
+			if (qs.hasQuestItems(PREMIUM_CERT)) {
 				MultiSell.getInstance().separateAndSend(322980002, player, npc, false);
 			}
 		}
@@ -98,44 +83,34 @@ public class Hude extends Quest
 	}
 	
 	@Override
-	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		String htmltext = "";
 		QuestState qs = player.getQuestState(getName());
-		if (qs == null)
-		{
+		if (qs == null) {
 			qs = newQuestState(player);
 		}
 		
-		if (!qs.hasQuestItems(BASIC_CERT) && !qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT))
-		{
+		if (!qs.hasQuestItems(BASIC_CERT) && !qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT)) {
 			htmltext = "32298-01.htm";
-		}
-		else if (qs.hasQuestItems(BASIC_CERT) && !qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT))
-		{
+		} else if (qs.hasQuestItems(BASIC_CERT) && !qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT)) {
 			htmltext = "32298-03.htm";
-		}
-		else if (qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT))
-		{
+		} else if (qs.hasQuestItems(STANDART_CERT) && !qs.hasQuestItems(PREMIUM_CERT)) {
 			htmltext = "32298-05.htm";
-		}
-		else if (qs.hasQuestItems(PREMIUM_CERT))
-		{
+		} else if (qs.hasQuestItems(PREMIUM_CERT)) {
 			htmltext = "32298-07.htm";
 		}
 		return htmltext;
 	}
 	
-	public Hude(int questId, String name, String descr)
-	{
+	public Hude(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addFirstTalkId(HUDE);
 		addStartNpc(HUDE);
 		addTalkId(HUDE);
 	}
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		new Hude(-1, "Hude", "hellbound");
 	}
+	
 }
