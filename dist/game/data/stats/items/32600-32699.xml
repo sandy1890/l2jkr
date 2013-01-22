@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="32608" name="永生襯衫" type="Armor">
+		<table name="#Plus">HP</table>
+		<table name="#Desc">強化4以上時，將會賦予HP最大值增加301的精煉效果。</table>
+		<set name="icon" val="icon.r1_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="38"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32609" name="永生襯衫" type="Armor">
+		<table name="#Plus">MP</table>
+		<table name="#Desc">強化4以上時，將會賦予MP最大值增加148的精煉效果。</table>
+		<set name="icon" val="icon.r1_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="38"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32610" name="永生襯衫" type="Armor">
+		<table name="#Plus">CP</table>
+		<table name="#Desc">強化4以上時，將會賦予CP最大值增加811的精煉效果。</table>
+		<set name="icon" val="icon.r1_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="38"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32611" name="煉獄襯衫" type="Armor">
+		<table name="#Plus">HP</table>
+		<table name="#Desc">強化4以上時，將會賦予HP最大值增加316的精煉效果。</table>
+		<set name="icon" val="icon.r2_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="42"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32612" name="煉獄襯衫" type="Armor">
+		<table name="#Plus">MP</table>
+		<table name="#Desc">強化4以上時，將會賦予MP最大值增加162的精煉效果。</table>
+		<set name="icon" val="icon.r2_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="42"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32613" name="煉獄襯衫" type="Armor">
+		<table name="#Plus">CP</table>
+		<table name="#Desc">強化4以上時，將會賦予CP最大值增加851的精煉效果。</table>
+		<set name="icon" val="icon.r2_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="42"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32614" name="卡戴拉襯衫" type="Armor">
+		<table name="#Plus">HP</table>
+		<table name="#Desc">強化4以上時，將會賦予HP最大值增加332的精煉效果。</table>
+		<set name="icon" val="icon.r95_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r95"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="46"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32615" name="卡戴拉襯衫" type="Armor">
+		<table name="#Plus">MP</table>
+		<table name="#Desc">強化4以上時，將會賦予MP最大值增加176的精煉效果。</table>
+		<set name="icon" val="icon.r95_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r95"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="46"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32616" name="卡戴拉襯衫" type="Armor">
+		<table name="#Plus">CP</table>
+		<table name="#Desc">強化4以上時，將會賦予CP最大值增加894的精煉效果。</table>
+		<set name="icon" val="icon.r95_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r95"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="46"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32617" name="艾迪奧斯襯衫" type="Armor">
+		<table name="#Plus">HP</table>
+		<table name="#Desc">強化4以上時，將會賦予HP最大值增加339的精煉效果。</table>
+		<set name="icon" val="icon.r991_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="48"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32618" name="艾迪奧斯襯衫" type="Armor">
+		<table name="#Plus">MP</table>
+		<table name="#Desc">強化4以上時，將會賦予MP最大值增加182的精煉效果。</table>
+		<set name="icon" val="icon.r991_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="48"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="32619" name="艾迪奧斯襯衫" type="Armor">
+		<table name="#Plus">CP</table>
+		<table name="#Desc">強化4以上時，將會賦予CP最大值增加912的精煉效果。</table>
+		<set name="icon" val="icon.r991_shirt_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x10" stat="pDef" val="48"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+
+</list>

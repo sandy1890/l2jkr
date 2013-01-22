@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="35570" name="塔武提戒指" type="Armor">
+		<table name="#Desc">塔武提戒指。賦予裝備者增加火/黑暗抗性25、增加MP38、增加致命傷害15%、增加技能攻擊力5%、增加PVP傷害5%、增加麻痺/束縛/驅逐抗性10、增加傷害反射抗性5、增加吸血抗性5、降低PVP被擊傷害5%；使用鈍器時，增加致命攻擊率54的效果。</table>
+		<set name="icon" val="icon.accessary_tauti_ring"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="38"/>
+			<add order="0x10" stat="mDef" val="108"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35571" name="水之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。水屬性防禦力+26、增加MP33。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="33"/>
+			<add order="0x10" stat="mDef" val="85"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35572" name="聖之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。神聖屬性防禦力+26、增加MP33。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="33"/>
+			<add order="0x10" stat="mDef" val="85"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35573" name="風之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。風屬性防禦力+26、增加MP33。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="33"/>
+			<add order="0x10" stat="mDef" val="85"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35574" name="暗之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。黑暗屬性防禦力+26、增加MP33。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="33"/>
+			<add order="0x10" stat="mDef" val="85"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35575" name="地之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。大地屬性防禦力+26、增加MP33。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="33"/>
+			<add order="0x10" stat="mDef" val="85"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35576" name="火之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。火屬性防禦力+26、增加MP33。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="33"/>
+			<add order="0x10" stat="mDef" val="85"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35577" name="特級水之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。水屬性防禦力+30、增加MP62。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="62"/>
+			<add order="0x10" stat="mDef" val="158"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35578" name="特級火之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。火屬性防禦力+30、增加MP62。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="62"/>
+			<add order="0x10" stat="mDef" val="158"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35579" name="特級聖之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。神聖屬性防禦力+30、增加MP62。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="62"/>
+			<add order="0x10" stat="mDef" val="158"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35580" name="特級暗之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。黑暗屬性防禦力+30、增加MP62。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="62"/>
+			<add order="0x10" stat="mDef" val="158"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35581" name="特級風之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。風屬性防禦力+30、增加MP62。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="62"/>
+			<add order="0x10" stat="mDef" val="158"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35582" name="特級地之守護項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。大地屬性防禦力+30、增加MP62。可以交易、丟棄、買賣。</table>
+		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="62"/>
+			<add order="0x10" stat="mDef" val="158"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35583" name="地之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。地屬性防禦力+12、增加MP17。可以交易或丟棄。即使戴上兩個地的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="17"/>
+			<add order="0x10" stat="mDef" val="42"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35584" name="水之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。水屬性防禦力+12、增加MP17。可以交易或丟棄。即使戴上兩個水的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="17"/>
+			<add order="0x10" stat="mDef" val="42"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35585" name="火之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。火屬性防禦力+12、增加MP17。可以交易或丟棄。即使戴上兩個火的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="17"/>
+			<add order="0x10" stat="mDef" val="42"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35586" name="聖之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。神聖屬性防禦力+12、增加MP17。可以交易或丟棄。即使戴上兩個聖的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="17"/>
+			<add order="0x10" stat="mDef" val="42"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35587" name="暗之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。黑暗屬性防禦力+12、增加MP17。可以交易或丟棄。即使戴上兩個暗的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="17"/>
+			<add order="0x10" stat="mDef" val="42"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35588" name="風之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。風屬性防禦力+12、增加MP17。可以交易或丟棄。即使戴上兩個風的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="17"/>
+			<add order="0x10" stat="mDef" val="42"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35589" name="特級地之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。地屬性防禦力+15、增加MP31。可以交易或丟棄。即使戴上兩個特級地的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="31"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35590" name="特級水之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。水屬性防禦力+15、增加MP31。可以交易或丟棄。即使戴上兩個特級水的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="31"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35591" name="特級火之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。火屬性防禦力+15、增加MP31。可以交易或丟棄。即使戴上兩個特級火的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="31"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35592" name="特級聖之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。神聖屬性防禦力+15、增加MP31。可以交易或丟棄。即使戴上兩個特級聖的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="31"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35593" name="特級暗之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。黑暗屬性防禦力+15、增加MP31。可以交易或丟棄。即使戴上兩個特級暗的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="31"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35594" name="特級風之守護戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。風屬性防禦力+15、增加MP31。可以交易或丟棄。即使戴上兩個特級風的守護戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="31"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35595" name="水之親衛項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。水屬性防禦力+30、增加MP46。可以交易、丟棄。</table>
+		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="106"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35596" name="地之親衛項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。地屬性防禦力+30、增加MP46。可以交易、丟棄。</table>
+		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="106"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35597" name="火之親衛項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。火屬性防禦力+30、增加MP46。可以交易、丟棄。</table>
+		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="106"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35598" name="聖之親衛項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。神聖屬性防禦力+30、增加MP46。可以交易、丟棄。</table>
+		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="106"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35599" name="暗之親衛項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。黑暗屬性防禦力+30、增加MP46。可以交易、丟棄。</table>
+		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="106"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+
+</list>

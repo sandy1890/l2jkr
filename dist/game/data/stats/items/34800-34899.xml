@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="34851" name="防具晶體碎片-R" type="EtcItem">
+		<table name="#Desc">透過倉庫管理員可以交換成防具強化卷軸 - R級。</table>
+		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i01"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34852" name="武器晶體碎片-R" type="EtcItem">
+		<table name="#Desc">透過倉庫管理員可以交換成武器強化卷軸 - R級。</table>
+		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i01"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34853" name="閃耀的防具晶體碎片-R" type="EtcItem">
+		<table name="#Desc">透過倉庫管理員可以交換成祝福的防具強化卷軸 - R級。</table>
+		<set name="icon" val="Branchsys2.icon.shine_cubic_a_piece_i01"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34854" name="閃耀的武器晶體碎片-R" type="EtcItem">
+		<table name="#Desc">透過倉庫管理員可以交換成祝福的武器強化卷軸 - R級。</table>
+		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i01"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34855" name="雷亞尼禮盒" type="EtcItem">
+		<table name="#Desc">用經驗值葫蘆交換的雷亞尼禮盒。以低機率可以獲得經驗值卷軸。無法交易、丟棄、刪除，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.present_of_destination_event"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+
+	<item id="34859" name="進階型伊絲蒂娜手鐲" type="EtcItem">
+		<table name="#Desc">功能提升的伊絲蒂娜手鐲。裝備時，可以開啟護身符欄位5個。具有MP+216、Con+1、Men+1的功能。無法交易/丟棄/強化/利用個人商店的道具。</table>
+		<set name="icon" val="icon.istina_bangel"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+	</item>
+	<item id="34860" name="進階型歐塔比斯手鐲" type="EtcItem">
+		<table name="#Desc">功能提升的歐塔比斯手鐲。裝備時，可以開啟護身符欄位5個。具有MP+216、Dex+1、Wit+1的功能。無法交易/丟棄/強化/利用個人商店的道具。</table>
+		<set name="icon" val="icon.octavis_bangel"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+	</item>
+
+	<item id="34869" name="壺精封印手鐲-火花精靈(活動)" type="Armor">
+		<table name="#Desc">為了孵化出淨化的紅龍蛋，由帕格立歐的手下-亞斯蘭所分發的手鐲。裝備的話，就可召喚火花精靈。無法交易、丟棄、刪除、出售於個人商店。</table>
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="lbracelet"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="unequip_skill" val="3267-1"/>
+		<set name="item_skill" val="3267-1;9472-1;15053-1;15054-1"/>
+	</item>
+
+</list>

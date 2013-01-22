@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="34595" name="活動用-螺旋槳壺精手鐲" type="Armor">
+		<table name="#Plus">活動專用</table>
+		<table name="#Desc">可召喚螺旋槳壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="lbracelet"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="unequip_skill" val="3267-1"/>
+		<set name="item_skill" val="3267-1;9307-1;9311-1"/>
+		<set name="time" val="43200"/>
+	</item>
+	<item id="34596" name="活動用-魔法少女壺精手鐲" type="Armor">
+		<table name="#Plus">活動專用</table>
+		<table name="#Desc">可召喚魔法少女壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="lbracelet"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="unequip_skill" val="3267-1"/>
+		<set name="item_skill" val="3267-1;9308-1;9312-1"/>
+		<set name="time" val="43200"/>
+	</item>
+	<item id="34597" name="活動用-眼鏡蛇壺精手鐲" type="Armor">
+		<table name="#Plus">活動專用</table>
+		<table name="#Desc">可召喚眼鏡蛇壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="lbracelet"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="unequip_skill" val="3267-1"/>
+		<set name="item_skill" val="3267-1;9309-1;9313-1"/>
+		<set name="time" val="43200"/>
+	</item>
+	<item id="34598" name="活動用-烏帕寶寶壺精手鐲" type="Armor">
+		<table name="#Plus">活動專用</table>
+		<table name="#Desc">可召喚烏帕寶寶壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="lbracelet"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="unequip_skill" val="3267-1"/>
+		<set name="item_skill" val="3267-1;9310-1;9314-1"/>
+		<set name="time" val="43200"/>
+	</item>
+
+</list>

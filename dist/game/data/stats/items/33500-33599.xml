@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="33507" name="酷酷魯騎乘卷軸" type="EtcItem">
+		<table name="#Desc">用於騎乘酷酷魯的卷軸。達到等級40以上後使用卷軸的話，就可騎乘酷酷魯。無法交易/丟棄/刪除，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.scroll_of_kukur_event"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="handler" val="ItemSkills"/>
+		<set name="item_skill" val="9209-1"/>
+		<cond msgId="113" addName="1">
+			<player level="40"/>
+		</cond>
+	</item>
+
+	<item id="33509" name="命運襯衫" type="Armor">
+		<table name="#Desc">為凱旋英雄所準備的命運襯衫。裝備時，將產生STR+1、INT+1的效果。無法交易/丟棄/刪除，但可以保管在個人倉庫。透過維他命管理者可與帳號內的其他角色共享。</table>
+		<set name="icon" val="icon.shirt_of_destination_event"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="underwear"/>
+		<set name="bodypart" val="chest"/>
+		<set name="material" val="crystal"/>
+		<set name="weight" val="130"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="33510" name="命運腰帶" type="Armor">
+		<table name="#Desc">為凱旋英雄所準備的命運腰帶。裝備時，將產生放寬負重上限5000的效果。無法交易或丟棄，但可以保管在個人倉庫。透過維他命管理者可與帳號內的其他角色共享。</table>
+		<set name="icon" val="icon.belt_of_destination_event"/>
+		<set name="default_action" val="equip"/>
+		<set name="armor_type" val="light"/>
+		<set name="bodypart" val="waist"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="440"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+
+</list>
