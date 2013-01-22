@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -70,26 +74,26 @@ public class AdminVitaminItem implements IAdminCommandHandler
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(5);
 		TextBuilder sb = new TextBuilder();
-		sb.append("<html><title>ºû¥L©RºÞ²z</title><body>");
+		sb.append("<html><title>ï¿½ï¿½Lï¿½Rï¿½Þ²z</title><body>");
 		sb.append("<table width=270>");
-		sb.append("<tr><td>½Ð¿é¤J±z·Q³Ð³yªºª««~½s¸¹¡B¤Î©Ò»Ý¼Æ¶q¡C<font color=\"LEVEL\">ª`·N: ½Ð¤Å³Ð³y¦h­ÓµLªk°ïÅ|ªºª««~</font></td></tr>");
-		sb.append("<tr><td>½s¸¹:</td></tr>");
+		sb.append("<tr><td>ï¿½Ð¿ï¿½Jï¿½zï¿½Qï¿½Ð³yï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½sï¿½ï¿½ï¿½Bï¿½Î©Ò»Ý¼Æ¶qï¿½C<font color=\"LEVEL\">ï¿½`ï¿½N: ï¿½Ð¤Å³Ð³yï¿½hï¿½ÓµLï¿½kï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½~</font></td></tr>");
+		sb.append("<tr><td>ï¿½sï¿½ï¿½:</td></tr>");
 		sb.append("<tr><td><td><edit width=120 var=\"tsId\"></td></tr>");
 		sb.append("<tr><td</td></tr>");
-		sb.append("<tr><td>¼Æ¶q:</td></tr>");
+		sb.append("<tr><td>ï¿½Æ¶q:</td></tr>");
 		sb.append("<tr><td><td><edit width=120 var=\"tsCnt\"></td></tr>");
 		sb.append("<tr><td</td></tr>");
-		sb.append("<tr><td>µ¹¤©:</td></tr>");
+		sb.append("<tr><td>ï¿½ï¿½ï¿½ï¿½:</td></tr>");
 		/* l2jtw start
 		 * 3q overzero
-		sb.append("<tr><td><td><combobox width=120 var=tsPpl list=¥þ³¡ª±®a;¥þ³¡½u¤Wª±®a></td></tr>");
+		sb.append("<tr><td><td><combobox width=120 var=tsPpl list=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a;ï¿½ï¿½ï¿½ï¿½ï¿½uï¿½Wï¿½ï¿½ï¿½a></td></tr>");
 		 */
-		sb.append("<tr><td><td><combobox width=120 var=tsPpl list=online;¥þ³¡ª±®a></td></tr>");
+		sb.append("<tr><td><td><combobox width=120 var=tsPpl list=online;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a></td></tr>");
 		// l2jtw end
 		sb.append("</table>");
 		sb.append("<table width=270>");
 		sb.append("<tr>");
-		sb.append("<td><button value=\"°e¥Xª««~\" width=80 action=\"bypass -h admin_sendVitem $tsId $tsCnt $tsPpl\" height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
+		sb.append("<td><button value=\"ï¿½eï¿½Xï¿½ï¿½ï¿½~\" width=80 action=\"bypass -h admin_sendVitem $tsId $tsCnt $tsPpl\" height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>");
 		sb.append("</tr>");
 		sb.append("</table></body></html>");
 		html.setHtml(sb.toString());
@@ -136,7 +140,7 @@ public class AdminVitaminItem implements IAdminCommandHandler
 				if (!pc.getPremiumItemList().isEmpty())
 					pc.sendPacket(new ExNotifyPremiumItem());
 			}
-			player.sendMessage("ª««~¤wµ¹ª±®a");
+			player.sendMessage("ï¿½ï¿½ï¿½~ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½a");
 		}
 		catch (Exception e)
 		{
