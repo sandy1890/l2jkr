@@ -1,4 +1,5 @@
-<Event ID="Christmas" Active="15 Dec 2011-6 Jan 2012">
+<?xml version="1.0" encoding="UTF-8"?>
+<Event ID="Christmas" Active="15 Dec 2011-6 Jan 2012" >
 	<Droplist>
 		<AllDrop Items="5556,5557"
 			Count="1,1"
