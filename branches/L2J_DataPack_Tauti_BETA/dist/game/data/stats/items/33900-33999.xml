@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="33900" name="永生頭箍" type="Armor">
+		<table name="#Plus">長袍用/活動</table>
+		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.armor_circlet_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="head"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="bone"/>
+		<set name="weight" val="530"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="114"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="33901" name="永生外衣" type="Armor">
+		<table name="#Plus">長袍用/活動</table>
+		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。強化+4時，增加魔法迴避能力、精神系抗性。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.armor_t503_u_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="armor_type" val="magic"/>
+		<set name="bodypart" val="chest"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="1750"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="649"/>
+			<add order="0x10" stat="pDef" val="152"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="33902" name="永生長襪" type="Armor">
+		<table name="#Plus">長袍用/活動</table>
+		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.armor_t503_l_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="armor_type" val="magic"/>
+		<set name="bodypart" val="legs"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="scale_of_dragon"/>
+		<set name="weight" val="850"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="427"/>
+			<add order="0x10" stat="pDef" val="95"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="33903" name="永生手套" type="Armor">
+		<table name="#Plus">長袍用/活動</table>
+		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.armor_t503_g_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="gloves"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="leather"/>
+		<set name="weight" val="510"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="76"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="33904" name="永生鞋" type="Armor">
+		<table name="#Plus">長袍用/活動</table>
+		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.armor_t503_b_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="feet"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="leather"/>
+		<set name="weight" val="1070"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="76"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="33905" name="永生符印" type="Armor">
+		<table name="#Plus">長袍用/活動</table>
+		<table name="#Desc">無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.weapon_karyen_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="armor_type" val="sigil"/>
+		<set name="bodypart" val="lhand"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="920"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="19"/>
+			<sub order="0x10" stat="rEvas" val="8"/>
+			<enchant order="0x0C" stat="pDef" val="0"/>
+		</for>
+	</item>
+	<item id="33906" name="永生項鍊" type="Armor">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">永生項鍊。可得到MP+53的效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.r1_necklace_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="53"/>
+			<add order="0x10" stat="mDef" val="123"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="33907" name="永生耳環" type="Armor">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">永生耳環。可得到MP+40的效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.r1_earring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="40"/>
+			<add order="0x10" stat="mDef" val="92"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="33908" name="永生戒指" type="Armor">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">永生戒指。可得到MP+26的效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.r1_ring_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="26"/>
+			<add order="0x10" stat="mDef" val="62"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+
+</list>

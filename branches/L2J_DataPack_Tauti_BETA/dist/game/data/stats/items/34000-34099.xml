@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<!-- 回聲水晶 -->
+	<item id="34065" name="回聲水晶-耀眼的你" type="EtcItem">
+		<table name="#Desc">演奏裴基成之歌「耀眼的你」的回聲水晶。使用1次後就消失。</table>
+		<set name="icon" val="icon.etc_echo_crystal_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="10"/>
+		<set name="is_stackable" val="true"/>
+		<set name="reuse_delay" val="20000"/>
+		<set name="handler" val="ItemSkills"/>
+		<set name="item_skill" val="16032-1"/>
+	</item>
+
+	<item id="34066" name="武器強化卷軸-A級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，A級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升4；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器的物理攻擊力可提升5；弓類武器的攻擊力可提升8；所有武器的魔法攻擊力可提升3。從強化+4開始，物理攻擊力/魔法攻擊力可增加雙倍。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_wp"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34067" name="防具強化卷軸-A級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">A級防具或飾品的物理防禦力可提升1，從強化+4開始物理防禦力可提升3。至+3為止能安全進行強化，連身防具則可安全強化至+4。防具強化+4以上時，隨著強化值HP也會提升。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_am"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34068" name="武器強化卷軸-B級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，B級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升3；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器的物理攻擊力可提升4；弓類武器的攻擊力可提升6；所有武器的魔法攻擊力可提升3。從強化+4開始，物理攻擊力/魔法攻擊力可增加雙倍。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_wp"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34069" name="防具強化卷軸-B級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">B級防具或飾品的物理防禦力可提升1，從強化+4開始物理防禦力可提升3。至+3為止能安全進行強化，連身防具則可安全強化至+4。防具強化+4以上時，隨著強化值HP也會提升。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_am"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34070" name="武器強化卷軸-C級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，C級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升3；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器的物理攻擊力可提升4；弓類武器的攻擊力可提升6；所有武器的魔法攻擊力可提升3。從強化+4開始，物理攻擊力/魔法攻擊力可增加雙倍。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_wp"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34071" name="防具強化卷軸-C級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">C級防具或飾品的物理防禦力可提升1，從強化+4開始物理防禦力可提升3。至+3為止能安全進行強化，連身防具則可安全強化至+4。防具強化+4以上時，隨著強化值HP也會提升。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_am"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34072" name="武器強化卷軸-D級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，D級劍/單手、鈍器/單手、匕首、槍、其他；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器的物理攻擊力可提升2；弓類武器的攻擊力可提升4；所有武器的魔法攻擊力可提升2。從強化+4開始，物理攻擊力/魔法攻擊力可增加雙倍。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_wp"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34073" name="防具強化卷軸-D級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">D級防具或飾品的物理防禦力可提升1，從強化+4開始物理防禦力可提升3。至+3為止能安全進行強化，連身防具則可安全強化至+4。防具強化+4以上時，隨著強化值HP也會提升。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_am"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34074" name="武器強化卷軸-S級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，S級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升5；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器的物理攻擊力可提升6；弓類武器的攻擊力可提升10；所有武器的魔法攻擊力可提升4。從強化+4開始，物理攻擊力/魔法攻擊力可增加雙倍。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_wp"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34075" name="防具強化卷軸-S級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，S級防具或飾品的物理防禦力可提升1，從強化+4開始物理防禦力可提升3。至+3為止能安全進行強化，連身防具則可安全強化至+4。防具強化+4以上時，隨著強化值HP也會提升。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_am"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34076" name="武器強化卷軸-R級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，R級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升6；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器的物理攻擊力可提升7；弓類武器的攻擊力可提升12；所有武器的魔法攻擊力可提升5。從強化+4開始，大幅提升物理攻擊力/魔法攻擊力。與一般武器相比，祝福的武器在所有層面上都有較大的增幅度。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.scroll_of_enchant_weapon_i06"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_wp"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34077" name="防具強化卷軸-R級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">強化時，R級防具或飾品的物理防禦力可提升2，從強化+4開始大幅提升物理防禦力。至+3為止能安全進行強化。防具強化+4以上時，隨著強化值HP也會提升。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.scroll_of_enchant_armor_i06"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scrl_enchant_am"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="34081" name="導師禮盒" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">點兩下時，可隨機獲得R級改良型巨人禮盒、改良型束縛禮盒、改良型破滅禮盒。無法交易或丟棄的道具。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+
+</list>

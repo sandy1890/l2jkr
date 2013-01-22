@@ -1,456 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-<!-- 英雄武器/覺醒封印武器 -->
-	<!-- 英雄武器 -->
-	<item id="30392" name="無限鉋刀" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="dagger"/>
-		<set name="bodypart" val="rhand"/>
-		<set name="random_damage" val="5"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13146-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="640"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="12"/>
-			<add order="0x10" stat="accCombat" val="-3.75"/>
-			<set order="0x08" stat="pAtkSpd" val="433"/>
-		</for>
-	</item>
-	<item id="30393" name="無限切刃" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_the_sword_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="sword"/>
-		<set name="bodypart" val="rhand"/>
-		<set name="random_damage" val="10"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13147-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="720"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="8"/>
-			<set order="0x08" stat="pAtkSpd" val="379"/>
-		</for>
-	</item>
-	<item id="30394" name="無限殺刃" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="bigsword"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="10"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13148-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="877"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="8"/>
-			<set order="0x08" stat="pAtkSpd" val="325"/>
-		</for>
-	</item>
-	<item id="30395" name="無限復仇者" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_the_axe_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="blunt"/>
-		<set name="bodypart" val="rhand"/>
-		<set name="random_damage" val="20"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="fine_steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13149-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="720"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="4"/>
-			<add order="0x10" stat="accCombat" val="8.0"/>
-			<set order="0x08" stat="pAtkSpd" val="379"/>
-		</for>
-	</item>
-	<item id="30396" name="無限戰爪" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_the_fist_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="dualfist"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="5"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;32;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13150-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="877"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="4"/>
-			<add order="0x10" stat="accCombat" val="8.0"/>
-			<set order="0x08" stat="pAtkSpd" val="325"/>
-		</for>
-	</item>
-	<item id="30397" name="無限風暴者" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_the_pole_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="pole"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="10"/>
-		<set name="attack_range" val="80"/>
-		<set name="damage_range" val="0;0;66;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="bronze"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13151-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="720"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="8"/>
-			<add order="0x10" stat="accCombat" val="-3.75"/>
-			<set order="0x08" stat="pAtkSpd" val="325"/>
-		</for>
-	</item>
-	<item id="30398" name="無限投弓" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_the_bow_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="bow"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="5"/>
-		<set name="attack_range" val="500"/>
-		<set name="damage_range" val="0;0;10;0"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="reuse_delay" val="1500"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13152-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="1419"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="12"/>
-			<add order="0x10" stat="accCombat" val="-3.75"/>
-			<set order="0x08" stat="pAtkSpd" val="293"/>
-		</for>
-	</item>
-	<item id="30399" name="無限射靈" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_infinity_shooter_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="crossbow"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="10"/>
-		<set name="attack_range" val="400"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="reuse_delay" val="400"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13153-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="908"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="10"/>
-			<add order="0x10" stat="accCombat" val="-1.5"/>
-			<set order="0x08" stat="pAtkSpd" val="303"/>
-		</for>
-	</item>
-	<item id="30400" name="無限爆刃" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度。額外增加靈活思緒效果。</table>
-		<set name="icon" val="icon.weapon_infinity_sword_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="sword"/>
-		<set name="bodypart" val="rhand"/>
-		<set name="random_damage" val="10"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_magic_weapon" val="true"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13154-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="592"/>
-			<set order="0x08" stat="mAtk" val="508"/>
-			<set order="0x08" stat="rCrit" val="8"/>
-			<set order="0x08" stat="pAtkSpd" val="379"/>
-		</for>
-	</item>
-	<item id="30401" name="無限術杖" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度。額外增加靈活思緒效果。</table>
-		<set name="icon" val="icon.weapon_the_mace_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="blunt"/>
-		<set name="bodypart" val="rhand"/>
-		<set name="random_damage" val="20"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="wood"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_magic_weapon" val="true"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13155-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="592"/>
-			<set order="0x08" stat="mAtk" val="508"/>
-			<set order="0x08" stat="rCrit" val="4"/>
-			<add order="0x10" stat="accCombat" val="8.0"/>
-			<set order="0x08" stat="pAtkSpd" val="379"/>
-		</for>
-	</item>
-	<item id="30402" name="無限報恨者" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度。額外增加靈活思緒效果。</table>
-		<set name="icon" val="icon.weapon_the_staff_of_hero_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="bigblunt"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="20"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="wood"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_magic_weapon" val="true"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13156-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="721"/>
-			<set order="0x08" stat="mAtk" val="551"/>
-			<set order="0x08" stat="rCrit" val="4"/>
-			<add order="0x10" stat="accCombat" val="8.0"/>
-			<set order="0x08" stat="pAtkSpd" val="325"/>
-		</for>
-	</item>
-	<item id="30403" name="無限雙刀" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="dual"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="10"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13157-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="877"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="8"/>
-			<set order="0x08" stat="pAtkSpd" val="325"/>
-		</for>
-	</item>
-	<item id="30404" name="無限雙匕首" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="dualdagger"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="10"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13158-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="738"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="12"/>
-			<add order="0x10" stat="accCombat" val="-3.75"/>
-			<set order="0x08" stat="pAtkSpd" val="433"/>
-		</for>
-	</item>
-	<item id="30405" name="無限雙鈍器" type="Weapon">
-		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
-		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
-		<set name="default_action" val="equip"/>
-		<set name="weapon_type" val="dualblunt"/>
-		<set name="bodypart" val="lrhand"/>
-		<set name="random_damage" val="20"/>
-		<set name="attack_range" val="40"/>
-		<set name="damage_range" val="0;0;40;120"/>
-		<set name="crystal_type" val="r"/>
-		<set name="material" val="fine_steel"/>
-		<set name="weight" val="1300"/>
-		<set name="soulshots" val="1"/>
-		<set name="spiritshots" val="1"/>
-		<set name="is_tradable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_destroyable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_oly_restricted" val="true"/>
-		<set name="item_skill" val="13159-1"/>
-		<cond msgId="1518">
-			<player isHero="true"/>
-		</cond>
-		<for>
-			<set order="0x08" stat="pAtk" val="877"/>
-			<set order="0x08" stat="mAtk" val="399"/>
-			<set order="0x08" stat="rCrit" val="4"/>
-			<add order="0x10" stat="accCombat" val="8.0"/>
-			<set order="0x08" stat="pAtkSpd" val="325"/>
-		</for>
-	</item>
+
 	<!-- 覺醒封印武器 -->
 	<item id="33717" name="封印著決鬥者力量的雙刀" type="Weapon">
 		<table name="#Desc">封印著決鬥者力量的雙刀。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
@@ -1160,4 +710,44 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
+
+	<item id="33780" name="靈魂彈-R級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">精靈之光加持於武器，瞬間對敵人加以強力衝擊。R級武器專用。無法交易/丟棄/出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.soulshot_r_i00"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+
+	<item id="33794" name="祝福的魔靈彈-R級" type="EtcItem">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">上級精靈之光加持於武器，瞬間極大強化魔法的威力。R級武器專用。無法交易/丟棄/出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.blessed_spiritshot_r_i00"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+
+	<item id="33797" name="壺精封印手鐲-泰爾錫之光" type="Armor">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">可以召喚在神殿分發的用於對抗席琳黑暗的泰爾錫之光的壺精手鐲。道具清單的空間和擁有的道具重量超出時，則無法領取光之幻影。無法交易/丟棄/出售於個人商店的道具，但可以保管在個人倉庫。</table>
+		<set name="icon" val="icon.bracelet_tersi_agathion"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="lbracelet"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="unequip_skill" val="3267-1"/>
+		<set name="item_skill" val="13346-1;13345-1;13347-1"/>
+	</item>
+
 </list>

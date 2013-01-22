@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="18704" name="英啟鉋刀" type="Weapon">
+		<table name="#Plus">導引</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_phasian_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="428"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18705" name="英啟鉋刀" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_phasian_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="428"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18706" name="英啟鉋刀" type="Weapon">
+		<table name="#Plus">偵測 </table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約82.3。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_phasian_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="428"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18707" name="英啟切刃" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_pasis_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18708" name="英啟切刃" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_pasis_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18709" name="英啟切刃" type="Weapon">
+		<table name="#Plus">強健</table>
+		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_pasis_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18710" name="英啟殺刃" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_volver_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18711" name="英啟殺刃" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_volver_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18712" name="英啟殺刃" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_volver_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18713" name="英啟復仇者" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_raksilion_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18714" name="英啟復仇者" type="Weapon">
+		<table name="#Plus">Crt.傷害</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊時物理攻擊力提升約1158。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_raksilion_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18715" name="英啟復仇者" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_raksilion_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18716" name="英啟戰爪" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約76。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_kirche_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18717" name="英啟戰爪" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_kirche_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18718" name="英啟戰爪" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_kirche_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18719" name="英啟風暴者" type="Weapon">
+		<table name="#Plus">HP吸收</table>
+		<table name="#Desc">＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
+		<set name="icon" val="icon.weapon_grave_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18720" name="英啟風暴者" type="Weapon">
+		<table name="#Plus">導引</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
+		<set name="icon" val="icon.weapon_grave_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18721" name="英啟風暴者" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
+		<set name="icon" val="icon.weapon_grave_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18722" name="英啟投弓" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_spina_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="963"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18723" name="英啟投弓" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_spina_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="963"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18724" name="英啟投弓" type="Weapon">
+		<table name="#Plus">遠程打擊</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊距離提升。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_spina_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="963"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18725" name="英啟射靈" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_medianox_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="620"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18726" name="英啟射靈" type="Weapon">
+		<table name="#Plus">Crt.緩速</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_medianox_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="620"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18727" name="英啟射靈" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_medianox_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="620"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18728" name="英啟爆刃" type="Weapon">
+		<table name="#Plus">靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_imerose_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="392"/>
+			<set order="0x08" stat="mAtk" val="285"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18729" name="英啟爆刃" type="Weapon">
+		<table name="#Plus">魔法束縛</table>
+		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_imerose_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="392"/>
+			<set order="0x08" stat="mAtk" val="285"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18730" name="英啟爆刃" type="Weapon">
+		<table name="#Plus">魔力上升</table>
+		<table name="#Desc">＜搜魂石特效＞MP最大值提升約30%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_imerose_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="392"/>
+			<set order="0x08" stat="mAtk" val="285"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18731" name="英啟術杖" type="Weapon">
+		<table name="#Plus">魔力催化</table>
+		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約322。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_yuke_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="392"/>
+			<set order="0x08" stat="mAtk" val="285"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18732" name="英啟術杖" type="Weapon">
+		<table name="#Plus">靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_yuke_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="392"/>
+			<set order="0x08" stat="mAtk" val="285"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18733" name="英啟術杖" type="Weapon">
+		<table name="#Plus">魔法束縛</table>
+		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_yuke_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="392"/>
+			<set order="0x08" stat="mAtk" val="285"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18734" name="英啟報恨者" type="Weapon">
+		<table name="#Plus">魔力再生</table>
+		<table name="#Desc">＜搜魂石特效＞提升MP的恢復速度。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_herencia_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="477"/>
+			<set order="0x08" stat="mAtk" val="314"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18735" name="英啟報恨者" type="Weapon">
+		<table name="#Plus">靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_herencia_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="477"/>
+			<set order="0x08" stat="mAtk" val="314"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18736" name="英啟報恨者" type="Weapon">
+		<table name="#Plus">魔力催化</table>
+		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約322。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_herencia_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="477"/>
+			<set order="0x08" stat="mAtk" val="314"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18737" name="英啟雙刀" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18738" name="英啟雙刀" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18739" name="英啟雙刀" type="Weapon">
+		<table name="#Plus">強健</table>
+		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18740" name="英啟雙匕首" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18741" name="英啟雙匕首" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18742" name="英啟雙匕首" type="Weapon">
+		<table name="#Plus">導引</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="489"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18743" name="英啟雙鈍器" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18744" name="英啟雙鈍器" type="Weapon">
+		<table name="#Plus">導引</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="18745" name="英啟雙鈍器" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="595"/>
+			<set order="0x08" stat="mAtk" val="226"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+
+</list>

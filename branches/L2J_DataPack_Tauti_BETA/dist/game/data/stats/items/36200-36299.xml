@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="36207" name="充滿英雄之力的鉋刀" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36208" name="充滿英雄之力的切刃" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36209" name="充滿英雄之力的殺刃" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36210" name="充滿英雄之力的復仇者" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_axe_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36211" name="充滿英雄之力的戰爪" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_fist_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36212" name="充滿英雄之力的風暴者" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_pole_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36213" name="充滿英雄之力的投弓" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_bow_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="reuse_delay" val="1500"/>
+	</item>
+	<item id="36214" name="充滿英雄之力的射靈" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_infinity_shooter_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="reuse_delay" val="400"/>
+	</item>
+	<item id="36215" name="充滿英雄之力的爆刃" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_infinity_sword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36216" name="充滿英雄之力的術杖" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_mace_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36217" name="充滿英雄之力的報恨者" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36218" name="充滿英雄之力的雙刀" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36219" name="充滿英雄之力的雙匕首" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	<item id="36220" name="充滿英雄之力的雙鈍器" type="Weapon">
+		<table name="#Plus">限時2小時</table>
+		<table name="#Desc">充滿著英雄之力的武器。可適用於所有等級。但必需使用普通 靈魂彈/魔靈彈/祝福的魔靈彈。無法交易/丟棄/利用個人商店，但可利用個人倉庫的道具。2小時限時道具。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+
+	<item id="36254" name="巨蟻女王的靈魂戒指" type="Armor">
+		<table name="#Desc">賦有巨蟻女王靈魂的戒指，賦予裝備者MP+31、提升中毒/出血抗性20%、毒/出血攻擊率提升20%、增加物理致命傷害15%的效果。即使戴上兩個巨蟻女王的靈魂戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="31"/>
+		</for>
+	</item>
+	<item id="36255" name="奧爾芬的靈魂耳環" type="Armor">
+		<table name="#Desc">賦有奧爾芬靈魂的耳環，賦予裝備者MP+46、提升睡眠/衝擊抗性20%、睡眠/衝擊攻擊率提升20%、治癒量提升10%的效果。即使戴上兩個奧爾芬耳環也只能發揮一個的特殊效果</table>
+		<set name="icon" val="icon.accessory_earring_of_orfen_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+		</for>
+	</item>
+	<item id="36257" name="莉莉絲的靈魂項鍊" type="Armor">
+		<table name="#Desc">賦有莉莉絲靈魂的項鍊，賦予裝備者MP+62、提升精神/麻痺抗性20%、精神/麻痺攻擊率提升20%、增加魔法致命攻擊率20的效果。</table>
+		<set name="icon" val="icon.accessary_blessed_lilith"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="gold"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="62"/>
+		</for>
+	</item>
+	<item id="36258" name="巨蟻女王變身藥水" type="EtcItem">
+		<table name="#Desc">雖然沒有特殊的能力但可以變身為巨蟻女王。提升移動速度。無法交易/丟棄/利用個人商店/在奧林匹亞使用，但可保管在個人倉庫的道具。</table>
+		<set name="icon" val="icon.etc_lesser_potion_clear_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="is_oly_restricted" val="true"/>
+		<set name="handler" val="ItemSkills"/>
+		<set name="item_skill" val="9745-1"/>
+	</item>
+	<item id="36259" name="奧爾芬變身藥水" type="EtcItem">
+		<table name="#Desc">雖然沒有特殊的能力但可以變身為奧爾芬。提升移動速度。無法交易/丟棄/利用個人商店/在奧林匹亞使用，但可保管在個人倉庫的道具。</table>
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="is_oly_restricted" val="true"/>
+		<set name="handler" val="ItemSkills"/>
+		<set name="item_skill" val="9746-1"/>
+	</item>
+	<item id="36260" name="亞納變身藥水" type="EtcItem">
+		<table name="#Desc">雖然沒有特殊的能力但可以變身為亞納。提升移動速度。無法交易/丟棄/利用個人商店/在奧林匹亞使用，但可保管在個人倉庫的道具。</table>
+		<set name="icon" val="icon.etc_lesser_potion_blue_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="is_oly_restricted" val="true"/>
+		<set name="handler" val="ItemSkills"/>
+		<set name="item_skill" val="9747-1"/>
+	</item>
+	<item id="36261" name="莉莉絲變身藥水" type="EtcItem">
+		<table name="#Desc">雖然沒有特殊的能力但可以變身為莉莉絲。提升移動速度。無法交易/丟棄/利用個人商店/在奧林匹亞使用，但可保管在個人倉庫的道具。</table>
+		<set name="icon" val="icon.etc_lesser_potion_red_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="weight" val="120"/>
+		<set name="is_stackable" val="true"/>
+		<set name="is_tradable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_sellable" val="false"/>
+		<set name="is_oly_restricted" val="true"/>
+		<set name="handler" val="ItemSkills"/>
+		<set name="item_skill" val="9748-1"/>
+	</item>
+
+	<item id="36279" name="邪教的惡魔之環" type="Armor">
+		<table name="#Desc">安蒂莉雅絲 班 胡爾特給予的惡魔之環。</table>
+		<set name="icon" val="icon.Accessary_demon_circlet_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="hairall"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36280" name="邪教的惡魔之環" type="Armor">
+		<table name="#Desc">安蒂莉雅絲 班 胡爾特給予的惡魔之環。裝備的話，就可獲得物理攻擊力增加5%的效果。</table>
+		<set name="icon" val="icon.Accessary_demon_circlet_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="hairall"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="10"/>
+	</item>
+	<item id="36281" name="邪教的惡魔之環" type="Armor">
+		<table name="#Desc">安蒂莉雅絲 班 胡爾特給予的惡魔之環。裝備的話，就可獲得魔法攻擊力增加10%的效果。</table>
+		<set name="icon" val="icon.Accessary_demon_circlet_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="hairall"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="10"/>
+	</item>
+
+</list>

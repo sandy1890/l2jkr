@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="35600" name="風之親衛項鍊" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的項鍊。風屬性防禦力+30、增加MP46。可以交易、丟棄。</table>
+		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="neck"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="106"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35601" name="水之親衛戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。水屬性防禦力+15、增加MP23。可以交易或丟棄。即使戴上兩個水的親衛戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="23"/>
+			<add order="0x10" stat="mDef" val="60"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35602" name="地之親衛戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。地屬性防禦力+15、增加MP23。可以交易或丟棄。即使戴上兩個地的親衛戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="23"/>
+			<add order="0x10" stat="mDef" val="60"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35603" name="火之親衛戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。火屬性防禦力+15、增加MP23。可以交易或丟棄。即使戴上兩個火的親衛戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="23"/>
+			<add order="0x10" stat="mDef" val="60"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35604" name="聖之親衛戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。神聖屬性防禦力+15、增加MP23。可以交易或丟棄。即使戴上兩個聖的親衛戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="23"/>
+			<add order="0x10" stat="mDef" val="60"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35605" name="暗之親衛戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。黑暗屬性防禦力+15、增加MP23。可以交易或丟棄。即使戴上兩個暗的親衛戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="23"/>
+			<add order="0x10" stat="mDef" val="60"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35606" name="風之親衛戒指" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的戒指。風屬性防禦力+15、增加MP23。可以交易或丟棄。即使戴上兩個風的親衛戒指也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="23"/>
+			<add order="0x10" stat="mDef" val="60"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35607" name="守護耳環A" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。衝擊攻擊力+15%、出血防禦力+15%、水屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環A也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35608" name="守護耳環B" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。束縛攻擊力+15%、中毒防禦力+15%、神聖屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環B也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35609" name="守護耳環C" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。出血攻擊力+15%、麻痺防禦力+15%、風屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環C也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35610" name="守護耳環D" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。麻痺攻擊力+15%、束縛防禦力+15%、黑暗屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環D也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35611" name="守護耳環E" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。精神攻擊力+15%、衝擊防禦力+15%、地屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環E也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35612" name="守護耳環F" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。睡眠攻擊力+15%、衝擊防禦力+15%、水屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環F也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35613" name="守護耳環G" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。衝擊攻擊力+15%、睡眠防禦力+15%、火屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環G也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35614" name="守護耳環H" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。中毒攻擊力+15%、束縛防禦力+15%、火屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環H也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35615" name="守護耳環I" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。精神異常防禦抗性15%、束縛攻擊力15%、風屬性防禦力+8、增加MP25。可以交易或丟棄。即使戴上兩個守護耳環I也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="a"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="25"/>
+			<add order="0x10" stat="mDef" val="63"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35616" name="特級守護耳環-休克" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、增加休克攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-休克也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35617" name="特級守護耳環-束縛" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、增加束縛攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-束縛也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35618" name="特級守護耳環-出血" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、增加出血攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-出血也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35619" name="特級守護耳環-麻痺" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、麻痺攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-麻痺也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35620" name="特級守護耳環-精神" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、精神攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-精神也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35621" name="特級守護耳環-睡眠" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、睡眠攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-睡眠也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35622" name="特級守護耳環-毒" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、毒攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-毒也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35623" name="特級守護耳環-擊退/擊倒" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、擊退攻擊/抗性、擊倒攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-擊退/擊倒也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35624" name="特級守護耳環-空中束縛" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。賦予裝備者MP+46、CP+5%、空中束縛攻擊/抗性20的效果。可以交易或丟棄。即使戴上兩個特級守護耳環-空中束縛也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="46"/>
+			<add order="0x10" stat="mDef" val="118"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35625" name="親衛耳環A" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。衝擊攻擊力+15%、出血防禦力+15%、水屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環A也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35626" name="親衛耳環B" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。束縛攻擊力+15%、中毒防禦力+15%、神聖屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環B也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35627" name="親衛耳環C" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。出血攻擊力+15%、麻痺防禦力+15%、風屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環C也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35628" name="親衛耳環D" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。麻痺攻擊力+15%、束縛防禦力+15%、黑暗屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環D也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35629" name="親衛耳環E" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。精神攻擊力+15%、衝擊防禦力+15%、大地屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環E也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35630" name="親衛耳環F" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。睡眠攻擊力+15%、衝擊防禦力+15%、水屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環F也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35631" name="親衛耳環G" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。衝擊攻擊力+15%、睡眠防禦力+15%、火屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環G也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35632" name="親衛耳環H" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。中毒攻擊力+15%、束縛防禦力+15%、火屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環H也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35633" name="親衛耳環I" type="Armor">
+		<table name="#Desc">在謎樣的宅邸購買的耳環。束縛攻擊力+15%、精神攻擊防禦力+15%、風屬性防禦力+10、CP+5%、增加MP35。可以交易或丟棄。即使戴上兩個親衛耳環I也只能發揮一個的特殊效果。</table>
+		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="crystal_type" val="s80"/>
+		<set name="material" val="silver"/>
+		<set name="weight" val="150"/>
+		<set name="enchant_enabled" val="1"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+		<for>
+			<add order="0x40" stat="maxMp" val="35"/>
+			<add order="0x10" stat="mDef" val="79"/>
+			<enchant order="0x0C" stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="35641" name="疑問的補給箱-魔法別針B、C級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得佩戴在腰帶上的下級魔法別針。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35642" name="疑問的補給箱-魔法小袋B、C級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得佩戴在腰帶上的下級魔法別針。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35643" name="疑問的補給箱-腰帶B、C級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得下級腰帶。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35644" name="疑問的補給箱-魔法別針S、A級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得佩戴在腰帶上的上級魔法別針。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35645" name="疑問的補給箱-魔法小袋S、A級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得佩戴在腰帶上的上級魔法小袋。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35646" name="疑問的補給箱-腰帶S、A級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得上級腰帶。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35647" name="疑問的補給箱-魔法古文夾S、A級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得佩戴在腰帶上的上級魔法古文夾。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35648" name="疑問的補給箱-魔法飾品S、A級" type="EtcItem">
+		<table name="#Desc">標有謎樣的紋章的箱子。以一定的機率可以獲得佩戴在腰帶上的上級魔法飾品。可以交易、丟棄。</table>
+		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" val="100"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35650" name="憎惡惡魔召喚卷軸" type="EtcItem">
+		<table name="#Desc">可召喚對練用憎惡惡魔的道具。等級76~等級84可以使用。在30秒內若將可惡惡魔的HP降為0的話，就可獲得血盟聲望30和個人聲望1000，並可隨機獲得額外的道具。只有加入血盟的玩家才可進行召喚，而且必須要滿足可以獲得個人聲望和血盟聲望的條件。可以交易、丟棄、出售於個人商店的道具，也可以保管在血盟倉庫。</table>
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35651" name="憎惡惡魔召喚卷軸" type="EtcItem">
+		<table name="#Desc">可召喚對練用憎惡惡魔的道具。等級85~等級89可以使用。在30秒內若將可惡惡魔的HP降為0的話，就可獲得血盟聲望30和個人聲望1000，並可隨機獲得額外的道具。只有加入血盟的玩家才可進行召喚，而且必須要滿足可以獲得個人聲望和血盟聲望的條件。可以交易、丟棄、出售於個人商店的道具，也可以保管在血盟倉庫。</table>
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35652" name="憎惡惡魔召喚卷軸" type="EtcItem">
+		<table name="#Desc">可召喚對練用憎惡惡魔的道具。等級90~等級94可以使用。在30秒內若將可惡惡魔的HP降為0的話，就可獲得血盟聲望30和個人聲望1000，並可隨機獲得額外的道具。只有加入血盟的玩家才可進行召喚，而且必須要滿足可以獲得個人聲望和血盟聲望的條件。可以交易、丟棄、出售於個人商店的道具，也可以保管在血盟倉庫。</table>
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35653" name="憎惡惡魔召喚卷軸" type="EtcItem">
+		<table name="#Desc">可召喚對練用憎惡惡魔的道具。等級95~等級99可以使用。在30秒內若將可惡惡魔的HP降為0的話，就可獲得血盟聲望30和個人聲望1000，並可隨機獲得額外的道具。只有加入血盟的玩家才可進行召喚，而且必須要滿足可以獲得個人聲望和血盟聲望的條件。可以交易、丟棄、出售於個人商店的道具，也可以保管在血盟倉庫。</table>
+		<set name="icon" val="icon.etc_scroll_white_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="scroll"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35670" name="野獸魔靈彈" type="EtcItem">
+		<table name="#Plus">維因召喚士專用</table>
+		<table name="#Desc">精靈之光加持於寵物/使魔，瞬間對敵人加以強力衝擊。無法交易/丟棄。可在寵物/使魔視窗確認靈魂彈的消耗量。（可在主人的道具清單內使用。）</table>
+		<set name="icon" val="BranchSys.icon.br_beast_soul_shot_i00"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35671" name="祝福的野獸魔靈彈" type="EtcItem">
+		<table name="#Plus">維因召喚士專用</table>
+		<table name="#Desc">上級精靈之光加持於寵物/使魔，瞬間強化魔法的威力。非常輕盈。無法交易/丟棄。可在寵物/使魔視窗確認靈魂彈的消耗量。（可在主人的道具清單內使用。）</table>
+		<set name="icon" val="BranchSys.icon.br_blessed_beast_spirit_shot_i00"/>
+		<set name="material" val="paper"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35675" name="高級生命靈藥-R級" type="EtcItem">
+		<table name="#Desc">恢復HP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
+		<set name="icon" val="icon.etc_super_potion_i02"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="elixir"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="liquid"/>
+		<set name="weight" val="5"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35676" name="高級精神靈藥-R級" type="EtcItem">
+		<table name="#Desc">恢復MP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
+		<set name="icon" val="icon.etc_super_potion_i00"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="elixir"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="liquid"/>
+		<set name="weight" val="5"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35677" name="高級鬥志靈藥-R級" type="EtcItem">
+		<table name="#Desc">恢復CP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
+		<set name="icon" val="icon.etc_super_potion_i01"/>
+		<set name="default_action" val="skill_reduce"/>
+		<set name="etcitem_type" val="elixir"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="liquid"/>
+		<set name="weight" val="5"/>
+		<set name="is_stackable" val="true"/>
+		<cond msg="很抱歉，目前這個物品的效果/功能尚未實裝。">
+			<player level="100"/>
+		</cond>
+	</item>
+	<item id="35678" name="測試鉋刀" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_stanpid_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35679" name="測試切刃" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_plenitas_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35680" name="測試殺刃" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_bauen_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35681" name="測試復仇者" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_qutram_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35682" name="測試戰爪" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_durga_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35683" name="測試風暴者" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_crabel_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35684" name="測試投弓" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_castron_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+	</item>
+	<item id="35685" name="測試射靈" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_stilla_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+	</item>
+	<item id="35686" name="測試爆刃" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weaon_serapear_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35687" name="測試術杖" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_pilia_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35688" name="測試報恨者" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_shaelon_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35689" name="測試雙刀" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35690" name="測試雙匕首" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35691" name="測試雙鈍器" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用（非GD2.0 改版內容）</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i10"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+	</item>
+	<item id="35692" name="怪物用武器" type="Weapon">
+		<table name="#Plus">測試用</table>
+		<table name="#Desc">測試用武器。</table>
+		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+	</item>
+	
+</list>

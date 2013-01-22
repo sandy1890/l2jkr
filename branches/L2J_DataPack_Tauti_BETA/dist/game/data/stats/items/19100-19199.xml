@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+
+	<item id="19100" name="祝福的凱利爾投弓" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_vesper_thrower_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="1257"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19101" name="祝福的凱利爾投弓" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_vesper_thrower_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="1257"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19102" name="祝福的凱利爾投弓" type="Weapon">
+		<table name="#Plus">遠程打擊</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊距離提升。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_vesper_thrower_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="1257"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19103" name="祝福的凱利爾射靈" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_vesper_schutze_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="809"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19104" name="祝福的凱利爾射靈" type="Weapon">
+		<table name="#Plus">Crt.緩速</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_vesper_schutze_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="809"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19105" name="祝福的凱利爾射靈" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_vesper_schutze_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="809"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19106" name="祝福的凱利爾爆刃" type="Weapon">
+		<table name="#Plus">靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_burster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19107" name="祝福的凱利爾爆刃" type="Weapon">
+		<table name="#Plus">魔法束縛</table>
+		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_burster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19108" name="祝福的凱利爾爆刃" type="Weapon">
+		<table name="#Plus">魔力上升</table>
+		<table name="#Desc">＜搜魂石特效＞MP最大值提升約30%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_burster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19109" name="祝福的凱利爾術杖" type="Weapon">
+		<table name="#Plus">魔力催化</table>
+		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約532。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_caster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19110" name="祝福的凱利爾術杖" type="Weapon">
+		<table name="#Plus">靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_caster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19111" name="祝福的凱利爾術杖" type="Weapon">
+		<table name="#Plus">魔法束縛</table>
+		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_caster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19112" name="祝福的凱利爾報恨者" type="Weapon">
+		<table name="#Plus">魔力再生</table>
+		<table name="#Desc">＜搜魂石特效＞提升MP的恢復速度。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_vesper_singer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="622"/>
+			<set order="0x08" stat="mAtk" val="408"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19113" name="祝福的凱利爾報恨者" type="Weapon">
+		<table name="#Plus">靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_vesper_singer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="622"/>
+			<set order="0x08" stat="mAtk" val="408"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19114" name="祝福的凱利爾報恨者" type="Weapon">
+		<table name="#Plus">魔力催化</table>
+		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約532。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_vesper_singer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="622"/>
+			<set order="0x08" stat="mAtk" val="408"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19115" name="祝福的凱利爾雙刀" type="Weapon">
+		<table name="#Plus">速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19116" name="祝福的凱利爾雙刀" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19117" name="祝福的凱利爾雙刀" type="Weapon">
+		<table name="#Plus">強健</table>
+		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19118" name="祝福的凱利爾雙匕首" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19119" name="祝福的凱利爾雙匕首" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19120" name="祝福的凱利爾雙匕首" type="Weapon">
+		<table name="#Plus">導引</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升8.0。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19121" name="祝福的凱利爾雙鈍器" type="Weapon">
+		<table name="#Plus">偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19122" name="祝福的凱利爾雙鈍器" type="Weapon">
+		<table name="#Plus">導引</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升8.0。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19123" name="祝福的凱利爾雙鈍器" type="Weapon">
+		<table name="#Plus">傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+
+	<!-- R급 무기 -->
+	<!-- R-99+:祝福的凱利爾 -->
+	<item id="19124" name="祝福的凱利爾鉋刀" type="Weapon">
+		<table name="#Plus">導引 + 速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升8、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_shaper_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3573-8;3564-4"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="559"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19125" name="祝福的凱利爾鉋刀" type="Weapon">
+		<table name="#Plus">速度激發 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約81.7。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_shaper_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3564-4;3566-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="559"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19126" name="祝福的凱利爾鉋刀" type="Weapon">
+		<table name="#Plus">偵測 + 導引</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約75.7、命中能力提升8。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_shaper_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3565-7;3573-8"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="559"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19127" name="祝福的凱利爾切刃" type="Weapon">
+		<table name="#Plus">速度激發 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_cutter_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3564-4;3567-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19128" name="祝福的凱利爾切刃" type="Weapon">
+		<table name="#Plus">偵測 + 強健</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5、HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_cutter_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3567-5;3013-3"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19129" name="祝福的凱利爾切刃" type="Weapon">
+		<table name="#Plus">強健 + 速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_cutter_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3013-3;3564-4"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19130" name="祝福的凱利爾殺刃" type="Weapon">
+		<table name="#Plus">偵測 + 傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.7、物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_vesper_slasher_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3567-6;13062-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19131" name="祝福的凱利爾殺刃" type="Weapon">
+		<table name="#Plus">傷害上升 + 速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_vesper_slasher_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13062-4;3564-4"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19132" name="祝福的凱利爾殺刃" type="Weapon">
+		<table name="#Plus">速度激發 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_vesper_slasher_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3564-4;3567-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19133" name="祝福的凱利爾復仇者" type="Weapon">
+		<table name="#Plus">速度激發 + Crt.傷害</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊時物理攻擊力提升約1254。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_avenger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3564-4;3572-9"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19134" name="祝福的凱利爾復仇者" type="Weapon">
+		<table name="#Plus">Crt.傷害 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊時物理攻擊力提升約1254、致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_avenger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3572-9;3567-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19135" name="祝福的凱利爾復仇者" type="Weapon">
+		<table name="#Plus">偵測 + 速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_avenger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3567-5;3564-4"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19136" name="祝福的凱利爾戰爪" type="Weapon">
+		<table name="#Plus">偵測 + 傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約75.5、物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_octoclaw_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3565-6;13062-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19137" name="祝福的凱利爾戰爪" type="Weapon">
+		<table name="#Plus">傷害上升 + 速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_octoclaw_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13062-4;3564-4"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19138" name="祝福的凱利爾戰爪" type="Weapon">
+		<table name="#Plus">速度激發 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約75.4。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_octoclaw_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;32;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1550"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3564-4;3565-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19139" name="祝福的凱利爾風暴者" type="Weapon">
+		<table name="#Plus">HP吸收 + 導引</table>
+		<table name="#Desc">＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。命中能力提升8。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
+		<set name="icon" val="icon.weapon_vesper_stormer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13111-1;13110-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19140" name="祝福的凱利爾風暴者" type="Weapon">
+		<table name="#Plus">導引 + 傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
+		<set name="icon" val="icon.weapon_vesper_stormer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13110-3;13109-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19141" name="祝福的凱利爾風暴者" type="Weapon">
+		<table name="#Plus">傷害上升 + HP吸收</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
+		<set name="icon" val="icon.weapon_vesper_stormer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="80"/>
+		<set name="damage_range" val="0;0;66;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="bronze"/>
+		<set name="weight" val="2010"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13109-2;13111-1"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19142" name="祝福的凱利爾投弓" type="Weapon">
+		<table name="#Plus">傷害上升 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332、致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_vesper_thrower_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<set name="item_skill" val="13062-2;3567-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="1257"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19143" name="祝福的凱利爾投弓" type="Weapon">
+		<table name="#Plus">偵測 + 遠程打擊</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5、攻擊距離提升。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_vesper_thrower_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<set name="item_skill" val="3567-5;13061-1"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="1257"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19144" name="祝福的凱利爾投弓" type="Weapon">
+		<table name="#Plus">遠程打擊 + 傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊距離提升、物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
+		<set name="icon" val="icon.weapon_vesper_thrower_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="5"/>
+		<set name="attack_range" val="500"/>
+		<set name="damage_range" val="0;0;10;0"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="1500"/>
+		<set name="item_skill" val="13061-1;13062-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="1257"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="293"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19145" name="祝福的凱利爾射靈" type="Weapon">
+		<table name="#Plus">偵測 + Crt.緩速</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。致命攻擊時，以一定的機率造成目標移動速度下降。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_vesper_schutze_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<set name="oncrit_chance" val="60"/>
+		<set name="oncrit_skill" val="13113-1"/>
+		<set name="item_skill" val="3567-5;3552-1"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="809"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19146" name="祝福的凱利爾射靈" type="Weapon">
+		<table name="#Plus">Crt.緩速 + 速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_vesper_schutze_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<set name="oncrit_chance" val="60"/>
+		<set name="oncrit_skill" val="13113-1"/>
+		<set name="item_skill" val="3564-4;3552-1"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="809"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19147" name="祝福的凱利爾射靈" type="Weapon">
+		<table name="#Plus">速度激發 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
+		<set name="icon" val="icon.weapon_vesper_schutze_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="crossbow"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="400"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="reuse_delay" val="400"/>
+		<set name="item_skill" val="3564-4;3567-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="809"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="10"/>
+			<add order="0x10" stat="accCombat" val="-1.5"/>
+			<set order="0x08" stat="pAtkSpd" val="303"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19148" name="祝福的凱利爾爆刃" type="Weapon">
+		<table name="#Plus">靈活思緒 + 魔法束縛</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_burster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="oncrit_chance" val="20"/>
+		<set name="oncrit_skill" val="13114-1"/>
+		<set name="item_skill" val="3047-3;3552-1"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19149" name="祝福的凱利爾爆刃" type="Weapon">
+		<table name="#Plus">魔法束縛 + 魔力上升</table>
+		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。MP最大值提升約30%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_burster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="oncrit_chance" val="20"/>
+		<set name="oncrit_skill" val="13114-1"/>
+		<set name="item_skill" val="3014-3;3552-1"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19150" name="祝福的凱利爾爆刃" type="Weapon">
+		<table name="#Plus">魔力上升 + 靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞MP最大值提升約30%、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
+		<set name="icon" val="icon.weapon_vesper_burster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3014-3;3047-3"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19151" name="祝福的凱利爾術杖" type="Weapon">
+		<table name="#Plus">魔力催化 + 靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約532、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_caster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3575-9;3047-3"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19152" name="祝福的凱利爾術杖" type="Weapon">
+		<table name="#Plus">靈活思緒 + 魔法束縛</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_caster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="oncrit_chance" val="20"/>
+		<set name="oncrit_skill" val="13114-1"/>
+		<set name="item_skill" val="3047-3;3552-1"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19153" name="祝福的凱利爾術杖" type="Weapon">
+		<table name="#Plus">魔法束縛 + 魔力催化</table>
+		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。魔法攻擊力提升約532。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
+		<set name="icon" val="icon.weapon_vesper_caster_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="oncrit_chance" val="20"/>
+		<set name="oncrit_skill" val="13114-1"/>
+		<set name="item_skill" val="3575-9;3552-1"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="511"/>
+			<set order="0x08" stat="mAtk" val="371"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="379"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19154" name="祝福的凱利爾報恨者" type="Weapon">
+		<table name="#Plus">魔力再生 + 靈活思緒</table>
+		<table name="#Desc">＜搜魂石特效＞提升MP的恢復速度、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_vesper_singer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3576-9;3047-3"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="622"/>
+			<set order="0x08" stat="mAtk" val="408"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19155" name="祝福的凱利爾報恨者" type="Weapon">
+		<table name="#Plus">靈活思緒 + 魔力催化</table>
+		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%、魔法攻擊力提升約532。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_vesper_singer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3047-3;3575-9"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="622"/>
+			<set order="0x08" stat="mAtk" val="408"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19156" name="祝福的凱利爾報恨者" type="Weapon">
+		<table name="#Plus">魔力催化 + 魔力再生</table>
+		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約395、提升MP的恢復速度。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
+		<set name="icon" val="icon.weapon_vesper_singer_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="wood"/>
+		<set name="weight" val="1080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3575-7;3576-9"/>
+		<set name="is_magic_weapon" val="true"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="622"/>
+			<set order="0x08" stat="mAtk" val="408"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19157" name="祝福的凱利爾雙刀" type="Weapon">
+		<table name="#Plus">速度激發 + 傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3564-4;13062-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19158" name="祝福的凱利爾雙刀" type="Weapon">
+		<table name="#Plus">傷害上升 + 強健</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457、HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13062-5;3013-3"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19159" name="祝福的凱利爾雙刀" type="Weapon">
+		<table name="#Plus">強健 + 速度激發</table>
+		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="1520"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3013-3;3564-4"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="8"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19160" name="祝福的凱利爾雙匕首" type="Weapon">
+		<table name="#Plus">傷害上升 + 偵測</table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377、致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13062-3;3567-7"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19161" name="祝福的凱利爾雙匕首" type="Weapon">
+		<table name="#Plus">偵測 + 導引</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9、命中能力提升8。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3567-9;3573-8"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19162" name="祝福的凱利爾雙匕首" type="Weapon">
+		<table name="#Plus">導引 + 傷害上升 </table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升7.9、物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualdagger"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="10"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="steel"/>
+		<set name="weight" val="2050"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3573-7;13062-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="639"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="12"/>
+			<add order="0x10" stat="accCombat" val="-3.75"/>
+			<set order="0x08" stat="pAtkSpd" val="433"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19163" name="祝福的凱利爾雙鈍器" type="Weapon">
+		<table name="#Plus">偵測 + 導引</table>
+		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約82.1、命中能力提升8。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3566-7;3573-8"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19164" name="祝福的凱利爾雙鈍器" type="Weapon">
+		<table name="#Plus">導引 + 傷害上升</table>
+		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="3573-6;13062-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	<item id="19165" name="祝福的凱利爾雙鈍器" type="Weapon">
+		<table name="#Plus">傷害上升 + 偵測 </table>
+		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377、致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
+		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
+		<set name="default_action" val="equip"/>
+		<set name="weapon_type" val="dualblunt"/>
+		<set name="bodypart" val="lrhand"/>
+		<set name="random_damage" val="20"/>
+		<set name="attack_range" val="40"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="crystal_type" val="r99"/>
+		<set name="material" val="fine_steel"/>
+		<set name="weight" val="1740"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="element_enabled" val="true"/>
+		<set name="item_skill" val="13062-3;3567-5"/>
+		<for>
+			<set order="0x08" stat="pAtk" val="778"/>
+			<set order="0x08" stat="mAtk" val="327"/>
+			<set order="0x08" stat="rCrit" val="4"/>
+			<add order="0x10" stat="accCombat" val="8.0"/>
+			<set order="0x08" stat="pAtkSpd" val="325"/>
+			<enchant order="0x0C" stat="pAtk" val="0"/>
+			<enchant order="0x0C" stat="mAtk" val="0"/>
+		</for>
+	</item>
+	
+	<item id="19166" name="飾品用生命石-R級" type="EtcItem">
+		<table name="#Desc">怪物內部的結石受到物理/魔法攻擊而僵硬的礦石。可成為精煉飾品的材料，等級85以上的角色可以使用。</table>
+		<set name="icon" val="icon.r_mineral_unique_i00"/>
+		<set name="material" val="liquid"/>
+		<set name="weight" val="2"/>
+		<set name="is_stackable" val="true"/>
+		<cond msgId="113">
+			<player level="85"/>
+		</cond>
+	</item>
+	<item id="19167" name="飾品用生命石-R95級" type="EtcItem">
+		<table name="#Desc">怪物內部的結石受到物理/魔法攻擊而僵硬的礦石。可成為精煉飾品的材料，等級95以上的角色可以使用。</table>
+		<set name="icon" val="icon.r95_mineral_unique_i00"/>
+		<set name="material" val="liquid"/>
+		<set name="weight" val="2"/>
+		<set name="is_stackable" val="true"/>
+		<cond msgId="113">
+			<player level="95"/>
+		</cond>
+	</item>
+	<item id="19168" name="飾品用生命石-R99級" type="EtcItem">
+		<table name="#Desc">怪物內部的結石受到物理/魔法攻擊而僵硬的礦石。可成為精煉飾品的材料，等級99以上的角色可以使用。</table>
+		<set name="icon" val="icon.r99_mineral_unique_i00"/>
+		<set name="material" val="liquid"/>
+		<set name="weight" val="2"/>
+		<set name="is_stackable" val="true"/>
+		<cond msgId="113">
+			<player level="99"/>
+		</cond>
+	</item>
+
+</list>
