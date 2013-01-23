@@ -37,7 +37,7 @@ public final class ProtocolVersion extends L2GameClientPacket {
 	private static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	private int _version;
-	private int _support = 448; // Update by rocknow
+	private int _support = 440; // Update by rocknow // ilovefree
 	
 	@Override
 	protected void readImpl() {
@@ -61,7 +61,7 @@ public final class ProtocolVersion extends L2GameClientPacket {
 		 * KeyPacket(getClient().enableCrypt(),0); getClient().setProtocolOk(false); getClient().close(pk); }
 		 */
 		else if (_version < _support) {
-			LogRecord record = new LogRecord(Level.WARNING, "Older protocol");
+			LogRecord record = new LogRecord(Level.WARNING, "프로토콜 버전이 낮습니다.");
 			record.setParameters(new Object[]
 			{
 				_version,
@@ -73,7 +73,7 @@ public final class ProtocolVersion extends L2GameClientPacket {
 			getClient().setProtocolOk(false);
 			getClient().close(pk);
 		} else if (_version > _support) {
-			LogRecord record = new LogRecord(Level.WARNING, "Newer protocol");
+			LogRecord record = new LogRecord(Level.WARNING, "프로토콜 버전이 높습니다.");
 			record.setParameters(new Object[]
 			{
 				_version,
