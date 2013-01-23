@@ -111,12 +111,12 @@
 	<class classId="135" name="인스펙터" serverName="인스펙터" parentClassId="126" />
 	<class classId="136" name="쥬디케이터" serverName="쥬디케이터" parentClassId="135" />
 	<!-- 각성 직업 -->
-	<class classId="139" name="席格爾騎士" serverName="席格爾騎士" parentClassId="90" />
-	<class classId="140" name="提爾鬥士" serverName="提爾鬥士" parentClassId="88" />
-	<class classId="141" name="歐瑟遊俠" serverName="歐瑟遊俠" parentClassId="93" />
-	<class classId="142" name="尤爾弓手" serverName="尤爾弓手" parentClassId="92" />
-	<class classId="143" name="菲歐巫師" serverName="菲歐巫師" parentClassId="95" />
-	<class classId="144" name="伊斯法師" serverName="伊斯法師" parentClassId="98" />
-	<class classId="145" name="維因召喚士" serverName="維因召喚士" parentClassId="96" />
-	<class classId="146" name="艾羅牧師" serverName="艾羅牧師" parentClassId="97" />
+	<class classId="139" name="시겔나이트" serverName="시겔나이트" parentClassId="90" />
+	<class classId="140" name="티르워리어" serverName="티르워리어" parentClassId="88" />
+	<class classId="141" name="오셀로그" serverName="오셀로그" parentClassId="93" />
+	<class classId="142" name="율아처" serverName="율아처" parentClassId="92" />
+	<class classId="143" name="페오위저드" serverName="페오위저드" parentClassId="95" />
+	<class classId="144" name="윈서머너" serverName="윈서머너" parentClassId="98" />
+	<class classId="145" name="에오로힐러" serverName="에오로힐러" parentClassId="96" />
+	<class classId="146" name="이스인챈터" serverName="이스인챈터" parentClassId="97" />
 </list>
