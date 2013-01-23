@@ -1,10 +1,21 @@
-﻿<html><body>%npcname%：<br>
-我明白你想結婚吧？對嗎？但結婚的費用很貴喔！你真的決定要結婚嗎？<br>
-<center>
-<a action="bypass -h npc_%objectId%_AskWedding">我要結婚！</a><br>
-</center>
-<br>程序：<br>
-首先你要進行訂婚動作。向你想訂婚的人輸入「.engage」，但在此動作進行之前，請確定對方已經在你的好友名單內。而好友名單的輸入指令是「/邀請好友 對方名稱」<br><br>
-進行訂婚動作之後就可以進行結婚。你與對方必須穿著禮服向本人進行結婚動作，同時亦需要 %replace% 金幣。<br><br>
-進行結婚之後，你可以使用指令「.gotolove」把對方傳送到你的身邊；如果想要離婚，請輸入指令「.divorce」。<br>
-</body></html>
+<html><body>%npcname%:<br>
+<center><a action="bypass -h npc_%objectId%_AskWedding">결혼한다</a></center><br>
+안내:<br>
+<br>
+<font color="LEVEL">첫번째 순서 - "약혼"</font><br1>
+1) 커플을 맺고 싶은 캐릭터를 선택합니다.<br1>
+2) 상대 캐릭터와 친구 추가가 되어 있어야 합니다. <font color="LEVEL">"/친구초대 상대캐릭터명"</font><br1>
+3) 채팅창에 <font color="LEVEL">".engage 파트너캐릭터명"</font> 커맨드를 입력합니다.<br1>
+4) 상대에게 약혼 권유 메세지가 팝업창으로 생성되게 됩니다. 수락한다면 약혼 상태가 됩니다.<br>
+<br>
+<font color="LEVEL">두번째 순서 - "결혼"</font><br1> 
+1) 약혼을 맺은 두 케릭터가 모두 가서 한 케릭터가 안드로메다 NPC에게 결혼을 신청하고, 다른 케릭터가 안드로메다 NPC에게 대화를 신청하면 결혼을 권유하게 됩니다.<br1>
+  (결혼을 하기 위해서는 두 케릭터 모두 예복을 착용하고 있어야 하며, %replace% 아데나의 결혼 자금을 지불해야 합니다)<br1>
+2) 결혼을 신청한 케릭터가 결혼자금을 지불 하고 나면 결혼이 성사 되게 됩니다.<br1>
+3) 완료 되면 폭죽이 터지고 소리의 수정이 실행 되게 됩니다.<br>
+<br>
+결혼이 성사되면 <font color="LEVEL">".gotolove 파트너캐릭터명"</font> 를 입력하면 1초의 대기시간 후에 파트너에게 귀환됩니다.<br1>
+결혼/약혼을 취소하고 싶다면 <font color="LEVEL">".divorce 파트너캐릭터명"</font> 커맨드를 입력 하면 됩니다.<br1>
+이혼/파혼을 신청하면 신청한 캐릭터는 일정의 위자료를 지불해야 합니다.<br>
+</body>
+</html>
