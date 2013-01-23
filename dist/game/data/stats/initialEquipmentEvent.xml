@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/initialEquipment.xsd">
-	<!-- Human Fighter -->
+	<!-- 휴먼 파이터 -->
 	<equipment classId="0">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20636" count="1" /> <!-- D-Grade Fighter Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20636" count="1" /> <!-- D급 전사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2369" count="1" equipped="true" /> <!-- 견습기사의 검 -->
+		<item id="10" count="1" /> <!-- 단검 -->
+		<item id="1146" count="1" equipped="true" /> <!-- 견습기사의 셔츠 -->
+		<item id="1147" count="1" equipped="true" /> <!-- 견습기사의 바지 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Human Mystic -->
+	<!-- 휴먼 메이지 -->
 	<equipment classId="10">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20637" count="1" /> <!-- D-Grade Mage Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20637" count="1" /> <!-- D급 마법사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="6" count="1" equipped="true" /> <!-- 견습사의 완드 -->
+		<item id="425" count="1" equipped="true" /> <!-- 견습사의 튜닉 -->
+		<item id="461" count="1" equipped="true" /> <!-- 견습사의 호즈 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Elven Fighter -->
+	<!-- 엘븐 파이터 -->
 	<equipment classId="18">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20636" count="1" /> <!-- D-Grade Fighter Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20636" count="1" /> <!-- D급 전사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2369" count="1" equipped="true" /> <!-- 견습기사의 검 -->
+		<item id="10" count="1" /> <!-- 단검 -->
+		<item id="1146" count="1" equipped="true" /> <!-- 견습기사의 셔츠 -->
+		<item id="1147" count="1" equipped="true" /> <!-- 견습기사의 바지 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Elven Mystic -->
+	<!-- 엘븐 메이지 -->
 	<equipment classId="25">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20637" count="1" /> <!-- D-Grade Mage Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20637" count="1" /> <!-- D급 마법사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="6" count="1" equipped="true" /> <!-- 견습사의 완드 -->
+		<item id="425" count="1" equipped="true" /> <!-- 견습사의 튜닉 -->
+		<item id="461" count="1" equipped="true" /> <!-- 견습사의 호즈 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Dark Fighter -->
+	<!-- 다크 파이터 -->
 	<equipment classId="31">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20636" count="1" /> <!-- D-Grade Fighter Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20636" count="1" /> <!-- D급 전사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2369" count="1" equipped="true" /> <!-- 견습기사의 검 -->
+		<item id="10" count="1" /> <!-- 단검 -->
+		<item id="1146" count="1" equipped="true" /> <!-- 견습기사의 셔츠 -->
+		<item id="1147" count="1" equipped="true" /> <!-- 견습기사의 바지 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Dark Mystic -->
+	<!-- 다크 메이지 -->
 	<equipment classId="38">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20637" count="1" /> <!-- D-Grade Mage Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20637" count="1" /> <!-- D급 마법사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="6" count="1" equipped="true" /> <!-- 견습사의 완드 -->
+		<item id="425" count="1" equipped="true" /> <!-- 견습사의 튜닉 -->
+		<item id="461" count="1" equipped="true" /> <!-- 견습사의 호즈 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Orc Fighter -->
+	<!-- 오크 파이터 -->
 	<equipment classId="44">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20636" count="1" /> <!-- D-Grade Fighter Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2369" count="1" /> <!-- Squire's Sword -->
-		<item id="2368" count="1" equipped="true" /> <!-- Training Gloves -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20636" count="1" /> <!-- D급 전사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2369" count="1" /> <!-- 견습기사의 검 -->
+		<item id="2368" count="1" equipped="true" /> <!-- 견습투사의 장갑 -->
+		<item id="1146" count="1" equipped="true" /> <!-- 견습기사의 셔츠 -->
+		<item id="1147" count="1" equipped="true" /> <!-- 견습기사의 바지 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Orc Mystic -->
+	<!-- 오크 메이지 -->
 	<!-- NOTE: This is orc_mage (orc_shaman is retail typo) -->
 	<equipment classId="49">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20637" count="1" /> <!-- D-Grade Mage Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2368" count="1" equipped="true" /> <!-- Training Gloves -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20637" count="1" /> <!-- D급 마법사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2368" count="1" equipped="true" /> <!-- 견습투사의 장갑 -->
+		<item id="425" count="1" equipped="true" /> <!-- 견습사의 튜닉 -->
+		<item id="461" count="1" equipped="true" /> <!-- 견습사의 호즈 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Dwarf Fighter -->
+	<!-- 드워븐 파이터 -->
 	<equipment classId="53">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20636" count="1" /> <!-- D-Grade Fighter Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2370" count="1" equipped="true" /> <!-- Guild Member's Club -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20636" count="1" /> <!-- D급 전사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2370" count="1" equipped="true" /> <!-- 조합원의 몽둥이 -->
+		<item id="10" count="1" /> <!-- 단검 -->
+		<item id="1146" count="1" equipped="true" /> <!-- 견습기사의 셔츠 -->
+		<item id="1147" count="1" equipped="true" /> <!-- 견습기사의 바지 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Male Kamael Soldier -->
+	<!-- 카마엘 솔져(남) -->
 	<equipment classId="123">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20636" count="1" /> <!-- D-Grade Fighter Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20636" count="1" /> <!-- D급 전사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2369" count="1" equipped="true" /> <!-- 견습기사의 검 -->
+		<item id="10" count="1" /> <!-- 단검 -->
+		<item id="1146" count="1" equipped="true" /> <!-- 견습기사의 셔츠 -->
+		<item id="1147" count="1" equipped="true" /> <!-- 견습기사의 바지 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
-	<!-- Female Kamael Soldier -->
+	<!-- 카마엘 솔져(여) -->
 	<equipment classId="124">
-		<item id="20635" count="1" /> <!-- No Grade Beginner's Adventurer Support Pack -->
-		<item id="20636" count="1" /> <!-- D-Grade Fighter Support Pack -->
-		<item id="20638" count="1" /> <!-- Beginner's Adventurer Reinforcement Pack -->
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
+		<item id="20635" count="1" /> <!-- 무급 초보 모험자 지원 팩 -->
+		<item id="20636" count="1" /> <!-- D급 전사 지원 팩 -->
+		<item id="20638" count="1" /> <!-- 초보 모험자 응원 팩 -->
+		<item id="2369" count="1" equipped="true" /> <!-- 견습기사의 검 -->
+		<item id="10" count="1" /> <!-- 단검 -->
+		<item id="1146" count="1" equipped="true" /> <!-- 견습기사의 셔츠 -->
+		<item id="1147" count="1" equipped="true" /> <!-- 견습기사의 바지 -->
+		<item id="5588" count="1" /> <!-- 리니지2 초보자 안내서 -->
+		<item id="10650" count="5" /> <!-- 모험가용 귀환 주문서 -->
 		<item id="32226" count="10" />
 	</equipment>
 </list>
