@@ -1,40 +1,60 @@
-﻿<html><title>物品</title><body>
+<html><title>아이템</title><body>
 <table width=270>
 <tr>
-<td width=45><button value="首頁" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=180><center>創造物品選單</center></td>
-<td width=45><button value="返回" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=45><button value="메인" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=180><center>아이템 만들기 메뉴</center></td>
+<td width=45><button value="이전" action="bypass -h admin_admin" width=45 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table><br>
-<table width=260><tr><td>請輸入您想創造的物品編號、及所需數量。<font color="LEVEL">注意: 請勿創造多個無法堆疊的物品</font></td></tr></table><br>
+<table width=260><tr><td>아이템을 만들려면 ID안에 코드를, 수량안에 수량을 적고 해당버튼을 클릭. <font color="LEVEL">주의: 겹쳐지지 않는 아이템은 수량 20개를 넘기지 마세요.</font></td></tr></table><br>
 <center>
 <table width=270>
 <tr>
-<td>編號:</td>
-<td>數量:</td>
+<td>아템ID</td>
+<td>수량</td>
 <td></td>
 </tr>
 <tr>
 <td><edit var="itemid" width=50></td>
 <td><edit var="itemnum" width=70 type=number></td>
-<td><button value="創造物品" action="bypass -h admin_create_item $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="아이템 만들기" action="bypass -h admin_create_item $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
-<tr><td></td><td></td><td><button value="給予目標玩家" action="bypass -h admin_give_item_target $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
-<tr><td></td><td></td><td><button value="給予全部線上玩家" action="bypass -h admin_give_item_to_all $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td></td><td></td><td><button value="타겟에게 아이템주기" action="bypass -h admin_give_item_target $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
+<tr><td></td><td></td><td><button value="접속된 유저에게주기" action="bypass -h admin_give_item_to_all $itemid $itemnum" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
 </table><br><br>
+<table width=270 cellpadding="2">
+<tr><td>Adena</td><td>: 아데나</td></tr>
+<tr><td>AncientAdena</td><td>: 고대의 아데나</td></tr>
+<tr><td>FestivalAdena</td><td>: 신비의 금화</td></tr>
+<tr><td>BlueEva</td><td>: 블루 에바</td></tr>
+<tr><td>GoldEinhasad</td><td>: 골드 아인하사드</td></tr>
+<tr><td>SilverShilen</td><td>: 실버 실렌</td></tr>
+<tr><td>BloodyPaagrio</td><td>: 블러드 파아그리오</td></tr>
+<tr><td>FantasyIsleCoin</td><td>: 환상의섬 코인</td></tr>
+</table>
 <table width=270 cellpadding="4">
 <tr>
-<td>貨幣選項:</td>
-<td><combobox width=120 height=17 var=ebox list=金幣;古代的金幣;慶典金幣;藍色伊娃;金色殷海薩;銀色席琳;血紅色帕格立歐;夢幻島代幣></td>
+<td>금전 종류:</td>
+<td><combobox width=120 height=17 var=ebox list=Adena;AncientAdena;FestivalAdena;BlueEva;GoldEinhasad;SilverShilen;BloodyPaagrio;FantasyIsleCoin></td>
 </tr>
 <tr>
-<td>數量:</td>
+<td>수량:</td>
 <td><edit var="vbox" width=120 height=12 type=number></td>
 </tr>
 <tr>
 <td></td>
-<td><button value="創造貨幣" action="bypass -h admin_create_coin $ebox $vbox" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="금전 만들기" action="bypass -h admin_create_coin $ebox $vbox" width=140 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 </center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </body></html>
