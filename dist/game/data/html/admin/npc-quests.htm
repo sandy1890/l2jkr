@@ -1,0 +1,23 @@
+<html><title>NPC 정보</title><body>
+<center>
+<table width=270 border=0 bgcolor="444444">
+<tr>
+<td><button value="킬" action="bypass -h admin_kill" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="삭제" action="bypass -h admin_delete" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="NPC이동" action="bypass -h admin_recall_npc" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="버프" action="bypass -h admin_getbuffs" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+<tr>
+<td><button value="수정" action="bypass -h admin_edit_npc %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="스킬" action="bypass -h admin_show_skilllist_npc %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="제거" action="bypass -h admin_show_droplist %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="퀘스트" action="bypass -h admin_show_quests %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr>
+</table>
+<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+%questName%
+<table width=270 border=0>
+%quests%
+</table>
+<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+</center></body></html>
