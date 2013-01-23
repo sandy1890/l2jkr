@@ -1,79 +1,79 @@
-<html><title>L2J Main Admin Menu</title><body>
+<html><title>L2J 메인 관리자 메뉴</title><body>
 <center>
 <table width=270 border=0 bgcolor="666666">
 <tr>
-<td><button value="Main" action="bypass -h admin_admin" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Game" action="bypass -h admin_admin2" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Effects" action="bypass -h admin_admin3" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Server" action="bypass -h admin_admin4" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM" action="bypass -h admin_admin7" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="메인" action="bypass -h admin_admin" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="게임" action="bypass -h admin_admin2" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="효과" action="bypass -h admin_admin3" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="서버" action="bypass -h admin_admin4" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="관리자(GM)" action="bypass -h admin_admin7" width=50 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 <br>
 <table width=240>
 <tr>
-<td>QuickBox:</td>
+<td>실행:</td>
 <td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass -h admin_help help/main_menu.htm" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="도움말" action="bypass -h admin_help help/main_menu.htm" width=45 height=20 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 <br>
 <table width=240><tr>
-<td><button value="Item" action="bypass -h admin_create_item $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Teleport" action="bypass -h admin_move_to $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Spawn" action="bypass -h admin_spawn_monster $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="ListSpwns" action="bypass -h admin_list_spawns $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="아이템" action="bypass -h admin_create_item $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="텔레포트" action="bypass -h admin_move_to $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="소환" action="bypass -h admin_spawn_monster $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="소환 목록" action="bypass -h admin_list_spawns $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="Announc" action="bypass -h admin_announce_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Set" action="bypass -h admin_set_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM Chat" action="bypass -h admin_gmchat_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="공지" action="bypass -h admin_announce_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="설정" action="bypass -h admin_set_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM 채팅" action="bypass -h admin_gmchat_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="List+Go" action="bypass -h admin_list_spawns $qbox 1" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="AutoAnn" action="bypass -h admin_list_autoann $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="자동 공지" action="bypass -h admin_list_autoann $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td></td>
 <td></td>
 <td></td>
 </tr></table>Characters:<table width=240><tr>
 <td><button value="Go To" action="bypass -h admin_goto_char_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Recall" action="bypass -h admin_recall_char_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Karma" action="bypass -h admin_setkarma $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="NoKarma" action="bypass -h admin_nokarma" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="재소환" action="bypass -h admin_recall_char_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="카오 설정" action="bypass -h admin_setkarma $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="카오 제거" action="bypass -h admin_nokarma" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="ChatBan" action="bypass -h admin_ban_chat $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="ChtUnBan" action="bypass -h admin_unban_chat $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Jail" action="bypass -h admin_jail $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Jail Out" action="bypass -h admin_unjail $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="채팅금지" action="bypass -h admin_ban_chat $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="채팅해제" action="bypass -h admin_unban_chat $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="감옥수감" action="bypass -h admin_jail $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="감옥출감" action="bypass -h admin_unjail $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="Kick" action="bypass -h admin_kick_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Ban" action="bypass -h admin_ban_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Find" action="bypass -h admin_find_character $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Repair" action="bypass -h admin_repair $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr></table>Other Target Related Actions:<table width=240><tr>
-<td><button value="Kill" action="bypass -h admin_kill_menu" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Res" action="bypass -h admin_res" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Open" action="bypass -h admin_open" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Close" action="bypass -h admin_close" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="킥" action="bypass -h admin_kick_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="밴" action="bypass -h admin_ban_menu $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="찾기" action="bypass -h admin_find_character $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="복구" action="bypass -h admin_repair $qbox" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table>대상에 대한 조치:<table width=240><tr>
+<td><button value="죽이기" action="bypass -h admin_kill_menu" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="부활" action="bypass -h admin_res" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="문열기" action="bypass -h admin_open" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="문닫기" action="bypass -h admin_close" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="RecallNPC" action="bypass -h admin_recall_npc" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Delete" action="bypass -h admin_delete" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Heal" action="bypass -h admin_heal" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Full Food" action="bypass -h admin_fullfood" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-</tr></table>GM Actions:<table width=240><tr>
-<td><button value="List ON" action="bypass -h admin_gmliston" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="List OFF" action="bypass -h admin_gmlistoff" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Diet" action="bypass -h admin_diet" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Invis" action="bypass -h admin_invis_menu" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="NPC이동" action="bypass -h admin_recall_npc" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="삭제" action="bypass -h admin_delete" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="힐" action="bypass -h admin_heal" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="사료주기" action="bypass -h admin_fullfood" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+</tr></table>GM 액션:<table width=240><tr>
+<td><button value="목록켜기" action="bypass -h admin_gmliston" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="목록끄기" action="bypass -h admin_gmlistoff" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="다이어트" action="bypass -h admin_diet" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="투명" action="bypass -h admin_invis_menu" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="Petitions" action="bypass -h admin_view_petitions" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Silence" action="bypass -h admin_silence" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="TradeOff" action="bypass -h admin_tradeoff" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Invul" action="bypass -h admin_invul" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="진정" action="bypass -h admin_view_petitions" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="수신상태" action="bypass -h admin_silence" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="거래" action="bypass -h admin_tradeoff" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="무적" action="bypass -h admin_invul" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="Wyvern" action="bypass -h admin_ride_wyvern" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Strider" action="bypass -h admin_ride_strider" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Enhance" action="bypass -h admin_enchant" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="GM Shop" action="bypass -h admin_gmshop" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="와이번" action="bypass -h admin_ride_wyvern" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="스트라이더" action="bypass -h admin_ride_strider" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="강화" action="bypass -h admin_enchant" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="GM 상점" action="bypass -h admin_gmshop" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr><tr>
-<td><button value="Instance" action="bypass -h admin_help instancezone.htm" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="인스턴스" action="bypass -h admin_help instancezone.htm" width=55 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table></center></body></html>
