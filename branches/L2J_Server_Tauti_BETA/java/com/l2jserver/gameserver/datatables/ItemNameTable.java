@@ -58,7 +58,7 @@ public class ItemNameTable {
 			{
 				"item_id",
 				"name"
-			}) + " FROM Item");
+			}) + " FROM item");
 			ResultSet itemdata = statement.executeQuery();
 			Nametable data;
 			while (itemdata.next()) {
