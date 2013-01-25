@@ -1,27 +1,28 @@
-﻿<html><body>
-這個根據地的系統標準價是 <font color="aaccff">%AGIT_LAST_PRICE%</font> 金幣，最終交易價是 <font color="aaccff">%AGIT_LAST_PRICE%</font> 金幣。<br>
-結束拍賣時，所收到的金額是從得標價扣除 <font color="LEVEL">交易稅[10%]</font>後的金額。拍賣標準價（最低投標價）要設為多少？
+<html><body>
+이 아지트의 구매 가격은 <font color="aaccff">%AGIT_LAST_PRICE%</font> adena and the last trading price was <font color="aaccff">%AGIT_LAST_PRICE%</font> 아데나 입니다.<br>
+경매로 아지트를 매각 하였을 경우 입찰가격의 <font color="LEVEL">세금(10%)</font>을 뺀 금액과 맡겨 놓았던 경매 보증금이 혈맹 창고로 입금 됩니다.<br>
+입찰 최소가를 입력하세요.
 <table width=270 border=0>
 <tr>
 <td width=220 align=right><edit var=minbid width=230 align=right type=number></td>
-<td width=40 align=right> 金幣</td>
+<td width=40 align=right>아데나</td>
 </tr>
 </table>
-拍賣期間要設為多少？
+경매 기간은 얼마로 하시겠습니까?
 <table width=270 border=0>
 <tr>
 <td width=270 align=right><combobox width=50 var=day list="7;3;1"></td>
 </tr>
 </table>
-請寫出有關根據地的說明。<multiedit var="comment" width=270>
+아지트에 관한 메모를 남겨주세요. <multiedit var="comment" width=270>
 <img src="L2UI.SquareBlank" width=270 height=10>
 <img src="L2UI.SquareWhite" width=270 height=1>
 <img src="L2UI.SquareBlank" width=270 height=5>
 <table width=270 border=0>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="上一步" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=80 align=center><button action="bypass -h npc_%objectId%_auction $day $minbid" value="下一步" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> 
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="이전" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_auction $day $minbid" value="팔기" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td> 
 </tr>
 </table>
 </body></html>

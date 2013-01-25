@@ -1,15 +1,16 @@
-﻿<html><body>
-在取消拍賣投標時，不可退還交易稅（<font color="LEVEL">投標價的10%</font>）。<br>
-這個根據地的投標價是<font color="aaccff">%AGIT_BID%</font> 金幣，扣除交易稅後剩餘的<font color="aaccff">%AGIT_BID_REMAIN%</font> 金幣可以退回。<br>
-要取消投標嗎？<br>
+<html><body>
+입찰을 취소 시에는, 세금(<font color="LEVEL">입찰가의 10%</font>)을 제외한 나머지 금액이 혈맹 창고로 반환 됩니다.<br>
+이 아지트의 입찰 금액은 <font color="aaccff">%AGIT_BID%</font> 아데나 입니다.
+입찰을 취소 시에는 세금을 제외한 <font color="aaccff">%AGIT_BID_REMAIN%</font> 아데나만 돌려 받을수 있습니다.
+입찰을 취소 하시겠습니까?<br>
 <img src="L2UI.SquareBlank" width=270 height=10>
 <img src="L2UI.SquareWhite" width=270 height=1>
 <img src="L2UI.SquareBlank" width=270 height=5>
 <table width=270 border=0>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="上一步" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=80 align=center><button action="bypass -h npc_%objectId%_doCancelBid" value="取消投標" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="이전" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_doCancelBid" value="입찰 취소" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 </body></html>
