@@ -1,29 +1,28 @@
-﻿<html><body>
+<html><body>
 <table width=270 border=0>
 <tr>
-<td width=90>最低投標價</td>
-<td width=180><font color="aaccff">%AGIT_AUCTION_MINBID%</font> 金幣</td>
+<td width=90>최소 입찰가</td>
+<td width=180><font color="aaccff">%AGIT_AUCTION_MINBID%</font> 아데나</td>
 </tr>
 <tr>
-<td>投標價</td>
-<td><font color="aaccff">%AGIT_AUCTION_BID%</font> 金幣</td>
+<td>입찰가</td>
+<td><font color="aaccff">%AGIT_AUCTION_BID%</font> 아데나</td>
 </tr>
 <tr>
-<td>拍賣結束日</td>
+<td>만료일</td>
 <td>%AGIT_AUCTION_END%</td>
 </tr>
 </table><br>
-在投標結束時，若想要提高投標價時，可以進行再次投標，若要取消投標時，則不可退還交易稅（<font color="LEVEL">投標價的10%</font>﹞。<br>
-在主選單的「我的出售商品」裡，可以進行再次投標及取消投標。<br>
-要進行投標嗎？<br>
+입찰금은 최소 입찰가보다 낮게 등록할 수 없으며, <font color="LEVEL">입찰을 취소 시에는 입찰가의 10%를 제외한 나머지 금액이 혈맹 창고로 반환 됩니다</font>.
+경매에 낙찰 받지 못하면 입찰했던 금액은 혈맹창고로 다시 반환됩니다. 입찰 하시겠습니까?<br>
 <img src="L2UI.SquareBlank" width=270 height=10>
 <img src="L2UI.SquareWhite" width=270 height=1>
 <img src="L2UI.SquareBlank" width=270 height=5>
 <table width=270 border=0>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="上一步" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=80 align=center><button action="bypass -h npc_%objectId%_bid1" value="確認已投標" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="이전" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_bid1" value="입찰" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 </body></html>

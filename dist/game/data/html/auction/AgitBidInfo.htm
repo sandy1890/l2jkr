@@ -1,30 +1,30 @@
-﻿<html><body>
-<center>在拍賣會上投標的根據地情報</center>
+<html><body>
+<center>경매에 참여한 혈맹 정보</center>
 <img src="L2UI.SquareWhite" width=270 height=1>
 <img src="L2UI.SquareBlank" width=1 height=3>
 <table width=280 border=0>
 <tr>
-<td width=14><font color="a2a0a2">根據地名字</font></td>
+<td width=14><font color="a2a0a2">아지트 이름</font></td>
 <td width=140><font color="b09979">%AGIT_NAME%</font></td>
 </tr>
 <tr>
-<td><font color="a2a0a2">所擁有的血盟</font></td>
+<td><font color="a2a0a2">소유 혈맹</font></td>
 <td><font color="b09979">%OWNER_PLEDGE_NAME%</font></td>
 </tr>
 <tr>
-<td><font color="a2a0a2">所擁有的血盟盟主</font></td>
+<td><font color="a2a0a2">소유 혈맹주</font></td>
 <td><font color="b09979">%OWNER_PLEDGE_MASTER%</font></td>
 </tr>
 <tr>
-<td><font color="a2a0a2">根據地規模</font></td>
-<td><font color="b09979">%AGIT_SIZE% 坪</font> [等級]</td>
+<td><font color="a2a0a2">크기</font></td>
+<td><font color="b09979">%AGIT_SIZE% rating</font> (그레이드)</td>
 </tr>
 <tr>
-<td><font color="a2a0a2">根據地租金</font></td>
-<td><font color="b09979">%AGIT_LEASE%</font> 金幣<font color="LEVEL">/1星期</font></td>
+<td><font color="a2a0a2">대여 비용</font></td>
+<td><font color="b09979">%AGIT_LEASE%</font> 아데나<font color="LEVEL">/주</font></td>
 </tr>
 <tr>
-<td><font color="a2a0a2">根據地位置</font></td>
+<td><font color="a2a0a2">아지트 위치</font></td>
 <td>%AGIT_LOCATION%</td>
 </tr>
 </table>
@@ -32,20 +32,20 @@
 <img src="L2UI.SquareBlank" width=1 height=3>
 <table width=280 border=0>
 <tr>
-<td width=140><font color="a2a0a2">拍賣結束日期</font></td>
+<td width=140><font color="a2a0a2">경매 종료일</font></td>
 <td width=140><font color="b09979">%AGIT_AUCTION_END%</font></td>
 </tr>
 <tr>
-<td><font color="a2a0a2">剩餘時間</font></td>
+<td><font color="a2a0a2">남은 시간</font></td>
 <td><font color="b09979">%AGIT_AUCTION_REMAIN%</font></td>
 </tr>
 <tr>
-<td><font color="a2a0a2">最低投標價</font></td>
-<td><font color="b09979">%AGIT_AUCTION_MINBID%</font> 金幣</td>
+<td><font color="a2a0a2">최소 입찰가</font></td>
+<td><font color="b09979">%AGIT_AUCTION_MINBID%</font> 아데나</td>
 </tr>
 <tr>
-<td><font color="ccc0cc">投標價</font></td>
-<td><font color="aaccff">%AGIT_AUCTION_MYBID%</font> 金幣</td>
+<td><font color="ccc0cc">내 입찰가</font></td>
+<td><font color="aaccff">%AGIT_AUCTION_MYBID%</font> 아데나</td>
 </tr>
 </table>
 <table width=280 border=0 bgcolor=333333>
@@ -57,13 +57,13 @@
 <table width=270 border=0>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="bypass -h npc_%objectId%_cancelBid" value="取消投標" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=80 align=center><button action="bypass -h npc_%objectId%_bidlist" value="投標者名單" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_cancelBid" value="취소" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_bidlist" value="입찰목록" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 <tr>
 <td width=110></td>
-<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="上一步" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td width=80 align=center><button action="bypass -h npc_%objectId%_rebid" value="再次投標" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="%AGIT_LINK_BACK%" value="이전" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td width=80 align=center><button action="bypass -h npc_%objectId%_rebid" value="재입찰" width=80 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
 </body></html>
