@@ -24,10 +24,15 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
+/**
+ * 비타민 매니저
+ */
 public class DimensionalMerchants extends Quest {
 	
-	private static final String qn = "DimensionalMerchants";
-	private static final int DIMENSIONAL_MERCHANT = 32478;
+	private static final String qn = "DimensionalMerchants"; // 생활의 활력 비타민 매니저
+	
+	// NPC
+	private static final int DIMENSIONAL_MERCHANT = 32478; // 비타민 매니저
 	
 	/**
 	 * @param questId
@@ -46,7 +51,6 @@ public class DimensionalMerchants extends Quest {
 		String htmltext = "";
 		htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		
 		if (event.equalsIgnoreCase("13017") || event.equalsIgnoreCase("13018") || event.equalsIgnoreCase("13019") || event.equalsIgnoreCase("13020")) {
 			// Player can either have an event coupon or a normal coupon, so first check for the normal one
 			long normalItem = st.getQuestItemsCount(13273);
@@ -100,9 +104,7 @@ public class DimensionalMerchants extends Quest {
 			Quest q = QuestManager.getInstance().getQuest(getName());
 			st = q.newQuestState(player);
 		}
-		
 		htmltext = "32478.htm";
-		
 		return htmltext;
 	}
 	
