@@ -116,7 +116,7 @@
 	<class classId="141" name="오셀로그" serverName="오셀로그" parentClassId="93" />
 	<class classId="142" name="율아처" serverName="율아처" parentClassId="92" />
 	<class classId="143" name="페오위저드" serverName="페오위저드" parentClassId="95" />
-	<class classId="144" name="윈서머너" serverName="윈서머너" parentClassId="98" />
-	<class classId="145" name="에오로힐러" serverName="에오로힐러" parentClassId="96" />
-	<class classId="146" name="이스인챈터" serverName="이스인챈터" parentClassId="97" />
+	<class classId="144" name="이스인챈터" serverName="이스인챈터" parentClassId="98" />
+	<class classId="145" name="윈서머너" serverName="윈서머너" parentClassId="96" />
+	<class classId="146" name="에오로힐러" serverName="에오로힐러" parentClassId="97" />
 </list>
