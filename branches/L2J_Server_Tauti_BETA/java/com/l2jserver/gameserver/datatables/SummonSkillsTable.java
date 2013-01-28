@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 
@@ -59,7 +60,7 @@ public class SummonSkillsTable {
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			try {
-				PreparedStatement statement = con.prepareStatement("SELECT id FROM npc WHERE type IN ('L2Pet','L2BabyPet','L2SiegeSummon') ORDER BY id");
+				PreparedStatement statement = con.prepareStatement(Config.CUSTOM_NPC_TABLE ? "SELECT id FROM npc WHERE type IN ('L2Pet','L2BabyPet','L2SiegeSummon') union distinct select id from custom_npc WHERE type IN ('L2Pet','L2BabyPet','L2SiegeSummon') ORDER BY id" : "SELECT id FROM npc WHERE type IN ('L2Pet','L2BabyPet','L2SiegeSummon') ORDER BY id");
 				ResultSet petlist = statement.executeQuery();
 				Map<Integer, L2PetSkillLearn> map;
 				L2PetSkillLearn skillLearn;
