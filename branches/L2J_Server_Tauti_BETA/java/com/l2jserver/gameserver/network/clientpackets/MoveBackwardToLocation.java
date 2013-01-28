@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.ExFlyMove;
 import com.l2jserver.gameserver.network.serverpackets.StopMove;
 import com.l2jserver.gameserver.util.Util;
 
@@ -35,6 +36,7 @@ import com.l2jserver.gameserver.util.Util;
  * @version $Revision: 1.11.2.4.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
 public class MoveBackwardToLocation extends L2GameClientPacket {
+	
 	private static final String _C__0F_MOVEBACKWARDTOLOC = "[C] 0F MoveBackwardToLoc";
 	
 	// cdddddd
@@ -59,8 +61,9 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
 	@Override
 	protected void readImpl() {
 		// Update by rocknow-Start
-		if (getClient().getActiveChar() == null)
+		if (getClient().getActiveChar() == null) {
 			return;
+		}
 		// Update by rocknow-End
 		_targetX = readD();
 		_targetY = readD();
@@ -81,16 +84,17 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0 && !activeChar.isGM() && activeChar.getNotMoveUntil() > System.currentTimeMillis()) {
+		if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !activeChar.isGM() && (activeChar.getNotMoveUntil() > System.currentTimeMillis())) {
 			activeChar.sendPacket(SystemMessageId.CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (_targetX == _originX && _targetY == _originY && _targetZ == _originZ) {
+		if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ)) {
 			activeChar.sendPacket(new StopMove(activeChar));
 			return;
 		}
@@ -108,30 +112,34 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
 		_curZ = activeChar.getZ();
 		
 		if (activeChar.getTeleMode() > 0) {
-			if (activeChar.getTeleMode() == 1)
+			if ((activeChar.getTeleMode() == 3) || (activeChar.getTeleMode() == 4)) {
+				if (activeChar.getTeleMode() == 3) {
+					activeChar.setTeleMode(0);
+				}
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), 1, _targetX, _targetY, _targetZ, -1));
+				activeChar.setXYZ(_targetX, _targetY, _targetZ);
+				return;
+			}
+			if (activeChar.getTeleMode() == 1) {
 				activeChar.setTeleMode(0);
+			}
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			activeChar.teleToLocation(_targetX, _targetY, _targetZ, false);
 			return;
 		}
 		
-		if (_moveMovement == 0 && !Config.ALLOW_KEYBOARD_MOVEMENT) // Update by rocknow
-		{
+		if ((_moveMovement == 0) && !Config.ALLOW_KEYBOARD_MOVEMENT) { // Update by rocknow
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		} else {
 			double dx = _targetX - _curX;
 			double dy = _targetY - _curY;
 			// Can't move if character is confused, or trying to move a huge distance
-			if (activeChar.isOutOfControl() || ((dx * dx + dy * dy) > 98010000)) // 9900*9900
-			{
+			if (activeChar.isOutOfControl() || (((dx * dx) + (dy * dy)) > 98010000)) { // 9900*9900
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(_targetX, _targetY, _targetZ, 0));
-			
-			/*
-			 * if (activeChar.getParty() != null) activeChar.getParty().broadcastToPartyMembers(activeChar, new PartyMemberPosition(activeChar));
-			 */
 		}
 	}
 	
@@ -139,4 +147,5 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
 	public String getType() {
 		return _C__0F_MOVEBACKWARDTOLOC;
 	}
+	
 }
