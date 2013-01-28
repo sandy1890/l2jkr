@@ -1216,6 +1216,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 							break;
 							case 0xb4:
 								msg = new RequestFlyMoveStart();
+							break;
 							case 0xc2:
 								msg = new RequestInzoneWaitingTime();
 							// rocknow-God-Awaking-End
