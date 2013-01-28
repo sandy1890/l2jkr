@@ -1445,7 +1445,7 @@
 			<effect name="ManaHealPercent" noicon="1" val="12" />
 		</for>
 	</skill>
-	<skill id="2487" levels="1" name="a,Item - Special Sound Crystal">
+	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />

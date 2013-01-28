@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="7000" levels="1" name="a,NPC Default">
+	<skill id="7000" levels="1" name="NPC Default">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -104,27 +104,27 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7009" levels="1" name="a,not_used">
+	<skill id="7009" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7010" levels="1" name="a,not_used">
+	<skill id="7010" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7011" levels="1" name="a,not_used">
+	<skill id="7011" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7012" levels="1" name="a,not_used">
+	<skill id="7012" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7013" levels="1" name="a,not_used">
+	<skill id="7013" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -175,27 +175,27 @@
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="7023" levels="1" name="a,not_used">
+	<skill id="7023" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7024" levels="1" name="a,not_used">
+	<skill id="7024" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7025" levels="1" name="a,not_used">
+	<skill id="7025" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7026" levels="1" name="a,not_used">
+	<skill id="7026" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7027" levels="1" name="a,not_used">
+	<skill id="7027" levels="1" name="not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -284,42 +284,42 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="20241" />
 	</skill>
-	<skill id="7033" levels="1" name="a,not_used">
+	<skill id="7033" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7034" levels="1" name="a,not_used">
+	<skill id="7034" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7035" levels="1" name="a,not_used">
+	<skill id="7035" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7036" levels="1" name="a,not_used">
+	<skill id="7036" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7037" levels="1" name="a,not_used">
+	<skill id="7037" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7038" levels="1" name="a,not_used">
+	<skill id="7038" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7039" levels="1" name="a,not_used">
+	<skill id="7039" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7040" levels="1" name="a,not_used">
+	<skill id="7040" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />

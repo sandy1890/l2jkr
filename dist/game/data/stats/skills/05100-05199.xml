@@ -51,7 +51,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5103" levels="1" name="a, a,none">
+	<skill id="5103" levels="1" name=" a,none">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
@@ -1269,7 +1269,7 @@
 			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="5178" levels="1" name="a,NPC Burn">
+	<skill id="5178" levels="1" name="NPC Burn">
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="38" />
 		<set name="power" val="116" />

@@ -78,13 +78,13 @@
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2008" levels="1" name="a,Item - Beast Spirit Shot">
+	<skill id="2008" levels="1" name="Item - Beast Spirit Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2009" levels="1" name="a,Item - Blessed Beast Spirit Shot">
+	<skill id="2009" levels="1" name="Item - Blessed Beast Spirit Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
@@ -270,7 +270,7 @@
 			<effect count="7" name="HealOverTime" abnormalTime="2" val="48" abnormalLvl="2" abnormalType="hp_recover" />
 		</for>
 	</skill>
-	<skill id="2033" levels="1" name="a,Item - Beast Soul Shot">
+	<skill id="2033" levels="1" name="Item - Beast Soul Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
@@ -615,49 +615,49 @@
 		<set name="castRange" val="40" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
-	<skill id="2066" levels="1" name="a,Item - Theme Sound Crystal">
+	<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2067" levels="1" name="a,Item - Theme Sound Crystal">
+	<skill id="2067" levels="1" name="Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2068" levels="1" name="a,Item - Race Sound Crystal">
+	<skill id="2068" levels="1" name="Item - Race Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2069" levels="1" name="a,Item - Race Sound Crystal">
+	<skill id="2069" levels="1" name="Item - Race Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2070" levels="1" name="a,Item - Race Sound Crystal">
+	<skill id="2070" levels="1" name="Item - Race Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2071" levels="1" name="a,Item - Race Sound Crystal">
+	<skill id="2071" levels="1" name="Item - Race Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2072" levels="1" name="a,Item - Race Sound Crystal">
+	<skill id="2072" levels="1" name="Item - Race Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2073" levels="1" name="a,Item - Theme Sound Crystal">
+	<skill id="2073" levels="1" name="Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />

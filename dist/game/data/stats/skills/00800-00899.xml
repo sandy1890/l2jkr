@@ -52,7 +52,7 @@
 			<mul order="0x30" stat="critVuln" val="0.95" />
 		</for>
 	</skill>
-	<skill id="805" levels="1" name="a,not used">
+	<skill id="805" levels="1" name="not used">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />

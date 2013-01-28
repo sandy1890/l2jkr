@@ -1344,30 +1344,30 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2581" levels="1" name="a,not_used">
+	<skill id="2581" levels="1" name="not_used">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2582" levels="1" name="a,not_used">
+	<skill id="2582" levels="1" name="not_used">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2583" levels="1" name="a,not_used">
+	<skill id="2583" levels="1" name="not_used">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2584" levels="1" name="a,Item - Special Sound Crystal">
+	<skill id="2584" levels="1" name="Item - Special Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2585" levels="1" name="a,Item - Special Sound Crystal">
+	<skill id="2585" levels="1" name="Item - Special Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
