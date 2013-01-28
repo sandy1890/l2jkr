@@ -13,7 +13,13 @@
 									<xs:attribute name="y" type="xs:integer" use="required" />
 									<xs:attribute name="z" type="xs:integer" use="required" />
 								</xs:complexType>
-							</xs:element>						</xs:sequence>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="zone" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string" />
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="trackId" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:integer" />
