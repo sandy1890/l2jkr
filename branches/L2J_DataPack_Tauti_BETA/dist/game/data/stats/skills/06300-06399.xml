@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6300" levels="1" name="Self-Destruction">
+	<skill id="6300" levels="1" name="자폭">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="element" val="1" /> <!-- Water -->
@@ -18,7 +18,7 @@
 			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="6662" />
 		</for>
 	</skill>
-	<skill id="6301" levels="2" name="Cold Mana's Fragment">
+	<skill id="6301" levels="2" name="차가운 마나의 파편">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<table name="#mdot"> 300 150 </table>
@@ -38,7 +38,7 @@
 			<effect count="2" name="ManaDamOverTime" abnormalTime="5" val="#mdot" abnormalLvl="#abnormalLvl" abnormalType="force_meditation" />
 		</for>
 	</skill>
-	<skill id="6302" levels="1" name="Cold Air">
+	<skill id="6302" levels="1" name="냉기">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6662 and 6698) -->
 		<set name="aggroPoints" val="1" />
@@ -55,7 +55,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6303" levels="1" name="Trial of the Coup">
+	<skill id="6303" levels="1" name="시련의 일격">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -72,7 +72,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6304" levels="1" name="Shock">
+	<skill id="6304" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -96,7 +96,7 @@
 			<effect name="Stun" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="6305" levels="1" name="Sacred Gnosis">
+	<skill id="6305" levels="1" name="신성한 계시">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="coolTime" val="500" />
@@ -112,7 +112,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="6306" levels="1" name="Solina Strike">
+	<skill id="6306" levels="1" name="구원의 일격">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -138,7 +138,7 @@
 			<effect count="3" name="DamOverTime" abnormalTime="3" val="417" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" />
 		</for>
 	</skill>
-	<skill id="6307" levels="1" name="Opus of the Hand">
+	<skill id="6307" levels="1" name="구도의 손길">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -158,7 +158,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6308" levels="1" name="Opus of the Wave">
+	<skill id="6308" levels="1" name="구도의 전파">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="900" />
@@ -178,7 +178,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6309" levels="1" name="Pain of the Ascetic">
+	<skill id="6309" levels="1" name="고행의 고통">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -198,7 +198,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6310" levels="1" name="Loss of Quest">
+	<skill id="6310" levels="1" name="수행의 방황">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -219,7 +219,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="6311" levels="1" name="Solina Thrust">
+	<skill id="6311" levels="1" name="솔리나 찌르기">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -236,7 +236,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6312" levels="1" name="Launch Sacred Sword Energy">
+	<skill id="6312" levels="1" name="신성 검기 발사">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="900" />
@@ -254,7 +254,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6313" levels="1" name="Solina Bless">
+	<skill id="6313" levels="1" name="솔리나 은총">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="aggroPoints" val="1" />
@@ -277,7 +277,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6314" levels="1" name="Sacred Judgement">
+	<skill id="6314" levels="1" name="신성 심판">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="900" />
@@ -297,7 +297,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6315" levels="1" name="Sacred Strike">
+	<skill id="6315" levels="1" name="신성 일격">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -314,7 +314,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6316" levels="1" name="Accomplish of Authority">
+	<skill id="6316" levels="1" name="권능의 실현">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="aggroPoints" val="100" />
@@ -332,7 +332,7 @@
 			<effect name="HealPercent" noicon="1" val="15" />
 		</for>
 	</skill>
-	<skill id="6317" levels="1" name="Sacred Tacit">
+	<skill id="6317" levels="1" name="신성 묵인">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -352,7 +352,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6318" levels="1" name="Divine Shield Protection">
+	<skill id="6318" levels="1" name="신성물리보호">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="aggroPoints" val="1" />
@@ -372,7 +372,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6319" levels="1" name="Sacred Magic Protection">
+	<skill id="6319" levels="1" name="신성마법보호">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="aggroPoints" val="1" />
@@ -392,7 +392,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6320" levels="1" name="Summon Sacred Magic Force">
+	<skill id="6320" levels="1" name="신성마법진소환">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="hitTime" val="2000" />
@@ -415,7 +415,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6321" levels="1" name="Divine Flash">
+	<skill id="6321" levels="1" name="디바인 플레쉬">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -435,7 +435,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6322" levels="1" name="Divine Impact">
+	<skill id="6322" levels="1" name="디바인 임펙트">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -455,7 +455,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6323" levels="1" name="Divine Bolt">
+	<skill id="6323" levels="1" name="디바인 볼트">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -469,7 +469,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6324" levels="1" name="Divine Strike">
+	<skill id="6324" levels="1" name="디바인 스트라이크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -487,7 +487,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6325" levels="1" name="Divine Nova">
+	<skill id="6325" levels="1" name="디바인 노바">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
@@ -505,7 +505,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="6326" levels="1" name="Martyr's Happiness">
+	<skill id="6326" levels="1" name="순교자의 기쁨">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -521,7 +521,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="6327" levels="1" name="Sacred Worship">
+	<skill id="6327" levels="1" name="신성 예배">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -538,7 +538,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6328" levels="1" name="Fighter Judgement">
+	<skill id="6328" levels="1" name="투사 심판">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="900" />
@@ -558,7 +558,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6329" levels="1" name="Fighter Strike">
+	<skill id="6329" levels="1" name="투사 일격">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
@@ -575,7 +575,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6330" levels="1" name="Salmon Porridge Attack">
+	<skill id="6330" levels="1" name="연어죽 공격">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
@@ -590,7 +590,7 @@
 			<effect name="HealPercent" noicon="1" val="5" />
 		</for>
 	</skill>
-	<skill id="6331" levels="1" name="Camp Fire Tired">
+	<skill id="6331" levels="1" name="모닥불 노곤함">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="hitTime" val="1000" />
@@ -610,7 +610,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6332" levels="1" name="Camp Fire Full">
+	<skill id="6332" levels="1" name="모닥불 배부름">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="hitTime" val="1000" />
@@ -631,7 +631,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6333" levels="1" name="Electric Bolt 1">
+	<skill id="6333" levels="1" name="일렉트릭 볼트 1">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
@@ -655,7 +655,7 @@
 			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" effectType="BLEED" />
 		</for>
 	</skill>
-	<skill id="6334" levels="1" name="Shock">
+	<skill id="6334" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
@@ -677,7 +677,7 @@
 			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="40" effectType="STUN" />
 		</for>
 	</skill>
-	<skill id="6335" levels="1" name="Electric Rain 1">
+	<skill id="6335" levels="1" name="일렉트릭 레인 1">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="900" />
@@ -692,7 +692,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6336" levels="1" name="Electric Rain 2">
+	<skill id="6336" levels="1" name="일렉트릭 레인 2">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="900" />
@@ -707,7 +707,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="6337" levels="1" name="Red Slash 1">
+	<skill id="6337" levels="1" name="붉은 베기 1">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
@@ -722,7 +722,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6338" levels="1" name="Red Slash 2">
+	<skill id="6338" levels="1" name="붉은 베기 2">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
@@ -737,7 +737,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6339" levels="1" name="Sacred Hammer Attack">
+	<skill id="6339" levels="1" name="신성한 헤머 공격">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="600" />
@@ -762,7 +762,7 @@
 			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" effectType="BLEED" />
 		</for>
 	</skill>
-	<skill id="6340" levels="1" name="Shock">
+	<skill id="6340" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
@@ -785,7 +785,7 @@
 			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="1" effectType="STUN" />
 		</for>
 	</skill>
-	<skill id="6341" levels="1" name="Stronghold Water Cannon">
+	<skill id="6341" levels="1" name="거점 워터 캐논">
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="500" />
 		<set name="target" val="TARGET_AREA" />
@@ -799,7 +799,7 @@
 		<set name="effectRange" val="900" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="6342" levels="1" name="Trap Over Steam">
+	<skill id="6342" levels="1" name="증기 위의 함정">
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
@@ -810,7 +810,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
 	</skill>
-	<skill id="6343" levels="2" name="Maguen Plasma - Power">
+	<skill id="6343" levels="2" name="마구엔 플라즈마 - 강력">
 		<table name="#mAtk"> 1.08 1.15 </table>
 		<table name="#pAtk"> 1.02 1.03 </table>
 		<set name="target" val="TARGET_AREA" />
@@ -832,7 +832,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6365" levels="2" name="Maguen Plasma - Speed">
+	<skill id="6365" levels="2" name="마구엔 플라즈마 - 신속">
 		<table name="#pmAtkSpd"> 1.04 1.08 </table>
 		<table name="#runSpd"> 5 10 </table>
 		<set name="target" val="TARGET_AREA" />
@@ -855,7 +855,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6366" levels="2" name="Maguen Plasma - Critical">
+	<skill id="6366" levels="2" name="마구엔 플라즈마 - 치명">
 		<table name="#rCrit"> 0.04 0.08 </table>
 		<table name="#cAtk"> 1.05 1.1 </table>
 		<table name="#mCritRate"> 0.02 0.04 </table>
@@ -880,28 +880,28 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
+	<skill id="6367" levels="3" name="마구엔 플라즈마 - 비스타콘">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6368" levels="3" name="Maguen Plasma - Cokrakon">
+	<skill id="6368" levels="3" name="마구엔 플라즈마 - 코크라콘">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6369" levels="3" name="Maguen Plasma - Reptilikon">
+	<skill id="6369" levels="3" name="마구엔 플라즈마 - 렙틸리콘">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6370" levels="1" name="Thunderbolt">
+	<skill id="6370" levels="1" name="뇌전">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -910,20 +910,20 @@
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
 	</skill>
-	<skill id="6371" levels="1" name="Invincibility">
+	<skill id="6371" levels="1" name="무적">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 	</skill>
-	<skill id="6372" levels="10" name="Power Up">
+	<skill id="6372" levels="10" name="파워 업">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6373" levels="1" name="Thunderbolt">
+	<skill id="6373" levels="1" name="뇌전">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -932,40 +932,40 @@
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
 	</skill>
-	<skill id="6374" levels="1" name="Notification">
+	<skill id="6374" levels="1" name="알림 - 뇌전">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6375" levels="1" name="Notification">
+	<skill id="6375" levels="1" name="알림 - 뇌전">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6376" levels="9" name="Sonic Strike">
+	<skill id="6376" levels="9" name="소닉 스트라이크">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="6377" levels="10" name="Assault Boost">
+	<skill id="6377" levels="10" name="스피드 업">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6378" levels="1" name="Earth Shift">
+	<skill id="6378" levels="1" name="어스 바이브레이션">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="6379" levels="1" name="Blood Spurt">
+	<skill id="6379" levels="1" name="크리티컬 히트">
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
@@ -977,7 +977,7 @@
 		<set name="lvlDepend" val="2" />
 		<set name="trait" val="BLEED" />
 	</skill>
-	<skill id="6380" levels="1" name="Bistakon Roar">
+	<skill id="6380" levels="1" name="비스타콘 로어">
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -997,7 +997,7 @@
 			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="6381" levels="2" name="Bistakon Soul Beam">
+	<skill id="6381" levels="2" name="비스타콘 소울 빔">
 		<table name="#abnormalLvl"> 1 2 </table>
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1019,7 +1019,7 @@
 			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="6382" levels="1" name="Bistakon Rolling Claw">
+	<skill id="6382" levels="1" name="비스타콘 롤링 크로">
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="isDebuff" val="true" />
@@ -1040,7 +1040,7 @@
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
+	<skill id="6383" levels="1" name="비스타콘 데들리 로어">
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -1061,7 +1061,7 @@
 			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="6384" levels="2" name="Bistakon Deadly Blow">
+	<skill id="6384" levels="2" name="비스타콘 데들리 블로우">
 		<table name="#power"> 9125 13688 </table>
 		<set name="castRange" val="60" />
 		<set name="effectRange" val="500" />
@@ -1074,7 +1074,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6385" levels="1" name="Bistakon Critical Claw">
+	<skill id="6385" levels="1" name="비스타콘 크리티컬 크로">
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
@@ -1096,7 +1096,7 @@
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="6386" levels="1" name="Bistakon Earth Rise">
+	<skill id="6386" levels="1" name="비스타콘 어스 라이즈">
 		<set name="castRange" val="60" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2500" />
@@ -1116,7 +1116,7 @@
 			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="6387" levels="1" name="Bistakon Earthquake">
+	<skill id="6387" levels="1" name="비스타콘 어스 퀘이크">
 		<set name="baseCritRate" val="15" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -1136,7 +1136,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="6388" levels="1" name="Bistakon Jump Blow">
+	<skill id="6388" levels="1" name="비스타콘 점프 블로우">
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="500" />
 		<set name="magicLvl" val="85" />
@@ -1148,7 +1148,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="6389" levels="1" name="Cokrakon Sonic Cage">
+	<skill id="6389" levels="1" name="코크라콘 소닉 케이지">
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="isDebuff" val="true" />
@@ -1166,7 +1166,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6390" levels="1" name="Cokrakon Sonic Explosion">
+	<skill id="6390" levels="1" name="코크라콘 소닉 익스플로젼">
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1185,7 +1185,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6391" levels="1" name="Cokrakon Sonic Slash">
+	<skill id="6391" levels="1" name="코크라콘 소닉 슬래시">
 		<set name="castRange" val="60" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2500" />
@@ -1205,7 +1205,7 @@
 			<effect name="Stun" abnormalTime="5" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="6392" levels="1" name="Cokrakon Sonic Shot">
+	<skill id="6392" levels="1" name="코크라콘 소닉 샷">
 		<!-- Attack Speed is decreased by 50%. -->
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
@@ -1227,7 +1227,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6393" levels="1" name="Cokrakon Sonic Beam">
+	<skill id="6393" levels="1" name="코크라콘 소닉 빔">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
@@ -1240,7 +1240,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
-	<skill id="6394" levels="1" name="Cokrakon Sonic Bomb">
+	<skill id="6394" levels="1" name="코크라콘 소닉 봄">
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
@@ -1252,7 +1252,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="skillRadius" val="300" />
 	</skill>
-	<skill id="6395" levels="1" name="Cokrakon Dreadful Clow">
+	<skill id="6395" levels="1" name="코크라콘 드레드풀 클로">
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
@@ -1274,7 +1274,7 @@
 			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="6396" levels="1" name="Cokrakon Panic">
+	<skill id="6396" levels="1" name="코크라콘 소닉 블렛">
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
@@ -1295,7 +1295,7 @@
 			<effect count="3" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="6397" levels="1" name="Cokrakon Staggering Blow">
+	<skill id="6397" levels="1" name="코크라콘 드레드풀 블로우">
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
@@ -1315,7 +1315,7 @@
 			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">
+	<skill id="6398" levels="1" name="코크라콘 소닉 샤우트">
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1335,7 +1335,7 @@
 			<effect count="2" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="6399" levels="1" name="Cokrakon Dreadful Piercing">
+	<skill id="6399" levels="1" name="코크라콘 드레드풀 피어싱">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />

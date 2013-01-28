@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5900" levels="1" name="Burst of Oblivion">
+	<skill id="5900" levels="1" name="버스트 오브 오블리비언">
 		<!-- Update by pmq -->
 		<set name="magicLvl" val="76" /> <!-- Test -->
 		<set name="target" val="TARGET_ONE" />
@@ -20,7 +20,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectType="DEBUFF" effectPower="50" />
 		</for>
 	</skill>
-	<skill id="5901" levels="2" name="Mist of Oblivion">
+	<skill id="5901" levels="2" name="미스트 오브 오블리비언">
 		<table name="#hitTime"> 2000 22940 </table>
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -31,7 +31,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
+	<skill id="5902" levels="1" name="NPC 트리거 타겟켄슬">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="isTriggeredSkill" val="true" />
@@ -43,7 +43,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="5903" levels="1" name="Burst of Misplace">
+	<skill id="5903" levels="1" name="버스트 오브 미스플레이스">
 		<set name="mpConsume" val="74" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -61,7 +61,7 @@
 			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
-	<skill id="5904" levels="3" name="Mist of Souleater">
+	<skill id="5904" levels="3" name="미스트 오브 소울이터">
 		<table name="#magicLvl"> 77 81 83 </table>
 		<table name="#power"> 112 117 120 </table>
 		<table name="#mpInitialConsume"> 37 38 39 </table>
@@ -81,7 +81,7 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="skillRadius" val="300" />
 	</skill>
-	<skill id="5905" levels="1" name="Confusing Nuph">
+	<skill id="5905" levels="1" name="콘퓨징 너브">
 		<!-- Update by pmq -->
 		<set name="magicLvl" val="76" />
 		<set name="lvlDepend" val="2" />
@@ -100,14 +100,14 @@
 			<effect name="Mute" abnormalTime="30" val="0" />
 		</for>
 	</skill>
-	<skill id="5906" levels="1" name="Ritual of Revive">
+	<skill id="5906" levels="1" name="리츄얼 오브 리바이브">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
-	<skill id="5907" levels="2" name="Ritual of Entombment">
+	<skill id="5907" levels="2" name="리츄얼 오브 인툼먼트">
 		<table name="#hitTime"> 3000 34400 </table>
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -117,7 +117,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="5908" levels="2" name="Ritual of Entombment">
+	<skill id="5908" levels="2" name="리츄얼 오브 인툼먼트">
 		<table name="#hitTime"> 3000 34400 </table>
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -127,7 +127,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="5909" levels="1" name="Stronghold Attack">
+	<skill id="5909" levels="1" name="거점 공격">
 		<set name="power" val="3000" /> <!-- FIXME: value unconfirmed -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" /> <!-- FIXME: value unconfirmed -->
@@ -138,7 +138,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
-	<skill id="5910" levels="1" name="Stronghold Attack">
+	<skill id="5910" levels="1" name="거점 공격">
 		<set name="power" val="5000" /> <!-- FIXME: value unconfirmed -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" /> <!-- FIXME: value unconfirmed -->
@@ -149,7 +149,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
-	<skill id="5911" levels="1" name="Pestilence Cleanse">
+	<skill id="5911" levels="1" name="페스틸렌스 글랜드">
 		<!-- Update by pmq -->
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="900" />
@@ -170,7 +170,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5912" levels="1" name="Pestilence Cleanse">
+	<skill id="5912" levels="1" name="페스틸렌스 글랜드">
 		<!-- Update by pmq -->
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="900" />
@@ -192,7 +192,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5913" levels="1" name="Putrefection Cleanse">
+	<skill id="5913" levels="1" name="퓨트리팩션 글랜드">
 		<!-- Update by pmq -->
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="900" />
@@ -212,7 +212,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5914" levels="1" name="Putrefaction Cleanse">
+	<skill id="5914" levels="1" name="퓨트리팩션 글랜드">
 		<!-- Update by pmq -->
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="900" />
@@ -233,30 +233,30 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5915" levels="9" name="Mummifying Aura">
+	<skill id="5915" levels="9" name="머미파잉 오라">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5916" levels="9" name="Cruising Aura">
+	<skill id="5916" levels="9" name="그루징 오라">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5917" levels="9" name="Shrouding Aura">
+	<skill id="5917" levels="9" name="슈라우딩 오라">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5918" levels="9" name="Physical Root Weakness">
+	<skill id="5918" levels="9" name="물리적 루트에 약함">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5919" levels="1" name="Obey">
+	<skill id="5919" levels="1" name="복종">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="castRange" val="300" />
@@ -275,7 +275,7 @@
 			<effect name="BlockResurrection" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="block_resurrection" />
 		</for>
 	</skill>
-	<skill id="5920" levels="1" name="Tentacle of Agony">
+	<skill id="5920" levels="1" name="텐타클 오브 애고니">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="coolTime" val="2000" />
@@ -292,7 +292,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5921" levels="1" name="Inhale">
+	<skill id="5921" levels="1" name="인헤일">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
@@ -322,7 +322,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5922" levels="1" name="Exhale">
+	<skill id="5922" levels="1" name="익스헤일">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="castRange" val="600" />
@@ -348,7 +348,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5923" levels="1" name="Soul Retain">
+	<skill id="5923" levels="1" name="소울 리테인">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -356,14 +356,14 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="5924" levels="1" name="Devour Soul">
+	<skill id="5924" levels="1" name="디바우어 소울">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
 	</skill>
-	<skill id="5925" levels="1" name="Goring Charge">
+	<skill id="5925" levels="1" name="고어링 차지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="DA1" />
@@ -372,34 +372,34 @@
 			<target mindistance="200" />
 		</cond>
 	</skill>
-	<skill id="5926" levels="1" name="Breath Corruption">
+	<skill id="5926" levels="1" name="브레스 커럽션">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
-	<skill id="5927" levels="4" name="Immortal Frenzy">
+	<skill id="5927" levels="4" name="임모탈 프렌지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5928" levels="4" name="Immortal Resilience">
+	<skill id="5928" levels="4" name="임모탈 레질런스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5929" levels="1" name="Pairing of the Lost">
+	<skill id="5929" levels="1" name="패링 오브 더 로스트">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5930" levels="1" name="Shielding of the Lost">
+	<skill id="5930" levels="1" name="실딩 오브 더 로스트">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5931" levels="1" name="Ultimate Shield">
+	<skill id="5931" levels="1" name="얼티미트 실드">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="magicLvl" val="85" />
@@ -411,7 +411,7 @@
 			<effect name="Invincible" abnormalTime="-1" val="0" />
 		</for>
 	</skill>
-	<skill id="5932" levels="1" name="Dark Blade">
+	<skill id="5932" levels="1" name="다크 블레이드">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
@@ -428,7 +428,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
-	<skill id="5933" levels="1" name="Dark Blade">
+	<skill id="5933" levels="1" name="다크 블레이드">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
@@ -445,13 +445,13 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
-	<skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
+	<skill id="5934" levels="1" name="어둠의 영혼에 맞서 싸우는자">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5935" levels="1" name="Dark Ring">
+	<skill id="5935" levels="1" name="다크 링">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
@@ -468,7 +468,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5936" levels="1" name="Earth Ring">
+	<skill id="5936" levels="1" name="어스 링">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
@@ -485,58 +485,58 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5937" levels="1" name="Self Stun">
+	<skill id="5937" levels="1" name="셀프 스턴">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5938" levels="1" name="Attack Ability Up">
+	<skill id="5938" levels="1" name="공격능력 업">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5939" levels="5" name="Defense Ability Up">
+	<skill id="5939" levels="5" name="방어능력 업">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5940" levels="12" name="Energy of Generation">
+	<skill id="5940" levels="12" name="재생의 기운">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5941" levels="1" name="Energy of Erosion">
+	<skill id="5941" levels="1" name="침식의 기운">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5942" levels="1" name="Energy of Pollution">
+	<skill id="5942" levels="1" name="오염의 기운">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5943" levels="1" name="Energy of Contamination">
+	<skill id="5943" levels="1" name="부패의 기운">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5944" levels="1" name="Energy of Oblivion">
+	<skill id="5944" levels="1" name="망각의 기운">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5945" levels="1" name="Region2 Rotation5">
+	<skill id="5945" levels="1" name="2지역 순환5">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5946" levels="1" name="Large Firework">
+	<skill id="5946" levels="1" name="대폭죽">
 		<!-- Update by pmq -->
 		<set name="itemConsumeId" val="6407" />
 		<set name="itemConsumeCount" val="1" />
@@ -546,7 +546,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="staticReuse" val="true" />
 	</skill>
-	<skill id="5947" levels="1" name="Large Firework">
+	<skill id="5947" levels="1" name="대폭죽">
 		<!-- Update by pmq -->
 		<set name="itemConsumeId" val="6407" />
 		<set name="itemConsumeCount" val="1" />
@@ -556,14 +556,14 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="staticReuse" val="true" />
 	</skill>
-	<skill id="5948" levels="1" name="Large Firework">
+	<skill id="5948" levels="1" name="대폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
-	<skill id="5949" levels="1" name="Large Firework">
+	<skill id="5949" levels="1" name="대폭죽">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -573,7 +573,7 @@
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
 	</skill>
-	<skill id="5950" levels="1" name="Birthday Cake">
+	<skill id="5950" levels="1" name="생일 축하 선물">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -590,28 +590,28 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5951" levels="1" name="Agathion's Blessing">
+	<skill id="5951" levels="1" name="아가시온의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
-	<skill id="5952" levels="1" name="Agathion's Blessing">
+	<skill id="5952" levels="1" name="아가시온의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
-	<skill id="5953" levels="1" name="Agathion's Blessing">
+	<skill id="5953" levels="1" name="아가시온의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 	</skill>
-	<skill id="5954" levels="1" name="Agathion Cute Trick - Tin Plate Golem">
+	<skill id="5954" levels="1" name="아가시온 큐트 트릭 - 양철 골렘">
 		<!-- Update by pmq -->
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A1" />
@@ -624,7 +624,7 @@
 			<player agathionId="13162" />
 		</cond>
 	</skill>
-	<skill id="5955" levels="1" name="Agathion Cute Trick - Joy">
+	<skill id="5955" levels="1" name="아가시온 큐트 트릭 - 기쁨">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -633,7 +633,7 @@
 			<player agathionId="16056" />
 		</cond>
 	</skill>
-	<skill id="5956" levels="1" name="Agathion Cute Trick - Anger">
+	<skill id="5956" levels="1" name="아가시온 큐트 트릭 - 분노">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -642,7 +642,7 @@
 			<player agathionId="16058" />
 		</cond>
 	</skill>
-	<skill id="5957" levels="1" name="Agathion Cute Trick - Sorrow">
+	<skill id="5957" levels="1" name="아가시온 큐트 트릭 - 슬픔">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -651,7 +651,7 @@
 			<player agathionId="16057" />
 		</cond>
 	</skill>
-	<skill id="5958" levels="1" name="Agathion Cute Trick - Teddy Bear Boy">
+	<skill id="5958" levels="1" name="아가시온 큐트 트릭 - 테디 베어군">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -660,7 +660,7 @@
 			<player agathionId="16059" />
 		</cond>
 	</skill>
-	<skill id="5959" levels="1" name="Agathion Cute Trick - Teddy Bear Girl">
+	<skill id="5959" levels="1" name="아가시온 큐트 트릭 - 테디 베어양">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -669,7 +669,7 @@
 			<player agathionId="16060" />
 		</cond>
 	</skill>
-	<skill id="5960" levels="1" name="Stronghold Reactivate">
+	<skill id="5960" levels="1" name="거점 재가동">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -677,7 +677,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
-	<skill id="5961" levels="1" name="Barrier Thunder Storm">
+	<skill id="5961" levels="1" name="배리어 썬더 스톰">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -686,32 +686,32 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="5962" levels="1" name="Air Defense Cannon">
+	<skill id="5962" levels="1" name="방공 캐논">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="7000" />
 	</skill>
-	<skill id="5963" levels="1" name="Emery Conversion">
+	<skill id="5963" levels="1" name="에머리 변환">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="5964" levels="1" name="Fairy Flame">
+	<skill id="5964" levels="1" name="요정불꽃">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5965" levels="1" name="Firework">
+	<skill id="5965" levels="1" name="폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="500" />
 	</skill>
-	<skill id="5966" levels="1" name="Large Firework">
+	<skill id="5966" levels="1" name="대폭죽">
 		<!-- Update by pmq -->
 		<set name="itemConsumeId" val="6407" />
 		<set name="itemConsumeCount" val="1" />
@@ -721,7 +721,7 @@
 		<set name="reuseDelay" val="1500" />
 		<set name="staticReuse" val="true" />
 	</skill>
-	<skill id="5967" levels="2" name="Hate Aura">
+	<skill id="5967" levels="2" name="헤이트 오라">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -730,7 +730,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="5968" levels="2" name="Rapid Shot">
+	<skill id="5968" levels="2" name="래피드 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 2 5 </table>
 		<table name="#mpConsume"> 11 20 </table>
@@ -748,7 +748,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5969" levels="2" name="Punch of Doom">
+	<skill id="5969" levels="2" name="펀치 오브 둠">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A3" />
@@ -760,7 +760,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="440" />
 	</skill>
-	<skill id="5970" levels="1" name="Seduced Knight's Help">
+	<skill id="5970" levels="1" name="현혹된 나이트의 도움">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -768,7 +768,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5971" levels="1" name="Seduced Ranger's Help">
+	<skill id="5971" levels="1" name="현혹된 레인져의 도움">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -776,7 +776,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5972" levels="1" name="Seduced Wizard's Help">
+	<skill id="5972" levels="1" name="현혹된 위저드의 도움">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -784,7 +784,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5973" levels="1" name="Seduced Warrior's Help">
+	<skill id="5973" levels="1" name="현혹된 워리어의 도움">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -792,14 +792,14 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5974" levels="1" name="Tiat Transformation">
+	<skill id="5974" levels="1" name="티아트 변신">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="7900" />
 	</skill>
-	<skill id="5975" levels="3" name="Dark Attack">
+	<skill id="5975" levels="3" name="다크 어택">
 		<table name="#magicLvl"> 51 61 79 </table>
 		<table name="#mpConsume"> 50 61 75 </table>
 		<table name="#power"> 1515 2365 6059 </table>
@@ -814,7 +814,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5976" levels="3" name="Dark Storm">
+	<skill id="5976" levels="3" name="다크 스톰">
 		<table name="#magicLvl"> 51 61 79 </table>
 		<table name="#mpConsume"> 50 61 75 </table>
 		<table name="#power"> 757 1182 4039 </table>
@@ -828,14 +828,14 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5977" levels="3" name="Dark Strike">
+	<skill id="5977" levels="3" name="다크 스트라이크">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="5978" levels="1" name="Death Strike">
+	<skill id="5978" levels="1" name="데블 스트라이크">
 		<!-- update by pmq -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
@@ -844,14 +844,14 @@
 		<set name="hitTime" val="1000" />
 		<set name="staticHitTime" val="true" />
 	</skill>
-	<skill id="5979" levels="1" name="Forced Move">
+	<skill id="5979" levels="1" name="강제 이동">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="2500" />
 	</skill>
-	<skill id="5980" levels="3" name="Seal Isolation">
+	<skill id="5980" levels="3" name="봉인 차단">
 		<!-- update by pmq -->
 		<set name="magicLvl" val="74" />
 		<set name="power" val="100" />
@@ -866,13 +866,13 @@
 		<set name="effectRange" val="1200" />
 		<set name="mpConsume" val="80" />
 	</skill>
-	<skill id="5981" levels="3" name="Lilith's Curse">
+	<skill id="5981" levels="3" name="릴리스의 저주">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5982" levels="1" name="Aura Bird - Falcon">
+	<skill id="5982" levels="1" name="오라버드 - 팔콘">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="75" />
 		<set name="target" val="TARGET_ONE" />
@@ -891,7 +891,7 @@
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->
 		</for>
 	</skill>
-	<skill id="5983" levels="1" name="Aura Bird - Owl">
+	<skill id="5983" levels="1" name="오라버드 - 오울">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="75" />
 		<set name="target" val="TARGET_ONE" />
@@ -910,26 +910,26 @@
 			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation has unlimited time -->
 		</for>
 	</skill>
-	<skill id="5984" levels="1" name="Hand of Death">
+	<skill id="5984" levels="1" name="죽음의 손길">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="1" />
 	</skill>
-	<skill id="5985" levels="9" name="Decaying Aura">
+	<skill id="5985" levels="9" name="디케잉 오라">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5986" levels="9" name="Vampiric Aura">
+	<skill id="5986" levels="9" name="뱀피릭 오라">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5987" levels="1" name="Weapon Maintenance">
+	<skill id="5987" levels="1" name="웨폰 메인터넌스">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="467" />
 		<set name="coolTime" val="500" />
@@ -956,7 +956,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5988" levels="1" name="Armor Maintenance">
+	<skill id="5988" levels="1" name="아머 메인터넌스">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="438" />
 		<set name="coolTime" val="500" />
@@ -988,14 +988,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5989" levels="1" name="Invincible">
+	<skill id="5989" levels="1" name="무적">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="3500" />
 	</skill>
-	<skill id="5990" levels="3" name="Lesser Heal">
+	<skill id="5990" levels="3" name="라이더 힐">
 		<!-- Update by pmq -->
 		<table name="#power"> 817 839 867 </table>
 		<table name="#mpInitialConsume"> 17 17 18 </table>
@@ -1010,7 +1010,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL" />
 	</skill>
-	<skill id="5991" levels="1" name="Presentation - Summon Tiat">
+	<skill id="5991" levels="1" name="연출 - 티아트 소환">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -1018,7 +1018,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="hitTime" val="11760" />
 	</skill>
-	<skill id="5992" levels="12" name="NPC Hate">
+	<skill id="5992" levels="12" name="헤이트">
 		<!-- Update by pmq -->
 		<table name="#power"> 3594 3690 3787 3885 3982 4080 4178 4276 4374 4471 4568 4665 </table>
 		<set name="mpConsume" val="51" />
@@ -1035,7 +1035,7 @@
 			<effect name="TargetMe" time="3" val="0" />
 		</for>
 	</skill>
-	<skill id="5993" levels="1" name="Command of Anger">
+	<skill id="5993" levels="1" name="커맨드 오브 앵커">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
 		<set name="hitTime" val="2000" />
@@ -1057,7 +1057,7 @@
 			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
 		</for>
 	</skill>
-	<skill id="5994" levels="1" name="Effect of Doubt">
+	<skill id="5994" levels="1" name="의문의 효과">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -1071,27 +1071,27 @@
 			<effect name="BigHead" abnormalTime="1800" val="0" abnormalVisualEffect="bighead" abnormalLvl="1" abnormalType="big_head" />
 		</for>
 	</skill>
-	<skill id="5995" levels="1" name="not_used">
+	<skill id="5995" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5996" levels="1" name="not_used">
+	<skill id="5996" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5997" levels="1" name="not_used">
+	<skill id="5997" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5998" levels="1" name="not_used">
+	<skill id="5998" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5999" levels="1" name="not_used">
+	<skill id="5999" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />

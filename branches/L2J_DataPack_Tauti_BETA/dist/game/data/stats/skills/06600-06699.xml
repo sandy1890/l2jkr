@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6600" levels="28" name="NPC earth attack">
+	<skill id="6600" levels="28" name="어스 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6601" levels="28" name="NPC earth attack">
+	<skill id="6601" levels="28" name="어스 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6602" levels="28" name="NPC earth attack">
+	<skill id="6602" levels="28" name="어스 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6603" levels="28" name="NPC earth shot">
+	<skill id="6603" levels="28" name="어스 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6604" levels="28" name="NPC earth shot">
+	<skill id="6604" levels="28" name="어스 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6605" levels="28" name="NPC earth shot">
+	<skill id="6605" levels="28" name="어스 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6606" levels="28" name="NPC earth shot">
+	<skill id="6606" levels="28" name="어스 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6607" levels="28" name="NPC earth shot">
+	<skill id="6607" levels="28" name="어스 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6608" levels="28" name="NPC earth shot">
+	<skill id="6608" levels="28" name="어스 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6609" levels="29" name="NPC earth magic">
+	<skill id="6609" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6610" levels="29" name="NPC earth magic">
+	<skill id="6610" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6611" levels="29" name="NPC earth magic">
+	<skill id="6611" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6612" levels="29" name="NPC earth magic">
+	<skill id="6612" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6613" levels="29" name="NPC earth magic">
+	<skill id="6613" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6614" levels="29" name="NPC earth magic">
+	<skill id="6614" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6615" levels="29" name="NPC earth magic">
+	<skill id="6615" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6616" levels="29" name="NPC earth magic">
+	<skill id="6616" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6617" levels="29" name="NPC earth magic">
+	<skill id="6617" levels="29" name="어스 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6618" levels="7" name="Maguen Strike">
+	<skill id="6618" levels="7" name="마구엔 스트라이크">
 		<!-- Moving Spd. Is decreased by 50% for 10 seconds. -->
 		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
 		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
@@ -132,7 +132,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6619" levels="7" name="Maguen Power Strike">
+	<skill id="6619" levels="7" name="마구엔 파워 스트라이크">
 		<!-- Moving Spd. Is decreased by 90% for 10 seconds. -->
 		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
 		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
@@ -156,7 +156,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6620" levels="7" name="Maguen Plasma">
+	<skill id="6620" levels="7" name="마구엔 플라즈마">
 		<table name="#pAtk"> 100 150 200 250 300 350 400 </table>
 		<table name="#mAtk"> 5 10 15 20 25 30 35 </table>
 		<set name="magicLvl" val="85" />
@@ -180,7 +180,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6621" levels="1" name="Maguen Plasma">
+	<skill id="6621" levels="1" name="마구엔 플라즈마">
 		<table name="#pAtk"> 200 250 300 350 400 450 500 </table>
 		<table name="#mAtk"> 15 20 25 30 35 40 45 </table>
 		<set name="magicLvl" val="85" />
@@ -204,7 +204,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6622" levels="1" name="Shock">
+	<skill id="6622" levels="1" name="쇼크">
 		<!-- Momentarily causes shock, which stuns the enemy for 20 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -213,13 +213,13 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="6623" levels="1" name="Fungus Hub">
+	<skill id="6623" levels="1" name="펑거스 허브">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6624" levels="1" name="Shock">
+	<skill id="6624" levels="1" name="쇼크">
 		<!-- Momentarily causes shock, which stuns the enemy for 9 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -228,14 +228,14 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="6625" levels="1" name="Energy of Life">
+	<skill id="6625" levels="1" name="생명의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6626" levels="2" name="Energy of Life's Power">
+	<skill id="6626" levels="2" name="강력 생명의 기운">
 		<!-- This skill only has one level, 2. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -243,7 +243,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6627" levels="3" name="Energy of Life's Highest Power">
+	<skill id="6627" levels="3" name="초강력 생명의 기운">
 		<!-- This skill only has one level, 3. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -251,14 +251,14 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6628" levels="1" name="Energy of Mana">
+	<skill id="6628" levels="1" name="마나의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6629" levels="2" name="Energy of Mana's Power">
+	<skill id="6629" levels="2" name="강력 마나의 기운">
 		<!-- This skill only has one level, 2. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -266,7 +266,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6630" levels="3" name="Energy of Mana's Highest Power">
+	<skill id="6630" levels="3" name="초강력 마나의 기운">
 		<!-- This skill only has one level, 3. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -274,49 +274,49 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6631" levels="1" name="Energy of Power">
+	<skill id="6631" levels="1" name="힘의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6632" levels="1" name="Energy of Enchant">
+	<skill id="6632" levels="1" name="마력의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6633" levels="1" name="Energy of Attack Speed\">
+	<skill id="6633" levels="1" name="공격 속도의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6634" levels="1" name="Energy of Casting Speed">
+	<skill id="6634" levels="1" name="마법 속도의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6635" levels="1" name="Energy of Crt Rate\">
+	<skill id="6635" levels="1" name="치명 타격의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6636" levels="1" name="Energy of Moving Speed">
+	<skill id="6636" levels="1" name="이동 속도의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6637" levels="1" name="Vampiric Aura">
+	<skill id="6637" levels="1" name="생명력 흡수의 기운">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="2000" />
@@ -338,7 +338,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6638" levels="1" name="Aura of Mystery">
+	<skill id="6638" levels="1" name="의문의 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -346,21 +346,21 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="6639" levels="1" name="Bane of Auras - Damage">
+	<skill id="6639" levels="1" name="치명타격의 기운 - 대미지">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6640" levels="1" name="Energizing Aura">
+	<skill id="6640" levels="1" name="활력 충전 기운">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="6641" levels="1" name="Holy Ball">
+	<skill id="6641" levels="1" name="신성구체">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Jinia Skills -->
 		<set name="castRange" val="650" />
@@ -379,7 +379,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6642" levels="1" name="Dash">
+	<skill id="6642" levels="1" name="대시">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Kegor Skills -->
 		<set name="castRange" val="650" />
@@ -402,7 +402,7 @@
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="6643" levels="1" name="Holy Strike">
+	<skill id="6643" levels="1" name="홀리 스트라이크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Kegor Skills -->
 		<set name="castRange" val="150" />
@@ -418,35 +418,35 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6644" levels="1" name="Ice Queen Freya">
+	<skill id="6644" levels="1" name="얼음여왕 프레야">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="6645" levels="1" name="Cooker Invincibility On">
+	<skill id="6645" levels="1" name="주방장 무적 켜기">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="6646" levels="1" name="Cooker Invincibility Off">
+	<skill id="6646" levels="1" name="주방장 무적 끄기">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6647" levels="1" name="Presentation - Ice Knight">
+	<skill id="6647" levels="1" name="연출 - 빙궁 기사">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6648" levels="1" name="Komodo Heal">
+	<skill id="6648" levels="1" name="코모도 힐">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6649" levels="1" name="Treykan Transformation">
+	<skill id="6649" levels="1" name="트렌스폼 트레이칸">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -464,68 +464,68 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6650" levels="1" name="Tacrakahn's Alienation">
+	<skill id="6650" levels="1" name="타크라칸의 소외">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="6651" levels="1" name="Dopagen's Alienation">
+	<skill id="6651" levels="1" name="도파겐의 소외">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="6652" levels="1" name="Level 85 Raid Boss">
+	<skill id="6652" levels="1" name="89레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6653" levels="1" name="Level 85 Raid Boss">
+	<skill id="6653" levels="1" name="89레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6654" levels="1" name="Level 85 Raid Boss">
+	<skill id="6654" levels="1" name="89레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6655" levels="1" name="Tarsque Carapace">
+	<skill id="6655" levels="1" name="타라스크 캐러페이스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6656" levels="1" name="Lavasaurus Firstborn Attack">
+	<skill id="6656" levels="1" name="라바사우러스 퍼스트본 공격">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6657" levels="1" name="Lavasaurus Firstborn Heal">
+	<skill id="6657" levels="1" name="라바사우러스 퍼스트본 힐">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6658" levels="1" name="Level 84 Raid Boss">
+	<skill id="6658" levels="1" name="84레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6659" levels="1" name="Level 84 Raid Boss">
+	<skill id="6659" levels="1" name="84레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6660" levels="1" name="Level 84 Raid Boss">
+	<skill id="6660" levels="1" name="84레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6661" levels="1" name="Level 85 Raid Boss">
+	<skill id="6661" levels="1" name="85레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6662" levels="2" name="Pillar of Frozen">
+	<skill id="6662" levels="2" name="빙결 - 영원한 얼음">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6274, 6275, 6299, 6300) -->
 		<table name="#count"> 7 3 </table>
@@ -553,22 +553,22 @@
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="6302" />
 		</for>
 	</skill>
-	<skill id="6663" levels="1" name="Level 76 Raid Boss">
+	<skill id="6663" levels="1" name="76레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6664" levels="1" name="Level 84 Raid Boss">
+	<skill id="6664" levels="1" name="84레벨 레이드보스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6665" levels="1" name="NPC Hate">
+	<skill id="6665" levels="1" name="헤이트">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6666" levels="1" name="Feral Shield">
+	<skill id="6666" levels="1" name="로어 실드">
 		<!-- Increases P. Def. by 18% by 5 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -585,7 +585,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6667" levels="1" name="Feral Wind Walk">
+	<skill id="6667" levels="1" name="로어 윈드 워크">
 		<!-- Increases Moving Spd. by 33 for 5 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -602,7 +602,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6668" levels="1" name="Feral Death Whisper">
+	<skill id="6668" levels="1" name="로어 데스 위스퍼">
 		<!-- Increases critical attack power by 35% for 5 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -619,7 +619,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6669" levels="1" name="Feral Body Bless">
+	<skill id="6669" levels="1" name="로어 블레스 더 바디">
 		<!-- Increases Max HP by 35% for 5 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -636,7 +636,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6670" levels="1" name="Feral Vampiric Rage">
+	<skill id="6670" levels="1" name="로어 뱀피릭 레이지">
 		<!-- For 5 minutes, 9% of the standard short-range physical damage inflicted on the enemy is converted to HP for you. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -653,7 +653,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6671" levels="1" name="Feral Berserker Spirit">
+	<skill id="6671" levels="1" name="로어 버서커 스피릿">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Moving Spd. by 8 for 5 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -677,7 +677,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6672" levels="1" name="Feral Bless Shield">
+	<skill id="6672" levels="1" name="로어 블레스 실드">
 		<!-- Increases Shield defense rate by 5% for 30 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -694,25 +694,25 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6673" levels="1" name="Presentation - Attain Noblesse">
+	<skill id="6673" levels="1" name="연출 - 노블레스 달성">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6674" levels="1" name="Energy of Range Increment">
+	<skill id="6674" levels="1" name="사거리 증가의 기운">
 		<!-- Bow/Crossbow range is temporarily increased by 50. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="6675" levels="1" name="Lavasaurus Firstborn Attack">
+	<skill id="6675" levels="1" name="라바사우러스 퍼스트본 공격">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6676" levels="1" name="Magician's Perversity">
+	<skill id="6676" levels="1" name="마법사의 심술">
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
@@ -722,7 +722,7 @@
 		<set name="mpConsume" val="82" />
 		<set name="power" val="450" />
 	</skill>
-	<skill id="6677" levels="1" name="Hold">
+	<skill id="6677" levels="1" name="홀드">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -732,14 +732,14 @@
 		<set name="lvlDepend" val="2" />
 		<set name="trait" val="HOLD" />
 	</skill>
-	<skill id="6678" levels="1" name="Hold Cancel">
+	<skill id="6678" levels="1" name="홀드 캔슬">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 	</skill>
-	<skill id="6679" levels="1" name="Summoner's Strike">
+	<skill id="6679" levels="1" name="소환사의 일격">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="83" />
@@ -753,13 +753,13 @@
 		<set name="element" val="3" />
 		<set name="elementPower" val="180" />
 	</skill>
-	<skill id="6680" levels="1" name="Faint Plus">
+	<skill id="6680" levels="1" name="페인트플러스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6681" levels="1" name="Maguen Speed Walk">
+	<skill id="6681" levels="1" name="마구엔 윈드 워크">
 		<!-- Moving Spd. increases by 40 for 20 minutes. -->
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -779,7 +779,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6682" levels="1" name="Elite Maguen Speed Walk">
+	<skill id="6682" levels="1" name="엘리트 마구엔 윈드 워크">
 		<!-- Moving Spd. increases by 45 for 20 minutes. -->
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -800,7 +800,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6683" levels="1" name="Maguen Recall">
+	<skill id="6683" levels="1" name="마구엔 귀향">
 		<set name="magicLvl" val="1" />
 		<set name="teleCoords" val="-178244,153389,2472" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -812,7 +812,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="skillRadius" val="100" />
 	</skill>
-	<skill id="6684" levels="1" name="Maguen Recall">
+	<skill id="6684" levels="1" name="마구엔 파티 귀향">
 		<set name="magicLvl" val="1" />
 		<set name="teleCoords" val="-178244,153389,2472" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -824,7 +824,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="skillRadius" val="100" />
 	</skill>
-	<skill id="6685" levels="1" name="Santa Claus's Gift">
+	<skill id="6685" levels="1" name="산타 할아버지의 선물">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="coolTime" val="1000" />
@@ -844,7 +844,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="6686" levels="1" name="Sacred Protector Cancel">
+	<skill id="6686" levels="1" name="신성보호 제거">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="aggroPoints" val="1" />
@@ -857,7 +857,7 @@
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="6687" levels="1" name="Patience">
+	<skill id="6687" levels="1" name="페이션스">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says pAtk but is client typo, this increase skill pAtk -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -872,7 +872,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6688" levels="1" name="Soup of Failure">
+	<skill id="6688" levels="1" name="망가진 죽">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -893,13 +893,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6689" levels="1" name="Absorb HP MP">
+	<skill id="6689" levels="1" name="HP MP 흡수">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="2000" />
 	</skill>
-	<skill id="6690" levels="1" name="Hold">
+	<skill id="6690" levels="1" name="홀드">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -907,45 +907,45 @@
 		<set name="coolTime" val="2000" />
 		<set name="trait" val="HOLD" />
 	</skill>
-	<skill id="6691" levels="1" name="Dualsword Deadly Move">
+	<skill id="6691" levels="1" name="이도류 필살기">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="900" />
 	</skill>
-	<skill id="6692" levels="1" name="Dualsword Range Deadly Move">
+	<skill id="6692" levels="1" name="이도류 범위 필살기">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="1500" />
 	</skill>
-	<skill id="6693" levels="12" name="NPC Strike">
+	<skill id="6693" levels="12" name="파워 스트라이크">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
 		<set name="coolTime" val="800" />
 	</skill>
-	<skill id="6694" levels="12" name="BOSS Strike">
+	<skill id="6694" levels="12" name="파워 스트라이크">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="660" />
 	</skill>
-	<skill id="6695" levels="12" name="BOSS Spinning Slasher">
+	<skill id="6695" levels="12" name="스피닝 슬래셔">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="660" />
 	</skill>
-	<skill id="6696" levels="1" name="Presentation - Quest Done">
+	<skill id="6696" levels="1" name="연출 - 퀘스트 완료">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="trait" val="HOLD" />
 	</skill>
-	<skill id="6697" levels="1" name="Eternal Blizzard">
+	<skill id="6697" levels="1" name="이터널 블리자드">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="coolTime" val="500" />
@@ -964,7 +964,7 @@
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6698" chanceType="ON_START" />
 		</for>
 	</skill>
-	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
+	<skill id="6698" levels="1" name="빙결 - 영원한 얼음">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6698) -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -987,7 +987,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="6302" chanceType="ON_EXIT" />
 		</for>
 	</skill>
-	<skill id="6699" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
+	<skill id="6699" levels="1" name="볼 트래핑 그노시안 아가시온 큐트 트릭">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

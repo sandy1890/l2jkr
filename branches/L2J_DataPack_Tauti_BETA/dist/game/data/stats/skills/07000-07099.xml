@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="7000" levels="1" name="NPC Default">
+	<skill id="7000" levels="1" name="a,NPC Default">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="7001" levels="1" name="Dispel Buff">
+	<skill id="7001" levels="1" name="이로운 상태 무효화">
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CANCEL" />
@@ -16,7 +16,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 	</skill>
-	<skill id="7002" levels="1" name="Dispel Debuff">
+	<skill id="7002" levels="1" name="해로운 상태 무효화">
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CANCEL_DEBUFF" />
@@ -25,7 +25,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 	</skill>
-	<skill id="7003" levels="1" name="Dispel All">
+	<skill id="7003" levels="1" name="대규모 무효화">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
@@ -39,7 +39,7 @@
 			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" effectType="CANCEL_DEBUFF" />
 		</for>
 	</skill>
-	<skill id="7004" levels="2" name="Dispel Petrification">
+	<skill id="7004" levels="2" name="석화 무효화">
 		<!-- This skill only has one level, 2. -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_SELF" />
@@ -52,7 +52,7 @@
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="7005" levels="4" name="Greater Chant of Vampire">
+	<skill id="7005" levels="4" name="그레이터 챈트 오브 뱀파이어">
 		<!-- This skill only has one level, 4. -->
 		<set name="magicLvl" val="74" />
 		<set name="mpInitialConsume" val="55" />
@@ -72,7 +72,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7006" levels="13" name="The Love of Pa'agrio">
+	<skill id="7006" levels="13" name="그레이터 하트 오브 파아그리오">
 		<!-- TODO: Needs to be done -->
 		<!-- This skill only has one level, 13. -->
 		<set name="mpConsume" val="272" />
@@ -85,7 +85,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="655" />
 	</skill>
-	<skill id="7007" levels="4" name="Greater Seal of Flame">
+	<skill id="7007" levels="4" name="그레이터 실 오브 플레임">
 		<!-- Needs to be done -->
 		<!-- This skill only has one level, 4. -->
 		<set name="mpConsume" val="153" />
@@ -99,108 +99,108 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="7008" levels="1" name="not_used">
+	<skill id="7008" levels="1" name="축복의 깃털">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7009" levels="1" name="not_used">
+	<skill id="7009" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7010" levels="1" name="not_used">
+	<skill id="7010" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7011" levels="1" name="not_used">
+	<skill id="7011" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7012" levels="1" name="not_used">
+	<skill id="7012" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7013" levels="1" name="not_used">
+	<skill id="7013" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7014" levels="1" name="Test - Critical Damage Up">
+	<skill id="7014" levels="1" name="테스트 - 크리티컬 대미지 업">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7015" levels="1" name="Test - Critical Damage Down">
+	<skill id="7015" levels="1" name="테스트 - 크리티컬 대미지 다운">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7016" levels="1" name="Test - Critical Damage Up">
+	<skill id="7016" levels="1" name="테스트 - 크리티컬 대미지 업">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7017" levels="1" name="Test - Critical Damage Down">
+	<skill id="7017" levels="1" name="테스트 - 크리티컬 대미지 다운">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7018" levels="1" name="Test - Critical Rate Up">
+	<skill id="7018" levels="1" name="테스트 - 크리티컬 확률 업">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7019" levels="1" name="Test - Critical Rate Down">
+	<skill id="7019" levels="1" name="테스트 - 크리티컬 확률 다운">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7020" levels="1" name="Test - Critical Rate Up">
+	<skill id="7020" levels="1" name="테스트 - 크리티컬 확률 업">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7021" levels="1" name="Test - Critical Rate Down">
+	<skill id="7021" levels="1" name="테스트 - 크리티컬 확률 다운">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
-	<skill id="7022" levels="1" name="Test - Find Hidden Door">
+	<skill id="7022" levels="1" name="테스트 - 숨겨진 문 찾기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="7023" levels="1" name="not_used">
+	<skill id="7023" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7024" levels="1" name="not_used">
+	<skill id="7024" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7025" levels="1" name="not_used">
+	<skill id="7025" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7026" levels="1" name="not_used">
+	<skill id="7026" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7027" levels="1" name="not_used">
+	<skill id="7027" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7028" levels="1" name="For Stationary NPCs">
+	<skill id="7028" levels="1" name="고정 NPC">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -210,7 +210,7 @@
 			<mul order="0x30" stat="walkSpd" val="0" />
 		</for>
 	</skill>
-	<skill id="7029" levels="4" name="Super Haste">
+	<skill id="7029" levels="4" name="슈퍼 헤이스트">
 		<!-- Update by rocknow (Original Super Haste) -->
 		<!-- GM Skill -->
 		<table name="#pAtkSpd"> 1.2 1.5 2 3 </table>
@@ -233,7 +233,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7030" levels="1" name="Summon King Bugbear">
+	<skill id="7030" levels="1" name="서먼 킹 버그베어">
 		<set name="itemConsumeId" val="1458" />
 		<set name="mpConsume" val="3" />
 		<set name="itemConsumeSteps" val="0" />
@@ -250,7 +250,7 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="20150" />
 	</skill>
-	<skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
+	<skill id="7031" levels="1" name="서먼 스켈레톤 RG">
 		<set name="itemConsumeId" val="1458" />
 		<set name="mpConsume" val="3" />
 		<set name="itemConsumeSteps" val="0" />
@@ -267,7 +267,7 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="20169" />
 	</skill>
-	<skill id="7032" levels="1" name="Summon Hunter Gargoyle">
+	<skill id="7032" levels="1" name="서먼 헌터 가고일">
 		<set name="itemConsumeId" val="1458" />
 		<set name="mpConsume" val="3" />
 		<set name="itemConsumeSteps" val="0" />
@@ -284,47 +284,47 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="20241" />
 	</skill>
-	<skill id="7033" levels="1" name="not_used">
+	<skill id="7033" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7034" levels="1" name="not_used">
+	<skill id="7034" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7035" levels="1" name="not_used">
+	<skill id="7035" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7036" levels="1" name="not_used">
+	<skill id="7036" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7037" levels="1" name="not_used">
+	<skill id="7037" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7038" levels="1" name="not_used">
+	<skill id="7038" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7039" levels="1" name="not_used">
+	<skill id="7039" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7040" levels="1" name="not_used">
+	<skill id="7040" levels="1" name="a,not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7041" levels="1" name="Master's Blessing - Focus">
+	<skill id="7041" levels="1" name="마스터의 축복 - 포커스">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -341,7 +341,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
+	<skill id="7042" levels="1" name="마스터의 축복 - 데스 위스퍼">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="castRange" val="400" />
@@ -358,7 +358,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7043" levels="1" name="Master's Blessing - Haste">
+	<skill id="7043" levels="1" name="마스터의 축복 - 헤이스트">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -375,7 +375,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7044" levels="1" name="Master's Blessing - Guidance">
+	<skill id="7044" levels="1" name="마스터의 축복 - 가이던스">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="532" />
 		<set name="castRange" val="400" />
@@ -392,7 +392,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
+	<skill id="7045" levels="1" name="마스터의 축복 - 블레스 더 바디">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
@@ -409,7 +409,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
+	<skill id="7046" levels="1" name="마스터의 축복 - 블레스 더 소울">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="635" />
 		<set name="castRange" val="400" />
@@ -426,7 +426,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7047" levels="1" name="Master's Blessing - Agility">
+	<skill id="7047" levels="1" name="마스터의 축복 - 어질리티">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -443,7 +443,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7048" levels="1" name="Master's Blessing - Acumen">
+	<skill id="7048" levels="1" name="마스터의 축복 - 아큐멘">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="457" />
 		<set name="castRange" val="400" />
@@ -460,7 +460,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
+	<skill id="7049" levels="1" name="마스터의 축복 - 디크리즈 웨이트">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -477,7 +477,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7050" levels="1" name="Master's Blessing - Might">
+	<skill id="7050" levels="1" name="마스터의 축복 - 마이트">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="379" />
 		<set name="castRange" val="400" />
@@ -494,7 +494,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7051" levels="1" name="Master's Blessing - Shield">
+	<skill id="7051" levels="1" name="마스터의 축복 - 실드">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="418" />
 		<set name="castRange" val="400" />
@@ -511,7 +511,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
+	<skill id="7052" levels="1" name="마스터의 축복 - 매직 배리어">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -528,7 +528,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
+	<skill id="7053" levels="1" name="마스터의 축복 - 뱀피릭 레이지">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
@@ -545,7 +545,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7054" levels="1" name="Master's Blessing - Empower">
+	<skill id="7054" levels="1" name="마스터의 축복 - 엠파워">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -562,7 +562,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
+	<skill id="7055" levels="1" name="마스터의 축복 - 윈드 워크">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="285" />
 		<set name="castRange" val="400" />
@@ -579,7 +579,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
+	<skill id="7056" levels="1" name="마스터의 축복 - 버서커 스피릿">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -603,7 +603,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7057" levels="1" name="Master's Blessing - Greater Might">
+	<skill id="7057" levels="1" name="마스터의 축복 - 그레이터 마이트">
 		<!-- GM Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -619,7 +619,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
+	<skill id="7058" levels="1" name="마스터의 축복 - 그레이터 실드">
 		<!-- GM Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -635,7 +635,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
+	<skill id="7059" levels="1" name="마스터의 축복 - 와일드 매직">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="635" />
 		<set name="castRange" val="400" />
@@ -652,7 +652,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7060" levels="1" name="Master's Blessing - Clarity">
+	<skill id="7060" levels="1" name="마스터의 축복 - 클레리티">
 		<!-- GM Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -670,7 +670,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
+	<skill id="7061" levels="1" name="마스터의 축복 - 프로피시 오브 워터">
 		<!-- GM Skill -->
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
@@ -702,7 +702,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
+	<skill id="7062" levels="1" name="마스터의 축복 - 프로피시 오브 파이어">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
@@ -731,7 +731,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
+	<skill id="7063" levels="1" name="마스터의 축복 - 프로피시 오브 윈드">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
@@ -759,7 +759,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
+	<skill id="7064" levels="1" name="마스터의 축복 - 챈트 오브 빅토리">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
@@ -788,7 +788,7 @@
 			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
-	<skill id="7065" levels="1" name="Test - Charge">
+	<skill id="7065" levels="1" name="테스트용 돌격">
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
@@ -799,7 +799,7 @@
 			<target mindistance="200" />
 		</cond>
 	</skill>
-	<skill id="7066" levels="1" name="Test Stun Charge">
+	<skill id="7066" levels="1" name="테스트용 스턴 돌격">
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
@@ -813,7 +813,7 @@
 			<target mindistance="200" />
 		</cond>
 	</skill>
-	<skill id="7067" levels="1" name="Test Range Charge">
+	<skill id="7067" levels="1" name="테스트용 범위 돌격">
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
@@ -827,7 +827,7 @@
 			<target mindistance="200" />
 		</cond>
 	</skill>
-	<skill id="7068" levels="1" name="Test Steal Abnormal State">
+	<skill id="7068" levels="1" name="테스트용 이상상태 훔치기">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
@@ -839,7 +839,7 @@
 			<target mindistance="200" />
 		</cond>
 	</skill>
-	<skill id="7069" levels="1" name="Test Abnormal State DD">
+	<skill id="7069" levels="1" name="테스트용 이상상태 DD">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
@@ -851,40 +851,40 @@
 			<target mindistance="200" />
 		</cond>
 	</skill>
-	<skill id="7070" levels="1" name="Test - Soul Eating Passive">
+	<skill id="7070" levels="1" name="테스트용 - 소울 이팅 패시브">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="7071" levels="1" name="Test - Soul Transfer">
+	<skill id="7071" levels="1" name="테스트용 - 영혼 전이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="900" />
 	</skill>
-	<skill id="7072" levels="1" name="Test - Basic Trap">
+	<skill id="7072" levels="1" name="테스트용 - 기본함정">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="3000" />
 	</skill>
-	<skill id="7073" levels="1" name="Test - Find Trap">
+	<skill id="7073" levels="1" name="테스트용 - 함정 찾기">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="7074" levels="1" name="Test - Cancel Trap">
+	<skill id="7074" levels="1" name="테스트용 - 함정 해제">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="7075" levels="1" name="Test - Distance DD">
+	<skill id="7075" levels="1" name="테스트용 - 거리 DD">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -892,7 +892,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="7076" levels="1" name="Test - Delay Debuff">
+	<skill id="7076" levels="1" name="테스트용 - 지연 Debuff">
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
@@ -903,13 +903,13 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 	</skill>
-	<skill id="7077" levels="1" name="Test - Delay Debuff - Call">
+	<skill id="7077" levels="1" name="테스트용 - 지연 Debuff - 호출">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="7078" levels="1" name="Test - Blink">
+	<skill id="7078" levels="1" name="테스트용 - 블링크">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -921,20 +921,20 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="7079" levels="1" name="Test - Party Damage Absorb">
+	<skill id="7079" levels="1" name="테스트용 - 파티 대미지 흡수">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 	</skill>
-	<skill id="7080" levels="1" name="Test - General Attack Prohibited">
+	<skill id="7080" levels="1" name="테스트용 - 일반 공격 금지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="CON" />
 	</skill>
-	<skill id="7081" levels="1" name="Effect Test - Land Shot">
+	<skill id="7081" levels="1" name="이팩트 테스트용 - 랜드 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -942,7 +942,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 	</skill>
-	<skill id="7082" levels="1" name="Effect Test - Chain Lightning">
+	<skill id="7082" levels="1" name="이팩트 테스트용 - 체인 라이트닝">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -950,38 +950,38 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="5000" />
 	</skill>
-	<skill id="7083" levels="1" name="Test - Trap Skill">
+	<skill id="7083" levels="1" name="테스트용 - 함정스킬">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="7084" levels="1" name="Test - Trap Skill">
+	<skill id="7084" levels="1" name="테스트용 - 함정스킬">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA1" />
 	</skill>
-	<skill id="7085" levels="1" name="Self-Destruct Explosion">
+	<skill id="7085" levels="1" name="셀프 블라스팅_test">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="7086" levels="1" name="Last Stand_test">
+	<skill id="7086" levels="1" name="라스트 스탠드_test">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="7087" levels="1" name="Chain Magic - Dark Explosion_test">
+	<skill id="7087" levels="1" name="체인매직 - 다크 익스플로젼_test">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="7088" levels="1" name="Master's Blessing - Improve Combat">
+	<skill id="7088" levels="1" name="마스터의 축복 - 임프로브 컴뱃">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -1002,7 +1002,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7089" levels="1" name="Master's Blessing - Improve Magic">
+	<skill id="7089" levels="1" name="마스터의 축복 - 임프로브 매직">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -1023,7 +1023,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7090" levels="1" name="Master's Blessing - Improve Condition">
+	<skill id="7090" levels="1" name="마스터의 축복 - 임프로브 컨디션">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -1044,7 +1044,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7091" levels="1" name="Master's Blessing - Improve Critical">
+	<skill id="7091" levels="1" name="마스터의 축복 - 임프로브 크리티컬">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -1065,7 +1065,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7092" levels="1" name="Master's Blessing - Improve Shield Defense">
+	<skill id="7092" levels="1" name="마스터의 축복 - 임프로브 실드 디펜스">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -1086,7 +1086,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7093" levels="1" name="Master's Blessing - Improve Movement">
+	<skill id="7093" levels="1" name="마스터의 축복 - 임프로브 무브먼트">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -1107,7 +1107,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7094" levels="1" name="Master's Blessing - Sharpen Edge">
+	<skill id="7094" levels="1" name="마스터의 축복 - 샤픈 엣지">
 		<!-- GM Skill -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1129,7 +1129,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7095" levels="1" name="Master's Blessing - Face Harden">
+	<skill id="7095" levels="1" name="마스터의 축복 - 페이스하든">
 		<!-- GM Skill -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1148,7 +1148,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="7096" levels="1" name="Master's Blessing - Blessing of Noblesse">
+	<skill id="7096" levels="1" name="마스터의 축복 - 블레싱 오브 노블레스">
 		<!-- GM Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="canBeDispeled" val="false" />

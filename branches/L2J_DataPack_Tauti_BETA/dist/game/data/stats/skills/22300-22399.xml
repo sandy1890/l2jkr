@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22300" levels="1" name="Fantasy Isle Magic">
+	<skill id="22300" levels="1" name="환상의 섬 마법">
 		<!-- "Magic obtained from Fantasy Isle. Increases Speed by 30%, and decreases fall damage when falling from a high place." -->
 		<!-- Update by pmq -->
 		<!-- Zone Skill -->
@@ -14,73 +14,73 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22301" levels="1" name="Party Cake">
+	<skill id="22301" levels="1" name="파티용 생크림 케이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22302" levels="1" name="Sweet Chocolate - 4 hour">
+	<skill id="22302" levels="1" name="달콤한 초콜릿 - 4시간">
 		<!-- "For 4 hours, recovers energy when Exp. is acquired through hunting." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22303" levels="1" name="Party Cake">
+	<skill id="22303" levels="1" name="파티용 생크림 케이크">
 		<!-- Party Cake's energy effect. Maintains vitality for 20 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22304" levels="1" name="Campfire's Warmth">
+	<skill id="22304" levels="1" name="모닥불의 온기">
 		<!-- "The campfire's warmth can be felt. Increases HP regeneration by 80%, CP regeneration by 60%, and MP regeneration by 40%." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22305" levels="1" name="Campfire Summon">
+	<skill id="22305" levels="1" name="모닥불 소환">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22306" levels="1" name="Event - Baby Bunny Scroll of Summon">
+	<skill id="22306" levels="1" name="이벤트 - 불량 토끼 소환 주문서">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22307" levels="1" name="Event - Baby Bunny Captain Scroll of Summon">
+	<skill id="22307" levels="1" name="이벤트 - 불량 토끼 대장 소환 주문서">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22308" levels="1" name="Event - Sad Baby Bunny Scroll of Summon">
+	<skill id="22308" levels="1" name="이벤트 - 간이 없는 토끼 소환 주문서">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22309" levels="1" name="Event - Sad Baby Bunny Captain Scroll of Summon">
+	<skill id="22309" levels="1" name="이벤트 - 간이 없는 토끼 대장 소환 주문서">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22310" levels="1" name="Cupid's Cure">
+	<skill id="22310" levels="1" name="큐피트의 치료제">
 		<!-- Sends mutated animals a heart filled with love. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22311" levels="1" name="Cupid's Enhanced Cure">
+	<skill id="22311" levels="1" name="큐피트의 강화 치료제">
 		<!-- Sends mutated animals a powerful heart filled with love. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22312" levels="1" name="Birthday Joy">
+	<skill id="22312" levels="1" name="생일의 기쁨">
 		<!-- "Birthday gift received once a year. For 4 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
 		<!-- Birthday Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -97,524 +97,524 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22313" levels="1" name="Pa'agrio's Warm Breeze - 4 hour">
+	<skill id="22313" levels="1" name="파아그리오의 따뜻한 바람 – 4시간">
 		<!-- "For 4 hours, recovers energy when Exp. is acquired through hunting." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22314" levels="1" name="Treasure Sack 1st Place">
+	<skill id="22314" levels="1" name="보물 자루 1등">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22315" levels="2" name="Treasure Sack 2nd Place">
+	<skill id="22315" levels="2" name="보물 자루 2등">
 		<!-- This skill only has one level, 2. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22316" levels="3" name="Treasure Sack 3rd Place">
+	<skill id="22316" levels="3" name="보물 자루 3등">
 		<!-- This skill only has one level, 3. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22317" levels="4" name="Treasure Sack 4th Place">
+	<skill id="22317" levels="4" name="보물 자루 4등">
 		<!-- This skill only has one level, 4. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22318" levels="5" name="Treasure Sack 5th Place">
+	<skill id="22318" levels="5" name="보물 자루 5등">
 		<!-- This skill only has one level, 5. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22319" levels="6" name="Treasure Sack 6th Place">
+	<skill id="22319" levels="6" name="보물 자루 6등">
 		<!-- This skill only has one level, 6. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22320" levels="1" name="Berserker Spirit">
+	<skill id="22320" levels="1" name="버서커 스피릿">
 		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22321" levels="1" name="Acumen">
+	<skill id="22321" levels="1" name="아큐멘">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22322" levels="1" name="Magic Barrier">
+	<skill id="22322" levels="1" name="매직 배리어">
 		<!-- Increases M. Def. by 30% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22323" levels="1" name="Clarity">
+	<skill id="22323" levels="1" name="클레리티">
 		<!-- "Decreases MP Consumption by 20% for physical skills, by 10% for magical skills, and by 20% for song/dance skills for 60 minutes." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22324" levels="1" name="Blessed Soul">
+	<skill id="22324" levels="1" name="블레스 더 소울">
 		<!-- Increases Max MP by 35% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22325" levels="1" name="Blessed Body">
+	<skill id="22325" levels="1" name="블레스 더 바디">
 		<!-- Increases Max HP by 35% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22326" levels="1" name="Empower">
+	<skill id="22326" levels="1" name="엠파워">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22327" levels="1" name="Wind Walk">
+	<skill id="22327" levels="1" name="윈드 워크">
 		<!-- Increases Speed by 33 for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22328" levels="1" name="Shield">
+	<skill id="22328" levels="1" name="실드">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22329" levels="1" name="Wind Walk">
+	<skill id="22329" levels="1" name="윈드 워크">
 		<!-- Increases Speed by 33 for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22330" levels="1" name="Shield">
+	<skill id="22330" levels="1" name="실드">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22331" levels="1" name="Haste">
+	<skill id="22331" levels="1" name="헤이스트">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22332" levels="1" name="Death Whisper">
+	<skill id="22332" levels="1" name="데스 위스퍼">
 		<!-- Increases Critical Attack by 35% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22333" levels="1" name="Vampiric Rage">
+	<skill id="22333" levels="1" name="뱀피릭 레이지">
 		<!-- Absorbs 9% of standard melee damage inflicted upon an enemy as HP for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22334" levels="1" name="Guidance">
+	<skill id="22334" levels="1" name="가이던스">
 		<!-- Increases Accuracy by 4 for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22335" levels="1" name="Might">
+	<skill id="22335" levels="1" name="마이트">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22336" levels="1" name="Blessed Body">
+	<skill id="22336" levels="1" name="블레스 더 바디">
 		<!-- Increases Max HP by 35% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22337" levels="1" name="Focus">
+	<skill id="22337" levels="1" name="포커스">
 		<!-- Increases Critical Rate by 30% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22338" levels="1" name="Bless Shield">
+	<skill id="22338" levels="1" name="블레스 실드">
 		<!-- Increases Shield Defense Rate by 30% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22339" levels="1" name="Berserker Spirit">
+	<skill id="22339" levels="1" name="버서커 스피릿">
 		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22340" levels="1" name="Might">
+	<skill id="22340" levels="1" name="마이트">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22341" levels="1" name="Wind Walk">
+	<skill id="22341" levels="1" name="윈드 워크">
 		<!-- Increases Speed by 33 for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22342" levels="1" name="Haste">
+	<skill id="22342" levels="1" name="헤이스트">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22343" levels="1" name="Vampiric Rage">
+	<skill id="22343" levels="1" name="뱀피릭 레이지">
 		<!-- Absorbs 9% of standard melee damage inflicted upon an enemy as HP for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22344" levels="1" name="Berserker Spirit">
+	<skill id="22344" levels="1" name="버서커 스피릿">
 		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22345" levels="1" name="Empower">
+	<skill id="22345" levels="1" name="엠파워">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22346" levels="1" name="Acumen">
+	<skill id="22346" levels="1" name="아큐멘">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22347" levels="1" name="Shield">
+	<skill id="22347" levels="1" name="실드">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22348" levels="1" name="Focus">
+	<skill id="22348" levels="1" name="포커스">
 		<!-- Increases Critical Rate by 30% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22349" levels="1" name="Death Whisper">
+	<skill id="22349" levels="1" name="데스 위스퍼">
 		<!-- Increases Critical Attack by 35% for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22350" levels="1" name="Guidance">
+	<skill id="22350" levels="1" name="가이던스">
 		<!-- Increases Accuracy by 4 for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22351" levels="1" name="Clarity">
+	<skill id="22351" levels="1" name="클레리티">
 		<!-- "Decreases MP Consumption by 20% for physical skills, by 10% for magical skills, and by 20% for song/dance skills for 60 minutes." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22352" levels="1" name="Wild Magic">
+	<skill id="22352" levels="1" name="와일드 매직">
 		<!-- Increases the chance of prominent magic damage by 2 for 60 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22353" levels="6" name="Concentration">
+	<skill id="22353" levels="6" name="콘센트레이션">
 		<!-- Decreases magic cancel damage by 53 for 60 minutes. -->
 		<!-- This skill only has one level, 6. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22354" levels="1" name="Lantern Agathion's Gift">
+	<skill id="22354" levels="1" name="초롱 아가시온의 선물">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22355" levels="1" name="Soul Crystal Box - Level 17">
+	<skill id="22355" levels="1" name="집혼석 - 단계 17 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22356" levels="1" name="Soul Crystal Box - Level 18">
+	<skill id="22356" levels="1" name="집혼석 - 단계 18 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22357" levels="1" name="S84 High-Grade Weapon Box">
+	<skill id="22357" levels="1" name="S84 상급 무기 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22358" levels="1" name="Vorpal Armor Box">
+	<skill id="22358" levels="1" name="버페스 방어구 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22359" levels="1" name="Scroll: Enchant Weapon of Destruction (S-Grade)">
+	<skill id="22359" levels="1" name="파멸의 무기 강화 주문서-S그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22360" levels="1" name="Scroll: Enchant Armor of Destruction (S-Grade)">
+	<skill id="22360" levels="1" name="파멸의 갑옷 강화 주문서-S그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22361" levels="1" name="Scroll: Enchant Weapon of Destruction (A-Grade)">
+	<skill id="22361" levels="1" name="파멸의 무기 강화 주문서-A그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22362" levels="1" name="Scroll: Enchant Armor of Destruction (A-Grade)">
+	<skill id="22362" levels="1" name="파멸의 갑옷 강화 주문서-A그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22363" levels="1" name="Scroll: Enchant Weapon of Destruction (B-Grade)">
+	<skill id="22363" levels="1" name="파멸의 무기 강화 주문서-B그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22364" levels="1" name="Scroll: Enchant Armor of Destruction (B-Grade)">
+	<skill id="22364" levels="1" name="파멸의 갑옷 강화 주문서-B그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22365" levels="1" name="Scroll: Enchant Weapon of Destruction (C-Grade)">
+	<skill id="22365" levels="1" name="파멸의 무기 강화 주문서-C그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22366" levels="1" name="Scroll: Enchant Armor of Destruction (C-Grade)">
+	<skill id="22366" levels="1" name="파멸의 갑옷 강화 주문서-C그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22367" levels="1" name="Scroll: Enchant Weapon of Destruction (D-Grade)">
+	<skill id="22367" levels="1" name="파멸의 무기 강화 주문서-D그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22368" levels="1" name="Scroll: Enchant Armor of Destruction (D-Grade)">
+	<skill id="22368" levels="1" name="파멸의 갑옷 강화 주문서-D그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 	</skill>
-	<skill id="22369" levels="1" name="Blessed Spiritshot - S grade">
+	<skill id="22369" levels="1" name="축복받은 마정탄 - S그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22370" levels="1" name="Mysterious Soulshot Pack (S-Grade)">
+	<skill id="22370" levels="1" name="신비한 정령탄 팩 - S그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22371" levels="1" name="Mysterious Blessed Spiritshot Pack (S-Grade)">
+	<skill id="22371" levels="1" name="신비한 축복받은 마정탄 팩 - S 그레이드">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22372" levels="1" name="Meteor">
+	<skill id="22372" levels="1" name="미티어">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22373" levels="1" name="Starfall">
+	<skill id="22373" levels="1" name="스타폴">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22374" levels="1" name="Sweet Chocolate">
+	<skill id="22374" levels="1" name="달콤한 초콜릿">
 		<!-- Desciption: For 30 minutes, Vitality is replenished when Exp. is acquired through hunting. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22375" levels="1" name="Valentine's Day Love Pouch">
+	<skill id="22375" levels="1" name="밸런타인데이 사랑의 주머니">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22376" levels="1" name="Sweet Chocolate">
+	<skill id="22376" levels="1" name="달콤한 초콜릿">
 		<!-- Desciption: For 30 minutes, Vitality is replenished when Exp. is acquired through hunting. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22377" levels="1" name="Bad Bunny's Necklace Box">
+	<skill id="22377" levels="1" name="불량 토끼의 목걸이 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22378" levels="1" name="Bad Bunny's Earring Box">
+	<skill id="22378" levels="1" name="불량 토끼의 귀걸이 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22379" levels="1" name="Bad Bunny's Ring Box">
+	<skill id="22379" levels="1" name="불량 토끼의 반지 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22380" levels="1" name="Lantern Agathion's Gift Set">
+	<skill id="22380" levels="1" name="초롱 아가시온의 선물 세트">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22381" levels="1" name="Attribute Ore Box">
+	<skill id="22381" levels="1" name="속성 원석 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22382" levels="1" name="Attribute Crystal Box">
+	<skill id="22382" levels="1" name="속성 수정 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22383" levels="1" name="Pathfinder Supplies">
+	<skill id="22383" levels="1" name="패스파인더 보급품">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22384" levels="1" name="Pathfinder Supplies">
+	<skill id="22384" levels="1" name="패스파인더 보급품">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22385" levels="1" name="Pathfinder Supplies">
+	<skill id="22385" levels="1" name="패스파인더 보급품">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22386" levels="1" name="PC Cafe Transformation Scroll Box">
+	<skill id="22386" levels="1" name="PC방 변신주문서 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22387" levels="1" name="PC Cafe Gift Box">
+	<skill id="22387" levels="1" name="PC방 선물상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22388" levels="1" name="PC Cafe Transformation Stick Box">
+	<skill id="22388" levels="1" name="PC방 변신막대기 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22389" levels="1" name="PC Cafe Hair Accessory Box">
+	<skill id="22389" levels="1" name="PC방 헤어 액세서리 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22390" levels="1" name="PC Cafe Luxury Gift Box">
+	<skill id="22390" levels="1" name="PC방 고급 선물상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22391" levels="1" name="Jewelry Box - Talisman">
+	<skill id="22391" levels="1" name="보석함 - 탈리스만">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22392" levels="1" name="Happiness Cake - Low Grade">
+	<skill id="22392" levels="1" name="행복의 케이크 - 하급">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22393" levels="1" name="Happiness Cake - Medium Grade">
+	<skill id="22393" levels="1" name="행복의 케이크 - 중급">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22394" levels="1" name="Happiness Cake - High Grade">
+	<skill id="22394" levels="1" name="행복의 케이크 - 상급">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22395" levels="1" name="Happiness Cake - Top Grade">
+	<skill id="22395" levels="1" name="행복의 케이크 - 최상급">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22396" levels="1" name="Holy Happiness Cake">
+	<skill id="22396" levels="1" name="신성한 행복의 케이크">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22397" levels="1" name="Sweet Chocolate Cookie">
+	<skill id="22397" levels="1" name="달콤한 초콜릿 쿠키">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22398" levels="1" name="Allegra Box">
+	<skill id="22398" levels="1" name="알레그라 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22399" levels="1" name="Latus Box">
+	<skill id="22399" levels="1" name="라투스 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />

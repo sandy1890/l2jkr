@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3400" levels="1" name="Traits Strengthen Earring">
+	<skill id="3400" levels="1" name="특성 강화 귀걸이">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -9,28 +9,28 @@
 			<add order="0x40" stat="derangementProf" val="6" />
 		</for>
 	</skill>
-	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
+	<skill id="3401" levels="1" name="특성 저항 목걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="9" /> <!-- Fear Resistance +9 -->
 		</for>
 	</skill>
-	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
+	<skill id="3402" levels="1" name="특성 저항 반지">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="4" /> <!-- Fear Resistance +4 -->
 		</for>
 	</skill>
-	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
+	<skill id="3403" levels="1" name="특성 저항 귀걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="6" /> <!-- Fear Resistance +6 -->
 		</for>
 	</skill>
-	<skill id="3404" levels="1" name="Mystery Effect">
+	<skill id="3404" levels="1" name="의문의 효과">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -48,13 +48,13 @@
 			<effect name="BigHead" abnormalTime="1200" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
-	<skill id="3405" levels="1" name="Large Firecracker Effect">
+	<skill id="3405" levels="1" name="대폭죽 효과">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="3406" levels="1" name="Weight Decrease Ring">
+	<skill id="3406" levels="1" name="무게 감소의 반지">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -63,7 +63,7 @@
 			<add order="0x40" stat="weightPenalty" val="9000" />
 		</for>
 	</skill>
-	<skill id="3407" levels="1" name="Stealth Ring">
+	<skill id="3407" levels="1" name="조용한 발걸음의 반지">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<!-- set name="avoidAggro" val="100" / -->
@@ -78,7 +78,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3408" levels="1" name="Blessed Ring of Escape">
+	<skill id="3408" levels="1" name="축복받은 귀환의 반지">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="200" />
@@ -88,7 +88,7 @@
 		<set name="skillType" val="RECALL" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
+	<skill id="3409" levels="1" name="축복받은 부활의 반지">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
@@ -101,7 +101,7 @@
 		<set name="skillType" val="RESURRECT" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 	</skill>
-	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
+	<skill id="3410" levels="1" name="청색 탈리스만 - 대미지 반사">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -117,7 +117,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3411" levels="1" name="Special Ability: Focus">
+	<skill id="3411" levels="1" name="특수능력 포커스">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
@@ -129,7 +129,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3412" levels="1" name="Dynasty Breast Plate">
+	<skill id="3412" levels="1" name="다이너스티 블레스트 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -141,7 +141,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3413" levels="1" name="Dynasty Leather Armor">
+	<skill id="3413" levels="1" name="다이너스티 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -154,7 +154,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3414" levels="1" name="Dynasty Leather Armor - Force Master">
+	<skill id="3414" levels="1" name="다이너스티 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -167,7 +167,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3415" levels="1" name="Dynasty Leather Armor - Weapon Master">
+	<skill id="3415" levels="1" name="다이너스티 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -181,7 +181,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3416" levels="1" name="Dynasty Tunic">
+	<skill id="3416" levels="1" name="다이너스티 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -193,7 +193,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3417" levels="1" name="Equipped with Shield">
+	<skill id="3417" levels="1" name="방패 착용">
 		<!-- Confirmed CT2.5 -->
 		<!-- Dynasty Shield Skill -->
 		<set name="magicLvl" val="1" />
@@ -203,7 +203,7 @@
 			<mul order="0x30" stat="rShld" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3418" levels="1" name="Active Skill: Transform Pig">
+	<skill id="3418" levels="1" name="액티브 스킬 - 돼지 변신">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="600000" />
@@ -216,7 +216,7 @@
 			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="3419" levels="1" name="Magic Immunity">
+	<skill id="3419" levels="1" name="매직 이뮤니티">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -225,7 +225,7 @@
 			<mul order="0x30" stat="magicDamVul" val="0.95" />
 		</for>
 	</skill>
-	<skill id="3420" levels="1" name="Dynasty Leather Armor - Summoner">
+	<skill id="3420" levels="1" name="다이너스티 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -239,19 +239,19 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3421" levels="1" name="Wolf Mount">
+	<skill id="3421" levels="1" name="늑대 탑승">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="3422" levels="1" name="Wolf Dismount">
+	<skill id="3422" levels="1" name="늑대 탑승 해제">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="3423" levels="1" name="Little Angel Agathion - Summon (or Release)">
+	<skill id="3423" levels="1" name="아가시온 봉인해제 - 리틀엔젤">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -259,7 +259,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16031" />
 	</skill>
-	<skill id="3424" levels="1" name="Little Devil Agathion - Summon (or Release)">
+	<skill id="3424" levels="1" name="아가시온 봉인해제 - 리틀데빌">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -267,7 +267,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16032" />
 	</skill>
-	<skill id="3425" levels="1" name="Rudolph Agathion - Summon (or Release)">
+	<skill id="3425" levels="1" name="아가시온 봉인해제 - 루돌프">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -275,7 +275,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16033" />
 	</skill>
-	<skill id="3426" levels="1" name="Maximum Ability">
+	<skill id="3426" levels="1" name="맥시멈 어빌리티">
 		<!-- Confirmed CT2.5 -->
 		<!-- Rapier +4 Skill -->
 		<set name="magicLvl" val="80" />
@@ -285,7 +285,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
 		</for>
 	</skill>
-	<skill id="3427" levels="1" name="Special Ability: Infinity Rapier">
+	<skill id="3427" levels="1" name="특수능력 인피니티 레이피어">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -302,7 +302,7 @@
 			<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 		</for>
 	</skill>
-	<skill id="3428" levels="1" name="Blue Talisman - Explosion">
+	<skill id="3428" levels="1" name="청색 탈리스만 - 폭발">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -318,7 +318,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3429" levels="1" name="Red Talisman - Life Force">
+	<skill id="3429" levels="1" name="적색 탈리스만 - 생명력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -330,7 +330,7 @@
 			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
-	<skill id="3430" levels="1" name="White Talisman - Darkness">
+	<skill id="3430" levels="1" name="흰색 탈리스만 - 다크니스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
@@ -345,7 +345,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3431" levels="1" name="White Talisman - Storm">
+	<skill id="3431" levels="1" name="흰색 탈리스만 - 스톰">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
@@ -360,7 +360,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3432" levels="1" name="White Talisman - Water">
+	<skill id="3432" levels="1" name="흰색 탈리스만 - 워터">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
@@ -375,7 +375,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3433" levels="1" name="White Talisman - Fire">
+	<skill id="3433" levels="1" name="흰색 탈리스만 - 화이어">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
@@ -390,7 +390,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3434" levels="1" name="White Talisman - Earth">
+	<skill id="3434" levels="1" name="흰색 탈리스만 - 어스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
@@ -405,7 +405,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3435" levels="1" name="White Talisman - Light">
+	<skill id="3435" levels="1" name="흰색 탈리스만 - 라이트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="50" />
@@ -420,7 +420,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
+	<skill id="3436" levels="1" name="청색 탈리스만 - 자폭">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<!-- set name="affectLimit = "6;12" / -->
@@ -433,7 +433,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="3437" levels="1" name="Blue Talisman - Magic Explosive Power">
+	<skill id="3437" levels="1" name="청색 탈리스만 - 마법폭발력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -449,7 +449,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3438" levels="1" name="Blue Talisman - Great Healing">
+	<skill id="3438" levels="1" name="청색 탈리스만 - 그레이트 힐링">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="4000" />
@@ -463,28 +463,28 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3439" levels="1" name="Silk Shirt">
+	<skill id="3439" levels="1" name="비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="118" />
 		</for>
 	</skill>
-	<skill id="3440" levels="1" name="Silk Shirt">
+	<skill id="3440" levels="1" name="비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="51" />
 		</for>
 	</skill>
-	<skill id="3441" levels="1" name="Silk Shirt">
+	<skill id="3441" levels="1" name="비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="354" />
 		</for>
 	</skill>
-	<skill id="3442" levels="1" name="Silk Shirt">
+	<skill id="3442" levels="1" name="비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -492,7 +492,7 @@
 			<add order="0x40" stat="maxMp" val="26" />
 		</for>
 	</skill>
-	<skill id="3443" levels="1" name="Silk Shirt">
+	<skill id="3443" levels="1" name="비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -500,7 +500,7 @@
 			<add order="0x40" stat="maxCp" val="117" />
 		</for>
 	</skill>
-	<skill id="3444" levels="1" name="Silk Shirt">
+	<skill id="3444" levels="1" name="비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -508,28 +508,28 @@
 			<add order="0x40" stat="maxCp" val="117" />
 		</for>
 	</skill>
-	<skill id="3445" levels="1" name="Thin Leather Shirt">
+	<skill id="3445" levels="1" name="얇은 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="147" />
 		</for>
 	</skill>
-	<skill id="3446" levels="1" name="Thin Leather Shirt">
+	<skill id="3446" levels="1" name="얇은 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="72" />
 		</for>
 	</skill>
-	<skill id="3447" levels="1" name="Thin Leather Shirt">
+	<skill id="3447" levels="1" name="얇은 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="441" />
 		</for>
 	</skill>
-	<skill id="3448" levels="1" name="Thin Leather Shirt">
+	<skill id="3448" levels="1" name="얇은 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -537,7 +537,7 @@
 			<add order="0x40" stat="maxMp" val="36" />
 		</for>
 	</skill>
-	<skill id="3449" levels="1" name="Thin Leather Shirt">
+	<skill id="3449" levels="1" name="얇은 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -545,7 +545,7 @@
 			<add order="0x40" stat="maxCp" val="222" />
 		</for>
 	</skill>
-	<skill id="3450" levels="1" name="Thin Leather Shirt">
+	<skill id="3450" levels="1" name="얇은 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -553,28 +553,28 @@
 			<add order="0x40" stat="maxCp" val="222" />
 		</for>
 	</skill>
-	<skill id="3451" levels="1" name="Scale Shirt">
+	<skill id="3451" levels="1" name="미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="172" />
 		</for>
 	</skill>
-	<skill id="3452" levels="1" name="Scale Shirt">
+	<skill id="3452" levels="1" name="미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="85" />
 		</for>
 	</skill>
-	<skill id="3453" levels="1" name="Scale Shirt">
+	<skill id="3453" levels="1" name="미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="516" />
 		</for>
 	</skill>
-	<skill id="3454" levels="1" name="Scale Shirt">
+	<skill id="3454" levels="1" name="미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -582,7 +582,7 @@
 			<add order="0x40" stat="maxMp" val="43" />
 		</for>
 	</skill>
-	<skill id="3455" levels="1" name="Scale Shirt">
+	<skill id="3455" levels="1" name="미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -590,7 +590,7 @@
 			<add order="0x40" stat="maxCp" val="258" />
 		</for>
 	</skill>
-	<skill id="3456" levels="1" name="Scale Shirt">
+	<skill id="3456" levels="1" name="미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -598,28 +598,28 @@
 			<add order="0x40" stat="maxCp" val="258" />
 		</for>
 	</skill>
-	<skill id="3457" levels="1" name="Mithril Shirt">
+	<skill id="3457" levels="1" name="미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="224" />
 		</for>
 	</skill>
-	<skill id="3458" levels="1" name="Mithril Shirt">
+	<skill id="3458" levels="1" name="미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="111" />
 		</for>
 	</skill>
-	<skill id="3459" levels="1" name="Mithril Shirt">
+	<skill id="3459" levels="1" name="미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="672" />
 		</for>
 	</skill>
-	<skill id="3460" levels="1" name="Mithril Shirt">
+	<skill id="3460" levels="1" name="미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -627,7 +627,7 @@
 			<add order="0x40" stat="maxMp" val="56" />
 		</for>
 	</skill>
-	<skill id="3461" levels="1" name="Mithril Shirt">
+	<skill id="3461" levels="1" name="미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -635,7 +635,7 @@
 			<add order="0x40" stat="maxCp" val="336" />
 		</for>
 	</skill>
-	<skill id="3462" levels="1" name="Mithril Shirt">
+	<skill id="3462" levels="1" name="미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -643,28 +643,28 @@
 			<add order="0x40" stat="maxCp" val="336" />
 		</for>
 	</skill>
-	<skill id="3463" levels="1" name="Striped Silk Shirt">
+	<skill id="3463" levels="1" name="줄무늬 비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="135" />
 		</for>
 	</skill>
-	<skill id="3464" levels="1" name="Striped Silk Shirt">
+	<skill id="3464" levels="1" name="줄무늬 비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="66" />
 		</for>
 	</skill>
-	<skill id="3465" levels="1" name="Striped Silk Shirt">
+	<skill id="3465" levels="1" name="줄무늬 비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="405" />
 		</for>
 	</skill>
-	<skill id="3466" levels="1" name="Striped Silk Shirt">
+	<skill id="3466" levels="1" name="줄무늬 비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -672,7 +672,7 @@
 			<add order="0x40" stat="maxMp" val="33" />
 		</for>
 	</skill>
-	<skill id="3467" levels="1" name="Striped Silk Shirt">
+	<skill id="3467" levels="1" name="줄무늬 비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -680,7 +680,7 @@
 			<add order="0x40" stat="maxCp" val="203" />
 		</for>
 	</skill>
-	<skill id="3468" levels="1" name="Striped Silk Shirt">
+	<skill id="3468" levels="1" name="줄무늬 비단 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -688,28 +688,28 @@
 			<add order="0x40" stat="maxCp" val="203" />
 		</for>
 	</skill>
-	<skill id="3469" levels="1" name="Thin Stripe Leather Shirt">
+	<skill id="3469" levels="1" name="얇은 줄무늬 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="160" />
 		</for>
 	</skill>
-	<skill id="3470" levels="1" name="Thin Stripe Leather Shirt">
+	<skill id="3470" levels="1" name="얇은 줄무늬 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="78" />
 		</for>
 	</skill>
-	<skill id="3471" levels="1" name="Thin Stripe Leather Shirt">
+	<skill id="3471" levels="1" name="얇은 줄무늬 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="480" />
 		</for>
 	</skill>
-	<skill id="3472" levels="1" name="Thin Stripe Leather Shirt">
+	<skill id="3472" levels="1" name="얇은 줄무늬 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -717,7 +717,7 @@
 			<add order="0x40" stat="maxMp" val="39" />
 		</for>
 	</skill>
-	<skill id="3473" levels="1" name="Thin Stripe Leather Shirt">
+	<skill id="3473" levels="1" name="얇은 줄무늬 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -725,7 +725,7 @@
 			<add order="0x40" stat="maxCp" val="240" />
 		</for>
 	</skill>
-	<skill id="3474" levels="1" name="Thin Stripe Leather Shirt">
+	<skill id="3474" levels="1" name="얇은 줄무늬 가죽 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -733,28 +733,28 @@
 			<add order="0x40" stat="maxCp" val="240" />
 		</for>
 	</skill>
-	<skill id="3475" levels="1" name="Striped Scale Shirt">
+	<skill id="3475" levels="1" name="줄무늬 미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="186" />
 		</for>
 	</skill>
-	<skill id="3476" levels="1" name="Striped Scale Shirt">
+	<skill id="3476" levels="1" name="줄무늬 미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="92" />
 		</for>
 	</skill>
-	<skill id="3477" levels="1" name="Striped Scale Shirt">
+	<skill id="3477" levels="1" name="줄무늬 미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="564" />
 		</for>
 	</skill>
-	<skill id="3478" levels="1" name="Striped Scale Shirt">
+	<skill id="3478" levels="1" name="줄무늬 미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -762,7 +762,7 @@
 			<add order="0x40" stat="maxMp" val="46" />
 		</for>
 	</skill>
-	<skill id="3479" levels="1" name="Striped Scale Shirt">
+	<skill id="3479" levels="1" name="줄무늬 미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -770,7 +770,7 @@
 			<add order="0x40" stat="maxCp" val="282" />
 		</for>
 	</skill>
-	<skill id="3480" levels="1" name="Striped Scale Shirt">
+	<skill id="3480" levels="1" name="줄무늬 미늘 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -778,28 +778,28 @@
 			<add order="0x40" stat="maxCp" val="282" />
 		</for>
 	</skill>
-	<skill id="3481" levels="1" name="Striped Mithril Shirt">
+	<skill id="3481" levels="1" name="줄무늬 미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="246" />
 		</for>
 	</skill>
-	<skill id="3482" levels="1" name="Striped Mithril Shirt">
+	<skill id="3482" levels="1" name="줄무늬 미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxMp" val="122" />
 		</for>
 	</skill>
-	<skill id="3483" levels="1" name="Striped Mithril Shirt">
+	<skill id="3483" levels="1" name="줄무늬 미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxCp" val="744" />
 		</for>
 	</skill>
-	<skill id="3484" levels="1" name="Striped Mithril Shirt">
+	<skill id="3484" levels="1" name="줄무늬 미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -807,7 +807,7 @@
 			<add order="0x40" stat="maxMp" val="61" />
 		</for>
 	</skill>
-	<skill id="3485" levels="1" name="Striped Mithril Shirt">
+	<skill id="3485" levels="1" name="줄무늬 미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -815,7 +815,7 @@
 			<add order="0x40" stat="maxCp" val="372" />
 		</for>
 	</skill>
-	<skill id="3486" levels="1" name="Striped Mithril Shirt">
+	<skill id="3486" levels="1" name="줄무늬 미스릴 셔츠">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
@@ -823,7 +823,7 @@
 			<add order="0x40" stat="maxCp" val="372" />
 		</for>
 	</skill>
-	<skill id="3487" levels="1" name="Blue Talisman of Power">
+	<skill id="3487" levels="1" name="청색 탈리스만 - 공격력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
@@ -839,7 +839,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3488" levels="1" name="Blue Talisman of Protection">
+	<skill id="3488" levels="1" name="청색 탈리스만 - 방패 방어">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpInitialConsume" val="10" />
@@ -855,7 +855,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3489" levels="1" name="Yellow Talisman of Arcane Power">
+	<skill id="3489" levels="1" name="황색 탈리스만 - 마법력">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -863,7 +863,7 @@
 			<add order="0x40" stat="mAtk" val="11.7" />
 		</for>
 	</skill>
-	<skill id="3490" levels="1" name="Yellow Talisman of Defense">
+	<skill id="3490" levels="1" name="황색 탈리스만 - 방어력">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -871,7 +871,7 @@
 			<add order="0x40" stat="pDef" val="18.3" />
 		</for>
 	</skill>
-	<skill id="3491" levels="1" name="Yellow Talisman of Evasion">
+	<skill id="3491" levels="1" name="황색 탈리스만 - 회피">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -879,7 +879,7 @@
 			<add order="0x40" stat="rEvas" val="1.1" />
 		</for>
 	</skill>
-	<skill id="3492" levels="1" name="Yellow Talisman of Speed">
+	<skill id="3492" levels="1" name="황색 탈리스만 - 이동속도">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -887,7 +887,7 @@
 			<add order="0x40" stat="runSpd" val="3" />
 		</for>
 	</skill>
-	<skill id="3493" levels="1" name="Yellow Talisman of Regeneration">
+	<skill id="3493" levels="1" name="황색 탈리스만 - HP 회복량">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -895,7 +895,7 @@
 			<mul order="0x30" stat="regHp" val="1.01" />
 		</for>
 	</skill>
-	<skill id="3494" levels="1" name="Yellow Talisman of CP Regeneration">
+	<skill id="3494" levels="1" name="황색 탈리스만 - CP 회복량">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -903,7 +903,7 @@
 			<mul order="0x30" stat="regCp" val="1.01" />
 		</for>
 	</skill>
-	<skill id="3495" levels="1" name="Yellow Talisman of Healing">
+	<skill id="3495" levels="1" name="황색 탈리스만 - 힐 위력">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -911,7 +911,7 @@
 			<add order="0x40" stat="bonusHp" val="8" />
 		</for>
 	</skill>
-	<skill id="3496" levels="1" name="Red Talisman of Recovery">
+	<skill id="3496" levels="1" name="적색 탈리스만 - HP/CP 회복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
@@ -924,7 +924,7 @@
 			<effect name="Heal" noicon="1" val="100" />
 		</for>
 	</skill>
-	<skill id="3497" levels="1" name="Yellow Talisman of MP Regeneration">
+	<skill id="3497" levels="1" name="황색 탈리스만 - MP 회복량">
 		<set name="magicLvl" val="55" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -932,7 +932,7 @@
 			<mul order="0x30" stat="regMp" val="1.01" />
 		</for>
 	</skill>
-	<skill id="3498" levels="1" name="Special Ability: Light">
+	<skill id="3498" levels="1" name="특수능력 라이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="46" />
 		<set name="target" val="TARGET_SELF" />
@@ -941,7 +941,7 @@
 			<mul order="0x30" stat="weightLimit" val="1.2" />
 		</for>
 	</skill>
-	<skill id="3499" levels="1" name="Transform Dispel">
+	<skill id="3499" levels="1" name="트랜스폼 디스펠">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="10" />
 		<set name="hitTime" val="2500" />

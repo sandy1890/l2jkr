@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3300" levels="1" name="Yellow Talisman of Speed">
+	<skill id="3300" levels="1" name="황색 탈리스만 - 이동속도">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -9,7 +9,7 @@
 			<add order="0x40" stat="runSpd" val="5" />
 		</for>
 	</skill>
-	<skill id="3301" levels="1" name="Yellow Talisman of Violent Haste">
+	<skill id="3301" levels="1" name="황색 탈리스만 - 공격속도">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -18,7 +18,7 @@
 			<add order="0x40" stat="pAtkSpd" val="10" />
 		</for>
 	</skill>
-	<skill id="3302" levels="1" name="Yellow Talisman of Arcane Haste">
+	<skill id="3302" levels="1" name="황색 탈리스만 - 마법 속도">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -27,7 +27,7 @@
 			<add order="0x40" stat="mAtkSpd" val="8" />
 		</for>
 	</skill>
-	<skill id="3303" levels="1" name="White Talisman of Bandages">
+	<skill id="3303" levels="1" name="흰색 탈리스만 - 출혈 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -36,7 +36,7 @@
 			<sub order="0x40" stat="bleedVuln" val="10" />
 		</for>
 	</skill>
-	<skill id="3304" levels="1" name="White Talisman of Attention">
+	<skill id="3304" levels="1" name="흰색 탈리스만 - 수면 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -45,7 +45,7 @@
 			<sub order="0x40" stat="sleepVuln" val="10" />
 		</for>
 	</skill>
-	<skill id="3305" levels="1" name="White Talisman of Grounding">
+	<skill id="3305" levels="1" name="흰색 탈리스만 - 쇼크 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -54,7 +54,7 @@
 			<sub order="0x40" stat="stunVuln" val="10" />
 		</for>
 	</skill>
-	<skill id="3306" levels="1" name="White Talisman of Bravery">
+	<skill id="3306" levels="1" name="흰색 탈리스만 - 공포 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -63,7 +63,7 @@
 			<sub order="0x40" stat="derangementVuln" val="10" />
 		</for>
 	</skill>
-	<skill id="3307" levels="1" name="White Talisman of Motion">
+	<skill id="3307" levels="1" name="흰색 탈리스만 - 마비 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -72,7 +72,7 @@
 			<sub order="0x40" stat="paralyzeVuln" val="10" />
 		</for>
 	</skill>
-	<skill id="3308" levels="1" name="White Talisman of Freedom">
+	<skill id="3308" levels="1" name="흰색 탈리스만 - 홀드 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -81,14 +81,14 @@
 			<sub order="0x40" stat="rootVuln" val="10" />
 		</for>
 	</skill>
-	<skill id="3309" levels="1" name="White Talisman of Protection">
+	<skill id="3309" levels="1" name="흰색 탈리스만 - 캔슬 내성">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="cancelVuln" val="100" />
 		</for>
 	</skill>
-	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
+	<skill id="3310" levels="1" name="황색 탈리스만 - HP 회복량">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -97,7 +97,7 @@
 			<mul order="0x30" stat="regHp" val="1.03" />
 		</for>
 	</skill>
-	<skill id="3311" levels="1" name="Yellow Talisman of CP Regeneration">
+	<skill id="3311" levels="1" name="황색 탈리스만 - CP 회복량">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -106,7 +106,7 @@
 			<mul order="0x30" stat="regCp" val="1.03" />
 		</for>
 	</skill>
-	<skill id="3312" levels="1" name="Yellow Talisman of Healing">
+	<skill id="3312" levels="1" name="황색 탈리스만 - 힐 위력">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -115,7 +115,7 @@
 			<add order="0x40" stat="bonusHp" val="40" />
 		</for>
 	</skill>
-	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
+	<skill id="3313" levels="1" name="황색 탈리스만 - 속도 증가">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -126,7 +126,7 @@
 			<add order="0x40" stat="pAtkSpd" val="5" />
 		</for>
 	</skill>
-	<skill id="3314" levels="1" name="Grey Talisman of Weight Training">
+	<skill id="3314" levels="1" name="회색 탈리스만 - 무게 게이지">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -135,7 +135,7 @@
 			<mul order="0x30" stat="weightLimit" val="1.1" />
 		</for>
 	</skill>
-	<skill id="3315" levels="1" name="Grey Talisman of Fishing">
+	<skill id="3315" levels="1" name="회색 탈리스만 - 중급 낚시 숙련">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -149,7 +149,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3316" levels="1" name="Yellow Talisman of Critical Dodging">
+	<skill id="3316" levels="1" name="황색 탈리스만 - 크리티컬 회피">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -158,7 +158,7 @@
 			<mul order="0x30" stat="critDamEvas" val="1.03" />
 		</for>
 	</skill>
-	<skill id="3317" levels="1" name="Yellow Talisman of Critical Reduction">
+	<skill id="3317" levels="1" name="황색 탈리스만 - 크리티컬 감소">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -167,7 +167,7 @@
 			<sub order="0x40" stat="critAddVuln" val="100" />
 		</for>
 	</skill>
-	<skill id="3318" levels="1" name="Flag Display">
+	<skill id="3318" levels="1" name="깃발 게양">
 		<!-- Flag Skill -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_FLAGPOLE" />
@@ -176,7 +176,7 @@
 		<set name="skillType" val="TAKEFORT" />
 		<set name="operateType" val="CA1" />
 	</skill>
-	<skill id="3319" levels="1" name="Divine Protection of Ring">
+	<skill id="3319" levels="1" name="반지의 가호">
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -184,7 +184,7 @@
 			<sub order="0x40" stat="gustVuln" val="100" />
 		</for>
 	</skill>
-	<skill id="3320" levels="1" name="Yellow Talisman of Mental Regeneration">
+	<skill id="3320" levels="1" name="황색 탈리스만 - MP 회복량">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -193,7 +193,7 @@
 			<mul order="0x30" stat="regMp" val="1.03" />
 		</for>
 	</skill>
-	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
+	<skill id="3321" levels="1" name="청색 탈리스만 - 회피">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="379" />
 		<set name="equipDelay" val="30000" /> <!-- FIXME: This should be loaded from "equip_reuse_delay" on items XMLs -->
@@ -215,49 +215,49 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3322" levels="1" name="Brass Bracelet">
+	<skill id="3322" levels="1" name="쇠 팔찌">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<set order="0x50" stat="talisman" val="1" />
 		</for>
 	</skill>
-	<skill id="3323" levels="1" name="Bronze Bracelet">
+	<skill id="3323" levels="1" name="청동 팔찌">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<set order="0x50" stat="talisman" val="2" />
 		</for>
 	</skill>
-	<skill id="3324" levels="1" name="Steel Bracelet">
+	<skill id="3324" levels="1" name="강철 팔찌">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<set order="0x50" stat="talisman" val="3" />
 		</for>
 	</skill>
-	<skill id="3325" levels="1" name="Mithril Bracelet">
+	<skill id="3325" levels="1" name="미스릴 팔찌">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<set order="0x50" stat="talisman" val="4" />
 		</for>
 	</skill>
-	<skill id="3326" levels="1" name="Jewelry Bracelet">
+	<skill id="3326" levels="1" name="보석 팔찌">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<set order="0x50" stat="talisman" val="5" />
 		</for>
 	</skill>
-	<skill id="3327" levels="1" name="Oriharukon Bracelet">
+	<skill id="3327" levels="1" name="오리하르콘 팔찌">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<set order="0x50" stat="talisman" val="6" />
 		</for>
 	</skill>
-	<skill id="3328" levels="1" name="Double Stab">
+	<skill id="3328" levels="1" name="더블 스탭">
 		<!-- Update by pmq -->
 		<set name="mpInitialConsume" val="28" />
 		<set name="mpConsume" val="112" />
@@ -270,7 +270,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="3329" levels="1" name="Power Slash">
+	<skill id="3329" levels="1" name="파워 슬래쉬">
 		<!-- Update by pmq -->
 		<set name="mpInitialConsume" val="28" />
 		<set name="mpConsume" val="112" />
@@ -284,7 +284,7 @@
 		<set name="skillRadius" val="300" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="3330" levels="1" name="Air Blade">
+	<skill id="3330" levels="1" name="에어 블레이드">
 		<!-- Update by pmq -->
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1080" />
@@ -298,7 +298,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="-1" />
 	</skill>
-	<skill id="3331" levels="1" name="Enslave">
+	<skill id="3331" levels="1" name="인슬레이브">
 		<!-- Update by pmq -->
 		<set name="power" val="1900" />
 		<set name="target" val="TARGET_AURA" />
@@ -315,7 +315,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">
+	<skill id="3332" levels="1" name="주황색 탈리스만 - 온천 투지의 물약">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
@@ -338,7 +338,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="3333" levels="1" name="Orange Talisman - A Grade Elixir of Life">
+	<skill id="3333" levels="1" name="주황색 탈리스만 - A급 생명의 비약">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
@@ -360,7 +360,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="3334" levels="1" name="Orange Talisman - A Grade Elixir of Mental Strength">
+	<skill id="3334" levels="1" name="주황색 탈리스만 - A급 정신의 비약">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="create_item_count" val="1" />
@@ -383,7 +383,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="3335" levels="1" name="Transform Yeti">
+	<skill id="3335" levels="1" name="트랜스폼 예티">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -398,7 +398,7 @@
 			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="3336" levels="1" name="Transform Buffalo">
+	<skill id="3336" levels="1" name="트랜스폼 버팔로">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -413,7 +413,7 @@
 			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="3337" levels="1" name="Transform Cutie Pig">
+	<skill id="3337" levels="1" name="트랜스폼 큐티 피그">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -427,7 +427,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="3338" levels="1" name="Shield Master">
+	<skill id="3338" levels="1" name="실드 마스터">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -442,7 +442,7 @@
 			<add order="0x40" stat="sleepVuln" val="80" />
 		</for>
 	</skill>
-	<skill id="3339" levels="1" name="Bard">
+	<skill id="3339" levels="1" name="바드">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -457,7 +457,7 @@
 			<mul order="0x30" stat="pAtk" val="1.08" />
 		</for>
 	</skill>
-	<skill id="3340" levels="1" name="Weapon Master">
+	<skill id="3340" levels="1" name="웨폰 마스터">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -471,7 +471,7 @@
 			<mul order="0x30" stat="cAtk" val="1.08" />
 		</for>
 	</skill>
-	<skill id="3341" levels="1" name="Force Master">
+	<skill id="3341" levels="1" name="포스 마스터">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -485,7 +485,7 @@
 			<mul order="0x30" stat="MpConsume" val="0.80" />
 		</for>
 	</skill>
-	<skill id="3342" levels="1" name="Bow Master">
+	<skill id="3342" levels="1" name="보우 마스터">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -500,7 +500,7 @@
 			<mul order="0x30" stat="MpConsume" val="0.80" />
 		</for>
 	</skill>
-	<skill id="3343" levels="1" name="Dagger Master">
+	<skill id="3343" levels="1" name="대거 마스터">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -515,7 +515,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.08" />
 		</for>
 	</skill>
-	<skill id="3344" levels="1" name="Wizard">
+	<skill id="3344" levels="1" name="위자드">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -531,7 +531,7 @@
 			<mul order="0x30" stat="mAtk" val="1.15" />
 		</for>
 	</skill>
-	<skill id="3345" levels="1" name="Summoner">
+	<skill id="3345" levels="1" name="서머너">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -546,7 +546,7 @@
 			<mul order="0x30" stat="pDef" val="1.0540" />
 		</for>
 	</skill>
-	<skill id="3346" levels="1" name="Healer">
+	<skill id="3346" levels="1" name="힐러">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -561,7 +561,7 @@
 			<add order="0x40" stat="cancelVuln" val="80" />
 		</for>
 	</skill>
-	<skill id="3347" levels="1" name="Enchanter">
+	<skill id="3347" levels="1" name="인챈터">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -576,7 +576,7 @@
 			<!-- <mul order="0x30" stat="concentration" val="0.8" /> -->
 		</for>
 	</skill>
-	<skill id="3348" levels="1" name="Dynasty Breast Plate - Shield Master">
+	<skill id="3348" levels="1" name="다이너스티 블레스트 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -590,7 +590,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3349" levels="1" name="Dynasty Breast Plate - Weapon Master">
+	<skill id="3349" levels="1" name="다이너스티 블레스트 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -604,7 +604,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3350" levels="1" name="Dynasty Breast Plate - Force Master">
+	<skill id="3350" levels="1" name="다이너스티 블레스트 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -617,7 +617,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3351" levels="1" name="Dynasty Breast Plate - Bard">
+	<skill id="3351" levels="1" name="다이너스티 블레스트 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -630,7 +630,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3352" levels="1" name="Dynasty Leather Armor - Dagger Master">
+	<skill id="3352" levels="1" name="다이너스티 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -644,7 +644,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3353" levels="1" name="Dynasty Leather Armor - Bow Master">
+	<skill id="3353" levels="1" name="다이너스티 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -658,7 +658,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3354" levels="1" name="Dynasty Tunic - Healer">
+	<skill id="3354" levels="1" name="다이너스티 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -672,7 +672,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
+	<skill id="3355" levels="1" name="다이너스티 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -686,7 +686,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3356" levels="1" name="Dynasty Tunic - Summoner">
+	<skill id="3356" levels="1" name="다이너스티 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -700,7 +700,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3357" levels="1" name="Dynasty Tunic - Wizard">
+	<skill id="3357" levels="1" name="다이너스티 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -713,7 +713,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3358" levels="1" name="Flag Equip">
+	<skill id="3358" levels="1" name="깃발 착용">
 		<!-- Confirmed CT2.5 -->
 		<!-- Flag Skill -->
 		<set name="magicLvl" val="1" />
@@ -728,7 +728,7 @@
 
 		</for>
 	</skill>
-	<skill id="3359" levels="1" name="Transform Native">
+	<skill id="3359" levels="1" name="트랜스폼 네이티브">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -744,7 +744,7 @@
 			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="3360" levels="1" name="Cheap Shot">
+	<skill id="3360" levels="1" name="특수능력 칩샷">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="P" />
@@ -754,7 +754,7 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.88" />
 		</for>
 	</skill>
-	<skill id="3361" levels="1" name="Summon Agathion - Fortress">
+	<skill id="3361" levels="1" name="아가시온 봉인해제 - 요새">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -762,228 +762,228 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="16029" />
 	</skill>
-	<skill id="3362" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3362" levels="1" name="특성 강화 목걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3363" levels="1" name="Traits Strengthen Ring">
+	<skill id="3363" levels="1" name="특성 강화 반지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3364" levels="1" name="Traits Strengthen Earring">
+	<skill id="3364" levels="1" name="특성 강화 귀걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3365" levels="1" name="Dynasty Resistance Necklace">
+	<skill id="3365" levels="1" name="특성 저항 목걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="18" /> <!-- Stun Resistance +18 -->
 		</for>
 	</skill>
-	<skill id="3366" levels="1" name="Dynasty Resistance Ring">
+	<skill id="3366" levels="1" name="특성 저항 반지">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="8" /> <!-- Stun Resistance +8 -->
 		</for>
 	</skill>
-	<skill id="3367" levels="1" name="Dynasty Resistance Earring">
+	<skill id="3367" levels="1" name="특성 저항 귀걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="12" /> <!-- Stun Resistance +12 -->
 		</for>
 	</skill>
-	<skill id="3368" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3368" levels="1" name="특성 강화 목걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3369" levels="1" name="Traits Strengthen Ring">
+	<skill id="3369" levels="1" name="특성 강화 반지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3370" levels="1" name="Traits Strengthen Earring">
+	<skill id="3370" levels="1" name="특성 강화 귀걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3371" levels="1" name="Dynasty Resistance Necklace">
+	<skill id="3371" levels="1" name="특성 저항 목걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="11" /> <!-- Bleed Resistance +11 -->
 		</for>
 	</skill>
-	<skill id="3372" levels="1" name="Dynasty Resistance Ring">
+	<skill id="3372" levels="1" name="특성 저항 반지">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="5" /> <!-- Bleed Resistance +5 -->
 		</for>
 	</skill>
-	<skill id="3373" levels="1" name="Dynasty Resistance Earring">
+	<skill id="3373" levels="1" name="특성 저항 귀걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="8" /> <!-- Bleed Resistance +8 -->
 		</for>
 	</skill>
-	<skill id="3374" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3374" levels="1" name="특성 강화 목걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3375" levels="1" name="Traits Strengthen Ring">
+	<skill id="3375" levels="1" name="특성 강화 반지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3376" levels="1" name="Traits Strengthen Earring">
+	<skill id="3376" levels="1" name="특성 강화 귀걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3377" levels="1" name="Dynasty Resistance Necklace">
+	<skill id="3377" levels="1" name="특성 저항 목걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="16" /> <!-- Poison Resistance +16 -->
 		</for>
 	</skill>
-	<skill id="3378" levels="1" name="Dynasty Resistance Ring">
+	<skill id="3378" levels="1" name="특성 저항 반지">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="7" /> <!-- Poison Resistance +7 -->
 		</for>
 	</skill>
-	<skill id="3379" levels="1" name="Dynasty Resistance Earring">
+	<skill id="3379" levels="1" name="특성 저항 귀걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="11" /> <!-- Poison Resistance +11 -->
 		</for>
 	</skill>
-	<skill id="3380" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3380" levels="1" name="특성 강화 목걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3381" levels="1" name="Traits Strengthen Ring">
+	<skill id="3381" levels="1" name="특성 강화 반지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3382" levels="1" name="Traits Strengthen Earring">
+	<skill id="3382" levels="1" name="특성 강화 귀걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3383" levels="1" name="Dynasty Resistance Necklace">
+	<skill id="3383" levels="1" name="특성 저항 목걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="9" /> <!-- Paralysis Resistance +9 -->
 		</for>
 	</skill>
-	<skill id="3384" levels="1" name="Dynasty Resistance Ring">
+	<skill id="3384" levels="1" name="특성 저항 반지">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="4" /> <!-- Paralysis Resistance +4 -->
 		</for>
 	</skill>
-	<skill id="3385" levels="1" name="Dynasty Resistance Earring">
+	<skill id="3385" levels="1" name="특성 저항 귀걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="6" /> <!-- Paralysis Resistance +6 -->
 		</for>
 	</skill>
-	<skill id="3386" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3386" levels="1" name="특성 강화 목걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3387" levels="1" name="Traits Strengthen Ring">
+	<skill id="3387" levels="1" name="특성 강화 반지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3388" levels="1" name="Traits Strengthen Earring">
+	<skill id="3388" levels="1" name="특성 강화 귀걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3389" levels="1" name="Dynasty Resistance Necklace">
+	<skill id="3389" levels="1" name="특성 저항 목걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="18" /> <!-- Hold Resistance +18 -->
 		</for>
 	</skill>
-	<skill id="3390" levels="1" name="Dynasty Resistance Ring">
+	<skill id="3390" levels="1" name="특성 저항 반지">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="8" /> <!-- Hold Resistance +8 -->
 		</for>
 	</skill>
-	<skill id="3391" levels="1" name="Dynasty Resistance Earring">
+	<skill id="3391" levels="1" name="특성 저항 귀걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="12" /> <!-- Hold Resistance +12 -->
 		</for>
 	</skill>
-	<skill id="3392" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3392" levels="1" name="특성 강화 목걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3393" levels="1" name="Traits Strengthen Ring">
+	<skill id="3393" levels="1" name="특성 강화 반지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3394" levels="1" name="Traits Strengthen Earring">
+	<skill id="3394" levels="1" name="특성 강화 귀걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3395" levels="1" name="Dynasty Resistance Necklace">
+	<skill id="3395" levels="1" name="특성 저항 목걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="18" /> <!-- Sleep Resistance +18 -->
 		</for>
 	</skill>
-	<skill id="3396" levels="1" name="Dynasty Resistance Ring">
+	<skill id="3396" levels="1" name="특성 저항 반지">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="8" /> <!-- Sleep Resistance +8 -->
 		</for>
 	</skill>
-	<skill id="3397" levels="1" name="Dynasty Resistance Earring">
+	<skill id="3397" levels="1" name="특성 저항 귀걸이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="12" /> <!-- Sleep Resistance +12 -->
 		</for>
 	</skill>
-	<skill id="3398" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3398" levels="1" name="특성 강화 목걸이">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3399" levels="1" name="Traits Strengthen Ring">
+	<skill id="3399" levels="1" name="특성 강화 반지">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />

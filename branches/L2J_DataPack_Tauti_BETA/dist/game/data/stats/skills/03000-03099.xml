@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3001" levels="1" name="int_1">
+	<skill id="3001" levels="1" name="a,int_1">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3002" levels="1" name="int_2">
+	<skill id="3002" levels="1" name="a,int_2">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3003" levels="1" name="str_2">
+	<skill id="3003" levels="1" name="a,str_2">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3004" levels="1" name="maxmp_5">
+	<skill id="3004" levels="1" name="a,maxmp_5">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3005" levels="1" name="Bleed">
+	<skill id="3005" levels="1" name="출혈">
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="40" />
@@ -30,11 +30,11 @@
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="66" abnormalLvl="5" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="3006" levels="1" name="Equip Set Items">
+	<skill id="3006" levels="1" name="세트 아이템 착용">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="3007" levels="6" name="Special Ability: Guidance">
+	<skill id="3007" levels="6" name="특수능력 가이던스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -45,7 +45,7 @@
 			<add order="0x40" stat="accCombat" val="#accCombat" />
 		</for>
 	</skill>
-	<skill id="3008" levels="6" name="Special Ability: Guidance">
+	<skill id="3008" levels="6" name="특수능력 가이던스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 5.42 5.12 4.82 4.53 4.24 3.95 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -56,7 +56,7 @@
 			<add order="0x40" stat="accCombat" val="#accCombat" />
 		</for>
 	</skill>
-	<skill id="3009" levels="8" name="Special Ability: Evasion">
+	<skill id="3009" levels="8" name="특수능력 이베이젼">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 2.95 2.82 2.68 2.55 2.41 2.28 7.5 5.31 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 80 80 </table>
@@ -67,7 +67,7 @@
 			<add order="0x40" stat="rEvas" val="#rEvas" />
 		</for>
 	</skill>
-	<skill id="3010" levels="6" name="Special Ability: Focus">
+	<skill id="3010" levels="6" name="특수능력 포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rCrit"> 86.7 82.2 77.8 73.3 68.9 64.5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -78,7 +78,7 @@
 			<add order="0x40" stat="rCrit" val="#rCrit" />
 		</for>
 	</skill>
-	<skill id="3011" levels="6" name="Special Ability: Focus">
+	<skill id="3011" levels="6" name="특수능력 포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rCrit"> 90.5 85.9 81.2 76.6 71.9 67.3 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -89,7 +89,7 @@
 			<add order="0x40" stat="rCrit" val="#rCrit" />
 		</for>
 	</skill>
-	<skill id="3012" levels="6" name="Special Ability: Anger">
+	<skill id="3012" levels="6" name="특수능력 앵거">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 </table>
@@ -101,7 +101,7 @@
 			<mul order="0x30" stat="maxHp" val="0.85" />
 		</for>
 	</skill>
-	<skill id="3013" levels="5" name="Special Ability: Health">
+	<skill id="3013" levels="5" name="특수능력 헬스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvpBonus"> 1 1 1.05 1.05 1.05 </table>
 		<table name="#atkCountMax"> 0 4 0 4 0 </table>
@@ -117,7 +117,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3014" levels="3" name="Special Ability: Mana Up">
+	<skill id="3014" levels="3" name="특수능력 마나업">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 1 64 70 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
@@ -131,7 +131,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3016" levels="6" name="Special Ability: Critical Stun">
+	<skill id="3016" levels="6" name="특수능력 Crt.스턴">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -147,7 +147,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="3018" levels="6" name="Special Ability: Back Blow">
+	<skill id="3018" levels="6" name="특수능력 백블로">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rCrit"> 0.71 0.67 0.63 0.6 0.56 0.53 </table>
@@ -160,7 +160,7 @@
 			</basemul>
 		</for>
 	</skill>
-	<skill id="3019" levels="6" name="Special Ability: Back Blow">
+	<skill id="3019" levels="6" name="특수능력 백블로">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#rCrit"> 0.5 0.47 0.45 0.42 0.4 0.37 </table>
@@ -173,7 +173,7 @@
 			</basemul>
 		</for>
 	</skill>
-	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
+	<skill id="3020" levels="6" name="특수능력 Crt.블리드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
@@ -191,7 +191,7 @@
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
+	<skill id="3021" levels="6" name="특수능력 Crt.블리드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#dot"> 129 129 192 192 195 264 </table>
@@ -208,7 +208,7 @@
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="5" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
+	<skill id="3022" levels="6" name="특수능력 Crt.드레인">
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 9.26 9.33 9.31 9.19 8.97 8.65 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -224,7 +224,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
-	<skill id="3023" levels="6" name="Special Ability: Critical Damage">
+	<skill id="3023" levels="6" name="특수능력 Crt.대미지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 174.78 194.1 213.12 231.29 247.98 262.57 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -235,7 +235,7 @@
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
 		</for>
 	</skill>
-	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
+	<skill id="3024" levels="6" name="특수능력 Crt.포이즌">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
@@ -257,7 +257,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
+	<skill id="3025" levels="6" name="특수능력 Crt.앵거">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#hpConsume"> 12 13 14 15 16 17 </table>
@@ -267,7 +267,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="hpConsume" val="#hpConsume" />
 	</skill>
-	<skill id="3026" levels="6" name="Special Ability: Critical Anger">
+	<skill id="3026" levels="6" name="특수능력 Crt.앵거">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#cAtkAdd"> 248.56 298.04 352.73 411.98 474.82 539.9 </table>
@@ -278,7 +278,7 @@
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
 		</for>
 	</skill>
-	<skill id="3027" levels="7" name="Special Ability: Rsk. Focus">
+	<skill id="3027" levels="7" name="특수능력 Rsk.포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 80 </table>
@@ -295,7 +295,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3028" levels="6" name="Special Ability: Rsk. Evasion">
+	<skill id="3028" levels="6" name="특수능력 Rsk.이베이젼">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -308,7 +308,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3029" levels="6" name="Special Ability: Rsk. Evasion">
+	<skill id="3029" levels="6" name="특수능력 Rsk.이베이젼">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 4.44 4.24 4.04 3.84 3.63 3.41 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -321,7 +321,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3030" levels="6" name="Special Ability: Rsk. Evasion">
+	<skill id="3030" levels="6" name="특수능력 Rsk.이베이젼">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -334,7 +334,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3031" levels="6" name="Special Ability: Rsk. Evasion">
+	<skill id="3031" levels="6" name="특수능력 Rsk.이베이젼">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -347,7 +347,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3032" levels="6" name="Special Ability: Rsk. Haste">
+	<skill id="3032" levels="6" name="특수능력 Rsk.헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
@@ -360,7 +360,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="3033" levels="6" name="Special Ability: Rsk. Haste">
+	<skill id="3033" levels="6" name="특수능력 Rsk.헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
@@ -373,7 +373,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="3034" levels="7" name="Special Ability: Rsk. Haste">
+	<skill id="3034" levels="7" name="특수능력 Rsk.헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 80 </table>
@@ -390,7 +390,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3035" levels="6" name="Special Ability: Mighty Mortal">
+	<skill id="3035" levels="6" name="특수능력 마이트모탈">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#blowRate"> 1.5 1.48 1.46 1.44 1.42 1.4 </table>
@@ -401,7 +401,7 @@
 			<mul order="0x30" stat="blowRate" val="#blowRate" />
 		</for>
 	</skill>
-	<skill id="3036" levels="6" name="Special Ability: Haste">
+	<skill id="3036" levels="6" name="특수능력 헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -412,7 +412,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 		</for>
 	</skill>
-	<skill id="3037" levels="6" name="Special Ability: Haste">
+	<skill id="3037" levels="6" name="특수능력 헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -423,7 +423,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 		</for>
 	</skill>
-	<skill id="3038" levels="6" name="Special Ability: Haste">
+	<skill id="3038" levels="6" name="특수능력 헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -434,7 +434,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 		</for>
 	</skill>
-	<skill id="3039" levels="7" name="Special Ability: Critical Drain">
+	<skill id="3039" levels="7" name="특수능력 Crt.드레인">
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 6.85 7.96 9.26 10.8 12.62 14.82 14.82 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 70 </table>
@@ -449,7 +449,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
-	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
+	<skill id="3040" levels="6" name="특수능력 Crt.포이즌">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
@@ -469,7 +469,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
+	<skill id="3041" levels="6" name="특수능력 Crt.포이즌">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
@@ -489,7 +489,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="3042" levels="20" name="Special Ability: Critical Damage">
+	<skill id="3042" levels="20" name="특수능력 Crt.대미지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
@@ -504,7 +504,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3043" levels="6" name="Special Ability: Critical Damage">
+	<skill id="3043" levels="6" name="특수능력 Crt.대미지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 106.45 118.22 129.81 140.87 151.04 159.93 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
@@ -515,7 +515,7 @@
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
 		</for>
 	</skill>
-	<skill id="3044" levels="20" name="Special Ability: Focus">
+	<skill id="3044" levels="20" name="특수능력 포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#rCrit"> 53.6 38.5 50.4 43.2 36.5 30.4 24.8 40.4 76.6 65 54 43.7 52.6 47.2 98.7 92.4 86.2 96 103.5 109.2 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
@@ -530,7 +530,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3045" levels="20" name="Special Ability: Haste">
+	<skill id="3045" levels="20" name="특수능력 헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtkSpd"> 1.05 1.04 1.05 1.04 1.03 1.03 1.02 1.04 1.07 1.06 1.05 1.04 1.05 1.04 1.09 1.08 1.08 1.09 1.09 1.1 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
@@ -545,7 +545,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3046" levels="20" name="Special Ability: Guidance">
+	<skill id="3046" levels="20" name="특수능력 가이던스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 3.9 2.8 3.7 3.1 2.6 2.2 1.8 2.9 5.7 4.8 3.9 3.2 3.8 3.4 6.5 6.5 6.5 6.5 6.5 6.5 </table>
 		<table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
@@ -560,7 +560,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3047" levels="3" name="Special Ability: Acumen">
+	<skill id="3047" levels="3" name="특수능력 아큐멘">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<table name="#magicLvl"> 64 64 70 </table>
@@ -574,7 +574,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3048" levels="3" name="Special Ability: Conversion">
+	<skill id="3048" levels="3" name="특수능력 업다운">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<table name="#magicLvl"> 64 64 70 </table>
@@ -589,7 +589,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3049" levels="2" name="Special Ability: Increase Critical">
+	<skill id="3049" levels="2" name="특수능력 매직대미지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_NONE" />
@@ -601,7 +601,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 	</skill>
-	<skill id="3050" levels="2" name="Special Ability: Focus">
+	<skill id="3050" levels="2" name="특수능력 포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -614,7 +614,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3051" levels="2" name="Special Ability: Focus">
+	<skill id="3051" levels="2" name="특수능력 포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 67 70 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -627,7 +627,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
+	<skill id="3052" levels="2" name="특수능력 Crt.블리드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -643,7 +643,7 @@
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="222" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
+	<skill id="3053" levels="2" name="특수능력 Crt.블리드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -661,7 +661,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3054" levels="2" name="Special Ability: Critical Bleed">
+	<skill id="3054" levels="2" name="특수능력 Crt.블리드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -679,7 +679,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3055" levels="2" name="Special Ability: Critical Bleed">
+	<skill id="3055" levels="2" name="특수능력 Crt.블리드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -697,7 +697,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3056" levels="3" name="Special Ability: Rsk. Haste">
+	<skill id="3056" levels="3" name="특수능력 Rsk.헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 64 67 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
@@ -713,7 +713,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3057" levels="4" name="Special Ability: Anger">
+	<skill id="3057" levels="4" name="특수능력 앵거">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 70 80 </table>
 		<table name="#pAtk"> 31.3 32.05 32.05 78.33 </table>
@@ -728,7 +728,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3058" levels="2" name="Special Ability: Anger">
+	<skill id="3058" levels="2" name="특수능력 앵거">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#pAtk"> 38.09 39 </table>
@@ -743,7 +743,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3059" levels="2" name="Special Ability: Critical Drain">
+	<skill id="3059" levels="2" name="특수능력 Crt.드레인">
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 18 19 </table>
 		<table name="#magicLvl"> 64 67 </table>
@@ -757,7 +757,7 @@
 		<set name="absorbPart" val="35" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
-	<skill id="3060" levels="2" name="Special Ability: Critical Drain">
+	<skill id="3060" levels="2" name="특수능력 Crt.드레인">
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 10 11 </table>
 		<table name="#magicLvl"> 64 67 </table>
@@ -771,7 +771,7 @@
 		<set name="absorbPart" val="35" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>
-	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
+	<skill id="3061" levels="3" name="특수능력 Crt.포이즌">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 70 </table>
 		<table name="#dot"> 1209 1209 1317 </table>
@@ -790,7 +790,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="7" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="3062" levels="2" name="Special Ability: Critical Poison">
+	<skill id="3062" levels="2" name="특수능력 Crt.포이즌">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -808,7 +808,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="672" abnormalLvl="7" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="3063" levels="2" name="Special Ability: Back Blow">
+	<skill id="3063" levels="2" name="특수능력 백블로">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 70 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -823,7 +823,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3064" levels="1" name="Special Ability: Guidance">
+	<skill id="3064" levels="1" name="특수능력 가이던스">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -835,7 +835,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3065" levels="1" name="Special Ability: Guidance">
+	<skill id="3065" levels="1" name="특수능력 가이던스">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -847,7 +847,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3066" levels="4" name="Special Ability: Critical Damage">
+	<skill id="3066" levels="4" name="특수능력 Crt.대미지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 180.94 200.79 200.79 559 </table>
 		<table name="#magicLvl"> 64 67 70 80 </table>
@@ -861,7 +861,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3067" levels="2" name="Special Ability: Critical Damage">
+	<skill id="3067" levels="2" name="특수능력 Crt.대미지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#cAtkAdd"> 297.68 326.28 </table>
 		<table name="#magicLvl"> 64 67 </table>
@@ -875,7 +875,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3068" levels="3" name="Special Ability: Haste">
+	<skill id="3068" levels="3" name="특수능력 헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtkSpd"> 1.06 1.06 1.06 </table>
 		<table name="#pvpBonus"> 1 1.05 1.05 </table>
@@ -890,7 +890,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3069" levels="1" name="Special Ability: Rsk. Evasion">
+	<skill id="3069" levels="1" name="특수능력 Rsk.이베이젼">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -901,7 +901,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3070" levels="4" name="Special Ability: Critical Stun">
+	<skill id="3070" levels="4" name="특수능력 Crt.스턴">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 70 80 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -917,7 +917,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="3071" levels="2" name="Special Ability: Rsk. Focus">
+	<skill id="3071" levels="2" name="특수능력 Rsk.포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvpBonus"> 1 1.05 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -932,7 +932,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3072" levels="2" name="Special Ability: Empower">
+	<skill id="3072" levels="2" name="특수능력 엠파워">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#mAtk"> 30.76 31.38 </table>
@@ -946,7 +946,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3073" levels="2" name="Special Ability: Magic Power">
+	<skill id="3073" levels="2" name="특수능력 매직파워">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#mAtk"> 153.28 167.02 </table>
@@ -961,7 +961,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3074" levels="2" name="Special Ability: Magic Silence">
+	<skill id="3074" levels="2" name="특수능력 매직사일런스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -980,7 +980,7 @@
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
 	</skill>
-	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
+	<skill id="3075" levels="2" name="특수능력 매직패럴라이즈">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -1002,7 +1002,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3076" levels="6" name="Special Ability: Empower">
+	<skill id="3076" levels="6" name="특수능력 엠파워">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#mAtk"> 20.36 22.51 24.59 26.53 28.27 29.7 </table>
@@ -1013,7 +1013,7 @@
 			<add order="0x40" stat="mAtk" val="#mAtk" />
 		</for>
 	</skill>
-	<skill id="3077" levels="6" name="Special Ability: Magic Power">
+	<skill id="3077" levels="6" name="특수능력 매직파워">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#mAtk"> 75.86 87.22 99.39 112.26 125.66 139.41 </table>
@@ -1025,7 +1025,7 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
 		</for>
 	</skill>
-	<skill id="3078" levels="6" name="Special Ability: Magic Silence">
+	<skill id="3078" levels="6" name="특수능력 매직사일런스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -1044,7 +1044,7 @@
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
 	</skill>
-	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
+	<skill id="3079" levels="6" name="특수능력 매직패럴라이즈">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -1067,7 +1067,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3080" levels="10" name="Item Skill: Aggression">
+	<skill id="3080" levels="10" name="아이템 스킬 : 헤이트">
 		<table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -1085,7 +1085,7 @@
 			<effect name="TargetMe" abnormalTime="3" val="0" />
 		</for>
 	</skill>
-	<skill id="3081" levels="10" name="Item Skill: Charm">
+	<skill id="3081" levels="10" name="아이템 스킬 : 참(어택액티브)">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1099,7 +1099,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="3082" levels="10" name="Item Skill: Mana Burn">
+	<skill id="3082" levels="10" name="아이템 스킬 : 마나 번">
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -1113,7 +1113,7 @@
 		<set name="activationChance" val="#chance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 	</skill>
-	<skill id="3083" levels="10" name="Item Skill: Slow">
+	<skill id="3083" levels="10" name="아이템 스킬 : 슬로우(어택액티브)">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1128,7 +1128,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="3084" levels="10" name="Item Skill: Winter">
+	<skill id="3084" levels="10" name="아이템 스킬 : 윈터(어택액티브)">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1143,7 +1143,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="3085" levels="10" name="Item Skill: Stun">
+	<skill id="3085" levels="10" name="아이템 스킬 : 스턴">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1159,7 +1159,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="3086" levels="10" name="Item Skill: Hold">
+	<skill id="3086" levels="10" name="아이템 스킬 : 홀드">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1175,7 +1175,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="HOLD" />
 	</skill>
-	<skill id="3087" levels="10" name="Item Skill: Sleep">
+	<skill id="3087" levels="10" name="아이템 스킬 : 슬리프">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1191,7 +1191,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="SLEEP" />
 	</skill>
-	<skill id="3088" levels="10" name="Item Skill: Paralyze">
+	<skill id="3088" levels="10" name="아이템 스킬 : 패럴라이즈">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1207,7 +1207,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="PARALYZE" />
 	</skill>
-	<skill id="3089" levels="10" name="Item Skill: Medusa">
+	<skill id="3089" levels="10" name="아이템 스킬 : 메두사">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1222,7 +1222,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="3090" levels="10" name="Item Skill: Fear">
+	<skill id="3090" levels="10" name="아이템 스킬 : 피어">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1238,7 +1238,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="3091" levels="10" name="Item Skill: Poison">
+	<skill id="3091" levels="10" name="아이템 스킬 : 포이즌(어택액티브)">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1254,7 +1254,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 	</skill>
-	<skill id="3092" levels="10" name="Item Skill: Bleed">
+	<skill id="3092" levels="10" name="아이템 스킬 : 블리드(어택액티브)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="nextActionAttack" val="true" />
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -1271,7 +1271,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 	</skill>
-	<skill id="3093" levels="10" name="Item Skill: Silence">
+	<skill id="3093" levels="10" name="아이템 스킬 : 사일런스">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1287,7 +1287,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="3094" levels="10" name="Item Skill: Doom">
+	<skill id="3094" levels="10" name="아이템 스킬 : 둠">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1303,7 +1303,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="3095" levels="10" name="Item Skill: Mana Burn">
+	<skill id="3095" levels="10" name="아이템 스킬 : 마나 번">
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -1317,7 +1317,7 @@
 		<set name="activationChance" val="#chance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 	</skill>
-	<skill id="3096" levels="10" name="Item Skill: Slow">
+	<skill id="3096" levels="10" name="아이템 스킬 : 슬로우(매직액티브)">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1332,7 +1332,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="3097" levels="10" name="Item Skill: Winter">
+	<skill id="3097" levels="10" name="아이템 스킬 : 윈터(매직액티브)">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1347,7 +1347,7 @@
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
 	</skill>
-	<skill id="3098" levels="10" name="Item Skill: Stun">
+	<skill id="3098" levels="10" name="아이템 스킬 : 스턴">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1363,7 +1363,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="3099" levels="10" name="Item Skill: Hold">
+	<skill id="3099" levels="10" name="아이템 스킬 : 홀드">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

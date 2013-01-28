@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="13313" levels="1" name="Blessed Antharas Earring"><!-- Check OK -->
+	<skill id="13313" levels="1" name="축복받은 안타라스의 귀걸이"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -23,7 +23,7 @@
 			<add order="0x10" stat="MEN" val="3" />
 		</for>
 	</skill>
-	<skill id="13315" levels="1" name="Blessed Valakas Necklace"><!-- Check OK -->
+	<skill id="13315" levels="1" name="축복받은 발라카스의 목걸이"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -43,7 +43,7 @@
 			<add order="0x10" stat="INT" val="3" />
 		</for>
 	</skill>
-	<skill id="13320" levels="1" name="Istina's Ring"><!-- Check OK -->
+	<skill id="13320" levels="1" name="이스티나의 반지"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -53,7 +53,7 @@
 			<basemul order="0x30" stat="rCrit" val="0.544" />
 		</for>
 	</skill>
-	<skill id="13321" levels="1" name="Istina's Earring"><!-- Check OK -->
+	<skill id="13321" levels="1" name="이스티나의 귀걸이"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -63,7 +63,7 @@
 			<add order="0x40" stat="windRes" val="20" />
 		</for>
 	</skill>
-	<skill id="13322" levels="1" name="Istina's Necklace"><!-- Check OK -->
+	<skill id="13322" levels="1" name="이스티나의 목걸이"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -74,7 +74,7 @@
 			<add order="0x40" stat="holyRes" val="35" />
 		</for>
 	</skill>
-	<skill id="13323" levels="1" name="Istina's Belt"><!-- Check OK -->
+	<skill id="13323" levels="1" name="이스티나의 벨트"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -83,7 +83,7 @@
 			<mul order="0x30" stat="regHp" val="1.348" />
 		</for>
 	</skill>
-	<skill id="13324" levels="1" name="Istina's Shirt"><!-- Check OK -->
+	<skill id="13324" levels="1" name="이스티나의 셔츠"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -91,7 +91,7 @@
 			<add order="0x40" stat="maxHp" val="465" />
 		</for>
 	</skill>
-	<skill id="13325" levels="1" name="Octavis' Ring"><!-- Check OK -->
+	<skill id="13325" levels="1" name="옥타비스의 반지"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -100,7 +100,7 @@
 			<mul order="0x30" stat="cAtk" val="1.15" />
 		</for>
 	</skill>
-	<skill id="13326" levels="1" name="Octavis' Earring"><!-- Check OK -->
+	<skill id="13326" levels="1" name="옥타비스의 귀걸이"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -112,7 +112,7 @@
 			<add order="0x40" stat="earthRes" val="30" />
 		</for>
 	</skill>
-	<skill id="13327" levels="1" name="Octavis' Necklace"><!-- Check OK -->
+	<skill id="13327" levels="1" name="옥타비스의 목걸이"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -121,7 +121,7 @@
 			<mul order="0x30" stat="physicalSkillPower" val="1.05" />
 		</for>
 	</skill>
-	<skill id="13328" levels="1" name="Octavis' Belt"><!-- Check OK -->
+	<skill id="13328" levels="1" name="옥타비스의 벨트"><!-- Check OK -->
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -130,7 +130,7 @@
 			<mul order="0x30" stat="regMp" val="1.23" />
 		</for>
 	</skill>
-	<skill id="13339" levels="1" name="Enchant Heavy Armor (R-grade)"><!-- Check OK -->
+	<skill id="13339" levels="1" name="R 그레이드 중장비 강화"><!-- Check OK -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -148,7 +148,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="13340" levels="1" name="Enchant Light Armor (R-grade)"><!-- Check OK -->
+	<skill id="13340" levels="1" name="R 그레이드 경장비 강화"><!-- Check OK -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -161,7 +161,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="13341" levels="1" name="Enchant Robe (R-grade)"><!-- Check OK -->
+	<skill id="13341" levels="1" name="R 그레이드 로브 강화"><!-- Check OK -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />

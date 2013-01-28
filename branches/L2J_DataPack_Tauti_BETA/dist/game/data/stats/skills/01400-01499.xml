@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1400" levels="10" name="Turn Undead" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+	<skill id="1400" levels="10" name="턴 언데드" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
@@ -57,7 +57,7 @@
 			<effect count="10" name="Fear" abnormalTime="2" val="0" effectPower="30" effectType="FEAR" />
 		</enchant3for>
 	</skill>
-	<skill id="1401" levels="11" name="Major Heal" enchantGroup1="2" enchantGroup2="2">
+	<skill id="1401" levels="11" name="메이저 힐" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1amount"> 958 972 985 999 1012 1026 1039 1053 1067 1080 1094 1107 1121 1134 1148 1162 1175 1189 1202 1216 1229 1243 1257 1270 1284 1297 1311 1324 1338 1352 </table>
@@ -93,7 +93,7 @@
 			<effect name="Heal" noicon="1" val="#ench1amount" />
 		</enchant1for>
 	</skill>
-	<skill id="1402" levels="5" name="Major Group Heal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+	<skill id="1402" levels="5" name="메이저 그룹 힐" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1amount"> 1183 1196 1209 1222 1235 1248 1261 1274 1287 1300 1313 1326 1339 1352 1365 1378 1391 1404 1417 1430 1443 1456 1469 1482 1495 1508 1521 1534 1547 1561 </table>
@@ -140,7 +140,7 @@
 			<effect name="Negate" noicon="1" val="0" />
 		</enchant4for>
 	</skill>
-	<skill id="1403" levels="1" name="Summon Friend">
+	<skill id="1403" levels="1" name="서먼 프랜드">
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<set name="skillRadius" val="-1" />
 		<set name="skillType" val="SUMMON_FRIEND" />
@@ -154,7 +154,7 @@
 		<set name="targetConsumeId" val="8615" />
 		<set name="targetConsumeCount" val="1" />
 	</skill>
-	<skill id="1404" levels="1" name="Word of Invitation">
+	<skill id="1404" levels="1" name="워드 오브 인비테이션">
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="-1" />
 		<set name="skillType" val="SUMMON_FRIEND" />
@@ -170,13 +170,13 @@
 		<set name="targetConsumeId" val="8615" />
 		<set name="targetConsumeCount" val="1" />
 	</skill>
-	<skill id="1405" levels="4" name="Divine Inspiration">
+	<skill id="1405" levels="4" name="인크리스 오브 디비니티">
 		<!-- Increases the number of buffs you can receive. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="COREDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="1406" levels="1" name="Summon Feline King" enchantGroup1="5">
+	<skill id="1406" levels="1" name="서먼 킹 오브 캣" enchantGroup1="5">
 		<!-- TODO: Needs to be verified -->
 		<table name="#ench1npcId"> 14871 14872 14873 14874 14875 14876 14877 14878 14879 14880 14881 14882 14883 14884 14885 </table>
 		<set name="mpInitialConsume" val="28" />
@@ -203,7 +203,7 @@
 		<enchant1 name="mpInitialConsume" val="29" />
 		<enchant1 name="mpConsume" val="116" />
 	</skill>
-	<skill id="1407" levels="1" name="Summon Magnus the Unicorn" enchantGroup1="5">
+	<skill id="1407" levels="1" name="서먼 유니콘 매그너스" enchantGroup1="5">
 		<!-- TODO: Needs to be verified -->
 		<table name="#ench1npcId"> 14886 14887 14888 14889 14890 14891 14892 14893 14894 14895 14896 14897 14898 14899 14900 </table>
 		<set name="mpInitialConsume" val="28" />
@@ -230,7 +230,7 @@
 		<enchant1 name="mpInitialConsume" val="29" />
 		<enchant1 name="mpConsume" val="116" />
 	</skill>
-	<skill id="1408" levels="1" name="Summon Spectral Lord" enchantGroup1="5">
+	<skill id="1408" levels="1" name="서먼 스펙트럴 로드" enchantGroup1="5">
 		<!-- TODO: Needs to be verified -->
 		<table name="#ench1npcId"> 14901 14902 14903 14904 14905 14906 14907 14908 14909 14910 14911 14912 14913 14914 14915 </table>
 		<set name="mpInitialConsume" val="28" />
@@ -257,7 +257,7 @@
 		<enchant1 name="mpInitialConsume" val="29" />
 		<enchant1 name="mpConsume" val="116" />
 	</skill>
-	<skill id="1409" levels="1" name="Cleanse">
+	<skill id="1409" levels="1" name="클랜스">
 		<set name="itemConsumeId" val="8874" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="12" />
@@ -271,7 +271,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="1410" levels="1" name="Salvation">
+	<skill id="1410" levels="1" name="샐베이션">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -292,7 +292,7 @@
 			<effect name="PhoenixBless" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="resurrection_special" />
 		</for>
 	</skill>
-	<skill id="1411" levels="1" name="Mystic Immunity">
+	<skill id="1411" levels="1" name="미스틱 이뮤니티">
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -309,7 +309,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1412" levels="1" name="Spell Turning">
+	<skill id="1412" levels="1" name="스펠 터닝">
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="500" />
@@ -325,7 +325,7 @@
 			<effect name="AbortCast" noicon="1" val="0" effectPower="50" />
 		</for>
 	</skill>
-	<skill id="1413" levels="1" name="Magnus' Chant" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1413" levels="1" name="챈트 오브 매그너스" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
 		<table name="#ench2mpInitialConsume"> 56 55 54 53 52 51 50 49 48 47 46 45 44 44 43 </table>
 		<table name="#ench2mpConsume"> 225 221 218 214 210 206 202 198 195 191 187 183 179 176 172 </table>
@@ -383,7 +383,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1414" levels="1" name="Victory of Pa'agrio" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
+	<skill id="1414" levels="1" name="빅토리 오브 파아그리오" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
 		<table name="#ench2mpInitialConsume"> 55 53 51 49 47 45 43 41 40 38 36 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 218 212 204 196 189 181 174 166 158 150 142 136 128 121 113 </table>
@@ -457,7 +457,7 @@
 			<effect name="CpHealPercent" noicon="1" val="20" />
 		</enchant3for>
 	</skill>
-	<skill id="1415" levels="1" name="Pa'agrio's Emblem" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1415" levels="1" name="엠블럼 오브 파아그리오" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
 		<table name="#ench2mpInitialConsume"> 54 53 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 219 212 204 196 189 181 174 166 159 151 143 136 128 121 113 </table>
@@ -486,7 +486,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1416" levels="1" name="Pa'agrio's Fist" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1416" levels="1" name="피스트 오브 파아그리오" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1amount"> 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 </table>
 		<table name="#ench2mpInitialConsume"> 54 53 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 219 212 205 196 189 181 174 166 159 151 143 136 128 121 113 </table>
@@ -516,7 +516,7 @@
 			<effect name="CpHeal" noicon="1" val="#ench1amount" />
 		</enchant1for>
 	</skill>
-	<skill id="1417" levels="5" name="Aura Flash" enchantGroup1="2" enchantGroup2="2">
+	<skill id="1417" levels="5" name="오라 플래쉬" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#itemConsumeCount"> 2 2 3 3 4 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
@@ -548,7 +548,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench2Chance" effectType="DEBUFF" />
 		</enchant2for>
 	</skill>
-	<skill id="1418" levels="1" name="Celestial Shield">
+	<skill id="1418" levels="1" name="셀레스티얼 실드">
 		<set name="mpConsume" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="4000" />
@@ -564,7 +564,7 @@
 			<effect name="Invincible" abnormalTime="10" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
-	<skill id="1419" levels="1" name="Volcano">
+	<skill id="1419" levels="1" name="볼케이노">
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -592,7 +592,7 @@
 			<effect self="1" count="9" name="SignetMDam" abnormalTime="2" val="0" />
 		</for>
 	</skill>
-	<skill id="1420" levels="1" name="Cyclone">
+	<skill id="1420" levels="1" name="싸이클론">
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -620,7 +620,7 @@
 			<effect self="1" count="9" name="SignetMDam" abnormalTime="2" val="0" />
 		</for>
 	</skill>
-	<skill id="1421" levels="1" name="Raging Waves">
+	<skill id="1421" levels="1" name="레이징 웨이브">
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -648,7 +648,7 @@
 			<effect self="1" count="9" name="SignetMDam" abnormalTime="2" val="0" />
 		</for>
 	</skill>
-	<skill id="1422" levels="1" name="Day of Doom">
+	<skill id="1422" levels="1" name="데이 오브 둠">
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
@@ -673,7 +673,7 @@
 			<effect count="5" name="Signet" abnormalTime="3" val="0" />
 		</for>
 	</skill>
-	<skill id="1423" levels="1" name="Gehenna">
+	<skill id="1423" levels="1" name="게헤나">
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -701,7 +701,7 @@
 			<effect self="1" count="9" name="SignetMDam" abnormalTime="2" val="0" />
 		</for>
 	</skill>
-	<skill id="1424" levels="1" name="Anti-Summoning Field">
+	<skill id="1424" levels="1" name="안티 서먼 필드">
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
@@ -727,7 +727,7 @@
 			<effect count="6" name="SignetAntiSummon" abnormalTime="5" val="0" />
 		</for>
 	</skill>
-	<skill id="1425" levels="1" name="Purification Field">
+	<skill id="1425" levels="1" name="퓨리피케이션 필드">
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="operateType" val="A1" />
@@ -746,7 +746,7 @@
 			<player olympiad="false" />
 		</cond>
 	</skill>
-	<skill id="1426" levels="1" name="Miracle">
+	<skill id="1426" levels="1" name="미라클">
 		<set name="aggroPoints" val="100" />
 		<set name="itemConsumeId" val="8876" />
 		<set name="itemConsumeCount" val="1" />
@@ -766,7 +766,7 @@
 			<effect name="HealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
-	<skill id="1427" levels="1" name="Flames of Invincibility">
+	<skill id="1427" levels="1" name="파이어 오브 인빈시빌리티">
 		<set name="itemConsumeId" val="8876" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="36" />
@@ -787,7 +787,7 @@
 			<effect name="Invincible" abnormalTime="30" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
-	<skill id="1428" levels="1" name="Mass Recharge">
+	<skill id="1428" levels="1" name="매스 리차지">
 		<set name="itemConsumeId" val="8876" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpConsume" val="73" />
@@ -806,7 +806,7 @@
 			<effect name="ManaHealByLevel" noicon="1" val="1500" />
 		</for>
 	</skill>
-	<skill id="1429" levels="1" name="Gate Chant">
+	<skill id="1429" levels="1" name="챈트 오브 게이트">
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="4" />
@@ -819,7 +819,7 @@
 		<set name="skillType" val="SUMMON_FRIEND" />
 		<set name="target" val="TARGET_PARTY" />
 	</skill>
-	<skill id="1430" levels="5" name="Invocation">
+	<skill id="1430" levels="5" name="인보케이션">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mhot"> 81 90 102 111 126 </table>
 		<table name="#magicLvl"> 56 60 64 68 72 </table>
@@ -845,7 +845,7 @@
 			<effect count="10" name="ManaHealOverTime" abnormalTime="3" noicon="1" val="#mhot" />
 		</for>
 	</skill>
-	<skill id="1431" levels="6" name="Fallen Arrow">
+	<skill id="1431" levels="6" name="폴른 애로우">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpInitialConsume"> 2 2 2 3 3 3 </table>
 		<table name="#mpConsume"> 7 7 8 11 12 12 </table>
@@ -867,7 +867,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="1432" levels="2" name="Increase Power">
+	<skill id="1432" levels="2" name="인크리즈 파워">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 28 </table>
 		<table name="#rate"> 1.08 1.12 </table>
@@ -891,7 +891,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1433" levels="10" name="Abyssal Blaze">
+	<skill id="1433" levels="10" name="어비셜 블레이즈">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 12 13 13 14 15 16 17 18 19 20 </table>
 		<table name="#mpInitialConsume"> 3 4 4 4 4 4 5 5 5 5 </table>
@@ -913,7 +913,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="1434" levels="4" name="Dark Explosion">
+	<skill id="1434" levels="4" name="다크 익스플로젼">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 22 26 29 33 </table>
 		<table name="#mpInitialConsume"> 6 7 8 9 </table>
@@ -936,7 +936,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="1435" levels="10" name="Death Mark" enchantGroup1="2" enchantGroup2="2">
+	<skill id="1435" levels="10" name="데스 마크" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#magicLvl"> 24 32 40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 12 14 18 22 24 28 29 32 33 35 </table>
@@ -977,7 +977,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1436" levels="30" name="Soul of Pain" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+	<skill id="1436" levels="30" name="소울 오브 페인" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 111 112 112 112 113 113 113 114 114 115 115 115 116 116 116 117 117 117 118 118 119 119 119 120 120 120 121 121 121 122 </table>
@@ -1019,7 +1019,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="30" effectType="DEBUFF" />
 		</for>
 	</skill>
-	<skill id="1437" levels="26" name="Dark Flame" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2">
+	<skill id="1437" levels="26" name="다크 플레임" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 78 78 79 79 79 79 80 80 80 80 81 81 81 81 82 82 82 82 83 83 83 83 84 84 84 84 85 85 85 85 </table>
 		<table name="#ench2Power"> 77 77 77 77 77 77 77 77 77 78 78 78 78 78 78 78 78 78 78 79 79 79 79 79 79 79 79 79 79 80 </table>
@@ -1076,7 +1076,7 @@
 			</effect>
 		</enchant5for>
 	</skill>
-	<skill id="1438" levels="9" name="Annihilation Circle" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+	<skill id="1438" levels="9" name="어나이얼레이션 서클" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 111 112 112 112 113 113 113 114 114 115 115 115 116 116 116 117 117 117 118 118 119 119 119 120 120 120 121 121 121 122 </table>
@@ -1116,7 +1116,7 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 	</skill>
-	<skill id="1439" levels="5" name="Curse of Divinity">
+	<skill id="1439" levels="5" name="커스 오브 디비니티">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 49 51 52 53 55 </table>
@@ -1138,7 +1138,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="1440" levels="5" name="Steal Divinity">
+	<skill id="1440" levels="5" name="스틸 디비니티">
 		<table name="#mpConsume"> 50 55 60 64 67 </table>
 		<table name="#maxNegated"> 3 4 5 6 7 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
@@ -1157,7 +1157,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="1441" levels="3" name="Soul to Empower">
+	<skill id="1441" levels="3" name="소울 투 엠파워">
 		<!-- CT2.5 retail confirmed and Updated to H5 -->
 		<table name="#magicLvl"> 43 55 64 </table>
 		<table name="#mpConsume_Init"> 8 10 12 </table>
@@ -1178,7 +1178,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1442" levels="3" name="Protection from Darkness" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1442" levels="3" name="다크니스 프로텍션" enchantGroup1="1" enchantGroup2="1">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#mpConsume_Init"> 6 7 8 </table>
 		<table name="#mpConsume"> 48 55 61 </table>
@@ -1216,7 +1216,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1443" levels="1" name="Dark Weapon" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1443" levels="1" name="다크 웨폰" enchantGroup1="1" enchantGroup2="1">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#ench1Power"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
 		<table name="#ench2Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -1247,7 +1247,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1444" levels="1" name="Pride of Kamael" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+	<skill id="1444" levels="1" name="프라이드 오브 카마엘" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchIncrease"> 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.2 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 </table>
@@ -1317,7 +1317,7 @@
 			</effect>
 		</enchant4for>
 	</skill>
-	<skill id="1445" levels="18" name="Surrender to the Unholy" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1445" levels="18" name="서렌더 투 언홀리" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#mpConsume_Init"> 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 </table>
@@ -1369,7 +1369,7 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="1446" levels="11" name="Shadow Bind" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1446" levels="11" name="섀도우 바인드" enchantGroup1="1" enchantGroup2="1">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#magicLvl"> 52 55 58 60 62 64 66 68 70 72 74 </table>
@@ -1400,7 +1400,7 @@
 			<effect name="Root" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="root_magically" abnormalVisualEffect="root" />
 		</enchant2for>
 	</skill>
-	<skill id="1447" levels="9" name="Voice Bind" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1447" levels="9" name="보이스 바인드" enchantGroup1="1" enchantGroup2="1">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -1431,7 +1431,7 @@
 			<effect name="Mute" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="silence" abnormalVisualEffect="mute" />
 		</enchant2for>
 	</skill>
-	<skill id="1448" levels="1" name="Blink" enchantGroup1="2" enchantGroup2="2">
+	<skill id="1448" levels="1" name="블링크" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1mpInitialConsume"> 20 19 19 18 18 18 18 17 17 16 16 16 16 15 15 14 14 14 14 13 13 12 12 12 12 11 11 10 10 10 </table>
 		<table name="#ench1MpConsume"> 78 77 75 74 72 72 70 69 67 66 64 64 62 61 59 58 56 56 54 53 51 50 48 48 46 45 43 42 40 40 </table>
@@ -1466,7 +1466,7 @@
 			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="1449" levels="1" name="Transfer Soul">
+	<skill id="1449" levels="1" name="트랜스퍼 소울">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="150" />
 		<set name="castRange" val="400" />
@@ -1486,7 +1486,7 @@
 			<target races="Kamael" />
 		</cond>
 	</skill>
-	<skill id="1450" levels="1" name="Chain Lightning" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+	<skill id="1450" levels="1" name="체인 라이트닝" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<!-- Confirmed CT2.5 -->
 		<table name="#ench1Power"> 202 204 206 208 210 212 214 216 218 220 222 224 226 228 230 </table>
 		<table name="#ench2Cost"> 48 47 46 44 43 42 41 39 38 37 36 34 33 32 31 </table>
@@ -1520,7 +1520,7 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 	</skill>
-	<skill id="1451" levels="1" name="Fire Vortex Buster" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+	<skill id="1451" levels="1" name="파이어 보텍스 버스터" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 198 198 199 199 200 201 201 202 202 203 203 204 204 205 206 </table>
 		<table name="#ench2mpInitialConsume"> 21 20 19 18 18 17 16 16 15 14 13 13 12 11 11 </table>
@@ -1555,7 +1555,7 @@
 			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 	</skill>
-	<skill id="1452" levels="1" name="Count of Fire" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+	<skill id="1452" levels="1" name="카운트 오브 파이어" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 176 178 180 182 183 185 187 189 190 192 194 196 197 199 201 </table>
 		<table name="#ench2mpInitialConsume"> 21 20 19 19 18 17 16 16 15 14 14 13 12 11 11 </table>
@@ -1592,7 +1592,7 @@
 			<effect count="10" name="DamOverTime" val="#ench1Power" abnormalLvl="1" abnormalType="fire_dot" />
 		</enchant1for>
 	</skill>
-	<skill id="1453" levels="1" name="Ice Vortex Crusher" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+	<skill id="1453" levels="1" name="아이스 보텍스 크러셔" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 198 198 199 199 200 201 201 202 202 203 203 204 204 205 206 </table>
 		<table name="#ench2mpInitialConsume"> 21 20 19 18 18 17 16 16 15 14 13 13 12 11 11 </table>
@@ -1627,7 +1627,7 @@
 			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 	</skill>
-	<skill id="1454" levels="1" name="Diamond Dust" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+	<skill id="1454" levels="1" name="다이아몬드 더스트" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 71 73 74 76 77 79 80 82 83 85 86 88 89 91 92 </table>
 		<table name="#ench2mpConsume"> 105 101 97 93 90 86 82 78 76 72 68 65 61 57 53 </table>
@@ -1659,7 +1659,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1455" levels="1" name="Throne of Ice" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+	<skill id="1455" levels="1" name="쓰론 오브 아이스" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 176 178 180 182 183 185 187 189 190 192 194 196 197 199 201 </table>
 		<table name="#ench2mpConsume"> 105 101 97 93 90 86 82 78 76 72 68 65 61 57 53 </table>
@@ -1693,7 +1693,7 @@
 			<effect count="10" name="DamOverTime" val="#ench1Power" abnormalLvl="1" abnormalType="water_dot" />
 		</enchant1for>
 	</skill>
-	<skill id="1456" levels="1" name="Wind Vortex Slug" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+	<skill id="1456" levels="1" name="윈드 보텍스 슬러그" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 198 198 199 199 200 201 201 202 202 203 203 204 204 205 206 </table>
 		<table name="#ench2mpInitialConsume"> 21 20 19 18 18 17 16 16 15 14 13 13 12 11 11 </table>
@@ -1728,7 +1728,7 @@
 			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
 		</for>
 	</skill>
-	<skill id="1457" levels="1" name="Empowering Echo" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1457" levels="1" name="엠파워 오브 에코" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
 		<table name="#ench2mpConsume"> 140 135 130 125 120 115 110 106 101 96 91 86 81 76 72 </table>
 		<set name="mpConsume" val="145" />
@@ -1752,7 +1752,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1458" levels="1" name="Throne of Wind" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+	<skill id="1458" levels="1" name="쓰론 오브 윈드" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 176 178 180 182 183 185 187 189 190 192 194 196 197 199 201 </table>
 		<table name="#ench2mpConsume"> 105 101 97 93 90 86 82 78 76 72 68 65 61 57 53 </table>
@@ -1787,7 +1787,7 @@
 			<effect count="10" name="DamOverTime" val="#ench1Power" abnormalLvl="1" abnormalType="wind_dot" />
 		</enchant1for>
 	</skill>
-	<skill id="1459" levels="1" name="Divine Power" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1459" levels="1" name="디바인 파워" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Power"> 1033 1066 1100 1133 1166 1200 1233 1266 1300 1333 1366 1400 1433 1466 1500 </table>
 		<table name="#ench2mpConsume"> 105 101 97 93 90 86 82 78 76 72 68 65 61 57 53 </table>
 		<set name="hitTime" val="2000" />
@@ -1809,7 +1809,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1460" levels="1" name="Mana Gain" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1460" levels="1" name="마나 게인" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
 		<table name="#ench2mpInitialConsume"> 35 33 32 31 30 29 27 26 25 24 23 21 20 19 18 </table>
 		<table name="#ench2mpConsume"> 138 134 129 124 120 114 110 105 100 96 90 86 81 76 72 </table>
@@ -1841,7 +1841,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1461" levels="1" name="Chant of Protection" enchantGroup1="5" enchantGroup2="5">
+	<skill id="1461" levels="1" name="챈트 오브 프로텍션" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 1220 1240 1260 1280 1300 1320 1340 1360 1380 1400 1420 1440 1460 1480 1500 </table>
 		<table name="#ench2mpInitialConsume"> 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 </table>
 		<table name="#ench2mpConsume"> 226 222 218 214 210 208 204 200 196 192 188 184 181 177 173 </table>
@@ -1868,7 +1868,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1462" levels="1" name="Seal of Blockade" enchantGroup1="6" enchantGroup2="6">
+	<skill id="1462" levels="1" name="실 오브 블럭케이드" enchantGroup1="6" enchantGroup2="6">
 		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench2mpConsume"> 105 101 97 93 90 86 82 78 76 72 68 65 61 57 53 </table>
@@ -1898,7 +1898,7 @@
 			<effect name="PhysicalAttackMute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="normal_attack_block" effectPower="#ench1Power" effectType="MUTE" />
 		</enchant1for>
 	</skill>
-	<skill id="1463" levels="1" name="Fire Weapon">
+	<skill id="1463" levels="1" name="파이어 웨폰">
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -1916,7 +1916,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1464" levels="1" name="Ice Weapon">
+	<skill id="1464" levels="1" name="아이스 웨폰">
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -1934,7 +1934,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1465" levels="1" name="Wind Weapon">
+	<skill id="1465" levels="1" name="윈드 웨폰">
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -1952,7 +1952,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1466" levels="1" name="Earth Weapon">
+	<skill id="1466" levels="1" name="어스 웨폰">
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -1970,7 +1970,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1467" levels="1" name="Meteor">
+	<skill id="1467" levels="1" name="미티어">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="castRange" val="600" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -1994,7 +1994,7 @@
 			<effect count="3" name="DamOverTime" abnormalTime="3" val="351" effectPower="100" effectType="DOT" />
 		</for>
 	</skill>
-	<skill id="1468" levels="1" name="Star Fall">
+	<skill id="1468" levels="1" name="스타 폴">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -2016,7 +2016,7 @@
 			<effect count="3" name="DamOverTime" abnormalTime="3" val="351" effectPower="100" effectType="DOT" />
 		</for>
 	</skill>
-	<skill id="1469" levels="1" name="Leopold" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+	<skill id="1469" levels="1" name="레오폴트" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 235 235 236 237 237 238 238 239 239 240 241 241 242 242 243 </table>
@@ -2050,7 +2050,7 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 	</skill>
-	<skill id="1470" levels="1" name="Prahnah" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5" enchantGroup4="5">
+	<skill id="1470" levels="1" name="프라흐나흐" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5" enchantGroup4="5">
 		<table name="#ench1mDef"> 3033 3066 3100 3133 3166 3200 3233 3266 3300 3333 3366 3400 3433 3466 3500 </table>
 		<table name="#ench2mpConsume"> 103 99 95 92 89 85 82 78 75 72 68 64 62 58 54 </table>
 		<table name="#ench3Time"> 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 </table>
@@ -2082,7 +2082,7 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="1471" levels="1" name="Death Beam">
+	<skill id="1471" levels="1" name="데스 빔">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
 		<set name="castRange" val="40" />
@@ -2101,7 +2101,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
-	<skill id="1472" levels="1" name="Soul Sucking">
+	<skill id="1472" levels="1" name="소울 써킹">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
 		<set name="castRange" val="900" />
@@ -2120,7 +2120,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="1473" levels="1" name="Change Weapon">
+	<skill id="1473" levels="1" name="체인지 웨폰">
 		<!-- CT2.2 retail confirmed -->
 		<set name="mpInitialConsume" val="4" />
 		<set name="mpConsume" val="25" />
@@ -2134,7 +2134,7 @@
 			<using weaponChange="true" />
 		</cond>
 	</skill>
-	<skill id="1474" levels="1" name="Abyssal Power" enchantGroup1="1">
+	<skill id="1474" levels="1" name="어비셜 파워" enchantGroup1="1">
 		<table name="#ench1mAtk"> 1.101 1.103 1.105 1.106 1.108 1.11 1.111 1.113 1.115 1.116 1.118 1.12 1.121 1.123 1.125 1.126 1.128 1.13 1.131 1.133 1.135 1.136 1.138 1.14 1.141 1.143 1.145 1.146 1.148 1.15 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -2145,7 +2145,7 @@
 			<mul order="0x30" stat="mAtk" val="#ench1mAtk" />
 		</enchant1for>
 	</skill>
-	<skill id="1475" levels="3" name="Erase Mark">
+	<skill id="1475" levels="3" name="이레이즈 마크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 235 438 611 </table>
 		<table name="#magicLvl"> 24 46 66 </table>
@@ -2166,7 +2166,7 @@
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="1476" levels="3" name="Appetite for Destruction" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1476" levels="3" name="디스트로이 인스팅트" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#magicLvl"> 40 49 58 </table>
 		<table name="#mpConsume"> 70 88 107 </table>
@@ -2205,7 +2205,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1477" levels="3" name="Vampiric Impulse" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1477" levels="3" name="뱀피릭 임펄스" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#mpConsume_Init"> 19 24 27 </table>
 		<table name="#mpConsume"> 75 95 106 </table>
 		<table name="#absorbDam"> 60 70 80 </table>
@@ -2239,7 +2239,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1478" levels="2" name="Protection Instinct" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1478" levels="2" name="프로텍션 인스팅트" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#magicLvl"> 46 60 </table>
 		<table name="#mpConsume"> 82 110 </table>
@@ -2276,7 +2276,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1479" levels="3" name="Magic Impulse" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1479" levels="3" name="매직 임펄스" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#magicLvl"> 55 62 68 </table>
 		<table name="#mpConsume"> 100 115 127 </table>
@@ -2315,7 +2315,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1480" levels="1" name="Soul Harmony" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="1480" levels="1" name="소울 하모니" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#ench1MpConsume"> 126 123 122 120 117 115 113 111 108 107 105 102 101 98 96 93 92 90 87 86 83 81 78 77 75 72 71 68 66 65 </table>
 		<table name="#ench2Time"> 15 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 25 25 26 26 27 27 28 28 29 29 30 </table>
 		<table name="#ench3Reuse"> 590000 580000 570000 560000 550000 540000 530000 520000 510000 500000 490000 480000 470000 460000 450000 440000 430000 420000 410000 400000 390000 380000 370000 360000 350000 340000 330000 320000 310000 300000 </table>
@@ -2345,7 +2345,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="1481" levels="7" name="Oblivion" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1481" levels="7" name="오블리비언" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 43 49 55 60 64 68 72 </table>
 		<table name="#mpConsume"> 30 35 40 44 48 51 53 </table>
@@ -2383,7 +2383,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5448" />
 		</enchant1for>
 	</skill>
-	<skill id="1482" levels="4" name="Weak Constitution" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1482" levels="4" name="위크 컨티튜션" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 58 62 65 68 </table>
 		<table name="#ench1Time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
@@ -2413,7 +2413,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5449" />
 		</enchant1for>
 	</skill>
-	<skill id="1483" levels="7" name="Thin Skin" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1483" levels="7" name="틴 스킨" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 42 48 54 58 62 65 68 </table>
 		<table name="#lvl"> 1 2 3 4 5 6 7 </table>
@@ -2444,7 +2444,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5450" triggeredLevel="7" />
 		</enchant1for>
 	</skill>
-	<skill id="1484" levels="4" name="Enervation" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1484" levels="4" name="에너베이션" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 55 60 64 67 </table>
 		<table name="#ench1Time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
@@ -2474,7 +2474,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5451" />
 		</enchant1for>
 	</skill>
-	<skill id="1485" levels="3" name="Spite" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1485" levels="3" name="스파이트" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 62 65 68 </table>
 		<table name="#lvl"> 1 2 3 </table>
@@ -2504,7 +2504,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="3" />
 		</enchant1for>
 	</skill>
-	<skill id="1486" levels="4" name="Mental Impoverish" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1486" levels="4" name="멘탈 임파버리시" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 64 65 67 68 </table>
 		<table name="#lvl"> 1 2 3 4 </table>
@@ -2535,7 +2535,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="#ench1Time" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="4" />
 		</enchant1for>
 	</skill>
-	<skill id="1487" levels="8" name="Restoration" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1487" levels="8" name="레스토레이션" enchantGroup1="1" enchantGroup2="1">
 		<table name="#mpConsume_Init"> 21 25 14 16 17 19 20 20 </table>
 		<table name="#mpConsume"> 49 57 34 38 41 43 45 48 </table>
 		<table name="#hot"> 45 54 66 75 81 87 90 96 </table>
@@ -2570,7 +2570,7 @@
 			<effect count="#ench2Count" name="HealOverTime" val="32" abnormalLvl="2" abnormalType="life_force_kamael" />
 		</enchant2for>
 	</skill>
-	<skill id="1488" levels="3" name="Restoration Impact" enchantGroup1="1">
+	<skill id="1488" levels="3" name="레스토레이션 임팩트" enchantGroup1="1">
 		<table name="#mpConsume_Init"> 7 8 10 </table>
 		<table name="#mpConsume"> 16 20 23 </table>
 		<table name="#amount"> 10 15 20 </table>
@@ -2599,7 +2599,7 @@
 			<effect name="HealPercent" noicon="1" val="#ench1amount" />
 		</enchant1for>
 	</skill>
-	<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
+	<skill id="1489" levels="1" name="서머너 어빌리티 - 레지스트 어트리뷰트">
 		<!-- CT2.5 retail confirmed -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
@@ -2612,7 +2612,7 @@
 			<add order="0x40" stat="waterRes" val="5" />
 		</for>
 	</skill>
-	<skill id="1490" levels="1" name="Healer Ability - Heal">
+	<skill id="1490" levels="1" name="힐러 어빌리티 - 힐">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
@@ -2622,7 +2622,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
 		</for>
 	</skill>
-	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
+	<skill id="1491" levels="1" name="서머너 어빌리티 - 스피릿">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
@@ -2632,7 +2632,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
 		</for>
 	</skill>
-	<skill id="1492" levels="1" name="Flame Armor">
+	<skill id="1492" levels="1" name="플레임 아머">
 		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
 		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="3000" />
@@ -2650,7 +2650,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1493" levels="1" name="Frost Armor">
+	<skill id="1493" levels="1" name="프로스트 아머">
 		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
 		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="3000" />
@@ -2668,7 +2668,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1494" levels="1" name="Hurricane Armor">
+	<skill id="1494" levels="1" name="허리케인 아머">
 		<!-- Confirmed CT2.5 and Partially Updated to H5 -->
 		<set name="aggroPoints" val="138" />
 		<set name="hitTime" val="3000" />
@@ -2686,7 +2686,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1495" levels="1" name="Vampiric Mist">
+	<skill id="1495" levels="1" name="뱀피릭 미스트">
 		<set name="mpConsume" val="145" />
 		<set name="power" val="117" />
 		<set name="target" val="TARGET_AURA" />
@@ -2713,7 +2713,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1496" levels="1" name="Servitor Barrier">
+	<skill id="1496" levels="1" name="서비터 배리어">
 		<set name="itemConsumeCount" val="5" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="hitTime" val="2500" />
@@ -2731,7 +2731,7 @@
 			<effect name="Invincible" abnormalTime="30" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
-	<skill id="1497" levels="1" name="Excessive Loyalty">
+	<skill id="1497" levels="1" name="익세시브 로열티">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
@@ -2740,7 +2740,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
 		</for>
 	</skill>
-	<skill id="1498" levels="1" name="Mutual Response">
+	<skill id="1498" levels="1" name="뮤추얼 리스폰스">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
@@ -2749,7 +2749,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
 		</for>
 	</skill>
-	<skill id="1499" levels="1" name="Improved Combat">
+	<skill id="1499" levels="1" name="임프로브 컴뱃">
 		<set name="mpConsume" val="27" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />

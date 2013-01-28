@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9100" levels="1" name="Vesper Weapon Box">
+	<skill id="9100" levels="1" name="베스페르 무기 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13457,1,7.1429;13458,1,7.1429;13459,1,7.1429;13460,1,7.1429;13461,1,7.1429;13462,1,7.1429;13463,1,7.1429;13464,1,7.1429;13465,1,7.1429;13466,1,7.1429;13467,1,7.1429;13468,1,7.1429;13469,1,7.1429;13470,1,7.1423
@@ -21,7 +21,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9101" levels="1" name="Icarus Weapon Box">
+	<skill id="9101" levels="1" name="이카루스 무기 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			10215,1,8.3333;10216,1,8.3333;10217,1,8.3333;10218,1,8.3333;10219,1,8.3333;10220,1,8.3333;10221,1,8.3333;10222,1,8.3333;10223,1,8.3333;10224,1,8.3333;10225,1,8.3333;10226,1,8.3337
@@ -42,7 +42,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9102" levels="1" name="Dynasty Weapon Box">
+	<skill id="9102" levels="1" name="다이너스티 무기 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9380,1,7.1429;9446,1,7.1429;10004,1,7.1429;9449,1,7.1429;9450,1,7.1429;9445,1,7.1429;9443,1,7.1429;9442,1,7.1429;10252,1,7.1429;9448,1,7.1429;10253,1,7.1429;9384,1,7.1429;9444,1,7.1429;9447,1,7.1423
@@ -63,7 +63,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9103" levels="1" name="Box of Vesper Armor">
+	<skill id="9103" levels="1" name="베스페르 방어구 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13143,1,5.8824;14105,1,5.8824;14108,1,5.8824;14109,1,5.8824;14110,1,5.8824;14111,1,5.8824;13144,1,5.8824;14106,1,5.8824;14112,1,5.8824;14113,1,5.8824;14114,1,5.8824;13145,1,5.8824;14107,1,5.8824;14115,1,5.8824;14116,1,5.8824;14117,1,5.8824;13887,1,5.8816
@@ -84,7 +84,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9104" levels="1" name="Box of Moirai Armor">
+	<skill id="9104" levels="1" name="데스티노 방어구 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			15694,1,5.8824;15695,1,5.8824;15696,1,5.8824;15697,1,5.8824;15698,1,5.8824;15699,1,5.8824;15700,1,5.8824;15701,1,5.8824;15702,1,5.8824;15703,1,5.8824;15704,1,5.8824;15705,1,5.8824;15706,1,5.8824;15707,1,5.8824;15708,1,5.8824;15709,1,5.8824;15710,1,5.8816
@@ -105,7 +105,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9105" levels="1" name="Box of Dynasty Armor">
+	<skill id="9105" levels="1" name="다이너스티 방어구 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9514,1,5.8824;9515,1,5.8824;9516,1,5.8824;9517,1,5.8824;9518,1,5.8824;9529,1,5.8824;9519,1,5.8824;9520,1,5.8824;9521,1,5.8824;9522,1,5.8824;9523,1,5.8824;9524,1,5.8824;9525,1,5.8824;9526,1,5.8824;9527,1,5.8824;9528,1,5.8824;13886,1,5.8816
@@ -126,7 +126,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9106" levels="1" name="Soul Crystal Box - Level 14">
+	<skill id="9106" levels="1" name="집혼석 - 단계 14 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9570,1,33.3333;9571,1,33.3333;9572,1,33.3334
@@ -147,7 +147,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9107" levels="1" name="Soul Crystal Box - Level 15">
+	<skill id="9107" levels="1" name="집혼석 - 단계 15 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			10480,1,33.3333;10481,1,33.3333;10482,1,33.3334
@@ -168,7 +168,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9108" levels="1" name="Soul Crystal Box - Level 16">
+	<skill id="9108" levels="1" name="집혼석 - 단계 16 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13071,1,33.3333;13072,1,33.3333;13073,1,33.3334
@@ -189,7 +189,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9109" levels="1" name="Box of Facelift Potions">
+	<skill id="9109" levels="1" name="성형의 물약 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8664,1,16.6667;8665,1,16.6667;8666,1,16.6667;14739,1,49.9999
@@ -210,7 +210,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9110" levels="1" name="Box of Haircolor Change Potions">
+	<skill id="9110" levels="1" name="염색의 물약 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8667,1,16.6667;8668,1,16.6667;8669,1,16.6667;8670,1,16.6667;14739,1,33.3332
@@ -231,7 +231,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9111" levels="1" name="Box of Hairstyle Change Potions">
+	<skill id="9111" levels="1" name="헤어체인지 물약 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8671,1,10;8672,1,10;8673,1,10;8674,1,10;8675,1,10;8676,1,10;8677,1,10;14739,1,30
@@ -252,7 +252,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9112" levels="1" name="Box of Gold Apiga">
+	<skill id="9112" levels="1" name="황금 아돼나 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9546,1,14.2857;9547,1,14.2857;9548,1,14.2857;9549,1,14.2857;9550,1,14.2857;9551,1,14.2857;2134,2,14.2858
@@ -273,7 +273,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9113" levels="1" name="Vitality Potion">
+	<skill id="9113" levels="1" name="활력 유지 물약">
 		<!-- Maintains the current Vitality for 10 minutes. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -281,7 +281,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 	</skill>
-	<skill id="9114" levels="1" name="Nevit's Voice">
+	<skill id="9114" levels="1" name="네비트의 음성">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="GIVE_RECO" />
@@ -291,7 +291,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="reuseDelay" val="2000" />
 	</skill>
-	<skill id="9115" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9115" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -306,7 +306,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9116" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9116" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -321,7 +321,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9117" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9117" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -336,7 +336,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9118" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9118" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -351,7 +351,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9119" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9119" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -366,7 +366,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9120" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9120" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -381,7 +381,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9121" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9121" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -396,7 +396,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9122" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9122" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -411,7 +411,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9123" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9123" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -426,7 +426,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9124" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9124" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -441,7 +441,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9125" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9125" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -456,7 +456,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9126" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9126" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -471,7 +471,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9127" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9127" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -486,7 +486,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9128" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9128" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -501,7 +501,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9129" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9129" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -516,7 +516,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9130" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9130" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -531,7 +531,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9131" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9131" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -546,7 +546,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9132" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9132" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -561,7 +561,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9133" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9133" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -576,7 +576,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9134" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9134" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -591,7 +591,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9135" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9135" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -606,7 +606,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9136" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9136" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -621,7 +621,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9137" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9137" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -636,7 +636,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9138" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9138" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -651,7 +651,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9139" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9139" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -666,7 +666,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9140" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9140" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -681,7 +681,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9141" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9141" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -696,7 +696,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9142" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9142" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -711,7 +711,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9143" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9143" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -726,7 +726,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9144" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9144" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -741,7 +741,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9145" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9145" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -756,7 +756,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9146" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9146" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -771,7 +771,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9147" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9147" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -786,7 +786,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9148" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9148" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -801,7 +801,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9149" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9149" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour. -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -816,7 +816,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9150" levels="1" name="Freesia Bouquet - Event">
+	<skill id="9150" levels="1" name="후리지아 꽃다발 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -825,7 +825,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9151" levels="1" name="Baby's Breath Bouquet - Event">
+	<skill id="9151" levels="1" name="안개 꽃다발 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -834,7 +834,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9152" levels="1" name="Pink Lady - Event">
+	<skill id="9152" levels="1" name="핑크 레이디 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -843,7 +843,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9153" levels="1" name="June Bug - Event">
+	<skill id="9153" levels="1" name="준벅 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -852,7 +852,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9154" levels="1" name="Soft Cheese Cake - Event">
+	<skill id="9154" levels="1" name="부드러운 치즈케익 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -861,7 +861,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9155" levels="1" name="Freshly-Baked Baguette - Event">
+	<skill id="9155" levels="1" name="갓구운 바게트 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -870,7 +870,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9156" levels="1" name="Sweet Cream-filled Bread - Event">
+	<skill id="9156" levels="1" name="달콤한 크림빵 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -879,7 +879,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9157" levels="1" name="White Day Candy - Event">
+	<skill id="9157" levels="1" name="화이트데이 캔디 - 이벤트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -888,7 +888,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="500" />
 	</skill>
-	<skill id="9158" levels="1" name="Freya's Gift">
+	<skill id="9158" levels="1" name="프레야의 선물">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			16026,1,0.0001;9627,1,0.1417;17139,1,1.4172;17140,1,1.4172;14052,1,2.8345;6622,1,18.424;2134,2,21.2585;14701,1,54.5068
@@ -909,7 +909,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9159" levels="1" name="Transformation Scroll - Anakim">
+	<skill id="9159" levels="1" name="변신주문서 - 아나킴">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -932,7 +932,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9160" levels="1" name="Transformation Scroll - Zaken">
+	<skill id="9160" levels="1" name="변신주문서 - 자켄">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -955,7 +955,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9161" levels="1" name="Vesper's Mighty Power">
+	<skill id="9161" levels="1" name="베스페르의 괴력">
 		<!-- Increase Physical Attack by 15%, Magical Attack by 20%, and Moving Speed by 10 for 10 minutes. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -972,7 +972,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9162" levels="1" name="Vesper's Critical Attack Power">
+	<skill id="9162" levels="1" name="베스페르의 치명력">
 		<!-- Increase Physical Critical Attack Rate by 15, Magic Critical Attack Rate by 2, and Moving Speed by 10 for 10 minutes. Recovers 5% of the standard short-range physical damage inflicted on the enemy as HP. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -990,7 +990,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9163" levels="1" name="Invincible Vesper">
+	<skill id="9163" levels="1" name="불패의 베스페르">
 		<!-- Increase Max. Attack Speed by 20%, Magic Speed by 20%, and Moving Speed by 20 for 10 minutes. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
@@ -1007,7 +1007,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9164" levels="1" name="Special Gift of April Fool's Day - Event">
+	<skill id="9164" levels="1" name="만우절 특별 선물 – 이벤트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13143,1,5.882;14105,1,5.882;14108,1,5.882;14109,1,5.882;14110,1,5.882;14111,1,5.882;13144,1,5.882;14106,1,5.882;14112,1,5.882;14113,1,5.882;14114,1,5.882;13145,1,5.882;14107,1,5.882;14115,1,5.882;14116,1,5.882;14117,1,5.882;13887,1,5.88799999999999
@@ -1028,14 +1028,14 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="9165" levels="1" name="Energy of Sprout">
+	<skill id="9165" levels="1" name="새싹의 기운">
 		<!-- For 1 hour, receives help from the Energy of Sprout to increase Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption needed for skill use by 5%. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="9166" levels="1" name="Energy Replenishing Herb Tea">
+	<skill id="9166" levels="1" name="활력 충전 허브티">
 		<!-- Recovers energy upon acquiring Exp. points for 30 minutes. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1043,7 +1043,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
-	<skill id="9167" levels="1" name="Nevit's Hourglass - 1 hour(s)">
+	<skill id="9167" levels="1" name="네비트의 모래시계 - 1시간">
 		<!-- Increases Nevit's blessing by 1 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1058,7 +1058,7 @@
 			<effect name="RecoBonus" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9168" levels="1" name="Nevit's Hourglass - 1.5 hour(s)">
+	<skill id="9168" levels="1" name="네비트의 모래시계 - 1.5시간">
 		<!-- Increases Nevit's blessing by 1.5 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1073,7 +1073,7 @@
 			<effect name="RecoBonus" abnormalTime="5400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9169" levels="1" name="Nevit's Hourglass - 2 hour(s)">
+	<skill id="9169" levels="1" name="네비트의 모래시계 - 2시간">
 		<!-- Increases Nevit's blessing by 2 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1088,7 +1088,7 @@
 			<effect name="RecoBonus" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9170" levels="1" name="Nevit's Hourglass - 2.5 hour(s)">
+	<skill id="9170" levels="1" name="네비트의 모래시계 - 2.5시간">
 		<!-- Increases Nevit's blessing by 2.5 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1103,7 +1103,7 @@
 			<effect name="RecoBonus" abnormalTime="9000" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9171" levels="1" name="Nevit's Hourglass - 3 hour(s)">
+	<skill id="9171" levels="1" name="네비트의 모래시계 - 3시간">
 		<!-- Increases Nevit's blessing by 3 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1118,7 +1118,7 @@
 			<effect name="RecoBonus" abnormalTime="10800" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9172" levels="1" name="Nevit's Hourglass - 4 hour(s)">
+	<skill id="9172" levels="1" name="네비트의 모래시계 - 4시간">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1133,55 +1133,55 @@
 			<effect name="RecoBonus" abnormalTime="14400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9173" levels="1" name="Nevit's Voice">
+	<skill id="9173" levels="1" name="네비트의 음성">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9174" levels="1" name="500,000 SP scroll">
+	<skill id="9174" levels="1" name="50만 SP 주문서">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9175" levels="1" name="1,000,000 SP scroll">
+	<skill id="9175" levels="1" name="100만 SP 주문서">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9176" levels="1" name="Provided gift of cheers">
+	<skill id="9176" levels="1" name="응원의 선물 지급">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9177" levels="1" name="Olympiad Reward Box">
+	<skill id="9177" levels="1" name="올림피아드 보상 상자">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9178" levels="1" name="Theodric's Box">
+	<skill id="9178" levels="1" name="테오드릭의 상자">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9179" levels="1" name="Antharas's Blood Crystal">
+	<skill id="9179" levels="1" name="안타라스의 피의 결정">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9180" levels="2" name="10,000,000 SP scroll">
+	<skill id="9180" levels="2" name="1000만 SP 주문서">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9181" levels="1" name="Nevit's Hourglass - 4 hour(s)">
+	<skill id="9181" levels="1" name="네비트의 모래시계 - 4시간">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1196,7 +1196,7 @@
 			<effect name="RecoBonus" abnormalTime="14400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9182" levels="1" name="Nevit's Hourglass - 4 hour(s)">
+	<skill id="9182" levels="1" name="네비트의 모래시계 - 4시간">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
@@ -1211,13 +1211,13 @@
 			<effect name="RecoBonus" abnormalTime="14400" val="0" abnormalLvl="1" abnormalType="nevit_hourglass_effect" />
 		</for>
 	</skill>
-	<skill id="9183" levels="1" name="Freya's Refreshing Breeze - 4 hour(s)">
+	<skill id="9183" levels="1" name="프레야의 시원한 바람 – 4시간">
 		<!-- "For 4 hours, recovers vitality when Exp. is acquired through hunting." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="9184" levels="1" name="Freya's Refreshing Breeze - 4 hour(s)">
+	<skill id="9184" levels="1" name="프레야의 시원한 바람 – 4시간">
 		<!-- "For 4 hours, recovers vitality when Exp. is acquired through hunting." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2200" levels="3" name="Item - Jade Treasure Box">
+	<skill id="2200" levels="3" name="큰 옥색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,24,28.5;7609,26,26.0572
@@ -22,7 +22,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2201" levels="3" name="Item - Blue Treasure Box">
+	<skill id="2201" levels="3" name="큰 청색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,24,39.5;7609,26,36.1144
@@ -44,7 +44,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2202" levels="3" name="Item - Yellow Treasure Box">
+	<skill id="2202" levels="3" name="큰 황색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,5.424;6908,28,19.3714;6909,8,18.0799;7609,30,18.08
@@ -66,7 +66,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2203" levels="3" name="Item - Orange Treasure Box">
+	<skill id="2203" levels="3" name="큰 주황색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,7.788;6908,56,13.9072;6909,14,11.5376;7609,60,12.98
@@ -88,7 +88,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2204" levels="3" name="Item - Violet Treasure Box">
+	<skill id="2204" levels="3" name="큰 보라색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,3,58.24
@@ -110,7 +110,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2205" levels="3" name="Item - Red Treasure Box">
+	<skill id="2205" levels="3" name="큰 붉은색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,3,84.864
@@ -132,7 +132,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2206" levels="3" name="Item - White Treasure Box">
+	<skill id="2206" levels="3" name="큰 흰색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,6,58.048
@@ -154,7 +154,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2207" levels="3" name="Item - Black Treasure Box">
+	<skill id="2207" levels="3" name="큰 검은색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,6,69.312
@@ -176,37 +176,37 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2208" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2208" levels="1" name="축복받은 갑옷 강화주문서 - S그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2209" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2209" levels="1" name="축복받은 갑옷 강화주문서 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2210" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2210" levels="1" name="축복받은 갑옷 강화주문서 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2211" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2211" levels="1" name="축복받은 갑옷 강화주문서 - C그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2212" levels="1" name="Item - Blessed Scroll of Enchant Armor">
+	<skill id="2212" levels="1" name="축복받은 갑옷 강화주문서 - D그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2213" levels="22" name="Escape - to X Town">
+	<skill id="2213" levels="22" name="귀환 - 영혼의 섬 마을">
 		<!-- Confirmed CT2.5 -->
 		<table name="#teleCoords"> -114558,253605,-1536 46915,51441,-2976 9723,15576,-4568 -45208,-112502,-240 115158,-178170,-880 -80831,149808,-3040 -12728,122726,-3112 15633,142962,-2696 17860,170191,-3496 83378,147999,-3400 105760,113064,-3176 111388,219331,-3544 82916,53210,-1488 85289,16225,-3672 117052,76884,-2688 146818,25807,-2008 147922,-55316,-2728 43840,-47779,-792 87326,-143370,-1319 149800,-79999,-5568 107946,-52280,-2408 -118092,46955,342 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -217,7 +217,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="teleCoords" val="#teleCoords" />
 	</skill>
-	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
+	<skill id="2214" levels="10" name="기란성 마을 귀환서">
 		<!-- Confirmed CT2.5 -->
 		<!-- Levels 7, 8 and 9 doesn't exist in client. -->
 		<table name="#teleCoords"> -114558,253605,-1536 46915,51441,-2976 9723,15576,-4568 -45208,-112502,-240 115158,-178170,-880 -118092,46955,342 0,0,0 0,0,0 0,0,0 83378,147999,-3400 </table>
@@ -229,7 +229,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="teleCoords" val="#teleCoords" />
 	</skill>
-	<skill id="2215" levels="4" name="Item - Quest Special Box">
+	<skill id="2215" levels="4" name="화염 미끼로 낚은 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			57,100000,8;3456,1,10;3454,1,5.5;3455,1,5.5;3448,1,17.6;3449,1,17;3446,1,18;3468,1,18.4
@@ -252,7 +252,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2216" levels="4" name="Item - Quest Special Fish">
+	<skill id="2216" levels="4" name="특수 물고기 4">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			57,100,34;1867,1,33;1872,1,33
@@ -275,7 +275,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2217" levels="5" name="Item - Quest Treasure Box">
+	<skill id="2217" levels="5" name="약탈물 - 보라색 서류함">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6697,1,9;6693,1,9;6694,1,9;6696,1,9;7579,1,9;6690,1,9;6688,1,9;6691,1,9;6689,1,9;6695,1,9;57,330000,10
@@ -299,7 +299,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2218" levels="3" name="Item - Quest Sac">
+	<skill id="2218" levels="3" name="노획물 - 회색 주머니">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1882,3,20;1876,6,16;1879,3,12;1881,1,12;1880,4,10;1874,1,10;1875,3,10;1877,3,10
@@ -321,7 +321,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2219" levels="2" name="Item - Quest Sac">
+	<skill id="2219" levels="2" name="약탈물 - 회색 주머니">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1882,20,18;1876,20,16;1879,20,10;1881,20,10;1880,20,5;1874,20,10;1875,20,10;1877,20,11;57,150000,10
@@ -342,7 +342,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2220" levels="9" name="Item - Easy Green Fish">
+	<skill id="2220" levels="9" name="초보자용-큰 녹색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,3,55.2
@@ -370,7 +370,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2221" levels="9" name="Item - Easy Jade Fish">
+	<skill id="2221" levels="9" name="초보자용-큰 옥색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,6,57.2
@@ -398,7 +398,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2222" levels="9" name="Item - Easy Blue Fish">
+	<skill id="2222" levels="9" name="초보자용-큰 청색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,6,65.2
@@ -426,7 +426,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2223" levels="9" name="Item - Easy Yellow Fish">
+	<skill id="2223" levels="9" name="초보자용-큰 황색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,1.768;6908,6,29.4664;6909,2,17.6798
@@ -454,7 +454,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2224" levels="9" name="Item - Easy Orange Fish">
+	<skill id="2224" levels="9" name="초보자용-큰 주황색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,2.488;6908,8,33.1732;6909,2,24.88
@@ -482,7 +482,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2225" levels="9" name="Item - Easy Violet Fish">
+	<skill id="2225" levels="9" name="초보자용-큰 보라색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,1,42.048
@@ -510,7 +510,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2226" levels="9" name="Item - Easy Red Fish">
+	<skill id="2226" levels="9" name="초보자용-큰 붉은색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,30.672
@@ -538,7 +538,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2227" levels="9" name="Item - Easy White Fish">
+	<skill id="2227" levels="9" name="초보자용-큰 흰색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,41.952
@@ -566,7 +566,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2228" levels="9" name="Item - Easy Black Fish">
+	<skill id="2228" levels="9" name="초보자용-큰 검은색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,49.968
@@ -594,7 +594,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2229" levels="8" name="Treasure Chest Key">
+	<skill id="2229" levels="8" name="보물상자 열쇠 - 8급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -608,13 +608,13 @@
 			<target npcType="L2ChestInstance" />
 		</cond>
 	</skill>
-	<skill id="2230" levels="1" name="Item - Theme Sound Crystal">
+	<skill id="2230" levels="1" name="a,Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
+	<skill id="2231" levels="1" name="화룡 보호의 부적">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="1000" />
@@ -630,7 +630,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
+	<skill id="2232" levels="1" name="화룡 척살의 부적">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="1000" />
@@ -646,7 +646,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2233" levels="1" name="Amulet: Flames of Valakas">
+	<skill id="2233" levels="1" name="화룡 불꽃의 부적">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="1000" />
@@ -660,7 +660,7 @@
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2234" levels="1" name="Soul Breaking Arrow">
+	<skill id="2234" levels="1" name="파혼의 화살">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="900" />
@@ -681,7 +681,7 @@
 			<effect name="Stun" abnormalTime="1" val="0" effectPower="100" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="2235" levels="1" name="Anteroom Door Key">
+	<skill id="2235" levels="1" name="대기실 문 열쇠">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="40" />
@@ -698,7 +698,7 @@
 			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009" />
 		</cond>
 	</skill>
-	<skill id="2236" levels="1" name="Chapel Door Key">
+	<skill id="2236" levels="1" name="예배당 문 열쇠">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="40" />
@@ -715,7 +715,7 @@
 			<target npcId="19160010,19160011" />
 		</cond>
 	</skill>
-	<skill id="2237" levels="1" name="Key of Darkness">
+	<skill id="2237" levels="1" name="어둠의 열쇠">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="40" />
@@ -732,7 +732,7 @@
 			<target npcId="19160012,19160013" />
 		</cond>
 	</skill>
-	<skill id="2238" levels="1" name="Room of Splendor Key">
+	<skill id="2238" levels="1" name="광휘의 방 열쇠">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="40" />
@@ -749,7 +749,7 @@
 			<target npcId="23150003,23150004" />
 		</cond>
 	</skill>
-	<skill id="2239" levels="1" name="Petrification Scroll">
+	<skill id="2239" levels="1" name="석화 주문서">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="600" />
@@ -764,7 +764,7 @@
 			<effect name="Petrification" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="turn_stone" />
 		</for>
 	</skill>
-	<skill id="2240" levels="1" name="Hot Spring Nectar">
+	<skill id="2240" levels="1" name="온천 넥타">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
@@ -777,28 +777,28 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="2241" levels="1" name="Hot Spring Mineral Water">
+	<skill id="2241" levels="1" name="온천 광천수">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
+	<skill id="2242" levels="1" name="온천 용천수">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2243" levels="1" name="Hot Spring Sulfur">
+	<skill id="2243" levels="1" name="온천 유황">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2244" levels="1" name="Herb of Life">
+	<skill id="2244" levels="1" name="생명의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -814,7 +814,7 @@
 			<effect name="HealPercent" noicon="1" val="17" />
 		</for>
 	</skill>
-	<skill id="2245" levels="1" name="Herb of Mana">
+	<skill id="2245" levels="1" name="마나의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -830,7 +830,7 @@
 			<effect name="ManaHealPercent" noicon="1" val="4" />
 		</for>
 	</skill>
-	<skill id="2246" levels="1" name="Herb of Power">
+	<skill id="2246" levels="1" name="힘의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -853,7 +853,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2247" levels="1" name="Herb of Magic">
+	<skill id="2247" levels="1" name="마력의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -871,7 +871,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2248" levels="1" name="Bless of Fire">
+	<skill id="2248" levels="1" name="불의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -886,7 +886,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2249" levels="1" name="Bless of Water">
+	<skill id="2249" levels="1" name="물의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -901,7 +901,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2250" levels="1" name="Bless of Wind">
+	<skill id="2250" levels="1" name="바람의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="2" /> <!-- Wind -->
@@ -916,7 +916,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2251" levels="1" name="Bless of Earth">
+	<skill id="2251" levels="1" name="대지의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -931,7 +931,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2252" levels="1" name="Bless of Darkness">
+	<skill id="2252" levels="1" name="암흑의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -946,7 +946,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2253" levels="1" name="Bless of Sacredness">
+	<skill id="2253" levels="1" name="신성의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="element" val="4" /> <!-- Holy -->
@@ -961,7 +961,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2254" levels="3" name="Crystal of Fire">
+	<skill id="2254" levels="3" name="불의 결정">
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="1000" />
@@ -976,7 +976,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</skill>
-	<skill id="2255" levels="3" name="Crystal of Water">
+	<skill id="2255" levels="3" name="물의 결정">
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="1000" />
@@ -991,7 +991,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</skill>
-	<skill id="2256" levels="3" name="Crystal of Wind">
+	<skill id="2256" levels="3" name="바람의 결정">
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="1000" />
@@ -1006,7 +1006,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</skill>
-	<skill id="2257" levels="3" name="Crystal of Earth">
+	<skill id="2257" levels="3" name="대지의 결정">
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="1000" />
@@ -1021,7 +1021,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</skill>
-	<skill id="2258" levels="3" name="Crystal of Darkness">
+	<skill id="2258" levels="3" name="암흑의 결정">
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="1000" />
@@ -1036,7 +1036,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</skill>
-	<skill id="2259" levels="3" name="Crystal of Sacredness">
+	<skill id="2259" levels="3" name="신성의 결정">
 		<!-- Update by pmq -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="1000" />
@@ -1051,7 +1051,7 @@
 			<player flyMounted="False" />
 		</cond>
 	</skill>
-	<skill id="2260" levels="1" name="Key of Riddles">
+	<skill id="2260" levels="1" name="수수께끼의 열쇠">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8059,1,100
@@ -1071,7 +1071,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2261" levels="9" name="Item - Hard Green Fish">
+	<skill id="2261" levels="9" name="상급-큰 녹색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,11.04;6911,2,18.4;8353,2,27.6
@@ -1099,7 +1099,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2262" levels="9" name="Item - Hard Jade Fish">
+	<skill id="2262" levels="9" name="상급-큰 옥색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,22.8;6911,2,28.5;8359,4,19
@@ -1127,7 +1127,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2263" levels="9" name="Item - Hard Blue Fish">
+	<skill id="2263" levels="9" name="상급-큰 청색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,25.28;6911,4,19.75;8355,4,17.5556
@@ -1155,7 +1155,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2264" levels="9" name="Item - Hard Yellow Fish">
+	<skill id="2264" levels="9" name="상급-큰 황색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,28.288;6911,4,29.4666;8354,2,22.1
@@ -1183,7 +1183,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2265" levels="9" name="Item - Hard Orange Fish">
+	<skill id="2265" levels="9" name="상급-큰 주황색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,2,24.88;6911,8,20.7333;8357,2,19.904
@@ -1211,7 +1211,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2266" levels="9" name="Item - Hard Violet Fish">
+	<skill id="2266" levels="9" name="상급-큰 보라색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,1,28;6912,8,19.4445;8358,2,29.1666
@@ -1239,7 +1239,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2267" levels="9" name="Item - Hard Red Fish">
+	<skill id="2267" levels="9" name="상급-큰 붉은색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,20.432;6912,9,18.9184;8352,4,18.2428
@@ -1267,7 +1267,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2268" levels="9" name="Item - Hard White Fish">
+	<skill id="2268" levels="9" name="상급-큰 흰색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,20.964;6912,9,19.4112;8373,1,2.6205;8356,4,16.3781
@@ -1295,7 +1295,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2269" levels="9" name="Item - Hard Black Fish">
+	<skill id="2269" levels="9" name="상급-큰 검은색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,24.972;6912,9,23.1224;8373,1,3.1215;8351,4,17.3416
@@ -1323,7 +1323,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2270" levels="7" name="Item - Adventurer Box">
+	<skill id="2270" levels="7" name="모험가의 상자 - 창조의 요람">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			853,1,14.1723;884,1,21.3675;916,1,10.6428
@@ -1349,7 +1349,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2271" levels="1" name="Item - Hot Spring Fish">
+	<skill id="2271" levels="1" name="낡은 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8034,3,85;2134,3,4;2133,7,11
@@ -1369,13 +1369,13 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2272" levels="1" name="Item - Fight Song Crystal">
+	<skill id="2272" levels="1" name="a,Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2273" levels="1" name="Item - Red Devil Support Box">
+	<skill id="2273" levels="1" name="승리의 응원도구 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8552,1,25;8187,1,25;8555,5,25;6406,10,15;6407,5,9.991;5577,1,0.002;5578,1,0.002;5579,1,0.002;5580,1,0.001;5581,1,0.001;5582,1,0.001
@@ -1395,7 +1395,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2274" levels="9" name="Fisherman's Potion">
+	<skill id="2274" levels="9" name="낚시꾼의 물약 - 흰색">
 		<table name="#power"> 2 5 8 11 14 17 20 23 26 </table>
 		<table name="#active_skill_id_lvl"> 1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25 1315,28 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1411,7 +1411,7 @@
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="fishing_mastery_down" />
 		</for>
 	</skill>
-	<skill id="2275" levels="1" name="Fisherman's Recovery Potion">
+	<skill id="2275" levels="1" name="낚시꾼의 회복 물약">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1423,7 +1423,7 @@
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2276" levels="1" name="Dewdrop of Destruction">
+	<skill id="2276" levels="1" name="파혼의 이슬">
 		<!-- Update by pmq -->
 		<set name="power" val="999999999" />
 		<set name="target" val="TARGET_ONE" />
@@ -1445,7 +1445,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2277" levels="6" name="Event Gift Box">
+	<skill id="2277" levels="6" name="이벤트용 선물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1539,10,8592,1,50;1539,10,8592,1,50
@@ -1470,7 +1470,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2278" levels="3" name="Herb of Life">
+	<skill id="2278" levels="3" name="초강력 생명의 허브">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 15 25 100 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1486,7 +1486,7 @@
 			<effect name="HealPercent" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="2279" levels="3" name="Herb of Mana">
+	<skill id="2279" levels="3" name="초강력 마나의 허브">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 11 18 100 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1502,7 +1502,7 @@
 			<effect name="ManaHealPercent" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="2280" levels="1" name="Herb of Power">
+	<skill id="2280" levels="1" name="힘의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -1520,7 +1520,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2281" levels="1" name="Herb of Magic">
+	<skill id="2281" levels="1" name="마력의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -1538,7 +1538,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
+	<skill id="2282" levels="1" name="공격 속도의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -1556,7 +1556,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2283" levels="1" name="Herb of Casting Spd.">
+	<skill id="2283" levels="1" name="마법 속도의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -1574,7 +1574,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2284" levels="1" name="Herb of Critical Attack">
+	<skill id="2284" levels="1" name="치명 타격의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -1592,7 +1592,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2285" levels="1" name="Herb of Speed">
+	<skill id="2285" levels="1" name="이동 속도의 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -1610,7 +1610,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2286" levels="6" name="Scroll: Recovery">
+	<skill id="2286" levels="6" name="회복의 주문서 - S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;99 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1629,7 +1629,7 @@
 			<effect name="Recovery" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2287" levels="6" name="Elixir of Life">
+	<skill id="2287" levels="6" name="생명의 비약 - R그레이드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#amount"> 250 650 1100 1500 1900 2300 </table>
@@ -1646,7 +1646,7 @@
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="2288" levels="6" name="Elixir of Mental Strength">
+	<skill id="2288" levels="6" name="정신의 비약 - R그레이드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#amount"> 60 140 220 290 360 420 </table>
@@ -1662,7 +1662,7 @@
 			<effect name="ManaHeal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="2289" levels="6" name="Elixir of CP">
+	<skill id="2289" levels="6" name="투지의 비약 - R그레이드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#amount"> 150 350 600 800 1000 1200 </table>
@@ -1677,7 +1677,7 @@
 			<effect name="CpHeal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="2290" levels="1" name="Coffer of Shadows">
+	<skill id="2290" levels="1" name="할로윈 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8661,1,15;8660,1,15;5234,3,30;6406,10,20;6407,5,19.991;5577,1,0.002;5578,1,0.002;5579,1,0.002;5580,1,0.001;5581,1,0.001;5582,1,0.001
@@ -1697,7 +1697,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2291" levels="1" name="Facelifting Potion">
+	<skill id="2291" levels="1" name="성형의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1706,7 +1706,7 @@
 		<set name="faceId" val="0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2292" levels="1" name="Facelifting Potion">
+	<skill id="2292" levels="1" name="성형의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1715,7 +1715,7 @@
 		<set name="faceId" val="1" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2293" levels="1" name="Facelifting Potion">
+	<skill id="2293" levels="1" name="성형의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1724,7 +1724,7 @@
 		<set name="faceId" val="2" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2294" levels="1" name="Dye Potion">
+	<skill id="2294" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1733,7 +1733,7 @@
 		<set name="hairColorId" val="0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2295" levels="1" name="Dye Potion">
+	<skill id="2295" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1742,7 +1742,7 @@
 		<set name="hairColorId" val="1" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2296" levels="1" name="Dye Potion">
+	<skill id="2296" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1751,7 +1751,7 @@
 		<set name="hairColorId" val="2" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2297" levels="1" name="Dye Potion">
+	<skill id="2297" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1760,7 +1760,7 @@
 		<set name="hairColorId" val="3" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2298" levels="1" name="Hair Style Change Potion">
+	<skill id="2298" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1769,7 +1769,7 @@
 		<set name="hairStyleId" val="0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2299" levels="1" name="Hair Style Change Potion">
+	<skill id="2299" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="3600" levels="10" name="Special Ability: Anger">
+	<skill id="3600" levels="10" name="특수능력 앵거">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table>
 		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78.33 </table>
@@ -17,7 +17,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3601" levels="10" name="Special Ability: Haste">
+	<skill id="3601" levels="10" name="특수능력 헤이스트">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 1.11 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
@@ -32,7 +32,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3602" levels="10" name="Special Ability: Guidance">
+	<skill id="3602" levels="10" name="특수능력 가이던스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 84 </table>
@@ -48,7 +48,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
 		</for>
 	</skill>
-	<skill id="3603" levels="10" name="Demon Sword Zariche">
+	<skill id="3603" levels="10" name="마검 자리체">
 		<table name="#pAtk"> 3.2 3.42 3.66 3.92 4.22 4.54 4.89 5.28 5.71 6.18 </table>
 		<table name="#pAtkAdd"> 600 720 864 1036 1244 1492 1791 2149 2579 3095 </table>
 		<table name="#mAtk"> 3.1 3.2 3.31 3.43 3.55 3.68 3.81 3.95 4.1 4.25 </table>
@@ -92,7 +92,7 @@
 			<set order="0x08" stat="MEN" val="21" />
 		</for>
 	</skill>
-	<skill id="3604" levels="1" name="Frintezza's Necklace">
+	<skill id="3604" levels="1" name="프린테사의 목걸이">
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
@@ -115,7 +115,7 @@
 			<add order="0x40" stat="reflectDam" val="4" />
 		</for>
 	</skill>
-	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
+	<skill id="3605" levels="1" name="맹세의 중장비 세트">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -125,7 +125,7 @@
 			<mul order="0x30" stat="pAtk" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
+	<skill id="3606" levels="1" name="맹세의 경장비 세트">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -135,7 +135,7 @@
 			<mul order="0x30" stat="cAtk" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3607" levels="1" name="Clan Oath Robe Set">
+	<skill id="3607" levels="1" name="맹세의 로브 세트">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -145,7 +145,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3608" levels="3" name="Apella Heavy Armor Set">
+	<skill id="3608" levels="3" name="투쟁의 아펠라 중장비 세트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
@@ -163,7 +163,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5605" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
-	<skill id="3609" levels="3" name="Apella Light Armor Set">
+	<skill id="3609" levels="3" name="투쟁의 아펠라 경장비 세트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
@@ -181,7 +181,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5607" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
-	<skill id="3610" levels="2" name="Apella Robe Set">
+	<skill id="3610" levels="2" name="투쟁의 아펠라 로브 세트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
@@ -199,7 +199,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5608" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
-	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
+	<skill id="3611" levels="1" name="D 그레이드 중장비 강화">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -218,7 +218,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+	<skill id="3612" levels="1" name="D 그레이드 경장비 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -231,7 +231,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
+	<skill id="3613" levels="1" name="D 그레이드 로브 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -242,7 +242,7 @@
 			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
-	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
+	<skill id="3614" levels="1" name="C 그레이드 중장비 강화">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -261,7 +261,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
+	<skill id="3615" levels="1" name="C 그레이드 경장비 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -274,7 +274,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
+	<skill id="3616" levels="1" name="C 그레이드 로브 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -285,7 +285,7 @@
 			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
-	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
+	<skill id="3617" levels="1" name="B 그레이드 중장비 강화">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -304,7 +304,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
+	<skill id="3618" levels="1" name="B 그레이드 경장비 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -317,7 +317,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
+	<skill id="3619" levels="1" name="B 그레이드 로브 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -328,7 +328,7 @@
 			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
-	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
+	<skill id="3620" levels="1" name="A 그레이드 중장비 강화">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -347,7 +347,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
+	<skill id="3621" levels="1" name="A 그레이드 경장비 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -360,7 +360,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
+	<skill id="3622" levels="1" name="A 그레이드 로브 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -371,7 +371,7 @@
 			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
-	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
+	<skill id="3623" levels="1" name="S 그레이드 중장비 강화">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -390,7 +390,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
+	<skill id="3624" levels="1" name="S 그레이드 경장비 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -403,7 +403,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
+	<skill id="3625" levels="1" name="S 그레이드 로브 강화">
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -414,7 +414,7 @@
 			<mul order="0x30" stat="weightLimit" val="1.3" />
 		</for>
 	</skill>
-	<skill id="3626" levels="1" name="Kabokula">
+	<skill id="3626" levels="1" name="카보클라">
 		<set name="itemConsumeId" val="8764" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="77" />
@@ -432,7 +432,7 @@
 			<target npcId="22215,22216,22217" />
 		</cond>
 	</skill>
-	<skill id="3627" levels="1" name="Tapirawa">
+	<skill id="3627" levels="1" name="타피라와">
 		<set name="itemConsumeId" val="8764" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="77" />
@@ -450,7 +450,7 @@
 			<target npcId="22215,22216,22217" />
 		</cond>
 	</skill>
-	<skill id="3628" levels="1" name="Shabonoba">
+	<skill id="3628" levels="1" name="샤보노바">
 		<set name="itemConsumeId" val="8764" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="77" />
@@ -468,7 +468,7 @@
 			<target npcId="22215,22216,22217" />
 		</cond>
 	</skill>
-	<skill id="3629" levels="10" name="Blood Sword Akamanah">
+	<skill id="3629" levels="10" name="혈검 아카마나프">
 		<table name="#pAtk"> 3.2 3.42 3.66 3.92 4.22 4.54 4.89 5.28 5.71 6.18 </table>
 		<table name="#pAtkAdd"> 600 720 864 1036 1244 1492 1791 2149 2579 3095 </table>
 		<table name="#mAtk"> 3.1 3.2 3.31 3.43 3.55 3.68 3.81 3.95 4.1 4.25 </table>
@@ -512,7 +512,7 @@
 			<set order="0x08" stat="MEN" val="21" />
 		</for>
 	</skill>
-	<skill id="3630" levels="1" name="Void Burst">
+	<skill id="3630" levels="1" name="보이드 버스트">
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
@@ -522,7 +522,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="3631" levels="1" name="Void Flow">
+	<skill id="3631" levels="1" name="보이드 플로우">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
@@ -533,7 +533,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="3632" levels="1" name="Clan Gate">
+	<skill id="3632" levels="1" name="클랜 게이트">
 		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -549,7 +549,7 @@
 			<effect name="ImmobileBuff" abnormalTime="120" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="3633" levels="2" name="Residential Shock Immunity">
+	<skill id="3633" levels="2" name="레지던스 쇼크 이뮤니티">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#vuln"> 80 100 </table>
 		<set name="magicLvl" val="60" />
@@ -563,7 +563,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3634" levels="1" name="Special Ability: Infinity Sword">
+	<skill id="3634" levels="1" name="특수능력 인피니티 소드">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -581,7 +581,7 @@
 			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
 		</for>
 	</skill>
-	<skill id="3635" levels="1" name="Special Ability: Infinity Shooter">
+	<skill id="3635" levels="1" name="특수능력 인피니티 슈터">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -595,7 +595,7 @@
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 		</for>
 	</skill>
-	<skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
+	<skill id="3636" levels="1" name="다이너스티 플래티늄 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -609,7 +609,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3637" levels="1" name="Dynasty Platinum Plate - Weapon Master">
+	<skill id="3637" levels="1" name="다이너스티 플래티늄 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -623,7 +623,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3638" levels="1" name="Dynasty Platinum Plate - Bard">
+	<skill id="3638" levels="1" name="다이너스티 플래티늄 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -636,7 +636,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3639" levels="1" name="Dynasty Platinum Plate - Force Master">
+	<skill id="3639" levels="1" name="다이너스티 플래티늄 플레이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -649,7 +649,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3640" levels="1" name="Dynasty Jewel Leather Mail Dagger Master">
+	<skill id="3640" levels="1" name="다이너스티 쥬엘 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -663,7 +663,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3641" levels="1" name="Dynasty Jewel Leather Mail Bow Master">
+	<skill id="3641" levels="1" name="다이너스티 쥬엘 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -677,7 +677,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3642" levels="1" name="Dynasty Jeweled Leather Armor Force Master">
+	<skill id="3642" levels="1" name="다이너스티 쥬엘 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -690,7 +690,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3643" levels="1" name="Dynasty Jeweled Leather Armor Weapon Master">
+	<skill id="3643" levels="1" name="다이너스티 쥬엘 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -704,7 +704,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3644" levels="1" name="Dynasty Jeweled Leather Armor Summoner">
+	<skill id="3644" levels="1" name="다이너스티 쥬엘 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -718,7 +718,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3645" levels="1" name="Dynasty Silver Satin Tunic Healer">
+	<skill id="3645" levels="1" name="다이너스티 실버 새틴 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -732,7 +732,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3646" levels="1" name="Dynasty Silver Satin Tunic Enchanter">
+	<skill id="3646" levels="1" name="다이너스티 실버 새틴 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -746,7 +746,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3647" levels="1" name="Dynasty Silver Satin Tunic Summoner">
+	<skill id="3647" levels="1" name="다이너스티 실버 새틴 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -760,7 +760,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3648" levels="1" name="Dynasty Silver Satin Tunic Human Wizard">
+	<skill id="3648" levels="1" name="다이너스티 실버 새틴 튜닉">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -773,7 +773,7 @@
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
-	<skill id="3649" levels="1" name="Beleth's Ring">
+	<skill id="3649" levels="1" name="베레스의 반지">
 		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
@@ -789,7 +789,7 @@
 			<add order="0x40" stat="regMp" val="0.23" />
 		</for>
 	</skill>
-	<skill id="3650" levels="1" name="PvP Weapon - CP Drain">
+	<skill id="3650" levels="1" name="PvP 무기 - CP 드레인">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -798,7 +798,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5681" />
 		</for>
 	</skill>
-	<skill id="3651" levels="1" name="PvP Weapon - Cancel">
+	<skill id="3651" levels="1" name="PvP 무기 - 캔슬">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -807,7 +807,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5682" />
 		</for>
 	</skill>
-	<skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
+	<skill id="3652" levels="1" name="PvP 무기 - 이그노어 실드 디펜스">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -816,7 +816,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5683" />
 		</for>
 	</skill>
-	<skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
+	<skill id="3653" levels="1" name="PvP 무기 - 어택 챈스">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -825,7 +825,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5684" />
 		</for>
 	</skill>
-	<skill id="3654" levels="1" name="PvP Weapon - Casting">
+	<skill id="3654" levels="1" name="PvP 무기 - 캐스팅">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -834,7 +834,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5685" />
 		</for>
 	</skill>
-	<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
+	<skill id="3655" levels="1" name="PvP 무기 - 래피드 파이어">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -843,7 +843,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5686" />
 		</for>
 	</skill>
-	<skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
+	<skill id="3656" levels="1" name="PvP 무기 - 디크리즈 레인지">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -852,7 +852,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5687" />
 		</for>
 	</skill>
-	<skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
+	<skill id="3657" levels="1" name="PvP 무기 - 디크리즈 레지스트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -861,7 +861,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5688" />
 		</for>
 	</skill>
-	<skill id="3658" levels="1" name="PvP Shield - Reflect Damage">
+	<skill id="3658" levels="1" name="PvP 방패 - 리플렉트 대미지">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -870,7 +870,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="40" chanceType="ON_ATTACKED_HIT" triggeredId="5689" />
 		</for>
 	</skill>
-	<skill id="3659" levels="1" name="PvP Armor - Damage Down">
+	<skill id="3659" levels="1" name="PvP 방어구 - 대미지 다운">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -879,7 +879,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5690" />
 		</for>
 	</skill>
-	<skill id="3660" levels="1" name="PvP Armor - Critical Down">
+	<skill id="3660" levels="1" name="PvP 방어구 - 크리티컬 다운">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -888,7 +888,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
 		</for>
 	</skill>
-	<skill id="3661" levels="1" name="PvP Armor - Heal">
+	<skill id="3661" levels="1" name="PvP 방어구 - 힐">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -897,7 +897,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationSkills="1401" chanceType="ON_CAST" triggeredId="5692" />
 		</for>
 	</skill>
-	<skill id="3662" levels="1" name="PvP Armor - Speed Down">
+	<skill id="3662" levels="1" name="PvP 방어구 - 스피드 다운">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -906,7 +906,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
 		</for>
 	</skill>
-	<skill id="3663" levels="1" name="PvP Armor - Mirage">
+	<skill id="3663" levels="1" name="PvP 방어구 - 미라지">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -915,7 +915,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
 		</for>
 	</skill>
-	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
+	<skill id="3664" levels="1" name="적색 탈리스만 - 최대 CP">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -930,7 +930,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
+	<skill id="3665" levels="2" name="적색 탈리스만 - CP 회복량">
 		<!-- This skill only has one level, 2. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="50" />
@@ -946,7 +946,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
+	<skill id="3666" levels="1" name="황색 탈리스만 - 기력 증가">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -955,21 +955,21 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" activationMinDamage="20" chanceType="ON_ATTACKED_HIT" triggeredId="5695" />
 		</for>
 	</skill>
-	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
+	<skill id="3667" levels="1" name="황색 탈리스만 - 피해 전이">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="transDam" val="10" />
 		</for>
 	</skill>
-	<skill id="3668" levels="1" name="Zubei's Leather Gaiters">
+	<skill id="3668" levels="1" name="쉬르노엔 가죽 각반">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="1.47" />
 		</for>
 	</skill>
-	<skill id="3669" levels="1" name="Zubei's Leather Shirt">
+	<skill id="3669" levels="1" name="쉬르노엔 레더 셔츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -978,7 +978,7 @@
 			<add order="0x40" stat="rEvas" val="9.55" />
 		</for>
 	</skill>
-	<skill id="3670" levels="1" name="Zubei's Gauntlet">
+	<skill id="3670" levels="1" name="쉬르노엔의 건틀렛">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -986,7 +986,7 @@
 			<add order="0x40" stat="rEvas" val="0.59" />
 		</for>
 	</skill>
-	<skill id="3671" levels="1" name="Zubei's Boots">
+	<skill id="3671" levels="1" name="쉬르노엔의 부츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -994,7 +994,7 @@
 			<add order="0x40" stat="rEvas" val="0.59" />
 		</for>
 	</skill>
-	<skill id="3672" levels="1" name="Zubei's Gaiters">
+	<skill id="3672" levels="1" name="쉬르노엔의 각반">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1003,7 +1003,7 @@
 			<add order="0x40" stat="maxHp" val="123" />
 		</for>
 	</skill>
-	<skill id="3673" levels="1" name="Zubei's Gauntlet">
+	<skill id="3673" levels="1" name="쉬르노엔의 건틀렛">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1012,7 +1012,7 @@
 			<add order="0x40" stat="maxHp" val="49" />
 		</for>
 	</skill>
-	<skill id="3674" levels="1" name="Zubei's Boots">
+	<skill id="3674" levels="1" name="쉬르노엔의 부츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1021,7 +1021,7 @@
 			<add order="0x40" stat="maxHp" val="49" />
 		</for>
 	</skill>
-	<skill id="3675" levels="1" name="Zubei's Helmet">
+	<skill id="3675" levels="1" name="쉬르노엔의 헬멧">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1030,7 +1030,7 @@
 			<add order="0x40" stat="maxHp" val="74" />
 		</for>
 	</skill>
-	<skill id="3676" levels="1" name="Zubei's Breastplate">
+	<skill id="3676" levels="1" name="쉬르노엔의 흉갑">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1040,7 +1040,7 @@
 			<mul order="0x30" stat="pDef" val="1.0724" />
 		</for>
 	</skill>
-	<skill id="3677" levels="1" name="Tunic of Zubei">
+	<skill id="3677" levels="1" name="튜닉 오브 쉬르노엔">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1049,7 +1049,7 @@
 			<mul order="0x30" stat="mAtk" val="1.15" />
 		</for>
 	</skill>
-	<skill id="3678" levels="1" name="Stockings of Zubei">
+	<skill id="3678" levels="1" name="호즈 오브 쉬르노엔">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1057,7 +1057,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0208" />
 		</for>
 	</skill>
-	<skill id="3679" levels="1" name="Zubei's Gauntlet">
+	<skill id="3679" levels="1" name="쉬르노엔의 건틀렛">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1065,7 +1065,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0083" />
 		</for>
 	</skill>
-	<skill id="3680" levels="1" name="Zubei's Boots">
+	<skill id="3680" levels="1" name="쉬르노엔의 부츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1073,7 +1073,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0083" />
 		</for>
 	</skill>
-	<skill id="3681" levels="1" name="Zubei's Shield">
+	<skill id="3681" levels="1" name="쉬르노엔의 쉴드">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1081,7 +1081,7 @@
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
 	</skill>
-	<skill id="3682" levels="1" name="Avadon Gloves">
+	<skill id="3682" levels="1" name="아바돈 글로브">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1089,7 +1089,7 @@
 			<add order="0x40" stat="maxHp" val="49" />
 		</for>
 	</skill>
-	<skill id="3683" levels="1" name="Avadon Boots">
+	<skill id="3683" levels="1" name="아바돈 부츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1097,7 +1097,7 @@
 			<add order="0x40" stat="maxHp" val="49" />
 		</for>
 	</skill>
-	<skill id="3684" levels="1" name="Avadon Circlet">
+	<skill id="3684" levels="1" name="아바돈 서클릿">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1105,7 +1105,7 @@
 			<add order="0x40" stat="maxHp" val="73" />
 		</for>
 	</skill>
-	<skill id="3685" levels="1" name="Avadon Gaiters">
+	<skill id="3685" levels="1" name="아바돈 플레이트 각반">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1113,7 +1113,7 @@
 			<add order="0x40" stat="maxHp" val="122" />
 		</for>
 	</skill>
-	<skill id="3686" levels="1" name="Avadon Breastplate">
+	<skill id="3686" levels="1" name="아바돈 플레이트 흉갑">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1122,7 +1122,7 @@
 			<add order="0x40" stat="maxHp" val="833" />
 		</for>
 	</skill>
-	<skill id="3687" levels="1" name="Avadon Shield">
+	<skill id="3687" levels="1" name="아바돈 쉴드">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1130,7 +1130,7 @@
 			<mul order="0x30" stat="mDef" val="1.01" />
 		</for>
 	</skill>
-	<skill id="3688" levels="1" name="Avadon Circlet">
+	<skill id="3688" levels="1" name="아바돈 서클릿">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1139,7 +1139,7 @@
 			<add order="0x40" stat="weightPenalty" val="1440" />
 		</for>
 	</skill>
-	<skill id="3689" levels="1" name="Avadon Gloves">
+	<skill id="3689" levels="1" name="아바돈 글로브">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1148,7 +1148,7 @@
 			<add order="0x40" stat="weightPenalty" val="960" />
 		</for>
 	</skill>
-	<skill id="3690" levels="1" name="Avadon Leather Armor">
+	<skill id="3690" levels="1" name="아바돈 레더 메일">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1158,7 +1158,7 @@
 			<mul order="0x30" stat="mDef" val="1.1708" />
 		</for>
 	</skill>
-	<skill id="3691" levels="1" name="Avadon Boots">
+	<skill id="3691" levels="1" name="아바돈 부츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1167,7 +1167,7 @@
 			<add order="0x40" stat="weightPenalty" val="960" />
 		</for>
 	</skill>
-	<skill id="3692" levels="1" name="Avadon Circlet">
+	<skill id="3692" levels="1" name="아바돈 서클릿">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1175,7 +1175,7 @@
 			<mul order="0x30" stat="pDef" val="1.0125" />
 		</for>
 	</skill>
-	<skill id="3693" levels="1" name="Avadon Gloves">
+	<skill id="3693" levels="1" name="아바돈 글로브">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1183,7 +1183,7 @@
 			<mul order="0x30" stat="pDef" val="1.0083" />
 		</for>
 	</skill>
-	<skill id="3694" levels="1" name="Avadon Robe">
+	<skill id="3694" levels="1" name="아바돈 로브">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1193,7 +1193,7 @@
 			<mul order="0x30" stat="mDef" val="1.1708" />
 		</for>
 	</skill>
-	<skill id="3695" levels="1" name="Avadon Boots">
+	<skill id="3695" levels="1" name="아바돈 부츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1201,7 +1201,7 @@
 			<mul order="0x30" stat="pDef" val="1.0083" />
 		</for>
 	</skill>
-	<skill id="3696" levels="1" name="Doom Gloves">
+	<skill id="3696" levels="1" name="둠 글로브">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1210,7 +1210,7 @@
 			<add order="0x40" stat="breath" val="33" />
 		</for>
 	</skill>
-	<skill id="3697" levels="1" name="Doom Boots">
+	<skill id="3697" levels="1" name="둠 부츠">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
@@ -1219,7 +1219,7 @@
 			<add order="0x40" stat="breath" val="33" />
 		</for>
 	</skill>
-	<skill id="3698" levels="1" name="Doom Plate Armor">
+	<skill id="3698" levels="1" name="둠 플레이트 아머">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -1229,7 +1229,7 @@
 			<add order="0x40" stat="maxHp" val="1093" />
 		</for>
 	</skill>
-	<skill id="3699" levels="1" name="Doom Helmet">
+	<skill id="3699" levels="1" name="둠 헬멧">
 		<!-- Confirmed CT2.5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />

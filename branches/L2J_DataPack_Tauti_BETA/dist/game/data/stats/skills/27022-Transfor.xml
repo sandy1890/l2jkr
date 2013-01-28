@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 變身技能 -->
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9209" levels="1" name="酷酷魯">
+	<skill id="9209" levels="1" name="쿠쿠루">
 		<table name="#Desc-LV1">騎乘酷酷魯。</table>
 		<set name="isMagic" val="2"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -19,7 +19,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9213" levels="1" name="酷酷林">
+	<skill id="9213" levels="1" name="쿠쿠린">
 		<table name="#Desc-LV1">騎乘酷酷林。</table>
 		<set name="isMagic" val="2"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -35,7 +35,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9323" levels="1" name="活動專用-變身 玫瑰精靈(男)">
+	<skill id="9323" levels="1" name="PC방 전용 - 트랜스 폼 로즈(남)">
 		<table name="#Desc-LV1">在10分鐘內變身為玫瑰精靈（男）。</table>
 		<set name="isMagic" val="2"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -53,7 +53,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9324" levels="1" name="活動專用-變身 玫瑰精靈(女)">
+	<skill id="9324" levels="1" name="PC방 전용 - 트랜스 폼 로즈(여)">
 		<table name="#Desc-LV1">在10分鐘內變身為玫瑰精靈（女）。</table>
 		<set name="isMagic" val="2"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -71,14 +71,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9349" levels="1" name="降下">
+	<skill id="9349" levels="1" name="디스마운트">
 		<table name="#Desc-LV1">從黑熊身上降下。</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMDISPEL"/>
 		<set name="operateType" val="A1"/>
 		<set name="hitTime" val="2500"/>
 	</skill>
-	<skill id="9350" levels="1" name="疾奔">
+	<skill id="9350" levels="1" name="패스트 런">
 		<table name="#Desc-LV1">在30秒內黑熊將以最高速度疾走。</table>
 		<set name="mpConsume" val="1"/>
 		<set name="target" val="TARGET_SELF"/>

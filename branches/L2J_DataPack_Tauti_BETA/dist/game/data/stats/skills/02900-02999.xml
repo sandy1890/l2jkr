@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2900" levels="1" name="Ancient Herb - Slayer">
+	<skill id="2900" levels="1" name="원시 허브 - 학살자">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -13,7 +13,7 @@
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="signal_c" />
 		</for>
 	</skill>
-	<skill id="2901" levels="1" name="Ancient Herb - Immortal">
+	<skill id="2901" levels="1" name="원시 허브 - 불멸자">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -26,7 +26,7 @@
 			<effect name="Invincible" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="pd_up_special" />
 		</for>
 	</skill>
-	<skill id="2902" levels="1" name="Ancient Herb - Terminator">
+	<skill id="2902" levels="1" name="원시 허브 - 종결자">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -41,7 +41,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2903" levels="1" name="Ancient Herb - Guide">
+	<skill id="2903" levels="1" name="원시 허브 - 인도자">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -56,14 +56,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2904" levels="1" name="Guardian Spirit's Divine Protection">
+	<skill id="2904" levels="1" name="수호 영혼의 가호">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="2905" levels="1" name="Growth Accelerator">
+	<skill id="2905" levels="1" name="성장 촉진제">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -76,14 +76,14 @@
 			<target npcId="18793,18794,18795,18796,18797,18798" />
 		</cond>
 	</skill>
-	<skill id="2906" levels="1" name="Incubation Accelerator">
+	<skill id="2906" levels="1" name="부화 촉진제">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2907" levels="5" name="Battlefield Use Secret Medicine of Life">
+	<skill id="2907" levels="5" name="전장용 생명의 비약">
 		<!-- This skill only has one level, 5. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -91,7 +91,7 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2908" levels="5" name="Battlefield Use Secret Medicine of Mind">
+	<skill id="2908" levels="5" name="전장용 정신의 비약">
 		<!-- This skill only has one level, 5. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -99,7 +99,7 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2909" levels="5" name="Battlefield Use Secret Medicine of Will">
+	<skill id="2909" levels="5" name="전장용 투지의 비약">
 		<!-- This skill only has one level, 5. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -107,39 +107,39 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2910" levels="1" name="Skull Key of Pain">
+	<skill id="2910" levels="1" name="고통의 해골 열쇠">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2911" levels="1" name="Skull Key of Erosion">
+	<skill id="2911" levels="1" name="침식의 해골 열쇠">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2912" levels="1" name="Skull Key of the Heart">
+	<skill id="2912" levels="1" name="심장부의 해골 열쇠">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2913" levels="1" name="Soul Extraction">
+	<skill id="2913" levels="1" name="영혼 추출">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="60000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2914" levels="2" name="Equipment Set 90 Day Pack">
+	<skill id="2914" levels="2" name="장비 세트 90일 팩">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2915" levels="1" name="Clear Five-Colored Crystal">
+	<skill id="2915" levels="1" name="오색 영롱한 광석">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -149,7 +149,7 @@
 		<set name="teleCoords" val="89417,-44506,-2126" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets">
+	<skill id="2916" levels="1" name="고농축 강화펫 사료">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="feed" val="11000" />
@@ -158,7 +158,7 @@
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2917" levels="1" name="Big Staccato Silk Cocoon">
+	<skill id="2917" levels="1" name="큰 스타카토 고치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9575,1,2.77;10485,1,2.31;10577,1,3.2;14209,1,3.2;14208,1,3.2;14212,1,3.2;960,1,6.4;9625,1,3.2;9626,1,2.13;959,1,0.64;10373,1,1.54;10374,1,1.54;10375,1,1.54;10376,1,1.54;10377,1,1.54;10378,1,1.54;10379,1,1.54;10380,1,1.54;10381,1,1.54
@@ -178,7 +178,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2918" levels="1" name="Small Staccato Silk Cocoon">
+	<skill id="2918" levels="1" name="작은 스타카토 고치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9575,1,2.36;10485,1,1.96;10577,1,2.72;14209,1,2.72;14208,1,2.72;14212,1,2.72;960,1,5.44;9625,1,2.72;9626,1,1.81;959,1,0.54;10373,1,1.31;10374,1,1.31;10375,1,1.31;10376,1,1.31;10377,1,1.31;10378,1,1.31;10379,1,1.31;10380,1,1.31;10381,1,1.31
@@ -198,7 +198,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2919" levels="1" name="Ancient Parchment">
+	<skill id="2919" levels="1" name="고대의 양피지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			5942,1,40.0;5943,1,40.0;14836,1,4.0;14837,1,4.0;14838,1,4.0;14839,1,4.0;14840,1,4.0
@@ -218,7 +218,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2920" levels="1" name="Titan's Ancient Book">
+	<skill id="2920" levels="1" name="하거인의 고서적">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			5942,1,40.0;5943,1,40.0;14842,1,4.0;14843,1,4.0;14844,1,4.0;14845,1,4.0;14846,1,4.0
@@ -238,7 +238,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2921" levels="1" name="Gludio Supply Box - magic pin">
+	<skill id="2921" levels="1" name="글루디오 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -258,7 +258,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2922" levels="1" name="Dion supply box - magic pin">
+	<skill id="2922" levels="1" name="디온 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -278,7 +278,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2923" levels="1" name="Giran supply box - magic pin">
+	<skill id="2923" levels="1" name="기란 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -298,7 +298,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2924" levels="1" name="Oren supply box - magic pin">
+	<skill id="2924" levels="1" name="오렌 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -318,7 +318,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2925" levels="1" name="Aden supply box - magic pin">
+	<skill id="2925" levels="1" name="아덴 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -338,7 +338,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2926" levels="1" name="Innadril supply box - magic pin">
+	<skill id="2926" levels="1" name="인나드릴 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -358,7 +358,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2927" levels="1" name="Goddard supply box - magic pin">
+	<skill id="2927" levels="1" name="고다드 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -378,7 +378,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2928" levels="1" name="Rune supply box - magic pin">
+	<skill id="2928" levels="1" name="루운 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -398,7 +398,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2929" levels="1" name="Schuttgart supply box - magic pin">
+	<skill id="2929" levels="1" name="슈트가르트 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13898,1,30.0;13899,1,15.0
@@ -418,7 +418,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2930" levels="1" name="Gludio supply box - magic pouch">
+	<skill id="2930" levels="1" name="글루디오 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -438,7 +438,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2931" levels="1" name="Dion supply box - magic pouch">
+	<skill id="2931" levels="1" name="디온 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -458,7 +458,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2932" levels="1" name="Giran supply box - magic pouch">
+	<skill id="2932" levels="1" name="기란 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -478,7 +478,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2933" levels="1" name="Oren supply box - magic pouch">
+	<skill id="2933" levels="1" name="오렌 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -498,7 +498,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2934" levels="1" name="Aden supply box - magic pouch">
+	<skill id="2934" levels="1" name="아덴 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -518,7 +518,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2935" levels="1" name="Innadril supply box - magic pouch">
+	<skill id="2935" levels="1" name="인나드릴 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -538,7 +538,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2936" levels="1" name="Goddard supply box - magic pouch">
+	<skill id="2936" levels="1" name="고다드 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -558,7 +558,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2937" levels="1" name="Rune supply box - magic pouch">
+	<skill id="2937" levels="1" name="루운 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -578,7 +578,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2938" levels="1" name="Schuttgart supply box - magic pouch">
+	<skill id="2938" levels="1" name="슈트가르트 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13918,1,30.0;13919,1,15.0
@@ -598,7 +598,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2939" levels="1" name="Gludio supply box - belt">
+	<skill id="2939" levels="1" name="글루디오 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -618,7 +618,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2940" levels="1" name="Dion supply box - belt">
+	<skill id="2940" levels="1" name="디온 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -638,7 +638,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2941" levels="1" name="Giran supply box - belt">
+	<skill id="2941" levels="1" name="기란 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -658,7 +658,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2942" levels="1" name="Oren supply box - belt">
+	<skill id="2942" levels="1" name="오렌 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -678,7 +678,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2943" levels="1" name="Aden supply box - belt">
+	<skill id="2943" levels="1" name="아덴 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -698,7 +698,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2944" levels="1" name="Innadril supply box - belt">
+	<skill id="2944" levels="1" name="인나드릴 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -718,7 +718,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2945" levels="1" name="Goddard supply box - belt">
+	<skill id="2945" levels="1" name="고다드 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -738,7 +738,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2946" levels="1" name="Rune supply box - belt">
+	<skill id="2946" levels="1" name="루운 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -758,7 +758,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2947" levels="1" name="Schuttgart supply box - belt">
+	<skill id="2947" levels="1" name="슈트가르트 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13894,1,30.0;13895,1,15.0
@@ -778,7 +778,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2948" levels="1" name="Gludio Supply Box - magic pin">
+	<skill id="2948" levels="1" name="글루디오 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -798,7 +798,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2949" levels="1" name="Dion supply box - magic pin">
+	<skill id="2949" levels="1" name="디온 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -818,7 +818,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2950" levels="1" name="Giran supply box - magic pin">
+	<skill id="2950" levels="1" name="기란 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -838,7 +838,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2951" levels="1" name="Oren supply box - magic pin">
+	<skill id="2951" levels="1" name="오렌 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -858,7 +858,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2952" levels="1" name="Aden supply box - magic pin">
+	<skill id="2952" levels="1" name="아덴 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -878,7 +878,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2953" levels="1" name="Innadril supply box - magic pin">
+	<skill id="2953" levels="1" name="인나드릴 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -898,7 +898,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2954" levels="1" name="Goddard supply box - magic pin">
+	<skill id="2954" levels="1" name="고다드 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -918,7 +918,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2955" levels="1" name="Rune supply box - magic pin">
+	<skill id="2955" levels="1" name="루운 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -938,7 +938,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2956" levels="1" name="Schuttgart supply box - magic pin">
+	<skill id="2956" levels="1" name="슈트가르트 보급 상자 - 마법 핀">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13900,1,30.0;13901,1,15.0
@@ -958,7 +958,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2957" levels="1" name="Gludio supply box - magic pouch">
+	<skill id="2957" levels="1" name="글루디오 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -978,7 +978,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2958" levels="1" name="Dion supply box - magic pouch">
+	<skill id="2958" levels="1" name="디온 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -998,7 +998,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2959" levels="1" name="Giran supply box - magic pouch">
+	<skill id="2959" levels="1" name="기란 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -1018,7 +1018,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2960" levels="1" name="Oren supply box - magic pouch">
+	<skill id="2960" levels="1" name="오렌 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -1038,7 +1038,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2961" levels="1" name="Aden supply box - magic pouch">
+	<skill id="2961" levels="1" name="아덴 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -1058,7 +1058,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2962" levels="1" name="Innadril supply box - magic pouch">
+	<skill id="2962" levels="1" name="인나드릴 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -1078,7 +1078,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2963" levels="1" name="Goddard supply box - magic pouch">
+	<skill id="2963" levels="1" name="고다드 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -1098,7 +1098,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2964" levels="1" name="Rune supply box - magic pouch">
+	<skill id="2964" levels="1" name="루운 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -1118,7 +1118,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2965" levels="1" name="Schuttgart supply box - magic pouch">
+	<skill id="2965" levels="1" name="슈트가르트 보급 상자 - 마법 파우치">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13920,1,30.0;13921,1,15.0
@@ -1138,7 +1138,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2966" levels="1" name="Gludio supply box - belt">
+	<skill id="2966" levels="1" name="글루디오 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1158,7 +1158,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2967" levels="1" name="Dion supply box - belt">
+	<skill id="2967" levels="1" name="디온 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1178,7 +1178,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2968" levels="1" name="Giran supply box - belt">
+	<skill id="2968" levels="1" name="기란 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1198,7 +1198,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2969" levels="1" name="Oren supply box - belt">
+	<skill id="2969" levels="1" name="오렌 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1218,7 +1218,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2970" levels="1" name="Aden supply box - belt">
+	<skill id="2970" levels="1" name="아덴 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1238,7 +1238,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2971" levels="1" name="Innadril supply box - belt">
+	<skill id="2971" levels="1" name="인나드릴 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1258,7 +1258,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2972" levels="1" name="Goddard supply box - belt">
+	<skill id="2972" levels="1" name="고다드 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1278,7 +1278,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2973" levels="1" name="Rune supply box - belt">
+	<skill id="2973" levels="1" name="루운 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1298,7 +1298,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2974" levels="1" name="Schuttgart supply box - belt">
+	<skill id="2974" levels="1" name="슈트가르트 보급 상자 - 벨트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13896,1,30.0;13897,1,15.0
@@ -1318,7 +1318,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2975" levels="1" name="Gludio supply box - magic rune clip">
+	<skill id="2975" levels="1" name="글루디오 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1338,7 +1338,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2976" levels="1" name="Dion supply box - magic rune clip">
+	<skill id="2976" levels="1" name="디온 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1358,7 +1358,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2977" levels="1" name="Giran supply box - magic rune clip">
+	<skill id="2977" levels="1" name="기란 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1378,7 +1378,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2978" levels="1" name="Oren supply box - magic rune clip">
+	<skill id="2978" levels="1" name="오렌 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1398,7 +1398,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2979" levels="1" name="Aden supply box - magic rune clip">
+	<skill id="2979" levels="1" name="아덴 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1418,7 +1418,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2980" levels="1" name="Innadril supply box - magic rune clip">
+	<skill id="2980" levels="1" name="인나드릴 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1438,7 +1438,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2981" levels="1" name="Goddard supply box - magic rune clip">
+	<skill id="2981" levels="1" name="고다드 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1458,7 +1458,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2982" levels="1" name="Rune supply box - magic rune clip">
+	<skill id="2982" levels="1" name="루운 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1478,7 +1478,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2983" levels="1" name="Schuttgart supply box - magic rune clip">
+	<skill id="2983" levels="1" name="슈트가르트 보급 상자 - 마법 룬 클립">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14902,1,21.0;14903,1,10.5
@@ -1498,7 +1498,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2984" levels="1" name="Gludio supply box - magic ornament">
+	<skill id="2984" levels="1" name="글루디오 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1518,7 +1518,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2985" levels="1" name="Dion supply box - magic ornament">
+	<skill id="2985" levels="1" name="디온 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1538,7 +1538,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2986" levels="1" name="Giran supply box - magic ornament">
+	<skill id="2986" levels="1" name="기란 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1558,7 +1558,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2987" levels="1" name="Oren supply box - magic ornament">
+	<skill id="2987" levels="1" name="오렌 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1578,7 +1578,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2988" levels="1" name="Aden supply box - magic ornament">
+	<skill id="2988" levels="1" name="아덴 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1598,7 +1598,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2989" levels="1" name="Innadril supply box - magic ornament">
+	<skill id="2989" levels="1" name="인나드릴 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1618,7 +1618,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2990" levels="1" name="Goddard supply box - magic ornament">
+	<skill id="2990" levels="1" name="고다드 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1638,7 +1638,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2991" levels="1" name="Rune supply box - magic ornament">
+	<skill id="2991" levels="1" name="루운 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1658,7 +1658,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2992" levels="1" name="Schuttgart supply box - magic ornament">
+	<skill id="2992" levels="1" name="슈트가르트 보급 상자 - 마법 장식">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			14904,1,21.0;14905,1,10.5
@@ -1678,14 +1678,14 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2993" levels="1" name="Ancient herb - Deceiver">
+	<skill id="2993" levels="1" name="원시 허브 - 기만자">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="2994" levels="1" name="Disguised Half - Aqua Elf">
+	<skill id="2994" levels="1" name="변신 하프 - 아쿠아 엘프">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -1698,31 +1698,31 @@
 			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="2995" levels="1" name="PC room private weapon strengthening order sheet - D grade">
+	<skill id="2995" levels="1" name="PC 방 전용 무기 강화 주문서-D그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2996" levels="1" name="PC room private weapon strengthening order sheet - C grade">
+	<skill id="2996" levels="1" name="PC 방 전용 무기 강화 주문서-C그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2997" levels="1" name="PC room private weapon strengthening order sheet - B grade">
+	<skill id="2997" levels="1" name="PC 방 전용 무기 강화 주문서-B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2998" levels="1" name="PC room private weapon strengthening order sheet - A grade">
+	<skill id="2998" levels="1" name="PC 방 전용 무기 강화 주문서-A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2999" levels="1" name="PC room private weapon strengthening order sheet - S grade">
+	<skill id="2999" levels="1" name="PC 방 전용 무기 강화 주문서-S그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />

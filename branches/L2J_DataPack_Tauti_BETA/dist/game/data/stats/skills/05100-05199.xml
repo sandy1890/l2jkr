@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5100" levels="1" name="Cancel Capture B">
+	<skill id="5100" levels="1" name="포획 B 해제">
 		<!-- Update by pmq -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -16,7 +16,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5101" levels="1" name="Cancel Capture C">
+	<skill id="5101" levels="1" name="포획 C 해제">
 		<!-- Update by pmq -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -32,7 +32,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5102" levels="1" name="Cancel All Capture">
+	<skill id="5102" levels="1" name="포획 전체 해제">
 		<!-- Update by pmq -->
 		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -51,7 +51,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5103" levels="1" name="Production - Clan / Transfer">
+	<skill id="5103" levels="1" name="a, a,none">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
@@ -61,7 +61,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5104" levels="3" name="Battle Force">
+	<skill id="5104" levels="3" name="배틀 포스">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
@@ -73,7 +73,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5105" levels="3" name="Spell Force">
+	<skill id="5105" levels="3" name="스펠 포스">
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
@@ -85,7 +85,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5106" levels="4" name="Capture A State">
+	<skill id="5106" levels="4" name="포획 A 상태">
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -101,7 +101,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5107" levels="4" name="Capture B State">
+	<skill id="5107" levels="4" name="포획 B 상태">
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -117,7 +117,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5108" levels="4" name="Capture C State">
+	<skill id="5108" levels="4" name="포획 C 상태">
 		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -133,7 +133,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5109" levels="1" name="Production - Clan Gate">
+	<skill id="5109" levels="1" name="연출 - 클랜 게이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
@@ -144,7 +144,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5110" levels="1" name="Cannon Fodder">
+	<skill id="5110" levels="1" name="스우프 미들 샷">
 		<!-- Confirmed CT2.5 -->
 		<!-- Swoop Cannon Skill -->
 		<set name="castRange" val="1600" />
@@ -164,7 +164,7 @@
 			<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
 		</cond>
 	</skill>
-	<skill id="5111" levels="1" name="Big Bang">
+	<skill id="5111" levels="1" name="스우프 롱 샷">
 		<!-- Confirmed CT2.5 -->
 		<!-- Swoop Cannon Skill -->
 		<set name="castRange" val="2000" />
@@ -184,7 +184,7 @@
 			<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
 		</cond>
 	</skill>
-	<skill id="5112" levels="12" name="Stun">
+	<skill id="5112" levels="12" name="쇼크">
 		<!-- Lvl 1-12 - Temporarily Immobilized and in a state of shock. -->
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -206,7 +206,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5113" levels="12" name="Castle Self AE Dispell Buff">
+	<skill id="5113" levels="12" name="버프 디스펠">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -222,7 +222,7 @@
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
 	</skill>
-	<skill id="5114" levels="12" name="Hold">
+	<skill id="5114" levels="12" name="홀드">
 		<!-- Lvl 1-12 - Temporarily Immobilized. -->
 		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -244,7 +244,7 @@
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="5115" levels="12" name="Cubic Hate">
+	<skill id="5115" levels="12" name="큐빅 헤이트">
 		<!-- Summon Attractive Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 62 66 70 74 76 78 80 81 82 83 84 85 </table>
@@ -257,7 +257,7 @@
 			<effect name="TargetMe" val="0" />
 		</for>
 	</skill>
-	<skill id="5116" levels="12" name="Hold">
+	<skill id="5116" levels="12" name="홀드">
 		<!-- Summon Attractive Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 62 66 70 74 76 78 80 81 82 83 84 85 </table>
@@ -275,7 +275,7 @@
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="5117" levels="1" name="Stun">
+	<skill id="5117" levels="1" name="스턴">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="84" />
@@ -297,7 +297,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="30" effectType="STUN" />
 		</for>
 	</skill>
-	<skill id="5118" levels="1" name="Cancel Sailren Use">
+	<skill id="5118" levels="1" name="사이렌 전용 캔슬">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="90" />
@@ -311,7 +311,7 @@
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
 	</skill>
-	<skill id="5119" levels="1" name="Bleed">
+	<skill id="5119" levels="1" name="출혈">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="90" />
 		<set name="mpConsume" val="84" />
@@ -329,7 +329,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="aggroPoints" val="351" />
 	</skill>
-	<skill id="5120" levels="1" name="Stun">
+	<skill id="5120" levels="1" name="쇼크">
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="5" />
@@ -349,14 +349,14 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5121" levels="1" name="Production - Corpse Revival">
+	<skill id="5121" levels="1" name="연출 - 시체 소환">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="5122" levels="1" name="Sailren Use Might">
+	<skill id="5122" levels="1" name="사이렌 전용 마이트">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="90" />
 		<set name="mpConsume" val="38" />
@@ -370,7 +370,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5123" levels="1" name="Maximum Defense">
+	<skill id="5123" levels="1" name="방어 극대화">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
@@ -384,14 +384,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5124" levels="1" name="Anti-Music">
+	<skill id="5124" levels="1" name="안티 뮤직">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5125" levels="1" name="Maximum Resist Status">
+	<skill id="5125" levels="1" name="상태 저항 극대화">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
@@ -403,7 +403,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5126" levels="1" name="Maximum Recovery">
+	<skill id="5126" levels="1" name="회복력 극대화">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
@@ -416,7 +416,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5127" levels="1" name="Recover Force">
+	<skill id="5127" levels="1" name="기력 회복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
@@ -430,7 +430,7 @@
 			<effect count="7" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
-	<skill id="5128" levels="1" name="Maximize long-range weapon use">
+	<skill id="5128" levels="1" name="원거리 무기 사용 극대화">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
@@ -447,7 +447,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5129" levels="1" name="Smokescreen">
+	<skill id="5129" levels="1" name="연막">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
@@ -460,37 +460,37 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5130" levels="1" name="Volcano">
+	<skill id="5130" levels="1" name="볼케이노">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5131" levels="1" name="Tsunami">
+	<skill id="5131" levels="1" name="쓰나미">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5132" levels="1" name="Cyclone">
+	<skill id="5132" levels="1" name="싸이클론">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5133" levels="1" name="Gehenna">
+	<skill id="5133" levels="1" name="게헤나">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5134" levels="1" name="Anti-Summoning Field">
+	<skill id="5134" levels="1" name="안티 서먼 필드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5135" levels="1" name="Slash">
+	<skill id="5135" levels="1" name="슬래쉬">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
 		<set name="castRange" val="40" />
@@ -508,7 +508,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="nextActionAttack" val="true" />
 	</skill>
-	<skill id="5136" levels="1" name="Spin Slash">
+	<skill id="5136" levels="1" name="스핀 슬래쉬">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
 		<set name="hitTime" val="1070" />
@@ -524,7 +524,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5137" levels="1" name="Hold of King">
+	<skill id="5137" levels="1" name="홀드 오브 킹">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
 		<set name="isDebuff" val="true" />
@@ -546,7 +546,7 @@
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="5138" levels="1" name="Whiplash">
+	<skill id="5138" levels="1" name="후핑">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Magnus the Unicorn Skill -->
 		<set name="castRange" val="40" />
@@ -571,7 +571,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5139" levels="1" name="Tidal Wave">
+	<skill id="5139" levels="1" name="타이들 웨이브">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Magnus the Unicorn Skill -->
 		<set name="castRange" val="500" />
@@ -591,7 +591,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5140" levels="1" name="Dark Curse">
+	<skill id="5140" levels="1" name="포스 오브 커스">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
 		<set name="hitTime" val="1500" />
@@ -615,7 +615,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5141" levels="1" name="Dicing Death">
+	<skill id="5141" levels="1" name="커터">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
 		<set name="castRange" val="40" />
@@ -633,7 +633,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5142" levels="1" name="Corpse Kaboom">
+	<skill id="5142" levels="1" name="콥스 버스트">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
 		<set name="castRange" val="400" />
@@ -650,7 +650,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
 	</skill>
-	<skill id="5143" levels="1" name="Sailren Use Blow">
+	<skill id="5143" levels="1" name="사이렌 전용 블로우">
 		<!-- Confirmed CT2.5 -->
 		<set name="blowChance" val="115" />
 		<set name="magicLvl" val="89" />
@@ -666,7 +666,7 @@
 		<set name="effectRange" val="200" />
 		<set name="aggroPoints" val="100" />
 	</skill>
-	<skill id="5144" levels="1" name="Mirage">
+	<skill id="5144" levels="1" name="미라지">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -680,7 +680,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="5145" levels="1" name="Day of Doom">
+	<skill id="5145" levels="1" name="데이 오브 둠">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="power" val="-1" /> <!-- Land Always -->
@@ -705,7 +705,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5146" levels="10" name="Heal">
+	<skill id="5146" levels="10" name="힐">
 		<table name="#amount"> 308 337 365 393 421 448 474 498 520 552 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -719,7 +719,7 @@
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="5147" levels="10" name="Blessed Body">
+	<skill id="5147" levels="10" name="블레스 더 바디">
 		<table name="#maxHp"> 24 48 72 96 120 144 168 192 216 240 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -736,7 +736,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5148" levels="10" name="Prayer">
+	<skill id="5148" levels="10" name="프래이어">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -752,7 +752,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5149" levels="10" name="Recharge">
+	<skill id="5149" levels="10" name="리차지">
 		<table name="#amount"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -766,7 +766,7 @@
 			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="5150" levels="10" name="Blessed Soul">
+	<skill id="5150" levels="10" name="블레스 더 소울">
 		<table name="#maxMp"> 16 32 48 68 80 96 112 128 144 160 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -783,7 +783,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5151" levels="10" name="Mana Gain">
+	<skill id="5151" levels="10" name="마나 게인">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -799,7 +799,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5152" levels="10" name="Ritual">
+	<skill id="5152" levels="10" name="리튜얼">
 		<table name="#amount"> 264 289 313 337 361 384 406 427 446 473 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -813,7 +813,7 @@
 			<effect name="CpHeal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="5153" levels="10" name="Cheer">
+	<skill id="5153" levels="10" name="치어">
 		<table name="#power"> 24 48 72 96 120 144 168 192 216 240 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -830,7 +830,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5154" levels="10" name="Might">
+	<skill id="5154" levels="10" name="마이트">
 		<table name="#value"> 23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -847,7 +847,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5156" levels="10" name="Empower">
+	<skill id="5156" levels="10" name="엠파워">
 		<table name="#value"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -864,7 +864,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5157" levels="10" name="Duel Might">
+	<skill id="5157" levels="10" name="듀얼 마이트">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -881,7 +881,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5158" levels="10" name="Shield">
+	<skill id="5158" levels="10" name="실드">
 		<table name="#value"> 30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -898,7 +898,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5159" levels="10" name="Magic Barrier">
+	<skill id="5159" levels="10" name="매직 배리어">
 		<table name="#value"> 37 40 44 48 52 56 61 68 70 77 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -915,7 +915,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5160" levels="10" name="Duel Weakness">
+	<skill id="5160" levels="10" name="듀얼 위크니스">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -937,7 +937,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5161" levels="10" name="Agility">
+	<skill id="5161" levels="10" name="어질리티">
 		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -954,7 +954,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5162" levels="10" name="Guidance">
+	<skill id="5162" levels="10" name="가이던스">
 		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -971,7 +971,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5163" levels="10" name="Focus">
+	<skill id="5163" levels="10" name="포커스">
 		<table name="#rCrit"> 0.05 0.05 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -988,7 +988,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5164" levels="10" name="Wild Magic">
+	<skill id="5164" levels="10" name="와일드 매직">
 		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1005,7 +1005,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5165" levels="10" name="Charm">
+	<skill id="5165" levels="10" name="참">
 		<table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1022,7 +1022,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
-	<skill id="5166" levels="10" name="Slow">
+	<skill id="5166" levels="10" name="슬로우">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1043,7 +1043,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5167" levels="10" name="Winter">
+	<skill id="5167" levels="10" name="윈터">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="40" />
@@ -1064,7 +1064,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5168" levels="10" name="Stun">
+	<skill id="5168" levels="10" name="스턴">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1084,7 +1084,7 @@
 			<effect name="Stun" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5169" levels="10" name="Hold">
+	<skill id="5169" levels="10" name="홀드">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="40" />
@@ -1104,7 +1104,7 @@
 			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="5170" levels="10" name="Sleep">
+	<skill id="5170" levels="10" name="슬리프">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="40" />
@@ -1124,7 +1124,7 @@
 			<effect name="Sleep" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
 	</skill>
-	<skill id="5171" levels="10" name="Paralyze">
+	<skill id="5171" levels="10" name="패럴라이즈">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1144,7 +1144,7 @@
 			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="5172" levels="10" name="Medusa">
+	<skill id="5172" levels="10" name="메두사">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1163,7 +1163,7 @@
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="turn_stone" />
 		</for>
 	</skill>
-	<skill id="5173" levels="10" name="Fear">
+	<skill id="5173" levels="10" name="피어">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1183,7 +1183,7 @@
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="5174" levels="10" name="Poison">
+	<skill id="5174" levels="10" name="포이즌">
 		<table name="#dmg"> 123 123 150 150 150 174 174 174 189 189 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
@@ -1205,7 +1205,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="5175" levels="10" name="Bleed">
+	<skill id="5175" levels="10" name="블리드">
 		<table name="#dmg"> 132 132 162 162 162 186 186 186 201 201 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
@@ -1228,7 +1228,7 @@
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
-	<skill id="5176" levels="10" name="Silence">
+	<skill id="5176" levels="10" name="사일런스">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1248,7 +1248,7 @@
 			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
 	</skill>
-	<skill id="5177" levels="10" name="Doom">
+	<skill id="5177" levels="10" name="둠">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1269,7 +1269,7 @@
 			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="5178" levels="1" name="NPC Burn">
+	<skill id="5178" levels="1" name="a,NPC Burn">
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="38" />
 		<set name="power" val="116" />
@@ -1280,22 +1280,22 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5179" levels="1" name="Raid Boss - Level 80">
+	<skill id="5179" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5180" levels="1" name="Raid Boss - Level 80">
+	<skill id="5180" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5181" levels="1" name="Raid Boss - Level 80">
+	<skill id="5181" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5182" levels="1" name="Blessing of Protection">
+	<skill id="5182" levels="1" name="보호의 축복">
 		<!-- Newbie Guide Buff -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="60" />
@@ -1309,7 +1309,7 @@
 			<effect name="ProtectionBlessing" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="pk_protect" />
 		</for>
 	</skill>
-	<skill id="5183" levels="1" name="Production: Dimensional Stun">
+	<skill id="5183" levels="1" name="차원의 쇼크">
 		<!-- Confirmed CT2.5 -->
 		<set name="flyRadius" val="300" />
 		<set name="flyType" val="THROW_UP" />
@@ -1322,7 +1322,7 @@
 			<effect name="ThrowUp" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="5184" levels="1" name="Production: Valakas Dragon Breath">
+	<skill id="5184" levels="1" name="드래곤 브레스">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2000" />
@@ -1333,7 +1333,7 @@
 		<set name="skillRadius" val="1200" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
-	<skill id="5185" levels="1" name="Production: Magic-type Guard">
+	<skill id="5185" levels="1" name="연출 - 마법형 경비병">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -1347,7 +1347,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5186" levels="2" name="Pet Haste">
+	<skill id="5186" levels="2" name="펫 헤이스트">
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#mpConsume"> 16 19 </table>
 		<table name="#mpInitialConsume"> 4 5 </table>
@@ -1372,7 +1372,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5187" levels="4" name="Pet Vampiric Rage">
+	<skill id="5187" levels="4" name="펫 뱀피릭 레이지">
 		<table name="#aggro"> 285 418 549 646 </table>
 		<table name="#absorbDam"> 6 7 8 9 </table>
 		<table name="#mpConsume"> 11 16 22 27 </table>
@@ -1397,7 +1397,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5188" levels="3" name="Pet Regeneration">
+	<skill id="5188" levels="3" name="펫 리제네레이션">
 		<table name="#mpConsume"> 12 18 21 </table>
 		<table name="#mpInitialConsume"> 3 5 6 </table>
 		<table name="#rate"> 1.1 1.15 1.2 </table>
@@ -1422,7 +1422,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5189" levels="6" name="Pet Blessed Body">
+	<skill id="5189" levels="6" name="펫 블레스 더 바디">
 		<table name="#mpConsume"> 16 18 19 21 24 27 </table>
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
@@ -1447,7 +1447,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5190" levels="6" name="Pet Blessed Soul">
+	<skill id="5190" levels="6" name="펫 블레스 더 소울">
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 16 18 19 21 23 26 </table>
 		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
@@ -1472,7 +1472,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5191" levels="3" name="Pet Guidance">
+	<skill id="5191" levels="3" name="펫 가이던스">
 		<table name="#mpConsume"> 14 18 21 </table>
 		<table name="#mpInitialConsume"> 4 5 6 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
@@ -1495,7 +1495,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5192" levels="2" name="Pet Wind Walk">
+	<skill id="5192" levels="2" name="펫 윈드 워크">
 		<table name="#mpConsume"> 8 11 </table>
 		<table name="#mpInitialConsume"> 2 3 </table>
 		<table name="#runSpd"> 20 33 </table>
@@ -1520,7 +1520,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5193" levels="3" name="Pet Acumen">
+	<skill id="5193" levels="3" name="펫 아큐멘">
 		<table name="#mpConsume"> 8 12 18 </table>
 		<table name="#mpInitialConsume"> 2 3 5 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -1545,7 +1545,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5194" levels="3" name="Pet Empower">
+	<skill id="5194" levels="3" name="펫 엠파워">
 		<table name="#mpConsume"> 9 16 19 </table>
 		<table name="#magicLvl"> 25 44 52 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
@@ -1570,7 +1570,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5195" levels="12" name="Pet Greater Heal">
+	<skill id="5195" levels="12" name="펫 그레이터 힐">
 		<table name="#mpConsume"> 7 12 18 25 32 39 46 49 51 52 53 53 </table>
 		<table name="#amount"> 58 92 148 219 299 380 450 477 500 525 542 550 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1589,7 +1589,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="5196" levels="3" name="Pet Wind Shackle">
+	<skill id="5196" levels="3" name="펫 윈드 셰클">
 		<table name="#mpConsume"> 48 49 51 </table>
 		<table name="#mpInitialConsume"> 12 13 13 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
@@ -1614,7 +1614,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5197" levels="3" name="Pet Hex">
+	<skill id="5197" levels="3" name="펫 헥스">
 		<table name="#magicLvl"> 64 66 68 </table>
 		<table name="#mpConsume"> 24 25 26 </table>
 		<table name="#mpInitialConsume"> 6 7 7 </table>
@@ -1639,7 +1639,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5198" levels="3" name="Pet Slow">
+	<skill id="5198" levels="3" name="펫 슬로우">
 		<table name="#mpConsume"> 48 49 51 </table>
 		<table name="#mpInitialConsume"> 12 13 13 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
@@ -1664,7 +1664,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5199" levels="3" name="Pet Curse Gloom">
+	<skill id="5199" levels="3" name="펫 커스 글룸">
 		<table name="#mpConsume"> 48 49 51 </table>
 		<table name="#mpInitialConsume"> 12 13 13 </table>
 		<table name="#magicLvl"> 64 66 68 </table>

@@ -1,108 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="23100" levels="1" name="Fourth Consecutive Win">
+	<skill id="23100" levels="1" name="4 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23101" levels="1" name="5th Consecutive Win">
+	<skill id="23101" levels="1" name="5 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23102" levels="1" name="6th Consecutive Win">
+	<skill id="23102" levels="1" name="6 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23103" levels="1" name="7th Consecutive Win">
+	<skill id="23103" levels="1" name="7 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23104" levels="1" name="8th Consecutive Win">
+	<skill id="23104" levels="1" name="8 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23105" levels="1" name="9th Consecutive Win">
+	<skill id="23105" levels="1" name="9 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23106" levels="1" name="10th Consecutive Win">
+	<skill id="23106" levels="1" name="10 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23107" levels="1" name="11th Consecutive Win">
+	<skill id="23107" levels="1" name="11 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23108" levels="1" name="12th Consecutive Win">
+	<skill id="23108" levels="1" name="12 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23109" levels="1" name="13th Consecutive Win">
+	<skill id="23109" levels="1" name="13 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23110" levels="1" name="14th Consecutive Win">
+	<skill id="23110" levels="1" name="14 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23111" levels="1" name="15th Consecutive Win">
+	<skill id="23111" levels="1" name="15 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23112" levels="1" name="16th Consecutive Win">
+	<skill id="23112" levels="1" name="16 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23113" levels="1" name="17th Consecutive Win">
+	<skill id="23113" levels="1" name="17 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23114" levels="1" name="18th Consecutive Win">
+	<skill id="23114" levels="1" name="18 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23115" levels="1" name="19th Consecutive Win">
+	<skill id="23115" levels="1" name="19 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23116" levels="1" name="20th Consecutive Win">
+	<skill id="23116" levels="1" name="20 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23117" levels="1" name="Zombie Agathion Cute Trick">
+	<skill id="23117" levels="1" name="강시 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -111,7 +111,7 @@
 			<player agathionId="1535" />
 		</cond>
 	</skill>
-	<skill id="23118" levels="1" name="Zombie Agathion Special Skill - Escape from Death">
+	<skill id="23118" levels="1" name="강시 아가시온 스페셜 스킬 - 구사일생">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -121,7 +121,7 @@
 			<player agathionId="1535" />
 		</cond>
 	</skill>
-	<skill id="23119" levels="1" name="Baekyi Hwamae Agathion Cute Trick">
+	<skill id="23119" levels="1" name="백이화매 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -130,7 +130,7 @@
 			<player agathionId="1536" />
 		</cond>
 	</skill>
-	<skill id="23120" levels="1" name="Kwanwoo Hwamae Agathion Cute Trick">
+	<skill id="23120" levels="1" name="관우화매 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -139,19 +139,19 @@
 			<player agathionId="1537" />
 		</cond>
 	</skill>
-	<skill id="23121" levels="1" name="Jack Game - Gauge">
+	<skill id="23121" levels="1" name="잭 게임 - 게이지">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23122" levels="1" name="Jack Game - Target">
+	<skill id="23122" levels="1" name="잭 게임 - 타겟">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23123" levels="1" name="Gwangong Agathion Cute Trick">
+	<skill id="23123" levels="1" name="관공 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -160,7 +160,7 @@
 			<player agathionId="1551" />
 		</cond>
 	</skill>
-	<skill id="23124" levels="1" name="Gwangong Agathion Special Skill - Aura of Fury">
+	<skill id="23124" levels="1" name="관공 아가시온 스페셜 스킬 - 분노의 오라">
 		<!-- Stimulates the enemy's attack by 6983 Power. Cooldown of 1 minute. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -172,7 +172,7 @@
 			<player agathionId="1551" />
 		</cond>
 	</skill>
-	<skill id="23125" levels="1" name="Gwanseum Nyang Nyang Agathion Cute Trick">
+	<skill id="23125" levels="1" name="관세음낭낭 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -181,7 +181,7 @@
 			<player agathionId="1552" />
 		</cond>
 	</skill>
-	<skill id="23126" levels="1" name="Gwanseum Nyang Nyang Agathion Special Skill - Blessing of Mercy">
+	<skill id="23126" levels="1" name="관세음낭낭 아가시온 스페셜 스킬 - 자비의 축복">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -190,7 +190,7 @@
 			<player agathionId="1552" />
 		</cond>
 	</skill>
-	<skill id="23127" levels="1" name="Blue Opera Agathion Cute Trick">
+	<skill id="23127" levels="1" name="푸른 경극 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -199,7 +199,7 @@
 			<player agathionId="1553" />
 		</cond>
 	</skill>
-	<skill id="23128" levels="1" name="Blue Opera Agathion Special Skill - Sword of Recovery">
+	<skill id="23128" levels="1" name="푸른 경극 아가시온 스페셜 스킬 - 회복의 검">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -208,7 +208,7 @@
 			<player agathionId="1553" />
 		</cond>
 	</skill>
-	<skill id="23129" levels="1" name="Blue Opera Agathion Special Skill - Sword of Water">
+	<skill id="23129" levels="1" name="푸른 경극 아가시온 스페셜 스킬 - 물의 검">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -216,7 +216,7 @@
 			<player agathionId="1553" />
 		</cond>
 	</skill>
-	<skill id="23130" levels="1" name="Red Opera Agathion Cute Trick">
+	<skill id="23130" levels="1" name="붉은 경극 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -225,7 +225,7 @@
 			<player agathionId="1554" />
 		</cond>
 	</skill>
-	<skill id="23131" levels="1" name="Red Opera Agathion Special Skill - Spear of Flames">
+	<skill id="23131" levels="1" name="붉은 경극 아가시온 스페셜 스킬 - 화염의 창">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -233,7 +233,7 @@
 			<player agathionId="1554" />
 		</cond>
 	</skill>
-	<skill id="23132" levels="1" name="Opera Agathion Cute Trick">
+	<skill id="23132" levels="1" name="경극 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -242,7 +242,7 @@
 			<player agathionId="1555" />
 		</cond>
 	</skill>
-	<skill id="23133" levels="1" name="Miss Chipao Agathion Cute Trick">
+	<skill id="23133" levels="1" name="치파오 양 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -251,7 +251,7 @@
 			<player agathionId="1556" />
 		</cond>
 	</skill>
-	<skill id="23134" levels="1" name="Miss Chipao Agathion Special Skill - Decrease Weight">
+	<skill id="23134" levels="1" name="치파오 양 아가시온 스페셜 스킬 - 디크리즈 웨이트">
 		<!-- For 1 hour, increases the weight penalty interval by 9000. Reuse delay is 4 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -268,7 +268,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23135" levels="1" name="Nepal Snow Agathion Cute Trick">
+	<skill id="23135" levels="1" name="나팔 스노 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -277,7 +277,7 @@
 			<player agathionId="1557" />
 		</cond>
 	</skill>
-	<skill id="23136" levels="1" name="Nepal Snow Agathion Special Skill - Snow's Haste">
+	<skill id="23136" levels="1" name="나팔 스노 아가시온 스페셜 스킬 - 스노의 헤이스트">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hour. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -294,7 +294,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23137" levels="1" name="Round Ball Snow Agathion Cute Trick">
+	<skill id="23137" levels="1" name="둥근 공 스노 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -303,7 +303,7 @@
 			<player agathionId="1558" />
 		</cond>
 	</skill>
-	<skill id="23138" levels="1" name="Round Ball Snow Agathion Special Skill - Snow's Acumen">
+	<skill id="23138" levels="1" name="둥근 공 스노 아가시온 스페셜 스킬 - 스노의 아큐멘">
 		<!-- Increases Casting Spd. by 30% for 20 minutes. Reuse delay is 1 hour. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -320,7 +320,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23139" levels="1" name="Ladder Snow Agathion Cute Trick">
+	<skill id="23139" levels="1" name="사다리 스노 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -329,7 +329,7 @@
 			<player agathionId="1559" />
 		</cond>
 	</skill>
-	<skill id="23140" levels="1" name="Ladder Snow Agathion Special Skill - Snow's Wind Walk">
+	<skill id="23140" levels="1" name="사다리 스노 아가시온 스페셜 스킬 - 스노의 윈드워크">
 		<!-- Increases moving speed by 20 for 20 minutes. Reuse delay is 1 hour. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -347,7 +347,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23141" levels="1" name="Iken Agathion Cute Trick">
+	<skill id="23141" levels="1" name="이켄 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -356,7 +356,7 @@
 			<player agathionId="1539" />
 		</cond>
 	</skill>
-	<skill id="23142" levels="1" name="Lana Agathion Cute Trick">
+	<skill id="23142" levels="1" name="라나 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -365,7 +365,7 @@
 			<player agathionId="1540" />
 		</cond>
 	</skill>
-	<skill id="23143" levels="1" name="Gnocian Agathion Cute Trick">
+	<skill id="23143" levels="1" name="그노시안 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -374,7 +374,7 @@
 			<player agathionId="1541" />
 		</cond>
 	</skill>
-	<skill id="23144" levels="1" name="Orodriel Agathion Cute Trick">
+	<skill id="23144" levels="1" name="오로드리엘 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -383,7 +383,7 @@
 			<player agathionId="1542" />
 		</cond>
 	</skill>
-	<skill id="23145" levels="1" name="Lakinos Agathion Cute Trick">
+	<skill id="23145" levels="1" name="라키노스 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -392,7 +392,7 @@
 			<player agathionId="1543" />
 		</cond>
 	</skill>
-	<skill id="23146" levels="1" name="Mortia Agathion Cute Trick">
+	<skill id="23146" levels="1" name="모르티아 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -401,7 +401,7 @@
 			<player agathionId="1544" />
 		</cond>
 	</skill>
-	<skill id="23147" levels="1" name="Hayance Agathion Cute Trick">
+	<skill id="23147" levels="1" name="하얀츠 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -410,7 +410,7 @@
 			<player agathionId="1545" />
 		</cond>
 	</skill>
-	<skill id="23148" levels="1" name="Meruril Agathion Cute Trick">
+	<skill id="23148" levels="1" name="메루릴 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -419,7 +419,7 @@
 			<player agathionId="1546" />
 		</cond>
 	</skill>
-	<skill id="23149" levels="1" name="Taman ze Lapatui Agathion Cute Trick">
+	<skill id="23149" levels="1" name="타만 즈 라파투이 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -428,7 +428,7 @@
 			<player agathionId="1547" />
 		</cond>
 	</skill>
-	<skill id="23150" levels="1" name="Kaurin Agathion Cute Trick">
+	<skill id="23150" levels="1" name="카우린 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -437,7 +437,7 @@
 			<player agathionId="1548" />
 		</cond>
 	</skill>
-	<skill id="23151" levels="1" name="Ahertbein Agathion Cute Trick">
+	<skill id="23151" levels="1" name="아헤르트베인 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -446,7 +446,7 @@
 			<player agathionId="1549" />
 		</cond>
 	</skill>
-	<skill id="23152" levels="1" name="Naonin Agathion Cute Trick">
+	<skill id="23152" levels="1" name="나오닌 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -455,7 +455,7 @@
 			<player agathionId="1550" />
 		</cond>
 	</skill>
-	<skill id="23153" levels="1" name="Prominent Outsider Adventurer's Ability">
+	<skill id="23153" levels="1" name="탁월한 이계 모험자의 능력">
 		<!-- For 20 minutes, raises HP by 20%, Max MP by 20%, and moving speed by 20%. Increases HP recovery bonus by 20% and MP recovery bonus by 20%. Increases resistance to de-buffs by 10%. Reuse delay is 4 hours. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />
@@ -475,21 +475,21 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23154" levels="1" name="Kadomas Special Skill - Fireworks">
+	<skill id="23154" levels="1" name="카도마츠 스페셜 스킬 - 불꽃놀이">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
-	<skill id="23155" levels="1" name="Reindeer Scratch">
+	<skill id="23155" levels="1" name="따듯한 손길">
 		<!-- Raises affection level. For 10 minutes, raises physical critical rate by 30% and chance of magical critical rate by 2. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="23156" levels="1" name="Gift of Thanks">
+	<skill id="23156" levels="1" name="감사의 선물">
 		<!-- Energy level is maintained for 10 minutes. Reuse delay is 2 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -497,54 +497,54 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 	</skill>
-	<skill id="23157" levels="1" name="Donateloph's Blessing">
+	<skill id="23157" levels="1" name="도나텔로프의 축복">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases physical P. Atk. by 10%. Increases physical Atk. Spd. by 20%. Bestows the ability to recover as HP 10% of the standard short-range physical damage inflicted on the enemy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="23158" levels="1" name="Raphaeloph's Blessing">
+	<skill id="23158" levels="1" name="라파엘로프의 축복">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increasesw physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases physical P. Atk. by 10%. Increases the rate of Critical attack by 30%. Increases the power of Critical attack by 10%. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="23159" levels="1" name="Leonardoph's Blessing">
+	<skill id="23159" levels="1" name="레오나르도프의 축복">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases magic M. Atk. by 10%. Increases magic Casting Spd. by 20%. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="23160" levels="1" name="Michelangeloph's Blessing">
+	<skill id="23160" levels="1" name="미켈란젤로프의 축복">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 40%. Increases physical P. Def. and magic M. Def. by 20%. Increases moving speed by 20%. Increases magical critical power by 20% and the chance of magical critical rate by 2. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="23161" levels="1" name="Rudolphina's Blessing - Maintain Vitality">
+	<skill id="23161" levels="1" name="루돌프 걸의 축복 - 활력 유지">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="23162" levels="1" name="Rudolphina's Blessing - Replenish Vitality">
+	<skill id="23162" levels="1" name="루돌프 걸의 축복 - 활력 충전">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23163" levels="1" name="Turkey's Big Mistake">
+	<skill id="23163" levels="1" name="칠면조의 큰 실수">
 		<!-- For 1 hour, increases Max HP, MP, and CP by 50%. Increases physical P. Atk., magic M. Atk., physical P. Def., and magic M. Def. by 20%. Increases moving speed by 30%. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="23164" levels="1" name="Opera Agathion Special Skill - Sword of Life">
+	<skill id="23164" levels="1" name="경극 아가시온 스페셜 스킬 - 생명의 검">
 		<!-- Can use the ability of Blessed Resurrection through the power of life. Reuse delay is 12 hours. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
@@ -560,7 +560,7 @@
 			<player agathionId="1555" />
 		</cond>
 	</skill>
-	<skill id="23165" levels="1" name="Inadequate Affection">
+	<skill id="23165" levels="1" name="애정 부족">
 		<!-- For 10 seconds, moving speed decreases by 2%, and your head gets bigger. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -568,13 +568,13 @@
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="23166" levels="1" name="Energized Rose Spirit">
+	<skill id="23166" levels="1" name="장미의 정령 활력 충전">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23167" levels="1" name="Rosy Seduction">
+	<skill id="23167" levels="1" name="장미빛 유혹">
 		<!-- Increases Max HP by 20%, Max MP by 20%, and the moving speed by 20% for 5 minutes. Increases the resistance to de-buffs by 10%. Reuse delay 10 minutes. Consumes 3 Rose Essence during skill use. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_OWNER_PET" />
@@ -594,7 +594,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23168" levels="1" name="Critical Seduction">
+	<skill id="23168" levels="1" name="치명적인 유혹">
 		<!-- Increases party members' Max HP by 30%, Max MP by 30%, Max CP by 30%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20%, and physical P. Atk. by 10%, and decreases MP consumption during skill use by 15% for 20 minutes. Reuse delay 40 minutes. Consumes 10 Rose Essence during skill use. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_PARTY" />
@@ -620,7 +620,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23169" levels="1" name="Mesmerized">
+	<skill id="23169" levels="1" name="매료">
 		<!-- Critical Seduction has left you mesmerized. You cannot be buffed with Critical Seduction again during the next 40 minutes. -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -628,7 +628,7 @@
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="23170" levels="1" name="Mesmerized">
+	<skill id="23170" levels="1" name="매료">
 		<!-- Rosy Seduction has left you mesmerized. You cannot be buffed with Rosy Seduction again during the next 10 minutes. -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -636,7 +636,7 @@
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="23171" levels="1" name="Phoenix Agathion Cute Trick">
+	<skill id="23171" levels="1" name="피닉스 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -645,7 +645,7 @@
 			<player agathionId="1574" />
 		</cond>
 	</skill>
-	<skill id="23172" levels="1" name="Phoenix Agathion Special Skill - Nirvana Rebirth">
+	<skill id="23172" levels="1" name="피닉스 아가시온 스페셜 스킬 - 열반재생">
 		<!-- All HP, MP, CP are recovered, and becomes invincible for 5 seconds with the power of Phoenix. Possible to use under HP 30% only. Cooldown of 12 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -667,7 +667,7 @@
 			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
-	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill - Oriental Phoenix">
+	<skill id="23173" levels="1" name="피닉스 아가시온 스페셜 스킬 - 유봉래의">
 		<!-- All Debuff is canceled with the power of Phoenix. Cooldown of 4 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -681,7 +681,7 @@
 			<player agathionId="1574" />
 		</cond>
 	</skill>
-	<skill id="23174" levels="1" name="Narrow Escape from Death">
+	<skill id="23174" levels="1" name="구사일생">
 		<!-- Revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained, though the Blessing of Noblesse and the Amulet of Luck will both be lost. Cooldown of 12 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -689,7 +689,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
 	</skill>
-	<skill id="23175" levels="1" name="Soul Stealth">
+	<skill id="23175" levels="1" name="소울 스텔스">
 		<!-- Hides for 5 seconds, then bestows the ability not to provoke preemptive attacks from monsters for 2 minutes. Decreases moving speed by 50% while the skill is in effect. Reuse delay is 12 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -697,7 +697,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
 	</skill>
-	<skill id="23176" levels="1" name="Hide">
+	<skill id="23176" levels="1" name="하이드">
 		<!-- Hides for 5 seconds. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -705,7 +705,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
-	<skill id="23177" levels="1" name="Soul Stealth">
+	<skill id="23177" levels="1" name="소울 스텔스">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -713,7 +713,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 	</skill>
-	<skill id="23178" levels="1" name="Soul Stealth">
+	<skill id="23178" levels="1" name="소울 스텔스">
 		<!-- For 2 minutes, bestows the ability not to provoke preemptive attacks from monsters. Decreases moving speed by 50% while the skill is in effect. -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -722,7 +722,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="staticReuse" val="true" />
 	</skill>
-	<skill id="23179" levels="1" name="Blessing of Vitality">
+	<skill id="23179" levels="1" name="활력의 축복">
 		<!-- Your Vitality level is maintained for 2 hours thanks to an old magic unsealed by the Magic Research Institute. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
@@ -735,13 +735,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23180" levels="1" name="Joy of Vitality">
+	<skill id="23180" levels="1" name="활력의 기쁨">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="23181" levels="1" name="Three-headed Dragon Agathion Cute Trick">
+	<skill id="23181" levels="1" name="삼두용 아가시온 큐트 트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -750,7 +750,7 @@
 			<player agathionId="1575" />
 		</cond>
 	</skill>
-	<skill id="23182" levels="1" name="Three-headed Dragon Agathion Special Skill - Wind Walk">
+	<skill id="23182" levels="1" name="삼두용 아가시온 스페셜 스킬 - 윈드 워크">
 		<!-- Increases moving speed by 20 for 20 minutes. Reuse delay is 1 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -767,7 +767,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23183" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
+	<skill id="23183" levels="1" name="볼 트래핑 그노시안 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 30 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -775,7 +775,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23184" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23184" levels="1" name="볼 트래핑 그노시안 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -794,7 +794,7 @@
 			<player agathionId="20983" />
 		</cond>
 	</skill>
-	<skill id="23185" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
+	<skill id="23185" levels="1" name="볼 트래핑 오로드리엘 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -802,7 +802,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23186" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23186" levels="1" name="볼 트래핑 오로드리엘 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -821,7 +821,7 @@
 			<player agathionId="20984" />
 		</cond>
 	</skill>
-	<skill id="23187" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
+	<skill id="23187" levels="1" name="패널티 킥 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -829,7 +829,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23188" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23188" levels="1" name="패널티 킥 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -848,7 +848,7 @@
 			<player agathionId="20985" />
 		</cond>
 	</skill>
-	<skill id="23189" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
+	<skill id="23189" levels="1" name="볼 트래핑 그노시안 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -856,7 +856,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23190" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23190" levels="1" name="볼 트래핑 그노시안 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -875,7 +875,7 @@
 			<player agathionId="20986" />
 		</cond>
 	</skill>
-	<skill id="23191" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
+	<skill id="23191" levels="1" name="볼 트래핑 오로드리엘 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -883,7 +883,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23192" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23192" levels="1" name="볼 트래핑 오로드리엘 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -902,7 +902,7 @@
 			<player agathionId="20987" />
 		</cond>
 	</skill>
-	<skill id="23193" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
+	<skill id="23193" levels="1" name="패널티 킥 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -910,7 +910,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23194" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23194" levels="1" name="패널티 킥 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -929,7 +929,7 @@
 			<player agathionId="20988" />
 		</cond>
 	</skill>
-	<skill id="23195" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
+	<skill id="23195" levels="1" name="볼 트래핑 그노시안 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -937,7 +937,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23196" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23196" levels="1" name="볼 트래핑 그노시안 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -956,7 +956,7 @@
 			<player agathionId="20989" />
 		</cond>
 	</skill>
-	<skill id="23197" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
+	<skill id="23197" levels="1" name="볼 트래핑 오로드리엘 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -964,7 +964,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 	</skill>
-	<skill id="23198" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
+	<skill id="23198" levels="1" name="볼 트래핑 오로드리엘 아가시온 스페셜 스킬 - 응원의 축구공">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -983,7 +983,7 @@
 			<player agathionId="20990" />
 		</cond>
 	</skill>
-	<skill id="23199" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
+	<skill id="23199" levels="1" name="패널티 킥 아가시온 스페셜 스킬 - 응원의 버프">
 		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />

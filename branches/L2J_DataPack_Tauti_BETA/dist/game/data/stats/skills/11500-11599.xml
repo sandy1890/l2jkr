@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11501" levels="1" name="Grand Dual weapon Master">
+	<skill id="11501" levels="1" name="그랜드 듀얼 웨폰 마스터리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -12,7 +12,7 @@
 			<using kind="Dual Sword,Dual Blunt" />
 		</for>
 	</skill>
-	<skill id="11502" levels="1" name="The skill of wearing robes">
+	<skill id="11502" levels="1" name="그랜드 로브 마스터리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -22,7 +22,7 @@
 			<using kind="Robe" />
 		</for>
 	</skill>
-	<skill id="11503" levels="1" name="The skill of wearing Light">
+	<skill id="11503" levels="1" name="그랜드 라이트 아머 마스터리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -33,7 +33,7 @@
 			<using kind="Light" />
 		</for>
 	</skill>
-	<skill id="11504" levels="1" name="Skill wearing heavy armor">
+	<skill id="11504" levels="1" name="그랜드 헤비 아머 마스터리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -43,7 +43,7 @@
 			<using kind="Heavy" />
 		</for>
 	</skill>
-	<skill id="11505" levels="1" name="Grand Anti-Magic">
+	<skill id="11505" levels="1" name="그랜드 안티 매직">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -52,7 +52,7 @@
 			<add order="0x40" stat="mDef" val="139" />
 		</for>
 	</skill>
-	<skill id="11506" levels="1" name="Increase HP">
+	<skill id="11506" levels="1" name="그랜드 부스트 바디">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -62,7 +62,7 @@
 			<add order="0x40" stat="maxHp" val="366" />
 		</for>
 	</skill>
-		<skill id="11507" levels="1" name="Increase MP">
+		<skill id="11507" levels="1" name="그랜드 부스트 마나">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -72,7 +72,7 @@
 			<add order="0x40" stat="maxMp" val="313" />
 		</for>
 	</skill>
-	<skill id="11508" levels="1" name="Rush">
+	<skill id="11508" levels="1" name="어설트 러시">
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="900" />
@@ -93,7 +93,7 @@
 			<effect name="Stun" abnormalTime="1" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="11509" levels="8" name="The main attack">
+	<skill id="11509" levels="8" name="어설트 어택">
 		<table name="#pwr"> 8268 8556 9134 9711 10288 10866 11443 12020 </table>
 		<set name="mpConsume" val="46" />
 		<set name="power" val="#pwr" />
@@ -118,7 +118,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11510" levels="8" name="Blade of darkness">
+	<skill id="11510" levels="8" name="섀도우 블레이드">
 		<table name="#pwr"> 9133 9769 10404 11040 11675 12311 12946 13582 </table>
 		<set name="mpConsume" val="50" />
 		<set name="power" val="#pwr" />
@@ -141,7 +141,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11511" levels="8" name="Death blow">
+	<skill id="11511" levels="8" name="데스 스트라이크">
 		<table name="#pwr"> 14326 14819 15803 16788 17773 18758 19743 20727 </table>
 		<set name="power" val="#pwr" />
 		<set name="mpConsume" val="50" />
@@ -157,7 +157,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="11513" levels="8" name="Burn">
+	<skill id="11513" levels="8" name="버닝 스탑">
 		<table name="#pwr"> 10263 10616 11322 12027 12733 13438 14144 14849 </table>
 		<set name="power" val="#pwr" />
 		<set name="mpConsume" val="130" />
@@ -182,7 +182,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11514" levels="8" name="Storm">
+	<skill id="11514" levels="8" name="스톰 브레이크">
 		<table name="#pwr"> 11722 12525 13327 14130 14933 15736 16539 17342 </table>
 		<set name="power" val="#pwr" />	
 		<set name="mpConsume" val="146" />
@@ -199,7 +199,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="11517" levels="4" name="Poem forge">
+	<skill id="11517" levels="4" name="포엠 오브 혼">
 		<table name="#pAtk"> 1.17 1.19 1.21 1.23 </table>
 		<table name="#mAtk"> 1.79 1.83 1.87 1.91 </table>
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
@@ -224,7 +224,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11518" levels="3" name="Poem of the drum">
+	<skill id="11518" levels="3" name="포엠 오브 드럼">
 		<table name="#spd"> 0.85 0.9 0.95 </table>
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="140" />
@@ -254,7 +254,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11519" levels="4" name="Poem of the body">
+	<skill id="11519" levels="4" name="포엠 오브 오르간">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<table name="#vuln"> 1.37 1.39 1.41 1.43 </table>
 		<set name="mpConsume" val="140" />
@@ -278,7 +278,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11520" levels="4" name="Poem of the guitar">
+	<skill id="11520" levels="4" name="포엠 오브 기타">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<table name="#vuln"> 1.32 1.34 1.36 1.38 </table>
 		<set name="mpConsume" val="140" />
@@ -302,7 +302,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11521" levels="4" name="Poem harp">
+	<skill id="11521" levels="4" name="포엠 오브 하프">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<table name="#vuln"> 5 6 7 8 </table>
 		<table name="#vuln2"> 34 35 36 37 </table>
@@ -327,7 +327,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11522" levels="1" name="Poem horn">
+	<skill id="11522" levels="1" name="포엠 오브 비파">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<table name="#vuln"> 15 </table>
 		<table name="#vuln1"> 1.34 1.35 1.36 1.37 </table>
@@ -359,7 +359,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11523" levels="1" name="Harmony Guardian">
+	<skill id="11523" levels="1" name="가디언스 하모니">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -381,7 +381,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11524" levels="1" name="Harmony Berserk">
+	<skill id="11524" levels="1" name="버서커스 하모니">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -408,7 +408,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11525" levels="1" name="Harmony Mage">
+	<skill id="11525" levels="1" name="매지션스 하모니">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -438,7 +438,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11529" levels="1" name="Battle Sonata">
+	<skill id="11529" levels="1" name="컴뱃 소나타">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="120" />
 		<set name="nextDanceCost" val="30" />
@@ -464,7 +464,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11530" levels="1" name="Sonata Movement">
+	<skill id="11530" levels="1" name="무빙 소나타">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="120" />
 		<set name="nextDanceCost" val="30" />
@@ -492,7 +492,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11532" levels="1" name="Sonata Meditation">
+	<skill id="11532" levels="1" name="릴랙스 소나타">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="120" />
 		<set name="nextDanceCost" val="30" />
@@ -519,7 +519,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11533" levels="1" name="Bloody Requiem">
+	<skill id="11533" levels="1" name="블러드 레퀴엠">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="916" />
 		<set name="magicLvl" val="97" />
@@ -538,7 +538,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11534" levels="5" name="Angela hand">
+	<skill id="11534" levels="5" name="엔젤스 핸즈">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="916" />
 		<set name="magicLvl" val="97" />
@@ -558,7 +558,7 @@
 		</effect>
 		</for>
 	</skill>
-	<skill id="11536" levels="11" name="The final elimination">
+	<skill id="11536" levels="11" name="파이널 캔슬">
 		<set name="mpConsume" val="70" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="25" /> <!-- Base Land Rate -->
@@ -571,7 +571,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="5" />
 	</skill>
-	<skill id="11537" levels="7" name="Changing body">
+	<skill id="11537" levels="7" name="체인지 바디">
 		<table name="#spd"> 0.8 0.7 0.6 0.5 0.4 0.3 0.2 </table>
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="55" />
@@ -595,7 +595,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11538" levels="33" name="Dryad Root">
+	<skill id="11538" levels="33" name="매스 자이언트 루트">
 		<set name="mpConsume" val="256" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="120" /> <!-- Base Land Rate -->
@@ -613,7 +613,7 @@
 			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="11539" levels="1" name="Change Stone">
+	<skill id="11539" levels="1" name="체인지 스톤">
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="900" />
@@ -635,7 +635,7 @@
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
 		</for>
 	</skill>
-	<skill id="11540" levels="4" name="Cutie Pig">
+	<skill id="11540" levels="4" name="큐티 퀵 피그">
 		<table name="#mDef"> 3000 3500 4000 4500 </table>
 		<table name="#spd"> 1.3 1.4 1.5 1.6 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -652,7 +652,7 @@
 		</effect>
 		</for>
 	</skill>
-	<skill id="11541" levels="1" name="The transformation into stone">
+	<skill id="11541" levels="1" name="론리 스톤">
 		<set name="target" val="TARGET_SELF" />
 		<set name="mpConsume" val="70" />
 		<set name="skillType" val="BUFF" />
@@ -664,7 +664,7 @@
 			<effect name="Petrification" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="turn_stone" />
 		</for>
 	</skill>
-	<skill id="11543" levels="3" name="Changing body">
+	<skill id="11543" levels="3" name="리오가니제이션">
 		<table name="#Def"> 2000 3000 4000 </table>
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="120" />
@@ -689,7 +689,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11544" levels="1" name="Battlestar Rhapsody">
+	<skill id="11544" levels="1" name="배틀 랩소디">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="916" />
 		<set name="magicLvl" val="89" />
@@ -710,7 +710,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11545" levels="1" name="Mad Nocturne">
+	<skill id="11545" levels="1" name="크레이지 녹턴">
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="120" />
 		<set name="nextDanceCost" val="30" />
@@ -731,7 +731,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11546" levels="1" name="Symphony temteyisyeon">
+	<skill id="11546" levels="1" name="템테이션 심포니">
 		<set name="power" val="13629" />
 		<set name="mpConsume" val="1003" />
 		<set name="coolTime" val="200" />
@@ -757,7 +757,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11547" levels="1" name="Regen MP">
+	<skill id="11547" levels="1" name="그랜드 HP 리커버리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -769,7 +769,7 @@
 			<add order="0x40" stat="absorbDamMana" val="10" />
 		</for>
 	</skill>
-	<skill id="11548" levels="1" name="Grand quick recovery">
+	<skill id="11548" levels="1" name="그랜드 퀵 리커버리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -779,11 +779,11 @@
 			<mul order="0x30" stat="mReuse" val="0.75" />
 		</for>
 	</skill>
-	<skill id="11549" levels="1" name="Superior Mana Steal">
+	<skill id="11549" levels="1" name="그랜드 스틸 마나">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>
-	<skill id="11551" levels="1" name="Grand resist attribute">
+	<skill id="11551" levels="1" name="그랜드 레지스트 어트리뷰트">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -796,7 +796,7 @@
 			<add order="0x40" stat="paralyzeVuln" val="30" />
 		</for>
 	</skill>
-	<skill id="11552" levels="1" name="Grand Divine Lore">
+	<skill id="11552" levels="1" name="그랜드 디바인 로어">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -805,7 +805,7 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.94" />
 		</for>
 	</skill>
-	<skill id="11553" levels="1" name="Grand Focus Mind">
+	<skill id="11553" levels="1" name="그랜드 포커스 마인드">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -815,7 +815,7 @@
 			<add order="0x40" stat="regMp" val="8.4" />
 		</for>
 	</skill>
-	<skill id="11554" levels="1" name="Grand Six Senses">
+	<skill id="11554" levels="1" name="그랜드 식스 센스">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -827,7 +827,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="11555" levels="1" name="Grand Fast Spell Casting">
+	<skill id="11555" levels="1" name="그랜드 패스트 스펠 캐스팅">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -836,7 +836,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
 		</for>
 	</skill>
-	<skill id="11557" levels="1" name="Ultimate Scourge">
+	<skill id="11557" levels="1" name="파이널 스커지">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A2"/>
@@ -847,7 +847,7 @@
 		<set name="isDebuff" val="True"/>
 		<set name="mpConsume" val="423"/>
 	</skill>
-	<skill id="11558" levels="1" name="Ultimate Oblivion">
+	<skill id="11558" levels="1" name="파이널 오블리비언">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -858,7 +858,7 @@
 		<set name="isDebuff" val="True"/>
 		<set name="mpConsume" val="423"/>
 	</skill>
-	<skill id="11559" levels="1" name="Ultimate Suspension">
+	<skill id="11559" levels="1" name="파이널 서스펜션">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A2"/>
@@ -869,7 +869,7 @@
 		<set name="isDebuff" val="True"/>
 		<set name="mpConsume" val="423"/>
 	</skill>
-	<skill id="11560" levels="2" name="Celestial Aegis">
+	<skill id="11560" levels="2" name="파이널 인빈시빌리티">
 		<table name="#mpConsume"> 423 557 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -880,7 +880,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11561" levels="1" name="Giant Root">
+	<skill id="11561" levels="1" name="자이언트 루트">
 		<set name="mpConsume" val="126" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="100" /> 
@@ -898,7 +898,7 @@
 			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="11562" levels="1" name="Devil's Movement">
+	<skill id="11562" levels="1" name="데블스 무브먼트">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A2"/>
@@ -906,7 +906,7 @@
 		<set name="reuseDelay" val="3000"/>
 		<set name="mpConsume" val="60"/>
 	</skill>
-	<skill id="11563" levels="1" name="Quick Return">
+	<skill id="11563" levels="1" name="퀵 리콜">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -915,7 +915,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="60"/>
 	</skill>
-	<skill id="11564" levels="3" name="Angel's Resurrection">
+	<skill id="11564" levels="3" name="엔젤스 리저렉션">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -926,7 +926,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="60"/>
 	</skill>
-	<skill id="11565" levels="1" name="Divine Resist">
+	<skill id="11565" levels="1" name="레지스트 엘레멘탈">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="140" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -944,7 +944,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11566" levels="1" name="Divine Resist">
+	<skill id="11566" levels="1" name="레지스트 디바인">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="140" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -962,7 +962,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11567" levels="1" name="Mental Resist">
+	<skill id="11567" levels="1" name="레지스트 멘탈">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="140" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -981,7 +981,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11570" levels="1" name="Healing Melody">
+	<skill id="11570" levels="1" name="인크리즈 포엠">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -992,7 +992,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="194"/>
 	</skill>
-	<skill id="11571" levels="1" name="Recovery Poem">
+	<skill id="11571" levels="1" name="리커버리 포엠">
 		<set name="mpConsume" val="120" />
 		<set name="reuseDelay" val="50000" />
 		<set name="magicLvl" val="85" />

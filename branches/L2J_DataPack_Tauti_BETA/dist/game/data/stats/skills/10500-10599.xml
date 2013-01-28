@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10501" levels="1" name="Grand Dagger Mastery">
+	<skill id="10501" levels="1" name="그랜드 대거 마스터리">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -14,7 +14,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10502" levels="1" name="Grand Dual Dagger Mastery">
+	<skill id="10502" levels="1" name="그랜드 듀얼 대거 마스터리">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -25,7 +25,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10503" levels="1" name="Grand Light Armor Mastery">
+	<skill id="10503" levels="1" name="그랜드 라이트 아머 마스터리">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -39,7 +39,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10504" levels="1" name="Grand Movement">
+	<skill id="10504" levels="1" name="그랜드 무브먼트">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -52,12 +52,12 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10505" levels="1" name="Last peyisyeonseu">
+	<skill id="10505" levels="1" name="그랜드 크리티컬 마스터리">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10506" levels="1" name="Grand Spirit Mastery">
+	<skill id="10506" levels="1" name="그랜드 스피릿 마스터리">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -69,12 +69,12 @@
 			<add order="0x40" stat="poisonVuln" val="30" />
 		</for>
 	</skill>
-	<skill id="10507" levels="1" name="Last peyisyeonseu">
+	<skill id="10507" levels="1" name="데스 타임">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10508" levels="8" name="Blood Staff ">
+	<skill id="10508" levels="8" name="블러드 스탭">
 		<table name="#power"> 18329 18976 20271 21566 22862 24151 25452 26747 </table>
 		<set name="blowChance" val="30" />
 		<set name="castRange" val="40" />
@@ -94,7 +94,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 	</skill>
-	<skill id="10509" levels="8" name="Heart Breaker ">
+	<skill id="10509" levels="8" name="하트 브레이커">
 		<table name="#power"> 19404 20075 21419 22762 24105 25449 26792 28136 </table>
 		<set name="blowChance" val="30" />
 		<set name="castRange" val="40" />
@@ -119,37 +119,37 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10510" levels="1" name="Last peyisyeonseu">
+	<skill id="10510" levels="1" name="체인 블로우">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10511" levels="1" name="Last peyisyeonseu">
+	<skill id="10511" levels="1" name="리버스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10512" levels="1" name="Last peyisyeonseu">
+	<skill id="10512" levels="1" name="대거 익스플로전">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10513" levels="1" name="Last peyisyeonseu">
+	<skill id="10513" levels="1" name="블러드 레인">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10514" levels="1" name="Last peyisyeonseu">
+	<skill id="10514" levels="1" name="다크 패럴라이즈">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10515" levels="1" name="Last peyisyeonseu">
+	<skill id="10515" levels="1" name="마비 상태">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10516" levels="1" name="Chase Shadow">
+	<skill id="10516" levels="1" name="섀도우 체이스">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="38" />
 		<set name="operateType" val="A1" />
@@ -164,12 +164,12 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" effectType="DEBUFF" />
 		</for>
 	</skill>
-	<skill id="10517" levels="1" name="Last peyisyeonseu">
+	<skill id="10517" levels="1" name="섀도우 하이드">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10518" levels="1" name="Last peyisyeonseu">
+	<skill id="10518" levels="1" name="포스 오브 어쌔시네이션">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -179,7 +179,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10520" levels="1" name="Last peyisyeonseu">
+	<skill id="10520" levels="1" name="파이널 얼터미트 이베이전">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -189,7 +189,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10522" levels="1" name="Poison Cloud">
+	<skill id="10522" levels="1" name="포이즌 존">
 		<table name="#mpInitialConsume"> 21 </table>
 		<table name="#mpConsume"> 76 </table>
 		<table name="#magicLvl"> 86 </table>
@@ -217,17 +217,17 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10523" levels="1" name="Last peyisyeonseu">
+	<skill id="10523" levels="1" name="중독 상태">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10524" levels="1" name="Last peyisyeonseu">
+	<skill id="10524" levels="1" name="크로스 카운터">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10525" levels="4" name="Dash Shadow">
+	<skill id="10525" levels="4" name="섀도우 대시">
 		<table name="#spd"> 40 45 54 66 </table>
 		<set name="mpConsume" val="38" />
 		<set name="target" val="TARGET_SELF" />
@@ -244,32 +244,32 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10526" levels="1" name="Last peyisyeonseu">
+	<skill id="10526" levels="1" name="미스치프">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10527" levels="1" name="Last peyisyeonseu">
+	<skill id="10527" levels="1" name="매스 트릭">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10528" levels="1" name="Last peyisyeonseu">
+	<skill id="10528" levels="1" name="섀도우 페이크 데스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10529" levels="1" name="Last peyisyeonseu">
+	<skill id="10529" levels="1" name="섀도우 플래시">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10530" levels="1" name="Last peyisyeonseu">
+	<skill id="10530" levels="1" name="데스 포지션">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10531" levels="2" name="Angel Of Death">
+	<skill id="10531" levels="2" name="엔젤 오브 데스">
 		<table name="#spd"> 30 34 </table>
 		<table name="#pEvas"> 40 45 </table>
 		<table name="#crt"> 1.4 1.45 </table>
@@ -289,7 +289,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10532" levels="1" name="Last peyisyeonseu">
+	<skill id="10532" levels="1" name="섀도우 일루전">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -299,12 +299,12 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10534" levels="1" name="Last peyisyeonseu">
+	<skill id="10534" levels="1" name="토드 포이즌">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10535" levels="1" name="Last peyisyeonseu">
+	<skill id="10535" levels="1" name="스콜피온 포이즌">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -314,67 +314,67 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10537" levels="1" name="Last peyisyeonseu">
+	<skill id="10537" levels="1" name="블록 매직">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10538" levels="1" name="Last peyisyeonseu">
+	<skill id="10538" levels="1" name="위크니스 크리티컬">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10539" levels="1" name="Last peyisyeonseu">
+	<skill id="10539" levels="1" name="스로잉 대거">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10540" levels="1" name="Last peyisyeonseu">
+	<skill id="10540" levels="1" name="스로잉 샌드">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10541" levels="1" name="Last peyisyeonseu">
+	<skill id="10541" levels="1" name="스로잉 포이즌 니들">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10542" levels="1" name="Last peyisyeonseu">
+	<skill id="10542" levels="1" name="맥시멈 크리티컬">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10543" levels="1" name="Last peyisyeonseu">
+	<skill id="10543" levels="1" name="사일런트 스탭">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10544" levels="1" name="Last peyisyeonseu">
+	<skill id="10544" levels="1" name="타겟 해제">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10545" levels="1" name="Last peyisyeonseu">
+	<skill id="10545" levels="1" name="포이즌 패럴라이즈">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10546" levels="1" name="Last peyisyeonseu">
+	<skill id="10546" levels="1" name="어퍼컷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10547" levels="1" name="Last peyisyeonseu">
+	<skill id="10547" levels="1" name="섀도우 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10548" levels="1" name="Last peyisyeonseu">
+	<skill id="10548" levels="1" name="플렌더">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10549" levels="1" name="Kick">
+	<skill id="10549" levels="1" name="킥">
 		<table name="#magicLvl"> 85 </table>
 		<table name="#mpConsume"> 69 </table>
 		<set name="flyRadius" val="270" />
@@ -391,17 +391,17 @@
 		<set name="isDebuff" val="true" />
 		<set name="weaponsAllowed" val="Dagger, Dual Dagger" />
 	</skill>
-	<skill id="10550" levels="1" name="Last peyisyeonseu">
+	<skill id="10550" levels="1" name="일루전 스트라이크">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10551" levels="1" name="Last peyisyeonseu">
+	<skill id="10551" levels="1" name="일루전 트릭">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10552" levels="1" name="Grand Resist">
+	<skill id="10552" levels="1" name="그랜드 레지스턴스">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -415,12 +415,12 @@
 			<add order="0x40" stat="earthRes" val="20" />
 		</for>
 	</skill>
-	<skill id="10553" levels="1" name="Last peyisyeonseu">
+	<skill id="10553" levels="1" name="대거 스톰">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="10554" levels="1" name="Power Bluff" >
+	<skill id="10554" levels="1" name="파워 블러프" >
 		<!-- NOT DONE Need more information-->
 		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="magicLvl" val="85" />

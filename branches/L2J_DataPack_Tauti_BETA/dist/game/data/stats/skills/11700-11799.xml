@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11751" levels="1" name="Superior Magic Weapon Mastery"><!-- Check OK -->
+	<skill id="11751" levels="1" name="그랜드 매직 웨폰 마스터리"><!-- Check OK -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
@@ -19,7 +19,7 @@
 			</sub>
 		</for>
 	</skill>
-	<skill id="11752" levels="8" name="Sustain">
+	<skill id="11752" levels="8" name="서스테인">
 		<table name="#power"> 172 173 173 174 174 175 175 176 </table>
 		<table name="#gainHp"> 1.1 1.13 1.16 1.19 1.22 1.25 1.28 1.3 </table>
 		<set name="mpInitialConsume" val="32" />
@@ -40,7 +40,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11754" levels="5" name="Fairy of Life">
+	<skill id="11754" levels="5" name="페어리 오브 라이프">
 		<table name="#mpConsume"> 43 46 48 52 55 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -53,7 +53,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11755" levels="8" name="Radiant Heal">
+	<skill id="11755" levels="8" name="라이트 오브 힐">
 		<table name="#mpConsume"> 138 138 141 143 146 148 151 153 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -66,7 +66,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11756" levels="8" name="League of Light"> 
+	<skill id="11756" levels="8" name="라이트 오브 리그로스"> 
 		<table name="#power"> 1488 1495 1507 1519 1532 1544 1557 1570 </table>
 		<set name="mpInitialConsume" val="95" />
 		<set name="mpConsume" val="207" />
@@ -86,7 +86,7 @@
 			</effect>
 		</for>
 	</skill> 
-	<skill id="11757" levels="8" name="Brilliance of Lv1 Hill">
+	<skill id="11757" levels="8" name="브릴리언스 오브 힐">
 		<table name="#power"> 1191 1200 1210 1220 1230 1240 1250 1261 </table>
 		<set name="mpInitialConsume" val="100" />
 		<set name="mpConsume" val="250" />
@@ -106,7 +106,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11758" levels="1" name="Celestial Protection">
+	<skill id="11758" levels="1" name="셀레스티얼 프로텍션">
 		<set name="mpConsume" val="60" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<set name="hitTime" val="4000" />
@@ -122,7 +122,7 @@
 			<effect name="Invincible" abnormalTime="10" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
-	<skill id="11759" levels="1" name="Celestial Party Protection">
+	<skill id="11759" levels="1" name="셀레스티얼 파티 프로텍션">
 		<set name="mpConsume" val="60" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="hitTime" val="4000" />
@@ -138,7 +138,7 @@
 			<effect name="Invincible" abnormalTime="10" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
-	<skill id="11760" levels="8" name="Radiant Recharge">
+	<skill id="11760" levels="8" name="라이트 오브 리차지">
 		<table name="#mpConsume"> 183 186 188 192 196 200 203 207 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -151,7 +151,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11761" levels="5" name="Blessed recharge">
+	<skill id="11761" levels="5" name="브릴리언스 오브 리차지">
 		<table name="#magicLvl"> 85 88 91 94 97 </table>
 		<table name="#power"> 140 143 145 148 150 </table>
 		<table name="#mpConsume"> 390 397 403 411 418 </table>
@@ -170,7 +170,7 @@
 			<effect count="10" name="ManaHealOverTime" val="#mpRegPerSec" />
 		</for>
 	</skill>
-	<skill id="11762" levels="1" name="Balance Heal">
+	<skill id="11762" levels="1" name="라이트 오브 이퀄리브리엄">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A2"/>
@@ -180,7 +180,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="178"/>
 	</skill>
-	<skill id="11763" levels="1" name="Radiant Purge">
+	<skill id="11763" levels="1" name="라이트 오브 퍼지">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -192,7 +192,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="35"/>
 	</skill>
-	<skill id="11764" levels="1" name="Crystal regeneration">
+	<skill id="11764" levels="1" name="브릴리언스 오브 퍼지">
 		<set name="aggroPoints" val="679" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
@@ -211,7 +211,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11765" levels="4" name="Crystal Regeneration">
+	<skill id="11765" levels="4" name="크리스탈 리제네레이션">
 		<table name="#mpConsume"> 73 77 80 83 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -220,7 +220,7 @@
 		<set name="reuseDelay" val="300000"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11766" levels="8" name="Dark Veil">
+	<skill id="11766" levels="8" name="다크 블래스트">
 		<table name="#mpConsume"> 70 72 76 78 82 85 88 92 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -233,7 +233,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11767" levels="8" name="Mass Dark Veil">
+	<skill id="11767" levels="8" name="다크 써클">
 		<table name="#mpConsume"> 423 432 450 468 487 506 526 547 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -246,7 +246,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11768" levels="1" name="Rebirth">
+	<skill id="11768" levels="1" name="라이프 릴리즈">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -256,7 +256,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="66"/>
 	</skill>
-	<skill id="11769" levels="6" name="Dark Backfire">
+	<skill id="11769" levels="6" name="다크 백파이어">
 		<table name="#mpConsume"> 35 36 38 41 43 46 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -270,7 +270,7 @@
 		<set name="isDebuff" val="True"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11770" levels="1" name="Dissolve">
+	<skill id="11770" levels="1" name="디졸브">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -279,7 +279,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="10"/>
 	</skill>
-	<skill id="11772" levels="4" name="Giant's Favor">
+	<skill id="11772" levels="4" name="인탠스 힐링">
 		<table name="#mpConsume"> 17 18 21 22 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -288,12 +288,12 @@
 		<set name="reuseDelay" val="900000"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11773" levels="2" name="Lakcis Disc">
+	<skill id="11773" levels="2" name="라키시스 디스크">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 	</skill>
-	<skill id="11774" levels="4" name="Summon Tree of Life">
+	<skill id="11774" levels="4" name="서먼 트리 오브 라이프">
 		<table name="#mpConsume"> 185 205 225 243 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -306,7 +306,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11776" levels="4" name="Summon Lumi">
+	<skill id="11776" levels="4" name="서먼 루미">
 		<table name="#mpConsume"> 96 106 117 127 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -317,7 +317,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11777" levels="5" name="Mark Of Rumi">
+	<skill id="11777" levels="5" name="마크 오브 루미">
 		<table name="#dot"> 113 118 123 128 134 </table>
 		<table name="#Def"> 0.9 0.85 0.8 0.75 0.75 </table>
 		<table name="#magicLvl"> 85 87 89 90 95 </table>
@@ -344,7 +344,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11778" levels="6" name="Fatal Sleep">
+	<skill id="11778" levels="6" name="페이탈 슬리프">
 		<table name="#mpConsume"> 26 26 27 30 31 33 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -356,7 +356,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11780" levels="6" name="Dark Devour" >
+	<skill id="11780" levels="6" name="다크 디바우어" >
 		<table name="#gainHp"> 0.5 0.48 0.44 0.4 0.35 0.3 </table>
 		<set name="mpConsume" val="35" />
 		<set name="target" val="TARGET_ONE" />
@@ -372,7 +372,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11782" levels="2" name="Heal">
+	<skill id="11782" levels="2" name="프랜틱 힐링">
 		<table name="#magicLvl"> 85 90 </table>
 		<table name="#mAtkSpd"> 1.3 1.5 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -387,7 +387,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11783" levels="1" name="Reset">
+	<skill id="11783" levels="1" name="리셋">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -397,7 +397,7 @@
 		<set name="effectRange" val="1100"/>
 		<set name="isMagic" val="1"/>
 	</skill>
-	<skill id="11784" levels="4" name="Blessed Resurrection">
+	<skill id="11784" levels="4" name="블레싱 리저렉션">
 		<table name="#mpConsume"> 35 38 42 46 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -409,7 +409,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11785" levels="3" name="Group Resurrection">
+	<skill id="11785" levels="3" name="파티 리저렉션">
 		<table name="#mpConsume"> 133 145 152 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -420,7 +420,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11787" levels="1" name="Grand Armor Mastery">
+	<skill id="11787" levels="1" name="그랜드 아머 마스터리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -437,7 +437,7 @@
 			<add order="0x40" stat="regMp" val="3.6" />
 		</for>
 	</skill>
-	<skill id="11788" levels="1" name="Grand Casting Mastery">
+	<skill id="11788" levels="1" name="그랜드 캐스팅 마스터리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -450,11 +450,11 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
 		</for>
 	</skill>
-	<skill id="11789" levels="1" name="Superior Anti Magic">
+	<skill id="11789" levels="1" name="그랜드 안티 매직">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>
-	<skill id="11790" levels="1" name="Grand Elemental Protection">
+	<skill id="11790" levels="1" name="그랜드 엘레멘탈 프로텍션">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="85" />
@@ -467,11 +467,11 @@
 			<add order="0x40" stat="windRes" val="20" />
 		</for>
 	</skill>
-	<skill id="11791" levels="1" name="Superior Sigil Mastery">
+	<skill id="11791" levels="1" name="그랜드 시길 마스터리">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>
-	<skill id="11792" levels="1" name="Grand Traverse Resistance">
+	<skill id="11792" levels="1" name="그랜드 트레이트 레지스턴스">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="87" />

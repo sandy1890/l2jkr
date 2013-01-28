@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="26000" levels="1" name="Small fortuna box">
+	<skill id="26000" levels="1" name="작은 포르투나 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22006,3,20.55555;22007,2,14.01515;22008,1,6.16666;22014,1,0.86999;22022,3,3.19444;22023,3,6.38888;22024,1,5.75;8743,1,10;8744,1,8.33333;8745,1,6.94444;8753,1,2;8754,1,1.66666;8755,1,1.38888;22025,5,12.77777
@@ -20,7 +20,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26001" levels="1" name="Middle fortuna box">
+	<skill id="26001" levels="1" name="중간 포르투나 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22007,3,27.27272;22008,2,9;22009,1,5;22014,1,0.93959;22015,1,0.32467;22022,5,3.75;22023,5,7.5;22024,2,5.625;8746,1,9.11458;8747,1,7.875;8748,1,6.5625;8756,1,1.82291;8757,1,1.575;8758,1,1.3125;22025,10,12.5
@@ -40,7 +40,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26002" levels="1" name="Large fortuna box">
+	<skill id="26002" levels="1" name="큰 포르투나 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22008,2,27;22009,1,15;22014,1,0.78299;22015,1,0.27056;22018,1,0.00775;22019,1,0.0027;22022,10,3.75;22023,10,7.5;22024,5,4.5;8749,1,9.75;8750,1,8.125;8751,1,6.77083;8759,1,1.95;8760,1,1.625;8761,1,1.35416;22025,20,12.5
@@ -60,7 +60,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26003" levels="1" name="Small fortuna cube">
+	<skill id="26003" levels="1" name="작은 포르투나 큐브">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22010,3,20.22222;22011,2,13.78787;22012,1,6.06666;22016,1,0.69599;22022,3,3.47222;22023,3,6.94444;22024,1,6.25;8743,1,9.5;8744,1,7.91666;8745,1,6.59722;8753,1,1.9;8754,1,1.58333;8755,1,1.31944;22025,5,13.88888
@@ -80,7 +80,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26004" levels="1" name="Middle fortuna cube">
+	<skill id="26004" levels="1" name="중간 포르투나 큐브">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22011,3,26.51515;22012,2,8.75;22013,1,4.86111;22016,1,0.91349;22017,1,0.31565;22022,5,3.75;22023,5,7.5;22024,2,5.625;8746,1,9.54861;8747,1,8.25;8748,1,6.875;8756,1,1.90972;8757,1,1.65;8758,1,1.375;22025,10,12.5
@@ -100,7 +100,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26005" levels="1" name="Large fortuna cube">
+	<skill id="26005" levels="1" name="큰 포르투나 큐브">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22012,2,26.25;22013,1,14.58333;22016,1,0.69599;22017,1,0.24049;22020,1,0.00638;22021,1,0.0022;22022,10,3.95833;22023,10,7.91666;22024,5,4.75;8749,1,9.58333;8750,1,7.98611;8751,1,6.65509;8759,1,1.91666;8760,1,1.59722;8761,1,1.33101;22025,20,13.19444
@@ -120,103 +120,103 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26006" levels="1" name="Weapon Enchant Scroll - D Grade">
+	<skill id="26006" levels="1" name="무기 강화 주문서 - D그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26007" levels="1" name="Weapon Enchant Scroll - C Grade">
+	<skill id="26007" levels="1" name="무기 강화 주문서 - C그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26008" levels="1" name="Weapon Enchant Scroll - B Grade">
+	<skill id="26008" levels="1" name="무기 강화 주문서 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26009" levels="1" name="Weapon Enchant Scroll - A Grade">
+	<skill id="26009" levels="1" name="무기 강화 주문서 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26010" levels="1" name="Armor Enchant Scroll - D Grade">
+	<skill id="26010" levels="1" name="갑옷 강화 주문서 - D그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26011" levels="1" name="Armor Enchant Scroll - C Grade">
+	<skill id="26011" levels="1" name="갑옷 강화 주문서 - C그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26012" levels="1" name="Armor Enchant Scroll - B Grade">
+	<skill id="26012" levels="1" name="갑옷 강화 주문서 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26013" levels="1" name="Armor Enchant Scroll - A Grade">
+	<skill id="26013" levels="1" name="갑옷 강화 주문서 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26014" levels="1" name="Ancient Weapon Enchant Crystal - B grade">
+	<skill id="26014" levels="1" name="고대 무기 강화 결정 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26015" levels="1" name="Ancient Weapon Enchant Crystal - A grade">
+	<skill id="26015" levels="1" name="고대 무기 강화 결정 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26016" levels="1" name="Ancient Armor Enchant Crystal - B grade">
+	<skill id="26016" levels="1" name="고대 갑옷 강화 결정 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26017" levels="1" name="Ancient Armor Enchant Crystal - A grade">
+	<skill id="26017" levels="1" name="고대 갑옷 강화 결정 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26018" levels="1" name="Divine Weapon Enchant Crystal - B grade">
+	<skill id="26018" levels="1" name="신성한 무기 강화 결정 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26019" levels="1" name="Divine Weapon Enchant Crystal - A grade">
+	<skill id="26019" levels="1" name="신성한 무기 강화 결정 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26020" levels="1" name="Divine Armor Enchant Crystal - B grade">
+	<skill id="26020" levels="1" name="신성한 갑옷 강화 결정 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26021" levels="1" name="Divine Armor Enchant Crystal - A grade">
+	<skill id="26021" levels="1" name="신성한 갑옷 강화 결정 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26022" levels="1" name="High grade potion which improves attack speed">
+	<skill id="26022" levels="1" name="고급 공격 속도 향상 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -228,7 +228,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26023" levels="1" name="High grade potion which improves moving speed">
+	<skill id="26023" levels="1" name="고급 이동 속도 향상 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -240,7 +240,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26024" levels="1" name="Temporary Healing Potion">
+	<skill id="26024" levels="1" name="순간 체력 회복제">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
@@ -250,7 +250,7 @@
 			<effect name="Heal" noicon="1" val="435" />
 		</for>
 	</skill>
-	<skill id="26025" levels="1" name="Powerful Healing Potion">
+	<skill id="26025" levels="1" name="강력 체력 회복제">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -259,7 +259,7 @@
 			<effect count="5" name="HealOverTime" abnormalTime="3" val="150" abnormalLvl="3" abnormalType="hp_recover" />
 		</for>
 	</skill>
-	<skill id="26026" levels="1" name="High-grade Healing Potion">
+	<skill id="26026" levels="1" name="고급 체력 회복제">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -268,7 +268,7 @@
 			<effect count="5" name="HealOverTime" abnormalTime="3" val="72" abnormalLvl="2" abnormalType="hp_recover" />
 		</for>
 	</skill>
-	<skill id="26027" levels="6" name="Secret medicine of Will">
+	<skill id="26027" levels="6" name="투지의 비약 - S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
@@ -285,7 +285,7 @@
 			<effect name="CpHeal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="26028" levels="6" name="Secret medicine of Life">
+	<skill id="26028" levels="6" name="생명의 비약 - S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
@@ -303,7 +303,7 @@
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="26029" levels="1" name="Potion of Will">
+	<skill id="26029" levels="1" name="투지의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -312,7 +312,7 @@
 			<effect name="CpHeal" noicon="1" val="50" />
 		</for>
 	</skill>
-	<skill id="26030" levels="1" name="Healing medicine for Mana">
+	<skill id="26030" levels="1" name="마나 치유약">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeId" val="22038" />
@@ -325,7 +325,7 @@
 			<effect name="ManaHeal" noicon="1" val="60" />
 		</for>
 	</skill>
-	<skill id="26031" levels="1" name="Wind Walk Scroll">
+	<skill id="26031" levels="1" name="윈드 워크 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -338,7 +338,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26032" levels="1" name="Haste Scroll">
+	<skill id="26032" levels="1" name="헤이스트 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -351,7 +351,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26033" levels="1" name="Might Scroll">
+	<skill id="26033" levels="1" name="마이트 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -364,7 +364,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26034" levels="1" name="Shield Scroll">
+	<skill id="26034" levels="1" name="실드 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -377,7 +377,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26035" levels="1" name="Death Whisper Scroll">
+	<skill id="26035" levels="1" name="데스 위스퍼 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -390,7 +390,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26036" levels="1" name="Guidance Scroll">
+	<skill id="26036" levels="1" name="가이던스 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -403,7 +403,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26037" levels="1" name="Empower Scroll">
+	<skill id="26037" levels="1" name="엠파워 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -416,7 +416,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26038" levels="1" name="Greater Acumen Scroll">
+	<skill id="26038" levels="1" name="그레이터 아큐멘 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -429,7 +429,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26039" levels="1" name="Vampiric Rage Scroll">
+	<skill id="26039" levels="1" name="뱀피릭 레이지 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -442,7 +442,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26040" levels="1" name="Bless the Body Scroll">
+	<skill id="26040" levels="1" name="블레스 더 바디 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -455,7 +455,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26041" levels="1" name="Berserker Spirit Scroll">
+	<skill id="26041" levels="1" name="버서커 스피릿 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -475,7 +475,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26042" levels="1" name="Magic Barrier Scroll">
+	<skill id="26042" levels="1" name="매직 배리어 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -488,7 +488,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26043" levels="1" name="Bless the Soul Scroll">
+	<skill id="26043" levels="1" name="블레스 더 소울 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -501,7 +501,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26044" levels="1" name="Clarity Scroll">
+	<skill id="26044" levels="1" name="클레리티 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -516,7 +516,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26045" levels="1" name="Wild Magic Scroll">
+	<skill id="26045" levels="1" name="와일드 매직 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -529,117 +529,117 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="26046" levels="5" name="Rune of Experience Points">
+	<skill id="26046" levels="5" name="경험치의 룬 50%">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="26047" levels="5" name="Rune of SP">
+	<skill id="26047" levels="5" name="SP의 룬 50%">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="26048" levels="5" name="Rune of Crystal Form">
+	<skill id="26048" levels="5" name="결정형의 룬 5레벨">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="26049" levels="1" name="Rune of Feather">
+	<skill id="26049" levels="1" name="깃털의 룬">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="26050" levels="1" name="Blessed Spiritshot - D grade">
+	<skill id="26050" levels="1" name="축복받은 마정탄 - D그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26051" levels="1" name="Blessed Spiritshot - C grade">
+	<skill id="26051" levels="1" name="축복받은 마정탄 - C그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26052" levels="1" name="Blessed Spiritshot - B grade">
+	<skill id="26052" levels="1" name="축복받은 마정탄 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26053" levels="1" name="Blessed Spiritshot - A grade">
+	<skill id="26053" levels="1" name="축복받은 마정탄 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26054" levels="1" name="Blessed Spiritshot - S grade">
+	<skill id="26054" levels="1" name="축복받은 마정탄 - S그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26055" levels="1" name="Spiritshot - D grade">
+	<skill id="26055" levels="1" name="마정탄 - D그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26056" levels="1" name="Spiritshot - C grade">
+	<skill id="26056" levels="1" name="마정탄 - C그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26057" levels="1" name="Spiritshot - B grade">
+	<skill id="26057" levels="1" name="마정탄 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26058" levels="1" name="Spiritshot - A grade">
+	<skill id="26058" levels="1" name="마정탄 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26059" levels="1" name="Spiritshot - S grade">
+	<skill id="26059" levels="1" name="마정탄 - S그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26060" levels="1" name="Soulshot - D grade">
+	<skill id="26060" levels="1" name="정령탄 - D그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26061" levels="1" name="Soulshot - C grade">
+	<skill id="26061" levels="1" name="정령탄 - C그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26062" levels="1" name="Soulshot - B grade">
+	<skill id="26062" levels="1" name="정령탄 - B그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26063" levels="1" name="Soulshot - A grade">
+	<skill id="26063" levels="1" name="정령탄 - A그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26064" levels="1" name="Soulshot - S grade">
+	<skill id="26064" levels="1" name="정령탄 - S그레이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="26065" levels="1" name="A Scroll Bundle of Fighter">
+	<skill id="26065" levels="1" name="파이터의 주문서 묶음">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22039,1,22040,1,22047,1,22041,1,22042,1,22043,1,22044,1,22048,1,100
@@ -659,7 +659,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26066" levels="1" name="A Scroll Bundle of Mage">
+	<skill id="26066" levels="1" name="메이지의 주문서 묶음">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			22049,1,22050,1,22051,1,22045,1,22046,1,22052,1,22048,1,22053,1,100
@@ -679,7 +679,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="26067" levels="5" name="Bone Quiver">
+	<skill id="26067" levels="5" name="빛의 화살통">
 		<!-- Confirmed CT2.5 -->
 		<table name="#create_item_id"> 22067 22068 22069 22070 22071 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -696,7 +696,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="26068" levels="10" name="Blessed Spiritshot Pack">
+	<skill id="26068" levels="10" name="축복받은 마정탄 대형 팩 - S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#create_item_id"> 22072 22073 22074 22075 22076 22072 22073 22074 22075 22076 </table>
 		<table name="#create_item_count"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
@@ -714,7 +714,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="26069" levels="10" name="Spiritshot Pack">
+	<skill id="26069" levels="10" name="마정탄 대형 팩 - S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#create_item_id"> 22077 22078 22079 22080 22081 22077 22078 22079 22080 22081 </table>
 		<table name="#create_item_count"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
@@ -732,7 +732,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="26070" levels="10" name="Soulshot Pack">
+	<skill id="26070" levels="10" name="정령탄 대형 팩 - S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#create_item_id"> 22082 22083 22084 22085 22086 22082 22083 22084 22085 22086 </table>
 		<table name="#create_item_count"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
@@ -750,7 +750,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="26071" levels="17" name="Wrapped daisy hairpin">
+	<skill id="26071" levels="17" name="포장된 장인의 고글">
 		<!-- Confirmed CT2.5 -->
 		<table name="#create_item_id"> 22156 22157 22158 22159 22160 22161 22162 22163 22164 22165 22166 22167 22168 22169 22170 22171 22172 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -767,7 +767,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="26072" levels="3" name="Wrapped Pet Exchange Ticket">
+	<skill id="26072" levels="3" name="포장된 펫 교환 티켓 - 쿠카부로">
 		<!-- Confirmed CT2.5 -->
 		<table name="#create_item_id"> 7583 7584 7585 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -784,7 +784,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="26073" levels="5" name="Bone Bolt Container">
+	<skill id="26073" levels="5" name="빛의 볼트통">
 		<!-- Confirmed CT2.5 -->
 		<table name="#create_item_id"> 22144 22145 22146 22147 22148 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

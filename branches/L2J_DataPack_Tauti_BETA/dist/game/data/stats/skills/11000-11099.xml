@@ -10,7 +10,7 @@
 		<basemul order="0x30" stat="mAtkSpd" val="1.23" />
 	</for>
 </skill>
-	<skill id="11002" levels="1" name="Advanced possession robe">
+	<skill id="11002" levels="1" name="그랜드 로브 마스터리">
 		<set name="armorAllowed" val="Robe" /> <!-- Robe -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="85" />
@@ -21,7 +21,7 @@
 			<using kind="Robe" />
 		</for>
 	</skill>
-	<skill id="11003" levels="1" name="Grand Magic Resistance">
+	<skill id="11003" levels="1" name="그랜드 안티 매직">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -32,7 +32,7 @@
 			<mul order="0x30" stat="magicDamVul" val="0.65" />
 		</for>
 	</skill>
-	<skill id="11004" levels="1" name="Grand Sigil Mastery">
+	<skill id="11004" levels="1" name="그랜드 시길 마스터리">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -42,7 +42,7 @@
 			<using kind="Sigil" />
 		</for>
 	</skill>
-	<skill id="11005" levels="1" name="Advanced Will Mage">
+	<skill id="11005" levels="1" name="그랜드 매지션 마스터">
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
@@ -56,7 +56,7 @@
 			<mul order="0x30" stat="DanceMpConsumeRate" val="0.6" />
 		</for>
 	</skill>
-	<skill id="11006" levels="1" name="Improved mastery of the spirit">
+	<skill id="11006" levels="1" name="그랜드 레지스트 어트리뷰트">
 		<table name="#vuln">30</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -70,35 +70,35 @@
 				<sub order="0x40" stat="poisonVuln" val="#vuln" />
 			</for>
 	</skill>
-	<skill id="11007" levels="1" name="Fire Stance">
+	<skill id="11007" levels="1" name="오리진 파이어">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="isMagic" val="1"/>
 	</skill>
-	<skill id="11008" levels="1" name="Water Stance">
+	<skill id="11008" levels="1" name="오리진 워터">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="isMagic" val="1"/>
 	</skill>
-	<skill id="11009" levels="1" name="Wind Stance">
+	<skill id="11009" levels="1" name="오리진 윈드">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="isMagic" val="1"/>
 	</skill>
-	<skill id="11010" levels="1" name="Earth Stance">
+	<skill id="11010" levels="1" name="오리진 어스">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="isMagic" val="1"/>
 	</skill>
-	<skill id="11011" levels="8" name="Elemental Power">
+	<skill id="11011" levels="8" name="엘레멘탈 스파이크">
 		<table name="#pwr">121 122 126 129 133 136 140 143</table>
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="1400" />
@@ -115,7 +115,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="11012" levels="1" name="Elemental Powe Fire">
+	<skill id="11012" levels="1" name="엘레멘탈 스파이크 (불)">
 		<table name="#pwr">121 122 126 129 133 136 140 143</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -133,7 +133,7 @@
 		<set name="castRange" val="3080" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11013" levels="1" name="Elemental Powe Water">
+	<skill id="11013" levels="1" name="엘레멘탈 스파이크 (물)">
 		<table name="#pwr">121 122 126 129 133 136 140 143</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -151,7 +151,7 @@
 		<set name="castRange" val="3080" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11014" levels="1" name="Elemental Powe Wind">
+	<skill id="11014" levels="1" name="엘레멘탈 스파이크 (바람)">
 		<table name="#pwr">121 122 126 129 133 136 140 143</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -169,7 +169,7 @@
 		<set name="castRange" val="3080" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11015" levels="1" name="Elemental Powe Earth">
+	<skill id="11015" levels="1" name="엘레멘탈 스파이크 (땅)">
 		<table name="#pwr">121 122 126 129 133 136 140 143</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -187,7 +187,7 @@
 		<set name="castRange" val="3080" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11017" levels="8" name="Elemental Crash">
+	<skill id="11017" levels="8" name="엘레멘탈 크래시">
 		<table name="#mpConsume"> 53 55 57 60 62 65 67 70 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -200,7 +200,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11020" levels="8" name="Basic strokes Wind">
+	<skill id="11020" levels="8" name="엘레멘탈 크래시 (바람)">
 		<table name="#pwr">144 146 150 154 159 163 167 171</table>
 		<set name="castRange" val="3080" />
 		<set name="effectRange" val="500" />
@@ -227,7 +227,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11021" levels="8" name="Basic strokes Earth">
+	<skill id="11021" levels="8" name="엘레멘탈 크래시 (땅)">
 		<table name="#pwr">144 146 150 154 159 163 167 171</table>
 		<set name="castRange" val="3080" />
 		<set name="effectRange" val="500" />
@@ -252,7 +252,7 @@
 			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="11022" levels="8" name="Basic strokes">
+	<skill id="11022" levels="8" name="엘레멘탈 크래시 (4대 속성)">
 		<table name="#pwr">144 146 150 154 159 163 167 171</table>
 		<set name="coolTime" val="3000" />
 		<set name="flyRadius" val="280" />
@@ -280,7 +280,7 @@
 			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
 		</for>
 	</skill>
-	<skill id="11023" levels="8" name="Elemental Destruction">
+	<skill id="11023" levels="8" name="엘레멘탈 디스트럭션">
 		<table name="#pwr">356 367 377 387 397 407 418 428</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -296,7 +296,7 @@
 		<set name="cast" val="-3" />
 		<set name="effectRange" val="3080" />
 	</skill>
-	<skill id="11024" levels="8" name="Elemental Destruction Fire">
+	<skill id="11024" levels="8" name="엘레멘탈 디스트럭션 (불)">
 		<table name="#pwr">356 367 377 387 397 407 418 428</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -314,7 +314,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11025" levels="8" name="Elemental Destruction Water">
+	<skill id="11025" levels="8" name="엘레멘탈 디스트럭션 (물)">
 		<table name="#pwr">356 367 377 387 397 407 418 428</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -332,7 +332,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11026" levels="8" name="Elemental Destruction Wind">
+	<skill id="11026" levels="8" name="엘레멘탈 디스트럭션 (바람)">
 		<table name="#pwr">356 367 377 387 397 407 418 428</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -350,7 +350,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11027" levels="8" name="Elemental Destruction Earth">
+	<skill id="11027" levels="8" name="엘레멘탈 디스트럭션 (땅)">
 		<table name="#pwr">356 367 377 387 397 407 418 428</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
@@ -368,7 +368,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11028" levels="1" name="Elemental Destruction 4 ELEMENTS">
+	<skill id="11028" levels="1" name="엘레멘탈 디스트럭션 (4대 속성)">
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="125" />
 		<set name="magicLvl" val="85" />
@@ -382,7 +382,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11029" levels="5" name="Raspiratornaya death">
+	<skill id="11029" levels="5" name="데스 브레스">
 		<table name="#DOT">480 494 509 523 537</table>
 		<set name="mpInitialConsume" val="2" />
 		<set name="mpConsume" val="68" />
@@ -403,7 +403,7 @@
 			<effect count="15" name="DamOverTime" abnormalTime="1" val="#DOT" abnormalLvl="1" abnormalType="poison" abnormal="poison" />
 		</for>
 	</skill>
-	<skill id="11030" levels="4" name="Death Siphon">
+	<skill id="11030" levels="4" name="데스 로드">
 		<table name="#mpConsume"> 68 72 84 88 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -415,7 +415,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11032" levels="4" name="Death Howl">
+	<skill id="11032" levels="4" name="데스 하울링">
 		<table name="#mpConsume"> 204 216 252 264 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -425,7 +425,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11033" levels="1" name="Giant fist">
+	<skill id="11033" levels="1" name="데미지 지역">
 		<set name="coolTime" val="3000" />
 		<set name="flyRadius" val="280" />
 		<set name="effectRange" val="450" />
@@ -453,7 +453,7 @@
 			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
 		</for>
 	</skill>
-	<skill id="11034" levels="8" name="Flexible Element">
+	<skill id="11034" levels="8" name="엘레멘탈 블래스트">
 		<table name="#pwr">191 194 199 205 210 216 221 227</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="70" />
@@ -468,7 +468,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11035" levels="8" name="Flexible Element Fire">
+	<skill id="11035" levels="8" name="엘레멘탈 블래스트 (불)">
 		<table name="#pwr">191 194 199 205 210 216 221 227</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="70" />
@@ -486,7 +486,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11036" levels="8" name="Flexible Element Water">
+	<skill id="11036" levels="8" name="엘레멘탈 블래스트 (물)">
 		<table name="#pwr">191 194 199 205 210 216 221 227</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="70" />
@@ -504,7 +504,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11037" levels="8" name="Flexible Element Wind">
+	<skill id="11037" levels="8" name="엘레멘탈 블래스트 (바람)">
 		<table name="#pwr">191 194 199 205 210 216 221 227</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="70" />
@@ -522,7 +522,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11038" levels="8" name="Flexible Element Earth">
+	<skill id="11038" levels="8" name="엘레멘탈 블래스트 (땅)">
 		<table name="#pwr">191 194 199 205 210 216 221 227</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="70" />
@@ -540,7 +540,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11039" levels="8" name="Flexible Element 4 ELEMENT">
+	<skill id="11039" levels="8" name="엘레멘탈 블래스트 (4대 속성)">
 		<table name="#pwr">191 194 199 205 210 216 221 227</table>
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="70" />
@@ -555,7 +555,7 @@
 		<set name="castRange" val="2580" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="11040" levels="8" name="Elemental Storm">
+	<skill id="11040" levels="8" name="엘레멘탈 파이널 스톰">
 		<table name="#pwr">238 245 252 259 265 272 279 286</table>
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="1800" />
@@ -571,7 +571,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="11041" levels="8" name="Elemental Storm Fire">
+	<skill id="11041" levels="8" name="엘레멘탈 파이널 스톰 (불)">
 		<table name="#pwr">238 245 252 259 265 272 279 286</table>
 		<set name="element" val="0" />
 		<!-- Fire -->
@@ -590,7 +590,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="11042" levels="8" name="Elemental Storm Water">
+	<skill id="11042" levels="8" name="엘레멘탈 파이널 스톰 (물)">
 		<table name="#pwr">238 245 252 259 265 272 279 286</table>
 		<set name="element" val="1" />
 		<!-- Water -->
@@ -609,7 +609,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="11043" levels="8" name="Elemental Storm Wind">
+	<skill id="11043" levels="8" name="엘레멘탈 파이널 스톰 (바람)">
 		<table name="#pwr">238 245 252 259 265 272 279 286</table>
 		<set name="element" val="2" />
 		<!-- Wind -->
@@ -628,7 +628,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="11044" levels="8" name="Elemental Storm Earth">
+	<skill id="11044" levels="8" name="엘레멘탈 파이널 스톰 (땅)">
 		<table name="#pwr">238 245 252 259 265 272 279 286</table>
 		<set name="element" val="3" />
 		<!-- Erth -->
@@ -647,7 +647,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="11040" levels="8" name="Elemental Storm 4 ELEMENTS" >
+	<skill id="11040" levels="8" name="엘레멘탈 파이널 스톰" >
 		<table name="#pwr">238 245 252 259 265 272 279 286</table>
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="1800" />
@@ -663,7 +663,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="11046" levels="2" name="Soul Magician">
+	<skill id="11046" levels="2" name="매지션 스피릿">
 		<table name="#mAtk">1.2 1.3</table>
 		<table name="#Crt">1.5 1.6</table>
 		<set name="mpInitialConsume" val="15" />
@@ -687,7 +687,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11047" levels="6" name="Fluctuations of the Devil">
+	<skill id="11047" levels="6" name="데블스 웨이">
 		<table name="#pwr">143 145 151 158 164 170</table>
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="57" />
@@ -716,7 +716,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11048" levels="6" name="Wide variations in the Devil">
+	<skill id="11048" levels="6" name="데블스 하이 웨이">
 		<table name="#pwr">114 116 121 126 131 136</table>
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="57" />
@@ -747,7 +747,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11049" levels="2" name="Ignore Divinity">
+	<skill id="11049" levels="2" name="이그노어 디비니티">
 		<table name="#mpConsume"> 82 91 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -759,7 +759,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11050" levels="1" name="Hellbaund">
+	<skill id="11050" levels="1" name="헬 바인딩">
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
@@ -781,7 +781,7 @@
 		<effect name="Paralyze" abnormalTime="10" val="0" abnormal="floatroot" abnormalType="paralyze" abnormalLvl="1" />
 		</for>
 	</skill>
-	<skill id="11052" levels="1" name="Mass Hellbaund">
+	<skill id="11052" levels="1" name="매스 헬 바인딩">
 		<set name="coolTime" val="3000" />
 		<set name="flyRadius" val="280" />
 		<set name="effectRange" val="450" />
@@ -809,7 +809,7 @@
 				<effect name="Paralyze" abnormalTime="10" val="0" abnormal="floatroot" abnormalType="paralyze" abnormalLvl="1" />
 			</for>
 	</skill>
-	<skill id="11055" levels="7" name="Eye of Death">
+	<skill id="11055" levels="7" name="데스 피어">
 		<table name="#spd">0.6 0.55 0.5 0.45 0.4 0.35 0.3</table>
 		<set name="mpConsume" val="70" />
 		<set name="lvlDepend" val="1" />
@@ -835,7 +835,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11056" levels="8" name="Mass Eye of Death">
+	<skill id="11056" levels="8" name="매스 데스 피어">
 		<table name="#spd">0.75 0.7 0.65 0.6 0.55 0.5 0.45 0.4</table>
 		<set name="mpConsume" val="211" />
 		<set name="lvlDepend" val="1" />
@@ -861,7 +861,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11057" levels="6" name="Sudden flash">
+	<skill id="11057" levels="6" name="얼티밋 블링크">
 		<table name="#pwr">121 124 129 135 140 145</table>
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
@@ -890,7 +890,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" />
 		</for>
 	</skill>
-	<skill id="11058" levels="3" name="Shadow Snare">
+	<skill id="11058" levels="3" name="섀도우 헬">
 		<table name="#mpConsume"> 238 252 267 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -902,7 +902,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11062" levels="4" name="Wind Wanderer">
+	<skill id="11062" levels="4" name="에어라이더">
 		<table name="#mpInitialConsume">6 10 14 18</table>
 		<table name="#mpConsume">24 36 48 50</table>
 		<table name="#runSpd">60 70 80 90</table>
@@ -926,7 +926,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11064" levels="8" name="Advanced Body To Mind">
+	<skill id="11064" levels="8" name="파이널 바디 투 마인드">
 		<table name="#aggroPoints">243 379 495 549 611 725 847 985</table>
 		<table name="#HP">384 388 396 404 412 420 428 436</table>
 		<table name="#MP">400 412 436 450 474 499 523 647</table>
@@ -941,7 +941,7 @@
 		<set name="operateType" val="A1" />
 		<set name="aggroPoints" val="#aggroPoints" />
 	</skill>
-	<skill id="11065" levels="1" name="Barrier Secrets">
+	<skill id="11065" levels="1" name="아케인 배리어">
 		<set name="aggroPoints" val="204" /> <!-- Guess -->
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" />
@@ -964,7 +964,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11066" levels="1" name="Wave of Death">
+	<skill id="11066" levels="1" name="데스 헬 웨이">
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="798" />
 		<set name="magicLvl" val="95" />
@@ -987,7 +987,7 @@
 			<effect count="20" name="Fear" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="11067" levels="1" name="The Gates of Hell">
+	<skill id="11067" levels="1" name="데스 헬 게이트">
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="1620" />
 		<set name="magicLvl" val="99" />
@@ -1010,7 +1010,7 @@
 			<effect count="20" name="Fear" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="11068" levels="4" name="Double Castr">
+	<skill id="11068" levels="4" name="더블 캐스팅">
 		<table name="#mpInitialConsume">6 10 14 18</table>
 		<table name="#abnormalLvl">1 2 3 4</table>
 		<table name="#aggroPoints">331 457 587 701</table>
@@ -1035,7 +1035,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11093" levels="1" name="Crystal Form">
+	<skill id="11093" levels="1" name="셀프 크리스탈">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A2"/>
@@ -1044,7 +1044,7 @@
 		<set name="reuseDelay" val="120000"/>
 		<set name="mpConsume" val="73"/>
 	</skill>
-	<skill id="11094" levels="6" name="Spatial jump">
+	<skill id="11094" levels="6" name="얼티밋 워프">
 		<table name="#pwr">121 124 129 135 140 145</table>
 		<set name="flyCourse" val="180" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
@@ -1076,7 +1076,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" />
 		</for>
 	</skill>
-	<skill id="11095" levels="1" name="Seal of Suspension">
+	<skill id="11095" levels="1" name="데블스 핸즈">
 		<set name="mpConsume" val="119" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="230" /> <!-- Base Land Rate -->
