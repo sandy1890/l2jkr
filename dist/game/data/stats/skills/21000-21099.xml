@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="21000" levels="1" name="Release Seal on Agathion - Majo">
+	<skill id="21000" levels="1" name="아가시온 봉인해제 - 마조">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -8,7 +8,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="npcId" val="1501" />
 	</skill>
-	<skill id="21001" levels="1" name="Release Seal on Agathion - Gold Majo">
+	<skill id="21001" levels="1" name="아가시온 봉인해제 - 금면마조">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -16,7 +16,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="npcId" val="1502" />
 	</skill>
-	<skill id="21002" levels="1" name="Release Seal on Agathion - Black Majo">
+	<skill id="21002" levels="1" name="아가시온 봉인해제 - 흑면마조">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -24,7 +24,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="npcId" val="1503" />
 	</skill>
-	<skill id="21003" levels="1" name="Release Seal on Agathion - Plaipitak">
+	<skill id="21003" levels="1" name="아가시온 봉인해제 - 플라이피탁">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -32,7 +32,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="npcId" val="1504" />
 	</skill>
-	<skill id="21004" levels="1" name="Wind Walk">
+	<skill id="21004" levels="1" name="윈드 워크">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -45,7 +45,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21005" levels="3" name="Agility">
+	<skill id="21005" levels="3" name="어질리티">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -58,7 +58,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21006" levels="1" name="Large Firework Effect">
+	<skill id="21006" levels="1" name="대폭죽의 능력">
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -66,7 +66,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="staticReuse" val="true" />
 	</skill>
-	<skill id="21007" levels="1" name="Ability of Doubt">
+	<skill id="21007" levels="1" name="의문의 능력">
 		<!-- Update by rocknow -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -78,7 +78,7 @@
 			<effect name="BigHead" abnormalTime="300" val="0" abnormalLvl="1" abnormalVisualEffect="bighead" abnormalType="big_head" />
 		</for>
 	</skill>
-	<skill id="21008" levels="1" name="Release Seal on Agathion - Baby Panda">
+	<skill id="21008" levels="1" name="아가시온 봉인해제 - 아기팬더">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -86,7 +86,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="npcId" val="1505" />
 	</skill>
-	<skill id="21009" levels="1" name="Release Seal on Agathion - Bamboo Panda">
+	<skill id="21009" levels="1" name="아가시온 봉인해제 - 대나무팬더">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -94,7 +94,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="npcId" val="1506" />
 	</skill>
-	<skill id="21010" levels="1" name="Release Seal on Agathion - Sexy Panda">
+	<skill id="21010" levels="1" name="아가시온 봉인해제 - 섹시팬더">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -102,7 +102,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="npcId" val="1507" />
 	</skill>
-	<skill id="21011" levels="1" name="Energy Recovery">
+	<skill id="21011" levels="1" name="활력 유지">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -116,7 +116,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21012" levels="1" name="Energy Recovery">
+	<skill id="21012" levels="1" name="활력 유지">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -130,7 +130,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21013" levels="1" name="Energy Recovery">
+	<skill id="21013" levels="1" name="활력 유지">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -144,7 +144,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21014" levels="1" name="Scissors">
+	<skill id="21014" levels="1" name="가위">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
@@ -157,7 +157,7 @@
 			<target npcId="13183" />
 		</cond>
 	</skill>
-	<skill id="21015" levels="1" name="Rock">
+	<skill id="21015" levels="1" name="바위">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
@@ -169,7 +169,7 @@
 			<target npcId="13183" />
 		</cond>
 	</skill>
-	<skill id="21016" levels="1" name="Paper">
+	<skill id="21016" levels="1" name="보">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
@@ -181,7 +181,7 @@
 			<target npcId="13183" />
 		</cond>
 	</skill>
-	<skill id="21017" levels="1" name="Holiday Dream Weapon">
+	<skill id="21017" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -191,7 +191,7 @@
 			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
-	<skill id="21018" levels="1" name="Holiday Dream Weapon">
+	<skill id="21018" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -201,7 +201,7 @@
 			<mul order="0x30" stat="cAtk" val="1.25" />
 		</for>
 	</skill>
-	<skill id="21019" levels="1" name="Holiday Dream Weapon">
+	<skill id="21019" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -211,7 +211,7 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
-	<skill id="21020" levels="1" name="Holiday Dream Weapon">
+	<skill id="21020" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -221,7 +221,7 @@
 			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
-	<skill id="21021" levels="1" name="Holiday Dream Weapon">
+	<skill id="21021" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -231,7 +231,7 @@
 			<mul order="0x30" stat="cAtk" val="1.25" />
 		</for>
 	</skill>
-	<skill id="21022" levels="1" name="Holiday Dream Weapon">
+	<skill id="21022" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -241,7 +241,7 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
-	<skill id="21023" levels="1" name="Holiday Dream Weapon">
+	<skill id="21023" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -251,7 +251,7 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
-	<skill id="21024" levels="1" name="Holiday Dream Weapon">
+	<skill id="21024" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -261,7 +261,7 @@
 			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
-	<skill id="21025" levels="1" name="Holiday Dream Weapon">
+	<skill id="21025" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -271,7 +271,7 @@
 			<basemul order="0x30" stat="rCrit" val="0.25" />
 		</for>
 	</skill>
-	<skill id="21026" levels="1" name="Holiday Dream Weapon">
+	<skill id="21026" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -281,7 +281,7 @@
 			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
-	<skill id="21027" levels="1" name="Holiday Dream Weapon">
+	<skill id="21027" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -292,7 +292,7 @@
 			<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
-	<skill id="21028" levels="1" name="Holiday Dream Weapon">
+	<skill id="21028" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -302,7 +302,7 @@
 			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
-	<skill id="21029" levels="1" name="Holiday Dream Weapon">
+	<skill id="21029" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -312,7 +312,7 @@
 			<mul order="0x30" stat="cAtk" val="1.25" />
 		</for>
 	</skill>
-	<skill id="21030" levels="1" name="Holiday Dream Weapon">
+	<skill id="21030" levels="1" name="크리스마스 환상의 무기">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
@@ -322,7 +322,7 @@
 			<add order="0x40" stat="accCombat" val="5" />
 		</for>
 	</skill>
-	<skill id="21031" levels="1" name="Agathion Seal Release - Charming Cupid">
+	<skill id="21031" levels="1" name="아가시온 봉인 해제 - 화이트 큐피드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -330,7 +330,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1508" />
 	</skill>
-	<skill id="21032" levels="1" name="Agathion Seal Release - Naughty Cupid">
+	<skill id="21032" levels="1" name="아가시온 봉인 해제 - 다크 큐피드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -338,7 +338,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1509" />
 	</skill>
-	<skill id="21033" levels="1" name="Release Seal on Agathion - White Maneki Neko">
+	<skill id="21033" levels="1" name="아가시온 봉인 해제 - 하얀 마네키네코">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -346,7 +346,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1510" />
 	</skill>
-	<skill id="21034" levels="1" name="Release Seal on Agathion - Black Maneki Neko">
+	<skill id="21034" levels="1" name="아가시온 봉인 해제 - 검정 마네키네코">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -354,7 +354,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1511" />
 	</skill>
-	<skill id="21035" levels="1" name="Release Seal on Agathion - Brown Maneki Neko">
+	<skill id="21035" levels="1" name="아가시온 봉인 해제 - 갈색 마네키네코">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -362,7 +362,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1512" />
 	</skill>
-	<skill id="21036" levels="1" name="Release Seal on Agathion - One-eyed Bat Drove">
+	<skill id="21036" levels="1" name="아가시온 봉인 해제 - 외눈박이 박쥐 무리">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -370,7 +370,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1513" />
 	</skill>
-	<skill id="21037" levels="1" name="Release Seal on Agathion - Pegasus">
+	<skill id="21037" levels="1" name="아가시온 봉인 해제 - 페가수스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -378,7 +378,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1514" />
 	</skill>
-	<skill id="21038" levels="1" name="Release Seal on Agathion - Yellow-robed Tojigong">
+	<skill id="21038" levels="1" name="아가시온 봉인 해제 - 노란옷 토지공">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -386,7 +386,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1515" />
 	</skill>
-	<skill id="21039" levels="1" name="Release Seal on Agathion - Blue-robed Tojigong">
+	<skill id="21039" levels="1" name="아가시온 봉인 해제 - 파란옷 토지공">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -394,7 +394,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1516" />
 	</skill>
-	<skill id="21040" levels="1" name="Release Seal on Agathion - Green-robed Tojigong">
+	<skill id="21040" levels="1" name="아가시온 봉인 해제 - 녹색옷 토지공">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -402,7 +402,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1517" />
 	</skill>
-	<skill id="21041" levels="1" name="Release Seal on Agathion - Bugbear">
+	<skill id="21041" levels="1" name="아가시온 봉인 해제 - 버그베어">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -410,7 +410,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1518" />
 	</skill>
-	<skill id="21042" levels="1" name="Baguette's Blessing">
+	<skill id="21042" levels="1" name="바게트의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -418,7 +418,7 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="hitTime" val="3000" />
 	</skill>
-	<skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
+	<skill id="21043" levels="1" name="아가시온 봉인 해제 - 붉은 스모 선수">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -426,7 +426,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1519" />
 	</skill>
-	<skill id="21044" levels="1" name="Agathion Seal Cancel - Blue Sumo Wrestler Agathion">
+	<skill id="21044" levels="1" name="아가시온 봉인 해제 - 푸른 스모 선수">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -434,7 +434,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1520" />
 	</skill>
-	<skill id="21045" levels="1" name="Agathion Seal Cancel - Great Sumo Match">
+	<skill id="21045" levels="1" name="아가시온 봉인 해제 - 스모 대결투">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -442,7 +442,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1521" />
 	</skill>
-	<skill id="21046" levels="1" name="Agathion Seal Cancel - Button-Eyed Bear Doll">
+	<skill id="21046" levels="1" name="아가시온 봉인 해제 - 단추눈 곰인형">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -450,7 +450,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1522" />
 	</skill>
-	<skill id="21047" levels="1" name="Agathion Seal Cancel - God of Fortune">
+	<skill id="21047" levels="1" name="아가시온 봉인 해제 - 재물의 신">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -458,7 +458,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1523" />
 	</skill>
-	<skill id="21048" levels="1" name="Agathion Seal Cancel - Dryad">
+	<skill id="21048" levels="1" name="아가시온 봉인 해제 - 드라이어드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -466,7 +466,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1524" />
 	</skill>
-	<skill id="21049" levels="1" name="Agathion Seal Cancel - Wonboso">
+	<skill id="21049" levels="1" name="아가시온 봉인 해제 - 원보소">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -474,7 +474,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1525" />
 	</skill>
-	<skill id="21050" levels="1" name="Agathion Seal Cancel - Daewoonso">
+	<skill id="21050" levels="1" name="아가시온 봉인 해제 - 대운소">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -482,7 +482,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1526" />
 	</skill>
-	<skill id="21051" levels="1" name="Steam Beatle Mount">
+	<skill id="21051" levels="1" name="스팀 비틀 탑승">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -492,7 +492,7 @@
 			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="21052" levels="1" name="Bless the Body">
+	<skill id="21052" levels="1" name="블레스 더 바디">
 		<!-- Increases Max HP by 25% for 30 minutes -->
 		<!-- Update by pmq -->
 		<set name="mpInitialConsume" val="11" />
@@ -512,7 +512,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21053" levels="1" name="Bless the Soul">
+	<skill id="21053" levels="1" name="블레스 더 소울">
 		<!-- Increases Max MP by 25% for 30 minutes -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 10 </table>
@@ -537,7 +537,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21054" levels="1" name="Blessed Resurrection Ability">
+	<skill id="21054" levels="1" name="축복받은 부활의 능력">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours -->
 		<!-- Update by pmq -->
 		<set name="power" val="100" />
@@ -551,7 +551,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="21055" levels="1" name="Wind Walk">
+	<skill id="21055" levels="1" name="윈드 워크">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -575,7 +575,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21056" levels="1" name="Agility">
+	<skill id="21056" levels="1" name="어질리티">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -599,7 +599,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21057" levels="1" name="Reflect">
+	<skill id="21057" levels="1" name="리플렉트">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 5 </table>
@@ -622,7 +622,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21058" levels="1" name="Mana Regeneration">
+	<skill id="21058" levels="1" name="마나 리제네레이션">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#regMp"> 3.0 </table>
@@ -648,7 +648,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21059" levels="1" name="Greater Heal">
+	<skill id="21059" levels="1" name="그레이터 힐">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 22 </table>
@@ -673,7 +673,7 @@
 			<effect count="15" name="HealOverTime" val="#hotValue" abnormalLvl="1" abnormalType="LifeForce" />
 		</for>
 	</skill>
-	<skill id="21060" levels="1" name="Death Whisper">
+	<skill id="21060" levels="1" name="데스 위스퍼">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#cAtk"> 1.35 </table>
@@ -697,7 +697,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21061" levels="1" name="Agility">
+	<skill id="21061" levels="1" name="어질리티">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -721,7 +721,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21062" levels="1" name="Wild Magic">
+	<skill id="21062" levels="1" name="와일드 매직">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 11 </table>
@@ -745,7 +745,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21063" levels="1" name="Wind Walk">
+	<skill id="21063" levels="1" name="윈드 워크">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -769,7 +769,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21064" levels="1" name="Mana Regeneration">
+	<skill id="21064" levels="1" name="마나 리제네레이션">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#regMp"> 3.0 </table>
@@ -795,7 +795,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21065" levels="1" name="Reflect">
+	<skill id="21065" levels="1" name="리플렉트">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 5 </table>
@@ -818,7 +818,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21066" levels="1" name="Energy Recovery">
+	<skill id="21066" levels="1" name="활력 회복">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -833,7 +833,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21067" levels="1" name="Blessed Escape Ability">
+	<skill id="21067" levels="1" name="축복받은 귀환의 능력">
 		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours -->
 		<!-- Update by pmq -->
 		<set name="operateType" val="A1" />
@@ -842,7 +842,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="RECALL" />
 	</skill>
-	<skill id="21068" levels="1" name="Resist Unholy">
+	<skill id="21068" levels="1" name="레지스트 언홀리">
 		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 </table>
@@ -866,7 +866,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21069" levels="1" name="Wind Walk">
+	<skill id="21069" levels="1" name="윈드 워크">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -890,7 +890,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21070" levels="1" name="Death Whisper">
+	<skill id="21070" levels="1" name="데스 위스퍼">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#cAtk"> 1.35 </table>
@@ -914,7 +914,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21071" levels="1" name="Agility">
+	<skill id="21071" levels="1" name="어질리티">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -938,7 +938,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21072" levels="1" name="Wild Magic">
+	<skill id="21072" levels="1" name="와일드 매직">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 11 </table>
@@ -962,7 +962,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21073" levels="1" name="Mana Regeneration">
+	<skill id="21073" levels="1" name="마나 리제네레이션">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#regMp"> 3 </table>
@@ -988,7 +988,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21074" levels="1" name="Reflect">
+	<skill id="21074" levels="1" name="리플렉트">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 5 </table>
@@ -1011,7 +1011,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21075" levels="1" name="Greater Heal">
+	<skill id="21075" levels="1" name="그레이터 힐">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 22 </table>
@@ -1036,7 +1036,7 @@
 			<effect count="15" name="HealOverTime" val="#hotValue" abnormalType="LifeForce" />
 		</for>
 	</skill>
-	<skill id="21076" levels="1" name="Resist Unholy">
+	<skill id="21076" levels="1" name="레지스트 언홀리">
 		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 </table>
@@ -1060,7 +1060,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21077" levels="1" name="Wind Walk">
+	<skill id="21077" levels="1" name="윈드 워크">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -1084,7 +1084,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21078" levels="1" name="Death Whisper">
+	<skill id="21078" levels="1" name="데스 위스퍼">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#cAtk"> 1.35 </table>
@@ -1108,7 +1108,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21079" levels="1" name="Agility">
+	<skill id="21079" levels="1" name="어질리티">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 4 </table>
@@ -1132,7 +1132,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21080" levels="1" name="Wild Magic">
+	<skill id="21080" levels="1" name="와일드 매직">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 11 </table>
@@ -1156,7 +1156,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21081" levels="1" name="Mana Regeneration">
+	<skill id="21081" levels="1" name="마나 리제네레이션">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#regMp"> 3.0 </table>
@@ -1182,7 +1182,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21082" levels="1" name="Reflect">
+	<skill id="21082" levels="1" name="리플렉트">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 5 </table>
@@ -1205,7 +1205,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21083" levels="1" name="Greater Heal">
+	<skill id="21083" levels="1" name="그레이터 힐">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 22 </table>
@@ -1230,7 +1230,7 @@
 			<effect count="15" name="HealOverTime" val="#hotValue" abnormalLvl="1" abnormalType="LifeForce" />
 		</for>
 	</skill>
-	<skill id="21084" levels="1" name="Energy Recovery">
+	<skill id="21084" levels="1" name="활력 회복">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -1245,7 +1245,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21085" levels="1" name="Agathion Seal Cancel - Pomona">
+	<skill id="21085" levels="1" name="아가시온 봉인 해제 - 포모나">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -1253,7 +1253,7 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1527" />
 	</skill>
-	<skill id="21086" levels="1" name="Blessing of Love">
+	<skill id="21086" levels="1" name="사랑의 축복">
 		<!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse Delay 4 hours -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_ONE" />
@@ -1268,7 +1268,7 @@
 			<effect name="Invincible" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="Instant_Shield" />
 		</for>
 	</skill>
-	<skill id="21087" levels="1" name="Berserker Spirit">
+	<skill id="21087" levels="1" name="버서커 스피릿">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 20 minutes. -->
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_SELF" />
@@ -1290,7 +1290,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21088" levels="1" name="Summon Friend">
+	<skill id="21088" levels="1" name="친구 소환">
 		<!-- Summons your friend. -->
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -1304,7 +1304,7 @@
 		<set name="effectRange" val="-2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 	</skill>
-	<skill id="21089" levels="1" name="Dance of Shadows">
+	<skill id="21089" levels="1" name="댄스 오브 섀도우">
 		<!-- Receives the soul's help, and for 2 minutes, decreases one's own moving speed by 50% and invokes the ability not to receive the preemptive attack of monsters. -->
 		<!-- Update by rocknow -->
 		<set name="mpConsume" val="60" />
@@ -1320,7 +1320,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21090" levels="1" name="Soul of Phoenix">
+	<skill id="21090" levels="1" name="소울 오브 피닉스">
 		<!-- Receives the soul's help, and revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained. -->
 		<!-- Update by rocknow -->
 		<set name="magicLvl" val="79" />
@@ -1338,7 +1338,7 @@
 			<effect name="PhoenixBless" abnormalTime="1800" val="0" />
 		</for>
 	</skill>
-	<skill id="21091" levels="1" name="Agathion Seal Cancel - Weaver">
+	<skill id="21091" levels="1" name="아가시온 봉인 해제 - 직녀">
 		<!-- Removes the seal on the Agathion. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
@@ -1347,28 +1347,28 @@
 		<set name="operateType" val="A1" />
 		<set name="npcId" val="1528" />
 	</skill>
-	<skill id="21092" levels="1" name="Theme - Love">
+	<skill id="21092" levels="1" name="테마 - 타운">
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="60000" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="21093" levels="1" name="Theme - Hero">
+	<skill id="21093" levels="1" name="테마 - 영웅">
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="60000" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="21094" levels="1" name="Theme - Theme Park">
+	<skill id="21094" levels="1" name="테마 - 테마 파크">
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="60000" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="21095" levels="1" name="Blessed Resurrection">
+	<skill id="21095" levels="1" name="축복받은 부활">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
@@ -1381,7 +1381,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="21096" levels="1" name="Ability of Cool Watermelon">
+	<skill id="21096" levels="1" name="시원한 수박의 능력">
 		<!-- For 30 minutes, increases critical rate by 30% and critical power by 35%. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />
@@ -1397,7 +1397,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21097" levels="1" name="Summon Friend">
+	<skill id="21097" levels="1" name="친구 소환">
 		<!-- Summons your friend. -->
 		<!-- Update by pmq -->
 		<set name="target" val="TARGET_PARTY_MEMBER" />
@@ -1411,7 +1411,7 @@
 		<set name="effectRange" val="-2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 	</skill>
-	<skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">
+	<skill id="21098" levels="1" name="불멸의 모험자 영혼의 능력">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />
@@ -1429,7 +1429,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21099" levels="1" name="Great Warrior's Soul Power: Strength">
+	<skill id="21099" levels="1" name="강인한 전사 영혼의 능력">
 		<!-- For five minutes, the Great Spirit increases Atk.Spd. by 20%, damage by 10% and P.Def. by 20%. You recover HP equal to 5% of the melee damage. -->
 		<!-- Update by rocknow -->
 		<set name="target" val="TARGET_SELF" />

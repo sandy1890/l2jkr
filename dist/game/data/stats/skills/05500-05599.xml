@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5500" levels="1" name="Black Dragon Claw">
+	<skill id="5500" levels="1" name="블랙 드래곤 클러">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="castRange" val="40" />
@@ -22,7 +22,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="260" abnormalVisualEffect="bleed" effectPower="90" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />
 		</for>
 	</skill>
-	<skill id="5501" levels="1" name="Stuns">
+	<skill id="5501" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="castRange" val="40" />
@@ -43,7 +43,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
 		</for>
 	</skill>
-	<skill id="5502" levels="1" name="Stuns">
+	<skill id="5502" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="hitTime" val="1500" />
@@ -62,7 +62,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
 		</for>
 	</skill>
-	<skill id="5503" levels="1" name="Ultimate Guard">
+	<skill id="5503" levels="1" name="얼터미트 가드">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="aggroPoints" val="100" />
@@ -81,7 +81,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5504" levels="1" name="Shield Defense">
+	<skill id="5504" levels="1" name="실드 디펜스">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="magicLvl" val="1" />
@@ -91,7 +91,7 @@
 			<mul order="0x30" stat="rShld" val="1.9" />
 		</for>
 	</skill>
-	<skill id="5505" levels="1" name="Fire Blossom">
+	<skill id="5505" levels="1" name="블러섬 오브 파이어">
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -105,7 +105,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5506" levels="1" name="Water Blossom">
+	<skill id="5506" levels="1" name="블러섬 오브 워터">
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -119,7 +119,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5507" levels="1" name="Wind Blossom">
+	<skill id="5507" levels="1" name="블러섬 오브 윈드">
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="2" /> <!-- Wind -->
@@ -133,7 +133,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5508" levels="1" name="Earth Blossom">
+	<skill id="5508" levels="1" name="블러섬 오브 어스">
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -147,7 +147,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5509" levels="1" name="Fire Power">
+	<skill id="5509" levels="1" name="파이어 프로스퍼">
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
@@ -167,7 +167,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5510" levels="1" name="Water Power">
+	<skill id="5510" levels="1" name="워터 프로스퍼">
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
@@ -187,7 +187,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5511" levels="1" name="Wind Power">
+	<skill id="5511" levels="1" name="윈드 프로스퍼">
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
@@ -207,7 +207,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5512" levels="1" name="Earth Power">
+	<skill id="5512" levels="1" name="어스 프로스퍼">
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="3330" />
@@ -227,31 +227,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5513" levels="1" name="Fire Taint">
+	<skill id="5513" levels="1" name="테인트 오브 파이어">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
 	</skill>
-	<skill id="5514" levels="1" name="Water Taint">
+	<skill id="5514" levels="1" name="테인트 오브 워터">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
 	</skill>
-	<skill id="5515" levels="1" name="Wind Taint">
+	<skill id="5515" levels="1" name="테인트 오브 윈드">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
 	</skill>
-	<skill id="5516" levels="1" name="Earth Taint">
+	<skill id="5516" levels="1" name="테인트 오브 어스">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
 	</skill>
-	<skill id="5517" levels="1" name="Nurture">
+	<skill id="5517" levels="1" name="너쳐">
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
@@ -264,13 +264,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5518" levels="1" name="Last Stand">
+	<skill id="5518" levels="1" name="라스트 스탠드">
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5519" levels="1" name="Chain Buff - Power Up">
+	<skill id="5519" levels="1" name="체인버프 - 파워 업">
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -287,7 +287,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5520" levels="1" name="Chain Buff - Vampiric Shield">
+	<skill id="5520" levels="1" name="체인버프 - 뱀피릭 실드">
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -303,7 +303,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5521" levels="1" name="Chain Buff - Critical Sense">
+	<skill id="5521" levels="1" name="체인버프 - 크리티컬 센스">
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -319,7 +319,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5522" levels="1" name="Chain Magic - Dark Explosion">
+	<skill id="5522" levels="1" name="체인매직 - 다크 익스플로젼">
 		<set name="castRange" val="500" />
 		<set name="dependOnTargetBuff" val="0.2" /> <!-- NOTE: Divine Inspiration/Dance/Song/Trigger slots are ignored, so using (20 Default Buff Slots / 100) -->
 		<set name="effectRange" val="900" />
@@ -334,7 +334,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="85" />
 	</skill>
-	<skill id="5523" levels="1" name="Chain Magic - Unholy Castle">
+	<skill id="5523" levels="1" name="체인매직 - 언홀리 캔슬">
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />
@@ -355,7 +355,7 @@
 			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
 		</for>
 	</skill>
-	<skill id="5524" levels="1" name="Chain Buff - Resistance to Bow and Magic attacks">
+	<skill id="5524" levels="1" name="체인버프 - 보우 앤 매직 레지스턴스">
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -372,7 +372,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5525" levels="1" name="Chain Buff - Resistance to Melee Attacks">
+	<skill id="5525" levels="1" name="체인버프 - 밀리 어택 레지스턴스">
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -396,7 +396,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5526" levels="1" name="Challenger's Blessing">
+	<skill id="5526" levels="1" name="블레싱 오브 챌린저">
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -415,7 +415,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5527" levels="1" name="Overflow">
+	<skill id="5527" levels="1" name="오버 플로우">
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -428,14 +428,14 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_PARTY_OTHER" />
 	</skill>
-	<skill id="5528" levels="1" name="Self-Destruct">
+	<skill id="5528" levels="1" name="셀프 블라스팅">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5529" levels="12" name="Surrender to the Unholy">
+	<skill id="5529" levels="12" name="서렌더 투 언홀리">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 23 31 40 49 57 61 64 66 68 68 </table>
@@ -461,7 +461,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5530" levels="12" name="Blood Storm">
+	<skill id="5530" levels="12" name="블리드 스톰">
 		<!-- Update by pmq -->
 		<table name="#mpConsume"> 13 20 29 39 50 62 72 77 80 83 85 85 </table>
 		<table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 1876.0 2112.0 2320.0 2487.0 2617.0 </table>
@@ -486,7 +486,7 @@
 		<set name="trait" val="BLEED" />
 		<effect count="7" name="DamOverTime" abnormalTime="3" val="#bleedpower" abnormalVisualEffect="bleed" abnormalLvl="7" abnormalType="Bleed" /> 	
 	</skill>
-	<skill id="5531" levels="1" name="Direction-Beleth Magic Skill 1">
+	<skill id="5531" levels="1" name="연출-베레스마법스킬1">
 		<!-- Update by pmq -->
 		<set name="magicLvl" val="95" />
 		<set name="power" val="140" />
@@ -499,27 +499,27 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="5532" levels="1" name="Direction-Beleth Summon Skill 1">
+	<skill id="5532" levels="1" name="연출-베레스소환스킬1">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
-	<skill id="5533" levels="1" name="Direction-Beleth Self-Destruction Skill 1">
+	<skill id="5533" levels="1" name="연출-베레스자폭스킬1">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
-	<skill id="5534" levels="1" name="Direction-Beleth Transformation Skill 1">
+	<skill id="5534" levels="1" name="연출-베레스변신스킬1">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5535" levels="1" name="Little Angel Cuteness Trick">
+	<skill id="5535" levels="1" name="리틀 엔젤 아가시온 큐트트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -527,7 +527,7 @@
 			<player agathionId="16031" />
 		</cond>
 	</skill>
-	<skill id="5536" levels="1" name="Little Devil Cuteness Trick">
+	<skill id="5536" levels="1" name="리틀 데빌 아가시온 큐트트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -535,7 +535,7 @@
 			<player agathionId="16032" />
 		</cond>
 	</skill>
-	<skill id="5537" levels="1" name="Rudolph Cuteness Trick">
+	<skill id="5537" levels="1" name="루돌프 아가시온 큐트트릭">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -543,7 +543,7 @@
 			<player agathionId="16033" />
 		</cond>
 	</skill>
-	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
+	<skill id="5538" levels="1" name="리틀 엔젤 아가시온 스페셜 스킬 - 폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -552,7 +552,7 @@
 			<player agathionId="16031" />
 		</cond>
 	</skill>
-	<skill id="5539" levels="1" name="Little Angel Agathion Special Skill - Mysterious Power">
+	<skill id="5539" levels="1" name="리틀 엔젤 아가시온 스페셜 스킬 - 의문의 능력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -566,7 +566,7 @@
 			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
-	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Return">
+	<skill id="5540" levels="1" name="리틀 엔젤 아가시온 스페셜 스킬 - 축복받은 귀환의 능력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
@@ -577,7 +577,7 @@
 			<player agathionId="16031" />
 		</cond>
 	</skill>
-	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Resurrection">
+	<skill id="5541" levels="1" name="리틀 엔젤 아가시온 스페셜 스킬 - 축복받은 부활의 능력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
@@ -591,7 +591,7 @@
 			<player agathionId="16031" />
 		</cond>
 	</skill>
-	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
+	<skill id="5542" levels="1" name="리틀 데벨 아가시온 스페셜 스킬 - 폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -600,7 +600,7 @@
 			<player agathionId="16032" />
 		</cond>
 	</skill>
-	<skill id="5543" levels="1" name="Little Devil Agathion Special Skill - Mysterious Power">
+	<skill id="5543" levels="1" name="리틀 데벨 아가시온 스페셜 스킬 - 의문의 능력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -614,7 +614,7 @@
 			<effect name="BigHead" abnormalTime="120" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
-	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Return">
+	<skill id="5544" levels="1" name="리틀 데벨 아가시온 스페셜 스킬 - 축복받은 귀환의 능력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
@@ -625,7 +625,7 @@
 			<player agathionId="16032" />
 		</cond>
 	</skill>
-	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Resurrection">
+	<skill id="5545" levels="1" name="리틀 데벨 아가시온 스페셜 스킬 - 축복받은 부활의 능력">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
@@ -639,14 +639,14 @@
 			<player agathionId="16032" />
 		</cond>
 	</skill>
-	<skill id="5546" levels="1" name="Alert">
+	<skill id="5546" levels="1" name="경보">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5547" levels="1" name="Maximum Ability">
+	<skill id="5547" levels="1" name="맥시멈 어빌리티">
 		<!-- Confirmed CT2.5 -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
@@ -665,7 +665,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5548" levels="4" name="Critical Spiritual Energy Attack">
+	<skill id="5548" levels="4" name="크리티컬 소울">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 20 40 58 70 </table>
 		<set name="isTriggeredSkill" val="true" />
@@ -681,12 +681,12 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5549" levels="1" name="Physical Short-range Weakness">
+	<skill id="5549" levels="1" name="물리 근거리 약점">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="5550" levels="12" name="NPC Trigger Stun">
+	<skill id="5550" levels="12" name="트리거 스턴">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#triggeredLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="activationChance" val="15" />
@@ -697,7 +697,7 @@
 		<set name="triggeredId" val="5551" />
 		<set name="triggeredLevel" val="#triggeredLvl" />
 	</skill>
-	<skill id="5551" levels="12" name="Stun">
+	<skill id="5551" levels="12" name="쇼크">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -717,7 +717,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
 		</for>
 	</skill>
-	<skill id="5552" levels="12" name="NPC Hill Up">
+	<skill id="5552" levels="12" name="힐 업">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 10 20 30 40 50 60 70 80 90 100 110 120 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -727,7 +727,7 @@
 			<add order="0x40" stat="gainHp" val="#power" />
 		</for>
 	</skill>
-	<skill id="5553" levels="12" name="NPC HP Region">
+	<skill id="5553" levels="12" name="회복력">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 1.2 1.3 1.4 1.5 1.75 2 3 4 5 6 8.5 11 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -737,7 +737,7 @@
 			<mul order="0x30" stat="regHp" val="#power" />
 		</for>
 	</skill>
-	<skill id="5554" levels="12" name="NPC Silence Resistance enhanced">
+	<skill id="5554" levels="12" name="사일런스 내성 강화">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#vuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -747,7 +747,7 @@
 			<add order="0x40" stat="derangementVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="5555" levels="12" name="NPC Silence Resistance weakened">
+	<skill id="5555" levels="12" name="사일런스 내성 약화">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#vuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -757,7 +757,7 @@
 			<sub order="0x40" stat="derangementVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="5556" levels="1" name="Protection Power">
+	<skill id="5556" levels="1" name="프로텍션 파워">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered Skill for Protection of Rune/Elemental/Alignment -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -779,7 +779,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5557" levels="1" name="Protection of Elemental">
+	<skill id="5557" levels="1" name="블레싱 오브 레지스턴스">
 		<!-- Not Used Anymore -->
 		<!-- Update by pmq -->
 		<set name="magicLvl" val="82" />
@@ -797,7 +797,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5558" levels="1" name="Protection of Alignment">
+	<skill id="5558" levels="1" name="프로텍션 오브 얼라이먼트">
 		<!-- Not Used Anymore -->
 		<!-- Update by pmq -->
 		<set name="magicLvl" val="82" />
@@ -813,7 +813,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5559" levels="1" name="Physical Pose">
+	<skill id="5559" levels="1" name="피지컬 포스">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered Skill for Fighter's/Archer's Will -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -830,7 +830,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5560" levels="1" name="Archer's Will">
+	<skill id="5560" levels="1" name="아쳐스 윌">
 		<!-- Not Used Anymore -->
 		<!-- Update by pmq -->
 		<set name="weaponsAllowed" val="Bow,Crossbow" /> <!-- Bow/Crossbow -->
@@ -849,7 +849,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5561" levels="3" name="Seed of Revenge">
+	<skill id="5561" levels="3" name="시드 오브 리벤지">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
@@ -870,7 +870,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5562" levels="3" name="Spirit of Phoenix">
+	<skill id="5562" levels="3" name="스피릿 오브 피닉스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
@@ -892,7 +892,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5563" levels="3" name="Eva's Will">
+	<skill id="5563" levels="3" name="에바스 윌">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
@@ -913,7 +913,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5564" levels="3" name="Pain of Shilen">
+	<skill id="5564" levels="3" name="페인 오브 실렌">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#absorbDam"> 0 0 8 </table>
@@ -934,7 +934,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5565" levels="1" name="Expose Weak Point">
+	<skill id="5565" levels="1" name="익스포즈 위크 포인트">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
@@ -959,7 +959,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5566" levels="1" name="Post of Destruction">
+	<skill id="5566" levels="1" name="포스 오브 디스트럭션">
 		<!-- Update by pmq -->
 		<set name="power" val="2516" />
 		<set name="magicLvl" val="81" />
@@ -974,7 +974,7 @@
 			<using kind="Fist, Dual Fist" />
 		</cond>
 	</skill>
-	<skill id="5567" levels="1" name="Flame Armor">
+	<skill id="5567" levels="1" name="플레임 아머">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -986,7 +986,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5568" levels="1" name="Frost Armor">
+	<skill id="5568" levels="1" name="프로스트 아머">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -1006,7 +1006,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5569" levels="1" name="Hurricane Armor">
+	<skill id="5569" levels="1" name="허리케인 아머">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -1026,7 +1026,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5570" levels="1" name="Excessive Loyalty">
+	<skill id="5570" levels="1" name="익세시브 로열티">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1043,7 +1043,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5571" levels="1" name="Mutual Response">
+	<skill id="5571" levels="1" name="뮤추얼 리스폰스">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -1058,7 +1058,7 @@
 			<effect name="ManaHealByLevel" noicon="1" val="73" />
 		</for>
 	</skill>
-	<skill id="5572" levels="1" name="Warrior Ability - Haste">
+	<skill id="5572" levels="1" name="워리어 어빌리티 - 헤이스트">
 		<!-- CT2.5 retail confirmed -->
 		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1076,7 +1076,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5573" levels="1" name="Knight Ability - Defense">
+	<skill id="5573" levels="1" name="나이트 어빌리티 - 디펜스">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -1094,7 +1094,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5574" levels="1" name="Log Ability - Critical Chance">
+	<skill id="5574" levels="1" name="로그 어빌리티 - 크리티컬 챈스">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -1111,7 +1111,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5575" levels="1" name="Wizard Ability - Mana Steal">
+	<skill id="5575" levels="1" name="위자드 어빌리티 - 마나 스틸">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
@@ -1122,7 +1122,7 @@
 			<effect name="ManaHealByLevel" noicon="1" val="10" />
 		</for>
 	</skill>
-	<skill id="5576" levels="1" name="Enchanter Ability - Barrier">
+	<skill id="5576" levels="1" name="인챈터 어빌리티 - 배리어">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -1137,7 +1137,7 @@
 			<effect name="Invincible" abnormalTime="5" val="0" special="invincible" abnormalLvl="1" abnormalType="sub_trigger_defence" />
 		</for>
 	</skill>
-	<skill id="5577" levels="1" name="Healer Ability - Heal">
+	<skill id="5577" levels="1" name="힐러 어빌리티 - 힐">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1149,7 +1149,7 @@
 			<effect name="Heal" noicon="1" val="150" />
 		</for>
 	</skill>
-	<skill id="5578" levels="1" name="Summoner Ability - Spirit">
+	<skill id="5578" levels="1" name="소환사 어빌리티 - 스피릿">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -1169,7 +1169,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5579" levels="1" name="Cubic Cure">
+	<skill id="5579" levels="1" name="큐빅 큐어">
 		<!-- Smart Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="408" />
@@ -1179,7 +1179,7 @@
 		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="5580" levels="1" name="Divine Beast Bite">
+	<skill id="5580" levels="1" name="디바인 비스트 바이트">
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
@@ -1192,7 +1192,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="5581" levels="1" name="Divine Beast Stun Attack">
+	<skill id="5581" levels="1" name="디바인 비스트 스턴 어택">
 		<set name="magicLvl" val="80" />
 		<set name="power" val="704" />
 		<set name="nextActionAttack" val="true" />
@@ -1210,7 +1210,7 @@
 			<effect name="Stun" val="0" effectPower="100" effectType="STUN" abnormalLvl="1" abnormalType="stun" /> <!-- using 1 second due abnormal don't have abnormal time -->
 		</for>
 	</skill>
-	<skill id="5582" levels="1" name="Divine Beast Fire Breath">
+	<skill id="5582" levels="1" name="디바인 비스트 파이어 브레스">
 		<set name="mpConsume" val="80" />
 		<set name="power" val="875" />
 		<set name="magicLvl" val="80" />
@@ -1227,7 +1227,7 @@
 		<set name="skillRadius" val="250" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="5583" levels="1" name="Divine Beast Roar">
+	<skill id="5583" levels="1" name="디바인 비스트 로어">
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="2" />
@@ -1245,7 +1245,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5584" levels="1" name="Wolf Howl">
+	<skill id="5584" levels="1" name="울프 하울링">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="8000" />
@@ -1254,7 +1254,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
 	</skill>
-	<skill id="5585" levels="1" name="Strider Roar">
+	<skill id="5585" levels="1" name="스트라이더 로어">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="8000" />
@@ -1263,7 +1263,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
 	</skill>
-	<skill id="5586" levels="3" name="Pet Might">
+	<skill id="5586" levels="3" name="펫 마이트">
 		<table name="#mpConsume"> 4 8 14 </table>
 		<table name="#mpInitialConsume"> 1 2 4 </table>
 		<table name="#magicLvl"> 7 20 40 </table>
@@ -1288,7 +1288,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5587" levels="3" name="Pet Shield">
+	<skill id="5587" levels="3" name="펫 실드">
 		<table name="#mpConsume"> 4 9 16 </table>
 		<table name="#mpInitialConsume"> 1 3 4 </table>
 		<table name="#magicLvl"> 7 25 44 </table>
@@ -1313,7 +1313,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5588" levels="3" name="Pet Focus">
+	<skill id="5588" levels="3" name="펫 포커스">
 		<table name="#mpConsume"> 9 16 19 </table>
 		<table name="#mpInitialConsume"> 3 4 5 </table>
 		<table name="#magicLvl"> 25 44 52 </table>
@@ -1338,7 +1338,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5589" levels="3" name="Pet Death Whisper">
+	<skill id="5589" levels="3" name="펫 데스 위스퍼">
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<table name="#mpInitialConsume"> 4 5 6 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
@@ -1363,7 +1363,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5590" levels="12" name="Pet Battle Heal">
+	<skill id="5590" levels="12" name="펫 배틀 힐">
 		<table name="#mpConsume"> 10 18 27 37 48 59 68 73 76 78 79 79 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpInitialConsume"> 3 5 7 10 12 15 17 19 19 20 20 20 </table>
@@ -1381,7 +1381,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="5591" levels="8" name="Light Flow">
+	<skill id="5591" levels="8" name="라이프 플로우">
 		<!-- Confirmed CT2.5 -->
 		<!-- Curse of Life Flow effect -->
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
@@ -1398,7 +1398,7 @@
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="5592" levels="16" name="Lightning Barrier">
+	<skill id="5592" levels="16" name="라이트닝 배리어">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 80 81 81 81 82 82 82 83 83 83 84 84 85 85 85 85 </table>
 		<table name="#power"> 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 </table>
@@ -1420,7 +1420,7 @@
 			<effect name="Paralyze" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="5593" levels="1" name="Vampiric Mana Burn">
+	<skill id="5593" levels="1" name="뱀피릭 마나 번">
 		<!-- Confirmed CT2.5 -->
 		<!-- Darion Skills -->
 		<set name="absorbPart" val="0.8" />
@@ -1440,7 +1440,7 @@
 			<effect name="ManaDamOverTime" noicon="1" val="182" />
 		</for>
 	</skill>
-	<skill id="5594" levels="1" name="Poison">
+	<skill id="5594" levels="1" name="독">
 		<!-- Update by pmq -->
 		<set name="bloodPower" val="11" />
 		<set name="power" val="60" />
@@ -1453,7 +1453,7 @@
 		<set name="trait" val="POISON" />
 		<effect count="7" name="Poisoning" abnormalTime="1" val="365" abnormalVisualEffect="poison" abnormalLvl="11" abnormalType="Poison" />
 	</skill>
-	<skill id="5595" levels="1" name="Bleed">
+	<skill id="5595" levels="1" name="출혈">
 		<!-- Update by pmq -->
 		<set name="bloodPower" val="11" />
 		<set name="power" val="60" />
@@ -1466,7 +1466,7 @@
 		<set name="trait" val="BLEED" />
 		<effect count="7" name="DamOverTime" abnormalTime="1" val="365" abnormalVisualEffect="bleed" abnormalLvl="11" abnormalType="Bleed" />
 	</skill>
-	<skill id="5596" levels="1" name="Flame">
+	<skill id="5596" levels="1" name="화염">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<set name="element" val="0" /> <!-- Fire -->
@@ -1484,7 +1484,7 @@
 			<effect count="5" name="DamOverTime" val="200" abnormalVisualEffect="bleed" abnormalLvl="10" abnormalType="dot_attr" />
 		</for>
 	</skill>
-	<skill id="5597" levels="1" name="Invalid Skill cancel">
+	<skill id="5597" levels="1" name="스킬 캔슬 무효화">
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -1492,7 +1492,7 @@
 			<sub order="0x40" stat="cancel" val="10000" />
 		</for>
 	</skill>
-	<skill id="5598" levels="12" name="Flash Resistance">
+	<skill id="5598" levels="12" name="석화 내성">
 		<!-- Update by pmq -->
 		<table name="#resist"> 0.9 0.9 0.8 0.8 0.8 0.7 0.7 0.7 0.6 0.6 0.6 0.5 </table>
 		<set name="magicLvl" val="1" />
@@ -1505,7 +1505,7 @@
 			<mul order="0x30" stat="stunVuln" val="#resist" />
 		</for>
 	</skill>
-	<skill id="5599" levels="12" name="Stun Resistance">
+	<skill id="5599" levels="12" name="스턴 내성">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#vuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<set name="magicLvl" val="#magicLvl" />

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2100" levels="1" name="Escape: 1 second">
+	<skill id="2100" levels="1" name="1초 귀환">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2101" levels="1" name="Feed: General Strider">
+	<skill id="2101" levels="1" name="일반 스트라이더용 사료">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="feed" val="200" />
@@ -16,7 +16,7 @@
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2102" levels="1" name="Feed: Clan Hall Strider">
+	<skill id="2102" levels="1" name="아지트산 스트라이더용 사료">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="feed" val="450" />
@@ -25,7 +25,7 @@
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2103" levels="1" name="Mystery Potion">
+	<skill id="2103" levels="1" name="의문의 물약">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -43,7 +43,7 @@
 			<effect name="BigHead" abnormalTime="300" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
-	<skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
+	<skill id="2104" levels="1" name="고급 무급 정령탄압축팩">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -59,7 +59,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2105" levels="1" name="Greater Compressed Package of Soulshots: D-grade">
+	<skill id="2105" levels="1" name="고급 정령탄압축팩-D그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -75,7 +75,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2106" levels="1" name="Greater Compressed Package of Soulshots: C-grade">
+	<skill id="2106" levels="1" name="고급 정령탄압축팩-C그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -91,7 +91,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2107" levels="1" name="Greater Compressed Package of Soulshots: B-grade">
+	<skill id="2107" levels="1" name="고급 정령탄압축팩-B그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -107,7 +107,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2108" levels="1" name="Greater Compressed Package of Soulshots: A-grade">
+	<skill id="2108" levels="1" name="고급 정령탄압축팩-A그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -123,7 +123,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2109" levels="1" name="Greater Compressed Package of Soulshots: S-grade">
+	<skill id="2109" levels="1" name="고급 정령탄압축팩-S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -139,7 +139,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2110" levels="1" name="Greater Compressed Package of Spiritshots: No-grade">
+	<skill id="2110" levels="1" name="고급 무급 마정탄압축팩">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -155,7 +155,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2111" levels="1" name="Greater Compressed Package of Spiritshots: D-grade">
+	<skill id="2111" levels="1" name="고급 마정탄압축팩-D그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -171,7 +171,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2112" levels="1" name="Greater Compressed Package of Spiritshots: C-grade">
+	<skill id="2112" levels="1" name="고급 마정탄압축팩-C그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -187,7 +187,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2113" levels="1" name="Greater Compressed Package of Spiritshots: B-grade">
+	<skill id="2113" levels="1" name="고급 마정탄압축팩-B그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -203,7 +203,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2114" levels="1" name="Greater Compressed Package of Spiritshots: A-grade">
+	<skill id="2114" levels="1" name="고급 마정탄압축팩-A그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -219,7 +219,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2115" levels="1" name="Greater Compressed Package of Spiritshots: S-grade">
+	<skill id="2115" levels="1" name="고급 마정탄압축팩-S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -235,7 +235,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2116" levels="1" name="Greater Compressed Package of Blessed Spiritshots: No-grade">
+	<skill id="2116" levels="1" name="고급 무급 축마정탄압축팩">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -251,7 +251,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2117" levels="1" name="Greater Compressed Package of Blessed Spiritshots: D-grade">
+	<skill id="2117" levels="1" name="고급 축마정탄압축팩-D그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -267,7 +267,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2118" levels="1" name="Greater Compressed Package of Blessed Spiritshots: C-grade">
+	<skill id="2118" levels="1" name="고급 축마정탄압축팩-C그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -283,7 +283,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2119" levels="1" name="Greater Compressed Package of Blessed Spiritshots: B-grade">
+	<skill id="2119" levels="1" name="고급 축마정탄압축팩-B그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -299,7 +299,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2120" levels="1" name="Greater Compressed Package of Blessed Spiritshots: A-grade">
+	<skill id="2120" levels="1" name="고급 축마정탄압축팩-A그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -315,7 +315,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2121" levels="1" name="Greater Compressed Package of Blessed Spiritshots: S-grade">
+	<skill id="2121" levels="1" name="고급 축마정탄압축팩-S그레이드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1000" />
@@ -331,7 +331,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2122" levels="1" name="Facelifting Potion">
+	<skill id="2122" levels="1" name="성형의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -340,7 +340,7 @@
 		<set name="faceId" val="0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2123" levels="1" name="Facelifting Potion">
+	<skill id="2123" levels="1" name="성형의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -349,7 +349,7 @@
 		<set name="faceId" val="1" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2124" levels="1" name="Facelifting Potion">
+	<skill id="2124" levels="1" name="성형의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -358,7 +358,7 @@
 		<set name="faceId" val="2" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2125" levels="1" name="Dye Potion">
+	<skill id="2125" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -367,7 +367,7 @@
 		<set name="hairColorId" val="0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2126" levels="1" name="Dye Potion">
+	<skill id="2126" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -376,7 +376,7 @@
 		<set name="hairColorId" val="1" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2127" levels="1" name="Dye Potion">
+	<skill id="2127" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -385,7 +385,7 @@
 		<set name="hairColorId" val="2" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2128" levels="1" name="Dye Potion">
+	<skill id="2128" levels="1" name="염색의 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -394,7 +394,7 @@
 		<set name="hairColorId" val="3" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2129" levels="1" name="Hair Style Change Potion">
+	<skill id="2129" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -403,7 +403,7 @@
 		<set name="hairStyleId" val="0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2130" levels="1" name="Hair Style Change Potion">
+	<skill id="2130" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -412,7 +412,7 @@
 		<set name="hairStyleId" val="1" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2131" levels="1" name="Hair Style Change Potion">
+	<skill id="2131" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -421,7 +421,7 @@
 		<set name="hairStyleId" val="2" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2132" levels="1" name="Hair Style Change Potion">
+	<skill id="2132" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -430,7 +430,7 @@
 		<set name="hairStyleId" val="3" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2133" levels="1" name="Hair Style Change Potion">
+	<skill id="2133" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -439,7 +439,7 @@
 		<set name="hairStyleId" val="4" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2134" levels="1" name="Hair Style Change Potion">
+	<skill id="2134" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -451,7 +451,7 @@
 			<player sex="1" />
 		</cond>
 	</skill>
-	<skill id="2135" levels="1" name="Hair Style Change Potion">
+	<skill id="2135" levels="1" name="헤어체인지 물약">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -463,7 +463,7 @@
 			<player sex="1" />
 		</cond>
 	</skill>
-	<skill id="2136" levels="1" name="Rice Cake">
+	<skill id="2136" levels="1" name="모찌">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -475,7 +475,7 @@
 			<effect name="ManaHealPercent" noicon="1" val="1" />
 		</for>
 	</skill>
-	<skill id="2137" levels="1" name="Summon Regular Tree">
+	<skill id="2137" levels="1" name="일반 트리 소환">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
@@ -486,7 +486,7 @@
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2138" levels="1" name="Summon Special Tree">
+	<skill id="2138" levels="1" name="고급 트리 소환">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
@@ -497,7 +497,7 @@
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2139" levels="1" name="Special Tree Recovery Bonus">
+	<skill id="2139" levels="1" name="고급 트리 회복보너스">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -511,157 +511,157 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2140" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2140" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2141" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2141" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2142" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2142" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2143" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2143" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2144" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2144" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2145" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2145" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2146" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2146" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2147" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2147" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2148" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2148" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2149" levels="1" name="Item - Carol Sound Crystal">
+	<skill id="2149" levels="1" name="a,Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2150" levels="1" name="Soulshot: D-Grade">
+	<skill id="2150" levels="1" name="정령탄 D급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2151" levels="1" name="Soulshot: C-Grade">
+	<skill id="2151" levels="1" name="정령탄 C급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2152" levels="1" name="Soulshot: B-Grade">
+	<skill id="2152" levels="1" name="정령탄 B급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2153" levels="1" name="Soulshot: A-Grade">
+	<skill id="2153" levels="1" name="정령탄 A급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2154" levels="1" name="Soulshot: S-Grade">
+	<skill id="2154" levels="1" name="정령탄 S급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2155" levels="1" name="Spiritshot: D-Grade">
+	<skill id="2155" levels="1" name="마정탄 D급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2156" levels="1" name="Spiritshot: C-Grade">
+	<skill id="2156" levels="1" name="마정탄 C급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2157" levels="1" name="Spiritshot: B-Grade">
+	<skill id="2157" levels="1" name="마정탄 B급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2158" levels="1" name="Spiritshot: A-Grade">
+	<skill id="2158" levels="1" name="마정탄 A급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2159" levels="1" name="Spiritshot: S-Grade">
+	<skill id="2159" levels="1" name="마정탄 S급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2160" levels="1" name="Blessed Spiritshot: D-Grade">
+	<skill id="2160" levels="1" name="축복받은 마정탄 D급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2161" levels="1" name="Blessed Spiritshot: C-Grade">
+	<skill id="2161" levels="1" name="축복받은 마정탄 C급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2162" levels="1" name="Blessed Spiritshot: B-Grade">
+	<skill id="2162" levels="1" name="축복받은 마정탄 B급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2163" levels="1" name="Blessed Spiritshot: A-Grade">
+	<skill id="2163" levels="1" name="축복받은 마정탄 A급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2164" levels="1" name="Blessed Spiritshot: S-Grade">
+	<skill id="2164" levels="1" name="축복받은 마정탄 S급">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2165" levels="1" name="Energy Stone">
+	<skill id="2165" levels="1" name="에너지 스톤">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -672,7 +672,7 @@
 			<effect count="2" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
-	<skill id="2166" levels="2" name="CP Gauge Potion">
+	<skill id="2166" levels="2" name="고급 투지의 물약">
 		<table name="#amount"> 50 200 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -682,7 +682,7 @@
 			<effect name="CpHeal" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="2167" levels="4" name="Scroll of SP">
+	<skill id="2167" levels="4" name="SP 주문서">
 		<table name="#power"> 500 5000 100000 500000 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -694,7 +694,7 @@
 		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2168" levels="6" name="Raid Blessing">
+	<skill id="2168" levels="6" name="행운의 부적">
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -707,7 +707,7 @@
 			<effect name="CharmOfLuck" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="reduce_drop_penalty" />
 		</for>
 	</skill>
-	<skill id="2169" levels="2" name="Magic Haste Potion">
+	<skill id="2169" levels="2" name="고급 마법시전속도 물약">
 		<!-- Lvl 2 is Greater Magic Haste Potion -->
 		<table name="#mAtkSpd"> 1.23 1.3 </table>
 		<table name="#abnormalLvl"> 2 3 </table>
@@ -722,7 +722,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2170" levels="1" name="Scroll: Cancel Sleep">
+	<skill id="2170" levels="1" name="수면 해제 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -733,7 +733,7 @@
 		<set name="effectRange" val="600" />
 		<set name="negateAbnormals" val="sleep,1" />
 	</skill>
-	<skill id="2171" levels="1" name="Spellbook Paper">
+	<skill id="2171" levels="1" name="마법서의 종이">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			5917,1,10;5918,1,10;5919,1,10;5920,1,10;736,1,60
@@ -754,7 +754,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2172" levels="1" name="Scroll of Giants">
+	<skill id="2172" levels="1" name="거인들의 두루마리">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			5922,1,2.5;5923,1,2.5;5924,1,2.5;5925,1,2.5;5926,1,2.5;5927,1,2.5;5928,1,2.5;5929,1,2.5;5930,1,2.5;5931,1,2.5;5932,1,2.5;5933,1,2.5;5934,1,2.5;5935,1,2.5;5936,1,2.5;5937,1,2.5;5938,1,2.5;5939,1,2.5;5940,1,2.5;5941,1,2.5;5942,1,25;5943,1,25
@@ -774,7 +774,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2173" levels="1" name="Book of Giants">
+	<skill id="2173" levels="1" name="거인들의 책">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			5945,1,5;5946,1,5;5947,1,5;5948,1,5;5949,1,5;5950,1,5;5951,1,5;5952,1,5;5953,1,5;5954,1,5;5942,1,25;5943,1,25
@@ -794,7 +794,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2174" levels="3" name="Ingredient Bag">
+	<skill id="2174" levels="3" name="시약의 주머니">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6019,2,30;6013,2,30;6014,1,20;6016,1,20
@@ -816,7 +816,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2175" levels="1" name="Ingredient Box">
+	<skill id="2175" levels="1" name="시약의 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6017,2,20;6020,2,20;6016,1,35;6015,2,25
@@ -836,7 +836,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2176" levels="4" name="Ancient Papyrus">
+	<skill id="2176" levels="4" name="고대의 파피루스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			5978,1,2;5983,1,2;5988,1,2;5994,1,2;5995,1,2;5975,1,8;5976,1,8;5977,1,8;5981,1,8;5982,1,8;5973,1,11.4;5974,1,11.2;5980,1,11.2;5985,1,11.2;5972,1,1.8;5979,1,1.6;5984,1,1.6
@@ -859,7 +859,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2177" levels="1" name="Blessed Scroll of Escape: Clan Hall">
+	<skill id="2177" levels="1" name="축복받은 아지트 귀환 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -871,7 +871,7 @@
 			<player clanHall="-1" />
 		</cond>
 	</skill>
-	<skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
+	<skill id="2178" levels="1" name="축복받은 성 귀환 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -880,7 +880,7 @@
 		<set name="recallType" val="Castle" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
+	<skill id="2179" levels="1" name="축복받은 펫용 부활 주문서">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_CORPSE_PET" />
@@ -890,7 +890,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 	</skill>
-	<skill id="2180" levels="1" name="Feed: Castle Strider">
+	<skill id="2180" levels="1" name="와이번용 사료">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="feed" val="450" />
@@ -899,49 +899,49 @@
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2181" levels="1" name="Item - Fishing Shot">
+	<skill id="2181" levels="1" name="a,Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2182" levels="1" name="Item - Fishing Shot">
+	<skill id="2182" levels="1" name="a,Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2183" levels="1" name="Item - Fishing Shot">
+	<skill id="2183" levels="1" name="a,Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2184" levels="1" name="Item - Fishing Shot">
+	<skill id="2184" levels="1" name="a,Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2185" levels="1" name="Item - Fishing Shot">
+	<skill id="2185" levels="1" name="a,Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2186" levels="1" name="Item - Fishing Shot">
+	<skill id="2186" levels="1" name="a,Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2187" levels="1" name="Item - Special Sound Crystal">
+	<skill id="2187" levels="1" name="a,Item - Special Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2188" levels="1" name="Golden Spice">
+	<skill id="2188" levels="1" name="골든 스파이스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="6643" />
@@ -952,7 +952,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="2189" levels="1" name="Crystal Spice">
+	<skill id="2189" levels="1" name="크리스탈 스파이스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="6644" />
@@ -963,7 +963,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="2190" levels="9" name="Item - Green Fish">
+	<skill id="2190" levels="9" name="큰 녹색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,6,27.6;6913,1,16.56
@@ -991,7 +991,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2191" levels="9" name="Item - Jade Fish">
+	<skill id="2191" levels="9" name="큰 옥색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,12,19;6913,1,22.8;6920,8,30.4
@@ -1019,7 +1019,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2192" levels="9" name="Item - Blue Fish">
+	<skill id="2192" levels="9" name="큰 청색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,12,26.3332;6913,2,18.0572;6920,16,21.0667
@@ -1047,7 +1047,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2193" levels="9" name="Item - Yellow Fish">
+	<skill id="2193" levels="9" name="큰 황색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,2.1216;6908,14,15.1544;6909,4,14.144;6913,2,10.608;6920,16,14.1441
@@ -1075,7 +1075,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2194" levels="9" name="Item - Orange Fish">
+	<skill id="2194" levels="9" name="큰 주황색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,2.9856;6908,28,10.6628;6909,4,19.904;6913,2,14.928;6920,16,19.9039
@@ -1103,7 +1103,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2195" levels="9" name="Item - Violet Fish">
+	<skill id="2195" levels="9" name="큰 보라색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			7698,1,7;6910,2,18.6666;6914,2,17.5
@@ -1131,7 +1131,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2196" levels="9" name="Item - Red Fish">
+	<skill id="2196" levels="9" name="큰 붉은색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			7685,1,6.1296;7698,1,6.1296;6907,1,6.1296;6910,2,16.3456;6914,2,15.3241
@@ -1159,7 +1159,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2197" levels="9" name="Item - White Fish">
+	<skill id="2197" levels="9" name="큰 흰색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			7685,1,8.3856;7698,1,8.3856;6907,1,8.3856;6910,4,11.1808;6914,4,10.4818
@@ -1187,7 +1187,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2198" levels="9" name="Item - Black Fish">
+	<skill id="2198" levels="9" name="큰 검은색 넓은 물고기">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			7685,1,9.9888;7698,1,9.9888;6907,1,9.9888;6910,4,13.3184;6914,4,12.4858
@@ -1215,7 +1215,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2199" levels="3" name="Item - Green Treasure Box">
+	<skill id="2199" levels="3" name="큰 녹색 보물 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,12,30.6;7609,8,48.96

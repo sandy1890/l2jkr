@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6400" levels="1" name="Cokrakon Dwindling Velocity">
+	<skill id="6400" levels="1" name="코크라콘 소닉 소울 샷">
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="2000" />
@@ -20,7 +20,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6401" levels="1" name="Cokrakon Wheeling Clow">
+	<skill id="6401" levels="1" name="코크라콘 휠링 클로">
 		<set name="target" val="TARGET_AREA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
@@ -34,7 +34,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="skillRadius" val="150" />
 	</skill>
-	<skill id="6402" levels="5" name="Torumba Poison Strike">
+	<skill id="6402" levels="5" name="토룸바 포이즌 슬래시">
 		<table name="#dot"> 500 1100 2200 4400 8000 </table>
 		<table name="#abnormalLvl"> 11 12 13 14 15 </table>
 		<set name="target" val="TARGET_ONE" />
@@ -54,7 +54,7 @@
 			<effect count="12" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="6403" levels="1" name="Torumba Numbing Poison">
+	<skill id="6403" levels="1" name="토룸바 포이즌 블렛">
 		<set name="target" val="TARGET_AREA" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
@@ -75,7 +75,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6404" levels="1" name="Torumba Poison Swing">
+	<skill id="6404" levels="1" name="토룸바 포이즌 스윙">
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
@@ -94,7 +94,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6405" levels="1" name="Torumba Roar">
+	<skill id="6405" levels="1" name="토룸바 로어">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
@@ -115,7 +115,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6406" levels="1" name="Torumba's Plague">
+	<skill id="6406" levels="1" name="토룸바의 소외">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
@@ -127,7 +127,7 @@
 			<effect name="Petrification" abnormalTime="300" val="0" abnormalLvl="99" abnormalType="silence_all" />
 		</for>
 	</skill>
-	<skill id="6407" levels="1" name="Torumba's Constraint">
+	<skill id="6407" levels="1" name="토룸바의 거절">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
@@ -144,7 +144,7 @@
 			<effect name="BlockResurrection" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="block_resurrection" />
 		</for>
 	</skill>
-	<skill id="6408" levels="1" name="Soul Weakness">
+	<skill id="6408" levels="1" name="심신 미약">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" /> <!-- TODO: Needs Core Support for prevent player from begin transformed -->
 		<set name="operateType" val="A2" />
@@ -155,7 +155,7 @@
 		<set name="effectRange" val="600" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<skill id="6409" levels="1" name="Reptilikon Earthquake">
+	<skill id="6409" levels="1" name="렙틸리콘 어스퀘이크">
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
@@ -167,7 +167,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="6410" levels="1" name="Reptilikon Rush">
+	<skill id="6410" levels="1" name="렙틸리콘 러쉬">
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillScope" val="fan;100;60" />
 		<set name="operateType" val="A2" />
@@ -189,14 +189,14 @@
 			<effect name="Stun" abnormalTime="5" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="6411" levels="1" name="Reptilikon Summon">
+	<skill id="6411" levels="1" name="렙틸리콘 소환">
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6412" levels="1" name="Reptilikon Critical Blow">
+	<skill id="6412" levels="1" name="렙틸리콘 크리티컬 블로우">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
@@ -209,7 +209,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
-	<skill id="6413" levels="1" name="Reptilikon Missile">
+	<skill id="6413" levels="1" name="렙틸리콘 미사일">
 		<set name="target" val="TARGET_AREA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
@@ -223,7 +223,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="6414" levels="1" name="Reptilikon Charge">
+	<skill id="6414" levels="1" name="렙틸리콘 차지">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
@@ -243,7 +243,7 @@
 			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="6415" levels="1" name="Reptilikon Scratch">
+	<skill id="6415" levels="1" name="렙틸리콘 스크래치">
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
@@ -255,7 +255,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="skillRadius" val="300" />
 	</skill>
-	<skill id="6416" levels="1" name="Reptilikon Poison Breath">
+	<skill id="6416" levels="1" name="렙틸리콘 포이즌 브래스">
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillScope" val="fan;200;90" />
 		<set name="operateType" val="A2" />
@@ -278,7 +278,7 @@
 			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="6417" levels="1" name="Reptilikon Poison Shot">
+	<skill id="6417" levels="1" name="렙틸리콘 포이즌 샷">
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="POISON" />
@@ -300,7 +300,7 @@
 			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="6418" levels="1" name="Reptilikon Fury Poison Bomb">
+	<skill id="6418" levels="1" name="렙틸리콘 퓨리 포이즌 봄">
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
@@ -323,7 +323,7 @@
 			<effect count="4" name="ManaDamOverTime" noicon="1" abnormalTime="5" val="20" />
 		</for>
 	</skill>
-	<skill id="6419" levels="1" name="Light of Scout">
+	<skill id="6419" levels="1" name="정찰자의 광체">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="82" />
@@ -334,7 +334,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="6420" levels="1" name="Lizard Strike">
+	<skill id="6420" levels="1" name="리자드 일격">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="83" />
@@ -345,7 +345,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="6421" levels="1" name="Rage of Soldier">
+	<skill id="6421" levels="1" name="용사의 분노">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
@@ -356,7 +356,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="6422" levels="1" name="Resistance Explosion">
+	<skill id="6422" levels="1" name="내성 폭발">
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
@@ -366,7 +366,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="6423" levels="1" name="Shock">
+	<skill id="6423" levels="1" name="쇼크">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="84" />
@@ -385,7 +385,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="6424" levels="1" name="Double Shot">
+	<skill id="6424" levels="1" name="더블 샷">
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
@@ -397,7 +397,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6425" levels="1" name="Demotivation Hex">
+	<skill id="6425" levels="1" name="전투 의욕 저하">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -405,7 +405,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
 	</skill>
-	<skill id="6426" levels="1" name="Priest's Ire">
+	<skill id="6426" levels="1" name="제사장의 일침">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
@@ -421,7 +421,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="6427" levels="1" name="Medicinal Mushroom 1">
+	<skill id="6427" levels="1" name="버섯부약초1">
 		<!-- Fantasy Mushroom Skill -->
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_AURA" />
@@ -429,7 +429,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
 	</skill>
-	<skill id="6428" levels="1" name="Hold">
+	<skill id="6428" levels="1" name="홀드">
 		<!-- Sticky Mushroom Skill -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -445,7 +445,7 @@
 			<effect name="HealPercent" noicon="1" val="90" />
 		</for>
 	</skill>
-	<skill id="6429" levels="1" name="Cozy Mucus">
+	<skill id="6429" levels="1" name="코지 뮤커스">
 		<!-- Rainbow Frog -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_ONE" />
@@ -462,7 +462,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6430" levels="1" name="Roar Hip Heal">
+	<skill id="6430" levels="1" name="로즈 힙 힐">
 		<!-- Energy Plant Skill -->
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
@@ -473,7 +473,7 @@
 			<effect name="HealPercent" noicon="1" val="30" />
 		</for>
 	</skill>
-	<skill id="6431" levels="1" name="Feral Might">
+	<skill id="6431" levels="1" name="로어 마이트">
 		<!-- P. Atk. increases by 19 % for 5 minutes -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -490,7 +490,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6432" levels="1" name="Feral Focus">
+	<skill id="6432" levels="1" name="로어 포커스">
 		<!-- Critical attack rate increases by 35 % for 5 minutes -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -507,7 +507,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6433" levels="1" name="Feral Guidance">
+	<skill id="6433" levels="1" name="로어 가이던스">
 		<!-- Accuracy increases by 7 for 5 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -524,7 +524,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6434" levels="1" name="Feral Haste">
+	<skill id="6434" levels="1" name="로어 헤이스트">
 		<!-- Atk. Spd. increases by 38 % for 5 minutes. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="90000" />
@@ -541,7 +541,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6435" levels="3" name="Curse of the Plains">
+	<skill id="6435" levels="3" name="심연의 저주">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#dot"> 100 200 300 </table>
@@ -568,7 +568,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6436" levels="1" name="Curse of the Dark Abyss">
+	<skill id="6436" levels="1" name="검은 심연의 저주">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<set name="isDebuff" val="true" />
@@ -591,7 +591,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6437" levels="7" name="Area of Freezing Core">
+	<skill id="6437" levels="7" name="결빙석 지대">
 		<table name="#dot"> 30 60 90 150 250 350 500 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="POISON" />
@@ -608,7 +608,7 @@
 			<effect count="15" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="10" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
-	<skill id="6438" levels="1" name="Penalty Area">
+	<skill id="6438" levels="1" name="패널티 에어리어">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -616,7 +616,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
-	<skill id="6439" levels="1" name="Energy of Wisdom">
+	<skill id="6439" levels="1" name="총명함의 기운">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="lvlDepend" val="1" />
@@ -624,7 +624,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 	</skill>
-	<skill id="6440" levels="1" name="Energy of Strong">
+	<skill id="6440" levels="1" name="강대함의 기운">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -632,7 +632,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
-	<skill id="6441" levels="1" name="Energy of Agile">
+	<skill id="6441" levels="1" name="민첩함의 기운">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="lvlDepend" val="1" />
@@ -640,7 +640,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 	</skill>
-	<skill id="6442" levels="1" name="Efficacy of Wisdom">
+	<skill id="6442" levels="1" name="총명함의 기운">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="lvlDepend" val="1" />
@@ -653,7 +653,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6443" levels="1" name="Efficacy of Strength">
+	<skill id="6443" levels="1" name="강대함의 기운">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="lvlDepend" val="1" />
@@ -667,7 +667,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6444" levels="1" name="Efficacy of Agility">
+	<skill id="6444" levels="1" name="민첩함의 기운">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="lvlDepend" val="1" />
@@ -681,121 +681,121 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6445" levels="1" name="Presentation - Freya's Message 1">
+	<skill id="6445" levels="1" name="연출 -프레야의 메시지1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6446" levels="1" name="Presentation - Freya's Message 2">
+	<skill id="6446" levels="1" name="연출 -프레야의 메시지2">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6447" levels="1" name="Presentation - Freya's Message 3">
+	<skill id="6447" levels="1" name="연출 -프레야의 메시지3">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6448" levels="1" name="Presentation - Freya's Message 4">
+	<skill id="6448" levels="1" name="연출 -프레야의 메시지4">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6449" levels="1" name="Presentation - Freya's Message 5">
+	<skill id="6449" levels="1" name="연출 -프레야의 메시지5">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6450" levels="1" name="Presentation - Freya Nova">
+	<skill id="6450" levels="1" name="연출 -프레야 노바">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6451" levels="1" name="Presentation - Freya Move">
+	<skill id="6451" levels="1" name="연출 -프레야 이동">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6452" levels="1" name="Presentation - Freya Space Change">
+	<skill id="6452" levels="1" name="연출 -프레야 시공변이">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6453" levels="1" name="Presentation - Freya Death">
+	<skill id="6453" levels="1" name="연출 -프레야 죽음">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6454" levels="1" name="Presentation - Freya Frustration">
+	<skill id="6454" levels="1" name="연출 -프레야 좌절">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6455" levels="1" name="Presentation - Freya Destroy">
+	<skill id="6455" levels="1" name="연출 -프레야 소멸">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6456" levels="1" name="Presentation - Freya Eternal Blizzard">
+	<skill id="6456" levels="1" name="연출 -프레야 이터널블리자드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6457" levels="1" name="Presentation - Absorption of Sirr">
+	<skill id="6457" levels="1" name="연출 -시르의 흡수">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6458" levels="1" name="Presentation - Transform of Sirr">
+	<skill id="6458" levels="1" name="연출 -시르의 변신">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6459" levels="1" name="Presentation - Kegor Super Buff">
+	<skill id="6459" levels="1" name="연출 -케고르 슈퍼 버프">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6460" levels="1" name="Presentation - Jinia Super Buff">
+	<skill id="6460" levels="1" name="연출 -지니아 슈퍼 버프">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6461" levels="1" name="Presentation - Kegor's Message 1">
+	<skill id="6461" levels="1" name="연출 -케고르의 메시지1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6462" levels="1" name="Presentation - Kegor's Message 1">
+	<skill id="6462" levels="1" name="연출 -케고르의 메시지1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6463" levels="1" name="Presentation - Transfer Achievement">
+	<skill id="6463" levels="1" name="연출-전직달성">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6464" levels="1" name="Three Siblings' Trickery">
+	<skill id="6464" levels="1" name="삼남매의 장난">
 		<!-- By the three sibling's trickery, Max HP/MP/CP are increased by 40% for 10 seconds. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -803,213 +803,213 @@
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
-	<skill id="6465" levels="1" name="Jack O'Lantern Card">
+	<skill id="6465" levels="1" name="잭 오 랜턴 카드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6466" levels="1" name="Rotten Jack O'Lantern Card">
+	<skill id="6466" levels="1" name="썩은 잭 오 랜턴 카드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6467" levels="1" name="Jack O'Lantern Card - Confirm Skill">
+	<skill id="6467" levels="1" name="잭 오 랜턴 카드 - 컨펌 스킬">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6468" levels="1" name="Rotten Jack O'Lantern Card - Confirm Skill">
+	<skill id="6468" levels="1" name="썩은 잭 오 랜턴 카드 - 컨펌 스킬">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6469" levels="1" name="Halloween Defeat">
+	<skill id="6469" levels="1" name="할로윈 패배">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6470" levels="1" name="1 win">
+	<skill id="6470" levels="1" name="1 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6471" levels="1" name="2 win">
+	<skill id="6471" levels="1" name="2 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6472" levels="1" name="3 win">
+	<skill id="6472" levels="1" name="3 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6473" levels="1" name="4 win">
+	<skill id="6473" levels="1" name="4 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6474" levels="1" name="5 win">
+	<skill id="6474" levels="1" name="5 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6475" levels="1" name="6 win">
+	<skill id="6475" levels="1" name="6 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6476" levels="1" name="7 win">
+	<skill id="6476" levels="1" name="7 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6477" levels="1" name="8 win">
+	<skill id="6477" levels="1" name="8 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6478" levels="1" name="9 win">
+	<skill id="6478" levels="1" name="9 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6479" levels="1" name="10 win">
+	<skill id="6479" levels="1" name="10 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6480" levels="1" name="11 win">
+	<skill id="6480" levels="1" name="11 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6481" levels="1" name="12 win">
+	<skill id="6481" levels="1" name="12 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6482" levels="1" name="13 win">
+	<skill id="6482" levels="1" name="13 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6483" levels="1" name="14 win">
+	<skill id="6483" levels="1" name="14 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6484" levels="1" name="15 win">
+	<skill id="6484" levels="1" name="15 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6485" levels="1" name="16 win">
+	<skill id="6485" levels="1" name="16 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6486" levels="1" name="17 win">
+	<skill id="6486" levels="1" name="17 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6487" levels="1" name="18 win">
+	<skill id="6487" levels="1" name="18 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6488" levels="1" name="19 win">
+	<skill id="6488" levels="1" name="19 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6489" levels="1" name="20 win">
+	<skill id="6489" levels="1" name="20 연승">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6490" levels="1" name="Jack's game - Gauge">
+	<skill id="6490" levels="1" name="잭 게임 - 게이지">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6491" levels="1" name="Jack's game - Target">
+	<skill id="6491" levels="1" name="잭 게임 - 타겟">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="6492" levels="28" name="NPC holy attack">
+	<skill id="6492" levels="28" name="홀리 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6493" levels="28" name="Jack's game - Target">
+	<skill id="6493" levels="28" name="홀리 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6494" levels="28" name="NPC holy attack">
+	<skill id="6494" levels="28" name="홀리 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6495" levels="28" name="NPC holy attack">
+	<skill id="6495" levels="28" name="홀리 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6496" levels="28" name="NPC holy attack">
+	<skill id="6496" levels="28" name="홀리 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6497" levels="28" name="NPC holy attack">
+	<skill id="6497" levels="28" name="홀리 어택">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6498" levels="28" name="NPC holy shot">
+	<skill id="6498" levels="28" name="홀리 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
-	<skill id="6499" levels="28" name="NPC holy shot">
+	<skill id="6499" levels="28" name="홀리 샷">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />

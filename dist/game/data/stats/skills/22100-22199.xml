@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22100" levels="1" name="Soul Scent">
+	<skill id="22100" levels="1" name="영혼의 향">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -27,7 +27,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22101" levels="1" name="Fortune of Love Box">
+	<skill id="22101" levels="1" name="사랑의 행운 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20590,1,40;9207,1,60
@@ -48,7 +48,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22102" levels="1" name="Soul Magic Box">
+	<skill id="22102" levels="1" name="영혼의 마법 상자">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="coolTime" val="1000" />
@@ -67,7 +67,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="22103" levels="1" name="Blessed Scroll of Escape (Event)">
+	<skill id="22103" levels="1" name="축복받은 귀환 주문서 - 이벤트용">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="200" />
@@ -78,7 +78,7 @@
 		<set name="skillType" val="RECALL" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="22104" levels="1" name="Blessed Scroll of Resurrection (Event)">
+	<skill id="22104" levels="1" name="축복받은 부활 주문서 - 이벤트용">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -92,7 +92,7 @@
 		<set name="skillType" val="RESURRECT" />
 		<set name="target" val="TARGET_CORPSE_PLAYER" />
 	</skill>
-	<skill id="22105" levels="1" name="Uldie Summon Scroll (Event)">
+	<skill id="22105" levels="1" name="울디 소환서 - 이벤트">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
@@ -115,7 +115,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="22106" levels="1" name="Belldandy Summon Scroll (Event)">
+	<skill id="22106" levels="1" name="베르단디 소환서 - 이벤트">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
@@ -138,7 +138,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="22107" levels="1" name="Skooldie Summon Scroll (Event)">
+	<skill id="22107" levels="1" name="스쿨디 소환서 - 이벤트">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
@@ -161,7 +161,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="22108" levels="1" name="Halloween Toy Box">
+	<skill id="22108" levels="1" name="할로윈 장난감 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20712,1,20;20713,1,20;20714,1,20;20715,1,20;20716,1,20
@@ -181,7 +181,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22109" levels="1" name="Shiny Halloween Toy Box">
+	<skill id="22109" levels="1" name="빛나는 할로윈 장난감 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20718,1,20;20719,1,20;20720,1,20;20721,1,20;20722,1,20
@@ -201,7 +201,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22110" levels="1" name="Lucky Sky Lantern Summon">
+	<skill id="22110" levels="1" name="길상 천등 소환">
 		<!-- Update by rocknow -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="24" />
@@ -218,7 +218,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="npcId" val="22" />
 	</skill>
-	<skill id="22111" levels="1" name="Ambient Sky Lantern Summon">
+	<skill id="22111" levels="1" name="환경 천등 소환">
 		<!-- Update by rocknow -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="24" />
@@ -235,7 +235,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="npcId" val="23" />
 	</skill>
-	<skill id="22112" levels="1" name="Sway Sky Lantern Summon">
+	<skill id="22112" levels="1" name="기복 천등 소환">
 		<!-- Update by rocknow -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="24" />
@@ -252,7 +252,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="npcId" val="24" />
 	</skill>
-	<skill id="22113" levels="1" name="Comfort Sky Lantern Summon">
+	<skill id="22113" levels="1" name="평안 천등 소환">
 		<!-- Update by rocknow -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="24" />
@@ -269,7 +269,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="npcId" val="25" />
 	</skill>
-	<skill id="22114" levels="1" name="Morph Scroll Box">
+	<skill id="22114" levels="1" name="변신 주문서 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20364,1,33;20365,1,33;20366,1,34
@@ -289,7 +289,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22115" levels="1" name="Santa's Weapon Exchange Ticket Box">
+	<skill id="22115" levels="1" name="흰 수염 산타 무기 교환권 상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20755,1,99.99949;20757,1,0.00051
@@ -309,19 +309,19 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22116" levels="1" name="Summon Flames Box">
+	<skill id="22116" levels="1" name="불꽃 상자 소환">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="22117" levels="1" name="Flames Box Firework">
+	<skill id="22117" levels="1" name="불꽃 상자 폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="22118" levels="1" name="Warmth of Kotatz">
+	<skill id="22118" levels="1" name="코타츠의 온기">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -336,7 +336,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22119" levels="1" name="Love for All Seasons">
+	<skill id="22119" levels="1" name="백년호합">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -350,7 +350,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22120" levels="1" name="Happy New Year">
+	<skill id="22120" levels="1" name="연년유여">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -365,7 +365,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22121" levels="1" name="Female Aniruddha">
+	<skill id="22121" levels="1" name="원만여의">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -380,7 +380,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22122" levels="1" name="Kung Hei Fat Choy">
+	<skill id="22122" levels="1" name="공희발재">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -401,7 +401,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22123" levels="1" name="Chinese Feast">
+	<skill id="22123" levels="1" name="금옥만당">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -418,7 +418,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22124" levels="1" name="Hwa Gei Bu Gwi">
+	<skill id="22124" levels="1" name="화개부귀">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -432,7 +432,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22125" levels="1" name="Fire Stamp">
+	<skill id="22125" levels="1" name="불도장">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -447,7 +447,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22126" levels="1" name="Baby Food Skill">
+	<skill id="22126" levels="1" name="이유식 스킬">
 		<!-- TODO: Implement. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="400" />
@@ -461,7 +461,7 @@
 			<target npcId="1538" />
 		</cond>
 	</skill>
-	<skill id="22127" levels="1" name="Summon Warm Kotatz">
+	<skill id="22127" levels="1" name="따뜻한 코타츠 소환">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="despawnDelay" val="7200" /> <!-- FIXME: Custom. -->
@@ -473,7 +473,7 @@
 		<set name="skillType" val="SPAWN" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="22128" levels="3" name="Rudolph's Joy">
+	<skill id="22128" levels="3" name="루돌프의 기쁨">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#AtkSpd"> 1.1 1.15 1.2 </table>
@@ -489,7 +489,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22129" levels="1" name="Red Dimensional Stone">
+	<skill id="22129" levels="1" name="붉은 차원의 돌">
 		<!-- TODO: Implement. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
@@ -501,14 +501,14 @@
 		<set name="skillType" val="NOTDONE" /> <!-- TODO: RESET_QUESTS -->
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="22130" levels="1" name="Food of Doubt's Effect">
+	<skill id="22130" levels="1" name="의문의 먹이 효과">
 		<!-- Food of Doubt's effect.For 20 minutes, energy is recovered when Exp. is acquired. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="22131" levels="1" name="Red Firework Flames">
+	<skill id="22131" levels="1" name="빨간색 폭죽 불꽃">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -522,7 +522,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22132" levels="1" name="Gold Firework Flames">
+	<skill id="22132" levels="1" name="금색 폭죽 불꽃">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -536,7 +536,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22133" levels="1" name="Blue Firework Flames">
+	<skill id="22133" levels="1" name="파란색 폭죽 불꽃">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -550,7 +550,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22134" levels="1" name="Pink Firework Flames">
+	<skill id="22134" levels="1" name="분홍색 폭죽 불꽃">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -564,7 +564,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22135" levels="1" name="White Firework Flames">
+	<skill id="22135" levels="1" name="흰색 폭죽 불꽃">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -578,7 +578,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22136" levels="1" name="Silver Firework Flames">
+	<skill id="22136" levels="1" name="은색 폭죽 불꽃">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -592,7 +592,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22137" levels="1" name="Star Food">
+	<skill id="22137" levels="1" name="별의 먹이">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -601,7 +601,7 @@
 		<set name="skillType" val="GIVE_VITALITY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="22138" levels="1" name="Mango Dessert">
+	<skill id="22138" levels="1" name="망고디저트">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -611,7 +611,7 @@
 		<set name="skillType" val="GIVE_VITALITY" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="22139" levels="1" name="Branding Wind Walk">
+	<skill id="22139" levels="1" name="불도장 윈드 워크">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -623,7 +623,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22140" levels="1" name="Hwa Gei Bu Gwi Haste">
+	<skill id="22140" levels="1" name="화개부귀 헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -635,7 +635,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22141" levels="1" name="Branding Agility">
+	<skill id="22141" levels="1" name="불도장 어질리티">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -647,7 +647,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22142" levels="1" name="Female Aniruddha's Shield">
+	<skill id="22142" levels="1" name="원만여의 실드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -659,7 +659,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22143" levels="1" name="Happy New Year Death Whisper">
+	<skill id="22143" levels="1" name="연년유여 데스 위스퍼">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -671,7 +671,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22144" levels="1" name="Happy New Year Guidance">
+	<skill id="22144" levels="1" name="연년유여 가이던스">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -683,7 +683,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22145" levels="1" name="Love for All Seasons Empower">
+	<skill id="22145" levels="1" name="백년호합 엠파워">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -695,7 +695,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22146" levels="1" name="Chinese Feast Greater Acumen">
+	<skill id="22146" levels="1" name="금옥만당 그레이터 아큐멘">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -707,7 +707,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22147" levels="1" name="Kung Hei Fat Choy Vampiric Rage">
+	<skill id="22147" levels="1" name="공희발재 뱀피릭 레이지">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -719,7 +719,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22148" levels="1" name="Branding Blessed Body">
+	<skill id="22148" levels="1" name="불도장 블레스 더 바디">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -731,7 +731,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22149" levels="1" name="Kung Hei Fat Choy Berserker Spirit">
+	<skill id="22149" levels="1" name="공희발재 버서커 스피릿">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -749,7 +749,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22150" levels="1" name="Female Aniruddha's Magic Barrier">
+	<skill id="22150" levels="1" name="원만여의 매직 배리어">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -761,7 +761,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22151" levels="1" name="Chinese Feast Blessed Soul">
+	<skill id="22151" levels="1" name="금옥만당 블레스 더 소울">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -773,7 +773,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22152" levels="1" name="Chinese Feast Clarity">
+	<skill id="22152" levels="1" name="금옥만당 클레리티">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -787,7 +787,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22153" levels="1" name="Love for All Seasons Wild Magic">
+	<skill id="22153" levels="1" name="백년호합 와일드 매직">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -799,7 +799,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22154" levels="1" name="Happy New Year Focus">
+	<skill id="22154" levels="1" name="연년유여 포커스">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -811,7 +811,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22155" levels="1" name="Female Aniruddha's Blessed Shield">
+	<skill id="22155" levels="1" name="원만여의 블레스 실드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -823,7 +823,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22156" levels="1" name="Hwa Gei Bu Gwi Decrease Weight">
+	<skill id="22156" levels="1" name="화개부귀 디크리즈 웨이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -835,7 +835,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22157" levels="1" name="Kung Hei Fat Choy Might">
+	<skill id="22157" levels="1" name="공희발재 마이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -847,7 +847,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22158" levels="10" name="Rose Petal">
+	<skill id="22158" levels="10" name="붉은 장미 허브">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -864,7 +864,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22159" levels="1" name="Vesper Super Power">
+	<skill id="22159" levels="1" name="베스페르의 괴력">
 		<!-- Increases P. Atk. by 15%, M. Atk. by 20% and Speed by 10 for 10 minutes. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -880,7 +880,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22160" levels="1" name="Vesper Critical Power">
+	<skill id="22160" levels="1" name="베스페르의 치명력">
 		<!-- Increases Physical critical attack rate by 15, Magical critical attack rate by 2 and Speed by 10 for 10 minutes. 5% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -897,7 +897,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22161" levels="1" name="Invincible Vesper">
+	<skill id="22161" levels="1" name="불패의 베스페르">
 		<!-- Increases Atk. Spd. by 20%, Casting Spd. by 20% and Speed by 20 for 10 minutes. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
@@ -913,7 +913,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22162" levels="1" name="Mt. Fuji Herb">
+	<skill id="22162" levels="1" name="후지산 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
@@ -928,7 +928,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22163" levels="1" name="Hawk Herb">
+	<skill id="22163" levels="1" name="매 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
@@ -945,7 +945,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22164" levels="1" name="Eggplant Herb">
+	<skill id="22164" levels="1" name="가지 허브">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
@@ -962,21 +962,21 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22165" levels="1" name="Energy Replenish">
+	<skill id="22165" levels="1" name="에너지 충전">
 		<!-- 5000 Soul Avatar Energy is replenished. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="22166" levels="1" name="Energy Replenish">
+	<skill id="22166" levels="1" name="에너지 충전">
 		<!-- 10000 Soul Avatar Energy is replenished. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="22167" levels="1" name="April Fools' Day Vesper Weapon Gift">
+	<skill id="22167" levels="1" name="만우절 베스페르 무기 선물">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13457,1,13.32;13458,1,6.66;13459,1,6.66;13460,1,6.66;13461,1,6.66;13462,1,6.66;13463,1,6.66;13464,1,6.66;13466,1,6.66;13467,1,6.66;13468,1,6.66;13469,1,6.66;13470,1,6.66;13465,1,6.66
@@ -996,14 +996,14 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22168" levels="1" name="Thirst Quencher">
+	<skill id="22168" levels="1" name="승리의 갈증 해소 음료">
 		<!-- Replenishes an Agathion's energy by 2500 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="22169" levels="1" name="Soccer Ball of Cheers Release">
+	<skill id="22169" levels="1" name="응원의 축구공 개봉">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6575,2,45;6573,1,30;6571,1,15;6569,1,9.4;6577,1,0.6
@@ -1023,7 +1023,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22170" levels="1" name="Hardin's Protection">
+	<skill id="22170" levels="1" name="하딘의 가호">
 		<!-- Maximies P. Def. for 10 seconds. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1031,7 +1031,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 	</skill>
-	<skill id="22171" levels="1" name="Hardin's Blessing">
+	<skill id="22171" levels="1" name="하딘의 축복">
 		<!-- Maximies M. Def. for 10 seconds. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1039,7 +1039,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 	</skill>
-	<skill id="22172" levels="1" name="Sylphide's Wings">
+	<skill id="22172" levels="1" name="실피드의 날개">
 		<!-- Increases one's own moving speed by 300 for 15 seconds. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1047,7 +1047,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 	</skill>
-	<skill id="22173" levels="1" name="Sylphide's Blessing">
+	<skill id="22173" levels="1" name="실피드의 축복">
 		<!-- Increases the moving speed of yourself and friendly nearby targets by 300 for 15 seconds. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1055,7 +1055,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 	</skill>
-	<skill id="22174" levels="1" name="Yibein's Recovery Scroll">
+	<skill id="22174" levels="1" name="이베인의 회복 주문서">
 		<!-- Recovers HP of yourself and friendly nearby targets by 500. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
@@ -1063,7 +1063,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 	</skill>
-	<skill id="22175" levels="1" name="Rune of Life">
+	<skill id="22175" levels="1" name="생명의 호부">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1075,7 +1075,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" chanceType="ON_START" triggeredId="23214" />
 		</for>
 	</skill>
-	<skill id="22176" levels="1" name="Rune of Spirit">
+	<skill id="22176" levels="1" name="정신의 호부">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1087,13 +1087,13 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" chanceType="ON_START" triggeredId="23215" />
 		</for>
 	</skill>
-	<skill id="22177" levels="1" name="Warrior's Breath">
+	<skill id="22177" levels="1" name="용사의 숨결">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="22178" levels="1" name="Hero's Potion">
+	<skill id="22178" levels="1" name="영웅의 물약">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1106,7 +1106,7 @@
 			<effect name="ManaHeal" noicon="1" val="200" />
 		</for>
 	</skill>
-	<skill id="22179" levels="1" name="Fortuna of Chaos">
+	<skill id="22179" levels="1" name="혼돈의 포르투나">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8618,3,13.999;8619,1,26;8620,3,17;8621,1,0.011;14700,25,4;14701,12,4;21038,6,5;9627,1,5;6622,3,19;21030,4,1.5;21031,4,1.5;21032,8,1;21033,8,1;21037,5,1
@@ -1126,7 +1126,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22180" levels="1" name="Wondrous Cubic - 1 time use">
+	<skill id="22180" levels="1" name="신비로운 큐브 - 1회용">
 		<!-- High Five Skill -->
 		<table name="#extractableItems">
 			10633,1,35;10642,1,25;10634,1,20;10643,1,10;10635,1,4;10644,1,3;10636,1,1.2;10645,1,0.8;10637,1,0.6;10646,1,0.4
@@ -1147,13 +1147,13 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="22181" levels="1" name="Refined Cubic - 1 time use">
+	<skill id="22181" levels="1" name="정제된 큐브 - 1회용">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22182" levels="1" name="Birthday Joy">
+	<skill id="22182" levels="1" name="생일의 기쁨">
 		<!-- "Birthday gift received once a year. For 12 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
 		<!-- Birthday Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1170,7 +1170,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
+	<skill id="22183" levels="1" name="드래곤 마스터 리 변신 주문서">
 		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Lee. -->
 		<set name="operateType" val="A2" /> <!-- FIXME: value unconfirmed -->
@@ -1190,7 +1190,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
+	<skill id="22184" levels="1" name="드래곤 마스터 카린 변신 주문서">
 		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Karin. -->
 		<set name="operateType" val="A2" /> <!-- FIXME: value unconfirmed -->
@@ -1210,37 +1210,37 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22185" levels="1" name="Shiny Lighting">
+	<skill id="22185" levels="1" name="빛나는 조명">
 		<!-- Lighting shines brightly above the character's head. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22186" levels="1" name="Echo Crystal - Theme of Celebration">
+	<skill id="22186" levels="1" name="소리 수정 - 축하의 테마">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22187" levels="1" name="Honeymoon Ticket - Joy of Energy">
+	<skill id="22187" levels="1" name="허니문 티켓 - 활력의 기쁨">
 		<!-- State in which the Energy Stage is maintained. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22188" levels="1" name="Summon Big Wedding Cake">
+	<skill id="22188" levels="1" name="빅 웨딩 케이크 소환">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22189" levels="1" name="Flower Shower">
+	<skill id="22189" levels="1" name="플라워 샤워">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22190" levels="1" name="Transformation Scroll - Blue Block Checker">
+	<skill id="22190" levels="1" name="변신 주문서 - 블록체커 블루">
 		<!-- High Five Skill -->
 		<!-- Transformed into a cute block checker. Look for a treasure chest on Fantasy Isle. -->
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -1251,55 +1251,55 @@
 			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="22191" levels="1" name="Transformation Scroll - Onyx Beast">
+	<skill id="22191" levels="1" name="변신 주문서 - 오닉스 비스트">
 		<!-- Transformed into an Onyx Beast. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22192" levels="1" name="Transformation Scroll - Death Blader">
+	<skill id="22192" levels="1" name="변신 주문서 - 데스 블레이더">
 		<!-- Transformed into a Death Blader. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22193" levels="1" name="Transformation Scroll - Grail Apostle">
+	<skill id="22193" levels="1" name="변신 주문서 - 아포스틸 그레일">
 		<!-- Transformed into a Grail Apostle. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22194" levels="1" name="Transformation Scroll - Unicorn">
+	<skill id="22194" levels="1" name="변신 주문서 - 유니콘">
 		<!-- Transformed into a Unicorn. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22195" levels="1" name="Transformation Scroll - Lilim Knight">
+	<skill id="22195" levels="1" name="변신 주문서 - 릴림 나이트">
 		<!-- Transformed into a Lilim Knight. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22196" levels="1" name="Transformation Scroll - Golem Guardian">
+	<skill id="22196" levels="1" name="변신 주문서 - 골렘 가디언">
 		<!-- Transformed into a Golem Guardian. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22197" levels="1" name="Transformation Scroll - Inferno Drake">
+	<skill id="22197" levels="1" name="변신 주문서 - 인페르노 드레이크">
 		<!-- Transformed into an Inferno Drake. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22198" levels="1" name="Transformation Scroll - Dragon Bomber">
+	<skill id="22198" levels="1" name="변신 주문서 - 드래곤 범버">
 		<!-- Transformed into a Dragon Bomber. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="22199" levels="1" name="Transformation Scroll - Heretic">
+	<skill id="22199" levels="1" name="변신 주문서 - 헤러틱">
 		<!-- Transformed into a Heretic. -->
 		<set name="isMagic" val="2"/>
 		<set name="target" val="TARGET_SELF"/>

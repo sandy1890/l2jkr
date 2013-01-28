@@ -1,564 +1,564 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4900" levels="1" name="Raid Boss - Level 78">
+	<skill id="4900" levels="1" name="78레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4901" levels="1" name="Raid Boss - Level 78">
+	<skill id="4901" levels="1" name="78레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4902" levels="1" name="Raid Boss - Level 74">
+	<skill id="4902" levels="1" name="74레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4903" levels="1" name="Raid Boss - Level 80">
+	<skill id="4903" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4904" levels="1" name="Raid Boss - Level 80">
+	<skill id="4904" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4905" levels="1" name="Raid Boss - Level 80">
+	<skill id="4905" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4906" levels="1" name="Raid Boss - Level 80">
+	<skill id="4906" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4907" levels="1" name="Raid Boss - Level 80">
+	<skill id="4907" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4908" levels="1" name="Raid Boss - Level 80">
+	<skill id="4908" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4909" levels="1" name="Raid Boss - Level 80">
+	<skill id="4909" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4910" levels="1" name="Raid Boss - Level 80">
+	<skill id="4910" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4911" levels="1" name="Raid Boss - Level 80">
+	<skill id="4911" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4912" levels="1" name="Raid Boss - Level 66">
+	<skill id="4912" levels="1" name="66레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4913" levels="1" name="Raid Boss - Level 70">
+	<skill id="4913" levels="1" name="70레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4914" levels="1" name="Raid Boss - Level 71">
+	<skill id="4914" levels="1" name="71레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4915" levels="1" name="Raid Boss - Level 28">
+	<skill id="4915" levels="1" name="28레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4916" levels="1" name="Raid Boss - Level 38">
+	<skill id="4916" levels="1" name="38레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4917" levels="1" name="Raid Boss - Level 48">
+	<skill id="4917" levels="1" name="48레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4918" levels="1" name="Raid Boss - Level 58">
+	<skill id="4918" levels="1" name="58레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4919" levels="1" name="Raid Boss - Level 68">
+	<skill id="4919" levels="1" name="68레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4920" levels="1" name="Raid Boss - Level 78">
+	<skill id="4920" levels="1" name="78레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4921" levels="1" name="Raid Boss - Level 80">
+	<skill id="4921" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4922" levels="1" name="Raid Boss - Level 80">
+	<skill id="4922" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4923" levels="1" name="Raid Boss - Level 80">
+	<skill id="4923" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4924" levels="1" name="Raid Boss - Level 80">
+	<skill id="4924" levels="1" name="80레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4925" levels="1" name="Raid Boss - Level 30">
+	<skill id="4925" levels="1" name="30레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4926" levels="1" name="Raid Boss - Level 35">
+	<skill id="4926" levels="1" name="35레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4927" levels="1" name="Raid Boss - Level 21">
+	<skill id="4927" levels="1" name="21레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4928" levels="1" name="Raid Boss - Level 26">
+	<skill id="4928" levels="1" name="26레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4929" levels="1" name="Raid Boss - Level 23">
+	<skill id="4929" levels="1" name="23레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4930" levels="1" name="Raid Boss - Level 26">
+	<skill id="4930" levels="1" name="26레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4931" levels="1" name="Raid Boss - Level 23">
+	<skill id="4931" levels="1" name="23레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4932" levels="1" name="Raid Boss - Level 25">
+	<skill id="4932" levels="1" name="25레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4933" levels="1" name="Raid Boss - Level 20">
+	<skill id="4933" levels="1" name="20레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4934" levels="1" name="Raid Boss - Level 21">
+	<skill id="4934" levels="1" name="21레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4935" levels="1" name="Raid Boss - Level 20">
+	<skill id="4935" levels="1" name="20레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4936" levels="1" name="Raid Boss - Level 21">
+	<skill id="4936" levels="1" name="21레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4937" levels="1" name="Raid Boss - Level 34">
+	<skill id="4937" levels="1" name="34레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4938" levels="1" name="Raid Boss - Level 36">
+	<skill id="4938" levels="1" name="36레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4939" levels="1" name="Raid Boss - Level 35">
+	<skill id="4939" levels="1" name="35레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4940" levels="1" name="Raid Boss - Level 33">
+	<skill id="4940" levels="1" name="33레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4941" levels="1" name="Raid Boss - Level 32">
+	<skill id="4941" levels="1" name="32레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4942" levels="1" name="Raid Boss - Level 38">
+	<skill id="4942" levels="1" name="38레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4943" levels="1" name="Raid Boss - Level 45">
+	<skill id="4943" levels="1" name="45레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4944" levels="1" name="Raid Boss - Level 35">
+	<skill id="4944" levels="1" name="35레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4945" levels="1" name="Raid Boss - Level 32">
+	<skill id="4945" levels="1" name="32레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4946" levels="1" name="Raid Boss - Level 33">
+	<skill id="4946" levels="1" name="33레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4947" levels="1" name="Raid Boss - Level 60">
+	<skill id="4947" levels="1" name="60레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4948" levels="1" name="Raid Boss - Level 40">
+	<skill id="4948" levels="1" name="40레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4949" levels="1" name="Raid Boss - Level 47">
+	<skill id="4949" levels="1" name="47레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4950" levels="1" name="Raid Boss - Level 40">
+	<skill id="4950" levels="1" name="40레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4951" levels="1" name="Raid Boss - Level 44">
+	<skill id="4951" levels="1" name="44레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4952" levels="1" name="Raid Boss - Level 48">
+	<skill id="4952" levels="1" name="48레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4953" levels="1" name="Raid Boss - Level 61">
+	<skill id="4953" levels="1" name="61레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4954" levels="1" name="Raid Boss - Level 25">
+	<skill id="4954" levels="1" name="25레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4955" levels="1" name="Raid Boss - Level 55">
+	<skill id="4955" levels="1" name="55레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4956" levels="1" name="Raid Boss - Level 45">
+	<skill id="4956" levels="1" name="45레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4957" levels="1" name="Raid Boss - Level 44">
+	<skill id="4957" levels="1" name="44레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4958" levels="1" name="Raid Boss - Level 45">
+	<skill id="4958" levels="1" name="45레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4959" levels="1" name="Raid Boss - Level 65">
+	<skill id="4959" levels="1" name="65레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4960" levels="1" name="Raid Boss - Level 71">
+	<skill id="4960" levels="1" name="71레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4961" levels="1" name="Raid Boss - Level 79">
+	<skill id="4961" levels="1" name="79레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4962" levels="1" name="Raid Boss - Level 70">
+	<skill id="4962" levels="1" name="70레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4963" levels="1" name="Raid Boss - Level 49">
+	<skill id="4963" levels="1" name="49레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4964" levels="1" name="Raid Boss - Level 51">
+	<skill id="4964" levels="1" name="51레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4965" levels="1" name="Raid Boss - Level 56">
+	<skill id="4965" levels="1" name="56레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4966" levels="1" name="Raid Boss - Level 64">
+	<skill id="4966" levels="1" name="64레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4967" levels="1" name="Raid Boss - Level 66">
+	<skill id="4967" levels="1" name="66레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4968" levels="1" name="Raid Boss - Level 52">
+	<skill id="4968" levels="1" name="52레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4969" levels="1" name="Raid Boss - Level 55">
+	<skill id="4969" levels="1" name="55레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4970" levels="1" name="Raid Boss - Level 65">
+	<skill id="4970" levels="1" name="65레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4971" levels="1" name="Raid Boss - Level 53">
+	<skill id="4971" levels="1" name="53레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4972" levels="1" name="Raid Boss - Level 50">
+	<skill id="4972" levels="1" name="50레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4973" levels="1" name="Raid Boss - Level 40">
+	<skill id="4973" levels="1" name="40레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4974" levels="1" name="Raid Boss - Level 40">
+	<skill id="4974" levels="1" name="40레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4975" levels="1" name="Raid Boss - Level 55">
+	<skill id="4975" levels="1" name="55레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4976" levels="1" name="Raid Boss - Level 52">
+	<skill id="4976" levels="1" name="52레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4977" levels="1" name="Raid Boss - Level 45">
+	<skill id="4977" levels="1" name="45레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4978" levels="1" name="Raid Boss - Level 81">
+	<skill id="4978" levels="1" name="81레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4979" levels="1" name="Raid Boss - Level 82">
+	<skill id="4979" levels="1" name="82레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4980" levels="1" name="Raid Boss - Level 83">
+	<skill id="4980" levels="1" name="83레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4981" levels="1" name="Raid Boss - Level 84">
+	<skill id="4981" levels="1" name="84레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4982" levels="1" name="Raid Boss - Level 85">
+	<skill id="4982" levels="1" name="85레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4983" levels="1" name="Raid Boss - Level 25">
+	<skill id="4983" levels="1" name="25레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4984" levels="1" name="Raid Boss - Level 44">
+	<skill id="4984" levels="1" name="44레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4985" levels="1" name="Raid Boss - Level 70">
+	<skill id="4985" levels="1" name="70레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4986" levels="1" name="Raid Boss - Level 72">
+	<skill id="4986" levels="1" name="72레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4987" levels="1" name="Raid Boss - Level 74">
+	<skill id="4987" levels="1" name="74레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4988" levels="1" name="Raid Boss - Level 76">
+	<skill id="4988" levels="1" name="76레벨 레이드보스">
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="4989" levels="1" name="Npc - Hot Spring Nectar">
+	<skill id="4989" levels="1" name="핫 스프링 넥타">
 		<!-- TODO -->
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="4990" levels="1" name="Npc - Hot Spring Mineral">
+	<skill id="4990" levels="1" name="핫 스프링 미네랄">
 		<!-- TODO -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="4991" levels="1" name="Hot Spring Sulfur">
+	<skill id="4991" levels="1" name="온천 유황">
 		<!-- TODO -->
 		<!-- Decreases Atk. Spd. and Casting Spd. Effect 5. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="4992" levels="1" name="Stun">
+	<skill id="4992" levels="1" name="쇼크">
 		<!-- TODO -->
 		<!-- Shocks and instantly Immobilizes. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="SHOCK" />
 	</skill>
-	<skill id="4993" levels="1" name="Venom - Strike">
+	<skill id="4993" levels="1" name="베놈 스트라이크">
 		<!-- Benom Skills -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="830" />
@@ -566,7 +566,7 @@
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 	</skill>
-	<skill id="4994" levels="1" name="Venom - Sonic Storm">
+	<skill id="4994" levels="1" name="베놈 스톰">
 		<!-- Benom Skills -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="1900" />
@@ -575,7 +575,7 @@
 		<set name="castRange" val="500" />
 		<set name="baseCritRate" val="15" />
 	</skill>
-	<skill id="4995" levels="1" name="Venom - Teleport">
+	<skill id="4995" levels="1" name="베놈 텔레포트">
 		<!-- Benom Skills -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="2900" />
@@ -583,7 +583,7 @@
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="100" />
 	</skill>
-	<skill id="4996" levels="1" name="Venom - Range Teleport">
+	<skill id="4996" levels="1" name="베놈 매스 텔레포트">
 		<!-- Benom Skills -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="2900" />
@@ -591,19 +591,19 @@
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="800" />
 	</skill>
-	<skill id="4997" levels="1" name="Lidia - Regen">
+	<skill id="4997" levels="1" name="리디아 리젠">
 		<!-- TODO: Needs to be done -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="4998" levels="1" name="Lidia - Twister">
+	<skill id="4998" levels="1" name="리디아 트위스터">
 		<!-- TODO: Needs to be done -->
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
 	</skill>
-	<skill id="4999" levels="1" name="Lidia - Range Life Drain">
+	<skill id="4999" levels="1" name="리디아 뱀피릭 터치">
 		<!-- TODO: Needs to be done -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11302" levels="8" name="Major Heal seobiteo">
+	<skill id="11302" levels="8" name="서비터 메이저 힐">
 		<table name="#HP">1488 1495 1507 1519 1532 1544 1557 1570</table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1100" />
@@ -14,7 +14,7 @@
 		<set name="skillType" val="HEAL" />
 		<set name="target" val="TARGET_PET" />
 	</skill>
-	<skill id="11303" levels="1" name="Mass seobiteo Magic Shield">
+	<skill id="11303" levels="1" name="매스 서비터 매직 실드">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -31,7 +31,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11304" levels="1" name="Seobiteo Mass Haste">
+	<skill id="11304" levels="1" name="매스 서비터 헤이스트">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -48,7 +48,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11305" levels="1" name="Mass physical shield seobiteo">
+	<skill id="11305" levels="1" name="매스 서비터 피지컬 실드">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -65,7 +65,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11306" levels="1" name="Mass seobiteo empawo">
+	<skill id="11306" levels="1" name="매스 서비터 엠파워">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -82,7 +82,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11307" levels="1" name="Mass seobiteo Dynamite">
+	<skill id="11307" levels="1" name="매스 서비터 마이트">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -99,7 +99,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11308" levels="1" name="Seobiteo Mass Fast">
+	<skill id="11308" levels="1" name="매스 서비터 패스트">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -116,7 +116,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11309" levels="1" name="Blessing Mass seobiteo">
+	<skill id="11309" levels="1" name="매스 서비터 블레싱">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -130,7 +130,7 @@
 		<set name="negateAbnormals" val="root_physically,1;root_magically,1;paralyze,1;attack_time_up,3;speed_down,3" />
 		<set name="aggroPoints" val="582" />
 	</skill>
-	<skill id="11310" levels="2" name="Meat Alternate Defense Mass seobiteo">
+	<skill id="11310" levels="2" name="매스 서비터 얼터미트 디펜스">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
@@ -148,7 +148,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11311" levels="1" name="lion roar">
+	<skill id="11311" levels="1" name="나비아로프 스트라이크">
 		<set name="mpInitialConsume" val="14" />
 		<set name="mpConsume" val="56" />
 		<set name="magicLvl" val="77" />
@@ -165,7 +165,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="11312" levels="1" name="Lion's Claw">
+	<skill id="11312" levels="1" name="나비아로프 플레임">
 		<set name="castRange" val="1290" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="400" />
@@ -182,7 +182,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
-	<skill id="11313" levels="1" name="Lion strike">
+	<skill id="11313" levels="1" name="나비아로프 익스플로전">
 		<table name="#mpConsume">90</table>
 		<table name="#power">7645</table>
 		<table name="#magicLvl">85</table>
@@ -207,7 +207,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="11314" levels="1" name="flame Lion">
+	<skill id="11314" levels="1" name="콥스 블레스트">
 		<table name="#mpInitialConsume">15</table>
 		<table name="#mpConsume">32</table>
 		<table name="#magicLvl">85</table>
@@ -228,7 +228,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="11316" levels="1" name="Summon Soulshots">
+	<skill id="11316" levels="1" name="서먼 소울 샷">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>

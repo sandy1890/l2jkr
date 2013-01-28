@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1571" levels="1" name="Awakened Class Inventory Increase">
+	<skill id="1571" levels="1" name="각성 클래스 인벤토리 증가">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>
-	<skill id="1572" levels="1" name="Awakened Class Weight Increase">
+	<skill id="1572" levels="1" name="각성 클래스 무게 증가">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>
-	<skill id="1597" levels="1" name="Awakened Class Weight Increase">
+	<skill id="1597" levels="1" name="각성 클래스 무게 증가">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>
-	<skill id="1901" levels="1" name="Aim">
+	<skill id="1901" levels="1" name="에임">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -21,7 +21,7 @@
 			<mul order="0x30" stat="rCrit" val="0.97" />
 		</for>
 	</skill>
-	<skill id="1902" levels="1" name="Mental Fortress">
+	<skill id="1902" levels="1" name="멘탈">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -31,7 +31,7 @@
 			<add order="0x40" stat="pAtk" val="31" />
 		</for>
 	</skill>
-	<skill id="1903" levels="1" name="HP MP Regen">
+	<skill id="1903" levels="1" name="액티비티">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -40,7 +40,7 @@
 			<add order="0x40" stat="regMp" val="1" />
 		</for>
 	</skill>
-	<skill id="1904" levels="1" name="Unbind">
+	<skill id="1904" levels="1" name="퍼시스턴트">
 		<set name="hitTime" val="1000" />
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A1" />
@@ -56,7 +56,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1905" levels="1" name="Swiftness">
+	<skill id="1905" levels="1" name="라피드">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -65,7 +65,7 @@
 			<add order="0x40" stat="mAtkSpd" val="3" />
 		</for>
 	</skill>
-	<skill id="1906" levels="1" name="Water Blessing">
+	<skill id="1906" levels="1" name="블레스 워터">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -75,7 +75,7 @@
 			<add order="0x40" stat="waterPower" val="10" />
 		</for>
 	</skill>
-	<skill id="1907" levels="1" name="Prevision">
+	<skill id="1907" levels="1" name="프레비젼">
 		<set name="hitTime" val="1000" />
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A1" />
@@ -88,7 +88,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1908" levels="1" name="Delicacy">
+	<skill id="1908" levels="1" name="딜리케시">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -97,12 +97,12 @@
 			<add order="0x40" stat="rCrit" val="15" />
 		</for>
 	</skill>
-	<skill id="1909" levels="1" name="Delicacy">
+	<skill id="1909" levels="1" name="샤프니스">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="1910" levels="1" name="Dark Presence">
+	<skill id="1910" levels="1" name="다크 어빌리티">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -112,7 +112,7 @@
 			<game night="true" />
 		</for>
 	</skill>
-	<skill id="1911" levels="1" name="Wind Blessing">
+	<skill id="1911" levels="1" name="블레스 윈드">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -121,7 +121,7 @@
 			<add order="0x40" stat="windPower" val="10" />
 		</for>
 	</skill>
-	<skill id="1913" levels="1" name="Life Siphon">
+	<skill id="1913" levels="1" name="사이펀 라이프">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -129,7 +129,7 @@
 			<add order="0x40" stat="absorbDam" val="1" />
 		</for>
 	</skill>
-	<skill id="1914" levels="1" name="Savage">
+	<skill id="1914" levels="1" name="세비지">
 		<set name="hitTime" val="1000" />
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A1" />
@@ -143,7 +143,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1915" levels="1" name="Fire Blessing">
+	<skill id="1915" levels="1" name="파이어 스트랭스">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -152,7 +152,7 @@
 			<add order="0x40" stat="firePower" val="10" />
 		</for>
 	</skill>
-	<skill id="1916" levels="1" name="Energetic">
+	<skill id="1916" levels="1" name="에너지틱">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -160,7 +160,7 @@
 			<add order="0x40" stat="regHp" val="3" />
 		</for>
 	</skill>
-	<skill id="1919" levels="1" name="Dexterity">
+	<skill id="1919" levels="1" name="덱스터리티">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -168,7 +168,7 @@
 			<mul order="0x30" stat="pAtk" val="1.02" /> 
 		</for>
 	</skill>
-	<skill id="1921" levels="1" name="Earth Blessing">
+	<skill id="1921" levels="1" name="블레스 어스">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -177,7 +177,7 @@
 			<add order="0x40" stat="earthPower" val="10" />
 		</for>
 	</skill>
-	<skill id="1923" levels="1" name="Battle Instinct">
+	<skill id="1923" levels="1" name="배틀 인스팅트">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -185,7 +185,7 @@
 			<add order="0x40" stat="pvpPhysDmg" val="1.01" />
 		</for>
 	</skill>
-	<skill id="1924" levels="1" name="Dark Blessing">
+	<skill id="1924" levels="1" name="다크 사일런스">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="P" />
@@ -194,7 +194,7 @@
 			<add order="0x40" stat="darkPower" val="10" />
 		</for>
 	</skill>
-	<skill id="1925" levels="1" name="Soul Protection">
+	<skill id="1925" levels="1" name="소울 프로텍션">
 		<set name="hitTime" val="1000" />
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A1" />
@@ -207,31 +207,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1927" levels="1" name="Sigel Aura">
+	<skill id="1927" levels="1" name="시겔 오라">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="1929" levels="1" name="Tyrr Aura">
+	<skill id="1929" levels="1" name="티르 오라">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="1931" levels="1" name="Othell Aura">
+	<skill id="1931" levels="1" name="오셀 오라">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="1933" levels="1" name="Yul Aura">
+	<skill id="1933" levels="1" name="율 오라">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="1935" levels="1" name="Strength Wizard">
+	<skill id="1935" levels="1" name="페오 오라">
 		<set name="aggroPoints" val="679" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" />
@@ -251,19 +251,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1937" levels="1" name="Wynn Aura">
+	<skill id="1937" levels="1" name="윈 오라">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="1939" levels="1" name="Aeore Aura">
+	<skill id="1939" levels="1" name="에오로 오라">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="T"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="1946" levels="1" name="strength Knight">
+	<skill id="1946" levels="1" name="블록 시겔 포스">
 		<set name="aggroPoints" val="679" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" />
@@ -281,7 +281,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1947" levels="1" name="Gladiator strength">
+	<skill id="1947" levels="1" name="블록 티르 포스">
 		<set name="aggroPoints" val="597" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />

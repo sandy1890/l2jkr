@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5200" levels="8" name="Pet Recharge">
+	<skill id="5200" levels="8" name="펫 리차지">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 65 67 69 75 80 85 90 95 </table>
 		<table name="#aggroPoints"> 268 285 313 331 360 379 399 418 </table>
@@ -21,7 +21,7 @@
 		<set name="skillType" val="MANA_BY_LEVEL" />
 		<set name="target" val="TARGET_OWNER_PET" />
 	</skill>
-	<skill id="5201" levels="6" name="Pet Concentration">
+	<skill id="5201" levels="6" name="펫 콘센트레이션">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 20 30 44 52 60 68 </table>
 		<table name="#mpInitialConsume"> 4 6 8 10 11 13 </table>
@@ -47,7 +47,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5202" levels="12" name="Stun">
+	<skill id="5202" levels="12" name="쇼크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
@@ -69,7 +69,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5203" levels="12" name="Fear">
+	<skill id="5203" levels="12" name="공포">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
@@ -90,14 +90,14 @@
 			<effect count="5" name="Fear" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
+	<skill id="5204" levels="1" name="연출-초거대 돼지 합체">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5800" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="5205" levels="1" name="Boss Regeneration">
+	<skill id="5205" levels="1" name="힐">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
@@ -107,7 +107,7 @@
 			<effect name="HealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
-	<skill id="5206" levels="1" name="Decrease Speed">
+	<skill id="5206" levels="1" name="이동속도 감소">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="95" />
 		<set name="mpInitialConsume" val="16" />
@@ -130,7 +130,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5207" levels="1" name="Decrease Atk. Spd.">
+	<skill id="5207" levels="1" name="공격속도 감소">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="95" />
 		<set name="mpInitialConsume" val="16" />
@@ -153,7 +153,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5208" levels="1" name="Event Wind walk">
+	<skill id="5208" levels="1" name="이벤트 윈드 워크">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -168,7 +168,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5209" levels="1" name="Event Shield">
+	<skill id="5209" levels="1" name="이벤트 실드">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -183,7 +183,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5210" levels="1" name="Event Bless the body">
+	<skill id="5210" levels="1" name="이벤트 블레스 더 바디">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -198,7 +198,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5211" levels="1" name="Event Vampiric rage">
+	<skill id="5211" levels="1" name="이벤트 뱀피릭 레이지">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="60" />
@@ -213,7 +213,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5212" levels="1" name="Event Regeneration">
+	<skill id="5212" levels="1" name="이벤트 리제네레이션">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -228,7 +228,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5213" levels="1" name="Event Haste">
+	<skill id="5213" levels="1" name="이벤트 헤이스트">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -243,7 +243,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5214" levels="1" name="Event Bless the soul">
+	<skill id="5214" levels="1" name="이벤트 블레스 더 소울">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -258,7 +258,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5215" levels="1" name="Event Acumen">
+	<skill id="5215" levels="1" name="이벤트 아큐멘">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -273,7 +273,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5216" levels="1" name="Event Concentration">
+	<skill id="5216" levels="1" name="이벤트 콘센트레이션">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -288,7 +288,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5217" levels="1" name="Event Empower">
+	<skill id="5217" levels="1" name="이벤트 엠파워">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
@@ -303,7 +303,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5218" levels="1" name="Production: Event Teleport">
+	<skill id="5218" levels="1" name="순간 이동">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -312,7 +312,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5219" levels="1" name="Stun of giant mutated animal">
+	<skill id="5219" levels="1" name="거대 돌연변이 스턴">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="95" />
 		<set name="lvlDepend" val="1" />
@@ -334,7 +334,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5220" levels="1" name="Fear of giant mutated animal">
+	<skill id="5220" levels="1" name="거대 돌연변이 공포">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="95" />
 		<set name="mpConsume" val="43" />
@@ -355,7 +355,7 @@
 			<effect count="10" name="Fear" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
+	<skill id="5221" levels="1" name="발러 - 물리 근거리 약점">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
@@ -376,7 +376,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5222" levels="1" name="Balor - Physical Long Range Weak Point">
+	<skill id="5222" levels="1" name="발러 - 물리 원거리 약점">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
@@ -389,7 +389,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5223" levels="1" name="Balor - Magic Weak Point">
+	<skill id="5223" levels="1" name="발러 - 마법 약점">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
@@ -402,7 +402,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5224" levels="1" name="Berserk">
+	<skill id="5224" levels="1" name="광폭화">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="aggroPoints" val="100" />
@@ -420,7 +420,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5225" levels="1" name="Invincible">
+	<skill id="5225" levels="1" name="무적">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="aggroPoints" val="100" />
@@ -435,7 +435,7 @@
 			<effect name="Invincible" abnormalTime="30" val="0" special="invincible" abnormalLvl="1" abnormalType="pd_up_special" />
 		</for>
 	</skill>
-	<skill id="5226" levels="1" name="Imprison">
+	<skill id="5226" levels="1" name="감옥으로 보내기">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="castRange" val="600" />
@@ -448,7 +448,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="5227" levels="1" name="Ground Strike">
+	<skill id="5227" levels="1" name="지면 강타">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="baseCritRate" val="20" />
@@ -461,7 +461,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5228" levels="1" name="Jump Attack">
+	<skill id="5228" levels="1" name="점프 공격">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="baseCritRate" val="20" />
@@ -475,7 +475,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5229" levels="1" name="Strong Punch">
+	<skill id="5229" levels="1" name="스트롱 펀치">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="baseCritRate" val="20" />
@@ -499,7 +499,7 @@
 			<effect name="ThrowUp" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="5230" levels="1" name="Stun">
+	<skill id="5230" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="hitTime" val="5000" />
@@ -518,7 +518,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5231" levels="1" name="Stun">
+	<skill id="5231" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="hitTime" val="3000" />
@@ -537,7 +537,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5232" levels="1" name="Stun">
+	<skill id="5232" levels="1" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="hitTime" val="2000" />
@@ -556,7 +556,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5233" levels="1" name="Weight Spin Attack - Weak">
+	<skill id="5233" levels="1" name="통통추 회전공격 - 약">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="hitTime" val="5000" />
@@ -568,7 +568,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5234" levels="1" name="Weight Spin Attack - Mid">
+	<skill id="5234" levels="1" name="통통추 회전공격 - 중">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="hitTime" val="3000" />
@@ -580,7 +580,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5235" levels="1" name="Weight Spin Attack - Strong">
+	<skill id="5235" levels="1" name="통통추 회전공격 - 강">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="hitTime" val="2000" />
@@ -592,7 +592,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5236" levels="1" name="Speed Up">
+	<skill id="5236" levels="1" name="스피드 업">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="aggroPoints" val="100" />
@@ -608,7 +608,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5237" levels="1" name="Speed Down">
+	<skill id="5237" levels="1" name="스피드 다운">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="aggroPoints" val="100" />
@@ -624,7 +624,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5238" levels="1" name="Freezing">
+	<skill id="5238" levels="1" name="프리징">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -649,7 +649,7 @@
 			<effect name="Paralyze" abnormalTime="10" val="0" effectPower="80" effectType="PARALYZE" abnormalLvl="1" abnormalType="freezing" />
 		</for>
 	</skill>
-	<skill id="5239" levels="5" name="Event Timer">
+	<skill id="5239" levels="5" name="남겨진 시간">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="85" />
 		<table name="#Time"> 300 600 900 1200 1800 </table>
@@ -663,7 +663,7 @@
 			<effect name="Buff" abnormalTime="#Time" val="0" abnormalLvl="1" abnormalType="time_check" />
 		</for>
 	</skill>
-	<skill id="5240" levels="1" name="Stun">
+	<skill id="5240" levels="1" name="쇼크">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume" val="221" />
@@ -684,7 +684,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5241" levels="1" name="Stun">
+	<skill id="5241" levels="1" name="쇼크">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume" val="368" />
@@ -704,7 +704,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5242" levels="1" name="Sickness">
+	<skill id="5242" levels="1" name="시크니스">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="1" />
@@ -722,7 +722,7 @@
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalVisualEffect="earthquake" />
 		</for>
 	</skill>
-	<skill id="5243" levels="1" name="Blind">
+	<skill id="5243" levels="1" name="블라인드">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_ONE" />
@@ -733,7 +733,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="lvlDepend" val="2" />
 	</skill>
-	<skill id="5244" levels="1" name="Physical Up">
+	<skill id="5244" levels="1" name="피지컬 업">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -747,7 +747,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5245" levels="1" name="Magical Up">
+	<skill id="5245" levels="1" name="매지컬 업">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -761,7 +761,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5246" levels="12" name="Boss Dark Explosion">
+	<skill id="5246" levels="12" name="다크 익스플로전">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 23 32 44 58 74 89 102 107 112 114 116 118 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -780,7 +780,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5247" levels="12" name="Seed of Darkness">
+	<skill id="5247" levels="12" name="어둠의 씨앗">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -809,7 +809,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="30" noicon="1" val="0" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
-	<skill id="5248" levels="12" name="Seed Explosion">
+	<skill id="5248" levels="12" name="시드 익스플로전">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#power"> 81 121 171 231 298 367 431 458 481 500 513 526 </table>
@@ -827,7 +827,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5249" levels="12" name="Boss Dark Circle">
+	<skill id="5249" levels="12" name="다크 서클">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
@@ -846,7 +846,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5250" levels="1" name="Stun">
+	<skill id="5250" levels="1" name="쇼크">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="87" />
 		<set name="mpConsume" val="76" />
@@ -867,7 +867,7 @@
 			<effect name="Stun" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5251" levels="12" name="Poison">
+	<skill id="5251" levels="12" name="독">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 157 161 163 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -893,7 +893,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
-	<skill id="5252" levels="12" name="Paralysis">
+	<skill id="5252" levels="12" name="마비">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<set name="isTriggeredSkill" val="true" />
@@ -914,7 +914,7 @@
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="5253" levels="12" name="Bleed">
+	<skill id="5253" levels="12" name="출혈">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dot"> 105 150 204 261 321 369 402 402 417 417 426 426 </table>
@@ -944,7 +944,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="10" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
-	<skill id="5254" levels="12" name="Invasion of Spirit">
+	<skill id="5254" levels="12" name="영혼의 잠식">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -969,7 +969,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="10" noicon="1" val="0" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
-	<skill id="5255" levels="12" name="Mana Burn">
+	<skill id="5255" levels="12" name="마나 번">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 26 39 56 78 102 128 153 164 174 182 189 194 </table>
@@ -983,7 +983,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="canBeReflected" val="false" />
 	</skill>
-	<skill id="5256" levels="1" name="Announcement of Death">
+	<skill id="5256" levels="1" name="죽음의 선고">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="95" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1002,7 +1002,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="5257" abnormalLvl="1" abnormalType="death_clack" />
 		</for>
 	</skill>
-	<skill id="5257" levels="2" name="Death">
+	<skill id="5257" levels="2" name="데스">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#lethal2"> 99 5 </table>
 		<set name="isTriggeredSkill" val="true" />
@@ -1013,7 +1013,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5258" levels="12" name="Mana Burn">
+	<skill id="5258" levels="12" name="마나 번">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 26 39 56 78 102 128 153 164 174 182 189 194 </table>
@@ -1032,7 +1032,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="5259" levels="12" name="Fear">
+	<skill id="5259" levels="12" name="공포">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
@@ -1058,7 +1058,7 @@
 			<effect count="5" name="Fear" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="5260" levels="12" name="Disarm">
+	<skill id="5260" levels="12" name="디스암">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1078,7 +1078,7 @@
 			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
-	<skill id="5261" levels="1" name="Zombie">
+	<skill id="5261" levels="1" name="좀비화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="mpInitialConsume" val="11" />
 		<set name="mpConsume" val="44" />
@@ -1098,7 +1098,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5262" levels="12" name="NPC - Rise Shot">
+	<skill id="5262" levels="12" name="라이즈 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1117,7 +1117,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5263" levels="12" name="NPC _ Chain Lightning">
+	<skill id="5263" levels="12" name="체인 라이트닝">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1137,7 +1137,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="5264" levels="12" name="Death Mark">
+	<skill id="5264" levels="12" name="데스 마크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1161,7 +1161,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="0" abnormalVisualEffect="deathmark" abnormalLvl="3" abnormalType="death_mark" />
 		</for>
 	</skill>
-	<skill id="5265" levels="12" name="NPC - Soul Emission">
+	<skill id="5265" levels="12" name="소울 에미션">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1183,7 +1183,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillScope" val="fan;200;180" />
 	</skill>
-	<skill id="5266" levels="12" name="Magical Backfire">
+	<skill id="5266" levels="12" name="매지컬 백파이어">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#val"> 1 1.5 1.5 7 7 7 7 7 7 7 7 7 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1211,7 +1211,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5267" levels="21" name="Trap Explosion">
+	<skill id="5267" levels="21" name="함정 폭발">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 28 36 43 49 55 60 64 68 72 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 35 46 57 66 77 85 92 99 105 107 111 112 114 115 116 117 119 120 121 122 123 </table>
@@ -1226,7 +1226,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5268" levels="17" name="Poison">
+	<skill id="5268" levels="17" name="독">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#dmg"> 54 66 78 78 78 84 165 165 165 165 171 171 171 171 171 171 171 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 79 80 81 82 83 84 85 86 </table>
@@ -1244,7 +1244,7 @@
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="1" abnormalType="poison" abnormalVisualEffect="poison" effectPower="80" effectType="POISON" />
 		</for>
 	</skill>
-	<skill id="5269" levels="17" name="Slow Trap">
+	<skill id="5269" levels="17" name="슬로우 트랩">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1265,7 +1265,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5270" levels="16" name="Flash Trap">
+	<skill id="5270" levels="16" name="플래쉬 트랩">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1284,7 +1284,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="5271" levels="19" name="Hold">
+	<skill id="5271" levels="19" name="홀드">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#traits"> NONE HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD </table>
@@ -1304,7 +1304,7 @@
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="5272" levels="17" name="Decoy Provocation">
+	<skill id="5272" levels="17" name="디코이 도발">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 43 52 60 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 4080 4950 5657 6104 6349 6542 6582 6620 6656 6690 6722 6752 6781 6809 6836 6862 6887 </table>
@@ -1320,7 +1320,7 @@
 			<effect name="TargetMe" val="0" />
 		</for>
 	</skill>
-	<skill id="5273" levels="9" name="NPC(party) - Physical Single Close Range Attack">
+	<skill id="5273" levels="9" name="파워 스트라이크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1336,7 +1336,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 	</skill>
-	<skill id="5274" levels="9" name="NPC(party) - Physical Single Long Range Attack">
+	<skill id="5274" levels="9" name="파워 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1351,7 +1351,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5275" levels="9" name="NPC(party) - Physical Range Close Range Attack">
+	<skill id="5275" levels="9" name="스피닝 슬래셔">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1366,7 +1366,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5276" levels="9" name="NPC(party) - Physical Range Long Range Attack">
+	<skill id="5276" levels="9" name="버스트 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1383,7 +1383,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5277" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
+	<skill id="5277" levels="9" name="파워 스트라이크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1401,7 +1401,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5278" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
+	<skill id="5278" levels="9" name="파워 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1418,7 +1418,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5279" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
+	<skill id="5279" levels="9" name="스피닝 슬래셔">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
@@ -1434,7 +1434,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5280" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
+	<skill id="5280" levels="9" name="버스트 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1453,7 +1453,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5281" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
+	<skill id="5281" levels="9" name="파워 스트라이크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1472,7 +1472,7 @@
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5282" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
+	<skill id="5282" levels="9" name="파워 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1489,7 +1489,7 @@
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5283" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
+	<skill id="5283" levels="9" name="스피닝 슬래셔">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
@@ -1505,7 +1505,7 @@
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5284" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
+	<skill id="5284" levels="9" name="버스트 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1524,7 +1524,7 @@
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5285" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
+	<skill id="5285" levels="9" name="파워 스트라이크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1543,7 +1543,7 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5286" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
+	<skill id="5286" levels="9" name="파워 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1560,7 +1560,7 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5287" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
+	<skill id="5287" levels="9" name="스피닝 슬래셔">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
@@ -1576,7 +1576,7 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5288" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
+	<skill id="5288" levels="9" name="버스트 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1595,7 +1595,7 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5289" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
+	<skill id="5289" levels="9" name="파워 스트라이크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1614,7 +1614,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5290" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
+	<skill id="5290" levels="9" name="파워 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1631,7 +1631,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5291" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
+	<skill id="5291" levels="9" name="스피닝 슬래셔">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
@@ -1647,7 +1647,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5292" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
+	<skill id="5292" levels="9" name="버스트 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1666,7 +1666,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5293" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
+	<skill id="5293" levels="9" name="파워 스트라이크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1685,7 +1685,7 @@
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5294" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
+	<skill id="5294" levels="9" name="파워 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1702,7 +1702,7 @@
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5295" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
+	<skill id="5295" levels="9" name="스피닝 슬래셔">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
@@ -1718,7 +1718,7 @@
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5296" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
+	<skill id="5296" levels="9" name="버스트 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1737,7 +1737,7 @@
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5297" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
+	<skill id="5297" levels="9" name="파워 스트라이크">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1755,7 +1755,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5298" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
+	<skill id="5298" levels="9" name="파워 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1772,7 +1772,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5299" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
+	<skill id="5299" levels="9" name="스피닝 슬래셔">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>

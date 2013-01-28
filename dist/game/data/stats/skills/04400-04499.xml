@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="4400" levels="3" name="Acumen">
+	<skill id="4400" levels="3" name="아큐멘">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -17,7 +17,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4401" levels="3" name="Empower">
+	<skill id="4401" levels="3" name="엠파워">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
@@ -34,7 +34,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4402" levels="2" name="Haste">
+	<skill id="4402" levels="2" name="헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
@@ -51,7 +51,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4403" levels="3" name="Guidance">
+	<skill id="4403" levels="3" name="가이던스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#accCombat"> 2 3 4 </table>
@@ -68,7 +68,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4404" levels="3" name="Focus">
+	<skill id="4404" levels="3" name="포커스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#rCrit"> 0.2 0.25 0.3 </table>
@@ -85,7 +85,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4405" levels="3" name="Death Whisper">
+	<skill id="4405" levels="3" name="데스 위스퍼">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
@@ -102,7 +102,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4406" levels="3" name="Agility">
+	<skill id="4406" levels="3" name="어질리티">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#rEvas"> 2 3 4 </table>
@@ -119,13 +119,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4407" levels="2" name="Monster Type">
+	<skill id="4407" levels="2" name="강화형 몬스터">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4408" levels="20" name="HP Modifiers">
+	<skill id="4408" levels="20" name="HP가 12배">
 		<!-- Confirmed CT2.5 -->
 		<table name="#maxhp"> 1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="magicLvl" val="1" />
@@ -136,7 +136,7 @@
 			<mul order="0x30" stat="regHp" val="#maxhp" />
 		</for>
 	</skill>
-	<skill id="4409" levels="20" name="MP Modifiers">
+	<skill id="4409" levels="20" name="MP가 12배">
 		<!-- Confirmed CT2.5 -->
 		<table name="#maxmp"> 1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="magicLvl" val="1" />
@@ -147,7 +147,7 @@
 			<mul order="0x30" stat="regMp" val="#maxmp" />
 		</for>
 	</skill>
-	<skill id="4410" levels="22" name="P. Atk. Modifiers">
+	<skill id="4410" levels="22" name="공격력이 엄청나게 강함">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtk"> 0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10 </table>
 		<set name="magicLvl" val="1" />
@@ -157,7 +157,7 @@
 			<mul order="0x30" stat="pAtk" val="#pAtk" />
 		</for>
 	</skill>
-	<skill id="4411" levels="22" name="M. Atk. Modifiers">
+	<skill id="4411" levels="22" name="마법력이 엄청나게 강함">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mAtk"> 0.15 0.18 0.22 0.27 0.32 0.39 0.47 0.57 0.69 0.83 1 1.21 1.46 1.77 2.14 2.59 3.13 3.79 4.59 5.55 6.72 100 </table>
 		<set name="magicLvl" val="1" />
@@ -167,7 +167,7 @@
 			<mul order="0x30" stat="mAtk" val="#mAtk" />
 		</for>
 	</skill>
-	<skill id="4412" levels="22" name="P. Def. Modifiers">
+	<skill id="4412" levels="22" name="방어력이 엄청나게 강함">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pDef"> 0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10 </table>
 		<set name="magicLvl" val="1" />
@@ -177,7 +177,7 @@
 			<mul order="0x30" stat="pDef" val="#pDef" />
 		</for>
 	</skill>
-	<skill id="4413" levels="22" name="M. Def. Modifiers">
+	<skill id="4413" levels="22" name="마법저항이 엄청나게 강함">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.94 2.14 2.35 2.59 10 </table>
 		<set name="magicLvl" val="1" />
@@ -187,7 +187,7 @@
 			<mul order="0x30" stat="mDef" val="#mDef" />
 		</for>
 	</skill>
-	<skill id="4414" levels="3" name="Armor Type">
+	<skill id="4414" levels="3" name="경장갑형">
 		<!-- Confirmed CT2.5 -->
 		<table name="#evasion"> -10 0 10 </table>
 		<table name="#pdef"> 1.15 1 0.85 </table>
@@ -199,7 +199,7 @@
 			<mul order="0x30" stat="pDef" val="#pdef" />
 		</for>
 	</skill>
-	<skill id="4415" levels="22" name="Weapon Type">
+	<skill id="4415" levels="22" name="석궁">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pAtk"> 1 1.38 1 1.38 1 1.38 0.87 1.21 2.22 2.5 1 1.38 1.16 1.62 1.16 1.62 1.16 1.62 1.16 1.62 1.08 1.62 0.93 1.62 1.38 1.62 1.08 1.62 </table>
 		<table name="#pAtkSpd"> 1 0.71 1 0.71 1 0.71 1.14 0.82 0.89 0.64 1 0.71 0.85 0.61 0.85 0.61 0.85 0.61 0.85 0.61 0.92 0.61 1.07 0.61 0.62 0.61 0.92 0.61 </table>
@@ -211,7 +211,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 		</for>
 	</skill>
-	<skill id="4416" levels="25" name="Races">
+	<skill id="4416" levels="25" name="카마엘">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pDefMagicCreatures"> 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </table>
 		<table name="#pDefBeasts"> 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </table>
@@ -245,7 +245,7 @@
 			<sub order="0x40" stat="stunVuln" val="#pDefShocks" />
 		</for>
 	</skill>
-	<skill id="4417" levels="38" name="Race Types">
+	<skill id="4417" levels="38" name="언데드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pDefBows"> 1 1 0.85 0.85 0.85 1 1 0.85 1 1.15 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.15 1 1 </table>
 		<table name="#pDefBlunts"> 1 1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1.15 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.85 1 1 </table>
@@ -270,7 +270,7 @@
 			<sub order="0x40" stat="rootVuln" val="#pDefHold" />
 		</for>
 	</skill>
-	<skill id="4418" levels="5" name="Fire Attacks">
+	<skill id="4418" levels="5" name="불 속성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
@@ -281,7 +281,7 @@
 			<add order="0x40" stat="fireRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4419" levels="5" name="Water Attacks">
+	<skill id="4419" levels="5" name="물 속성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
@@ -292,7 +292,7 @@
 			<add order="0x40" stat="waterRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4420" levels="5" name="Wind Attacks">
+	<skill id="4420" levels="5" name="바람 속성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
@@ -303,7 +303,7 @@
 			<add order="0x40" stat="windRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4421" levels="5" name="Earth Attacks">
+	<skill id="4421" levels="5" name="땅 속성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
@@ -314,7 +314,7 @@
 			<add order="0x40" stat="earthRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4422" levels="5" name="Dark Attacks">
+	<skill id="4422" levels="5" name="암흑 속성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
@@ -325,7 +325,7 @@
 			<add order="0x40" stat="darkRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4423" levels="5" name="Sacred Attacks">
+	<skill id="4423" levels="5" name="성스러운 속성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 10 20 30 40 50 </table>
 		<set name="magicLvl" val="1" />
@@ -336,7 +336,7 @@
 			<add order="0x40" stat="holyRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4424" levels="5" name="Resist Hand-to-hand Weapons">
+	<skill id="4424" levels="5" name="격투 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
 		<set name="magicLvl" val="1" />
@@ -346,7 +346,7 @@
 			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4425" levels="5" name="Resist Blunt Weapons">
+	<skill id="4425" levels="5" name="둔기 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
 		<set name="magicLvl" val="1" />
@@ -357,7 +357,7 @@
 			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4426" levels="5" name="Resist Dual-Sword Weapons">
+	<skill id="4426" levels="5" name="이도류 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
 		<set name="magicLvl" val="1" />
@@ -367,7 +367,7 @@
 			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4427" levels="5" name="Resist Swords">
+	<skill id="4427" levels="5" name="도검 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
 		<set name="magicLvl" val="1" />
@@ -378,13 +378,13 @@
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4428" levels="5" name="Resist Two-handed Weapons">
+	<skill id="4428" levels="5" name="양손 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4429" levels="5" name="Greater Resist Fire Attacks">
+	<skill id="4429" levels="5" name="높은 불 속성 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -394,7 +394,7 @@
 			<add order="0x40" stat="fireRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4430" levels="5" name="Greater Resist Water Attacks">
+	<skill id="4430" levels="5" name="높은 물 속성 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -404,7 +404,7 @@
 			<add order="0x40" stat="waterRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4431" levels="5" name="Greater Resist Wind Attacks">
+	<skill id="4431" levels="5" name="높은 바람 속성 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -414,7 +414,7 @@
 			<add order="0x40" stat="windRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4432" levels="5" name="Greater Resist Earth Attacks">
+	<skill id="4432" levels="5" name="높은 땅 속성 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -424,7 +424,7 @@
 			<add order="0x40" stat="earthRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4433" levels="5" name="Greater Resist Sacred Attacks">
+	<skill id="4433" levels="5" name="높은 성스러운 속성 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -434,7 +434,7 @@
 			<add order="0x40" stat="holyRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4434" levels="5" name="Greater Resist Dark Attacks">
+	<skill id="4434" levels="5" name="높은 암흑 속성 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -444,7 +444,7 @@
 			<add order="0x40" stat="darkRes" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4435" levels="5" name="Greater Resist Stun">
+	<skill id="4435" levels="5" name="높은 쇼크 공격 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -454,7 +454,7 @@
 			<sub order="0x40" stat="stunVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4436" levels="5" name="Greater Resist Poison">
+	<skill id="4436" levels="5" name="높은 독 공격 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -464,7 +464,7 @@
 			<sub order="0x40" stat="poisonVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4437" levels="5" name="Greater Resist Bleeding">
+	<skill id="4437" levels="5" name="높은 출혈 공격 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -474,7 +474,7 @@
 			<sub order="0x40" stat="bleedVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4438" levels="5" name="Greater Resist Sleep">
+	<skill id="4438" levels="5" name="높은 수면 공격 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -484,7 +484,7 @@
 			<sub order="0x40" stat="sleepVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4439" levels="5" name="Greater Resist Hold">
+	<skill id="4439" levels="5" name="높은 홀드 공격 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -494,7 +494,7 @@
 			<sub order="0x40" stat="rootVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4440" levels="5" name="Greater Resist Paralysis">
+	<skill id="4440" levels="5" name="높은 마비 공격 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -504,7 +504,7 @@
 			<sub order="0x40" stat="paralyzeVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4441" levels="5" name="Greater Resist Mental Derangement">
+	<skill id="4441" levels="5" name="높은 정신 공격 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
@@ -514,7 +514,7 @@
 			<sub order="0x40" stat="derangementVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4442" levels="5" name="Greater Resist Hand-to-hand Weapons">
+	<skill id="4442" levels="5" name="높은 격투 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
 		<set name="magicLvl" val="1" />
@@ -524,7 +524,7 @@
 			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4443" levels="5" name="Greater Resist Blunt Weapons">
+	<skill id="4443" levels="5" name="높은 둔기 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
 		<set name="magicLvl" val="1" />
@@ -535,7 +535,7 @@
 			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4444" levels="5" name="Higher Resist Bow/Crossbow Weapons">
+	<skill id="4444" levels="5" name="높은 활/석궁 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
 		<set name="magicLvl" val="1" />
@@ -546,7 +546,7 @@
 			<mul order="0x30" stat="crossbowWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4445" levels="5" name="Greater Resist Spear Weapons">
+	<skill id="4445" levels="5" name="높은 창 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
 		<set name="magicLvl" val="1" />
@@ -556,7 +556,7 @@
 			<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
+	<skill id="4446" levels="5" name="높은 이도류 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
 		<set name="magicLvl" val="1" />
@@ -566,7 +566,7 @@
 			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4447" levels="5" name="Greater Resist Swords">
+	<skill id="4447" levels="5" name="높은 도검 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
 		<set name="magicLvl" val="1" />
@@ -577,7 +577,7 @@
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4448" levels="5" name="Greater Resist Daggers">
+	<skill id="4448" levels="5" name="높은 단검/세검 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
 		<set name="magicLvl" val="1" />
@@ -589,13 +589,13 @@
 			<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
+	<skill id="4449" levels="5" name="높은 양손 무기 내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4450" levels="5" name="Stun Attack Weak Point">
+	<skill id="4450" levels="5" name="쇼크 공격 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 11 25 43 67 100 </table>
 		<set name="magicLvl" val="1" />
@@ -605,7 +605,7 @@
 			<add order="0x40" stat="stunVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4451" levels="5" name="Poison Attack Weak Point">
+	<skill id="4451" levels="5" name="독 공격 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 11 25 43 67 100 </table>
 		<set name="magicLvl" val="1" />
@@ -615,7 +615,7 @@
 			<add order="0x40" stat="poisonVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4452" levels="5" name="Bleed Attack Weak Point">
+	<skill id="4452" levels="5" name="출혈 공격 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 11 25 43 67 100 </table>
 		<set name="magicLvl" val="1" />
@@ -625,7 +625,7 @@
 			<add order="0x40" stat="bleedVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4453" levels="5" name="Sleep Attack Weak Point">
+	<skill id="4453" levels="5" name="수면 공격 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 11 25 43 67 100 </table>
 		<set name="magicLvl" val="1" />
@@ -635,7 +635,7 @@
 			<add order="0x40" stat="sleepVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4454" levels="5" name="Hold Attack Weak Point">
+	<skill id="4454" levels="5" name="홀드 공격 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 11 25 43 67 100 </table>
 		<set name="magicLvl" val="1" />
@@ -645,7 +645,7 @@
 			<add order="0x40" stat="rootVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4455" levels="5" name="Paralysis Attack Weak Point">
+	<skill id="4455" levels="5" name="마비 공격 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 11 25 43 67 100 </table>
 		<set name="magicLvl" val="1" />
@@ -655,7 +655,7 @@
 			<add order="0x40" stat="paralyzeVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4456" levels="5" name="Mental Attack Weak Point">
+	<skill id="4456" levels="5" name="정신 공격 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 11 25 43 67 100 </table>
 		<set name="magicLvl" val="1" />
@@ -665,7 +665,7 @@
 			<add order="0x40" stat="derangementVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4457" levels="5" name="Hand-to-hand Weapon Weak Point">
+	<skill id="4457" levels="5" name="격투 무기 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 1.11 1.25 1.43 1.67 2 </table>
 		<set name="magicLvl" val="1" />
@@ -675,7 +675,7 @@
 			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4458" levels="5" name="Spear Weapon Weak Point">
+	<skill id="4458" levels="5" name="창 무기 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 1.11 1.25 1.43 1.67 2 </table>
 		<set name="magicLvl" val="1" />
@@ -685,7 +685,7 @@
 			<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4459" levels="5" name="Dual-Sword Weapon Weak Point">
+	<skill id="4459" levels="5" name="이도류 무기 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 1.11 1.25 1.43 1.67 2 </table>
 		<set name="magicLvl" val="1" />
@@ -695,7 +695,7 @@
 			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4460" levels="5" name="Sword Weak Point">
+	<skill id="4460" levels="5" name="도검 무기 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 1.11 1.25 1.43 1.67 2 </table>
 		<set name="magicLvl" val="1" />
@@ -706,7 +706,7 @@
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4461" levels="5" name="Dagger Weak Point">
+	<skill id="4461" levels="5" name="단검/세검 무기 약점">
 		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 1.11 1.25 1.43 1.67 2 </table>
 		<set name="magicLvl" val="1" />
@@ -718,13 +718,13 @@
 			<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
 		</for>
 	</skill>
-	<skill id="4462" levels="5" name="Two-handed Weapon Weak Point">
+	<skill id="4462" levels="5" name="양손 무기 약점">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4463" levels="3" name="Surrender To Water">
+	<skill id="4463" levels="3" name="서렌더 투 워터">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#fire"> 7 12 15 </table>
@@ -754,7 +754,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4464" levels="3" name="Surrender To Wind">
+	<skill id="4464" levels="3" name="서렌더 투 윈드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#earth"> 7 12 15 </table>
@@ -784,7 +784,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4465" levels="3" name="Surrender To Earth">
+	<skill id="4465" levels="3" name="서렌더 투 어스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#earth"> 15 25 30 </table>
@@ -814,7 +814,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4466" levels="3" name="Surrender To Darkness">
+	<skill id="4466" levels="3" name="서렌더 투 다크니스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#dark"> 15 25 30 </table>
@@ -844,7 +844,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4467" levels="3" name="Surrender To Light">
+	<skill id="4467" levels="3" name="서렌더 투 라이트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 2 3 4 </table>
 		<table name="#dark"> 7 12 15 </table>
@@ -874,7 +874,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4468" levels="2" name="Area Buff - Wind Walk">
+	<skill id="4468" levels="2" name="윈드 워크">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#abnormalLvl"> 1 2 </table>
@@ -892,13 +892,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4469" levels="1" name="Potion Drinking">
+	<skill id="4469" levels="1" name="물약먹기">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4470" levels="1" name="NPC Spoils">
+	<skill id="4470" levels="1" name="스포일">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -909,7 +909,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="4471" levels="12" name="NPC Anger">
+	<skill id="4471" levels="12" name="앵거">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#pAtkDef"> 1.15 1.3 1.45 1.6 1.9 2.2 2.5 2.8 3.1 3.4 3.7 4 </table>
@@ -939,7 +939,7 @@
 			<!-- /effect -->
 		</for>
 	</skill>
-	<skill id="4472" levels="12" name="NPC Strike Golem">
+	<skill id="4472" levels="12" name="골렘 스트라이크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -955,7 +955,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="4473" levels="12" name="Stun">
+	<skill id="4473" levels="12" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
@@ -978,7 +978,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="4474" levels="5" name="Area Heal - Per">
+	<skill id="4474" levels="5" name="리스토어 라이프">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#magicLvl"> 10 20 30 40 50 </table>
@@ -992,7 +992,7 @@
 			<effect name="HealPercent" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="4475" levels="1" name="Perfect Resist Bleeding">
+	<skill id="4475" levels="1" name="출혈 공격 완벽내성">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1009,7 +1009,7 @@
 		</for>
 		<set name="mpConsume" val="50" />
 	</skill>
-	<skill id="4476" levels="5" name="Silent Move">
+	<skill id="4476" levels="5" name="사일런트 무브">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalTime"> 60 120 300 600 1200 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 </table>
@@ -1028,7 +1028,7 @@
 			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="#abnormalTime" val="0" abnormalLvl="1" abnormalType="stealth" />
 		</for>
 	</skill>
-	<skill id="4477" levels="12" name="NPC Frost Wall">
+	<skill id="4477" levels="12" name="프로스트 월">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1050,7 +1050,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
-	<skill id="4478" levels="1" name="Ice Fairy Aqua Splash">
+	<skill id="4478" levels="1" name="아쿠아 스플래시">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1065,7 +1065,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
-	<skill id="4479" levels="1" name="Ice Fairy Resist Cold">
+	<skill id="4479" levels="1" name="얼음 요정의 축복">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1085,7 +1085,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4480" levels="1" name="Ice Fairy Curse Gloom">
+	<skill id="4480" levels="1" name="커스 글룸">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -1106,7 +1106,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4481" levels="1" name="Ice Fairy Hex">
+	<skill id="4481" levels="1" name="헥스">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -1127,7 +1127,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4482" levels="1" name="Ice Fairy Silence">
+	<skill id="4482" levels="1" name="사일런스">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -1142,7 +1142,7 @@
 			<effect name="PhysicalMute" abnormalTime="120" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="4483" levels="12" name="Hold">
+	<skill id="4483" levels="12" name="홀드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#isMagic"> 0 1 1 1 1 1 1 1 1 1 1 1 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1166,7 +1166,7 @@
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="4484" levels="1" name="Eating Follower Heal">
+	<skill id="4484" levels="1" name="부하 잡아먹기">
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
@@ -1180,7 +1180,7 @@
 			<effect name="HealPercent" noicon="1" val="50" />
 		</for>
 	</skill>
-	<skill id="4485" levels="1" name="Eating Follower">
+	<skill id="4485" levels="1" name="부하 잡아먹기">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1189,7 +1189,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="4486" levels="12" name="Decrease P. Def">
+	<skill id="4486" levels="12" name="방어력 감소">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1218,7 +1218,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4487" levels="12" name="Decrease M. Def.">
+	<skill id="4487" levels="12" name="마법저항 감소">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1247,7 +1247,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4488" levels="12" name="Hold">
+	<skill id="4488" levels="12" name="홀드">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
@@ -1267,7 +1267,7 @@
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="4489" levels="12" name="NPC Death MP Bomb">
+	<skill id="4489" levels="12" name="데스 봄">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
@@ -1280,7 +1280,7 @@
 		<set name="skillType" val="MANADAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="4490" levels="12" name="NPC Holy Wall">
+	<skill id="4490" levels="12" name="홀리 월">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
@@ -1302,7 +1302,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
-	<skill id="4491" levels="12" name="Holy Weapon">
+	<skill id="4491" levels="12" name="홀리 웨폰">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 37 60 84 114 148 182 212 227 238 247 252 255 </table>
 		<table name="#power"> 31 70 146 278 481 758 1084 1251 1408 1547 1658 1745 </table>
@@ -1326,7 +1326,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4492" levels="12" name="Enlarging Head Curse">
+	<skill id="4492" levels="12" name="머리가 커지는 저주">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1348,7 +1348,7 @@
 			<effect name="BigHead" abnormalTime="300" val="0" effectPower="80" effectType="DEBUFF" abnormalLvl="1" abnormalType="big_head" abnormalVisualEffect="bighead" />
 		</for>
 	</skill>
-	<skill id="4493" levels="12" name="NPC Debuff Shield Slow">
+	<skill id="4493" levels="12" name="미스틱 이뮤니티">
 		<!-- Confirmed CT2.5 -->
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
@@ -1366,14 +1366,14 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="debuff_shield" triggeredId="5520" triggeredLevel="#triggeredLevel" chanceType="ON_ATTACKED_HIT" activationChance="50" />
 		</for>
 	</skill>
-	<skill id="4494" levels="1" name="Raid Boss">
+	<skill id="4494" levels="1" name="지하수감자">
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4495" levels="12" name="BOSS Power Shot">
+	<skill id="4495" levels="12" name="파워 샷">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
@@ -1388,7 +1388,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="4496" levels="12" name="Stun">
+	<skill id="4496" levels="12" name="쇼크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
@@ -1409,21 +1409,21 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="4497" levels="1" name="Treasure Chest - Level 21">
+	<skill id="4497" levels="1" name="21레벨 보물상자">
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4498" levels="1" name="Treasure Chest - Level 22">
+	<skill id="4498" levels="1" name="22레벨 보물상자">
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4499" levels="1" name="Treasure Chest - Level 25">
+	<skill id="4499" levels="1" name="25레벨 보물상자">
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<set name="magicLvl" val="1" />

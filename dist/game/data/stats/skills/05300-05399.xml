@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5300" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
+	<skill id="5300" levels="9" name="버스트 샷">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -19,7 +19,7 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5301" levels="9" name="Stun">
+	<skill id="5301" levels="9" name="쇼크">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -43,7 +43,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5302" levels="9" name="Poison">
+	<skill id="5302" levels="9" name="독">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -67,7 +67,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5303" levels="9" name="Bleed">
+	<skill id="5303" levels="9" name="출혈">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -91,7 +91,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
 	</skill>
-	<skill id="5304" levels="9" name="Paralysis">
+	<skill id="5304" levels="9" name="마비">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -117,7 +117,7 @@
 			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="5305" levels="9" name="Poison">
+	<skill id="5305" levels="9" name="독">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -138,7 +138,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" effectType="POISON" abnormalLvl="8" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5306" levels="9" name="Paralysis">
+	<skill id="5306" levels="9" name="마비">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -161,7 +161,7 @@
 			<effect name="Paralyze" abnormalTime="30" effectPower="60" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="5307" levels="9" name="Stun">
+	<skill id="5307" levels="9" name="쇼크">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -184,7 +184,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5308" levels="9" name="Poison">
+	<skill id="5308" levels="9" name="독">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -207,7 +207,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5309" levels="9" name="Bleed">
+	<skill id="5309" levels="9" name="출혈">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -231,7 +231,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
 	</skill>
-	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5310" levels="9" name="오라 번">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -248,7 +248,7 @@
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 	</skill>
-	<skill id="5311" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5311" levels="9" name="오라 플래어">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 83 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -264,7 +264,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="5312" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
+	<skill id="5312" levels="9" name="블레이즈">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -284,7 +284,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="40" />
 	</skill>
-	<skill id="5313" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
+	<skill id="5313" levels="9" name="플레임 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -304,7 +304,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="5000" />
 	</skill>
-	<skill id="5314" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
+	<skill id="5314" levels="9" name="블레이징 서클">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -322,7 +322,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5315" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
+	<skill id="5315" levels="9" name="블레이징 서클">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="power" val="#power" />
@@ -335,7 +335,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5316" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
+	<skill id="5316" levels="9" name="하이드로 블래스트">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -355,7 +355,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="skillRadius" val="40" />
 	</skill>
-	<skill id="5317" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
+	<skill id="5317" levels="9" name="매스 하이드로 블래스트">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -375,7 +375,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="5318" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
+	<skill id="5318" levels="9" name="프로스트 월">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -393,7 +393,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="5319" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
+	<skill id="5319" levels="9" name="허리케인">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -414,7 +414,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5320" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+	<skill id="5320" levels="9" name="템페스트">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -434,7 +434,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5321" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
+	<skill id="5321" levels="9" name="템페스트">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -454,7 +454,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="650" />
 	</skill>
-	<skill id="5322" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
+	<skill id="5322" levels="9" name="록 스트라이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -475,7 +475,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5323" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+	<skill id="5323" levels="9" name="어스퀘이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -495,7 +495,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5324" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+	<skill id="5324" levels="9" name="어스퀘이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -515,7 +515,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="650" />
 	</skill>
-	<skill id="5325" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+	<skill id="5325" levels="9" name="홀리 스트라이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -536,7 +536,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5326" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5326" levels="9" name="홀리 블래스트">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -556,7 +556,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5327" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5327" levels="9" name="홀리 서클">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -576,7 +576,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="650" />
 	</skill>
-	<skill id="5328" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
+	<skill id="5328" levels="9" name="언홀리 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -596,7 +596,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="skillRadius" val="40" />
 	</skill>
-	<skill id="5329" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5329" levels="9" name="언홀리 블래스트">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -616,7 +616,7 @@
 		<set name="effectRange" val="1000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="5330" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5330" levels="9" name="언홀리 서클">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -634,7 +634,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="5331" levels="9" name="NPC HP Drain">
+	<skill id="5331" levels="9" name="드레인 에너지">
 		<table name="#mpConsume"> 69 72 73 75 77 77 78 78 79 </table>
 		<table name="#magicLvl"> 78 80 81 82 83 84 85 86 87 </table>
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -649,7 +649,7 @@
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 	</skill>
-	<skill id="5332" levels="9" name="NPC MP Burn">
+	<skill id="5332" levels="9" name="마나 번">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 186 192 196 199 202 205 207 207 207 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -668,7 +668,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="castRange" val="600" />
 	</skill>
-	<skill id="5333" levels="9" name="Poison">
+	<skill id="5333" levels="9" name="독">
 		<!-- TODO: Need to be Checked in Retail -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
@@ -693,7 +693,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
+	<skill id="5334" levels="9" name="파워 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -708,7 +708,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 	</skill>
-	<skill id="5335" levels="9" name="NPC(party) - Physical Single Long Range Attack">
+	<skill id="5335" levels="9" name="파워 샷">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -722,7 +722,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5336" levels="9" name="NPC(party) - Physical Range Close Range Attack">
+	<skill id="5336" levels="9" name="스피닝 슬래셔">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -735,7 +735,7 @@
 		<set name="coolTime" val="800" />
 		<set name="skillRadius" val="150" />
 	</skill>
-	<skill id="5337" levels="9" name="NPC(party) - Physical Range Long Range Attack">
+	<skill id="5337" levels="9" name="버스트 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 45 46 48 49 50 50 50 51 51 </table>
 		<table name="#mpConsume"> 181 187 192 196 200 201 203 204 207 </table>
@@ -754,7 +754,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5338" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
+	<skill id="5338" levels="9" name="파워 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -771,7 +771,7 @@
 		<set name="effectRange" val="200" />
 		<set name="coolTime" val="660" />
 	</skill>
-	<skill id="5339" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
+	<skill id="5339" levels="9" name="파워 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 30 31 32 32 33 33 33 34 34 </table>
 		<table name="#mpConsume"> 120 124 128 131 133 134 135 136 138 </table>
@@ -791,7 +791,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5340" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
+	<skill id="5340" levels="9" name="스피닝 슬래셔">
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -807,7 +807,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 	</skill>
-	<skill id="5341" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
+	<skill id="5341" levels="9" name="버스트 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 45 46 48 49 50 50 50 51 51 </table>
 		<table name="#mpConsume"> 181 187 192 196 200 201 203 204 207 </table>
@@ -827,7 +827,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5342" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
+	<skill id="5342" levels="9" name="파워 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -844,7 +844,7 @@
 		<set name="effectRange" val="200" />
 		<set name="coolTime" val="660" />
 	</skill>
-	<skill id="5343" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
+	<skill id="5343" levels="9" name="파워 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 30 31 32 32 33 33 33 34 34 </table>
 		<table name="#mpConsume"> 120 124 128 131 133 134 135 136 138 </table>
@@ -864,7 +864,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5344" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
+	<skill id="5344" levels="9" name="스피닝 슬래셔">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 15 15 16 16 16 16 17 17 17 </table>
 		<table name="#mpConsume"> 60 62 64 65 67 67 68 68 69 </table>
@@ -884,7 +884,7 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="300" />
 	</skill>
-	<skill id="5345" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
+	<skill id="5345" levels="9" name="버스트 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 45 46 48 49 50 50 50 51 51 </table>
 		<table name="#mpConsume"> 181 187 192 196 200 201 203 204 207 </table>
@@ -904,7 +904,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5346" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
+	<skill id="5346" levels="9" name="파워 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -921,7 +921,7 @@
 		<set name="effectRange" val="200" />
 		<set name="coolTime" val="660" />
 	</skill>
-	<skill id="5347" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
+	<skill id="5347" levels="9" name="파워 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 30 31 32 32 33 33 33 34 34 </table>
 		<table name="#mpConsume"> 120 124 128 131 133 134 135 136 138 </table>
@@ -941,7 +941,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5348" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
+	<skill id="5348" levels="9" name="스피닝 슬래셔">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 15 15 16 16 16 16 17 17 17 </table>
 		<table name="#mpConsume"> 60 62 64 65 67 67 68 68 69 </table>
@@ -961,7 +961,7 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="300" />
 	</skill>
-	<skill id="5349" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
+	<skill id="5349" levels="9" name="버스트 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 45 46 48 49 50 50 50 51 51 </table>
 		<table name="#mpConsume"> 181 187 192 196 200 201 203 204 207 </table>
@@ -981,7 +981,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5350" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
+	<skill id="5350" levels="9" name="파워 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -998,7 +998,7 @@
 		<set name="effectRange" val="200" />
 		<set name="coolTime" val="660" />
 	</skill>
-	<skill id="5351" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
+	<skill id="5351" levels="9" name="파워 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 30 31 32 32 33 33 33 34 34 </table>
 		<table name="#mpConsume"> 120 124 128 131 133 134 135 136 138 </table>
@@ -1018,7 +1018,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5352" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
+	<skill id="5352" levels="9" name="스피닝 슬래셔">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="power" val="12777" />
@@ -1033,7 +1033,7 @@
 		<set name="coolTime" val="800" />
 		<set name="skillRadius" val="150" />
 	</skill>
-	<skill id="5353" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
+	<skill id="5353" levels="9" name="버스트 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 45 46 48 49 50 50 50 51 51 </table>
 		<table name="#mpConsume"> 181 187 192 196 200 201 203 204 207 </table>
@@ -1053,7 +1053,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5354" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
+	<skill id="5354" levels="9" name="파워 스트라이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 15 15 16 16 16 16 17 17 17 </table>
 		<table name="#mpConsume"> 60 62 64 65 67 67 68 68 69 </table>
@@ -1073,7 +1073,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="5355" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
+	<skill id="5355" levels="9" name="파워 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 30 31 32 32 33 33 33 34 34 </table>
 		<table name="#mpConsume"> 120 124 128 131 133 134 135 136 138 </table>
@@ -1093,7 +1093,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5356" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
+	<skill id="5356" levels="9" name="스피닝 슬래셔">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="power" val="12777" />
@@ -1108,7 +1108,7 @@
 		<set name="coolTime" val="800" />
 		<set name="skillRadius" val="150" />
 	</skill>
-	<skill id="5357" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
+	<skill id="5357" levels="9" name="버스트 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 45 46 48 49 50 50 50 51 51 </table>
 		<table name="#mpConsume"> 181 187 192 196 200 201 203 204 207 </table>
@@ -1128,7 +1128,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5358" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
+	<skill id="5358" levels="9" name="파워 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
@@ -1145,7 +1145,7 @@
 		<set name="effectRange" val="200" />
 		<set name="coolTime" val="660" />
 	</skill>
-	<skill id="5359" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
+	<skill id="5359" levels="9" name="파워 샷">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
@@ -1161,7 +1161,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5360" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
+	<skill id="5360" levels="9" name="스피닝 슬래셔">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="power" val="12777" />
@@ -1176,7 +1176,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 	</skill>
-	<skill id="5361" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
+	<skill id="5361" levels="9" name="버스트 샷">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 45 46 48 49 50 50 50 51 51 </table>
 		<table name="#mpConsume"> 181 187 192 196 200 201 203 204 207 </table>
@@ -1196,7 +1196,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5362" levels="9" name="Stun">
+	<skill id="5362" levels="9" name="쇼크">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1220,7 +1220,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
-	<skill id="5363" levels="9" name="Poison">
+	<skill id="5363" levels="9" name="독">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1244,7 +1244,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5364" levels="9" name="Bleed">
+	<skill id="5364" levels="9" name="출혈">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1269,7 +1269,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvl" effectType="BLEED" abnormalType="bleeding" />
 		</for>
 	</skill>
-	<skill id="5365" levels="9" name="Paralysis">
+	<skill id="5365" levels="9" name="마비">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1293,7 +1293,7 @@
 			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="5366" levels="9" name="Poison">
+	<skill id="5366" levels="9" name="독">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1315,7 +1315,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" effectType="POISON" abnormalLvl="8" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5367" levels="9" name="Paralysis">
+	<skill id="5367" levels="9" name="마비">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1338,7 +1338,7 @@
 			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="60" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
-	<skill id="5368" levels="9" name="Stun">
+	<skill id="5368" levels="9" name="쇼크">
 		<!-- Update by pmq -->
 		<!-- Description(s): Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#mpInitialConsume"> 15 15 16 16 16 16 17 17 17 </table>
@@ -1365,7 +1365,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="9" abnormalType="Stun" />
 		</for>
 	</skill>
-	<skill id="5369" levels="9" name="Poison">
+	<skill id="5369" levels="9" name="독">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
@@ -1388,7 +1388,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5370" levels="9" name="Bleed">
+	<skill id="5370" levels="9" name="출혈">
 		<!-- Update by pmq -->
 		<!-- Description(s): Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
 		<table name="#mpInitialConsume"> 15 15 16 16 16 16 17 17 17 </table>
@@ -1411,7 +1411,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5371" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5371" levels="9" name="오라 번">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
@@ -1428,7 +1428,7 @@
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 	</skill>
-	<skill id="5372" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
+	<skill id="5372" levels="9" name="오라 플래어">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1444,7 +1444,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="5373" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
+	<skill id="5373" levels="9" name="블레이즈">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1465,7 +1465,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5374" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
+	<skill id="5374" levels="9" name="플레임 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1485,7 +1485,7 @@
 		<set name="hitTime" val="5000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="5375" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
+	<skill id="5375" levels="9" name="블레이징 서클">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1505,7 +1505,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="650" />
 	</skill>
-	<skill id="5376" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
+	<skill id="5376" levels="9" name="블레이징 서클">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
@@ -1520,7 +1520,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
-	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
+	<skill id="5377" levels="9" name="하이드로 블래스트">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1541,7 +1541,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5378" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
+	<skill id="5378" levels="9" name="매스 하이드로 블래스트">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1561,7 +1561,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5379" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
+	<skill id="5379" levels="9" name="프로스트 월">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1581,7 +1581,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="650" />
 	</skill>
-	<skill id="5380" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
+	<skill id="5380" levels="9" name="허리케인">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1600,7 +1600,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="skillRadius" val="40" />
 	</skill>
-	<skill id="5381" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+	<skill id="5381" levels="9" name="템페스트">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1620,7 +1620,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5382" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
+	<skill id="5382" levels="9" name="템페스트">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1637,7 +1637,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="skillRadius" val="200" />
 	</skill>
-	<skill id="5383" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
+	<skill id="5383" levels="9" name="록 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1656,7 +1656,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="skillRadius" val="40" />
 	</skill>
-	<skill id="5384" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+	<skill id="5384" levels="9" name="어스퀘이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1676,7 +1676,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5385" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+	<skill id="5385" levels="9" name="어스퀘이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1696,7 +1696,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="650" />
 	</skill>
-	<skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+	<skill id="5386" levels="9" name="홀리 스트라이크">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1717,7 +1717,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
-	<skill id="5387" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5387" levels="9" name="홀리 블래스트">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1737,7 +1737,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 	</skill>
-	<skill id="5388" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5388" levels="9" name="홀리 서클">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 13 14 14 15 15 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
@@ -1757,7 +1757,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="650" />
 	</skill>
-	<skill id="5389" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
+	<skill id="5389" levels="9" name="언홀리 스트라이크">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1776,7 +1776,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="skillRadius" val="40" />
 	</skill>
-	<skill id="5390" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+	<skill id="5390" levels="9" name="언홀리 블래스트">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1796,7 +1796,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5391" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+	<skill id="5391" levels="9" name="언홀리 서클">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1814,7 +1814,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5392" levels="9" name="NPC HP Drain">
+	<skill id="5392" levels="9" name="드레인 에너지">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1834,7 +1834,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
-	<skill id="5393" levels="9" name="NPC MP Burn">
+	<skill id="5393" levels="9" name="마나 번">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
@@ -1852,7 +1852,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="5394" levels="9" name="Poison">
+	<skill id="5394" levels="9" name="독">
 		<!-- TODO: Need to be Checked in Retail -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
@@ -1880,7 +1880,7 @@
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
-	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
+	<skill id="5395" levels="3" name="수퍼 마이트 헤이스트">
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#pAtk"> 1.5 2.0 3.0 </table>
 		<table name="#pAtkSpd"> 1.33 1.33 1.5 </table>
@@ -1904,20 +1904,20 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5396" levels="1" name="NPC - Spell Stance">
+	<skill id="5396" levels="1" name="스펠 스탠스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA5" />
 		<set name="hitTime" val="15000" />
 	</skill>
-	<skill id="5397" levels="3" name="NPC - Spell Force">
+	<skill id="5397" levels="3" name="스펠 포스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="5398" levels="1" name="NPC - Combination Force">
+	<skill id="5398" levels="1" name="파이널 번">
 		<set name="target" val="TARGET_AREA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="99" />
@@ -1933,7 +1933,7 @@
 		<set name="elementPower" val="20" />
 		<set name="skillRadius" val="300" />
 	</skill>
-	<skill id="5399" levels="1" name="Heat of Desert">
+	<skill id="5399" levels="1" name="사막의 열기">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<set name="isDebuff" val="true" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11183" levels="1" name="Sigil Mastery">
+	<skill id="11183" levels="1" name="그랜드 퀵 리커버리">
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="BUFF" />
@@ -15,11 +15,11 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="11184" levels="1" name="Superior Arcane Lore">
+	<skill id="11184" levels="1" name="그랜드 아케인 로어">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>
-	<skill id="11185" levels="1" name="Advanced Surge Mana">
+	<skill id="11185" levels="1" name="그랜드 부스트 마나">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -29,7 +29,7 @@
 			<mul order="0x30" stat="maxMp" val="1.313" />
 		</for>
 	</skill>
-	<skill id="11186" levels="1" name="Advanced Recovery">
+	<skill id="11186" levels="1" name="그랜드 패스트 MP 리커버리">
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -39,7 +39,7 @@
 			<mul order="0x30" stat="regMp" val="1.36" />
 		</for>
 	</skill>
-	<skill id="11187" levels="1" name="Superior Clear Mind">
+	<skill id="11187" levels="1" name="그랜드 클리어 마인드">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="operateType" val="P"/>
 	</skill>

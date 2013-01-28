@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="800" levels="3" name="Master Ability - Magic Defense">
+	<skill id="800" levels="3" name="서브 - 매지컬 디펜스 익스퍼트">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 50.4 100.8 151.2 </table>
 		<set name="excludedFromCheck" val="true" />
@@ -11,7 +11,7 @@
 			<add order="0x40" stat="mDef" val="#mDef" />
 		</for>
 	</skill>
-	<skill id="801" levels="1" name="Warrior Ability - Boost CP">
+	<skill id="801" levels="1" name="워리어 어빌리티 - 부스트 CP">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
@@ -21,7 +21,7 @@
 			<add order="0x40" stat="maxCp" val="738.3" />
 		</for>
 	</skill>
-	<skill id="802" levels="1" name="Wizard Ability - Anti-magic">
+	<skill id="802" levels="1" name="위자드 어빌리티 - 안티 매직">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
@@ -31,7 +31,7 @@
 			<mul order="0x30" stat="magicDamVul" val="0.95" />
 		</for>
 	</skill>
-	<skill id="803" levels="1" name="Healer Ability - Divine Protection">
+	<skill id="803" levels="1" name="힐러 어빌리티 - 디바인 프로텍션">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
@@ -42,7 +42,7 @@
 			<add order="0x40" stat="holyRes" val="5" />
 		</for>
 	</skill>
-	<skill id="804" levels="1" name="Knight Ability - Resist Critical">
+	<skill id="804" levels="1" name="나이트 어빌리티 - 레지스트 크리티컬">
 		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
@@ -52,14 +52,14 @@
 			<mul order="0x30" stat="critVuln" val="0.95" />
 		</for>
 	</skill>
-	<skill id="805" levels="1" name="not used">
+	<skill id="805" levels="1" name="a,not used">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="806" levels="1" name="Magic Obstacle">
+	<skill id="806" levels="1" name="매직 옵스티클">
 		<set name="mpConsume" val="49" />
 		<set name="magicLvl" val="83" />
 		<set name="power" val="25" /> <!-- Base Land Rate -->
@@ -71,7 +71,7 @@
 		<set name="operateType" val="A1" />
 		<set name="maxNegated" val="5" />
 	</skill>
-	<skill id="807" levels="1" name="Over-hit">
+	<skill id="807" levels="1" name="오버 히트">
 		<set name="mpConsume" val="25" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="2000" />
@@ -85,7 +85,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="808" levels="1" name="Golem Punch">
+	<skill id="808" levels="1" name="골렘 펀치">
 		<set name="mpConsume" val="53" />
 		<set name="magicLvl" val="83" />
 		<set name="lvlDepend" val="2" />
@@ -106,7 +106,7 @@
 			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
 	</skill>
-	<skill id="809" levels="1" name="Golem Tornado Swing">
+	<skill id="809" levels="1" name="골렘 토네이도 스윙">
 		<set name="mpConsume" val="53" />
 		<set name="magicLvl" val="83" />
 		<set name="power" val="6199" />
@@ -120,7 +120,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="810" levels="1" name="Vanguard">
+	<skill id="810" levels="1" name="뱅가드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="5000" />
 		<set name="mpConsume" val="31" />
@@ -138,7 +138,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="811" levels="1" name="Vanguard">
+	<skill id="811" levels="1" name="뱅가드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="5000" />
 		<set name="mpConsume" val="31" />
@@ -156,7 +156,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="812" levels="1" name="Vanguard">
+	<skill id="812" levels="1" name="뱅가드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="5000" />
 		<set name="mpConsume" val="31" />
@@ -174,7 +174,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="813" levels="1" name="Vanguard">
+	<skill id="813" levels="1" name="뱅가드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="5000" />
 		<set name="mpConsume" val="31" />
@@ -192,7 +192,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="814" levels="43" name="Full Swing">
+	<skill id="814" levels="43" name="풀 스윙">
 		<!-- Vanguard Stance Skill -->
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
@@ -215,7 +215,7 @@
 			<using kind="Big Sword,Big Blunt" />
 		</cond>
 	</skill>
-	<skill id="815" levels="43" name="Blade Hurricane">
+	<skill id="815" levels="43" name="블레이드 허리케인">
 		<!-- Vanguard Stance Skill -->
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
@@ -238,7 +238,7 @@
 			<using kind="Dual Sword" />
 		</cond>
 	</skill>
-	<skill id="816" levels="43" name="Cleave">
+	<skill id="816" levels="43" name="파워 디바이드">
 		<!-- Vanguard Stance Skill -->
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
@@ -264,7 +264,7 @@
 			<using kind="Big Sword,Big Blunt" />
 		</cond>
 	</skill>
-	<skill id="817" levels="43" name="Double Strike">
+	<skill id="817" levels="43" name="더블 어택">
 		<!-- Vanguard Stance Skill -->
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
@@ -289,7 +289,7 @@
 			<using kind="Dual Sword" />
 		</cond>
 	</skill>
-	<skill id="818" levels="1" name="Evasion Counter">
+	<skill id="818" levels="1" name="이베이젼 카운터">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
@@ -298,7 +298,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5673" />
 		</for>
 	</skill>
-	<skill id="819" levels="1" name="Evasion Chance">
+	<skill id="819" levels="1" name="이베이젼 챈스">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
@@ -307,7 +307,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5674" />
 		</for>
 	</skill>
-	<skill id="820" levels="1" name="Evasion Haste">
+	<skill id="820" levels="1" name="이베이젼 헤이스트">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="P" />
@@ -316,7 +316,7 @@
 			<effect passive="1" name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" chanceType="ON_EVADED_HIT" triggeredId="5675" />
 		</for>
 	</skill>
-	<skill id="821" levels="1" name="Shadow Step">
+	<skill id="821" levels="1" name="섀도우 스탭">
 		<set name="magicLvl" val="72" />
 		<set name="mpConsume" val="50" />
 		<set name="operateType" val="A1" />
@@ -331,7 +331,7 @@
 			<effect name="RemoveTarget" effectPower="100" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="822" levels="3" name="Repair Golem">
+	<skill id="822" levels="3" name="리페어 골렘">
 		<table name="#mpConsume"> 61 78 88 </table>
 		<table name="#amount"> 8 12 15 </table>
 		<set name="aggroPoints" val="#amount" />
@@ -348,7 +348,7 @@
 			<effect name="HealPercent" noicon="1" val="#amount" />
 		</for>
 	</skill>
-	<skill id="823" levels="3" name="Strengthen Golem">
+	<skill id="823" levels="3" name="마이티 파워">
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#pAtkSpd"> 1.03 1.06 1.09 </table>
 		<table name="#mpConsume"> 24 36 42 </table>
@@ -368,7 +368,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="824" levels="3" name="Golem Reinforcement">
+	<skill id="824" levels="3" name="아머 플레이트">
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<table name="#maxHp"> 1.05 1.08 1.1 </table>
 		<table name="#mpConsume"> 35 44 41 </table>
@@ -388,7 +388,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="825" levels="1" name="Sharp Edge">
+	<skill id="825" levels="1" name="샤픈 엣지">
 		<set name="magicLvl" val="49" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="mpConsume" val="28" />
@@ -411,7 +411,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="826" levels="1" name="Spike">
+	<skill id="826" levels="1" name="스파이크">
 		<set name="magicLvl" val="49" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="mpConsume" val="28" />
@@ -434,7 +434,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="827" levels="1" name="Restring">
+	<skill id="827" levels="1" name="보우스트링">
 		<set name="magicLvl" val="49" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="mpConsume" val="28" />
@@ -457,7 +457,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="828" levels="1" name="Case Harden">
+	<skill id="828" levels="1" name="페이스하든">
 		<set name="magicLvl" val="46" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="25" />
@@ -477,7 +477,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="829" levels="1" name="Hard Tanning">
+	<skill id="829" levels="1" name="하드 태닝">
 		<set name="magicLvl" val="46" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="25" />
@@ -500,7 +500,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="830" levels="1" name="Embroider">
+	<skill id="830" levels="1" name="임브로이더">
 		<set name="magicLvl" val="46" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="25" />
@@ -523,7 +523,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="831" levels="1" name="Summon Merchant Golem">
+	<skill id="831" levels="1" name="서먼 머천트 골렘">
 		<set name="itemConsumeId" val="1458" />
 		<set name="itemConsumeCount" val="5" />
 		<set name="mpConsume" val="122" />
@@ -538,7 +538,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="npcId" val="13128" />
 	</skill>
-	<skill id="832" levels="2" name="Fast Recovery">
+	<skill id="832" levels="2" name="패스트 리커버리">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- FIXME: Level 2 regen values unconfirmed -->
 		<table name="#magicLvl"> 43 49 </table>
@@ -553,7 +553,7 @@
 			<add order="0x40" stat="regCp" val="#regHpCp" />
 		</for>
 	</skill>
-	<skill id="833" levels="1" name="Body Reconstruction">
+	<skill id="833" levels="1" name="리컨스트럭션 바디">
 		<set name="magicLvl" val="52" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="1500" />
@@ -565,7 +565,7 @@
 			<effect name="HealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
-	<skill id="834" levels="1" name="Blood Pact">
+	<skill id="834" levels="1" name="블러드 컨스트럭트">
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_PARTY" />
@@ -581,7 +581,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="835" levels="4" name="Imbue Seed of Destruction">
+	<skill id="835" levels="4" name="임뷰 둠 시드">
 		<table name="#mdot"> 76 83 83 83 </table>
 		<table name="#magicLvl"> 68 70 72 74 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 </table>
@@ -608,7 +608,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
-	<skill id="836" levels="3" name="Oblivion Trap">
+	<skill id="836" levels="3" name="오블리비언 트랩">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#triggerSkillLvl"> 1 2 3 </table>
 		<set name="mpConsume" val="50" />
@@ -624,7 +624,7 @@
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<set name="trapNpcId" val="13037" />
 	</skill>
-	<skill id="837" levels="1" name="Painkiller">
+	<skill id="837" levels="1" name="페인킬러">
 		<!-- CT2.2 retail confirmed -->
 		<set name="mpConsume" val="53" />
 		<set name="target" val="TARGET_SELF" />
@@ -639,20 +639,20 @@
 			<effect name="Invincible" abnormalTime="8" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
-	<skill id="838" levels="1" name="Switch Stance">
+	<skill id="838" levels="1" name="체인지 에티튜드">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="TRANSFORMDISPEL" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="15000" />
 	</skill>
-	<skill id="839" levels="1" name="Dismount">
+	<skill id="839" levels="1" name="디스마운트">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="TRANSFORMDISPEL" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
 	</skill>
-	<skill id="840" levels="1" name="Final Flying Form">
+	<skill id="840" levels="1" name="파이널 플라잉 폼">
 		<set name="mpConsume" val="72" />
 		<set name="hpConsume" val="200" />
 		<set name="target" val="TARGET_SELF" />
@@ -680,7 +680,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="841" levels="1" name="Aura Bird - Falcon">
+	<skill id="841" levels="1" name="오라버드 - 팔콘">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="72" />
 		<set name="target" val="TARGET_SELF" />
@@ -706,7 +706,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="842" levels="1" name="Aura Bird - Owl">
+	<skill id="842" levels="1" name="오라버드 - 오울">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="72" />
 		<set name="target" val="TARGET_SELF" />
@@ -732,7 +732,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="843" levels="1" name="Shooting Star">
+	<skill id="843" levels="1" name="슈팅 스타">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
@@ -744,7 +744,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="844" levels="1" name="Outpost Construction">
+	<skill id="844" levels="1" name="전초 기지 건설">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpInitialConsume" val="30" />
 		<set name="itemConsumeId" val="2132" />
@@ -756,7 +756,7 @@
 		<set name="isOutpost" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="845" levels="1" name="Outpost Demolition">
+	<skill id="845" levels="1" name="전초 기지 철거">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="A1" />
@@ -768,7 +768,7 @@
 			<target npcId="36590" />
 		</cond>
 	</skill>
-	<skill id="846" levels="1" name="Possess Ward">
+	<skill id="846" levels="1" name="수호물 소유">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -781,7 +781,7 @@
 			<mul order="0x30" stat="runSpd" val="0.2" />
 		</for>
 	</skill>
-	<skill id="847" levels="1" name="Ward Transport">
+	<skill id="847" levels="1" name="수호물 탈취">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="CA1" />
@@ -793,7 +793,7 @@
 			<target npcId="36590" />
 		</cond>
 	</skill>
-	<skill id="848" levels="1" name="Gludio Territory Benefaction">
+	<skill id="848" levels="1" name="글루디오 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -804,7 +804,7 @@
 			<add order="0x10" stat="INT" val="1" />
 		</for>
 	</skill>
-	<skill id="849" levels="1" name="Dion Territory Benefaction">
+	<skill id="849" levels="1" name="디온 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -815,7 +815,7 @@
 			<add order="0x10" stat="WIT" val="1" />
 		</for>
 	</skill>
-	<skill id="850" levels="1" name="Giran Territory Benefaction">
+	<skill id="850" levels="1" name="기란 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -826,7 +826,7 @@
 			<add order="0x10" stat="MEN" val="1" />
 		</for>
 	</skill>
-	<skill id="851" levels="1" name="Oren Territory Benefaction">
+	<skill id="851" levels="1" name="오렌 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -837,7 +837,7 @@
 			<add order="0x10" stat="MEN" val="1" />
 		</for>
 	</skill>
-	<skill id="852" levels="1" name="Aden Territory Benefaction">
+	<skill id="852" levels="1" name="아덴 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -848,7 +848,7 @@
 			<add order="0x10" stat="MEN" val="1" />
 		</for>
 	</skill>
-	<skill id="853" levels="1" name="Innadril Territory Benefaction">
+	<skill id="853" levels="1" name="인나드릴 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -859,7 +859,7 @@
 			<add order="0x10" stat="INT" val="1" />
 		</for>
 	</skill>
-	<skill id="854" levels="1" name="Goddard Territory Benefaction">
+	<skill id="854" levels="1" name="고다드 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -870,7 +870,7 @@
 			<add order="0x10" stat="INT" val="1" />
 		</for>
 	</skill>
-	<skill id="855" levels="1" name="Rune Territory Benefaction">
+	<skill id="855" levels="1" name="루운 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -881,7 +881,7 @@
 			<add order="0x10" stat="WIT" val="1" />
 		</for>
 	</skill>
-	<skill id="856" levels="1" name="Schuttgart Territory Benefaction">
+	<skill id="856" levels="1" name="슈트가르트 수호물의 가호">
 		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
@@ -892,7 +892,7 @@
 			<add order="0x10" stat="WIT" val="1" />
 		</for>
 	</skill>
-	<skill id="857" levels="1" name="Human Mercenary">
+	<skill id="857" levels="1" name="휴먼 용병">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -905,7 +905,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="858" levels="1" name="Elf Mercenary">
+	<skill id="858" levels="1" name="엘프 용병">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -918,7 +918,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="859" levels="1" name="Dark Elf Mercenary">
+	<skill id="859" levels="1" name="다크 엘프 용병">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -931,7 +931,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="860" levels="1" name="Orc Mercenary">
+	<skill id="860" levels="1" name="오크 용병">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -944,7 +944,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="861" levels="1" name="Dwarf Mercenary">
+	<skill id="861" levels="1" name="드워프 용병">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -957,7 +957,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="862" levels="1" name="Kamael Mercenary">
+	<skill id="862" levels="1" name="카마엘 용병">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -970,7 +970,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="863" levels="1" name="Royal Guard Captain">
+	<skill id="863" levels="1" name="근위대장">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -983,7 +983,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="864" levels="1" name="Archer Captain">
+	<skill id="864" levels="1" name="궁수대장">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -996,7 +996,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="865" levels="1" name="Magic Leader">
+	<skill id="865" levels="1" name="마법단장">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -1009,7 +1009,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="866" levels="1" name="Kamael Guard Captain">
+	<skill id="866" levels="1" name="백인대장">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -1022,7 +1022,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="867" levels="1" name="Knight of Dawn">
+	<skill id="867" levels="1" name="기사대장">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -1035,7 +1035,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="868" levels="1" name="Fortress Captain">
+	<skill id="868" levels="1" name="사령관">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="target" val="TARGET_SELF" />
@@ -1048,7 +1048,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="869" levels="9" name="Mercenary Power Strike">
+	<skill id="869" levels="9" name="용병 파워 스트라이크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 2272 3252 4224 4312 4399 4482 4563 4640 4715 </table>
@@ -1065,7 +1065,7 @@
 		<set name="effectRange" val="400" />
 		<set name="nextActionAttack" val="true" />
 	</skill>
-	<skill id="870" levels="8" name="Knight Mercenary Power Strike">
+	<skill id="870" levels="8" name="근위대장 파워 스트라이크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 3252 4224 4312 4399 4482 4563 4640 4715 </table>
@@ -1082,7 +1082,7 @@
 		<set name="effectRange" val="400" />
 		<set name="nextActionAttack" val="true" />
 	</skill>
-	<skill id="871" levels="1" name="Might">
+	<skill id="871" levels="1" name="마이트">
 		<!-- Confirmed CT2.5 -->
 		<set name="mpInitialConsume" val="7" />
 		<set name="mpConsume" val="28" />
@@ -1100,7 +1100,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="872" levels="8" name="Archer Mercenary Power Shot">
+	<skill id="872" levels="8" name="궁수대장 파워 샷">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 4336 5632 5750 5865 5976 6084 6187 6286 </table>
@@ -1117,7 +1117,7 @@
 		<set name="effectRange" val="1200" />
 		<set name="overHit" val="true" />
 	</skill>
-	<skill id="873" levels="1" name="Rapid Shot">
+	<skill id="873" levels="1" name="래피드 샷">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="70" />
 		<set name="mpConsume" val="25" />
@@ -1135,7 +1135,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="874" levels="8" name="Wizard Mercenary Flame Strike">
+	<skill id="874" levels="8" name="마법단장 플레임 스트라이크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 68 78 78 79 80 81 81 82 </table>
@@ -1156,7 +1156,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="#elementPower" />
 	</skill>
-	<skill id="875" levels="1" name="Empower">
+	<skill id="875" levels="1" name="엠파워">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="70" />
 		<set name="mpInitialConsume" val="14" />
@@ -1175,7 +1175,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="876" levels="8" name="Kamael Captain Mercenary Enuma Elish">
+	<skill id="876" levels="8" name="백인대장 에누마 에리슈">
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 4878 6335 6468 6598 6723 6844 6960 7072 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
@@ -1195,7 +1195,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="nextActionAttack" val="true" />
 	</skill>
-	<skill id="877" levels="8" name="Kamael Captain Mercenary Disarm">
+	<skill id="877" levels="8" name="백인대장 디스암">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1219,7 +1219,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="878" levels="7" name="Knight Captain Mercenary Power Strike">
+	<skill id="878" levels="7" name="기사대장 파워 스트라이크">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 5068 5175 5278 5379 5475 5568 5658 </table>
@@ -1236,7 +1236,7 @@
 		<set name="effectRange" val="400" />
 		<set name="nextActionAttack" val="true" />
 	</skill>
-	<skill id="879" levels="7" name="Knight Captain Mercenary Curse Fear">
+	<skill id="879" levels="7" name="기사대장 커스 피어">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="mpInitialConsume" val="14" />
@@ -1259,7 +1259,7 @@
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
-	<skill id="880" levels="1" name="Knight Captain Mercenary Ultimate Defense">
+	<skill id="880" levels="1" name="기사대장 얼터미트 디펜스">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="21" />
@@ -1277,7 +1277,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="881" levels="7" name="Commander Mercenary Twister">
+	<skill id="881" levels="7" name="사령관 트위스터">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 116 117 119 120 121 122 123 </table>
@@ -1297,7 +1297,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="882" levels="7" name="Commander Mercenary Blaze">
+	<skill id="882" levels="7" name="사령관 블레이즈">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 116 117 119 120 121 122 123 </table>
@@ -1317,7 +1317,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 	</skill>
-	<skill id="883" levels="7" name="Commander Mercenary Seal of Binding">
+	<skill id="883" levels="7" name="사령관 실 오브 바인딩">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1339,7 +1339,7 @@
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
-	<skill id="884" levels="11" name="Air Assault">
+	<skill id="884" levels="11" name="에어 어썰트">
 		<!-- Aurabird Falcon and Owl -->
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="power" val="1" />
@@ -1359,7 +1359,7 @@
 			<target mindistance="200" />
 		</cond>
 	</skill>
-	<skill id="885" levels="1" name="Air Blink">
+	<skill id="885" levels="1" name="에어 블링크">
 		<!-- Aurabird Falcon and Owl -->
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
@@ -1380,7 +1380,7 @@
 			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="886" levels="11" name="Air Shock Bomb">
+	<skill id="886" levels="11" name="에어 쇼크 봄">
 		<!-- Aurabird Falcon -->
 		<table name="#power"> 2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1403,7 +1403,7 @@
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
 		</for>
 	</skill>
-	<skill id="887" levels="11" name="Sky Clutch">
+	<skill id="887" levels="11" name="에어 홀드 봄">
 		<!-- Aurabird Owl -->
 		<table name="#power"> 110 111 112 114 115 116 117 119 120 121 122 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1427,7 +1427,7 @@
 			<effect name="Root" abnormalTime="9" val="0" effectPower="80" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
 		</for>
 	</skill>
-	<skill id="888" levels="11" name="Energy Storm">
+	<skill id="888" levels="11" name="에너지 플레어">
 		<!-- Aurabird Falcon -->
 		<table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1443,7 +1443,7 @@
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="500" />
 	</skill>
-	<skill id="889" levels="11" name="Energy Storm">
+	<skill id="889" levels="11" name="에너지 플레어">
 		<!-- Aurabird Owl -->
 		<table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1459,7 +1459,7 @@
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="500" />
 	</skill>
-	<skill id="890" levels="11" name="Prodigious Flare">
+	<skill id="890" levels="11" name="더블 플레어">
 		<!-- Aurabird Falcon -->
 		<table name="#power"> 5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1475,7 +1475,7 @@
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="500" />
 	</skill>
-	<skill id="891" levels="11" name="Energy Shot">
+	<skill id="891" levels="11" name="에너지 샷">
 		<!-- Aurabird Falcon -->
 		<table name="#power"> 88 89 90 91 92 93 94 95 96 97 98 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1492,7 +1492,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
 	</skill>
-	<skill id="892" levels="11" name="Energy Shot">
+	<skill id="892" levels="11" name="에너지 샷">
 		<!-- Aurabird Owl -->
 		<table name="#power"> 131 133 135 136 138 139 141 142 144 145 146 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1509,7 +1509,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
 	</skill>
-	<skill id="893" levels="11" name="Concentrated Energy Shot">
+	<skill id="893" levels="11" name="콘센트레이션 에너지 샷">
 		<!-- Aurabird Owl -->
 		<table name="#power"> 197 199 202 204 206 209 211 213 215 217 219 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -1526,7 +1526,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
 	</skill>
-	<skill id="894" levels="1" name="Exhilarate">
+	<skill id="894" levels="1" name="릴리즈 어빌리티">
 		<!-- Aurabird Falcon -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="69" />
@@ -1545,7 +1545,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="895" levels="1" name="Exhilarate">
+	<skill id="895" levels="1" name="릴리즈 어빌리티">
 		<!-- Aurabird Owl -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="70" />
@@ -1563,7 +1563,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="896" levels="6" name="Rolling Step">
+	<skill id="896" levels="6" name="롤링 스탭">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
@@ -1581,7 +1581,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 	</skill>
-	<skill id="897" levels="6" name="Double Blast">
+	<skill id="897" levels="6" name="더블 블레스트">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
@@ -1598,7 +1598,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
 	</skill>
-	<skill id="898" levels="6" name="Tornado Slash">
+	<skill id="898" levels="6" name="토네이도 슬래시">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
 		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
@@ -1614,7 +1614,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="899" levels="6" name="Cat Roar">
+	<skill id="899" levels="6" name="캣 로어">
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 1056 1078 1100 1121 1141 1160 </table>
 		<table name="#pvePower"> 3168 3234 3299 3362 3422 3480 </table>

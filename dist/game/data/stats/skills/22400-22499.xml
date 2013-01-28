@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22400" levels="1" name="Transformation Scroll - Zaken">
+	<skill id="22400" levels="1" name="변신 주문서 - 자켄">
 		<!-- Desciption: Transformed into Zaken. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22401" levels="1" name="Transformation Scroll - Ranku">
+	<skill id="22401" levels="1" name="변신 주문서 - 란쿠">
 		<!-- Desciption: Transformed into Ranku. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22402" levels="1" name="Juju Agathion's Gift">
+	<skill id="22402" levels="1" name="츄츄 아가시온의 선물">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22403" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
+	<skill id="22403" levels="1" name="추가 입장권 - 카마로카 (악몽의 홀)">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22404" levels="1" name="Pathfinder's Reward">
+	<skill id="22404" levels="1" name="패스파인더 포상품">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22405" levels="1" name="S84 Top-Grade Weapon Box">
+	<skill id="22405" levels="1" name="S84 최상급 무기 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22406" levels="1" name="Ellegia Armor Box">
+	<skill id="22406" levels="1" name="엘레기아 방어구 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22407" levels="1" name="PC Cafe Energy">
+	<skill id="22407" levels="1" name="pc방의 기운">
 		<!-- Desciption: For 60 minutes, recovers Vitality when Exp. is acquired through hunting. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="22408" levels="1" name="Enchantment Tool Box">
+	<skill id="22408" levels="1" name="강화도구 상자">
 		<!-- Desciption: There is no available description. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />

@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="6700" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+	<skill id="6700" levels="1" name="볼 트래핑 오로드리엘 아가시온 큐트 트릭">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6701" levels="1" name="Penalty Kick Agathion Cute Trick">
+	<skill id="6701" levels="1" name="패널티 킥 아가시온 큐트 트릭">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6702" levels="1" name="Blessing of Cheers">
+	<skill id="6702" levels="1" name="응원의 축복">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6703" levels="1" name="Blessing of Cheers">
+	<skill id="6703" levels="1" name="응원의 축복">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6704" levels="1" name="Blessing of Cheers">
+	<skill id="6704" levels="1" name="응원의 축복">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6705" levels="1" name="Stun">
+	<skill id="6705" levels="1" name="스턴">
 		<!-- Temporarily in shock and unable to move. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6706" levels="1" name="Piercing Attack">
+	<skill id="6706" levels="1" name="피어싱 어택">
 		<!-- High Five Skill -->
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="500" />
@@ -56,37 +56,37 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6707" levels="1" name="Self-destruction">
+	<skill id="6707" levels="1" name="자폭">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6708" levels="1" name="Self-destruction">
+	<skill id="6708" levels="1" name="자폭">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6709" levels="1" name="Multi Shot">
+	<skill id="6709" levels="1" name="멀티 샷">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6710" levels="1" name="Etis Haste">
+	<skill id="6710" levels="1" name="이티스 헤이스트">
 		<!-- Atk. Spd. increases by 10%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6711" levels="3" name="Etis Power Up">
+	<skill id="6711" levels="3" name="이티스 파워업">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6714" levels="1" name="Wind Walk of Elcadia">
+	<skill id="6714" levels="1" name="윈드 워크 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -101,7 +101,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6715" levels="1" name="Haste of Elcadia">
+	<skill id="6715" levels="1" name="헤이스트 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -116,7 +116,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6716" levels="1" name="Might of Elcadia">
+	<skill id="6716" levels="1" name="마이트 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -131,7 +131,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6717" levels="1" name="Berserker Spirit of Elcadia">
+	<skill id="6717" levels="1" name="버서커 스피릿 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -153,7 +153,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6718" levels="1" name="Death Whisper of Elcadia">
+	<skill id="6718" levels="1" name="데스 위스퍼 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -168,7 +168,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6719" levels="1" name="Guidance of Elcadia">
+	<skill id="6719" levels="1" name="가이던스 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -183,7 +183,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6720" levels="1" name="Focus of Elcadia">
+	<skill id="6720" levels="1" name="포커스 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -198,7 +198,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6721" levels="1" name="Empower of Elcadia">
+	<skill id="6721" levels="1" name="엠파워 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -213,7 +213,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6722" levels="1" name="Acumen of Elcadia">
+	<skill id="6722" levels="1" name="아큐멘 오브 엘카디아">
 		<!-- Increases Casting Spd. by 30% for 10 minutes. -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -228,7 +228,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6723" levels="1" name="Concentration of Elcadia">
+	<skill id="6723" levels="1" name="콘센트레이션 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -243,7 +243,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6724" levels="1" name="Greater Heal of Elcadia">
+	<skill id="6724" levels="1" name="그레이터 힐 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -257,7 +257,7 @@
 			<effect name="Heal" noicon="1" val="450" />
 		</for>
 	</skill>
-	<skill id="6725" levels="1" name="Bless the Blood of Elcadia">
+	<skill id="6725" levels="1" name="블레스 더 블러드 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -270,7 +270,7 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="6726" abnormalLvl="1" abnormalType="bless_the_blood" />
 		</for>
 	</skill>
-	<skill id="6726" levels="1" name="Bless the Blood">
+	<skill id="6726" levels="1" name="블레스 더 블러드">
 		<!-- High Five Skill -->
 		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -282,7 +282,7 @@
 			<effect name="Heal" noicon="1" val="458" />
 		</for>
 	</skill>
-	<skill id="6727" levels="1" name="Vampiric Rage of Elcadia">
+	<skill id="6727" levels="1" name="뱀피릭 레이지 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -297,7 +297,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6728" levels="1" name="Recharge of Elcadia">
+	<skill id="6728" levels="1" name="리차지 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -310,7 +310,7 @@
 			<effect name="ManaHealByLevel" noicon="1" val="136" />
 		</for>
 	</skill>
-	<skill id="6729" levels="1" name="Resist Holy of Elcadia">
+	<skill id="6729" levels="1" name="레지스트 홀리 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -325,7 +325,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6730" levels="1" name="Greater Battle Heal of Elcadia">
+	<skill id="6730" levels="1" name="그레이터 배틀 힐 오브 엘카디아">
 		<!-- High Five Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -338,415 +338,415 @@
 			<effect name="Heal" noicon="1" val="858" />
 		</for>
 	</skill>
-	<skill id="6731" levels="1" name="Etis Shadow">
+	<skill id="6731" levels="1" name="이티스 섀도우">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6732" levels="1" name="Mirage">
+	<skill id="6732" levels="1" name="미라지">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6733" levels="1" name="Antharas's Stigma">
+	<skill id="6733" levels="1" name="안타라스의 낙인">
 		<!-- "Antharas's stigma. After 10 seconds, spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6734" levels="1" name="Energy of Destruction">
+	<skill id="6734" levels="1" name="파괴의 기운">
 		<!-- "For 5 seconds, inflicted with poison with 800 HP decrease per second." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6735" levels="1" name="Petrify">
+	<skill id="6735" levels="1" name="석화">
 		<!-- "Inflicted with petrification, the body is rigid like stone." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6736" levels="1" name="Fierce Attack">
+	<skill id="6736" levels="1" name="피어스 어택">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6737" levels="1" name="Heal">
+	<skill id="6737" levels="1" name="힐">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6738" levels="1" name="Hold">
+	<skill id="6738" levels="1" name="홀드">
 		<!-- Temporarily inflicted with hold and unable to move. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6739" levels="1" name="Presentation - Behemoth Leader Casting Preparation">
+	<skill id="6739" levels="1" name="연출 - 베히모스 리더 시전 준비">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6740" levels="1" name="Presentation - Behemoth Leader Casting">
+	<skill id="6740" levels="1" name="연출 - 베히모스 리더 시전">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6741" levels="1" name="Presentation - Behemoth Leader Casting Failure">
+	<skill id="6741" levels="1" name="연출 - 베히모스 리더 시전 실패">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6742" levels="1" name="Presentation - Behemoth Object Channeling">
+	<skill id="6742" levels="1" name="연출 - 베히모스 오브젝트 채널링">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6743" levels="1" name="Dark Wind">
+	<skill id="6743" levels="1" name="다크 운드">
 		<!-- Darkness attribute is weakened -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6744" levels="1" name="Dark Storm">
+	<skill id="6744" levels="1" name="다크 스톰">
 		<!-- Casting Spd. decreases by 90% and Atk. Spd. decreases by 30%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6745" levels="1" name="Dark Space">
+	<skill id="6745" levels="1" name="다크 스페이스">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6746" levels="1" name="Dark Space">
+	<skill id="6746" levels="1" name="다크 스페이스">
 		<!-- Darkness attribute is weakened. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6747" levels="1" name="Dark Blade">
+	<skill id="6747" levels="1" name="다크 블레이드">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6748" levels="1" name="Stun Attack">
+	<skill id="6748" levels="1" name="스턴 어택">
 		<!-- Inflicts stun for 5 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6749" levels="1" name="Death Strike">
+	<skill id="6749" levels="1" name="데블 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6750" levels="1" name="Power Strike">
+	<skill id="6750" levels="1" name="파워 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6751" levels="1" name="Blow Attack">
+	<skill id="6751" levels="1" name="블로우 어택">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6752" levels="1" name="Revival">
+	<skill id="6752" levels="1" name="리바이벌">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6753" levels="1" name="Death Blow">
+	<skill id="6753" levels="1" name="데스 블로우">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6754" levels="1" name="Bleed">
+	<skill id="6754" levels="1" name="출혈">
 		<!-- Inflicted with bleed and 200 HP decreases every second. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6755" levels="1" name="Death Strike">
+	<skill id="6755" levels="1" name="데블 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6756" levels="1" name="Death Talon">
+	<skill id="6756" levels="1" name="데스 핑거">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6757" levels="1" name="Slow">
+	<skill id="6757" levels="1" name="슬로우">
 		<!-- Decreases an enemy's Speed by 30% for 15 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6758" levels="1" name="Rage">
+	<skill id="6758" levels="1" name="분노">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6759" levels="1" name="Death Shot">
+	<skill id="6759" levels="1" name="데스 샷">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6760" levels="1" name="Dragon Strike">
+	<skill id="6760" levels="1" name="드래곤 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6761" levels="1" name="Dragon Blow Strike">
+	<skill id="6761" levels="1" name="드래곤 블로우 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6762" levels="1" name="Rage">
+	<skill id="6762" levels="1" name="분노">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6763" levels="1" name="Dragon Earth Strike">
+	<skill id="6763" levels="1" name="드래곤 어스 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6764" levels="1" name="Dragon Earth Shot">
+	<skill id="6764" levels="1" name="드래곤 어스 샷">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6765" levels="1" name="Complete Recovery">
+	<skill id="6765" levels="1" name="완전 회복">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6766" levels="1" name="Earth Tremor">
+	<skill id="6766" levels="1" name="어스 트러머">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6767" levels="1" name="Earthquake">
+	<skill id="6767" levels="1" name="어스퀘이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6768" levels="1" name="Stun Attack">
+	<skill id="6768" levels="1" name="스턴 어택">
 		<!-- Inflicts stun for 5 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6769" levels="1" name="Petrify">
+	<skill id="6769" levels="1" name="석화">
 		<!-- "Inflicted with petrification, the body is rigid like stone." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6770" levels="1" name="Heal">
+	<skill id="6770" levels="1" name="힐">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6771" levels="1" name="Death Strike">
+	<skill id="6771" levels="1" name="데블 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6772" levels="1" name="Power Strike">
+	<skill id="6772" levels="1" name="파워 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6773" levels="1" name="Rage">
+	<skill id="6773" levels="1" name="분노">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6774" levels="1" name="Stun Attack">
+	<skill id="6774" levels="1" name="스턴 어택">
 		<!-- Inflicts stun for 10 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6775" levels="1" name="Soul Breath">
+	<skill id="6775" levels="1" name="소울 브레스">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6776" levels="1" name="Paralysis">
+	<skill id="6776" levels="1" name="마비">
 		<!-- Causes an enemy's body to go completely rigid for 10 seconds and causes paralysis for 15 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6777" levels="1" name="Bleeding Gash">
+	<skill id="6777" levels="1" name="블리드 블로우">
 		<!-- "For 20 seconds, slows down Speed and inflicts bleed so that 200 HP is decreased every second. Inflicted with paralysis for 10 seconds." -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6778" levels="1" name="Death Strike">
+	<skill id="6778" levels="1" name="데블 스트라이크">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6779" levels="1" name="Paralysis">
+	<skill id="6779" levels="1" name="마비">
 		<!-- Body is rigid and paralyzed. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6780" levels="1" name="Presentation - Portal Ray Combined Light Maintenance">
+	<skill id="6780" levels="1" name="연출 - 포탈 ray 합체 빛 유지">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6781" levels="1" name="Presentation - Red Portal Ray">
+	<skill id="6781" levels="1" name="연출 - 포탈 ray 빨강">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6782" levels="1" name="Presentation - Blue Portal Ray">
+	<skill id="6782" levels="1" name="연출 - 포탈 ray 파랑">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6783" levels="1" name="Presentation - Portal 2_boom_up">
+	<skill id="6783" levels="1" name="연출 - 포탈2_boom_up">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6784" levels="1" name="Presentation - Eris's Suffering">
+	<skill id="6784" levels="1" name="연출 - 에리스의 고통">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6785" levels="1" name="Presentation - Dialogue with Etis 1">
+	<skill id="6785" levels="1" name="연출 - 에티스의 대화1">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6786" levels="1" name="Presentation - Etis Transformation Effect">
+	<skill id="6786" levels="1" name="연출 - 에티스 변신 이펙트">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6787" levels="1" name="Presentation - Etis Pre-Transformation">
+	<skill id="6787" levels="1" name="연출 - 에티스 변신 전">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6788" levels="1" name="Presentation - Etis Post-Transformation">
+	<skill id="6788" levels="1" name="연출 - 에티스 변신 후">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6789" levels="1" name="Presentation - Etis's Defeat">
+	<skill id="6789" levels="1" name="연출 - 에티스 패배">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6790" levels="1" name="Presentation - Etis Kneeling">
+	<skill id="6790" levels="1" name="연출 - 에티스 무릎 꿇음">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6791" levels="1" name="Presentation - Dialogue with Elcadia 1">
+	<skill id="6791" levels="1" name="연출 - 엘카디아의 대화 1">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6792" levels="1" name="Presentation - Dialogue with Elcadia 2">
+	<skill id="6792" levels="1" name="연출 - 엘카디아의 대화 2">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6793" levels="1" name="Presentation - Dialogue with Elcadia 3">
+	<skill id="6793" levels="1" name="연출 - 엘카디아의 대화 3">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6794" levels="1" name="Presentation - Elcadia Casting 1">
+	<skill id="6794" levels="1" name="연출 - 엘카디아 캐스팅1">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6795" levels="1" name="Presentation - Elcadia Casting 2">
+	<skill id="6795" levels="1" name="연출 - 엘카디아 캐스팅2">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6796" levels="1" name="Presentation - Meteor Effect">
+	<skill id="6796" levels="1" name="연출 - 메테오 이펙트">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6797" levels="1" name="Presentation - Eris Scatter Effect">
+	<skill id="6797" levels="1" name="연출 - 에리스 흩어지는 이펙트">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6798" levels="1" name="Presentation - Etis Summon Effect">
+	<skill id="6798" levels="1" name="연출 - 에티스 소환 이펙트">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
-	<skill id="6799" levels="1" name="Presentation - Portal 2_boom_down">
+	<skill id="6799" levels="1" name="연출 - 포탈2_boom_down">
 		<!-- none -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

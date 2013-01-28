@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="8001" levels="1" name="Augment Option - Divine Attack">
+	<skill id="8001" levels="1" name="제련 옵션 - 성스러운 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -9,7 +9,7 @@
 			<add order="0x40" stat="holyPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8002" levels="1" name="Augment Option - Dark Attack">
+	<skill id="8002" levels="1" name="제련 옵션 - 암흑 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -18,7 +18,7 @@
 			<add order="0x40" stat="darkPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8003" levels="1" name="Augment Option - Fire Attack">
+	<skill id="8003" levels="1" name="제련 옵션 - 불 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -27,7 +27,7 @@
 			<add order="0x40" stat="firePower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8004" levels="1" name="Augment Option - Water Attack">
+	<skill id="8004" levels="1" name="제련 옵션 - 물 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -36,7 +36,7 @@
 			<add order="0x40" stat="waterPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8005" levels="1" name="Augment Option - Wind Attack">
+	<skill id="8005" levels="1" name="제련 옵션 - 바람 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -45,7 +45,7 @@
 			<add order="0x40" stat="windPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8006" levels="1" name="Augment Option - Earth Attack">
+	<skill id="8006" levels="1" name="제련 옵션 - 땅 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -54,7 +54,7 @@
 			<add order="0x40" stat="earthPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8007" levels="1" name="Augment Option - Divine Resistance">
+	<skill id="8007" levels="1" name="제련 옵션 - 성스러운 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -63,7 +63,7 @@
 			<add order="0x40" stat="holyRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8008" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8008" levels="1" name="제련 옵션 - 암흑 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -72,7 +72,7 @@
 			<add order="0x40" stat="darkRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8009" levels="1" name="Augment Option - Fire Resistance">
+	<skill id="8009" levels="1" name="제련 옵션 - 불 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -81,7 +81,7 @@
 			<add order="0x40" stat="fireRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8010" levels="1" name="Augment Option - Water Resistance">
+	<skill id="8010" levels="1" name="제련 옵션 - 물 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -90,7 +90,7 @@
 			<add order="0x40" stat="waterRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8011" levels="1" name="Augment Option - Wind Resistance">
+	<skill id="8011" levels="1" name="제련 옵션 - 바람 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -99,7 +99,7 @@
 			<add order="0x40" stat="windRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8012" levels="1" name="Augment Option - Earth Resistance">
+	<skill id="8012" levels="1" name="제련 옵션 - 땅 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -108,7 +108,7 @@
 			<add order="0x40" stat="earthRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8013" levels="1" name="Augment Option - Divine Attack">
+	<skill id="8013" levels="1" name="제련 옵션 - 성스러운 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -117,7 +117,7 @@
 			<add order="0x40" stat="holyPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8014" levels="1" name="Augment Option - Dark Attack">
+	<skill id="8014" levels="1" name="제련 옵션 - 암흑 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -126,7 +126,7 @@
 			<add order="0x40" stat="darkPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8015" levels="1" name="Augment Option - Fire Attack">
+	<skill id="8015" levels="1" name="제련 옵션 - 불 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -135,7 +135,7 @@
 			<add order="0x40" stat="firePower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8016" levels="1" name="Augment Option - Water Attack">
+	<skill id="8016" levels="1" name="제련 옵션 - 물 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -144,7 +144,7 @@
 			<add order="0x40" stat="waterPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8017" levels="1" name="Augment Option - Wind Attack">
+	<skill id="8017" levels="1" name="제련 옵션 - 바람 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -153,7 +153,7 @@
 			<add order="0x40" stat="windPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8018" levels="1" name="Augment Option - Earth Attack">
+	<skill id="8018" levels="1" name="제련 옵션 - 땅 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -162,7 +162,7 @@
 			<add order="0x40" stat="earthPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8019" levels="1" name="Augment Option - Divine Resistance">
+	<skill id="8019" levels="1" name="제련 옵션 - 성스러운 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -171,7 +171,7 @@
 			<add order="0x40" stat="holyRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8020" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8020" levels="1" name="제련 옵션 - 암흑 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -180,7 +180,7 @@
 			<add order="0x40" stat="darkRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8021" levels="1" name="Augment Option - Fire Resistance">
+	<skill id="8021" levels="1" name="제련 옵션 - 불 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -189,7 +189,7 @@
 			<add order="0x40" stat="fireRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8022" levels="1" name="Augment Option - Water Resistance">
+	<skill id="8022" levels="1" name="제련 옵션 - 물 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -198,7 +198,7 @@
 			<add order="0x40" stat="waterRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8023" levels="1" name="Augment Option - Wind Resistance">
+	<skill id="8023" levels="1" name="제련 옵션 - 바람 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -207,7 +207,7 @@
 			<add order="0x40" stat="windRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8024" levels="1" name="Augment Option - Earth Resistance">
+	<skill id="8024" levels="1" name="제련 옵션 - 땅 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -216,7 +216,7 @@
 			<add order="0x40" stat="earthRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8025" levels="1" name="Augment Option - Divine Attack">
+	<skill id="8025" levels="1" name="제련 옵션 - 성스러운 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -225,7 +225,7 @@
 			<add order="0x40" stat="holyPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8026" levels="1" name="Augment Option - Dark Attack">
+	<skill id="8026" levels="1" name="제련 옵션 - 암흑 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -234,7 +234,7 @@
 			<add order="0x40" stat="darkPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8027" levels="1" name="Augment Option - Fire Attack">
+	<skill id="8027" levels="1" name="제련 옵션 - 불 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -243,7 +243,7 @@
 			<add order="0x40" stat="firePower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8028" levels="1" name="Augment Option - Water Attack">
+	<skill id="8028" levels="1" name="제련 옵션 - 물 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -252,7 +252,7 @@
 			<add order="0x40" stat="waterPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8029" levels="1" name="Augment Option - Wind Attack">
+	<skill id="8029" levels="1" name="제련 옵션 - 바람 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -261,7 +261,7 @@
 			<add order="0x40" stat="windPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8030" levels="1" name="Augment Option - Earth Attack">
+	<skill id="8030" levels="1" name="제련 옵션 - 땅 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -270,7 +270,7 @@
 			<add order="0x40" stat="earthPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8031" levels="1" name="Augment Option - Divine Resistance">
+	<skill id="8031" levels="1" name="제련 옵션 - 성스러운 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -279,7 +279,7 @@
 			<add order="0x40" stat="holyRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8032" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8032" levels="1" name="제련 옵션 - 암흑 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -288,7 +288,7 @@
 			<add order="0x40" stat="darkRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8033" levels="1" name="Augment Option - Fire Resistance">
+	<skill id="8033" levels="1" name="제련 옵션 - 불 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -297,7 +297,7 @@
 			<add order="0x40" stat="fireRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8034" levels="1" name="Augment Option - Water Resistance">
+	<skill id="8034" levels="1" name="제련 옵션 - 물 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -306,7 +306,7 @@
 			<add order="0x40" stat="waterRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8035" levels="1" name="Augment Option - Wind Resistance">
+	<skill id="8035" levels="1" name="제련 옵션 - 바람 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -315,7 +315,7 @@
 			<add order="0x40" stat="windRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8036" levels="1" name="Augment Option - Earth Resistance">
+	<skill id="8036" levels="1" name="제련 옵션 - 땅 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -324,7 +324,7 @@
 			<add order="0x40" stat="earthRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8037" levels="1" name="Augment Option - Divine Attack">
+	<skill id="8037" levels="1" name="제련 옵션 - 성스러운 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -333,7 +333,7 @@
 			<add order="0x40" stat="holyPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8038" levels="1" name="Augment Option - Dark Attack">
+	<skill id="8038" levels="1" name="제련 옵션 - 암흑 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -342,7 +342,7 @@
 			<add order="0x40" stat="darkPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8039" levels="1" name="Augment Option - Fire Attack">
+	<skill id="8039" levels="1" name="제련 옵션 - 불 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -351,7 +351,7 @@
 			<add order="0x40" stat="firePower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8040" levels="1" name="Augment Option - Water Attack">
+	<skill id="8040" levels="1" name="제련 옵션 - 물 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -360,7 +360,7 @@
 			<add order="0x40" stat="waterPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8041" levels="1" name="Augment Option - Wind Attack">
+	<skill id="8041" levels="1" name="제련 옵션 - 바람 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -369,7 +369,7 @@
 			<add order="0x40" stat="windPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8042" levels="1" name="Augment Option - Earth Attack">
+	<skill id="8042" levels="1" name="제련 옵션 - 땅 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -378,7 +378,7 @@
 			<add order="0x40" stat="earthPower" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8043" levels="1" name="Augment Option - Divine Resistance">
+	<skill id="8043" levels="1" name="제련 옵션 - 성스러운 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -387,7 +387,7 @@
 			<add order="0x40" stat="holyRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8044" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8044" levels="1" name="제련 옵션 - 암흑 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -396,7 +396,7 @@
 			<add order="0x40" stat="darkRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8045" levels="1" name="Augment Option - Fire Resistance">
+	<skill id="8045" levels="1" name="제련 옵션 - 불 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -405,7 +405,7 @@
 			<add order="0x40" stat="fireRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8046" levels="1" name="Augment Option - Water Resistance">
+	<skill id="8046" levels="1" name="제련 옵션 - 물 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -414,7 +414,7 @@
 			<add order="0x40" stat="waterRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8047" levels="1" name="Augment Option - Wind Resistance">
+	<skill id="8047" levels="1" name="제련 옵션 - 바람 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -423,7 +423,7 @@
 			<add order="0x40" stat="windRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8048" levels="1" name="Augment Option - Earth Resistance">
+	<skill id="8048" levels="1" name="제련 옵션 - 땅 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -432,7 +432,7 @@
 			<add order="0x40" stat="earthRes" val="4.28" />
 		</for>
 	</skill>
-	<skill id="8049" levels="1" name="Augment Option - Enhance Shock">
+	<skill id="8049" levels="1" name="제련 옵션 - 쇼크 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -441,7 +441,7 @@
 			<add order="0x40" stat="stunProf" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8050" levels="1" name="Augment Option - Enhance Bleed">
+	<skill id="8050" levels="1" name="제련 옵션 - 출혈 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -450,7 +450,7 @@
 			<add order="0x40" stat="bleedProf" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8051" levels="1" name="Augment Option - Enhance Poison">
+	<skill id="8051" levels="1" name="제련 옵션 - 독 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -459,7 +459,7 @@
 			<add order="0x40" stat="poisonProf" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8052" levels="1" name="Augment Option - Enhance Sleep">
+	<skill id="8052" levels="1" name="제련 옵션 - 수면 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -468,7 +468,7 @@
 			<add order="0x40" stat="sleepProf" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8053" levels="1" name="Augment Option - Enhance Paralysis">
+	<skill id="8053" levels="1" name="제련 옵션 - 마비 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -477,7 +477,7 @@
 			<add order="0x40" stat="paralyzeProf" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8054" levels="1" name="Augment Option - Enhance Mental Attack">
+	<skill id="8054" levels="1" name="제련 옵션 - 정신공격 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -486,7 +486,7 @@
 			<add order="0x40" stat="derangementProf" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8055" levels="1" name="Augment Option - Stun Resistance">
+	<skill id="8055" levels="1" name="제련 옵션 - 쇼크 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -495,7 +495,7 @@
 			<sub order="0x40" stat="stunVuln" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8056" levels="1" name="Augment Option - Bleed Resistance">
+	<skill id="8056" levels="1" name="제련 옵션 - 출혈 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -504,7 +504,7 @@
 			<sub order="0x40" stat="bleedVuln" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8057" levels="1" name="Augment Option - Poison Resistance">
+	<skill id="8057" levels="1" name="제련 옵션 - 독 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -513,7 +513,7 @@
 			<sub order="0x40" stat="poisonVuln" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8058" levels="1" name="Augment Option - Sleep Resistance">
+	<skill id="8058" levels="1" name="제련 옵션 - 수면 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -522,7 +522,7 @@
 			<sub order="0x40" stat="sleepVuln" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8059" levels="1" name="Augment Option - Paralysis Resistance">
+	<skill id="8059" levels="1" name="제련 옵션 - 마비 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -531,7 +531,7 @@
 			<sub order="0x40" stat="paralyzeVuln" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8060" levels="1" name="Augment Option - Mental Attack Resistance">
+	<skill id="8060" levels="1" name="제련 옵션 - 정신공격 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -540,7 +540,7 @@
 			<sub order="0x40" stat="derangementVuln" val="0.85" />
 		</for>
 	</skill>
-	<skill id="8061" levels="1" name="Augment Option - Enhance Shock">
+	<skill id="8061" levels="1" name="제련 옵션 - 쇼크 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -549,7 +549,7 @@
 			<add order="0x40" stat="stunProf" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8062" levels="1" name="Augment Option - Enhance Bleed">
+	<skill id="8062" levels="1" name="제련 옵션 - 출혈 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -558,7 +558,7 @@
 			<add order="0x40" stat="bleedProf" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8063" levels="1" name="Augment Option - Enhance Poison">
+	<skill id="8063" levels="1" name="제련 옵션 - 독 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -567,7 +567,7 @@
 			<add order="0x40" stat="poisonProf" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8064" levels="1" name="Augment Option - Enhance Sleep">
+	<skill id="8064" levels="1" name="제련 옵션 - 수면 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -576,7 +576,7 @@
 			<add order="0x40" stat="sleepProf" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8065" levels="1" name="Augment Option - Enhance Paralysis">
+	<skill id="8065" levels="1" name="제련 옵션 - 마비 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -585,7 +585,7 @@
 			<add order="0x40" stat="paralyzeProf" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8066" levels="1" name="Augment Option - Enhance Mental Attack">
+	<skill id="8066" levels="1" name="제련 옵션 - 정신공격 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -594,7 +594,7 @@
 			<add order="0x40" stat="derangementProf" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8067" levels="1" name="Augment Option - Stun Resistance">
+	<skill id="8067" levels="1" name="제련 옵션 - 쇼크 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -603,7 +603,7 @@
 			<sub order="0x40" stat="stunVuln" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8068" levels="1" name="Augment Option - Bleed Resistance">
+	<skill id="8068" levels="1" name="제련 옵션 - 출혈 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -612,7 +612,7 @@
 			<sub order="0x40" stat="bleedVuln" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8069" levels="1" name="Augment Option - Poison Resistance">
+	<skill id="8069" levels="1" name="제련 옵션 - 독 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -621,7 +621,7 @@
 			<sub order="0x40" stat="poisonVuln" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8070" levels="1" name="Augment Option - Sleep Resistance">
+	<skill id="8070" levels="1" name="제련 옵션 - 수면 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -630,7 +630,7 @@
 			<sub order="0x40" stat="sleepVuln" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8071" levels="1" name="Augment Option - Paralysis Resistance">
+	<skill id="8071" levels="1" name="제련 옵션 - 마비 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -639,7 +639,7 @@
 			<sub order="0x40" stat="paralyzeVuln" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8072" levels="1" name="Augment Option - Mental Attack Resistance">
+	<skill id="8072" levels="1" name="제련 옵션 - 정신공격 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -648,7 +648,7 @@
 			<sub order="0x40" stat="derangementVuln" val="1.07" />
 		</for>
 	</skill>
-	<skill id="8073" levels="1" name="Augment Option - Enhance Shock">
+	<skill id="8073" levels="1" name="제련 옵션 - 쇼크 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -657,7 +657,7 @@
 			<add order="0x40" stat="stunProf" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8074" levels="1" name="Augment Option - Enhance Bleed">
+	<skill id="8074" levels="1" name="제련 옵션 - 출혈 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -666,7 +666,7 @@
 			<add order="0x40" stat="bleedProf" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8075" levels="1" name="Augment Option - Enhance Poison">
+	<skill id="8075" levels="1" name="제련 옵션 - 독 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -675,7 +675,7 @@
 			<add order="0x40" stat="poisonProf" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8076" levels="1" name="Augment Option - Enhance Sleep">
+	<skill id="8076" levels="1" name="제련 옵션 - 수면 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -684,7 +684,7 @@
 			<add order="0x40" stat="sleepProf" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8077" levels="1" name="Augment Option - Enhance Paralysis">
+	<skill id="8077" levels="1" name="제련 옵션 - 마비 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -693,7 +693,7 @@
 			<add order="0x40" stat="paralyzeProf" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8078" levels="1" name="Augment Option - Enhance Mental Attack">
+	<skill id="8078" levels="1" name="제련 옵션 - 정신공격 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -702,7 +702,7 @@
 			<add order="0x40" stat="derangementProf" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8079" levels="1" name="Augment Option - Stun Resistance">
+	<skill id="8079" levels="1" name="제련 옵션 - 쇼크 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -711,7 +711,7 @@
 			<sub order="0x40" stat="stunVuln" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8080" levels="1" name="Augment Option - Bleed Resistance">
+	<skill id="8080" levels="1" name="제련 옵션 - 출혈 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -720,7 +720,7 @@
 			<sub order="0x40" stat="bleedVuln" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8081" levels="1" name="Augment Option - Poison Resistance">
+	<skill id="8081" levels="1" name="제련 옵션 - 독 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -729,7 +729,7 @@
 			<sub order="0x40" stat="poisonVuln" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8082" levels="1" name="Augment Option - Sleep Resistance">
+	<skill id="8082" levels="1" name="제련 옵션 - 수면 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -738,7 +738,7 @@
 			<sub order="0x40" stat="sleepVuln" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8083" levels="1" name="Augment Option - Paralysis Resistance">
+	<skill id="8083" levels="1" name="제련 옵션 - 마비 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -747,7 +747,7 @@
 			<sub order="0x40" stat="paralyzeVuln" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8084" levels="1" name="Augment Option - Mental Attack Resistance">
+	<skill id="8084" levels="1" name="제련 옵션 - 정신공격 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -756,7 +756,7 @@
 			<sub order="0x40" stat="derangementVuln" val="1.5" />
 		</for>
 	</skill>
-	<skill id="8085" levels="1" name="Augment Option - Enhance Shock">
+	<skill id="8085" levels="1" name="제련 옵션 - 쇼크 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -765,7 +765,7 @@
 			<add order="0x40" stat="stunProf" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8086" levels="1" name="Augment Option - Enhance Bleed">
+	<skill id="8086" levels="1" name="제련 옵션 - 출혈 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -774,7 +774,7 @@
 			<add order="0x40" stat="bleedProf" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8087" levels="1" name="Augment Option - Enhance Poison">
+	<skill id="8087" levels="1" name="제련 옵션 - 독 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -783,7 +783,7 @@
 			<add order="0x40" stat="poisonProf" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8088" levels="1" name="Augment Option - Enhance Sleep">
+	<skill id="8088" levels="1" name="제련 옵션 - 수면 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -792,7 +792,7 @@
 			<add order="0x40" stat="sleepProf" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8089" levels="1" name="Augment Option - Enhance Paralysis">
+	<skill id="8089" levels="1" name="제련 옵션 - 마비 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -801,7 +801,7 @@
 			<add order="0x40" stat="paralyzeProf" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8090" levels="1" name="Augment Option - Enhance Mental Attack">
+	<skill id="8090" levels="1" name="제련 옵션 - 정신공격 강화">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -810,7 +810,7 @@
 			<add order="0x40" stat="derangementProf" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8091" levels="1" name="Augment Option - Stun Resistance">
+	<skill id="8091" levels="1" name="제련 옵션 - 쇼크 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -819,7 +819,7 @@
 			<sub order="0x40" stat="stunVuln" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8092" levels="1" name="Augment Option - Bleed Resistance">
+	<skill id="8092" levels="1" name="제련 옵션 - 출혈 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -828,7 +828,7 @@
 			<sub order="0x40" stat="bleedVuln" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8093" levels="1" name="Augment Option - Poison Resistance">
+	<skill id="8093" levels="1" name="제련 옵션 - 독 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -837,7 +837,7 @@
 			<sub order="0x40" stat="poisonVuln" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8094" levels="1" name="Augment Option - Sleep Resistance">
+	<skill id="8094" levels="1" name="제련 옵션 - 수면 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -846,7 +846,7 @@
 			<sub order="0x40" stat="sleepVuln" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8095" levels="1" name="Augment Option - Paralysis Resistance">
+	<skill id="8095" levels="1" name="제련 옵션 - 마비 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -855,7 +855,7 @@
 			<sub order="0x40" stat="paralyzeVuln" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8096" levels="1" name="Augment Option - Mental Attack Resistance">
+	<skill id="8096" levels="1" name="제련 옵션 - 정신공격 저항">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -864,7 +864,7 @@
 			<sub order="0x40" stat="derangementVuln" val="1.71" />
 		</for>
 	</skill>
-	<skill id="8097" levels="1" name="Augment Option - Divine Attack">
+	<skill id="8097" levels="1" name="제련 옵션 - 성스러운 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -873,7 +873,7 @@
 			<add order="0x40" stat="holyPower" val="6.42" />
 		</for>
 	</skill>
-	<skill id="8098" levels="1" name="Augment Option - Dark Attack">
+	<skill id="8098" levels="1" name="제련 옵션 - 암흑 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -882,7 +882,7 @@
 			<add order="0x40" stat="darkPower" val="6.42" />
 		</for>
 	</skill>
-	<skill id="8099" levels="1" name="Augment Option - Fire Attack">
+	<skill id="8099" levels="1" name="제련 옵션 - 불 공격">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="target" val="TARGET_SELF" />

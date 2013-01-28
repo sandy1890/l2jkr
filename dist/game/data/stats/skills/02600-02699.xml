@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2600" levels="1" name="Gran Kain's Echo Crystal - Theme of Solitude">
+	<skill id="2600" levels="1" name="그랑카인의 소리수정 - 고독의 테마">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2601" levels="1" name="Gran Kain's Echo Crystal - Theme of the Feast">
+	<skill id="2601" levels="1" name="그랑카인의 소리수정 - 축제의 테마">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2602" levels="1" name="Gran Kain's Echo Crystal - Theme of Celebration">
+	<skill id="2602" levels="1" name="그랑카인의 소리수정 - 축하의 테마">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2603" levels="1" name="Gran Kain's Echo Crystal - Theme of Comedy">
+	<skill id="2603" levels="1" name="그랑카인의 소리수정 - 희극의 테마">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2604" levels="1" name="Gran Kain's Firework">
+	<skill id="2604" levels="1" name="그랑카인의 폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 	</skill>
-	<skill id="2605" levels="1" name="Gran Kain's Large Firework">
+	<skill id="2605" levels="1" name="그랑카인의 대폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
-	<skill id="2606" levels="1" name="Gran Kain's Gift Box">
+	<skill id="2606" levels="1" name="그랑카인의 선물상자">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			13259,1,0.8130;13258,1,1.626;13260,1,16.260;13261,10,4.645;13262,10,4.645;13263,10,4.645;13264,10,4.645;13265,10,4.645;13266,10,4.645;13267,10,4.645;13268,10,32.5260;13269,10,16.260
@@ -59,7 +59,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2607" levels="1" name="Pailaka Door Key">
+	<skill id="2607" levels="1" name="파이라카 문 열쇠">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_UNLOCKABLE" />
@@ -72,7 +72,7 @@
 			<target npcId="22110100,22110101,22110102,22110103,22110104,22110105" />
 		</cond>
 	</skill>
-	<skill id="2608" levels="3" name="Crystal of Fantasy">
+	<skill id="2608" levels="3" name="환상의 붉은 수정">
 		<!-- Lvl 1: Blue Crystal of Fantasy -->
 		<!-- Lvl 2: Green Crystal of Fantasy -->
 		<!-- Lvl 3: Red Crystal of Fantasy -->
@@ -90,7 +90,7 @@
 			<player level="76" />
 		</cond>
 	</skill>
-	<skill id="2609" levels="20" name="Escape">
+	<skill id="2609" levels="20" name="귀환 - 영혼의 섬 마을">
 		<table name="#teleCoords"> -114558,253605,-1536 46934,51467,-2977 9745,15606,-4574 -44836,-112524,-235 115113,-178212,-901 -80826,149775,-3043 -12678,122776,-3116 15670,142983,-2705 17836,170178,-3507 83400,147943,-3404 105918,109759,-3207 111409,219364,-3545 82956,53162,-1495 85348,16142,-3699 116819,76994,-2714 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 -117251,46771,360 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -100,41 +100,41 @@
 		<set name="teleCoords" val="#teleCoords" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2610" levels="1" name="Register Bookmark (Event)">
+	<skill id="2610" levels="1" name="북마크 등록 - 이벤트용">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2611" levels="1" name="Large Firework">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-	</skill>
-	<skill id="2612" levels="1" name="Large Firework">
+	<skill id="2611" levels="1" name="대폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2613" levels="1" name="Large Firework">
+	<skill id="2612" levels="1" name="대폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2614" levels="1" name="Large Firework">
+	<skill id="2613" levels="1" name="대폭죽">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2615" levels="1" name="Destroyed Darkness Fragment Powder">
+	<skill id="2614" levels="1" name="대폭죽">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="A1" />
+	</skill>
+	<skill id="2615" levels="1" name="부서진 어둠의 파편 가루">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="create_item_count" val="1" />
@@ -154,7 +154,7 @@
 			<player npcIdRadius="32529,300" />
 		</cond>
 	</skill>
-	<skill id="2616" levels="1" name="Bond Sealant">
+	<skill id="2616" levels="1" name="본드 붙이기">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
@@ -162,7 +162,7 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="100" />
 	</skill>
-	<skill id="2617" levels="1" name="Stun Planter">
+	<skill id="2617" levels="1" name="지뢰 심기">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
@@ -170,7 +170,7 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="100" />
 	</skill>
-	<skill id="2618" levels="1" name="Stun Land Mine">
+	<skill id="2618" levels="1" name="스턴 지뢰">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="2000" />
@@ -178,25 +178,25 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="100" />
 	</skill>
-	<skill id="2619" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss) (Event)">
+	<skill id="2619" levels="1" name="추가 입장권 - 카마로카 (심연의 홀) - 이벤트용">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2620" levels="1" name="Extra Entrance Pass - Near Kamaloka (Event)">
+	<skill id="2620" levels="1" name="추가 입장권 - 니어 카마로카 - 이벤트용">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2621" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) (Event)">
+	<skill id="2621" levels="1" name="추가 입장권 - 카마로카 (심연의 미궁) - 이벤트용">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2622" levels="1" name="Summon Life-size Decoy">
+	<skill id="2622" levels="1" name="서먼 라이프시드 디코이">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="1800000" />
@@ -204,50 +204,50 @@
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
-	<skill id="2623" levels="1" name="Alkaline Therapy">
+	<skill id="2623" levels="1" name="알카라인 테라피">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="2624" levels="1" name="Life Aid Banding">
+	<skill id="2624" levels="1" name="라이프에이드 벤딩">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="2625" levels="1" name="Embalming">
+	<skill id="2625" levels="1" name="임바밍">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2626" levels="1" name="Lighting Incense">
+	<skill id="2626" levels="1" name="라이팅 인센스">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2627" levels="1" name="Elixir Miracle">
+	<skill id="2627" levels="1" name="엘릭서 미라클">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2628" levels="1" name="Structure Scarab">
+	<skill id="2628" levels="1" name="구조의 스카라베">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
-	<skill id="2629" levels="1" name="Ancient Treasure Sack">
+	<skill id="2629" levels="1" name="에이션트 트레져 색">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2630" levels="1" name="Presentation - Collect Items">
+	<skill id="2630" levels="1" name="연출 - 채집 아이템">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
@@ -263,7 +263,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2631" levels="1" name="Scroll of Transformation - Frog">
+	<skill id="2631" levels="1" name="변신 주문서 - 개구리">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -278,7 +278,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="2632" levels="1" name="Scroll of Transformation - Young Child">
+	<skill id="2632" levels="1" name="변신 주문서 - 어린아이">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -293,7 +293,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="2633" levels="1" name="Elmore-Aden's Holy Water">
+	<skill id="2633" levels="1" name="엘모아덴의 성수">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="40" />
@@ -309,7 +309,7 @@
 			<target npcId="17240101,17240105,17240109" />
 		</cond>
 	</skill>
-	<skill id="2634" levels="1" name="Court Magician's Blessing">
+	<skill id="2634" levels="1" name="궁정마법사의 축복">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="40" />
@@ -325,7 +325,7 @@
 			<target npcId="17240103,17240107" />
 		</cond>
 	</skill>
-	<skill id="2635" levels="1" name="Blessing of Fire">
+	<skill id="2635" levels="1" name="불의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -338,7 +338,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2636" levels="1" name="Blessing of Earth">
+	<skill id="2636" levels="1" name="대지의 축복">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -351,13 +351,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2637" levels="1" name="Scroll: Enchant Weapon (Event)">
+	<skill id="2637" levels="1" name="무기 강화 주문서 - 이벤트용">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2638" levels="1" name="Five-year anniversary event box">
+	<skill id="2638" levels="1" name="5주년 기념 이벤트 박스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9546,1,16.6;9547,1,16.6;9548,1,16.6;9549,1,16.6;9550,1,16.6;9551,1,17.0
@@ -377,7 +377,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2639" levels="1" name="Five-year anniversary event box">
+	<skill id="2639" levels="1" name="5주년 기념 이벤트 박스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9546,2,16.6;9547,2,16.6;9548,2,16.6;9549,2,16.6;9550,2,16.6;9551,2,17.0
@@ -397,7 +397,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2640" levels="1" name="Five-year anniversary event box">
+	<skill id="2640" levels="1" name="5주년 기념 이벤트 박스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			10260,1,9.0;10261,1,9.0;10262,1,9.0;10263,1,9.0;10264,1,9.0;10265,1,9.0;10266,1,9.0;10267,1,9.0;10268,1,9.0;10269,1,9.0;10270,1,10.0
@@ -417,7 +417,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2641" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2641" levels="1" name="5주년 기념 이벤트 박스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			10260,2,9.0;10261,2,9.0;10262,2,9.0;10263,2,9.0;10264,2,9.0;10265,2,9.0;10266,2,9.0;10267,2,9.0;10268,2,9.0;10269,2,9.0;10270,2,10.0
@@ -437,7 +437,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2642" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2642" levels="1" name="5주년 기념 이벤트 박스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			10260,3,9.0;10261,3,9.0;10262,3,9.0;10263,3,9.0;10264,3,9.0;10265,3,9.0;10266,3,9.0;10267,3,9.0;10268,3,9.0;10269,3,9.0;10270,3,10.0
@@ -457,7 +457,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2643" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2643" levels="1" name="5주년 기념 이벤트 박스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			7122,1,7.14;7123,1,7.14;7124,1,7.14;7125,1,7.14;7126,1,7.14;7127,1,7.14;7128,1,7.14;7129,1,7.14;7130,1,7.18;7131,1,7.14;7132,1,7.14;7133,1,7.14;7134,1,7.14;7135,1,7.14
@@ -477,7 +477,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2644" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2644" levels="1" name="5주년 기념 이벤트 박스">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			7122,2,7.14;7123,2,7.14;7124,2,7.14;7125,2,7.14;7126,2,7.14;7127,2,7.14;7128,2,7.14;7129,2,7.14;7130,2,7.18;7131,2,7.14;7132,2,7.14;7133,2,7.14;7134,2,7.14;7135,2,7.14
@@ -497,19 +497,19 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2645" levels="1" name="Multi-Colored Honey Rice Cake">
+	<skill id="2645" levels="1" name="오색 꿀떡">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2646" levels="1" name="Honey Wheat Cake">
+	<skill id="2646" levels="1" name="약과">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2647" levels="1" name="Energy Star Stone">
+	<skill id="2647" levels="1" name="에너지 스타 스톤">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -518,7 +518,7 @@
 		<set name="hitTime" val="200" />
 		<set name="power" val="25" />
 	</skill>
-	<skill id="2648" levels="1" name="High Quality Energy Star Stone">
+	<skill id="2648" levels="1" name="고급 에너지 스타 스톤">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -527,7 +527,7 @@
 		<set name="hitTime" val="200" />
 		<set name="power" val="100" />
 	</skill>
-	<skill id="2649" levels="9" name="Escape - Gludin Village">
+	<skill id="2649" levels="9" name="귀환 - 슈트가르트성 마을">
 		<table name="#teleCoords"> -12678,122776,-3116 15670,142983,-2705 83400,147943,-3404 111409,219364,-3545 82956,53162,-1495 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -537,7 +537,7 @@
 		<set name="teleCoords" val="#teleCoords" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2650" levels="1" name="Summon Imperial Phoenix">
+	<skill id="2650" levels="1" name="서먼 래서 피닉스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -555,7 +555,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2651" levels="1" name="Deflect Magic">
+	<skill id="2651" levels="1" name="디플렉트 매직">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -573,7 +573,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2652" levels="1" name="Song of Purification">
+	<skill id="2652" levels="1" name="송 오브 퓨리피케이션">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -591,7 +591,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2653" levels="1" name="Dance of Berserker">
+	<skill id="2653" levels="1" name="댄스 오브 버서커">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -609,7 +609,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2654" levels="1" name="Final Secret">
+	<skill id="2654" levels="1" name="파이널 시크릿">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -627,7 +627,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2655" levels="1" name="Maximum Force Focus">
+	<skill id="2655" levels="1" name="맥시멈 포커스 포스">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -645,7 +645,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2656" levels="1" name="Maximum Sonic Focus">
+	<skill id="2656" levels="1" name="맥시멈 포커스 소닉">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -663,7 +663,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2657" levels="1" name="Hide">
+	<skill id="2657" levels="1" name="하이드">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -681,7 +681,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2658" levels="1" name="Dual Dagger Mastery">
+	<skill id="2658" levels="1" name="듀얼 대거 마스터리">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -700,7 +700,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2659" levels="1" name="Seven Arrow">
+	<skill id="2659" levels="1" name="세븐 에로우">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -718,7 +718,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2660" levels="1" name="Enlightenment">
+	<skill id="2660" levels="1" name="엔라이튼멘트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -736,7 +736,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2661" levels="1" name="Enlightenment">
+	<skill id="2661" levels="1" name="엔라이튼멘트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -754,7 +754,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2662" levels="1" name="Chant of Movement">
+	<skill id="2662" levels="1" name="챈트 오브 무브먼트">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -772,7 +772,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2663" levels="1" name="Combat of Pa'agrio">
+	<skill id="2663" levels="1" name="컴뱃 오브 파아그리오">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -790,7 +790,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2664" levels="1" name="Critical of Pa'agrio">
+	<skill id="2664" levels="1" name="크리티컬 오브 파아그리오">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -808,7 +808,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2665" levels="1" name="Condition of Pa'agrio">
+	<skill id="2665" levels="1" name="컨디션 오브 파아그리오">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -826,7 +826,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2666" levels="1" name="Dual Blow">
+	<skill id="2666" levels="1" name="듀얼 블로우">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -844,7 +844,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2667" levels="1" name="Spirit of the Cat">
+	<skill id="2667" levels="1" name="스피릿 더 캣">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -862,7 +862,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2668" levels="1" name="Spirit of the Phantom">
+	<skill id="2668" levels="1" name="스피릿 더 팬텀">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -880,7 +880,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2669" levels="1" name="Spirit of the Unicorn">
+	<skill id="2669" levels="1" name="스피릿 더 유니콘">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -898,7 +898,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2670" levels="1" name="Scroll of Transformation - Red">
+	<skill id="2670" levels="1" name="변신 주문서 - 레드">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
@@ -910,7 +910,7 @@
 			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="2671" levels="1" name="Scroll of Transformation - Blue">
+	<skill id="2671" levels="1" name="변신 주문서 - 블루">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
@@ -922,7 +922,7 @@
 			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
-	<skill id="2672" levels="1" name="Gludio Human Mercenary">
+	<skill id="2672" levels="1" name="글루디오 휴먼 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -942,7 +942,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2673" levels="1" name="Gludio Elf Mercenary">
+	<skill id="2673" levels="1" name="글루디오 엘프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -962,7 +962,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2674" levels="1" name="Gludio Dark Elf Mercenary">
+	<skill id="2674" levels="1" name="글루디오 다크 엘프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -982,7 +982,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2675" levels="1" name="Gludio Orc Mercenary">
+	<skill id="2675" levels="1" name="글루디오 오크 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1002,7 +1002,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2676" levels="1" name="Gludio Dwarf Mercenary">
+	<skill id="2676" levels="1" name="글루디오 드워프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1022,7 +1022,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2677" levels="1" name="Gludio Kamael Mercenary">
+	<skill id="2677" levels="1" name="글루디오 카마엘 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1042,7 +1042,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2678" levels="1" name="Gludio Knight Mercenary">
+	<skill id="2678" levels="1" name="글루디오 근위대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1062,7 +1062,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2679" levels="1" name="Gludio Archer Mercenary">
+	<skill id="2679" levels="1" name="글루디오 궁수대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1082,7 +1082,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2680" levels="1" name="Gludio Wizard Mercenary">
+	<skill id="2680" levels="1" name="글루디오 마법단장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1102,7 +1102,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2681" levels="1" name="Gludio Kamael Captain Mercenary">
+	<skill id="2681" levels="1" name="글루디오 카마엘 경비대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1122,7 +1122,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2682" levels="1" name="Gludio Knight Captain Mercenary">
+	<skill id="2682" levels="1" name="글루디오 여명의 기사">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1142,7 +1142,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2683" levels="1" name="Gludio Commander Mercenary">
+	<skill id="2683" levels="1" name="글루디오 요새대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1162,7 +1162,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2684" levels="1" name="Dion Human Mercenary">
+	<skill id="2684" levels="1" name="디온 휴먼 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1182,7 +1182,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2685" levels="1" name="Dion Elf Mercenary">
+	<skill id="2685" levels="1" name="디온 엘프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1202,7 +1202,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2686" levels="1" name="Dion Dark Elf Mercenary">
+	<skill id="2686" levels="1" name="디온 다크 엘프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1222,7 +1222,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2687" levels="1" name="Dion Orc Mercenary">
+	<skill id="2687" levels="1" name="디온 오크 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1242,7 +1242,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2688" levels="1" name="Dion Dwarf Mercenary">
+	<skill id="2688" levels="1" name="디온 드워프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1262,7 +1262,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2689" levels="1" name="Dion Kamael Mercenary">
+	<skill id="2689" levels="1" name="디온 카마엘 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1282,7 +1282,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2690" levels="1" name="Dion Knight Mercenary">
+	<skill id="2690" levels="1" name="디온 근위대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1302,7 +1302,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2691" levels="1" name="Dion Archer Mercenary">
+	<skill id="2691" levels="1" name="디온 궁수대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1322,7 +1322,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2692" levels="1" name="Dion Wizard Mercenary">
+	<skill id="2692" levels="1" name="디온 마법단장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1342,7 +1342,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2693" levels="1" name="Dion Kamael Captain Mercenary">
+	<skill id="2693" levels="1" name="디온 카마엘 경비대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1362,7 +1362,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2694" levels="1" name="Dion Knight Captain Mercenary">
+	<skill id="2694" levels="1" name="디온 여명의 기사">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1382,7 +1382,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2695" levels="1" name="Dion Commander Mercenary">
+	<skill id="2695" levels="1" name="디온 요새대장">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1402,7 +1402,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2696" levels="1" name="Giran Human Mercenary">
+	<skill id="2696" levels="1" name="기란 휴먼 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1422,7 +1422,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2697" levels="1" name="Giran Elf Mercenary">
+	<skill id="2697" levels="1" name="기란 엘프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1442,7 +1442,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2698" levels="1" name="Giran Dark Elf Mercenary">
+	<skill id="2698" levels="1" name="기란 다크 엘프 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1462,7 +1462,7 @@
 			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
-	<skill id="2699" levels="1" name="Giran Orc Mercenary">
+	<skill id="2699" levels="1" name="기란 오크 용병">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

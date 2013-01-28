@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11814" levels="8" name="Dark Force">
+	<skill id="11814" levels="8" name="다크 포스">
 		<table name="#mpConsume"> 87 91 95 98 102 107 111 116 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -13,7 +13,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11817" levels="8" name="Dark Rain">
+	<skill id="11817" levels="8" name="다크 레인">
 		<table name="#mpConsume"> 282 288 300 312 325 337 351 365 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -24,7 +24,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11819" levels="1" name="Party Return">
+	<skill id="11819" levels="1" name="패스트 리콜">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -33,7 +33,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="91"/>
 	</skill>
-	<skill id="11820" levels="1" name="Power of Saha">
+	<skill id="11820" levels="1" name="사하 더 파워">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_ONE" />
@@ -53,7 +53,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11821" levels="1" name="Crit of Saha">
+	<skill id="11821" levels="1" name="사하 더 크리티컬">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_ONE" />
@@ -74,7 +74,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11822" levels="1" name="might of Saha">
+	<skill id="11822" levels="1" name="사하 더 포스">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_ONE" />
@@ -92,7 +92,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11823" levels="1" name="Move of Saha">
+	<skill id="11823" levels="1" name="사하 더 무브">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_ONE" />
@@ -112,7 +112,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11824" levels="1" name="Resist of Saha">
+	<skill id="11824" levels="1" name="사하 더 레지스트">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_ONE" />
@@ -132,7 +132,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11825" levels="1" name="mind of Saha">
+	<skill id="11825" levels="1" name="사하 더 멘탈">
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_ONE" />
@@ -152,7 +152,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11826" levels="1" name="Emblem of Salvation">
+	<skill id="11826" levels="1" name="엠블렘 오브 샐베이션">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A2"/>
@@ -162,7 +162,7 @@
 		<set name="effectRange" val="1100"/>
 		<set name="mpConsume" val="70"/>
 	</skill>
-	<skill id="11828" levels="1" name="Progressive Heal">
+	<skill id="11828" levels="1" name="체인 리그로스">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A1"/>
@@ -173,7 +173,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="194"/>
 	</skill>
-	<skill id="11830" levels="1" name="Blessing of Saha">
+	<skill id="11830" levels="1" name="사하 더 블레스">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="A2"/>
@@ -184,7 +184,7 @@
 		<set name="effectRange" val="1100"/>
 		<set name="mpConsume" val="35"/>
 	</skill>
-	<skill id="11831" levels="8" name="Erase Impact">
+	<skill id="11831" levels="8" name="이레이스 임팩트">
 		<table name="#mpConsume"> 373 377 380 383 384 387 390 393 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -196,7 +196,7 @@
 		<set name="isMagic" val="1"/>
 		<set name="mpConsume" val="#mpConsume"/>
 	</skill>
-	<skill id="11832" levels="6" name="Mass Fatal Sleep">
+	<skill id="11832" levels="6" name="매스 페이탈 슬리프">
 		<table name="#mpConsume"> 52 52 54 60 62 66 </table>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
