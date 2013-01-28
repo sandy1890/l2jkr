@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence maxOccurs="1" minOccurs="1">
+			<xs:sequence maxOccurs="unbounded" minOccurs="1">
 				<xs:element name="track" maxOccurs="4" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
