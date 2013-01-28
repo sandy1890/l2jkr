@@ -300,12 +300,6 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 import gnu.trove.list.array.TIntArrayList;
-//Add NevitAdvent by pmq
-//rocknow-God-Awaking
-//Add NevitAdvent by pmq
-//Add NevitAdvent by pmq
-//Add NevitAdvent by pmq
-// Add PI by pmq
 
 /**
  * This class represents all player characters in the world. There is always a client-thread connected to this (except if a player-store is activated upon logout).<BR>
@@ -388,6 +382,7 @@ public final class L2PcInstance extends L2Playable {
 	public static FastList<ProfessionChangeListener> globalProfessionChangeListeners = new FastList<ProfessionChangeListener>().shared();
 	
 	private int _pcBangPoints = 0; // Add pcbangpoints by pmq
+	public int jumpTrackId = 0;
 	
 	public class AIAccessor extends L2Character.AIAccessor {
 		protected AIAccessor() {
@@ -13169,7 +13164,8 @@ public final class L2PcInstance extends L2Playable {
 		}
 		/*
 		 * TODO: Instant Zone still not implement else if (this.isInsideZone(ZONE_INSTANT)) { sendPacket(SystemMessage.getSystemMessage(2357)); return; }
-		 */else {
+		 */
+		else {
 			return true;
 		}
 	}
@@ -13866,7 +13862,8 @@ public final class L2PcInstance extends L2Playable {
 		{
 			_log.info("Removing skill id " + id + " level " + getSkillLevel(id) + " from player " + this);
 			removeSkill(getSkills().get(id), true);
-		} else // replace with lower one
+		} else
+		// replace with lower one
 		{
 			_log.info("Decreasing skill id " + id + " from " + getSkillLevel(id) + " to " + nextLevel + " for " + this);
 			addSkill(SkillTable.getInstance().getInfo(id, nextLevel), true);
