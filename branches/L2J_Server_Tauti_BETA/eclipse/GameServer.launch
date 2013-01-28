@@ -14,6 +14,6 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.l2jserver.gameserver.GameServer"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="L2J_Server_Tauti_BETA"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djava.util.logging.manager=com.l2jserver.util.L2LogManager -Xms32m -Xmx2048m -verbose:gc"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djava.util.logging.manager=com.l2jserver.util.L2LogManager -Xms32m -Xmx2048m"/>
 <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:L2J_Server_Tauti_BETA/dist/game}"/>
 </launchConfiguration>
