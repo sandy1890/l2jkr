@@ -608,7 +608,7 @@
 			<target npcType="L2ChestInstance" />
 		</cond>
 	</skill>
-	<skill id="2230" levels="1" name="a,Item - Theme Sound Crystal">
+	<skill id="2230" levels="1" name="Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -1369,7 +1369,7 @@
 			<effect name="RestorationRandom" noicon="1" val="0" />
 		</for>
 	</skill>
-	<skill id="2272" levels="1" name="a,Item - Theme Sound Crystal">
+	<skill id="2272" levels="1" name="Item - Theme Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />

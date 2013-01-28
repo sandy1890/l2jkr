@@ -511,61 +511,61 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2140" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2140" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2141" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2141" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2142" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2142" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2143" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2143" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2144" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2144" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2145" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2145" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2146" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2146" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2147" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2147" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2148" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2148" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2149" levels="1" name="a,Item - Carol Sound Crystal">
+	<skill id="2149" levels="1" name="Item - Carol Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -899,43 +899,43 @@
 		<set name="skillType" val="FEED_PET" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="2181" levels="1" name="a,Item - Fishing Shot">
+	<skill id="2181" levels="1" name="Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2182" levels="1" name="a,Item - Fishing Shot">
+	<skill id="2182" levels="1" name="Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2183" levels="1" name="a,Item - Fishing Shot">
+	<skill id="2183" levels="1" name="Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2184" levels="1" name="a,Item - Fishing Shot">
+	<skill id="2184" levels="1" name="Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2185" levels="1" name="a,Item - Fishing Shot">
+	<skill id="2185" levels="1" name="Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2186" levels="1" name="a,Item - Fishing Shot">
+	<skill id="2186" levels="1" name="Item - Fishing Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="2187" levels="1" name="a,Item - Special Sound Crystal">
+	<skill id="2187" levels="1" name="Item - Special Sound Crystal">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />

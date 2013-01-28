@@ -563,14 +563,14 @@
 		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
-	<skill id="4549" levels="1" name="a,Quest - Unsealed Altar">
+	<skill id="4549" levels="1" name="Quest - Unsealed Altar">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="4550" levels="1" name="a,Quest - Cursed Altar">
+	<skill id="4550" levels="1" name="Quest - Cursed Altar">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="99" />

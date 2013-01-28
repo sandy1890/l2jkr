@@ -2499,21 +2499,21 @@
 		<set name="skillType" val="COREDONE" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
-	<skill id="392" levels="1" name="a,none">
+	<skill id="392" levels="1" name="none">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="393" levels="1" name="a,none">
+	<skill id="393" levels="1" name="none">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="394" levels="1" name="a,none">
+	<skill id="394" levels="1" name="none">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -2570,21 +2570,21 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="397" levels="1" name="a,none">
+	<skill id="397" levels="1" name="none">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="398" levels="1" name="a,none">
+	<skill id="398" levels="1" name="none">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="target" val="TARGET_NONE" />
 	</skill>
-	<skill id="399" levels="1" name="a,none">
+	<skill id="399" levels="1" name="none">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />

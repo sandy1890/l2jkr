@@ -1152,7 +1152,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5769" levels="12" name="a,not_used">
+	<skill id="5769" levels="12" name="not_used">
 		<!-- Update by pmq -->
 		<table name="#magicLvl"> 0 0 0 1 1 1 1 1 1 2 2 2 </table>
 		<table name="#mpConsume_Init"> 12 12 12 12 12 12 12 12 12 12 12 12 </table>
@@ -1174,7 +1174,7 @@
 		<for>
 		</for>
 	</skill>
-	<skill id="5770" levels="12" name="a,not_used">
+	<skill id="5770" levels="12" name="not_used">
 		<!-- Update by pmq -->
 		<table name="#magicLvl"> 0 0 0 1 1 1 1 1 1 2 2 2 </table>
 		<table name="#mpConsume_Init"> 12 12 12 12 12 12 12 12 12 12 12 12 </table>

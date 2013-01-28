@@ -478,7 +478,7 @@
 			<add order="0x40" stat="mAtk" val="21.77" />
 		</for>
 	</skill>
-	<skill id="3855" levels="1" name="a,not_used">
+	<skill id="3855" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
@@ -628,7 +628,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="3871" levels="1" name="a,not_used">
+	<skill id="3871" levels="1" name="not_used">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />

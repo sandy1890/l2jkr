@@ -148,25 +148,25 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5609" levels="1" name="a,Sound 1">
+	<skill id="5609" levels="1" name="Sound 1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5610" levels="1" name="a,Sound 2">
+	<skill id="5610" levels="1" name="Sound 2">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5611" levels="1" name="a,Sound 3">
+	<skill id="5611" levels="1" name="Sound 3">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
-	<skill id="5612" levels="1" name="a,Sound 4">
+	<skill id="5612" levels="1" name="Sound 4">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -557,7 +557,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5641" levels="1" name="a,not_used">
+	<skill id="5641" levels="1" name="not_used">
 		<!-- Update by pmq -->
 		<set name="mpInitialConsume" val="8" />
 		<set name="mpConsume" val="31" />
@@ -569,7 +569,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="5642" levels="4" name="a,not_used">
+	<skill id="5642" levels="4" name="not_used">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 10 12 12 13 </table>
 		<table name="#mpConsume"> 42 46 50 52 </table>
@@ -603,7 +603,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5644" levels="1" name="a,not_used">
+	<skill id="5644" levels="1" name="not_used">
 		<!-- Update by pmq -->
 		<set name="mpInitialConsume" val="5" />
 		<set name="mpConsume" val="22" />
@@ -615,7 +615,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="5645" levels="3" name="a,not_used">
+	<skill id="5645" levels="3" name="not_used">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 7 9 10 </table>
 		<table name="#mpConsume"> 28 35 42 </table>
@@ -629,7 +629,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="5646" levels="2" name="a,not_used">
+	<skill id="5646" levels="2" name="not_used">
 		<!-- Confirmed CT2.5 -->
 		<!-- 3 lvl not_used, don't add it on skill -->
 		<table name="#aggro"> 582 635 </table>
@@ -713,7 +713,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5649" levels="2" name="a,not_used">
+	<skill id="5649" levels="2" name="not_used">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#mpConsume"> 31 38 </table>
@@ -727,7 +727,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="5650" levels="3" name="a,not_used">
+	<skill id="5650" levels="3" name="not_used">
 		<!-- Update by pmq -->
 		<table name="#mpInitialConsume"> 10 11 13 </table>
 		<table name="#mpConsume"> 38 44 51 </table>
@@ -741,7 +741,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="5651" levels="1" name="a,not_used">
+	<skill id="5651" levels="1" name="not_used">
 		<!-- Update by pmq -->
 		<set name="mpInitialConsume" val="7" />
 		<set name="mpConsume" val="28" />
