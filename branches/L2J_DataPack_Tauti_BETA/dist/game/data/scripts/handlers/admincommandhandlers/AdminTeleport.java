@@ -92,6 +92,12 @@ public class AdminTeleport implements IAdminCommandHandler {
 		if (command.equals("admin_teleto r")) {
 			activeChar.setTeleMode(2);
 		}
+		if (command.equals("admin_teleto f1")) {
+			activeChar.setTeleMode(3);
+		}
+		if (command.equals("admin_teleto f")) {
+			activeChar.setTeleMode(4);
+		}
 		if (command.equals("admin_teleto end")) {
 			activeChar.setTeleMode(0);
 		}
