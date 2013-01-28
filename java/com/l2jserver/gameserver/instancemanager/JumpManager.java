@@ -20,7 +20,9 @@ package com.l2jserver.gameserver.instancemanager;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,8 +33,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.model.zone.type.L2JumpZone;
 import com.l2jserver.gameserver.network.serverpackets.ExFlyMove;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
@@ -41,33 +46,30 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * JumpManager
  * @author ALF
  */
+
 public class JumpManager {
 	
 	private static final Logger _log = Logger.getLogger(JumpManager.class.getName());
+	
 	private final TIntObjectHashMap<List<JumpNode>> _routes = new TIntObjectHashMap<>();
+	private final Map<String, Integer> _zoneRoutesList = new HashMap<>();
 	
 	private JumpManager() {
-		// l2jtw add start
 		load();
-		// l2jtw add end
 	}
 	
 	public void load() {
 		_log.info(getClass().getSimpleName() + ": Initializing");
 		_routes.clear();
+		_zoneRoutesList.clear();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/JumpTrack.xml");
 		Document doc = null;
-		
 		if (file.exists()) {
 			try {
 				doc = factory.newDocumentBuilder().parse(file);
-			} catch (Exception e) {
-				_log.log(Level.WARNING, "Could not parse JumpTrack.xml file: " + e.getMessage(), e);
-			}
-			if (doc != null) {
 				Node n = doc.getFirstChild();
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
 					if (d.getNodeName().equals("track")) {
@@ -85,13 +87,23 @@ public class JumpManager {
 							}
 						}
 						_routes.put(trackId, list);
+						_zoneRoutesList.put(d.getAttributes().getNamedItem("zone").getNodeValue(), trackId);
 					}
 				}
-			} else {
-				_log.log(Level.WARNING, "doc null");
+			} catch (Exception e) {
+				_log.log(Level.WARNING, "Could not parse JumpTrack.xml file: " + e.getMessage(), e);
 			}
 		}
 		_log.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " Jump Routes.");
+	}
+	
+	public int getTrackId(L2PcInstance player) {
+		for (L2ZoneType zone : L2World.getInstance().getRegion(player.getX(), player.getY()).getZones()) {
+			if (zone.isCharacterInZone(player) && (zone instanceof L2JumpZone)) {
+				return _zoneRoutesList.get(zone.getName());
+			}
+		}
+		return 0;
 	}
 	
 	public void StartJump(L2PcInstance player) {
@@ -99,44 +111,22 @@ public class JumpManager {
 			return;
 		}
 		
-		int _id = MapRegionManager.getInstance().getClosestTownId(player);
-		int _tracId = 0;
+		player.jumpTrackId = getTrackId(player);
 		
-		switch (_id) {
-			case 910:
-				_tracId = 1;
-			break; // Talking Island Village
-		}
-		
-		/*
-		 * l2jtw start JumpNode n = getRouteForId(_tracId).get(1);
-		 */
-		if (_tracId == 0) {
+		if (player.jumpTrackId == 0) {
 			return;
 		}
-		JumpNode n = getRouteForId(_tracId).get(0);
-		// l2jtw end
+		JumpNode n = getRouteForId(player.jumpTrackId).get(0);
 		player.sendPacket(new ExFlyMove(player.getObjectId(), n.getMaxNum(), n.getMoveX(), n.getMoveY(), n.getMoveZ(), n.getRouteId()));
 		player.setXYZ(n.getMoveX(), n.getMoveY(), n.getMoveZ());
 	}
 	
 	public void NextJump(L2PcInstance player, int nextId) {
-		if (nextId < 0) {
+		List<JumpNode> jn = getRouteForId(player.jumpTrackId);
+		if ((nextId < 0) || (player.jumpTrackId == 0) || (jn == null) || (nextId >= jn.size())) {
 			return;
 		}
-		int _id = MapRegionManager.getInstance().getClosestTownId(player);
-		int _tracId = 0;
-		switch (_id) {
-			case 910:
-				_tracId = 1;
-			break; // Talking Island Village
-		}
-		// l2jtw add start
-		if (nextId >= getRouteForId(_tracId).size()) {
-			return;
-		}
-		// l2jtw end
-		JumpNode n = getRouteForId(_tracId).get(nextId);
+		JumpNode n = jn.get(nextId);
 		if (n == null) {
 			return;
 		}
