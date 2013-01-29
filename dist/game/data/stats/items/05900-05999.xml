@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5900" type="EtcItem" name="Coin Collecting Album">
+	<item id="5900" type="EtcItem" name="동전 수집 앨범">
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -11,7 +11,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5901" type="EtcItem" name="Blood Offering">
+	<item id="5901" type="EtcItem" name="제물의 피">
 		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -22,7 +22,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5902" type="EtcItem" name="Scroll of Ancient Magic">
+	<item id="5902" type="EtcItem" name="고대 마법의 주문서">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -33,7 +33,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5903" type="EtcItem" name="Ancient Ash Urn">
+	<item id="5903" type="EtcItem" name="고대의 유골 단지">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -44,7 +44,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5904" type="EtcItem" name="Wesley's Mixing Stone">
+	<item id="5904" type="EtcItem" name="웨슬리의 믹싱스톤">
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -55,7 +55,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5905" type="EtcItem" name="Magister's Mixing Stone">
+	<item id="5905" type="EtcItem" name="매지스터의 믹싱스톤">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -66,7 +66,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5906" type="EtcItem" name="5th Anniversary Gift Box (10 Honey Rice Cake Set)">
+	<item id="5906" type="EtcItem" name="5주년 기념 선물 상자(꿀떡 10개 세트)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -81,7 +81,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,10,10,100;13419,1,1,100" />
 	</item>
-	<item id="5907" type="EtcItem" name="5th Anniversary Gift Box (9 Honey Rice Cake Set)">
+	<item id="5907" type="EtcItem" name="5주년 기념 선물 상자(꿀떡 9개 세트)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -96,7 +96,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,9,9,100;13419,1,1,100" />
 	</item>
-	<item id="5908" type="EtcItem" name="Red Soul Crystal: Stage 13">
+	<item id="5908" type="EtcItem" name="붉은 집혼석 - 단계 13">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -106,7 +106,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="5909" type="EtcItem" name="5th Anniversary Gift Box (8 Honey Rice Cake Set)">
+	<item id="5909" type="EtcItem" name="5주년 기념 선물 상자(꿀떡 8개 세트)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -121,7 +121,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,8,8,100;13419,1,1,100" />
 	</item>
-	<item id="5910" type="EtcItem" name="5th Anniversary Gift Box (7 Honey Rice Cake Set)">
+	<item id="5910" type="EtcItem" name="5주년 기념 선물 상자(꿀떡 7개 세트)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -136,7 +136,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,7,7,100;13419,1,1,100" />
 	</item>
-	<item id="5911" type="EtcItem" name="Green Soul Crystal: Stage 13">
+	<item id="5911" type="EtcItem" name="초록 집혼석 - 단계 13">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -146,7 +146,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="5912" type="EtcItem" name="5th Anniversary Gift Box (6 Honey Rice Cake Set)">
+	<item id="5912" type="EtcItem" name="5주년 기념 선물 상자(꿀떡 6개 세트)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -161,7 +161,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13420,6,6,100;13419,1,1,100" />
 	</item>
-	<item id="5913" type="EtcItem" name="5th Anniversary Gift Box (3 Honey Wheat Cake Set)">
+	<item id="5913" type="EtcItem" name="5주년 기념 선물 상자(약과 3개 세트)">
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -176,7 +176,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13421,3,3,100;13419,1,1,100" />
 	</item>
-	<item id="5914" type="EtcItem" name="Blue Soul Crystal: Stage 13">
+	<item id="5914" type="EtcItem" name="푸른 집혼석 - 단계 13">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -186,14 +186,14 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="5915" type="EtcItem" name="Pirate's Treasure Map">
+	<item id="5915" type="EtcItem" name="해적의 보물 지도">
 		<set name="icon" val="icon.etc_map_ivory_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5916" type="EtcItem" name="Spellbook Page">
+	<item id="5916" type="EtcItem" name="마법서의 페이지 조각">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -203,176 +203,176 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2171-1" />
 	</item>
-	<item id="5917" type="EtcItem" name="Kranvel's Spellbook: Chapter of Fire">
+	<item id="5917" type="EtcItem" name="크란벨의 마법서-불의 장">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5918" type="EtcItem" name="Kranvel's Spellbook: Chapter of Water">
+	<item id="5918" type="EtcItem" name="크란벨의 마법서-물의 장">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5919" type="EtcItem" name="Kranvel's Spellbook: Chapter of Wind">
+	<item id="5919" type="EtcItem" name="크란벨의 마법서-바람의 장">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5920" type="EtcItem" name="Kranvel's Spellbook: Chapter of Earth">
+	<item id="5920" type="EtcItem" name="크란벨의 마법서-대지의 장">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5921" type="EtcItem" name="Worthless Piece of Paper">
+	<item id="5921" type="EtcItem" name="쓸모 없는 종이 조각">
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5922" type="EtcItem" name="Blueprint: Giants Golem 1">
+	<item id="5922" type="EtcItem" name="거인의 골램 설계도, 1장">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5923" type="EtcItem" name="Blueprint: Giants Golem 2">
+	<item id="5923" type="EtcItem" name="거인의 골램 설계도, 2장">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5924" type="EtcItem" name="Blueprint: Giants Golem 3">
+	<item id="5924" type="EtcItem" name="거인의 골램 설계도, 3장">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5925" type="EtcItem" name="Blueprint: Giants Golem 4">
+	<item id="5925" type="EtcItem" name="거인의 골램 설계도, 4장">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5926" type="EtcItem" name="Blueprint: Giants Golem 5">
+	<item id="5926" type="EtcItem" name="거인의 골램 설계도, 5장">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5927" type="EtcItem" name="Book: Basics of Giants Magic, Chapter 1">
+	<item id="5927" type="EtcItem" name="거인의 마법 이론서, 1편">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5928" type="EtcItem" name="Book: Basics of Giants Magic, Chapter 2">
+	<item id="5928" type="EtcItem" name="거인의 마법 이론서, 2편">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5929" type="EtcItem" name="Book: Basics of Giants Magic, Chapter 3">
+	<item id="5929" type="EtcItem" name="거인의 마법 이론서, 3편">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5930" type="EtcItem" name="Book: Basics of Giants Magic, Chapter 4">
+	<item id="5930" type="EtcItem" name="거인의 마법 이론서, 4편">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5931" type="EtcItem" name="Book: Basics of Giants Magic, Chapter 5">
+	<item id="5931" type="EtcItem" name="거인의 마법 이론서, 5편">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5932" type="EtcItem" name="Handbook: Giants Architecture, Chapter 1">
+	<item id="5932" type="EtcItem" name="거인의 건축 편람, 1장">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5933" type="EtcItem" name="Handbook: Giants Architecture, Chapter 2">
+	<item id="5933" type="EtcItem" name="거인의 건축 편람, 2장">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5934" type="EtcItem" name="Handbook: Giants Architecture, Chapter 3">
+	<item id="5934" type="EtcItem" name="거인의 건축 편람, 3장">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5935" type="EtcItem" name="Handbook: Giants Architecture, Chapter 4">
+	<item id="5935" type="EtcItem" name="거인의 건축 편람, 4장">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5936" type="EtcItem" name="Handbook: Giants Architecture, Chapter 5">
+	<item id="5936" type="EtcItem" name="거인의 건축 편람, 5장">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5937" type="EtcItem" name="Book: Giants Medical Science, Chapter 1">
+	<item id="5937" type="EtcItem" name="거인의 의학 이론서, 1편">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5938" type="EtcItem" name="Book: Giants Medical Science, Chapter 2">
+	<item id="5938" type="EtcItem" name="거인의 의학 이론서, 2편">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5939" type="EtcItem" name="Book: Giants Medical Science, Chapter 3">
+	<item id="5939" type="EtcItem" name="거인의 의학 이론서, 3편">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5940" type="EtcItem" name="Book: Giants Medical Science, Chapter 4">
+	<item id="5940" type="EtcItem" name="거인의 의학 이론서, 4편">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5941" type="EtcItem" name="Book: Giants Medical Science, Chapter 5">
+	<item id="5941" type="EtcItem" name="거인의 의학 이론서, 5편">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5942" type="EtcItem" name="Giant's Love Letter">
+	<item id="5942" type="EtcItem" name="거인의 연애 편지">
 		<set name="icon" val="icon.etc_piece_of_report_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5943" type="EtcItem" name="Giants' Doodle">
+	<item id="5943" type="EtcItem" name="거인의 낙서">
 		<set name="icon" val="icon.etc_painting_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5944" type="EtcItem" name="Ancient Parchment">
+	<item id="5944" type="EtcItem" name="고대의 양피지">
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -381,67 +381,67 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2172-1" />
 	</item>
-	<item id="5945" type="EtcItem" name="Book: Giants Science and Technology, Chapter 1">
+	<item id="5945" type="EtcItem" name="거인의 과학 이론서, 1장">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5946" type="EtcItem" name="Book: Giants Science and Technology, Chapter 2">
+	<item id="5946" type="EtcItem" name="거인의 과학 이론서, 2장">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5947" type="EtcItem" name="Book: Giants Science and Technology, Chapter 3">
+	<item id="5947" type="EtcItem" name="거인의 과학 이론서, 3장">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5948" type="EtcItem" name="Book: Giants Science and Technology, Chapter 4">
+	<item id="5948" type="EtcItem" name="거인의 과학 이론서, 4장">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5949" type="EtcItem" name="Book: Giants Science and Technology, Chapter 5">
+	<item id="5949" type="EtcItem" name="거인의 과학 이론서, 5장">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5950" type="EtcItem" name="Almanac: Titan Culture, Chapter 1">
+	<item id="5950" type="EtcItem" name="하거인 문화 연감, 1편">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5951" type="EtcItem" name="Almanac: Titan Culture, Chapter 2">
+	<item id="5951" type="EtcItem" name="하거인 문화 연감, 2편">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5952" type="EtcItem" name="Almanac: Titan Culture, Chapter 3">
+	<item id="5952" type="EtcItem" name="하거인 문화 연감, 3편">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5953" type="EtcItem" name="Almanac: Titan Culture, Chapter 4">
+	<item id="5953" type="EtcItem" name="하거인 문화 연감, 4편">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5954" type="EtcItem" name="Almanac: Titan Culture, Chapter 5">
+	<item id="5954" type="EtcItem" name="하거인 문화 연감, 5편">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5955" type="EtcItem" name="Ancient Titan Book">
+	<item id="5955" type="EtcItem" name="하거인 고서적">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -450,7 +450,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2173-1" />
 	</item>
-	<item id="5956" type="EtcItem" name="15 Year Old Wine">
+	<item id="5956" type="EtcItem" name="15년산 포도주">
 		<set name="icon" val="icon.etc_luxury_wine_a_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -458,7 +458,7 @@
 		<set name="price" val="5900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5957" type="EtcItem" name="30 Year Old Wine">
+	<item id="5957" type="EtcItem" name="30년산 포도주">
 		<set name="icon" val="icon.etc_luxury_wine_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -466,7 +466,7 @@
 		<set name="price" val="7900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5958" type="EtcItem" name="60 Year Old Wine">
+	<item id="5958" type="EtcItem" name="60년산 포도주">
 		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -474,56 +474,56 @@
 		<set name="price" val="30900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5959" type="EtcItem" name="Ritron's Dessert Recipe">
+	<item id="5959" type="EtcItem" name="리트론 디저트 레시피">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="price" val="40000" />
 	</item>
-	<item id="5960" type="EtcItem" name="Ritron Jelly">
+	<item id="5960" type="EtcItem" name="리트론 젤리">
 		<set name="icon" val="icon.etc_cobol_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 		<set name="price" val="920" />
 	</item>
-	<item id="5961" type="EtcItem" name="Kail's Silver Basilisk">
+	<item id="5961" type="EtcItem" name="카일의 실버 바실리스크">
 		<set name="icon" val="icon.etc_kyles_silver_basilisk_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5962" type="EtcItem" name="Kail's Gold Golem">
+	<item id="5962" type="EtcItem" name="카일의 골드 골렘">
 		<set name="icon" val="icon.etc_kyles_gold_golem_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5963" type="EtcItem" name="Kail's Blood Dragon">
+	<item id="5963" type="EtcItem" name="카일의 블러드 드래곤">
 		<set name="icon" val="icon.etc_kyles_blood_dragon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5964" type="EtcItem" name="Warehouse Keeper's Medal">
+	<item id="5964" type="EtcItem" name="창고지기의 메달">
 		<set name="icon" val="icon.etc_irongate_medal_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5965" type="EtcItem" name="Blank Scroll">
+	<item id="5965" type="EtcItem" name="빈 주문서">
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5966" type="EtcItem" name="Ancient Red Papyrus">
+	<item id="5966" type="EtcItem" name="붉은 고대의 파피루스">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -533,7 +533,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2176-1" />
 	</item>
-	<item id="5967" type="EtcItem" name="Ancient Blue Papyrus">
+	<item id="5967" type="EtcItem" name="푸른 고대의 파피루스">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -543,7 +543,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2176-2" />
 	</item>
-	<item id="5968" type="EtcItem" name="Ancient Black Papyrus">
+	<item id="5968" type="EtcItem" name="검은 고대의 파피루스">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -553,7 +553,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2176-3" />
 	</item>
-	<item id="5969" type="EtcItem" name="Ancient White Papyrus">
+	<item id="5969" type="EtcItem" name="흰 고대의 파피루스">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -563,210 +563,210 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2176-4" />
 	</item>
-	<item id="5970" type="EtcItem" name="Ancient Chain Letter">
+	<item id="5970" type="EtcItem" name="고대 행운의 편지">
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5971" type="EtcItem" name="Ancient Joke Book">
+	<item id="5971" type="EtcItem" name="고대인의 만담집">
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5972" type="EtcItem" name="Revelation of the Seals: Chapter of Avarice">
+	<item id="5972" type="EtcItem" name="봉인의 묵시록, 탐욕의 장">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5973" type="EtcItem" name="Revelation of the Seals: Chapter of Gnosis">
+	<item id="5973" type="EtcItem" name="봉인의 묵시록, 계시의 장">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5974" type="EtcItem" name="Revelation of the Seals: Chapter of Strife">
+	<item id="5974" type="EtcItem" name="봉인의 묵시록, 전란의 장">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5975" type="EtcItem" name="Revelation of the Seals: Chapter of Vengeance">
+	<item id="5975" type="EtcItem" name="봉인의 묵시록, 응징의 장">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5976" type="EtcItem" name="Revelation of the Seals: Chapter of Awakening">
+	<item id="5976" type="EtcItem" name="봉인의 묵시록, 각성의 장">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5977" type="EtcItem" name="Revelation of the Seals: Chapter of Calamity">
+	<item id="5977" type="EtcItem" name="봉인의 묵시록, 재해의 장">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5978" type="EtcItem" name="Revelation of the Seals: Chapter of Descent">
+	<item id="5978" type="EtcItem" name="봉인의 묵시록, 강림의 장">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5979" type="EtcItem" name="Ancient Epic, Chapter 1">
+	<item id="5979" type="EtcItem" name="제국의 서사시, 1편">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5980" type="EtcItem" name="Ancient Epic, Chapter 2">
+	<item id="5980" type="EtcItem" name="제국의 서사시, 2편">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5981" type="EtcItem" name="Ancient Epic, Chapter 3">
+	<item id="5981" type="EtcItem" name="제국의 서사시, 3편">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5982" type="EtcItem" name="Ancient Epic, Chapter 4">
+	<item id="5982" type="EtcItem" name="제국의 서사시, 4편">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5983" type="EtcItem" name="Ancient Epic, Chapter 5">
+	<item id="5983" type="EtcItem" name="제국의 서사시, 5편">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5984" type="EtcItem" name="Imperial Genealogy 1">
+	<item id="5984" type="EtcItem" name="제국의 계보, 1편">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5985" type="EtcItem" name="Imperial Genealogy 2">
+	<item id="5985" type="EtcItem" name="제국의 계보, 2편">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5986" type="EtcItem" name="Imperial Genealogy 3">
+	<item id="5986" type="EtcItem" name="제국의 계보, 3편">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5987" type="EtcItem" name="Imperial Genealogy 4">
+	<item id="5987" type="EtcItem" name="제국의 계보, 4편">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5988" type="EtcItem" name="Imperial Genealogy 5">
+	<item id="5988" type="EtcItem" name="제국의 계보, 5편">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5989" type="EtcItem" name="Blueprint: Tower of Insolence, 1st Floor">
+	<item id="5989" type="EtcItem" name="오만의 탑 설계도, 1층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5990" type="EtcItem" name="Blueprint: Tower of Insolence, 2nd Floor">
+	<item id="5990" type="EtcItem" name="오만의 탑 설계도, 2층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5991" type="EtcItem" name="Blueprint: Tower of Insolence, 3rd Floor">
+	<item id="5991" type="EtcItem" name="오만의 탑 설계도, 3층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5992" type="EtcItem" name="Blueprint: Tower of Insolence, 4th Floor">
+	<item id="5992" type="EtcItem" name="오만의 탑 설계도, 4층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5993" type="EtcItem" name="Blueprint: Tower of Insolence, 5th Floor">
+	<item id="5993" type="EtcItem" name="오만의 탑 설계도, 5층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5994" type="EtcItem" name="Blueprint: Tower of Insolence, 6th Floor">
+	<item id="5994" type="EtcItem" name="오만의 탑 설계도, 6층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5995" type="EtcItem" name="Blueprint: Tower of Insolence, 7th Floor">
+	<item id="5995" type="EtcItem" name="오만의 탑 설계도, 7층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5996" type="EtcItem" name="Blueprint: Tower of Insolence, 8th Floor">
+	<item id="5996" type="EtcItem" name="오만의 탑 설계도, 8층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5997" type="EtcItem" name="Blueprint: Tower of Insolence, 9th Floor">
+	<item id="5997" type="EtcItem" name="오만의 탑 설계도, 9층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5998" type="EtcItem" name="Blueprint: Tower of Insolence, 10th Floor">
+	<item id="5998" type="EtcItem" name="오만의 탑 설계도, 10층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5999" type="EtcItem" name="Blueprint: Tower of Insolence, 11th Floor">
+	<item id="5999" type="EtcItem" name="오만의 탑 설계도, 11층">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />

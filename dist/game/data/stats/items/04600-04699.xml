@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="4600" type="EtcItem" name="Greater Dye of WIT (Wit+2 Men-2)">
+	<item id="4600" type="EtcItem" name="고급 재치의 염료&lt;Wit+2 Men-2&gt;">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -9,7 +9,7 @@
 		<set name="price" val="60000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4601" type="EtcItem" name="Greater Dye of STR (Str+3 Con-3)">
+	<item id="4601" type="EtcItem" name="고급 힘의 염료&lt;Str+3 Con-3&gt;">
 		<set name="icon" val="icon.etc_str_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -18,7 +18,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4602" type="EtcItem" name="Greater Dye of STR (Str+3 Dex-3)">
+	<item id="4602" type="EtcItem" name="고급 힘의 염료&lt;Str+3 Dex-3&gt;">
 		<set name="icon" val="icon.etc_str_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -27,7 +27,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4603" type="EtcItem" name="Greater Dye of CON (Con+3 Str-3)">
+	<item id="4603" type="EtcItem" name="고급 체력의 염료&lt;Con+3 Str-3&gt;">
 		<set name="icon" val="icon.etc_con_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -36,7 +36,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4604" type="EtcItem" name="Greater Dye of CON (Con+3 Dex-3)">
+	<item id="4604" type="EtcItem" name="고급 체력의 염료&lt;Con+3 Dex-3&gt;">
 		<set name="icon" val="icon.etc_con_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -45,7 +45,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4605" type="EtcItem" name="Greater Dye of DEX (Dex+3 Str-3)">
+	<item id="4605" type="EtcItem" name="고급 민첩의 염료&lt;Dex+3 Str-3&gt;">
 		<set name="icon" val="icon.etc_dex_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -54,7 +54,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4606" type="EtcItem" name="Greater Dye of DEX (Dex+3 Con-3)">
+	<item id="4606" type="EtcItem" name="고급 민첩의 염료&lt;Dex+3 Con-3&gt;">
 		<set name="icon" val="icon.etc_dex_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -63,7 +63,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4607" type="EtcItem" name="Greater Dye of INT (Int+3 Men-3)">
+	<item id="4607" type="EtcItem" name="고급 지능의 염료&lt;Int+3 Men-3&gt;">
 		<set name="icon" val="icon.etc_int_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -72,7 +72,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4608" type="EtcItem" name="Greater Dye of INT (Int+3 Wit-3)">
+	<item id="4608" type="EtcItem" name="고급 지능의 염료&lt;Int+3 Wit-3&gt;">
 		<set name="icon" val="icon.etc_int_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -81,7 +81,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4609" type="EtcItem" name="Greater Dye of MEN (Men+3 Int-3)">
+	<item id="4609" type="EtcItem" name="고급 정신의 염료&lt;Men+3 Int-3&gt;">
 		<set name="icon" val="icon.etc_men_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -90,7 +90,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4610" type="EtcItem" name="Greater Dye of MEN (Men+3 Wit-3)">
+	<item id="4610" type="EtcItem" name="고급 정신의 염료&lt;Men+3 Wit-3&gt;">
 		<set name="icon" val="icon.etc_men_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -99,7 +99,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4611" type="EtcItem" name="Greater Dye of WIT (Wit+3 Int-3)">
+	<item id="4611" type="EtcItem" name="고급 재치의 염료&lt;Wit+3 Int-3&gt;">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -108,7 +108,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4612" type="EtcItem" name="Greater Dye of WIT (Wit+3 Men-3)">
+	<item id="4612" type="EtcItem" name="고급 재치의 염료&lt;Wit+3 Men-3&gt;">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -117,7 +117,7 @@
 		<set name="price" val="90000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4613" type="EtcItem" name="Greater Dye of STR (Str+4 Con-4)">
+	<item id="4613" type="EtcItem" name="고급 힘의 염료&lt;Str+4 Con-4&gt;">
 		<set name="icon" val="icon.etc_str_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -126,7 +126,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4614" type="EtcItem" name="Greater Dye of STR (Str+4 Dex-4)">
+	<item id="4614" type="EtcItem" name="고급 힘의 염료&lt;Str+4 Dex-4&gt;">
 		<set name="icon" val="icon.etc_str_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -135,7 +135,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4615" type="EtcItem" name="Greater Dye of CON (Con+4 Str-4)">
+	<item id="4615" type="EtcItem" name="고급 체력의 염료&lt;Con+4 Str-4&gt;">
 		<set name="icon" val="icon.etc_con_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -144,7 +144,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4616" type="EtcItem" name="Greater Dye of CON (Con+4 Dex-4)">
+	<item id="4616" type="EtcItem" name="고급 체력의 염료&lt;Con+4 Dex-4&gt;">
 		<set name="icon" val="icon.etc_con_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -153,7 +153,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4617" type="EtcItem" name="Greater Dye of DEX (Dex+4 Str-4)">
+	<item id="4617" type="EtcItem" name="고급 민첩의 염료&lt;Dex+4 Str-4&gt;">
 		<set name="icon" val="icon.etc_dex_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -162,7 +162,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4618" type="EtcItem" name="Greater Dye of DEX (Dex+4 Con-4)">
+	<item id="4618" type="EtcItem" name="고급 민첩의 염료&lt;Dex+4 Con-4&gt;">
 		<set name="icon" val="icon.etc_dex_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -171,7 +171,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4619" type="EtcItem" name="Greater Dye of INT (Int+4 Men-4)">
+	<item id="4619" type="EtcItem" name="고급 지능의 염료&lt;Int+4 Men-4&gt;">
 		<set name="icon" val="icon.etc_int_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -180,7 +180,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4620" type="EtcItem" name="Greater Dye of INT (Int+4 Wit-4)">
+	<item id="4620" type="EtcItem" name="고급 지능의 염료&lt;Int+4 Wit-4&gt;">
 		<set name="icon" val="icon.etc_int_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -189,7 +189,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4621" type="EtcItem" name="Greater Dye of MEN (Men+4 Int-4)">
+	<item id="4621" type="EtcItem" name="고급 정신의 염료&lt;Men+4 Int-4&gt;">
 		<set name="icon" val="icon.etc_men_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -198,7 +198,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4622" type="EtcItem" name="Greater Dye of MEN (Men+4 Wit-4)">
+	<item id="4622" type="EtcItem" name="고급 정신의 염료&lt;Men+4 Wit-4&gt;">
 		<set name="icon" val="icon.etc_men_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -207,7 +207,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4623" type="EtcItem" name="Greater Dye of WIT (Wit+4 Int-4)">
+	<item id="4623" type="EtcItem" name="고급 재치의 염료&lt;Wit+4 Int-4&gt;">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -216,7 +216,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4624" type="EtcItem" name="Greater Dye of WIT (Wit+4 Men-4)">
+	<item id="4624" type="EtcItem" name="고급 재치의 염료&lt;Wit+4 Men-4&gt;">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
 		<set name="etcitem_type" val="dye" />
 		<set name="immediate_effect" val="1" />
@@ -225,7 +225,7 @@
 		<set name="price" val="145000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4625" type="EtcItem" name="Dice (Heart)">
+	<item id="4625" type="EtcItem" name="주사위 (하트)">
 		<set name="icon" val="icon.etc_dice_a_i00" />
 		<set name="default_action" val="dice" />
 		<set name="immediate_effect" val="1" />
@@ -234,7 +234,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="handler" val="RollingDice" />
 	</item>
-	<item id="4626" type="EtcItem" name="Dice (Spade)">
+	<item id="4626" type="EtcItem" name="주사위 (스페이드)">
 		<set name="icon" val="icon.etc_dice_b_i00" />
 		<set name="default_action" val="dice" />
 		<set name="immediate_effect" val="1" />
@@ -243,7 +243,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="handler" val="RollingDice" />
 	</item>
-	<item id="4627" type="EtcItem" name="Dice (Clover)">
+	<item id="4627" type="EtcItem" name="주사위 (클로버)">
 		<set name="icon" val="icon.etc_dice_c_i00" />
 		<set name="default_action" val="dice" />
 		<set name="immediate_effect" val="1" />
@@ -252,7 +252,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="handler" val="RollingDice" />
 	</item>
-	<item id="4628" type="EtcItem" name="Dice (Diamond)">
+	<item id="4628" type="EtcItem" name="주사위 (다이아몬드)">
 		<set name="icon" val="icon.etc_dice_d_i00" />
 		<set name="default_action" val="dice" />
 		<set name="immediate_effect" val="1" />
@@ -261,7 +261,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="handler" val="RollingDice" />
 	</item>
-	<item id="4629" type="EtcItem" name="Red Soul Crystal">
+	<item id="4629" type="EtcItem" name="붉은 집혼석">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -271,7 +271,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4630" type="EtcItem" name="Red Soul Crystal - Stage 1">
+	<item id="4630" type="EtcItem" name="붉은 집혼석 - 단계 1">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -281,7 +281,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4631" type="EtcItem" name="Red Soul Crystal - Stage 2">
+	<item id="4631" type="EtcItem" name="붉은 집혼석 - 단계 2">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -291,7 +291,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4632" type="EtcItem" name="Red Soul Crystal - Stage 3">
+	<item id="4632" type="EtcItem" name="붉은 집혼석 - 단계 3">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -301,7 +301,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4633" type="EtcItem" name="Red Soul Crystal - Stage 4">
+	<item id="4633" type="EtcItem" name="붉은 집혼석 - 단계 4">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -311,7 +311,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4634" type="EtcItem" name="Red Soul Crystal - Stage 5">
+	<item id="4634" type="EtcItem" name="붉은 집혼석 - 단계 5">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -321,7 +321,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4635" type="EtcItem" name="Red Soul Crystal - Stage 6">
+	<item id="4635" type="EtcItem" name="붉은 집혼석 - 단계 6">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -331,7 +331,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4636" type="EtcItem" name="Red Soul Crystal - Stage 7">
+	<item id="4636" type="EtcItem" name="붉은 집혼석 - 단계 7">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -341,7 +341,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4637" type="EtcItem" name="Red Soul Crystal - Stage 8">
+	<item id="4637" type="EtcItem" name="붉은 집혼석 - 단계 8">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -351,7 +351,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4638" type="EtcItem" name="Red Soul Crystal - Stage 9">
+	<item id="4638" type="EtcItem" name="붉은 집혼석 - 단계 9">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -361,7 +361,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4639" type="EtcItem" name="Red Soul Crystal - Stage 10">
+	<item id="4639" type="EtcItem" name="붉은 집혼석 - 단계 10">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -371,7 +371,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4640" type="EtcItem" name="Green Soul Crystal">
+	<item id="4640" type="EtcItem" name="초록 집혼석">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -381,7 +381,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4641" type="EtcItem" name="Green Soul Crystal - Stage 1">
+	<item id="4641" type="EtcItem" name="초록 집혼석 - 단계 1">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -391,7 +391,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4642" type="EtcItem" name="Green Soul Crystal - Stage 2">
+	<item id="4642" type="EtcItem" name="초록 집혼석 - 단계 2">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -401,7 +401,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4643" type="EtcItem" name="Green Soul Crystal - Stage 3">
+	<item id="4643" type="EtcItem" name="초록 집혼석 - 단계 3">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -411,7 +411,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4644" type="EtcItem" name="Green Soul Crystal - Stage 4">
+	<item id="4644" type="EtcItem" name="초록 집혼석 - 단계 4">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -421,7 +421,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4645" type="EtcItem" name="Green Soul Crystal - Stage 5">
+	<item id="4645" type="EtcItem" name="초록 집혼석 - 단계 5">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -431,7 +431,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4646" type="EtcItem" name="Green Soul Crystal - Stage 6">
+	<item id="4646" type="EtcItem" name="초록 집혼석 - 단계 6">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -441,7 +441,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4647" type="EtcItem" name="Green Soul Crystal - Stage 7">
+	<item id="4647" type="EtcItem" name="초록 집혼석 - 단계 7">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -451,7 +451,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4648" type="EtcItem" name="Green Soul Crystal - Stage 8">
+	<item id="4648" type="EtcItem" name="초록 집혼석 - 단계 8">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -461,7 +461,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4649" type="EtcItem" name="Green Soul Crystal - Stage 9">
+	<item id="4649" type="EtcItem" name="초록 집혼석 - 단계 9">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -471,7 +471,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4650" type="EtcItem" name="Green Soul Crystal - Stage 10">
+	<item id="4650" type="EtcItem" name="초록 집혼석 - 단계 10">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -481,7 +481,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4651" type="EtcItem" name="Blue Soul Crystal">
+	<item id="4651" type="EtcItem" name="푸른 집혼석">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -491,7 +491,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4652" type="EtcItem" name="Blue Soul Crystal - Stage 1">
+	<item id="4652" type="EtcItem" name="푸른 집혼석 - 단계 1">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -501,7 +501,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4653" type="EtcItem" name="Blue Soul Crystal - Stage 2">
+	<item id="4653" type="EtcItem" name="푸른 집혼석 - 단계 2">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -511,7 +511,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4654" type="EtcItem" name="Blue Soul Crystal - Stage 3">
+	<item id="4654" type="EtcItem" name="푸른 집혼석 - 단계 3">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -521,7 +521,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4655" type="EtcItem" name="Blue Soul Crystal - Stage 4">
+	<item id="4655" type="EtcItem" name="푸른 집혼석 - 단계 4">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -531,7 +531,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4656" type="EtcItem" name="Blue Soul Crystal - Stage 5">
+	<item id="4656" type="EtcItem" name="푸른 집혼석 - 단계 5">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -541,7 +541,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4657" type="EtcItem" name="Blue Soul Crystal - Stage 6">
+	<item id="4657" type="EtcItem" name="푸른 집혼석 - 단계 6">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -551,7 +551,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4658" type="EtcItem" name="Blue Soul Crystal - Stage 7">
+	<item id="4658" type="EtcItem" name="푸른 집혼석 - 단계 7">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -561,7 +561,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4659" type="EtcItem" name="Blue Soul Crystal - Stage 8">
+	<item id="4659" type="EtcItem" name="푸른 집혼석 - 단계 8">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -571,7 +571,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4660" type="EtcItem" name="Blue Soul Crystal - Stage 9">
+	<item id="4660" type="EtcItem" name="푸른 집혼석 - 단계 9">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -581,7 +581,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4661" type="EtcItem" name="Blue Soul Crystal - Stage 10">
+	<item id="4661" type="EtcItem" name="푸른 집혼석 - 단계 10">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -591,7 +591,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="4662" type="EtcItem" name="Broken Red Soul Crystal">
+	<item id="4662" type="EtcItem" name="부서진 붉은 집혼석">
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -599,7 +599,7 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="4663" type="EtcItem" name="Broken Green Soul Crystal">
+	<item id="4663" type="EtcItem" name="부서진 초록 집혼석">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -607,7 +607,7 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="4664" type="EtcItem" name="Broken Blue Soul Crystal">
+	<item id="4664" type="EtcItem" name="부서진 푸른 집혼석">
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -615,7 +615,7 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="4665" type="Weapon" name="Pipette Knife">
+	<item id="4665" type="Weapon" name="피펫 나이프">
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -641,7 +641,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="4666" type="EtcItem" name="Reiria's Soul Orb">
+	<item id="4666" type="EtcItem" name="레이리아의 소울 오브">
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -652,7 +652,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4667" type="EtcItem" name="Kernon's Infernium Scepter">
+	<item id="4667" type="EtcItem" name="케르논의 인페르니움 셉터">
 		<set name="icon" val="icon.etc_imperial_scepter_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -663,7 +663,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4668" type="EtcItem" name="Golkonda's Infernium Scepter">
+	<item id="4668" type="EtcItem" name="골콘다의 인페르니움 셉터">
 		<set name="icon" val="icon.etc_imperial_scepter_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -674,7 +674,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4669" type="EtcItem" name="Hallate's Infernium Scepter">
+	<item id="4669" type="EtcItem" name="할라트의 인페르니움 셉터">
 		<set name="icon" val="icon.etc_imperial_scepter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -685,7 +685,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4670" type="EtcItem" name="Maestro Reorin's Hammer">
+	<item id="4670" type="EtcItem" name="마에스트로 레오린의 해머">
 		<set name="icon" val="icon.weapon_iron_hammer_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -696,7 +696,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4671" type="EtcItem" name="Maestro Reorin's Mold">
+	<item id="4671" type="EtcItem" name="마에스트로 레오린의 거푸집">
 		<set name="icon" val="icon.etc_artisans_frame_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -707,7 +707,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4672" type="EtcItem" name="Infernium Varnish">
+	<item id="4672" type="EtcItem" name="인페르니움 연마제">
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -718,7 +718,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4673" type="EtcItem" name="Red Pipette Knife">
+	<item id="4673" type="EtcItem" name="붉은 빛의 피펫 나이프">
 		<set name="icon" val="icon.weapon_knife_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -729,7 +729,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4674" type="EtcItem" name="Medal of Honor">
+	<item id="4674" type="EtcItem" name="영광의 메달">
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -740,7 +740,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4675" type="EtcItem" name="Medal of Friendship">
+	<item id="4675" type="EtcItem" name="우정의 메달">
 		<set name="icon" val="icon.etc_magic_coin_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -751,7 +751,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4676" type="EtcItem" name="Medal of Victory">
+	<item id="4676" type="EtcItem" name="승리의 메달">
 		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -762,7 +762,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4677" type="EtcItem" name="Potion of Critical Escape">
+	<item id="4677" type="EtcItem" name="떠넘기기 물약">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -780,7 +780,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4678" type="EtcItem" name="Decrease Haste Potion">
+	<item id="4678" type="EtcItem" name="용서의 주문서">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -798,7 +798,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4679" type="EtcItem" name="Bless of Eva">
+	<item id="4679" type="EtcItem" name="에바의 축복">
 		<set name="icon" val="icon.etc_bless_of_eva_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -816,7 +816,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4680" type="EtcItem" name="Potion of Revenge">
+	<item id="4680" type="EtcItem" name="보복의 물약">
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -834,7 +834,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="4681" type="Weapon" name="Stormbringer - Critical Anger">
+	<item id="4681" type="Weapon" name="스톰 브링거 Crt.앵거">
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -864,7 +864,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4682" type="Weapon" name="Stormbringer - Focus">
+	<item id="4682" type="Weapon" name="스톰 브링거 포커스">
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -892,7 +892,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4683" type="Weapon" name="Stormbringer - Light">
+	<item id="4683" type="Weapon" name="스톰 브링거 라이트">
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -920,7 +920,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4684" type="Weapon" name="Shamshir - Guidance">
+	<item id="4684" type="Weapon" name="샴쉬르 가이던스">
 		<set name="icon" val="icon.weapon_shamshir_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -948,7 +948,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4685" type="Weapon" name="Shamshir - Back Blow">
+	<item id="4685" type="Weapon" name="샴쉬르 백블로">
 		<set name="icon" val="icon.weapon_shamshir_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -976,7 +976,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4686" type="Weapon" name="Shamshir - Rsk. Evasion">
+	<item id="4686" type="Weapon" name="샴쉬르 Rsk.이베이젼">
 		<set name="icon" val="icon.weapon_shamshir_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1004,7 +1004,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4687" type="Weapon" name="Katana - Focus">
+	<item id="4687" type="Weapon" name="카타나 포커스">
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1032,7 +1032,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4688" type="Weapon" name="Katana - Critical Damage">
+	<item id="4688" type="Weapon" name="카타나 Crt.대미지">
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1060,7 +1060,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4689" type="Weapon" name="Katana - Haste">
+	<item id="4689" type="Weapon" name="카타나 헤이스트">
 		<set name="icon" val="icon.weapon_katana_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1088,7 +1088,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4690" type="Weapon" name="Spirit Sword - Critical Damage">
+	<item id="4690" type="Weapon" name="스피릿츠 소드 Crt.대미지">
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1116,7 +1116,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4691" type="Weapon" name="Spirit Sword - Critical Poison">
+	<item id="4691" type="Weapon" name="스피릿츠 소드 Crt.포이즌">
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1145,7 +1145,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4692" type="Weapon" name="Spirit Sword - Haste">
+	<item id="4692" type="Weapon" name="스피릿츠 소드 헤이스트">
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1173,7 +1173,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4693" type="Weapon" name="Raid Sword - Focus">
+	<item id="4693" type="Weapon" name="레이드 소드 포커스">
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1201,7 +1201,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4694" type="Weapon" name="Raid Sword - Critical Drain">
+	<item id="4694" type="Weapon" name="레이드 소드 Crt.드레인">
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1230,7 +1230,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4695" type="Weapon" name="Raid Sword - Critical Poison">
+	<item id="4695" type="Weapon" name="레이드 소드 Crt.포이즌">
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1259,7 +1259,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4696" type="Weapon" name="Caliburs - Guidance">
+	<item id="4696" type="Weapon" name="카리브스 가이던스">
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1287,7 +1287,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4697" type="Weapon" name="Caliburs - Focus">
+	<item id="4697" type="Weapon" name="카리브스 포커스">
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1315,7 +1315,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4698" type="Weapon" name="Caliburs - Critical Damage">
+	<item id="4698" type="Weapon" name="카리브스 Crt.대미지">
 		<set name="icon" val="icon.weapon_caliburs_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1343,7 +1343,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="4699" type="Weapon" name="Sword of Delusion - Focus">
+	<item id="4699" type="Weapon" name="미혹의 검 포커스">
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />

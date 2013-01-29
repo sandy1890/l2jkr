@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="10400" type="EtcItem" name="Icarus Heavy Arms Piece">
+	<item id="10400" type="EtcItem" name="이카루스 헤비 암스 조각">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -9,7 +9,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10401" type="EtcItem" name="Icarus Trident Piece">
+	<item id="10401" type="EtcItem" name="이카루스 트라이던트 조각">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -18,7 +18,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10402" type="EtcItem" name="Icarus Hammer Piece">
+	<item id="10402" type="EtcItem" name="이카루스 해머 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -27,7 +27,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10403" type="EtcItem" name="Icarus Hand Piece">
+	<item id="10403" type="EtcItem" name="이카루스 핸드 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -36,7 +36,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10404" type="EtcItem" name="Icarus Hall Piece">
+	<item id="10404" type="EtcItem" name="이카루스 홀 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -45,7 +45,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10405" type="EtcItem" name="Icarus Spitter Piece">
+	<item id="10405" type="EtcItem" name="이카루스 스피터 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -54,7 +54,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10406" type="EtcItem" name="Icarus Stinger Piece">
+	<item id="10406" type="EtcItem" name="이카루스 스팅거 조각">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -63,7 +63,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10407" type="EtcItem" name="Icarus Wingblade Piece">
+	<item id="10407" type="EtcItem" name="이카루스 윙블레이드 조각">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -72,7 +72,7 @@
 		<set name="price" val="312000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10408" type="EtcItem" name="Old Agathion">
+	<item id="10408" type="EtcItem" name="낡은 아가시온">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -82,7 +82,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2504-1" />
 	</item>
-	<item id="10409" type="EtcItem" name="A Bottle of Souls">
+	<item id="10409" type="EtcItem" name="영혼의 병">
 		<set name="icon" val="icon.blank_glass_bottle_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -97,7 +97,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2498-1" />
 	</item>
-	<item id="10410" type="EtcItem" name="Full Bottle of Souls - 5 Souls">
+	<item id="10410" type="EtcItem" name="가득찬 영혼의 병 - 5개의 영혼">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -110,7 +110,7 @@
 		<set name="handler" val="ItemSkillsTemplate" />
 		<set name="item_skill" val="2499-1" />
 	</item>
-	<item id="10411" type="EtcItem" name="Full Bottle of Souls - 5 Souls (For Combat)">
+	<item id="10411" type="EtcItem" name="가득찬 영혼의 병 - 5개의 영혼 (전장용)">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -127,7 +127,7 @@
 			<player SiegeZone="126" />
 		</cond>
 	</item>
-	<item id="10412" type="EtcItem" name="Full Bottle of Souls - 10 Souls">
+	<item id="10412" type="EtcItem" name="가득찬 영혼의 병 - 10개의 영혼">
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -138,7 +138,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10413" type="EtcItem" name="Dynastic Essence II">
+	<item id="10413" type="EtcItem" name="소울 오브 다이너스티II">
 		<set name="icon" val="icon.etc_armor_soul_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -146,7 +146,7 @@
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10414" type="EtcItem" name="Agathion Exchange Coupon">
+	<item id="10414" type="EtcItem" name="아가시온 교환권">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="1" />
@@ -154,7 +154,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="10415" type="Weapon" name="Icarus Dual Sword">
+	<item id="10415" type="Weapon" name="이카루스 듀얼 소드">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -183,7 +183,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10416" type="Armor" name="Blue Talisman - Explosion">
+	<item id="10416" type="Armor" name="청색 탈리스만 - 폭발">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -198,7 +198,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10417" type="Armor" name="Blue Talisman - Magic Explosion">
+	<item id="10417" type="Armor" name="청색 탈리스만 - 마법폭발력">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -213,7 +213,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10418" type="Armor" name="White Talisman - Storm">
+	<item id="10418" type="Armor" name="흰색 탈리스만 - 스톰">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -228,7 +228,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10419" type="Armor" name="White Talisman - Darkness">
+	<item id="10419" type="Armor" name="흰색 탈리스만 - 다크니스">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -243,7 +243,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10420" type="Armor" name="White Talisman - Water">
+	<item id="10420" type="Armor" name="흰색 탈리스만 - 워터">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -258,7 +258,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10421" type="Armor" name="White Talisman - Fire">
+	<item id="10421" type="Armor" name="흰색 탈리스만 - 화이어">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -273,7 +273,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10422" type="Armor" name="White Talisman - Light">
+	<item id="10422" type="Armor" name="흰색 탈리스만 - 라이트">
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -288,7 +288,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10423" type="Armor" name="Blue Talisman - Self-Destruction">
+	<item id="10423" type="Armor" name="청색 탈리스만 - 자폭 공격">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -302,7 +302,7 @@
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
-	<item id="10424" type="Armor" name="Blue Talisman - Greater Healing">
+	<item id="10424" type="Armor" name="청색 탈리스만 - 그레이트 힐링">
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="deco1" />
@@ -317,7 +317,7 @@
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="10425" type="EtcItem" name="Improved Baby Pet Food">
+	<item id="10425" type="EtcItem" name="개량된 베이비 펫용 사료">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -331,7 +331,7 @@
 		<set name="use_condition" val="{{uc_category;{@upgrade_baby_pet_group}}}" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="10426" type="EtcItem" name="Fenrir Necklace">
+	<item id="10426" type="EtcItem" name="라이딩 울프 목걸이">
 		<set name="icon" val="icon.etc_summon_wolf_r_01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -345,7 +345,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="10427" type="EtcItem" name="Tully's Platinum Medal">
+	<item id="10427" type="EtcItem" name="톨레스의 백금 메달">
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -356,7 +356,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10428" type="EtcItem" name="Tully's Tin Medal">
+	<item id="10428" type="EtcItem" name="톨레스의 주석 메달">
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -367,7 +367,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10429" type="EtcItem" name="Tully's Lead Medal">
+	<item id="10429" type="EtcItem" name="톨레스의 납 메달">
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -378,7 +378,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10430" type="EtcItem" name="Tully's Zinc Medal">
+	<item id="10430" type="EtcItem" name="톨레스의 아연 메달">
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -389,7 +389,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10431" type="EtcItem" name="Tully's Copper Medal">
+	<item id="10431" type="EtcItem" name="톨레스의 구리 메달">
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -400,7 +400,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10432" type="EtcItem" name="Kertin's Herb of Life">
+	<item id="10432" type="EtcItem" name="케르탕의 생명의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -408,7 +408,7 @@
 		<set name="item_skill" val="2485-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="10433" type="EtcItem" name="Kertin's Herb of Mana">
+	<item id="10433" type="EtcItem" name="케르탕의 마나의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -416,7 +416,7 @@
 		<set name="item_skill" val="2486-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="10434" type="Weapon" name="Icarus Sawsword - Focus">
+	<item id="10434" type="Weapon" name="이카루스 소우소드 포커스">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -445,7 +445,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10435" type="Weapon" name="Icarus Sawsword - Health">
+	<item id="10435" type="Weapon" name="이카루스 소우소드 헬스">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -474,7 +474,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10436" type="Weapon" name="Icarus Sawsword - Light">
+	<item id="10436" type="Weapon" name="이카루스 소우소드 라이트">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -503,7 +503,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10437" type="Weapon" name="Icarus Heavy Arms - Focus">
+	<item id="10437" type="Weapon" name="이카루스 헤비 암스 포커스">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -532,7 +532,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10438" type="Weapon" name="Icarus Heavy Arms - Health">
+	<item id="10438" type="Weapon" name="이카루스 헤비 암스 헬스">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -561,7 +561,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10439" type="Weapon" name="Icarus Heavy Arms - Light">
+	<item id="10439" type="Weapon" name="이카루스 헤비 암스 라이트">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -590,7 +590,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10440" type="Weapon" name="Icarus Spirit - Acumen">
+	<item id="10440" type="Weapon" name="이카루스 스피릿 아큐멘">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -619,7 +619,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10441" type="Weapon" name="Icarus Spirit - Mana Up">
+	<item id="10441" type="Weapon" name="이카루스 스피릿 마나업">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -648,7 +648,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10442" type="Weapon" name="Icarus Spirit - Conversion">
+	<item id="10442" type="Weapon" name="이카루스 스피릿 업다운">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -677,7 +677,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10443" type="Weapon" name="Icarus Spitter - Cheap Shot">
+	<item id="10443" type="Weapon" name="이카루스 스피터 칩샷">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -709,7 +709,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10444" type="Weapon" name="Icarus Spitter - Guidance">
+	<item id="10444" type="Weapon" name="이카루스 스피터 가이던스">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -741,7 +741,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10445" type="Weapon" name="Icarus Spitter - Focus">
+	<item id="10445" type="Weapon" name="이카루스 스피터 포커스">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -773,7 +773,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10446" type="Weapon" name="Icarus Disperser - Focus">
+	<item id="10446" type="Weapon" name="이카루스 디스퍼서 포커스">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -802,7 +802,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10447" type="Weapon" name="Icarus Disperser - Evasion">
+	<item id="10447" type="Weapon" name="이카루스 디스퍼서 이베이젼">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -831,7 +831,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10448" type="Weapon" name="Icarus Disperser - Critical Damage">
+	<item id="10448" type="Weapon" name="이카루스 디스퍼서 Crt.대미지">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -860,7 +860,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10449" type="Weapon" name="Icarus Trident - Anger">
+	<item id="10449" type="Weapon" name="이카루스 트라이던트 앵거">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -889,7 +889,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10450" type="Weapon" name="Icarus Trident - Critical Stun">
+	<item id="10450" type="Weapon" name="이카루스 트라이던트 Crt.스턴">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -920,7 +920,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10451" type="Weapon" name="Icarus Trident - Light">
+	<item id="10451" type="Weapon" name="이카루스 트라이던트 라이트">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -949,7 +949,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10452" type="Weapon" name="Icarus Hammer - Anger">
+	<item id="10452" type="Weapon" name="이카루스 해머 앵거">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -978,7 +978,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10453" type="Weapon" name="Icarus Hammer - Health">
+	<item id="10453" type="Weapon" name="이카루스 해머 헬스">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1007,7 +1007,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10454" type="Weapon" name="Icarus Hammer - Rsk. Focus">
+	<item id="10454" type="Weapon" name="이카루스 해머 Rsk.포커스">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1036,7 +1036,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10455" type="Weapon" name="Icarus Hall - Mana Up">
+	<item id="10455" type="Weapon" name="이카루스 홀 마나업">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1066,7 +1066,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10456" type="Weapon" name="Icarus Hall - Conversion">
+	<item id="10456" type="Weapon" name="이카루스 홀 업다운">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1096,7 +1096,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10457" type="Weapon" name="Icarus Hall - Acumen">
+	<item id="10457" type="Weapon" name="이카루스 홀 아큐멘">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1126,7 +1126,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10458" type="Weapon" name="Icarus Hand - Rsk. Evasion">
+	<item id="10458" type="Weapon" name="이카루스 핸드 Rsk.이베이젼">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1155,7 +1155,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10459" type="Weapon" name="Icarus Hand - Focus">
+	<item id="10459" type="Weapon" name="이카루스 핸드 포커스">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1184,7 +1184,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10460" type="Weapon" name="Icarus Hand - Haste">
+	<item id="10460" type="Weapon" name="이카루스 핸드 헤이스트">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1213,7 +1213,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10461" type="Weapon" name="Icarus Stinger - Focus">
+	<item id="10461" type="Weapon" name="이카루스 스팅거 포커스">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1247,7 +1247,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10462" type="Weapon" name="Icarus Stinger - Health">
+	<item id="10462" type="Weapon" name="이카루스 스팅거 헬스">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1281,7 +1281,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10463" type="Weapon" name="Icarus Stinger - Light">
+	<item id="10463" type="Weapon" name="이카루스 스팅거 라이트">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1315,7 +1315,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10464" type="Weapon" name="Icarus Wingblade - Focus">
+	<item id="10464" type="Weapon" name="이카루스 윙블레이드 포커스">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1348,7 +1348,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10465" type="Weapon" name="Icarus Wingblade - Health">
+	<item id="10465" type="Weapon" name="이카루스 윙블레이드 헬스">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1381,7 +1381,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10466" type="Weapon" name="Icarus Wingblade - Light">
+	<item id="10466" type="Weapon" name="이카루스 윙블레이드 라이트">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1414,7 +1414,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10467" type="Weapon" name="Icarus Shooter - Cheap Shot">
+	<item id="10467" type="Weapon" name="이카루스 슈터 칩샷">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1448,7 +1448,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10468" type="Weapon" name="Icarus Shooter - Guidance">
+	<item id="10468" type="Weapon" name="이카루스 슈터 가이던스">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1482,7 +1482,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10469" type="Weapon" name="Icarus Shooter - Focus">
+	<item id="10469" type="Weapon" name="이카루스 슈터 포커스">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1516,7 +1516,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10470" type="Armor" name="Shadow Item - Red Crescent">
+	<item id="10470" type="Armor" name="투영병기 - 레드 크레센트">
 		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -1532,7 +1532,7 @@
 			<add order="0x10" stat="mDef" val="24" />
 		</for>
 	</item>
-	<item id="10471" type="Armor" name="Shadow Item - Ring of Devotion">
+	<item id="10471" type="Armor" name="투영병기 - 헌신의 반지">
 		<set name="icon" val="icon.accessary_ring_of_devotion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1548,7 +1548,7 @@
 			<add order="0x10" stat="mDef" val="16" />
 		</for>
 	</item>
-	<item id="10472" type="Armor" name="Shadow Item - Necklace of Devotion">
+	<item id="10472" type="Armor" name="투영병기 - 헌신의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -1564,7 +1564,7 @@
 			<add order="0x10" stat="mDef" val="32" />
 		</for>
 	</item>
-	<item id="10473" type="EtcItem" name="Magic Accessory Set">
+	<item id="10473" type="EtcItem" name="마법 방어구 세트">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1578,7 +1578,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2490-1" />
 	</item>
-	<item id="10474" type="Weapon" name="Shadow Item - Apprentice's Staff">
+	<item id="10474" type="Weapon" name="투영병기 - 견습사의 지팡이">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1607,7 +1607,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="10475" type="Weapon" name="Shadow Item - Bone Club">
+	<item id="10475" type="Weapon" name="투영병기 - 본 클럽">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1635,7 +1635,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="10476" type="Weapon" name="Shadow Item - Shining Knife">
+	<item id="10476" type="Weapon" name="투영병기 - 샤이닝 나이프">
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1663,7 +1663,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="10477" type="Weapon" name="Shadow Item - Cestus">
+	<item id="10477" type="Weapon" name="투영병기 - 세스터스">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1691,7 +1691,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="10478" type="Weapon" name="Shadow Item - Forest Bow">
+	<item id="10478" type="Weapon" name="투영병기 - 숲의 활">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1721,7 +1721,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="10479" type="Weapon" name="Shadow Item - Long Sword">
+	<item id="10479" type="Weapon" name="투영병기 - 장검">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1748,7 +1748,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="10480" type="EtcItem" name="Red Soul Crystal - Stage 15">
+	<item id="10480" type="EtcItem" name="붉은 집혼석 - 단계 15">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1758,7 +1758,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="10481" type="EtcItem" name="Blue Soul Crystal - Stage 15">
+	<item id="10481" type="EtcItem" name="푸른 집혼석 - 단계 15">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1768,7 +1768,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="10482" type="EtcItem" name="Green Soul Crystal - Stage 15">
+	<item id="10482" type="EtcItem" name="초록 집혼석 - 단계 15">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1778,7 +1778,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="10483" type="EtcItem" name="Life Stone - Level 82">
+	<item id="10483" type="EtcItem" name="생명의 돌 - 82 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1789,7 +1789,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone - Level 82">
+	<item id="10484" type="EtcItem" name="중급 생명의 돌 - 82 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1800,7 +1800,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10485" type="EtcItem" name="High-Grade Life Stone - Level 82">
+	<item id="10485" type="EtcItem" name="상급 생명의 돌 - 82 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1811,7 +1811,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10486" type="EtcItem" name="Top-Grade Life Stone - Level 82">
+	<item id="10486" type="EtcItem" name="최상급 생명의 돌 - 82 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1822,7 +1822,7 @@
 			<player level="82" />
 		</cond>
 	</item>
-	<item id="10487" type="Armor" name="Dynasty Jeweled Leather Armor - Force Master">
+	<item id="10487" type="Armor" name="다이너스티 쥬엘 레더 메일 포스마스터">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1844,7 +1844,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10488" type="Armor" name="Dynasty Jeweled Leather Armor - Weapon Master">
+	<item id="10488" type="Armor" name="다이너스티 쥬엘 레더 메일 웨폰마스터">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1866,7 +1866,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10489" type="Armor" name="Dynasty Jeweled Leather Armor - Enchanter">
+	<item id="10489" type="Armor" name="다이너스티 쥬엘 레더 메일 인챈터">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1888,7 +1888,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10490" type="Armor" name="Dynasty Jeweled Leather Armor - Summoner">
+	<item id="10490" type="Armor" name="다이너스티 쥬엘 레더 메일 서머너">
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1910,7 +1910,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10491" type="Armor" name="Silk Shirt - HP">
+	<item id="10491" type="Armor" name="비단 셔츠 HP">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1927,7 +1927,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10492" type="Armor" name="Silk Shirt - MP">
+	<item id="10492" type="Armor" name="비단 셔츠 MP">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1944,7 +1944,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10493" type="Armor" name="Silk Shirt - CP">
+	<item id="10493" type="Armor" name="비단 셔츠 CP">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1961,7 +1961,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10494" type="Armor" name="Thin Leather Shirt - HP">
+	<item id="10494" type="Armor" name="얇은 가죽 셔츠 HP">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1978,7 +1978,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10495" type="Armor" name="Thin Leather Shirt - MP">
+	<item id="10495" type="Armor" name="얇은 가죽 셔츠 MP">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1995,7 +1995,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10496" type="Armor" name="Thin Leather Shirt - CP">
+	<item id="10496" type="Armor" name="얇은 가죽 셔츠 CP">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -2012,7 +2012,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10497" type="Armor" name="Scale Shirt - HP">
+	<item id="10497" type="Armor" name="미늘 셔츠 HP">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -2029,7 +2029,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10498" type="Armor" name="Scale Shirt - MP">
+	<item id="10498" type="Armor" name="미늘 셔츠 MP">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -2046,7 +2046,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="10499" type="Armor" name="Scale Shirt - CP">
+	<item id="10499" type="Armor" name="미늘 셔츠 CP">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />

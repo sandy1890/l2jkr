@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5700" type="EtcItem" name="Seed: Alternative Great Cobol">
+	<item id="5700" type="EtcItem" name="개량 대왕 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -11,7 +11,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="5701" type="EtcItem" name="Seed: Alternative Red Codran">
+	<item id="5701" type="EtcItem" name="개량 붉은 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -22,7 +22,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="5702" type="EtcItem" name="Seed: Alternative Sea Codran">
+	<item id="5702" type="EtcItem" name="개량 바다 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -33,7 +33,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="5703" type="EtcItem" name="Lucky Charm">
+	<item id="5703" type="EtcItem" name="행운의 부적- 무급">
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -46,7 +46,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2168-1" />
 	</item>
-	<item id="5704" type="Weapon" name="Keshanberk*Keshanberk">
+	<item id="5704" type="Weapon" name="크샨베르크*크샨베르크">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -72,7 +72,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5705" type="Weapon" name="Keshanberk*Damascus">
+	<item id="5705" type="Weapon" name="크샨베르크*다마스커스">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -99,7 +99,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5706" type="Weapon" name="Damascus*Damascus">
+	<item id="5706" type="Weapon" name="다마스커스*다마스커스">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -126,7 +126,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5707" type="EtcItem" name="Record of Seven Signs">
+	<item id="5707" type="EtcItem" name="일곱 봉인의 실록">
 		<set name="icon" val="icon.etc_ssq_scroll_i00" />
 		<set name="default_action" val="show_ssq_status" />
 		<set name="immediate_effect" val="1" />
@@ -134,13 +134,13 @@
 		<set name="price" val="500" />
 		<set name="handler" val="SevenSignsRecord" />
 	</item>
-	<item id="5708" type="EtcItem" name="Lord of the Manor's Certificate of Approval">
+	<item id="5708" type="EtcItem" name="영주의 승인증">
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="etcitem_type" val="ticket_of_lord" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 	</item>
-	<item id="5709" type="Armor" name="Sealed Zubei's Gauntlets">
+	<item id="5709" type="Armor" name="봉인된 쉬르노엔의 건틀렛">
 		<set name="icon" val="icon.armor_t64_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -156,7 +156,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5710" type="Armor" name="Zubei's Gauntlets - Heavy Armor">
+	<item id="5710" type="Armor" name="쉬르노엔의 건틀렛 중갑용">
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -175,7 +175,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5711" type="Armor" name="Zubei's Gauntlets - Light Armor">
+	<item id="5711" type="Armor" name="쉬르노엔의 건틀렛 경갑용">
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -191,7 +191,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5712" type="Armor" name="Zubei's Gauntlets - Robe">
+	<item id="5712" type="Armor" name="쉬르노엔의 건틀렛 로브용">
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -210,7 +210,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5713" type="Armor" name="Sealed Avadon Gloves">
+	<item id="5713" type="Armor" name="봉인된 아바돈 글로브">
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -226,7 +226,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5714" type="Armor" name="Avadon Gloves - Heavy Armor">
+	<item id="5714" type="Armor" name="아바돈 글로브 중갑용">
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -245,7 +245,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5715" type="Armor" name="Avadon Gloves - Light Armor">
+	<item id="5715" type="Armor" name="아바돈 글로브 경갑용">
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -261,7 +261,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5716" type="Armor" name="Avadon Gloves - Robe">
+	<item id="5716" type="Armor" name="아바돈 글로브 로브용">
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -280,7 +280,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5717" type="Armor" name="Sealed Blue Wolf Gloves">
+	<item id="5717" type="Armor" name="봉인된 푸른 늑대의 장갑">
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -296,7 +296,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5718" type="Armor" name="Blue Wolf Gloves - Heavy Armor">
+	<item id="5718" type="Armor" name="푸른 늑대의 장갑 중갑용">
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -315,7 +315,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5719" type="Armor" name="Blue Wolf Gloves - Light Armor">
+	<item id="5719" type="Armor" name="푸른 늑대의 장갑 경갑용">
 		<set name="icon" val="icon.armor_t69_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -331,7 +331,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5720" type="Armor" name="Blue Wolf Gloves - Robe">
+	<item id="5720" type="Armor" name="푸른 늑대의 장갑 로브용">
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -350,7 +350,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5721" type="Armor" name="Sealed Doom Gloves">
+	<item id="5721" type="Armor" name="봉인된 둠 글로브">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -366,7 +366,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5722" type="Armor" name="Doom Gloves - Heavy Armor">
+	<item id="5722" type="Armor" name="둠 글로브 중갑용">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -385,7 +385,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5723" type="Armor" name="Doom Gloves - Light Armor">
+	<item id="5723" type="Armor" name="둠 글로브 경갑용">
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -401,7 +401,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5724" type="Armor" name="Doom Gloves - Robe">
+	<item id="5724" type="Armor" name="둠 글로브 로브용">
 		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -420,7 +420,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5725" type="Armor" name="Sealed Zubei's Boots">
+	<item id="5725" type="Armor" name="봉인된 쉬르노엔의 부츠">
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -436,7 +436,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5726" type="Armor" name="Zubei's Boots - Heavy Armor">
+	<item id="5726" type="Armor" name="쉬르노엔의 부츠 중갑용">
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -455,7 +455,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5727" type="Armor" name="Zubei's Boots - Light Armor">
+	<item id="5727" type="Armor" name="쉬르노엔의 부츠 경갑용">
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -471,7 +471,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5728" type="Armor" name="Zubei's Boots - Robe">
+	<item id="5728" type="Armor" name="쉬르노엔의 부츠 로브용">
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -490,7 +490,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5729" type="Armor" name="Sealed Avadon Boots">
+	<item id="5729" type="Armor" name="봉인된 아바돈 부츠">
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -506,7 +506,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5730" type="Armor" name="Avadon Boots - Heavy Armor">
+	<item id="5730" type="Armor" name="아바돈 부츠 중갑용">
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -525,7 +525,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5731" type="Armor" name="Avadon Boots - Light Armor">
+	<item id="5731" type="Armor" name="아바돈 부츠 경갑용">
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -541,7 +541,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5732" type="Armor" name="Avadon Boots - Robe">
+	<item id="5732" type="Armor" name="아바돈 부츠 로브용">
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -560,7 +560,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5733" type="Armor" name="Sealed Blue Wolf Boots">
+	<item id="5733" type="Armor" name="봉인된 푸른 늑대의 부츠">
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -576,7 +576,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5734" type="Armor" name="Blue Wolf Boots - Heavy Armor">
+	<item id="5734" type="Armor" name="푸른 늑대의 부츠 중갑용">
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -595,7 +595,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5735" type="Armor" name="Blue Wolf Boots - Light Armor">
+	<item id="5735" type="Armor" name="푸른 늑대의 부츠 경갑용">
 		<set name="icon" val="icon.armor_t69_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -611,7 +611,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5736" type="Armor" name="Blue Wolf Boots - Robe">
+	<item id="5736" type="Armor" name="푸른 늑대의 부츠 로브용">
 		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -630,7 +630,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5737" type="Armor" name="Sealed Doom Boots">
+	<item id="5737" type="Armor" name="봉인된 둠 부츠">
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -646,7 +646,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5738" type="Armor" name="Doom Boots - Heavy Armor">
+	<item id="5738" type="Armor" name="둠 부츠 중갑용">
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -665,7 +665,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5739" type="Armor" name="Doom Boots - Light Armor">
+	<item id="5739" type="Armor" name="둠 부츠 경갑용">
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -681,7 +681,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5740" type="Armor" name="Doom Boots - Robe">
+	<item id="5740" type="Armor" name="둠 부츠 로브용">
 		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -700,7 +700,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5741" type="EtcItem" name="Recipe: Sealed Zubei's Gauntlets (100%)">
+	<item id="5741" type="EtcItem" name="레시피 : 봉인된 쉬르노엔의 건틀렛(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -710,7 +710,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5742" type="EtcItem" name="Recipe: Sealed Zubei's Gauntlets (60%)">
+	<item id="5742" type="EtcItem" name="레시피 : 봉인된 쉬르노엔의 건틀렛(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -720,7 +720,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5743" type="EtcItem" name="Recipe: Sealed Avadon Gloves (100%)">
+	<item id="5743" type="EtcItem" name="레시피 : 봉인된 아바돈 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -730,7 +730,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5744" type="EtcItem" name="Recipe: Sealed Avadon Gloves (60%)">
+	<item id="5744" type="EtcItem" name="레시피 : 봉인된 아바돈 글로브(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -740,7 +740,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5745" type="EtcItem" name="Recipe: Sealed Blue Wolf Gloves (100%)">
+	<item id="5745" type="EtcItem" name="레시피 : 봉인된 푸른 늑대의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -750,7 +750,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5746" type="EtcItem" name="Recipe: Sealed Blue Wolf Gloves (60%)">
+	<item id="5746" type="EtcItem" name="레시피 : 봉인된 푸른 늑대의 장갑(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -760,7 +760,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5747" type="EtcItem" name="Recipe: Sealed Doom Gloves (100%)">
+	<item id="5747" type="EtcItem" name="레시피 : 봉인된 둠 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -770,7 +770,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5748" type="EtcItem" name="Recipe: Sealed Doom Gloves (60%)">
+	<item id="5748" type="EtcItem" name="레시피 : 봉인된 둠 글로브(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -780,7 +780,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5749" type="EtcItem" name="Recipe: Sealed Zubei's Boots (100%)">
+	<item id="5749" type="EtcItem" name="레시피 : 봉인된 쉬르노엔의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -790,7 +790,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5750" type="EtcItem" name="Recipe: Sealed Zubei's Boots (60%)">
+	<item id="5750" type="EtcItem" name="레시피 : 봉인된 쉬르노엔의 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -800,7 +800,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5751" type="EtcItem" name="Recipe: Sealed Avadon Boots (100%)">
+	<item id="5751" type="EtcItem" name="레시피 : 봉인된 아바돈 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -810,7 +810,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5752" type="EtcItem" name="Recipe: Sealed Avadon Boots (60%)">
+	<item id="5752" type="EtcItem" name="레시피 : 봉인된 아바돈 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -820,7 +820,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5753" type="EtcItem" name="Recipe: Sealed Blue Wolf Boots (100%)">
+	<item id="5753" type="EtcItem" name="레시피 : 봉인된 푸른 늑대의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -830,7 +830,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5754" type="EtcItem" name="Recipe: Sealed Blue Wolf Boots (60%)">
+	<item id="5754" type="EtcItem" name="레시피 : 봉인된 푸른 늑대의 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -840,7 +840,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5755" type="EtcItem" name="Recipe: Sealed Doom Boots (100%)">
+	<item id="5755" type="EtcItem" name="레시피 : 봉인된 둠 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -850,7 +850,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5756" type="EtcItem" name="Recipe: Sealed Doom Boots (60%)">
+	<item id="5756" type="EtcItem" name="레시피 : 봉인된 둠 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -860,7 +860,7 @@
 		<set name="price" val="17700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5757" type="EtcItem" name="Sealed Zubei's Gauntlet Part">
+	<item id="5757" type="EtcItem" name="봉인된 쉬르노엔의 건틀렛 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -869,7 +869,7 @@
 		<set name="price" val="3843" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5758" type="EtcItem" name="Sealed Avadon Gloves Part">
+	<item id="5758" type="EtcItem" name="봉인된 아바돈 글로브 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -878,7 +878,7 @@
 		<set name="price" val="3843" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5759" type="EtcItem" name="Sealed Blue Wolf Gloves Fabric">
+	<item id="5759" type="EtcItem" name="봉인된 푸른 늑대의 장갑 원단">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -887,7 +887,7 @@
 		<set name="price" val="4455" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5760" type="EtcItem" name="Sealed Doom Gloves Part">
+	<item id="5760" type="EtcItem" name="봉인된 둠 글로브 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -896,7 +896,7 @@
 		<set name="price" val="4455" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5761" type="EtcItem" name="Sealed Zubei's Boots Design">
+	<item id="5761" type="EtcItem" name="봉인된 쉬르노엔의 부츠 원형">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -905,7 +905,7 @@
 		<set name="price" val="3843" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5762" type="EtcItem" name="Sealed Avadon Boots Design">
+	<item id="5762" type="EtcItem" name="봉인된 아바돈 부츠 원형">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -914,7 +914,7 @@
 		<set name="price" val="3843" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5763" type="EtcItem" name="Sealed Blue Wolf Boots Design">
+	<item id="5763" type="EtcItem" name="봉인된 푸른 늑대의 부츠 원형">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -923,7 +923,7 @@
 		<set name="price" val="4455" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5764" type="EtcItem" name="Sealed Doom Boots Part">
+	<item id="5764" type="EtcItem" name="봉인된 둠 부츠 조각">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -932,7 +932,7 @@
 		<set name="price" val="4455" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5765" type="Armor" name="Dark Crystal Gloves - Heavy Armor">
+	<item id="5765" type="Armor" name="다크 크리스탈 글로브 중갑용">
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -951,7 +951,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5766" type="Armor" name="Dark Crystal Gloves - Light Armor">
+	<item id="5766" type="Armor" name="다크 크리스탈 글로브 경갑용">
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -967,7 +967,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5767" type="Armor" name="Dark Crystal Gloves - Robe">
+	<item id="5767" type="Armor" name="다크 크리스탈 글로브 로브용">
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -986,7 +986,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5768" type="Armor" name="Tallum Gloves - Heavy Armor">
+	<item id="5768" type="Armor" name="탈룸 글로브 중갑용">
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1005,7 +1005,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5769" type="Armor" name="Tallum Gloves - Light Armor">
+	<item id="5769" type="Armor" name="탈룸 글로브 경갑용">
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1021,7 +1021,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5770" type="Armor" name="Tallum Gloves - Robe">
+	<item id="5770" type="Armor" name="탈룸 글로브 로브용">
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1040,7 +1040,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5771" type="Armor" name="Gauntlets of Nightmare - Heavy Armor">
+	<item id="5771" type="Armor" name="악몽의 건틀렛 중갑용">
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1059,7 +1059,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5772" type="Armor" name="Gauntlets of Nightmare - Light Armor">
+	<item id="5772" type="Armor" name="악몽의 건틀렛 경갑용">
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1075,7 +1075,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5773" type="Armor" name="Gauntlets of Nightmare - Robe">
+	<item id="5773" type="Armor" name="악몽의 건틀렛 로브용">
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1094,7 +1094,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5774" type="Armor" name="Majestic Gauntlets - Heavy Armor">
+	<item id="5774" type="Armor" name="마제스틱 건틀렛 중갑용">
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1113,7 +1113,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5775" type="Armor" name="Majestic Gauntlets - Light Armor">
+	<item id="5775" type="Armor" name="마제스틱 건틀렛 경갑용">
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1129,7 +1129,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5776" type="Armor" name="Majestic Gauntlets - Robe">
+	<item id="5776" type="Armor" name="마제스틱 건틀렛 로브용">
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1148,7 +1148,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5777" type="Armor" name="Dark Crystal Boots - Heavy Armor">
+	<item id="5777" type="Armor" name="다크 크리스탈 부츠 중갑용">
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1167,7 +1167,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5778" type="Armor" name="Dark Crystal Boots - Light Armor">
+	<item id="5778" type="Armor" name="다크 크리스탈 부츠 경갑용">
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1183,7 +1183,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5779" type="Armor" name="Dark Crystal Boots - Robe">
+	<item id="5779" type="Armor" name="다크 크리스탈 부츠 로브용">
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1202,7 +1202,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5780" type="Armor" name="Tallum Boots - Heavy Armor">
+	<item id="5780" type="Armor" name="탈룸 부츠 중갑용">
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1221,7 +1221,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5781" type="Armor" name="Tallum Boots - Light Armor">
+	<item id="5781" type="Armor" name="탈룸 부츠 경갑용">
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1237,7 +1237,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5782" type="Armor" name="Tallum Boots - Robe">
+	<item id="5782" type="Armor" name="탈룸 부츠 로브용">
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1256,7 +1256,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5783" type="Armor" name="Boots of Nightmare - Heavy Armor">
+	<item id="5783" type="Armor" name="악몽의 부츠 중갑용">
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1275,7 +1275,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5784" type="Armor" name="Boots of Nightmare - Light Armor">
+	<item id="5784" type="Armor" name="악몽의 부츠 경갑용">
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1291,7 +1291,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5785" type="Armor" name="Boots of Nightmare - Robe">
+	<item id="5785" type="Armor" name="악몽의 부츠 로브용">
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1310,7 +1310,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5786" type="Armor" name="Majestic Boots - Heavy Armor">
+	<item id="5786" type="Armor" name="마제스틱 부츠 중갑용">
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1329,7 +1329,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5787" type="Armor" name="Majestic Boots - Light Armor">
+	<item id="5787" type="Armor" name="마제스틱 부츠 경갑용">
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1345,7 +1345,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5788" type="Armor" name="Majestic Boots - Robe">
+	<item id="5788" type="Armor" name="마제스틱 부츠 로브용">
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1364,7 +1364,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5789" type="EtcItem" name="Soulshot: No Grade for Beginners">
+	<item id="5789" type="EtcItem" name="초보용 무급 정령탄">
 		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
 		<set name="default_action" val="soulshot" />
 		<set name="immediate_effect" val="1" />
@@ -1377,7 +1377,7 @@
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2039-1" />
 	</item>
-	<item id="5790" type="EtcItem" name="Spiritshot: No Grade for Beginners">
+	<item id="5790" type="EtcItem" name="초보용 무급 마정탄">
 		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
 		<set name="default_action" val="spiritshot" />
 		<set name="immediate_effect" val="1" />
@@ -1390,7 +1390,7 @@
 		<set name="handler" val="SpiritShot" />
 		<set name="item_skill" val="2047-1" />
 	</item>
-	<item id="5791" type="Weapon" name="Tomb Guard A">
+	<item id="5791" type="Weapon" name="몹전용(툼가드a)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1416,7 +1416,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5792" type="Weapon" name="Tomb Guard B">
+	<item id="5792" type="Weapon" name="몹전용(툼가드b)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1442,7 +1442,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5793" type="Weapon" name="Tomb Savant A">
+	<item id="5793" type="Weapon" name="몹전용(툼사반트a)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1468,7 +1468,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5794" type="Weapon" name="Tomb Savant B">
+	<item id="5794" type="Weapon" name="몹전용(툼사반트b)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1494,7 +1494,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5795" type="Weapon" name="Tomb Guard A">
+	<item id="5795" type="Weapon" name="몹전용(템플가드a)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1520,7 +1520,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5796" type="Weapon" name="Tomb Guard B">
+	<item id="5796" type="Weapon" name="몹전용(템플가드b)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1546,7 +1546,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5797" type="Weapon" name="Tomb Savant A">
+	<item id="5797" type="Weapon" name="몹전용(템플사반트a)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1572,7 +1572,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5798" type="Weapon" name="Tomb Savant B">
+	<item id="5798" type="Weapon" name="몹전용(템플사반트b)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1598,7 +1598,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5799" type="Armor" name="Nephilim Lord">
+	<item id="5799" type="Armor" name="몹전용(네필림로드)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />

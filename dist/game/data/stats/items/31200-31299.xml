@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="31245" name="束縛的重劍*革命劍" type="Weapon">
+	<item id="31245" type="Weapon" name="속박의 바스타드*혁명의 검">
 		<table name="#Desc">束縛的重劍*革命劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31246" name="束縛的重劍*緋紅劍" type="Weapon">
+	<item id="31246" type="Weapon" name="속박의 바스타드*크림슨소드">
 		<table name="#Desc">束縛的重劍*緋紅劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31247" name="束縛的重劍*工匠之劍" type="Weapon">
+	<item id="31247" type="Weapon" name="속박의 바스타드*장인의 검">
 		<table name="#Desc">束縛的重劍*工匠之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -82,7 +82,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31248" name="束縛的重劍*精靈劍" type="Weapon">
+	<item id="31248" type="Weapon" name="속박의 바스타드*엘븐소드">
 		<table name="#Desc">束縛的重劍*精靈劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -109,7 +109,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31249" name="束縛的重劍*精靈長劍" type="Weapon">
+	<item id="31249" type="Weapon" name="속박의 바스타드*엘븐 롱소드">
 		<table name="#Desc">束縛的重劍*精靈長劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -136,7 +136,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31250" name="束縛的重劍*椎骨之劍" type="Weapon">
+	<item id="31250" type="Weapon" name="속박의 바스타드*스파인본 소드">
 		<table name="#Desc">束縛的重劍*椎骨之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -163,7 +163,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31251" name="束縛的重劍*重劍" type="Weapon">
+	<item id="31251" type="Weapon" name="속박의 바스타드*바스타드">
 		<table name="#Desc">束縛的重劍*重劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -190,7 +190,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31252" name="束縛的重劍*騎士劍" type="Weapon">
+	<item id="31252" type="Weapon" name="속박의 바스타드*나이트소드">
 		<table name="#Desc">束縛的重劍*騎士劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -217,7 +217,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31253" name="束縛的重劍" type="Weapon">
+	<item id="31253" type="Weapon" name="속박의 바스타드 소드">
 		<table name="#Desc">束縛的重劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_bastard_sword_i00"/>
 		<set name="default_action" val="equip"/>

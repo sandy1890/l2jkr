@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="7900" type="Weapon" name="Ice Storm Hammer">
+	<item id="7900" type="Weapon" name="아이스 스톰 해머">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -27,7 +27,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7901" type="Weapon" name="Star Buster">
+	<item id="7901" type="Weapon" name="스타 버스터">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -54,7 +54,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7902" type="Weapon" name="Doom Crusher">
+	<item id="7902" type="Weapon" name="둠 크러셔">
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -81,7 +81,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7903" type="Weapon" name="Frintezza's Sword">
+	<item id="7903" type="Weapon" name="프린테사의 검">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -103,7 +103,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="7904" type="EtcItem" name="Boat Ticket: Rune to Gludin">
+	<item id="7904" type="EtcItem" name="루운 발 - 글루딘 행 배표">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -111,7 +111,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7905" type="EtcItem" name="Boat Ticket: Gludin to Rune">
+	<item id="7905" type="EtcItem" name="글루딘 발 - 루운 행 배표">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -119,7 +119,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7906" type="EtcItem" name="Fire Blessing">
+	<item id="7906" type="EtcItem" name="불의 축복">
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -130,7 +130,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2248-1" />
 	</item>
-	<item id="7907" type="EtcItem" name="Water Blessing">
+	<item id="7907" type="EtcItem" name="물의 축복">
 		<set name="icon" val="icon.etc_water_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -141,7 +141,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2249-1" />
 	</item>
-	<item id="7908" type="EtcItem" name="Wind Blessing">
+	<item id="7908" type="EtcItem" name="바람의 축복">
 		<set name="icon" val="icon.etc_wind_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -152,7 +152,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2250-1" />
 	</item>
-	<item id="7909" type="EtcItem" name="Earth Blessing">
+	<item id="7909" type="EtcItem" name="대지의 축복">
 		<set name="icon" val="icon.etc_earth_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -163,7 +163,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2251-1" />
 	</item>
-	<item id="7910" type="EtcItem" name="Dark Blessing">
+	<item id="7910" type="EtcItem" name="암흑의 축복">
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -174,7 +174,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2252-1" />
 	</item>
-	<item id="7911" type="EtcItem" name="Holy Blessing">
+	<item id="7911" type="EtcItem" name="신성의 축복">
 		<set name="icon" val="icon.etc_holy_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -185,7 +185,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2253-1" />
 	</item>
-	<item id="7912" type="EtcItem" name="Fire Shard">
+	<item id="7912" type="EtcItem" name="불의 결정">
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -196,7 +196,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2254-3" />
 	</item>
-	<item id="7913" type="EtcItem" name="Water Shard">
+	<item id="7913" type="EtcItem" name="물의 결정">
 		<set name="icon" val="icon.etc_water_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -207,7 +207,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2255-3" />
 	</item>
-	<item id="7914" type="EtcItem" name="Wind Shard">
+	<item id="7914" type="EtcItem" name="바람의 결정">
 		<set name="icon" val="icon.etc_wind_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -218,7 +218,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2256-3" />
 	</item>
-	<item id="7915" type="EtcItem" name="Earth Shard">
+	<item id="7915" type="EtcItem" name="대지의 결정">
 		<set name="icon" val="icon.etc_earth_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -229,7 +229,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2257-3" />
 	</item>
-	<item id="7916" type="EtcItem" name="Dark Shard">
+	<item id="7916" type="EtcItem" name="암흑의 결정">
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -240,7 +240,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2258-3" />
 	</item>
-	<item id="7917" type="EtcItem" name="Holy Shard">
+	<item id="7917" type="EtcItem" name="신성의 결정">
 		<set name="icon" val="icon.etc_holy_crystal_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -251,7 +251,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2259-3" />
 	</item>
-	<item id="7918" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="7918" type="EtcItem" name="용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -260,7 +260,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7919" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="7919" type="EtcItem" name="용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -269,7 +269,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7920" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="7920" type="EtcItem" name="용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -278,7 +278,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7921" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="7921" type="EtcItem" name="용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -287,7 +287,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7922" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="7922" type="EtcItem" name="용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -296,7 +296,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7923" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="7923" type="EtcItem" name="용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -305,7 +305,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7924" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="7924" type="EtcItem" name="용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -314,7 +314,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7925" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="7925" type="EtcItem" name="용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -323,7 +323,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7926" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="7926" type="EtcItem" name="용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -332,7 +332,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7927" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="7927" type="EtcItem" name="용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -341,7 +341,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7928" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+	<item id="7928" type="EtcItem" name="용병배치표(텔레포터1)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -350,7 +350,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7929" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+	<item id="7929" type="EtcItem" name="용병배치표(텔레포터2)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -359,7 +359,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7930" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+	<item id="7930" type="EtcItem" name="용병배치표(텔레포터3)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -368,7 +368,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7931" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="7931" type="EtcItem" name="고급 용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -377,7 +377,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7932" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="7932" type="EtcItem" name="고급 용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -386,7 +386,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7933" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="7933" type="EtcItem" name="고급 용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -395,7 +395,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7934" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="7934" type="EtcItem" name="고급 용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -404,7 +404,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7935" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="7935" type="EtcItem" name="고급 용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -413,7 +413,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7936" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="7936" type="EtcItem" name="고급 용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -422,7 +422,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7937" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="7937" type="EtcItem" name="고급 용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -431,7 +431,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7938" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="7938" type="EtcItem" name="고급 용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -440,7 +440,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7939" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="7939" type="EtcItem" name="고급 용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -449,7 +449,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7940" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="7940" type="EtcItem" name="고급 용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -458,7 +458,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7941" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="7941" type="EtcItem" name="여명의 용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -467,7 +467,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7942" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="7942" type="EtcItem" name="여명의 용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -476,7 +476,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7943" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="7943" type="EtcItem" name="여명의 용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -485,7 +485,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7944" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="7944" type="EtcItem" name="여명의 용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -494,7 +494,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7945" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="7945" type="EtcItem" name="여명의 용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -503,7 +503,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7946" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="7946" type="EtcItem" name="여명의 용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -512,7 +512,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7947" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="7947" type="EtcItem" name="여명의 용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -521,7 +521,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7948" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="7948" type="EtcItem" name="여명의 용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -530,7 +530,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7949" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="7949" type="EtcItem" name="여명의 용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -539,7 +539,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7950" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="7950" type="EtcItem" name="여명의 용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -548,7 +548,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7951" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Stationary)">
+	<item id="7951" type="EtcItem" name="고급 훈련병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -557,7 +557,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7952" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Stationary)">
+	<item id="7952" type="EtcItem" name="고급 훈련병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -566,7 +566,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7953" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Stationary)">
+	<item id="7953" type="EtcItem" name="고급 훈련병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -575,7 +575,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7954" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Stationary)">
+	<item id="7954" type="EtcItem" name="고급 훈련병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -584,7 +584,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7955" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Stationary)">
+	<item id="7955" type="EtcItem" name="고급 훈련병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -593,7 +593,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7956" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
+	<item id="7956" type="EtcItem" name="고급 훈련병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -602,7 +602,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7957" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
+	<item id="7957" type="EtcItem" name="고급 훈련병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -611,7 +611,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7958" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
+	<item id="7958" type="EtcItem" name="고급 훈련병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -620,7 +620,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7959" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
+	<item id="7959" type="EtcItem" name="고급 훈련병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -629,7 +629,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7960" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
+	<item id="7960" type="EtcItem" name="고급 훈련병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -638,7 +638,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7961" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+	<item id="7961" type="EtcItem" name="훈련병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -647,7 +647,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7962" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+	<item id="7962" type="EtcItem" name="훈련병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -656,7 +656,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7963" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+	<item id="7963" type="EtcItem" name="훈련병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -665,7 +665,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7964" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+	<item id="7964" type="EtcItem" name="훈련병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -674,7 +674,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7965" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+	<item id="7965" type="EtcItem" name="훈련병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -683,7 +683,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7966" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+	<item id="7966" type="EtcItem" name="훈련병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -692,7 +692,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7967" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+	<item id="7967" type="EtcItem" name="훈련병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -701,7 +701,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7968" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+	<item id="7968" type="EtcItem" name="훈련병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -710,7 +710,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7969" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+	<item id="7969" type="EtcItem" name="훈련병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -719,7 +719,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7970" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+	<item id="7970" type="EtcItem" name="훈련병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7971" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+	<item id="7971" type="EtcItem" name="네필림 전사 배치표">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -737,7 +737,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7972" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+	<item id="7972" type="EtcItem" name="네필림 주술사 배치표">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -746,7 +746,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7973" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="7973" type="EtcItem" name="용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -755,7 +755,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7974" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="7974" type="EtcItem" name="용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -764,7 +764,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7975" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="7975" type="EtcItem" name="용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -773,7 +773,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7976" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="7976" type="EtcItem" name="용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -782,7 +782,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7977" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="7977" type="EtcItem" name="용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -791,7 +791,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7978" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="7978" type="EtcItem" name="용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -800,7 +800,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7979" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="7979" type="EtcItem" name="용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -809,7 +809,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7980" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="7980" type="EtcItem" name="용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -818,7 +818,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7981" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="7981" type="EtcItem" name="용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -827,7 +827,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7982" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="7982" type="EtcItem" name="용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -836,7 +836,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7983" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+	<item id="7983" type="EtcItem" name="용병배치표(텔레포터1)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -845,7 +845,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7984" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+	<item id="7984" type="EtcItem" name="용병배치표(텔레포터2)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -854,7 +854,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7985" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+	<item id="7985" type="EtcItem" name="용병배치표(텔레포터3)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -863,7 +863,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7986" type="EtcItem" name="Mercenary Posting Ticket (Teleporter4)">
+	<item id="7986" type="EtcItem" name="용병배치표(텔레포터4)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -872,7 +872,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7987" type="EtcItem" name="Mercenary Posting Ticket (Teleporter5)">
+	<item id="7987" type="EtcItem" name="용병배치표(텔레포터5)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7988" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="7988" type="EtcItem" name="고급 용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7989" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="7989" type="EtcItem" name="고급 용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -899,7 +899,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7990" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="7990" type="EtcItem" name="고급 용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -908,7 +908,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7991" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="7991" type="EtcItem" name="고급 용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -917,7 +917,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7992" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="7992" type="EtcItem" name="고급 용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -926,7 +926,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7993" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="7993" type="EtcItem" name="고급 용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -935,7 +935,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7994" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="7994" type="EtcItem" name="고급 용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -944,7 +944,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7995" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="7995" type="EtcItem" name="고급 용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -953,7 +953,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7996" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="7996" type="EtcItem" name="고급 용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -962,7 +962,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7997" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="7997" type="EtcItem" name="고급 용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -971,7 +971,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7998" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="7998" type="EtcItem" name="여명의 용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -980,7 +980,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="7999" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="7999" type="EtcItem" name="여명의 용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />

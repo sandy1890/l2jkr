@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13400" type="EtcItem" name="Scroll of Escape: Gludin Village">
+	<item id="13400" type="EtcItem" name="귀환 - 글루딘 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -15,7 +15,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13401" type="EtcItem" name="Scroll of Escape: Town of Gludio">
+	<item id="13401" type="EtcItem" name="귀환 - 글루디오성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -30,7 +30,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13402" type="EtcItem" name="Scroll of Escape: Town of Dion">
+	<item id="13402" type="EtcItem" name="귀환 - 디온성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -45,7 +45,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13403" type="EtcItem" name="Scroll of Escape: Floran Village">
+	<item id="13403" type="EtcItem" name="귀환 - 플로란 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -60,7 +60,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13404" type="EtcItem" name="Scroll of Escape: Town of Giran">
+	<item id="13404" type="EtcItem" name="귀환 - 기란성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -75,7 +75,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13405" type="EtcItem" name="Scroll of Escape: Hardin's Academy">
+	<item id="13405" type="EtcItem" name="귀환 - 하딘의 사숙">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -90,7 +90,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13406" type="EtcItem" name="Scroll of Escape: Heine">
+	<item id="13406" type="EtcItem" name="귀환 - 수상도시 하이네스">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -105,7 +105,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13407" type="EtcItem" name="Scroll of Escape: Town of Oren">
+	<item id="13407" type="EtcItem" name="귀환 - 오렌성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -120,7 +120,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13408" type="EtcItem" name="Scroll of Escape: Ivory Tower">
+	<item id="13408" type="EtcItem" name="귀환 - 상아탑">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -135,7 +135,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13409" type="EtcItem" name="Scroll of Escape: Hunters Village">
+	<item id="13409" type="EtcItem" name="귀환 - 사냥꾼 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -150,7 +150,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13410" type="EtcItem" name="Scroll of Escape: Town of Aden">
+	<item id="13410" type="EtcItem" name="귀환 - 아덴성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -165,7 +165,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13411" type="EtcItem" name="Scroll of Escape: Town of Goddard">
+	<item id="13411" type="EtcItem" name="귀환 - 고다드성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -180,7 +180,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13412" type="EtcItem" name="Scroll of Escape: Rune Township">
+	<item id="13412" type="EtcItem" name="귀환 - 루운성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -195,7 +195,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13413" type="EtcItem" name="Scroll of Escape: Town of Schuttgart">
+	<item id="13413" type="EtcItem" name="귀환 - 슈트가르트성 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -210,7 +210,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13414" type="EtcItem" name="Scroll of Escape: Kamael Village">
+	<item id="13414" type="EtcItem" name="귀환 - 영혼의 섬 마을">
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -225,7 +225,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13415" type="Armor" name="Frog Hat">
+	<item id="13415" type="Armor" name="개구리 모자">
 		<set name="icon" val="icon.accessory_frog_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -236,7 +236,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13416" type="Armor" name="Chicken Hat">
+	<item id="13416" type="Armor" name="닭 모자">
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -247,19 +247,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13417" type="EtcItem" name="L2day - Y">
+	<item id="13417" type="EtcItem" name="L2day - 문자 Y">
 		<set name="icon" val="icon.etc_alphabet_y_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13418" type="EtcItem" name="L2day - Letter 5">
+	<item id="13418" type="EtcItem" name="L2day - 문자 5">
 		<set name="icon" val="icon.etc_alphabet_5_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13419" type="EtcItem" name="Lineage II Commemorative Mark">
+	<item id="13419" type="EtcItem" name="리니지II 기념 증표">
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -269,7 +269,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13420" type="EtcItem" name="Multi-colored Honey Rice Cake">
+	<item id="13420" type="EtcItem" name="오색 꿀떡">
 		<set name="icon" val="icon.etc_five_color_honey_cake_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -281,7 +281,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2645-1" />
 	</item>
-	<item id="13421" type="EtcItem" name="Honey Wheat Cake">
+	<item id="13421" type="EtcItem" name="약과">
 		<set name="icon" val="icon.etc_cake_of_wheatlfour_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -296,7 +296,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2646-1" />
 	</item>
-	<item id="13422" type="EtcItem" name="Medium Parchment Box">
+	<item id="13422" type="EtcItem" name="귀환 주문서 2장 상자">
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -309,7 +309,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2644-1" />
 	</item>
-	<item id="13423" type="EtcItem" name="Medium Mineral Box">
+	<item id="13423" type="EtcItem" name="원석 2개 상자">
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -322,7 +322,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2639-1" />
 	</item>
-	<item id="13424" type="EtcItem" name="Large Libation Box">
+	<item id="13424" type="EtcItem" name="음료 3개 상자">
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -335,7 +335,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2642-1" />
 	</item>
-	<item id="13425" type="EtcItem" name="Small Parchment Box">
+	<item id="13425" type="EtcItem" name="귀환 주문서 1장 상자">
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -348,7 +348,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2643-1" />
 	</item>
-	<item id="13426" type="EtcItem" name="Small Mineral Box">
+	<item id="13426" type="EtcItem" name="원석 1개 상자">
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -361,7 +361,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2638-1" />
 	</item>
-	<item id="13427" type="EtcItem" name="Medium Libation Box">
+	<item id="13427" type="EtcItem" name="음료 2개 상자">
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -374,7 +374,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2641-1" />
 	</item>
-	<item id="13428" type="EtcItem" name="Small Libation Box">
+	<item id="13428" type="EtcItem" name="음료 1개 상자">
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -387,7 +387,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2640-1" />
 	</item>
-	<item id="13429" type="Armor" name="Teddy Bear Hat (Event)">
+	<item id="13429" type="Armor" name="곰돌이 모자 - 이벤트용">
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -398,7 +398,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13430" type="Armor" name="Piggy Hat (Event)">
+	<item id="13430" type="Armor" name="꿀꿀이 모자 - 이벤트용">
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -409,7 +409,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13431" type="Armor" name="Jester Hat (Event)">
+	<item id="13431" type="Armor" name="광대 모자 - 이벤트용">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -420,7 +420,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13432" type="Armor" name="Vesper Breastplate">
+	<item id="13432" type="Armor" name="베스페르 흉갑">
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -441,7 +441,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13433" type="Armor" name="Vesper Leather Breastplate">
+	<item id="13433" type="Armor" name="베스페르 가죽 흉갑">
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -459,7 +459,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13434" type="Armor" name="Vesper Tunic">
+	<item id="13434" type="Armor" name="베스페르 튜닉">
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -481,7 +481,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13435" type="Armor" name="Vesper Noble Breastplate">
+	<item id="13435" type="Armor" name="베스페르 노블 흉갑">
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -502,7 +502,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13436" type="Armor" name="Vesper Noble Leather Breastplate">
+	<item id="13436" type="Armor" name="베스페르 노블 가죽 흉갑">
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -520,7 +520,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13437" type="Armor" name="Vesper Noble Tunic">
+	<item id="13437" type="Armor" name="베스페르 노블 튜닉">
 		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -542,7 +542,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13438" type="Armor" name="Vesper Gaiters">
+	<item id="13438" type="Armor" name="베스페르 각반">
 		<set name="icon" val="icon.armor_t94_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -563,7 +563,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13439" type="Armor" name="Vesper Gauntlet">
+	<item id="13439" type="Armor" name="베스페르 건틀렛">
 		<set name="icon" val="icon.armor_t94_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -583,7 +583,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13440" type="Armor" name="Vesper Boots">
+	<item id="13440" type="Armor" name="베스페르 부츠">
 		<set name="icon" val="icon.armor_t94_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -603,7 +603,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13441" type="Armor" name="Vesper Leather Leggings">
+	<item id="13441" type="Armor" name="베스페르 레더 레깅스">
 		<set name="icon" val="icon.armor_t95_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -621,7 +621,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13442" type="Armor" name="Vesper Leather Gloves">
+	<item id="13442" type="Armor" name="베스페르 레더 글로브">
 		<set name="icon" val="icon.armor_t95_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -638,7 +638,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13443" type="Armor" name="Vesper Leather Boots">
+	<item id="13443" type="Armor" name="베스페르 레더 부츠">
 		<set name="icon" val="icon.armor_t95_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -655,7 +655,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13444" type="Armor" name="Vesper Stockings">
+	<item id="13444" type="Armor" name="베스페르 호즈">
 		<set name="icon" val="icon.armor_t96_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -677,7 +677,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13445" type="Armor" name="Vesper Gloves">
+	<item id="13445" type="Armor" name="베스페르 글로브">
 		<set name="icon" val="icon.armor_t96_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -697,7 +697,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13446" type="Armor" name="Vesper Shoes">
+	<item id="13446" type="Armor" name="베스페르 신발">
 		<set name="icon" val="icon.armor_t96_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -717,7 +717,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13447" type="Armor" name="(Not In Use) Vesper Shield">
+	<item id="13447" type="Armor" name="(사용안함)베스페르 방패">
 		<set name="icon" val="icon.shield_vesper_verteidiger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -734,7 +734,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="13448" type="Armor" name="Vesper Noble Gaiters">
+	<item id="13448" type="Armor" name="베스페르 노블 각반">
 		<set name="icon" val="icon.armor_t94_l_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -755,7 +755,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13449" type="Armor" name="Vesper Noble Gauntlet">
+	<item id="13449" type="Armor" name="베스페르 노블 건틀렛">
 		<set name="icon" val="icon.armor_t94_g_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -775,7 +775,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13450" type="Armor" name="Vesper Noble Boots">
+	<item id="13450" type="Armor" name="베스페르 노블 부츠">
 		<set name="icon" val="icon.armor_t94_b_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -795,7 +795,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13451" type="Armor" name="Vesper Noble Leather Leggings">
+	<item id="13451" type="Armor" name="베스페르 노블 레더 레깅스">
 		<set name="icon" val="icon.armor_t95_l_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -813,7 +813,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13452" type="Armor" name="Vesper Noble Leather Gloves">
+	<item id="13452" type="Armor" name="베스페르 노블 레더 글로브">
 		<set name="icon" val="icon.armor_t95_g_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -830,7 +830,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13453" type="Armor" name="Vesper Noble Leather Boots">
+	<item id="13453" type="Armor" name="베스페르 노블 레더 부츠">
 		<set name="icon" val="icon.armor_t95_b_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -847,7 +847,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13454" type="Armor" name="Vesper Noble Stockings">
+	<item id="13454" type="Armor" name="베스페르 노블 호즈">
 		<set name="icon" val="icon.armor_t96_l_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -869,7 +869,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13455" type="Armor" name="Vesper Noble Gloves">
+	<item id="13455" type="Armor" name="베스페르 노블 글로브">
 		<set name="icon" val="icon.armor_t96_g_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -889,7 +889,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13456" type="Armor" name="Vesper Noble Shoes">
+	<item id="13456" type="Armor" name="베스페르 노블 신발">
 		<set name="icon" val="icon.armor_t96_b_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -909,7 +909,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13457" type="Weapon" name="Vesper Cutter">
+	<item id="13457" type="Weapon" name="베스페르 커터">
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -937,7 +937,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13458" type="Weapon" name="Vesper Slasher">
+	<item id="13458" type="Weapon" name="베스페르 슬래셔">
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -965,7 +965,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13459" type="Weapon" name="Vesper Buster">
+	<item id="13459" type="Weapon" name="베스페르 버스터">
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -993,7 +993,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13460" type="Weapon" name="Vesper Shaper">
+	<item id="13460" type="Weapon" name="베스페르 셰이퍼">
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1021,7 +1021,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13461" type="Weapon" name="Vesper Fighter">
+	<item id="13461" type="Weapon" name="베스페르 파이터">
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1049,7 +1049,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13462" type="Weapon" name="Vesper Stormer">
+	<item id="13462" type="Weapon" name="베스페르 스토머">
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1078,7 +1078,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13463" type="Weapon" name="Vesper Avenger">
+	<item id="13463" type="Weapon" name="베스페르 어벤져">
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1106,7 +1106,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13464" type="Weapon" name="Vesper Retributer">
+	<item id="13464" type="Weapon" name="베스페르 레트리뷰터">
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1134,7 +1134,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13465" type="Weapon" name="Vesper Caster">
+	<item id="13465" type="Weapon" name="베스페르 캐스터">
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1163,7 +1163,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13466" type="Weapon" name="Vesper Singer">
+	<item id="13466" type="Weapon" name="베스페르 싱어">
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1192,7 +1192,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13467" type="Weapon" name="Vesper Thrower">
+	<item id="13467" type="Weapon" name="베스페르 스로워">
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1223,7 +1223,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13468" type="Weapon" name="Vesper Pincer">
+	<item id="13468" type="Weapon" name="베스페르 핀서">
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1256,7 +1256,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13469" type="Weapon" name="Vesper Shooter">
+	<item id="13469" type="Weapon" name="베스페르 슈트제">
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1289,7 +1289,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13470" type="Weapon" name="Vesper Nagan">
+	<item id="13470" type="Weapon" name="베스페르 나간">
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1321,7 +1321,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="13471" type="Armor" name="Vesper Shield">
+	<item id="13471" type="Armor" name="베스페르 쉴드">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1342,7 +1342,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="13472" type="Armor" name="Circlet of Innadril Valor">
+	<item id="13472" type="Armor" name="인나드릴 용맹의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair1_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1354,7 +1354,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13473" type="Armor" name="Circlet of Aden Valor">
+	<item id="13473" type="Armor" name="아덴 용맹의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1366,7 +1366,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13474" type="Armor" name="Circlet of Dion Valor">
+	<item id="13474" type="Armor" name="디온 용맹의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair3_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1378,7 +1378,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13475" type="Armor" name="Circlet of Dion Sniper">
+	<item id="13475" type="Armor" name="디온 사수의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair4_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1390,7 +1390,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13476" type="Armor" name="Circlet of Innadril Sniper">
+	<item id="13476" type="Armor" name="인나드릴 사수의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair5_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1402,7 +1402,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13477" type="Armor" name="Circlet of Oren Sniper">
+	<item id="13477" type="Armor" name="오렌 사수의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair6_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1414,7 +1414,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13478" type="Armor" name="Circlet of Gludio Sage">
+	<item id="13478" type="Armor" name="글루디오 현자의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair7_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1426,7 +1426,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13479" type="Armor" name="Circlet of Rune Sage">
+	<item id="13479" type="Armor" name="루운 현자의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair8_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1438,7 +1438,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13480" type="Armor" name="Circlet of Giran Sage">
+	<item id="13480" type="Armor" name="기란 현자의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair9_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1450,7 +1450,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13481" type="Armor" name="Goddard Circlet of Combat">
+	<item id="13481" type="Armor" name="고다드 투쟁의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair10_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1462,7 +1462,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13482" type="Armor" name="Circlet of Schuttgart Combat">
+	<item id="13482" type="Armor" name="슈트가르트 투쟁의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair12_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1474,7 +1474,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13483" type="Armor" name="Circlet of Oren Combat">
+	<item id="13483" type="Armor" name="오렌 투쟁의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair11_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1486,7 +1486,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13484" type="Armor" name="Gludio Circlet Silence">
+	<item id="13484" type="Armor" name="글루디오 고요의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair13_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1498,7 +1498,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13485" type="Armor" name="Circlet of Schuttgart Silence">
+	<item id="13485" type="Armor" name="슈트가르트 고요의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair14_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1510,7 +1510,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13486" type="Armor" name="Circlet of Aden Unity">
+	<item id="13486" type="Armor" name="아덴 고요의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair15_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1522,7 +1522,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13487" type="Armor" name="Circlet of Rune Silence">
+	<item id="13487" type="Armor" name="루운 고요의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_hair16_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1534,7 +1534,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13488" type="Armor" name="Birthday Hat">
+	<item id="13488" type="Armor" name="생일 모자">
 		<set name="icon" val="icon.accessory_birthday_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1543,7 +1543,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13489" type="Armor" name="Halloween Hat">
+	<item id="13489" type="Armor" name="할로윈 모자">
 		<set name="icon" val="icon.accessory_halloween_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1552,7 +1552,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13490" type="Armor" name="Arrow-Pierced Apple">
+	<item id="13490" type="Armor" name="화살박힌 사과">
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1561,7 +1561,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13491" type="Armor" name="Popped-Out Eye">
+	<item id="13491" type="Armor" name="튀어나온 눈">
 		<set name="icon" val="icon.accessory_beetle_eye_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1570,7 +1570,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13492" type="Armor" name="Graduation Cap">
+	<item id="13492" type="Armor" name="학사모">
 		<set name="icon" val="icon.accessory_graduation_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1579,7 +1579,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13493" type="Armor" name="Refined Carnival Circlet">
+	<item id="13493" type="Armor" name="세련된 카니발 서클릿">
 		<set name="icon" val="icon.accessory_carnival_circlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1588,7 +1588,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="13494" type="Armor" name="Refined Angel Ring">
+	<item id="13494" type="Armor" name="세련된 천사 링">
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1597,7 +1597,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
 	</item>
-	<item id="13495" type="Armor" name="Refined Devil Horn">
+	<item id="13495" type="Armor" name="세련된 악마 뿔">
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1606,7 +1606,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
 	</item>
-	<item id="13496" type="Armor" name="Refined Pirate Hat">
+	<item id="13496" type="Armor" name="세련된 선장모자">
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1615,7 +1615,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
 	</item>
-	<item id="13497" type="Armor" name="Refined Chick Hat">
+	<item id="13497" type="Armor" name="세련된 병아리 모자">
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1624,7 +1624,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
 	</item>
-	<item id="13498" type="Armor" name="Refined Wizard Hat">
+	<item id="13498" type="Armor" name="세련된 마법사 모자">
 		<set name="icon" val="icon.accessory_magician_cap2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1633,7 +1633,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="6000000" />
 	</item>
-	<item id="13499" type="Armor" name="Refined Jester Hat">
+	<item id="13499" type="Armor" name="세련된 광대 모자">
 		<set name="icon" val="icon.accessory_jester_cap_2_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />

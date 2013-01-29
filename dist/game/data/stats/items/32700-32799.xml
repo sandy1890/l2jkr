@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="32700" name="下級魔法古文夾-R級" type="EtcItem">
+	<item id="32700" type="EtcItem" name="하급 마법 룬 클립- R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的下級魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i00"/>
 		<set name="material" val="leather"/>
@@ -10,7 +10,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32701" name="中級魔法古文夾-R級" type="EtcItem">
+	<item id="32701" type="EtcItem" name="중급 마법 룬 클립 - R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i00"/>
 		<set name="material" val="leather"/>
@@ -19,7 +19,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32702" name="上級魔法古文夾-R級" type="EtcItem">
+	<item id="32702" type="EtcItem" name="상급 마법 룬 클립 - R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的上級魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i01"/>
 		<set name="material" val="leather"/>
@@ -28,7 +28,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32703" name="特級魔法古文夾-R級" type="EtcItem">
+	<item id="32703" type="EtcItem" name="최상급 마법 룬 클립 - R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的特級魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i02"/>
 		<set name="material" val="leather"/>
@@ -37,7 +37,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32704" name="下級魔法飾品-R級" type="EtcItem">
+	<item id="32704" type="EtcItem" name="하급 마법 장식- R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的下級魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i00"/>
 		<set name="material" val="leather"/>
@@ -46,7 +46,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32705" name="中級魔法飾品-R級" type="EtcItem">
+	<item id="32705" type="EtcItem" name="중급 마법 장식 - R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i00"/>
 		<set name="material" val="leather"/>
@@ -55,7 +55,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32706" name="上級魔法飾品-R級" type="EtcItem">
+	<item id="32706" type="EtcItem" name="상급 마법 장식 - R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的上級魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i01"/>
 		<set name="material" val="leather"/>
@@ -64,7 +64,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32707" name="特級魔法飾品-R級" type="EtcItem">
+	<item id="32707" type="EtcItem" name="최상급 마법 장식 - R그레이드">
 		<table name="#Desc">可以提高R級腰帶功能的特級魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i02"/>
 		<set name="material" val="leather"/>
@@ -73,7 +73,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32708" name="下級魔法古文夾-R95級" type="EtcItem">
+	<item id="32708" type="EtcItem" name="하급 마법 룬 클립- R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的下級魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i00"/>
 		<set name="material" val="leather"/>
@@ -82,7 +82,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32709" name="中級魔法古文夾-R95級" type="EtcItem">
+	<item id="32709" type="EtcItem" name="중급 마법 룬 클립 - R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i00"/>
 		<set name="material" val="leather"/>
@@ -91,7 +91,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32710" name="上級魔法古文夾-R95級" type="EtcItem">
+	<item id="32710" type="EtcItem" name="상급 마법 룬 클립 - R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的上級魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i01"/>
 		<set name="material" val="leather"/>
@@ -100,7 +100,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32711" name="特級魔法古文夾-R95級" type="EtcItem">
+	<item id="32711" type="EtcItem" name="최상급 마법 룬 클립 - R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的特級魔法古文夾。</table>
 		<set name="icon" val="icon.etc_rune_clip_i02"/>
 		<set name="material" val="leather"/>
@@ -109,7 +109,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32712" name="下級魔法飾品-R95級" type="EtcItem">
+	<item id="32712" type="EtcItem" name="하급 마법 장식- R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的下級魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i00"/>
 		<set name="material" val="leather"/>
@@ -118,7 +118,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32713" name="中級魔法飾品-R95級" type="EtcItem">
+	<item id="32713" type="EtcItem" name="중급 마법 장식 - R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i00"/>
 		<set name="material" val="leather"/>
@@ -127,7 +127,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32714" name="上級魔法飾品-R95級" type="EtcItem">
+	<item id="32714" type="EtcItem" name="상급 마법 장식 - R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的上級魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i01"/>
 		<set name="material" val="leather"/>
@@ -136,7 +136,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="32715" name="特級魔法飾品-R95級" type="EtcItem">
+	<item id="32715" type="EtcItem" name="최상급 마법 장식 - R95그레이드">
 		<table name="#Desc">可以提高R95級腰帶功能的特級魔法飾品。</table>
 		<set name="icon" val="icon.etc_belt_deco_i02"/>
 		<set name="material" val="leather"/>

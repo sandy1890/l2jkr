@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="35000" name="塔武提雙手巨斧" type="Weapon">
+	<item id="35000" type="Weapon" name="타우티의 양손 도끼">
 		<table name="#Desc">提煉塔武提的破片之後製造的武器。裝備時，可以使用塔武提的憤怒技能。裝備時，增加攻擊速度約15%、致命攻擊率150、HP最大值25%、物理攻擊力415。PVP時提升所造成的傷害。無法強化、賦予屬性、搜魂、精煉。</table>
 		<set name="icon" val="icon.weapon_tauti_two_hand_pole_i01"/>
 		<set name="default_action" val="equip"/>
@@ -26,7 +26,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35001" name="塔武提雙刃巨斧" type="Weapon">
+	<item id="35001" type="Weapon" name="타우티의 이도 도끼">
 		<table name="#Desc">提煉塔武提的破片之後製造的武器。裝備時，可以使用塔武提的憤怒技能。裝備時，增加攻擊速度約15%、致命攻擊率150、HP最大值25%、物理攻擊力415。PVP時提升所造成的傷害。無法強化、賦予屬性、搜魂、精煉。</table>
 		<set name="icon" val="icon.weapon_tauti_dual_axe_i01"/>
 		<set name="default_action" val="equip"/>
@@ -51,7 +51,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35002" name="黑暗艾迪奧斯頭盔" type="Armor">
+	<item id="35002" type="Armor" name="다크 아이디오스 헬멧 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -67,7 +67,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35003" name="黑暗艾迪奧斯胸甲" type="Armor">
+	<item id="35003" type="Armor" name="다크 아이디오스 흉갑 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t701_u_i00"/>
@@ -84,7 +84,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35004" name="黑暗艾迪奧斯脛甲" type="Armor">
+	<item id="35004" type="Armor" name="다크 아이디오스 각반 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t701_l_i00"/>
@@ -101,7 +101,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35005" name="黑暗艾迪奧斯護手" type="Armor">
+	<item id="35005" type="Armor" name="다크 아이디오스 건틀렛 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_g_i00"/>
@@ -117,7 +117,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35006" name="黑暗艾迪奧斯靴" type="Armor">
+	<item id="35006" type="Armor" name="다크 아이디오스 부츠 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_b_i00"/>
@@ -133,7 +133,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35008" name="黑暗艾迪奧斯皮頭盔" type="Armor">
+	<item id="35008" type="Armor" name="다크 아이디오스 레더 헬멧 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -149,7 +149,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35009" name="黑暗艾迪奧斯皮甲" type="Armor">
+	<item id="35009" type="Armor" name="다크 아이디오스 레더 아머 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t702_u_i00"/>
@@ -166,7 +166,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35010" name="黑暗艾迪奧斯皮脛甲" type="Armor">
+	<item id="35010" type="Armor" name="다크 아이디오스 레더 레깅스 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t702_l_i00"/>
@@ -183,7 +183,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35011" name="黑暗艾迪奧斯皮手套" type="Armor">
+	<item id="35011" type="Armor" name="다크 아이디오스 레더 글로브 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_g_i00"/>
@@ -199,7 +199,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35012" name="黑暗艾迪奧斯皮靴" type="Armor">
+	<item id="35012" type="Armor" name="다크 아이디오스 레더 부츠 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_b_i00"/>
@@ -215,7 +215,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35013" name="黑暗艾迪奧斯頭箍" type="Armor">
+	<item id="35013" type="Armor" name="다크 아이디오스 서클릿 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -231,7 +231,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35014" name="黑暗艾迪奧斯外衣" type="Armor">
+	<item id="35014" type="Armor" name="다크 아이디오스 튜닉 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t703_u_i00"/>
@@ -249,7 +249,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35015" name="黑暗艾迪奧斯長襪" type="Armor">
+	<item id="35015" type="Armor" name="다크 아이디오스 호즈 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t703_l_i00"/>
@@ -267,7 +267,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35016" name="黑暗艾迪奧斯手套" type="Armor">
+	<item id="35016" type="Armor" name="다크 아이디오스 글로브 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_g_i00"/>
@@ -283,7 +283,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35017" name="黑暗艾迪奧斯鞋" type="Armor">
+	<item id="35017" type="Armor" name="다크 아이디오스 슈즈 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_b_i00"/>
@@ -299,7 +299,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35018" name="黑暗艾迪奧斯頭盔" type="Armor">
+	<item id="35018" type="Armor" name="다크 아이디오스 헬멧 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -315,7 +315,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35019" name="黑暗艾迪奧斯胸甲" type="Armor">
+	<item id="35019" type="Armor" name="다크 아이디오스 흉갑 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t701_u_i00"/>
@@ -332,7 +332,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35020" name="黑暗艾迪奧斯脛甲" type="Armor">
+	<item id="35020" type="Armor" name="다크 아이디오스 각반 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t701_l_i00"/>
@@ -349,7 +349,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35021" name="黑暗艾迪奧斯護手" type="Armor">
+	<item id="35021" type="Armor" name="다크 아이디오스 건틀렛 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_g_i00"/>
@@ -365,7 +365,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35022" name="黑暗艾迪奧斯靴" type="Armor">
+	<item id="35022" type="Armor" name="다크 아이디오스 부츠 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_b_i00"/>
@@ -381,7 +381,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35023" name="黑暗艾迪奧斯皮頭盔" type="Armor">
+	<item id="35023" type="Armor" name="다크 아이디오스 레더 헬멧 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -397,7 +397,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35024" name="黑暗艾迪奧斯皮甲" type="Armor">
+	<item id="35024" type="Armor" name="다크 아이디오스 레더 아머 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t702_u_i00"/>
@@ -414,7 +414,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35025" name="黑暗艾迪奧斯皮脛甲" type="Armor">
+	<item id="35025" type="Armor" name="다크 아이디오스 레더 레깅스 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t702_l_i00"/>
@@ -431,7 +431,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35026" name="黑暗艾迪奧斯皮手套" type="Armor">
+	<item id="35026" type="Armor" name="다크 아이디오스 레더 글로브 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_g_i00"/>
@@ -447,7 +447,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35027" name="黑暗艾迪奧斯皮靴" type="Armor">
+	<item id="35027" type="Armor" name="다크 아이디오스 레더 부츠 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_b_i00"/>
@@ -463,7 +463,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35028" name="黑暗艾迪奧斯頭箍" type="Armor">
+	<item id="35028" type="Armor" name="다크 아이디오스 서클릿 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -479,7 +479,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35029" name="黑暗艾迪奧斯外衣" type="Armor">
+	<item id="35029" type="Armor" name="다크 아이디오스 튜닉 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t703_u_i00"/>
@@ -497,7 +497,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35030" name="黑暗艾迪奧斯長襪" type="Armor">
+	<item id="35030" type="Armor" name="다크 아이디오스 호즈 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t703_l_i00"/>
@@ -515,7 +515,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35031" name="黑暗艾迪奧斯手套" type="Armor">
+	<item id="35031" type="Armor" name="다크 아이디오스 글로브 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_g_i00"/>
@@ -531,7 +531,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35032" name="黑暗艾迪奧斯鞋" type="Armor">
+	<item id="35032" type="Armor" name="다크 아이디오스 슈즈 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_b_i00"/>
@@ -547,7 +547,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35033" name="血腥艾迪奧斯頭盔" type="Armor">
+	<item id="35033" type="Armor" name="블러디 아이디오스 헬멧 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -563,7 +563,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35034" name="血腥艾迪奧斯胸甲" type="Armor">
+	<item id="35034" type="Armor" name="블러디 아이디오스 흉갑 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t701_u_i00"/>
@@ -580,7 +580,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35035" name="血腥艾迪奧斯脛甲" type="Armor">
+	<item id="35035" type="Armor" name="블러디 아이디오스 각반 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t701_l_i00"/>
@@ -597,7 +597,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35036" name="血腥艾迪奧斯護手" type="Armor">
+	<item id="35036" type="Armor" name="블러디 아이디오스 건틀렛 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_g_i00"/>
@@ -613,7 +613,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35037" name="血腥艾迪奧斯靴" type="Armor">
+	<item id="35037" type="Armor" name="블러디 아이디오스 부츠 공격형">
 		<table name="#Plus">攻擊型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_b_i00"/>
@@ -629,7 +629,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35038" name="血腥艾迪奧斯皮頭盔" type="Armor">
+	<item id="35038" type="Armor" name="블러디 아이디오스 레더 헬멧 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -645,7 +645,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35039" name="血腥艾迪奧斯皮甲" type="Armor">
+	<item id="35039" type="Armor" name="블러디 아이디오스 레더 아머 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t702_u_i00"/>
@@ -662,7 +662,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35040" name="血腥艾迪奧斯皮脛甲" type="Armor">
+	<item id="35040" type="Armor" name="블러디 아이디오스 레더 레깅스 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t702_l_i00"/>
@@ -679,7 +679,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35041" name="血腥艾迪奧斯皮手套" type="Armor">
+	<item id="35041" type="Armor" name="블러디 아이디오스 레더 글로브 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_g_i00"/>
@@ -695,7 +695,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35042" name="血腥艾迪奧斯皮靴" type="Armor">
+	<item id="35042" type="Armor" name="블러디 아이디오스 레더 부츠 암살형">
 		<table name="#Plus">暗殺型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_b_i00"/>
@@ -711,7 +711,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35043" name="血腥艾迪奧斯頭箍" type="Armor">
+	<item id="35043" type="Armor" name="블러디 아이디오스 서클릿 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -727,7 +727,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35044" name="血腥艾迪奧斯外衣" type="Armor">
+	<item id="35044" type="Armor" name="블러디 아이디오스 튜닉 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t703_u_i00"/>
@@ -745,7 +745,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35045" name="血腥艾迪奧斯長襪" type="Armor">
+	<item id="35045" type="Armor" name="블러디 아이디오스 호즈 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t703_l_i00"/>
@@ -763,7 +763,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35046" name="血腥艾迪奧斯手套" type="Armor">
+	<item id="35046" type="Armor" name="블러디 아이디오스 글로브 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_g_i00"/>
@@ -779,7 +779,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35047" name="血腥艾迪奧斯鞋" type="Armor">
+	<item id="35047" type="Armor" name="블러디 아이디오스 슈즈 마법형">
 		<table name="#Plus">魔法型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_b_i00"/>
@@ -795,7 +795,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35048" name="血腥艾迪奧斯頭盔" type="Armor">
+	<item id="35048" type="Armor" name="블러디 아이디오스 헬멧 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -811,7 +811,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35049" name="血腥艾迪奧斯胸甲" type="Armor">
+	<item id="35049" type="Armor" name="블러디 아이디오스 흉갑 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t701_u_i00"/>
@@ -828,7 +828,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35050" name="血腥艾迪奧斯脛甲" type="Armor">
+	<item id="35050" type="Armor" name="블러디 아이디오스 각반 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t701_l_i00"/>
@@ -845,7 +845,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35051" name="血腥艾迪奧斯護手" type="Armor">
+	<item id="35051" type="Armor" name="블러디 아이디오스 건틀렛 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_g_i00"/>
@@ -861,7 +861,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35052" name="血腥艾迪奧斯靴" type="Armor">
+	<item id="35052" type="Armor" name="블러디 아이디오스 부츠 방어형">
 		<table name="#Plus">防禦型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t701_b_i00"/>
@@ -877,7 +877,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35053" name="血腥艾迪奧斯皮頭盔" type="Armor">
+	<item id="35053" type="Armor" name="블러디 아이디오스 레더 헬멧 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -893,7 +893,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35054" name="血腥艾迪奧斯皮甲" type="Armor">
+	<item id="35054" type="Armor" name="블러디 아이디오스 레더 아머 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t702_u_i00"/>
@@ -910,7 +910,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35055" name="血腥艾迪奧斯皮脛甲" type="Armor">
+	<item id="35055" type="Armor" name="블러디 아이디오스 레더 레깅스 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t702_l_i00"/>
@@ -927,7 +927,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35056" name="血腥艾迪奧斯皮手套" type="Armor">
+	<item id="35056" type="Armor" name="블러디 아이디오스 레더 글로브 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_g_i00"/>
@@ -943,7 +943,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35057" name="血腥艾迪奧斯皮靴" type="Armor">
+	<item id="35057" type="Armor" name="블러디 아이디오스 레더 부츠 강화형">
 		<table name="#Plus">強化型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t702_b_i00"/>
@@ -959,7 +959,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35058" name="血腥艾迪奧斯頭箍" type="Armor">
+	<item id="35058" type="Armor" name="블러디 아이디오스 서클릿 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -975,7 +975,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35059" name="血腥艾迪奧斯外衣" type="Armor">
+	<item id="35059" type="Armor" name="블러디 아이디오스 튜닉 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t703_u_i00"/>
@@ -993,7 +993,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35060" name="血腥艾迪奧斯長襪" type="Armor">
+	<item id="35060" type="Armor" name="블러디 아이디오스 호즈 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。</table>
 		<set name="icon" val="icon.armor_t703_l_i00"/>
@@ -1011,7 +1011,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35061" name="血腥艾迪奧斯手套" type="Armor">
+	<item id="35061" type="Armor" name="블러디 아이디오스 글로브 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_g_i00"/>
@@ -1027,7 +1027,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35062" name="血腥艾迪奧斯鞋" type="Armor">
+	<item id="35062" type="Armor" name="블러디 아이디오스 슈즈 회복형">
 		<table name="#Plus">恢復型</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。</table>
 		<set name="icon" val="icon.armor_t703_b_i00"/>
@@ -1043,7 +1043,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35063" name="黑暗艾迪奧斯頭盔" type="Armor">
+	<item id="35063" type="Armor" name="다크 아이디오스 헬멧 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -1059,7 +1059,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35064" name="黑暗艾迪奧斯胸甲" type="Armor">
+	<item id="35064" type="Armor" name="다크 아이디오스 흉갑 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。可以賦予攻擊型和防禦型的成套精煉效果。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t701_u_i00"/>
@@ -1076,7 +1076,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35065" name="黑暗艾迪奧斯脛甲" type="Armor">
+	<item id="35065" type="Armor" name="다크 아이디오스 각반 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t701_l_i00"/>
@@ -1093,7 +1093,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35066" name="黑暗艾迪奧斯護手" type="Armor">
+	<item id="35066" type="Armor" name="다크 아이디오스 건틀렛 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t701_g_i00"/>
@@ -1109,7 +1109,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35067" name="黑暗艾迪奧斯靴" type="Armor">
+	<item id="35067" type="Armor" name="다크 아이디오스 부츠 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t701_b_i00"/>
@@ -1125,7 +1125,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35069" name="黑暗艾迪奧斯皮頭盔" type="Armor">
+	<item id="35069" type="Armor" name="다크 아이디오스 레더 헬멧 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -1141,7 +1141,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35070" name="黑暗艾迪奧斯皮甲" type="Armor">
+	<item id="35070" type="Armor" name="다크 아이디오스 레더 아머 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。可以賦予暗殺型和強化型的成套精煉效果。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t702_u_i00"/>
@@ -1158,7 +1158,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35071" name="黑暗艾迪奧斯皮脛甲" type="Armor">
+	<item id="35071" type="Armor" name="다크 아이디오스 레더 레깅스 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t702_l_i00"/>
@@ -1175,7 +1175,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35072" name="黑暗艾迪奧斯皮手套" type="Armor">
+	<item id="35072" type="Armor" name="다크 아이디오스 레더 글로브 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t702_g_i00"/>
@@ -1191,7 +1191,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35073" name="黑暗艾迪奧斯皮靴" type="Armor">
+	<item id="35073" type="Armor" name="다크 아이디오스 레더 부츠 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t702_b_i00"/>
@@ -1207,7 +1207,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35074" name="黑暗艾迪奧斯頭箍" type="Armor">
+	<item id="35074" type="Armor" name="다크 아이디오스 서클릿 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害3%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -1223,7 +1223,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35075" name="黑暗艾迪奧斯外衣" type="Armor">
+	<item id="35075" type="Armor" name="다크 아이디오스 튜닉 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害8%。可以賦予魔法型和恢復型的成套精煉效果。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t703_u_i00"/>
@@ -1241,7 +1241,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35076" name="黑暗艾迪奧斯長襪" type="Armor">
+	<item id="35076" type="Armor" name="다크 아이디오스 호즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害5%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t703_l_i00"/>
@@ -1259,7 +1259,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35077" name="黑暗艾迪奧斯手套" type="Armor">
+	<item id="35077" type="Armor" name="다크 아이디오스 글로브 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t703_g_i00"/>
@@ -1275,7 +1275,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35078" name="黑暗艾迪奧斯鞋" type="Armor">
+	<item id="35078" type="Armor" name="다크 아이디오스 슈즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVP強化型道具，降低玩家角色給予的傷害2%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t703_b_i00"/>
@@ -1291,7 +1291,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35079" name="血腥艾迪奧斯頭盔" type="Armor">
+	<item id="35079" type="Armor" name="블러디 아이디오스 헬멧 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -1307,7 +1307,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35080" name="血腥艾迪奧斯胸甲" type="Armor">
+	<item id="35080" type="Armor" name="블러디 아이디오스 흉갑 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。可以賦予攻擊型和防禦型的成套精煉效果。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t701_u_i00"/>
@@ -1324,7 +1324,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35081" name="血腥艾迪奧斯脛甲" type="Armor">
+	<item id="35081" type="Armor" name="블러디 아이디오스 각반 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t701_l_i00"/>
@@ -1341,7 +1341,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35082" name="血腥艾迪奧斯護手" type="Armor">
+	<item id="35082" type="Armor" name="블러디 아이디오스 건틀렛 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t701_g_i00"/>
@@ -1357,7 +1357,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35083" name="血腥艾迪奧斯靴" type="Armor">
+	<item id="35083" type="Armor" name="블러디 아이디오스 부츠 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t701_b_i00"/>
@@ -1373,7 +1373,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35085" name="血腥艾迪奧斯皮頭盔" type="Armor">
+	<item id="35085" type="Armor" name="블러디 아이디오스 레더 헬멧 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -1389,7 +1389,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35086" name="血腥艾迪奧斯皮甲" type="Armor">
+	<item id="35086" type="Armor" name="블러디 아이디오스 레더 아머 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。可以賦予暗殺型和強化型的成套精煉效果。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t702_u_i00"/>
@@ -1406,7 +1406,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35087" name="血腥艾迪奧斯皮脛甲" type="Armor">
+	<item id="35087" type="Armor" name="블러디 아이디오스 레더 레깅스 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t702_l_i00"/>
@@ -1423,7 +1423,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35088" name="血腥艾迪奧斯皮手套" type="Armor">
+	<item id="35088" type="Armor" name="블러디 아이디오스 레더 글로브 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t702_g_i00"/>
@@ -1439,7 +1439,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35089" name="血腥艾迪奧斯皮靴" type="Armor">
+	<item id="35089" type="Armor" name="블러디 아이디오스 레더 부츠 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t702_b_i00"/>
@@ -1455,7 +1455,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35090" name="血腥艾迪奧斯頭箍" type="Armor">
+	<item id="35090" type="Armor" name="블러디 아이디오스 서클릿 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害3%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -1471,7 +1471,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35091" name="血腥艾迪奧斯外衣" type="Armor">
+	<item id="35091" type="Armor" name="블러디 아이디오스 튜닉 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害8%。可以賦予魔法型和恢復型的成套精煉效果。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t703_u_i00"/>
@@ -1489,7 +1489,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35092" name="血腥艾迪奧斯長襪" type="Armor">
+	<item id="35092" type="Armor" name="블러디 아이디오스 호즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害5%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t703_l_i00"/>
@@ -1507,7 +1507,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35093" name="血腥艾迪奧斯手套" type="Armor">
+	<item id="35093" type="Armor" name="블러디 아이디오스 글로브 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t703_g_i00"/>
@@ -1523,7 +1523,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35094" name="血腥艾迪奧斯鞋" type="Armor">
+	<item id="35094" type="Armor" name="블러디 아이디오스 슈즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">PVE強化型道具，降低玩家角色給予的傷害2%。可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t703_b_i00"/>
@@ -1539,7 +1539,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="35095" name="黑暗赫利奧斯鉋刀" type="Weapon">
+	<item id="35095" type="Weapon" name="다크 헬리오스 셰이퍼">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予導引、速度激發、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i10"/>
 		<set name="default_action" val="equip"/>
@@ -1565,7 +1565,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35096" name="黑暗赫利奧斯切刃" type="Weapon">
+	<item id="35096" type="Weapon" name="다크 헬리오스 커터">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予速度激發、弱點偵測、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i10"/>
 		<set name="default_action" val="equip"/>
@@ -1590,7 +1590,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35097" name="黑暗赫利奧斯殺刃" type="Weapon">
+	<item id="35097" type="Weapon" name="다크 헬리오스 슬래셔">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i10"/>
 		<set name="default_action" val="equip"/>
@@ -1615,7 +1615,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35098" name="黑暗赫利奧斯復仇者" type="Weapon">
+	<item id="35098" type="Weapon" name="다크 헬리오스 어벤져">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予速度激發、Crt.傷害、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i10"/>
 		<set name="default_action" val="equip"/>
@@ -1641,7 +1641,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35099" name="黑暗赫利奧斯戰爪" type="Weapon">
+	<item id="35099" type="Weapon" name="다크 헬리오스 파이터">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i10"/>
 		<set name="default_action" val="equip"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="34741" name="經驗值葫蘆" type="EtcItem">
+	<item id="34741" type="EtcItem" name="경험치 호리병">
 		<table name="#Desc">經驗值葫蘆壺精的禮物。透過副職業大師 「雷亞尼」可以交換成經驗值卷軸。無法交易、丟棄、刪除，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.exp_bottle"/>
 		<set name="material" val="liquid"/>
@@ -11,7 +11,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34742" name="經驗值卷軸-5億" type="EtcItem">
+	<item id="34742" type="EtcItem" name="경험치 주문서 - 5억">
 		<table name="#Desc">5億Exp充能卷軸。未滿等級85的角色使用的話，只會適用充能經驗值20%。僅限等級76以上的副職業（雙職業）使用。性向值大於0的角色無法使用。無法交易/丟棄/刪除，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.exp_bottle_scroll"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -24,7 +24,7 @@
 		</cond>
 	</item>
 
-	<item id="34750" name="經驗值葫蘆壺精-80小時" type="Armor">
+	<item id="34750" type="Armor" name="경험치 호리병 아가시온 - 80 시간">
 		<table name="#Desc">召喚經驗值葫蘆壺精的手鐲。若想封印壺精的話，必須要解除手鐲的裝備。解除手鐲的裝備時，在10秒內無法獲得經驗值葫蘆的神聖力量效果。無法交易、丟棄、刪除，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.exp_bottle_agathion"/>
 		<set name="default_action" val="equip"/>
@@ -38,7 +38,7 @@
 		<set name="duration" val="4800"/>
 	</item>
 
-	<item id="34759" name="學徒頭戴式耳機" type="Armor">
+	<item id="34759" type="Armor" name="멘티 헤드폰">
 		<table name="#Desc">頒發給學徒的頭飾。裝備的話，就會出現很氣派的效果，並告知你是個學徒。</table>
 		<set name="icon" val="BranchSys.icon.br_headphone_i00"/>
 		<set name="default_action" val="equip"/>

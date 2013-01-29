@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="33642" name="酷酷林手鐲" type="EtcItem">
+	<item id="33642" type="EtcItem" name="쿠쿠린 팔찌">
 		<table name="#Desc">裝備時可以騎乘酷酷林。無法交易/丟棄/刪除/出售於個人商店，但可以保管在個人倉庫。透過維他命管理者可在相同帳號內的角色之間轉移。</table>
 		<set name="icon" val="icon.accessary_blue_coral_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="9213-1"/>
 	</item>
 
-	<item id="33649" name="酷酷林羽毛頭盔" type="Armor">
+	<item id="33649" type="Armor" name="쿠쿠린 깃털 투구">
 		<table name="#Desc">酷酷林羽毛頭盔。無法交易或丟棄。透過維他命管理者可在相同帳號內的角色之間轉移。</table>
 		<set name="icon" val="icon.accessory_tengallon_brown_hat_i00"/>
 		<set name="default_action" val="equip"/>
@@ -24,7 +24,7 @@
 		<set name="weight" val="10"/>
 	</item>
 
-	<item id="33650" name="席琳魔杖" type="Weapon">
+	<item id="33650" type="Weapon" name="실렌 완드">
 		<table name="#Desc">席琳魔杖。</table>
 		<set name="icon" val="icon.weapon_apprentices_wand_i00"/>
 		<set name="default_action" val="equip"/>

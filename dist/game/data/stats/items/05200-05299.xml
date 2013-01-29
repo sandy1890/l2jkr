@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5200" type="EtcItem" name="Chest Key - Grade 5">
+	<item id="5200" type="EtcItem" name="상자 열쇠 - 5급">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -11,7 +11,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2065-4" />
 	</item>
-	<item id="5201" type="EtcItem" name="Chest Key - Grade 4">
+	<item id="5201" type="EtcItem" name="상자 열쇠 - 4급">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -22,7 +22,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2065-5" />
 	</item>
-	<item id="5202" type="EtcItem" name="Chest Key - Grade 3">
+	<item id="5202" type="EtcItem" name="상자 열쇠 - 3급">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -33,7 +33,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2065-6" />
 	</item>
-	<item id="5203" type="EtcItem" name="Chest Key - Grade 2">
+	<item id="5203" type="EtcItem" name="상자 열쇠 - 2급">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -44,7 +44,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2065-7" />
 	</item>
-	<item id="5204" type="EtcItem" name="Chest Key - Grade 1">
+	<item id="5204" type="EtcItem" name="상자 열쇠 - 1급">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -55,7 +55,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2065-8" />
 	</item>
-	<item id="5205" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="5205" type="EtcItem" name="용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -64,7 +64,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5206" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="5206" type="EtcItem" name="용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -73,7 +73,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5207" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="5207" type="EtcItem" name="용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -82,7 +82,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5208" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="5208" type="EtcItem" name="용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5209" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="5209" type="EtcItem" name="용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -100,7 +100,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5210" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="5210" type="EtcItem" name="용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -109,7 +109,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5211" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="5211" type="EtcItem" name="용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -118,7 +118,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5212" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="5212" type="EtcItem" name="용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -127,7 +127,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5213" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="5213" type="EtcItem" name="용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -136,7 +136,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5214" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="5214" type="EtcItem" name="용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -145,7 +145,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5215" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+	<item id="5215" type="EtcItem" name="용병배치표(텔레포터1)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -154,7 +154,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5216" type="Armor" name="Wolf's Level 75 Armor">
+	<item id="5216" type="Armor" name="늑대용 75랩 방어구">
 		<set name="icon" val="icon.etc_pet_armor_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -170,7 +170,7 @@
 			<add order="0x10" stat="pDef" val="71" />
 		</for>
 	</item>
-	<item id="5217" type="Weapon" name="Wolf's Level 75 Weapon">
+	<item id="5217" type="Weapon" name="늑대용 75랩 무기">
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -191,7 +191,7 @@
 			<set order="0x08" stat="pAtkSpd" val="277" />
 		</for>
 	</item>
-	<item id="5218" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+	<item id="5218" type="EtcItem" name="용병배치표(텔레포터2)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -200,7 +200,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5219" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+	<item id="5219" type="EtcItem" name="용병배치표(텔레포터3)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -209,7 +209,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5220" type="EtcItem" name="Metal Hardener">
+	<item id="5220" type="EtcItem" name="금속 강화제">
 		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -218,7 +218,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5221" type="EtcItem" name="Seed: Chilly Cobol">
+	<item id="5221" type="EtcItem" name="냉기의 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -229,7 +229,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="5222" type="EtcItem" name="Seed: Blue Cobol">
+	<item id="5222" type="EtcItem" name="푸른 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -240,7 +240,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="5223" type="EtcItem" name="Seed: Thorn Cobol">
+	<item id="5223" type="EtcItem" name="가시 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -251,7 +251,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="5224" type="EtcItem" name="Seed: Golden Cobol">
+	<item id="5224" type="EtcItem" name="황금 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -262,7 +262,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="5225" type="EtcItem" name="Seed: Great Cobol">
+	<item id="5225" type="EtcItem" name="대왕 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -273,7 +273,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="5226" type="EtcItem" name="Seed: Red Codran">
+	<item id="5226" type="EtcItem" name="붉은 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -284,7 +284,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="5227" type="EtcItem" name="Seed: Sea Codran">
+	<item id="5227" type="EtcItem" name="바다 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -295,7 +295,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="5228" type="EtcItem" name="Trash">
+	<item id="5228" type="EtcItem" name="trash">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -304,7 +304,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="5229" type="EtcItem" name="Trash">
+	<item id="5229" type="EtcItem" name="trash">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -313,7 +313,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="5230" type="EtcItem" name="Recipe: Mithril Arrow (100%)">
+	<item id="5230" type="EtcItem" name="레시피 : 미스릴 화살(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -325,7 +325,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5231" type="EtcItem" name="Recipe: Metal Hardener (100%)">
+	<item id="5231" type="EtcItem" name="레시피 : 금속 강화제(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -337,7 +337,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5232" type="EtcItem" name="White Fabric">
+	<item id="5232" type="EtcItem" name="흰 천">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
@@ -348,7 +348,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5233" type="Weapon" name="Keshanberk*Keshanberk">
+	<item id="5233" type="Weapon" name="크샨베르크*크샨베르크">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -375,7 +375,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5234" type="EtcItem" name="Mystery Potion">
+	<item id="5234" type="EtcItem" name="의문의 물약">
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -392,7 +392,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5235" type="EtcItem" name="Facelifting Potion - A">
+	<item id="5235" type="EtcItem" name="성형의 물약 - A">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -408,7 +408,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5236" type="EtcItem" name="Facelifting Potion - B">
+	<item id="5236" type="EtcItem" name="성형의 물약 - B">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -424,7 +424,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5237" type="EtcItem" name="Facelifting Potion - C">
+	<item id="5237" type="EtcItem" name="성형의 물약 - C">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -440,7 +440,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5238" type="EtcItem" name="Dye Potion - A">
+	<item id="5238" type="EtcItem" name="염색의 물약 - A">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -456,7 +456,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5239" type="EtcItem" name="Dye Potion - B">
+	<item id="5239" type="EtcItem" name="염색의 물약 - B">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -472,7 +472,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5240" type="EtcItem" name="Dye Potion - C">
+	<item id="5240" type="EtcItem" name="염색의 물약 - C">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -488,7 +488,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5241" type="EtcItem" name="Dye Potion - D">
+	<item id="5241" type="EtcItem" name="염색의 물약 - D">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -507,7 +507,7 @@
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
-	<item id="5242" type="EtcItem" name="Hair Style Change Potion - A">
+	<item id="5242" type="EtcItem" name="헤어체인지 물약 - A">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -523,7 +523,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5243" type="EtcItem" name="Hair Style Change Potion - B">
+	<item id="5243" type="EtcItem" name="헤어체인지 물약 - B">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -539,7 +539,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5244" type="EtcItem" name="Hair Style Change Potion - C">
+	<item id="5244" type="EtcItem" name="헤어체인지 물약 - C">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -555,7 +555,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5245" type="EtcItem" name="Hair Style Change Potion - D">
+	<item id="5245" type="EtcItem" name="헤어체인지 물약 - D">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -571,7 +571,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5246" type="EtcItem" name="Hair Style Change Potion - E">
+	<item id="5246" type="EtcItem" name="헤어체인지 물약 - E">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -587,7 +587,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5247" type="EtcItem" name="Hair Style Change Potion - F">
+	<item id="5247" type="EtcItem" name="헤어체인지 물약 - F">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -603,7 +603,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5248" type="EtcItem" name="Hair Style Change Potion - G">
+	<item id="5248" type="EtcItem" name="헤어체인지 물약 - G">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -619,7 +619,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="5249" type="EtcItem" name="Commemorative Item: First Anniversary of Lineage II Service">
+	<item id="5249" type="EtcItem" name="리니지II 서비스 1주년 기념아이템">
 		<set name="icon" val="icon.etc_l2_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
@@ -629,7 +629,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="5250" type="EtcItem" name="Greater Compressed Package of Soulshots (No-Grade)">
+	<item id="5250" type="EtcItem" name="고급 무급 정령탄압축팩">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -639,7 +639,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2104-1" />
 	</item>
-	<item id="5251" type="EtcItem" name="Greater Compressed Package of Soulshots (D-Grade)">
+	<item id="5251" type="EtcItem" name="고급 정령탄압축팩-D그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -649,7 +649,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2105-1" />
 	</item>
-	<item id="5252" type="EtcItem" name="Greater Compressed Package of Soulshots (C-Grade)">
+	<item id="5252" type="EtcItem" name="고급 정령탄압축팩-C그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -659,7 +659,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2106-1" />
 	</item>
-	<item id="5253" type="EtcItem" name="Greater Compressed Package of Soulshots (B-Grade)">
+	<item id="5253" type="EtcItem" name="고급 정령탄압축팩-B그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -669,7 +669,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2107-1" />
 	</item>
-	<item id="5254" type="EtcItem" name="Greater Compressed Package of Soulshots (A-Grade)">
+	<item id="5254" type="EtcItem" name="고급 정령탄압축팩-A그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -679,7 +679,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2108-1" />
 	</item>
-	<item id="5255" type="EtcItem" name="Greater Compressed Package of Soulshots (S-Grade)">
+	<item id="5255" type="EtcItem" name="고급 정령탄압축팩-S그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -689,7 +689,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2109-1" />
 	</item>
-	<item id="5256" type="EtcItem" name="Greater Compressed Package of Spiritshots (No-Grade)">
+	<item id="5256" type="EtcItem" name="고급 무급 마정탄압축팩">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -699,7 +699,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2110-1" />
 	</item>
-	<item id="5257" type="EtcItem" name="Greater Compressed Package of Spiritshots (D-Grade)">
+	<item id="5257" type="EtcItem" name="고급 마정탄압축팩-D그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -709,7 +709,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2111-1" />
 	</item>
-	<item id="5258" type="EtcItem" name="Greater Compressed Package of Spiritshots (C-Grade)">
+	<item id="5258" type="EtcItem" name="고급 마정탄압축팩-C그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -719,7 +719,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2112-1" />
 	</item>
-	<item id="5259" type="EtcItem" name="Greater Compressed Package of Spiritshots (B-Grade)">
+	<item id="5259" type="EtcItem" name="고급 마정탄압축팩-B그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -729,7 +729,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2113-1" />
 	</item>
-	<item id="5260" type="EtcItem" name="Greater Compressed Package of Spiritshots (A-Grade)">
+	<item id="5260" type="EtcItem" name="고급 마정탄압축팩-A그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -739,7 +739,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2114-1" />
 	</item>
-	<item id="5261" type="EtcItem" name="Greater Compressed Package of Spiritshots (S-Grade)">
+	<item id="5261" type="EtcItem" name="고급 마정탄압축팩-S그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -749,7 +749,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2115-1" />
 	</item>
-	<item id="5262" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (No-Grade)">
+	<item id="5262" type="EtcItem" name="고급 무급 축마정탄압축팩">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -759,7 +759,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2116-1" />
 	</item>
-	<item id="5263" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (D-Grade)">
+	<item id="5263" type="EtcItem" name="고급 축마정탄압축팩-D그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -769,7 +769,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2117-1" />
 	</item>
-	<item id="5264" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (C-Grade)">
+	<item id="5264" type="EtcItem" name="고급 축마정탄압축팩-C그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -779,7 +779,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2118-1" />
 	</item>
-	<item id="5265" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (B-Grade)">
+	<item id="5265" type="EtcItem" name="고급 축마정탄압축팩-B그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -789,7 +789,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2119-1" />
 	</item>
-	<item id="5266" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (A-Grade)">
+	<item id="5266" type="EtcItem" name="고급 축마정탄압축팩-A그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -799,7 +799,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2120-1" />
 	</item>
-	<item id="5267" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots (S-Grade)">
+	<item id="5267" type="EtcItem" name="고급 축마정탄압축팩-S그레이드">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -809,7 +809,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2121-1" />
 	</item>
-	<item id="5268" type="EtcItem" name="Recipe: Greater Soulshot (D) Compressed Package (100%)">
+	<item id="5268" type="EtcItem" name="레시피 : 고급 정령탄(D) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -821,7 +821,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5269" type="EtcItem" name="Recipe: Greater Soulshot (C) Compressed Package(100%)">
+	<item id="5269" type="EtcItem" name="레시피 : 고급 정령탄(C) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -833,7 +833,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5270" type="EtcItem" name="Recipe: Greater Soulshot (B) Compressed Package(100%)">
+	<item id="5270" type="EtcItem" name="레시피 : 고급 정령탄(B) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -845,7 +845,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5271" type="EtcItem" name="Recipe: Greater Soulshot (A) Compressed Package(100%)">
+	<item id="5271" type="EtcItem" name="레시피 : 고급 정령탄(A) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -857,7 +857,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5272" type="EtcItem" name="Recipe: Greater Soulshot (S) Compressed Package(100%)">
+	<item id="5272" type="EtcItem" name="레시피 : 고급 정령탄(S) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -869,7 +869,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5273" type="EtcItem" name="Recipe: Greater Spiritshot (D) Compressed Package(100%)">
+	<item id="5273" type="EtcItem" name="레시피 : 고급 마정탄(D) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5274" type="EtcItem" name="Recipe: Greater Spiritshot (C) Compressed Package(100%)">
+	<item id="5274" type="EtcItem" name="레시피 : 고급 마정탄(C) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -893,7 +893,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5275" type="EtcItem" name="Recipe: Greater Spiritshot (B) Compressed Package(100%)">
+	<item id="5275" type="EtcItem" name="레시피 : 고급 마정탄(B) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -905,7 +905,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5276" type="EtcItem" name="Recipe: Greater Spiritshot (A) Compressed Package(100%)">
+	<item id="5276" type="EtcItem" name="레시피 : 고급 마정탄(A) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -917,7 +917,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5277" type="EtcItem" name="Recipe: Greater Spiritshot (S) Compressed Package(100%)">
+	<item id="5277" type="EtcItem" name="레시피 : 고급 마정탄(S) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -929,7 +929,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5278" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)">
+	<item id="5278" type="EtcItem" name="레시피 : 고급 축마정탄(D) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -941,7 +941,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5279" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)">
+	<item id="5279" type="EtcItem" name="레시피 : 고급 축마정탄(C) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -953,7 +953,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5280" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)">
+	<item id="5280" type="EtcItem" name="레시피 : 고급 축마정탄(B) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -965,7 +965,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5281" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)">
+	<item id="5281" type="EtcItem" name="레시피 : 고급 축마정탄(A) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -977,7 +977,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5282" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)">
+	<item id="5282" type="EtcItem" name="레시피 : 고급 축마정탄(S) 압축팩(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -989,7 +989,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5283" type="EtcItem" name="Rice Cake">
+	<item id="5283" type="EtcItem" name="모찌">
 		<set name="icon" val="icon.etc_mochi_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -1000,7 +1000,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2136-1" />
 	</item>
-	<item id="5284" type="Weapon" name="Zweihander">
+	<item id="5284" type="Weapon" name="쯔바이핸더">
 		<set name="icon" val="icon.weapon_zweihander_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1021,7 +1021,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="5285" type="Weapon" name="Heavy Sword">
+	<item id="5285" type="Weapon" name="헤비 소드">
 		<set name="icon" val="icon.weapon_heavy_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1048,7 +1048,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5286" type="Weapon" name="Berserker Blade">
+	<item id="5286" type="Weapon" name="버서커 블레이드">
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1075,7 +1075,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="5287" type="Armor" name="Sealed Dark Crystal breastplate">
+	<item id="5287" type="Armor" name="봉인된 다크 크리스탈 흉갑">
 		<set name="icon" val="icon.armor_t74_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1095,7 +1095,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5288" type="Armor" name="Sealed Dark Crystal Gaiters">
+	<item id="5288" type="Armor" name="봉인된 다크 크리스탈 각반">
 		<set name="icon" val="icon.armor_t74_l_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1115,7 +1115,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5289" type="Armor" name="Sealed Dark Crystal Helmet">
+	<item id="5289" type="Armor" name="봉인된 다크 크리스탈 헬멧">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1131,7 +1131,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5290" type="Armor" name="Sealed Dark Crystal Gloves">
+	<item id="5290" type="Armor" name="봉인된 다크 크리스탈 글로브">
 		<set name="icon" val="icon.armor_t74_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1147,7 +1147,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5291" type="Armor" name="Sealed Dark Crystal Boots">
+	<item id="5291" type="Armor" name="봉인된 다크 크리스탈 부츠">
 		<set name="icon" val="icon.armor_t74_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1163,7 +1163,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5292" type="Armor" name="Sealed Dark Crystal Shield">
+	<item id="5292" type="Armor" name="봉인된 다크 크리스탈 쉴드">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1184,7 +1184,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="5293" type="Armor" name="Sealed Tallum Plate Armor">
+	<item id="5293" type="Armor" name="봉인된 탈룸 플레이트 아머">
 		<set name="icon" val="icon.armor_t77_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1204,7 +1204,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5294" type="Armor" name="Sealed Tallum Helmet">
+	<item id="5294" type="Armor" name="봉인된 탈룸 헬멧">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1220,7 +1220,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5295" type="Armor" name="Sealed Tallum Gloves">
+	<item id="5295" type="Armor" name="봉인된 탈룸 글로브">
 		<set name="icon" val="icon.armor_t77_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1236,7 +1236,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5296" type="Armor" name="Sealed Tallum Boots">
+	<item id="5296" type="Armor" name="봉인된 탈룸 부츠">
 		<set name="icon" val="icon.armor_t77_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1252,7 +1252,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5297" type="Armor" name="Sealed Dark Crystal Leather Armor">
+	<item id="5297" type="Armor" name="봉인된 다크 크리스탈 레더 메일">
 		<set name="icon" val="icon.armor_t75_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1269,7 +1269,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5298" type="Armor" name="Sealed Dark Crystal Leggings">
+	<item id="5298" type="Armor" name="봉인된 레깅 오브 다크 크리스탈">
 		<set name="icon" val="icon.armor_t75_l_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1286,7 +1286,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5299" type="Armor" name="Sealed Gloves of Underworld">
+	<item id="5299" type="Armor" name="봉인된 글로브 오브 언더월드">
 		<set name="icon" val="icon.armor_t40_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />

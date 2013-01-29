@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="22100" type="EtcItem" name="Spiritshot Pack (C-Grade)">
+	<item id="22100" type="EtcItem" name="마정탄 팩 - C그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -13,7 +13,7 @@
 		<set name="item_skill" val="26069-2" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22101" type="EtcItem" name="Spiritshot Pack (B-Grade)">
+	<item id="22101" type="EtcItem" name="마정탄 팩 - B그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_b_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -26,7 +26,7 @@
 		<set name="item_skill" val="26069-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22102" type="EtcItem" name="Spiritshot Pack (A-Grade)">
+	<item id="22102" type="EtcItem" name="마정탄 팩 - A그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -39,7 +39,7 @@
 		<set name="item_skill" val="26069-4" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22103" type="EtcItem" name="Spiritshot Pack (S-Grade)">
+	<item id="22103" type="EtcItem" name="마정탄 팩 - S그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_s_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -52,7 +52,7 @@
 		<set name="item_skill" val="26069-5" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22104" type="EtcItem" name="Soulshot Pack (C-Grade)">
+	<item id="22104" type="EtcItem" name="정령탄 팩 - D그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_d_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -65,7 +65,7 @@
 		<set name="item_skill" val="26070-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22105" type="EtcItem" name="Soulshot Pack (C-Grade)">
+	<item id="22105" type="EtcItem" name="정령탄 팩 - C그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_c_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -78,7 +78,7 @@
 		<set name="item_skill" val="26070-2" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22106" type="EtcItem" name="Soulshot Pack (B-Grade)">
+	<item id="22106" type="EtcItem" name="정령탄 팩 - B그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_b_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -91,7 +91,7 @@
 		<set name="item_skill" val="26070-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22107" type="EtcItem" name="Soulshot Pack (A-Grade)">
+	<item id="22107" type="EtcItem" name="정령탄 팩 - A그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_a_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -104,7 +104,7 @@
 		<set name="item_skill" val="26070-4" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22108" type="EtcItem" name="Soulshot Pack (S-Grade)">
+	<item id="22108" type="EtcItem" name="정령탄 팩 - S그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_s_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -117,7 +117,7 @@
 		<set name="item_skill" val="26070-5" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22109" type="EtcItem" name="Blessed Spiritshot Large Pack (C-Grade)">
+	<item id="22109" type="EtcItem" name="축복받은 마정탄 대형 팩 - D그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_d_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -130,7 +130,7 @@
 		<set name="item_skill" val="26068-6" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22110" type="EtcItem" name="Blessed Spiritshot Large Pack (C-Grade)">
+	<item id="22110" type="EtcItem" name="축복받은 마정탄 대형 팩 - C그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_c_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -143,7 +143,7 @@
 		<set name="item_skill" val="26068-7" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22111" type="EtcItem" name="Blessed Spiritshot Large Pack (B-Grade)">
+	<item id="22111" type="EtcItem" name="축복받은 마정탄 대형 팩 - B그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -156,7 +156,7 @@
 		<set name="item_skill" val="26068-8" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22112" type="EtcItem" name="Blessed Spiritshot Large Pack (A-Grade)">
+	<item id="22112" type="EtcItem" name="축복받은 마정탄 대형 팩 - A그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_a_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -169,7 +169,7 @@
 		<set name="item_skill" val="26068-9" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22113" type="EtcItem" name="Blessed Spiritshot Large Pack (S-Grade)">
+	<item id="22113" type="EtcItem" name="축복받은 마정탄 대형 팩 - S그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_s_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -182,7 +182,7 @@
 		<set name="item_skill" val="26068-10" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22114" type="EtcItem" name="Spiritshot Large Pack (C-Grade)">
+	<item id="22114" type="EtcItem" name="마정탄 대형 팩 - D그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_spiritshot_d_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -195,7 +195,7 @@
 		<set name="item_skill" val="26069-6" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22115" type="EtcItem" name="Spiritshot Large Pack (C-Grade)">
+	<item id="22115" type="EtcItem" name="마정탄 대형 팩 - C그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_spiritshot_c_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -208,7 +208,7 @@
 		<set name="item_skill" val="26069-7" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22116" type="EtcItem" name="Spiritshot Large Pack (B-Grade)">
+	<item id="22116" type="EtcItem" name="마정탄 대형 팩 - B그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_spiritshot_b_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -221,7 +221,7 @@
 		<set name="item_skill" val="26069-8" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22117" type="EtcItem" name="Spiritshot Large Pack (A-Grade)">
+	<item id="22117" type="EtcItem" name="마정탄 대형 팩 - A그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_spiritshot_a_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -234,7 +234,7 @@
 		<set name="item_skill" val="26069-9" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22118" type="EtcItem" name="Spiritshot Large Pack (S-Grade)">
+	<item id="22118" type="EtcItem" name="마정탄 대형 팩 - S그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_spiritshot_s_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -247,7 +247,7 @@
 		<set name="item_skill" val="26069-10" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22119" type="EtcItem" name="Soulshot Large Pack (C-Grade)">
+	<item id="22119" type="EtcItem" name="정령탄 대형 팩 - D그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_soulshot_d_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -260,7 +260,7 @@
 		<set name="item_skill" val="26070-6" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22120" type="EtcItem" name="Soulshot Large Pack (C-Grade)">
+	<item id="22120" type="EtcItem" name="정령탄 대형 팩 - C그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_soulshot_c_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -273,7 +273,7 @@
 		<set name="item_skill" val="26070-7" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22121" type="EtcItem" name="Soulshot Large Pack (B-Grade)">
+	<item id="22121" type="EtcItem" name="정령탄 대형 팩 - B그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_soulshot_b_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -286,7 +286,7 @@
 		<set name="item_skill" val="26070-8" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22122" type="EtcItem" name="Soulshot Large Pack (A-Grade)">
+	<item id="22122" type="EtcItem" name="정령탄 대형 팩 - A그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_soulshot_a_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -299,7 +299,7 @@
 		<set name="item_skill" val="26070-9" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22123" type="EtcItem" name="Soulshot Large Pack (S-Grade)">
+	<item id="22123" type="EtcItem" name="정령탄 대형 팩 - S그레이드">
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_soulshot_s_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -312,7 +312,7 @@
 		<set name="item_skill" val="26070-10" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22124" type="EtcItem" name="Wrapped daisy hairpin">
+	<item id="22124" type="EtcItem" name="포장된 데이지 꽃 헤어핀">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -327,7 +327,7 @@
 		<set name="item_skill" val="26071-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22125" type="EtcItem" name="Wrapped forget-me-not hairpin">
+	<item id="22125" type="EtcItem" name="포장된 물망초 헤어핀">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -342,7 +342,7 @@
 		<set name="item_skill" val="26071-2" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22126" type="EtcItem" name="Wrapped outlaw's eyepatch">
+	<item id="22126" type="EtcItem" name="포장된 무법자의 안대">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -357,7 +357,7 @@
 		<set name="item_skill" val="26071-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22127" type="EtcItem" name="Wrapped pirate's eyepatch">
+	<item id="22127" type="EtcItem" name="포장된 해적의 안대">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -372,7 +372,7 @@
 		<set name="item_skill" val="26071-4" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22128" type="EtcItem" name="Wrapped Monocle">
+	<item id="22128" type="EtcItem" name="포장된 모노클">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -387,7 +387,7 @@
 		<set name="item_skill" val="26071-5" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22129" type="EtcItem" name="Wrapped Red Mask of Victory">
+	<item id="22129" type="EtcItem" name="포장된 승리의 붉은 마스크">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -402,7 +402,7 @@
 		<set name="item_skill" val="26071-6" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22130" type="EtcItem" name="Wrapped Red Horn of Victory">
+	<item id="22130" type="EtcItem" name="포장된 승리의 붉은 뿔">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -417,7 +417,7 @@
 		<set name="item_skill" val="26071-7" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22131" type="EtcItem" name="Wrapped Party Mask">
+	<item id="22131" type="EtcItem" name="포장된 파티 마스크">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -432,7 +432,7 @@
 		<set name="item_skill" val="26071-8" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22132" type="EtcItem" name="Wrapped Red Party Mask">
+	<item id="22132" type="EtcItem" name="포장된 붉은 파티 마스크">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -447,7 +447,7 @@
 		<set name="item_skill" val="26071-9" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22133" type="EtcItem" name="Wrapped Cat Ear">
+	<item id="22133" type="EtcItem" name="포장된 고양이 귀">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -462,7 +462,7 @@
 		<set name="item_skill" val="26071-10" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22134" type="EtcItem" name="Wrapped Lady's Hair Pin">
+	<item id="22134" type="EtcItem" name="포장된 귀부인의 헤어핀">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -477,7 +477,7 @@
 		<set name="item_skill" val="26071-11" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22135" type="EtcItem" name="Wrapped Raccoon Ear">
+	<item id="22135" type="EtcItem" name="포장된 너구리 귀">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -492,7 +492,7 @@
 		<set name="item_skill" val="26071-12" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22136" type="EtcItem" name="Wrapped Rabbit Ear">
+	<item id="22136" type="EtcItem" name="포장된 토끼 귀">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -507,7 +507,7 @@
 		<set name="item_skill" val="26071-13" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22137" type="EtcItem" name="Wrapped Little Angel's Wings">
+	<item id="22137" type="EtcItem" name="포장된 작은 천사 날개">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -522,7 +522,7 @@
 		<set name="item_skill" val="26071-14" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22138" type="EtcItem" name="Wrapped Fairy's Tentacle">
+	<item id="22138" type="EtcItem" name="포장된 페어리의 더듬이">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -537,7 +537,7 @@
 		<set name="item_skill" val="26071-15" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22139" type="EtcItem" name="Wrapped Dandy's Chapeau">
+	<item id="22139" type="EtcItem" name="포장된 멋쟁이의 샤프롱">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -552,7 +552,7 @@
 		<set name="item_skill" val="26071-16" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22140" type="EtcItem" name="Wrapped Artisan's Goggles">
+	<item id="22140" type="EtcItem" name="포장된 장인의 고글">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -567,7 +567,7 @@
 		<set name="item_skill" val="26071-17" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22141" type="EtcItem" name="Wrapped Pet Exchange Ticket - Buffalo">
+	<item id="22141" type="EtcItem" name="포장된 펫 교환 티켓 - 버팔로">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_pet_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -582,7 +582,7 @@
 		<set name="item_skill" val="26072-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22142" type="EtcItem" name="Wrapped Pet Exchange Ticket - Cougar">
+	<item id="22142" type="EtcItem" name="포장된 펫 교환 티켓 - 쿠거">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_pet_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -597,7 +597,7 @@
 		<set name="item_skill" val="26072-2" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22143" type="EtcItem" name="Wrapped Pet Exchange Ticket - kookaburra">
+	<item id="22143" type="EtcItem" name="포장된 펫 교환 티켓 - 쿠카부로">
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_pet_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -612,7 +612,7 @@
 		<set name="item_skill" val="26072-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22144" type="EtcItem" name="Bone Bolt">
+	<item id="22144" type="EtcItem" name="뼈 볼트">
 		<set name="icon" val="br_cashtex.item.br_cash_bone_bolt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="bolt" />
@@ -628,7 +628,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="22145" type="EtcItem" name="Steel Bolt">
+	<item id="22145" type="EtcItem" name="강철 볼트">
 		<set name="icon" val="br_cashtex.item.br_cash_fine_steel_bolt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="bolt" />
@@ -644,7 +644,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="22146" type="EtcItem" name="Silver Bolt">
+	<item id="22146" type="EtcItem" name="은 볼트">
 		<set name="icon" val="br_cashtex.item.br_cash_silver_bolt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="bolt" />
@@ -660,7 +660,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="22147" type="EtcItem" name="Mithril Bolt">
+	<item id="22147" type="EtcItem" name="미스릴 볼트">
 		<set name="icon" val="br_cashtex.item.br_cash_mithril_bolt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="bolt" />
@@ -676,7 +676,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="22148" type="EtcItem" name="Bolt of Light">
+	<item id="22148" type="EtcItem" name="빛의 볼트">
 		<set name="icon" val="br_cashtex.item.br_cash_shining_bolt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="bolt" />
@@ -692,7 +692,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="22149" type="EtcItem" name="Bone Bolt Container">
+	<item id="22149" type="EtcItem" name="뼈 볼트통">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -708,7 +708,7 @@
 		<set name="item_skill" val="26073-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22150" type="EtcItem" name="Steel Bolt Container">
+	<item id="22150" type="EtcItem" name="강철 볼트통">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_bolts_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -724,7 +724,7 @@
 		<set name="item_skill" val="26073-2" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22151" type="EtcItem" name="Silver Bolt Container">
+	<item id="22151" type="EtcItem" name="은 볼트통">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_silver_bolts_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -740,7 +740,7 @@
 		<set name="item_skill" val="26073-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22152" type="EtcItem" name="Mithril Bolt Container">
+	<item id="22152" type="EtcItem" name="미스릴 볼트통">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -756,7 +756,7 @@
 		<set name="item_skill" val="26073-4" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22153" type="EtcItem" name="Bolt Container of Light">
+	<item id="22153" type="EtcItem" name="빛의 볼트통">
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_bolts_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -772,7 +772,7 @@
 		<set name="item_skill" val="26073-5" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="22154" type="Armor" name="Shadow Weapon - Wolf Hat - Blessed Escape">
+	<item id="22154" type="Armor" name="투영병기 - 늑대 모자  축복받은 귀환">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -788,7 +788,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="22155" type="Armor" name="Shadow Weapon - Wolf Hat - Blessed Resurrection">
+	<item id="22155" type="Armor" name="투영병기 - 늑대 모자  축복받은 부활">
 		<set name="icon" val="icon.accessory_wolf_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -804,7 +804,7 @@
 		<set name="duration" val="1440" />
 		<set name="useSkillDisTime" val="120" />
 	</item>
-	<item id="22156" type="Armor" name="Daisy Hairpin">
+	<item id="22156" type="Armor" name="데이지 꽃 헤어핀">
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -818,7 +818,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="22157" type="Armor" name="Forget-me-not Hairpin">
+	<item id="22157" type="Armor" name="물망초 헤어핀">
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -832,7 +832,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="22158" type="Armor" name="Outlaw's Eyepatch">
+	<item id="22158" type="Armor" name="무법자의 안대">
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -843,7 +843,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22159" type="Armor" name="Pirate's Eyepatch">
+	<item id="22159" type="Armor" name="해적의 안대">
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -854,7 +854,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22160" type="Armor" name="Monocle">
+	<item id="22160" type="Armor" name="모노클">
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -865,7 +865,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22161" type="Armor" name="Red Mask of Victory">
+	<item id="22161" type="Armor" name="승리의 붉은 마스크">
 		<set name="icon" val="icon.accessory_worldcup_mask_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -876,7 +876,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22162" type="Armor" name="Red Horn of Victory">
+	<item id="22162" type="Armor" name="승리의 붉은 뿔">
 		<set name="icon" val="icon.accessory_hair_cornu_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -887,7 +887,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22163" type="Armor" name="Party Mask">
+	<item id="22163" type="Armor" name="파티 마스크">
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -898,7 +898,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22164" type="Armor" name="Red Party Mask">
+	<item id="22164" type="Armor" name="붉은 파티 마스크">
 		<set name="icon" val="icon.etc_party_mask_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -908,7 +908,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22165" type="Armor" name="Cat Ears">
+	<item id="22165" type="Armor" name="고양이 귀">
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -919,7 +919,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22166" type="Armor" name="Lady's Hair Pin">
+	<item id="22166" type="Armor" name="귀부인의 헤어핀">
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -933,7 +933,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="22167" type="Armor" name="Raccoon Ears">
+	<item id="22167" type="Armor" name="너구리 귀">
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -944,7 +944,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22168" type="Armor" name="Rabbit Ear">
+	<item id="22168" type="Armor" name="토끼 귀">
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -955,7 +955,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22169" type="Armor" name="Little Angel Wings">
+	<item id="22169" type="Armor" name="작은 천사 날개">
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -966,7 +966,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22170" type="Armor" name="Fairy's Tentacle">
+	<item id="22170" type="Armor" name="페어리의 더듬이">
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -977,7 +977,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22171" type="Armor" name="Dandy's Chapeau">
+	<item id="22171" type="Armor" name="멋쟁이의 샤프롱">
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -988,7 +988,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22172" type="Armor" name="Artisan's Goggles">
+	<item id="22172" type="Armor" name="장인의 고글">
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -999,7 +999,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22173" type="Armor" name="Improved Ring of Baium">
+	<item id="22173" type="Armor" name="강화된 바이움의 반지">
 		<!-- Description: MP +21, Resistance to Poison +40%, Poison attack rate +40%, Resistance to Hold +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, and Casting Spd. Only one effect is applied when wearing two of the same ring. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="equip" />
@@ -1018,7 +1018,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="22174" type="Armor" name="Improved Ring of Queen Ant">
+	<item id="22174" type="Armor" name="강화된 여왕개미의 반지">
 		<!-- Description: MP +21, Resistance to Poison +30%, Poison attack rate +30%, Resistance to Hold +20%, Hold attack rate +20%, and increases Accuracy and Critical Damage. Only one effect is applied when wearing two of the same ring. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
@@ -1037,7 +1037,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="22175" type="Armor" name="Improved Blessed Earring of Zaken">
+	<item id="22175" type="Armor" name="강화된 불멸의 자켄 귀걸이">
 		<!-- Description: MP +37, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount +15%, vampiric rage effect, Resistance to Shock/Metal attacks +30%, Shock/Metal attack rate +30%, and Resistance to Dark +15. Only one effect is applied even when the same two earrings are worn. If it is equipped together with a standard Earring of Zaken, only the effect of Blessed Earring of Zaken will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
@@ -1055,31 +1055,31 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="22176" type="EtcItem" name="Angry Bunny Lure Scroll - Event">
+	<item id="22176" type="EtcItem" name="이벤트 - 불량 토끼 소환 주문서">
 		<!-- Description: Scroll that summons a Bad Bunny. If you relieve the Bad Bunny's fatigue, you can acquire Apiga. (Recovery is only possible through Cupid's Fatigue Recovery Potion or Cupid's Powerful Fatigue Recovery Potion.) -->
 		<set name="icon" val="BranchSys2.icon2.g_ev_rabbit" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22177" type="EtcItem" name="Fearless Angry Bunny Lure Scroll - Event">
+	<item id="22177" type="EtcItem" name="이벤트 - 간이 없는 토끼 소환 주문서">
 		<!-- Description: Scroll that summons a Liverless Bunny. While the Liverless Bunny is being recovered, it can sometimes transform into a Big Liver Bunny. (Recovery is only possible through Cupid's Fatigue Recovery Potion or Cupid's Powerful Fatigue Recovery Potion.) -->
 		<set name="icon" val="BranchSys2.icon2.g_ev_rabbit" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22178" type="EtcItem" name="Large Angry Bunny Lure Scroll - Event">
+	<item id="22178" type="EtcItem" name="이벤트 - 불량 토끼 대장 소환 주문서">
 		<!-- Description: Scroll that summons a Bad Bunny Captain. If you relieve the Bad Bunny Captain's fatigue, you can acquire Apiga. (Recovery is only possible through Cupid's Fatigue Recovery Potion or Cupid's Powerful Fatigue Recovery Potion.) -->
 		<set name="icon" val="BranchSys2.icon2.g_ev_rabbit_boss" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22179" type="EtcItem" name="Large Fearless Bunny Lure Scroll - Event">
+	<item id="22179" type="EtcItem" name="이벤트 - 간이 없는 토끼 대장 소환 주문서">
 		<!-- Description: Scroll that summons a Liverless Bunny Captain. While the Liverless Bunny Captain is being recovered, it can sometimes transform into a Big Liver Bunny Captain. (Recovery is only possible through Cupid's Fatigue Recovery Potion or Cupid's Powerful Fatigue Recovery Potion.) -->
 		<set name="icon" val="BranchSys2.icon2.g_ev_rabbit_boss" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22180" type="EtcItem" name="Bunny Anger Management Kit - Event">
+	<item id="22180" type="EtcItem" name="이벤트 - 불량 토끼 갱생 이벤트 팩">
 		<!-- Description: An event pack that can be obtained once every 12 hours per account. If you double click it, you will obtain a Bad Bunny Scroll of Summon and "Cupid's Fatigue Recovery Potion" that are needed for the event. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="steel" />
@@ -1088,19 +1088,19 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22181" type="EtcItem" name="Bunny Pacifier Juice - Event">
+	<item id="22181" type="EtcItem" name="이벤트 - 큐피드의 원기회복제">
 		<!-- Description: Recovers energy when used on a Bunny. -->
 		<set name="icon" val="icon.etc_faitgue_relief_of_cupid_i00" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22182" type="EtcItem" name="Improved Bunny Pacifier Juice - Event">
+	<item id="22182" type="EtcItem" name="이벤트 - 큐피드의 강력 원기회복제">
 		<!-- Description: Recovers energy when used on a Bunny. It has a better effect than Cupid's Fatigue Recovery Potion. -->
 		<set name="icon" val="icon.etc_nutrients_of_cupid_i00" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22183" type="Armor" name="Graduation Cap">
+	<item id="22183" type="Armor" name="학사모">
 		<!-- Description: Graduation Cap. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.accessory_graduation_cap_i00" />
 		<set name="default_action" val="equip" />
@@ -1111,7 +1111,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22184" type="Armor" name="Admiral's Hat">
+	<item id="22184" type="Armor" name="제독의 정모">
 		<!-- Description: Admiral's Hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.Accessary_middle_ages_i01" />
 		<set name="default_action" val="equip" />
@@ -1122,14 +1122,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22185" type="EtcItem" name="Illumination - Yellow">
+	<item id="22185" type="EtcItem" name="일루미네이션 - 옐로우">
 		<!-- Description: Brightly burning illumination. -->
 		<set name="icon" val="BranchSys2.icon.g_illumination_yellow" />
 		<set name="material" val="paper" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22186" type="EtcItem" name="Cat the Ranger Summon Necklace Exchange Coupon">
+	<item id="22186" type="EtcItem" name="캣 더 레인저 소환 목걸이 교환권">
 		<!-- Description: Coupon that can be exchanged for a necklace (5 hour) that summons a Cat the Ranger. Can be exchanged through the Dimensional Merchant. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="steel" />
@@ -1139,7 +1139,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="22187" type="EtcItem" name="Birthday Present Pack">
+	<item id="22187" type="EtcItem" name="기쁨의 생일 선물 상자">
 		<!-- Description: Birthday present received from Alegria on the character's birthday. When used, you can obtain (3) Birthday Vitality Potion(s), a birthday cake, and a Birthday Hat. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="peel" />
@@ -1152,7 +1152,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="22188,3,3,100;21595,1,1,100;21594,1,1,100" />
 	</item>
-	<item id="22188" type="EtcItem" name="Birthday Vitality Potion">
+	<item id="22188" type="EtcItem" name="기쁨의 활력 포션">
 		<!-- Description: Upon use, for 4 hours, when Exp. is acquired through hunting, vitality is recovered. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
@@ -1169,7 +1169,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="22189" type="Armor" name="Child's Hat - Boy">
+	<item id="22189" type="Armor" name="어린이 모자 - 남자">
 		<!-- Description: Taiwanese child exclusive hat (boy). Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Item that can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_hat_for_boy_i00" />
 		<set name="default_action" val="equip" />
@@ -1180,7 +1180,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="22190" type="Armor" name="Child's Hat - Girl">
+	<item id="22190" type="Armor" name="어린이 모자 - 여자">
 		<!-- Description: Taiwanese child exclusive hat (girl). Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Item that can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_hat_for_girl_i00" />
 		<set name="default_action" val="equip" />
@@ -1192,7 +1192,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="22191" type="Armor" name="Rocking Horse Mount Bracelet - 7-day limited period">
+	<item id="22191" type="Armor" name="골동목마 탑승용 팔찌 7일 기간제">
 		<!-- Description: Dimensional item. Can ride a Rocking Horse when equipped. Can be used for 7 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="branchsys2.icon.g_wooen_house" />
 		<set name="default_action" val="equip" />
@@ -1203,7 +1203,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="22192" type="Armor" name="Rocking Horse Mount Bracelet - 30-day limited period">
+	<item id="22192" type="Armor" name="골동목마 탑승용 팔찌 30일 기간제">
 		<!-- Description: Dimensional item. Can ride a Rocking Horse when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="branchsys2.icon.g_wooen_house" />
 		<set name="default_action" val="equip" />
@@ -1213,7 +1213,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="22193" type="Armor" name="Rocking Horse Mount Bracelet">
+	<item id="22193" type="Armor" name="골동목마 탑승용 팔찌">
 		<!-- Description: Dimensional item. Can ride a Rocking Horse when equipped. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="branchsys2.icon.g_wooen_house" />
 		<set name="default_action" val="equip" />
@@ -1224,37 +1224,37 @@
 		<set name="is_dropable" val="false" />
 		<set name="item_skill" val="21258-1"/>
 	</item>
-	<item id="22194" type="EtcItem" name="1st Place Treasure Sack">
+	<item id="22194" type="EtcItem" name="1등 보물 자루">
 		<!-- Description: When double-clicked, a random 1st Place prize is granted. -->
 		<set name="icon" val="icon.etc_treasure_sack_1_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22195" type="EtcItem" name="2nd Place Treasure Sack">
+	<item id="22195" type="EtcItem" name="2등 보물 자루">
 		<!-- Description: When double-clicked, a random 2nd Place prize is granted. -->
 		<set name="icon" val="icon.etc_treasure_sack_2_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22196" type="EtcItem" name="3rd Place Treasure Sack">
+	<item id="22196" type="EtcItem" name="3등 보물 자루">
 		<!-- Description: When double-clicked, a random 3rd Place prize is granted. -->
 		<set name="icon" val="icon.etc_treasure_sack_3_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22197" type="EtcItem" name="4th Place Treasure Sack">
+	<item id="22197" type="EtcItem" name="4등 보물 자루">
 		<!-- Description: When double-clicked, a random 4th Place prize is granted. -->
 		<set name="icon" val="icon.etc_treasure_sack_4_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22198" type="EtcItem" name="5th Place Treasure Sack">
+	<item id="22198" type="EtcItem" name="5등 보물 자루">
 		<!-- Description: When double-clicked, a random 5th Place prize is granted. -->
 		<set name="icon" val="icon.etc_treasure_sack_5_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22199" type="EtcItem" name="6th Place Treasure Sack">
+	<item id="22199" type="EtcItem" name="6등 보물 자루">
 		<!-- Description: When double-clicked, a random 6th Place prize is granted. -->
 		<set name="icon" val="icon.etc_treasure_sack_6_i00" />
 		<set name="material" val="paper" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="31000" name="束縛的椎骨之劍*椎骨之劍" type="Weapon">
+	<item id="31000" type="Weapon" name="속박의 스파인본 소드*스파인본 소드">
 		<table name="#Desc">束縛的椎骨之劍*椎骨之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31001" name="束縛的椎骨之劍*騎士劍" type="Weapon">
+	<item id="31001" type="Weapon" name="속박의 스파인본 소드*나이트소드">
 		<table name="#Desc">束縛的椎骨之劍*騎士劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31002" name="束縛的椎骨之劍" type="Weapon">
+	<item id="31002" type="Weapon" name="속박의 스파인본 소드">
 		<table name="#Desc">束縛的椎骨之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_spinebone_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -82,7 +82,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31008" name="束縛的暴風之劍*武士刀" type="Weapon">
+	<item id="31008" type="Weapon" name="속박의 스톰 브링거*카타나">
 		<table name="#Desc">束縛的暴風之劍*武士刀。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -109,7 +109,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31009" name="束縛的暴風之劍*靈魂之劍" type="Weapon">
+	<item id="31009" type="Weapon" name="속박의 스톰 브링거*스피릿츠 소드">
 		<table name="#Desc">束縛的暴風之劍*靈魂之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -136,7 +136,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31010" name="束縛的暴風之劍*暴風之劍" type="Weapon">
+	<item id="31010" type="Weapon" name="속박의 스톰 브링거*스톰 브링거">
 		<table name="#Desc">束縛的暴風之劍*暴風之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -163,7 +163,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31011" name="束縛的暴風之劍*彎刀" type="Weapon">
+	<item id="31011" type="Weapon" name="속박의 스톰 브링거*샴쉬르">
 		<table name="#Desc">束縛的暴風之劍*彎刀。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -190,7 +190,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31012" name="束縛的暴風之劍*襲擊劍" type="Weapon">
+	<item id="31012" type="Weapon" name="속박의 스톰 브링거*레이드 소드">
 		<table name="#Desc">束縛的暴風之劍*襲擊劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -217,7 +217,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31015" name="束縛的暴風之劍" type="Weapon">
+	<item id="31015" type="Weapon" name="속박의 스톰 브링거 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約86。</table>
 		<set name="icon" val="icon.weapon_stormbringer_i01"/>

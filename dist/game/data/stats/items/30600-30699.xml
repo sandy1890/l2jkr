@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="30649" name="束縛的緋紅劍*革命劍" type="Weapon">
+	<item id="30649" type="Weapon" name="속박의 크림슨소드*혁명의 검">
 		<table name="#Desc">束縛的緋紅劍*革命劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30650" name="束縛的緋紅劍*緋紅劍" type="Weapon">
+	<item id="30650" type="Weapon" name="속박의 크림슨소드*크림슨소드">
 		<table name="#Desc">束縛的緋紅劍*緋紅劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30651" name="束縛的緋紅劍*精靈劍" type="Weapon">
+	<item id="30651" type="Weapon" name="속박의 크림슨소드*엘븐소드">
 		<table name="#Desc">束縛的緋紅劍*精靈劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -82,7 +82,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30652" name="束縛的緋紅劍*精靈長劍" type="Weapon">
+	<item id="30652" type="Weapon" name="속박의 크림슨소드*엘븐 롱소드">
 		<table name="#Desc">束縛的緋紅劍*精靈長劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -109,7 +109,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30653" name="束縛的緋紅劍" type="Weapon">
+	<item id="30653" type="Weapon" name="속박의 크림슨 소드">
 		<table name="#Desc">束縛的緋紅劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_crimson_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -137,7 +137,7 @@
 		</for>
 	</item>
 
-	<item id="30679" name="束縛的武士刀*武士刀" type="Weapon">
+	<item id="30679" type="Weapon" name="속박의 카타나*카타나">
 		<table name="#Desc">束縛的武士刀*武士刀。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -164,7 +164,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30680" name="束縛的武士刀*靈魂之劍" type="Weapon">
+	<item id="30680" type="Weapon" name="속박의 카타나*스피릿츠 소드">
 		<table name="#Desc">束縛的武士刀*靈魂之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -191,7 +191,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30681" name="束縛的武士刀*襲擊劍" type="Weapon">
+	<item id="30681" type="Weapon" name="속박의 카타나*레이드 소드">
 		<table name="#Desc">束縛的武士刀*襲擊劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -218,7 +218,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30683" name="束縛的武士刀" type="Weapon">
+	<item id="30683" type="Weapon" name="속박의 카타나 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約82。</table>
 		<set name="icon" val="icon.weapon_katana_i01"/>

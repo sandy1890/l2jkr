@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20600" type="Weapon" name="Twilight Staff - Dance of Shadow - 7-day limited period">
+	<item id="20600" type="Weapon" name="초혼 지팡이 댄스오브섀도우 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -25,7 +25,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20601" type="Armor" name="Anniversary Hat - Soul of Phoenix - 7-day limited period">
+	<item id="20601" type="Armor" name="회혼 모자 소울오브피닉스 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -41,7 +41,7 @@
 		<set name="item_skill" val="21090-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20602" type="EtcItem" name="Soul Silver Foil (Event)">
+	<item id="20602" type="EtcItem" name="영혼의 은지 - 이벤트">
 		<set name="icon" val="BranchSys.icon.br_ghost_silverpaper_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -54,7 +54,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22099-1" />
 	</item>
-	<item id="20603" type="EtcItem" name="Soul Scent (Event)">
+	<item id="20603" type="EtcItem" name="영혼의 향 - 이벤트">
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -67,7 +67,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22100-1" />
 	</item>
-	<item id="20604" type="EtcItem" name="Low-Class Certificate (Event)">
+	<item id="20604" type="EtcItem" name="초급 증명서 - 이벤트">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -78,7 +78,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="20605" type="EtcItem" name="Mid-Class Certificate (Event)">
+	<item id="20605" type="EtcItem" name="중급 증명서 - 이벤트">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -89,7 +89,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="20606" type="EtcItem" name="High-Class Certificate (Event) - 8-hour limited period">
+	<item id="20606" type="EtcItem" name="고급 증명서 - 이벤트 8시간 기간제">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -101,7 +101,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="time" val="480" />
 	</item>
-	<item id="20607" type="EtcItem" name="Headphone Pack - Town Theme">
+	<item id="20607" type="EtcItem" name="헤드폰 팩 타운테마">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -117,7 +117,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20613,1,1,100" />
 	</item>
-	<item id="20608" type="EtcItem" name="Headphone Pack - Hero Theme">
+	<item id="20608" type="EtcItem" name="헤드폰 팩 영웅테마">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -133,7 +133,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20614,1,1,100" />
 	</item>
-	<item id="20609" type="EtcItem" name="Headphone Pack - Theme Park">
+	<item id="20609" type="EtcItem" name="헤드폰 팩 테마파크">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -149,7 +149,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20615,1,1,100" />
 	</item>
-	<item id="20610" type="EtcItem" name="Headphone 7-Day Pack - Town Theme : Great Adventurer's Soul Power">
+	<item id="20610" type="EtcItem" name="헤드폰 7일 팩 타운테마, 불멸의 모험자 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -165,7 +165,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20616,1,1,100" />
 	</item>
-	<item id="20611" type="EtcItem" name="Headphone 7-Day Pack - Hero Theme : Great Warrior's Soul Power">
+	<item id="20611" type="EtcItem" name="헤드폰 7일 팩 영웅테마, 강인한 전사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -181,7 +181,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20617,1,1,100" />
 	</item>
-	<item id="20612" type="EtcItem" name="Headphone 7-Day Pack - Park theme : Great Wizard's Soul Power">
+	<item id="20612" type="EtcItem" name="헤드폰 7일 팩 테마파크, 지혜로운 마법사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -197,7 +197,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20618,1,1,100" />
 	</item>
-	<item id="20613" type="Armor" name="Headphone - Town Theme">
+	<item id="20613" type="Armor" name="헤드폰 타운테마">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -212,7 +212,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21092-1" />
 	</item>
-	<item id="20614" type="Armor" name="Headphone - Hero Theme">
+	<item id="20614" type="Armor" name="헤드폰 영웅테마">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -227,7 +227,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21093-1" />
 	</item>
-	<item id="20615" type="Armor" name="Headphone - Park Theme">
+	<item id="20615" type="Armor" name="헤드폰 테마파크">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -242,7 +242,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21094-1" />
 	</item>
-	<item id="20616" type="Armor" name="Headphone - Town Theme - 7-day limited period">
+	<item id="20616" type="Armor" name="헤드폰 타운테마, 불멸의 모험자 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -257,7 +257,7 @@
 		<set name="item_skill" val="21092-1;21111-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20617" type="Armor" name="Headphone - Hero Theme - 7-day limited period">
+	<item id="20617" type="Armor" name="헤드폰 영웅테마, 강인한 전사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -272,7 +272,7 @@
 		<set name="item_skill" val="21093-1;21112-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20618" type="Armor" name="Headphone - Park Theme - 7-day limited period">
+	<item id="20618" type="Armor" name="헤드폰 테마파크, 지혜로운 마법사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -287,7 +287,7 @@
 		<set name="item_skill" val="21094-1;21113-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20619" type="EtcItem" name="Female Weaver Agathion 24-Hour Pack - Flute Sound">
+	<item id="20619" type="EtcItem" name="직녀 아가시온 24시간 팩 피리소리">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -301,7 +301,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20621,1,1,100" />
 	</item>
-	<item id="20620" type="EtcItem" name="Female Weaver Agathion 3-Day Pack - Flute Sound">
+	<item id="20620" type="EtcItem" name="직녀 아가시온 3일 팩 피리소리">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -315,7 +315,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20622,1,1,100" />
 	</item>
-	<item id="20621" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 24-hour limited period">
+	<item id="20621" type="Armor" name="아가시온 봉인 팔찌 - 직녀 피리소리 - 24시간 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -332,7 +332,7 @@
 		<set name="item_skill" val="3267-1;21091-1;23078-1" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="20622" type="Armor" name="Agathion Seal Bracelet - Female Weaver - Flute Sound - 3-day limited period">
+	<item id="20622" type="Armor" name="아가시온 봉인 팔찌 - 직녀 피리소리 - 3일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -349,7 +349,7 @@
 		<set name="item_skill" val="3267-1;21091-1;23078-1" />
 		<set name="time" val="4320" />
 	</item>
-	<item id="20623" type="EtcItem" name="Soul Silver Foil - Scent Pack">
+	<item id="20623" type="EtcItem" name="영혼의 은지-향 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -363,7 +363,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20602,100,100,100;20603,100,100,100" />
 	</item>
-	<item id="20624" type="EtcItem" name="Soul Scent 100 Sheet Pack">
+	<item id="20624" type="EtcItem" name="영혼의 향 100장 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -377,7 +377,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20603,100,100,100" />
 	</item>
-	<item id="20625" type="EtcItem" name="Anniversary Hat 7-Day Pack - Resurrection">
+	<item id="20625" type="EtcItem" name="회혼 모자 7일 팩 부활">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -393,7 +393,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20626,1,1,100" />
 	</item>
-	<item id="20626" type="Armor" name="Anniversary Hat - Resurrection - 7-Day Limited Period">
+	<item id="20626" type="Armor" name="회혼 모자 부활 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -409,7 +409,7 @@
 		<set name="item_skill" val="21095-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20627" type="EtcItem" name="Summon of Love Bracelet 7-Day Pack">
+	<item id="20627" type="EtcItem" name="사랑의 소환 팔찌 7일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -425,7 +425,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20628,1,1,100" />
 	</item>
-	<item id="20628" type="Armor" name="Summon of Love Bracelet - 7-day limited period">
+	<item id="20628" type="Armor" name="사랑의 소환 팔찌 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_ring_of_friendship_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -441,7 +441,7 @@
 		<set name="item_skill" val="21097-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20629" type="EtcItem" name="Fortune of Love Box (event)">
+	<item id="20629" type="EtcItem" name="사랑의 행운 상자 - 이벤트">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -451,7 +451,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22101-1" />
 	</item>
-	<item id="20630" type="EtcItem" name="Soul Magic Box">
+	<item id="20630" type="EtcItem" name="영혼의 마법 상자">
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -465,7 +465,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22102-1" />
 	</item>
-	<item id="20631" type="EtcItem" name="Laborer Hat 7-Day Pack">
+	<item id="20631" type="EtcItem" name="수박 모자 7일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -481,7 +481,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20633,1,1,100" />
 	</item>
-	<item id="20632" type="EtcItem" name="Watermelon Hat Pack">
+	<item id="20632" type="EtcItem" name="수박 모자 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -497,7 +497,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20634,1,1,100" />
 	</item>
-	<item id="20633" type="Armor" name="Watermelon Hat - Ability of a Cool Watermelon - 7-day limited period">
+	<item id="20633" type="Armor" name="수박 모자 시원한 수박의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -512,7 +512,7 @@
 		<set name="item_skill" val="21096-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20634" type="Armor" name="Watermelon Hat">
+	<item id="20634" type="Armor" name="수박 모자">
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -525,7 +525,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="20635" type="EtcItem" name="No Grade Beginner's Adventurer Support Pack">
+	<item id="20635" type="EtcItem" name="무급 초보 모험자 지원 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -539,7 +539,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="8973,1,1,100;8977,1,1,100;9030,1,1,100;9031,1,1,100;9032,1,1,100;9033,1,1,100;9034,1,1,100;9035,1,1,100;21093,3,3,100;21094,3,3,100" />
 	</item>
-	<item id="20636" type="EtcItem" name="D-Grade Fighter Support Pack">
+	<item id="20636" type="EtcItem" name="D급 전사 지원 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -553,7 +553,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20639,1,1,100;20640,1,1,100;20641,1,1,100;20642,1,1,100;20643,1,1,100;20644,1,1,100;20645,1,1,100;20646,1,1,100;20647,1,1,100;20648,1,1,100" />
 	</item>
-	<item id="20637" type="EtcItem" name="D-Grade Mage Support Pack">
+	<item id="20637" type="EtcItem" name="D급 마법사 지원 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -567,7 +567,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20649,1,1,100;20650,1,1,100;20651,1,1,100;20652,1,1,100;20653,1,1,100;20645,1,1,100" />
 	</item>
-	<item id="20638" type="EtcItem" name="Beginner's Adventurer Reinforcement Pack">
+	<item id="20638" type="EtcItem" name="초보 모험자 응원 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -582,7 +582,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20415,1,1,100;21091,1,1,100;21092,1,1,100" />
 	</item>
-	<item id="20639" type="Weapon" name="Common Item - Elven Long Sword">
+	<item id="20639" type="Weapon" name="기본 병기 - 엘븐 롱소드">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -607,7 +607,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20640" type="Weapon" name="Common Item - Light Crossbow">
+	<item id="20640" type="Weapon" name="기본 병기 - 사이클론 보우">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -635,7 +635,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="20641" type="Weapon" name="Common Item - Knight's Sword*Elven Sword">
+	<item id="20641" type="Weapon" name="기본 병기 - 나이트소드*엘븐소드">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -660,7 +660,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20642" type="Armor" name="Common Item - Mithril Gloves">
+	<item id="20642" type="Armor" name="기본 병기 - 미스릴 장갑">
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -676,7 +676,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="20643" type="Armor" name="Common Item - Plate Boots">
+	<item id="20643" type="Armor" name="기본 병기 - 플레이트 부츠">
 		<set name="icon" val="icon.armor_t46_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -692,7 +692,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="20644" type="Armor" name="Common Item - Plate Shield">
+	<item id="20644" type="Armor" name="기본 병기 - 플레이트 쉴드">
 		<set name="icon" val="icon.shield_plate_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -713,7 +713,7 @@
 			<set order="0x08" stat="sDef" val="154" />
 		</for>
 	</item>
-	<item id="20645" type="Armor" name="Common Item - Plate Helmet">
+	<item id="20645" type="Armor" name="기본 병기 - 플레이트 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -729,7 +729,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="20646" type="Armor" name="Common Item - Plate Gaiters">
+	<item id="20646" type="Armor" name="기본 병기 - 플레이트각반">
 		<set name="icon" val="icon.armor_t46_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -749,7 +749,7 @@
 			<add order="0x10" stat="pDef" val="70" />
 		</for>
 	</item>
-	<item id="20647" type="Armor" name="Common Item - Half Plate Armor">
+	<item id="20647" type="Armor" name="기본 병기 - 하프플레이트">
 		<set name="icon" val="icon.armor_t46_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -769,7 +769,7 @@
 			<add order="0x10" stat="pDef" val="111" />
 		</for>
 	</item>
-	<item id="20648" type="Armor" name="Common Item - Salamander Skin Mail">
+	<item id="20648" type="Armor" name="기본 병기 - 샐러맨더 레더 메일">
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -786,7 +786,7 @@
 			<add order="0x10" stat="pDef" val="136" />
 		</for>
 	</item>
-	<item id="20649" type="Weapon" name="Common Item - Ghost Staff">
+	<item id="20649" type="Weapon" name="기본 병기 - 혼령의 지팡이">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -813,7 +813,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20650" type="Armor" name="Common Item - Mithril Tunic">
+	<item id="20650" type="Armor" name="기본 병기 - 미스릴 튜닉">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -834,7 +834,7 @@
 			<add order="0x40" stat="maxMp" val="169" />
 		</for>
 	</item>
-	<item id="20651" type="Armor" name="Common Item - Mithril Stockings">
+	<item id="20651" type="Armor" name="기본 병기 - 미스릴 호즈">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -855,7 +855,7 @@
 			<add order="0x40" stat="maxMp" val="105" />
 		</for>
 	</item>
-	<item id="20652" type="Armor" name="Common Item - Salamander Skin Boots">
+	<item id="20652" type="Armor" name="기본 병기 - 샐러맨더 레더 부츠">
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -871,7 +871,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="20653" type="Armor" name="Common Item - Ogre Power Gauntlet">
+	<item id="20653" type="Armor" name="기본 병기 - 오거 파워 건틀렛">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -887,7 +887,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="20654" type="Armor" name="Agathion Seal Bracelet - Chon-chon">
+	<item id="20654" type="Armor" name="아가시온 봉인팔찌 - 천천">
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -904,7 +904,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21105-1;23079-1" />
 	</item>
-	<item id="20655" type="Armor" name="Agathion Seal Bracelet - Chon-chon - Great Warrior's Soul Power - 7-day limited period">
+	<item id="20655" type="Armor" name="아가시온 봉인팔찌 - 천천 용감한 전사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -921,7 +921,7 @@
 		<set name="item_skill" val="3267-1;21105-1;23080-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20656" type="Armor" name="Agathion Seal Bracelet - Tang-tang">
+	<item id="20656" type="Armor" name="아가시온 봉인팔찌 - 탕탕">
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -938,7 +938,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21106-1;23081-1" />
 	</item>
-	<item id="20657" type="Armor" name="Agathion Seal Bracelet - Tang-tang - Great Wizard's Soul Power - 7-day limited period">
+	<item id="20657" type="Armor" name="아가시온 봉인팔찌 - 탕탕 위대한 마법사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -955,7 +955,7 @@
 		<set name="item_skill" val="3267-1;21106-1;23082-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20658" type="Armor" name="Agthion Seal Bracelet - Dancing Lucky Kid">
+	<item id="20658" type="Armor" name="아가시온 봉인팔찌 - 춤추는 행운 아이">
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -972,7 +972,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21107-1;23083-1" />
 	</item>
-	<item id="20659" type="Armor" name="Agthion Seal Bracelet - Dancing Lucky Kid - Great Adventurer's Soul Power - 7-day limited period">
+	<item id="20659" type="Armor" name="아가시온 봉인팔찌 - 춤추는 행운 아이 탁월한 모험자 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -989,7 +989,7 @@
 		<set name="item_skill" val="3267-1;21107-1;23084-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20660" type="Armor" name="Agathion Seal Bracelet - Monkey King">
+	<item id="20660" type="Armor" name="아가시온 봉인팔찌 - 제천대성">
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1006,7 +1006,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21108-1;23085-1" />
 	</item>
-	<item id="20661" type="Armor" name="Agathion Seal Bracelet - Monkey King - Great Wizard's Soul Power - 7-day limited period">
+	<item id="20661" type="Armor" name="아가시온 봉인팔찌 - 제천대성 위대한 마법사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1023,7 +1023,7 @@
 		<set name="item_skill" val="3267-1;21108-1;23086-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20662" type="Armor" name="Agathion Seal Bracelet - Utanka Agathion">
+	<item id="20662" type="Armor" name="아가시온 봉인팔찌 - 우탕카 아가시온">
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1040,7 +1040,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21109-1;23087-1" />
 	</item>
-	<item id="20663" type="Armor" name="Agathion Seal Bracelet - Utanka Agathion - Great Warrior's Soul Power - 7-day limited period">
+	<item id="20663" type="Armor" name="아가시온 봉인팔찌 - 우탕카 아가시온 용감한 전사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1057,7 +1057,7 @@
 		<set name="item_skill" val="3267-1;21109-1;23088-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20664" type="Armor" name="Agathion Seal Bracelet - Bonus B Agathion">
+	<item id="20664" type="Armor" name="아가시온 봉인팔찌 - 보너스B 아가시온">
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1074,7 +1074,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21110-1;23089-1" />
 	</item>
-	<item id="20665" type="Armor" name="Agathion Seal Bracelet - Bonus B Agathion - Great Adventurer's Soul Power - 7-day limited period">
+	<item id="20665" type="Armor" name="아가시온 봉인팔찌 - 보너스B 아가시온 탁월한 모험자 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1091,7 +1091,7 @@
 		<set name="item_skill" val="3267-1;21110-1;23090-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20666" type="Armor" name="Valkyrie Hat">
+	<item id="20666" type="Armor" name="발키리 모자">
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1106,7 +1106,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20667" type="Armor" name="Valkyrie Hat - Great Adventurer's Soul Power - 7-day limited period">
+	<item id="20667" type="Armor" name="발키리 모자 불멸의 모험자 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1122,7 +1122,7 @@
 		<set name="item_skill" val="21098-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20668" type="Armor" name="Tiger Hat">
+	<item id="20668" type="Armor" name="호랑이 모자">
 		<set name="icon" val="BranchSys.icon.br_tiger_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1137,7 +1137,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20669" type="Armor" name="Tiger Hat - Great Warrior's Soul Power - 7-day limited period">
+	<item id="20669" type="Armor" name="호랑이 모자 강인한 전사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_tiger_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1153,7 +1153,7 @@
 		<set name="item_skill" val="21099-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20670" type="Armor" name="Maid's Hairband">
+	<item id="20670" type="Armor" name="메이드 헤어밴드">
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1168,7 +1168,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20671" type="Armor" name="Maid Hairband - Great Wizard's Soul Power - 7-day limited period">
+	<item id="20671" type="Armor" name="메이드 헤어밴드 지혜로운 마법사 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1184,7 +1184,7 @@
 		<set name="item_skill" val="21100-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20672" type="Armor" name="Baby Panda Hat">
+	<item id="20672" type="Armor" name="아기팬더 모자">
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1199,7 +1199,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20673" type="Armor" name="Baby Panda Hat - Blessed Escape - 7-day limited period">
+	<item id="20673" type="Armor" name="아기팬더 모자 축복받은 귀환 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1215,7 +1215,7 @@
 		<set name="item_skill" val="21101-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20674" type="Armor" name="Bamboo Panda Hat">
+	<item id="20674" type="Armor" name="대나무팬더 모자">
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1230,7 +1230,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20675" type="Armor" name="Bamboo Panda Hat - Great Adventurer's Soul Power - 7-day limited period">
+	<item id="20675" type="Armor" name="대나무팬더 모자 불멸의 모험자 영혼의 능력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1246,7 +1246,7 @@
 		<set name="item_skill" val="21103-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20676" type="Armor" name="Sexy Panda Hat">
+	<item id="20676" type="Armor" name="섹시팬더 모자">
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1261,7 +1261,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20677" type="Armor" name="Sexy Panda Hat - Blessed Resurrection - 7-day limited period">
+	<item id="20677" type="Armor" name="섹시팬더 모자 축복받은 부활 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1277,7 +1277,7 @@
 		<set name="item_skill" val="21102-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20678" type="Armor" name="Gatekeeper Hat">
+	<item id="20678" type="Armor" name="게이트 키퍼 모자">
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1292,7 +1292,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20679" type="Armor" name="Gatekeeper Hat - Destroy Instinct - 7-day limited period">
+	<item id="20679" type="Armor" name="게이트 키퍼 모자 디스트로이 인스팅트 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1308,7 +1308,7 @@
 		<set name="item_skill" val="21104-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20680" type="EtcItem" name="Chon-chon Agathion Pack">
+	<item id="20680" type="EtcItem" name="천천 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1324,7 +1324,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20654,1,1,100" />
 	</item>
-	<item id="20681" type="EtcItem" name="Chon-chon Agathion 7-Day Pack - Great Warrior's Soul Power">
+	<item id="20681" type="EtcItem" name="천천 아가시온 7일 팩 용감한 전사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1340,7 +1340,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20655,1,1,100" />
 	</item>
-	<item id="20682" type="EtcItem" name="Tang-tang Agathion Pack">
+	<item id="20682" type="EtcItem" name="탕탕 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1356,7 +1356,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20656,1,1,100" />
 	</item>
-	<item id="20683" type="EtcItem" name="Tang-tang Agathion 7-Day Pack - Great Wizard's Soul Power">
+	<item id="20683" type="EtcItem" name="탕탕 아가시온 7일 팩 위대한 마법사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1372,7 +1372,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20657,1,1,100" />
 	</item>
-	<item id="20684" type="EtcItem" name="Dancing Lucky Kid Agathion Pack">
+	<item id="20684" type="EtcItem" name="춤추는 행운 아이 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1388,7 +1388,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20658,1,1,100" />
 	</item>
-	<item id="20685" type="EtcItem" name="Dancing Lucky Kid Agathion Pack (7 day) - Great Adventurer's Soul Power">
+	<item id="20685" type="EtcItem" name="춤추는 행운 아이 아가시온 7일 팩 탁월한 모험자 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1404,7 +1404,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20659,1,1,100" />
 	</item>
-	<item id="20686" type="EtcItem" name="Monkey King Agathion Pack">
+	<item id="20686" type="EtcItem" name="제천대성 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1420,7 +1420,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20660,1,1,100" />
 	</item>
-	<item id="20687" type="EtcItem" name="Monkey King Agathion 7-Day Pack - Great Wizard's Soul Power">
+	<item id="20687" type="EtcItem" name="제천대성 아가시온 7일 팩 위대한 마법사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1436,7 +1436,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20661,1,1,100" />
 	</item>
-	<item id="20688" type="EtcItem" name="Utanka Agathion Pack">
+	<item id="20688" type="EtcItem" name="우탕카 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1452,7 +1452,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20662,1,1,100" />
 	</item>
-	<item id="20689" type="EtcItem" name="Utanka Agathion 7-Day Pack - Great Warrior's Soul Power">
+	<item id="20689" type="EtcItem" name="우탕카 아가시온 7일 팩 용감한 전사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1468,7 +1468,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20663,1,1,100" />
 	</item>
-	<item id="20690" type="EtcItem" name="Bonus B Agathion Pack">
+	<item id="20690" type="EtcItem" name="보너스B 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1484,7 +1484,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20664,1,1,100" />
 	</item>
-	<item id="20691" type="EtcItem" name="Bonus B Agathion 7-day Pack - Great Adventurer's Soul Power">
+	<item id="20691" type="EtcItem" name="보너스B 아가시온 7일 팩 탁월한 모험자 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1500,7 +1500,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20665,1,1,100" />
 	</item>
-	<item id="20692" type="EtcItem" name="Valkyrie Hat Pack">
+	<item id="20692" type="EtcItem" name="발키리 모자 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1516,7 +1516,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20666,1,1,100" />
 	</item>
-	<item id="20693" type="EtcItem" name="Valkyrie Hat 7-Day Pack - Great Adventurer's Soul Power">
+	<item id="20693" type="EtcItem" name="발키리 모자 7일 팩 불멸의 모험자 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1532,7 +1532,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20667,1,1,100" />
 	</item>
-	<item id="20694" type="EtcItem" name="Tiger Hat Pack">
+	<item id="20694" type="EtcItem" name="호랑이 모자 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1548,7 +1548,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20668,1,1,100" />
 	</item>
-	<item id="20695" type="EtcItem" name="Tiger Hat 7-Day Pack - Great Warrior's Soul Power">
+	<item id="20695" type="EtcItem" name="호랑이 모자 7일 팩 강인한 전사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1564,7 +1564,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20669,1,1,100" />
 	</item>
-	<item id="20696" type="EtcItem" name="Maid Hairband Pack">
+	<item id="20696" type="EtcItem" name="메이드 헤어밴드 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1580,7 +1580,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20670,1,1,100" />
 	</item>
-	<item id="20697" type="EtcItem" name="Maid Hairband 7-Day Pack - Great Wizard's Soul Power">
+	<item id="20697" type="EtcItem" name="메이드 헤어밴드 7일 팩 지혜로운 마법사 영혼의 능력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1596,7 +1596,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20671,1,1,100" />
 	</item>
-	<item id="20698" type="EtcItem" name="Baby Panda Hat Pack">
+	<item id="20698" type="EtcItem" name="아기팬더 모자 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1612,7 +1612,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20672,1,1,100" />
 	</item>
-	<item id="20699" type="EtcItem" name="Agathion of Baby Panda 7-Day Pack - Blessing of Escape">
+	<item id="20699" type="EtcItem" name="아기팬더 모자 7일 팩 축복받은 귀환">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />

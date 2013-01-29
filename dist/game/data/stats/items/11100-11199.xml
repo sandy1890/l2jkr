@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="11100" type="Weapon" name="Flaming Dragon Skull - Wisdom">
+	<item id="11100" type="Weapon" name="드래곤 플레임 헤드 - 지혜">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -29,7 +29,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11101" type="Weapon" name="Flaming Dragon Skull - Wisdom - Acumen">
+	<item id="11101" type="Weapon" name="드래곤 플레임 헤드 - 지혜 아큐멘">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -58,7 +58,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11102" type="Weapon" name="Flaming Dragon Skull - Wisdom - M. Atk.">
+	<item id="11102" type="Weapon" name="드래곤 플레임 헤드 - 지혜 매직파워">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -87,7 +87,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11103" type="Weapon" name="Flaming Dragon Skull - Wisdom - Magic Silence">
+	<item id="11103" type="Weapon" name="드래곤 플레임 헤드 - 지혜 매직사일런스">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -118,7 +118,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11104" type="Weapon" name="Branch of the Mother Tree - Nature">
+	<item id="11104" type="Weapon" name="세계수의 가지 - 자연">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -147,7 +147,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11105" type="Weapon" name="Branch of the Mother Tree - Nature - Conversion">
+	<item id="11105" type="Weapon" name="세계수의 가지 - 자연 업다운">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -176,7 +176,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11106" type="Weapon" name="Branch of the Mother Tree - Nature - Magic Damage">
+	<item id="11106" type="Weapon" name="세계수의 가지 - 자연 매직대미지">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -207,7 +207,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11107" type="Weapon" name="Branch of the Mother Tree - Nature - Acumen">
+	<item id="11107" type="Weapon" name="세계수의 가지 - 자연 아큐멘">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -236,7 +236,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11108" type="Weapon" name="Sword of Miracles - Holy Spirit">
+	<item id="11108" type="Weapon" name="소드 오브 미라클 - 성령">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -264,7 +264,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11109" type="Weapon" name="Sword of Miracles - Holy Spirit - M. Atk.">
+	<item id="11109" type="Weapon" name="소드 오브 미라클 - 성령 매직파워">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -292,7 +292,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11110" type="Weapon" name="Sword of Miracles - Holy Spirit - Magic Silence">
+	<item id="11110" type="Weapon" name="소드 오브 미라클 - 성령 매직사일런스">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -322,7 +322,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11111" type="Weapon" name="Sword of Miracles - Holy Spirit - Acumen">
+	<item id="11111" type="Weapon" name="소드 오브 미라클 - 성령 아큐멘">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -350,7 +350,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11112" type="Weapon" name="Reaper - Clairvoyance">
+	<item id="11112" type="Weapon" name="소울 슈터 - 천리안">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -383,7 +383,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11113" type="Weapon" name="Reaper - Clairvoyance - Cheap Shot">
+	<item id="11113" type="Weapon" name="소울 슈터 - 천리안 칩샷">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -416,7 +416,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11114" type="Weapon" name="Reaper - Clairvoyance - Quick Recovery">
+	<item id="11114" type="Weapon" name="소울 슈터 - 천리안 퀵리커버리">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -449,7 +449,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11115" type="Weapon" name="Reaper - Clairvoyance - Critical Poison">
+	<item id="11115" type="Weapon" name="소울 슈터 - 천리안 Crt.포이즌">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -484,7 +484,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11116" type="Weapon" name="Soul Separator - On Fire">
+	<item id="11116" type="Weapon" name="소울세퍼레이터 - 온화">
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -512,7 +512,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11117" type="Weapon" name="Soul Separator - On Fire - Guidance">
+	<item id="11117" type="Weapon" name="소울세퍼레이터 - 온화 가이던스">
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -540,7 +540,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11118" type="Weapon" name="Soul Separator - On Fire - Critical Damage">
+	<item id="11118" type="Weapon" name="소울세퍼레이터 - 온화 Crt.대미지">
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -568,7 +568,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11119" type="Weapon" name="Soul Separator - On Fire - Rsk. Haste">
+	<item id="11119" type="Weapon" name="소울세퍼레이터 - 온화 Rsk.헤이스트">
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -596,7 +596,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11120" type="Weapon" name="Elysian - Great Gale">
+	<item id="11120" type="Weapon" name="엘리시온 - 질풍">
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -624,7 +624,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11121" type="Weapon" name="Elysian - Great Gale - Health">
+	<item id="11121" type="Weapon" name="엘리시온 - 질풍 헬스">
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -652,7 +652,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11122" type="Weapon" name="Elysian - Great Gale - Anger">
+	<item id="11122" type="Weapon" name="엘리시온 - 질풍 앵거">
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -680,7 +680,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11123" type="Weapon" name="Elysian - Great Gale - Critical Drain">
+	<item id="11123" type="Weapon" name="엘리시온 - 질풍 Crt.드레인">
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -710,7 +710,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11124" type="Weapon" name="Soul Bow - Clairvoyance">
+	<item id="11124" type="Weapon" name="영혼의 활 - 천리안">
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -741,7 +741,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11125" type="Weapon" name="Soul Bow - Clairvoyance - Cheap Shot">
+	<item id="11125" type="Weapon" name="영혼의 활 - 천리안 칩샷">
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -773,7 +773,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11126" type="Weapon" name="Soul Bow - Clairvoyance - Quick Recovery">
+	<item id="11126" type="Weapon" name="영혼의 활 - 천리안 퀵리커버리">
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -804,7 +804,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11127" type="Weapon" name="Soul Bow - Clairvoyance - Critical Poison">
+	<item id="11127" type="Weapon" name="영혼의 활 - 천리안 Crt.포이즌">
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -837,7 +837,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11128" type="Weapon" name="Tallum Glaive - On Fire">
+	<item id="11128" type="Weapon" name="탈룸 글레이브 - 온화">
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -865,7 +865,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11129" type="Weapon" name="Tallum Glaive - On Fire - Guidance">
+	<item id="11129" type="Weapon" name="탈룸 글레이브 - 온화 가이던스">
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -893,7 +893,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11130" type="Weapon" name="Tallum Glaive - On Fire - Health">
+	<item id="11130" type="Weapon" name="탈룸 글레이브 - 온화 헬스">
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -921,7 +921,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11131" type="Weapon" name="Tallum Glaive - On Fire - Wide Blow">
+	<item id="11131" type="Weapon" name="탈룸 글레이브 - 온화 와이드블로">
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -950,7 +950,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11132" type="Weapon" name="Enchanted Cerberus Fang">
+	<item id="11132" type="Weapon" name="강화 켈베로스 송곳니">
 		<set name="icon" val="icon.etc_wolf_r_d_01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -970,7 +970,7 @@
 			<set order="0x08" stat="pAtkSpd" val="277" />
 		</for>
 	</item>
-	<item id="11133" type="Weapon" name="Naga Storm - Molar">
+	<item id="11133" type="Weapon" name="나가 스톰 - 어금니">
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -998,7 +998,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11134" type="Weapon" name="Naga Storm - Molar - Focus">
+	<item id="11134" type="Weapon" name="나가 스톰 - 어금니 포커스">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1026,7 +1026,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11135" type="Weapon" name="Naga Storm - Molar - Critical Damage">
+	<item id="11135" type="Weapon" name="나가 스톰 - 어금니 Crt.대미지">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1054,7 +1054,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11136" type="Weapon" name="Naga Storm - Molar - Back Blow">
+	<item id="11136" type="Weapon" name="나가 스톰 - 어금니 백블로">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1082,7 +1082,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11137" type="Weapon" name="Daimon Crystal - Wisdom">
+	<item id="11137" type="Weapon" name="데이몬의 결정 - 지혜">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1111,7 +1111,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11138" type="Weapon" name="Daimon Crystal - Wisdom - Mana Up">
+	<item id="11138" type="Weapon" name="데이몬의 결정 - 지혜 마나업">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1140,7 +1140,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11139" type="Weapon" name="Daimon Crystal - Wisdom - Acumen">
+	<item id="11139" type="Weapon" name="데이몬의 결정 - 지혜 아큐멘">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1169,7 +1169,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11140" type="Weapon" name="Daimon Crystal - Wisdom - Mental Shield">
+	<item id="11140" type="Weapon" name="데이몬의 결정 - 지혜 매직멘탈실드">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1200,7 +1200,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11141" type="Weapon" name="Barakiel's Axe - On Fire">
+	<item id="11141" type="Weapon" name="바라키엘 엑스 - 온화">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1228,7 +1228,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11142" type="Weapon" name="Barakiel's Axe - On Fire - Health">
+	<item id="11142" type="Weapon" name="바라키엘 엑스 - 온화 헬스">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1256,7 +1256,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11143" type="Weapon" name="Barakiel's Axe - On Fire - Haste">
+	<item id="11143" type="Weapon" name="바라키엘 엑스 - 온화 헤이스트">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1284,7 +1284,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11144" type="Weapon" name="Barakiel's Axe - On Fire - Focus">
+	<item id="11144" type="Weapon" name="바라키엘 엑스 - 온화 포커스">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1312,7 +1312,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11145" type="Weapon" name="Screaming Vengeance - Concentration">
+	<item id="11145" type="Weapon" name="버스트 어벤져 - 집중">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1345,7 +1345,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11146" type="Weapon" name="Screaming Vengeance - Concentration - Cheap Shot">
+	<item id="11146" type="Weapon" name="버스트 어벤져 - 집중 칩샷">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1378,7 +1378,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11147" type="Weapon" name="Screaming Vengeance - Concentration - Focus">
+	<item id="11147" type="Weapon" name="버스트 어벤져 - 집중 포커스">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1411,7 +1411,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11148" type="Weapon" name="Screaming Vengeance - Concentration - Quick Recovery">
+	<item id="11148" type="Weapon" name="버스트 어벤져 - 집중 퀵리커버리">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1444,7 +1444,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11149" type="Weapon" name="Behemoth's Tuning Fork - Destruction">
+	<item id="11149" type="Weapon" name="베헤모스의 소리굽쇠 - 파괴">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1472,7 +1472,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11150" type="Weapon" name="Behemoth's Tuning Fork - Destruction - Focus">
+	<item id="11150" type="Weapon" name="베헤모스의 소리굽쇠 - 파괴 포커스">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1500,7 +1500,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11151" type="Weapon" name="Behemoth's Tuning Fork - Destruction - Health">
+	<item id="11151" type="Weapon" name="베헤모스의 소리굽쇠 - 파괴 헬스">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1528,7 +1528,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11152" type="Weapon" name="Behemoth's Tuning Fork - Destruction - Anger">
+	<item id="11152" type="Weapon" name="베헤모스의 소리굽쇠 - 파괴 앵거">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1556,7 +1556,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11153" type="Weapon" name="Bultgang - Earth">
+	<item id="11153" type="Weapon" name="불트강 - 대지">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1588,7 +1588,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11154" type="Weapon" name="Bultgang - Earth - Focus">
+	<item id="11154" type="Weapon" name="불트강 - 대지 포커스">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1620,7 +1620,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11155" type="Weapon" name="Bultgang - Earth - Haste">
+	<item id="11155" type="Weapon" name="불트강 - 대지 헤이스트">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1652,7 +1652,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11156" type="Weapon" name="Bultgang - Earth - Health">
+	<item id="11156" type="Weapon" name="불트강 - 대지 헬스">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1684,7 +1684,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11157" type="Weapon" name="Shyeed's Bow - Concentration">
+	<item id="11157" type="Weapon" name="샤이드 보우 - 집중">
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1715,7 +1715,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11158" type="Weapon" name="Shyeed's Bow - Concentration - Cheap Shot">
+	<item id="11158" type="Weapon" name="샤이드 보우 - 집중 칩샷">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1747,7 +1747,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11159" type="Weapon" name="Shyeed's Bow - Concentration - Focus">
+	<item id="11159" type="Weapon" name="샤이드 보우 - 집중 포커스">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1778,7 +1778,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11160" type="Weapon" name="Shyeed's Bow - Concentration - Quick Recovery">
+	<item id="11160" type="Weapon" name="샤이드 보우 - 집중 퀵리커버리">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1809,7 +1809,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11161" type="Weapon" name="Sword of Ipos - Earth">
+	<item id="11161" type="Weapon" name="소드 오브 이포스 - 대지">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1837,7 +1837,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11162" type="Weapon" name="Sword of Ipos - Earth - Focus">
+	<item id="11162" type="Weapon" name="소드 오브 이포스 - 대지 포커스">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1865,7 +1865,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11163" type="Weapon" name="Sword of Ipos - Earth - Haste">
+	<item id="11163" type="Weapon" name="소드 오브 이포스 - 대지 헤이스트">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1893,7 +1893,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11164" type="Weapon" name="Sword of Ipos - Earth - Health">
+	<item id="11164" type="Weapon" name="소드 오브 이포스 - 대지 헬스">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1921,7 +1921,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11165" type="Weapon" name="Sobekk's Hurricane - Landslide">
+	<item id="11165" type="Weapon" name="소베크 허리케인 - 산사태">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1949,7 +1949,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11166" type="Weapon" name="Sobekk's Hurricane - Landslide - Rsk. Haste">
+	<item id="11166" type="Weapon" name="소베크 허리케인 - 산사태 Rsk.헤이스트">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1977,7 +1977,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11167" type="Weapon" name="Sobekk's Hurricane - Landslide - Haste">
+	<item id="11167" type="Weapon" name="소베크 허리케인 - 산사태 헤이스트">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2005,7 +2005,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11168" type="Weapon" name="Sobekk's Hurricane - Landslide - Critical Drain">
+	<item id="11168" type="Weapon" name="소베크 허리케인 - 산사태 Crt.드레인">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2035,7 +2035,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11169" type="Weapon" name="Sirra's Blade - Landslide">
+	<item id="11169" type="Weapon" name="시르 블레이드 - 산사태">
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2063,7 +2063,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11170" type="Weapon" name="Sirra's Blade - Landslide - Haste">
+	<item id="11170" type="Weapon" name="시르 블레이드 - 산사태 헤이스트">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2091,7 +2091,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11171" type="Weapon" name="Sirra's Blade - Landslide - Health">
+	<item id="11171" type="Weapon" name="시르 블레이드 - 산사태 헬스">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2119,7 +2119,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11172" type="Weapon" name="Sirra's Blade - Landslide - Critical Poison">
+	<item id="11172" type="Weapon" name="시르 블레이드 - 산사태 Crt.포이즌">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2149,7 +2149,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11173" type="Weapon" name="Eclair Bijou - Landslide">
+	<item id="11173" type="Weapon" name="에끌레르 비쥬 - 산사태">
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2182,7 +2182,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11174" type="Weapon" name="Eclair Bijou - Landslide - Haste">
+	<item id="11174" type="Weapon" name="에끌레르 비쥬 - 산사태 헤이스트">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2215,7 +2215,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11175" type="Weapon" name="Eclair Bijou - Landslide - Health">
+	<item id="11175" type="Weapon" name="에끌레르 비쥬 - 산사태 헬스">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2248,7 +2248,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11176" type="Weapon" name="Eclair Bijou - Landslide - Critical Poison">
+	<item id="11176" type="Weapon" name="에끌레르 비쥬 - 산사태 Crt.포이즌">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2283,7 +2283,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11177" type="Weapon" name="Tiphon's Spear - Landslide">
+	<item id="11177" type="Weapon" name="타이폰 스피어 - 산사태">
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2311,7 +2311,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11178" type="Weapon" name="Tiphon's Spear - Landslide - Critical Stun">
+	<item id="11178" type="Weapon" name="타이폰 스피어 - 산사태 Crt. 스턴">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2341,7 +2341,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11179" type="Weapon" name="Tiphon's Spear - Landslide - Towering Blow">
+	<item id="11179" type="Weapon" name="타이폰 스피어 - 산사태 롱블로">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2370,7 +2370,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11180" type="Weapon" name="Tiphon's Spear - Landslide - Wild Blow">
+	<item id="11180" type="Weapon" name="타이폰 스피어 - 산사태 와일드 블로">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2399,7 +2399,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11181" type="Weapon" name="Tallum Blade*Damascus - Landslide">
+	<item id="11181" type="Weapon" name="탈룸 블레이드*다마스커스 - 산사태">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -2427,7 +2427,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11182" type="Weapon" name="Themis' Tongue - Cleverness">
+	<item id="11182" type="Weapon" name="테미스의 혀 - 총명">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2455,7 +2455,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11183" type="Weapon" name="Themis' Tongue - Cleverness - Mana Up">
+	<item id="11183" type="Weapon" name="테미스의 혀 - 총명 마나업">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2483,7 +2483,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11184" type="Weapon" name="Themis' Tongue - Cleverness - Mental Shield">
+	<item id="11184" type="Weapon" name="테미스의 혀 - 총명 매직멘탈실드">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2513,7 +2513,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11185" type="Weapon" name="Themis' Tongue - Cleverness - Magic Focus">
+	<item id="11185" type="Weapon" name="테미스의 혀 - 총명 매직 포커스">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2543,7 +2543,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11186" type="Weapon" name="Cabrio's Hand - Cleverness">
+	<item id="11186" type="Weapon" name="핸드 오브 카브리오 - 총명">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2572,7 +2572,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11187" type="Weapon" name="Cabrio's Hand - Cleverness - Conversion">
+	<item id="11187" type="Weapon" name="핸드 오브 카브리오 - 총명 업다운">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2601,7 +2601,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11188" type="Weapon" name="Cabrio's Hand - Cleverness - Mana Up">
+	<item id="11188" type="Weapon" name="핸드 오브 카브리오 - 총명 마나업">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2630,7 +2630,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11189" type="Weapon" name="Cabrio's Hand - Cleverness - Magic Silence">
+	<item id="11189" type="Weapon" name="핸드 오브 카브리오 - 총명 매직 사일런스">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2661,7 +2661,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11190" type="Weapon" name="Gram - Thunder">
+	<item id="11190" type="Weapon" name="그람 - 전격">
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2694,7 +2694,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11191" type="Weapon" name="Gram - Thunder - Haste">
+	<item id="11191" type="Weapon" name="그람 - 전격 헤이스트">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2727,7 +2727,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11192" type="Weapon" name="Gram - Thunder - Health">
+	<item id="11192" type="Weapon" name="그람 - 전격 헬스">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2760,7 +2760,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11193" type="Weapon" name="Gram - Thunder - Focus">
+	<item id="11193" type="Weapon" name="그람 - 전격 포커스">
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2793,7 +2793,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11194" type="Weapon" name="Demon Splinter - Thunder">
+	<item id="11194" type="Weapon" name="데몬 스플린터 - 전격">
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2822,7 +2822,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11195" type="Weapon" name="Demon Splinter - Thunder - Focus">
+	<item id="11195" type="Weapon" name="데몬 스플린터 - 전격 포커스">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2851,7 +2851,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11196" type="Weapon" name="Demon Splinter - Thunder - Health">
+	<item id="11196" type="Weapon" name="데몬 스플린터 - 전격 헬스">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2880,7 +2880,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11197" type="Weapon" name="Demon Splinter - Thunder - Critical Stun">
+	<item id="11197" type="Weapon" name="데몬 스플린터 - 전격 Crt.스턴">
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2911,7 +2911,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11198" type="Weapon" name="Draconic Bow - Earth">
+	<item id="11198" type="Weapon" name="드라코닉 보우 - 대지">
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2943,7 +2943,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="11199" type="Weapon" name="Draconic Bow - Earth - Cheap Shot">
+	<item id="11199" type="Weapon" name="드라코닉 보우 - 대지 칩샷">
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />

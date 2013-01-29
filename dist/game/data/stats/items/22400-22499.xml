@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="22400" name="壺精封印手鐲-巴拉卡斯" type="Armor">
+	<item id="22400" type="Armor" name="_">
 		<table name="#Plus">Lv7</table>
 		<table name="#Desc">可以召喚等級7巴拉卡斯壺精的手鐲。無法交易/丟棄的道具，但可以刪除，也可以保管在個人倉庫。</table>
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00"/>
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="3267-1;21273-7;23346-7;23347-7"/>
 	</item>
 
-	<item id="22425" name="武器強化卷軸-R級" type="EtcItem">
+	<item id="22425" type="EtcItem" name="_">
 		<table name="#Desc">提高強化成功機率10%。強化時，R級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升6；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器、弩類武器的物理攻擊力可提升7；弓類武器的攻擊力可提升12；所有武器的魔法攻擊力可提升5。從強化+4開始，大幅提升物理攻擊力/魔法攻擊力。與一般武器相比，祝福的武器在所有層面上都有較大的增幅度。</table>
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -32,7 +32,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="22438-1"/>
 	</item>
-	<item id="22426" name="古代武器強化結晶-R級" type="EtcItem">
+	<item id="22426" type="EtcItem" name="_">
 		<table name="#Desc">提高強化成功機率10%。強化失敗時，現有的強化數值將會維持不變。強化時，R級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升6；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器、弩類武器的物理攻擊力可提升7；弓類武器的攻擊力可提升12；所有武器的魔法攻擊力可提升5。從強化+4開始，大幅提升物理攻擊力/魔法攻擊力。與一般武器相比，祝福的武器在所有層面上都有較大的增幅度。</table>
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_wp_s_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -49,7 +49,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="22439-1"/>
 	</item>
-	<item id="22427" name="神聖武器強化結晶-R級" type="EtcItem">
+	<item id="22427" type="EtcItem" name="_">
 		<table name="#Desc">提高強化成功機率至100%。強化時，R級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升6；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手武器、弩類武器的物理攻擊力可提升7；弓類武器的攻擊力可提升12；所有武器的魔法攻擊力可提升5。從強化+4開始，大幅提升物理攻擊力/魔法攻擊力。與一般武器相比，祝福的武器在所有層面上都有較大的增幅度。一般武器可以強化至+12，而魔法武器可以強化至+7。</table>
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -66,7 +66,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="22440-1"/>
 	</item>
-	<item id="22428" name="防具強化卷軸-R級" type="EtcItem">
+	<item id="22428" type="EtcItem" name="_">
 		<table name="#Desc">提高強化成功機率10%。強化時，R級防具或飾品的物理防禦力可提升2，從強化+4開始大幅提升物理防禦力。至+3為止能安全進行強化。防具強化+4以上時，隨著強化值HP也會提升。</table>
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_am_s_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -83,7 +83,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="22441-1"/>
 	</item>
-	<item id="22429" name="古代防具強化結晶-R級" type="EtcItem">
+	<item id="22429" type="EtcItem" name="_">
 		<table name="#Desc">提高強化成功機率10%。強化失敗時，現有的強化數值將會維持不變。強化時，R級防具或飾品的物理防禦力可提升2，從強化+4開始大幅提升物理防禦力。至+3為止能安全進行強化。防具強化+4以上時，隨著強化值HP也會提升。</table>
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_am_s_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -100,7 +100,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="22442-1"/>
 	</item>
-	<item id="22430" name="神聖防具強化結晶-R級" type="EtcItem">
+	<item id="22430" type="EtcItem" name="_">
 		<table name="#Desc">提高強化成功機率至100%。強化時，R級防具或飾品的物理防禦力可提升2，從強化+4開始大幅提升物理防禦力。至+3為止能安全進行強化。防具強化+4以上時，隨著強化值HP也會提升。</table>
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -119,7 +119,7 @@
 	</item>
 
 	<!-- 其他斗篷 -->
-	<item id="22480" name="聖誕少女斗篷" type="Armor">
+	<item id="22480" type="Armor" name="_">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以同時感受到輕盈與寬鬆的斗篷。此物為聖誕少女的聖誕活動獎勵道具。無法交易、丟棄的道具，但可以刪除，也可以保管在個人倉庫。</table>
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak"/>

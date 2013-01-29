@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="18830" name="幻靈鉋刀" type="Weapon">
+	<item id="18830" type="Weapon" name="판타스마 셰이퍼 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ignicion_i01"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18831" name="幻靈鉋刀" type="Weapon">
+	<item id="18831" type="Weapon" name="판타스마 셰이퍼 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ignicion_i01"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18832" name="幻靈鉋刀" type="Weapon">
+	<item id="18832" type="Weapon" name="판타스마 셰이퍼 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約82.1。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ignicion_i01"/>
@@ -82,7 +82,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18833" name="幻靈切刃" type="Weapon">
+	<item id="18833" type="Weapon" name="판타스마 커터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_ninfea_i01"/>
@@ -108,7 +108,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18834" name="幻靈切刃" type="Weapon">
+	<item id="18834" type="Weapon" name="판타스마 커터 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_ninfea_i01"/>
@@ -134,7 +134,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18835" name="幻靈切刃" type="Weapon">
+	<item id="18835" type="Weapon" name="판타스마 커터 헬스">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_ninfea_i01"/>
@@ -160,7 +160,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18836" name="幻靈殺刃" type="Weapon">
+	<item id="18836" type="Weapon" name="판타스마 슬래셔 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_skia_i01"/>
@@ -186,7 +186,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18837" name="幻靈殺刃" type="Weapon">
+	<item id="18837" type="Weapon" name="판타스마 슬래셔 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_skia_i01"/>
@@ -212,7 +212,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18838" name="幻靈殺刃" type="Weapon">
+	<item id="18838" type="Weapon" name="판타스마 슬래셔 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_skia_i01"/>
@@ -238,7 +238,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18839" name="幻靈復仇者" type="Weapon">
+	<item id="18839" type="Weapon" name="판타스마 어벤져 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ikeon_i01"/>
@@ -265,7 +265,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18840" name="幻靈復仇者" type="Weapon">
+	<item id="18840" type="Weapon" name="판타스마 어벤져 Crt. 대미지">
 		<table name="#Plus">Crt.傷害</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時物理攻擊力提升約1199。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ikeon_i01"/>
@@ -292,7 +292,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18841" name="幻靈復仇者" type="Weapon">
+	<item id="18841" type="Weapon" name="판타스마 어벤져 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ikeon_i01"/>
@@ -319,7 +319,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18842" name="幻靈戰爪" type="Weapon">
+	<item id="18842" type="Weapon" name="판타스마 파이터 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約75.7。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_deodos_i01"/>
@@ -346,7 +346,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18843" name="幻靈戰爪" type="Weapon">
+	<item id="18843" type="Weapon" name="판타스마 파이터 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_deodos_i01"/>
@@ -373,7 +373,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18844" name="幻靈戰爪" type="Weapon">
+	<item id="18844" type="Weapon" name="판타스마 파이터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_deodos_i01"/>
@@ -400,7 +400,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18845" name="幻靈風暴者" type="Weapon">
+	<item id="18845" type="Weapon" name="판타스마 스토머 HP 드레인">
 		<table name="#Plus">HP吸收</table>
 		<table name="#Desc">＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_transgredi_i01"/>
@@ -427,7 +427,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18846" name="幻靈風暴者" type="Weapon">
+	<item id="18846" type="Weapon" name="판타스마 스토머 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_transgredi_i01"/>
@@ -454,7 +454,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18847" name="幻靈風暴者" type="Weapon">
+	<item id="18847" type="Weapon" name="판타스마 스토머 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_transgredi_i01"/>
@@ -481,7 +481,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18848" name="幻靈投弓" type="Weapon">
+	<item id="18848" type="Weapon" name="판타스마 스로워 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_solenas_i01"/>
@@ -509,7 +509,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18849" name="幻靈投弓" type="Weapon">
+	<item id="18849" type="Weapon" name="판타스마 스로워 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_solenas_i01"/>
@@ -537,7 +537,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18850" name="幻靈投弓" type="Weapon">
+	<item id="18850" type="Weapon" name="판타스마 스로워 롱블로">
 		<table name="#Plus">遠程打擊</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊距離提升。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_solenas_i01"/>
@@ -565,7 +565,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18851" name="幻靈射靈" type="Weapon">
+	<item id="18851" type="Weapon" name="판타스마 슈트제 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_lapis_i01"/>
@@ -593,7 +593,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18852" name="幻靈射靈" type="Weapon">
+	<item id="18852" type="Weapon" name="판타스마 슈트제 Crt. 슬로우">
 		<table name="#Plus">Crt.緩速</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_lapis_i01"/>
@@ -621,7 +621,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18853" name="幻靈射靈" type="Weapon">
+	<item id="18853" type="Weapon" name="판타스마 슈트제 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_lapis_i01"/>
@@ -649,7 +649,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18854" name="幻靈爆刃" type="Weapon">
+	<item id="18854" type="Weapon" name="판타스마 버스터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_zihel_i01"/>
@@ -675,7 +675,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18855" name="幻靈爆刃" type="Weapon">
+	<item id="18855" type="Weapon" name="판타스마 버스터 매직홀드">
 		<table name="#Plus">魔法束縛</table>
 		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_zihel_i01"/>
@@ -701,7 +701,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18856" name="幻靈爆刃" type="Weapon">
+	<item id="18856" type="Weapon" name="판타스마 버스터 마나업">
 		<table name="#Plus">魔力上升</table>
 		<table name="#Desc">＜搜魂石特效＞MP最大值提升約30%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_zihel_i01"/>
@@ -727,7 +727,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18857" name="幻靈術杖" type="Weapon">
+	<item id="18857" type="Weapon" name="판타스마 캐스터 엠파워">
 		<table name="#Plus">魔力催化</table>
 		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約395。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_alacer_i01"/>
@@ -754,7 +754,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18858" name="幻靈術杖" type="Weapon">
+	<item id="18858" type="Weapon" name="판타스마 캐스터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_alacer_i01"/>
@@ -781,7 +781,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18859" name="幻靈術杖" type="Weapon">
+	<item id="18859" type="Weapon" name="판타스마 캐스터 매직홀드">
 		<table name="#Plus">魔法束縛</table>
 		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_alacer_i01"/>
@@ -808,7 +808,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18860" name="幻靈報恨者" type="Weapon">
+	<item id="18860" type="Weapon" name="판타스마 레트리뷰터 MP리제네레이션">
 		<table name="#Plus">魔力再生</table>
 		<table name="#Desc">＜搜魂石特效＞提升MP的恢復速度。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_rupe_i01"/>
@@ -835,7 +835,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18861" name="幻靈報恨者" type="Weapon">
+	<item id="18861" type="Weapon" name="판타스마 레트리뷰터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_rupe_i01"/>
@@ -862,7 +862,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18862" name="幻靈報恨者" type="Weapon">
+	<item id="18862" type="Weapon" name="판타스마 레트리뷰터 엠파워">
 		<table name="#Plus">魔力催化</table>
 		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約395。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_rupe_i01"/>
@@ -889,7 +889,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18863" name="幻靈雙刀" type="Weapon">
+	<item id="18863" type="Weapon" name="판타스마 듀얼소드 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -915,7 +915,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18864" name="幻靈雙刀" type="Weapon">
+	<item id="18864" type="Weapon" name="판타스마 듀얼소드 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -941,7 +941,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18865" name="幻靈雙刀" type="Weapon">
+	<item id="18865" type="Weapon" name="판타스마 듀얼소드 헬스">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -967,7 +967,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18866" name="幻靈雙匕首" type="Weapon">
+	<item id="18866" type="Weapon" name="판타스마 듀얼대거 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -994,7 +994,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18867" name="幻靈雙匕首" type="Weapon">
+	<item id="18867" type="Weapon" name="판타스마 듀얼대거 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1021,7 +1021,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18868" name="幻靈雙匕首" type="Weapon">
+	<item id="18868" type="Weapon" name="판타스마 듀얼대거 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1048,7 +1048,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18869" name="幻靈雙鈍器" type="Weapon">
+	<item id="18869" type="Weapon" name="판타스마 듀얼블런트 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
@@ -1075,7 +1075,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18870" name="幻靈雙鈍器" type="Weapon">
+	<item id="18870" type="Weapon" name="판타스마 듀얼블런트 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
@@ -1102,7 +1102,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="18871" name="幻靈雙鈍器" type="Weapon">
+	<item id="18871" type="Weapon" name="판타스마 듀얼블런트 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>

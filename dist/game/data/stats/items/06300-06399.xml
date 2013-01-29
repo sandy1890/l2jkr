@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6300" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+	<item id="6300" type="EtcItem" name="네필림 주술사 배치표">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -9,7 +9,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6301" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+	<item id="6301" type="EtcItem" name="네필림 전사 배치표">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -18,7 +18,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6302" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+	<item id="6302" type="EtcItem" name="네필림 주술사 배치표">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -27,7 +27,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6303" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+	<item id="6303" type="EtcItem" name="네필림 전사 배치표">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6304" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+	<item id="6304" type="EtcItem" name="네필림 주술사 배치표">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6305" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+	<item id="6305" type="EtcItem" name="네필림 전사 배치표">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -54,7 +54,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6306" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+	<item id="6306" type="EtcItem" name="네필림 주술사 배치표">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -63,7 +63,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6307" type="Weapon" name="Sword of Limit - Guidance">
+	<item id="6307" type="Weapon" name="극한의 검 가이던스">
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -91,7 +91,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6308" type="Weapon" name="Sword of Limit - Critical Drain">
+	<item id="6308" type="Weapon" name="극한의 검 Crt.드레인">
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -120,7 +120,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6309" type="Weapon" name="Sword of Limit - Health">
+	<item id="6309" type="Weapon" name="극한의 검 헬스">
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -148,7 +148,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6310" type="Weapon" name="Sword of Whispering Death - Empower">
+	<item id="6310" type="Weapon" name="데스브레스 소드 엠파워">
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -176,7 +176,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6311" type="Weapon" name="Sword of Whispering Death - M. Atk.">
+	<item id="6311" type="Weapon" name="데스브레스 소드 매직파워">
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -204,7 +204,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6312" type="Weapon" name="Sword of Whispering Death - Magic Silence">
+	<item id="6312" type="Weapon" name="데스브레스 소드 매직사일런스">
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -233,7 +233,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6313" type="Weapon" name="Homunkulus's Sword - Acumen">
+	<item id="6313" type="Weapon" name="호문쿨러스 소드 아큐멘">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -261,7 +261,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6314" type="Weapon" name="Homunkulus's Sword - Conversion">
+	<item id="6314" type="Weapon" name="호문쿨러스 소드 업다운">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -289,7 +289,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6315" type="Weapon" name="Homunkulus's Sword - Magic Paralyze">
+	<item id="6315" type="Weapon" name="호문쿨러스 소드 매직패럴라이즈">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -318,7 +318,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6316" type="EtcItem" name="Food for Wyvern">
+	<item id="6316" type="EtcItem" name="와이번용 사료">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -332,7 +332,7 @@
 		<set name="use_condition" val="{{uc_category;{@strider;@wyvern_group}}}" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="6317" type="EtcItem" name="Mixing Manual">
+	<item id="6317" type="EtcItem" name="재료 혼합 설명서">
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="show_html" />
 		<set name="immediate_effect" val="1" />
@@ -342,7 +342,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="6318" type="EtcItem" name="Blood Fire">
+	<item id="6318" type="EtcItem" name="블러드파이어">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -351,7 +351,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="6319" type="EtcItem" name="Mimir's Elixir">
+	<item id="6319" type="EtcItem" name="미미르의 샘물">
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -362,7 +362,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="6320" type="EtcItem" name="Pure Silver">
+	<item id="6320" type="EtcItem" name="퓨어 실버">
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -370,7 +370,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="6321" type="EtcItem" name="True Gold">
+	<item id="6321" type="EtcItem" name="트루 골드">
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -381,7 +381,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="6322" type="EtcItem" name="Sage's Stone">
+	<item id="6322" type="EtcItem" name="현자의 돌">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -392,7 +392,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="6323" type="Armor" name="Sealed Phoenix Necklace">
+	<item id="6323" type="Armor" name="봉인된 피닉스 네크리스">
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -408,7 +408,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6324" type="Armor" name="Sealed Phoenix Earring">
+	<item id="6324" type="Armor" name="봉인된 피닉스 이어링">
 		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -424,7 +424,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6325" type="Armor" name="Sealed Phoenix Ring">
+	<item id="6325" type="Armor" name="봉인된 피닉스 링">
 		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -440,7 +440,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6326" type="Armor" name="Sealed Majestic Necklace">
+	<item id="6326" type="Armor" name="봉인된 마제스틱 네크리스">
 		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -456,7 +456,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6327" type="Armor" name="Sealed Majestic Earring">
+	<item id="6327" type="Armor" name="봉인된 마제스틱 이어링">
 		<set name="icon" val="icon.accessary_inferno_earing_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -472,7 +472,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6328" type="Armor" name="Sealed Majestic Ring">
+	<item id="6328" type="Armor" name="봉인된 마제스틱 링">
 		<set name="icon" val="icon.accessary_inferno_ring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -488,7 +488,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6329" type="EtcItem" name="Recipe: Sealed Phoenix Necklace(70%)">
+	<item id="6329" type="EtcItem" name="레시피 : 봉인된 피닉스 네크리스(70%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -500,7 +500,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6330" type="EtcItem" name="Recipe: Sealed Phoenix Necklace(100%)">
+	<item id="6330" type="EtcItem" name="레시피 : 봉인된 피닉스 네크리스(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -512,7 +512,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6331" type="EtcItem" name="Recipe: Sealed Phoenix Earring(70%)">
+	<item id="6331" type="EtcItem" name="레시피 : 봉인된 피닉스 이어링(70%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -524,7 +524,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6332" type="EtcItem" name="Recipe: Sealed Phoenix Earring(100%)">
+	<item id="6332" type="EtcItem" name="레시피 : 봉인된 피닉스 이어링(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -536,7 +536,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6333" type="EtcItem" name="Recipe: Sealed Phoenix Ring(70%)">
+	<item id="6333" type="EtcItem" name="레시피 : 봉인된 피닉스 링(70%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -548,7 +548,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6334" type="EtcItem" name="Recipe: Sealed Phoenix Ring(100%)">
+	<item id="6334" type="EtcItem" name="레시피 : 봉인된 피닉스 링(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -560,7 +560,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6335" type="EtcItem" name="Recipe: Sealed Majestic Necklace(70%)">
+	<item id="6335" type="EtcItem" name="레시피 : 봉인된 마제스틱 네크리스(70%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -572,7 +572,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6336" type="EtcItem" name="Recipe: Sealed Majestic Necklace(100%)">
+	<item id="6336" type="EtcItem" name="레시피 : 봉인된 마제스틱 네크리스(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -584,7 +584,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6337" type="EtcItem" name="Recipe: Sealed Majestic Earring(70%)">
+	<item id="6337" type="EtcItem" name="레시피 : 봉인된 마제스틱 이어링(70%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -596,7 +596,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6338" type="EtcItem" name="Recipe: Sealed Majestic Earring(100%)">
+	<item id="6338" type="EtcItem" name="레시피 : 봉인된 마제스틱 이어링(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -608,7 +608,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6339" type="EtcItem" name="Recipe: Sealed Majestic Ring(70%)">
+	<item id="6339" type="EtcItem" name="레시피 : 봉인된 마제스틱 링(70%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -620,7 +620,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6340" type="EtcItem" name="Recipe: Sealed Majestic Ring(100%)">
+	<item id="6340" type="EtcItem" name="레시피 : 봉인된 마제스틱 링(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -632,7 +632,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6341" type="EtcItem" name="Sealed Phoenix Earring Gemstone">
+	<item id="6341" type="EtcItem" name="봉인된 피닉스 이어링 젬">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -641,7 +641,7 @@
 		<set name="price" val="7231" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6342" type="EtcItem" name="Sealed Majestic Earring Gemstone">
+	<item id="6342" type="EtcItem" name="봉인된 마제스틱 이어링 젬">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -650,7 +650,7 @@
 		<set name="price" val="8829" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6343" type="EtcItem" name="Sealed Phoenix Necklace Beads">
+	<item id="6343" type="EtcItem" name="봉인된 피닉스 네크리스 비즈">
 		<set name="icon" val="BranchSys2.icon.etc_sealed_phoenixbeads_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -659,7 +659,7 @@
 		<set name="price" val="9354" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6344" type="EtcItem" name="Sealed Majestic Necklace Beads">
+	<item id="6344" type="EtcItem" name="봉인된 마제스틱 네크리스 비즈">
 		<set name="icon" val="BranchSys2.icon.etc_sealed_majesticbeads_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -668,7 +668,7 @@
 		<set name="price" val="13643" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6345" type="EtcItem" name="Sealed Phoenix Ring Gemstone">
+	<item id="6345" type="EtcItem" name="봉인된 피닉스 링 젬">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -677,7 +677,7 @@
 		<set name="price" val="5228" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6346" type="EtcItem" name="Sealed Majestic Ring Gemstone">
+	<item id="6346" type="EtcItem" name="봉인된 마제스틱 링 젬">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -686,7 +686,7 @@
 		<set name="price" val="6143" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6347" type="Weapon" name="Berserker Blade - Focus">
+	<item id="6347" type="Weapon" name="버서커 블레이드 포커스">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -714,7 +714,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6348" type="Weapon" name="Berserker Blade - Critical Damage">
+	<item id="6348" type="Weapon" name="버서커 블레이드 Crt.대미지">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -742,7 +742,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6349" type="Weapon" name="Berserker Blade - Haste">
+	<item id="6349" type="Weapon" name="버서커 블레이드 헤이스트">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -770,7 +770,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6350" type="EtcItem" name="Amulet: Pa'agrio's Honor">
+	<item id="6350" type="EtcItem" name="부적 - 오너 오브 파아그리오">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -778,7 +778,7 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6351" type="EtcItem" name="Amulet: Ritual of Life">
+	<item id="6351" type="EtcItem" name="부적 - 리튜얼 오브 라이프">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -786,7 +786,7 @@
 		<set name="price" val="8200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6352" type="EtcItem" name="Spellbook: Prayer">
+	<item id="6352" type="EtcItem" name="마법서 - 프래이어">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -794,13 +794,13 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6353" type="EtcItem" name="Blue Gemstone">
+	<item id="6353" type="EtcItem" name="푸른 보석">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6354" type="Weapon" name="Falchion - for Beginners">
+	<item id="6354" type="Weapon" name="펄션 - 초보용">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -824,7 +824,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="6355" type="Weapon" name="Mage Staff - for Beginners">
+	<item id="6355" type="Weapon" name="법사의 지팡이 - 초보용">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -850,7 +850,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="6356" type="Weapon" name="Dark Elven Dagger - Rsk. Haste">
+	<item id="6356" type="Weapon" name="다크 엘븐 대거 Rsk.헤이스트">
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -878,7 +878,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6357" type="Weapon" name="Stiletto - Rsk. Haste">
+	<item id="6357" type="Weapon" name="스틸레토 Rsk.헤이스트">
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -906,7 +906,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6358" type="Weapon" name="Crystal Dagger - Critical Damage">
+	<item id="6358" type="Weapon" name="크리스탈 단검 Crt.대미지">
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -934,7 +934,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6359" type="Weapon" name="Demon's Dagger - Critical Damage">
+	<item id="6359" type="Weapon" name="악마의 단검 Crt.대미지">
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -962,35 +962,35 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6360" type="EtcItem" name="Blue Seal Stone">
+	<item id="6360" type="EtcItem" name="푸른 봉인석">
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="gold" />
 		<set name="price" val="3" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6361" type="EtcItem" name="Green Seal Stone">
+	<item id="6361" type="EtcItem" name="초록 봉인석">
 		<set name="icon" val="icon.etc_wind_rune_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="gold" />
 		<set name="price" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6362" type="EtcItem" name="Red Seal Stone">
+	<item id="6362" type="EtcItem" name="붉은 봉인석">
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="gold" />
 		<set name="price" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6363" type="EtcItem" name="Stolen Infernium Ore">
+	<item id="6363" type="EtcItem" name="도난당한 인페르니움 원석">
 		<set name="icon" val="icon.etc_inf_ore_high_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6364" type="Weapon" name="Forgotten Blade">
+	<item id="6364" type="Weapon" name="포가튼 블레이드">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1018,7 +1018,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6365" type="Weapon" name="Basalt Battlehammer">
+	<item id="6365" type="Weapon" name="바살트 배틀해머">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1046,7 +1046,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6366" type="Weapon" name="Imperial Staff">
+	<item id="6366" type="Weapon" name="임페리얼 스텝">
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1075,7 +1075,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6367" type="Weapon" name="Angel Slayer">
+	<item id="6367" type="Weapon" name="엔젤 슬레이어">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1103,7 +1103,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6368" type="Weapon" name="Shining Bow">
+	<item id="6368" type="Weapon" name="빛의 활">
 		<set name="icon" val="icon.weapon_shining_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1133,7 +1133,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6369" type="Weapon" name="Dragon Hunter Axe">
+	<item id="6369" type="Weapon" name="드래곤 헌터 액스">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1161,7 +1161,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6370" type="Weapon" name="Saint Spear">
+	<item id="6370" type="Weapon" name="세인트 스피어">
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1190,7 +1190,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6371" type="Weapon" name="Demon Splinter">
+	<item id="6371" type="Weapon" name="데몬 스플린터">
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1218,7 +1218,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6372" type="Weapon" name="Heaven's Divider">
+	<item id="6372" type="Weapon" name="헤븐스 디바이더">
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1246,7 +1246,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6373" type="Armor" name="Imperial Crusader Breastplate">
+	<item id="6373" type="Armor" name="임페리얼 크루세이더 흉갑">
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1267,7 +1267,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6374" type="Armor" name="Imperial Crusader Gaiters">
+	<item id="6374" type="Armor" name="임페리얼 크루세이더 각반">
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1288,7 +1288,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6375" type="Armor" name="Imperial Crusader Gauntlets">
+	<item id="6375" type="Armor" name="임페리얼 크루세이더 건틀렛">
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1308,7 +1308,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6376" type="Armor" name="Imperial Crusader Boots">
+	<item id="6376" type="Armor" name="임페리얼 크루세이더 부츠">
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1328,7 +1328,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6377" type="Armor" name="Imperial Crusader Shield">
+	<item id="6377" type="Armor" name="임페리얼 크루세이더 쉴드">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1349,7 +1349,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="6378" type="Armor" name="Imperial Crusader Helmet">
+	<item id="6378" type="Armor" name="임페리얼 크루세이더 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1369,7 +1369,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6379" type="Armor" name="Draconic Leather Armor">
+	<item id="6379" type="Armor" name="드라코닉 레더 아머">
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1387,7 +1387,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6380" type="Armor" name="Draconic Leather Gloves">
+	<item id="6380" type="Armor" name="드라코닉 레더 글로브">
 		<set name="icon" val="icon.armor_t89_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1404,7 +1404,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6381" type="Armor" name="Draconic Leather Boots">
+	<item id="6381" type="Armor" name="드라코닉 레더 부츠">
 		<set name="icon" val="icon.armor_t89_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1421,7 +1421,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6382" type="Armor" name="Draconic Leather Helmet">
+	<item id="6382" type="Armor" name="드라코닉 레더 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1438,7 +1438,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6383" type="Armor" name="Major Arcana Robe">
+	<item id="6383" type="Armor" name="메이저 아르카나 로브">
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1460,7 +1460,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6384" type="Armor" name="Major Arcana Gloves">
+	<item id="6384" type="Armor" name="메이저 아르카나 글로브">
 		<set name="icon" val="icon.armor_t90_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1480,7 +1480,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6385" type="Armor" name="Major Arcana Boots">
+	<item id="6385" type="Armor" name="메이저 아르카나 부츠">
 		<set name="icon" val="icon.armor_t90_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1500,7 +1500,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6386" type="Armor" name="Major Arcana Circlet">
+	<item id="6386" type="Armor" name="메이저 아르카나 서클릿">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1520,7 +1520,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="6387" type="EtcItem" name="Blessed Scroll of Resurrection for Pets">
+	<item id="6387" type="EtcItem" name="축복받은 펫용 부활 주문서">
 		<set name="icon" val="icon.etc_scroll_of_resurrection_pet_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1532,13 +1532,13 @@
 		<set name="handler" val="ScrollOfResurrection" />
 		<set name="item_skill" val="2179-1" />
 	</item>
-	<item id="6388" type="EtcItem" name="Lord of the Manor's Certificate of Approval">
+	<item id="6388" type="EtcItem" name="영주의 승인증">
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6389" type="EtcItem" name="Squash Seed">
+	<item id="6389" type="EtcItem" name="박씨">
 		<set name="icon" val="icon.etc_gourd_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1548,7 +1548,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2003-1" />
 	</item>
-	<item id="6390" type="EtcItem" name="Large Squash Seed">
+	<item id="6390" type="EtcItem" name="대박씨">
 		<set name="icon" val="icon.etc_gourd_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1558,7 +1558,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2004-1" />
 	</item>
-	<item id="6391" type="EtcItem" name="Nectar">
+	<item id="6391" type="EtcItem" name="넥타">
 		<set name="icon" val="icon.etc_nectar_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -1567,17 +1567,17 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2005-1" />
 	</item>
-	<item id="6392" type="EtcItem" name="Event - Medal">
+	<item id="6392" type="EtcItem" name="이벤트 - 메달">
 		<set name="icon" val="icon.etc_event_medal_i00" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6393" type="EtcItem" name="Event - Glittering Medal">
+	<item id="6393" type="EtcItem" name="이벤트 - 반짝이는 메달">
 		<set name="icon" val="icon.etc_event_glitter_medal_i00" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6394" type="Armor" name="Red Party Mask">
+	<item id="6394" type="Armor" name="붉은 파티 마스크">
 		<set name="icon" val="icon.etc_party_mask_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1585,7 +1585,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="6395" type="EtcItem" name="Amulet: Chant of Predator">
+	<item id="6395" type="EtcItem" name="부적 - 챈트 오브 프레디터">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1593,7 +1593,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6396" type="EtcItem" name="Amulet: Chant of Eagle">
+	<item id="6396" type="EtcItem" name="부적 - 챈트 오브 이글">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1601,7 +1601,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6397" type="EtcItem" name="Amulet: Chant of Vampire">
+	<item id="6397" type="EtcItem" name="부적 - 챈트 오브 뱀파이어">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1609,7 +1609,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6398" type="EtcItem" name="Spellbook: Body of Avatar">
+	<item id="6398" type="EtcItem" name="마법서 - 바디 오브 아바타">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1617,7 +1617,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6399" type="EtcItem" name="Badge of Rabbit">
+	<item id="6399" type="EtcItem" name="토끼의 문장">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />

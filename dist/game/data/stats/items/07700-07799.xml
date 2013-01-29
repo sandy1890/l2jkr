@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="7700" type="EtcItem" name="Recipe: Daisy Hairpin (100%)">
+	<item id="7700" type="EtcItem" name="레시피 : 데이지 꽃 헤어핀(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="7701" type="Weapon" name="Stick of Faith - Mana Up">
+	<item id="7701" type="Weapon" name="신앙의 홀 마나업">
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -41,7 +41,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7702" type="Weapon" name="Stick of Faith - Magic Hold">
+	<item id="7702" type="Weapon" name="신앙의 홀 매직홀드">
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -71,7 +71,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7703" type="Weapon" name="Stick of Faith - Magic Shield">
+	<item id="7703" type="Weapon" name="신앙의 홀 매직멘탈실드">
 		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -101,7 +101,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7704" type="Weapon" name="Stick of Eternity - Empower">
+	<item id="7704" type="Weapon" name="구원의 홀 엠파워">
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -130,7 +130,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7705" type="Weapon" name="Stick of Eternity - Rsk. Evasion">
+	<item id="7705" type="Weapon" name="구원의 홀 Rsk.이베이젼">
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -159,7 +159,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7706" type="Weapon" name="Stick of Eternity - Blessed Body">
+	<item id="7706" type="Weapon" name="구원의 홀 매직bls.바디">
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -189,7 +189,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7707" type="Weapon" name="Nirvana Axe - M. Atk.">
+	<item id="7707" type="Weapon" name="너바나 액스 매직파워">
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -218,7 +218,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7708" type="Weapon" name="Nirvana Axe - Magic Poison">
+	<item id="7708" type="Weapon" name="너바나 액스 매직포이즌">
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -248,7 +248,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7709" type="Weapon" name="Nirvana Axe - Magic Weakness">
+	<item id="7709" type="Weapon" name="너바나 액스 매직위크니스">
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -278,7 +278,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7710" type="Weapon" name="Club of Nature - Acumen">
+	<item id="7710" type="Weapon" name="대자연의 클럽 아큐멘">
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -307,7 +307,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7711" type="Weapon" name="Club of Nature - Mental Shield">
+	<item id="7711" type="Weapon" name="대자연의 클럽 매직멘탈실드">
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -337,7 +337,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7712" type="Weapon" name="Club of Nature - Magic Hold">
+	<item id="7712" type="Weapon" name="대자연의 클럽 매직홀드">
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -367,7 +367,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7713" type="Weapon" name="Mace of Underworld - Mana Up">
+	<item id="7713" type="Weapon" name="메이스 오브 언더월드 마나업">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -396,7 +396,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7714" type="Weapon" name="Mace of Underworld - Magic Silence">
+	<item id="7714" type="Weapon" name="메이스 오브 언더월드 매직사일런스">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -426,7 +426,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7715" type="Weapon" name="Mace of Underworld - Conversion">
+	<item id="7715" type="Weapon" name="메이스 오브 언더월드 업다운">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -455,7 +455,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7716" type="Weapon" name="Inferno Staff - Acumen">
+	<item id="7716" type="Weapon" name="인페르노 스탭 아큐멘">
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -484,7 +484,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7717" type="Weapon" name="Inferno Staff - Magic Silence">
+	<item id="7717" type="Weapon" name="인페르노 스탭 매직사일런스">
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -514,7 +514,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7718" type="Weapon" name="Inferno Staff - Magic Paralyze">
+	<item id="7718" type="Weapon" name="인페르노 스탭 매직패럴라이즈">
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -544,7 +544,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7719" type="Weapon" name="Poleaxe - Critical Stun">
+	<item id="7719" type="Weapon" name="폴액스 Crt.스턴">
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -574,7 +574,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7720" type="Weapon" name="Poleaxe - Towering Blow">
+	<item id="7720" type="Weapon" name="폴액스 롱블로">
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -603,7 +603,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7721" type="Weapon" name="Poleaxe - Wide Blow">
+	<item id="7721" type="Weapon" name="폴액스 와이드블로">
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -632,7 +632,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7722" type="Weapon" name="Sword of Valhalla - Acumen">
+	<item id="7722" type="Weapon" name="소드 오브 발할라 아큐멘">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -660,7 +660,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7723" type="Weapon" name="Sword of Valhalla - Magic Weakness">
+	<item id="7723" type="Weapon" name="소드 오브 발할라 매직위크니스">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -689,7 +689,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7724" type="Weapon" name="Sword of Valhalla - Magic Regeneration">
+	<item id="7724" type="Weapon" name="소드 오브 발할라 매직리제네레이션">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -718,7 +718,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="7725" type="EtcItem" name="Booty - Gray Pouch">
+	<item id="7725" type="EtcItem" name="노획물 - 회색 주머니">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -728,7 +728,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2218-3" />
 	</item>
-	<item id="7726" type="EtcItem" name="Small Nimble Green Fish - For Beginners">
+	<item id="7726" type="EtcItem" name="초보자용-작은 녹색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -739,7 +739,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-1" />
 	</item>
-	<item id="7727" type="EtcItem" name="Small Ugly Green Fish - For Beginners">
+	<item id="7727" type="EtcItem" name="초보자용-작은 녹색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -750,7 +750,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-2" />
 	</item>
-	<item id="7728" type="EtcItem" name="Small Pudgy Green Fish - For Beginners">
+	<item id="7728" type="EtcItem" name="초보자용-작은 녹색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -761,7 +761,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-3" />
 	</item>
-	<item id="7729" type="EtcItem" name="Nimble Green Fish - For Beginners">
+	<item id="7729" type="EtcItem" name="초보자용-녹색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -772,7 +772,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-4" />
 	</item>
-	<item id="7730" type="EtcItem" name="Ugly Green Fish - For Beginners">
+	<item id="7730" type="EtcItem" name="초보자용-녹색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -783,7 +783,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-5" />
 	</item>
-	<item id="7731" type="EtcItem" name="Pudgy Green Fish - For Beginners">
+	<item id="7731" type="EtcItem" name="초보자용-녹색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -794,7 +794,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-6" />
 	</item>
-	<item id="7732" type="EtcItem" name="Large Nimble Green Fish - For Beginners">
+	<item id="7732" type="EtcItem" name="초보자용-큰 녹색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -805,7 +805,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-7" />
 	</item>
-	<item id="7733" type="EtcItem" name="Large Ugly Green Fish - For Beginners">
+	<item id="7733" type="EtcItem" name="초보자용-큰 녹색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -816,7 +816,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-8" />
 	</item>
-	<item id="7734" type="EtcItem" name="Large Pudgy Green Fish - For Beginners">
+	<item id="7734" type="EtcItem" name="초보자용-큰 녹색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -827,7 +827,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2220-9" />
 	</item>
-	<item id="7735" type="EtcItem" name="Small Jade Nimble Fish - For Beginners">
+	<item id="7735" type="EtcItem" name="초보자용-작은 옥색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -838,7 +838,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-1" />
 	</item>
-	<item id="7736" type="EtcItem" name="Small Jade Ugly Fish - For Beginners">
+	<item id="7736" type="EtcItem" name="초보자용-작은 옥색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -849,7 +849,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-2" />
 	</item>
-	<item id="7737" type="EtcItem" name="Small Jade Fat Fish - For Beginners">
+	<item id="7737" type="EtcItem" name="초보자용-작은 옥색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -860,7 +860,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-3" />
 	</item>
-	<item id="7738" type="EtcItem" name="Jade Nimble Fish - For Beginners">
+	<item id="7738" type="EtcItem" name="초보자용-옥색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -871,7 +871,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-4" />
 	</item>
-	<item id="7739" type="EtcItem" name="Jade Ugly Fish - For Beginners">
+	<item id="7739" type="EtcItem" name="초보자용-옥색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -882,7 +882,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-5" />
 	</item>
-	<item id="7740" type="EtcItem" name="Jade Fat Fish - For Beginners">
+	<item id="7740" type="EtcItem" name="초보자용-옥색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -893,7 +893,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-6" />
 	</item>
-	<item id="7741" type="EtcItem" name="Large Jade Nimble Fish - For Beginners">
+	<item id="7741" type="EtcItem" name="초보자용-큰 옥색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -904,7 +904,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-7" />
 	</item>
-	<item id="7742" type="EtcItem" name="Large Jade Ugly Fish - For Beginners">
+	<item id="7742" type="EtcItem" name="초보자용-큰 옥색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -915,7 +915,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-8" />
 	</item>
-	<item id="7743" type="EtcItem" name="Large Jade Fat Fish - For Beginners">
+	<item id="7743" type="EtcItem" name="초보자용-큰 옥색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -926,7 +926,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2221-9" />
 	</item>
-	<item id="7744" type="EtcItem" name="Small Blue Nimble Fish - For Beginners">
+	<item id="7744" type="EtcItem" name="초보자용-작은 청색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -937,7 +937,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-1" />
 	</item>
-	<item id="7745" type="EtcItem" name="Small Blue Ugly Fish - For Beginners">
+	<item id="7745" type="EtcItem" name="초보자용-작은 청색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -948,7 +948,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-2" />
 	</item>
-	<item id="7746" type="EtcItem" name="Small Blue Fat Fish - For Beginners">
+	<item id="7746" type="EtcItem" name="초보자용-작은 청색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -959,7 +959,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-3" />
 	</item>
-	<item id="7747" type="EtcItem" name="Blue Nimble Fish - For Beginners">
+	<item id="7747" type="EtcItem" name="초보자용-청색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -970,7 +970,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-4" />
 	</item>
-	<item id="7748" type="EtcItem" name="Blue Ugly Fish - For Beginners">
+	<item id="7748" type="EtcItem" name="초보자용-청색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -981,7 +981,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-5" />
 	</item>
-	<item id="7749" type="EtcItem" name="Blue Fat Fish - For Beginners">
+	<item id="7749" type="EtcItem" name="초보자용-청색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -992,7 +992,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-6" />
 	</item>
-	<item id="7750" type="EtcItem" name="Large Blue Nimble Fish - For Beginners">
+	<item id="7750" type="EtcItem" name="초보자용-큰 청색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1003,7 +1003,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-7" />
 	</item>
-	<item id="7751" type="EtcItem" name="Large Blue Ugly Fish - For Beginners">
+	<item id="7751" type="EtcItem" name="초보자용-큰 청색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1014,7 +1014,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-8" />
 	</item>
-	<item id="7752" type="EtcItem" name="Large Blue Fat Fish - For Beginners">
+	<item id="7752" type="EtcItem" name="초보자용-큰 청색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1025,7 +1025,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2222-9" />
 	</item>
-	<item id="7753" type="EtcItem" name="Small Yellow Nimble Fish - For Beginners">
+	<item id="7753" type="EtcItem" name="초보자용-작은 황색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1036,7 +1036,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-1" />
 	</item>
-	<item id="7754" type="EtcItem" name="Small Yellow Ugly Fish - For Beginners">
+	<item id="7754" type="EtcItem" name="초보자용-작은 황색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1047,7 +1047,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-2" />
 	</item>
-	<item id="7755" type="EtcItem" name="Small Yellow Fat Fish - For Beginners">
+	<item id="7755" type="EtcItem" name="초보자용-작은 황색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1058,7 +1058,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-3" />
 	</item>
-	<item id="7756" type="EtcItem" name="Yellow Nimble Fish - For Beginners">
+	<item id="7756" type="EtcItem" name="초보자용-황색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1069,7 +1069,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-4" />
 	</item>
-	<item id="7757" type="EtcItem" name="Yellow Ugly Fish - For Beginners">
+	<item id="7757" type="EtcItem" name="초보자용-황색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1080,7 +1080,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-5" />
 	</item>
-	<item id="7758" type="EtcItem" name="Yellow Fat Fish - For Beginners">
+	<item id="7758" type="EtcItem" name="초보자용-황색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1091,7 +1091,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-6" />
 	</item>
-	<item id="7759" type="EtcItem" name="Large Yellow Nimble Fish - For Beginners">
+	<item id="7759" type="EtcItem" name="초보자용-큰 황색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1102,7 +1102,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-7" />
 	</item>
-	<item id="7760" type="EtcItem" name="Large Yellow Ugly Fish - For Beginners">
+	<item id="7760" type="EtcItem" name="초보자용-큰 황색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1113,7 +1113,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-8" />
 	</item>
-	<item id="7761" type="EtcItem" name="Large Yellow Fat Fish - For Beginners">
+	<item id="7761" type="EtcItem" name="초보자용-큰 황색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1124,7 +1124,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2223-9" />
 	</item>
-	<item id="7762" type="EtcItem" name="Small Orange Nimble Fish - For Beginners">
+	<item id="7762" type="EtcItem" name="초보자용-작은 주황색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1135,7 +1135,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-1" />
 	</item>
-	<item id="7763" type="EtcItem" name="Small Orange Ugly Fish - For Beginners">
+	<item id="7763" type="EtcItem" name="초보자용-작은 주황색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1146,7 +1146,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-2" />
 	</item>
-	<item id="7764" type="EtcItem" name="Small Orange Fat Fish - For Beginners">
+	<item id="7764" type="EtcItem" name="초보자용-작은 주황색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1157,7 +1157,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-3" />
 	</item>
-	<item id="7765" type="EtcItem" name="Orange Nimble Fish - For Beginners">
+	<item id="7765" type="EtcItem" name="초보자용-주황색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1168,7 +1168,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-4" />
 	</item>
-	<item id="7766" type="EtcItem" name="Orange Ugly Fish - For Beginners">
+	<item id="7766" type="EtcItem" name="초보자용-주황색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1179,7 +1179,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-5" />
 	</item>
-	<item id="7767" type="EtcItem" name="Orange Fat Fish - For Beginners">
+	<item id="7767" type="EtcItem" name="초보자용-주황색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1190,7 +1190,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-6" />
 	</item>
-	<item id="7768" type="EtcItem" name="Large Orange Nimble Fish - For Beginners">
+	<item id="7768" type="EtcItem" name="초보자용-큰 주황색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1201,7 +1201,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-7" />
 	</item>
-	<item id="7769" type="EtcItem" name="Large Orange Ugly Fish - For Beginners">
+	<item id="7769" type="EtcItem" name="초보자용-큰 주황색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1212,7 +1212,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-8" />
 	</item>
-	<item id="7770" type="EtcItem" name="Large Orange Fat Fish - For Beginners">
+	<item id="7770" type="EtcItem" name="초보자용-큰 주황색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1223,7 +1223,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2224-9" />
 	</item>
-	<item id="7771" type="EtcItem" name="Small Purple Nimble Fish - For Beginners">
+	<item id="7771" type="EtcItem" name="초보자용-작은 보라색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1234,7 +1234,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-1" />
 	</item>
-	<item id="7772" type="EtcItem" name="Small Purple Ugly Fish - For Beginners">
+	<item id="7772" type="EtcItem" name="초보자용-작은 보라색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1245,7 +1245,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-2" />
 	</item>
-	<item id="7773" type="EtcItem" name="Small Purple Fat Fish - For Beginners">
+	<item id="7773" type="EtcItem" name="초보자용-작은 보라색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1256,7 +1256,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-3" />
 	</item>
-	<item id="7774" type="EtcItem" name="Purple Nimble Fish - For Beginners">
+	<item id="7774" type="EtcItem" name="초보자용-보라색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1267,7 +1267,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-4" />
 	</item>
-	<item id="7775" type="EtcItem" name="Purple Ugly Fish - For Beginners">
+	<item id="7775" type="EtcItem" name="초보자용-보라색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1278,7 +1278,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-5" />
 	</item>
-	<item id="7776" type="EtcItem" name="Purple Fat Fish - For Beginners">
+	<item id="7776" type="EtcItem" name="초보자용-보라색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1289,7 +1289,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-6" />
 	</item>
-	<item id="7777" type="EtcItem" name="Large Purple Nimble Fish - For Beginners">
+	<item id="7777" type="EtcItem" name="초보자용-큰 보라색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1300,7 +1300,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-7" />
 	</item>
-	<item id="7778" type="EtcItem" name="Large Purple Ugly Fish - For Beginners">
+	<item id="7778" type="EtcItem" name="초보자용-큰 보라색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1311,7 +1311,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-8" />
 	</item>
-	<item id="7779" type="EtcItem" name="Large Purple Fat Fish - For Beginners">
+	<item id="7779" type="EtcItem" name="초보자용-큰 보라색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1322,7 +1322,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2225-9" />
 	</item>
-	<item id="7780" type="EtcItem" name="Small Red Nimble Fish - For Beginners">
+	<item id="7780" type="EtcItem" name="초보자용-작은 붉은색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1333,7 +1333,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-1" />
 	</item>
-	<item id="7781" type="EtcItem" name="Small Red Ugly Fish - For Beginners">
+	<item id="7781" type="EtcItem" name="초보자용-작은 붉은색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1344,7 +1344,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-2" />
 	</item>
-	<item id="7782" type="EtcItem" name="Small Red Fat Fish - For Beginners">
+	<item id="7782" type="EtcItem" name="초보자용-작은 붉은색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1355,7 +1355,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-3" />
 	</item>
-	<item id="7783" type="EtcItem" name="Red Nimble Fish - For Beginners">
+	<item id="7783" type="EtcItem" name="초보자용-붉은색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1366,7 +1366,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-4" />
 	</item>
-	<item id="7784" type="EtcItem" name="Red Ugly Fish - For Beginners">
+	<item id="7784" type="EtcItem" name="초보자용-붉은색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1377,7 +1377,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-5" />
 	</item>
-	<item id="7785" type="EtcItem" name="Red Fat Fish - For Beginners">
+	<item id="7785" type="EtcItem" name="초보자용-붉은색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1388,7 +1388,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-6" />
 	</item>
-	<item id="7786" type="EtcItem" name="Large Red Nimble Fish - For Beginners">
+	<item id="7786" type="EtcItem" name="초보자용-큰 붉은색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1399,7 +1399,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-7" />
 	</item>
-	<item id="7787" type="EtcItem" name="Large Red Ugly Fish - For Beginners">
+	<item id="7787" type="EtcItem" name="초보자용-큰 붉은색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1410,7 +1410,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-8" />
 	</item>
-	<item id="7788" type="EtcItem" name="Large Red Fat Fish - For Beginners">
+	<item id="7788" type="EtcItem" name="초보자용-큰 붉은색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1421,7 +1421,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2226-9" />
 	</item>
-	<item id="7789" type="EtcItem" name="Small White Nimble Fish - For Beginners">
+	<item id="7789" type="EtcItem" name="초보자용-작은 흰색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1432,7 +1432,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-1" />
 	</item>
-	<item id="7790" type="EtcItem" name="Small White Ugly Fish - For Beginners">
+	<item id="7790" type="EtcItem" name="초보자용-작은 흰색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1443,7 +1443,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-2" />
 	</item>
-	<item id="7791" type="EtcItem" name="Small White Fat Fish - For Beginners">
+	<item id="7791" type="EtcItem" name="초보자용-작은 흰색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1454,7 +1454,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-3" />
 	</item>
-	<item id="7792" type="EtcItem" name="White Nimble Fish - For Beginners">
+	<item id="7792" type="EtcItem" name="초보자용-흰색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1465,7 +1465,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-4" />
 	</item>
-	<item id="7793" type="EtcItem" name="White Ugly Fish - For Beginners">
+	<item id="7793" type="EtcItem" name="초보자용-흰색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1476,7 +1476,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-5" />
 	</item>
-	<item id="7794" type="EtcItem" name="White Fat Fish - For Beginners">
+	<item id="7794" type="EtcItem" name="초보자용-흰색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1487,7 +1487,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-6" />
 	</item>
-	<item id="7795" type="EtcItem" name="Large White Nimble Fish - For Beginners">
+	<item id="7795" type="EtcItem" name="초보자용-큰 흰색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1498,7 +1498,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-7" />
 	</item>
-	<item id="7796" type="EtcItem" name="Large White Ugly Fish - For Beginners">
+	<item id="7796" type="EtcItem" name="초보자용-큰 흰색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1509,7 +1509,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-8" />
 	</item>
-	<item id="7797" type="EtcItem" name="Large White Fat Fish - For Beginners">
+	<item id="7797" type="EtcItem" name="초보자용-큰 흰색 넓은 물고기">
 		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1520,7 +1520,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2227-9" />
 	</item>
-	<item id="7798" type="EtcItem" name="Small Black Nimble Fish: For Beginners">
+	<item id="7798" type="EtcItem" name="초보자용-작은 검은색 날쌘 물고기">
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1531,7 +1531,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2228-1" />
 	</item>
-	<item id="7799" type="EtcItem" name="Small Black Ugly Fish - For Beginners">
+	<item id="7799" type="EtcItem" name="초보자용-작은 검은색 못생긴 물고기">
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />

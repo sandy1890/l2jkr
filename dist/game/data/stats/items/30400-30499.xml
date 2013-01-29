@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
 	<!-- R급 무기 -->
-	<item id="30400" name="無限爆刃" type="Weapon">
+	<item id="30400" type="Weapon" name="인피니티 버스터">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度。額外增加靈活思緒效果。</table>
 		<set name="icon" val="icon.weapon_infinity_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -34,7 +34,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="30401" name="無限術杖" type="Weapon">
+	<item id="30401" type="Weapon" name="인피니티 캐스터">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度。額外增加靈活思緒效果。</table>
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -67,7 +67,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="30402" name="無限報恨者" type="Weapon">
+	<item id="30402" type="Weapon" name="인피니티 레트리뷰터">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度。額外增加靈活思緒效果。</table>
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -100,7 +100,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="30403" name="無限雙刀" type="Weapon">
+	<item id="30403" type="Weapon" name="인피니티 듀얼소드">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -131,7 +131,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="30404" name="無限雙匕首" type="Weapon">
+	<item id="30404" type="Weapon" name="인피니티 듀얼대거">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
 		<set name="default_action" val="equip"/>
@@ -163,7 +163,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433"/>
 		</for>
 	</item>
-	<item id="30405" name="無限雙鈍器" type="Weapon">
+	<item id="30405" type="Weapon" name="인피니티 듀얼블런트">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -196,7 +196,7 @@
 		</for>
 	</item>
 
-	<item id="30459" name="束縛的革命劍*革命劍" type="Weapon">
+	<item id="30459" type="Weapon" name="속박의 혁명의 검*혁명의 검">
 		<table name="#Desc">束縛的革命劍*革命劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -223,7 +223,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30460" name="束縛的革命劍*精靈長劍" type="Weapon">
+	<item id="30460" type="Weapon" name="속박의 혁명의 검*엘븐 롱소드">
 		<table name="#Desc">束縛的革命劍*精靈長劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -250,7 +250,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30461" name="束縛的革命劍" type="Weapon">
+	<item id="30461" type="Weapon" name="속박의 혁명의 검">
 		<table name="#Desc">束縛的革命劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_sword_of_revolution_i00"/>
 		<set name="default_action" val="equip"/>

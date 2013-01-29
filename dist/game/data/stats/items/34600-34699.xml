@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="34600" name="活動用-玫瑰精靈(女)變身卷軸" type="EtcItem">
+	<item id="34600" type="EtcItem" name="PC방 용 - 로즈(여) 변신 주문서 PC방 전용">
 		<table name="#Plus">活動專用</table>
 		<table name="#Desc">覺醒之前角色用，進行法師型攻擊。變身為玫瑰精靈（女）10分鐘。無法交易/丟棄。</table>
 		<set name="icon" val="icon.etc_trans_4f_s_b_01"/>
@@ -15,7 +15,7 @@
 		<set name="handler" val="ItemSkills"/>
 		<set name="item_skill" val="9324-1"/>
 	</item>
-	<item id="34601" name="活動用-玫瑰精靈(男)變身卷軸" type="EtcItem">
+	<item id="34601" type="EtcItem" name="PC방 용 - 로즈(남) 변신 주문서 PC방 전용">
 		<table name="#Plus">活動專用</table>
 		<table name="#Desc">覺醒之前角色用，進行戰士型攻擊。變身為玫瑰精靈（男）10分鐘。無法交易/丟棄。</table>
 		<set name="icon" val="icon.etc_trans_4f_s_b_01"/>
@@ -30,7 +30,7 @@
 		<set name="item_skill" val="9323-1"/>
 	</item>
 
-	<item id="34623" name="帕格立歐襯衫" type="Armor">
+	<item id="34623" type="Armor" name="파아그리오의 티셔츠">
 		<table name="#Desc">蘊含著火之神-帕格立歐氣息的魔法襯衫。維他命道具利用殷海薩襯衫強化卷軸，最多可以強化至+10。強化+7以上時，可以解除異常狀態，並在一段時間內可以使用絕對無敵技能。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_fire"/>
 		<set name="default_action" val="equip"/>
@@ -42,7 +42,7 @@
 			<add order="0x10" stat="pDef" val="28"/>
 		</for>
 	</item>
-	<item id="34624" name="沙哈襯衫" type="Armor">
+	<item id="34624" type="Armor" name="사이하의 티셔츠">
 		<table name="#Desc">蘊含著風之神-沙哈氣息的魔法襯衫。維他命道具利用殷海薩襯衫強化卷軸，最多可以強化至+10。強化+7以上時，可以使用可在指定位置開設傳送門之後傳送到該傳送門的傳送技能（無法在奧林匹亞上使用）。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_wind"/>
 		<set name="default_action" val="equip"/>
@@ -54,7 +54,7 @@
 			<add order="0x10" stat="pDef" val="28"/>
 		</for>
 	</item>
-	<item id="34625" name="伊娃襯衫" type="Armor">
+	<item id="34625" type="Armor" name="에바의 티셔츠">
 		<table name="#Desc">蘊含著水之神-伊娃氣息的魔法襯衫。維他命道具利用殷海薩襯衫強化卷軸，最多可以強化至+10。強化+7以上時，可以使用HP、MP、CP恢復技能。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_water"/>
 		<set name="default_action" val="equip"/>
@@ -66,7 +66,7 @@
 			<add order="0x10" stat="pDef" val="28"/>
 		</for>
 	</item>
-	<item id="34626" name="梅芙襯衫" type="Armor">
+	<item id="34626" type="Armor" name="마프르의 티셔츠">
 		<table name="#Desc">蘊含著大地之神-梅芙氣息的魔法襯衫。維他命道具利用殷海薩襯衫強化卷軸，最多可以強化至+10。裝備強化+7以上的梅芙襯衫時，增加強化成功機率。（不適用於奧林匹亞）。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_earth"/>
 		<set name="default_action" val="equip"/>

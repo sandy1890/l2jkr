@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="17200" type="Armor" name="National Representative Warrior's Earring">
+	<item id="17200" type="Armor" name="국가대표 용사의 귀걸이">
 		<!-- Description: National Representative Warrior's Earring. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. Only one effect is applied even when the two identical earrings are worn. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="equip" />
@@ -14,7 +14,7 @@
 			<add order="0x40" stat="maxMp" val="31" />
 		</for>
 	</item>
-	<item id="17201" type="EtcItem" name="Proof of Cheers">
+	<item id="17201" type="EtcItem" name="응원의 증표">
 		<!-- Description: National Representative Warrior's tenacity. Mark needed to use the Spell of Blessing and Energy of Victory skill. Cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.icon.br_cheer_symbol_i00" />
 		<set name="material" val="paper" />
@@ -22,7 +22,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17202" type="EtcItem" name="Proof of Cheers 10 Pack">
+	<item id="17202" type="EtcItem" name="응원의 증표 10개 팩">
 		<!-- Description: Wrapped pack containing 10 proofs of cheers. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -30,7 +30,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17203" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Gnosian">
+	<item id="17203" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 그노시안">
 		<!-- Description: Bracelet that summons a ball trapping Gnosian. It wears a red uniform. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
 		<set name="default_action" val="equip" />
@@ -43,7 +43,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8515-1;23236-1;23237-1" />
 	</item>
-	<item id="17204" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Orodriel">
+	<item id="17204" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 오로드리엘">
 		<!-- Description: Bracelet that summons a ball trapping Orodriel. It wears a red uniform. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
 		<set name="default_action" val="equip" />
@@ -56,7 +56,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8516-1;23236-1;23237-1" />
 	</item>
-	<item id="17205" type="Armor" name="Agathion Seal Bracelet - Penalty Kick">
+	<item id="17205" type="Armor" name="아가시온 봉인팔찌 - 패널티 킥">
 		<!-- Description: Bracelet that summons a Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
 		<set name="default_action" val="equip" />
@@ -69,7 +69,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8517-1;23236-1;23237-1" />
 	</item>
-	<item id="17206" type="EtcItem" name="Nevit's Hourglass - 1 hour">
+	<item id="17206" type="EtcItem" name="네비트의 모래시계 - 1시간">
 		<!-- Description: Hourglass that increases Nevit's blessing time by 1 hour. Can be used regardless of level. Cannot be exchanged or dropped. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -86,7 +86,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9167-1" />
 	</item>
-	<item id="17207" type="EtcItem" name="Nevit's Hourglass - 1.5 hour">
+	<item id="17207" type="EtcItem" name="네비트의 모래시계 - 1.5시간">
 		<!-- Description: Hourglass that increases Nevit's blessing time by 1.5 hour. Can be used regardless of level. Cannot be exchanged or dropped. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -103,7 +103,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9168-1" />
 	</item>
-	<item id="17208" type="EtcItem" name="Nevit's Hourglass - 2 hour">
+	<item id="17208" type="EtcItem" name="네비트의 모래시계 - 2시간">
 		<!-- Description: Hourglass that increases Nevit's blessing time by 2 hour. Can be used regardless of level. Cannot be exchanged or dropped. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -120,7 +120,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9169-1" />
 	</item>
-	<item id="17209" type="EtcItem" name="Nevit's Hourglass - 2.5 hour">
+	<item id="17209" type="EtcItem" name="네비트의 모래시계 - 2.5시간">
 		<!-- Description: Hourglass that increases Nevit's blessing time by 2.5 hour. Can be used regardless of level. Cannot be exchanged or dropped. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -137,7 +137,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9170-1" />
 	</item>
-	<item id="17210" type="EtcItem" name="Nevit's Hourglass - 3 hour">
+	<item id="17210" type="EtcItem" name="네비트의 모래시계 - 3시간">
 		<!-- Description: Hourglass that increases Nevit's blessing time by 3 hour. Can be used regardless of level. Cannot be exchanged or dropped. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -154,7 +154,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9171-1" />
 	</item>
-	<item id="17211" type="EtcItem" name="Nevit's Hourglass - 4 hour">
+	<item id="17211" type="EtcItem" name="네비트의 모래시계 - 4시간">
 		<!-- Description: Hourglass that increases Nevit's blessing time by 4 hour. Can be used regardless of level. Cannot be exchanged or dropped. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -171,7 +171,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9172-1" />
 	</item>
-	<item id="17212" type="EtcItem" name="Nevit's Voice">
+	<item id="17212" type="EtcItem" name="네비트의 음성">
 		<!-- Description: Seashell containing Nevit's voice. Item that raises your evaluation value by 10. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="material" val="liquid" />
@@ -179,112 +179,112 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17213" type="EtcItem" name="Solina's Biography">
+	<item id="17213" type="EtcItem" name="솔리나 평전">
 		<!-- Description: A biography containing the life story of Solina, a saintess of the Elmore-Aden kingdom. This text has been banned throughout the kingdom and is incredibly difficult to find and intact copy. Double click for more information. -->
 		<set name="icon" val="icon.etc_old_evil_book_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17214" type="EtcItem" name="Kaerun's Memoir">
+	<item id="17214" type="EtcItem" name="카에룬의 수기">
 		<!-- Description: A complete copy of Kaerun's Memoir. It is a detailed look at Solina's life written by Kaerun from his perspective. This book was never circulated but it's original print has been archived inside the monastery. Double click for more information. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17215" type="EtcItem" name="Kaerun's Memoir Part 1">
+	<item id="17215" type="EtcItem" name="카에룬의 기록 1부">
 		<!-- Description: An incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into 4 parts and is kept inside the Monastery of Silence. Double click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17216" type="EtcItem" name="Kaerun's Memoir Part 2">
+	<item id="17216" type="EtcItem" name="카에룬의 기록 2부">
 		<!-- Description: An incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into 4 parts and is kept inside the Monastery of Silence. Double click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17217" type="EtcItem" name="Kaerun's Memoir Part 3">
+	<item id="17217" type="EtcItem" name="카에룬의 기록 3부">
 		<!-- Description: An incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into 4 parts and is kept inside the Monastery of Silence. Double click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17218" type="EtcItem" name="Kaerun's Memoir Part 4">
+	<item id="17218" type="EtcItem" name="카에룬의 기록 4부">
 		<!-- Description: An incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into 4 parts and is kept inside the Monastery of Silence. Double click for more information. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17219" type="EtcItem" name="Eris's Chronicle">
+	<item id="17219" type="EtcItem" name="에리스의 기록">
 		<!-- Description: A book chronicling the early life and events of Solina written by Eris, the abbot of the Monastery of Silence. Double click for more information. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17220" type="EtcItem" name="Catalog Card">
+	<item id="17220" type="EtcItem" name="사서의 쪽지">
 		<!-- Description: Librarian Sophia has given the catalog card containing the location of the book. Double click for more information. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="17221" type="EtcItem" name="Key to the Passageway">
+	<item id="17221" type="EtcItem" name="통로의 열쇠">
 		<!-- Description: Key that opens the passageway gate to the Seal of the Saintess entrance. You can enter the passageway with this key. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17222" type="EtcItem" name="Key to the Tomb">
+	<item id="17222" type="EtcItem" name="묘소의 열쇠">
 		<!-- Description: Key that opens the door to the Tomb inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Tomb without this key. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17223" type="EtcItem" name="Key to the Library">
+	<item id="17223" type="EtcItem" name="서고의 열쇠">
 		<!-- Description: Key that opens the door to the Library inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Library without this key. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17224" type="EtcItem" name="Key to the Warehouse">
+	<item id="17224" type="EtcItem" name="창고의 열쇠">
 		<!-- Description: Key that opens the door to the Warehouse inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Warehouse without this key. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17225" type="EtcItem" name="Key to the Armory">
+	<item id="17225" type="EtcItem" name="무기고의 열쇠">
 		<!-- Description: Key that opens the door to the Armory inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Armory without this key. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17226" type="EtcItem" name="Elcadia's Mark">
+	<item id="17226" type="EtcItem" name="엘카디아의 증표">
 		<!-- Description: Rune mark created by magic for Elcadia's test. -->
 		<set name="icon" val="icon.etc_fire_mantra_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17227" type="EtcItem" name="Elcadia's Token">
+	<item id="17227" type="EtcItem" name="엘카디아의 징표">
 		<!-- Description: Rune token created by magic for Elcadia's test. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17228" type="EtcItem" name="Scroll of Abstinence">
+	<item id="17228" type="EtcItem" name="금욕의 서">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. This scroll emanates an unusual energy. The scroll is very old and worn. It must be handled with care. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17229" type="EtcItem" name="Shield of Sacrifice">
+	<item id="17229" type="EtcItem" name="희생의 방패">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. This shield emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17230" type="EtcItem" name="Sword of Holy Spirit">
+	<item id="17230" type="EtcItem" name="성령의 검">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. The sword emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17231" type="EtcItem" name="Staff of Blessing">
+	<item id="17231" type="EtcItem" name="축복의 지팡이">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. This staff emanates an unusual energy. But it is very worn and heavy. It is fragile cannot be used in battle. -->
 		<set name="icon" val="icon.weapon_mace_of_prayer_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17232" type="EtcItem" name="Ball Trapping Gnosian Agathion Pack">
+	<item id="17232" type="EtcItem" name="볼 트래핑 그노시안 아가시온 팩">
 		<!-- Description: Wrapped pack containing a Ball Trapping Gnosian Agathion. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -293,7 +293,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17233" type="EtcItem" name="Ball Trapping Orodriel Agathion Pack">
+	<item id="17233" type="EtcItem" name="볼 트래핑 오로드리엘 아가시온 팩">
 		<!-- Description: Wrapped pack containing a Ball Trapping Orodriel Agathion. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -302,7 +302,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17234" type="EtcItem" name="Penalty Kick Agathion Pack">
+	<item id="17234" type="EtcItem" name="패널티 킥 아가시온 팩">
 		<!-- Description: Wrapped pack containing a Penalty Kick Agathion. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -311,183 +311,183 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17235" type="EtcItem" name="World Cup Special Gift">
+	<item id="17235" type="EtcItem" name="월드컵 특별 선물">
 		<!-- Description: Special gift in commemoration of the World Cup. Can obtain various items by using it. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17236" type="EtcItem" name="Gift of Victory Box">
+	<item id="17236" type="EtcItem" name="승리의 선물 상자">
 		<!-- Description: Gift in commemoration of the World Cup victory. Can obtain Nevit's Hourglass and Voice by using it. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17237" type="EtcItem" name="Luxury Gift of Victory Box">
+	<item id="17237" type="EtcItem" name="승리의 고급 선물 상자">
 		<!-- Description: Gift in commemoration of the World Cup victory. Can obtain Nevit's Hourglass and Voice by using it. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17238" type="EtcItem" name="Olympiad Match 3 Participation Certificate">
+	<item id="17238" type="EtcItem" name="올림피아드 3경기 참가 증서">
 		<!-- Description: Document that proves participation in the Olympiad Match 3. Take this document to the Olympiad Operator to receive the minimum reward. -->
 		<set name="icon" val="icon.mercenary_certification_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17239" type="EtcItem" name="Olympiad Match 5 Participation Certificate">
+	<item id="17239" type="EtcItem" name="올림피아드 5경기 참가 증서">
 		<!-- Description: Document that proves participation in the Olympiad Match 5. Take this document to the Olympiad Operator to receive an incomplete reward. -->
 		<set name="icon" val="icon.mercenary_certification_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17240" type="EtcItem" name="Olympiad Match 10 Participation Certificate">
+	<item id="17240" type="EtcItem" name="올림피아드 10경기 참가 증서">
 		<!-- Description: Document that proves participation in the Olympiad Match 10. Take this document to the Olympiad Operator to receive a whole reward. -->
 		<set name="icon" val="icon.mercenary_certification_i02" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17241" type="EtcItem" name="Olympiad Team Event Certificate">
+	<item id="17241" type="EtcItem" name="올림피아드 단체전 인증서">
 		<!-- Description: Certificate that proves participation in the Olympiad team event 5 matches. Take the certificate to the Olympiad Operator. If you take it with the class-free and class battle certificates, you can expect a greater reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17242" type="EtcItem" name="Olympiad Class-Free Battle Certificate">
+	<item id="17242" type="EtcItem" name="올림피아드 무관전 인증서">
 		<!-- Description: Certificate that proves participation in the Olympiad class-free battle 5 matches. Take the certificate to the Olympiad Operator. If you take it with the team event and class battle certificates, you can expect a greater reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17243" type="EtcItem" name="Olympiad Class Battle Certificate">
+	<item id="17243" type="EtcItem" name="올림피아드 클래스전 인증서">
 		<!-- Description: Certificate that proves participation in the Olympiad class battle 5 matches. Take the certificate to the Olympiad Operator. If you take it with the team event and class-free battle certificates, you can expect a greater reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17244" type="EtcItem" name="Olympiad 2 Consecutive Wins Confirmation">
+	<item id="17244" type="EtcItem" name="올림피아드 2연승 확인서">
 		<!-- Description: Document needed to confirm 2 consecutive wins in the Olympiad. Take this confirmation to the Olympiad Operator to receive the minimum reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i01" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17245" type="EtcItem" name="Olympiad 5 Consecutive Wins Confirmation">
+	<item id="17245" type="EtcItem" name="올림피아드 5연승 확인서">
 		<!-- Description: Document needed to confirm 5 consecutive wins in the Olympiad. Take this document to the Olympiad Operator to receive an incomplete reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i02" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17246" type="EtcItem" name="Olympiad 10 Consecutive Wins Confirmation">
+	<item id="17246" type="EtcItem" name="올림피아드 10연승 확인서">
 		<!-- Description: Document needed to confirm 10 consecutive wins in the Olympiad. Take this document to the Olympiad Operator to receive a whole reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i03" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17247" type="EtcItem" name="Party Vitality Herb">
+	<item id="17247" type="EtcItem" name="파티 활력 충전 허브">
 		<!-- Description: Herb that brings Vitality to stage 4 for 10 minutes upon use. Effect works for all party members. -->
 		<set name="material" val="paper" />
 	</item>
-	<item id="17248" type="EtcItem" name="Large Dragon Bone">
+	<item id="17248" type="EtcItem" name="커다란 용의 뼛조각">
 		<!-- Description: A summoning item, you can call a raid monster at a certain location in the Dragon Valley. But if the raid monster has already been summoned, it cannot be called. -->
 		<set name="icon" val="icon.big_dragon_bone_summon" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17249" type="EtcItem" name="Large Dragon Skull">
+	<item id="17249" type="EtcItem" name="거대한 용골">
 		<!-- Description: Dragon Skull obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the dragon skulls from all 7 different raid monsters, bring them to Gilmore. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17250" type="EtcItem" name="Large Baby Dragon">
+	<item id="17250" type="EtcItem" name="거대한 용아">
 		<!-- Description: Baby Dragon obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the baby dragon, bring it to the separated soul in the Dragon Valley. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17251" type="EtcItem" name="Drake Lord's Essence">
+	<item id="17251" type="EtcItem" name="드레이크 로드의 정수">
 		<!-- Description: Drake Lord's essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17252" type="EtcItem" name="Behemoth Leader's Essence">
+	<item id="17252" type="EtcItem" name="베히모스 리더의 정수">
 		<!-- Description: Behemoth Leader's Essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_green_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17253" type="EtcItem" name="Dragon Beast's Essence">
+	<item id="17253" type="EtcItem" name="드래곤 비스트의 정수">
 		<!-- Description: Dragon Beast's Essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="17254" type="EtcItem" name="Box of Theodric">
+	<item id="17254" type="EtcItem" name="영혼의 선물">
 		<!-- Description: Old and tattered box. You can hear a rattling sound when you shake it. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="liquid" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17255" type="EtcItem" name="Blessed Scroll: Enchant Weapon (A-Grade) - Event">
+	<item id="17255" type="EtcItem" name="축복받은 무기 강화 주문서-A그레이드 이벤트">
 		<!-- Description: When enchanted, P. Atk. increases by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 8 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17256" type="EtcItem" name="Blessed Scroll: Enchant Armor (A-Grade) - Event">
+	<item id="17256" type="EtcItem" name="축복받은 갑옷 강화 주문서-A그레이드 이벤트">
 		<!-- Description: When enchanted, P. Def. increases by 1 for A-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17257" type="EtcItem" name="Blessed Scroll: Enchant Weapon (B-Grade) - Event">
+	<item id="17257" type="EtcItem" name="축복받은 무기 강화 주문서-B그레이드 이벤트">
 		<!-- Description: When enchanted, P. Atk. increases by 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 6 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17258" type="EtcItem" name="Blessed Scroll: Enchant Armor (B-Grade) - Event">
+	<item id="17258" type="EtcItem" name="축복받은 갑옷 강화 주문서-B그레이드 이벤트">
 		<!-- Description: When enchanted, P. Def. increases by 1 for B-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17259" type="EtcItem" name="Blessed Scroll: Enchant Weapon (C-Grade) - Event">
+	<item id="17259" type="EtcItem" name="축복받은 무기 강화 주문서-C그레이드 이벤트">
 		<!-- Description: When enchanted, P. Atk. increases by 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 6 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17260" type="EtcItem" name="Blessed Scroll: Enchant Armor (C-Grade) - Event">
+	<item id="17260" type="EtcItem" name="축복받은 갑옷 강화 주문서-C그레이드 이벤트">
 		<!-- Description: When enchanted, P. Def. increases by 1 for C-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17261" type="EtcItem" name="Blessed Scroll: Enchant Weapon (D-Grade) - Event">
+	<item id="17261" type="EtcItem" name="축복받은 무기 강화 주문서-D그레이드 이벤트">
 		<!-- Description: When enchanted, P. Atk. increases by 2 for all D-grade weapons with the exception of bow, which will increase by 4. M. Atk. increases by 2 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17262" type="EtcItem" name="Blessed Scroll: Enchant Armor (D-Grade) - Event">
+	<item id="17262" type="EtcItem" name="축복받은 갑옷 강화 주문서-D그레이드 이벤트">
 		<!-- Description: When enchanted, P. Def. increases by 1 for D-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17263" type="EtcItem" name="Blessed Scroll: Enchant Weapon (S-Grade) - Event">
+	<item id="17263" type="EtcItem" name="축복받은 무기 강화 주문서-S그레이드 이벤트">
 		<!-- Description: When enchanted, P. Atk. increases by 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 10 for bows. M. Atk. increases by 4 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17264" type="EtcItem" name="Blessed Scroll: Enchant Armor (S-Grade) - Event">
+	<item id="17264" type="EtcItem" name="축복받은 갑옷 강화 주문서-S그레이드 이벤트">
 		<!-- Description: When enchanted, P. Def. increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17265" type="EtcItem" name="Certificate of Dawn">
+	<item id="17265" type="EtcItem" name="여명의 증서">
 		<!-- Update by pmq -->
 		<!-- Description: A certificate received from the Witness of Dawn Franz. It says that if you show this certificate to Priest Wood, he will exchange it for an occupation specific Forgotten Scroll that can be learned at level 81. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
@@ -497,26 +497,26 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="17266" type="EtcItem" name="Will of Antharas">
+	<item id="17266" type="EtcItem" name="안타라스의 의지">
 		<!-- Description: A command stone made by Antharas embedded in his high commanding minions so he will always have control over them. Used to create Antharas Blood Crystal. Bring it to a Separated Soul. -->
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17267" type="EtcItem" name="Sealed Blood Crystal">
+	<item id="17267" type="EtcItem" name="봉인된 피의 결정">
 		<!-- Description: Small crystal particles made from the blood of Antharas. After his blood was spilt, the land absorbed the blood and acted as a filter that separated the poison from the blood creating a pure form of his blood that crystallized over time. Used to create an Atharas's Blood Crystal. Bring it to a Separated Soul. -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="material" val="paper" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17268" type="EtcItem" name="Antharas Blood Crystal">
+	<item id="17268" type="EtcItem" name="안타라스 피의 결정">
 		<!-- Description: Using the power held within the blood of Antharas, this crystal can revive and fully restore EXP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Reuse time is 1 hour. -->
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17269" type="Armor" name="Agathion Seal Bracelet - Antharas">
+	<item id="17269" type="Armor" name="아가시온 봉인팔찌 - 안타라스">
 		<!-- Description: Bracelet that summons a cute Antharas Agathion. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="equip" />
@@ -528,7 +528,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;8521-1;6916-1" />
 	</item>
-	<item id="17270" type="Armor" name="Agathion Seal Bracelet - Nevit's Messenger Kanna">
+	<item id="17270" type="Armor" name="아가시온 봉인팔찌 - 네비트의 전령 칸나">
 		<!-- Description: Bracelet that summons a Nevit's messenger Kanna Agathion. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="equip" />
@@ -540,7 +540,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;8522-1;6917-1" />
 	</item>
-	<item id="17271" type="Armor" name="Agathion Seal Bracelet - Guardian of the Dawn Kallesin">
+	<item id="17271" type="Armor" name="아가시온 봉인팔찌 - 여명의 수호자 칼레신">
 		<!-- Description: Bracelet that summons a Guardian of the Dawn Kallesin Agathion. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="equip" />
@@ -552,25 +552,25 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;8523-1;6918-1" />
 	</item>
-	<item id="17272" type="EtcItem" name="Antharas Agathion PAck">
+	<item id="17272" type="EtcItem" name="안타라스 아가시온 팩">
 		<!-- Description: Special gift that commemorates the conquest of Dragon Valley. When used, you can obtain an Antharas Agathion seal bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17273" type="EtcItem" name="Nevit's Messenger Kanna Agathion Pack">
+	<item id="17273" type="EtcItem" name="네비트의 전령 칸나 아가시온 팩">
 		<!-- Description: Special gift that commemorates the completion of the Seven Sign quest. When used, you can obtain a Nevit's Messenger Kanna Agathion seal bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17274" type="EtcItem" name="Guardian of the Dawn Kallesin Agathion Pack">
+	<item id="17274" type="EtcItem" name="여명의 수호자 칼레신 아가시온 팩">
 		<!-- Description: Special gift that commemorates the completion of the Seven Sign quest. When used, you can obtain a Guardian of the Dawn Kallesin Agathion seal bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17275" type="EtcItem" name="Strider Pet Exchange Coupon">
+	<item id="17275" type="EtcItem" name="스트라이더 펫 교환권">
 		<!-- Description: Certificate that shows receipt of a Strider pet. You can exchange the exchange coupon for the Strider pet through the News Informer. Cannot be exchanged, dropped, or put in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="material" val="paper" />
@@ -579,21 +579,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17276" type="EtcItem" name="5,000,000 SP scroll">
+	<item id="17276" type="EtcItem" name="500만 SP 주문서">
 		<!-- Description: Scroll that replenishes 5,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17277" type="EtcItem" name="100,000,000 SP scroll">
+	<item id="17277" type="EtcItem" name="1000만 SP 주문서">
 		<!-- Description: Scroll that replenishes 100,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17278" type="EtcItem" name="Strider Pet Exchange Pack">
+	<item id="17278" type="EtcItem" name="스트라이더 펫 교환팩">
 		<!-- Description: Dimensional item pack. Wrapped pack containing a Strider pet exchange coupon. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -602,7 +602,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17279" type="EtcItem" name="Transformation Scroll: Anakim Pack">
+	<item id="17279" type="EtcItem" name="변신 주문서 - 아나킴 팩">
 		<!-- Description: Gift box containing 1 Anakim Transformation Scroll. When used, you can obtain a Transformation Scroll: Anakim. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -611,7 +611,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17280" type="EtcItem" name="Transformation Sealbook: Anakim Pack">
+	<item id="17280" type="EtcItem" name="변신 각인서 - 아나킴 팩">
 		<!-- Description: Gift box containing 1 Anakim Transformation Sealbook. When used, you can obtain a Transformation Sealbook: Anakim. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -620,7 +620,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17281" type="EtcItem" name="Delivery Box">
+	<item id="17281" type="EtcItem" name="배달 상자">
 		<!-- Description: Box that Isabel Silvershadow in Hunters Village asks you to deliver. Bring it to Valley Trader Kitzka in Dragon's Valley. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="paper" />
@@ -631,7 +631,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="17282" type="EtcItem" name="2010 Summer Special Pack">
+	<item id="17282" type="EtcItem" name="2010 썸머 스페셜 팩">
 		<!-- Description: Dimensional Item Pack. Gift box containing Nevit's Hourglass, Freya's Refreshing Breeze, and Ice Watermelon Hat. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -639,7 +639,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17283" type="EtcItem" name="Nevit's Hourglass - 4 hour">
+	<item id="17283" type="EtcItem" name="네비트의 모래시계 - 4시간">
 		<!-- Description: Dimensional item. Hourglass that increases Nevit's blessing time by 4 hour(s). Can be used regardless of the level. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -656,7 +656,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9181-1" />
 	</item>
-	<item id="17284" type="EtcItem" name="Nevit's Hourglass - 4 hour - Event">
+	<item id="17284" type="EtcItem" name="네비트의 모래시계 - 4시간 이벤트">
 		<!-- Description: Dimensional item. Hourglass that increases Nevit's blessing time by 4 hour(s). Can be used regardless of the level. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<!-- Update by pmq -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
@@ -673,7 +673,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9182-1" />
 	</item>
-	<item id="17285" type="EtcItem" name="Freya's Refreshing Breeze">
+	<item id="17285" type="EtcItem" name="프레야의 시원한 바람">
 		<!-- Description: Dimensional item. When used, you can feel the Vitality recovery herb's effect for 4 hour(s). But there will be no effect when the "Birthday Joy" effect is applied. Re-use time is 60 minutes. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="liquid" />
@@ -682,7 +682,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17286" type="EtcItem" name="Freya's Refreshing Breeze - Event">
+	<item id="17286" type="EtcItem" name="프레야의 시원한 바람 이벤트">
 		<!-- Description: Dimensional item. When used, you can feel the Vitality recovery herb's effect for 4 hour(s). But there will be no effect when the "Birthday Joy" effect is applied. Re-use time is 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="liquid" />
@@ -692,7 +692,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17287" type="EtcItem" name="2010 Summer Special Pack - Event">
+	<item id="17287" type="EtcItem" name="2010 썸머 스페셜 팩 이벤트">
 		<!-- Description: Dimensional Item Pack. Gift box containing Nevit's Hourglass, Freya's Refreshing Breeze, and Ice Watermelon Hat. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="steel" />
@@ -701,7 +701,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="17288" type="Armor" name="Ice Watermelon Hat - Event">
+	<item id="17288" type="Armor" name="얼음 수박 모자 이벤트">
 		<!-- Description: Dimensional item. Hat that looks like a watermelon. Just looking at it is refreshing. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="equip" />
@@ -712,7 +712,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="17289" type="Armor" name="Ice Watermelon Hat">
+	<item id="17289" type="Armor" name="얼음 수박 모자">
 		<!-- Description: Dimensional item. Hat that looks like a watermelon. Just looking at it is refreshing. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
 		<set name="default_action" val="equip" />
@@ -726,7 +726,7 @@
 
 	<!-- R級一般型武器(鎮魂/英啟/幻靈/赫利奧斯/祝福的凱利爾) -->
 	<!-- R-1:鎮魂 -->
-	<item id="17290" name="鎮魂鉋刀" type="Weapon">
+	<item id="17290" type="Weapon" name="레퀴엠 셰이퍼">
 		<table name="#Desc">可以賦予導引、速度激發、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_aspeda_i00"/>
 		<set name="default_action" val="equip"/>
@@ -752,7 +752,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17291" name="鎮魂切刃" type="Weapon">
+	<item id="17291" type="Weapon" name="레퀴엠 커터">
 		<table name="#Desc">可以賦予速度激發、弱點偵測、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_estia_i00"/>
 		<set name="default_action" val="equip"/>
@@ -777,7 +777,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17292" name="鎮魂殺刃" type="Weapon">
+	<item id="17292" type="Weapon" name="레퀴엠 슬래셔">
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_polion_i00"/>
 		<set name="default_action" val="equip"/>
@@ -802,7 +802,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17293" name="鎮魂復仇者" type="Weapon">
+	<item id="17293" type="Weapon" name="레퀴엠 어벤져">
 		<table name="#Desc">可以賦予速度激發、Crt.傷害、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_batista_i00"/>
 		<set name="default_action" val="equip"/>
@@ -828,7 +828,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17294" name="鎮魂戰爪" type="Weapon">
+	<item id="17294" type="Weapon" name="레퀴엠 파이터">
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_fantasma_i00"/>
 		<set name="default_action" val="equip"/>
@@ -854,7 +854,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17295" name="鎮魂風暴者" type="Weapon">
+	<item id="17295" type="Weapon" name="레퀴엠 스토머">
 		<table name="#Desc">可以賦予HP吸收、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_soryu_i00"/>
 		<set name="default_action" val="equip"/>
@@ -880,7 +880,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17296" name="鎮魂投弓" type="Weapon">
+	<item id="17296" type="Weapon" name="레퀴엠 스로워">
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、遠程打擊其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_grabathus_i00"/>
 		<set name="default_action" val="equip"/>
@@ -907,7 +907,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17297" name="鎮魂射靈" type="Weapon">
+	<item id="17297" type="Weapon" name="레퀴엠 슈트제">
 		<table name="#Desc">可以賦予弱點偵測、Crt.緩速、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_shyayaka_i00"/>
 		<set name="default_action" val="equip"/>
@@ -934,7 +934,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17298" name="鎮魂爆刃" type="Weapon">
+	<item id="17298" type="Weapon" name="레퀴엠 버스터">
 		<table name="#Desc">可以賦予靈活思緒、魔法束縛、魔力上升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_kaynon_i00"/>
 		<set name="default_action" val="equip"/>
@@ -960,7 +960,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17299" name="鎮魂術杖" type="Weapon">
+	<item id="17299" type="Weapon" name="레퀴엠 캐스터">
 		<table name="#Desc">可以賦予魔力催化、靈活思緒、魔法束縛其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_anatrian_i00"/>
 		<set name="default_action" val="equip"/>

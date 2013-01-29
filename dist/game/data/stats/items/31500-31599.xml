@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="31503" name="束縛的騎士劍*革命劍" type="Weapon">
+	<item id="31503" type="Weapon" name="속박의 나이트소드*혁명의 검">
 		<table name="#Desc">束縛的騎士劍*革命劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31504" name="束縛的騎士劍*緋紅劍" type="Weapon">
+	<item id="31504" type="Weapon" name="속박의 나이트소드*크림슨소드">
 		<table name="#Desc">束縛的騎士劍*緋紅劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31505" name="束縛的騎士劍*精靈劍" type="Weapon">
+	<item id="31505" type="Weapon" name="속박의 나이트소드*엘븐소드">
 		<table name="#Desc">束縛的騎士劍*精靈劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -82,7 +82,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31507" name="束縛的騎士劍*精靈長劍" type="Weapon">
+	<item id="31507" type="Weapon" name="속박의 나이트소드*엘븐 롱소드">
 		<table name="#Desc">束縛的騎士劍*精靈長劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -109,7 +109,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31508" name="束縛的騎士劍*騎士劍" type="Weapon">
+	<item id="31508" type="Weapon" name="속박의 나이트소드*나이트소드">
 		<table name="#Desc">束縛的騎士劍*騎士劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -136,7 +136,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31510" name="束縛的騎士劍" type="Weapon">
+	<item id="31510" type="Weapon" name="속박의 나이트 소드">
 		<table name="#Desc">束縛的騎士劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_knights_sword_i00"/>
 		<set name="default_action" val="equip"/>

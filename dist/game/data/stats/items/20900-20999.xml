@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20900" type="Armor" name="Santa Hat - 14-day limited period">
+	<item id="20900" type="Armor" name="흰 수염 산타 모자 14일 기간제">
 		<set name="icon" val="BranchSys.icon.br_xmas_gawibawibo_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -13,7 +13,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="time" val="20160" />
 	</item>
-	<item id="20901" type="EtcItem" name="Santa Hat Set">
+	<item id="20901" type="EtcItem" name="흰 수염 산타 모자 세트">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -27,7 +27,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20900,1,1,100;14611,1,1,100" />
 	</item>
-	<item id="20902" type="EtcItem" name="Ring of Queen Ant 7-Day Pack">
+	<item id="20902" type="EtcItem" name="여왕개미의 반지 7일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -43,7 +43,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20205,1,1,100" />
 	</item>
-	<item id="20903" type="EtcItem" name="Rose Petal">
+	<item id="20903" type="EtcItem" name="붉은 장미 허브">
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -53,7 +53,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22158-1" />
 	</item>
-	<item id="20904" type="EtcItem" name="Rose Essense">
+	<item id="20904" type="EtcItem" name="장미 에센스">
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -61,7 +61,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="20905" type="EtcItem" name="One Red Rose Bud">
+	<item id="20905" type="EtcItem" name="붉은 장미꽃 한 송이">
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -70,7 +70,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="20906" type="EtcItem" name="One Blue Rose Bud">
+	<item id="20906" type="EtcItem" name="파란 장미꽃 한 송이">
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -79,7 +79,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="20907" type="EtcItem" name="One White Rose Bud">
+	<item id="20907" type="EtcItem" name="흰 장미꽃 한 송이">
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -88,7 +88,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="20908" type="EtcItem" name="Deseloph Rose Necklace (Event) - Summon duration - 3 hours">
+	<item id="20908" type="EtcItem" name="드셀로프 장미의 목걸이 - 이벤트 소환시간 3시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -105,7 +105,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20909" type="EtcItem" name="Hyum Rose Necklace (Event) - Summon duration - 3 hours">
+	<item id="20909" type="EtcItem" name="흄 장미의 목걸이 - 이벤트 소환시간 3시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -122,7 +122,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20910" type="EtcItem" name="Rekang Rose Necklace (Event) - Summon duration - 3 hours">
+	<item id="20910" type="EtcItem" name="레캉 장미의 목걸이 - 이벤트 소환시간 3시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -139,7 +139,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20911" type="EtcItem" name="Lilias Rose Necklace (Event) - Summon duration - 3 hours">
+	<item id="20911" type="EtcItem" name="릴리아스 장미의 목걸이 - 이벤트 소환시간 3시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -156,7 +156,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20912" type="EtcItem" name="Lapham Rose Necklace (Event) - Summon duration - 3 hours">
+	<item id="20912" type="EtcItem" name="라팜 장미의 목걸이 - 이벤트 소환시간 3시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -173,7 +173,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20913" type="EtcItem" name="Mafum Rose Necklace (Event) - Summon duration - 3 hours">
+	<item id="20913" type="EtcItem" name="마퓸 장미의 목걸이 - 이벤트 소환시간 3시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_event" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -190,7 +190,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20914" type="EtcItem" name="Improved Rose Spirit Exchange Ticket - 5 hours">
+	<item id="20914" type="EtcItem" name="향상된 장미의 정령 교환권 - 5시간">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fish" />
@@ -203,7 +203,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20915" type="EtcItem" name="Improved Deseloph Rose Necklace (Event) - Summon duration - 5 hours">
+	<item id="20915" type="EtcItem" name="향상된 드셀로프 장미의 목걸이 소환시간 5시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -222,7 +222,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20916" type="EtcItem" name="Improved Hyum Rose Necklace (Event) - Summon duration - 5 hours">
+	<item id="20916" type="EtcItem" name="향상된 흄 장미의 목걸이 소환시간 5시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -241,7 +241,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20917" type="EtcItem" name="Improved Rekang Rose Necklace (Event) - Summon duration - 5 hours">
+	<item id="20917" type="EtcItem" name="향상된 레캉 장미의 목걸이 소환시간 5시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -260,7 +260,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20918" type="EtcItem" name="Improved Lilias Rose Necklace (Event) - Summon duration - 5 hours">
+	<item id="20918" type="EtcItem" name="향상된 릴리아스 장미의 목걸이 소환시간 5시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -279,7 +279,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20919" type="EtcItem" name="Improved Lapham Rose Necklace (Event) - Summon duration - 5 hours">
+	<item id="20919" type="EtcItem" name="향상된 라팜 장미의 목걸이 소환시간 5시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -298,7 +298,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20920" type="EtcItem" name="Improved Mafum Rose Necklace (Event) - Summon duration - 5 hours">
+	<item id="20920" type="EtcItem" name="향상된 마퓸 장미의 목걸이 소환시간 5시간">
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -317,7 +317,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="20921" type="EtcItem" name="Rose Spirit Test Report - 24-hour limited period">
+	<item id="20921" type="EtcItem" name="장미의 정령 실험 기록서 24시간 기간제">
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -330,7 +330,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="20922" type="Armor" name="Adventurer Hat">
+	<item id="20922" type="Armor" name="탐험가 모자">
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -340,7 +340,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="20923" type="EtcItem" name="Vesper Slasher">
+	<item id="20923" type="EtcItem" name="베스페르 슬래셔">
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -351,7 +351,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22159-1" />
 	</item>
-	<item id="20924" type="EtcItem" name="Vesper Caster">
+	<item id="20924" type="EtcItem" name="베스페르 캐스터">
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -362,7 +362,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22160-1" />
 	</item>
-	<item id="20925" type="EtcItem" name="Vesper Dual Sword">
+	<item id="20925" type="EtcItem" name="베스페르 듀얼 소드">
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -373,7 +373,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22161-1" />
 	</item>
-	<item id="20926" type="EtcItem" name="Mt. Fuji Herb">
+	<item id="20926" type="EtcItem" name="후지산 허브">
 		<set name="icon" val="BranchSys2.icon.br_fuji_herb_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -385,7 +385,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22162-1" />
 	</item>
-	<item id="20927" type="EtcItem" name="Hawk Herb">
+	<item id="20927" type="EtcItem" name="매 허브">
 		<set name="icon" val="BranchSys2.icon.br_hawk_herb_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -397,7 +397,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22163-1" />
 	</item>
-	<item id="20928" type="EtcItem" name="Eggplant Herb">
+	<item id="20928" type="EtcItem" name="가지 허브">
 		<set name="icon" val="BranchSys2.icon.br_eggplant_herb_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -409,7 +409,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22164-1" />
 	</item>
-	<item id="20929" type="Armor" name="Royal Crown of Vesper">
+	<item id="20929" type="Armor" name="로얄 크라운 오브 베스페르">
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -424,7 +424,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20930" type="Armor" name="Royal Circlet of Vesper">
+	<item id="20930" type="Armor" name="로얄 서클릿 오브 베스페르">
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -439,7 +439,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20931" type="Armor" name="Noblesse Oblige">
+	<item id="20931" type="Armor" name="노블레스 오블리주">
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -454,7 +454,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20932" type="Armor" name="Royal Crown of Vesper - 30-day limited period">
+	<item id="20932" type="Armor" name="로얄 크라운 오브 베스페르 30일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -469,7 +469,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20933" type="Armor" name="Royal Circlet of Vesper - 30-day limited period">
+	<item id="20933" type="Armor" name="로얄 서클릿 오브 베스페르 30일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -484,7 +484,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20934" type="Armor" name="Noblesse Oblige - 30-day limited period">
+	<item id="20934" type="Armor" name="노블레스 오블리주 30일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -499,7 +499,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20935" type="Armor" name="Royal Crown of Vesper">
+	<item id="20935" type="Armor" name="로얄 크라운 오브 베스페르">
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -511,7 +511,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20936" type="Armor" name="Royal Circlet of Vesper">
+	<item id="20936" type="Armor" name="로얄 서클릿 오브 베스페르">
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -523,7 +523,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20937" type="Armor" name="Noblesse Oblige">
+	<item id="20937" type="Armor" name="노블레스 오블리주">
 		<set name="icon" val="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -535,7 +535,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20938" type="Armor" name="Jet Bike Mount Bracelet - 7-day limited period">
+	<item id="20938" type="Armor" name="제트 바이크 탑승용 팔찌 7일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -551,7 +551,7 @@
 		<set name="item_skill" val="21171-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20939" type="Armor" name="Jet Bike Mount Bracelet - 30-day limited period">
+	<item id="20939" type="Armor" name="제트 바이크 탑승용 팔찌 30일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -567,7 +567,7 @@
 		<set name="item_skill" val="21171-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20940" type="Armor" name="Phoenix Agthion Seal Bracelet - Nirvana Rebirth - 7-day limited period">
+	<item id="20940" type="Armor" name="피닉스 아가시온 봉인 팔찌 열반재생 - 7일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -584,7 +584,7 @@
 		<set name="item_skill" val="3267-1;21191-1;23171-1;23172-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20941" type="Armor" name="Phoenix Agthion Seal Bracelet - Oriental Phoenix - 7-day limited period">
+	<item id="20941" type="Armor" name="피닉스 아가시온 봉인 팔찌 유봉래의 - 7일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -601,7 +601,7 @@
 		<set name="item_skill" val="3267-1;21191-1;23171-1;23173-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20942" type="Armor" name="Fox Mask">
+	<item id="20942" type="Armor" name="여우 가면">
 		<set name="icon" val="BranchSys2.icon.br_fox_japan_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -616,7 +616,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20943" type="Armor" name="Fox Mask - Silent Move - 7-day limited period">
+	<item id="20943" type="Armor" name="여우 가면 사일런트 무브 - 7일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_fox_japan_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -632,7 +632,7 @@
 		<set name="item_skill" val="21192-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20944" type="Armor" name="Paiwan Hat">
+	<item id="20944" type="Armor" name="배만족 모자">
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -647,7 +647,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20945" type="Armor" name="Paiwan Hat - Power of Guardian Deity - 7-day limited period">
+	<item id="20945" type="Armor" name="배만족 모자 수호신의 힘 - 7일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -663,7 +663,7 @@
 		<set name="item_skill" val="21193-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20946" type="EtcItem" name="Jet Bike 7-Day Pack">
+	<item id="20946" type="EtcItem" name="제트 바이크 7일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -678,7 +678,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20938,1,1,100" />
 	</item>
-	<item id="20947" type="EtcItem" name="Jet Bike 30-Day Pack">
+	<item id="20947" type="EtcItem" name="제트 바이크 30일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -693,7 +693,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20939,1,1,100" />
 	</item>
-	<item id="20948" type="EtcItem" name="Phoenix Agathion 7-Day Pack - Nirvana Rebirth">
+	<item id="20948" type="EtcItem" name="피닉스 아가시온 7일 팩 열반재생">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -709,7 +709,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20940,1,1,100" />
 	</item>
-	<item id="20949" type="EtcItem" name="Phoenix Agathion 7-Day Pack - Oriental Phoenix">
+	<item id="20949" type="EtcItem" name="피닉스 아가시온 7일 팩 유봉래의">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -725,7 +725,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20941,1,1,100" />
 	</item>
-	<item id="20950" type="EtcItem" name="Fox Mask Pack">
+	<item id="20950" type="EtcItem" name="여우 가면 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -741,7 +741,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20942,1,1,100" />
 	</item>
-	<item id="20951" type="EtcItem" name="Fox Mask 7-Day Pack - Silent Move">
+	<item id="20951" type="EtcItem" name="여우 가면 7일 팩 사일런트 무브">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -757,7 +757,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20943,1,1,100" />
 	</item>
-	<item id="20952" type="EtcItem" name="Paiwan Hat Pack">
+	<item id="20952" type="EtcItem" name="배만족 모자 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -773,7 +773,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20944,1,1,100" />
 	</item>
-	<item id="20953" type="EtcItem" name="Paiwan Hat 7-Day Pack - Power of Guardian Deity">
+	<item id="20953" type="EtcItem" name="배만족 모자 7일 팩 수호신의 힘">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -789,7 +789,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20945,1,1,100" />
 	</item>
-	<item id="20954" type="EtcItem" name="Small Placid">
+	<item id="20954" type="EtcItem" name="소형 프라시드">
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="gold" />
@@ -804,7 +804,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22165-1" />
 	</item>
-	<item id="20955" type="EtcItem" name="Medium Placid">
+	<item id="20955" type="EtcItem" name="중형 프라시드">
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="gold" />
@@ -819,7 +819,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22166-1" />
 	</item>
-	<item id="20956" type="Armor" name="Agathion Seal Bracelet - Frozen Corpse - Soul Stealth - 7-day limited period">
+	<item id="20956" type="Armor" name="아가시온 봉인팔찌 - 강시 소울 스텔스 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_gangsi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -836,7 +836,7 @@
 		<set name="item_skill" val="3267-1;21133-1;23117-1;23175-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20957" type="EtcItem" name="Zombie Agathion 7-Day Pack - Soul Stealth">
+	<item id="20957" type="EtcItem" name="강시 아가시온 7일 팩 소울 스텔스">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -852,7 +852,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20956,1,1,100" />
 	</item>
-	<item id="20958" type="EtcItem" name="April Fools' Day Special Gift - For Event">
+	<item id="20958" type="EtcItem" name="만우절 특별 선물 - 이벤트용">
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -863,7 +863,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22167-1" />
 	</item>
-	<item id="20959" type="EtcItem" name="Royal Crown of Vesper Pack">
+	<item id="20959" type="EtcItem" name="로얄 크라운 오브 베스페르 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -879,7 +879,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20929,1,1,100" />
 	</item>
-	<item id="20960" type="EtcItem" name="Royal Circlet of Vesper Pack">
+	<item id="20960" type="EtcItem" name="로얄 서클릿 오브 베스페르 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -895,7 +895,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20930,1,1,100" />
 	</item>
-	<item id="20961" type="EtcItem" name="Noblesse Oblige Pack">
+	<item id="20961" type="EtcItem" name="노블레스 오블리주 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -911,7 +911,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20931,1,1,100" />
 	</item>
-	<item id="20962" type="EtcItem" name="Royal Crown of Vesper 30-Day Pack">
+	<item id="20962" type="EtcItem" name="로얄 크라운 오브 베스페르 30일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -927,7 +927,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20932,1,1,100" />
 	</item>
-	<item id="20963" type="EtcItem" name="Royal Circlet of Vesper 30-Day Pack">
+	<item id="20963" type="EtcItem" name="로얄 서클릿 오브 베스페르 30일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -943,7 +943,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20933,1,1,100" />
 	</item>
-	<item id="20964" type="EtcItem" name="Noblesse Oblige 30-Day Pack">
+	<item id="20964" type="EtcItem" name="노블레스 오블리주 30일 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -959,7 +959,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20934,1,1,100" />
 	</item>
-	<item id="20965" type="EtcItem" name="Royal Crown of Vesper Pack">
+	<item id="20965" type="EtcItem" name="로얄 크라운 오브 베스페르 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -975,7 +975,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20935,1,1,100" />
 	</item>
-	<item id="20966" type="EtcItem" name="Royal Circlet of Vesper Pack">
+	<item id="20966" type="EtcItem" name="로얄 서클릿 오브 베스페르 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -991,7 +991,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20936,1,1,100" />
 	</item>
-	<item id="20967" type="EtcItem" name="Noblesse Oblige Pack">
+	<item id="20967" type="EtcItem" name="노블레스 오블리주 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1007,7 +1007,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20937,1,1,100" />
 	</item>
-	<item id="20968" type="Armor" name="Agathion Seal Bracelet - Guangong">
+	<item id="20968" type="Armor" name="아가시온 봉인 팔찌 - 관공">
 		<set name="icon" val="BranchSys.icon.br_aga_warriorgod_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1023,7 +1023,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="3267-1;21142-1;23123-1" />
 	</item>
-	<item id="20969" type="EtcItem" name="Guangong Agathion Pack">
+	<item id="20969" type="EtcItem" name="관공 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1039,7 +1039,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20968,1,1,100" />
 	</item>
-	<item id="20970" type="Armor" name="Agathion Seal Bracelet - Three-headed Dragon - Wind Walk">
+	<item id="20970" type="Armor" name="아가시온 봉인팔찌 - 삼두용 윈드 워크">
 		<set name="icon" val="BranchSys2.icon.br_aga_threehead_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1055,7 +1055,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21194-1;23181-1;23182-1" />
 	</item>
-	<item id="20971" type="Weapon" name="Trejuo Transformation Stick - Blessed Child Transformation">
+	<item id="20971" type="Weapon" name="트레주오 변신 막대기 축복받은 어린이 변신">
 		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1081,7 +1081,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20972" type="Weapon" name="Sujin Transformation Stick - Blessed Child Transformation">
+	<item id="20972" type="Weapon" name="수진 변신 막대기 축복받은 어린이 변신">
 		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1107,7 +1107,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20973" type="Armor" name="Opera Mask - Liu Bei - Buff of Virtue, Age of the Three Kingdoms">
+	<item id="20973" type="Armor" name="경극 마스크 - 유비 인덕의 버프, 삼국의 살">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_a_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1123,7 +1123,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21197-1;21200-1" />
 	</item>
-	<item id="20974" type="Armor" name="Opera Mask - Guan Yu - Silence of Fidelity, Age of the Three Kingdoms">
+	<item id="20974" type="Armor" name="경극 마스크 - 관우 충의의 무성, 삼국의 살">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1139,7 +1139,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21198-1;21200-1" />
 	</item>
-	<item id="20975" type="Armor" name="Opera Mask - Zhang Fei - Vitality of Courage, Age of the Three Kingdoms">
+	<item id="20975" type="Armor" name="경극 마스크 - 장비 금강의 활력, 삼국의 살">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_c_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1155,7 +1155,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="item_skill" val="21199-1;21200-1" />
 	</item>
-	<item id="20976" type="EtcItem" name="Proof of a Warrior - 30-day limited period">
+	<item id="20976" type="EtcItem" name="용사의 증표 30일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_symbol_a_i00" />
 		<set name="material" val="gold" />
 		<set name="is_tradable" val="false" />
@@ -1166,7 +1166,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20977" type="EtcItem" name="Proof of Friendship">
+	<item id="20977" type="EtcItem" name="우애의 증표">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_symbol_b_i00" />
 		<set name="material" val="gold" />
 		<set name="is_tradable" val="false" />
@@ -1178,7 +1178,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20978" type="EtcItem" name="Zhongzi (B-Grade)">
+	<item id="20978" type="EtcItem" name="쫑쯔 - B 그레이드">
 		<set name="icon" val="BranchSys2.icon.br_taiwan_riceball_a_i00" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1194,7 +1194,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
-	<item id="20979" type="EtcItem" name="Zhongzi (A-Grade)">
+	<item id="20979" type="EtcItem" name="쫑쯔 - A 그레이드">
 		<set name="icon" val="BranchSys2.icon.br_taiwan_riceball_b_i00" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1210,7 +1210,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
-	<item id="20980" type="EtcItem" name="Zhongzi (S-Grade)">
+	<item id="20980" type="EtcItem" name="쫑쯔 - S 그레이드">
 		<set name="icon" val="BranchSys2.icon.br_taiwan_riceball_c_i00" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1226,7 +1226,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
-	<item id="20981" type="Armor" name="Dragon Boat">
+	<item id="20981" type="Armor" name="드래곤 보트">
 		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1241,7 +1241,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="20982" type="Armor" name="Dragon Boat - Haste - 7-day limited period">
+	<item id="20982" type="Armor" name="드래곤 보트 헤이스트 - 7일 기간제">
 		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1257,7 +1257,7 @@
 		<set name="item_skill" val="21201-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20983" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Gnosian - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20983" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 그노시안 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_male_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1274,7 +1274,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21202-1;23201-1;23183-1;23184-1" />
 	</item>
-	<item id="20984" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Orodriel - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20984" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 오로드리엘 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_female_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1291,7 +1291,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21203-1;23202-1;23185-1;23186-1" />
 	</item>
-	<item id="20985" type="Armor" name="Agathion Seal Bracelet - Penalty Kick - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20985" type="Armor" name="아가시온 봉인팔찌 - 패널티 킥 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_kick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1308,7 +1308,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21204-1;23203-1;23187-1;23188-1" />
 	</item>
-	<item id="20986" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Gnosian - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20986" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 그노시안 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_male_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1325,7 +1325,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21205-1;23204-1;23189-1;23190-1" />
 	</item>
-	<item id="20987" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Orodriel - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20987" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 오로드리엘 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_female_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1342,7 +1342,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21206-1;23205-1;23191-1;23192-1" />
 	</item>
-	<item id="20988" type="Armor" name="Agathion Seal Bracelet - Penalty Kick - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20988" type="Armor" name="아가시온 봉인팔찌 - 패널티 킥 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_kick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1359,7 +1359,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21207-1;23206-1;23193-1;23194-1" />
 	</item>
-	<item id="20989" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Gnosian - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20989" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 그노시안 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1376,7 +1376,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21208-1;23207-1;23195-1;23196-1" />
 	</item>
-	<item id="20990" type="Armor" name="Agathion Seal Bracelet - Ball Trapping Orodriel - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20990" type="Armor" name="아가시온 봉인팔찌 - 볼 트래핑 오로드리엘 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1393,7 +1393,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21209-1;23208-1;23197-1;23198-1" />
 	</item>
-	<item id="20991" type="Armor" name="Agathion Seal Bracelet - Penalty Kick - Soccer Ball of Cheers, Buff of Cheers">
+	<item id="20991" type="Armor" name="아가시온 봉인팔찌 - 패널티 킥 응원의 축구공, 응원의 버프">
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1410,7 +1410,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21210-1;23209-1;23199-1;23200-1" />
 	</item>
-	<item id="20992" type="EtcItem" name="Thirst of Victory Quenching Drink">
+	<item id="20992" type="EtcItem" name="승리의 갈증 해소 음료">
 		<set name="icon" val="BranchSys2.icon.br_victory_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="gold" />
@@ -1425,7 +1425,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22168-1" />
 	</item>
-	<item id="20993" type="EtcItem" name="Soccer Ball of Cheers">
+	<item id="20993" type="EtcItem" name="응원의 축구공">
 		<set name="icon" val="BranchSys2.icon.br_soccer_ball_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1442,7 +1442,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22169-1" />
 	</item>
-	<item id="20994" type="EtcItem" name="Three-headed Dragon Agathion Pack - Wind Walk">
+	<item id="20994" type="EtcItem" name="삼두용 아가시온 팩 윈드 워크">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1459,7 +1459,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20970,1,1,100" />
 	</item>
-	<item id="20995" type="EtcItem" name="Liu Bei Opera Mask Pack - Buff of Virtue, Age of the Three Kingdoms">
+	<item id="20995" type="EtcItem" name="유비 경극 마스크 팩 인덕의 버프, 삼국의 살">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1475,7 +1475,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20973,1,1,100" />
 	</item>
-	<item id="20996" type="EtcItem" name="Guan Yu Opera Mask Pack - Silence of Fidelity, Age of the Three Kingdoms">
+	<item id="20996" type="EtcItem" name="관우 경극 마스크 팩 충의의 무성, 삼국의 살">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1491,7 +1491,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20974,1,1,100" />
 	</item>
-	<item id="20997" type="EtcItem" name="Zhang Fei Opera Mask Pack - Vitality of Courage, Age of the Three Kingdoms">
+	<item id="20997" type="EtcItem" name="장비 경극 마스크 팩 금강의 활력, 삼국의 살">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1507,7 +1507,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20975,1,1,100" />
 	</item>
-	<item id="20998" type="EtcItem" name="Dragon Boat Pack">
+	<item id="20998" type="EtcItem" name="드래곤 보트 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1523,7 +1523,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20981,1,1,100" />
 	</item>
-	<item id="20999" type="EtcItem" name="Dragon Boat 7-Day Pack - Haste">
+	<item id="20999" type="EtcItem" name="드래곤 보트 7일 팩 헤이스트">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />

@@ -3,7 +3,7 @@
 
 	<!-- R級一般型武器(鎮魂/英啟/幻靈/赫利奧斯/祝福的凱利爾) -->
 	<!-- R-1:鎮魂 -->
-	<item id="17300" name="鎮魂報恨者" type="Weapon">
+	<item id="17300" type="Weapon" name="레퀴엠 레트리뷰터">
 		<table name="#Desc">可以賦予魔力再生、靈活思緒、魔力催化其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_grangkaz_i00"/>
 		<set name="default_action" val="equip"/>
@@ -30,7 +30,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17301" name="鎮魂雙刀" type="Weapon">
+	<item id="17301" type="Weapon" name="레퀴엠 듀얼소드">
 		<table name="#Desc">可以賦予速度激發、傷害提升、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17302" name="鎮魂雙匕首" type="Weapon">
+	<item id="17302" type="Weapon" name="레퀴엠 듀얼대거">
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、導引其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
 		<set name="default_action" val="equip"/>
@@ -81,7 +81,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17303" name="鎮魂雙鈍器" type="Weapon">
+	<item id="17303" type="Weapon" name="레퀴엠 듀얼블런트">
 		<table name="#Desc">可以賦予弱點偵測、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -109,7 +109,7 @@
 	</item>
 	
 	<!-- R-1:永生 -->
-	<item id="17304" name="永生頭盔" type="Armor">
+	<item id="17304" type="Armor" name="이모탈 헬멧 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -125,7 +125,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17305" name="永生胸甲" type="Armor">
+	<item id="17305" type="Armor" name="이모탈 흉갑 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t501_u_i00"/>
@@ -142,7 +142,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17306" name="永生脛甲" type="Armor">
+	<item id="17306" type="Armor" name="이모탈 각반 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t501_l_i00"/>
@@ -159,7 +159,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17307" name="永生護手" type="Armor">
+	<item id="17307" type="Armor" name="이모탈 건틀렛 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t501_g_i00"/>
@@ -175,7 +175,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17308" name="永生靴" type="Armor">
+	<item id="17308" type="Armor" name="이모탈 부츠 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t501_b_i00"/>
@@ -191,7 +191,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17309" name="永生盾" type="Armor">
+	<item id="17309" type="Armor" name="이모탈 쉴드 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.weapon_sacon_i00"/>
@@ -208,7 +208,7 @@
 			<enchant order="0x0C" stat="sDef" val="0"/>
 		</for>
 	</item>
-	<item id="17310" name="永生皮頭盔" type="Armor">
+	<item id="17310" type="Armor" name="이모탈 레더 헬멧 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -224,7 +224,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17311" name="永生皮甲" type="Armor">
+	<item id="17311" type="Armor" name="이모탈 레더 아머 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t502_u_i00"/>
@@ -241,7 +241,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17312" name="永生皮脛甲" type="Armor">
+	<item id="17312" type="Armor" name="이모탈 레더 레깅스 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t502_l_i00"/>
@@ -258,7 +258,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17313" name="永生皮手套" type="Armor">
+	<item id="17313" type="Armor" name="이모탈 레더 글로브 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t502_g_i00"/>
@@ -274,7 +274,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17314" name="永生皮靴" type="Armor">
+	<item id="17314" type="Armor" name="이모탈 레더 부츠 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t502_b_i00"/>
@@ -290,7 +290,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17315" name="永生頭箍" type="Armor">
+	<item id="17315" type="Armor" name="이모탈 서클릿 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -306,7 +306,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17316" name="永生外衣" type="Armor">
+	<item id="17316" type="Armor" name="이모탈 튜닉 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t503_u_i00"/>
@@ -324,7 +324,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17317" name="永生長襪" type="Armor">
+	<item id="17317" type="Armor" name="이모탈 호즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t503_l_i00"/>
@@ -342,7 +342,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17318" name="永生手套" type="Armor">
+	<item id="17318" type="Armor" name="이모탈 글로브 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t503_g_i00"/>
@@ -358,7 +358,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17319" name="永生鞋" type="Armor">
+	<item id="17319" type="Armor" name="이모탈 슈즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t503_b_i00"/>
@@ -376,7 +376,7 @@
 	</item>
 
 	<!-- R-1:永生 -->
-	<item id="17320" name="永生符印" type="Armor">
+	<item id="17320" type="Armor" name="이모탈 시길 로브용">
 		<table name="#Plus">長袍用</table>
 		<set name="icon" val="icon.weapon_karyen_i00"/>
 		<set name="default_action" val="equip"/>
@@ -392,7 +392,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17321" name="永生項鍊" type="Armor">
+	<item id="17321" type="Armor" name="이모탈 목걸이">
 		<table name="#Desc">永生項鍊。可得到MP+53的效果。</table>
 		<set name="icon" val="icon.r1_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -407,7 +407,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17322" name="永生耳環" type="Armor">
+	<item id="17322" type="Armor" name="이모탈 귀걸이">
 		<table name="#Desc">永生耳環。可得到MP+40的效果。</table>
 		<set name="icon" val="icon.r1_earring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -422,7 +422,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17323" name="永生戒指" type="Armor">
+	<item id="17323" type="Armor" name="이모탈 반지">
 		<table name="#Desc">永生戒指。可得到MP+26的效果。</table>
 		<set name="icon" val="icon.r1_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -439,7 +439,7 @@
 	</item>
 
 	<!-- R-2:英啟 -->
-	<item id="17324" name="英啟鉋刀" type="Weapon">
+	<item id="17324" type="Weapon" name="아포칼립스 셰이퍼">
 		<table name="#Desc">可以賦予導引、速度激發、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_phasian_i00"/>
 		<set name="default_action" val="equip"/>
@@ -465,7 +465,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17325" name="英啟切刃" type="Weapon">
+	<item id="17325" type="Weapon" name="아포칼립스 커터">
 		<table name="#Desc">可以賦予速度激發、弱點偵測、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_pasis_i00"/>
 		<set name="default_action" val="equip"/>
@@ -490,7 +490,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17326" name="英啟殺刃" type="Weapon">
+	<item id="17326" type="Weapon" name="아포칼립스 슬래셔">
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_volver_i00"/>
 		<set name="default_action" val="equip"/>
@@ -515,7 +515,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17327" name="英啟復仇者" type="Weapon">
+	<item id="17327" type="Weapon" name="아포칼립스 어벤져">
 		<table name="#Desc">可以賦予速度激發、Crt.傷害、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_raksilion_i00"/>
 		<set name="default_action" val="equip"/>
@@ -541,7 +541,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17328" name="英啟戰爪" type="Weapon">
+	<item id="17328" type="Weapon" name="아포칼립스 파이터">
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_kirche_i00"/>
 		<set name="default_action" val="equip"/>
@@ -567,7 +567,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17329" name="英啟風暴者" type="Weapon">
+	<item id="17329" type="Weapon" name="아포칼립스 스토머">
 		<table name="#Desc">可以賦予HP吸收、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_grave_i00"/>
 		<set name="default_action" val="equip"/>
@@ -593,7 +593,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17330" name="英啟投弓" type="Weapon">
+	<item id="17330" type="Weapon" name="아포칼립스 스로워">
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、遠程打擊其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_spina_i00"/>
 		<set name="default_action" val="equip"/>
@@ -620,7 +620,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17331" name="英啟射靈" type="Weapon">
+	<item id="17331" type="Weapon" name="아포칼립스 슈트제">
 		<table name="#Desc">可以賦予弱點偵測、Crt.緩速、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_medianox_i00"/>
 		<set name="default_action" val="equip"/>
@@ -647,7 +647,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17332" name="英啟爆刃" type="Weapon">
+	<item id="17332" type="Weapon" name="아포칼립스 버스터">
 		<table name="#Desc">可以賦予靈活思緒、魔法束縛、魔力上升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_imerose_i00"/>
 		<set name="default_action" val="equip"/>
@@ -673,7 +673,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17333" name="英啟術杖" type="Weapon">
+	<item id="17333" type="Weapon" name="아포칼립스 캐스터">
 		<table name="#Desc">可以賦予魔力催化、靈活思緒、魔法束縛其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_yuke_i00"/>
 		<set name="default_action" val="equip"/>
@@ -700,7 +700,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17334" name="英啟報恨者" type="Weapon">
+	<item id="17334" type="Weapon" name="아포칼립스 레트리뷰터">
 		<table name="#Desc">可以賦予魔力再生、靈活思緒、魔力催化其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_herencia_i00"/>
 		<set name="default_action" val="equip"/>
@@ -727,7 +727,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17335" name="英啟雙刀" type="Weapon">
+	<item id="17335" type="Weapon" name="아포칼립스 듀얼소드">
 		<table name="#Desc">可以賦予速度激發、傷害提升、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -752,7 +752,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17336" name="英啟雙匕首" type="Weapon">
+	<item id="17336" type="Weapon" name="아포칼립스 듀얼대거">
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、導引其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
 		<set name="default_action" val="equip"/>
@@ -778,7 +778,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17337" name="英啟雙鈍器" type="Weapon">
+	<item id="17337" type="Weapon" name="아포칼립스 듀얼블런트">
 		<table name="#Desc">可以賦予弱點偵測、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -806,7 +806,7 @@
 	</item>
 	
 	<!-- R-2:煉獄 -->
-	<item id="17338" name="煉獄頭盔" type="Armor">
+	<item id="17338" type="Armor" name="헬 헬멧 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -822,7 +822,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17339" name="煉獄胸甲" type="Armor">
+	<item id="17339" type="Armor" name="헬 흉갑 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t601_u_i00"/>
@@ -839,7 +839,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17340" name="煉獄脛甲" type="Armor">
+	<item id="17340" type="Armor" name="헬 각반 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t601_l_i00"/>
@@ -856,7 +856,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17341" name="煉獄護手" type="Armor">
+	<item id="17341" type="Armor" name="헬 건틀렛 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t601_g_i00"/>
@@ -872,7 +872,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17342" name="煉獄靴" type="Armor">
+	<item id="17342" type="Armor" name="헬 부츠 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t601_b_i00"/>
@@ -888,7 +888,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17343" name="煉獄盾" type="Armor">
+	<item id="17343" type="Armor" name="헬 쉴드 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.kratere_i00"/>
@@ -905,7 +905,7 @@
 			<enchant order="0x0C" stat="sDef" val="0"/>
 		</for>
 	</item>
-	<item id="17344" name="煉獄皮頭盔" type="Armor">
+	<item id="17344" type="Armor" name="헬 레더 헬멧 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -921,7 +921,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17345" name="煉獄皮甲" type="Armor">
+	<item id="17345" type="Armor" name="헬 레더 아머 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t602_u_i00"/>
@@ -938,7 +938,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17346" name="煉獄皮脛甲" type="Armor">
+	<item id="17346" type="Armor" name="헬 레더 레깅스 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t602_l_i00"/>
@@ -955,7 +955,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17347" name="煉獄皮手套" type="Armor">
+	<item id="17347" type="Armor" name="헬 레더 글로브 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t602_g_i00"/>
@@ -971,7 +971,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17348" name="煉獄皮靴" type="Armor">
+	<item id="17348" type="Armor" name="헬 레더 부츠 경갑용">
 		<table name="#Plus">輕裝用</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t602_b_i00"/>
@@ -987,7 +987,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17349" name="煉獄頭箍" type="Armor">
+	<item id="17349" type="Armor" name="헬 서클릿 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -1003,7 +1003,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17350" name="煉獄外衣" type="Armor">
+	<item id="17350" type="Armor" name="헬 튜닉 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t603_u_i00"/>
@@ -1021,7 +1021,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17351" name="煉獄長襪" type="Armor">
+	<item id="17351" type="Armor" name="헬 호즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t603_l_i00"/>
@@ -1039,7 +1039,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17352" name="煉獄手套" type="Armor">
+	<item id="17352" type="Armor" name="헬 글로브 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t603_g_i00"/>
@@ -1055,7 +1055,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17353" name="煉獄鞋" type="Armor">
+	<item id="17353" type="Armor" name="헬 슈즈 로브용">
 		<table name="#Plus">長袍用</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t603_b_i00"/>
@@ -1073,7 +1073,7 @@
 	</item>
 
 	<!-- 效果尚未實裝的物品-->
-	<item id="17358" name="傲慢皮帶" type="Armor">
+	<item id="17358" type="Armor" name="오만의 벨트">
 		<set name="icon" val="icon.belt_of_oman"/>
 		<set name="default_action" val="equip"/>
 		<set name="armor_type" val="light"/>
@@ -1087,7 +1087,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17359" name="傲慢襯衫" type="Armor">
+	<item id="17359" type="Armor" name="오만의 티셔츠">
 		<table name="#Desc">強化4以上時，將會賦予HP最大值增加246的精煉效果。</table>
 		<set name="icon" val="icon.tshirt_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1101,7 +1101,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17360" name="傲慢手鐲" type="Armor">
+	<item id="17360" type="Armor" name="오만의 팔찌">
 		<table name="#Desc">裝備時，可啟用護身符欄位四格。增加MP最大值60。</table>
 		<set name="icon" val="icon.bracelet_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1114,7 +1114,7 @@
 			<add order="0x40" stat="maxMp" val="60"/>
 		</for>
 	</item>
-	<item id="17361" name="傲慢項鍊" type="Armor">
+	<item id="17361" type="Armor" name="오만의 목걸이">
 		<table name="#Desc">傲慢項鍊。可得到MP+26的效果。</table>
 		<set name="icon" val="icon.necklace_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1129,7 +1129,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17362" name="傲慢戒指I" type="Armor">
+	<item id="17362" type="Armor" name="오만의 반지 I">
 		<table name="#Desc">賦予裝備者MP+15的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1144,7 +1144,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17363" name="傲慢戒指II" type="Armor">
+	<item id="17363" type="Armor" name="오만의 반지 II">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1159,7 +1159,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17364" name="傲慢戒指III" type="Armor">
+	<item id="17364" type="Armor" name="오만의 반지 III">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%、毒攻擊率提升10%效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1174,7 +1174,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17365" name="傲慢戒指IV" type="Armor">
+	<item id="17365" type="Armor" name="오만의 반지 IV">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%、毒攻擊率提升10%、束縛抗性提升10%的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1189,7 +1189,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17366" name="傲慢戒指V" type="Armor">
+	<item id="17366" type="Armor" name="오만의 반지 V">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%、毒攻擊率提升10%、束縛抗性提升10%、束縛攻擊率提升10%的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1204,7 +1204,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17367" name="傲慢戒指VI" type="Armor">
+	<item id="17367" type="Armor" name="오만의 반지 VI">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%、毒攻擊率提升10%、束縛抗性提升10%、束縛攻擊率提升10%、命中率提升的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1219,7 +1219,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17368" name="傲慢戒指VII" type="Armor">
+	<item id="17368" type="Armor" name="오만의 반지 VII">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%、毒攻擊率提升10%、束縛抗性提升10%、束縛攻擊率提升10%、命中率提升、攻擊速度加快的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1234,7 +1234,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17369" name="傲慢戒指VIII" type="Armor">
+	<item id="17369" type="Armor" name="오만의 반지 VIII">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%、毒攻擊率提升10%、束縛抗性提升10%、束縛攻擊率提升10%、命中率提升、攻擊速度加快、施法速度提升的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1249,7 +1249,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17370" name="傲慢戒指IX" type="Armor">
+	<item id="17370" type="Armor" name="오만의 반지 IX">
 		<table name="#Desc">賦予裝備者MP+15、毒抗性提升10%、毒攻擊率提升10%、束縛抗性提升10%、束縛攻擊率提升10%、命中率提升、攻擊速度加快、施法速度提升、致命傷害提升的效果。即使戴上兩個傲慢戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_of_oman"/>
 		<set name="default_action" val="equip"/>
@@ -1266,7 +1266,7 @@
 	</item>
 	
 	<!-- 結晶/寶石 -->
-	<item id="17371" name="結晶-R級" type="EtcItem">
+	<item id="17371" type="EtcItem" name="결정체 - R그레이드">
 		<table name="#Desc">R級結晶</table>
 		<set name="icon" val="icon.crystal_r_i00"/>
 		<set name="crystal_type" val="r"/>
@@ -1274,7 +1274,7 @@
 		<set name="is_stackable" val="true"/>
 	</item>
 
-	<item id="17372" name="投擲兵之槍" type="Weapon">
+	<item id="17372" type="Weapon" name="투척병 창">
 		<set name="icon" val="icon.weapon_doomed_dagger_i00"/>
 		<set name="default_action" val="equip"/>
 		<set name="weapon_type" val="dagger"/>
@@ -1300,7 +1300,7 @@
 	</item>
 
 	<!-- 壺精手鐲 -->
-	<item id="17380" name="妖精壺精手鐲" type="Armor">
+	<item id="17380" type="Armor" name="페어리 아가시온 팔찌">
 		<table name="#Desc">裝備的話，可以召喚妖精壺精。</table>
 		<set name="icon" val="icon.agathion_magmeld_teleport"/>
 		<set name="default_action" val="equip"/>
@@ -1312,7 +1312,7 @@
 	</item>
 
 	<!-- R95:幻靈 -->
-	<item id="17382" name="幻靈鉋刀" type="Weapon">
+	<item id="17382" type="Weapon" name="판타스마 셰이퍼">
 		<table name="#Desc">可以賦予導引、速度激發、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ignicion_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1338,7 +1338,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17383" name="幻靈切刃" type="Weapon">
+	<item id="17383" type="Weapon" name="판타스마 커터">
 		<table name="#Desc">可以賦予速度激發、弱點偵測、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_ninfea_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1363,7 +1363,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17384" name="幻靈殺刃" type="Weapon">
+	<item id="17384" type="Weapon" name="판타스마 슬래셔">
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_skia_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1388,7 +1388,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17385" name="幻靈復仇者" type="Weapon">
+	<item id="17385" type="Weapon" name="판타스마 어벤져">
 		<table name="#Desc">可以賦予速度激發、Crt.傷害、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_ikeon_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1414,7 +1414,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17386" name="幻靈戰爪" type="Weapon">
+	<item id="17386" type="Weapon" name="판타스마 파이터">
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_deodos_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1440,7 +1440,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17387" name="幻靈風暴者" type="Weapon">
+	<item id="17387" type="Weapon" name="판타스마 스토머">
 		<table name="#Desc">可以賦予HP吸收、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_transgredi_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1466,7 +1466,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17388" name="幻靈投弓" type="Weapon">
+	<item id="17388" type="Weapon" name="판타스마 스로워">
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、遠程打擊其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_solenas_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1493,7 +1493,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17389" name="幻靈射靈" type="Weapon">
+	<item id="17389" type="Weapon" name="판타스마 슈트제">
 		<table name="#Desc">可以賦予弱點偵測、Crt.緩速、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_lapis_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1520,7 +1520,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17390" name="幻靈爆刃" type="Weapon">
+	<item id="17390" type="Weapon" name="판타스마 버스터">
 		<table name="#Desc">可以賦予靈活思緒、魔法束縛、魔力上升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_zihel_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1546,7 +1546,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17391" name="幻靈術杖" type="Weapon">
+	<item id="17391" type="Weapon" name="판타스마 캐스터">
 		<table name="#Desc">可以賦予魔力催化、靈活思緒、魔法束縛其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_alacer_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1573,7 +1573,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17392" name="幻靈報恨者" type="Weapon">
+	<item id="17392" type="Weapon" name="판타스마 레트리뷰터">
 		<table name="#Desc">可以賦予魔力再生、靈活思緒、魔力催化其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_rupe_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1600,7 +1600,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17393" name="幻靈雙刀" type="Weapon">
+	<item id="17393" type="Weapon" name="판타스마 듀얼소드">
 		<table name="#Desc">可以賦予速度激發、傷害提升、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1625,7 +1625,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17394" name="幻靈雙匕首" type="Weapon">
+	<item id="17394" type="Weapon" name="판타스마 듀얼대거">
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、導引其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1651,7 +1651,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="17395" name="幻靈雙鈍器" type="Weapon">
+	<item id="17395" type="Weapon" name="판타스마 듀얼블런트">
 		<table name="#Desc">可以賦予弱點偵測、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1679,7 +1679,7 @@
 	</item>
 
 	<!-- R95:卡戴拉 -->
-	<item id="17396" name="卡戴拉頭盔" type="Armor">
+	<item id="17396" type="Armor" name="카데이라 헬멧 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -1695,7 +1695,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17397" name="卡戴拉胸甲" type="Armor">
+	<item id="17397" type="Armor" name="카데이라 흉갑 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t401_u_i00"/>
@@ -1712,7 +1712,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17398" name="卡戴拉脛甲" type="Armor">
+	<item id="17398" type="Armor" name="카데이라 각반 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t401_l_i00"/>
@@ -1729,7 +1729,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17399" name="卡戴拉護手" type="Armor">
+	<item id="17399" type="Armor" name="카데이라 건틀렛 중갑용">
 		<table name="#Plus">重裝用</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。</table>
 		<set name="icon" val="icon.armor_t401_g_i00"/>

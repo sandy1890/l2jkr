@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="35100" name="黑暗赫利奧斯風暴者" type="Weapon">
+	<item id="35100" type="Weapon" name="다크 헬리오스 스토머">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予HP吸收、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i10"/>
 		<set name="default_action" val="equip"/>
@@ -27,7 +27,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35101" name="黑暗赫利奧斯投弓" type="Weapon">
+	<item id="35101" type="Weapon" name="다크 헬리오스 스로워">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予傷害提升、弱點偵測、遠程打擊其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i10"/>
 		<set name="default_action" val="equip"/>
@@ -54,7 +54,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35102" name="黑暗赫利奧斯射靈" type="Weapon">
+	<item id="35102" type="Weapon" name="다크 헬리오스 슈트제">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予弱點偵測、Crt.緩速、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i10"/>
 		<set name="default_action" val="equip"/>
@@ -81,7 +81,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35103" name="黑暗赫利奧斯爆刃" type="Weapon">
+	<item id="35103" type="Weapon" name="다크 헬리오스 버스터">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予靈活思緒、魔法束縛、魔力上升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i10"/>
 		<set name="default_action" val="equip"/>
@@ -106,7 +106,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35104" name="黑暗赫利奧斯術杖" type="Weapon">
+	<item id="35104" type="Weapon" name="다크 헬리오스 캐스터">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予魔力催化、靈活思緒、魔法束縛其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i10"/>
 		<set name="default_action" val="equip"/>
@@ -132,7 +132,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35105" name="黑暗赫利奧斯報恨者" type="Weapon">
+	<item id="35105" type="Weapon" name="다크 헬리오스 레트리뷰터">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予魔力再生、靈活思緒、魔力催化其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i10"/>
 		<set name="default_action" val="equip"/>
@@ -158,7 +158,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35106" name="黑暗赫利奧斯雙刀" type="Weapon">
+	<item id="35106" type="Weapon" name="다크 헬리오스 듀얼소드">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予速度激發、傷害提升、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i10"/>
 		<set name="default_action" val="equip"/>
@@ -183,7 +183,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35107" name="黑暗赫利奧斯雙匕首" type="Weapon">
+	<item id="35107" type="Weapon" name="다크 헬리오스 듀얼대거">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予傷害提升、弱點偵測、導引其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i10"/>
 		<set name="default_action" val="equip"/>
@@ -209,7 +209,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35108" name="黑暗赫利奧斯雙鈍器" type="Weapon">
+	<item id="35108" type="Weapon" name="다크 헬리오스 듀얼블런트">
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。可以賦予弱點偵測、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i10"/>
 		<set name="default_action" val="equip"/>
@@ -235,7 +235,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35109" name="黑暗赫利奧斯鉋刀" type="Weapon">
+	<item id="35109" type="Weapon" name="다크 헬리오스 셰이퍼 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i11"/>
@@ -262,7 +262,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35110" name="黑暗赫利奧斯鉋刀" type="Weapon">
+	<item id="35110" type="Weapon" name="다크 헬리오스 셰이퍼 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i11"/>
@@ -289,7 +289,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35111" name="黑暗赫利奧斯鉋刀" type="Weapon">
+	<item id="35111" type="Weapon" name="다크 헬리오스 셰이퍼 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約81.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i11"/>
@@ -316,7 +316,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35112" name="黑暗赫利奧斯切刃" type="Weapon">
+	<item id="35112" type="Weapon" name="다크 헬리오스 커터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i11"/>
@@ -342,7 +342,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35113" name="黑暗赫利奧斯切刃" type="Weapon">
+	<item id="35113" type="Weapon" name="다크 헬리오스 커터 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i11"/>
@@ -368,7 +368,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35114" name="黑暗赫利奧斯切刃" type="Weapon">
+	<item id="35114" type="Weapon" name="다크 헬리오스 커터 헬스">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i11"/>
@@ -394,7 +394,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35115" name="黑暗赫利奧斯殺刃" type="Weapon">
+	<item id="35115" type="Weapon" name="다크 헬리오스 슬래셔 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i11"/>
@@ -420,7 +420,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35116" name="黑暗赫利奧斯殺刃" type="Weapon">
+	<item id="35116" type="Weapon" name="다크 헬리오스 슬래셔 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i11"/>
@@ -446,7 +446,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35117" name="黑暗赫利奧斯殺刃" type="Weapon">
+	<item id="35117" type="Weapon" name="다크 헬리오스 슬래셔 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i11"/>
@@ -472,7 +472,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35118" name="黑暗赫利奧斯復仇者" type="Weapon">
+	<item id="35118" type="Weapon" name="다크 헬리오스 어벤져 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i11"/>
@@ -499,7 +499,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35119" name="黑暗赫利奧斯復仇者" type="Weapon">
+	<item id="35119" type="Weapon" name="다크 헬리오스 어벤져 Crt. 대미지">
 		<table name="#Plus">Crt.傷害</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊時物理攻擊力提升約1232。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i11"/>
@@ -526,7 +526,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35120" name="黑暗赫利奧斯復仇者" type="Weapon">
+	<item id="35120" type="Weapon" name="다크 헬리오스 어벤져 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i11"/>
@@ -553,7 +553,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35121" name="黑暗赫利奧斯戰爪" type="Weapon">
+	<item id="35121" type="Weapon" name="다크 헬리오스 파이터 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約75.5。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i11"/>
@@ -580,7 +580,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35122" name="黑暗赫利奧斯戰爪" type="Weapon">
+	<item id="35122" type="Weapon" name="다크 헬리오스 파이터 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i11"/>
@@ -607,7 +607,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35123" name="黑暗赫利奧斯戰爪" type="Weapon">
+	<item id="35123" type="Weapon" name="다크 헬리오스 파이터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i11"/>
@@ -634,7 +634,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35124" name="黑暗赫利奧斯風暴者" type="Weapon">
+	<item id="35124" type="Weapon" name="다크 헬리오스 스토머 HP 드레인">
 		<table name="#Plus">HP吸收</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i11"/>
@@ -661,7 +661,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35125" name="黑暗赫利奧斯風暴者" type="Weapon">
+	<item id="35125" type="Weapon" name="다크 헬리오스 스토머 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i11"/>
@@ -688,7 +688,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35126" name="黑暗赫利奧斯風暴者" type="Weapon">
+	<item id="35126" type="Weapon" name="다크 헬리오스 스토머 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i11"/>
@@ -715,7 +715,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35127" name="黑暗赫利奧斯投弓" type="Weapon">
+	<item id="35127" type="Weapon" name="다크 헬리오스 스로워 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i11"/>
@@ -743,7 +743,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35128" name="黑暗赫利奧斯投弓" type="Weapon">
+	<item id="35128" type="Weapon" name="다크 헬리오스 스로워 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i11"/>
@@ -771,7 +771,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35129" name="黑暗赫利奧斯投弓" type="Weapon">
+	<item id="35129" type="Weapon" name="다크 헬리오스 스로워 롱블로">
 		<table name="#Plus">遠程打擊</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊距離提升。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i11"/>
@@ -799,7 +799,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35130" name="黑暗赫利奧斯射靈" type="Weapon">
+	<item id="35130" type="Weapon" name="다크 헬리오스 슈트제 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i11"/>
@@ -827,7 +827,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35131" name="黑暗赫利奧斯射靈" type="Weapon">
+	<item id="35131" type="Weapon" name="다크 헬리오스 슈트제 Crt. 슬로우">
 		<table name="#Plus">Crt.緩速</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i11"/>
@@ -855,7 +855,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35132" name="黑暗赫利奧斯射靈" type="Weapon">
+	<item id="35132" type="Weapon" name="다크 헬리오스 슈트제 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i11"/>
@@ -883,7 +883,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35133" name="黑暗赫利奧斯爆刃" type="Weapon">
+	<item id="35133" type="Weapon" name="다크 헬리오스 버스터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i11"/>
@@ -909,7 +909,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35134" name="黑暗赫利奧斯爆刃" type="Weapon">
+	<item id="35134" type="Weapon" name="다크 헬리오스 버스터 매직홀드">
 		<table name="#Plus">魔法束縛</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i11"/>
@@ -935,7 +935,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35135" name="黑暗赫利奧斯爆刃" type="Weapon">
+	<item id="35135" type="Weapon" name="다크 헬리오스 버스터 마나업">
 		<table name="#Plus">魔力上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞MP最大值提升約30%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i11"/>
@@ -961,7 +961,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35136" name="黑暗赫利奧斯術杖" type="Weapon">
+	<item id="35136" type="Weapon" name="다크 헬리오스 캐스터 엠파워">
 		<table name="#Plus">魔力催化</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i11"/>
@@ -988,7 +988,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35137" name="黑暗赫利奧斯術杖" type="Weapon">
+	<item id="35137" type="Weapon" name="다크 헬리오스 캐스터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i11"/>
@@ -1015,7 +1015,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35138" name="黑暗赫利奧斯術杖" type="Weapon">
+	<item id="35138" type="Weapon" name="다크 헬리오스 캐스터 매직홀드">
 		<table name="#Plus">魔法束縛</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i11"/>
@@ -1042,7 +1042,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35139" name="黑暗赫利奧斯報恨者" type="Weapon">
+	<item id="35139" type="Weapon" name="다크 헬리오스 레트리뷰터 MP리제네레이션">
 		<table name="#Plus">魔力再生</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞提升MP的恢復速度。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i11"/>
@@ -1069,7 +1069,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35140" name="黑暗赫利奧斯報恨者" type="Weapon">
+	<item id="35140" type="Weapon" name="다크 헬리오스 레트리뷰터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i11"/>
@@ -1096,7 +1096,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35141" name="黑暗赫利奧斯報恨者" type="Weapon">
+	<item id="35141" type="Weapon" name="다크 헬리오스 레트리뷰터 엠파워">
 		<table name="#Plus">魔力催化</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i11"/>
@@ -1123,7 +1123,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35142" name="黑暗赫利奧斯雙刀" type="Weapon">
+	<item id="35142" type="Weapon" name="다크 헬리오스 듀얼소드 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i11"/>
@@ -1149,7 +1149,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35143" name="黑暗赫利奧斯雙刀" type="Weapon">
+	<item id="35143" type="Weapon" name="다크 헬리오스 듀얼소드 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i11"/>
@@ -1175,7 +1175,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35144" name="黑暗赫利奧斯雙刀" type="Weapon">
+	<item id="35144" type="Weapon" name="다크 헬리오스 듀얼소드 헬스">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i11"/>
@@ -1201,7 +1201,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35145" name="黑暗赫利奧斯雙匕首" type="Weapon">
+	<item id="35145" type="Weapon" name="다크 헬리오스 듀얼대거 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i11"/>
@@ -1228,7 +1228,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35146" name="黑暗赫利奧斯雙匕首" type="Weapon">
+	<item id="35146" type="Weapon" name="다크 헬리오스 듀얼대거 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i11"/>
@@ -1255,7 +1255,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35147" name="黑暗赫利奧斯雙匕首" type="Weapon">
+	<item id="35147" type="Weapon" name="다크 헬리오스 듀얼대거 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i11"/>
@@ -1282,7 +1282,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35148" name="黑暗赫利奧斯雙鈍器" type="Weapon">
+	<item id="35148" type="Weapon" name="다크 헬리오스 듀얼블런트 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i11"/>
@@ -1309,7 +1309,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35149" name="黑暗赫利奧斯雙鈍器" type="Weapon">
+	<item id="35149" type="Weapon" name="다크 헬리오스 듀얼블런트 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i11"/>
@@ -1336,7 +1336,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35150" name="黑暗赫利奧斯雙鈍器" type="Weapon">
+	<item id="35150" type="Weapon" name="다크 헬리오스 듀얼블런트 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i11"/>
@@ -1363,7 +1363,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35151" name="黑暗赫利奧斯鉋刀" type="Weapon">
+	<item id="35151" type="Weapon" name="다크 헬리오스 셰이퍼 가이던스 + 헤이스트">
 		<table name="#Plus">導引 + 速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升8、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i11"/>
@@ -1390,7 +1390,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35152" name="黑暗赫利奧斯鉋刀" type="Weapon">
+	<item id="35152" type="Weapon" name="다크 헬리오스 셰이퍼 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約81.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i11"/>
@@ -1417,7 +1417,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35153" name="黑暗赫利奧斯鉋刀" type="Weapon">
+	<item id="35153" type="Weapon" name="다크 헬리오스 셰이퍼 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約79.2、命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i11"/>
@@ -1444,7 +1444,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35154" name="黑暗赫利奧斯切刃" type="Weapon">
+	<item id="35154" type="Weapon" name="다크 헬리오스 커터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i11"/>
@@ -1470,7 +1470,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35155" name="黑暗赫利奧斯切刃" type="Weapon">
+	<item id="35155" type="Weapon" name="다크 헬리오스 커터 포커스 + 헬스">
 		<table name="#Plus">偵測 + 強健</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約75.4、HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i11"/>
@@ -1496,7 +1496,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35156" name="黑暗赫利奧斯切刃" type="Weapon">
+	<item id="35156" type="Weapon" name="다크 헬리오스 커터 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i11"/>
@@ -1522,7 +1522,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35157" name="黑暗赫利奧斯殺刃" type="Weapon">
+	<item id="35157" type="Weapon" name="다크 헬리오스 슬래셔 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i11"/>
@@ -1548,7 +1548,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35158" name="黑暗赫利奧斯殺刃" type="Weapon">
+	<item id="35158" type="Weapon" name="다크 헬리오스 슬래셔 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i11"/>
@@ -1574,7 +1574,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35159" name="黑暗赫利奧斯殺刃" type="Weapon">
+	<item id="35159" type="Weapon" name="다크 헬리오스 슬래셔 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i11"/>
@@ -1600,7 +1600,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35160" name="黑暗赫利奧斯復仇者" type="Weapon">
+	<item id="35160" type="Weapon" name="다크 헬리오스 어벤져 헤이스트 + Crt. 대미지">
 		<table name="#Plus">速度激發 + Crt.傷害</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊時物理攻擊力提升約1232。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i11"/>
@@ -1627,7 +1627,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35161" name="黑暗赫利奧斯復仇者" type="Weapon">
+	<item id="35161" type="Weapon" name="다크 헬리오스 어벤져 Crt. 대미지 + 포커스">
 		<table name="#Plus">Crt.傷害 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊時物理攻擊力提升約1232、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i11"/>
@@ -1654,7 +1654,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35162" name="黑暗赫利奧斯復仇者" type="Weapon">
+	<item id="35162" type="Weapon" name="다크 헬리오스 어벤져 포커스 + 헤이스트">
 		<table name="#Plus">偵測 + 速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i11"/>
@@ -1681,7 +1681,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35163" name="黑暗赫利奧斯戰爪" type="Weapon">
+	<item id="35163" type="Weapon" name="다크 헬리오스 파이터 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約81.9、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i11"/>
@@ -1708,7 +1708,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35164" name="黑暗赫利奧斯戰爪" type="Weapon">
+	<item id="35164" type="Weapon" name="다크 헬리오스 파이터 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i11"/>
@@ -1735,7 +1735,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35165" name="黑暗赫利奧斯戰爪" type="Weapon">
+	<item id="35165" type="Weapon" name="다크 헬리오스 파이터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約75.5。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i11"/>
@@ -1762,7 +1762,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35166" name="黑暗赫利奧斯風暴者" type="Weapon">
+	<item id="35166" type="Weapon" name="다크 헬리오스 스토머 HP 드레인 + 가이던스">
 		<table name="#Plus">HP吸收 + 導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i11"/>
@@ -1789,7 +1789,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35167" name="黑暗赫利奧斯風暴者" type="Weapon">
+	<item id="35167" type="Weapon" name="다크 헬리오스 스토머 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i11"/>
@@ -1816,7 +1816,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35168" name="黑暗赫利奧斯風暴者" type="Weapon">
+	<item id="35168" type="Weapon" name="다크 헬리오스 스토머 대미지업 + HP 드레인">
 		<table name="#Plus">傷害上升 + HP吸收</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約288。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i11"/>
@@ -1843,7 +1843,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35169" name="黑暗赫利奧斯投弓" type="Weapon">
+	<item id="35169" type="Weapon" name="다크 헬리오스 스로워 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約332、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i11"/>
@@ -1871,7 +1871,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35170" name="黑暗赫利奧斯投弓" type="Weapon">
+	<item id="35170" type="Weapon" name="다크 헬리오스 스로워 포커스 + 롱블로">
 		<table name="#Plus">偵測 + 遠程打擊</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7、攻擊距離提升。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i11"/>
@@ -1899,7 +1899,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35171" name="黑暗赫利奧斯投弓" type="Weapon">
+	<item id="35171" type="Weapon" name="다크 헬리오스 스로워 롱블로 + 대미지업">
 		<table name="#Plus">遠程打擊 + 傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊距離提升、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i11"/>
@@ -1927,7 +1927,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35172" name="黑暗赫利奧斯射靈" type="Weapon">
+	<item id="35172" type="Weapon" name="다크 헬리오스 슈트제 포커스 + Crt. 슬로우">
 		<table name="#Plus">偵測 + Crt.緩速</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。致命攻擊時，以一定的機率造成目標移動速度下降。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i11"/>
@@ -1955,7 +1955,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35173" name="黑暗赫利奧斯射靈" type="Weapon">
+	<item id="35173" type="Weapon" name="다크 헬리오스 슈트제 Crt. 슬로우 + 헤이스트">
 		<table name="#Plus">Crt.緩速 + 速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i11"/>
@@ -1983,7 +1983,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35174" name="黑暗赫利奧斯射靈" type="Weapon">
+	<item id="35174" type="Weapon" name="다크 헬리오스 슈트제 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i11"/>
@@ -2011,7 +2011,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35175" name="黑暗赫利奧斯爆刃" type="Weapon">
+	<item id="35175" type="Weapon" name="다크 헬리오스 버스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i11"/>
@@ -2037,7 +2037,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35176" name="黑暗赫利奧斯爆刃" type="Weapon">
+	<item id="35176" type="Weapon" name="다크 헬리오스 버스터 매직홀드 + 마나업">
 		<table name="#Plus">魔法束縛 + 魔力上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。MP最大值提升約30%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i11"/>
@@ -2063,7 +2063,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35177" name="黑暗赫利奧斯爆刃" type="Weapon">
+	<item id="35177" type="Weapon" name="다크 헬리오스 버스터 마나업 + 아큐멘">
 		<table name="#Plus">魔力上升 + 靈活思緒</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞MP最大值提升約30%、施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i11"/>
@@ -2089,7 +2089,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35178" name="黑暗赫利奧斯術杖" type="Weapon">
+	<item id="35178" type="Weapon" name="다크 헬리오스 캐스터 엠파워 + 아큐멘">
 		<table name="#Plus">魔力催化 + 靈活思緒</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞魔法攻擊力提升約460、施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i11"/>
@@ -2116,7 +2116,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35179" name="黑暗赫利奧斯術杖" type="Weapon">
+	<item id="35179" type="Weapon" name="다크 헬리오스 캐스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i11"/>
@@ -2143,7 +2143,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35180" name="黑暗赫利奧斯術杖" type="Weapon">
+	<item id="35180" type="Weapon" name="다크 헬리오스 캐스터 매직홀드 + 엠파워">
 		<table name="#Plus">魔法束縛 + 魔力催化</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i11"/>
@@ -2170,7 +2170,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35181" name="黑暗赫利奧斯報恨者" type="Weapon">
+	<item id="35181" type="Weapon" name="다크 헬리오스 레트리뷰터 MP리제네레이션 + 아큐멘">
 		<table name="#Plus">魔力再生 + 靈活思緒</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞提升MP的恢復速度、施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i11"/>
@@ -2197,7 +2197,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35182" name="黑暗赫利奧斯報恨者" type="Weapon">
+	<item id="35182" type="Weapon" name="다크 헬리오스 레트리뷰터 아큐멘 + 엠파워">
 		<table name="#Plus">靈活思緒 + 魔力催化</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞施法速度加快約15%、魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i11"/>
@@ -2224,7 +2224,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35183" name="黑暗赫利奧斯報恨者" type="Weapon">
+	<item id="35183" type="Weapon" name="다크 헬리오스 레트리뷰터 엠파워 + MP리제네레이션">
 		<table name="#Plus">魔力催化 + 魔力再生</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞魔法攻擊力提升約322、提升MP的恢復速度。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i11"/>
@@ -2251,7 +2251,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35184" name="黑暗赫利奧斯雙刀" type="Weapon">
+	<item id="35184" type="Weapon" name="다크 헬리오스 듀얼소드 헤이스트 + 대미지업">
 		<table name="#Plus">速度激發 + 傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i11"/>
@@ -2277,7 +2277,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35185" name="黑暗赫利奧斯雙刀" type="Weapon">
+	<item id="35185" type="Weapon" name="다크 헬리오스 듀얼소드 대미지업 + 헬스">
 		<table name="#Plus">傷害上升 + 強健</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約457、HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i11"/>
@@ -2303,7 +2303,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35186" name="黑暗赫利奧斯雙刀" type="Weapon">
+	<item id="35186" type="Weapon" name="다크 헬리오스 듀얼소드 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i11"/>
@@ -2329,7 +2329,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35187" name="黑暗赫利奧斯雙匕首" type="Weapon">
+	<item id="35187" type="Weapon" name="다크 헬리오스 듀얼대거 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約377、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i11"/>
@@ -2356,7 +2356,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35188" name="黑暗赫利奧斯雙匕首" type="Weapon">
+	<item id="35188" type="Weapon" name="다크 헬리오스 듀얼대거 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約79.2、命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i11"/>
@@ -2383,7 +2383,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35189" name="黑暗赫利奧斯雙匕首" type="Weapon">
+	<item id="35189" type="Weapon" name="다크 헬리오스 듀얼대거 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升7.9、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i11"/>
@@ -2410,7 +2410,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35190" name="黑暗赫利奧斯雙鈍器" type="Weapon">
+	<item id="35190" type="Weapon" name="다크 헬리오스 듀얼블런트 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞致命攻擊率提升約79.2、命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i11"/>
@@ -2437,7 +2437,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35191" name="黑暗赫利奧斯雙鈍器" type="Weapon">
+	<item id="35191" type="Weapon" name="다크 헬리오스 듀얼블런트 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i11"/>
@@ -2464,7 +2464,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35192" name="黑暗赫利奧斯雙鈍器" type="Weapon">
+	<item id="35192" type="Weapon" name="다크 헬리오스 듀얼블런트 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">PVP強化型道具，提升給予玩家角色的傷害12%。＜搜魂石特效＞物理攻擊力提升約377、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i11"/>
@@ -2491,7 +2491,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35193" name="血腥赫利奧斯鉋刀" type="Weapon">
+	<item id="35193" type="Weapon" name="블러디 헬리오스 셰이퍼">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予導引、速度激發、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i20"/>
 		<set name="default_action" val="equip"/>
@@ -2517,7 +2517,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35194" name="血腥赫利奧斯切刃" type="Weapon">
+	<item id="35194" type="Weapon" name="블러디 헬리오스 커터">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予速度激發、弱點偵測、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i20"/>
 		<set name="default_action" val="equip"/>
@@ -2542,7 +2542,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35195" name="血腥赫利奧斯殺刃" type="Weapon">
+	<item id="35195" type="Weapon" name="블러디 헬리오스 슬래셔">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i20"/>
 		<set name="default_action" val="equip"/>
@@ -2567,7 +2567,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35196" name="血腥赫利奧斯復仇者" type="Weapon">
+	<item id="35196" type="Weapon" name="블러디 헬리오스 어벤져">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予速度激發、Crt.傷害、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i20"/>
 		<set name="default_action" val="equip"/>
@@ -2593,7 +2593,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35197" name="血腥赫利奧斯戰爪" type="Weapon">
+	<item id="35197" type="Weapon" name="블러디 헬리오스 파이터">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i20"/>
 		<set name="default_action" val="equip"/>
@@ -2619,7 +2619,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35198" name="血腥赫利奧斯風暴者" type="Weapon">
+	<item id="35198" type="Weapon" name="블러디 헬리오스 스토머">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予HP吸收、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i20"/>
 		<set name="default_action" val="equip"/>
@@ -2645,7 +2645,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35199" name="血腥赫利奧斯投弓" type="Weapon">
+	<item id="35199" type="Weapon" name="블러디 헬리오스 스로워">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予傷害提升、弱點偵測、遠程打擊其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i20"/>
 		<set name="default_action" val="equip"/>

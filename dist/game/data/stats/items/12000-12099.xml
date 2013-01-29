@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="12000" type="Weapon" name="Common Item - Arcana Mace">
+	<item id="12000" type="Weapon" name="기본 병기 - 아르카나 메이스">
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -26,7 +26,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12001" type="Weapon" name="Common Item - Angel Slayer">
+	<item id="12001" type="Weapon" name="기본 병기 - 엔젤 슬레이어">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -51,7 +51,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="12002" type="Weapon" name="Common Item - Imperial Staff">
+	<item id="12002" type="Weapon" name="기본 병기 - 임페리얼 스텝">
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -77,7 +77,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="12003" type="Weapon" name="Common Item - Tallum Blade*Dark Legion's Edge">
+	<item id="12003" type="Weapon" name="기본 병기 - 탈룸 블레이드*다크 레기온">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -102,7 +102,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="12004" type="Weapon" name="Common Item - Forgotten Blade">
+	<item id="12004" type="Weapon" name="기본 병기 - 포가튼 블레이드">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -127,7 +127,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12005" type="Weapon" name="Common Item - Heaven's Divider">
+	<item id="12005" type="Weapon" name="기본 병기 - 헤븐스 디바이더">
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -152,7 +152,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="12006" type="Armor" name="Common Item - Leather Boots">
+	<item id="12006" type="Armor" name="기본 병기 - 가죽부츠">
 		<set name="icon" val="icon.armor_t09_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -166,7 +166,7 @@
 			<add order="0x10" stat="pDef" val="19" />
 		</for>
 	</item>
-	<item id="12007" type="Armor" name="Common Item - Crafted Leather Gloves">
+	<item id="12007" type="Armor" name="기본 병기 - 고급 가죽 장갑">
 		<set name="icon" val="icon.armor_t09_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -180,7 +180,7 @@
 			<add order="0x10" stat="pDef" val="19" />
 		</for>
 	</item>
-	<item id="12008" type="Armor" name="Common Item - Ring Mail Breastplate">
+	<item id="12008" type="Armor" name="기본 병기 - 링 흉갑">
 		<set name="icon" val="icon.armor_t12_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -198,7 +198,7 @@
 			<add order="0x10" stat="pDef" val="77" />
 		</for>
 	</item>
-	<item id="12009" type="Armor" name="Common Item - Bone Helmet">
+	<item id="12009" type="Armor" name="기본 병기 - 뼈 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -212,7 +212,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="12010" type="Armor" name="Common Item - Cursed Tunic">
+	<item id="12010" type="Armor" name="기본 병기 - 저주 받은 튜닉">
 		<set name="icon" val="icon.armor_t14_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -231,7 +231,7 @@
 			<add order="0x40" stat="maxMp" val="106" />
 		</for>
 	</item>
-	<item id="12011" type="Armor" name="Common Item - Cursed Stockings">
+	<item id="12011" type="Armor" name="기본 병기 - 저주 받은 호즈">
 		<set name="icon" val="icon.armor_t14_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -250,7 +250,7 @@
 			<add order="0x40" stat="maxMp" val="66" />
 		</for>
 	</item>
-	<item id="12012" type="Armor" name="Common Item - Iron Plate Gaiters">
+	<item id="12012" type="Armor" name="기본 병기 - 철판 각반">
 		<set name="icon" val="icon.armor_t12_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -268,7 +268,7 @@
 			<add order="0x10" stat="pDef" val="48" />
 		</for>
 	</item>
-	<item id="12013" type="Armor" name="Common Item - Bronze Shield">
+	<item id="12013" type="Armor" name="기본 병기 - 청동 방패">
 		<set name="icon" val="icon.shield_bronze_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -287,7 +287,7 @@
 			<set order="0x08" stat="sDef" val="101" />
 		</for>
 	</item>
-	<item id="12014" type="Armor" name="Common Item - Puma Skin Gaiters">
+	<item id="12014" type="Armor" name="기본 병기 - 퓨마가죽각반">
 		<set name="icon" val="icon.armor_t09_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -302,7 +302,7 @@
 			<add order="0x10" stat="pDef" val="36" />
 		</for>
 	</item>
-	<item id="12015" type="Armor" name="Common Item - Puma Skin Shirt">
+	<item id="12015" type="Armor" name="기본 병기 - 퓨마가죽셔츠">
 		<set name="icon" val="icon.armor_t09_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -317,7 +317,7 @@
 			<add order="0x10" stat="pDef" val="58" />
 		</for>
 	</item>
-	<item id="12016" type="Armor" name="Common Item - Leather Gauntlet">
+	<item id="12016" type="Armor" name="기본 병기 - 가죽 건틀렛">
 		<set name="icon" val="icon.armor_t18_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -331,7 +331,7 @@
 			<add order="0x10" stat="pDef" val="22" />
 		</for>
 	</item>
-	<item id="12017" type="Armor" name="Common Item - Dark Stockings">
+	<item id="12017" type="Armor" name="기본 병기 - 검은 호즈">
 		<set name="icon" val="icon.armor_t16_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -350,7 +350,7 @@
 			<add order="0x40" stat="maxMp" val="79" />
 		</for>
 	</item>
-	<item id="12018" type="Armor" name="Common Item - Mystic's Tunic">
+	<item id="12018" type="Armor" name="기본 병기 - 마법사의 튜닉">
 		<set name="icon" val="icon.armor_t17_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -369,7 +369,7 @@
 			<add order="0x40" stat="maxMp" val="126" />
 		</for>
 	</item>
-	<item id="12019" type="Armor" name="Common Item - Mystic's Stockings">
+	<item id="12019" type="Armor" name="기본 병기 - 마법사의 호즈">
 		<set name="icon" val="icon.armor_t17_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -388,7 +388,7 @@
 			<add order="0x40" stat="maxMp" val="79" />
 		</for>
 	</item>
-	<item id="12020" type="Armor" name="Common Item - Lion Skin Gaiters">
+	<item id="12020" type="Armor" name="기본 병기 - 사자가죽각반">
 		<set name="icon" val="icon.armor_t18_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -403,7 +403,7 @@
 			<add order="0x10" stat="pDef" val="41" />
 		</for>
 	</item>
-	<item id="12021" type="Armor" name="Common Item - Lion Skin Shirt">
+	<item id="12021" type="Armor" name="기본 병기 - 사자가죽셔츠">
 		<set name="icon" val="icon.armor_t18_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -418,7 +418,7 @@
 			<add order="0x10" stat="pDef" val="65" />
 		</for>
 	</item>
-	<item id="12022" type="Armor" name="Common Item - White Tunic">
+	<item id="12022" type="Armor" name="기본 병기 - 순백의 튜닉">
 		<set name="icon" val="icon.armor_t16_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -437,7 +437,7 @@
 			<add order="0x40" stat="maxMp" val="126" />
 		</for>
 	</item>
-	<item id="12023" type="Armor" name="Common Item - Scale Gaiters">
+	<item id="12023" type="Armor" name="기본 병기 - 스케일 각반">
 		<set name="icon" val="icon.armor_t08_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -455,7 +455,7 @@
 			<add order="0x10" stat="pDef" val="54" />
 		</for>
 	</item>
-	<item id="12024" type="Armor" name="Common Item - Scale Mail">
+	<item id="12024" type="Armor" name="기본 병기 - 스케일 메일">
 		<set name="icon" val="icon.armor_t08_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -473,7 +473,7 @@
 			<add order="0x10" stat="pDef" val="87" />
 		</for>
 	</item>
-	<item id="12025" type="Armor" name="Common Item - Aspis">
+	<item id="12025" type="Armor" name="기본 병기 - 아스피스">
 		<set name="icon" val="icon.shield_aspis_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -492,7 +492,7 @@
 			<set order="0x08" stat="sDef" val="114" />
 		</for>
 	</item>
-	<item id="12026" type="Armor" name="Common Item - Elven Tunic">
+	<item id="12026" type="Armor" name="기본 병기 - 엘븐 튜닉">
 		<set name="icon" val="icon.armor_t11_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -511,7 +511,7 @@
 			<add order="0x40" stat="maxMp" val="126" />
 		</for>
 	</item>
-	<item id="12027" type="Armor" name="Common Item - Elven Stockings">
+	<item id="12027" type="Armor" name="기본 병기 - 엘븐호즈">
 		<set name="icon" val="icon.armor_t11_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -530,7 +530,7 @@
 			<add order="0x40" stat="maxMp" val="79" />
 		</for>
 	</item>
-	<item id="12028" type="Armor" name="Common Item - Bronze Helmet">
+	<item id="12028" type="Armor" name="기본 병기 - 청동 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -544,7 +544,7 @@
 			<add order="0x10" stat="pDef" val="33" />
 		</for>
 	</item>
-	<item id="12029" type="Armor" name="Common Item - Blue Buckskin Boots">
+	<item id="12029" type="Armor" name="기본 병기 - 푸른 사슴가죽 부츠">
 		<set name="icon" val="icon.armor_t18_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -558,7 +558,7 @@
 			<add order="0x10" stat="pDef" val="22" />
 		</for>
 	</item>
-	<item id="12030" type="Armor" name="Common Item - Dwarven Scale Mail">
+	<item id="12030" type="Armor" name="기본 병기 - 드워븐 스케일메일">
 		<set name="icon" val="icon.armor_t15_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -576,7 +576,7 @@
 			<add order="0x10" stat="pDef" val="95" />
 		</for>
 	</item>
-	<item id="12031" type="Armor" name="Common Item - Mithril Breastplate">
+	<item id="12031" type="Armor" name="기본 병기 - 미스릴 흉갑">
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -594,7 +594,7 @@
 			<add order="0x10" stat="pDef" val="95" />
 		</for>
 	</item>
-	<item id="12032" type="Armor" name="Common Item - Compound Scale Mail">
+	<item id="12032" type="Armor" name="기본 병기 - 합성 스케일 메일">
 		<set name="icon" val="icon.armor_t20_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -612,7 +612,7 @@
 			<add order="0x10" stat="pDef" val="95" />
 		</for>
 	</item>
-	<item id="12033" type="Armor" name="Common Item - Iron Boots">
+	<item id="12033" type="Armor" name="기본 병기 - 강철 부츠">
 		<set name="icon" val="icon.armor_t10_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -626,7 +626,7 @@
 			<add order="0x10" stat="pDef" val="24" />
 		</for>
 	</item>
-	<item id="12034" type="Armor" name="Common Item - Reinforced Leather Gaiters">
+	<item id="12034" type="Armor" name="기본 병기 - 강화 가죽 각반">
 		<set name="icon" val="icon.armor_t13_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -641,7 +641,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="12035" type="Armor" name="Common Item - Reinforced Leather Boots">
+	<item id="12035" type="Armor" name="기본 병기 - 강화 가죽 부츠">
 		<set name="icon" val="icon.armor_t13_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -655,7 +655,7 @@
 			<add order="0x10" stat="pDef" val="24" />
 		</for>
 	</item>
-	<item id="12036" type="Armor" name="Common Item - Reinforced Leather Shirt">
+	<item id="12036" type="Armor" name="기본 병기 - 강화 가죽 셔츠">
 		<set name="icon" val="icon.armor_t13_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -670,7 +670,7 @@
 			<add order="0x10" stat="pDef" val="73" />
 		</for>
 	</item>
-	<item id="12037" type="Armor" name="Common Item - Reinforced Leather Gloves">
+	<item id="12037" type="Armor" name="기본 병기 - 강화 가죽 장갑">
 		<set name="icon" val="icon.armor_t13_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -684,7 +684,7 @@
 			<add order="0x10" stat="pDef" val="24" />
 		</for>
 	</item>
-	<item id="12038" type="Armor" name="Common Item - Gauntlet">
+	<item id="12038" type="Armor" name="기본 병기 - 건틀렛">
 		<set name="icon" val="icon.armor_t10_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -698,7 +698,7 @@
 			<add order="0x10" stat="pDef" val="24" />
 		</for>
 	</item>
-	<item id="12039" type="Armor" name="Common Item - Dwarven Scale Gaiters">
+	<item id="12039" type="Armor" name="기본 병기 - 드워븐 스케일 각반">
 		<set name="icon" val="icon.armor_t15_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -716,7 +716,7 @@
 			<add order="0x10" stat="pDef" val="61" />
 		</for>
 	</item>
-	<item id="12040" type="Armor" name="Common Item - Linen Shirt">
+	<item id="12040" type="Armor" name="기본 병기 - 무명 셔츠">
 		<set name="icon" val="icon.etc_shirts_d_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -730,7 +730,7 @@
 			<add order="0x10" stat="pDef" val="12" />
 		</for>
 	</item>
-	<item id="12041" type="Armor" name="Common Item - Mithril Gaiters">
+	<item id="12041" type="Armor" name="기본 병기 - 미스릴 각반">
 		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -748,7 +748,7 @@
 			<add order="0x10" stat="pDef" val="61" />
 		</for>
 	</item>
-	<item id="12042" type="Armor" name="Common Item - Mithril Banded Gaiters">
+	<item id="12042" type="Armor" name="기본 병기 - 미스릴 밴디드각반">
 		<set name="icon" val="icon.armor_t10_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -763,7 +763,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="12043" type="Armor" name="Common Item - Mithril Banded Mail">
+	<item id="12043" type="Armor" name="기본 병기 - 미스릴 밴디드메일">
 		<set name="icon" val="icon.armor_t10_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -778,7 +778,7 @@
 			<add order="0x10" stat="pDef" val="73" />
 		</for>
 	</item>
-	<item id="12044" type="Armor" name="Common Item - Blast Plate">
+	<item id="12044" type="Armor" name="기본 병기 - 블레스트플레이트">
 		<set name="icon" val="icon.armor_t40_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -796,7 +796,7 @@
 			<add order="0x10" stat="pDef" val="97" />
 		</for>
 	</item>
-	<item id="12045" type="Armor" name="Common Item - Boots of Knowledge">
+	<item id="12045" type="Armor" name="기본 병기 - 지식의 부츠">
 		<set name="icon" val="icon.armor_t41_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -810,7 +810,7 @@
 			<add order="0x10" stat="pDef" val="24" />
 		</for>
 	</item>
-	<item id="12046" type="Armor" name="Common Item - Gloves of Knowledge">
+	<item id="12046" type="Armor" name="기본 병기 - 지식의 장갑">
 		<set name="icon" val="icon.armor_t41_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -824,7 +824,7 @@
 			<add order="0x10" stat="pDef" val="24" />
 		</for>
 	</item>
-	<item id="12047" type="Armor" name="Common Item - Tunic of Knowledge">
+	<item id="12047" type="Armor" name="기본 병기 - 지식의 튜닉">
 		<set name="icon" val="icon.armor_t41_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -843,7 +843,7 @@
 			<add order="0x40" stat="maxMp" val="147" />
 		</for>
 	</item>
-	<item id="12048" type="Armor" name="Common Item - Stockings of Knowledge">
+	<item id="12048" type="Armor" name="기본 병기 - 지식의 호즈">
 		<set name="icon" val="icon.armor_t41_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -862,7 +862,7 @@
 			<add order="0x40" stat="maxMp" val="92" />
 		</for>
 	</item>
-	<item id="12049" type="Armor" name="Common Item - Compound Scale Gaiters">
+	<item id="12049" type="Armor" name="기본 병기 - 합성 스케일 각반">
 		<set name="icon" val="icon.armor_t20_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -880,7 +880,7 @@
 			<add order="0x10" stat="pDef" val="61" />
 		</for>
 	</item>
-	<item id="12050" type="Armor" name="Common Item - Helmet">
+	<item id="12050" type="Armor" name="기본 병기 - 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -894,7 +894,7 @@
 			<add order="0x10" stat="pDef" val="37" />
 		</for>
 	</item>
-	<item id="12051" type="Armor" name="Common Item - Hoplon">
+	<item id="12051" type="Armor" name="기본 병기 - 호플론">
 		<set name="icon" val="icon.shield_hoplon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -913,7 +913,7 @@
 			<set order="0x08" stat="sDef" val="128" />
 		</for>
 	</item>
-	<item id="12052" type="Armor" name="Common Item - Manticore Skin Gaiters">
+	<item id="12052" type="Armor" name="기본 병기 - 맨티코어 가죽각반">
 		<set name="icon" val="icon.armor_t42_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -928,7 +928,7 @@
 			<add order="0x10" stat="pDef" val="48" />
 		</for>
 	</item>
-	<item id="12053" type="Armor" name="Common Item - Manticore Skin Boots">
+	<item id="12053" type="Armor" name="기본 병기 - 맨티코어 가죽부츠">
 		<set name="icon" val="icon.armor_t42_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -942,7 +942,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12054" type="Armor" name="Common Item - Manticore Skin Shirt">
+	<item id="12054" type="Armor" name="기본 병기 - 맨티코어 가죽셔츠">
 		<set name="icon" val="icon.armor_t42_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -957,7 +957,7 @@
 			<add order="0x10" stat="pDef" val="77" />
 		</for>
 	</item>
-	<item id="12055" type="Armor" name="Common Item - Manticore Skin Gloves">
+	<item id="12055" type="Armor" name="기본 병기 - 맨티코어 가죽장갑">
 		<set name="icon" val="icon.armor_t42_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -971,7 +971,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12056" type="Armor" name="Common Item - Mithril Scale Gaiters">
+	<item id="12056" type="Armor" name="기본 병기 - 미스릴 스케일 각반">
 		<set name="icon" val="icon.armor_t40_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -989,7 +989,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="12057" type="Armor" name="Common Item - Mithril Tunic">
+	<item id="12057" type="Armor" name="기본 병기 - 미스릴 튜닉">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1008,7 +1008,7 @@
 			<add order="0x40" stat="maxMp" val="169" />
 		</for>
 	</item>
-	<item id="12058" type="Armor" name="Common Item - Mithril Stockings">
+	<item id="12058" type="Armor" name="기본 병기 - 미스릴 호즈">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1027,7 +1027,7 @@
 			<add order="0x40" stat="maxMp" val="105" />
 		</for>
 	</item>
-	<item id="12059" type="Armor" name="Common Item - Brigandine">
+	<item id="12059" type="Armor" name="기본 병기 - 브리건딘">
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1045,7 +1045,7 @@
 			<add order="0x10" stat="pDef" val="103" />
 		</for>
 	</item>
-	<item id="12060" type="Armor" name="Common Item - Brigandine Gaiters">
+	<item id="12060" type="Armor" name="기본 병기 - 브리건딘 각반">
 		<set name="icon" val="icon.armor_t43_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1063,7 +1063,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="12061" type="Armor" name="Common Item - Brigandine Gauntlet">
+	<item id="12061" type="Armor" name="기본 병기 - 브리건딘 건틀렛">
 		<set name="icon" val="icon.armor_t43_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1077,7 +1077,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12062" type="Armor" name="Common Item - Brigandine Boots">
+	<item id="12062" type="Armor" name="기본 병기 - 브리건딘 부츠">
 		<set name="icon" val="icon.armor_t43_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1091,7 +1091,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12063" type="Armor" name="Common Item - Brigandine Shield">
+	<item id="12063" type="Armor" name="기본 병기 - 브리건딘 쉴드">
 		<set name="icon" val="icon.shield_brigandine_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1110,7 +1110,7 @@
 			<set order="0x08" stat="sDef" val="142" />
 		</for>
 	</item>
-	<item id="12064" type="Armor" name="Common Item - Brigandine Helmet">
+	<item id="12064" type="Armor" name="기본 병기 - 브리건딘 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1124,7 +1124,7 @@
 			<add order="0x10" stat="pDef" val="41" />
 		</for>
 	</item>
-	<item id="12065" type="Armor" name="Common Item - Elven Mithril Gloves">
+	<item id="12065" type="Armor" name="기본 병기 - 엘븐 미스릴 글로브">
 		<set name="icon" val="icon.armor_t51_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1138,7 +1138,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12066" type="Armor" name="Common Item - Elven Mithril Boots">
+	<item id="12066" type="Armor" name="기본 병기 - 엘븐 미스릴 부츠">
 		<set name="icon" val="icon.armor_t51_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1152,7 +1152,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12067" type="Armor" name="Common Item - Stripe Linen Shirt">
+	<item id="12067" type="Armor" name="기본 병기 - 줄무늬 무명 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_d_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1166,7 +1166,7 @@
 			<add order="0x10" stat="pDef" val="14" />
 		</for>
 	</item>
-	<item id="12068" type="Armor" name="Common Item - Rip Gauntlet">
+	<item id="12068" type="Armor" name="기본 병기 - 진혼의 건틀렛">
 		<set name="icon" val="icon.armor_t40_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1180,7 +1180,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12069" type="Armor" name="Common Item - Kite Shield">
+	<item id="12069" type="Armor" name="기본 병기 - 카이트쉴드">
 		<set name="icon" val="icon.shield_kite_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1199,7 +1199,7 @@
 			<set order="0x08" stat="sDef" val="142" />
 		</for>
 	</item>
-	<item id="12070" type="Armor" name="Common Item - Boots of Power">
+	<item id="12070" type="Armor" name="기본 병기 - 힘의 부츠">
 		<set name="icon" val="icon.armor_t40_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1213,7 +1213,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="12071" type="Armor" name="Common Item - Assault Boots">
+	<item id="12071" type="Armor" name="기본 병기 - 강습 부츠">
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1227,7 +1227,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="12072" type="Armor" name="Common Item - Mithril Gloves">
+	<item id="12072" type="Armor" name="기본 병기 - 미스릴 장갑">
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1241,7 +1241,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="12073" type="Armor" name="Common Item - Square Shield">
+	<item id="12073" type="Armor" name="기본 병기 - 사각 방패">
 		<set name="icon" val="icon.shield_square_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1260,7 +1260,7 @@
 			<set order="0x08" stat="sDef" val="154" />
 		</for>
 	</item>
-	<item id="12074" type="Armor" name="Common Item - Salamander Skin Mail">
+	<item id="12074" type="Armor" name="기본 병기 - 샐러맨더 레더 메일">
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1275,7 +1275,7 @@
 			<add order="0x10" stat="pDef" val="136" />
 		</for>
 	</item>
-	<item id="12075" type="Armor" name="Common Item - Salamander Skin Boots">
+	<item id="12075" type="Armor" name="기본 병기 - 샐러맨더 레더 부츠">
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1289,7 +1289,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="12076" type="Armor" name="Common Item - Ogre Power Gauntlet">
+	<item id="12076" type="Armor" name="기본 병기 - 오거 파워 건틀렛">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1303,7 +1303,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="12077" type="Armor" name="Common Item - Plate Boots">
+	<item id="12077" type="Armor" name="기본 병기 - 플레이트 부츠">
 		<set name="icon" val="icon.armor_t46_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1317,7 +1317,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="12078" type="Armor" name="Common Item - Plate Shield">
+	<item id="12078" type="Armor" name="기본 병기 - 플레이트 쉴드">
 		<set name="icon" val="icon.shield_plate_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1336,7 +1336,7 @@
 			<set order="0x08" stat="sDef" val="154" />
 		</for>
 	</item>
-	<item id="12079" type="Armor" name="Common Item - Plate Helmet">
+	<item id="12079" type="Armor" name="기본 병기 - 플레이트 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1350,7 +1350,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="12080" type="Armor" name="Common Item - Plate Gaiters">
+	<item id="12080" type="Armor" name="기본 병기 - 플레이트각반">
 		<set name="icon" val="icon.armor_t46_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1368,7 +1368,7 @@
 			<add order="0x10" stat="pDef" val="70" />
 		</for>
 	</item>
-	<item id="12081" type="Armor" name="Common Item - Half Plate Armor">
+	<item id="12081" type="Armor" name="기본 병기 - 하프플레이트">
 		<set name="icon" val="icon.armor_t46_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1386,7 +1386,7 @@
 			<add order="0x10" stat="pDef" val="111" />
 		</for>
 	</item>
-	<item id="12082" type="Armor" name="Common Item - Sage's Worn Gloves">
+	<item id="12082" type="Armor" name="기본 병기 - 현자의 낡은 장갑">
 		<set name="icon" val="icon.armor_t44_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1400,7 +1400,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="12083" type="Armor" name="Common Item - Sage's Rag">
+	<item id="12083" type="Armor" name="기본 병기 - 현자의 누더기">
 		<set name="icon" val="icon.armor_t44_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1419,7 +1419,7 @@
 			<add order="0x40" stat="maxMp" val="320" />
 		</for>
 	</item>
-	<item id="12084" type="Armor" name="Common Item - Reinforced Mithril Gaiters">
+	<item id="12084" type="Armor" name="기본 병기 - 강화 미스릴 각반">
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1434,7 +1434,7 @@
 			<add order="0x10" stat="pDef" val="56" />
 		</for>
 	</item>
-	<item id="12085" type="Armor" name="Common Item - Reinforced Mithril Boots">
+	<item id="12085" type="Armor" name="기본 병기 - 강화 미스릴 부츠">
 		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1448,7 +1448,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12086" type="Armor" name="Common Item - Reinforced Mithril Shirt">
+	<item id="12086" type="Armor" name="기본 병기 - 강화 미스릴 셔츠">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1463,7 +1463,7 @@
 			<add order="0x10" stat="pDef" val="90" />
 		</for>
 	</item>
-	<item id="12087" type="Armor" name="Common Item - Reinforced Mithril Gloves">
+	<item id="12087" type="Armor" name="기본 병기 - 강화 미스릴 장갑">
 		<set name="icon" val="icon.armor_t47_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1477,7 +1477,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12088" type="Armor" name="Common Item - Dwarven Chain Boots">
+	<item id="12088" type="Armor" name="기본 병기 - 드워븐 체인 부츠">
 		<set name="icon" val="icon.armor_t60_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1491,7 +1491,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12089" type="Armor" name="Common Item - Boots of Seal">
+	<item id="12089" type="Armor" name="기본 병기 - 봉인의 부츠">
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1505,7 +1505,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12090" type="Armor" name="Common Item - Chain Hood">
+	<item id="12090" type="Armor" name="기본 병기 - 쇠사슬 두건">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1519,7 +1519,7 @@
 			<add order="0x10" stat="pDef" val="47" />
 		</for>
 	</item>
-	<item id="12091" type="Armor" name="Common Item - Eldarake">
+	<item id="12091" type="Armor" name="기본 병기 - 엘다라크">
 		<set name="icon" val="icon.shield_eldarake_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1538,7 +1538,7 @@
 			<set order="0x08" stat="sDef" val="166" />
 		</for>
 	</item>
-	<item id="12092" type="Armor" name="Common Item - Chain Gloves">
+	<item id="12092" type="Armor" name="기본 병기 - 체인 글로브">
 		<set name="icon" val="icon.armor_t48_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1552,7 +1552,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12093" type="Armor" name="Common Item - Chain Boots">
+	<item id="12093" type="Armor" name="기본 병기 - 체인 부츠">
 		<set name="icon" val="icon.armor_t48_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1566,7 +1566,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12094" type="Armor" name="Common Item - Chain Gaiters">
+	<item id="12094" type="Armor" name="기본 병기 - 체인각반">
 		<set name="icon" val="icon.armor_t48_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1584,7 +1584,7 @@
 			<add order="0x10" stat="pDef" val="75" />
 		</for>
 	</item>
-	<item id="12095" type="Armor" name="Common Item - Chain Mail Shirt">
+	<item id="12095" type="Armor" name="기본 병기 - 체인메일셔츠">
 		<set name="icon" val="icon.armor_t48_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1602,7 +1602,7 @@
 			<add order="0x10" stat="pDef" val="120" />
 		</for>
 	</item>
-	<item id="12096" type="Armor" name="Common Item - Chain Shield">
+	<item id="12096" type="Armor" name="기본 병기 - 체인쉴드">
 		<set name="icon" val="icon.shield_chain_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1621,7 +1621,7 @@
 			<set order="0x08" stat="sDef" val="166" />
 		</for>
 	</item>
-	<item id="12097" type="Armor" name="Common Item - Karmian Gloves">
+	<item id="12097" type="Armor" name="기본 병기 - 카르미안 글로브">
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1635,7 +1635,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12098" type="Armor" name="Common Item - Karmian Boots">
+	<item id="12098" type="Armor" name="기본 병기 - 카르미안 부츠">
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1649,7 +1649,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="12099" type="Armor" name="Common Item - Karmian Tunic">
+	<item id="12099" type="Armor" name="기본 병기 - 카르미안 튜닉">
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />

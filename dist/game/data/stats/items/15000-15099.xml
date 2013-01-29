@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="15000" type="Armor" name="Leather Armor of Doom of Fortune - 30-day limited period">
+	<item id="15000" type="Armor" name="우정의 레더 메일 오브 둠 30일 기간제">
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -18,7 +18,7 @@
 			<add order="0x10" stat="pDef" val="202" />
 		</for>
 	</item>
-	<item id="15001" type="Armor" name="Doom Helmet of Fortune - 30-day limited period">
+	<item id="15001" type="Armor" name="우정의 둠 헬멧 30일 기간제">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -35,7 +35,7 @@
 			<add order="0x10" stat="pDef" val="66" />
 		</for>
 	</item>
-	<item id="15002" type="Armor" name="Doom Gloves of Fortune - Heavy Armor - 30-day limited period">
+	<item id="15002" type="Armor" name="우정의 둠 글로브 - 중갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -55,7 +55,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="15003" type="Armor" name="Doom Gloves of Fortune - Light Armor - 30-day limited period">
+	<item id="15003" type="Armor" name="우정의 둠 글로브 - 경갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -72,7 +72,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="15004" type="Armor" name="Doom Boots of Fortune - Heavy Armor - 30-day limited period">
+	<item id="15004" type="Armor" name="우정의 둠 부츠 - 중갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -92,7 +92,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="15005" type="Armor" name="Doom Boots of Fortune - Light Armor - 30-day limited period">
+	<item id="15005" type="Armor" name="우정의 둠 부츠 - 경갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -109,7 +109,7 @@
 			<add order="0x10" stat="pDef" val="44" />
 		</for>
 	</item>
-	<item id="15006" type="Armor" name="Doom Plate Armor of Fortune - 30-day limited period">
+	<item id="15006" type="Armor" name="우정의 둠 플레이트 아머 30일 기간제">
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -130,7 +130,7 @@
 			<add order="0x10" stat="pDef" val="270" />
 		</for>
 	</item>
-	<item id="15007" type="Armor" name="Doom Shield of Fortune - 30-day limited period">
+	<item id="15007" type="Armor" name="우정의 둠 쉴드 30일 기간제">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -152,7 +152,7 @@
 			<set order="0x08" stat="sDef" val="230" />
 		</for>
 	</item>
-	<item id="15008" type="Armor" name="Plate Leather Armor of Fortune - 30-day limited period">
+	<item id="15008" type="Armor" name="우정의 플레이트 레더 아머 30일 기간제">
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -170,7 +170,7 @@
 			<add order="0x10" stat="pDef" val="94" />
 		</for>
 	</item>
-	<item id="15009" type="Armor" name="Plate Leather Gaiters of Fortune - 30-day limited period">
+	<item id="15009" type="Armor" name="우정의 플레이트 가죽 각반 30일 기간제">
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -188,7 +188,7 @@
 			<add order="0x10" stat="pDef" val="59" />
 		</for>
 	</item>
-	<item id="15010" type="Armor" name="Plate Leather Boots of Fortune - 30-day limited period">
+	<item id="15010" type="Armor" name="우정의 플레이트 레더 부츠 30일 기간제">
 		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -205,7 +205,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="15011" type="Armor" name="Plate Leather Gloves of Fortune - 30-day limited period">
+	<item id="15011" type="Armor" name="우정의 플레이트 레더 글로브 30일 기간제">
 		<set name="icon" val="icon.armor_t47_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -222,7 +222,7 @@
 			<add order="0x10" stat="pDef" val="33" />
 		</for>
 	</item>
-	<item id="15012" type="Armor" name="Full Plate Helmet of Fortune - 30-day limited period">
+	<item id="15012" type="Armor" name="우정의 풀 플레이트 헬멧 30일 기간제">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -239,7 +239,7 @@
 			<add order="0x10" stat="pDef" val="58" />
 		</for>
 	</item>
-	<item id="15013" type="Armor" name="Full Plate Armor of Fortune - 30-day limited period">
+	<item id="15013" type="Armor" name="우정의 풀 플레이트 아머 30일 기간제">
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -260,7 +260,7 @@
 			<add order="0x10" stat="pDef" val="239" />
 		</for>
 	</item>
-	<item id="15014" type="Armor" name="Full Plate Boots of Fortune - 30-day limited period">
+	<item id="15014" type="Armor" name="우정의 풀 플레이트 부츠 30일 기간제">
 		<set name="icon" val="icon.armor_t62_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -277,7 +277,7 @@
 			<add order="0x10" stat="pDef" val="39" />
 		</for>
 	</item>
-	<item id="15015" type="Armor" name="Full Plate Gauntlet of Fortune - 30-day limited period">
+	<item id="15015" type="Armor" name="우정의 풀 플레이트 건틀렛 30일 기간제">
 		<set name="icon" val="icon.armor_t62_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -294,7 +294,7 @@
 			<add order="0x10" stat="pDef" val="39" />
 		</for>
 	</item>
-	<item id="15016" type="Armor" name="Full Plate Shield of Fortune - 30-day limited period">
+	<item id="15016" type="Armor" name="우정의 풀 플레이트 쉴드 30일 기간제">
 		<set name="icon" val="icon.shield_full_plate_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -316,7 +316,7 @@
 			<set order="0x08" stat="sDef" val="203" />
 		</for>
 	</item>
-	<item id="15017" type="Armor" name="Manticore Skin Shirt of Fortune - 30-day limited period">
+	<item id="15017" type="Armor" name="우정의 맨티코어 가죽셔츠 30일 기간제">
 		<set name="icon" val="icon.armor_t42_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -334,7 +334,7 @@
 			<add order="0x10" stat="pDef" val="77" />
 		</for>
 	</item>
-	<item id="15018" type="Armor" name="Manticore Skin Gaiters of Fortune - 30-day limited period">
+	<item id="15018" type="Armor" name="우정의 맨티코어 가죽각반 30일 기간제">
 		<set name="icon" val="icon.armor_t42_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -352,7 +352,7 @@
 			<add order="0x10" stat="pDef" val="48" />
 		</for>
 	</item>
-	<item id="15019" type="Armor" name="Manticore Skin Boots of Fortune - 30-day limited period">
+	<item id="15019" type="Armor" name="우정의 맨티코어 가죽부츠 30일 기간제">
 		<set name="icon" val="icon.armor_t42_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -369,7 +369,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="15020" type="Armor" name="Manticore Skin Gloves of Fortune - 30-day limited period">
+	<item id="15020" type="Armor" name="우정의 맨티코어 가죽장갑 30일 기간제">
 		<set name="icon" val="icon.armor_t42_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -386,7 +386,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="15021" type="Armor" name="Brigandine of Fortune - 30-day limited period">
+	<item id="15021" type="Armor" name="우정의 브리건딘 30일 기간제">
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -407,7 +407,7 @@
 			<add order="0x10" stat="pDef" val="103" />
 		</for>
 	</item>
-	<item id="15022" type="Armor" name="Brigandine Gaiters of Fortune - 30-day limited period">
+	<item id="15022" type="Armor" name="우정의 브리건딘 각반 30일 기간제">
 		<set name="icon" val="icon.armor_t43_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -428,7 +428,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="15023" type="Armor" name="Brigandine Helmet of Fortune - 30-day limited period">
+	<item id="15023" type="Armor" name="우정의 브리건딘 헬멧 30일 기간제">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -445,7 +445,7 @@
 			<add order="0x10" stat="pDef" val="41" />
 		</for>
 	</item>
-	<item id="15024" type="Armor" name="Brigandine Boots of Fortune - 30-day limited period">
+	<item id="15024" type="Armor" name="우정의 브리건딘 부츠 30일 기간제">
 		<set name="icon" val="icon.armor_t43_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -462,7 +462,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="15025" type="Armor" name="Brigandine Gauntlet of Fortune - 30-day limited period">
+	<item id="15025" type="Armor" name="우정의 브리건딘 건틀렛 30일 기간제">
 		<set name="icon" val="icon.armor_t43_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -479,7 +479,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="15026" type="Armor" name="Brigandine Shield of Fortune - 30-day limited period">
+	<item id="15026" type="Armor" name="우정의 브리건딘 쉴드 30일 기간제">
 		<set name="icon" val="icon.shield_brigandine_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -501,7 +501,7 @@
 			<set order="0x08" stat="sDef" val="142" />
 		</for>
 	</item>
-	<item id="15027" type="Armor" name="Fortune Armor of Nightmare - 30-day limited period">
+	<item id="15027" type="Armor" name="우정의 악몽 갑옷 30일 기간제">
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -522,7 +522,7 @@
 			<add order="0x10" stat="pDef" val="293" />
 		</for>
 	</item>
-	<item id="15028" type="Armor" name="Fortune Helm of Nightmare - 30-day limited period">
+	<item id="15028" type="Armor" name="우정의 악몽 투구 30일 기간제">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -539,7 +539,7 @@
 			<add order="0x10" stat="pDef" val="73" />
 		</for>
 	</item>
-	<item id="15029" type="Armor" name="Fortune Gauntlet of Nightmare - Heavy Armor - 30-day limited period">
+	<item id="15029" type="Armor" name="우정의 악몽 건틀렛 - 중갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -559,7 +559,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="15030" type="Armor" name="Fortune Boots of Nightmare - Heavy Armor - 30-day limited period">
+	<item id="15030" type="Armor" name="우정의 악몽 부츠 - 중갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -579,7 +579,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="15031" type="Armor" name="Fortune Shield of Nightmare - 30-day limited period">
+	<item id="15031" type="Armor" name="우정의 악몽 쉴드 30일 기간제">
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -601,7 +601,7 @@
 			<set order="0x08" stat="sDef" val="256" />
 		</for>
 	</item>
-	<item id="15032" type="Weapon" name="Sword of Miracles of Fortune - 30-day limited period">
+	<item id="15032" type="Weapon" name="우정의 소드 오브 미라클 30일 기간제">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -630,7 +630,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15033" type="Weapon" name="Wizard's Tear of Fortune - 30-day limited period">
+	<item id="15033" type="Weapon" name="우정의 티어스 오브 위자드 30일 기간제">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -659,7 +659,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15034" type="Weapon" name="Homunkulus's Sword of Fortune - 30-day limited period">
+	<item id="15034" type="Weapon" name="우정의 호문쿨러스 소드 30일 기간제">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -688,7 +688,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15035" type="Weapon" name="Fortune Staff of Life - 30-day limited period">
+	<item id="15035" type="Weapon" name="우정의 생명의 홀 30일 기간제">
 		<set name="icon" val="icon.weapon_life_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -717,7 +717,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15036" type="Weapon" name="Naga Storm of Fortune - 30-day limited period">
+	<item id="15036" type="Weapon" name="우정의 나가 스톰 30일 기간제">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -746,7 +746,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="15037" type="Weapon" name="Kris of Fortune - 30-day limited period">
+	<item id="15037" type="Weapon" name="우정의 크리스 30일 기간제">
 		<set name="icon" val="icon.weapon_kris_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -775,7 +775,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="15038" type="Weapon" name="Dark Screamer of Fortune - 30-day limited period">
+	<item id="15038" type="Weapon" name="우정의 다크스크리머 30일 기간제">
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -804,7 +804,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="15039" type="Weapon" name="Mithril Dagger of Fortune - 30-day limited period">
+	<item id="15039" type="Weapon" name="우정의 미스릴 단검 30일 기간제">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -832,7 +832,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="15040" type="Weapon" name="Shyeed's Bow of Fortune - 30-day limited period">
+	<item id="15040" type="Weapon" name="우정의 샤이드 보우 30일 기간제">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -863,7 +863,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="15041" type="Weapon" name="Fortune Bow of Peril - 30-day limited period">
+	<item id="15041" type="Weapon" name="우정의 해저드보우 30일 기간제">
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -894,7 +894,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="15042" type="Weapon" name="Eminence Bow of Fortune - 30-day limited period">
+	<item id="15042" type="Weapon" name="우정의 에머넌스보우 30일 기간제">
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -925,7 +925,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="15043" type="Weapon" name="Light Crossbow of Fortune - 30-day limited period">
+	<item id="15043" type="Weapon" name="우정의 사이클론 보우 30일 기간제">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -955,7 +955,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="15044" type="Weapon" name="Barakiel's Axe of Fortune - 30-day limited period">
+	<item id="15044" type="Weapon" name="우정의 바라키엘 엑스 30일 기간제">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -984,7 +984,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15045" type="Weapon" name="Art of Battle Axe of Fortune - 30-day limited period">
+	<item id="15045" type="Weapon" name="우정의 아트 오브 배틀액스 30일 기간제">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1013,7 +1013,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15046" type="Weapon" name="Yaksa Mace of Fortune - 30-day limited period">
+	<item id="15046" type="Weapon" name="우정의 야크샤 메이스 30일 기간제">
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1042,7 +1042,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15047" type="Weapon" name="Bonebreaker of Fortune - 30-day limited period">
+	<item id="15047" type="Weapon" name="우정의 본브레이커 30일 기간제">
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1070,7 +1070,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15048" type="Weapon" name="Sirra's Blade of Fortune - 30-day limited period">
+	<item id="15048" type="Weapon" name="우정의 시르 블레이드 30일 기간제">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1098,7 +1098,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15049" type="Weapon" name="Fortune Sword of Damascus - 30-day limited period">
+	<item id="15049" type="Weapon" name="우정의 다마스커스 검 30일 기간제">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1126,7 +1126,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15050" type="Weapon" name="Samurai Longsword of Fortune - 30-day limited period">
+	<item id="15050" type="Weapon" name="우정의 싸울아비 장검 30일 기간제">
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1154,7 +1154,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15051" type="Weapon" name="Elven Long Sword of Fortune - 30-day limited period">
+	<item id="15051" type="Weapon" name="우정의 엘븐 롱소드 30일 기간제">
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1181,7 +1181,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15052" type="Weapon" name="Fortune Sword of Ipos - 30-day limited period">
+	<item id="15052" type="Weapon" name="우정의 소드 오브 이포스 30일 기간제">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1209,7 +1209,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15053" type="Weapon" name="Guardian Sword of Fortune - 30-day limited period">
+	<item id="15053" type="Weapon" name="우정의 가디언스 소드 30일 기간제">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1237,7 +1237,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15054" type="Weapon" name="Berserker Blade of Fortune - 30-day limited period">
+	<item id="15054" type="Weapon" name="우정의 버서커 블레이드 30일 기간제">
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1265,7 +1265,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15055" type="Weapon" name="Claymore of Fortune - 30-day limited period">
+	<item id="15055" type="Weapon" name="우정의 클레이모어 30일 기간제">
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1292,7 +1292,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15056" type="Weapon" name="Sobekk's Hurricane of Fortune - 30-day limited period">
+	<item id="15056" type="Weapon" name="우정의 소베크 허리케인 30일 기간제">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1321,7 +1321,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15057" type="Weapon" name="Bellion Cestus of Fortune - 30-day limited period">
+	<item id="15057" type="Weapon" name="우정의 벨리온 세스터스 30일 기간제">
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1350,7 +1350,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15058" type="Weapon" name="Great Pata of Fortune - 30-day limited period">
+	<item id="15058" type="Weapon" name="우정의 그레이트파타 30일 기간제">
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1379,7 +1379,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15059" type="Weapon" name="Scallop Jamadhr of Fortune - 30-day limited period">
+	<item id="15059" type="Weapon" name="우정의 스캘럽 자마다르 30일 기간제">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1407,7 +1407,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15060" type="Weapon" name="Tallum Blade*Damascus of Fortune - 30-day limited period">
+	<item id="15060" type="Weapon" name="우정의 탈룸 블레이드*다마스커스 30일 기간제">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1435,7 +1435,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15061" type="Weapon" name="Samurai Long Sword*Samurai Long Sword of Fortune - 30-day limited period">
+	<item id="15061" type="Weapon" name="우정의 싸울아비*싸울아비 30일 기간제">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1463,7 +1463,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15062" type="Weapon" name="Spirit Sword*Raid Sword of Fortune - 30-day limited period">
+	<item id="15062" type="Weapon" name="우정의 스피릿츠 소드*레이드 소드 30일 기간제">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1491,7 +1491,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15063" type="Weapon" name="Bastard Sword*Elven Sword of Fortune - 30-day limited period">
+	<item id="15063" type="Weapon" name="우정의 바스타드*엘븐소드 30일 기간제">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1518,7 +1518,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15064" type="Weapon" name="Tiphon's Spear of Fortune - 30-day limited period">
+	<item id="15064" type="Weapon" name="우정의 타이폰 스피어 30일 기간제">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1547,7 +1547,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15065" type="Weapon" name="Lance of Fortune - 30-day limited period">
+	<item id="15065" type="Weapon" name="우정의 랜시아 30일 기간제">
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1576,7 +1576,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15066" type="Weapon" name="Orcish Poleaxe of Fortune - 30-day limited period">
+	<item id="15066" type="Weapon" name="우정의 오키쉬 폴액스 30일 기간제">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1605,7 +1605,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15067" type="Weapon" name="Glaive of Fortune - 30-day limited period">
+	<item id="15067" type="Weapon" name="우정의 글레이브 30일 기간제">
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1634,7 +1634,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15068" type="Weapon" name="Durendal of Fortune - 30-day limited period">
+	<item id="15068" type="Weapon" name="우정의 불트강 30일 기간제">
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1666,7 +1666,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="15069" type="Weapon" name="Dismantler of Fortune - 30-day limited period">
+	<item id="15069" type="Weapon" name="우정의 디스멘틀러 30일 기간제">
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1698,7 +1698,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="15070" type="Weapon" name="Saber Tooth of Fortune - 30-day limited period">
+	<item id="15070" type="Weapon" name="우정의 세이버투스 30일 기간제">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1730,7 +1730,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="15071" type="Weapon" name="General's Katzbalger of Fortune - 30-day limited period">
+	<item id="15071" type="Weapon" name="우정의 제네랄 카츠발게르 30일 기간제">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1761,7 +1761,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="15072" type="Weapon" name="Eclair Bijou of Fortune - 30-day limited period">
+	<item id="15072" type="Weapon" name="우정의 에끌레르 비쥬 30일 기간제">
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1794,7 +1794,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="15073" type="Weapon" name="Colichemarde of Fortune - 30-day limited period">
+	<item id="15073" type="Weapon" name="우정의 콜리슈마르드 30일 기간제">
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1827,7 +1827,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="15074" type="Weapon" name="Admiral's Estoc of Fortune - 30-day limited period">
+	<item id="15074" type="Weapon" name="우정의 아미랄 에스터크 30일 기간제">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1860,7 +1860,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="15075" type="Weapon" name="Grand Epee of Fortune - 30-day limited period">
+	<item id="15075" type="Weapon" name="우정의 그랑 에페 30일 기간제">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1892,7 +1892,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="15076" type="Weapon" name="Screaming Vengeance of Fortune - 30-day limited period">
+	<item id="15076" type="Weapon" name="우정의 버스트 어벤져 30일 기간제">
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1925,7 +1925,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="15077" type="Weapon" name="Hell Hound of Fortune - 30-day limited period">
+	<item id="15077" type="Weapon" name="우정의 헬 하운드 30일 기간제">
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1958,7 +1958,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="15078" type="Weapon" name="Sharpshooter of Fortune - 30-day limited period">
+	<item id="15078" type="Weapon" name="우정의 샤프 슈터 30일 기간제">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1991,7 +1991,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="15079" type="Weapon" name="Cranequin of Fortune - 30-day limited period">
+	<item id="15079" type="Weapon" name="우정의 크레인 퀸 30일 기간제">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2023,7 +2023,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="15080" type="Armor" name="Majestic Earring of Fortune - 10-day limited period">
+	<item id="15080" type="Armor" name="우정의 마제스틱 이어링  10일 기간제">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -2041,7 +2041,7 @@
 			<add order="0x40" stat="maxMp" val="25" />
 		</for>
 	</item>
-	<item id="15081" type="Armor" name="Majestic Necklace of Fortune - 10-day limited period">
+	<item id="15081" type="Armor" name="우정의 마제스틱 네크리스 10일 기간제">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -2059,7 +2059,7 @@
 			<add order="0x40" stat="maxMp" val="33" />
 		</for>
 	</item>
-	<item id="15082" type="Armor" name="Majestic Ring of Fortune - 10-day limited period">
+	<item id="15082" type="Armor" name="우정의 마제스틱 링 10일 기간제">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2077,7 +2077,7 @@
 			<add order="0x40" stat="maxMp" val="17" />
 		</for>
 	</item>
-	<item id="15083" type="Armor" name="Fortune Earring of Black Ore - 10-day limited period">
+	<item id="15083" type="Armor" name="우정의 흑광의 귀걸이 10일 기간제">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -2094,7 +2094,7 @@
 			<add order="0x10" stat="mDef" val="54" />
 		</for>
 	</item>
-	<item id="15084" type="Armor" name="Fortune Necklace of Black Ore - 10-day limited period">
+	<item id="15084" type="Armor" name="우정의 흑광의 목걸이 10일 기간제">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -2111,7 +2111,7 @@
 			<add order="0x10" stat="mDef" val="72" />
 		</for>
 	</item>
-	<item id="15085" type="Armor" name="Fortune Ring of Black Ore - 10-day limited period">
+	<item id="15085" type="Armor" name="우정의 흑광의 반지 10일 기간제">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2128,7 +2128,7 @@
 			<add order="0x10" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="15086" type="Armor" name="Fortune Earring of Seal - 10-day limited period">
+	<item id="15086" type="Armor" name="우정의 봉인의 귀걸이 10일 기간제">
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -2145,7 +2145,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="15087" type="Armor" name="Fortune Necklace of Seal - 10-day limited period">
+	<item id="15087" type="Armor" name="우정의 봉인의 목걸이 10일 기간제">
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -2162,7 +2162,7 @@
 			<add order="0x10" stat="mDef" val="64" />
 		</for>
 	</item>
-	<item id="15088" type="Armor" name="Fortune Ring of Seal - 10-day limited period">
+	<item id="15088" type="Armor" name="우정의 봉인의 반지 10일 기간제">
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2179,7 +2179,7 @@
 			<add order="0x10" stat="mDef" val="32" />
 		</for>
 	</item>
-	<item id="15089" type="Armor" name="Elven Earring of Fortune - 10-day limited period">
+	<item id="15089" type="Armor" name="우정의 엘븐 이어링 10일 기간제">
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -2196,7 +2196,7 @@
 			<add order="0x10" stat="mDef" val="34" />
 		</for>
 	</item>
-	<item id="15090" type="Armor" name="Elven Earring of Fortune - 10-day limited period">
+	<item id="15090" type="Armor" name="우정의 엘븐 네크리스 10일 기간제">
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -2213,7 +2213,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="15091" type="Armor" name="Elven Ring of Fortune - 10-day limited period">
+	<item id="15091" type="Armor" name="우정의 엘븐 링 10일 기간제">
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2230,7 +2230,7 @@
 			<add order="0x10" stat="mDef" val="22" />
 		</for>
 	</item>
-	<item id="15092" type="Armor" name="Dark Crystal Robe of Fortune - 10-day limited period">
+	<item id="15092" type="Armor" name="우정의 다크 크리스탈 로브 10일 기간제">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -2252,7 +2252,7 @@
 			<add order="0x40" stat="maxMp" val="665" />
 		</for>
 	</item>
-	<item id="15093" type="Armor" name="Dark Crystal Helmet of Fortune - 10-day limited period">
+	<item id="15093" type="Armor" name="우정의 다크 크리스탈 헬멧 10일 기간제">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2269,7 +2269,7 @@
 			<add order="0x10" stat="pDef" val="69" />
 		</for>
 	</item>
-	<item id="15094" type="Armor" name="Dark Crystal Gloves of Fortune - Robe - 10-day limited period">
+	<item id="15094" type="Armor" name="우정의 다크 크리스탈 글로브 - 로브용 10일 기간제">
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -2289,7 +2289,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="15095" type="Armor" name="Dark Crystal Boots of Fortune - Robe - 10-day limited period">
+	<item id="15095" type="Armor" name="우정의 다크 크리스탈 부츠 - 로브용 10일 기간제">
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -2309,7 +2309,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="15096" type="Armor" name="Dark Crystal Shield of Fortune - 10-day limited period">
+	<item id="15096" type="Armor" name="우정의 다크 크리스탈 쉴드 10일 기간제">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -2331,7 +2331,7 @@
 			<set order="0x08" stat="sDef" val="243" />
 		</for>
 	</item>
-	<item id="15097" type="Armor" name="Avadon Robe of Fortune - 10-day limited period">
+	<item id="15097" type="Armor" name="우정의 아바돈 로브 10일 기간제">
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -2353,7 +2353,7 @@
 			<add order="0x40" stat="maxMp" val="561" />
 		</for>
 	</item>
-	<item id="15098" type="Armor" name="Avadon Circlet of Fortune - 10-day limited period">
+	<item id="15098" type="Armor" name="우정의 아바돈 서클릿 10일 기간제">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -2370,7 +2370,7 @@
 			<add order="0x10" stat="pDef" val="62" />
 		</for>
 	</item>
-	<item id="15099" type="Armor" name="Avadon Gloves of Fortune - Robe - 10-day limited period">
+	<item id="15099" type="Armor" name="우정의 아바돈 글로브 - 로브용 10일 기간제">
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />

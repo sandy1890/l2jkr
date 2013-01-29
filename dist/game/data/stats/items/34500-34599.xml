@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="34595" name="活動用-螺旋槳壺精手鐲" type="Armor">
+	<item id="34595" type="Armor" name="PC방 용 - 프로펠라 아가시온 팔찌 PC방 전용">
 		<table name="#Plus">活動專用</table>
 		<table name="#Desc">可召喚螺旋槳壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="3267-1;9307-1;9311-1"/>
 		<set name="time" val="43200"/>
 	</item>
-	<item id="34596" name="活動用-魔法少女壺精手鐲" type="Armor">
+	<item id="34596" type="Armor" name="PC방 용 - 마법소녀 아가시온 팔찌 PC방 전용">
 		<table name="#Plus">活動專用</table>
 		<table name="#Desc">可召喚魔法少女壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
@@ -29,7 +29,7 @@
 		<set name="item_skill" val="3267-1;9308-1;9312-1"/>
 		<set name="time" val="43200"/>
 	</item>
-	<item id="34597" name="活動用-眼鏡蛇壺精手鐲" type="Armor">
+	<item id="34597" type="Armor" name="PC방 용 - 코브라 아가시온 팔찌 PC방 전용">
 		<table name="#Plus">活動專用</table>
 		<table name="#Desc">可召喚眼鏡蛇壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
@@ -43,7 +43,7 @@
 		<set name="item_skill" val="3267-1;9309-1;9313-1"/>
 		<set name="time" val="43200"/>
 	</item>
-	<item id="34598" name="活動用-烏帕寶寶壺精手鐲" type="Armor">
+	<item id="34598" type="Armor" name="PC방 용 - 아기우파 아가시온 팔찌 PC방 전용">
 		<table name="#Plus">活動專用</table>
 		<table name="#Desc">可召喚烏帕寶寶壺精的手鐲。召喚壺精後，就可使用返回卷軸的技能。限時30日。無法交易/丟棄/刪除。</table>
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>

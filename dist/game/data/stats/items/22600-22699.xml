@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
 	<!-- 其他斗篷 -->
-	<item id="22611" name="新天堂II緣份覺醒派對紀念斗篷" type="Armor">
+	<item id="22611" type="Armor" name="_">
 		<table name="#Desc">突顯純白之美的斗篷。新天堂II緣份覺醒派對紀念活動所給予的道具。開啟斗篷欄位後便可以進行裝備。無法交易/丟棄的道具，但可以刪除，也可以保管在個人倉庫。透過維他命管理者可與帳號內的其他角色共享。</table>
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02"/>
 		<set name="default_action" val="equip"/>
@@ -17,7 +17,7 @@
 		</for>
 	</item>
 	
-	<item id="22650" name="光束武器-單手劍" type="Weapon">
+	<item id="22650" type="Weapon" name="_">
 		<table name="#Desc">光束武器。單手劍型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_sword"/>
 		<set name="default_action" val="equip"/>
@@ -33,7 +33,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22651" name="光束武器-匕首" type="Weapon">
+	<item id="22651" type="Weapon" name="_">
 		<table name="#Desc">光束武器。匕首型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_sword"/>
 		<set name="default_action" val="equip"/>
@@ -49,7 +49,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22652" name="光束武器-雙手劍" type="Weapon">
+	<item id="22652" type="Weapon" name="_">
 		<table name="#Desc">光束武器。雙手劍型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_sword"/>
 		<set name="default_action" val="equip"/>
@@ -65,7 +65,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22653" name="光束武器-格鬥兵器" type="Weapon">
+	<item id="22653" type="Weapon" name="_">
 		<table name="#Desc">光束武器。格鬥武器型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualfist"/>
 		<set name="default_action" val="equip"/>
@@ -81,7 +81,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22654" name="光束武器-槍" type="Weapon">
+	<item id="22654" type="Weapon" name="_">
 		<table name="#Desc">光束武器。長矛型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_pole"/>
 		<set name="default_action" val="equip"/>
@@ -97,7 +97,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22655" name="光束武器-弓" type="Weapon">
+	<item id="22655" type="Weapon" name="_">
 		<table name="#Desc">光束武器。弓型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_bow"/>
 		<set name="default_action" val="equip"/>
@@ -115,7 +115,7 @@
 		<set name="enchant_enabled" val="1"/>
 		<set name="reuse_delay" val="1500"/>
 	</item>
-	<item id="22656" name="光束武器-弩弓" type="Weapon">
+	<item id="22656" type="Weapon" name="_">
 		<table name="#Desc">光束武器。弩弓型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_crossbow"/>
 		<set name="default_action" val="equip"/>
@@ -132,7 +132,7 @@
 		<set name="enchant_enabled" val="1"/>
 		<set name="reuse_delay" val="400"/>
 	</item>
-	<item id="22657" name="光束武器-單手鈍器" type="Weapon">
+	<item id="22657" type="Weapon" name="_">
 		<table name="#Desc">光束武器。單手鈍器型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -148,7 +148,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22658" name="光束武器-雙手鈍器" type="Weapon">
+	<item id="22658" type="Weapon" name="_">
 		<table name="#Desc">光束武器。雙手鈍器型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -164,7 +164,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22659" name="光束武器-單手魔法鈍器" type="Weapon">
+	<item id="22659" type="Weapon" name="_">
 		<table name="#Desc">光束武器。單手魔法鈍器型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -180,7 +180,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22660" name="光束武器-雙手魔法鈍器" type="Weapon">
+	<item id="22660" type="Weapon" name="_">
 		<table name="#Desc">光束武器。雙手魔法鈍器型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -196,7 +196,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22661" name="光束武器-雙刀" type="Weapon">
+	<item id="22661" type="Weapon" name="_">
 		<table name="#Desc">光束武器。雙刀型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual"/>
 		<set name="default_action" val="equip"/>
@@ -212,7 +212,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22662" name="光束武器-雙匕首" type="Weapon">
+	<item id="22662" type="Weapon" name="_">
 		<table name="#Desc">光束武器。雙匕首型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualdagger"/>
 		<set name="default_action" val="equip"/>
@@ -228,7 +228,7 @@
 		<set name="spiritshots" val="1"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22663" name="光束武器-雙鈍器" type="Weapon">
+	<item id="22663" type="Weapon" name="_">
 		<table name="#Desc">光束武器。雙鈍器型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualblunt"/>
 		<set name="default_action" val="equip"/>
@@ -244,7 +244,7 @@
 		<set name="spiritshots" val="1"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22664" name="光束武器-盾牌" type="Armor">
+	<item id="22664" type="Armor" name="_">
 		<table name="#Desc">光束武器。盾牌型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_shield"/>
 		<set name="default_action" val="equip"/>
@@ -254,7 +254,7 @@
 		<set name="weight" val="200"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22665" name="光束武器-符印" type="Armor">
+	<item id="22665" type="Armor" name="_">
 		<table name="#Desc">光束武器。符印型態。光束武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_beam_sigil"/>
 		<set name="default_action" val="equip"/>

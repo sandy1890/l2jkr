@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6800" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="6800" type="EtcItem" name="고급 용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -9,7 +9,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6801" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="6801" type="EtcItem" name="고급 용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -18,7 +18,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6802" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="6802" type="EtcItem" name="여명의 용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -27,7 +27,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6803" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="6803" type="EtcItem" name="여명의 용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6804" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="6804" type="EtcItem" name="여명의 용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6805" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="6805" type="EtcItem" name="여명의 용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -54,7 +54,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6806" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="6806" type="EtcItem" name="여명의 용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -63,7 +63,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6807" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="6807" type="EtcItem" name="여명의 용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -72,7 +72,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6808" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="6808" type="EtcItem" name="여명의 용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -81,7 +81,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6809" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="6809" type="EtcItem" name="여명의 용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -90,7 +90,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6810" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="6810" type="EtcItem" name="여명의 용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -99,7 +99,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6811" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="6811" type="EtcItem" name="여명의 용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6812" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Stationary)">
+	<item id="6812" type="EtcItem" name="고급 훈련병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -117,7 +117,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6813" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Stationary)">
+	<item id="6813" type="EtcItem" name="고급 훈련병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -126,7 +126,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6814" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Stationary)">
+	<item id="6814" type="EtcItem" name="고급 훈련병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -135,7 +135,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6815" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Stationary)">
+	<item id="6815" type="EtcItem" name="고급 훈련병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -144,7 +144,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6816" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Stationary)">
+	<item id="6816" type="EtcItem" name="고급 훈련병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -153,7 +153,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6817" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
+	<item id="6817" type="EtcItem" name="고급 훈련병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -162,7 +162,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6818" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
+	<item id="6818" type="EtcItem" name="고급 훈련병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -171,7 +171,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6819" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
+	<item id="6819" type="EtcItem" name="고급 훈련병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -180,7 +180,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6820" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
+	<item id="6820" type="EtcItem" name="고급 훈련병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -189,7 +189,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6821" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
+	<item id="6821" type="EtcItem" name="고급 훈련병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -198,7 +198,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6822" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+	<item id="6822" type="EtcItem" name="훈련병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -207,7 +207,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6823" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+	<item id="6823" type="EtcItem" name="훈련병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -216,7 +216,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6824" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+	<item id="6824" type="EtcItem" name="훈련병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -225,7 +225,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6825" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+	<item id="6825" type="EtcItem" name="훈련병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -234,7 +234,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6826" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+	<item id="6826" type="EtcItem" name="훈련병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -243,7 +243,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6827" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+	<item id="6827" type="EtcItem" name="훈련병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -252,7 +252,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6828" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+	<item id="6828" type="EtcItem" name="훈련병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -261,7 +261,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6829" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+	<item id="6829" type="EtcItem" name="훈련병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -270,7 +270,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6830" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+	<item id="6830" type="EtcItem" name="훈련병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -279,7 +279,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6831" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+	<item id="6831" type="EtcItem" name="훈련병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -288,7 +288,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6832" type="EtcItem" name="Nephilim Warrior Posting Ticket (Sword/Mobile)">
+	<item id="6832" type="EtcItem" name="네필림 전사 배치표">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -297,7 +297,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6833" type="EtcItem" name="Nephilim Shaman Posting Ticket (Wizard/Mobile)">
+	<item id="6833" type="EtcItem" name="네필림 주술사 배치표">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -306,7 +306,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6834" type="Armor" name="Circlet of Innadril">
+	<item id="6834" type="Armor" name="인나드릴의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -327,7 +327,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6835" type="Armor" name="Circlet of Dion">
+	<item id="6835" type="Armor" name="디온의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -348,7 +348,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6836" type="Armor" name="Goddard Circlet">
+	<item id="6836" type="Armor" name="고다드의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -369,7 +369,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6837" type="Armor" name="Circlet of Oren">
+	<item id="6837" type="Armor" name="오렌의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -390,7 +390,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6838" type="Armor" name="Circlet of Gludio">
+	<item id="6838" type="Armor" name="글루디오의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i05" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -411,7 +411,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6839" type="Armor" name="Circlet of Giran">
+	<item id="6839" type="Armor" name="기란의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -432,7 +432,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6840" type="Armor" name="Circlet of Aden">
+	<item id="6840" type="Armor" name="아덴의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap2_i07" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -453,7 +453,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6841" type="Armor" name="The Lord's Crown">
+	<item id="6841" type="Armor" name="성주의 왕관">
 		<set name="icon" val="icon.accessory_crown_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -473,7 +473,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="6842" type="Armor" name="Wings of Destiny Circlet">
+	<item id="6842" type="Armor" name="운명의 날개 서클릿">
 		<set name="icon" val="icon.accessory_hero_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -488,7 +488,7 @@
 			<player isHero="true" />
 		</cond>
 	</item>
-	<item id="6843" type="Armor" name="Cat Ears">
+	<item id="6843" type="Armor" name="고양이 귀">
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -497,7 +497,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="6844" type="Armor" name="Lady's Hair Pin">
+	<item id="6844" type="Armor" name="귀부인의 헤어핀">
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -509,7 +509,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="6845" type="Armor" name="Pirate's Eye Patch">
+	<item id="6845" type="Armor" name="해적의 안대">
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -518,7 +518,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="6846" type="Armor" name="Monocle">
+	<item id="6846" type="Armor" name="모노클">
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -527,7 +527,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="6847" type="EtcItem" name="Recipe: Sealed Tateossian Earring (70%)">
+	<item id="6847" type="EtcItem" name="레시피 : 봉인된 타테오시안 이어링(70%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -539,7 +539,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6848" type="EtcItem" name="Recipe: Sealed Tateossian Earring (100%)">
+	<item id="6848" type="EtcItem" name="레시피 : 봉인된 타테오시안 이어링(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -551,7 +551,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6849" type="EtcItem" name="Recipe: Sealed Tateossian Ring(70%)">
+	<item id="6849" type="EtcItem" name="레시피 : 봉인된 타테오시안 링(70%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -563,7 +563,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6850" type="EtcItem" name="Recipe: Sealed Tateossian Ring(100%)">
+	<item id="6850" type="EtcItem" name="레시피 : 봉인된 타테오시안 링(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -575,7 +575,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6851" type="EtcItem" name="Recipe: Sealed Tateossian Necklace(70%)">
+	<item id="6851" type="EtcItem" name="레시피 : 봉인된 타테오시안 네크리스(70%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -587,7 +587,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6852" type="EtcItem" name="Recipe: Sealed Tateossian Necklace(100%)">
+	<item id="6852" type="EtcItem" name="레시피 : 봉인된 타테오시안 네크리스(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -599,7 +599,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6853" type="EtcItem" name="Recipe: Sealed Imperial Crusader Breastplate (60%)">
+	<item id="6853" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 흉갑(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -611,7 +611,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6854" type="EtcItem" name="Recipe: Sealed Imperial Crusader Breastplate (100%)">
+	<item id="6854" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 흉갑(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -623,7 +623,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6855" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gaiters (60%)">
+	<item id="6855" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 각반(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -635,7 +635,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6856" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gaiters (100%)">
+	<item id="6856" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 각반(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -647,7 +647,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6857" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gauntlets (60%)">
+	<item id="6857" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 건틀렛(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -659,7 +659,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6858" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gauntlets (100%)">
+	<item id="6858" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 건틀렛(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -671,7 +671,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6859" type="EtcItem" name="Recipe: Sealed Imperial Crusader Boots (60%)">
+	<item id="6859" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -683,7 +683,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6860" type="EtcItem" name="Recipe: Sealed Imperial Crusader Boots (100%)">
+	<item id="6860" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -695,7 +695,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6861" type="EtcItem" name="Recipe: Sealed Imperial Crusader Shield (60%)">
+	<item id="6861" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 쉴드(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -707,7 +707,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6862" type="EtcItem" name="Recipe: Sealed Imperial Crusader Shield (100%)">
+	<item id="6862" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -719,7 +719,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6863" type="EtcItem" name="Recipe: Sealed Imperial Crusader Helmet (60%)">
+	<item id="6863" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 헬멧(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -731,7 +731,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6864" type="EtcItem" name="Recipe: Sealed Imperial Crusader Helmet (100%)">
+	<item id="6864" type="EtcItem" name="레시피 : 봉인된 임페리얼 크루세이더 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -743,7 +743,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6865" type="EtcItem" name="Recipe: Sealed Draconic Leather Armor (60%)">
+	<item id="6865" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 아머(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -755,7 +755,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6866" type="EtcItem" name="Recipe: Sealed Draconic Leather Armor (100%)">
+	<item id="6866" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 아머(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -767,7 +767,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6867" type="EtcItem" name="Recipe: Sealed Draconic Leather Gloves (60%)">
+	<item id="6867" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 글로브(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -779,7 +779,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6868" type="EtcItem" name="Recipe: Sealed Draconic Leather Gloves (100%)">
+	<item id="6868" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -791,7 +791,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6869" type="EtcItem" name="Recipe: Sealed Draconic Leather Boots (60%)">
+	<item id="6869" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -803,7 +803,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6870" type="EtcItem" name="Recipe: Sealed Draconic Leather Boots (100%)">
+	<item id="6870" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -815,7 +815,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6871" type="EtcItem" name="Recipe: Sealed Draconic Leather Helmet (60%)">
+	<item id="6871" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 헬멧(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -827,7 +827,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6872" type="EtcItem" name="Recipe: Sealed Draconic Leather Helmet (100%)">
+	<item id="6872" type="EtcItem" name="레시피 : 봉인된 드라코닉 레더 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -839,7 +839,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6873" type="EtcItem" name="Recipe: Sealed Major Arcana Robe (60%)">
+	<item id="6873" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 로브(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -851,7 +851,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6874" type="EtcItem" name="Recipe: Sealed Major Arcana Robe (100%)">
+	<item id="6874" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 로브(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -863,7 +863,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6875" type="EtcItem" name="Recipe: Sealed Major Arcana Gloves (60%)">
+	<item id="6875" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 글로브(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -875,7 +875,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6876" type="EtcItem" name="Recipe: Sealed Major Arcana Gloves (100%)">
+	<item id="6876" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -887,7 +887,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6877" type="EtcItem" name="Recipe: Sealed Major Arcana Boots (60%)">
+	<item id="6877" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -899,7 +899,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6878" type="EtcItem" name="Recipe: Sealed Major Arcana Boots (100%)">
+	<item id="6878" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -911,7 +911,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6879" type="EtcItem" name="Recipe: Sealed Major Arcana Circlet (60%)">
+	<item id="6879" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 서클릿(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -923,7 +923,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6880" type="EtcItem" name="Recipe: Sealed Major Arcana Circlet (100%)">
+	<item id="6880" type="EtcItem" name="레시피 : 봉인된 메이저 아르카나 서클릿(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -935,7 +935,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6881" type="EtcItem" name="Recipe: Forgotten Blade (60%)">
+	<item id="6881" type="EtcItem" name="레시피 : 포가튼 블레이드(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -947,7 +947,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6882" type="EtcItem" name="Recipe: Forgotten Blade (100%)">
+	<item id="6882" type="EtcItem" name="레시피 : 포가튼 블레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -959,7 +959,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6883" type="EtcItem" name="Recipe: Basalt Battlehammer (60%)">
+	<item id="6883" type="EtcItem" name="레시피 : 바살트 배틀해머(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -971,7 +971,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6884" type="EtcItem" name="Recipe: Basalt Battlehammer (100%)">
+	<item id="6884" type="EtcItem" name="레시피 : 바살트 배틀해머(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -983,7 +983,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6885" type="EtcItem" name="Recipe: Imperial Staff (60%)">
+	<item id="6885" type="EtcItem" name="레시피 : 임페리얼 스텝(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -995,7 +995,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6886" type="EtcItem" name="Recipe: Imperial Staff(100%)">
+	<item id="6886" type="EtcItem" name="레시피 : 임페리얼 스텝(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1007,7 +1007,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6887" type="EtcItem" name="Recipe: Angel Slayer (60%)">
+	<item id="6887" type="EtcItem" name="레시피 : 엔젤 슬레이어(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1019,7 +1019,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6888" type="EtcItem" name="Recipe: Angel Slayer (100%)">
+	<item id="6888" type="EtcItem" name="레시피 : 엔젤 슬레이어(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1031,7 +1031,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6889" type="EtcItem" name="Recipe: Shining Bow (60%)">
+	<item id="6889" type="EtcItem" name="레시피 : 빛의 활(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1043,7 +1043,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6890" type="EtcItem" name="Recipe: Shining Bow (100%)">
+	<item id="6890" type="EtcItem" name="레시피 : 빛의 활(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1055,7 +1055,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6891" type="EtcItem" name="Recipe: Dragon Hunter Axe (60%)">
+	<item id="6891" type="EtcItem" name="레시피 : 드래곤 헌터 액스(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1067,7 +1067,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6892" type="EtcItem" name="Recipe: Dragon Hunter Axe (100%)">
+	<item id="6892" type="EtcItem" name="레시피 : 드래곤 헌터 액스(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1079,7 +1079,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6893" type="EtcItem" name="Recipe: Saint Spear (60%)">
+	<item id="6893" type="EtcItem" name="레시피 : 세인트 스피어(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1091,7 +1091,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6894" type="EtcItem" name="Recipe: Saint Spear (100%)">
+	<item id="6894" type="EtcItem" name="레시피 : 세인트 스피어(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1103,7 +1103,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6895" type="EtcItem" name="Recipe: Demon Splinter (60%)">
+	<item id="6895" type="EtcItem" name="레시피 : 데몬 스플린터(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1115,7 +1115,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6896" type="EtcItem" name="Recipe: Demon Splinter (100%)">
+	<item id="6896" type="EtcItem" name="레시피 : 데몬 스플린터(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1127,7 +1127,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6897" type="EtcItem" name="Recipe: Heavens Divider (60%)">
+	<item id="6897" type="EtcItem" name="레시피 : 헤븐스 디바이더(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1139,7 +1139,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6898" type="EtcItem" name="Recipe: Heavens Divider (100%)">
+	<item id="6898" type="EtcItem" name="레시피 : 헤븐스 디바이더(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1151,7 +1151,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6899" type="EtcItem" name="Recipe: Arcana Mace (60%)">
+	<item id="6899" type="EtcItem" name="레시피 : 아르카나 메이스(60%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13600" type="EtcItem" name="Transformation Scroll: Giran Archer Mercenary">
+	<item id="13600" type="EtcItem" name="기란 아처 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -17,7 +17,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13601" type="EtcItem" name="Transformation Scroll: Giran Wizard Mercenary">
+	<item id="13601" type="EtcItem" name="기란 위자드 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -34,7 +34,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13602" type="EtcItem" name="Transformation Scroll: Giran Kamael Captain Mercenary">
+	<item id="13602" type="EtcItem" name="기란 백인대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -51,7 +51,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13603" type="EtcItem" name="Transformation Scroll: Giran Knight Captain Mercenary">
+	<item id="13603" type="EtcItem" name="기란 기사대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -68,7 +68,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13604" type="EtcItem" name="Transformation Scroll: Giran Commander Mercenary">
+	<item id="13604" type="EtcItem" name="기란 사령관 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -85,7 +85,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13605" type="EtcItem" name="Transformation Scroll: Oren Human Mercenary">
+	<item id="13605" type="EtcItem" name="오렌 인간 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -102,7 +102,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13606" type="EtcItem" name="Transformation Scroll: Oren Elf Mercenary">
+	<item id="13606" type="EtcItem" name="오렌 엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -119,7 +119,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13607" type="EtcItem" name="Transformation Scroll: Oren Dark Elf Mercenary">
+	<item id="13607" type="EtcItem" name="오렌 다크엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -136,7 +136,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13608" type="EtcItem" name="Transformation Scroll: Oren Orc Mercenary">
+	<item id="13608" type="EtcItem" name="오렌 오크 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -153,7 +153,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13609" type="EtcItem" name="Transformation Scroll: Oren Dwarf Mercenary">
+	<item id="13609" type="EtcItem" name="오렌 드워프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -170,7 +170,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13610" type="EtcItem" name="Transformation Scroll: Oren Kamael Mercenary">
+	<item id="13610" type="EtcItem" name="오렌 카마엘 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -187,7 +187,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13611" type="EtcItem" name="Transformation Scroll: Oren Knight Mercenary">
+	<item id="13611" type="EtcItem" name="오렌 나이트 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -204,7 +204,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13612" type="EtcItem" name="Transformation Scroll: Oren Archer Mercenary">
+	<item id="13612" type="EtcItem" name="오렌 아처 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -221,7 +221,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13613" type="EtcItem" name="Transformation Scroll: Oren Wizard Mercenary">
+	<item id="13613" type="EtcItem" name="오렌 위자드 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -238,7 +238,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13614" type="EtcItem" name="Transformation Scroll: Oren Kamael Captain Mercenary">
+	<item id="13614" type="EtcItem" name="오렌 백인대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -255,7 +255,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13615" type="EtcItem" name="Transformation Scroll: Oren Knight Captain Mercenary">
+	<item id="13615" type="EtcItem" name="오렌 기사대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -272,7 +272,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13616" type="EtcItem" name="Transformation Scroll: Oren Commander Mercenary">
+	<item id="13616" type="EtcItem" name="오렌 사령관 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -289,7 +289,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13617" type="EtcItem" name="Transformation Scroll: Aden Human Mercenary">
+	<item id="13617" type="EtcItem" name="아덴 인간 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -306,7 +306,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13618" type="EtcItem" name="Transformation Scroll: Aden Elf Mercenary">
+	<item id="13618" type="EtcItem" name="아덴 엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -323,7 +323,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13619" type="EtcItem" name="Transformation Scroll: Aden Dark Elf Mercenary">
+	<item id="13619" type="EtcItem" name="아덴 다크엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -340,7 +340,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13620" type="EtcItem" name="Transformation Scroll: Aden Orc Mercenary">
+	<item id="13620" type="EtcItem" name="아덴 오크 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -357,7 +357,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13621" type="EtcItem" name="Transformation Scroll: Aden Dwarf Mercenary">
+	<item id="13621" type="EtcItem" name="아덴 드워프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -374,7 +374,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13622" type="EtcItem" name="Transformation Scroll: Aden Kamael Mercenary">
+	<item id="13622" type="EtcItem" name="아덴 카마엘 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -391,7 +391,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13623" type="EtcItem" name="Transformation Scroll: Aden Knight Mercenary">
+	<item id="13623" type="EtcItem" name="아덴 나이트 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -408,7 +408,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13624" type="EtcItem" name="Transformation Scroll: Aden Archer Mercenary">
+	<item id="13624" type="EtcItem" name="아덴 아처 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -425,7 +425,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13625" type="EtcItem" name="Transformation Scroll: Aden Wizard Mercenary">
+	<item id="13625" type="EtcItem" name="아덴 위자드 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -442,7 +442,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13626" type="EtcItem" name="Transformation Scroll: Aden Kamael Captain Mercenary">
+	<item id="13626" type="EtcItem" name="아덴 백인대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -459,7 +459,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13627" type="EtcItem" name="Transformation Scroll: Aden Knight Captain Mercenary">
+	<item id="13627" type="EtcItem" name="아덴 기사대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -476,7 +476,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13628" type="EtcItem" name="Transformation Scroll: Aden Commander Mercenary">
+	<item id="13628" type="EtcItem" name="아덴 사령관 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -493,7 +493,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13629" type="EtcItem" name="Transformation Scroll: Innadril Human Mercenary">
+	<item id="13629" type="EtcItem" name="인나드릴 인간 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -510,7 +510,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13630" type="EtcItem" name="Transformation Scroll: Innadril Elf Mercenary">
+	<item id="13630" type="EtcItem" name="인나드릴 엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -527,7 +527,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13631" type="EtcItem" name="Transformation Scroll: Innadril Dark Elf Mercenary">
+	<item id="13631" type="EtcItem" name="인나드릴 다크엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -544,7 +544,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13632" type="EtcItem" name="Transformation Scroll: Innadril Orc Mercenary">
+	<item id="13632" type="EtcItem" name="인나드릴 오크 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -561,7 +561,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13633" type="EtcItem" name="Transformation Scroll: Innadril Dwarf Mercenary">
+	<item id="13633" type="EtcItem" name="인나드릴 드워프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -578,7 +578,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13634" type="EtcItem" name="Transformation Scroll: Innadril Kamael Mercenary">
+	<item id="13634" type="EtcItem" name="인나드릴 카마엘 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -595,7 +595,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13635" type="EtcItem" name="Transformation Scroll: Innadril Knight Mercenary">
+	<item id="13635" type="EtcItem" name="인나드릴 나이트 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -612,7 +612,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13636" type="EtcItem" name="Transformation Scroll: Innadril Archer Mercenary">
+	<item id="13636" type="EtcItem" name="인나드릴 아처 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -629,7 +629,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13637" type="EtcItem" name="Transformation Scroll: Innadril Wizard Mercenary">
+	<item id="13637" type="EtcItem" name="인나드릴 위자드 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -646,7 +646,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13638" type="EtcItem" name="Transformation Scroll: Innadril Kamael Captain Mercenary">
+	<item id="13638" type="EtcItem" name="인나드릴 백인대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -663,7 +663,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13639" type="EtcItem" name="Transformation Scroll: Innadril Knight Captain Mercenary">
+	<item id="13639" type="EtcItem" name="인나드릴 기사대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -680,7 +680,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13640" type="EtcItem" name="Transformation Scroll: Innadril Commander Mercenary">
+	<item id="13640" type="EtcItem" name="인나드릴 사령관 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -697,7 +697,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13641" type="EtcItem" name="Transformation Scroll: Goddard Human Mercenary">
+	<item id="13641" type="EtcItem" name="고다드 인간 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -714,7 +714,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13642" type="EtcItem" name="Transformation Scroll: Goddard Elf Mercenary">
+	<item id="13642" type="EtcItem" name="고다드 엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -731,7 +731,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13643" type="EtcItem" name="Transformation Scroll: Goddard Dark Elf Mercenary">
+	<item id="13643" type="EtcItem" name="고다드 다크엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -748,7 +748,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13644" type="EtcItem" name="Transformation Scroll: Goddard Orc Mercenary">
+	<item id="13644" type="EtcItem" name="고다드 오크 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -765,7 +765,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13645" type="EtcItem" name="Transformation Scroll: Goddard Dwarf Mercenary">
+	<item id="13645" type="EtcItem" name="고다드 드워프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -782,7 +782,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13646" type="EtcItem" name="Transformation Scroll: Goddard Kamael Mercenary">
+	<item id="13646" type="EtcItem" name="고다드 카마엘 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -799,7 +799,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13647" type="EtcItem" name="Transformation Scroll: Goddard Knight Mercenary">
+	<item id="13647" type="EtcItem" name="고다드 나이트 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -816,7 +816,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13648" type="EtcItem" name="Transformation Scroll: Goddard Archer Mercenary">
+	<item id="13648" type="EtcItem" name="고다드 아처 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -833,7 +833,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13649" type="EtcItem" name="Transformation Scroll: Goddard Wizard Mercenary">
+	<item id="13649" type="EtcItem" name="고다드 위자드 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -850,7 +850,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13650" type="EtcItem" name="Transformation Scroll: Goddard Kamael Captain Mercenary">
+	<item id="13650" type="EtcItem" name="고다드 백인대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -867,7 +867,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13651" type="EtcItem" name="Transformation Scroll: Goddard Knight Captain Mercenary">
+	<item id="13651" type="EtcItem" name="고다드 기사대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -884,7 +884,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13652" type="EtcItem" name="Transformation Scroll: Goddard Commander Mercenary">
+	<item id="13652" type="EtcItem" name="고다드 사령관 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -901,7 +901,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13653" type="EtcItem" name="Transformation Scroll: Rune Human Mercenary">
+	<item id="13653" type="EtcItem" name="루운 인간 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -918,7 +918,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13654" type="EtcItem" name="Transformation Scroll: Rune Elf Mercenary">
+	<item id="13654" type="EtcItem" name="루운 엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -935,7 +935,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13655" type="EtcItem" name="Transformation Scroll: Rune Dark Elf Mercenary">
+	<item id="13655" type="EtcItem" name="루운 다크엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -952,7 +952,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13656" type="EtcItem" name="Transformation Scroll: Rune Orc Mercenary">
+	<item id="13656" type="EtcItem" name="루운 오크 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -969,7 +969,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13657" type="EtcItem" name="Transformation Scroll: Rune Dwarf Mercenary">
+	<item id="13657" type="EtcItem" name="루운 드워프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -986,7 +986,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13658" type="EtcItem" name="Transformation Scroll: Rune Kamael Mercenary">
+	<item id="13658" type="EtcItem" name="루운 카마엘 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1003,7 +1003,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13659" type="EtcItem" name="Transformation Scroll: Rune Knight Mercenary">
+	<item id="13659" type="EtcItem" name="루운 나이트 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1020,7 +1020,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13660" type="EtcItem" name="Transformation Scroll: Rune Archer Mercenary">
+	<item id="13660" type="EtcItem" name="루운 아처 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1037,7 +1037,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13661" type="EtcItem" name="Transformation Scroll: Rune Wizard Mercenary">
+	<item id="13661" type="EtcItem" name="루운 위자드 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1054,7 +1054,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13662" type="EtcItem" name="Transformation Scroll: Rune Kamael Captain Mercenary">
+	<item id="13662" type="EtcItem" name="루운 백인대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1071,7 +1071,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13663" type="EtcItem" name="Transformation Scroll: Rune Knight Captain Mercenary">
+	<item id="13663" type="EtcItem" name="루운 기사대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1088,7 +1088,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13664" type="EtcItem" name="Transformation Scroll: Rune Commander Mercenary">
+	<item id="13664" type="EtcItem" name="루운 사령관 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1105,7 +1105,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13665" type="EtcItem" name="Transformation Scroll: Schuttgart Human Mercenary">
+	<item id="13665" type="EtcItem" name="슈트가르트 인간 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1122,7 +1122,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13666" type="EtcItem" name="Transformation Scroll: Schuttgart Elf Mercenary">
+	<item id="13666" type="EtcItem" name="슈트가르트 엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1139,7 +1139,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13667" type="EtcItem" name="Transformation Scroll: Schuttgart Dark Elf Mercenary">
+	<item id="13667" type="EtcItem" name="슈트가르트 다크엘프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1156,7 +1156,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13668" type="EtcItem" name="Transformation Scroll: Schuttgart Orc Mercenary">
+	<item id="13668" type="EtcItem" name="슈트가르트 오크 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1173,7 +1173,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13669" type="EtcItem" name="Transformation Scroll: Schuttgart Dwarf Mercenary">
+	<item id="13669" type="EtcItem" name="슈트가르트 드워프 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1190,7 +1190,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13670" type="EtcItem" name="Transformation Scroll: Schuttgart Kamael Mercenary">
+	<item id="13670" type="EtcItem" name="슈트가르트 카마엘 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1207,7 +1207,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13671" type="EtcItem" name="Transformation Scroll: Schuttgart Knight Mercenary">
+	<item id="13671" type="EtcItem" name="슈트가르트 나이트 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1224,7 +1224,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13672" type="EtcItem" name="Transformation Scroll: Schuttgart Archer Mercenary">
+	<item id="13672" type="EtcItem" name="슈트가르트 아처 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1241,7 +1241,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13673" type="EtcItem" name="Transformation Scroll: Schuttgart Wizard Mercenary">
+	<item id="13673" type="EtcItem" name="슈트가르트 위자드 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1258,7 +1258,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13674" type="EtcItem" name="Transformation Scroll: Schuttgart Kamael Captain Mercenary">
+	<item id="13674" type="EtcItem" name="슈트가르트 백인대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1275,7 +1275,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13675" type="EtcItem" name="Transformation Scroll: Schuttgart Knight Captain Mercenary">
+	<item id="13675" type="EtcItem" name="슈트가르트 기사대장 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1292,7 +1292,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13676" type="EtcItem" name="Transformation Scroll: Schuttgart Commander Mercenary">
+	<item id="13676" type="EtcItem" name="슈트가르트 사령관 용병 변신 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1309,7 +1309,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13677" type="EtcItem" name="Gludio Disguise Scroll">
+	<item id="13677" type="EtcItem" name="글루디오 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1322,7 +1322,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13678" type="EtcItem" name="Dion Disguise Scroll">
+	<item id="13678" type="EtcItem" name="디온 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1335,7 +1335,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13679" type="EtcItem" name="Giran Disguise Scroll">
+	<item id="13679" type="EtcItem" name="기란 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1348,7 +1348,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13680" type="EtcItem" name="Oren Disguise Scroll">
+	<item id="13680" type="EtcItem" name="오렌 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1361,7 +1361,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13681" type="EtcItem" name="Aden Disguise Scroll">
+	<item id="13681" type="EtcItem" name="아덴 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1374,7 +1374,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13682" type="EtcItem" name="Innadril Disguise Scroll">
+	<item id="13682" type="EtcItem" name="인나드릴 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1387,7 +1387,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13683" type="EtcItem" name="Goddard Disguise Scroll">
+	<item id="13683" type="EtcItem" name="고다드 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1400,7 +1400,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13684" type="EtcItem" name="Rune Disguise Scroll">
+	<item id="13684" type="EtcItem" name="루운 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1413,7 +1413,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13685" type="EtcItem" name="Schuttgart Disguise Scroll">
+	<item id="13685" type="EtcItem" name="슈트가르트 위장 주문서">
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="hide_name" />
 		<set name="etcitem_type" val="scroll" />
@@ -1426,7 +1426,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Disguise" />
 	</item>
-	<item id="13686" type="EtcItem" name="Sealed Knight's Cloak">
+	<item id="13686" type="EtcItem" name="봉인된 기사의 망토">
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1448,7 +1448,7 @@
 			<add order="0x10" stat="pDef" val="20" />
 		</for>
 	</item>
-	<item id="13687" type="Armor" name="Knight's Cloak">
+	<item id="13687" type="Armor" name="기사의 망토">
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -1472,7 +1472,7 @@
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
 	</item>
-	<item id="13688" type="Armor" name="Knight's Cloak - Light Armor exclusive">
+	<item id="13688" type="Armor" name="기사의 망토 - 경갑 착용 전용">
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -1499,7 +1499,7 @@
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
 	</item>
-	<item id="13689" type="Armor" name="Knight's Cloak - Robe exclusive">
+	<item id="13689" type="Armor" name="기사의 망토 - 로브 착용 전용">
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -1526,7 +1526,7 @@
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
 	</item>
-	<item id="13690" type="Armor" name="Knight's Cloak - Kamael exclusive">
+	<item id="13690" type="Armor" name="기사의 망토 - 카마엘 전용 망토">
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -1551,7 +1551,7 @@
 			<add order="0x40" stat="darkRes" val="30" />
 		</for>
 	</item>
-	<item id="13691" type="EtcItem" name="Mark of Keucereus - Stage 1">
+	<item id="13691" type="EtcItem" name="크세르스의 증표 - 1단계">
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1562,7 +1562,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="13692" type="EtcItem" name="Mark of Keucereus - Stage 2">
+	<item id="13692" type="EtcItem" name="크세르스의 증표 - 2단계">
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1573,7 +1573,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="13693" type="EtcItem" name="Gracian Anniversary Coins">
+	<item id="13693" type="EtcItem" name="그레시아 기념 주화">
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
@@ -1583,7 +1583,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13694" type="EtcItem" name="Gracia Key">
+	<item id="13694" type="EtcItem" name="그레시아 열쇠">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -1595,7 +1595,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2837-1" />
 	</item>
-	<item id="13695" type="EtcItem" name="Gludio Supply Box - Magic Pin - Grade B, C">
+	<item id="13695" type="EtcItem" name="글루디오 보급 상자 - 마법 핀 B, C그레이드">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1608,7 +1608,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2921-1" />
 	</item>
-	<item id="13696" type="EtcItem" name="Dion Supply Box - Magic Pin - Grade B, C">
+	<item id="13696" type="EtcItem" name="디온 보급 상자 - 마법 핀 B, C그레이드">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1621,7 +1621,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2922-1" />
 	</item>
-	<item id="13697" type="EtcItem" name="Giran Supply Box - Magic Pin - Grade B, C">
+	<item id="13697" type="EtcItem" name="기란 보급 상자 - 마법 핀 B, C그레이드">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1634,7 +1634,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2923-1" />
 	</item>
-	<item id="13698" type="EtcItem" name="Oren Supply Box - Magic Pin - Grade B, C">
+	<item id="13698" type="EtcItem" name="오렌 보급 상자 - 마법 핀 B, C그레이드">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1647,7 +1647,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2924-1" />
 	</item>
-	<item id="13699" type="EtcItem" name="Aden Supply Box - Magic Pin - Grade B, C">
+	<item id="13699" type="EtcItem" name="아덴 보급 상자 - 마법 핀 B, C그레이드">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />

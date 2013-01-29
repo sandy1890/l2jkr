@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="12300" type="Armor" name="Common Item - Sealed Imperial Crusader Gauntlet">
+	<item id="12300" type="Armor" name="기본 병기 - 봉인된 임페리얼 크루세이더 건틀렛">
 		<set name="icon" val="icon.armor_t88_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -17,7 +17,7 @@
 			<add order="0x10" stat="pDef" val="55" />
 		</for>
 	</item>
-	<item id="12301" type="Armor" name="Common Item - Sealed Imperial Crusader Boots">
+	<item id="12301" type="Armor" name="기본 병기 - 봉인된 임페리얼 크루세이더 부츠">
 		<set name="icon" val="icon.armor_t88_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -34,7 +34,7 @@
 			<add order="0x10" stat="pDef" val="55" />
 		</for>
 	</item>
-	<item id="12302" type="Armor" name="Common Item - Sealed Imperial Crusader Shield">
+	<item id="12302" type="Armor" name="기본 병기 - 봉인된 임페리얼 크루세이더 쉴드">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -52,7 +52,7 @@
 			<set order="0x08" stat="rShld" val="20" />
 		</for>
 	</item>
-	<item id="12303" type="Armor" name="Common Item - Sealed Imperial Crusader Helmet">
+	<item id="12303" type="Armor" name="기본 병기 - 봉인된 임페리얼 크루세이더 헬멧">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -69,7 +69,7 @@
 			<add order="0x10" stat="pDef" val="83" />
 		</for>
 	</item>
-	<item id="12304" type="Armor" name="Common Item - Sealed Imperial Crusader Breastplate">
+	<item id="12304" type="Armor" name="기본 병기 - 봉인된 임페리얼 크루세이더 흉갑">
 		<set name="icon" val="icon.armor_t88_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -87,7 +87,7 @@
 			<add order="0x10" stat="pDef" val="193" />
 		</for>
 	</item>
-	<item id="12305" type="Armor" name="Common Item - Imperial Crusader Gaiters">
+	<item id="12305" type="Armor" name="기본 병기 - 임페리얼 크루세이더 각반">
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -105,7 +105,7 @@
 			<add order="0x10" stat="pDef" val="128" />
 		</for>
 	</item>
-	<item id="12306" type="Armor" name="Common Item - Imperial Crusader Gauntlet">
+	<item id="12306" type="Armor" name="기본 병기 - 임페리얼 크루세이더 건틀렛">
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -122,7 +122,7 @@
 			<add order="0x10" stat="pDef" val="55" />
 		</for>
 	</item>
-	<item id="12307" type="Armor" name="Common Item - Imperial Crusader Boots">
+	<item id="12307" type="Armor" name="기본 병기 - 임페리얼 크루세이더 부츠">
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -139,7 +139,7 @@
 			<add order="0x10" stat="pDef" val="55" />
 		</for>
 	</item>
-	<item id="12308" type="Armor" name="Common Item - Imperial Crusader Shield">
+	<item id="12308" type="Armor" name="기본 병기 - 임페리얼 크루세이더 쉴드">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -158,7 +158,7 @@
 			<set order="0x08" stat="sDef" val="290" />
 		</for>
 	</item>
-	<item id="12309" type="Armor" name="Common Item - Imperial Crusader Helmet">
+	<item id="12309" type="Armor" name="기본 병기 - 임페리얼 크루세이더 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -175,7 +175,7 @@
 			<add order="0x10" stat="pDef" val="83" />
 		</for>
 	</item>
-	<item id="12310" type="Armor" name="Common Item - Imperial Crusader Breastplate">
+	<item id="12310" type="Armor" name="기본 병기 - 임페리얼 크루세이더 흉갑">
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -193,7 +193,7 @@
 			<add order="0x10" stat="pDef" val="205" />
 		</for>
 	</item>
-	<item id="12311" type="Armor" name="Common Item - Red Crescent">
+	<item id="12311" type="Armor" name="기본 병기 - 레드 크레센트">
 		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -207,7 +207,7 @@
 			<add order="0x10" stat="mDef" val="24" />
 		</for>
 	</item>
-	<item id="12312" type="Armor" name="Common Item - Necklace of Devotion">
+	<item id="12312" type="Armor" name="기본 병기 - 헌신의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -221,7 +221,7 @@
 			<add order="0x10" stat="mDef" val="32" />
 		</for>
 	</item>
-	<item id="12313" type="Armor" name="Common Item - Ring of Devotion">
+	<item id="12313" type="Armor" name="기본 병기 - 헌신의 반지">
 		<set name="icon" val="icon.accessary_ring_of_devotion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -235,7 +235,7 @@
 			<add order="0x10" stat="mDef" val="16" />
 		</for>
 	</item>
-	<item id="12314" type="Armor" name="Common Item - Enchanted Earring">
+	<item id="12314" type="Armor" name="기본 병기 - 마력의 귀걸이">
 		<set name="icon" val="icon.accessary_enchanted_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -249,7 +249,7 @@
 			<add order="0x10" stat="mDef" val="27" />
 		</for>
 	</item>
-	<item id="12315" type="Armor" name="Common Item - Enchanted Necklace">
+	<item id="12315" type="Armor" name="기본 병기 - 마력의 목걸이">
 		<set name="icon" val="icon.accessary_enchanted_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -263,7 +263,7 @@
 			<add order="0x10" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="12316" type="Armor" name="Common Item - Enchanted Ring">
+	<item id="12316" type="Armor" name="기본 병기 - 마력의 반지">
 		<set name="icon" val="icon.accessary_enchanted_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -277,7 +277,7 @@
 			<add order="0x10" stat="mDef" val="18" />
 		</for>
 	</item>
-	<item id="12317" type="Armor" name="Common Item - Near Forest Necklace">
+	<item id="12317" type="Armor" name="기본 병기 - 옛 숲의 목걸이">
 		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -291,7 +291,7 @@
 			<add order="0x10" stat="mDef" val="40" />
 		</for>
 	</item>
-	<item id="12318" type="Armor" name="Common Item - Tiger's Eye">
+	<item id="12318" type="Armor" name="기본 병기 - 타이거 아이">
 		<set name="icon" val="icon.accessary_tigerseye_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -305,7 +305,7 @@
 			<add order="0x10" stat="mDef" val="30" />
 		</for>
 	</item>
-	<item id="12319" type="Armor" name="Common Item - Black Pearl Ring">
+	<item id="12319" type="Armor" name="기본 병기 - 흑진주 반지">
 		<set name="icon" val="icon.accessary_black_pearl_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -319,7 +319,7 @@
 			<add order="0x10" stat="mDef" val="20" />
 		</for>
 	</item>
-	<item id="12320" type="Armor" name="Common Item - Elven Necklace">
+	<item id="12320" type="Armor" name="기본 병기 - 엘븐 네크리스">
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -333,7 +333,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="12321" type="Armor" name="Common Item - Elven Ring">
+	<item id="12321" type="Armor" name="기본 병기 - 엘븐 링">
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -347,7 +347,7 @@
 			<add order="0x10" stat="mDef" val="22" />
 		</for>
 	</item>
-	<item id="12322" type="Armor" name="Common Item - Elven Earring">
+	<item id="12322" type="Armor" name="기본 병기 - 엘븐 이어링">
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -361,7 +361,7 @@
 			<add order="0x10" stat="mDef" val="34" />
 		</for>
 	</item>
-	<item id="12323" type="Armor" name="Common Item - Mithril Ring">
+	<item id="12323" type="Armor" name="기본 병기 - 미스릴 반지">
 		<set name="icon" val="icon.accessary_mithril_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -375,7 +375,7 @@
 			<add order="0x10" stat="mDef" val="24" />
 		</for>
 	</item>
-	<item id="12324" type="Armor" name="Common Item - Necklace of Darkness">
+	<item id="12324" type="Armor" name="기본 병기 - 암흑의목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_darkness_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -389,7 +389,7 @@
 			<add order="0x10" stat="mDef" val="48" />
 		</for>
 	</item>
-	<item id="12325" type="Armor" name="Common Item - Omen Beast's Eye">
+	<item id="12325" type="Armor" name="기본 병기 - 오닉스 비스트 아이">
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -403,7 +403,7 @@
 			<add order="0x10" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="12326" type="Armor" name="Common Item - Moonstone Earring">
+	<item id="12326" type="Armor" name="기본 병기 - 문스톤 이어링">
 		<set name="icon" val="icon.accessary_moonstone_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -417,7 +417,7 @@
 			<add order="0x10" stat="mDef" val="39" />
 		</for>
 	</item>
-	<item id="12327" type="Armor" name="Common Item - Aquastone Necklace">
+	<item id="12327" type="Armor" name="기본 병기 - 아쿠아스톤네크리스">
 		<set name="icon" val="icon.accessary_aquastone_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -431,7 +431,7 @@
 			<add order="0x10" stat="mDef" val="52" />
 		</for>
 	</item>
-	<item id="12328" type="Armor" name="Common Item - Aquastone Ring">
+	<item id="12328" type="Armor" name="기본 병기 - 아쿠아스톤링">
 		<set name="icon" val="icon.accessary_aquastone_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -445,7 +445,7 @@
 			<add order="0x10" stat="mDef" val="26" />
 		</for>
 	</item>
-	<item id="12329" type="Armor" name="Common Item - Earring of Protection">
+	<item id="12329" type="Armor" name="기본 병기 - 수호의 귀걸이">
 		<set name="icon" val="icon.accessary_earing_of_protection_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -459,7 +459,7 @@
 			<add order="0x10" stat="mDef" val="42" />
 		</for>
 	</item>
-	<item id="12330" type="Armor" name="Common Item - Necklace of Protection">
+	<item id="12330" type="Armor" name="기본 병기 - 수호의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_protection_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -473,7 +473,7 @@
 			<add order="0x10" stat="mDef" val="56" />
 		</for>
 	</item>
-	<item id="12331" type="Armor" name="Common Item - Ring of Protection">
+	<item id="12331" type="Armor" name="기본 병기 - 수호의 반지">
 		<set name="icon" val="icon.accessary_ring_of_protection_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -487,7 +487,7 @@
 			<add order="0x10" stat="mDef" val="28" />
 		</for>
 	</item>
-	<item id="12332" type="Armor" name="Common Item - Earring of Seal">
+	<item id="12332" type="Armor" name="기본 병기 - 봉인의 귀걸이">
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -501,7 +501,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="12333" type="Armor" name="Common Item - Ring of Ages">
+	<item id="12333" type="Armor" name="기본 병기 - 영생의 반지">
 		<set name="icon" val="icon.accessary_ring_of_ages_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -515,7 +515,7 @@
 			<add order="0x10" stat="mDef" val="30" />
 		</for>
 	</item>
-	<item id="12334" type="Armor" name="Common Item - Necklace of Mermaid">
+	<item id="12334" type="Armor" name="기본 병기 - 인어의 눈물">
 		<set name="icon" val="icon.accessary_necklace_of_mermaid_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -529,7 +529,7 @@
 			<add order="0x10" stat="mDef" val="60" />
 		</for>
 	</item>
-	<item id="12335" type="Armor" name="Common Item - Nassen's Earring">
+	<item id="12335" type="Armor" name="기본 병기 - 나센의 귀걸이">
 		<set name="icon" val="icon.accessary_nassens_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -543,7 +543,7 @@
 			<add order="0x10" stat="mDef" val="48" />
 		</for>
 	</item>
-	<item id="12336" type="Armor" name="Common Item - Necklace of Seal">
+	<item id="12336" type="Armor" name="기본 병기 - 봉인의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -557,7 +557,7 @@
 			<add order="0x10" stat="mDef" val="64" />
 		</for>
 	</item>
-	<item id="12337" type="Armor" name="Common Item - Ring of Seal">
+	<item id="12337" type="Armor" name="기본 병기 - 봉인의 반지">
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -571,7 +571,7 @@
 			<add order="0x10" stat="mDef" val="32" />
 		</for>
 	</item>
-	<item id="12338" type="Armor" name="Common Item - Adamantite Earring">
+	<item id="12338" type="Armor" name="기본 병기 - 아다만타이트 귀걸이">
 		<set name="icon" val="icon.accessary_adamantite_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -585,7 +585,7 @@
 			<add order="0x10" stat="mDef" val="51" />
 		</for>
 	</item>
-	<item id="12339" type="Armor" name="Common Item - Adamantite Necklace">
+	<item id="12339" type="Armor" name="기본 병기 - 아다만타이트 네크리스">
 		<set name="icon" val="icon.accessary_adamantite_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -599,7 +599,7 @@
 			<add order="0x10" stat="mDef" val="68" />
 		</for>
 	</item>
-	<item id="12340" type="Armor" name="Common Item - Adamantite Ring">
+	<item id="12340" type="Armor" name="기본 병기 - 아다만타이트 링">
 		<set name="icon" val="icon.accessary_adamantite_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -613,7 +613,7 @@
 			<add order="0x10" stat="mDef" val="34" />
 		</for>
 	</item>
-	<item id="12341" type="Armor" name="Common Item - Earring of Black Ore">
+	<item id="12341" type="Armor" name="기본 병기 - 흑광의 귀걸이">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -627,7 +627,7 @@
 			<add order="0x10" stat="mDef" val="54" />
 		</for>
 	</item>
-	<item id="12342" type="Armor" name="Common Item - Necklace of Black Ore">
+	<item id="12342" type="Armor" name="기본 병기 - 흑광의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -641,7 +641,7 @@
 			<add order="0x10" stat="mDef" val="72" />
 		</for>
 	</item>
-	<item id="12343" type="Armor" name="Common Item - Ring of Black Ore">
+	<item id="12343" type="Armor" name="기본 병기 - 흑광의 반지">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -655,7 +655,7 @@
 			<add order="0x10" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="12344" type="Armor" name="Common Item - Sealed Phoenix Necklace">
+	<item id="12344" type="Armor" name="기본 병기 - 봉인된 피닉스 네크리스">
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -669,7 +669,7 @@
 			<add order="0x10" stat="mDef" val="76" />
 		</for>
 	</item>
-	<item id="12345" type="Armor" name="Common Item - Sealed Phoenix Earring">
+	<item id="12345" type="Armor" name="기본 병기 - 봉인된 피닉스 이어링">
 		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -683,7 +683,7 @@
 			<add order="0x10" stat="mDef" val="57" />
 		</for>
 	</item>
-	<item id="12346" type="Armor" name="Common Item - Sealed Phoenix Ring">
+	<item id="12346" type="Armor" name="기본 병기 - 봉인된 피닉스 링">
 		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -697,7 +697,7 @@
 			<add order="0x10" stat="mDef" val="38" />
 		</for>
 	</item>
-	<item id="12347" type="Armor" name="Common Item - Phoenix Necklace">
+	<item id="12347" type="Armor" name="기본 병기 - 피닉스 네크리스">
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -712,7 +712,7 @@
 			<add order="0x40" stat="maxMp" val="26" />
 		</for>
 	</item>
-	<item id="12348" type="Armor" name="Common Item - Phoenix Ring">
+	<item id="12348" type="Armor" name="기본 병기 - 피닉스 링">
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -727,7 +727,7 @@
 			<add order="0x40" stat="maxMp" val="13" />
 		</for>
 	</item>
-	<item id="12349" type="Armor" name="Common Item - Phoenix Earring">
+	<item id="12349" type="Armor" name="기본 병기 - 피닉스 이어링">
 		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -742,7 +742,7 @@
 			<add order="0x40" stat="maxMp" val="20" />
 		</for>
 	</item>
-	<item id="12350" type="Armor" name="Common Item - Sealed Majestic Necklace">
+	<item id="12350" type="Armor" name="기본 병기 - 봉인된 마제스틱 네크리스">
 		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -756,7 +756,7 @@
 			<add order="0x10" stat="mDef" val="80" />
 		</for>
 	</item>
-	<item id="12351" type="Armor" name="Common Item - Sealed Majestic Ring">
+	<item id="12351" type="Armor" name="기본 병기 - 봉인된 마제스틱 링">
 		<set name="icon" val="icon.accessary_inferno_ring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -770,7 +770,7 @@
 			<add order="0x10" stat="mDef" val="40" />
 		</for>
 	</item>
-	<item id="12352" type="Armor" name="Common Item - Sealed Majestic Earring">
+	<item id="12352" type="Armor" name="기본 병기 - 봉인된 마제스틱 이어링">
 		<set name="icon" val="icon.accessary_inferno_earing_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -784,7 +784,7 @@
 			<add order="0x10" stat="mDef" val="60" />
 		</for>
 	</item>
-	<item id="12353" type="Armor" name="Common Item - Majestic Necklace">
+	<item id="12353" type="Armor" name="기본 병기 - 마제스틱 네크리스">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -799,7 +799,7 @@
 			<add order="0x40" stat="maxMp" val="33" />
 		</for>
 	</item>
-	<item id="12354" type="Armor" name="Common Item - Majestic Ring">
+	<item id="12354" type="Armor" name="기본 병기 - 마제스틱 링">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -814,7 +814,7 @@
 			<add order="0x40" stat="maxMp" val="17" />
 		</for>
 	</item>
-	<item id="12355" type="Armor" name="Common Item - Majestic Earring">
+	<item id="12355" type="Armor" name="기본 병기 - 마제스틱 이어링">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -829,7 +829,7 @@
 			<add order="0x40" stat="maxMp" val="25" />
 		</for>
 	</item>
-	<item id="12356" type="Armor" name="Common Item - Sealed Tateossian Necklace">
+	<item id="12356" type="Armor" name="기본 병기 - 봉인된 타테오시안 네크리스">
 		<set name="icon" val="icon.accessory_tateossian_necklace_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -843,7 +843,7 @@
 			<add order="0x10" stat="mDef" val="91" />
 		</for>
 	</item>
-	<item id="12357" type="Armor" name="Common Item - Sealed Tateossian Ring">
+	<item id="12357" type="Armor" name="기본 병기 - 봉인된 타테오시안 링">
 		<set name="icon" val="icon.accessory_tateossian_ring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -857,7 +857,7 @@
 			<add order="0x10" stat="mDef" val="46" />
 		</for>
 	</item>
-	<item id="12358" type="Armor" name="Common Item - Sealed Tateossian Earring">
+	<item id="12358" type="Armor" name="기본 병기 - 봉인된 타테오시안 이어링">
 		<set name="icon" val="icon.accessory_tateossian_earring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -871,7 +871,7 @@
 			<add order="0x10" stat="mDef" val="68" />
 		</for>
 	</item>
-	<item id="12359" type="Armor" name="Common Item - Tateossian Necklace">
+	<item id="12359" type="Armor" name="기본 병기 - 타테오시안 네크리스">
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -886,7 +886,7 @@
 			<add order="0x40" stat="maxMp" val="42" />
 		</for>
 	</item>
-	<item id="12360" type="Armor" name="Common Item - Tateossian Ring">
+	<item id="12360" type="Armor" name="기본 병기 - 타테오시안 링">
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -901,7 +901,7 @@
 			<add order="0x40" stat="maxMp" val="21" />
 		</for>
 	</item>
-	<item id="12361" type="Armor" name="Common Item - Tateossian Earring">
+	<item id="12361" type="Armor" name="기본 병기 - 타테오시안 이어링">
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -916,7 +916,7 @@
 			<add order="0x40" stat="maxMp" val="31" />
 		</for>
 	</item>
-	<item id="12362" type="EtcItem" name="Weapon-Type Enhance Backup Stone (D-Grade)">
+	<item id="12362" type="EtcItem" name="무기용 강화 보조석 - D그레이드">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -930,7 +930,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2515-1" />
 	</item>
-	<item id="12363" type="EtcItem" name="Weapon-Type Enhance Backup Stone (C-Grade)">
+	<item id="12363" type="EtcItem" name="무기용 강화 보조석 - C그레이드">
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -944,7 +944,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2516-1" />
 	</item>
-	<item id="12364" type="EtcItem" name="Weapon-Type Enhance Backup Stone (B-Grade)">
+	<item id="12364" type="EtcItem" name="무기용 강화 보조석 - B그레이드">
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -958,7 +958,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
-	<item id="12365" type="EtcItem" name="Weapon-Type Enhance Backup Stone (A-Grade)">
+	<item id="12365" type="EtcItem" name="무기용 강화 보조석 - A그레이드">
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -972,7 +972,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
-	<item id="12366" type="EtcItem" name="Weapon-Type Enhance Backup Stone (S-Grade)">
+	<item id="12366" type="EtcItem" name="무기용 강화 보조석 - S그레이드">
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -986,7 +986,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
-	<item id="12367" type="EtcItem" name="Armor-Type Enhance Backup Stone (D-Grade)">
+	<item id="12367" type="EtcItem" name="방어구용 강화 보조석 - D그레이드">
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1000,7 +1000,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2520-1" />
 	</item>
-	<item id="12368" type="EtcItem" name="Armor-Type Enhance Backup Stone (C-Grade)">
+	<item id="12368" type="EtcItem" name="방어구용 강화 보조석 - C그레이드">
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1014,7 +1014,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2521-1" />
 	</item>
-	<item id="12369" type="EtcItem" name="Armor-Type Enhance Backup Stone (B-Grade)">
+	<item id="12369" type="EtcItem" name="방어구용 강화 보조석 - B그레이드">
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1028,7 +1028,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2522-1" />
 	</item>
-	<item id="12370" type="EtcItem" name="Armor-Type Enhance Backup Stone (A-Grade)">
+	<item id="12370" type="EtcItem" name="방어구용 강화 보조석 - A그레이드">
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1042,7 +1042,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2523-1" />
 	</item>
-	<item id="12371" type="EtcItem" name="Armor-Type Enhance Backup Stone (S-Grade)">
+	<item id="12371" type="EtcItem" name="방어구용 강화 보조석 - S그레이드">
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1056,7 +1056,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2524-1" />
 	</item>
-	<item id="12372" type="Armor" name="Monkey Hat">
+	<item id="12372" type="Armor" name="원숭이 모자">
 		<set name="icon" val="icon.monkey_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1065,7 +1065,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="12373" type="Armor" name="Pig Hat">
+	<item id="12373" type="Armor" name="돼지 모자">
 		<set name="icon" val="icon.event_pig_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1074,7 +1074,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="12374" type="EtcItem" name="Mammon's Varnish Enhancer">
+	<item id="12374" type="EtcItem" name="마몬의 연마 강화제">
 		<set name="icon" val="icon.etc_mammon_varnish_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -1083,7 +1083,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="12375" type="EtcItem" name="Foundation Great Sword">
+	<item id="12375" type="EtcItem" name="혼돈의 그레이트 소드">
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="weapon_type" val="sword" />
 		<set name="random_damage" val="10" />
@@ -1101,7 +1101,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12376" type="EtcItem" name="Foundation Great Axe">
+	<item id="12376" type="EtcItem" name="혼돈의 그레이트 액스">
 		<set name="icon" val="icon.weapon_great_axe_i00" />
 		<set name="weapon_type" val="pole" />
 		<set name="random_damage" val="10" />
@@ -1120,7 +1120,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="12377" type="EtcItem" name="Foundation Innominate Victory">
+	<item id="12377" type="EtcItem" name="혼돈의 네임리스 빅토리">
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="random_damage" val="15" />
@@ -1142,7 +1142,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="12378" type="EtcItem" name="Foundation Dark Elven Long Bow">
+	<item id="12378" type="EtcItem" name="혼돈의 다크엘븐 롱보우">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="weapon_type" val="bow" />
 		<set name="random_damage" val="5" />
@@ -1162,7 +1162,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="12379" type="EtcItem" name="Foundation Sword of Valhalla">
+	<item id="12379" type="EtcItem" name="혼돈의 소드 오브 발할라">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
 		<set name="weapon_type" val="sword" />
 		<set name="random_damage" val="10" />
@@ -1180,7 +1180,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12380" type="EtcItem" name="Foundation Spell Breaker">
+	<item id="12380" type="EtcItem" name="혼돈의 스펠 브레이커">
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1199,7 +1199,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12381" type="EtcItem" name="Foundation Arthro Nail">
+	<item id="12381" type="EtcItem" name="혼돈의 아스라네일">
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
 		<set name="weapon_type" val="dualfist" />
 		<set name="random_damage" val="5" />
@@ -1218,7 +1218,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="12382" type="EtcItem" name="Foundation Ice Storm Hammer">
+	<item id="12382" type="EtcItem" name="혼돈의 아이스 스톰 해머">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1237,7 +1237,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12383" type="EtcItem" name="Foundation Military Fleuret">
+	<item id="12383" type="EtcItem" name="혼돈의 어설트 플뢰레">
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="weapon_type" val="rapier" />
 		<set name="random_damage" val="40" />
@@ -1259,7 +1259,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="12384" type="EtcItem" name="Foundation Sprite's Staff">
+	<item id="12384" type="EtcItem" name="혼돈의 정령의 지팡이">
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1278,7 +1278,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12385" type="EtcItem" name="Foundation Kris">
+	<item id="12385" type="EtcItem" name="혼돈의 크리스">
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="weapon_type" val="dagger" />
 		<set name="random_damage" val="5" />
@@ -1297,7 +1297,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="12386" type="EtcItem" name="Foundation Keshanberk">
+	<item id="12386" type="EtcItem" name="혼돈의 크샨베르크">
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
 		<set name="weapon_type" val="sword" />
 		<set name="random_damage" val="10" />
@@ -1315,7 +1315,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12387" type="EtcItem" name="Foundation Peacemaker">
+	<item id="12387" type="EtcItem" name="혼돈의 피스메이커">
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="weapon_type" val="crossbow" />
 		<set name="random_damage" val="10" />
@@ -1337,7 +1337,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="12388" type="EtcItem" name="Foundation Heavy War Axe">
+	<item id="12388" type="EtcItem" name="혼돈의 헤비 워 액스">
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1356,7 +1356,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12389" type="EtcItem" name="Foundation Hell Knife">
+	<item id="12389" type="EtcItem" name="혼돈의 헬나이프">
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="weapon_type" val="dagger" />
 		<set name="random_damage" val="5" />
@@ -1375,7 +1375,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="12390" type="EtcItem" name="Foundation Guardian Sword">
+	<item id="12390" type="EtcItem" name="혼돈의 가디언스 소드">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="weapon_type" val="sword" />
 		<set name="random_damage" val="10" />
@@ -1393,7 +1393,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12391" type="EtcItem" name="Foundation Sword of Damascus">
+	<item id="12391" type="EtcItem" name="혼돈의 다마스커스 검">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="weapon_type" val="sword" />
 		<set name="random_damage" val="10" />
@@ -1411,7 +1411,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12392" type="EtcItem" name="Foundation Dismantler">
+	<item id="12392" type="EtcItem" name="혼돈의 디스멘틀러">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="weapon_type" val="ancientsword" />
 		<set name="random_damage" val="15" />
@@ -1433,7 +1433,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="12393" type="EtcItem" name="Foundation Lance">
+	<item id="12393" type="EtcItem" name="혼돈의 랜시아">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="weapon_type" val="pole" />
 		<set name="random_damage" val="10" />
@@ -1452,7 +1452,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="12394" type="EtcItem" name="Foundation Bellion Cestus">
+	<item id="12394" type="EtcItem" name="혼돈의 벨리온 세스터스">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="weapon_type" val="dualfist" />
 		<set name="random_damage" val="5" />
@@ -1471,7 +1471,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="12395" type="EtcItem" name="Foundation Staff of Evil Spirits">
+	<item id="12395" type="EtcItem" name="혼돈의 사령의 지팡이">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1490,7 +1490,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12396" type="EtcItem" name="Foundation Deadman's Glory">
+	<item id="12396" type="EtcItem" name="혼돈의 사자의 영광">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1509,7 +1509,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12397" type="EtcItem" name="Foundation Star Buster">
+	<item id="12397" type="EtcItem" name="혼돈의 스타 버스터">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1528,7 +1528,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12398" type="EtcItem" name="Foundation Art of Battle Axe">
+	<item id="12398" type="EtcItem" name="혼돈의 아트 오브 배틀액스">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="weapon_type" val="blunt" />
 		<set name="random_damage" val="20" />
@@ -1547,7 +1547,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="12399" type="EtcItem" name="Foundation Demon's Dagger">
+	<item id="12399" type="EtcItem" name="혼돈의 악마의 단검">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="weapon_type" val="dagger" />
 		<set name="random_damage" val="5" />

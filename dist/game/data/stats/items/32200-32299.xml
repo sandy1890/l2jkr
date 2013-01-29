@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
 	<!-- 移動卷軸 -->
-	<item id="32226" name="說話之島移動卷軸" type="EtcItem">
+	<item id="32226" type="EtcItem" name="말하는 섬 이동 주문서">
 		<table name="#Desc">能傳送至說話之島村莊的魔法卷軸。</table>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -18,7 +18,7 @@
 	</item>
 
 	<!-- 無限箭筒 -->
-	<item id="32249" name="無限木箭筒" type="EtcItem">
+	<item id="32249" type="EtcItem" name="무한의 나무 화살통">
 		<table name="#Desc">內裝用木頭製作的箭之箭筒。普通弓使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00"/>
 		<set name="default_action" val="equip"/>
@@ -26,7 +26,7 @@
 		<set name="bodypart" val="lhand"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32250" name="無限骨箭筒" type="EtcItem">
+	<item id="32250" type="EtcItem" name="무한의 뼈 화살통">
 		<table name="#Desc">內裝將骨頭削尖製成的箭之箭筒。D級弓使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00"/>
 		<set name="default_action" val="equip"/>
@@ -35,7 +35,7 @@
 		<set name="crystal_type" val="d"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32251" name="無限鐵箭筒" type="EtcItem">
+	<item id="32251" type="EtcItem" name="무한의 강철 화살통">
 		<table name="#Desc">內裝用鋼鐵製成的強力箭之箭筒。C級弓使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00"/>
 		<set name="default_action" val="equip"/>
@@ -44,7 +44,7 @@
 		<set name="crystal_type" val="c"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32252" name="無限銀箭筒" type="EtcItem">
+	<item id="32252" type="EtcItem" name="무한의 은 화살통">
 		<table name="#Desc">內裝外表鍍銀的鋼鐵箭之箭筒。B級弓使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_silver_arrows_i00"/>
 		<set name="default_action" val="equip"/>
@@ -53,7 +53,7 @@
 		<set name="crystal_type" val="b"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32253" name="無限米索莉之箭筒" type="EtcItem">
+	<item id="32253" type="EtcItem" name="무한의 미스릴 화살통">
 		<table name="#Desc">內裝外表鍍米索莉的鋼鐵箭之箭筒。A級弓使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
 		<set name="default_action" val="equip"/>
@@ -62,7 +62,7 @@
 		<set name="crystal_type" val="a"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32254" name="無限閃耀箭筒" type="EtcItem">
+	<item id="32254" type="EtcItem" name="무한의 빛의 화살통">
 		<table name="#Desc">內裝材質不明的箭之箭筒。S級弓使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_arrows_i00"/>
 		<set name="default_action" val="equip"/>
@@ -71,7 +71,7 @@
 		<set name="crystal_type" val="s"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32255" name="無限奧里哈魯根箭筒" type="EtcItem">
+	<item id="32255" type="EtcItem" name="무한의 오리칼쿰 화살통">
 		<table name="#Desc">內裝用奧里哈魯根合金製作的箭之箭筒。R級弓使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
 		<set name="default_action" val="equip"/>
@@ -80,7 +80,7 @@
 		<set name="crystal_type" val="r"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32256" name="無限木製弩箭筒" type="EtcItem">
+	<item id="32256" type="EtcItem" name="무한의 나무 볼트통">
 		<table name="#Desc">內裝用木頭製作的弩箭之箭筒。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00"/>
 		<set name="default_action" val="equip"/>
@@ -88,7 +88,7 @@
 		<set name="bodypart" val="lhand"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32257" name="無限骨製弩箭筒" type="EtcItem">
+	<item id="32257" type="EtcItem" name="무한의 뼈 볼트통">
 		<table name="#Desc">內裝將骨頭削尖製成的弩箭之箭筒。D級弩使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00"/>
 		<set name="default_action" val="equip"/>
@@ -97,7 +97,7 @@
 		<set name="crystal_type" val="d"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32258" name="無限鋼鐵弩箭筒" type="EtcItem">
+	<item id="32258" type="EtcItem" name="무한의 강철 볼트통">
 		<table name="#Desc">內裝用鋼鐵製成的強力弩箭之箭筒。C級弩使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_bolts_i00"/>
 		<set name="default_action" val="equip"/>
@@ -106,7 +106,7 @@
 		<set name="crystal_type" val="c"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32259" name="無限銀弩箭筒" type="EtcItem">
+	<item id="32259" type="EtcItem" name="무한의 은 볼트통">
 		<table name="#Desc">內裝外表鍍銀的鋼鐵弩箭之箭筒。B級弩使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_silver_bolts_i00"/>
 		<set name="default_action" val="equip"/>
@@ -115,7 +115,7 @@
 		<set name="crystal_type" val="b"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32260" name="無限米索莉弩箭筒" type="EtcItem">
+	<item id="32260" type="EtcItem" name="무한의 미스릴 볼트통">
 		<table name="#Desc">內裝外表鍍米索莉的鋼鐵弩箭之箭筒。A級弩使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
 		<set name="default_action" val="equip"/>
@@ -124,7 +124,7 @@
 		<set name="crystal_type" val="a"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32261" name="無限閃耀弩箭筒" type="EtcItem">
+	<item id="32261" type="EtcItem" name="무한의 빛의 볼트통">
 		<table name="#Desc">內裝材質不明的弩箭之箭筒。S級弩使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_bolts_i00"/>
 		<set name="default_action" val="equip"/>
@@ -133,7 +133,7 @@
 		<set name="crystal_type" val="s"/>
 		<set name="material" val="gold"/>
 	</item>
-	<item id="32262" name="無限奧里哈魯根弩箭筒" type="EtcItem">
+	<item id="32262" type="EtcItem" name="무한의 오리칼쿰 볼트통">
 		<table name="#Desc">內裝用奧里哈魯根合金製作的弩箭之箭筒。R級弩使用。</table>
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
 		<set name="default_action" val="equip"/>
@@ -143,7 +143,7 @@
 		<set name="material" val="gold"/>
 	</item>
 
-	<item id="32289" name="奧林匹亞守護勇士的戒指" type="Armor">
+	<item id="32289" type="Armor" name="올림피아드 수호 용사의 반지">
 		<table name="#Desc">奧林匹亞守護勇士的戒指。可以裝備30天的限時道具。可得到MP+28的效果。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessory_ring_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -158,7 +158,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="32290" name="奧林匹亞守護勇士的項鍊" type="Armor">
+	<item id="32290" type="Armor" name="올림피아드 수호 용사의 목걸이">
 		<table name="#Desc">奧林匹亞守護勇士的項鍊。可以裝備30天的限時道具。可得到MP+57的效果。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -173,7 +173,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="32291" name="奧林匹亞守護勇士的耳環" type="Armor">
+	<item id="32291" type="Armor" name="올림피아드 수호 용사의 귀걸이">
 		<table name="#Desc">奧林匹亞守護勇士的耳環。可以裝備30天的限時道具。可得到MP+42的效果。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessory_earring_of_hero_i00"/>
 		<set name="default_action" val="equip"/>

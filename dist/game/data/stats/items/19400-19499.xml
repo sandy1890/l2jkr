@@ -2,14 +2,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
 	<!-- 結晶/寶石 -->
-	<item id="19440" name="寶石-R級" type="EtcItem">
+	<item id="19440" type="EtcItem" name="젬스톤 - R그레이드">
 		<set name="icon" val="icon.etc_bead_gold_i00"/>
 		<set name="etcitem_type" val="material"/>
 		<set name="material" val="liquid"/>
 		<set name="weight" val="2"/>
 		<set name="is_stackable" val="true"/>
 	</item>
-	<item id="19441" name="魔靈彈-R級" type="EtcItem">
+	<item id="19441" type="EtcItem" name="마정탄 - R그레이드">
 		<table name="#Desc">上級精靈之光加持於武器，暫時大幅強化魔法的威力。R級武器專用。</table>
 		<set name="icon" val="icon.spiritshot_r_i00"/>
 		<set name="default_action" val="spiritshot"/>
@@ -20,7 +20,7 @@
 		<set name="handler" val="SpiritShot"/>
 		<set name="item_skill" val="9194-1"/>
 	</item>
-	<item id="19442" name="祝福的魔靈彈-R級" type="EtcItem">
+	<item id="19442" type="EtcItem" name="축복받은 마정탄 - R그레이드">
 		<table name="#Desc">上級精靈之光加持於武器，暫時大幅強化魔法的威力。R級武器專用。</table>
 		<set name="icon" val="icon.blessed_spiritshot_r_i00"/>
 		<set name="default_action" val="spiritshot"/>
@@ -33,7 +33,7 @@
 	</item>
 
 	<!-- 箭/弩箭 -->
-	<item id="19443" name="奧里哈魯根弩箭" type="EtcItem">
+	<item id="19443" type="EtcItem" name="오리칼쿰 볼트">
 		<table name="#Desc">用奧里哈魯根合金製成的弩箭。R級弩使用。</table>
 		<set name="icon" val="icon.etc_oricalcum_bolt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -44,7 +44,7 @@
 		<set name="is_stackable" val="true"/>
 	</item>
 
-	<item id="19447" name="祝福的武器強化卷軸-R級" type="EtcItem">
+	<item id="19447" type="EtcItem" name="축복받은 무기 강화 주문서-R그레이드">
 		<table name="#Desc">強化時，R級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升6；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手、弩類武器的物理攻擊力可提升7；弓類武器的攻擊力可提升12；所有武器的魔法攻擊力可提升5。從強化+4開始，大幅提升物理攻擊力/魔法攻擊力。與一般武器相比，祝福的武器在所有層面上都有較大的增幅度。強化失敗時，現有的裝備雖不會被結晶化，但是強化程度會初始化為+0。</table>
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -56,7 +56,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="9187-1"/>
 	</item>
-	<item id="19448" name="祝福的防具強化卷軸-R級" type="EtcItem">
+	<item id="19448" type="EtcItem" name="축복받은 갑옷 강화 주문서-R그레이드">
 		<table name="#Desc">強化時，R級防具或飾品的物理防禦力可提升2，從強化+4開始將大幅提升物理防禦力。至+3為止能安全進行強化。防具強化+4以上時，隨著強化值HP也會提升。強化失敗時，現有的裝備雖不會被結晶化，但是強化程度會初始化為+0。</table>
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -69,7 +69,7 @@
 		<set name="item_skill" val="9196-1"/>
 	</item>
 
-	<item id="19449" name="巨人手鐲" type="Armor">
+	<item id="19449" type="Armor" name="거인의 팔찌">
 		<table name="#Desc">裝備時，可啟用護身符欄位五格。</table>
 		<set name="icon" val="icon.r2_bracelet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -84,7 +84,7 @@
 	</item>
 
 	<!-- BOSS -->
-	<item id="19451" name="伊絲蒂娜戒指" type="Armor">
+	<item id="19451" type="Armor" name="이스티나의 반지">
 		<table name="#Desc">賦予裝備者MP+37、命中能力提升3、致命攻擊率提升54.4、水屬性抗性提升20的效果。即使戴上兩個伊絲蒂娜戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.istina_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -100,7 +100,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="19452" name="伊絲蒂娜耳環" type="Armor">
+	<item id="19452" type="Armor" name="이스티나의 귀걸이">
 		<table name="#Desc">賦予裝備者MP+56、休克抗性提升30%、休克攻擊率提升30%、吸血怒擊、風屬性抗性效果。即使戴上兩個伊絲蒂娜耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.istina_earring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -116,7 +116,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="19453" name="伊絲蒂娜項鍊" type="Armor">
+	<item id="19453" type="Armor" name="이스티나의 목걸이">
 		<table name="#Desc">賦予裝備者MP+74、神聖屬性抗性提升35、技能使用冷卻時間縮短、還擊護盾的效果。</table>
 		<set name="icon" val="icon.istina_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -132,7 +132,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="19454" name="伊絲蒂娜腰帶" type="Armor">
+	<item id="19454" type="Armor" name="이스티나의 벨트">
 		<table name="#Desc">增加HP的恢復、道具欄位擴充6格。</table>
 		<set name="icon" val="icon.istina_belt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -148,7 +148,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19455" name="伊絲蒂娜手鐲" type="Armor">
+	<item id="19455" type="Armor" name="이스티나의 팔찌">
 		<table name="#Desc">MP+216。裝備時，可啟用護身符欄位5格。</table>
 		<set name="icon" val="icon.istina_bracelet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -161,7 +161,7 @@
 			<add order="0x40" stat="maxMp" val="216"/>
 		</for>
 	</item>
-	<item id="19456" name="伊絲蒂娜襯衫" type="Armor">
+	<item id="19456" type="Armor" name="이스티나의 셔츠">
 		<table name="#Desc">增加HP465。</table>
 		<set name="icon" val="icon.istina_shirt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -176,7 +176,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19457" name="歐塔比斯戒指" type="Armor">
+	<item id="19457" type="Armor" name="옥타비스의 반지">
 		<table name="#Desc">賦予裝備者MP+37、致命傷害提升、火屬性抗性提升20的效果。即使戴上兩個歐塔比斯戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.octavis_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -192,7 +192,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="19458" name="歐塔比斯耳環" type="Armor">
+	<item id="19458" type="Armor" name="옥타비스의 귀걸이">
 		<table name="#Desc">賦予裝備者MP+56、束縛/睡眠抗性提升40%、束縛/睡眠攻擊率提升40%、地屬性抗性提升30的效果。即使戴上兩個歐塔比斯耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.octavis_earring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -208,7 +208,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="19459" name="歐塔比斯項鍊" type="Armor">
+	<item id="19459" type="Armor" name="옥타비스의 목걸이">
 		<table name="#Desc">賦予裝備者MP+74、黑暗屬性抗性提升35、物理技能攻擊力增加的效果。</table>
 		<set name="icon" val="icon.octavis_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -224,7 +224,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="19460" name="歐塔比斯腰帶" type="Armor">
+	<item id="19460" type="Armor" name="옥타비스의 벨트">
 		<table name="#Desc">增加MP的恢復、可攜帶的重量增加13000。</table>
 		<set name="icon" val="icon.octavis_belt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -240,7 +240,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19461" name="歐塔比斯手鐲" type="Armor">
+	<item id="19461" type="Armor" name="옥타비스의 팔찌">
 		<table name="#Desc">MP+216。裝備時，可啟用護身符欄位5格。</table>
 		<set name="icon" val="icon.octavis_bracelet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -253,7 +253,7 @@
 			<add order="0x40" stat="maxMp" val="216"/>
 		</for>
 	</item>
-	<item id="19462" name="歐塔比斯襯衫" type="Armor">
+	<item id="19462" type="Armor" name="옥타비스의 셔츠">
 		<table name="#Desc">增加MP247。</table>
 		<set name="icon" val="icon.octavis_shirt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -268,7 +268,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19463" name="祝福的安塔瑞斯耳環" type="Armor">
+	<item id="19463" type="Armor" name="축복받은 안타라스의 귀걸이">
 		<table name="#Desc">賦予裝備者MP+59、出血抗性提升50%、出血攻擊率提升50%、治癒量提升、吸血怒擊、衝擊/精神異常抗性提升40%、衝擊/精神異常攻擊率提升40%、降低物理/魔法技能的MP消耗量、大地屬性防禦提升、神聖屬性防禦提升、CON+3、MEN+3的效果。物理/魔法防禦力提升。可以使用衝擊解除技能，並暫時增加衝擊抗性100%。即使戴上兩個祝福的安塔瑞斯耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00"/>
 		<set name="default_action" val="equip"/>
@@ -284,7 +284,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="19464" name="祝福的巴拉卡斯項鍊" type="Armor">
+	<item id="19464" type="Armor" name="축복받은 발라카스의 목걸이">
 		<table name="#Desc">賦予裝備者HP+625、MP+79、睡眠抗性提升50%、睡眠攻擊率提升50%、縮短物理/魔法技能的使用冷卻時間、野性魔力、還擊護盾、火屬性防禦提升30、黑暗屬性防禦提升20、STR +3、INT +3的效果。物理技能攻擊力提升5%。物理攻擊力提升10%、魔法攻擊力提升20%、可以使用束縛解除技能，並暫時增加束縛抗性100%。</table>
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00"/>
 		<set name="default_action" val="equip"/>
@@ -301,7 +301,7 @@
 		</for>
 	</item>
 
-	<item id="19470" name="永生腰帶" type="Armor">
+	<item id="19470" type="Armor" name="이모탈 벨트">
 		<table name="#Desc">可利用R級魔法古文夾、魔法飾品來附加功能。</table>
 		<set name="icon" val="icon.r1_belt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -316,7 +316,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19471" name="永生手鐲" type="Armor">
+	<item id="19471" type="Armor" name="이모탈 팔찌">
 		<table name="#Desc">MP+187。裝備時，可啟用護身符欄位五格。</table>
 		<set name="icon" val="icon.r1_bracelet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -329,7 +329,7 @@
 			<add order="0x40" stat="maxMp" val="187"/>
 		</for>
 	</item>
-	<item id="19472" name="永生襯衫" type="Armor">
+	<item id="19472" type="Armor" name="이모탈 셔츠">
 		<set name="icon" val="icon.r1_shirt_i00"/>
 		<set name="default_action" val="equip"/>
 		<set name="bodypart" val="underwear"/>
@@ -342,7 +342,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19473" name="煉獄腰帶" type="Armor">
+	<item id="19473" type="Armor" name="헬 벨트">
 		<table name="#Desc">可利用R級魔法古文夾、魔法飾品來附加功能。</table>
 		<set name="icon" val="icon.r2_belt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -357,7 +357,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19474" name="煉獄手鐲" type="Armor">
+	<item id="19474" type="Armor" name="헬 팔찌">
 		<table name="#Desc">MP+204。裝備時，可啟用護身符欄位五格。</table>
 		<set name="icon" val="icon.r2_bracelet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -370,7 +370,7 @@
 			<add order="0x40" stat="maxMp" val="204"/>
 		</for>
 	</item>
-	<item id="19475" name="煉獄襯衫" type="Armor">
+	<item id="19475" type="Armor" name="헬 셔츠">
 		<set name="icon" val="icon.r2_shirt_i00"/>
 		<set name="default_action" val="equip"/>
 		<set name="bodypart" val="underwear"/>
@@ -383,7 +383,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19476" name="卡戴拉腰帶" type="Armor">
+	<item id="19476" type="Armor" name="카데이라 벨트">
 		<table name="#Desc">可利用R95級魔法古文夾、魔法飾品來附加功能。</table>
 		<set name="icon" val="icon.r95_belt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -398,7 +398,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19477" name="卡戴拉手鐲" type="Armor">
+	<item id="19477" type="Armor" name="카데이라 팔찌">
 		<table name="#Desc">MP+216。裝備時，可啟用護身符欄位五格。</table>
 		<set name="icon" val="icon.r95_bracelet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -411,7 +411,7 @@
 			<add order="0x40" stat="maxMp" val="216"/>
 		</for>
 	</item>
-	<item id="19478" name="卡戴拉襯衫" type="Armor">
+	<item id="19478" type="Armor" name="카데이라 셔츠">
 		<set name="icon" val="icon.r95_shirt_i00"/>
 		<set name="default_action" val="equip"/>
 		<set name="bodypart" val="underwear"/>
@@ -424,7 +424,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19479" name="艾迪奧斯腰帶" type="Armor">
+	<item id="19479" type="Armor" name="아이디오스 벨트">
 		<table name="#Desc">可利用R99級魔法古文夾、魔法飾品來附加功能。</table>
 		<set name="icon" val="icon.r991_belt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -439,7 +439,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19480" name="艾迪奧斯手鐲" type="Armor">
+	<item id="19480" type="Armor" name="아이디오스 팔찌">
 		<table name="#Desc">MP+225。裝備時，可啟用護身符欄位五格。</table>
 		<set name="icon" val="icon.r991_bracelet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -452,7 +452,7 @@
 			<add order="0x40" stat="maxMp" val="225"/>
 		</for>
 	</item>
-	<item id="19481" name="艾迪奧斯襯衫" type="Armor">
+	<item id="19481" type="Armor" name="아이디오스 셔츠">
 		<set name="icon" val="icon.r991_shirt_i00"/>
 		<set name="default_action" val="equip"/>
 		<set name="bodypart" val="underwear"/>

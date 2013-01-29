@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="15600" type="Armor" name="Vorpal Gloves">
+	<item id="15600" type="Armor" name="버페스 글로브">
 		<set name="icon" val="icon.armor_t96_g_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -20,7 +20,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15601" type="Armor" name="Vorpal Boots">
+	<item id="15601" type="Armor" name="버페스 부츠">
 		<set name="icon" val="icon.armor_t94_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -40,7 +40,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15602" type="Armor" name="Vorpal Leather Boots">
+	<item id="15602" type="Armor" name="버페스 레더 부츠">
 		<set name="icon" val="icon.armor_t95_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -57,7 +57,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15603" type="Armor" name="Vorpal Shoes">
+	<item id="15603" type="Armor" name="버페스 신발">
 		<set name="icon" val="icon.armor_t96_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -77,7 +77,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15604" type="Armor" name="Vorpal Shield">
+	<item id="15604" type="Armor" name="버페스 쉴드">
 		<set name="icon" val="icon.Evilgate_Shield_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -98,7 +98,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="15605" type="Armor" name="Vorpal Sigil">
+	<item id="15605" type="Armor" name="버페스 시길">
 		<set name="icon" val="icon.belleface_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="sigil" />
@@ -119,7 +119,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15606" type="Armor" name="Moirai Helmet">
+	<item id="15606" type="Armor" name="데스티노 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -139,7 +139,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15607" type="Armor" name="Moirai Leather Helmet">
+	<item id="15607" type="Armor" name="데스티노 가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -156,7 +156,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15608" type="Armor" name="Moirai Circlet">
+	<item id="15608" type="Armor" name="데스티노 서클릿">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -176,7 +176,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15609" type="Armor" name="Moirai Breastplate">
+	<item id="15609" type="Armor" name="데스티노 흉갑">
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -197,7 +197,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15610" type="Armor" name="Moirai Leather Breastplate">
+	<item id="15610" type="Armor" name="데스티노 가죽 흉갑">
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -215,7 +215,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15611" type="Armor" name="Moirai Tunic">
+	<item id="15611" type="Armor" name="데스티노 튜닉">
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -237,7 +237,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15612" type="Armor" name="Moirai Gaiter">
+	<item id="15612" type="Armor" name="데스티노 각반">
 		<set name="icon" val="icon.armor_t100_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -258,7 +258,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15613" type="Armor" name="Moirai Leather Legging">
+	<item id="15613" type="Armor" name="데스티노 레더 레깅스">
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -276,7 +276,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15614" type="Armor" name="Moirai Stockings">
+	<item id="15614" type="Armor" name="데스티노 호즈">
 		<set name="icon" val="icon.armor_t102_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -298,7 +298,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15615" type="Armor" name="Moirai Gauntlet">
+	<item id="15615" type="Armor" name="데스티노 건틀렛">
 		<set name="icon" val="icon.armor_t100_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -318,7 +318,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15616" type="Armor" name="Moirai Leather Gloves">
+	<item id="15616" type="Armor" name="데스티노 레더 글로브">
 		<set name="icon" val="icon.armor_t101_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -335,7 +335,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15617" type="Armor" name="Moirai Gloves">
+	<item id="15617" type="Armor" name="데스티노 글로브">
 		<set name="icon" val="icon.armor_t102_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -355,7 +355,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15618" type="Armor" name="Moirai Boots">
+	<item id="15618" type="Armor" name="데스티노 부츠">
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -375,7 +375,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15619" type="Armor" name="Moirai Leather Boots">
+	<item id="15619" type="Armor" name="데스티노 레더 부츠">
 		<set name="icon" val="icon.armor_t101_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -392,7 +392,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15620" type="Armor" name="Moirai Shoes">
+	<item id="15620" type="Armor" name="데스티노 신발">
 		<set name="icon" val="icon.armor_t102_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -412,7 +412,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15621" type="Armor" name="Moirai Shield">
+	<item id="15621" type="Armor" name="데스티노 쉴드">
 		<set name="icon" val="icon.weapon_tysandy_shield_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -433,7 +433,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="15622" type="Armor" name="Moirai Sigil">
+	<item id="15622" type="Armor" name="데스티노 시길">
 		<set name="icon" val="icon.weapon_tysandy_sigil_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="sigil" />
@@ -454,7 +454,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15623" type="EtcItem" name="Exp">
+	<item id="15623" type="EtcItem" name="경험치">
 		<set name="icon" val="icon.etc_exp_point_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -465,7 +465,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15624" type="EtcItem" name="SP">
+	<item id="15624" type="EtcItem" name="스킬 포인트">
 		<set name="icon" val="icon.etc_sp_point_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -476,7 +476,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15625" type="EtcItem" name="Question Mark">
+	<item id="15625" type="EtcItem" name="보상 시 결정">
 		<set name="icon" val="icon.etc_question_mark_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -487,7 +487,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15626" type="EtcItem" name="Vitality">
+	<item id="15626" type="EtcItem" name="활력 포인트">
 		<set name="icon" val="icon.etc_vitality_point_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -498,7 +498,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15627" type="EtcItem" name="Clan Point">
+	<item id="15627" type="EtcItem" name="혈맹 포인트">
 		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -509,7 +509,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15628" type="EtcItem" name="Gamble Reward">
+	<item id="15628" type="EtcItem" name="도박 보상">
 		<set name="icon" val="icon.etc_quest_game_reward_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -520,7 +520,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15629" type="EtcItem" name="Random Reward">
+	<item id="15629" type="EtcItem" name="랜덤 보상">
 		<set name="icon" val="icon.etc_quest_random_reward_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -531,7 +531,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15630" type="EtcItem" name="Flexible Reward">
+	<item id="15630" type="EtcItem" name="정산형 보상">
 		<set name="icon" val="icon.etc_quest_account_reward_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -542,7 +542,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15631" type="EtcItem" name="Bonus Reward">
+	<item id="15631" type="EtcItem" name="추가 보상">
 		<set name="icon" val="icon.etc_quest_add_reward_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -553,7 +553,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15632" type="EtcItem" name="Sub Class Reward">
+	<item id="15632" type="EtcItem" name="서브 클래스 권한 획득">
 		<set name="icon" val="icon.etc_quest_subclass_reward_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -564,7 +564,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15633" type="EtcItem" name="PK Reduction">
+	<item id="15633" type="EtcItem" name="PK 카운트 하락">
 		<set name="icon" val="icon.etc_quest_pkcount_reward_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
@@ -575,7 +575,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15634" type="EtcItem" name="Vesper Cutter Piece">
+	<item id="15634" type="EtcItem" name="베스페르 커터 조각">
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -584,7 +584,7 @@
 		<set name="price" val="336700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15635" type="EtcItem" name="Vesper Slasher Piece">
+	<item id="15635" type="EtcItem" name="베스페르 슬래셔 조각">
 		<set name="icon" val="icon.etc_vesper_slasher_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -593,7 +593,7 @@
 		<set name="price" val="337300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15636" type="EtcItem" name="Vesper Buster Piece">
+	<item id="15636" type="EtcItem" name="베스페르 버스터 조각">
 		<set name="icon" val="icon.etc_vesper_burster_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -602,7 +602,7 @@
 		<set name="price" val="336700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15637" type="EtcItem" name="Vesper Shaper Piece">
+	<item id="15637" type="EtcItem" name="베스페르 셰이퍼 조각">
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -611,7 +611,7 @@
 		<set name="price" val="336700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15638" type="EtcItem" name="Vesper Fighter Piece">
+	<item id="15638" type="EtcItem" name="베스페르 파이터 조각">
 		<set name="icon" val="icon.etc_vesper_fighter_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -620,7 +620,7 @@
 		<set name="price" val="339600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15639" type="EtcItem" name="Vesper Stormer Piece">
+	<item id="15639" type="EtcItem" name="베스페르 스토머 조각">
 		<set name="icon" val="icon.etc_vesper_stormer_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -629,7 +629,7 @@
 		<set name="price" val="335700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15640" type="EtcItem" name="Vesper Avenger Piece">
+	<item id="15640" type="EtcItem" name="베스페르 어벤져 조각">
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -638,7 +638,7 @@
 		<set name="price" val="339600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15641" type="EtcItem" name="Vesper Retributer Piece">
+	<item id="15641" type="EtcItem" name="베스페르 레트리뷰터 조각">
 		<set name="icon" val="icon.etc_vesper_retributer_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -647,7 +647,7 @@
 		<set name="price" val="335700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15642" type="EtcItem" name="Vesper Caster Piece">
+	<item id="15642" type="EtcItem" name="베스페르 캐스터 조각">
 		<set name="icon" val="icon.etc_vesper_caster_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -656,7 +656,7 @@
 		<set name="price" val="339600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15643" type="EtcItem" name="Vesper Singer Piece">
+	<item id="15643" type="EtcItem" name="베스페르 싱어 조각">
 		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -665,7 +665,7 @@
 		<set name="price" val="338700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15644" type="EtcItem" name="Vesper Thrower Piece">
+	<item id="15644" type="EtcItem" name="베스페르 스로워 조각">
 		<set name="icon" val="icon.etc_vesper_thrower_piece_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -674,7 +674,7 @@
 		<set name="price" val="335300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15645" type="EtcItem" name="Sealed Moirai Helmet Piece">
+	<item id="15645" type="EtcItem" name="봉인된 데스티노 헬멧 조각">
 		<set name="icon" val="icon.etc_sealed_blluelycan_helmet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -683,7 +683,7 @@
 		<set name="price" val="33700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15646" type="EtcItem" name="Sealed Moirai Leather Helmet Piece">
+	<item id="15646" type="EtcItem" name="봉인된 데스티노 가죽 헬멧 조각">
 		<set name="icon" val="icon.etc_sealed_blluelycan_leather_helmet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -692,7 +692,7 @@
 		<set name="price" val="33700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15647" type="EtcItem" name="Sealed Moirai Circlet Piece">
+	<item id="15647" type="EtcItem" name="봉인된 데스티노 서클릿 조각">
 		<set name="icon" val="icon.etc_sealed_blluelycan_circlet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -701,7 +701,7 @@
 		<set name="price" val="33700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15648" type="EtcItem" name="Sealed Moirai Breastplate Piece">
+	<item id="15648" type="EtcItem" name="봉인된 데스티노 흉갑 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_cuirass_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -710,7 +710,7 @@
 		<set name="price" val="84300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15649" type="EtcItem" name="Sealed Moirai Leather Breastplate Piece">
+	<item id="15649" type="EtcItem" name="봉인된 데스티노 가죽 흉갑 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_houberk_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -719,7 +719,7 @@
 		<set name="price" val="62300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15650" type="EtcItem" name="Sealed Moirai Tunic Piece">
+	<item id="15650" type="EtcItem" name="봉인된 데스티노 튜닉 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_jaket_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -728,7 +728,7 @@
 		<set name="price" val="62300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15651" type="EtcItem" name="Sealed Moirai Gaiter Piece">
+	<item id="15651" type="EtcItem" name="봉인된 데스티노 각반 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_gaiter_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -737,7 +737,7 @@
 		<set name="price" val="50300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15652" type="EtcItem" name="Sealed Moirai Leather Legging Piece">
+	<item id="15652" type="EtcItem" name="봉인된 데스티노 레더 레깅스 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_legging_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -746,7 +746,7 @@
 		<set name="price" val="38400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15653" type="EtcItem" name="Sealed Moirai Stockings Piece">
+	<item id="15653" type="EtcItem" name="봉인된 데스티노 호즈 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_hose_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -755,7 +755,7 @@
 		<set name="price" val="38400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15654" type="EtcItem" name="Sealed Moirai Gauntlet Piece">
+	<item id="15654" type="EtcItem" name="봉인된 데스티노 건틀렛 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_gauntlet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -764,7 +764,7 @@
 		<set name="price" val="22400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15655" type="EtcItem" name="Sealed Moirai Leather Gloves Piece">
+	<item id="15655" type="EtcItem" name="봉인된 데스티노 레더 글로브 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_gloves_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -773,7 +773,7 @@
 		<set name="price" val="22400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15656" type="EtcItem" name="Sealed Moirai Gloves Piece">
+	<item id="15656" type="EtcItem" name="봉인된 데스티노 글로브 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_gloves_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -782,7 +782,7 @@
 		<set name="price" val="22400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15657" type="EtcItem" name="Sealed Moirai Boots Piece">
+	<item id="15657" type="EtcItem" name="봉인된 데스티노 부츠 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_boots_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -791,7 +791,7 @@
 		<set name="price" val="22400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15658" type="EtcItem" name="Sealed Moirai Leather Boots Piece">
+	<item id="15658" type="EtcItem" name="봉인된 데스티노 레더 부츠 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_boots_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -800,7 +800,7 @@
 		<set name="price" val="22400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15659" type="EtcItem" name="Sealed Moirai Shoes Piece">
+	<item id="15659" type="EtcItem" name="봉인된 데스티노 신발 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_shoes_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -809,7 +809,7 @@
 		<set name="price" val="22400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15660" type="EtcItem" name="Sealed Vesper Helmet Piece">
+	<item id="15660" type="EtcItem" name="봉인된 베스페르 헬멧 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_helmet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -818,7 +818,7 @@
 		<set name="price" val="43600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15661" type="EtcItem" name="Sealed Vesper Leather Helmet Piece">
+	<item id="15661" type="EtcItem" name="봉인된 베스페르 가죽 헬멧 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_helmet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -827,7 +827,7 @@
 		<set name="price" val="43600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15662" type="EtcItem" name="Sealed Vesper Circlet Piece">
+	<item id="15662" type="EtcItem" name="봉인된 베스페르 서클릿 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_circlet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -836,7 +836,7 @@
 		<set name="price" val="43600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15663" type="EtcItem" name="Sealed Vesper Breastplate Piece">
+	<item id="15663" type="EtcItem" name="봉인된 베스페르 흉갑 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_cuirass_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -845,7 +845,7 @@
 		<set name="price" val="110500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15664" type="EtcItem" name="Sealed Vesper Leather Breastplate Piece">
+	<item id="15664" type="EtcItem" name="봉인된 베스페르 가죽 흉갑 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_houberk_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -854,7 +854,7 @@
 		<set name="price" val="84300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15665" type="EtcItem" name="Sealed Vesper Tunic Piece">
+	<item id="15665" type="EtcItem" name="봉인된 베스페르 튜닉 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_jaket_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -863,7 +863,7 @@
 		<set name="price" val="84300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15666" type="EtcItem" name="Sealed Vesper Gaiter Piece">
+	<item id="15666" type="EtcItem" name="봉인된 베스페르 각반 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_gaiter_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -872,7 +872,7 @@
 		<set name="price" val="68600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15667" type="EtcItem" name="Sealed Vesper Gauntlet Piece">
+	<item id="15667" type="EtcItem" name="봉인된 베스페르 건틀렛 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_gauntlet_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -881,7 +881,7 @@
 		<set name="price" val="26100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15668" type="EtcItem" name="Sealed Vesper Boots Piece">
+	<item id="15668" type="EtcItem" name="봉인된 베스페르 부츠 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_boots_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -890,7 +890,7 @@
 		<set name="price" val="26100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15669" type="EtcItem" name="Sealed Vesper Verteidiger Piece">
+	<item id="15669" type="EtcItem" name="봉인된 베스페르 쉴드 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_verteidiger_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -899,7 +899,7 @@
 		<set name="price" val="29500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15670" type="EtcItem" name="Sealed Vesper Leather Legging Piece">
+	<item id="15670" type="EtcItem" name="봉인된 베스페르 레더 레깅스 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_legging_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -908,7 +908,7 @@
 		<set name="price" val="54700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15671" type="EtcItem" name="Sealed Vesper Leather Gloves Piece">
+	<item id="15671" type="EtcItem" name="봉인된 베스페르 레더 글로브 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_gloves_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -917,7 +917,7 @@
 		<set name="price" val="26100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15672" type="EtcItem" name="Sealed Vesper Leather Boots Piece">
+	<item id="15672" type="EtcItem" name="봉인된 베스페르 레더 부츠 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_leather_boots_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -926,7 +926,7 @@
 		<set name="price" val="26100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15673" type="EtcItem" name="Sealed Vesper Stockings Piece">
+	<item id="15673" type="EtcItem" name="봉인된 베스페르 호즈 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_hose_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -935,7 +935,7 @@
 		<set name="price" val="54700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15674" type="EtcItem" name="Sealed Vesper Gloves Piece">
+	<item id="15674" type="EtcItem" name="봉인된 베스페르 글로브 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_gloves_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -944,7 +944,7 @@
 		<set name="price" val="26100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15675" type="EtcItem" name="Sealed Vesper Shoes Piece">
+	<item id="15675" type="EtcItem" name="봉인된 베스페르 신발 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_shoes_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -953,7 +953,7 @@
 		<set name="price" val="26100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15676" type="Weapon" name="Triumph Blade">
+	<item id="15676" type="Weapon" name="타이샌디 소드">
 		<set name="icon" val="icon.weapon_tysandy_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -980,7 +980,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15677" type="Weapon" name="Triumph Dagger">
+	<item id="15677" type="Weapon" name="타이샌디 나이프">
 		<set name="icon" val="icon.weapon_tysandy_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1007,7 +1007,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="15678" type="Weapon" name="Triumph Hammer">
+	<item id="15678" type="Weapon" name="타이샌디 커젤">
 		<set name="icon" val="icon.weapon_tysandy_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1034,7 +1034,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15679" type="Weapon" name="Triumph Crusher">
+	<item id="15679" type="Weapon" name="타이샌디 크러셔">
 		<set name="icon" val="icon.weapon_tysandy_crusher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1061,7 +1061,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15680" type="Weapon" name="Triumph Two Hand Sword">
+	<item id="15680" type="Weapon" name="타이샌디 블레이드">
 		<set name="icon" val="icon.weapon_tysandy_two_hand_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1088,7 +1088,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15681" type="Weapon" name="Triumph Jamadhr">
+	<item id="15681" type="Weapon" name="타이샌디 바그나우">
 		<set name="icon" val="icon.weapon_tysandy_jamadhr_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1115,7 +1115,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15682" type="Weapon" name="Triumph Spear">
+	<item id="15682" type="Weapon" name="타이샌디 핼버드">
 		<set name="icon" val="icon.weapon_tysandy_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1143,7 +1143,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15683" type="Weapon" name="Triumph Staff">
+	<item id="15683" type="Weapon" name="타이샌디 메이스">
 		<set name="icon" val="icon.weapon_tysandy_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1170,7 +1170,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15684" type="Weapon" name="Triumph Two Hand Staff">
+	<item id="15684" type="Weapon" name="타이샌디 스태프">
 		<set name="icon" val="icon.weapon_tysandy_twohand_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1197,7 +1197,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="15685" type="Weapon" name="Triumph Magic Sword">
+	<item id="15685" type="Weapon" name="타이샌디 팬텀">
 		<set name="icon" val="icon.weapon_tysandy_magic_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1223,7 +1223,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="15686" type="Weapon" name="Triumph Bow">
+	<item id="15686" type="Weapon" name="타이샌디 보우">
 		<set name="icon" val="icon.weapon_tysandy_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1253,7 +1253,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="15687" type="Weapon" name="Triumph Rapier">
+	<item id="15687" type="Weapon" name="타이샌디 레이피어">
 		<set name="icon" val="icon.weapon_tysandy_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1288,7 +1288,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="15688" type="Weapon" name="Triumph Ancientsword">
+	<item id="15688" type="Weapon" name="타이샌디 고대검">
 		<set name="icon" val="icon.weapon_tysandy_ancient_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1319,7 +1319,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="15689" type="Weapon" name="Triumph Crossbow">
+	<item id="15689" type="Weapon" name="타이샌디 크로스보우">
 		<set name="icon" val="icon.seapon_tysandy_crossbow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1351,7 +1351,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="15690" type="EtcItem" name="Secret Key">
+	<item id="15690" type="EtcItem" name="비밀의 열쇠">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="crystal" />
@@ -1360,7 +1360,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="9076-1" />
 	</item>
-	<item id="15691" type="EtcItem" name="Sealed Vesper Sigil Piece">
+	<item id="15691" type="EtcItem" name="봉인된 베스페르 시길 조각">
 		<set name="icon" val="icon.etc_sealed_vesper_sigil_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -1369,7 +1369,7 @@
 		<set name="price" val="29500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15692" type="EtcItem" name="Sealed Moirai Sigil Piece">
+	<item id="15692" type="EtcItem" name="봉인된 데스티노 시길 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_sigil_piece_I00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -1378,7 +1378,7 @@
 		<set name="price" val="18800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15693" type="EtcItem" name="Sealed Moirai Shield Piece">
+	<item id="15693" type="EtcItem" name="봉인된 데스티노 쉴드 조각">
 		<set name="icon" val="icon.etc_sealed_bluelycan_shield_piece_I01" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -1387,7 +1387,7 @@
 		<set name="price" val="18800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="15694" type="Armor" name="Sealed Moirai Helmet">
+	<item id="15694" type="Armor" name="봉인된 데스티노 헬멧">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1407,7 +1407,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15695" type="Armor" name="Sealed Moirai Leather Helmet">
+	<item id="15695" type="Armor" name="봉인된 데스티노 가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1424,7 +1424,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15696" type="Armor" name="Sealed Moirai Circlet">
+	<item id="15696" type="Armor" name="봉인된 데스티노 서클릿">
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1444,7 +1444,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15697" type="Armor" name="Sealed Moirai Breastplate">
+	<item id="15697" type="Armor" name="봉인된 데스티노 흉갑">
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1465,7 +1465,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15698" type="Armor" name="Sealed Moirai Leather Breastplate">
+	<item id="15698" type="Armor" name="봉인된 데스티노 가죽 흉갑">
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1483,7 +1483,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="15699" type="Armor" name="Sealed Moirai Tunic">
+	<item id="15699" type="Armor" name="봉인된 데스티노 튜닉">
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />

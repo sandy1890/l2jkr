@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8100" type="EtcItem" name="Destroyed Golem Shards">
+	<item id="8100" type="EtcItem" name="부서진 골렘의 파편">
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8101" type="EtcItem" name="Dwarf's Favor">
+	<item id="8101" type="EtcItem" name="드워프의 부탁">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -21,7 +21,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8102" type="Weapon" name="Pa'agrian Sword - Focus">
+	<item id="8102" type="Weapon" name="소드 오브 파아그리오 포커스">
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -49,7 +49,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8103" type="Weapon" name="Pa'agrian Sword - Health">
+	<item id="8103" type="Weapon" name="소드 오브 파아그리오 헬스">
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -77,7 +77,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8104" type="Weapon" name="Pa'agrian Sword - Critical Drain">
+	<item id="8104" type="Weapon" name="소드 오브 파아그리오 Crt.드레인">
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -106,7 +106,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8105" type="Weapon" name="Guardian Sword - Critical Drain">
+	<item id="8105" type="Weapon" name="가디언스 소드 Crt.드레인">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -135,7 +135,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8106" type="Weapon" name="Guardian Sword - Health">
+	<item id="8106" type="Weapon" name="가디언스 소드 헬스">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -163,7 +163,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8107" type="Weapon" name="Guardian Sword - Critical Bleed">
+	<item id="8107" type="Weapon" name="가디언스 소드 Crt.블리드">
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -192,7 +192,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8108" type="Weapon" name="Infernal Master - Haste">
+	<item id="8108" type="Weapon" name="인페르노 마스터 헤이스트">
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -220,7 +220,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8109" type="Weapon" name="Infernal Master - Critical Damage">
+	<item id="8109" type="Weapon" name="인페르노 마스터 Crt.대미지">
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -248,7 +248,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8110" type="Weapon" name="Infernal Master - Focus">
+	<item id="8110" type="Weapon" name="인페르노 마스터 포커스">
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -276,7 +276,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8111" type="Weapon" name="Mysterious Sword - Acumen">
+	<item id="8111" type="Weapon" name="미스터리 소드 아큐멘">
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -304,7 +304,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8112" type="Weapon" name="Mysterious Sword - M. Atk.">
+	<item id="8112" type="Weapon" name="미스터리 소드 매직파워">
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -332,7 +332,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8113" type="Weapon" name="Mysterious Sword - Magic Weakness">
+	<item id="8113" type="Weapon" name="미스터리 소드 매직위크니스">
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -361,7 +361,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8114" type="Weapon" name="Ecliptic Sword - Empower">
+	<item id="8114" type="Weapon" name="소드 오브 이클립스 엠파워">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -389,7 +389,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8115" type="Weapon" name="Ecliptic Sword - M. Atk.">
+	<item id="8115" type="Weapon" name="소드 오브 이클립스 매직파워">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -417,7 +417,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8116" type="Weapon" name="Ecliptic Sword - Magic Silence">
+	<item id="8116" type="Weapon" name="소드 오브 이클립스 매직사일런스">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -446,7 +446,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8117" type="Weapon" name="Wizard's Tear - Acumen">
+	<item id="8117" type="Weapon" name="티어스 오브 위자드 아큐멘">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -474,7 +474,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8118" type="Weapon" name="Wizard's Tear - M. Atk.">
+	<item id="8118" type="Weapon" name="티어스 오브 위자드 매직파워">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -502,7 +502,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8119" type="Weapon" name="Wizard's Tear - Conversion">
+	<item id="8119" type="Weapon" name="티어스 오브 위자드 업다운">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -530,7 +530,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8120" type="Weapon" name="Dwarven Hammer - Health">
+	<item id="8120" type="Weapon" name="드워븐 해머 헬스">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -558,7 +558,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8121" type="Weapon" name="Dwarven Hammer - Anger">
+	<item id="8121" type="Weapon" name="드워븐 해머 앵거">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -586,7 +586,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8122" type="Weapon" name="Dwarven Hammer - Critical Bleed">
+	<item id="8122" type="Weapon" name="드워븐 해머 Crt.블리드">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -615,7 +615,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8123" type="Weapon" name="Karik Horn - Focus">
+	<item id="8123" type="Weapon" name="카리크의 뿔 포커스">
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -643,7 +643,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8124" type="Weapon" name="Karik Horn - Haste">
+	<item id="8124" type="Weapon" name="카리크의 뿔 헤이스트">
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -671,7 +671,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8125" type="Weapon" name="Karik Horn - Critical Drain">
+	<item id="8125" type="Weapon" name="카리크의 뿔 Crt.드레인">
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -700,7 +700,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8126" type="Weapon" name="Destroyer Hammer - Health">
+	<item id="8126" type="Weapon" name="파괴자의 망치 헬스">
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -728,7 +728,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8127" type="Weapon" name="Destroyer Hammer - Haste">
+	<item id="8127" type="Weapon" name="파괴자의 망치 헤이스트">
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -756,7 +756,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8128" type="Weapon" name="Destroyer Hammer - Critical Drain">
+	<item id="8128" type="Weapon" name="파괴자의 망치 Crt.드레인">
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -786,7 +786,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8129" type="Weapon" name="Ice Storm Hammer - Focus">
+	<item id="8129" type="Weapon" name="아이스 스톰 해머 포커스">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -814,7 +814,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8130" type="Weapon" name="Ice Storm Hammer - Anger">
+	<item id="8130" type="Weapon" name="아이스 스톰 해머 앵거">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -842,7 +842,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8131" type="Weapon" name="Ice Storm Hammer - Critical Bleed">
+	<item id="8131" type="Weapon" name="아이스 스톰 해머 Crt.블리드">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -871,7 +871,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8132" type="Weapon" name="Star Buster - Health">
+	<item id="8132" type="Weapon" name="스타 버스터 헬스">
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -899,7 +899,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8133" type="Weapon" name="Star Buster - Haste">
+	<item id="8133" type="Weapon" name="스타 버스터 헤이스트">
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -927,7 +927,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8134" type="Weapon" name="Star Buster - Rsk. Focus">
+	<item id="8134" type="Weapon" name="스타 버스터 Rsk. 포커스">
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -955,7 +955,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8135" type="Weapon" name="Doom Crusher - Health">
+	<item id="8135" type="Weapon" name="둠 크러셔 헬스">
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -983,7 +983,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8136" type="Weapon" name="Doom Crusher - Anger">
+	<item id="8136" type="Weapon" name="둠 크러셔 앵거">
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1011,7 +1011,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8137" type="Weapon" name="Doom Crusher - Rsk. Haste">
+	<item id="8137" type="Weapon" name="둠 크러셔 Rsk. 헤이스트">
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1039,7 +1039,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8138" type="Weapon" name="Ecliptic Axe - Conversion">
+	<item id="8138" type="Weapon" name="이클립스 액스 업다운">
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1068,7 +1068,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8139" type="Weapon" name="Ecliptic Axe - M. Atk.">
+	<item id="8139" type="Weapon" name="이클립스 액스 매직파워">
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1097,7 +1097,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8140" type="Weapon" name="Ecliptic Axe - Magic Hold">
+	<item id="8140" type="Weapon" name="이클립스 액스 매직홀드">
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1127,7 +1127,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8141" type="Weapon" name="Spell Breaker - Acumen">
+	<item id="8141" type="Weapon" name="스펠 브레이커 아큐멘">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1156,7 +1156,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8142" type="Weapon" name="Spell Breaker - Mental Shield">
+	<item id="8142" type="Weapon" name="스펠 브레이커 매직멘탈실드">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1186,7 +1186,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8143" type="Weapon" name="Spell Breaker - Magic Hold">
+	<item id="8143" type="Weapon" name="스펠 브레이커 매직홀드">
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1216,7 +1216,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8144" type="Weapon" name="Kaim Vanul's Bones - Mana Up">
+	<item id="8144" type="Weapon" name="카임 바눌의 뼈 마나업">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1245,7 +1245,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8145" type="Weapon" name="Kaim Vanul's Bones - Magic Silence">
+	<item id="8145" type="Weapon" name="카임 바눌의 뼈 매직사일런스">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1275,7 +1275,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8146" type="Weapon" name="Kaim Vanul's Bones - Conversion">
+	<item id="8146" type="Weapon" name="카임 바눌의 뼈 업다운">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1304,7 +1304,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8147" type="Weapon" name="Spiritual Eye - Mana Up">
+	<item id="8147" type="Weapon" name="영혼의 눈 마나업">
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1333,7 +1333,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8148" type="Weapon" name="Spiritual Eye - Magic Poison">
+	<item id="8148" type="Weapon" name="영혼의 눈 매직포이즌">
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1364,7 +1364,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8149" type="Weapon" name="Spiritual Eye - Acumen">
+	<item id="8149" type="Weapon" name="영혼의 눈 아큐멘">
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1393,7 +1393,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8150" type="Weapon" name="Flaming Dragon Skull - Acumen">
+	<item id="8150" type="Weapon" name="드래곤 플레임 헤드 아큐멘">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1422,7 +1422,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8151" type="Weapon" name="Flaming Dragon Skull - M. Atk.">
+	<item id="8151" type="Weapon" name="드래곤 플레임 헤드 매직파워">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1451,7 +1451,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8152" type="Weapon" name="Flaming Dragon Skull - Magic Silence">
+	<item id="8152" type="Weapon" name="드래곤 플레임 헤드 매직사일런스">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1482,14 +1482,14 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8153" type="EtcItem" name="Adventurer's Guide Book">
+	<item id="8153" type="EtcItem" name="모험자 가이드 북">
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="default_action" val="show_adventurer_guide_book" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="2000" />
 	</item>
-	<item id="8154" type="EtcItem" name="Herb of Life">
+	<item id="8154" type="EtcItem" name="생명의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -1497,7 +1497,7 @@
 		<set name="item_skill" val="2244-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8155" type="EtcItem" name="Herb of Mana">
+	<item id="8155" type="EtcItem" name="마나의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -1505,7 +1505,7 @@
 		<set name="item_skill" val="2245-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8156" type="EtcItem" name="Herb of Power">
+	<item id="8156" type="EtcItem" name="힘의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -1513,7 +1513,7 @@
 		<set name="item_skill" val="2246-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8157" type="EtcItem" name="Herb of Magic">
+	<item id="8157" type="EtcItem" name="마력의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -1521,138 +1521,138 @@
 		<set name="item_skill" val="2247-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8158" type="EtcItem" name="Memento Mori (C-Grade)">
+	<item id="8158" type="EtcItem" name="사신의 해골 - C그레이드">
 		<set name="icon" val="icon.etc_raid_a_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8159" type="EtcItem" name="Memento Mori (B-Grade)">
+	<item id="8159" type="EtcItem" name="사신의 해골 - B그레이드">
 		<set name="icon" val="icon.etc_raid_a_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8160" type="EtcItem" name="Memento Mori (A-Grade)">
+	<item id="8160" type="EtcItem" name="사신의 해골 - A그레이드">
 		<set name="icon" val="icon.etc_raid_a_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8161" type="EtcItem" name="Dragon Heart (C-Grade)">
+	<item id="8161" type="EtcItem" name="용의 심장 - C그레이드">
 		<set name="icon" val="icon.etc_raid_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8162" type="EtcItem" name="Dragon Heart (B-Grade)">
+	<item id="8162" type="EtcItem" name="용의 심장 - B그레이드">
 		<set name="icon" val="icon.etc_raid_b_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8163" type="EtcItem" name="Dragon Heart (A-Grade)">
+	<item id="8163" type="EtcItem" name="용의 심장 - A그레이드">
 		<set name="icon" val="icon.etc_raid_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8164" type="EtcItem" name="Earth Egg (C-Grade)">
+	<item id="8164" type="EtcItem" name="대지의 알 - C그레이드">
 		<set name="icon" val="icon.etc_raid_c_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8165" type="EtcItem" name="Earth Egg (B-Grade)">
+	<item id="8165" type="EtcItem" name="대지의 알 - B그레이드">
 		<set name="icon" val="icon.etc_raid_c_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8166" type="EtcItem" name="Earth Egg (A-Grade)">
+	<item id="8166" type="EtcItem" name="대지의 알 - A그레이드">
 		<set name="icon" val="icon.etc_raid_c_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8167" type="EtcItem" name="Nonliving Nucleus (C-Grade)">
+	<item id="8167" type="EtcItem" name="거짓 생명의 핵 - C그레이드">
 		<set name="icon" val="icon.etc_raid_d_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8168" type="EtcItem" name="Nonliving Nucleus (B-Grade)">
+	<item id="8168" type="EtcItem" name="거짓 생명의 핵 - B그레이드">
 		<set name="icon" val="icon.etc_raid_d_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8169" type="EtcItem" name="Nonliving Nucleus (A-Grade)">
+	<item id="8169" type="EtcItem" name="거짓 생명의 핵 - A그레이드">
 		<set name="icon" val="icon.etc_raid_d_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8170" type="EtcItem" name="Angelic Essence (C-Grade)">
+	<item id="8170" type="EtcItem" name="천사의 영혼 - C그레이드">
 		<set name="icon" val="icon.etc_raid_e_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8171" type="EtcItem" name="Angelic Essence (B-Grade)">
+	<item id="8171" type="EtcItem" name="천사의 영혼 - B그레이드">
 		<set name="icon" val="icon.etc_raid_e_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8172" type="EtcItem" name="Angelic Essence (A-Grade)">
+	<item id="8172" type="EtcItem" name="천사의 영혼 - A그레이드">
 		<set name="icon" val="icon.etc_raid_e_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8173" type="EtcItem" name="Cradle of Creation (C-Grade) (Not In Use)">
+	<item id="8173" type="EtcItem" name="창조의 요람 - C그레이드(안씀)">
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8174" type="EtcItem" name="Cradle of Creation (B-Grade) (Not In Use)">
+	<item id="8174" type="EtcItem" name="창조의 요람 - B그레이드(안씀)">
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8175" type="EtcItem" name="Cradle of Creation">
+	<item id="8175" type="EtcItem" name="창조의 요람">
 		<set name="icon" val="icon.etc_raid_g_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8176" type="EtcItem" name="Destruction Tombstone">
+	<item id="8176" type="EtcItem" name="파멸의 묘비">
 		<set name="icon" val="icon.etc_raid_f_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8177" type="Armor" name="Raid Challenger's Circlet">
+	<item id="8177" type="Armor" name="레이드 도전자의 서클릿">
 		<set name="icon" val="icon.accessory_raid_challenger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1661,7 +1661,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8178" type="Armor" name="Raid Adventurer's Circlet">
+	<item id="8178" type="Armor" name="레이드 탐험가의 서클릿">
 		<set name="icon" val="icon.accessory_raid_explorer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1670,7 +1670,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8179" type="Armor" name="Raid Master's Circlet">
+	<item id="8179" type="Armor" name="레이드 마스터의 서클릿">
 		<set name="icon" val="icon.accessory_raid_master_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1679,7 +1679,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8180" type="Armor" name="Circlet of Ice Fairy Sirra">
+	<item id="8180" type="Armor" name="얼음 요정 시르의 서클릿">
 		<set name="icon" val="icon.accessory_ice_queen_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1688,7 +1688,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8181" type="Armor" name="Academy Circlet">
+	<item id="8181" type="Armor" name="아카데미의 서클릿">
 		<set name="icon" val="icon.accessory_academy_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1701,7 +1701,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 	</item>
-	<item id="8182" type="Armor" name="Circlet of Rune">
+	<item id="8182" type="Armor" name="루운의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1722,7 +1722,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="8183" type="Armor" name="Circlet of Schuttgart">
+	<item id="8183" type="Armor" name="슈트가르트의 서클릿">
 		<set name="icon" val="icon.accessory_pledge_cap1_i07" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -1743,7 +1743,7 @@
 			</and>
 		</cond>
 	</item>
-	<item id="8184" type="Armor" name="Party Hat">
+	<item id="8184" type="Armor" name="꼬깔모자">
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1752,7 +1752,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="8185" type="Armor" name="Feathered Hat">
+	<item id="8185" type="Armor" name="멋쟁이의 샤프롱">
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1761,7 +1761,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="8186" type="Armor" name="Artisan's Goggles">
+	<item id="8186" type="Armor" name="장인의 고글">
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1770,7 +1770,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="8187" type="Armor" name="Demon Horns">
+	<item id="8187" type="Armor" name="승리의 붉은 뿔">
 		<set name="icon" val="icon.accessory_hair_cornu_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -1778,7 +1778,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="8188" type="Armor" name="Little Angel Wings">
+	<item id="8188" type="Armor" name="작은 천사 날개">
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -1787,7 +1787,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8189" type="Armor" name="Fairy Antennae">
+	<item id="8189" type="Armor" name="페어리의 더듬이">
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -1796,7 +1796,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="500000" />
 	</item>
-	<item id="8190" type="Weapon" name="Demonic Sword Zariche">
+	<item id="8190" type="Weapon" name="마검 자리체">
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
@@ -1823,7 +1823,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8191" type="Armor" name="Necklace of Frintezza">
+	<item id="8191" type="Armor" name="프린테사의 목걸이">
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -1841,7 +1841,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="8192" type="EtcItem" name="Soul Breaking Arrow">
+	<item id="8192" type="EtcItem" name="파혼의 화살">
 		<set name="icon" val="icon.etc_destory_soul_arrow_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="gold" />
@@ -1852,7 +1852,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2234-1" />
 	</item>
-	<item id="8193" type="EtcItem" name="Fisherman's Potion - Green">
+	<item id="8193" type="EtcItem" name="낚시꾼의 물약 - 녹색">
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -1864,7 +1864,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2274-1" />
 	</item>
-	<item id="8194" type="EtcItem" name="Fisherman's Potion - Jade">
+	<item id="8194" type="EtcItem" name="낚시꾼의 물약 - 옥색">
 		<set name="icon" val="icon.etc_oblivion_jade_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -1876,7 +1876,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2274-2" />
 	</item>
-	<item id="8195" type="EtcItem" name="Fisherman's Potion - Blue">
+	<item id="8195" type="EtcItem" name="낚시꾼의 물약 - 청색">
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -1888,7 +1888,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2274-3" />
 	</item>
-	<item id="8196" type="EtcItem" name="Fisherman's Potion - Yellow">
+	<item id="8196" type="EtcItem" name="낚시꾼의 물약 - 황색">
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -1900,7 +1900,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2274-4" />
 	</item>
-	<item id="8197" type="EtcItem" name="Fisherman's Potion - Orange">
+	<item id="8197" type="EtcItem" name="낚시꾼의 물약 - 주황색">
 		<set name="icon" val="icon.etc_oblivion_orange_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -1912,7 +1912,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2274-5" />
 	</item>
-	<item id="8198" type="EtcItem" name="Fisherman's Potion - Purple">
+	<item id="8198" type="EtcItem" name="낚시꾼의 물약 - 보라색">
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -1924,7 +1924,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2274-6" />
 	</item>
-	<item id="8199" type="EtcItem" name="Fisherman's Potion - Red">
+	<item id="8199" type="EtcItem" name="낚시꾼의 물약 - 붉은색">
 		<set name="icon" val="icon.etc_oblivion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />

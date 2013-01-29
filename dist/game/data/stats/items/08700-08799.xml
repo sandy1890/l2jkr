@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8700" type="EtcItem" name="Recipe: Tiphon's Spear (60%)">
+	<item id="8700" type="EtcItem" name="레시피 : 타이폰 스피어(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8701" type="EtcItem" name="Recipe: Tiphon's Spear (100%)">
+	<item id="8701" type="EtcItem" name="레시피 : 타이폰 스피어(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -24,7 +24,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8702" type="EtcItem" name="Recipe: Shyeed's Bow (60%)">
+	<item id="8702" type="EtcItem" name="레시피 : 샤이드 보우(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8703" type="EtcItem" name="Recipe: Shyeed's Bow (100%)">
+	<item id="8703" type="EtcItem" name="레시피 : 샤이드 보우(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -48,7 +48,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8704" type="EtcItem" name="Recipe: Sobekk's Hurricane (60%)">
+	<item id="8704" type="EtcItem" name="레시피 : 소베크 허리케인(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8705" type="EtcItem" name="Recipe: Sobekk's Hurricane (100%)">
+	<item id="8705" type="EtcItem" name="레시피 : 소베크 허리케인(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -72,7 +72,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8706" type="EtcItem" name="Recipe: Themis' Tongue (60%)">
+	<item id="8706" type="EtcItem" name="레시피 : 테미스의 혀(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -84,7 +84,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8707" type="EtcItem" name="Recipe: Themis' Tongue (100%)">
+	<item id="8707" type="EtcItem" name="레시피 : 테미스의 혀(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -96,7 +96,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8708" type="EtcItem" name="Recipe: Cabrio's Hand (60%)">
+	<item id="8708" type="EtcItem" name="레시피 : 핸드 오브 카브리오(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8709" type="EtcItem" name="Recipe: Cabrio's Hand (100%)">
+	<item id="8709" type="EtcItem" name="레시피 : 핸드 오브 카브리오(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -120,7 +120,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8710" type="EtcItem" name="Recipe: Daimon Crystal (60%)">
+	<item id="8710" type="EtcItem" name="레시피 : 데이몬의 결정(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -132,7 +132,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8711" type="EtcItem" name="Recipe: Daimon Crystal (100%)">
+	<item id="8711" type="EtcItem" name="레시피 : 데이몬의 결정(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -144,7 +144,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8712" type="EtcItem" name="Sirra's Blade Edge">
+	<item id="8712" type="EtcItem" name="시르 블레이드 검신">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -153,7 +153,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8713" type="EtcItem" name="Sword of Ipos Blade">
+	<item id="8713" type="EtcItem" name="소드 오브 이포스 검신">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -162,7 +162,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8714" type="EtcItem" name="Barakiel's Axe Piece">
+	<item id="8714" type="EtcItem" name="바라키엘 엑스 조각">
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -171,7 +171,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8715" type="EtcItem" name="Behemoth's Tuning Fork Piece">
+	<item id="8715" type="EtcItem" name="베헤모스의 소리굽쇠 조각">
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -180,7 +180,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8716" type="EtcItem" name="Naga Storm Piece">
+	<item id="8716" type="EtcItem" name="나가 스톰 조각">
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -189,7 +189,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8717" type="EtcItem" name="Tiphon's Spear Edge">
+	<item id="8717" type="EtcItem" name="타이폰 스피어 엣지">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -198,7 +198,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8718" type="EtcItem" name="Shyeed's Bow Shaft">
+	<item id="8718" type="EtcItem" name="샤이드 보우 샤프트">
 		<set name="icon" val="icon.etc_branch_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -207,7 +207,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8719" type="EtcItem" name="Sobekk's Hurricane Edge">
+	<item id="8719" type="EtcItem" name="소베크 허리케인 날">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -216,7 +216,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8720" type="EtcItem" name="Themis' Tongue Piece">
+	<item id="8720" type="EtcItem" name="테미스의 혀 조각">
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -225,7 +225,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8721" type="EtcItem" name="Cabrio's Hand Head">
+	<item id="8721" type="EtcItem" name="핸드 오브 카브리오 머리">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -234,7 +234,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8722" type="EtcItem" name="Daimon Crystal Fragment">
+	<item id="8722" type="EtcItem" name="데이몬의 결정 조각">
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -243,7 +243,7 @@
 		<set name="price" val="82400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8723" type="EtcItem" name="Life Stone - Level 46">
+	<item id="8723" type="EtcItem" name="생명의 돌 - 46 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -254,7 +254,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8724" type="EtcItem" name="Life Stone - Level 49">
+	<item id="8724" type="EtcItem" name="생명의 돌 - 49 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -265,7 +265,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8725" type="EtcItem" name="Life Stone - Level 52">
+	<item id="8725" type="EtcItem" name="생명의 돌 - 52 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -276,7 +276,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8726" type="EtcItem" name="Life Stone - Level 55">
+	<item id="8726" type="EtcItem" name="생명의 돌 - 55 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -287,7 +287,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8727" type="EtcItem" name="Life Stone - Level 58">
+	<item id="8727" type="EtcItem" name="생명의 돌 - 58 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -298,7 +298,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8728" type="EtcItem" name="Life Stone - Level 61">
+	<item id="8728" type="EtcItem" name="생명의 돌 - 61 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -309,7 +309,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8729" type="EtcItem" name="Life Stone - Level 64">
+	<item id="8729" type="EtcItem" name="생명의 돌 - 64 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -320,7 +320,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8730" type="EtcItem" name="Life Stone - Level 67">
+	<item id="8730" type="EtcItem" name="생명의 돌 - 67 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -331,7 +331,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8731" type="EtcItem" name="Life Stone - Level 70">
+	<item id="8731" type="EtcItem" name="생명의 돌 - 70 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -342,7 +342,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8732" type="EtcItem" name="Life Stone - Level 76">
+	<item id="8732" type="EtcItem" name="생명의 돌 - 76 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -353,7 +353,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="8733" type="EtcItem" name="Mid-Grade Life Stone - Level 46">
+	<item id="8733" type="EtcItem" name="중급 생명의 돌 - 46 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -364,7 +364,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8734" type="EtcItem" name="Mid-Grade Life Stone - Level 49">
+	<item id="8734" type="EtcItem" name="중급 생명의 돌 - 49 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -375,7 +375,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8735" type="EtcItem" name="Mid-Grade Life Stone - Level 52">
+	<item id="8735" type="EtcItem" name="중급 생명의 돌 - 52 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -386,7 +386,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8736" type="EtcItem" name="Mid-Grade Life Stone - Level 55">
+	<item id="8736" type="EtcItem" name="중급 생명의 돌 - 55 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -397,7 +397,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8737" type="EtcItem" name="Mid-Grade Life Stone - Level 58">
+	<item id="8737" type="EtcItem" name="중급 생명의 돌 - 58 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -408,7 +408,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8738" type="EtcItem" name="Mid-Grade Life Stone - Level 61">
+	<item id="8738" type="EtcItem" name="중급 생명의 돌 - 61 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -419,7 +419,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8739" type="EtcItem" name="Mid-Grade Life Stone - Level 64">
+	<item id="8739" type="EtcItem" name="중급 생명의 돌 - 64 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -430,7 +430,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8740" type="EtcItem" name="Mid-Grade Life Stone - Level 67">
+	<item id="8740" type="EtcItem" name="중급 생명의 돌 - 67 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -441,7 +441,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8741" type="EtcItem" name="Mid-Grade Life Stone - Level 70">
+	<item id="8741" type="EtcItem" name="중급 생명의 돌 - 70 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -452,7 +452,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8742" type="EtcItem" name="Mid-Grade Life Stone - Level 76">
+	<item id="8742" type="EtcItem" name="중급 생명의 돌 - 76 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -463,7 +463,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="8743" type="EtcItem" name="High-Grade Life Stone - Level 46">
+	<item id="8743" type="EtcItem" name="상급 생명의 돌 - 46 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -474,7 +474,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8744" type="EtcItem" name="High-Grade Life Stone - Level 49">
+	<item id="8744" type="EtcItem" name="상급 생명의 돌 - 49 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -485,7 +485,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8745" type="EtcItem" name="High-Grade Life Stone - Level 52">
+	<item id="8745" type="EtcItem" name="상급 생명의 돌 - 52 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -496,7 +496,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8746" type="EtcItem" name="High-Grade Life Stone - Level 55">
+	<item id="8746" type="EtcItem" name="상급 생명의 돌 - 55 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -507,7 +507,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8747" type="EtcItem" name="High-Grade Life Stone - Level 58">
+	<item id="8747" type="EtcItem" name="상급 생명의 돌 - 58 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -518,7 +518,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8748" type="EtcItem" name="High-Grade Life Stone - Level 61">
+	<item id="8748" type="EtcItem" name="상급 생명의 돌 - 61 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -529,7 +529,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8749" type="EtcItem" name="High-Grade Life Stone - Level 64">
+	<item id="8749" type="EtcItem" name="상급 생명의 돌 - 64 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -540,7 +540,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8750" type="EtcItem" name="High-Grade Life Stone - Level 67">
+	<item id="8750" type="EtcItem" name="상급 생명의 돌 - 67 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -551,7 +551,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8751" type="EtcItem" name="High-Grade Life Stone - Level 70">
+	<item id="8751" type="EtcItem" name="상급 생명의 돌 - 70 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -562,7 +562,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8752" type="EtcItem" name="High-Grade Life Stone - Level 76">
+	<item id="8752" type="EtcItem" name="상급 생명의 돌 - 76 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -573,7 +573,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="8753" type="EtcItem" name="Top-Grade Life Stone - Level 46">
+	<item id="8753" type="EtcItem" name="최상급 생명의 돌 - 46 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -584,7 +584,7 @@
 			<player level="46" />
 		</cond>
 	</item>
-	<item id="8754" type="EtcItem" name="Top-Grade Life Stone - Level 49">
+	<item id="8754" type="EtcItem" name="최상급 생명의 돌 - 49 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -595,7 +595,7 @@
 			<player level="49" />
 		</cond>
 	</item>
-	<item id="8755" type="EtcItem" name="Top-Grade Life Stone - Level 52">
+	<item id="8755" type="EtcItem" name="최상급 생명의 돌 - 52 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -606,7 +606,7 @@
 			<player level="52" />
 		</cond>
 	</item>
-	<item id="8756" type="EtcItem" name="Top-Grade Life Stone - Level 55">
+	<item id="8756" type="EtcItem" name="최상급 생명의 돌 - 55 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -617,7 +617,7 @@
 			<player level="55" />
 		</cond>
 	</item>
-	<item id="8757" type="EtcItem" name="Top-Grade Life Stone - Level 58">
+	<item id="8757" type="EtcItem" name="최상급 생명의 돌 - 58 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -628,7 +628,7 @@
 			<player level="58" />
 		</cond>
 	</item>
-	<item id="8758" type="EtcItem" name="Top-Grade Life Stone - Level 61">
+	<item id="8758" type="EtcItem" name="최상급 생명의 돌 - 61 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -639,7 +639,7 @@
 			<player level="61" />
 		</cond>
 	</item>
-	<item id="8759" type="EtcItem" name="Top-Grade Life Stone - Level 64">
+	<item id="8759" type="EtcItem" name="최상급 생명의 돌 - 64 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -650,7 +650,7 @@
 			<player level="64" />
 		</cond>
 	</item>
-	<item id="8760" type="EtcItem" name="Top-Grade Life Stone - Level 67">
+	<item id="8760" type="EtcItem" name="최상급 생명의 돌 - 67 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -661,7 +661,7 @@
 			<player level="67" />
 		</cond>
 	</item>
-	<item id="8761" type="EtcItem" name="Top-Grade Life Stone - Level 70">
+	<item id="8761" type="EtcItem" name="최상급 생명의 돌 - 70 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -672,7 +672,7 @@
 			<player level="70" />
 		</cond>
 	</item>
-	<item id="8762" type="EtcItem" name="Top-Grade Life Stone - Level 76">
+	<item id="8762" type="EtcItem" name="최상급 생명의 돌 - 76 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -683,7 +683,7 @@
 			<player level="76" />
 		</cond>
 	</item>
-	<item id="8763" type="Weapon" name="Elrokian Trap">
+	<item id="8763" type="Weapon" name="엘크로키의 포획기">
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -704,7 +704,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8764" type="EtcItem" name="Trap Stone">
+	<item id="8764" type="EtcItem" name="포획석">
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -712,19 +712,19 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8765" type="EtcItem" name="Red Gem">
+	<item id="8765" type="EtcItem" name="붉은 구슬">
 		<set name="icon" val="icon.ets_red_abead_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8766" type="EtcItem" name="Spirit Bead">
+	<item id="8766" type="EtcItem" name="정령의 구슬">
 		<set name="icon" val="icon.etc_bead_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8767" type="EtcItem" name="Tyrannosaurus Claw">
+	<item id="8767" type="EtcItem" name="티라노사우루스의 발톱">
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -734,7 +734,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8768" type="EtcItem" name="Diary Fragment">
+	<item id="8768" type="EtcItem" name="일기장 조각">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -744,7 +744,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8769" type="EtcItem" name="Expedition Member's Letter">
+	<item id="8769" type="EtcItem" name="탐험대원의 편지">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -754,7 +754,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8770" type="EtcItem" name="Ornithomimus Claw">
+	<item id="8770" type="EtcItem" name="오르니토미무스의 발톱">
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -764,7 +764,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8771" type="EtcItem" name="Deinonychus Bone">
+	<item id="8771" type="EtcItem" name="데이노니쿠스 뼈">
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -774,7 +774,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8772" type="EtcItem" name="Pachycephalosaurus Skin">
+	<item id="8772" type="EtcItem" name="파키케팔로사우르스의 가죽">
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -784,7 +784,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8773" type="EtcItem" name="Practice Elrokian Trap">
+	<item id="8773" type="EtcItem" name="연습용 크로키언의 포획기">
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -794,7 +794,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8774" type="EtcItem" name="Dinosaur Tissue">
+	<item id="8774" type="EtcItem" name="공룡 생체 조직">
 		<set name="icon" val="icon.etc_bodypart_heart_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -804,7 +804,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8775" type="EtcItem" name="Dinosaur Egg">
+	<item id="8775" type="EtcItem" name="고대의 알">
 		<set name="icon" val="icon.etc_dragon_egg_i05" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -814,7 +814,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8776" type="EtcItem" name="Bones of a Plains Dinosaur">
+	<item id="8776" type="EtcItem" name="평원 공룡의 뼈">
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -824,7 +824,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8777" type="EtcItem" name="Ancient Creatures and How I Long To Be With Them">
+	<item id="8777" type="EtcItem" name="태초 생명체에 관한 기술">
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -834,7 +834,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8778" type="EtcItem" name="Mantarasa Egg">
+	<item id="8778" type="EtcItem" name="만타라사의 알">
 		<set name="icon" val="icon.etc_dragon_egg_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -844,7 +844,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8779" type="EtcItem" name="Ornithomimus Claw">
+	<item id="8779" type="EtcItem" name="오르니토미무스의 발톱">
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -854,7 +854,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8780" type="EtcItem" name="Deinonychus Bone Fragment">
+	<item id="8780" type="EtcItem" name="데이노니쿠스의 뼈조각">
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -864,7 +864,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8781" type="EtcItem" name="Epitaph of Wisdom">
+	<item id="8781" type="EtcItem" name="지혜의 비문">
 		<set name="icon" val="icon.etc_ancient_tablet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -874,7 +874,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8782" type="EtcItem" name="Gazkh Fragment">
+	<item id="8782" type="EtcItem" name="가즈크의 조각">
 		<set name="icon" val="icon.etc_piece_of_gazk_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -884,7 +884,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8783" type="EtcItem" name="Bone Powder">
+	<item id="8783" type="EtcItem" name="뼈가루">
 		<set name="icon" val="icon.etc_powder_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -894,7 +894,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8784" type="EtcItem" name="Gazkh">
+	<item id="8784" type="EtcItem" name="가즈크">
 		<set name="icon" val="icon.etc_head_of_gazk_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -904,7 +904,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8785" type="EtcItem" name="Dinosaur Fang Necklace">
+	<item id="8785" type="EtcItem" name="공룡 이빨 목걸이">
 		<set name="icon" val="icon.etc_ketra_friendship_1_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -914,7 +914,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8786" type="EtcItem" name="Primeval Potion">
+	<item id="8786" type="EtcItem" name="원시의 물약">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -926,7 +926,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2305-1" />
 	</item>
-	<item id="8787" type="EtcItem" name="Sprigant's Fruit">
+	<item id="8787" type="EtcItem" name="아라크누아의 열매">
 		<set name="icon" val="icon.etc_fruit_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -938,7 +938,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2305-1" />
 	</item>
-	<item id="8788" type="Weapon" name="Sirra's Blade - Haste">
+	<item id="8788" type="Weapon" name="시르 블레이드 헤이스트">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -966,7 +966,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8789" type="Weapon" name="Sirra's Blade - Health">
+	<item id="8789" type="Weapon" name="시르 블레이드 헬스">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -994,7 +994,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8790" type="Weapon" name="Sirra's Blade - Critical Poison">
+	<item id="8790" type="Weapon" name="시르 블레이드 Crt.포이즌">
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1024,7 +1024,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8791" type="Weapon" name="Sword of Ipos - Focus">
+	<item id="8791" type="Weapon" name="소드 오브 이포스 포커스">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1052,7 +1052,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8792" type="Weapon" name="Sword of Ipos - Haste">
+	<item id="8792" type="Weapon" name="소드 오브 이포스 헤이스트">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1080,7 +1080,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8793" type="Weapon" name="Sword of Ipos - Health">
+	<item id="8793" type="Weapon" name="소드 오브 이포스 헬스">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1108,7 +1108,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8794" type="Weapon" name="Barakiel's Axe - Health">
+	<item id="8794" type="Weapon" name="바라키엘 엑스 헬스">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1136,7 +1136,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8795" type="Weapon" name="Barakiel's Axe - Haste">
+	<item id="8795" type="Weapon" name="바라키엘 엑스 헤이스트">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1164,7 +1164,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8796" type="Weapon" name="Barakiel's Axe - Focus">
+	<item id="8796" type="Weapon" name="바라키엘 엑스 포커스">
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1192,7 +1192,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8797" type="Weapon" name="Behemoth's Tuning Fork - Focus">
+	<item id="8797" type="Weapon" name="베헤모스의 소리굽쇠 포커스">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1220,7 +1220,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8798" type="Weapon" name="Behemoth's Tuning Fork - Health">
+	<item id="8798" type="Weapon" name="베헤모스의 소리굽쇠 헬스">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1248,7 +1248,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8799" type="Weapon" name="Behemoth's Tuning Fork - Anger">
+	<item id="8799" type="Weapon" name="베헤모스의 소리굽쇠 앵거">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />

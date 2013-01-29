@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
 	<!-- R-2:煉獄 -->
-	<item id="17354" name="煉獄符印" type="Armor">
+	<item id="17354" type="Armor" name="헬 시길 로브용">
 		<table name="#Plus">長袍用</table>
 		<set name="icon" val="icon.weapon_dynaksus_i00"/>
 		<set name="default_action" val="equip"/>
@@ -18,7 +18,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="17355" name="煉獄項鍊" type="Armor">
+	<item id="17355" type="Armor" name="헬 목걸이">
 		<table name="#Desc">煉獄項鍊。可得到MP+58的效果。</table>
 		<set name="icon" val="icon.r2_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -33,7 +33,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17356" name="煉獄耳環" type="Armor">
+	<item id="17356" type="Armor" name="헬 귀걸이">
 		<table name="#Desc">煉獄耳環。可得到MP+43的效果。</table>
 		<set name="icon" val="icon.r2_earring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -48,7 +48,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="17357" name="煉獄戒指" type="Armor">
+	<item id="17357" type="Armor" name="헬 반지">
 		<table name="#Desc">煉獄戒指。可得到MP+29的效果。</table>
 		<set name="icon" val="icon.r2_ring_i00"/>
 		<set name="default_action" val="equip"/>
