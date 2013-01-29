@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="200" type="Weapon" name="Sage's Staff">
+	<item id="200" type="Weapon" name="현자의 지팡이">
 		<set name="icon" val="icon.weapon_sages_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -28,7 +28,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="201" type="Weapon" name="Club of Nature">
+	<item id="201" type="Weapon" name="대자연의 클럽">
 		<set name="icon" val="icon.weapon_club_of_nature_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -56,7 +56,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="202" type="Weapon" name="Mace of Underworld">
+	<item id="202" type="Weapon" name="메이스 오브 언더월드">
 		<set name="icon" val="icon.weapon_mace_of_underworld_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -84,7 +84,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="203" type="Weapon" name="Pa'agrian Axe">
+	<item id="203" type="Weapon" name="파아그리오 액스">
 		<set name="icon" val="icon.weapon_paagrio_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -112,7 +112,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="204" type="Weapon" name="Deadman's Staff">
+	<item id="204" type="Weapon" name="망자의 지팡이">
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -140,7 +140,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="205" type="Weapon" name="Ghoul's Staff">
+	<item id="205" type="Weapon" name="구울의 지팡이">
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -168,7 +168,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="206" type="Weapon" name="Demon's Staff">
+	<item id="206" type="Weapon" name="악마의 지팡이">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -196,7 +196,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="207" type="Weapon" name="Staff of Phantom">
+	<item id="207" type="Weapon" name="스탭 오브 팬텀">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -224,7 +224,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="208" type="Weapon" name="Staff of Seal">
+	<item id="208" type="Weapon" name="봉인의 지팡이">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -252,7 +252,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="209" type="Weapon" name="Divine Staff">
+	<item id="209" type="Weapon" name="신성의 지팡이">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -280,7 +280,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="210" type="Weapon" name="Staff of Evil Spirits">
+	<item id="210" type="Weapon" name="사령의 지팡이">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -308,7 +308,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="211" type="Weapon" name="Staff of Nobility">
+	<item id="211" type="Weapon" name="노블리스트 스탭">
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -336,7 +336,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="212" type="Weapon" name="Dasparion's Staff">
+	<item id="212" type="Weapon" name="데스페리온의 지팡이">
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -364,7 +364,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="213" type="Weapon" name="Branch of the Mother Tree">
+	<item id="213" type="Weapon" name="세계수의 가지">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -392,7 +392,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="214" type="Weapon" name="The Staff">
+	<item id="214" type="Weapon" name="더 스텝">
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -420,7 +420,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="215" type="Weapon" name="Doom Dagger">
+	<item id="215" type="Weapon" name="악운의단검">
 		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -442,7 +442,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="216" type="Weapon" name="Dirk">
+	<item id="216" type="Weapon" name="더크">
 		<set name="icon" val="icon.weapon_dirk_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -464,7 +464,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="217" type="Weapon" name="Shining Knife">
+	<item id="217" type="Weapon" name="샤이닝 나이프">
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -486,7 +486,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="218" type="Weapon" name="Throwing Knife">
+	<item id="218" type="Weapon" name="드로우 나이프">
 		<set name="icon" val="icon.weapon_throw_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -508,7 +508,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="219" type="Weapon" name="Sword Breaker">
+	<item id="219" type="Weapon" name="소드 브레이커">
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -530,7 +530,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="220" type="Weapon" name="Crafted Dagger">
+	<item id="220" type="Weapon" name="세공 단검">
 		<set name="icon" val="icon.weapon_handiwork_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -557,7 +557,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="221" type="Weapon" name="Assassin Knife">
+	<item id="221" type="Weapon" name="어쎄신 나이프">
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -584,7 +584,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="222" type="Weapon" name="Poniard Dagger">
+	<item id="222" type="Weapon" name="파냐드 대거">
 		<set name="icon" val="icon.weapon_dirk_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -611,7 +611,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="223" type="Weapon" name="Kukuri">
+	<item id="223" type="Weapon" name="쿠쿠리">
 		<set name="icon" val="icon.weapon_kukuri_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -638,7 +638,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="224" type="Weapon" name="Maingauche">
+	<item id="224" type="Weapon" name="메인거쉬">
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -665,7 +665,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="225" type="Weapon" name="Mithril Dagger">
+	<item id="225" type="Weapon" name="미스릴 단검">
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -692,7 +692,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="226" type="Weapon" name="Cursed Dagger">
+	<item id="226" type="Weapon" name="저주받은 단검">
 		<set name="icon" val="icon.weapon_cursed_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -719,7 +719,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="227" type="Weapon" name="Stiletto">
+	<item id="227" type="Weapon" name="스틸레토">
 		<set name="icon" val="icon.weapon_stiletto_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -746,7 +746,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="228" type="Weapon" name="Crystal Dagger">
+	<item id="228" type="Weapon" name="크리스탈 단검">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -773,7 +773,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="229" type="Weapon" name="Kris">
+	<item id="229" type="Weapon" name="크리스">
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -800,7 +800,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="230" type="Weapon" name="Wolverine Needle">
+	<item id="230" type="Weapon" name="니들 울브린">
 		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -827,7 +827,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="231" type="Weapon" name="Grace Dagger">
+	<item id="231" type="Weapon" name="그레이스 대거">
 		<set name="icon" val="icon.weapon_grace_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -854,7 +854,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="232" type="Weapon" name="Dark Elven Dagger">
+	<item id="232" type="Weapon" name="다크 엘븐 대거">
 		<set name="icon" val="icon.weapon_darkelven_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -881,7 +881,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="233" type="Weapon" name="Dark Screamer">
+	<item id="233" type="Weapon" name="다크스크리머">
 		<set name="icon" val="icon.weapon_dark_screamer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -908,7 +908,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="234" type="Weapon" name="Demon's Dagger">
+	<item id="234" type="Weapon" name="악마의 단검">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -935,7 +935,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="235" type="Weapon" name="Bloody Orchid">
+	<item id="235" type="Weapon" name="블러디오키드">
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -962,7 +962,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="236" type="Weapon" name="Soul Separator">
+	<item id="236" type="Weapon" name="소울세퍼레이터">
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -989,7 +989,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="237" type="Weapon" name="Dragon's Tooth">
+	<item id="237" type="Weapon" name="드래곤 나이프">
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1016,7 +1016,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="238" type="Weapon" name="Dagger of Mana">
+	<item id="238" type="Weapon" name="마나의 단검">
 		<set name="icon" val="icon.weapon_dagger_of_mana_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1044,7 +1044,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="239" type="Weapon" name="Mystic Knife">
+	<item id="239" type="Weapon" name="미스틱 나이프">
 		<set name="icon" val="icon.weapon_mystic_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1072,7 +1072,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="240" type="Weapon" name="Conjurer's Knife">
+	<item id="240" type="Weapon" name="컨쥬어 나이프">
 		<set name="icon" val="icon.weapon_conjure_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1100,7 +1100,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="241" type="Weapon" name="Shilen Knife">
+	<item id="241" type="Weapon" name="나이프 오 실레누스">
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1128,7 +1128,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="242" type="Weapon" name="Soulfire Dirk">
+	<item id="242" type="Weapon" name="마염의 단검">
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1156,7 +1156,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="243" type="Weapon" name="Hell Knife">
+	<item id="243" type="Weapon" name="헬나이프">
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1184,7 +1184,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="244" type="Weapon" name="Elven Fighter Fist">
+	<item id="244" type="Weapon" name="엘프파이터 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1200,7 +1200,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="245" type="Weapon" name="Dark Fighter Fist">
+	<item id="245" type="Weapon" name="다크엘프파이터 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1216,7 +1216,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="246" type="Weapon" name="Human Fighter Fist">
+	<item id="246" type="Weapon" name="인간파이터 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1232,7 +1232,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="247" type="Weapon" name="Dwarven Fighter Fist">
+	<item id="247" type="Weapon" name="드워프파이터 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1248,7 +1248,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="248" type="Weapon" name="Orc Fighter Fist">
+	<item id="248" type="Weapon" name="오크파이터 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1264,7 +1264,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="249" type="Weapon" name="Elven Mystic Fist">
+	<item id="249" type="Weapon" name="엘프메지션 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1280,7 +1280,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="250" type="Weapon" name="Dark Mystic Fist">
+	<item id="250" type="Weapon" name="다크엘프메지션 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1296,7 +1296,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="251" type="Weapon" name="Human Mystic Fist">
+	<item id="251" type="Weapon" name="인간메지션 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1312,7 +1312,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="252" type="Weapon" name="Orc Shaman Fist">
+	<item id="252" type="Weapon" name="오크샤먼 주먹">
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
 		<set name="bodypart" val="rhand" />
@@ -1327,7 +1327,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="253" type="Weapon" name="Spiked Gloves">
+	<item id="253" type="Weapon" name="징박은 장갑">
 		<set name="icon" val="icon.weapon_spike_glove_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1349,7 +1349,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="254" type="Weapon" name="Iron Gloves">
+	<item id="254" type="Weapon" name="철갑장갑">
 		<set name="icon" val="icon.weapon_iron_glove_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1371,7 +1371,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="255" type="Weapon" name="Fox Claw Gloves">
+	<item id="255" type="Weapon" name="여우 손톱">
 		<set name="icon" val="icon.weapon_foxs_nail_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1393,7 +1393,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="256" type="Weapon" name="Cestus">
+	<item id="256" type="Weapon" name="세스터스">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1415,7 +1415,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="257" type="Weapon" name="Viper Fang">
+	<item id="257" type="Weapon" name="독사 이빨">
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1437,7 +1437,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="258" type="Weapon" name="Bagh-Nakh">
+	<item id="258" type="Weapon" name="바그나우">
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1464,7 +1464,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="259" type="Weapon" name="Single-Edged Jamadhr">
+	<item id="259" type="Weapon" name="외날 자마다르">
 		<set name="icon" val="icon.weapon_single-edged_jamadhr_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1491,7 +1491,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="260" type="Weapon" name="Triple-Edged Jamadhr">
+	<item id="260" type="Weapon" name="세날 자마다르">
 		<set name="icon" val="icon.weapon_triple-edged_jamadhr_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1518,7 +1518,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="261" type="Weapon" name="Bich'Hwa">
+	<item id="261" type="Weapon" name="비차하우">
 		<set name="icon" val="icon.weapon_bichhwa_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1545,7 +1545,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="262" type="Weapon" name="Scallop Jamadhr">
+	<item id="262" type="Weapon" name="스캘럽 자마다르">
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1572,7 +1572,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="263" type="Weapon" name="Chakram">
+	<item id="263" type="Weapon" name="차크람">
 		<set name="icon" val="icon.weapon_chakram_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1599,7 +1599,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="264" type="Weapon" name="Pata">
+	<item id="264" type="Weapon" name="파타">
 		<set name="icon" val="icon.weapon_chakram_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1626,7 +1626,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="265" type="Weapon" name="Fisted Blade">
+	<item id="265" type="Weapon" name="피스트블레이드">
 		<set name="icon" val="icon.weapon_fist_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1653,7 +1653,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="266" type="Weapon" name="Great Pata">
+	<item id="266" type="Weapon" name="그레이트파타">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1680,7 +1680,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="267" type="Weapon" name="Arthro Nail">
+	<item id="267" type="Weapon" name="아스라네일">
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1707,7 +1707,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="268" type="Weapon" name="Bellion Cestus">
+	<item id="268" type="Weapon" name="벨리온 세스터스">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1734,7 +1734,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="269" type="Weapon" name="Blood Tornado">
+	<item id="269" type="Weapon" name="블러드 토네이도">
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1761,7 +1761,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="270" type="Weapon" name="Dragon Grinder">
+	<item id="270" type="Weapon" name="드래곤 그라인더">
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1788,7 +1788,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="271" type="Weapon" name="Hunting Bow">
+	<item id="271" type="Weapon" name="사냥활">
 		<set name="icon" val="icon.weapon_hunting_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1812,7 +1812,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="272" type="Weapon" name="Forest Bow">
+	<item id="272" type="Weapon" name="숲의 활">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1836,7 +1836,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="273" type="Weapon" name="Composite Bow">
+	<item id="273" type="Weapon" name="합성 활">
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1860,7 +1860,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="274" type="Weapon" name="Reinforced Bow">
+	<item id="274" type="Weapon" name="강화 활">
 		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1890,7 +1890,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="275" type="Weapon" name="Long Bow">
+	<item id="275" type="Weapon" name="롱 보우">
 		<set name="icon" val="icon.weapon_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1920,7 +1920,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="276" type="Weapon" name="Elven Bow">
+	<item id="276" type="Weapon" name="엘븐보우">
 		<set name="icon" val="icon.weapon_elven_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1950,7 +1950,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="277" type="Weapon" name="Dark Elven Bow">
+	<item id="277" type="Weapon" name="다크엘븐보우">
 		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1980,7 +1980,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="278" type="Weapon" name="Gastraphetes">
+	<item id="278" type="Weapon" name="가스트라페테스">
 		<set name="icon" val="icon.weapon_gastraphetes_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2010,7 +2010,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="279" type="Weapon" name="Reinforced Long Bow">
+	<item id="279" type="Weapon" name="강화롱보우">
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2040,7 +2040,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="280" type="Weapon" name="Light Crossbow">
+	<item id="280" type="Weapon" name="사이클론 보우">
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2070,7 +2070,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="281" type="Weapon" name="Crystallized Ice Bow">
+	<item id="281" type="Weapon" name="얼음결정의 활">
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2100,7 +2100,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="282" type="Weapon" name="Elemental Bow">
+	<item id="282" type="Weapon" name="엘레멘탈 보우">
 		<set name="icon" val="icon.weapon_elemental_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2130,7 +2130,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="283" type="Weapon" name="Akat Long Bow">
+	<item id="283" type="Weapon" name="아카트 장궁">
 		<set name="icon" val="icon.weapon_akat_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2160,7 +2160,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="284" type="Weapon" name="Dark Elven Long Bow">
+	<item id="284" type="Weapon" name="다크엘븐 롱보우">
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2190,7 +2190,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="285" type="Weapon" name="Noble Elven Bow">
+	<item id="285" type="Weapon" name="고급엘븐보우">
 		<set name="icon" val="icon.weapon_noble_elven_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2220,7 +2220,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="286" type="Weapon" name="Eminence Bow">
+	<item id="286" type="Weapon" name="에머넌스보우">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2250,7 +2250,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="287" type="Weapon" name="Bow of Peril">
+	<item id="287" type="Weapon" name="해저드보우">
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2280,7 +2280,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="288" type="Weapon" name="Carnage Bow">
+	<item id="288" type="Weapon" name="카르니움 활">
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2310,7 +2310,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="289" type="Weapon" name="Soul Bow">
+	<item id="289" type="Weapon" name="영혼의 활">
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2340,7 +2340,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="290" type="Weapon" name="The Bow">
+	<item id="290" type="Weapon" name="더 보우">
 		<set name="icon" val="icon.weapon_shining_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2369,7 +2369,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="291" type="Weapon" name="Trident">
+	<item id="291" type="Weapon" name="트라이던트">
 		<set name="icon" val="icon.weapon_trident_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2397,7 +2397,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="292" type="Weapon" name="Pike">
+	<item id="292" type="Weapon" name="파이크">
 		<set name="icon" val="icon.weapon_pike_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2425,7 +2425,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="293" type="Weapon" name="War Hammer">
+	<item id="293" type="Weapon" name="워 해머">
 		<set name="icon" val="icon.weapon_war_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2453,7 +2453,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="294" type="Weapon" name="War Pick">
+	<item id="294" type="Weapon" name="해머 인 플레임즈">
 		<set name="icon" val="icon.weapon_hammer_in_flames_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2481,7 +2481,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="295" type="Weapon" name="Dwarven Trident">
+	<item id="295" type="Weapon" name="드워븐트라이던트">
 		<set name="icon" val="icon.weapon_dwarven_trident_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2509,7 +2509,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="296" type="Weapon" name="Dwarven Pike">
+	<item id="296" type="Weapon" name="드워븐 파이크">
 		<set name="icon" val="icon.weapon_dwarven_pike_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2537,7 +2537,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="297" type="Weapon" name="Glaive">
+	<item id="297" type="Weapon" name="글레이브">
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2565,7 +2565,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="298" type="Weapon" name="Orcish Glaive">
+	<item id="298" type="Weapon" name="오키쉬 글레이브">
 		<set name="icon" val="icon.weapon_orcish_glaive_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2593,7 +2593,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="299" type="Weapon" name="Orcish Poleaxe">
+	<item id="299" type="Weapon" name="오키쉬 폴액스">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />

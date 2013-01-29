@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="4100" type="EtcItem" name="Sealed Zubei's Gauntlets Part">
+	<item id="4100" type="EtcItem" name="봉인된 쉬르노엔의 건틀렛 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -9,7 +9,7 @@
 		<set name="price" val="3843" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4101" type="EtcItem" name="Zubei's Shield Fragment">
+	<item id="4101" type="EtcItem" name="쉬르노엔의 쉴드 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -18,7 +18,7 @@
 		<set name="price" val="3450" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4102" type="EtcItem" name="Zubei's Helmet Design">
+	<item id="4102" type="EtcItem" name="쉬르노엔의 헬멧 원형">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -27,7 +27,7 @@
 		<set name="price" val="4453" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4103" type="EtcItem" name="Pata Blade">
+	<item id="4103" type="EtcItem" name="파타 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -36,7 +36,7 @@
 		<set name="price" val="32950" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4104" type="EtcItem" name="Great Sword Blade">
+	<item id="4104" type="EtcItem" name="그레이트 소드 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -45,7 +45,7 @@
 		<set name="price" val="34950" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4105" type="EtcItem" name="Heavy War Axe Head">
+	<item id="4105" type="EtcItem" name="헤비 워 액스 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -54,7 +54,7 @@
 		<set name="price" val="34950" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4106" type="EtcItem" name="Sprite's Staff Head">
+	<item id="4106" type="EtcItem" name="정령의 지팡이 머리">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -63,7 +63,7 @@
 		<set name="price" val="35533" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4107" type="EtcItem" name="Keshanberk Blade">
+	<item id="4107" type="EtcItem" name="크샨베르크 검신">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -72,7 +72,7 @@
 		<set name="price" val="35500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4108" type="EtcItem" name="Sword of Valhalla Blade">
+	<item id="4108" type="EtcItem" name="소드 오브 발할라 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -81,7 +81,7 @@
 		<set name="price" val="35500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4109" type="EtcItem" name="Kris Edge">
+	<item id="4109" type="EtcItem" name="크리스 엣지">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -90,7 +90,7 @@
 		<set name="price" val="35500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4110" type="EtcItem" name="Hell Knife Edge">
+	<item id="4110" type="EtcItem" name="헬나이프 엣지">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -99,7 +99,7 @@
 		<set name="price" val="35500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4111" type="EtcItem" name="Arthro Nail Blade">
+	<item id="4111" type="EtcItem" name="아스라네일 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -108,7 +108,7 @@
 		<set name="price" val="34950" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4112" type="EtcItem" name="Dark Elven Longbow Shaft">
+	<item id="4112" type="EtcItem" name="다크엘븐 롱보우 샤프트">
 		<set name="icon" val="icon.etc_branch_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -117,7 +117,7 @@
 		<set name="price" val="35325" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4113" type="EtcItem" name="Great Axe Head">
+	<item id="4113" type="EtcItem" name="그레이트 액스 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -126,7 +126,7 @@
 		<set name="price" val="38867" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4114" type="EtcItem" name="Sword of Damascus Blade">
+	<item id="4114" type="EtcItem" name="다마스커스 검신">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -135,7 +135,7 @@
 		<set name="price" val="45692" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4115" type="EtcItem" name="Lance Blade">
+	<item id="4115" type="EtcItem" name="랜시아 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -144,7 +144,7 @@
 		<set name="price" val="45846" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4116" type="EtcItem" name="Deadman's Glory Stone">
+	<item id="4116" type="EtcItem" name="사자의 영광 돌">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -153,7 +153,7 @@
 		<set name="price" val="45769" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4117" type="EtcItem" name="Art of Battle Axe Blade">
+	<item id="4117" type="EtcItem" name="아트 오브 배틀액스 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -162,7 +162,7 @@
 		<set name="price" val="45769" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4118" type="EtcItem" name="Evil Spirit Head">
+	<item id="4118" type="EtcItem" name="사령의 지팡이 머리">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -171,7 +171,7 @@
 		<set name="price" val="48308" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4119" type="EtcItem" name="Demon's Dagger Edge">
+	<item id="4119" type="EtcItem" name="악마의 단검 엣지">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -180,7 +180,7 @@
 		<set name="price" val="45692" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4120" type="EtcItem" name="Bellion Cestus Edge">
+	<item id="4120" type="EtcItem" name="벨리온 세스터스 날">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -189,7 +189,7 @@
 		<set name="price" val="45769" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4121" type="EtcItem" name="Bow of Peril Shaft">
+	<item id="4121" type="EtcItem" name="해저드보우 샤프트">
 		<set name="icon" val="icon.etc_branch_gold_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -198,7 +198,7 @@
 		<set name="price" val="45923" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4122" type="EtcItem" name="Recipe: Maestro Holder (100%)">
+	<item id="4122" type="EtcItem" name="레시피 : 마에스트로의 골쇠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -210,7 +210,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4123" type="EtcItem" name="Recipe: Maestro Anvil Lock (100%)">
+	<item id="4123" type="EtcItem" name="레시피 : 마에스트로의 모루쇠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -222,7 +222,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4124" type="EtcItem" name="Recipe: Craftsman Mold (100%)">
+	<item id="4124" type="EtcItem" name="레시피 : 도공의 거푸집(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -234,7 +234,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4125" type="EtcItem" name="Recipe: Maestro Mold (100%)">
+	<item id="4125" type="EtcItem" name="레시피 : 마에스트로 몰드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -246,7 +246,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4126" type="EtcItem" name="Recipe: Adamantite Earrings (100%)">
+	<item id="4126" type="EtcItem" name="레시피 : 아다만타이트 귀걸이(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -258,7 +258,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4127" type="EtcItem" name="Recipe: Adamantite Ring (100%)">
+	<item id="4127" type="EtcItem" name="레시피 : 아다만타이트 링(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -270,7 +270,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4128" type="EtcItem" name="Recipe: Adamantite Necklace (100%)">
+	<item id="4128" type="EtcItem" name="레시피 : 아다만타이트 네크리스(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -282,7 +282,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4129" type="EtcItem" name="Recipe: Earrings of Black Ore (100%)">
+	<item id="4129" type="EtcItem" name="레시피 : 흑광의 귀걸이(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -294,7 +294,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4130" type="EtcItem" name="Recipe: Ring of Black Ore (100%)">
+	<item id="4130" type="EtcItem" name="레시피 : 흑광의 반지(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -306,7 +306,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4131" type="EtcItem" name="Recipe: Necklace of Black Ore (100%)">
+	<item id="4131" type="EtcItem" name="레시피 : 흑광의 목걸이(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -318,7 +318,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4132" type="EtcItem" name="Recipe: Composite Shield (100%)">
+	<item id="4132" type="EtcItem" name="레시피 : 컴포짓 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -330,7 +330,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4133" type="EtcItem" name="Recipe: Zubei's Breastplate (100%)">
+	<item id="4133" type="EtcItem" name="레시피 : 쉬르노엔의 흉갑(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -342,7 +342,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4134" type="EtcItem" name="Recipe: Zubei's Gaiters (100%)">
+	<item id="4134" type="EtcItem" name="레시피 : 쉬르노엔의 각반(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -354,7 +354,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4135" type="EtcItem" name="Recipe: Implosion Boots (100%)">
+	<item id="4135" type="EtcItem" name="레시피 : 파열의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -366,7 +366,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4136" type="EtcItem" name="Recipe: Boots of Silence (100%)">
+	<item id="4136" type="EtcItem" name="레시피 : 침묵의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -378,7 +378,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4137" type="EtcItem" name="Recipe: Guardian's Boots (100%)">
+	<item id="4137" type="EtcItem" name="레시피 : 가디언스 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -390,7 +390,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4138" type="EtcItem" name="Recipe: Paradia Boots (100%)">
+	<item id="4138" type="EtcItem" name="레시피 : 패러디아 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -402,7 +402,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4139" type="EtcItem" name="Recipe: Elemental Boots (100%)">
+	<item id="4139" type="EtcItem" name="레시피 : 엘레멘탈 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -414,7 +414,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4140" type="EtcItem" name="Recipe: Boots of Grace (100%)">
+	<item id="4140" type="EtcItem" name="레시피 : 은총의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -426,7 +426,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4141" type="EtcItem" name="Recipe: Avadon Breastplate (100%)">
+	<item id="4141" type="EtcItem" name="레시피 : 아바돈 플레이트 흉갑(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -438,7 +438,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4142" type="EtcItem" name="Recipe: Avadon Gaiters (100%)">
+	<item id="4142" type="EtcItem" name="레시피 : 아바돈 플레이트 각반(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -450,7 +450,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4143" type="EtcItem" name="Recipe: Zubei's Leather Shirt (100%)">
+	<item id="4143" type="EtcItem" name="레시피 : 쉬르노엔 레더 셔츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -462,7 +462,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4144" type="EtcItem" name="Recipe: Zubei's Leather Gaiters (100%)">
+	<item id="4144" type="EtcItem" name="레시피 : 쉬르노엔 가죽 각반(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -474,7 +474,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4145" type="EtcItem" name="Recipe: Avadon Leather Armor (100%)">
+	<item id="4145" type="EtcItem" name="레시피 : 아바돈 레더 메일(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -486,7 +486,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4146" type="EtcItem" name="Recipe: Tunic of Zubei (100%)">
+	<item id="4146" type="EtcItem" name="레시피 : 튜닉 오브 쉬르노엔(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -498,7 +498,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4147" type="EtcItem" name="Recipe: Stockings of Zubei (100%)">
+	<item id="4147" type="EtcItem" name="레시피 : 호즈 오브 쉬르노엔(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -510,7 +510,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4148" type="EtcItem" name="Recipe: Avadon Robe (100%)">
+	<item id="4148" type="EtcItem" name="레시피 : 아바돈 로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -522,7 +522,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4149" type="EtcItem" name="Recipe: Avadon Circlet (100%)">
+	<item id="4149" type="EtcItem" name="레시피 : 아바돈 서클릿(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -534,7 +534,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4150" type="EtcItem" name="Recipe: Sealed Avadon Gloves (100%)">
+	<item id="4150" type="EtcItem" name="레시피 : 봉인된 아바돈 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -546,7 +546,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4151" type="EtcItem" name="Recipe: Chain Gloves of Silence (100%)">
+	<item id="4151" type="EtcItem" name="레시피 : 침묵의 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -558,7 +558,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4152" type="EtcItem" name="Recipe: Guardian's Gloves (100%)">
+	<item id="4152" type="EtcItem" name="레시피 : 가디언스 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -570,7 +570,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4153" type="EtcItem" name="Recipe: Gloves of Blessing (100%)">
+	<item id="4153" type="EtcItem" name="레시피 : 축복의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -582,7 +582,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4154" type="EtcItem" name="Recipe: Doom Shield (100%)">
+	<item id="4154" type="EtcItem" name="레시피 : 둠 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -594,7 +594,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4155" type="EtcItem" name="Recipe: Blue Wolf Breastplate (100%)">
+	<item id="4155" type="EtcItem" name="레시피 : 푸른 늑대의 흉갑(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -606,7 +606,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4156" type="EtcItem" name="Recipe: Boots of Blessing (100%)">
+	<item id="4156" type="EtcItem" name="레시피 : 축복의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -618,7 +618,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4157" type="EtcItem" name="Recipe: Blue Wolf Gaiters (100%)">
+	<item id="4157" type="EtcItem" name="레시피 : 푸른 늑대의 각반(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -630,7 +630,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4158" type="EtcItem" name="Recipe: Doom Plate Armor (100%)">
+	<item id="4158" type="EtcItem" name="레시피 : 둠 플레이트 아머(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -642,7 +642,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4159" type="EtcItem" name="Recipe: Blue Wolf Leather Armor (100%)">
+	<item id="4159" type="EtcItem" name="레시피 : 푸른 늑대의 레더 메일(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -654,7 +654,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4160" type="EtcItem" name="Recipe: Leather Armor of Doom (100%)">
+	<item id="4160" type="EtcItem" name="레시피 : 레더 메일 오브 둠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -666,7 +666,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4161" type="EtcItem" name="Recipe: Blue Wolf Tunic (100%)">
+	<item id="4161" type="EtcItem" name="레시피 : 푸른 늑대의 튜닉(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -678,7 +678,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4162" type="EtcItem" name="Recipe: Tunic of Doom (100%)">
+	<item id="4162" type="EtcItem" name="레시피 : 튜닉 오브 둠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -690,7 +690,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4163" type="EtcItem" name="Recipe: Blue Wolf Stockings (100%)">
+	<item id="4163" type="EtcItem" name="레시피 : 푸른 늑대의 호즈(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -702,7 +702,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4164" type="EtcItem" name="Recipe: Stockings of Doom (100%)">
+	<item id="4164" type="EtcItem" name="레시피 : 호즈 오브 둠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -714,7 +714,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4165" type="EtcItem" name="Recipe: Blue Wolf Helmet (100%)">
+	<item id="4165" type="EtcItem" name="레시피 : 푸른 늑대의 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -726,7 +726,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4166" type="EtcItem" name="Recipe: Doom Helmet (100%)">
+	<item id="4166" type="EtcItem" name="레시피 : 둠 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4167" type="EtcItem" name="Recipe: Sealed Blue Wolf Boots (100%)">
+	<item id="4167" type="EtcItem" name="레시피 : 봉인된 푸른 늑대의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -750,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4168" type="EtcItem" name="Recipe: Sealed Doom Gloves (100%)">
+	<item id="4168" type="EtcItem" name="레시피 : 봉인된 둠 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -762,7 +762,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4169" type="EtcItem" name="Recipe: Elemental Gloves (100%)">
+	<item id="4169" type="EtcItem" name="레시피 : 엘레멘탈 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -774,7 +774,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4170" type="EtcItem" name="Recipe: Gloves of Grace (100%)">
+	<item id="4170" type="EtcItem" name="레시피 : 은총의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -786,7 +786,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4171" type="EtcItem" name="Recipe: Implosion Gauntlets (100%)">
+	<item id="4171" type="EtcItem" name="레시피 : 파열의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -798,7 +798,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4172" type="EtcItem" name="Recipe: Paradia Gloves (100%)">
+	<item id="4172" type="EtcItem" name="레시피 : 패러디아 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -810,7 +810,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4173" type="EtcItem" name="Recipe: Sealed Blue Wolf Gloves (100%)">
+	<item id="4173" type="EtcItem" name="레시피 : 봉인된 푸른 늑대의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -822,7 +822,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4174" type="EtcItem" name="Recipe: Sealed Zubei's Boots (100%)">
+	<item id="4174" type="EtcItem" name="레시피 : 봉인된 쉬르노엔의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -834,7 +834,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4175" type="EtcItem" name="Recipe: Sealed Avadon Boots (100%)">
+	<item id="4175" type="EtcItem" name="레시피 : 봉인된 아바돈 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -846,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4176" type="EtcItem" name="Recipe: Sealed Doom Boots (100%)">
+	<item id="4176" type="EtcItem" name="레시피 : 봉인된 둠 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -858,7 +858,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4177" type="EtcItem" name="Recipe: Sealed Zubei's Gauntlets (100%)">
+	<item id="4177" type="EtcItem" name="레시피 : 봉인된 쉬르노엔의 건틀렛(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -870,7 +870,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4178" type="EtcItem" name="Recipe: Zubei's Shield (100%)">
+	<item id="4178" type="EtcItem" name="레시피 : 쉬르노엔의 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -882,7 +882,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4179" type="EtcItem" name="Recipe: Zubei's Helmet (100%)">
+	<item id="4179" type="EtcItem" name="레시피 : 쉬르노엔의 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -894,7 +894,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4180" type="EtcItem" name="Recipe: Silver Arrow (100%)">
+	<item id="4180" type="EtcItem" name="레시피 : 은화살(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -906,7 +906,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4181" type="EtcItem" name="Recipe: Pata (100%)">
+	<item id="4181" type="EtcItem" name="레시피 : 파타(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -918,7 +918,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4182" type="EtcItem" name="Recipe: Great Sword (100%)">
+	<item id="4182" type="EtcItem" name="레시피 : 그레이트 소드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -930,7 +930,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4183" type="EtcItem" name="Recipe: Heavy War Axe (100%)">
+	<item id="4183" type="EtcItem" name="레시피 : 헤비 워 액스(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -942,7 +942,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4184" type="EtcItem" name="Recipe: Sprite's Staff (100%)">
+	<item id="4184" type="EtcItem" name="레시피 : 정령의 지팡이(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -954,7 +954,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4185" type="EtcItem" name="Recipe: Keshanberk (100%)">
+	<item id="4185" type="EtcItem" name="레시피 : 크샨베르크(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4186" type="EtcItem" name="Recipe: Sword of Valhalla (100%)">
+	<item id="4186" type="EtcItem" name="레시피 : 소드 오브 발할라(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -978,7 +978,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4187" type="EtcItem" name="Recipe: Kris (100%)">
+	<item id="4187" type="EtcItem" name="레시피 : 크리스(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -990,7 +990,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4188" type="EtcItem" name="Recipe: Hell Knife (100%)">
+	<item id="4188" type="EtcItem" name="레시피 : 헬나이프(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1002,7 +1002,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4189" type="EtcItem" name="Recipe: Arthro Nail (100%)">
+	<item id="4189" type="EtcItem" name="레시피 : 아스라네일(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1014,7 +1014,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4190" type="EtcItem" name="Recipe: Dark Elven Long Bow (100%)">
+	<item id="4190" type="EtcItem" name="레시피 : 다크엘븐 롱보우(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1026,7 +1026,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4191" type="EtcItem" name="Recipe: Great Axe (100%)">
+	<item id="4191" type="EtcItem" name="레시피 : 그레이트 액스(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1038,7 +1038,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4192" type="EtcItem" name="Recipe: Sword of Damascus (100%)">
+	<item id="4192" type="EtcItem" name="레시피 : 다마스커스 검(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1050,7 +1050,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4193" type="EtcItem" name="Recipe: Lance (100%)">
+	<item id="4193" type="EtcItem" name="레시피 : 랜시아(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1062,7 +1062,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4194" type="EtcItem" name="Recipe: Deadman's Glory (100%)">
+	<item id="4194" type="EtcItem" name="레시피 : 사자의 영광(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1074,7 +1074,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4195" type="EtcItem" name="Recipe: Art of Battle Axe (100%)">
+	<item id="4195" type="EtcItem" name="레시피 : 아트 오브 배틀액스(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1086,7 +1086,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4196" type="EtcItem" name="Recipe: Staff of Evil Spirits (100%)">
+	<item id="4196" type="EtcItem" name="레시피 : 사령의 지팡이(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1098,7 +1098,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4197" type="EtcItem" name="Recipe: Demon's Dagger (100%)">
+	<item id="4197" type="EtcItem" name="레시피 : 악마의 단검(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1110,7 +1110,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4198" type="EtcItem" name="Recipe: Bellion Cestus (100%)">
+	<item id="4198" type="EtcItem" name="레시피 : 벨리온 세스터스(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1122,7 +1122,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="4199" type="EtcItem" name="Recipe: Bow of Peril (100%)">
+	<item id="4199" type="EtcItem" name="레시피 : 해저드보우(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />

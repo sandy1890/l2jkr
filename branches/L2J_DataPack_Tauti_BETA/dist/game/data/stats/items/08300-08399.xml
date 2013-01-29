@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8300" type="EtcItem" name="Recipe: Infernal Master (60%)">
+	<item id="8300" type="EtcItem" name="레시피 : 인페르노 마스터(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8301" type="EtcItem" name="Recipe: Priest Sword (100%)">
+	<item id="8301" type="EtcItem" name="레시피 : 사제의 검(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -24,7 +24,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8302" type="EtcItem" name="Recipe: Sword of Magic Fog (100%)">
+	<item id="8302" type="EtcItem" name="레시피 : 소드 오브 매직포그(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8303" type="EtcItem" name="Recipe: Mysterious Sword (100%)">
+	<item id="8303" type="EtcItem" name="레시피 : 미스터리 소드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -48,7 +48,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8304" type="EtcItem" name="Recipe: Ecliptic Sword (100%)">
+	<item id="8304" type="EtcItem" name="레시피 : 소드 오브 이클립스(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8305" type="EtcItem" name="Recipe: Wizard's Tear (100%)">
+	<item id="8305" type="EtcItem" name="레시피 : 티어스 오브 위자드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -72,7 +72,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8306" type="EtcItem" name="Recipe: Wizard's Tear (60%)">
+	<item id="8306" type="EtcItem" name="레시피 : 티어스 오브 위자드(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -84,7 +84,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8307" type="EtcItem" name="Recipe: Priest Mace (100%)">
+	<item id="8307" type="EtcItem" name="레시피 : 사제의 메이스(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -96,7 +96,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8308" type="EtcItem" name="Recipe: Ecliptic Axe (100%)">
+	<item id="8308" type="EtcItem" name="레시피 : 이클립스 액스(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8309" type="EtcItem" name="Recipe: Spell Breaker (100%)">
+	<item id="8309" type="EtcItem" name="레시피 : 스펠 브레이커(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -120,7 +120,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8310" type="EtcItem" name="Recipe: Spell Breaker (60%)">
+	<item id="8310" type="EtcItem" name="레시피 : 스펠 브레이커(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -132,7 +132,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8311" type="EtcItem" name="Recipe: Kaim Vanul's Bones (100%)">
+	<item id="8311" type="EtcItem" name="레시피 : 카임 바눌의 뼈(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -144,7 +144,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8312" type="EtcItem" name="Recipe: Kaim Vanul's Bones (60%)">
+	<item id="8312" type="EtcItem" name="레시피 : 카임 바눌의 뼈(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -156,7 +156,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8313" type="EtcItem" name="Recipe: Spiritual Eye (100%)">
+	<item id="8313" type="EtcItem" name="레시피 : 영혼의 눈(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -168,7 +168,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8314" type="EtcItem" name="Recipe: Spiritual Eye (60%)">
+	<item id="8314" type="EtcItem" name="레시피 : 영혼의 눈(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -180,7 +180,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8315" type="EtcItem" name="Recipe: Flaming Dragon Skull (100%)">
+	<item id="8315" type="EtcItem" name="레시피 : 드래곤 플레임 헤드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -192,7 +192,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8316" type="EtcItem" name="Recipe: Flaming Dragon Skull (60%)">
+	<item id="8316" type="EtcItem" name="레시피 : 드래곤 플레임 헤드(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -204,7 +204,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8317" type="EtcItem" name="Recipe: Titan Hammer (100%)">
+	<item id="8317" type="EtcItem" name="레시피 : 하거인의 망치(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -216,7 +216,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8318" type="EtcItem" name="Recipe: Dwarven Hammer (100%)">
+	<item id="8318" type="EtcItem" name="레시피 : 드워븐 해머(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8319" type="EtcItem" name="Recipe: Karik Horn (100%)">
+	<item id="8319" type="EtcItem" name="레시피 : 카리크의 뿔(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8320" type="EtcItem" name="Recipe: Destroyer Hammer (100%)">
+	<item id="8320" type="EtcItem" name="레시피 : 파괴자의 망치(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -252,7 +252,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8321" type="EtcItem" name="Recipe: Ice Storm Hammer (100%)">
+	<item id="8321" type="EtcItem" name="레시피 : 아이스 스톰 해머(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -264,7 +264,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8322" type="EtcItem" name="Recipe: Ice Storm Hammer (60%)">
+	<item id="8322" type="EtcItem" name="레시피 : 아이스 스톰 해머(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -276,7 +276,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8323" type="EtcItem" name="Recipe: Star Buster (100%)">
+	<item id="8323" type="EtcItem" name="레시피 : 스타 버스터(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -288,7 +288,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8324" type="EtcItem" name="Recipe: Star Buster (60%)">
+	<item id="8324" type="EtcItem" name="레시피 : 스타 버스터(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -300,7 +300,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8325" type="EtcItem" name="Recipe: Doom Crusher (100%)">
+	<item id="8325" type="EtcItem" name="레시피 : 둠 크러셔(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -312,7 +312,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8326" type="EtcItem" name="Recipe: Doom Crusher (60%)">
+	<item id="8326" type="EtcItem" name="레시피 : 둠 크러셔(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -324,7 +324,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8327" type="EtcItem" name="Steel Sword Blade">
+	<item id="8327" type="EtcItem" name="강철검 날">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -333,7 +333,7 @@
 		<set name="price" val="11912" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8328" type="EtcItem" name="Titan Sword Blade">
+	<item id="8328" type="EtcItem" name="하거인의 검 날">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -342,7 +342,7 @@
 		<set name="price" val="20950" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8329" type="EtcItem" name="Pa'agrian Sword Blade">
+	<item id="8329" type="EtcItem" name="소드 오브 파아그리오 날">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -351,7 +351,7 @@
 		<set name="price" val="38420" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8330" type="EtcItem" name="Guardian Sword Blade">
+	<item id="8330" type="EtcItem" name="가디언스 소드 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -360,7 +360,7 @@
 		<set name="price" val="45769" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8331" type="EtcItem" name="Infernal Master Blade">
+	<item id="8331" type="EtcItem" name="인페르노 마스터 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -369,7 +369,7 @@
 		<set name="price" val="58615" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8332" type="EtcItem" name="Priest Sword Blade">
+	<item id="8332" type="EtcItem" name="사제의 검 날">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -378,7 +378,7 @@
 		<set name="price" val="12037" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8333" type="EtcItem" name="Sword of Magic Fog Blade">
+	<item id="8333" type="EtcItem" name="소드 오브 매직포그 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -387,7 +387,7 @@
 		<set name="price" val="20300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8334" type="EtcItem" name="Mysterious Sword Blade">
+	<item id="8334" type="EtcItem" name="미스터리 소드 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -396,7 +396,7 @@
 		<set name="price" val="25187" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8335" type="EtcItem" name="Ecliptic Sword Blade">
+	<item id="8335" type="EtcItem" name="소드 오브 이클립스 날">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -405,7 +405,7 @@
 		<set name="price" val="43890" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8336" type="EtcItem" name="Blade of the Wizard's Tear">
+	<item id="8336" type="EtcItem" name="티어스 오브 위자드 블레이드">
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -414,7 +414,7 @@
 		<set name="price" val="45692" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8337" type="EtcItem" name="Priest Mace Head">
+	<item id="8337" type="EtcItem" name="사제의 메이스 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -423,7 +423,7 @@
 		<set name="price" val="19757" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8338" type="EtcItem" name="Axe of Eclipse Head">
+	<item id="8338" type="EtcItem" name="이클립스 액스 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -432,7 +432,7 @@
 		<set name="price" val="41636" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8339" type="EtcItem" name="Spell Breaker Head">
+	<item id="8339" type="EtcItem" name="스펠 브레이커 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -441,7 +441,7 @@
 		<set name="price" val="34950" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8340" type="EtcItem" name="Bones Head of Kaim Vanul">
+	<item id="8340" type="EtcItem" name="카임 바눌의 뼈 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -450,7 +450,7 @@
 		<set name="price" val="45769" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8341" type="EtcItem" name="Spiritual Eye Piece">
+	<item id="8341" type="EtcItem" name="영혼의 눈 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -459,7 +459,7 @@
 		<set name="price" val="59384" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8342" type="EtcItem" name="Flaming Dragon Skull Piece">
+	<item id="8342" type="EtcItem" name="드래곤 플레임 헤드 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -468,7 +468,7 @@
 		<set name="price" val="72914" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8343" type="EtcItem" name="Titan Hammer Piece">
+	<item id="8343" type="EtcItem" name="하거인의 망치 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -477,7 +477,7 @@
 		<set name="price" val="19757" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8344" type="EtcItem" name="Dwarven Hammer Piece">
+	<item id="8344" type="EtcItem" name="드워븐 해머의 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -486,7 +486,7 @@
 		<set name="price" val="43818" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8345" type="EtcItem" name="Karik Horn Piece">
+	<item id="8345" type="EtcItem" name="카리크의 뿔 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -495,7 +495,7 @@
 		<set name="price" val="36800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8346" type="EtcItem" name="Hammer Piece of Destroyer">
+	<item id="8346" type="EtcItem" name="파괴자의 망치 조각">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -504,7 +504,7 @@
 		<set name="price" val="59308" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8347" type="EtcItem" name="Ice Storm Hammer Head">
+	<item id="8347" type="EtcItem" name="아이스 스톰 해머 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -513,7 +513,7 @@
 		<set name="price" val="38867" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8348" type="EtcItem" name="Star Buster Head">
+	<item id="8348" type="EtcItem" name="스타 버스터 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -522,7 +522,7 @@
 		<set name="price" val="45846" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8349" type="EtcItem" name="Doom Crusher Head">
+	<item id="8349" type="EtcItem" name="둠 크러셔 헤드">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -531,7 +531,7 @@
 		<set name="price" val="72929" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8350" type="Weapon" name="Chrono Maracas">
+	<item id="8350" type="Weapon" name="크로노 마라카스">
 		<set name="icon" val="icon.weapon_chrono_maracas_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -550,7 +550,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8351" type="EtcItem" name="Black Colored Fish Scale">
+	<item id="8351" type="EtcItem" name="검은색 물고기 비늘">
 		<set name="icon" val="icon.etc_gludio_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -559,7 +559,7 @@
 		<set name="price" val="900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8352" type="EtcItem" name="Red Colored Fish Scale">
+	<item id="8352" type="EtcItem" name="붉은색 물고기 비늘">
 		<set name="icon" val="icon.etc_dion_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -568,7 +568,7 @@
 		<set name="price" val="700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8353" type="EtcItem" name="Green Colored Fish Scale">
+	<item id="8353" type="EtcItem" name="녹색 물고기 비늘">
 		<set name="icon" val="icon.etc_giran_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -577,7 +577,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8354" type="EtcItem" name="Yellow Colored Fish Scale">
+	<item id="8354" type="EtcItem" name="황색 물고기 비늘">
 		<set name="icon" val="icon.etc_oren_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -586,7 +586,7 @@
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8355" type="EtcItem" name="Blue Colored Fish Scale">
+	<item id="8355" type="EtcItem" name="청색 물고기 비늘">
 		<set name="icon" val="icon.etc_aden_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -595,7 +595,7 @@
 		<set name="price" val="300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8356" type="EtcItem" name="White Colored Fish Scale">
+	<item id="8356" type="EtcItem" name="흰색 물고기 비늘">
 		<set name="icon" val="icon.etc_innadrile_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -604,7 +604,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8357" type="EtcItem" name="Orange Colored Fish Scale">
+	<item id="8357" type="EtcItem" name="주황색 물고기 비늘">
 		<set name="icon" val="icon.etc_godad_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -613,7 +613,7 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8358" type="EtcItem" name="Purple Colored Fish Scale">
+	<item id="8358" type="EtcItem" name="보라색 물고기 비늘">
 		<set name="icon" val="icon.etc_rune_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -622,7 +622,7 @@
 		<set name="price" val="600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8359" type="EtcItem" name="Jade Colored Fish Scale">
+	<item id="8359" type="EtcItem" name="옥색 물고기 비늘">
 		<set name="icon" val="icon.etc_schuttgart_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -631,7 +631,7 @@
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8360" type="EtcItem" name="Adventurer's Box - C Accessory">
+	<item id="8360" type="EtcItem" name="모험가의 상자 - C 액세서리">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -639,7 +639,7 @@
 		<set name="price" val="200000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8361" type="EtcItem" name="Adventurer's Box - B Accessory">
+	<item id="8361" type="EtcItem" name="모험가의 상자 - B 액세서리">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -647,7 +647,7 @@
 		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8362" type="EtcItem" name="Adventurer's Box - Hair Accessory">
+	<item id="8362" type="EtcItem" name="모험가의 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -655,7 +655,7 @@
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8363" type="EtcItem" name="Adventurer's Box - Cradle of Creation">
+	<item id="8363" type="EtcItem" name="모험가의 상자 - 창조의 요람">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -663,7 +663,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8364" type="EtcItem" name="Recipe: Party Hat (100%)">
+	<item id="8364" type="EtcItem" name="레시피 : 꼬깔모자(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -675,7 +675,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8365" type="EtcItem" name="Recipe: Party Hat (70%)">
+	<item id="8365" type="EtcItem" name="레시피 : 꼬깔모자(70%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -687,7 +687,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8366" type="EtcItem" name="Recipe: Feathered Hat (100%)">
+	<item id="8366" type="EtcItem" name="레시피 : 멋쟁이의 샤프롱(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -699,7 +699,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8367" type="EtcItem" name="Recipe: Feathered Hat (70%)">
+	<item id="8367" type="EtcItem" name="레시피 : 멋쟁이의 샤프롱(70%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -711,7 +711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8368" type="EtcItem" name="Recipe: Artisan's Goggles (100%)">
+	<item id="8368" type="EtcItem" name="레시피 : 장인의 고글(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -723,7 +723,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8369" type="EtcItem" name="Recipe: Artisan's Goggles (70%)">
+	<item id="8369" type="EtcItem" name="레시피 : 장인의 고글(70%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -735,7 +735,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8370" type="EtcItem" name="Recipe: Red Horn of Victory (100%)">
+	<item id="8370" type="EtcItem" name="레시피 : 승리의 붉은 뿔(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -747,7 +747,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8371" type="EtcItem" name="Recipe: Little Angel Wings (100%)">
+	<item id="8371" type="EtcItem" name="레시피 : 작은 천사 날개(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -759,7 +759,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8372" type="EtcItem" name="Recipe: Fairy Antennae (100%)">
+	<item id="8372" type="EtcItem" name="레시피 : 페어리의 더듬이(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -771,7 +771,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8373" type="EtcItem" name="Party Hat Fabric">
+	<item id="8373" type="EtcItem" name="꼬깔모자 원단">
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -780,7 +780,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8374" type="EtcItem" name="Feathered Hat Fabric">
+	<item id="8374" type="EtcItem" name="멋쟁이의 샤프롱 원단">
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -789,7 +789,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8375" type="EtcItem" name="Artisan's Goggles Fabric">
+	<item id="8375" type="EtcItem" name="장인의 고글 원단">
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -798,7 +798,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8376" type="EtcItem" name="Red Horn of Victory Fragment">
+	<item id="8376" type="EtcItem" name="승리의 붉은 뿔 조각">
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -807,7 +807,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8377" type="EtcItem" name="Little Angel Wings Piece">
+	<item id="8377" type="EtcItem" name="작은 천사 날개 조각">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -816,7 +816,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8378" type="EtcItem" name="Fairy Antennae Piece">
+	<item id="8378" type="EtcItem" name="페어리의 더듬이 조각">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -825,7 +825,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8379" type="EtcItem" name="Petrification Scroll">
+	<item id="8379" type="EtcItem" name="석화주문서">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -835,7 +835,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2239-1" />
 	</item>
-	<item id="8380" type="EtcItem" name="Spellbook: Betray">
+	<item id="8380" type="EtcItem" name="마법서 - 비트레이">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -843,7 +843,7 @@
 		<set name="price" val="6250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8381" type="EtcItem" name="Spellbook: Mass Curse Fear">
+	<item id="8381" type="EtcItem" name="마법서 - 매스 커스 피어">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -851,7 +851,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8382" type="EtcItem" name="Spellbook: Mass Curse Gloom">
+	<item id="8382" type="EtcItem" name="마법서 - 매스 커스 글룸">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -859,7 +859,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8383" type="EtcItem" name="Spellbook: Mass Surrender to Fire">
+	<item id="8383" type="EtcItem" name="마법서 - 매스 서렌더 투 파이어">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -867,7 +867,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8384" type="EtcItem" name="Spellbook: Mass Surrender to Water">
+	<item id="8384" type="EtcItem" name="마법서 - 매스 서렌더 투 워터">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -875,7 +875,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8385" type="EtcItem" name="Spellbook: Mass Surrender to Wind">
+	<item id="8385" type="EtcItem" name="마법서 - 매스 서렌더 투 윈드">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -883,7 +883,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8386" type="EtcItem" name="Spellbook - Arcane Disruption">
+	<item id="8386" type="EtcItem" name="마법서 - 아케인 디스럽션">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -891,7 +891,7 @@
 		<set name="price" val="6250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8387" type="EtcItem" name="Spellbook - Summon Cursed Bones">
+	<item id="8387" type="EtcItem" name="마법서 - 서먼 커스트 본">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -899,7 +899,7 @@
 		<set name="price" val="7200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8388" type="EtcItem" name="Spellbook: Greater Might">
+	<item id="8388" type="EtcItem" name="마법서 - 그레이터 마이트">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -907,7 +907,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8389" type="EtcItem" name="Spellbook: Greater Shield">
+	<item id="8389" type="EtcItem" name="마법서 - 그레이터 실드">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -915,7 +915,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8390" type="EtcItem" name="Amulet: War Chant">
+	<item id="8390" type="EtcItem" name="부적 - 챈트 오브 워">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -923,7 +923,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8391" type="EtcItem" name="Amulet: Earth Chant">
+	<item id="8391" type="EtcItem" name="부적 - 챈트 오브 어스">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -931,7 +931,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8392" type="EtcItem" name="Spellbook: Holy Resistance">
+	<item id="8392" type="EtcItem" name="마법서 - 레지스트 홀리">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -939,7 +939,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8393" type="EtcItem" name="Spellbook: Unholy Resistance">
+	<item id="8393" type="EtcItem" name="마법서 - 레지스트 언홀리">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -947,7 +947,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8394" type="EtcItem" name="Spellbook: Trance">
+	<item id="8394" type="EtcItem" name="마법서 - 트랜스">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -955,7 +955,7 @@
 		<set name="price" val="6250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8395" type="EtcItem" name="Spellbook: Erase">
+	<item id="8395" type="EtcItem" name="마법서 - 이레이스">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -963,7 +963,7 @@
 		<set name="price" val="6250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8396" type="EtcItem" name="Spellbook: Magical Backfire">
+	<item id="8396" type="EtcItem" name="마법서 - 매지컬 백파이어">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -971,7 +971,7 @@
 		<set name="price" val="6250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8397" type="EtcItem" name="Spellbook: Clarity">
+	<item id="8397" type="EtcItem" name="마법서 - 클레리티">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -979,7 +979,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8398" type="EtcItem" name="Spellbook: Mana Burn">
+	<item id="8398" type="EtcItem" name="마법서 - 마나 번">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -987,7 +987,7 @@
 		<set name="price" val="6250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8399" type="EtcItem" name="Spellbook: Mana Storm">
+	<item id="8399" type="EtcItem" name="마법서 - 마나 스톰">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />

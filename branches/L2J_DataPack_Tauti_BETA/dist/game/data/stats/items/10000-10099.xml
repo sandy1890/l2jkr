@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="10000" type="EtcItem" name="Wind Potion">
+	<item id="10000" type="EtcItem" name="바람 속성 강화 물약">
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -13,7 +13,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2337-1" />
 	</item>
-	<item id="10001" type="EtcItem" name="Dark Potion">
+	<item id="10001" type="EtcItem" name="암흑 속성 강화 물약">
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -26,7 +26,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2340-1" />
 	</item>
-	<item id="10002" type="EtcItem" name="Holy Potion">
+	<item id="10002" type="EtcItem" name="신성 속성 강화 물약">
 		<set name="icon" val="icon.etc_holy_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -39,7 +39,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2339-1" />
 	</item>
-	<item id="10003" type="Weapon" name="Fleuret">
+	<item id="10003" type="Weapon" name="플뢰레">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -71,7 +71,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10004" type="Weapon" name="Dynasty Dual Sword">
+	<item id="10004" type="Weapon" name="다이너스티 듀얼 소드">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -100,7 +100,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10005" type="Weapon" name="Shadow Item: Fleuret">
+	<item id="10005" type="Weapon" name="투영병기 - 플뢰레">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -132,7 +132,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10006" type="Weapon" name="Shadow Item: Military Talwar">
+	<item id="10006" type="Weapon" name="투영병기 - 어설트 툴와르">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -163,7 +163,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10007" type="Weapon" name="Shadow Item: Hand Crossbow">
+	<item id="10007" type="Weapon" name="투영병기 - 핸드 보우건">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -195,7 +195,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10008" type="Weapon" name="Shadow Item: Blinzlasher">
+	<item id="10008" type="Weapon" name="투영병기 - 블링크 슬래셔">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -227,7 +227,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10009" type="Weapon" name="Shadow Item: Immortal Edge">
+	<item id="10009" type="Weapon" name="투영병기 - 인빈시블 블레이드">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -258,7 +258,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10010" type="Weapon" name="Shadow Item: Tathlum">
+	<item id="10010" type="Weapon" name="투영병기 - 타스람">
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -290,7 +290,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10011" type="Weapon" name="Shadow Item - War Axe">
+	<item id="10011" type="Weapon" name="투영병기 - 워액스">
 		<set name="icon" val="icon.weapon_war_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -318,7 +318,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="10012" type="EtcItem" name="Scorpion Poison Stinger">
+	<item id="10012" type="EtcItem" name="전갈의 독침">
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -326,7 +326,7 @@
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10013" type="EtcItem" name="Race Stamp">
+	<item id="10013" type="EtcItem" name="레이스 스템프">
 		<set name="icon" val="icon.etc_hs_agit_war_joining_certificate_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -337,14 +337,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10014" type="EtcItem" name="Control Room Card">
+	<item id="10014" type="EtcItem" name="제어실 카드">
 		<set name="icon" val="icon.etc_hs_agit_war_joining_certificate_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
 		<set name="price" val="250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10015" type="EtcItem" name="Prison Gate Key">
+	<item id="10015" type="EtcItem" name="감옥문 열쇠">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="steel" />
@@ -353,7 +353,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2362-1" />
 	</item>
-	<item id="10016" type="EtcItem" name="Underground Warehouse Key">
+	<item id="10016" type="EtcItem" name="지하 저장소 열쇠">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -362,7 +362,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2363-1" />
 	</item>
-	<item id="10017" type="EtcItem" name="Coral Treasure Chest Key">
+	<item id="10017" type="EtcItem" name="산호의 보물 상자 열쇠">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="steel" />
@@ -370,7 +370,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2400-1" />
 	</item>
-	<item id="10018" type="Armor" name="Agathion Seal Bracelet - Fortress">
+	<item id="10018" type="Armor" name="아가시온 봉인 팔찌 - 요새">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -388,7 +388,7 @@
 			<player fort="-1" />
 		</cond>
 	</item>
-	<item id="10019" type="Armor" name="Ring Mail Breastplate">
+	<item id="10019" type="Armor" name="링 흉갑">
 		<set name="icon" val="icon.armor_t12_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -409,7 +409,7 @@
 			<add order="0x10" stat="pDef" val="77" />
 		</for>
 	</item>
-	<item id="10020" type="Armor" name="Iron Plate Gaiters">
+	<item id="10020" type="Armor" name="철판 각반">
 		<set name="icon" val="icon.armor_t12_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -430,7 +430,7 @@
 			<add order="0x10" stat="pDef" val="48" />
 		</for>
 	</item>
-	<item id="10021" type="Armor" name="Puma Skin Shirt">
+	<item id="10021" type="Armor" name="퓨마가죽셔츠">
 		<set name="icon" val="icon.armor_t09_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -448,7 +448,7 @@
 			<add order="0x10" stat="pDef" val="58" />
 		</for>
 	</item>
-	<item id="10022" type="Armor" name="Puma Skin Gaiters">
+	<item id="10022" type="Armor" name="퓨마가죽각반">
 		<set name="icon" val="icon.armor_t09_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -466,7 +466,7 @@
 			<add order="0x10" stat="pDef" val="36" />
 		</for>
 	</item>
-	<item id="10023" type="Armor" name="Cursed Tunic">
+	<item id="10023" type="Armor" name="저주 받은 튜닉">
 		<set name="icon" val="icon.armor_t14_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -488,7 +488,7 @@
 			<add order="0x40" stat="maxMp" val="106" />
 		</for>
 	</item>
-	<item id="10024" type="Armor" name="Cursed Stockings">
+	<item id="10024" type="Armor" name="저주 받은 호즈">
 		<set name="icon" val="icon.armor_t14_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -510,7 +510,7 @@
 			<add order="0x40" stat="maxMp" val="66" />
 		</for>
 	</item>
-	<item id="10025" type="EtcItem" name="Battle Manual - Fallen Arrow">
+	<item id="10025" type="EtcItem" name="전투 교범 - 폴른 애로우">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -518,7 +518,7 @@
 		<set name="price" val="75" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10026" type="EtcItem" name="Battle Manual - Fallen Attack">
+	<item id="10026" type="EtcItem" name="전투 교범 - 폴른 어택">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -526,7 +526,7 @@
 		<set name="price" val="75" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10027" type="EtcItem" name="Battle Manual - Detect Trap">
+	<item id="10027" type="EtcItem" name="전투 교범 - 디택트 트랩">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -534,7 +534,7 @@
 		<set name="price" val="550" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10028" type="EtcItem" name="Battle Manual - Defuse Trap">
+	<item id="10028" type="EtcItem" name="전투 교범 - 디퓨즈 트랩">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -542,7 +542,7 @@
 		<set name="price" val="550" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10029" type="EtcItem" name="Battle Manual - Dark Strike">
+	<item id="10029" type="EtcItem" name="전투 교범 - 다크 스트라이크">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -550,7 +550,7 @@
 		<set name="price" val="700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10030" type="EtcItem" name="Battle Manual - Dark Smash">
+	<item id="10030" type="EtcItem" name="전투 교범 - 다크 스매시">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -558,7 +558,7 @@
 		<set name="price" val="2900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10031" type="EtcItem" name="Battle Manual - Double Thrust">
+	<item id="10031" type="EtcItem" name="전투 교범 - 더블 트러스트">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -566,7 +566,7 @@
 		<set name="price" val="700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10032" type="EtcItem" name="Battle Manual - Abyssal Blaze">
+	<item id="10032" type="EtcItem" name="전투 교범 - 어비셜 블레이즈">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -574,7 +574,7 @@
 		<set name="price" val="700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10033" type="EtcItem" name="Battle Manual - Dark Explosion">
+	<item id="10033" type="EtcItem" name="전투 교범 - 다크 익스플로젼">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -582,7 +582,7 @@
 		<set name="price" val="1150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10034" type="EtcItem" name="Battle Manual - Shift Target">
+	<item id="10034" type="EtcItem" name="전투 교범 - 시프트 타겟">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -590,7 +590,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10035" type="EtcItem" name="Battle Manual - Change Life Stone">
+	<item id="10035" type="EtcItem" name="전투 교범 - 체인지 라이프 스톤">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -598,7 +598,7 @@
 		<set name="price" val="2600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10036" type="EtcItem" name="Battle Manual - Spread Wing">
+	<item id="10036" type="EtcItem" name="전투 교범 - 스프래드 윙">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -606,7 +606,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10037" type="EtcItem" name="Battle Manual - Slashing Blade">
+	<item id="10037" type="EtcItem" name="전투 교범 - 블레이드 슬래시">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -614,7 +614,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10038" type="EtcItem" name="Battle Manual - Crushing Pain">
+	<item id="10038" type="EtcItem" name="전투 교범 - 크러쉬 오브 페인">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -622,7 +622,7 @@
 		<set name="price" val="7000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10039" type="EtcItem" name="Battle Manual - Contagion">
+	<item id="10039" type="EtcItem" name="전투 교범 - 컨테이젼">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -630,7 +630,7 @@
 		<set name="price" val="7950" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10040" type="EtcItem" name="Battle Manual - Life to Soul">
+	<item id="10040" type="EtcItem" name="전투 교범 - 라이프 투 소울">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -638,7 +638,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10041" type="EtcItem" name="Battle Manual - Scorn">
+	<item id="10041" type="EtcItem" name="전투 교범 - 스콘">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -646,7 +646,7 @@
 		<set name="price" val="3700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10042" type="EtcItem" name="Battle Manual - Triple Thrust">
+	<item id="10042" type="EtcItem" name="전투 교범 - 트리플 트러스트">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -654,7 +654,7 @@
 		<set name="price" val="2900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10043" type="EtcItem" name="Battle Manual - Shining Edge">
+	<item id="10043" type="EtcItem" name="전투 교범 - 샤이닝 엣지">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -662,7 +662,7 @@
 		<set name="price" val="4400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10044" type="EtcItem" name="Battle Manual - Checkmate">
+	<item id="10044" type="EtcItem" name="전투 교범 - 체크메이트">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -670,7 +670,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10045" type="EtcItem" name="Battle Manual - Soul of Pain">
+	<item id="10045" type="EtcItem" name="전투 교범 - 소울 오브 페인">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -678,7 +678,7 @@
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10046" type="EtcItem" name="Battle Manual - Dark Flame">
+	<item id="10046" type="EtcItem" name="전투 교범 - 다크 플레임">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -686,7 +686,7 @@
 		<set name="price" val="4000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10047" type="EtcItem" name="Battle Manual - Annihilation Circle">
+	<item id="10047" type="EtcItem" name="전투 교범 - 어나이얼레이션 서클">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -694,7 +694,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10048" type="EtcItem" name="Battle Manual - Curse of Divinity">
+	<item id="10048" type="EtcItem" name="전투 교범 - 커스 오브 디비니티">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -702,7 +702,7 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10049" type="EtcItem" name="Battle Manual - Steal Divinity">
+	<item id="10049" type="EtcItem" name="전투 교범 - 스틸 디비니티">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -710,7 +710,7 @@
 		<set name="price" val="6000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10050" type="EtcItem" name="Battle Manual - Blink">
+	<item id="10050" type="EtcItem" name="전투 교범 - 블링크">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -718,7 +718,7 @@
 		<set name="price" val="7200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10051" type="EtcItem" name="Battle Manual - Transfer Soul">
+	<item id="10051" type="EtcItem" name="전투 교범 - 트랜스퍼 소울">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -726,7 +726,7 @@
 		<set name="price" val="1150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10052" type="EtcItem" name="Battle Manual - Twin Shot">
+	<item id="10052" type="EtcItem" name="전투 교범 - 트윈 샷">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -734,7 +734,7 @@
 		<set name="price" val="2900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10053" type="EtcItem" name="Battle Manual - Rising Shot">
+	<item id="10053" type="EtcItem" name="전투 교범 - 라이즈 샷">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -742,7 +742,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10054" type="EtcItem" name="Battle Manual - Deadly Roulette">
+	<item id="10054" type="EtcItem" name="전투 교범 - 데들리 룰렛">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -750,7 +750,7 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10055" type="EtcItem" name="Battle Manual - Temptation">
+	<item id="10055" type="EtcItem" name="전투 교범 - 템테이션">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -758,7 +758,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10056" type="EtcItem" name="Battle Manual - Create Bio Potion">
+	<item id="10056" type="EtcItem" name="전투 교범 - 크리에이트 바이오 포션">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -766,7 +766,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10057" type="EtcItem" name="Battle Manual - Create Dark Seed">
+	<item id="10057" type="EtcItem" name="전투 교범 - 크리에이트 다크 시드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -774,7 +774,7 @@
 		<set name="price" val="7700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10058" type="EtcItem" name="Battle Manual - Fire Trap">
+	<item id="10058" type="EtcItem" name="전투 교범 - 파이어 트랩">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -782,7 +782,7 @@
 		<set name="price" val="1550" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10059" type="EtcItem" name="Battle Manual - Poison Trap">
+	<item id="10059" type="EtcItem" name="전투 교범 - 포이즌 트랩">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -790,7 +790,7 @@
 		<set name="price" val="4800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10060" type="EtcItem" name="Battle Manual - Slow Trap">
+	<item id="10060" type="EtcItem" name="전투 교범 - 슬로우 트랩">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -798,7 +798,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10061" type="EtcItem" name="Battle Manual - Flash Trap">
+	<item id="10061" type="EtcItem" name="전투 교범 - 플래쉬 트랩">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -806,7 +806,7 @@
 		<set name="price" val="6000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10062" type="EtcItem" name="Battle Manual - Binding Trap">
+	<item id="10062" type="EtcItem" name="전투 교범 - 바인딩 트랩">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -814,7 +814,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10063" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade A">
+	<item id="10063" type="EtcItem" name="전투 교범 - 퀴버 오브 볼츠 - A그레이드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -822,7 +822,7 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10064" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade S">
+	<item id="10064" type="EtcItem" name="전투 교범 - 퀴버 오브 볼츠 - S그레이드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -830,7 +830,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10065" type="EtcItem" name="Battle Manual - Cure Dark Seed">
+	<item id="10065" type="EtcItem" name="전투 교범 - 큐어 다크 시드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -838,7 +838,7 @@
 		<set name="price" val="8200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10066" type="EtcItem" name="Battle Manual - Decoy">
+	<item id="10066" type="EtcItem" name="전투 교범 - 디코이">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -846,7 +846,7 @@
 		<set name="price" val="3700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10067" type="EtcItem" name="Battle Manual - Chain Lightning">
+	<item id="10067" type="EtcItem" name="전투 교범 - 체인 라이트닝">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -854,7 +854,7 @@
 		<set name="price" val="10800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10068" type="EtcItem" name="Battle Manual - Enuma Elish">
+	<item id="10068" type="EtcItem" name="전투 교범 - 에누마 에리슈">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -862,7 +862,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10069" type="EtcItem" name="Battle Manual - Leopold">
+	<item id="10069" type="EtcItem" name="전투 교범 - 레오폴트">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -870,7 +870,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10070" type="EtcItem" name="Battle Manual - Change Weapon">
+	<item id="10070" type="EtcItem" name="전투 교범 - 체인지 웨폰">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -878,7 +878,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10071" type="EtcItem" name="Battle Manual - Quiver of Bolts - Grade B">
+	<item id="10071" type="EtcItem" name="전투 교범 - 퀴버 오브 볼츠 - B그레이드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -886,7 +886,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10072" type="EtcItem" name="Battle Manual - Increase Power">
+	<item id="10072" type="EtcItem" name="전투 교범 - 인크리즈 파워">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -894,7 +894,7 @@
 		<set name="price" val="250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10073" type="EtcItem" name="Battle Manual - Rapid Attack">
+	<item id="10073" type="EtcItem" name="전투 교범 - 래피드 어택">
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -902,7 +902,7 @@
 		<set name="price" val="250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10074" type="EtcItem" name="Battle Manual - Furious Soul">
+	<item id="10074" type="EtcItem" name="전투 교범 - 퓨리어스 소울">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -910,7 +910,7 @@
 		<set name="price" val="1150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10075" type="EtcItem" name="Battle Manual - Sword Shield">
+	<item id="10075" type="EtcItem" name="전투 교범 - 소드 실드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -918,7 +918,7 @@
 		<set name="price" val="2600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10076" type="EtcItem" name="Battle Manual - Disarm">
+	<item id="10076" type="EtcItem" name="전투 교범 - 디스암">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -926,7 +926,7 @@
 		<set name="price" val="2600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10077" type="EtcItem" name="Battle Manual - Fast Shot">
+	<item id="10077" type="EtcItem" name="전투 교범 - 패스트 샷">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -934,7 +934,7 @@
 		<set name="price" val="2050" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10078" type="EtcItem" name="Battle Manual - Death Mark">
+	<item id="10078" type="EtcItem" name="전투 교범 - 데스 마크">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -942,7 +942,7 @@
 		<set name="price" val="1150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10079" type="EtcItem" name="Battle Manual - Courage">
+	<item id="10079" type="EtcItem" name="전투 교범 - 커레지">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -950,7 +950,7 @@
 		<set name="price" val="2600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10080" type="EtcItem" name="Battle Manual - Violent Temper">
+	<item id="10080" type="EtcItem" name="전투 교범 - 바이어런트 탬퍼">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -958,7 +958,7 @@
 		<set name="price" val="4800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10081" type="EtcItem" name="Battle Manual - Soul to Empower">
+	<item id="10081" type="EtcItem" name="전투 교범 - 소울 투 엠파워">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -966,7 +966,7 @@
 		<set name="price" val="3700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10082" type="EtcItem" name="Battle Manual - Darkness Protection">
+	<item id="10082" type="EtcItem" name="전투 교범 - 다크니스 프로텍션">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -974,7 +974,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10083" type="EtcItem" name="Battle Manual - Dark Weapon">
+	<item id="10083" type="EtcItem" name="전투 교범 - 다크 웨폰">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -982,7 +982,7 @@
 		<set name="price" val="4250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10084" type="EtcItem" name="Battle Manual - Pride of Kamael">
+	<item id="10084" type="EtcItem" name="전투 교범 - 프라이드 오브 카마엘">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -990,7 +990,7 @@
 		<set name="price" val="4800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10085" type="EtcItem" name="Battle Manual - Surrender To Unholy">
+	<item id="10085" type="EtcItem" name="전투 교범 - 서렌더 투 언홀리">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -998,7 +998,7 @@
 		<set name="price" val="1250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10086" type="EtcItem" name="Battle Manual - Bleeding Shot">
+	<item id="10086" type="EtcItem" name="전투 교범 - 블리드 샷">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1006,7 +1006,7 @@
 		<set name="price" val="3350" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10087" type="EtcItem" name="Battle Manual - Sharpshooting">
+	<item id="10087" type="EtcItem" name="전투 교범 - 샤프슈팅">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1014,7 +1014,7 @@
 		<set name="price" val="7200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10088" type="EtcItem" name="Battle Manual - Real Target">
+	<item id="10088" type="EtcItem" name="전투 교범 - 리얼 타겟">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1022,7 +1022,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10089" type="EtcItem" name="Battle Manual - Imbue Dark Seed">
+	<item id="10089" type="EtcItem" name="전투 교범 - 임뷰 다크 시드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1030,7 +1030,7 @@
 		<set name="price" val="7700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10090" type="EtcItem" name="Battle Manual - Prahnah">
+	<item id="10090" type="EtcItem" name="전투 교범 - 프라흐나흐">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1038,7 +1038,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10091" type="EtcItem" name="Battle Manual - Final Form">
+	<item id="10091" type="EtcItem" name="전투 교범 - 파이널 폼">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1046,7 +1046,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10092" type="EtcItem" name="Battle Manual - Shadow Bind">
+	<item id="10092" type="EtcItem" name="전투 교범 - 섀도우 바인드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1054,7 +1054,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10093" type="EtcItem" name="Battle Manual - Voice Bind">
+	<item id="10093" type="EtcItem" name="전투 교범 - 보이스 바인드">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1062,7 +1062,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10094" type="EtcItem" name="Battle Manual - Rush">
+	<item id="10094" type="EtcItem" name="전투 교범 - 러시">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1070,7 +1070,7 @@
 		<set name="price" val="2050" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10095" type="EtcItem" name="Battle Manual - Storm Assault">
+	<item id="10095" type="EtcItem" name="전투 교범 - 스톰 어썰트">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1078,7 +1078,7 @@
 		<set name="price" val="4400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10096" type="EtcItem" name="Battle Manual - Wing Assault">
+	<item id="10096" type="EtcItem" name="전투 교범 - 윙 어썰트">
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1086,7 +1086,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10097" type="EtcItem" name="Battle Manual - Shoulder Charge">
+	<item id="10097" type="EtcItem" name="전투 교범 - 숄더 차지">
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1094,7 +1094,7 @@
 		<set name="price" val="2900" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10098" type="EtcItem" name="Battle Manual - Blade Rush">
+	<item id="10098" type="EtcItem" name="전투 교범 - 블레이드 러시">
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1102,7 +1102,7 @@
 		<set name="price" val="6000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="10099" type="EtcItem" name="Spellbook - Count of Fire">
+	<item id="10099" type="EtcItem" name="마법서 - 카운트 오브 파이어">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />

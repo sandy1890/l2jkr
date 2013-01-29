@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20200" type="Armor" name="Agathion of Love - 3-day limited period">
+	<item id="20200" type="Armor" name="아가시온 봉인 팔찌 - 사랑 활력 - 3일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="4320" />
 	</item>
-	<item id="20201" type="Armor" name="Agathion of Love - 7-day limited period">
+	<item id="20201" type="Armor" name="아가시온 봉인 팔찌 - 사랑 활력 - 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -30,7 +30,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20202" type="Armor" name="Agathion of Love - 15-day limited period">
+	<item id="20202" type="Armor" name="아가시온 봉인 팔찌 - 사랑 활력 - 15일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -45,7 +45,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="21600" />
 	</item>
-	<item id="20203" type="Armor" name="Agathion of Love - 30-day limited period">
+	<item id="20203" type="Armor" name="아가시온 봉인 팔찌 - 사랑 활력 - 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -60,7 +60,7 @@
 		<set name="item_skill" val="3267-1;8245-1;23024-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="20204" type="Armor" name="Queen Ant's Ring (Event) - 3-day limited period">
+	<item id="20204" type="Armor" name="여왕개미의 반지 - 이벤트용 3일 기간제">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -80,7 +80,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20205" type="Armor" name="Queen Ant's Ring (Event) - 7-day limited period">
+	<item id="20205" type="Armor" name="여왕개미의 반지 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -100,7 +100,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20206" type="Armor" name="Queen Ant's Ring (Event) - 15-day limited period">
+	<item id="20206" type="Armor" name="여왕개미의 반지 - 이벤트용 15일 기간제">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -120,7 +120,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20207" type="Armor" name="Earring of Zaken (Event) - 3-day limited period">
+	<item id="20207" type="Armor" name="자켄의 귀걸이 - 이벤트용 3일 기간제">
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -140,7 +140,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20208" type="Armor" name="Earring of Zaken (Event) - 7-day limited period">
+	<item id="20208" type="Armor" name="자켄의 귀걸이 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -160,7 +160,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20209" type="Armor" name="Earring of Zaken (Event) - 15-day limited period">
+	<item id="20209" type="Armor" name="자켄의 귀걸이 - 이벤트용 15일 기간제">
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -180,7 +180,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="20210" type="EtcItem" name="Charming Valentine Gift Set">
+	<item id="20210" type="EtcItem" name="발렌타인 화이트 스페셜 세트">
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -195,7 +195,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20212,1,1,100;20214,15,15,100" />
 	</item>
-	<item id="20211" type="EtcItem" name="Naughty Valentine Gift Set">
+	<item id="20211" type="EtcItem" name="발렌타인 다크 스페셜 세트">
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -210,7 +210,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20213,1,1,100;20214,15,15,100" />
 	</item>
-	<item id="20212" type="Armor" name="Agathion Seal Bracelet - Charming Cupid">
+	<item id="20212" type="Armor" name="아가시온 봉인 팔찌 - 화이트 큐피드">
 		<set name="icon" val="BranchSys.icon.br_aga_cupid_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -225,7 +225,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21031-1;23025-1" />
 	</item>
-	<item id="20213" type="Armor" name="Agathion Seal Bracelet - Naughty Cupid">
+	<item id="20213" type="Armor" name="아가시온 봉인 팔찌 - 다크 큐피드">
 		<set name="icon" val="BranchSys.icon.br_aga_cupid_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -240,7 +240,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21032-1;23026-1" />
 	</item>
-	<item id="20214" type="EtcItem" name="Chocolate Cookie">
+	<item id="20214" type="EtcItem" name="초콜릿 쿠키">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -257,7 +257,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22028-1" />
 	</item>
-	<item id="20215" type="EtcItem" name="White Maneki Neko Agathion Pack">
+	<item id="20215" type="EtcItem" name="하얀 마네키네코 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -272,7 +272,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20221,1,1,100" />
 	</item>
-	<item id="20216" type="EtcItem" name="Black Maneki Neko Agathion Pack">
+	<item id="20216" type="EtcItem" name="검정 마네키네코 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -287,7 +287,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20222,1,1,100" />
 	</item>
-	<item id="20217" type="EtcItem" name="Brown Maneki Neko Agathion Pack">
+	<item id="20217" type="EtcItem" name="갈색 마네키네코 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -302,7 +302,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20223,1,1,100" />
 	</item>
-	<item id="20218" type="EtcItem" name="White Maneki Neko Agathion 7-Day Pack - Resurrection">
+	<item id="20218" type="EtcItem" name="하얀 마네키네코 아가시온 7일 팩 부활">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -317,7 +317,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20224,1,1,100" />
 	</item>
-	<item id="20219" type="EtcItem" name="Black Maneki Neko Agathion 7-Day Pack - Blessed Escape">
+	<item id="20219" type="EtcItem" name="검정 마네키네코 아가시온 7일 팩 귀환">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -332,7 +332,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20225,1,1,100" />
 	</item>
-	<item id="20220" type="EtcItem" name="Brown Maneki Neko Agathion 7-Day Pack - Vitality">
+	<item id="20220" type="EtcItem" name="갈색 마네키네코 아가시온 7일 팩 활력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -347,7 +347,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20226,1,1,100" />
 	</item>
-	<item id="20221" type="Armor" name="Agathion Seal Bracelet - White Maneki Neko">
+	<item id="20221" type="Armor" name="아가시온 봉인 팔찌 - 하얀 마네키네코">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -362,7 +362,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21033-1;23027-1;23046-1" />
 	</item>
-	<item id="20222" type="Armor" name="Agathion Seal Bracelet - Black Maneki Neko">
+	<item id="20222" type="Armor" name="아가시온 봉인 팔찌 - 검정 마네키네코">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -377,7 +377,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21034-1;23028-1;23047-1" />
 	</item>
-	<item id="20223" type="Armor" name="Agathion Seal Bracelet - Brown Maneki Neko">
+	<item id="20223" type="Armor" name="아가시온 봉인 팔찌 - 갈색 마네키네코">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -392,7 +392,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21035-1;23029-1;23048-1" />
 	</item>
-	<item id="20224" type="Armor" name="Agathion Seal Bracelet - White Maneki Neko - Resurrection - 7-Day Limited Period">
+	<item id="20224" type="Armor" name="아가시온 봉인 팔찌 - 하얀 마네키네코 부활 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -408,7 +408,7 @@
 		<set name="item_skill" val="3267-1;21033-1;23030-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20225" type="Armor" name="Agathion Seal Bracelet - Black Maneki Neko - Escape - 7-Day Limited Period">
+	<item id="20225" type="Armor" name="아가시온 봉인 팔찌 - 검정 마네키네코 귀환 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -424,7 +424,7 @@
 		<set name="item_skill" val="3267-1;21034-1;23031-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20226" type="Armor" name="Agathion Seal Bracelet - Brown Maneki Neko - Vitality - 7-day limited time">
+	<item id="20226" type="Armor" name="아가시온 봉인 팔찌 - 갈색 마네키네코 활력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -440,7 +440,7 @@
 		<set name="item_skill" val="3267-1;21035-1;23032-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20227" type="EtcItem" name="One-Eyed Bat Drove Agathion Pack">
+	<item id="20227" type="EtcItem" name="외눈박이 박쥐 무리 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -455,7 +455,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20230,1,1,100" />
 	</item>
-	<item id="20228" type="EtcItem" name="One-Eyed Bat Drove Agathion 7-Day Pack - Resist Unholy">
+	<item id="20228" type="EtcItem" name="외눈박이 박쥐 무리 아가시온 7일 팩 레지스트 언홀리">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -470,7 +470,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20231,1,1,100" />
 	</item>
-	<item id="20229" type="EtcItem" name="One-Eyed Bat Drove Agathion 7-Day Pack - Vitality">
+	<item id="20229" type="EtcItem" name="외눈박이 박쥐 무리 아가시온 7일 팩 활력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -485,7 +485,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20232,1,1,100" />
 	</item>
-	<item id="20230" type="Armor" name="Agathion Seal Bracelet - One-Eyed Bat Drove">
+	<item id="20230" type="Armor" name="아가시온 봉인 팔찌 - 외눈박이 박쥐 무리">
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -500,7 +500,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21036-1;23033-1" />
 	</item>
-	<item id="20231" type="Armor" name="Agathion Seal Bracelet - One-Eyed Bat Drove - Resist Unholy - 7-Day Limited Period">
+	<item id="20231" type="Armor" name="아가시온 봉인 팔찌 - 외눈박이 박쥐 무리 레지스트 언홀리 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -516,7 +516,7 @@
 		<set name="item_skill" val="3267-1;21036-1;23034-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20232" type="Armor" name="Agathion Seal Bracelet - One-Eyed Bat Drove - Vitality - 7-Day Limited Period">
+	<item id="20232" type="Armor" name="아가시온 봉인 팔찌 - 외눈박이 박쥐 무리 활력 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -532,7 +532,7 @@
 		<set name="item_skill" val="3267-1;21036-1;23035-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20233" type="EtcItem" name="Pegasus Agathion Pack">
+	<item id="20233" type="EtcItem" name="페가수스 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -547,7 +547,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20236,1,1,100" />
 	</item>
-	<item id="20234" type="EtcItem" name="Pegasus Agathion 7-Day Pack - Wind Walk">
+	<item id="20234" type="EtcItem" name="페가수스 아가시온 7일 팩 윈드 워크">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -562,7 +562,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20237,1,1,100" />
 	</item>
-	<item id="20235" type="EtcItem" name="Pegasus Agathion 7-Day Pack - Blessed Escape">
+	<item id="20235" type="EtcItem" name="페가수스 아가시온 7일 팩 귀환">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -577,7 +577,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20238,1,1,100" />
 	</item>
-	<item id="20236" type="Armor" name="Agathion Seal Bracelet - Pegasus">
+	<item id="20236" type="Armor" name="아가시온 봉인 팔찌 - 페가수스">
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -592,7 +592,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21037-1;23036-1" />
 	</item>
-	<item id="20237" type="Armor" name="Agathion Seal Bracelet - Pegasus - Wind Walk - 7-Day Limited Period">
+	<item id="20237" type="Armor" name="아가시온 봉인 팔찌 - 페가수스 윈드 워크 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -608,7 +608,7 @@
 		<set name="item_skill" val="3267-1;21037-1;23037-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20238" type="Armor" name="Agathion Seal Bracelet - Pegasus - Escape - 7-Day Limited Period">
+	<item id="20238" type="Armor" name="아가시온 봉인 팔찌 - 페가수스 귀환 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -624,7 +624,7 @@
 		<set name="item_skill" val="3267-1;21037-1;23038-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20239" type="EtcItem" name="Yellow-Robed Tojigong Pack">
+	<item id="20239" type="EtcItem" name="노란옷 토지공 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -639,7 +639,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20245,1,1,100" />
 	</item>
-	<item id="20240" type="EtcItem" name="Blue-Robed Tojigong Pack">
+	<item id="20240" type="EtcItem" name="파란옷 토지공 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -654,7 +654,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20246,1,1,100" />
 	</item>
-	<item id="20241" type="EtcItem" name="Green-Robed Tojigong Pack">
+	<item id="20241" type="EtcItem" name="녹색옷 토지공 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -669,7 +669,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20247,1,1,100" />
 	</item>
-	<item id="20242" type="EtcItem" name="Yellow-Robed Tojigong 7-Day Pack - Greater Heal">
+	<item id="20242" type="EtcItem" name="노란옷 토지공 7일 팩 그레이터 힐">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -684,7 +684,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20248,1,1,100" />
 	</item>
-	<item id="20243" type="EtcItem" name="Blue-Robed Tojigong 7-Day Pack - Reflect Damage">
+	<item id="20243" type="EtcItem" name="파란옷 토지공 7일 팩 리플렉트 대미지">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -699,7 +699,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20249,1,1,100" />
 	</item>
-	<item id="20244" type="EtcItem" name="Green-Robed Tojigong 7-Day Pack - Mana Regeneration">
+	<item id="20244" type="EtcItem" name="녹색옷 토지공 7일 팩 마나 리제네레이션">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -714,7 +714,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20250,1,1,100" />
 	</item>
-	<item id="20245" type="Armor" name="Agathion Seal Bracelet - Yellow-Robed Tojigong">
+	<item id="20245" type="Armor" name="아가시온 봉인 팔찌 - 노란옷 토지공">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -729,7 +729,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21038-1;23039-1" />
 	</item>
-	<item id="20246" type="Armor" name="Agathion Seal Bracelet - Blue-Robed Tojigong">
+	<item id="20246" type="Armor" name="아가시온 봉인 팔찌 - 파란옷 토지공">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -744,7 +744,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21039-1;23040-1" />
 	</item>
-	<item id="20247" type="Armor" name="Agathion Seal Bracelet - Green-Robed Tojigong">
+	<item id="20247" type="Armor" name="아가시온 봉인 팔찌 - 녹색옷 토지공">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -759,7 +759,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21040-1;23041-1" />
 	</item>
-	<item id="20248" type="Armor" name="Agathion Seal Bracelet - Yellow-Robed Tojigong - Greater Heal - 7-Day Limited Period">
+	<item id="20248" type="Armor" name="아가시온 봉인 팔찌 - 노란옷 토지공 그레이터 힐 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -775,7 +775,7 @@
 		<set name="item_skill" val="3267-1;21038-1;23042-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20249" type="Armor" name="Agathion Seal Bracelet - Blue-Robed Tojigong - Reflect Damage - 7-Day Limited Period">
+	<item id="20249" type="Armor" name="아가시온 봉인 팔찌 - 파란옷 토지공 리플렉트 대미지 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -791,7 +791,7 @@
 		<set name="item_skill" val="3267-1;21039-1;23043-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20250" type="Armor" name="Agathion Seal Bracelet - Green-Robed Tojigong - Mana Regeneration - 7-Day Limited Period">
+	<item id="20250" type="Armor" name="아가시온 봉인 팔찌 - 녹색옷 토지공 마나 리제네레이션 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -807,7 +807,7 @@
 		<set name="item_skill" val="3267-1;21040-1;23044-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20251" type="EtcItem" name="Bugbear Agathion Pack">
+	<item id="20251" type="EtcItem" name="버그베어 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -822,7 +822,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20252,1,1,100" />
 	</item>
-	<item id="20252" type="Armor" name="Agathion Seal Bracelet - Bugbear">
+	<item id="20252" type="Armor" name="아가시온 봉인 팔찌 - 버그베어">
 		<set name="icon" val="BranchSys.icon.br_aga_bugbear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -837,7 +837,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21041-1;23045-1" />
 	</item>
-	<item id="20253" type="Armor" name="Agathion of Love (Event)">
+	<item id="20253" type="Armor" name="사랑 아가시온 - 이벤트">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -850,7 +850,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5763-1;8245-1;3267-1" />
 	</item>
-	<item id="20254" type="EtcItem" name="Agathion of Love Pack (Event)">
+	<item id="20254" type="EtcItem" name="사랑 아가시온 팩 - 이벤트">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -863,7 +863,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20253,1,1,100" />
 	</item>
-	<item id="20255" type="Weapon" name="Baguette Sword - 7-day limited period">
+	<item id="20255" type="Weapon" name="바게트의 빵검 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_sword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -890,7 +890,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20256" type="Weapon" name="Baguette Dagger - 7-day limited period">
+	<item id="20256" type="Weapon" name="바게트의 달콤한 단검 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_dagger_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -918,7 +918,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="20257" type="Weapon" name="Baguette Dual Sword - 7-day limited period">
+	<item id="20257" type="Weapon" name="바게트의 거대한 양손검 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_2h_sword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -945,7 +945,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20258" type="Weapon" name="Baguette Mace - 7-day limited period">
+	<item id="20258" type="Weapon" name="바게트의 딱딱한 메이스 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_blunt_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -973,7 +973,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20259" type="Weapon" name="Baguette Heavy Hammer - 7-day limited period">
+	<item id="20259" type="Weapon" name="바게트의 무거운 해머 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_2h_blunt_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1001,7 +1001,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20260" type="Weapon" name="Baguette Spear - 7-day limited period">
+	<item id="20260" type="Weapon" name="바게트의 맛있는 창 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_pole_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1029,7 +1029,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20261" type="Weapon" name="Baguette Bow - 7-day limited period">
+	<item id="20261" type="Weapon" name="바게트의 가벼운 활 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_bow_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1059,7 +1059,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="20262" type="Weapon" name="Baguette Fist - 7-day limited period">
+	<item id="20262" type="Weapon" name="바게트의 주먹 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_dualfist_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1087,7 +1087,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20263" type="Weapon" name="Baguette Magic Sword - 7-day limited period">
+	<item id="20263" type="Weapon" name="바게트의 마법검 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_mage_sword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1114,7 +1114,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20264" type="Weapon" name="Baguette Staff - 7-day limited period">
+	<item id="20264" type="Weapon" name="바게트의 고소한 스태프 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_1h_mage_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1142,7 +1142,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="20265" type="Weapon" name="Baguette Great Staff - 7-day limited period">
+	<item id="20265" type="Weapon" name="바게트의 거대한 스태프 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_2h_mage_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1170,7 +1170,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20266" type="Armor" name="Baguette Shield - 7-day limited period">
+	<item id="20266" type="Armor" name="바게트의 방패 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1194,7 +1194,7 @@
 			<set order="0x08" stat="sDef" val="5" />
 		</for>
 	</item>
-	<item id="20267" type="Weapon" name="Baguette Rapier - 7-day limited period">
+	<item id="20267" type="Weapon" name="바게트의 얇은 검 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_rapier_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1226,7 +1226,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="20268" type="Weapon" name="Baguette Ancient Sword - 7-day limited period">
+	<item id="20268" type="Weapon" name="바게트의 오래된 검 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_ancientsword_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1257,7 +1257,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="20269" type="Weapon" name="Baguette Crossbow - 7-day limited period">
+	<item id="20269" type="Weapon" name="바게트의 단단한 활 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_crossbow_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1289,7 +1289,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="20270" type="Weapon" name="Baguette's Dualsword - 7-day limited period">
+	<item id="20270" type="Weapon" name="바게트의 이도류 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_dual_bread_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1316,7 +1316,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="20271" type="EtcItem" name="Baguette Legacy">
+	<item id="20271" type="EtcItem" name="바게트의 유산">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1332,7 +1332,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22032-1" />
 	</item>
-	<item id="20272" type="EtcItem" name="Baguette Herb">
+	<item id="20272" type="EtcItem" name="바게트 허브">
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1341,7 +1341,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22029-1" />
 	</item>
-	<item id="20273" type="EtcItem" name="Cream Puff Herb">
+	<item id="20273" type="EtcItem" name="슈크림 허브">
 		<set name="icon" val="BranchSys.icon.br_herb_of_cream_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1350,7 +1350,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22030-1" />
 	</item>
-	<item id="20274" type="EtcItem" name="Cheesecake Herb">
+	<item id="20274" type="EtcItem" name="치즈케이크 허브">
 		<set name="icon" val="BranchSys.icon.br_herb_of_cheesecake_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1359,7 +1359,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22031-1" />
 	</item>
-	<item id="20275" type="Armor" name="Gold Afro">
+	<item id="20275" type="Armor" name="아프로 헤어 - 골드">
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1373,7 +1373,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="20276" type="Armor" name="Pink Afro">
+	<item id="20276" type="Armor" name="아프로 헤어 - 핑크">
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1387,7 +1387,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="20277" type="EtcItem" name="Baguette Legacy - Kamael">
+	<item id="20277" type="EtcItem" name="바게트의 유산-카마엘">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -1403,7 +1403,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22033-1" />
 	</item>
-	<item id="20278" type="EtcItem" name="Gold Afro Hair Pack">
+	<item id="20278" type="EtcItem" name="아프로 헤어 팩 - 골드">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1419,7 +1419,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20275,1,1,100" />
 	</item>
-	<item id="20279" type="EtcItem" name="Pink Afro Hair Pack">
+	<item id="20279" type="EtcItem" name="아프로 헤어 팩 - 핑크">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1435,7 +1435,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20276,1,1,100" />
 	</item>
-	<item id="20280" type="EtcItem" name="Red Sumo Wrestler Agathion Pack">
+	<item id="20280" type="EtcItem" name="붉은 스모 선수 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1450,7 +1450,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20297,1,1,100" />
 	</item>
-	<item id="20281" type="EtcItem" name="Red Sumo Wrestler Agathion 7-Day Pack - Death Whisper">
+	<item id="20281" type="EtcItem" name="붉은 스모 선수 아가시온 7일 팩 데스 위스퍼">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1465,7 +1465,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20298,1,1,100" />
 	</item>
-	<item id="20282" type="EtcItem" name="Blue Sumo Wrestler Agathion Pack">
+	<item id="20282" type="EtcItem" name="푸른 스모 선수 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1480,7 +1480,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20299,1,1,100" />
 	</item>
-	<item id="20283" type="EtcItem" name="Blue Sumo Wrestler Agathion 7-Day Pack - Wild Magic">
+	<item id="20283" type="EtcItem" name="푸른 스모 선수 아가시온 7일 팩 와일드 매직">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1495,7 +1495,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20300,1,1,100" />
 	</item>
-	<item id="20284" type="EtcItem" name="Great Sumo Match Agathion Pack">
+	<item id="20284" type="EtcItem" name="스모 대결투 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1510,7 +1510,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20301,1,1,100" />
 	</item>
-	<item id="20285" type="EtcItem" name="Great Sumo Match Agathion 7-Day Pack - Big Head / Firework">
+	<item id="20285" type="EtcItem" name="스모 대결투 아가시온 7일 팩 대두 / 폭죽">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1525,7 +1525,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20302,1,1,100" />
 	</item>
-	<item id="20286" type="EtcItem" name="Button-Eyed Bear Doll Agathion Pack">
+	<item id="20286" type="EtcItem" name="단추눈 곰인형 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1540,7 +1540,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20303,1,1,100" />
 	</item>
-	<item id="20287" type="EtcItem" name="Button-Eyed Bear Doll Agathion 7-Day Pack - Blessed Escape">
+	<item id="20287" type="EtcItem" name="단추눈 곰인형 아가시온 7일 팩 귀환">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1555,7 +1555,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20304,1,1,100" />
 	</item>
-	<item id="20288" type="EtcItem" name="Button-Eyed Bear Doll Agathion 7-Day Pack - Resurrection">
+	<item id="20288" type="EtcItem" name="단추눈 곰인형 아가시온 7일 팩 부활">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1570,7 +1570,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20305,1,1,100" />
 	</item>
-	<item id="20289" type="EtcItem" name="Button-Eyed Bear Doll Agathion 7-Day Pack - Energy">
+	<item id="20289" type="EtcItem" name="단추눈 곰인형 아가시온 7일 팩 활력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1585,7 +1585,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20306,1,1,100" />
 	</item>
-	<item id="20290" type="EtcItem" name="God of Fortune Agathion Pack">
+	<item id="20290" type="EtcItem" name="재물의 신 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1600,7 +1600,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20307,1,1,100" />
 	</item>
-	<item id="20291" type="EtcItem" name="God of Fortune Agathion 7-Day Pack - Energy">
+	<item id="20291" type="EtcItem" name="재물의 신 아가시온 7일 팩 활력">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1615,7 +1615,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20308,1,1,100" />
 	</item>
-	<item id="20292" type="EtcItem" name="Dryad Agathion Pack">
+	<item id="20292" type="EtcItem" name="드라이어드 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1630,7 +1630,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20309,1,1,100" />
 	</item>
-	<item id="20293" type="EtcItem" name="Wonboso Agathion Pack">
+	<item id="20293" type="EtcItem" name="원보소 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1645,7 +1645,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20310,1,1,100" />
 	</item>
-	<item id="20294" type="EtcItem" name="Wonboso Agathion 7-Day Pack - Wind Walk">
+	<item id="20294" type="EtcItem" name="원보소 아가시온 7일 팩 윈드 워크">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1660,7 +1660,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20311,1,1,100" />
 	</item>
-	<item id="20295" type="EtcItem" name="Daewoonso Agathion Pack">
+	<item id="20295" type="EtcItem" name="대운소 아가시온 팩">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1675,7 +1675,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20312,1,1,100" />
 	</item>
-	<item id="20296" type="EtcItem" name="Daewoonso Agathion 7-Day Pack - New Year's Gift">
+	<item id="20296" type="EtcItem" name="대운소 아가시온 7일 팩 세배 선물">
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1690,7 +1690,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="20313,1,1,100" />
 	</item>
-	<item id="20297" type="Armor" name="Agathion Seal Bracelet - Red Sumo Wrestler">
+	<item id="20297" type="Armor" name="아가시온 봉인 팔찌 - 붉은 스모 선수">
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1706,7 +1706,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="3267-1;21043-1;23049-1" />
 	</item>
-	<item id="20298" type="Armor" name="Agathion Seal Bracelet - Red Sumo Wrestler - Death Whisper - 7-Day Limited Period">
+	<item id="20298" type="Armor" name="아가시온 봉인 팔찌 - 붉은 스모 선수 데스 위스퍼 - 7일 기간제">
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1722,7 +1722,7 @@
 		<set name="item_skill" val="3267-1;21043-1;23057-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="20299" type="Armor" name="Agathion Seal Bracelet - Blue Sumo Wrestler">
+	<item id="20299" type="Armor" name="아가시온 봉인 팔찌 - 푸른 스모 선수">
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />

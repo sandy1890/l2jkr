@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="30300" name="刻印祕傳書-遺忘篇" type="EtcItem">
+	<item id="30300" type="EtcItem" name="각인의 비전서 - 망각편">
 		<table name="#Desc">刻印祕傳書。覺醒後，反昇華技能時所需的稀有道具。</table>
 		<set name="icon" val="icon.codex_of_incuse_forgetting"/>
 		<set name="material" val="paper"/>
@@ -11,7 +11,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30301" name="刻印祕傳書抄本" type="EtcItem">
+	<item id="30301" type="EtcItem" name="각인의 비전서 사본">
 		<table name="#Desc">刻印祕傳書。覺醒後，強化技能時所需的道具。無法交易/丟棄。</table>
 		<set name="icon" val="icon.codex_of_incuse"/>
 		<set name="material" val="paper"/>
@@ -21,7 +21,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30302" name="刻印祕傳書抄本-熟練篇" type="EtcItem">
+	<item id="30302" type="EtcItem" name="각인의 비전서 사본 - 숙련편">
 		<table name="#Desc">刻印祕傳書。覺醒後，強化祝福技能時所需的道具。無法交易/丟棄。</table>
 		<set name="icon" val="icon.codex_of_incuse_dexterity"/>
 		<set name="material" val="paper"/>
@@ -31,7 +31,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30303" name="刻印祕傳書抄本-訓練篇" type="EtcItem">
+	<item id="30303" type="EtcItem" name="각인의 비전서 사본 - 수련편">
 		<table name="#Desc">刻印祕傳書。覺醒後，變更技能的昇華方式時所需的道具。無法交易/丟棄。</table>
 		<set name="icon" val="icon.codex_of_incuse_training"/>
 		<set name="material" val="paper"/>
@@ -41,7 +41,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30304" name="刻印祕傳書抄本-遺忘篇" type="EtcItem">
+	<item id="30304" type="EtcItem" name="각인의 비전서 사본 - 망각편">
 		<table name="#Desc">刻印祕傳書。覺醒後，反昇華技能時所需的道具。無法交易/丟棄。</table>
 		<set name="icon" val="icon.codex_of_incuse_forgetting"/>
 		<set name="material" val="paper"/>
@@ -51,7 +51,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30306" name="下巨人的精髓" type="EtcItem">
+	<item id="30306" type="EtcItem" name="하거인의 정수">
 		<table name="#Desc">前往覺醒地區尋找巨人的手下「拉比多夫」的話，就可以交換成「刻印祕傳書」。</table>
 		<set name="icon" val="icon.essence_of_giant"/>
 		<set name="material" val="paper"/>
@@ -64,7 +64,7 @@
 
 	<!-- R급 무기 -->
 	<!-- 英雄武器/覺醒封印武器 -->
-	<item id="30307" name="R99(Rare)腰帶" type="Armor">
+	<item id="30307" type="Armor" name="R99(Rare) 벨트">
 		<set name="icon" val="icon.armor_belt_i03"/>
 		<set name="default_action" val="equip"/>
 		<set name="armor_type" val="light"/>
@@ -78,7 +78,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="30308" name="R99(Rare)手鐲" type="Armor">
+	<item id="30308" type="Armor" name="R99(Rare) 팔찌">
 		<set name="icon" val="icon.etc_rbracelet_s_i03"/>
 		<set name="default_action" val="equip"/>
 		<set name="bodypart" val="rbracelet"/>
@@ -91,7 +91,7 @@
 			<add order="0x40" stat="maxMp" val="230"/>
 		</for>
 	</item>
-	<item id="30309" name="R99(Rare)襯衫" type="Armor">
+	<item id="30309" type="Armor" name="R99(Rare) 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05"/>
 		<set name="default_action" val="equip"/>
 		<set name="bodypart" val="underwear"/>
@@ -107,7 +107,7 @@
 	
 	<!-- 망토 -->
 	<!-- 覺醒斗篷 -->
-	<item id="30310" name="亞貝里烏斯斗篷" type="Armor">
+	<item id="30310" type="Armor" name="아벨리우스의 망토 시겔 나이트">
 		<table name="#Plus">席格爾騎士</table>
 		<table name="#Desc">繼承古代巨人-亞貝里烏斯之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -124,7 +124,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="30311" name="薩菲洛斯斗篷" type="Armor">
+	<item id="30311" type="Armor" name="사피로스의 망토 티르 워리어">
 		<table name="#Plus">提爾鬥士</table>
 		<table name="#Desc">繼承古代巨人-薩菲洛斯之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -141,7 +141,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="30312" name="凱修納格斗篷" type="Armor">
+	<item id="30312" type="Armor" name="카이슈나가의 망토 오셀 로그">
 		<table name="#Plus">歐瑟遊俠</table>
 		<table name="#Desc">繼承古代巨人-凱修納格之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -158,7 +158,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="30313" name="克倫畢斯特斗篷" type="Armor">
+	<item id="30313" type="Armor" name="크론비스트의 망토 율 아처">
 		<table name="#Plus">尤爾弓手</table>
 		<table name="#Desc">繼承古代巨人-克倫畢斯特之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -175,7 +175,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="30314" name="索特克里格斗篷" type="Armor">
+	<item id="30314" type="Armor" name="솔트크리그의 망토 페오 위저드">
 		<table name="#Plus">菲歐巫師</table>
 		<table name="#Desc">繼承古代巨人-索特克里格之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -192,7 +192,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="30315" name="納比亞羅普斗篷" type="Armor">
+	<item id="30315" type="Armor" name="나비아로프의 망토 윈 서머너">
 		<table name="#Plus">維因召喚士</table>
 		<table name="#Desc">繼承古代巨人-納比亞羅普之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -209,7 +209,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="30316" name="拉伊斯特斗篷" type="Armor">
+	<item id="30316" type="Armor" name="라이스터의 망토 이스 인챈터">
 		<table name="#Plus">伊斯法師</table>
 		<table name="#Desc">繼承古代巨人-拉伊斯特之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -226,7 +226,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="30317" name="拉奇西斯斗篷" type="Armor">
+	<item id="30317" type="Armor" name="라키시스의 망토 에오로 힐러">
 		<table name="#Plus">艾羅牧師</table>
 		<table name="#Desc">繼承古代巨人-拉奇西斯之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
@@ -244,7 +244,7 @@
 		</for>
 	</item>
 
-	<item id="30330" name="特級古魯丁 水的守護項鍊" type="Armor">
+	<item id="30330" type="Armor" name="최상급 글루디오 물의 수호 목걸이">
 		<table name="#Desc">賜給古魯丁領地守護者的項鍊。水屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -262,7 +262,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30331" name="特級狄恩 聖的守護項鍊" type="Armor">
+	<item id="30331" type="Armor" name="최상급 디온 신성의 수호 목걸이">
 		<table name="#Desc">賜給狄恩領地守護者的項鍊。神聖屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -280,7 +280,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30332" name="特級奇岩 風的守護項鍊" type="Armor">
+	<item id="30332" type="Armor" name="최상급 기란 바람의 수호 목걸이">
 		<table name="#Desc">賜給奇岩領地守護者的項鍊。風屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -298,7 +298,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30333" name="特級歐瑞 暗的守護項鍊" type="Armor">
+	<item id="30333" type="Armor" name="최상급 오렌 암흑의 수호 목걸이">
 		<table name="#Desc">賜給歐瑞領地守護者的項鍊。黑暗屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -316,7 +316,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30334" name="特級亞丁 地的守護項鍊" type="Armor">
+	<item id="30334" type="Armor" name="최상급 아덴 대지의 수호 목걸이">
 		<table name="#Desc">賜給亞丁領地守護者的項鍊。地屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -334,7 +334,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30335" name="特級因納得立 水的守護項鍊" type="Armor">
+	<item id="30335" type="Armor" name="최상급 인나드릴 물의 수호 목걸이">
 		<table name="#Desc">賜給因納得立領地守護者的項鍊。水屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -352,7 +352,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30336" name="特級高達特 火的守護項鍊" type="Armor">
+	<item id="30336" type="Armor" name="최상급 고다드 불의 수호 목걸이">
 		<table name="#Desc">賜給高達特領地守護者的項鍊。火屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -370,7 +370,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30337" name="特級魯因 火的守護項鍊" type="Armor">
+	<item id="30337" type="Armor" name="최상급 루운 불의 수호 목걸이">
 		<table name="#Desc">賜給魯因領地守護者的項鍊。火屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -388,7 +388,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30338" name="特級修加特 風的守護項鍊" type="Armor">
+	<item id="30338" type="Armor" name="최상급 슈트가르트 바람의 수호 목걸이">
 		<table name="#Desc">賜給修加特領地守護者的項鍊。風屬性防禦力+30。無法交易或丟棄。</table>
 		<set name="icon" val="icon.accessary_inferno_necklace_i00"/>
 		<set name="default_action" val="equip"/>
@@ -406,7 +406,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30339" name="特級古魯丁 水的守護耳環" type="Armor">
+	<item id="30339" type="Armor" name="최상급 글루디오 물의 수호 귀걸이">
 		<table name="#Desc">賜給古魯丁領地守護者的耳環。衝擊攻擊力+15%、出血防禦力+15%、水屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級古魯丁 水的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -424,7 +424,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30340" name="特級狄恩 聖的守護耳環" type="Armor">
+	<item id="30340" type="Armor" name="최상급 디온 신성의 수호 귀걸이">
 		<table name="#Desc">賜給狄恩領地守護者的耳環。束縛攻擊力+15%、中毒防禦力+15%、神聖屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級狄恩 聖的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -442,7 +442,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30341" name="特級奇岩 風的守護耳環" type="Armor">
+	<item id="30341" type="Armor" name="최상급 기란 바람의 수호 귀걸이">
 		<table name="#Desc">賜給奇岩領地守護者的耳環。出血攻擊力+15%、麻痺防禦力+15%、風屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級奇岩 風的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -460,7 +460,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30342" name="特級歐瑞 暗的守護耳環" type="Armor">
+	<item id="30342" type="Armor" name="최상급 오렌 암흑의 수호 귀걸이">
 		<table name="#Desc">賜給歐瑞領地守護者的耳環。麻痺攻擊力+15%、束縛防禦力+15%、黑暗屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級歐瑞 暗的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -478,7 +478,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30343" name="特級亞丁 地的守護耳環" type="Armor">
+	<item id="30343" type="Armor" name="최상급 아덴 대지의 수호 귀걸이">
 		<table name="#Desc">賜給亞丁領地守護者的耳環。精神攻擊力+15%、衝擊防禦力+15%、地屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級亞丁 地的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -496,7 +496,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30344" name="特級因納得立 水的守護耳環" type="Armor">
+	<item id="30344" type="Armor" name="최상급 인나드릴 물의 수호 귀걸이">
 		<table name="#Desc">賜給因納得立領地守護者的耳環。睡眠攻擊力+15%、衝擊防禦力+15%、水屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級因納得立 水的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -514,7 +514,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30345" name="特級高達特 火的守護耳環" type="Armor">
+	<item id="30345" type="Armor" name="최상급 고다드 불의 수호 귀걸이">
 		<table name="#Desc">賜給高達特領地守護者的耳環。衝擊攻擊力+15%、睡眠防禦力+15%、火屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級高達特 火的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -532,7 +532,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30346" name="特級魯因 火的守護耳環" type="Armor">
+	<item id="30346" type="Armor" name="최상급 루운 불의 수호 귀걸이">
 		<table name="#Desc">賜給魯因領地守護者的耳環。中毒攻擊力+15%、束縛防禦力+15%、火屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級魯因 火的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -550,7 +550,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30347" name="特級修加特 風的守護耳環" type="Armor">
+	<item id="30347" type="Armor" name="최상급 슈트가르트 바람의 수호 귀걸이">
 		<table name="#Desc">賜給修加特領地守護者的耳環。束縛攻擊力+15%、精神攻擊防禦力+15%、風屬性防禦力+10、CP+5%。無法交易或丟棄。即使戴上兩個特級修加特 風的守護耳環也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_earing_i00"/>
 		<set name="default_action" val="equip"/>
@@ -568,7 +568,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30348" name="特級古魯丁 地的守護戒指" type="Armor">
+	<item id="30348" type="Armor" name="최상급 글루디오 대지의 수호 반지">
 		<table name="#Desc">賜給古魯丁領地守護者的戒指。地屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級古魯丁 地的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -586,7 +586,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30349" name="特級狄恩 水的守護戒指" type="Armor">
+	<item id="30349" type="Armor" name="최상급 디온 물의 수호 반지">
 		<table name="#Desc">賜給狄恩領地守護者的戒指。水屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級狄恩 水的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -604,7 +604,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30350" name="特級奇岩 火的守護戒指" type="Armor">
+	<item id="30350" type="Armor" name="최상급 기란 불의 수호 반지">
 		<table name="#Desc">賜給奇岩領地守護者的戒指。火屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級奇岩 火的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -622,7 +622,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30351" name="特級歐瑞 地的守護戒指" type="Armor">
+	<item id="30351" type="Armor" name="최상급 오렌 대지의 수호 반지">
 		<table name="#Desc">賜給歐瑞領地守護者的戒指。地屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級歐瑞 地的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -640,7 +640,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30352" name="特級亞丁 聖的守護戒指" type="Armor">
+	<item id="30352" type="Armor" name="최상급 아덴 신성의 수호 반지">
 		<table name="#Desc">賜給亞丁領地守護者的戒指。神聖屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級亞丁 聖的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -658,7 +658,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30353" name="特級因納得立 聖的守護戒指" type="Armor">
+	<item id="30353" type="Armor" name="최상급 인나드릴 신성의 수호 반지">
 		<table name="#Desc">賜給因納得立領地守護者的戒指。神聖屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級因納得立 聖的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -676,7 +676,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30354" name="特級高達特 暗的守護戒指" type="Armor">
+	<item id="30354" type="Armor" name="최상급 고다드 암흑의 수호 반지">
 		<table name="#Desc">賜給高達特領地守護者的戒指。黑暗屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級高達特 暗的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -694,7 +694,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30355" name="特級魯因 風的守護戒指" type="Armor">
+	<item id="30355" type="Armor" name="최상급 루운 바람의 수호 반지">
 		<table name="#Desc">賜給魯因領地守護者的戒指。風屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級魯因 風的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -712,7 +712,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30356" name="特級修加特 暗的守護戒指" type="Armor">
+	<item id="30356" type="Armor" name="최상급 슈트가르트 암흑의 수호 반지">
 		<table name="#Desc">賜給修加特領地守護者的戒指。黑暗屬性防禦力+15。無法交易或丟棄。即使戴上兩個特級修加特 暗的守護戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>
 		<set name="default_action" val="equip"/>
@@ -730,7 +730,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="30357" name="生命靈藥-R級" type="EtcItem">
+	<item id="30357" type="EtcItem" name="생명의 비약 - R그레이드">
 		<table name="#Desc">恢復HP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
 		<set name="icon" val="icon.etc_super_potion_i02"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -743,7 +743,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30358" name="精神靈藥-R級" type="EtcItem">
+	<item id="30358" type="EtcItem" name="정신의 비약 - R그레이드">
 		<table name="#Desc">恢復MP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
 		<set name="icon" val="icon.etc_super_potion_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -756,7 +756,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30359" name="鬥志靈藥-R級" type="EtcItem">
+	<item id="30359" type="EtcItem" name="투지의 비약 - R그레이드">
 		<table name="#Desc">恢復CP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
 		<set name="icon" val="icon.etc_super_potion_i01"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -769,7 +769,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30360" name="超強力生命靈藥-R級" type="EtcItem">
+	<item id="30360" type="EtcItem" name="초강력 생명의 비약 - R그레이드">
 		<table name="#Desc">恢復HP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
 		<set name="icon" val="icon.etc_super_potion_i02"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -782,7 +782,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30361" name="超強力精神靈藥-R級" type="EtcItem">
+	<item id="30361" type="EtcItem" name="초강력 정신의 비약 - R그레이드">
 		<table name="#Desc">恢復MP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
 		<set name="icon" val="icon.etc_super_potion_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -795,7 +795,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30362" name="超強力鬥志靈藥-R級" type="EtcItem">
+	<item id="30362" type="EtcItem" name="초강력 투지의 비약 - R그레이드">
 		<table name="#Desc">恢復CP。僅限等級85以上的角色用於自己身上。使用冷卻時間為2分鐘。</table>
 		<set name="icon" val="icon.etc_super_potion_i01"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -808,7 +808,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="30372" name="英雄斗篷" type="Armor">
+	<item id="30372" type="Armor" name="영웅의 망토">
 		<table name="#Desc">神聖的英雄斗篷。增加HP和CP、魔法防禦力+80、增加所有能力2、增加屬性抗性10。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
 		<set name="default_action" val="equip"/>
@@ -824,7 +824,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="30373" name="名譽斗篷" type="Armor">
+	<item id="30373" type="Armor" name="명예의 망토">
 		<table name="#Desc">名譽斗篷。增加HP和CP、魔法防禦力+50、增加所有能力1、增加屬性抗性5。</table>
 		<set name="icon" val="icon.vesper_cloack_i00"/>
 		<set name="default_action" val="equip"/>
@@ -842,7 +842,7 @@
 	</item>
 
 	<!-- 英雄武器 -->
-	<item id="30392" name="無限鉋刀" type="Weapon">
+	<item id="30392" type="Weapon" name="인피니티 셰이퍼">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -874,7 +874,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433"/>
 		</for>
 	</item>
-	<item id="30393" name="無限切刃" type="Weapon">
+	<item id="30393" type="Weapon" name="인피니티 커터">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -905,7 +905,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="30394" name="無限殺刃" type="Weapon">
+	<item id="30394" type="Weapon" name="인피니티 슬래셔">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -936,7 +936,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="30395" name="無限復仇者" type="Weapon">
+	<item id="30395" type="Weapon" name="인피니티 어벤져">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -968,7 +968,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="30396" name="無限戰爪" type="Weapon">
+	<item id="30396" type="Weapon" name="인피니티 파이터">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1000,7 +1000,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="30397" name="無限風暴者" type="Weapon">
+	<item id="30397" type="Weapon" name="인피니티 스토머">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1032,7 +1032,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="30398" name="無限投弓" type="Weapon">
+	<item id="30398" type="Weapon" name="인피니티 스로워">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00"/>
 		<set name="default_action" val="equip"/>
@@ -1065,7 +1065,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293"/>
 		</for>
 	</item>
-	<item id="30399" name="無限射靈" type="Weapon">
+	<item id="30399" type="Weapon" name="인피니티 슈트제">
 		<table name="#Desc">神聖的英雄武器。增加HP最大值/MP最大值/CP最大值/PvP時所造成的傷害，並增加攻擊速度和施法速度、致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_infinity_shooter_i00"/>
 		<set name="default_action" val="equip"/>

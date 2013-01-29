@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="21200" type="EtcItem" name="Mysterious Scroll - Prophecy of Wind">
+	<item id="21200" type="EtcItem" name="신비한 주문서 - 포엠 오브 드럼">
 		<!-- Description: Dimensional item. For 60 minutes, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, power of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buff by 10%. Decreases moving speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="material" val="paper" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21201" type="EtcItem" name="Magic Glasses 30-Day Pack">
+	<item id="21201" type="EtcItem" name="마법 안경 30일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 magic glasses (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -19,7 +19,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21202" type="Armor" name="Magic Glasses - 30-day limited period">
+	<item id="21202" type="Armor" name="마법 안경 30일 기간제">
 		<!-- Description: Dimensional item. Magic glasses that has MP +10 and M. Def. +70 effect. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="default_action" val="equip" />
@@ -33,7 +33,7 @@
 			<add order="0x40" stat="maxMp" val="10" />
 		</for>
 	</item>
-	<item id="21203" type="EtcItem" name="Queen Ant's Ring 30-Day Pack">
+	<item id="21203" type="EtcItem" name="여왕개미의 반지 30일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 queen ant's ring (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -42,7 +42,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21204" type="EtcItem" name="Baium's Ring 30-Day Pack">
+	<item id="21204" type="EtcItem" name="바이움의 반지 30일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Baium's ring (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -51,7 +51,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21205" type="EtcItem" name="Earring of Zaken 30-Day Pack">
+	<item id="21205" type="EtcItem" name="자켄의 귀걸이 30일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Earring of Zaken (30 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21206" type="Armor" name="Queen Ant's Ring - 30-day limited period">
+	<item id="21206" type="Armor" name="여왕개미의 반지 30일 기간제">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +30%, poison attack rate +30%, accuracy increase, critical damage increase, hold tolerance 20% increase, and hold attack rate 20% increase. Only one effect is applied even when two identical rings are worn. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
@@ -77,7 +77,7 @@
 			<add order="0x40" stat="maxMp" val="21" />
 		</for>
 	</item>
-	<item id="21207" type="Armor" name="Baium's Ring - 30-day limited period">
+	<item id="21207" type="Armor" name="바이움의 반지 30일 기간제">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +40%, poison attack rate +40%, accuracy increase, critical damage increase, hold tolerance +30%, hold attack rate +30%, attack increase, and Casting Spd. increase. Only one effect is applied even when two identical rings are worn. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="equip" />
@@ -94,7 +94,7 @@
 			<add order="0x40" stat="maxMp" val="21" />
 		</for>
 	</item>
-	<item id="21208" type="Armor" name="Earring of Zaken - 30-day limited period">
+	<item id="21208" type="Armor" name="자켄의 귀걸이 30일 기간제">
 		<!-- Description: Dimensional item. MP +31, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount increase, vampiric rage effect, Resistance to Shock/Mental attacks 20% increase, and Shock/Mental attack rate 20% increase. When equipped with two identical earrings, the effect of only one earring will be applied. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
@@ -112,7 +112,7 @@
 			<add order="0x40" stat="maxMp" val="31" />
 		</for>
 	</item>
-	<item id="21209" type="EtcItem" name="MP Recovery Potion Pack">
+	<item id="21209" type="EtcItem" name="MP 회복 물약 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 MP recovery (+50%) potions. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -121,7 +121,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21210" type="EtcItem" name="MP Recovery Potion">
+	<item id="21210" type="EtcItem" name="MP 회복 물약">
 		<!-- Description: Dimensional item. Magic potion that quickly recovers MP by 50% when used. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="material" val="liquid" />
@@ -131,7 +131,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21211" type="EtcItem" name="Vitality Replenishing Herb Tea Pack">
+	<item id="21211" type="EtcItem" name="활력 충전 허브티 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 10 Vitality Replenishing Herb Teas. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -140,7 +140,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21212" type="EtcItem" name="Vitality Replenishing Herb Tea">
+	<item id="21212" type="EtcItem" name="활력 충전 허브티">
 		<!-- Description: Dimensional item. For 30 minutes, energy is replenished when Exp. is acquired through hunting. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="liquid" />
@@ -150,7 +150,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21213" type="EtcItem" name="Queen Ant's Ring 180-Day Pack">
+	<item id="21213" type="EtcItem" name="여왕개미의 반지 180일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 queen ant's ring (180 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -159,7 +159,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21214" type="EtcItem" name="Baium's Ring 180-Day Pack">
+	<item id="21214" type="EtcItem" name="바이움의 반지 180일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Baium's ring (180 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -168,7 +168,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21215" type="EtcItem" name="Earring of Zaken 180-Day Pack">
+	<item id="21215" type="EtcItem" name="자켄의 귀걸이 180일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Earring of Zaken (180 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -177,7 +177,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21216" type="EtcItem" name="Valakas's Necklace 180-Day Pack">
+	<item id="21216" type="EtcItem" name="발라카스의 목걸이 180일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Valakas's necklace (180 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -186,7 +186,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21217" type="EtcItem" name="Antharas's Earring 180-Day Pack">
+	<item id="21217" type="EtcItem" name="안타라스의 귀걸이 180일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Antharas's earring (180 day). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -195,7 +195,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21218" type="Armor" name="Queen Ant's Ring - 180-day limited period">
+	<item id="21218" type="Armor" name="여왕개미의 반지 180일 기간제">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +30%, poison attack rate +30%, accuracy increase, critical damage increase, hold tolerance 20% increase, and hold attack rate 20% increase. Only one effect is applied even when two identical rings are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="equip" />
@@ -212,7 +212,7 @@
 			<add order="0x40" stat="maxMp" val="21" />
 		</for>
 	</item>
-	<item id="21219" type="Armor" name="Baium's Ring - 180-day limited period">
+	<item id="21219" type="Armor" name="바이움의 반지 180일 기간제">
 		<!-- Description: Dimensional item. MP +21, Resistance to Poison +40%, poison attack rate +40%, accuracy increase, critical damage increase, hold tolerance +30%, hold attack rate +30%, attack increase, and Casting Spd. increase. Only one effect is applied even when two identical rings are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="equip" />
@@ -229,7 +229,7 @@
 			<add order="0x40" stat="maxMp" val="21" />
 		</for>
 	</item>
-	<item id="21220" type="Armor" name="Earring of Zaken - 180-day limited period">
+	<item id="21220" type="Armor" name="자켄의 귀걸이 180일 기간제">
 		<!-- Description: Dimensional item. MP +31, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount increase, vampiric rage effect, Resistance to Shock/Mental attacks 20% increase, and Shock/Mental attack rate 20% increase. When equipped with two identical earrings, the effect of only one earring will be applied. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="equip" />
@@ -247,7 +247,7 @@
 			<add order="0x40" stat="maxMp" val="31" />
 		</for>
 	</item>
-	<item id="21221" type="Armor" name="Valakas's Necklace - 180-day limited period">
+	<item id="21221" type="Armor" name="발라카스의 목걸이 180일 기간제">
 		<!-- Description: Dimensional item. MP +50, Resistance to Sleep +40%, sleep attack rate +40%, HP +445, reuse delay decrease, P. Atk. and M. Atk. increase, wild magic effect, damage shield effect, and Resistance to Fire increase. Only one effect is applied even when the two identical necklaces are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="equip" />
@@ -264,7 +264,7 @@
 			<add order="0x40" stat="maxMp" val="50" />
 		</for>
 	</item>
-	<item id="21222" type="Armor" name="Antharas's Earring - 180-day limited period">
+	<item id="21222" type="Armor" name="안타라스의 귀걸이 180일 기간제">
 		<!-- Description: Dimensional item. MP +37, Resistance to Bleed +40%, Bleed attack rate +40%, heal amount increase, vampiric rage effect, Resistance to Stun/Mental attacks 30%, Stun/Mental attack rate +30%, MP consumption decrease, and Resistance to Earth increase. Only one effect is applied even when the two identical earrings are worn. Can be used for 180 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="equip" />
@@ -281,7 +281,7 @@
 			<add order="0x40" stat="maxMp" val="37" />
 		</for>
 	</item>
-	<item id="21223" type="EtcItem" name="Transformation Scroll: Anakim Pack">
+	<item id="21223" type="EtcItem" name="변신 주문서 - 아나킴 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 5 Anakim Transformation Scrolls. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -291,7 +291,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21224" type="EtcItem" name="Transformation Scroll: Anakim">
+	<item id="21224" type="EtcItem" name="변신 주문서 - 아나킴">
 		<!-- Description: Dimensional item. Transformation scroll that transforms you into Anakim for 30 minute(s). No effect if used while transformed. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="material" val="paper" />
@@ -302,7 +302,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21225" type="EtcItem" name="Sweet Fruit Cocktail Pack">
+	<item id="21225" type="EtcItem" name="달콤한 농축 후르츠 칵테일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 sweet fruit cocktails. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -311,7 +311,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21226" type="EtcItem" name="Sweet Fruit Cocktail Pack - Event">
+	<item id="21226" type="EtcItem" name="달콤한 농축 후르츠 칵테일 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 sweet fruit cocktails. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -320,7 +320,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21227" type="EtcItem" name="Sweet Fruit Cocktail">
+	<item id="21227" type="EtcItem" name="달콤한 농축 후르츠 칵테일">
 		<!-- Description: Dimensional item. Cocktail drink that's flavored with many rare types of fruit. When consumed, one can feel Might, Shield, Wind Walk, Focus, Death Whisper, Guidance, Bless Shield, Blessed Body, Haste, Vampiric Rage, and Berserker Spirit effects for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="material" val="liquid" />
@@ -330,7 +330,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21228" type="EtcItem" name="Sweet Fruit Cocktail - Event">
+	<item id="21228" type="EtcItem" name="달콤한 농축 후르츠 칵테일 이벤트">
 		<!-- Description: Dimensional item. Cocktail drink that's flavored with many rare types of fruit. When consumed, one can feel Might, Shield, Wind Walk, Focus, Death Whisper, Guidance, Bless Shield, Blessed Body, Haste, Vampiric Rage, and Berserker Spirit effects for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="material" val="liquid" />
@@ -340,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21229" type="EtcItem" name="Fresh Fruit Cocktail Pack">
+	<item id="21229" type="EtcItem" name="상큼한 농축 후르츠 칵테일 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 fresh fruit cocktails. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -349,7 +349,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21230" type="EtcItem" name="Fresh Fruit Cocktail Pack - Event">
+	<item id="21230" type="EtcItem" name="상큼한 농축 후르츠 칵테일 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 fresh fruit cocktails. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -358,7 +358,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21231" type="EtcItem" name="Fresh Fruit Cocktail">
+	<item id="21231" type="EtcItem" name="상큼한 농축 후르츠 칵테일">
 		<!-- Description: Dimensional item. Cocktail drink that's flavored with many rare types of fruit. When consumed, one can feel Berserker Spirit, Blessed Body, Magic Barrier, Shield, Wind Walk, Blessed Soul, Empower, Acumen, and Clarity effects for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="material" val="liquid" />
@@ -368,7 +368,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21232" type="EtcItem" name="Fresh Fruit Cocktail - Event">
+	<item id="21232" type="EtcItem" name="상큼한 농축 후르츠 칵테일 이벤트">
 		<!-- Description: Dimensional item. Cocktail drink that's flavored with many rare types of fruit. When consumed, one can feel Berserker Spirit, Blessed Body, Magic Barrier, Shield, Wind Walk, Blessed Soul, Empower, Acumen, and Clarity effects for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="material" val="liquid" />
@@ -378,7 +378,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21233" type="EtcItem" name="Fresh Milk Pack">
+	<item id="21233" type="EtcItem" name="신선한 우유 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 fresh milks. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -387,7 +387,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21234" type="EtcItem" name="Fresh Milk Pack - Event">
+	<item id="21234" type="EtcItem" name="신선한 우유 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 fresh milks. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -397,7 +397,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21235" type="EtcItem" name="Fresh Milk">
+	<item id="21235" type="EtcItem" name="신선한 우유">
 		<!-- Description: Dimensional Item. Freshly collected milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic and Concentration for 1 hour. Cannot be exchanged, dropped or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="material" val="liquid" />
@@ -407,7 +407,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21236" type="EtcItem" name="Fresh Milk - Event">
+	<item id="21236" type="EtcItem" name="신선한 우유 이벤트">
 		<!-- Description: Dimensional item. Freshly drawn milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic and Concentration for 1 hour. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="material" val="liquid" />
@@ -418,7 +418,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21237" type="EtcItem" name="Super Healthy Juice (HP) Pack">
+	<item id="21237" type="EtcItem" name="슈퍼 건강 주스(HP) 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 super healthy juices (HP). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -427,7 +427,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21238" type="EtcItem" name="Super Healthy Juice (HP) Pack - Event">
+	<item id="21238" type="EtcItem" name="슈퍼 건강 주스(HP) 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 super healthy juices (HP). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -437,7 +437,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21239" type="EtcItem" name="Super Healthy Juice (HP)">
+	<item id="21239" type="EtcItem" name="슈퍼 건강 주스(HP)">
 		<!-- Description: Dimensional Item. Magic juice that instantly fully recovers HP. Cannot be exchanged, dropped or destroyed. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys2.icon.etc_health_juice_i00" />
 		<set name="material" val="liquid" />
@@ -447,7 +447,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="21240" type="EtcItem" name="Super Healthy Juice (HP) - Event">
+	<item id="21240" type="EtcItem" name="슈퍼 건강 주스(HP) 이벤트">
 		<!-- Description: Dimensional item. Magic juice that temporarily recovers stamina in full. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_health_juice_i00" />
 		<set name="material" val="liquid" />
@@ -458,7 +458,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21241" type="EtcItem" name="Super Healthy Juice (CP) Pack">
+	<item id="21241" type="EtcItem" name="슈퍼 건강 주스(CP) 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 5 super healthy juices (CP). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -467,7 +467,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21242" type="EtcItem" name="Super Healthy Juice (CP) Pack - Event">
+	<item id="21242" type="EtcItem" name="슈퍼 건강 주스(CP) 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 5 super healthy juices (CP). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -477,8 +477,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21243" type="EtcItem" name="Super Healthy Juice (CP)">
-		<!-- Description: Dimensional item. Magic juice that temporarily recovers CP in full. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
+	<item id="21243" type="EtcItem" name="슈퍼 건강 주스(CP)">
+		<!-- Description: Dimensional item. Magic juice that temporarily recovers CP in full. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_health_juice_i01" />
 		<set name="material" val="liquid" />
 		<set name="weight" val="180" />
@@ -487,7 +487,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21244" type="EtcItem" name="Super Healthy Juice (CP) - Event">
+	<item id="21244" type="EtcItem" name="슈퍼 건강 주스(CP) 이벤트">
 		<!-- Description: Dimensional item. Magic juice that temporarily recovers CP in full. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_health_juice_i01" />
 		<set name="material" val="liquid" />
@@ -498,7 +498,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21245" type="EtcItem" name="Vitality Replenishing Beverage Pack">
+	<item id="21245" type="EtcItem" name="활력 충전 음료 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Vitality Replenishing Beverage. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -507,7 +507,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21246" type="EtcItem" name="Vitality Replenishing Beverage Pack - Event">
+	<item id="21246" type="EtcItem" name="활력 충전 음료 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Vitality Replenishing Beverage. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -517,7 +517,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21247" type="EtcItem" name="Vitality Replenishing Beverage">
+	<item id="21247" type="EtcItem" name="활력 충전 음료">
 		<!-- Description: Dimensional item. Vitality is replenished to 100% upon use. Re-use time is 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
 		<set name="material" val="liquid" />
@@ -526,7 +526,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21248" type="EtcItem" name="Vitality Replenishing Beverage - Event">
+	<item id="21248" type="EtcItem" name="활력 충전 음료 이벤트">
 		<!-- Description: Dimensional item. Vitality is replenished to 100% upon use. Re-use time is 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
 		<set name="material" val="liquid" />
@@ -536,7 +536,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21249" type="EtcItem" name="Vitality Maintainig Potion (30 Minutes) Pack">
+	<item id="21249" type="EtcItem" name="활력 유지 30분 물약 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Vitality Maintainig Potion. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -545,7 +545,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21250" type="EtcItem" name="Vitality Maintainig Potion (30 Minutes) Pack - Event">
+	<item id="21250" type="EtcItem" name="활력 유지 30분 물약 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 1 Vitality Maintainig Potion. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -554,7 +554,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21251" type="EtcItem" name="Vitality Maintainig Potion (30 Minutes)">
+	<item id="21251" type="EtcItem" name="활력 유지 30분 물약">
 		<!-- Description: Dimensional item. Maintains energy for 30 minutes when used. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="material" val="liquid" />
@@ -563,7 +563,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21252" type="EtcItem" name="Vitality Maintainig Potion (30 Minutes) - Event">
+	<item id="21252" type="EtcItem" name="활력 유지 30분 물약 이벤트">
 		<!-- Description: Dimensional item. Maintains energy for 30 minutes when used. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="material" val="liquid" />
@@ -572,7 +572,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21253" type="EtcItem" name="Gludio Homemade Cookie Pack">
+	<item id="21253" type="EtcItem" name="글루디오 수제 쿠키 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 5 Gludio Homemade Cookies. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -581,7 +581,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21254" type="EtcItem" name="Gludio Homemade Cookie Pack - Event">
+	<item id="21254" type="EtcItem" name="글루디오 수제 쿠키 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 5 Gludio Homemade Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -591,7 +591,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21255" type="EtcItem" name="Gludio Homemade Cookie">
+	<item id="21255" type="EtcItem" name="글루디오 수제 쿠키">
 		<!-- Description: Dimensional item. Increases P. Atk. by 10% for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -601,7 +601,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21256" type="EtcItem" name="Gludio Homemade Cookie - Event">
+	<item id="21256" type="EtcItem" name="글루디오 수제 쿠키 이벤트">
 		<!-- Description: Dimensional item. Increases P. Atk. by 10% for 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -612,7 +612,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21257" type="EtcItem" name="Dion Homemade Cookie Pack">
+	<item id="21257" type="EtcItem" name="디온 수제 쿠키 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 5 Dion Homemade Cookies. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -621,7 +621,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21258" type="EtcItem" name="Dion Homemade Cookie Pack - Event">
+	<item id="21258" type="EtcItem" name="디온 수제 쿠키 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 5 Dion Homemade Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -631,7 +631,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21259" type="EtcItem" name="Dion Homemade Cookie">
+	<item id="21259" type="EtcItem" name="디온 수제 쿠키">
 		<!-- Description: Dimensional item. Increases P. Def. by 15% for 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -641,7 +641,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21260" type="EtcItem" name="Dion Homemade Cookie - Event">
+	<item id="21260" type="EtcItem" name="디온 수제 쿠키 이벤트">
 		<!-- Description: Dimensional item. Increases P. Def. by 15% for 60 minutes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -652,7 +652,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21261" type="EtcItem" name="Aden Designer Cookie Pack">
+	<item id="21261" type="EtcItem" name="아덴 명품 쿠키 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Aden Designer Cookies. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -661,7 +661,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21262" type="EtcItem" name="Aden Designer Cookie Pack - Event">
+	<item id="21262" type="EtcItem" name="아덴 명품 쿠키 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Aden Designer Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -671,7 +671,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21263" type="EtcItem" name="Aden Designer Cookie">
+	<item id="21263" type="EtcItem" name="아덴 명품 쿠키">
 		<!-- Description: Dimensional item. For 60 minutes, receives help from a great spirit to recover HP by 20%, increases Max HP by 20%, the rate of Prominent Damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Resistance to de-buffs by 10%, and accuracy by 4. Decreases moving speed by 20%. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -681,7 +681,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21264" type="EtcItem" name="Aden Designer Cookie - Event">
+	<item id="21264" type="EtcItem" name="아덴 명품 쿠키 이벤트">
 		<!-- Description: Dimensional item. For 60 minutes, receives help from a great spirit to recover HP by 20%, increases Max HP by 20%, the rate of Prominent Damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Resistance to de-buffs by 10%, and accuracy by 4. Decreases moving speed by 20%. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -692,7 +692,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21265" type="EtcItem" name="Giran Designer Cookie Pack">
+	<item id="21265" type="EtcItem" name="기란 명품 쿠키 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Giran Designer Cookies. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -701,7 +701,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21266" type="EtcItem" name="Giran Designer Cookie Pack - Event">
+	<item id="21266" type="EtcItem" name="기란 명품 쿠키 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Giran Designer Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -711,7 +711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21267" type="EtcItem" name="Giran Designer Cookie">
+	<item id="21267" type="EtcItem" name="기란 명품 쿠키">
 		<!-- Description: Dimensional item. For 60 minutes, increases P. Def. against Critical by 30%. When the target receives an attack above a certain amount of damage, the critical damage for general short-range physical attack is increased for 8 seconds. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -721,7 +721,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21268" type="EtcItem" name="Giran Designer Cookie - Event">
+	<item id="21268" type="EtcItem" name="기란 명품 쿠키 이벤트">
 		<!-- Description: Dimensional item. For 60 minutes, increases P. Def. against Critical by 30%. When the target receives an attack above a certain amount of damage, the critical damage for general short-range physical attack is increased for 8 seconds. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -732,7 +732,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21269" type="EtcItem" name="Rune Designer Cookie Pack">
+	<item id="21269" type="EtcItem" name="루운 명품 쿠키 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Rune Designer Cookies. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -741,7 +741,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21270" type="EtcItem" name="Rune Designer Cookie Pack - Event">
+	<item id="21270" type="EtcItem" name="루운 명품 쿠키 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 Rune Designer Cookies. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -751,7 +751,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21271" type="EtcItem" name="Rune Designer Cookie">
+	<item id="21271" type="EtcItem" name="루운 명품 쿠키">
 		<!-- Description: Dimensional Item. Greatly increases received recharge power for 60 minutes. The amount of recovered MP may vary according to the level. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -761,7 +761,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21272" type="EtcItem" name="Rune Designer Cookie - Event">
+	<item id="21272" type="EtcItem" name="루운 명품 쿠키 이벤트">
 		<!-- Description: Dimensional Item. Greatly increases received recharge power for 60 minutes. The amount of recovered MP may vary according to the level. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="paper" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21273" type="EtcItem" name="Hunting Helper Exchange Coupon Pack">
+	<item id="21273" type="EtcItem" name="사냥 도우미 교환권 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 3 hunting helper exchange coupons. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -781,7 +781,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21274" type="EtcItem" name="Hunting Helper Exchange Coupon Pack - Event">
+	<item id="21274" type="EtcItem" name="사냥 도우미 교환권 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 3 hunting helper exchange coupons. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -791,7 +791,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21275" type="EtcItem" name="Hunting Helper Exchange Coupon">
+	<item id="21275" type="EtcItem" name="사냥 도우미 교환권">
 		<!-- Description: Dimensional item. An exchange coupon that can be exchanged for a necklace that allows you to summon a Hunting Helper (5 hours). Can be exchanged through the Dimensional Merchant. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="paper" />
@@ -801,7 +801,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21276" type="EtcItem" name="Hunting Helper Exchange Coupon - Event">
+	<item id="21276" type="EtcItem" name="사냥 도우미 교환권 이벤트">
 		<!-- Description: Dimensional item. An exchange coupon that can be exchanged for a necklace that allows you to summon a Hunting Helper (5 hours). Can be exchanged through the Dimensional Merchant. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="paper" />
@@ -812,7 +812,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21277" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon Pack">
+	<item id="21277" type="EtcItem" name="고급 사냥 도우미 교환권 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 2 high quality hunting helper exchange coupons. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -821,7 +821,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21278" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon Pack - Event">
+	<item id="21278" type="EtcItem" name="고급 사냥 도우미 교환권 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 2 high quality hunting helper exchange coupons. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -831,7 +831,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21279" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon">
+	<item id="21279" type="EtcItem" name="고급 사냥 도우미 교환권">
 		<!-- Description: Dimensional item. An exchange coupon that can be exchanged for a necklace that allows you to summon a High Quality Hunting Helper (5 hours). Can be exchanged through the Dimensional Merchant. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="paper" />
@@ -841,7 +841,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21280" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon - Event">
+	<item id="21280" type="EtcItem" name="고급 사냥 도우미 교환권 이벤트">
 		<!-- Description: Dimensional item. An exchange coupon that can be exchanged for a necklace that allows you to summon a High Quality Hunting Helper (5 hours). Can be exchanged through the Dimensional Merchant. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="paper" />
@@ -852,7 +852,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21281" type="EtcItem" name="Feather of Blessing Pack">
+	<item id="21281" type="EtcItem" name="축복의 깃털 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 feather of blessing. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -861,7 +861,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21282" type="EtcItem" name="Feather of Blessing Pack - Event">
+	<item id="21282" type="EtcItem" name="축복의 깃털 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 1 feather of blessing. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -871,7 +871,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21283" type="EtcItem" name="Free Teleport Scroll Pack">
+	<item id="21283" type="EtcItem" name="자유 텔레포트의 서 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 sheet of the Free Teleport Scroll. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -880,7 +880,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21284" type="EtcItem" name="Free Teleport Scroll Pack - Event">
+	<item id="21284" type="EtcItem" name="자유 텔레포트의 서 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 1 sheet of the Free Teleport Scroll. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21285" type="EtcItem" name="Free Teleport Scroll Pack">
+	<item id="21285" type="EtcItem" name="자유 텔레포트의 주문서 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 30 sheets of the Free Teleport Scroll. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -899,7 +899,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21286" type="EtcItem" name="Free Teleport Scroll Pack - Event">
+	<item id="21286" type="EtcItem" name="자유 텔레포트의 주문서 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 30 sheets of the Free Teleport Scroll. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -909,7 +909,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21287" type="EtcItem" name="Extra Entrance Pass - Near Kamaloka Pack">
+	<item id="21287" type="EtcItem" name="추가 입장권 - 니어 카마로카 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Near Kamaloka entrance passes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -918,7 +918,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21288" type="EtcItem" name="Extra Entrance Pass - Near Kamaloka Pack - Event">
+	<item id="21288" type="EtcItem" name="추가 입장권 - 니어 카마로카 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Near Kamaloka entrance passes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -928,7 +928,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21289" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss) Pack">
+	<item id="21289" type="EtcItem" name="추가 입장권 - 카마로카(심연의 홀）팩">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Kamaloka (Hall of the Abyss) entrance passes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -937,7 +937,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21290" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss) Pack - Event">
+	<item id="21290" type="EtcItem" name="추가 입장권 - 카마로카(심연의 홀）팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Kamaloka (Hall of the Abyss) entrance passes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -947,7 +947,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21291" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) Pack">
+	<item id="21291" type="EtcItem" name="추가 입장권 - 카마로카(심연의 미궁）팩">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Kamaloka (Labyrinth of the Abyss) entrance passes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -956,7 +956,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21292" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) Pack - Event">
+	<item id="21292" type="EtcItem" name="추가 입장권 - 카마로카(심연의 미궁）팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 15 Kamaloka (Labyrinth of the Abyss) entrance passes. Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21293" type="EtcItem" name="Weapon-type Enhance Backup Stone (A-Grade) Pack">
+	<item id="21293" type="EtcItem" name="무기용 강화 보조석 - A그레이드 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 weapon-type enhance backup stone (A-Grade). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -975,7 +975,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21294" type="EtcItem" name="Weapon-type Enhance Backup Stone (A-Grade) Pack - Event">
+	<item id="21294" type="EtcItem" name="무기용 강화 보조석 - A그레이드 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 1 weapon-type enhance backup stone (A-Grade). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -985,7 +985,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21295" type="EtcItem" name="Weapon-type Enhance Backup Stone (S-Grade) Pack">
+	<item id="21295" type="EtcItem" name="무기용 강화 보조석 - S그레이드 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 weapon-type enhance backup stone (S-Grade). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -994,7 +994,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21296" type="EtcItem" name="Weapon-type Enhance Backup Stone (S-Grade) Pack - Event">
+	<item id="21296" type="EtcItem" name="무기용 강화 보조석 - S그레이드 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 1 weapon-type enhance backup stone (S-Grade). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -1004,7 +1004,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21297" type="EtcItem" name="Armor-type Enhance Backup Stone (A-Grade) Pack">
+	<item id="21297" type="EtcItem" name="방어구용 강화 보조석 - A그레이드 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 armor-type enhance backup stone (A-Grade). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -1013,7 +1013,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21298" type="EtcItem" name="Armor-type Enhance Backup Stone (A-Grade) Pack - Event">
+	<item id="21298" type="EtcItem" name="방어구용 강화 보조석 - A그레이드 팩 이벤트">
 		<!-- Description: Dimensional item pack. Gift box containing 1 armor-type enhance backup stone (A-Grade). Cannot be exchanged, dropped, or destroyed. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />
@@ -1023,7 +1023,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="21299" type="EtcItem" name="Armor-type Enhance Backup Stone (S-Grade) Pack">
+	<item id="21299" type="EtcItem" name="방어구용 강화 보조석 - S그레이드 팩">
 		<!-- Description: Dimensional item pack. Gift box containing 1 armor-type enhance backup stone (S-Grade). Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="steel" />

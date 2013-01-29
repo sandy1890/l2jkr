@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8800" type="Weapon" name="Naga Storm - Focus">
+	<item id="8800" type="Weapon" name="나가 스톰 포커스">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -28,7 +28,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8801" type="Weapon" name="Naga Storm - Critical Damage">
+	<item id="8801" type="Weapon" name="나가 스톰 Crt.대미지">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -56,7 +56,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8802" type="Weapon" name="Naga Storm - Back Blow">
+	<item id="8802" type="Weapon" name="나가 스톰 백블로">
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -84,7 +84,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8803" type="Weapon" name="Tiphon's Spear - Critical Stun">
+	<item id="8803" type="Weapon" name="타이폰 스피어 Crt.스턴">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -114,7 +114,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8804" type="Weapon" name="Tiphon's Spear - Towering Blow">
+	<item id="8804" type="Weapon" name="타이폰 스피어 롱블로">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -143,7 +143,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8805" type="Weapon" name="Tiphon's Spear - Wild Blow">
+	<item id="8805" type="Weapon" name="타이폰 스피어 와일드 블로">
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -172,7 +172,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8806" type="Weapon" name="Shyeed's Bow - Cheap Shot">
+	<item id="8806" type="Weapon" name="샤이드 보우 칩샷">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -204,7 +204,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8807" type="Weapon" name="Shyeed's Bow - Focus">
+	<item id="8807" type="Weapon" name="샤이드 보우 포커스">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -235,7 +235,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8808" type="Weapon" name="Shyeed's Bow - Quick Recovery">
+	<item id="8808" type="Weapon" name="샤이드 보우 퀵리커버리">
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -266,7 +266,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8809" type="Weapon" name="Sobekk's Hurricane - Rsk. Haste">
+	<item id="8809" type="Weapon" name="소베크 허리케인 Rsk.헤이스트">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -294,7 +294,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8810" type="Weapon" name="Sobekk's Hurricane - Haste">
+	<item id="8810" type="Weapon" name="소베크 허리케인 헤이스트">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -322,7 +322,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8811" type="Weapon" name="Sobekk's Hurricane - Critical Drain">
+	<item id="8811" type="Weapon" name="소베크 허리케인 Crt.드레인">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -352,7 +352,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8812" type="Weapon" name="Themis' Tongue - Mana Up">
+	<item id="8812" type="Weapon" name="테미스의 혀 마나업">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -380,7 +380,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8813" type="Weapon" name="Themis' Tongue - Mental Shield">
+	<item id="8813" type="Weapon" name="테미스의 혀 매직멘탈실드">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -410,7 +410,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8814" type="Weapon" name="Themis' Tongue - Magic Focus">
+	<item id="8814" type="Weapon" name="테미스의 혀 매직 포커스">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -440,7 +440,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8815" type="Weapon" name="Cabrio's Hand - Conversion">
+	<item id="8815" type="Weapon" name="핸드 오브 카브리오 업다운">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -469,7 +469,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8816" type="Weapon" name="Cabrio's Hand - Mana Up">
+	<item id="8816" type="Weapon" name="핸드 오브 카브리오 마나업">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -498,7 +498,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8817" type="Weapon" name="Cabrio's Hand - Magic Silence">
+	<item id="8817" type="Weapon" name="핸드 오브 카브리오 매직 사일런스">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -529,7 +529,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8818" type="Weapon" name="Daimon Crystal - Mana Up">
+	<item id="8818" type="Weapon" name="데이몬의 결정 마나업">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -558,7 +558,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8819" type="Weapon" name="Daimon Crystal - Acumen">
+	<item id="8819" type="Weapon" name="데이몬의 결정 아큐멘">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -587,7 +587,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8820" type="Weapon" name="Daimon Crystal - Mental Shield">
+	<item id="8820" type="Weapon" name="데이몬의 결정 매직멘탈실드">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -618,7 +618,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8821" type="Weapon" name="Shadow Item: Two Handed Sword">
+	<item id="8821" type="Weapon" name="투영병기 - 양손검">
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -643,7 +643,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8822" type="Weapon" name="Shadow Item: Crimson Sword">
+	<item id="8822" type="Weapon" name="투영병기 - 크림슨 소드">
 		<set name="icon" val="icon.time_weapon_crimson_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -668,7 +668,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8823" type="Weapon" name="Shadow Item: Spiked Club">
+	<item id="8823" type="Weapon" name="투영병기 - 스파이크 클럽">
 		<set name="icon" val="icon.time_weapon_spike_club_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -694,7 +694,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8824" type="Weapon" name="Shadow Item: Staff of Magic">
+	<item id="8824" type="Weapon" name="투영병기 - 마력의 지팡이">
 		<set name="icon" val="icon.time_weapon_staff_of_magicpower_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -721,7 +721,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8825" type="Weapon" name="Shadow Item: Kukuri">
+	<item id="8825" type="Weapon" name="투영병기 - 쿠쿠리">
 		<set name="icon" val="icon.time_weapon_kukuri_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -747,7 +747,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="8826" type="Weapon" name="Shadow Item: Dagger of Mana">
+	<item id="8826" type="Weapon" name="투영병기 - 마나의 단검">
 		<set name="icon" val="icon.time_weapon_dagger_of_mana_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -774,7 +774,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="8827" type="Weapon" name="Shadow Item: Triple-Edged Jamadhr">
+	<item id="8827" type="Weapon" name="투영병기 - 세날 자마다르">
 		<set name="icon" val="icon.time_weapon_triple_edged_jamadhr_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -800,7 +800,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8828" type="Weapon" name="Shadow Item: Gastraphetes">
+	<item id="8828" type="Weapon" name="투영병기 - 가스트라페테스">
 		<set name="icon" val="icon.time_weapon_gastraphetes_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -828,7 +828,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="8829" type="Weapon" name="Shadow Item: War Hammer">
+	<item id="8829" type="Weapon" name="투영병기 - 워 해머">
 		<set name="icon" val="icon.time_weapon_war_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -855,7 +855,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8830" type="Weapon" name="Shadow Item: Katana">
+	<item id="8830" type="Weapon" name="투영병기 - 카타나">
 		<set name="icon" val="icon.time_weapon_katana_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -880,7 +880,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8831" type="Weapon" name="Shadow Item: Bec de Corbin">
+	<item id="8831" type="Weapon" name="투영병기 - 배크 드 코르뱅">
 		<set name="icon" val="icon.time_weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -907,7 +907,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8832" type="Weapon" name="Shadow Item: Cursed Staff">
+	<item id="8832" type="Weapon" name="투영병기 - 저주 받은 지팡이">
 		<set name="icon" val="icon.time_weapon_cursed_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -934,7 +934,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8833" type="Weapon" name="Shadow Item: Stiletto">
+	<item id="8833" type="Weapon" name="투영병기 - 스틸레토">
 		<set name="icon" val="icon.time_weapon_stiletto_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -960,7 +960,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="8834" type="Weapon" name="Shadow Item: Soulfire Dirk">
+	<item id="8834" type="Weapon" name="투영병기 - 마염의 단검">
 		<set name="icon" val="icon.time_weapon_dagger_of_magicflame_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -987,7 +987,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="8835" type="Weapon" name="Shadow Item: Elemental Bow">
+	<item id="8835" type="Weapon" name="투영병기 - 엘레멘탈 보우">
 		<set name="icon" val="icon.time_weapon_elemental_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1015,7 +1015,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="8836" type="Weapon" name="Shadow Item: Dwarven War Hammer">
+	<item id="8836" type="Weapon" name="투영병기 - 드워븐 워해머">
 		<set name="icon" val="icon.time_weapon_dwarven_warhammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1041,7 +1041,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8837" type="Weapon" name="Shadow Item: Sword of Revolution">
+	<item id="8837" type="Weapon" name="투영병기 - 혁명의 검*혁명의 검">
 		<set name="icon" val="icon.time_weapon_two_handed_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1066,7 +1066,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8838" type="Weapon" name="Shadow Item: Knuckle Duster">
+	<item id="8838" type="Weapon" name="투영병기 - 너클 더스트">
 		<set name="icon" val="icon.time_weapon_knuckle_dust_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1092,7 +1092,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8839" type="Weapon" name="Shadow Item: Sword of Delusion">
+	<item id="8839" type="Weapon" name="투영병기 - 미혹의 검">
 		<set name="icon" val="icon.time_weapon_sword_of_delusion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1117,7 +1117,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8840" type="Weapon" name="Shadow Item: Poleaxe">
+	<item id="8840" type="Weapon" name="투영병기 - 폴액스">
 		<set name="icon" val="icon.time_weapon_poleaxe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1144,7 +1144,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8841" type="Weapon" name="Shadow Item: Stick of Eternity">
+	<item id="8841" type="Weapon" name="투영병기 - 구원의 홀">
 		<set name="icon" val="icon.time_weapon_stick_of_eternity_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1171,7 +1171,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8842" type="Weapon" name="Shadow Item: Inferno Staff">
+	<item id="8842" type="Weapon" name="투영병기 - 인페르노 스탭">
 		<set name="icon" val="icon.time_weapon_inferno_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1198,7 +1198,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8843" type="Weapon" name="Shadow Item: Pa'agrian Hammer">
+	<item id="8843" type="Weapon" name="투영병기 - 파아그리오 해머">
 		<set name="icon" val="icon.time_weapon_paagrio_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1225,7 +1225,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8844" type="Weapon" name="Shadow Item: Dark Screamer">
+	<item id="8844" type="Weapon" name="투영병기 - 다크스크리머">
 		<set name="icon" val="icon.time_weapon_dark_screamer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1251,7 +1251,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="8845" type="Weapon" name="Shadow Item: Akat Long Bow">
+	<item id="8845" type="Weapon" name="투영병기 - 아카트 장궁">
 		<set name="icon" val="icon.time_weapon_akat_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1279,7 +1279,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="8846" type="Weapon" name="Shadow Item: Pa'agrian Sword">
+	<item id="8846" type="Weapon" name="투영병기 - 소드 오브 파아그리오">
 		<set name="icon" val="icon.time_weapon_sword_of_paagrio_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1304,7 +1304,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8847" type="Weapon" name="Shadow Item: Fisted Blade">
+	<item id="8847" type="Weapon" name="투영병기 - 피스트블레이드">
 		<set name="icon" val="icon.time_weapon_fist_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1330,7 +1330,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8848" type="Weapon" name="Shadow Item: Stormbringer">
+	<item id="8848" type="Weapon" name="투영병기 - 스톰 브링거*스톰 브링거">
 		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1355,7 +1355,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8849" type="Weapon" name="Shadow Item: Great Sword">
+	<item id="8849" type="Weapon" name="투영병기 - 그레이트 소드">
 		<set name="icon" val="icon.time_weapon_great_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1380,7 +1380,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8850" type="Weapon" name="Shadow Item: Heavy War Axe">
+	<item id="8850" type="Weapon" name="투영병기 - 헤비 워 액스">
 		<set name="icon" val="icon.time_weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1406,7 +1406,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8851" type="Weapon" name="Shadow Item: Sprite's Staff">
+	<item id="8851" type="Weapon" name="투영병기 - 정령의 지팡이">
 		<set name="icon" val="icon.time_weapon_sprites_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1433,7 +1433,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8852" type="Weapon" name="Shadow Item: Keshanberk">
+	<item id="8852" type="Weapon" name="투영병기 - 크샨베르크">
 		<set name="icon" val="icon.time_weapon_kshanberk_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1458,7 +1458,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8853" type="Weapon" name="Shadow Item: Sword of Valhalla">
+	<item id="8853" type="Weapon" name="투영병기 - 소드 오브 발할라">
 		<set name="icon" val="icon.time_weapon_sword_of_valhalla_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1484,7 +1484,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8854" type="Weapon" name="Shadow Item: Kris">
+	<item id="8854" type="Weapon" name="투영병기 - 크리스">
 		<set name="icon" val="icon.time_weapon_kris_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1510,7 +1510,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="8855" type="Weapon" name="Shadow Item: Arthro Nail">
+	<item id="8855" type="Weapon" name="투영병기 - 아스라네일">
 		<set name="icon" val="icon.time_weapon_arthro_nail_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1536,7 +1536,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8856" type="Weapon" name="Shadow Item: Dark Elven Long Bow">
+	<item id="8856" type="Weapon" name="투영병기 - 다크엘븐 롱보우">
 		<set name="icon" val="icon.time_weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1564,7 +1564,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="8857" type="Weapon" name="Shadow Item: Sword of Delusion*Sword of Delusion">
+	<item id="8857" type="Weapon" name="투영병기 - 미혹의 검*미혹의 검">
 		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1589,7 +1589,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8858" type="Weapon" name="Shadow Item: Great Axe">
+	<item id="8858" type="Weapon" name="투영병기 - 그레이트 액스">
 		<set name="icon" val="icon.time_weapon_great_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1616,7 +1616,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8859" type="Weapon" name="Shadow Item: Tallum Blade">
+	<item id="8859" type="Weapon" name="투영병기 - 탈룸 블레이드">
 		<set name="icon" val="icon.time_weapon_tallum_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1641,7 +1641,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8860" type="Weapon" name="Shadow Item: Halberd">
+	<item id="8860" type="Weapon" name="투영병기 - 핼버드">
 		<set name="icon" val="icon.time_weapon_halbard_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1668,7 +1668,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8861" type="Weapon" name="Shadow Item: Dasparion's Staff">
+	<item id="8861" type="Weapon" name="투영병기 - 데스페리온의 지팡이">
 		<set name="icon" val="icon.time_weapon_dasparions_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1695,7 +1695,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8862" type="Weapon" name="Shadow Item: Bloody Orchid">
+	<item id="8862" type="Weapon" name="투영병기 - 블러디오키드">
 		<set name="icon" val="icon.time_weapon_bloody_orchid_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1721,7 +1721,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="8863" type="Weapon" name="Shadow Item: Blood Tornado">
+	<item id="8863" type="Weapon" name="투영병기 - 블러드 토네이도">
 		<set name="icon" val="icon.time_weapon_blood_tornado_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1747,7 +1747,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8864" type="Weapon" name="Shadow Item: Carnage Bow">
+	<item id="8864" type="Weapon" name="투영병기 - 카르니움 활">
 		<set name="icon" val="icon.time_weapon_carnium_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1775,7 +1775,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="8865" type="Weapon" name="Shadow Item: Keshanberk*Keshanberk">
+	<item id="8865" type="Weapon" name="투영병기 - 크샨베르크*크샨베르크">
 		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1800,7 +1800,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8866" type="Weapon" name="Shadow Item: Meteor Shower">
+	<item id="8866" type="Weapon" name="투영병기 - 미티어 샤워">
 		<set name="icon" val="icon.time_weapon_meteor_shower_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1826,7 +1826,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8867" type="Weapon" name="Shadow Item: Inferno Master">
+	<item id="8867" type="Weapon" name="투영병기 - 인페르노 마스터">
 		<set name="icon" val="icon.time_weapon_inferno_master_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1851,14 +1851,14 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8868" type="EtcItem" name="Ziggo's Gemstone">
+	<item id="8868" type="EtcItem" name="지고의 보석">
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="crystal" />
 		<set name="price" val="200000000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8869" type="EtcItem" name="Shadow Item Exchange Coupon (D-Grade)">
+	<item id="8869" type="EtcItem" name="투영병기 교환권 -D그레이드">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1867,7 +1867,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8870" type="EtcItem" name="Shadow Item Exchange Coupon (C-Grade)">
+	<item id="8870" type="EtcItem" name="투영병기 교환권 -C그레이드">
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1876,7 +1876,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8871" type="EtcItem" name="Strategy Guide">
+	<item id="8871" type="EtcItem" name="전략 입문서">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="default_action" val="create_mpcc" />
 		<set name="immediate_effect" val="1" />
@@ -1887,7 +1887,7 @@
 			<player level="20" />
 		</cond>
 	</item>
-	<item id="8872" type="EtcItem" name="Flash Gunpowder">
+	<item id="8872" type="EtcItem" name="무연 화약 가루">
 		<set name="icon" val="icon.etc_powder_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1895,7 +1895,7 @@
 		<set name="price" val="1500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8873" type="EtcItem" name="Phoenix Blood">
+	<item id="8873" type="EtcItem" name="불사조의 피">
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
@@ -1903,7 +1903,7 @@
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8874" type="EtcItem" name="Einhasad's Holy Water">
+	<item id="8874" type="EtcItem" name="아인하사드의 성수">
 		<set name="icon" val="icon.etc_holy_grail_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
@@ -1911,7 +1911,7 @@
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8875" type="EtcItem" name="Battle Symbol">
+	<item id="8875" type="EtcItem" name="배틀 심볼">
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
@@ -1919,7 +1919,7 @@
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8876" type="EtcItem" name="Magic Symbol">
+	<item id="8876" type="EtcItem" name="매직 심볼">
 		<set name="icon" val="icon.etc_dragon_egg_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
@@ -1927,7 +1927,7 @@
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8877" type="EtcItem" name="Spellbook: Soul of the Phoenix">
+	<item id="8877" type="EtcItem" name="마법서 - 소울 오브 피닉스">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1935,7 +1935,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8878" type="EtcItem" name="Spellbook: Summon Feline King">
+	<item id="8878" type="EtcItem" name="마법서 - 서먼 킹 오브 캣">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1943,7 +1943,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8879" type="EtcItem" name="Spellbook: Summon Magnus the Unicorn">
+	<item id="8879" type="EtcItem" name="마법서 - 서먼 유니콘 매그너스">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1951,7 +1951,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8880" type="EtcItem" name="Spellbook: Summon Spectral Knight">
+	<item id="8880" type="EtcItem" name="마법서 - 서먼 스펙트럴 로드">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1959,7 +1959,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8881" type="EtcItem" name="Spellbook: Cleanse">
+	<item id="8881" type="EtcItem" name="마법서 - 클랜스">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1967,7 +1967,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8882" type="EtcItem" name="Spellbook: Salvation">
+	<item id="8882" type="EtcItem" name="마법서 - 샐베이션">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1975,7 +1975,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8883" type="EtcItem" name="Spellbook: Mystic Immunity">
+	<item id="8883" type="EtcItem" name="마법서 - 미스틱 이뮤니티">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1983,7 +1983,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8884" type="EtcItem" name="Spellbook: Spell Turning">
+	<item id="8884" type="EtcItem" name="마법서 - 스펠 터닝">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1991,7 +1991,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8885" type="EtcItem" name="Amulet: Magnus' Chant">
+	<item id="8885" type="EtcItem" name="부적 - 챈트 오브 매그너스">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1999,7 +1999,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8886" type="EtcItem" name="Amulet: Victories of Pa'agrio">
+	<item id="8886" type="EtcItem" name="부적 - 빅토리 오브 파아그리오">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2007,7 +2007,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8887" type="EtcItem" name="Amulet: Pa'agrio's Emblem">
+	<item id="8887" type="EtcItem" name="부적 - 엠블럼 오브 파아그리오">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2015,7 +2015,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8888" type="EtcItem" name="Amulet: Pa'agrio's Fist">
+	<item id="8888" type="EtcItem" name="부적 - 피스트 오브 파아그리오">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2023,7 +2023,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8889" type="EtcItem" name="Amulet: Gate Chant">
+	<item id="8889" type="EtcItem" name="부적 - 챈트 오브 게이트">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2031,7 +2031,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8890" type="EtcItem" name="Spellbook: Summon Attractive Cubic">
+	<item id="8890" type="EtcItem" name="마법서 - 서먼 어트렉트 큐빅">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2039,7 +2039,7 @@
 		<set name="price" val="7700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8891" type="EtcItem" name="Spellbook: Aura Flash">
+	<item id="8891" type="EtcItem" name="마법서 - 오라 플래쉬">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2047,7 +2047,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8892" type="EtcItem" name="Ancient Tactical Manual: Symbol of Defense">
+	<item id="8892" type="EtcItem" name="고대 전략서 - 심볼 오브 가디언">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2055,7 +2055,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8893" type="EtcItem" name="Ancient Tactical Manual: Symbol of Noise">
+	<item id="8893" type="EtcItem" name="고대 전략서 - 심볼 오브 노이즈">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2063,7 +2063,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8894" type="EtcItem" name="Ancient Tactical Manual: Symbol of Resistance">
+	<item id="8894" type="EtcItem" name="고대 전략서 - 심볼 오브 레지스턴스">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2071,7 +2071,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8895" type="EtcItem" name="Ancient Tactical Manual: Symbol of Honor">
+	<item id="8895" type="EtcItem" name="고대 전략서 - 심볼 오브 피스트">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2079,7 +2079,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8896" type="EtcItem" name="Ancient Tactical Manual: Symbol of Energy">
+	<item id="8896" type="EtcItem" name="고대 전략서 - 심볼 오브 에너지">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2087,7 +2087,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8897" type="EtcItem" name="Ancient Tactical Manual: Symbol of the Sniper">
+	<item id="8897" type="EtcItem" name="고대 전략서 - 심볼 오브 스나이프">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2095,7 +2095,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8898" type="EtcItem" name="Ancient Tactical Manual: Symbol of the Assassin">
+	<item id="8898" type="EtcItem" name="고대 전략서 - 심볼 오브 어쌔신">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -2103,7 +2103,7 @@
 		<set name="price" val="40000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8899" type="EtcItem" name="Ancient Spellbook: Volcano">
+	<item id="8899" type="EtcItem" name="고대 마법서 - 볼케이노">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />

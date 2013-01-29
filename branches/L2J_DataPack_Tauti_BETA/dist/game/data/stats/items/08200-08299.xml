@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8200" type="EtcItem" name="Fisherman's Potion - White">
+	<item id="8200" type="EtcItem" name="낚시꾼의 물약 - 흰색">
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -12,7 +12,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2274-8" />
 	</item>
-	<item id="8201" type="EtcItem" name="Fisherman's Potion - Black">
+	<item id="8201" type="EtcItem" name="낚시꾼의 물약 - 검은색">
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -22,7 +22,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="8202" type="EtcItem" name="Fisherman's Potion">
+	<item id="8202" type="EtcItem" name="낚시꾼의 회복 물약">
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="bodypart" val="lhand" />
@@ -35,7 +35,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2275-1" />
 	</item>
-	<item id="8203" type="Weapon" name="Monster Only (Venom Sword)">
+	<item id="8203" type="Weapon" name="몹전용(benom_sword)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -54,7 +54,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8204" type="Weapon" name="Monster Only (Follower of Frintezza Calibur)">
+	<item id="8204" type="Weapon" name="몹전용(follower_of_frintessa_calibur)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -73,7 +73,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8205" type="Weapon" name="Monster Only (Heretic Priest Sigil)">
+	<item id="8205" type="Weapon" name="몹전용(heretic_priest_sickle)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -93,7 +93,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8206" type="Weapon" name="Monster Only (Heretic Priest Sword)">
+	<item id="8206" type="Weapon" name="몹전용(heretic_priest_sword)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -112,7 +112,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8207" type="Weapon" name="Monster Only (Heretic Private Axe)">
+	<item id="8207" type="Weapon" name="몹전용(heretic_privates_axe)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -131,7 +131,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8208" type="Weapon" name="Monster Only (Heretic Private Staff)">
+	<item id="8208" type="Weapon" name="몹전용(heretic_privates_staff)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -151,7 +151,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8209" type="Weapon" name="Monster Only (Lidia Von Helmann Sword)">
+	<item id="8209" type="Weapon" name="몹전용(lidia_von_helmann_sword)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -170,7 +170,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8210" type="Armor" name="Monster Only (Monk Warrior Shield)">
+	<item id="8210" type="Armor" name="몹전용(monk_warrior_shield)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -184,7 +184,7 @@
 			<set order="0x08" stat="sDef" val="230" />
 		</for>
 	</item>
-	<item id="8211" type="Weapon" name="Monster Only (Monk Warrior Sword)">
+	<item id="8211" type="Weapon" name="몹전용(monk_warrior_sword)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -203,7 +203,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8212" type="Weapon" name="Monster Only (Solina Brother Mace)">
+	<item id="8212" type="Weapon" name="몹전용(solina_brother_mace)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -223,7 +223,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8213" type="Weapon" name="Monster Only (Solina Father Mace)">
+	<item id="8213" type="Weapon" name="몹전용(solina_father_mace)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -243,7 +243,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8214" type="Weapon" name="Monster Only (Solina Priest Pole)">
+	<item id="8214" type="Weapon" name="몹전용(solina_priest_pole)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -263,7 +263,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8215" type="Weapon" name="Monster Only (Zombie Enlisted Man Sword)">
+	<item id="8215" type="Weapon" name="몹전용(zombie_enlisted_man_sword)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -282,7 +282,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8216" type="Weapon" name="Monster Only (Zombie Enlisted Man Claw)">
+	<item id="8216" type="Weapon" name="몹전용(zombie_enlisted_man_claw)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -302,7 +302,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8217" type="Weapon" name="Monster Only (Zombie Gateguard Spear)">
+	<item id="8217" type="Weapon" name="몹전용(zombie_gateguard_spear)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -321,7 +321,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8218" type="Weapon" name="Monster Only (Zombie Laborer Axe)">
+	<item id="8218" type="Weapon" name="몹전용(zombie_laborer_axe)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -341,7 +341,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8219" type="Weapon" name="Monster Only (Zombie Laborer Sword)">
+	<item id="8219" type="Weapon" name="몹전용(zombie_laborer_sword)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -360,7 +360,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8220" type="Weapon" name="Monster Only (Grail Apostle Bow)">
+	<item id="8220" type="Weapon" name="몹전용(apostle_grail_bow)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -382,7 +382,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="8221" type="Weapon" name="Monster Only (Grail Apostle Spear)">
+	<item id="8221" type="Weapon" name="몹전용(apostle_grail_spear)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -402,7 +402,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="8222" type="Weapon" name="Monster Only (Follower of Frintezza Tran Calibur)">
+	<item id="8222" type="Weapon" name="몹전용(follower_of_frintessa_tran_calibur)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -421,7 +421,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8223" type="EtcItem" name="Seed: Twin Codran">
+	<item id="8223" type="EtcItem" name="쌍둥 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -432,7 +432,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8224" type="EtcItem" name="Seed: Great Codran">
+	<item id="8224" type="EtcItem" name="대왕 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -443,7 +443,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8225" type="EtcItem" name="Seed: Desert Codran">
+	<item id="8225" type="EtcItem" name="사막 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -454,7 +454,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8226" type="EtcItem" name="Seed: Blue Coba">
+	<item id="8226" type="EtcItem" name="푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -465,7 +465,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8227" type="EtcItem" name="Seed: Red Coba">
+	<item id="8227" type="EtcItem" name="붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -476,7 +476,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8228" type="EtcItem" name="Seed: Golden Coba">
+	<item id="8228" type="EtcItem" name="황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -487,7 +487,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8229" type="EtcItem" name="Seed: Desert Coba">
+	<item id="8229" type="EtcItem" name="사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -498,7 +498,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8230" type="EtcItem" name="Seed: Alternative Twin Codran">
+	<item id="8230" type="EtcItem" name="개량 쌍둥 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -509,7 +509,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8231" type="EtcItem" name="Seed: Alternative Great Codran">
+	<item id="8231" type="EtcItem" name="개량 대왕 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -520,7 +520,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8232" type="EtcItem" name="Seed: Alternative Desert Codran">
+	<item id="8232" type="EtcItem" name="개량 사막 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -531,7 +531,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8233" type="EtcItem" name="Seed: Alternative Blue Coba">
+	<item id="8233" type="EtcItem" name="개량 푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -542,7 +542,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8234" type="EtcItem" name="Seed: Alternative Red Coba">
+	<item id="8234" type="EtcItem" name="개량 붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -553,7 +553,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8235" type="EtcItem" name="Seed: Alternative Golden Coba">
+	<item id="8235" type="EtcItem" name="개량 황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -564,7 +564,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8236" type="EtcItem" name="Seed: Alternative Desert Coba">
+	<item id="8236" type="EtcItem" name="개량 사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -575,7 +575,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8237" type="EtcItem" name="Seed: Dark Coda">
+	<item id="8237" type="EtcItem" name="어둠의 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -586,7 +586,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8238" type="EtcItem" name="Seed: Red Coda">
+	<item id="8238" type="EtcItem" name="붉은 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -597,7 +597,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8239" type="EtcItem" name="Seed: Chilly Coda">
+	<item id="8239" type="EtcItem" name="냉기의 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -608,7 +608,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8240" type="EtcItem" name="Seed: Blue Coda">
+	<item id="8240" type="EtcItem" name="푸른 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -619,7 +619,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8241" type="EtcItem" name="Seed: Golden Coda">
+	<item id="8241" type="EtcItem" name="황금 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -630,7 +630,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8242" type="EtcItem" name="Seed: Lute Coda">
+	<item id="8242" type="EtcItem" name="비파 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -641,7 +641,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8243" type="EtcItem" name="Seed: Desert Coda">
+	<item id="8243" type="EtcItem" name="사막 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -652,7 +652,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8244" type="EtcItem" name="Seed: Red Cobol">
+	<item id="8244" type="EtcItem" name="붉은 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -663,7 +663,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8245" type="EtcItem" name="Seed: Chilly Cobol">
+	<item id="8245" type="EtcItem" name="냉기의 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -674,7 +674,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8246" type="EtcItem" name="Seed: Blue Cobol">
+	<item id="8246" type="EtcItem" name="푸른 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -685,7 +685,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8247" type="EtcItem" name="Seed: Thorn Cobol">
+	<item id="8247" type="EtcItem" name="가시 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -696,7 +696,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8248" type="EtcItem" name="Seed: Golden Cobol">
+	<item id="8248" type="EtcItem" name="황금 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -707,7 +707,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8249" type="EtcItem" name="Seed: Great Cobol">
+	<item id="8249" type="EtcItem" name="대왕 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -718,7 +718,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8250" type="EtcItem" name="Seed: Red Codran">
+	<item id="8250" type="EtcItem" name="붉은 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -729,7 +729,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8251" type="EtcItem" name="Seed: Sea Codran">
+	<item id="8251" type="EtcItem" name="바다 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -740,7 +740,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8252" type="EtcItem" name="Seed: Chilly Codran">
+	<item id="8252" type="EtcItem" name="냉기의 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -751,7 +751,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8253" type="EtcItem" name="Seed: Blue Codran">
+	<item id="8253" type="EtcItem" name="푸른 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -762,7 +762,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8254" type="EtcItem" name="Seed: Twin Codran">
+	<item id="8254" type="EtcItem" name="쌍둥 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -773,7 +773,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8255" type="EtcItem" name="Seed: Alternative Dark Coda">
+	<item id="8255" type="EtcItem" name="개량 어둠의 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -784,7 +784,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8256" type="EtcItem" name="Seed: Alternative Red Coda">
+	<item id="8256" type="EtcItem" name="개량 붉은 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -795,7 +795,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8257" type="EtcItem" name="Seed: Alternative Chilly Coda">
+	<item id="8257" type="EtcItem" name="개량 냉기의 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -806,7 +806,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8258" type="EtcItem" name="Seed: Alternative Blue Coda">
+	<item id="8258" type="EtcItem" name="개량 푸른 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -817,7 +817,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8259" type="EtcItem" name="Seed: Alternative Golden Coda">
+	<item id="8259" type="EtcItem" name="개량 황금 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -828,7 +828,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8260" type="EtcItem" name="Seed: Alternative Lute Coda">
+	<item id="8260" type="EtcItem" name="개량 비파 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -839,7 +839,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8261" type="EtcItem" name="Seed: Alternative Desert Coda">
+	<item id="8261" type="EtcItem" name="개량 사막 코다 씨앗">
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -850,7 +850,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="8262" type="EtcItem" name="Seed: Alternative Red Cobol">
+	<item id="8262" type="EtcItem" name="개량 붉은 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -861,7 +861,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8263" type="EtcItem" name="Seed: Alternative Chilly Cobol">
+	<item id="8263" type="EtcItem" name="개량 냉기의 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -872,7 +872,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8264" type="EtcItem" name="Seed: Alternative Blue Cobol">
+	<item id="8264" type="EtcItem" name="개량 푸른 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -883,7 +883,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8265" type="EtcItem" name="Seed: Alternative Thorn Cobol">
+	<item id="8265" type="EtcItem" name="개량 가시 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -894,7 +894,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8266" type="EtcItem" name="Seed: Alternative Golden Cobol">
+	<item id="8266" type="EtcItem" name="개량 황금 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -905,7 +905,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8267" type="EtcItem" name="Seed: Alternative Great Cobol">
+	<item id="8267" type="EtcItem" name="개량 대왕 코볼 씨앗">
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -916,7 +916,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-2" />
 	</item>
-	<item id="8268" type="EtcItem" name="Seed: Alternative Red Codran">
+	<item id="8268" type="EtcItem" name="개량 붉은 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -927,7 +927,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8269" type="EtcItem" name="Seed: Alternative Sea Codran">
+	<item id="8269" type="EtcItem" name="개량 바다 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -938,7 +938,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8270" type="EtcItem" name="Seed: Alternative Chilly Codran">
+	<item id="8270" type="EtcItem" name="개량 냉기의 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -949,7 +949,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8271" type="EtcItem" name="Seed: Alternative Blue Codran">
+	<item id="8271" type="EtcItem" name="개량 푸른 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -960,7 +960,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8272" type="EtcItem" name="Seed: Alternative Twin Codran">
+	<item id="8272" type="EtcItem" name="개량 쌍둥 코드란 씨앗">
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -971,7 +971,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="8273" type="EtcItem" name="Anteroom Key">
+	<item id="8273" type="EtcItem" name="대기실 열쇠">
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="steel" />
@@ -979,7 +979,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2235-1" />
 	</item>
-	<item id="8274" type="EtcItem" name="Chapel Key">
+	<item id="8274" type="EtcItem" name="예배당 열쇠">
 		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="steel" />
@@ -987,7 +987,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2236-1" />
 	</item>
-	<item id="8275" type="EtcItem" name="Key of Darkness">
+	<item id="8275" type="EtcItem" name="어둠의 열쇠">
 		<set name="icon" val="icon.etc_old_key_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="steel" />
@@ -995,7 +995,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2237-1" />
 	</item>
-	<item id="8276" type="EtcItem" name="Sekina's Scale">
+	<item id="8276" type="EtcItem" name="세키나의 비늘">
 		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1004,7 +1004,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8277" type="EtcItem" name="Themis' Scale">
+	<item id="8277" type="EtcItem" name="테미스의 비늘">
 		<set name="icon" val="icon.etc_scale_of_medusa_red_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1013,7 +1013,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8278" type="EtcItem" name="Vermilion Shard">
+	<item id="8278" type="EtcItem" name="버밀리온의 파편">
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1022,7 +1022,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8279" type="EtcItem" name="Nucleus of Hekaton Prime">
+	<item id="8279" type="EtcItem" name="헤카톤 프라임의 중추">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1031,7 +1031,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8280" type="EtcItem" name="Tiphon Shard">
+	<item id="8280" type="EtcItem" name="타이폰의 파편">
 		<set name="icon" val="icon.etc_gargoyle_claw_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1040,7 +1040,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8281" type="EtcItem" name="Glaki's Necleus">
+	<item id="8281" type="EtcItem" name="글라키의 중추">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1049,7 +1049,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8282" type="EtcItem" name="Rahha's Fang">
+	<item id="8282" type="EtcItem" name="라하의 송곳니">
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1058,7 +1058,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8283" type="EtcItem" name="Giant Poison Bee's Sting">
+	<item id="8283" type="EtcItem" name="거대 독 말벌의 침">
 		<set name="icon" val="icon.etc_sting_a_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1067,7 +1067,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8284" type="EtcItem" name="Cloudy Gem">
+	<item id="8284" type="EtcItem" name="클라우디 젬">
 		<set name="icon" val="icon.etc_oriharukon_ore_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1076,7 +1076,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8285" type="EtcItem" name="Talon of Young Araneid">
+	<item id="8285" type="EtcItem" name="어린 에레니드의 발톱">
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1085,7 +1085,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8286" type="EtcItem" name="Fairy Breath">
+	<item id="8286" type="EtcItem" name="정령의 숨결을 위한 용기">
 		<set name="icon" val="icon.etc_dragons_blood_i01" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1094,7 +1094,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8287" type="EtcItem" name="Starstone">
+	<item id="8287" type="EtcItem" name="스타스톤">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1103,7 +1103,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8288" type="EtcItem" name="Yumi's Letter">
+	<item id="8288" type="EtcItem" name="유미의 편지">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1112,7 +1112,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8289" type="EtcItem" name="Starstone">
+	<item id="8289" type="EtcItem" name="스타스톤">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1121,7 +1121,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8290" type="EtcItem" name="Flower of Pavel">
+	<item id="8290" type="EtcItem" name="파벨의 꽃">
 		<set name="icon" val="icon.etc_flower_i02" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1130,7 +1130,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8291" type="EtcItem" name="Heart of Atlanta">
+	<item id="8291" type="EtcItem" name="아틀란타의 심장">
 		<set name="icon" val="icon.etc_inf_ore_medium_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1139,7 +1139,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8292" type="EtcItem" name="Wendy's Necklace">
+	<item id="8292" type="EtcItem" name="웬디의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1148,7 +1148,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8293" type="EtcItem" name="Trainer License">
+	<item id="8293" type="EtcItem" name="조련사 자격증">
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
@@ -1157,7 +1157,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="8294" type="EtcItem" name="Recipe: Steel Sword (100%)">
+	<item id="8294" type="EtcItem" name="레시피 : 강철검(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1169,7 +1169,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8295" type="EtcItem" name="Recipe: Titan Sword (100%)">
+	<item id="8295" type="EtcItem" name="레시피 : 하거인의 검(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1181,7 +1181,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8296" type="EtcItem" name="Recipe: Pa'agrian Sword (100%)">
+	<item id="8296" type="EtcItem" name="레시피 : 소드 오브 파아그리오(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1193,7 +1193,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8297" type="EtcItem" name="Recipe: Guardian's Sword (100%)">
+	<item id="8297" type="EtcItem" name="레시피 : 가디언스 소드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1205,7 +1205,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8298" type="EtcItem" name="Recipe: Guardian's Sword (60%)">
+	<item id="8298" type="EtcItem" name="레시피 : 가디언스 소드(60%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1217,7 +1217,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8299" type="EtcItem" name="Recipe: Infernal Master (100%)">
+	<item id="8299" type="EtcItem" name="레시피 : 인페르노 마스터(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />

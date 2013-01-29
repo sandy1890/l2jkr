@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="11900" type="Weapon" name="Common Item - Sword of Valhalla">
+	<item id="11900" type="Weapon" name="기본 병기 - 소드 오브 발할라">
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -24,7 +24,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11901" type="Weapon" name="Common Item - Stormbringer*Samurai Long Sword">
+	<item id="11901" type="Weapon" name="기본 병기 - 스톰 브링거*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -48,7 +48,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11902" type="Weapon" name="Common Item - Spell Breaker">
+	<item id="11902" type="Weapon" name="기본 병기 - 스펠 브레이커">
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -73,7 +73,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11903" type="Weapon" name="Common Item - Arthro Nail">
+	<item id="11903" type="Weapon" name="기본 병기 - 아스라네일">
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -97,7 +97,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11904" type="Weapon" name="Common Item - Ice Storm Hammer">
+	<item id="11904" type="Weapon" name="기본 병기 - 아이스 스톰 해머">
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -121,7 +121,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11905" type="Weapon" name="Common Item - Sword of Nightmare*Sword of Nightmare">
+	<item id="11905" type="Weapon" name="기본 병기 - 악몽의 검*악몽의 검">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -145,7 +145,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11906" type="Weapon" name="Common Item - Sword of Nightmare*Tsurugi">
+	<item id="11906" type="Weapon" name="기본 병기 - 악몽의 검*츠루기">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -169,7 +169,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11907" type="Weapon" name="Common Item - Military Fleuret">
+	<item id="11907" type="Weapon" name="기본 병기 - 어설트 플뢰레">
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -198,7 +198,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="11908" type="Weapon" name="Common Item - Sprite's Staff">
+	<item id="11908" type="Weapon" name="기본 병기 - 정령의 지팡이">
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -223,7 +223,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11909" type="Weapon" name="Common Item - Tsurugi*Tsurugi">
+	<item id="11909" type="Weapon" name="기본 병기 - 츠루기*츠루기">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -247,7 +247,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11910" type="Weapon" name="Common Item - Caliburs*Sword of Limit">
+	<item id="11910" type="Weapon" name="기본 병기 - 카리브스*극한의 검">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -271,7 +271,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11911" type="Weapon" name="Common Item - Caliburs*Sword of Delusion">
+	<item id="11911" type="Weapon" name="기본 병기 - 카리브스*미혹의 검">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -295,7 +295,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11912" type="Weapon" name="Common Item - Caliburs*Sword of Nightmare">
+	<item id="11912" type="Weapon" name="기본 병기 - 카리브스*악몽의 검">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -319,7 +319,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11913" type="Weapon" name="Common Item - Caliburs*Tsurugi">
+	<item id="11913" type="Weapon" name="기본 병기 - 카리브스*츠루기">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -343,7 +343,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11914" type="Weapon" name="Common Item - Caliburs*Caliburs">
+	<item id="11914" type="Weapon" name="기본 병기 - 카리브스*카리브스">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -367,7 +367,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11915" type="Weapon" name="Common Item - Kris">
+	<item id="11915" type="Weapon" name="기본 병기 - 크리스">
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -391,7 +391,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11916" type="Weapon" name="Common Item - Keshanberk">
+	<item id="11916" type="Weapon" name="기본 병기 - 크샨베르크">
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -415,7 +415,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11917" type="Weapon" name="Common Item - Peacemaker">
+	<item id="11917" type="Weapon" name="기본 병기 - 피스메이커">
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -444,7 +444,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="11918" type="Weapon" name="Common Item - Heavy War Axe">
+	<item id="11918" type="Weapon" name="기본 병기 - 헤비 워 액스">
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -468,7 +468,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11919" type="Weapon" name="Common Item - Hell Knife">
+	<item id="11919" type="Weapon" name="기본 병기 - 헬나이프">
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -493,7 +493,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11920" type="Weapon" name="Common Item - Raid Sword*Samurai Long Sword">
+	<item id="11920" type="Weapon" name="기본 병기 - 레이드 소드*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -517,7 +517,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11921" type="Weapon" name="Common Item - Shamshir*Samurai Long Sword">
+	<item id="11921" type="Weapon" name="기본 병기 - 샴쉬르*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -541,7 +541,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11922" type="Weapon" name="Common Item - Spirit Sword*Samurai Long Sword">
+	<item id="11922" type="Weapon" name="기본 병기 - 스피릿츠 소드*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -565,7 +565,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11923" type="Weapon" name="Common Item - Katana*Samurai Long Sword">
+	<item id="11923" type="Weapon" name="기본 병기 - 카타나*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -589,7 +589,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11924" type="Weapon" name="Common Item - Sword of Limit*Samurai Long Sword">
+	<item id="11924" type="Weapon" name="기본 병기 - 극한의 검*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -613,7 +613,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11925" type="Weapon" name="Common Item - Sword of Delusion*Samurai Long Sword">
+	<item id="11925" type="Weapon" name="기본 병기 - 미혹의 검*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -637,7 +637,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11926" type="Weapon" name="Common Item - Sword of Nightmare*Samurai Long Sword">
+	<item id="11926" type="Weapon" name="기본 병기 - 악몽의 검*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -661,7 +661,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11927" type="Weapon" name="Common Item - Tsurugi*Samurai Long Sword">
+	<item id="11927" type="Weapon" name="기본 병기 - 츠루기*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -685,7 +685,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11928" type="Weapon" name="Common Item - Caliburs*Samurai Long Sword">
+	<item id="11928" type="Weapon" name="기본 병기 - 카리브스*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -709,7 +709,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11929" type="Weapon" name="Common Item - Guardian Sword">
+	<item id="11929" type="Weapon" name="기본 병기 - 가디언스 소드">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -733,7 +733,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11930" type="Weapon" name="Common Item - Sword of Damascus">
+	<item id="11930" type="Weapon" name="기본 병기 - 다마스커스 검">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -757,7 +757,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11931" type="Weapon" name="Common Item - Dismantler">
+	<item id="11931" type="Weapon" name="기본 병기 - 디스멘틀러">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -785,7 +785,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="11932" type="Weapon" name="Common Item - Lance">
+	<item id="11932" type="Weapon" name="기본 병기 - 랜시아">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -810,7 +810,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11933" type="Weapon" name="Common Item - Bellion Cestus">
+	<item id="11933" type="Weapon" name="기본 병기 - 벨리온 세스터스">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -834,7 +834,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11934" type="Weapon" name="Common Item - Staff of Evil Spirits">
+	<item id="11934" type="Weapon" name="기본 병기 - 사령의 지팡이">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -859,7 +859,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11935" type="Weapon" name="Common Item - Deadman's Glory">
+	<item id="11935" type="Weapon" name="기본 병기 - 사자의 영광">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -883,7 +883,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11936" type="Weapon" name="Common Item - Star Buster">
+	<item id="11936" type="Weapon" name="기본 병기 - 스타 버스터">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -907,7 +907,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11937" type="Weapon" name="Common Item - Samurai Long Sword*Samurai Long Sword">
+	<item id="11937" type="Weapon" name="기본 병기 - 싸울아비*싸울아비">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -931,7 +931,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11938" type="Weapon" name="Common Item - Art of Battle Axe">
+	<item id="11938" type="Weapon" name="기본 병기 - 아트 오브 배틀액스">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -955,7 +955,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11939" type="Weapon" name="Common Item - Demon's Dagger">
+	<item id="11939" type="Weapon" name="기본 병기 - 악마의 단검">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -979,7 +979,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11940" type="Weapon" name="Common Item - Demon's Dagger">
+	<item id="11940" type="Weapon" name="기본 병기 - 악마의 단검">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1005,7 +1005,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11941" type="Weapon" name="Common Item - Kaim Vanul's Bones">
+	<item id="11941" type="Weapon" name="기본 병기 - 카임 바눌의 뼈">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1030,7 +1030,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11942" type="Weapon" name="Common Item - Colichemarde">
+	<item id="11942" type="Weapon" name="기본 병기 - 콜리슈마르드">
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1059,7 +1059,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="11943" type="Weapon" name="Common Item - Wizard's Tear">
+	<item id="11943" type="Weapon" name="기본 병기 - 티어스 오브 위자드">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1083,7 +1083,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11944" type="Weapon" name="Common Item - Bow of Peril">
+	<item id="11944" type="Weapon" name="기본 병기 - 해저드보우">
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1110,7 +1110,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="11945" type="Weapon" name="Common Item - Hell Hound">
+	<item id="11945" type="Weapon" name="기본 병기 - 헬 하운드">
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1139,7 +1139,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="11946" type="Weapon" name="Common Item - Dasparion's Staff">
+	<item id="11946" type="Weapon" name="기본 병기 - 데스페리온의 지팡이">
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1164,7 +1164,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11947" type="Weapon" name="Common Item - Doomchanter">
+	<item id="11947" type="Weapon" name="기본 병기 - 둠 싱어">
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1193,7 +1193,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="11948" type="Weapon" name="Common Item - White Lightning">
+	<item id="11948" type="Weapon" name="기본 병기 - 라이트닝 블레이즈">
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1222,7 +1222,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="11949" type="Weapon" name="Common Item - Meteor Shower">
+	<item id="11949" type="Weapon" name="기본 병기 - 미티어 샤워">
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1246,7 +1246,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11950" type="Weapon" name="Common Item - Blood Tornado">
+	<item id="11950" type="Weapon" name="기본 병기 - 블러드 토네이도">
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1270,7 +1270,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11951" type="Weapon" name="Common Item - Bloody Orchid">
+	<item id="11951" type="Weapon" name="기본 병기 - 블러디오키드">
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1294,7 +1294,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11952" type="Weapon" name="Common Item - Elemental Sword">
+	<item id="11952" type="Weapon" name="기본 병기 - 엘레멘탈 소드">
 		<set name="icon" val="icon.weapon_elemental_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1318,7 +1318,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11953" type="Weapon" name="Common Item - Spiritual Eye">
+	<item id="11953" type="Weapon" name="기본 병기 - 영혼의 눈">
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1343,7 +1343,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11954" type="Weapon" name="Common Item - Inferno Master">
+	<item id="11954" type="Weapon" name="기본 병기 - 인페르노 마스터">
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1367,7 +1367,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11955" type="Weapon" name="Common Item - Carnage Bow">
+	<item id="11955" type="Weapon" name="기본 병기 - 카르니움 활">
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1394,7 +1394,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="11956" type="Weapon" name="Common Item - Keshanberk*Keshanberk">
+	<item id="11956" type="Weapon" name="기본 병기 - 크샨베르크*크샨베르크">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1418,7 +1418,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11957" type="Weapon" name="Common Item - Tallum Blade">
+	<item id="11957" type="Weapon" name="기본 병기 - 탈룸 블레이드">
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1442,7 +1442,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11958" type="Weapon" name="Common Item - Destroyer Hammer">
+	<item id="11958" type="Weapon" name="기본 병기 - 파괴자의 망치">
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1466,7 +1466,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11959" type="Weapon" name="Common Item - Divine Pain">
+	<item id="11959" type="Weapon" name="기본 병기 - 페인 오브 가드네스">
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1494,7 +1494,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="11960" type="Weapon" name="Common Item - Halberd">
+	<item id="11960" type="Weapon" name="기본 병기 - 핼버드">
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1519,7 +1519,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11961" type="Weapon" name="Common Item - Keshanberk*Damascus">
+	<item id="11961" type="Weapon" name="기본 병기 - 크샨베르크*다마스커스">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1543,7 +1543,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11962" type="Weapon" name="Common Item - Lacerator">
+	<item id="11962" type="Weapon" name="기본 병기 - 그리드 스팅거">
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1572,7 +1572,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="11963" type="Weapon" name="Common Item - Damascus*Damascus">
+	<item id="11963" type="Weapon" name="기본 병기 - 다마스커스*다마스커스">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -1596,7 +1596,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11964" type="Weapon" name="Common Item - Dark Legion's Edge">
+	<item id="11964" type="Weapon" name="기본 병기 - 다크 레기온">
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1620,7 +1620,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11965" type="Weapon" name="Common Item - Undertaker">
+	<item id="11965" type="Weapon" name="기본 병기 - 데스브링거">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1648,7 +1648,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="11966" type="Weapon" name="Common Item - Doom Crusher">
+	<item id="11966" type="Weapon" name="기본 병기 - 둠 크러셔">
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1672,7 +1672,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11967" type="Weapon" name="Common Item - Dragon Grinder">
+	<item id="11967" type="Weapon" name="기본 병기 - 드래곤 그라인더">
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1696,7 +1696,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11968" type="Weapon" name="Common Item - Dragon Slayer">
+	<item id="11968" type="Weapon" name="기본 병기 - 드래곤 슬레이어">
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1720,7 +1720,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11969" type="Weapon" name="Common Item - Flaming Dragon Skull">
+	<item id="11969" type="Weapon" name="기본 병기 - 드래곤 플레임 헤드">
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1745,7 +1745,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11970" type="Weapon" name="Common Item - Branch of the Mother Tree">
+	<item id="11970" type="Weapon" name="기본 병기 - 세계수의 가지">
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1770,7 +1770,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11971" type="Weapon" name="Common Item - Sword of Miracles">
+	<item id="11971" type="Weapon" name="기본 병기 - 소드 오브 미라클">
 		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1794,7 +1794,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11972" type="Weapon" name="Common Item - Reaper">
+	<item id="11972" type="Weapon" name="기본 병기 - 소울 슈터">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1823,7 +1823,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="11973" type="Weapon" name="Common Item - Soul Separator">
+	<item id="11973" type="Weapon" name="기본 병기 - 소울세퍼레이터">
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1847,7 +1847,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11974" type="Weapon" name="Common Item - Elysian">
+	<item id="11974" type="Weapon" name="기본 병기 - 엘리시온">
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1871,7 +1871,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11975" type="Weapon" name="Common Item - Soul Bow">
+	<item id="11975" type="Weapon" name="기본 병기 - 영혼의 활">
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1898,7 +1898,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="11976" type="Weapon" name="Common Item - Tallum Glaive">
+	<item id="11976" type="Weapon" name="기본 병기 - 탈룸 글레이브">
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1923,7 +1923,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11977" type="Weapon" name="Common Item - Naga Storm">
+	<item id="11977" type="Weapon" name="기본 병기 - 나가 스톰">
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1947,7 +1947,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11978" type="Weapon" name="Common Item - Daimon Crystal">
+	<item id="11978" type="Weapon" name="기본 병기 - 데이몬의 결정">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1972,7 +1972,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11979" type="Weapon" name="Common Item - Barakiel's Axe">
+	<item id="11979" type="Weapon" name="기본 병기 - 바라키엘 엑스">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1996,7 +1996,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11980" type="Weapon" name="Common Item - Screaming Vengeance">
+	<item id="11980" type="Weapon" name="기본 병기 - 버스트 어벤져">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2025,7 +2025,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="11981" type="Weapon" name="Common Item - Behemoth's Tuning Fork">
+	<item id="11981" type="Weapon" name="기본 병기 - 베헤모스의 소리굽쇠">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -2049,7 +2049,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11982" type="Weapon" name="Common Item - Durendal">
+	<item id="11982" type="Weapon" name="기본 병기 - 불트강">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2077,7 +2077,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="11983" type="Weapon" name="Common Item - Shyeed's Bow">
+	<item id="11983" type="Weapon" name="기본 병기 - 샤이드 보우">
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2104,7 +2104,7 @@
 			<set order="0x08" stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="11984" type="Weapon" name="Common Item - Sword of Ipos">
+	<item id="11984" type="Weapon" name="기본 병기 - 소드 오브 이포스">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -2128,7 +2128,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11985" type="Weapon" name="Common Item - Sobekk's Hurricane">
+	<item id="11985" type="Weapon" name="기본 병기 - 소베크 허리케인">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2152,7 +2152,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11986" type="Weapon" name="Common Item - Sirra's Blade">
+	<item id="11986" type="Weapon" name="기본 병기 - 시르 블레이드">
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2176,7 +2176,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11987" type="Weapon" name="Common Item - Eclair Bijou">
+	<item id="11987" type="Weapon" name="기본 병기 - 에끌레르 비쥬">
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2205,7 +2205,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="11988" type="Weapon" name="Common Item - Tiphon's Spear">
+	<item id="11988" type="Weapon" name="기본 병기 - 타이폰 스피어">
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2230,7 +2230,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11989" type="Weapon" name="Common Item - Tallum Blade*Damascus">
+	<item id="11989" type="Weapon" name="기본 병기 - 탈룸 블레이드*다마스커스">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -2254,7 +2254,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11990" type="Weapon" name="Common Item - Themis' Tongue">
+	<item id="11990" type="Weapon" name="기본 병기 - 테미스의 혀">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2278,7 +2278,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11991" type="Weapon" name="Common Item - Cabrio's Hand">
+	<item id="11991" type="Weapon" name="기본 병기 - 핸드 오브 카브리오">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2303,7 +2303,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11992" type="Weapon" name="Common Item - Gram">
+	<item id="11992" type="Weapon" name="기본 병기 - 그람">
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2332,7 +2332,7 @@
 			<set order="0x08" stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="11993" type="Weapon" name="Common Item - Demon Splinter">
+	<item id="11993" type="Weapon" name="기본 병기 - 데몬 스플린터">
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2357,7 +2357,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11994" type="Weapon" name="Common Item - Draconic Bow">
+	<item id="11994" type="Weapon" name="기본 병기 - 드라코닉 보우">
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2385,7 +2385,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="11995" type="Weapon" name="Common Item - Dragon Hunter Axe">
+	<item id="11995" type="Weapon" name="기본 병기 - 드래곤 헌터 액스">
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -2410,7 +2410,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="11996" type="Weapon" name="Common Item - Laevateinn">
+	<item id="11996" type="Weapon" name="기본 병기 - 레바테인">
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2440,7 +2440,7 @@
 			<set order="0x08" stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="11997" type="Weapon" name="Common Item - Basalt Battlehammer">
+	<item id="11997" type="Weapon" name="기본 병기 - 바살트 배틀해머">
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2465,7 +2465,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="11998" type="Weapon" name="Common Item - Sarunga">
+	<item id="11998" type="Weapon" name="기본 병기 - 사룽가">
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2495,7 +2495,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="11999" type="Weapon" name="Common Item - Saint Spear">
+	<item id="11999" type="Weapon" name="기본 병기 - 세인트 스피어">
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />

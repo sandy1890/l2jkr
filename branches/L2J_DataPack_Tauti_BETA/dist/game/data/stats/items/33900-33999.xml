@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="33900" name="永生頭箍" type="Armor">
+	<item id="33900" type="Armor" name="이모탈 서클릿 로브용 / 이벤트">
 		<table name="#Plus">長袍用/活動</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
@@ -20,7 +20,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33901" name="永生外衣" type="Armor">
+	<item id="33901" type="Armor" name="이모탈 튜닉 로브용 / 이벤트">
 		<table name="#Plus">長袍用/活動</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。強化+4時，增加魔法迴避能力、精神系抗性。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t503_u_i00"/>
@@ -41,7 +41,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33902" name="永生長襪" type="Armor">
+	<item id="33902" type="Armor" name="이모탈 호즈 로브용 / 이벤트">
 		<table name="#Plus">長袍用/活動</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t503_l_i00"/>
@@ -62,7 +62,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33903" name="永生手套" type="Armor">
+	<item id="33903" type="Armor" name="이모탈 글로브 로브용 / 이벤트">
 		<table name="#Plus">長袍用/活動</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t503_g_i00"/>
@@ -81,7 +81,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33904" name="永生鞋" type="Armor">
+	<item id="33904" type="Armor" name="이모탈 슈즈 로브용 / 이벤트">
 		<table name="#Plus">長袍用/活動</table>
 		<table name="#Desc">可以賦予魔法型和恢復型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t503_b_i00"/>
@@ -100,7 +100,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33905" name="永生符印" type="Armor">
+	<item id="33905" type="Armor" name="이모탈 시길 로브용 / 이벤트">
 		<table name="#Plus">長袍用/活動</table>
 		<table name="#Desc">無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_karyen_i00"/>
@@ -120,7 +120,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33906" name="永生項鍊" type="Armor">
+	<item id="33906" type="Armor" name="이모탈 목걸이 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">永生項鍊。可得到MP+53的效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.r1_necklace_i00"/>
@@ -139,7 +139,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="33907" name="永生耳環" type="Armor">
+	<item id="33907" type="Armor" name="이모탈 귀걸이 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">永生耳環。可得到MP+40的效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.r1_earring_i00"/>
@@ -158,7 +158,7 @@
 			<enchant order="0x0C" stat="mDef" val="0"/>
 		</for>
 	</item>
-	<item id="33908" name="永生戒指" type="Armor">
+	<item id="33908" type="Armor" name="이모탈 반지 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">永生戒指。可得到MP+26的效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.r1_ring_i00"/>

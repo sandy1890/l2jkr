@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14000" type="EtcItem" name="Dion Supply Box - Hair Accessory">
+	<item id="14000" type="EtcItem" name="디온 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -8,7 +8,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14001" type="EtcItem" name="Giran Supply Box - Hair Accessory">
+	<item id="14001" type="EtcItem" name="기란 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -16,7 +16,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14002" type="EtcItem" name="Oren Supply Box - Hair Accessory">
+	<item id="14002" type="EtcItem" name="오렌 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -24,7 +24,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14003" type="EtcItem" name="Aden Supply Box - Hair Accessory">
+	<item id="14003" type="EtcItem" name="아덴 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -32,7 +32,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14004" type="EtcItem" name="Innadril Supply Box - Hair Accessory">
+	<item id="14004" type="EtcItem" name="인나드릴 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -40,7 +40,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14005" type="EtcItem" name="Goddard Supply Box: Hair Accessory">
+	<item id="14005" type="EtcItem" name="고다드 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -48,7 +48,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14006" type="EtcItem" name="Rune Supply Box - Hair Accessory">
+	<item id="14006" type="EtcItem" name="루운 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -56,7 +56,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14007" type="EtcItem" name="Schuttgart Supply Box - Hair Accessory">
+	<item id="14007" type="EtcItem" name="슈트가르트 보급 상자 - 헤어 액세서리">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -64,7 +64,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="14008" type="EtcItem" name="Accessory Type Life Stone - Level 84">
+	<item id="14008" type="EtcItem" name="액세서리용 생명의 돌 - 84 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -75,7 +75,7 @@
 			<player level="84" />
 		</cond>
 	</item>
-	<item id="14009" type="EtcItem" name="Extracted Red Star Stone">
+	<item id="14009" type="EtcItem" name="붉은 스타스톤 추출석">
 		<set name="icon" val="icon.general_star_stone_piece_i00" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -86,7 +86,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14010" type="EtcItem" name="Extracted Blue Star Stone">
+	<item id="14010" type="EtcItem" name="푸른 스타스톤 추출석">
 		<set name="icon" val="icon.general_star_stone_piece_i01" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -97,7 +97,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14011" type="EtcItem" name="Extracted Green Star Stone">
+	<item id="14011" type="EtcItem" name="녹색 스타스톤 추출석">
 		<set name="icon" val="icon.general_star_stone_piece_i02" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14012" type="EtcItem" name="Extracted Mid-grade Red Star Stone">
+	<item id="14012" type="EtcItem" name="중급 붉은 스타스톤 추출석">
 		<set name="icon" val="icon.high_star_stone_piece_i00" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -119,7 +119,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14013" type="EtcItem" name="Extracted Mid-grade Blue Star Stone">
+	<item id="14013" type="EtcItem" name="중급 푸른 스타스톤 추출석">
 		<set name="icon" val="icon.high_star_stone_piece_i01" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -130,7 +130,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14014" type="EtcItem" name="Extracted Mid-grade Green Star Stone">
+	<item id="14014" type="EtcItem" name="중급 녹색 스타스톤 추출석">
 		<set name="icon" val="icon.high_star_stone_piece_i02" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -141,7 +141,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14015" type="EtcItem" name="Fire Energy Compression Stone">
+	<item id="14015" type="EtcItem" name="불 에너지 응축석">
 		<set name="icon" val="icon.general_energy_condense_i02" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -152,7 +152,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14016" type="EtcItem" name="Water Energy Compression Stone">
+	<item id="14016" type="EtcItem" name="물 에너지 응축석">
 		<set name="icon" val="icon.general_energy_condense_i03" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -163,7 +163,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14017" type="EtcItem" name="Wind Energy Compression Stone">
+	<item id="14017" type="EtcItem" name="바람 에너지 응축석">
 		<set name="icon" val="icon.general_energy_condense_i04" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -174,7 +174,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14018" type="EtcItem" name="Earth Energy Compression Stone">
+	<item id="14018" type="EtcItem" name="땅 에너지 응축석">
 		<set name="icon" val="icon.general_energy_condense_i05" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -185,7 +185,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14019" type="EtcItem" name="Dark Energy Compression Stone">
+	<item id="14019" type="EtcItem" name="암흑 에너지 응축석">
 		<set name="icon" val="icon.general_energy_condense_i01" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -196,7 +196,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14020" type="EtcItem" name="Holy Energy Compression Stone">
+	<item id="14020" type="EtcItem" name="신성 에너지 응축석">
 		<set name="icon" val="icon.general_energy_condense_i00" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -207,7 +207,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14021" type="EtcItem" name="Mid-grade Fire Energy Compression Stone">
+	<item id="14021" type="EtcItem" name="중급 불 에너지 응축석">
 		<set name="icon" val="icon.high_energy_condense_i02" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -218,7 +218,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14022" type="EtcItem" name="Mid-grade Water Energy Compression Stone">
+	<item id="14022" type="EtcItem" name="중급 물 에너지 응축석">
 		<set name="icon" val="icon.high_energy_condense_i03" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -229,7 +229,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14023" type="EtcItem" name="Mid-grade Wind Energy Compression Stone">
+	<item id="14023" type="EtcItem" name="중급 바람 에너지 응축석">
 		<set name="icon" val="icon.high_energy_condense_i04" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14024" type="EtcItem" name="Mid-grade Earth Energy Compression Stone">
+	<item id="14024" type="EtcItem" name="중급 땅 에너지 응축석">
 		<set name="icon" val="icon.high_energy_condense_i05" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -251,7 +251,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14025" type="EtcItem" name="Mid-grade Dark Energy Compression Stone">
+	<item id="14025" type="EtcItem" name="중급 암흑 에너지 응축석">
 		<set name="icon" val="icon.high_energy_condense_i01" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -262,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14026" type="EtcItem" name="Mid-grade Holy Energy Compression Stone">
+	<item id="14026" type="EtcItem" name="중급 신성 에너지 응축석">
 		<set name="icon" val="icon.high_energy_condense_i00" />
 		<set name="etcitem_type" val="potion" />
 		<set name="immediate_effect" val="1" />
@@ -273,7 +273,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14027" type="Armor" name="Collection Agathion Summon Bracelet">
+	<item id="14027" type="Armor" name="에너지 응축 장치 소환 팔찌">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -287,7 +287,7 @@
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="8251-1;3267-1;5780-3" />
 	</item>
-	<item id="14028" type="EtcItem" name="Design: Stone of Stamina">
+	<item id="14028" type="EtcItem" name="도안 - 체력의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -299,7 +299,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14029" type="EtcItem" name="Design: Stone of Mana">
+	<item id="14029" type="EtcItem" name="도안 - 마나의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i02" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -311,7 +311,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14030" type="EtcItem" name="Design: Stone of Recovery">
+	<item id="14030" type="EtcItem" name="도안 - 회복의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -323,7 +323,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14031" type="EtcItem" name="Design: Stone of Destruction">
+	<item id="14031" type="EtcItem" name="도안 - 파괴의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i04" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -335,7 +335,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14032" type="EtcItem" name="Design: Stone of Invincibility">
+	<item id="14032" type="EtcItem" name="도안 - 무적의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i05" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -347,7 +347,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14033" type="EtcItem" name="Design: Stone of Great Speed">
+	<item id="14033" type="EtcItem" name="도안 - 쾌속의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -359,7 +359,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14034" type="EtcItem" name="Design: Stone of Speed">
+	<item id="14034" type="EtcItem" name="도안 - 신속의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i07" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -371,7 +371,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14035" type="EtcItem" name="Design: Stone of Concentration">
+	<item id="14035" type="EtcItem" name="도안 - 집중의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -383,7 +383,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14036" type="EtcItem" name="Design: Stone of Ease">
+	<item id="14036" type="EtcItem" name="도안 - 여유의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i09" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -395,7 +395,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14037" type="EtcItem" name="Design: Stone of Abundance">
+	<item id="14037" type="EtcItem" name="도안 - 풍요의 돌">
 		<set name="icon" val="icon.scroll_of_verification_i05" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -407,7 +407,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="14038" type="EtcItem" name="Stone of Stamina">
+	<item id="14038" type="EtcItem" name="체력의 돌">
 		<set name="icon" val="icon.stone_9_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -424,7 +424,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14039" type="EtcItem" name="Greater Stone of Stamina">
+	<item id="14039" type="EtcItem" name="고급 체력의 돌">
 		<set name="icon" val="icon.stone_9_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -441,7 +441,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14040" type="EtcItem" name="Stone of Mana">
+	<item id="14040" type="EtcItem" name="마나의 돌">
 		<set name="icon" val="icon.stone_10_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -458,7 +458,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14041" type="EtcItem" name="High-quality Stone of Mana">
+	<item id="14041" type="EtcItem" name="고급 마나의 돌">
 		<set name="icon" val="icon.stone_10_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -475,7 +475,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14042" type="EtcItem" name="Stone of Recovery">
+	<item id="14042" type="EtcItem" name="회복의 돌">
 		<set name="icon" val="icon.stone_11_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -492,7 +492,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14043" type="EtcItem" name="Greater Stone of Recovery">
+	<item id="14043" type="EtcItem" name="고급 회복의 돌">
 		<set name="icon" val="icon.stone_11_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -509,7 +509,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14044" type="EtcItem" name="Stone of Destruction">
+	<item id="14044" type="EtcItem" name="파괴의 돌">
 		<set name="icon" val="icon.stone_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -526,7 +526,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14045" type="EtcItem" name="Stone of Invincibility">
+	<item id="14045" type="EtcItem" name="무적의 돌">
 		<set name="icon" val="icon.stone_2_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -543,7 +543,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14046" type="EtcItem" name="Stone of Great Speed">
+	<item id="14046" type="EtcItem" name="쾌속의 돌">
 		<set name="icon" val="icon.stone_3_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -560,7 +560,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14047" type="EtcItem" name="Stone of Speed">
+	<item id="14047" type="EtcItem" name="신속의 돌">
 		<set name="icon" val="icon.stone_8_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -577,7 +577,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14048" type="EtcItem" name="Stone of Concentration">
+	<item id="14048" type="EtcItem" name="집중의 돌">
 		<set name="icon" val="icon.stone_7_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -594,7 +594,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14049" type="EtcItem" name="Stone of Ease">
+	<item id="14049" type="EtcItem" name="여유의 돌">
 		<set name="icon" val="icon.stone_4_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -611,7 +611,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14050" type="EtcItem" name="Stone of Abundance">
+	<item id="14050" type="EtcItem" name="풍요의 돌">
 		<set name="icon" val="icon.stone_5_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -628,7 +628,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14051" type="EtcItem" name="Recovery Stone">
+	<item id="14051" type="EtcItem" name="회복석">
 		<set name="icon" val="icon.stone_1_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -645,7 +645,7 @@
 			<player flyMounted="true" />
 		</cond>
 	</item>
-	<item id="14052" type="EtcItem" name="Noble Enhancement Stone">
+	<item id="14052" type="EtcItem" name="베스페르 노블 강화석">
 		<set name="icon" val="icon.energy_condenser_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -653,7 +653,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="14053" type="Armor" name="Gold-Maned Lion Mount Bracelet - 7-day limited period">
+	<item id="14053" type="Armor" name="황금 갈기 사자 탑승용 팔찌 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -669,7 +669,7 @@
 		<set name="item_skill" val="8262-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14054" type="Armor" name="Steam Beatle Mount Bracelet - 7-day limited period">
+	<item id="14054" type="Armor" name="스팀비틀 탑승용 팔찌 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -685,7 +685,7 @@
 		<set name="item_skill" val="8261-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14055" type="EtcItem" name="Vitality Replenishing Beverage">
+	<item id="14055" type="EtcItem" name="활력 충전 음료">
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -703,7 +703,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-2" />
 	</item>
-	<item id="14056" type="Weapon" name="Snow Kung Transformation Stick - 30-day limited period">
+	<item id="14056" type="Weapon" name="스노우쿵 변신막대 30일 기간제">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -727,7 +727,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14057" type="Weapon" name="Scarecrow Jack Transformation Stick - 30-day limited period">
+	<item id="14057" type="Weapon" name="허수아비 잭 변신막대 30일 기간제">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -751,7 +751,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14058" type="Weapon" name="Tin Golem Transformation Stick - 30-day limited period">
+	<item id="14058" type="Weapon" name="틴고램 변신막대 30일 기간제">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -775,7 +775,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14059" type="Armor" name="Teddy Boy Agathion Bracelet - 30-day limited period">
+	<item id="14059" type="Armor" name="테디보이 아가시온 팔찌 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -790,7 +790,7 @@
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14060" type="Armor" name="Teddy Girl Agathion Bracelet - 30-day limited period">
+	<item id="14060" type="Armor" name="테디걸 아가시온 팔찌 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -805,7 +805,7 @@
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14061" type="EtcItem" name="Toy Knight Summon Whistle">
+	<item id="14061" type="EtcItem" name="토이기사 소환 목걸이">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -823,7 +823,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14062" type="EtcItem" name="Spirit Shaman Summon Whistle">
+	<item id="14062" type="EtcItem" name="정령술사 소환 목걸이">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -841,7 +841,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14063" type="EtcItem" name="Owl Monk Summon Whistle">
+	<item id="14063" type="EtcItem" name="부엉술사 소환 목걸이">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -859,7 +859,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14064" type="EtcItem" name="Turtle Ascetic Summon Whistle">
+	<item id="14064" type="EtcItem" name="거북도사 소환 목걸이">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -877,7 +877,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="14065" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon - 5 hours">
+	<item id="14065" type="EtcItem" name="고급 사냥 도우미 교환권 5시간">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fish" />
@@ -889,7 +889,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="14066" type="Armor" name="Gold Maned Lion Mount Bracelet (event) - 7-day limited period">
+	<item id="14066" type="Armor" name="황금 갈기 사자 탑승용 팔찌 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -905,7 +905,7 @@
 		<set name="item_skill" val="8262-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14067" type="Armor" name="Steam Beatle Mount Bracelet (event) - 7-day limited period">
+	<item id="14067" type="Armor" name="스팀비틀 탑승용 팔찌 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -921,7 +921,7 @@
 		<set name="item_skill" val="8261-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14068" type="EtcItem" name="Vitality Replenishing Beverage (event)">
+	<item id="14068" type="EtcItem" name="활력 충전 음료 - 이벤트용">
 		<set name="icon" val="icon.etc_potion_of_energy_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -940,7 +940,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2586-2" />
 	</item>
-	<item id="14069" type="Weapon" name="Snow Kung Transformation Stick (event) - 30-day limited period">
+	<item id="14069" type="Weapon" name="스노우쿵 변신막대 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -964,7 +964,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14070" type="Weapon" name="Scarecrow Jack Transformation Stick (Event) - 30-day limited period">
+	<item id="14070" type="Weapon" name="허수아비 잭 변신막대 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -988,7 +988,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14071" type="Weapon" name="Tin Golem Transformation Stick (event) - 30-day limited period">
+	<item id="14071" type="Weapon" name="틴고램 변신막대 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1012,7 +1012,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14072" type="Armor" name="Teddy Boy Agathion Bracelet (event) - 30-day limited period">
+	<item id="14072" type="Armor" name="테디보이 아가시온 팔찌 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1027,7 +1027,7 @@
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14073" type="Armor" name="Teddy Girl Agathion Bracelet (event) - 30-day limited period">
+	<item id="14073" type="Armor" name="테디걸 아가시온 팔찌 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1042,7 +1042,7 @@
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14074" type="EtcItem" name="Superior Minion Coupon (Event) - 5 hours">
+	<item id="14074" type="EtcItem" name="고급 사냥 도우미 교환권 - 이벤트용 5시간">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fish" />
@@ -1054,7 +1054,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="14075" type="Armor" name="Sudden Agathion (Event) - 30-day limited period">
+	<item id="14075" type="Armor" name="버럭 아가시온 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1069,7 +1069,7 @@
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14076" type="Armor" name="Shiny Agathion (Event) - 30-day limited period">
+	<item id="14076" type="Armor" name="샤방 아가시온 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1084,7 +1084,7 @@
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14077" type="Armor" name="Sobbing Agathion (Event) - 30-day limited period">
+	<item id="14077" type="Armor" name="엉엉 아가시온 - 이벤트용 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1099,7 +1099,7 @@
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="14078" type="EtcItem" name="Weapon-type Enhance Backup Stone (D-Grade) (event)">
+	<item id="14078" type="EtcItem" name="무기용 강화 보조석 - D그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1114,7 +1114,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2515-1" />
 	</item>
-	<item id="14079" type="EtcItem" name="Weapon-type Enhance Backup Stone (C-Grade) (event)">
+	<item id="14079" type="EtcItem" name="무기용 강화 보조석 - C그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1129,7 +1129,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2516-1" />
 	</item>
-	<item id="14080" type="EtcItem" name="Weapon-type Enhance Backup Stone (B-Grade) (event)">
+	<item id="14080" type="EtcItem" name="무기용 강화 보조석 - B그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1144,7 +1144,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2517-1" />
 	</item>
-	<item id="14081" type="EtcItem" name="Weapon-type Enhance Backup Stone (A-Grade) (event)">
+	<item id="14081" type="EtcItem" name="무기용 강화 보조석 - A그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1159,7 +1159,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2518-1" />
 	</item>
-	<item id="14082" type="EtcItem" name="Weapon-type Enhance Backup Stone (S-Grade) (event)">
+	<item id="14082" type="EtcItem" name="무기용 강화 보조석 - S그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
 		<set name="immediate_effect" val="1" />
@@ -1174,7 +1174,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2519-1" />
 	</item>
-	<item id="14083" type="EtcItem" name="Armor-type Enhance Backup Stone (D-Grade) (event)">
+	<item id="14083" type="EtcItem" name="방어구용 강화 보조석 - D그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1189,7 +1189,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2520-1" />
 	</item>
-	<item id="14084" type="EtcItem" name="Armor-type Enhance Backup Stone (C-Grade) (event)">
+	<item id="14084" type="EtcItem" name="방어구용 강화 보조석 - C그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1204,7 +1204,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2521-1" />
 	</item>
-	<item id="14085" type="EtcItem" name="Armor-type Enhance Backup Stone (B-Grade) (event)">
+	<item id="14085" type="EtcItem" name="방어구용 강화 보조석 - B그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1219,7 +1219,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2522-1" />
 	</item>
-	<item id="14086" type="EtcItem" name="Armor-type Enhance Backup Stone (A-Grade) (event)">
+	<item id="14086" type="EtcItem" name="방어구용 강화 보조석 - A그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1234,7 +1234,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2523-1" />
 	</item>
-	<item id="14087" type="EtcItem" name="Armor-type Enhance Backup Stone (S-Grade) (event)">
+	<item id="14087" type="EtcItem" name="방어구용 강화 보조석 - S그레이드 - 이벤트용">
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
 		<set name="immediate_effect" val="1" />
@@ -1249,7 +1249,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2524-1" />
 	</item>
-	<item id="14088" type="Weapon" name="Snow Kung Transformation Stick - 7-day limited period">
+	<item id="14088" type="Weapon" name="스노우쿵 변신막대 7일 기간제">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1273,7 +1273,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14089" type="Weapon" name="Scarecrow Jack Transformation Stick - 7-day limited period">
+	<item id="14089" type="Weapon" name="허수아비 잭 변신막대 7일 기간제">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1297,7 +1297,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14090" type="Weapon" name="Tin Golem Transformation Stick - 7-day limited period">
+	<item id="14090" type="Weapon" name="틴고램 변신막대 7일 기간제">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1321,7 +1321,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14091" type="Armor" name="Teddy Boy Agathion Bracelet - 7-day limited period">
+	<item id="14091" type="Armor" name="테디보이 아가시온 팔찌 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1336,7 +1336,7 @@
 		<set name="item_skill" val="8259-1;3267-1;5958-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14092" type="Armor" name="Teddy Girl Agathion Bracelet - 7-day limited period">
+	<item id="14092" type="Armor" name="테디걸 아가시온 팔찌 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1351,7 +1351,7 @@
 		<set name="item_skill" val="8260-1;3267-1;5959-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14093" type="Armor" name="Sudden Agathion - 7-day limited period">
+	<item id="14093" type="Armor" name="버럭 아가시온 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1366,7 +1366,7 @@
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14094" type="Armor" name="Shiny Agathion - 7-day limited period">
+	<item id="14094" type="Armor" name="샤방 아가시온 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1381,7 +1381,7 @@
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14095" type="Armor" name="Sobbing Agathion - 7-day limited period">
+	<item id="14095" type="Armor" name="엉엉 아가시온  7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -1396,7 +1396,7 @@
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="14096" type="Weapon" name="Snow Kung Transformation Stick (event) - 7-day limited period">
+	<item id="14096" type="Weapon" name="스노우쿵 변신막대 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1420,7 +1420,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14097" type="Weapon" name="Scarecrow Jack Transformation Stick (Event) - 7-day limited period">
+	<item id="14097" type="Weapon" name="허수아비 잭 변신막대 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1444,7 +1444,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14098" type="Weapon" name="Tin Golem Transformation Stick (event) - 7-day limited period">
+	<item id="14098" type="Weapon" name="틴고램 변신막대 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1468,7 +1468,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14099" type="Armor" name="Teddy Boy Agathion Bracelet (event) - 7-day limited period">
+	<item id="14099" type="Armor" name="테디보이 아가시온 팔찌 - 이벤트용 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />

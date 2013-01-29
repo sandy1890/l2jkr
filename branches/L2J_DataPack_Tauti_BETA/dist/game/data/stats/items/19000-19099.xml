@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="19082" name="祝福的凱利爾鉋刀" type="Weapon">
+	<item id="19082" type="Weapon" name="축복받은 칼리엘 셰이퍼 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升8.0。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_vesper_shaper_i01"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19083" name="祝福的凱利爾鉋刀" type="Weapon">
+	<item id="19083" type="Weapon" name="축복받은 칼리엘 셰이퍼 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_vesper_shaper_i01"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19084" name="祝福的凱利爾鉋刀" type="Weapon">
+	<item id="19084" type="Weapon" name="축복받은 칼리엘 셰이퍼 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約81.7。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_vesper_shaper_i01"/>
@@ -82,7 +82,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19085" name="祝福的凱利爾切刃" type="Weapon">
+	<item id="19085" type="Weapon" name="축복받은 칼리엘 커터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_vesper_cutter_i01"/>
@@ -108,7 +108,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19086" name="祝福的凱利爾切刃" type="Weapon">
+	<item id="19086" type="Weapon" name="축복받은 칼리엘 커터 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_vesper_cutter_i01"/>
@@ -134,7 +134,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19087" name="祝福的凱利爾切刃" type="Weapon">
+	<item id="19087" type="Weapon" name="축복받은 칼리엘 커터 헬스">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_vesper_cutter_i01"/>
@@ -160,7 +160,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19088" name="祝福的凱利爾殺刃" type="Weapon">
+	<item id="19088" type="Weapon" name="축복받은 칼리엘 슬래셔 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_vesper_slasher_i01"/>
@@ -186,7 +186,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19089" name="祝福的凱利爾殺刃" type="Weapon">
+	<item id="19089" type="Weapon" name="축복받은 칼리엘 슬래셔 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_vesper_slasher_i01"/>
@@ -212,7 +212,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19090" name="祝福的凱利爾殺刃" type="Weapon">
+	<item id="19090" type="Weapon" name="축복받은 칼리엘 슬래셔 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_vesper_slasher_i01"/>
@@ -238,7 +238,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19091" name="祝福的凱利爾復仇者" type="Weapon">
+	<item id="19091" type="Weapon" name="축복받은 칼리엘 어벤져 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_vesper_avenger_i01"/>
@@ -265,7 +265,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19092" name="祝福的凱利爾復仇者" type="Weapon">
+	<item id="19092" type="Weapon" name="축복받은 칼리엘 어벤져 Crt. 대미지">
 		<table name="#Plus">Crt.傷害</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時物理攻擊力提升約1254。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_vesper_avenger_i01"/>
@@ -292,7 +292,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19093" name="祝福的凱利爾復仇者" type="Weapon">
+	<item id="19093" type="Weapon" name="축복받은 칼리엘 어벤져 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.5。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_vesper_avenger_i01"/>
@@ -319,7 +319,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19094" name="祝福的凱利爾戰爪" type="Weapon">
+	<item id="19094" type="Weapon" name="축복받은 칼리엘 파이터 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約75.4。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_octoclaw_i01"/>
@@ -346,7 +346,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19095" name="祝福的凱利爾戰爪" type="Weapon">
+	<item id="19095" type="Weapon" name="축복받은 칼리엘 파이터 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_octoclaw_i01"/>
@@ -373,7 +373,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19096" name="祝福的凱利爾戰爪" type="Weapon">
+	<item id="19096" type="Weapon" name="축복받은 칼리엘 파이터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_octoclaw_i01"/>
@@ -400,7 +400,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19097" name="祝福的凱利爾風暴者" type="Weapon">
+	<item id="19097" type="Weapon" name="축복받은 칼리엘 스토머 HP 드레인">
 		<table name="#Plus">HP吸收</table>
 		<table name="#Desc">＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_vesper_stormer_i01"/>
@@ -427,7 +427,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19098" name="祝福的凱利爾風暴者" type="Weapon">
+	<item id="19098" type="Weapon" name="축복받은 칼리엘 스토머 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升8.0。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_vesper_stormer_i01"/>
@@ -454,7 +454,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19099" name="祝福的凱利爾風暴者" type="Weapon">
+	<item id="19099" type="Weapon" name="축복받은 칼리엘 스토머 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_vesper_stormer_i01"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="22807" name="斯佩席亞戰爪" type="Weapon">
+	<item id="22807" type="Weapon" name="_">
 		<table name="#Desc">斯佩席亞使用的格鬥兵器。賦予裝備者特別的力量。可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i00"/>
 		<set name="default_action" val="equip"/>
@@ -27,7 +27,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22808" name="斯佩席亞戰爪" type="Weapon">
+	<item id="22808" type="Weapon" name="_">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞斯佩席亞使用的格鬥兵器。賦予裝備者特別的力量。致命攻擊率提升約76。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01"/>
@@ -54,7 +54,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22809" name="斯佩席亞戰爪" type="Weapon">
+	<item id="22809" type="Weapon" name="_">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞斯佩席亞使用的格鬥兵器。賦予裝備者特別的力量。物理攻擊力提升約332。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01"/>
@@ -81,7 +81,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22810" name="斯佩席亞戰爪" type="Weapon">
+	<item id="22810" type="Weapon" name="_">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞斯佩席亞使用的格鬥兵器。賦予裝備者特別的力量。攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01"/>
@@ -108,7 +108,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22811" name="斯佩席亞戰爪" type="Weapon">
+	<item id="22811" type="Weapon" name="_">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞斯佩席亞使用的格鬥兵器。賦予裝備者特別的力量。致命攻擊率提升約78.9、物理攻擊力提升約332。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01"/>
@@ -135,7 +135,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22812" name="斯佩席亞戰爪" type="Weapon">
+	<item id="22812" type="Weapon" name="_">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞斯佩席亞使用的格鬥兵器。賦予裝備者特別的力量。物理攻擊力提升約415、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01"/>
@@ -162,7 +162,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22813" name="斯佩席亞戰爪" type="Weapon">
+	<item id="22813" type="Weapon" name="_">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞斯佩席亞使用的格鬥兵器。賦予裝備者特別的力量。攻擊速度提升約15%、致命攻擊率提升約76。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i01"/>
@@ -189,7 +189,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22814" name="梅莉莎風暴者" type="Weapon">
+	<item id="22814" type="Weapon" name="_">
 		<table name="#Desc">梅莉莎使用的長矛。可以賦予HP吸收、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i00"/>
 		<set name="default_action" val="equip"/>
@@ -215,7 +215,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22815" name="梅莉莎風暴者" type="Weapon">
+	<item id="22815" type="Weapon" name="_">
 		<table name="#Plus">HP吸收</table>
 		<table name="#Desc">＜搜魂石特效＞梅莉莎使用的長矛。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01"/>
@@ -242,7 +242,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22816" name="梅莉莎風暴者" type="Weapon">
+	<item id="22816" type="Weapon" name="_">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞梅莉莎使用的長矛。命中能力提升7.6。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01"/>
@@ -269,7 +269,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22817" name="梅莉莎風暴者" type="Weapon">
+	<item id="22817" type="Weapon" name="_">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞梅莉莎使用的長矛。物理攻擊力提升約288。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01"/>
@@ -296,7 +296,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22818" name="梅莉莎風暴者" type="Weapon">
+	<item id="22818" type="Weapon" name="_">
 		<table name="#Plus">HP吸收 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞梅莉莎使用的長矛。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。命中能力提升7.6。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01"/>
@@ -323,7 +323,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22819" name="梅莉莎風暴者" type="Weapon">
+	<item id="22819" type="Weapon" name="_">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞梅莉莎使用的長矛。命中能力提升7.6、物理攻擊力提升約288。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01"/>
@@ -350,7 +350,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22820" name="梅莉莎風暴者" type="Weapon">
+	<item id="22820" type="Weapon" name="_">
 		<table name="#Plus">傷害上升 + HP吸收</table>
 		<table name="#Desc">＜搜魂石特效＞梅莉莎使用的長矛。物理攻擊力提升約288。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i01"/>
@@ -377,7 +377,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22821" name="斯泰里格斯匕首" type="Weapon">
+	<item id="22821" type="Weapon" name="_">
 		<table name="#Desc">斯泰里格斯使用的匕首。可以賦予導引、速度激發、弱點偵測其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i00"/>
 		<set name="default_action" val="equip"/>
@@ -403,7 +403,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22822" name="斯泰里格斯匕首" type="Weapon">
+	<item id="22822" type="Weapon" name="_">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞斯泰里格斯使用的匕首。命中能力提升7.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01"/>
@@ -430,7 +430,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22823" name="斯泰里格斯匕首" type="Weapon">
+	<item id="22823" type="Weapon" name="_">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞斯泰里格斯使用的匕首。攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01"/>
@@ -457,7 +457,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22824" name="斯泰里格斯匕首" type="Weapon">
+	<item id="22824" type="Weapon" name="_">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞斯泰里格斯使用的匕首。致命攻擊率提升約82.3。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01"/>
@@ -484,7 +484,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22825" name="斯泰里格斯匕首" type="Weapon">
+	<item id="22825" type="Weapon" name="_">
 		<table name="#Plus">導引 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞斯泰里格斯使用的匕首。命中能力提升7.9、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01"/>
@@ -511,7 +511,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22826" name="斯泰里格斯匕首" type="Weapon">
+	<item id="22826" type="Weapon" name="_">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞斯泰里格斯使用的匕首。攻擊速度提升約15%、致命攻擊率提升約82.3。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01"/>
@@ -538,7 +538,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22827" name="斯泰里格斯匕首" type="Weapon">
+	<item id="22827" type="Weapon" name="_">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞斯泰里格斯使用的匕首。致命攻擊率提升約82.3、命中能力提升7.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i01"/>
@@ -565,7 +565,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22828" name="普倫雙鈍器" type="Weapon">
+	<item id="22828" type="Weapon" name="_">
 		<table name="#Desc">普倫使用的雙鈍器。賦予裝備者特別的力量。可以賦予弱點偵測、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i00"/>
 		<set name="default_action" val="equip"/>
@@ -591,7 +591,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22829" name="普倫雙鈍器" type="Weapon">
+	<item id="22829" type="Weapon" name="_">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞普倫使用的雙鈍器。賦予裝備者特別的力量。致命攻擊率提升約78.9。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01"/>
@@ -618,7 +618,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22830" name="普倫雙鈍器" type="Weapon">
+	<item id="22830" type="Weapon" name="_">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">＜搜魂石特效＞普倫使用的雙鈍器。賦予裝備者特別的力量。命中能力提升7.8。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01"/>
@@ -645,7 +645,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22831" name="普倫雙鈍器" type="Weapon">
+	<item id="22831" type="Weapon" name="_">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞普倫使用的雙鈍器。賦予裝備者特別的力量。物理攻擊力提升約377。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01"/>
@@ -672,7 +672,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22832" name="普倫雙鈍器" type="Weapon">
+	<item id="22832" type="Weapon" name="_">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞普倫使用的雙鈍器。賦予裝備者特別的力量。致命攻擊率提升約79.2、命中能力提升7.8。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01"/>
@@ -699,7 +699,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22833" name="普倫雙鈍器" type="Weapon">
+	<item id="22833" type="Weapon" name="_">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞普倫使用的雙鈍器。賦予裝備者特別的力量。命中能力提升7.7、物理攻擊力提升約377。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01"/>
@@ -726,7 +726,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22834" name="普倫雙鈍器" type="Weapon">
+	<item id="22834" type="Weapon" name="_">
 		<table name="#Plus">傷害上升 + 偵測 </table>
 		<table name="#Desc">＜搜魂石特效＞普倫使用的雙鈍器。賦予裝備者特別的力量。物理攻擊力提升約377、致命攻擊率提升約78.9。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i01"/>
@@ -754,7 +754,7 @@
 		</for>
 	</item>
 
-	<item id="22886" name="海賊王 烏山卡戒指" type="Armor">
+	<item id="22886" type="Armor" name="_">
 		<table name="#Desc">據說對海賊王 烏山卡的靈魂表示哀悼的話，就可以入手的戒指。裝備時，可變身為海賊王烏山卡。</table>
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka"/>
 		<set name="default_action" val="equip"/>
@@ -767,7 +767,7 @@
 	</item>
 
 	<!-- 變身卷軸/騎乘手鐲 -->
-	<item id="22887" name="獨角獸騎乘手鐲" type="Armor">
+	<item id="22887" type="Armor" name="_">
 		<table name="#Desc">維他命道具裝備時，可以騎乘獨角獸。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="BranchSys3.lcon.g_pi_transformation_unicorn"/>
 		<set name="default_action" val="equip"/>

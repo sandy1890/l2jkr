@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8600" type="EtcItem" name="Herb of Life">
+	<item id="8600" type="EtcItem" name="생명의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -9,7 +9,7 @@
 		<set name="item_skill" val="2278-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8601" type="EtcItem" name="Greater Herb of Life">
+	<item id="8601" type="EtcItem" name="강력 생명의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -18,7 +18,7 @@
 		<set name="item_skill" val="2278-2" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8602" type="EtcItem" name="Superior Herb of Life">
+	<item id="8602" type="EtcItem" name="초강력 생명의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -27,7 +27,7 @@
 		<set name="item_skill" val="2278-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8603" type="EtcItem" name="Herb of Mana">
+	<item id="8603" type="EtcItem" name="마나의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -36,7 +36,7 @@
 		<set name="item_skill" val="2279-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8604" type="EtcItem" name="Greater Herb of Mana">
+	<item id="8604" type="EtcItem" name="강력 마나의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -45,7 +45,7 @@
 		<set name="item_skill" val="2279-2" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8605" type="EtcItem" name="Superior Herb of Mana">
+	<item id="8605" type="EtcItem" name="초강력 마나의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -54,7 +54,7 @@
 		<set name="item_skill" val="2279-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8606" type="EtcItem" name="Herb of Power">
+	<item id="8606" type="EtcItem" name="힘의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -63,7 +63,7 @@
 		<set name="item_skill" val="2280-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8607" type="EtcItem" name="Herb of Magic">
+	<item id="8607" type="EtcItem" name="마력의 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -72,7 +72,7 @@
 		<set name="item_skill" val="2281-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8608" type="EtcItem" name="Herb of Alacrity">
+	<item id="8608" type="EtcItem" name="공격 속도의 허브">
 		<set name="icon" val="BranchSys2.icon.etc_attack_sp_herb_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -82,7 +82,7 @@
 		<set name="item_skill" val="2282-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8609" type="EtcItem" name="Herb of Casting Spd.">
+	<item id="8609" type="EtcItem" name="마법 속도의 허브">
 		<set name="icon" val="icon.etc_magic_sp_herb_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -92,7 +92,7 @@
 		<set name="item_skill" val="2283-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8610" type="EtcItem" name="Herb of Critical Attack - Probability">
+	<item id="8610" type="EtcItem" name="치명 타격의 허브 - 확률">
 		<set name="icon" val="icon.etc_critical_herb_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -102,7 +102,7 @@
 		<set name="item_skill" val="2284-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8611" type="EtcItem" name="Herb of Speed">
+	<item id="8611" type="EtcItem" name="이동 속도의 허브">
 		<set name="icon" val="BranchSys2.icon.etc_move_herb_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -112,7 +112,7 @@
 		<set name="item_skill" val="2285-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8612" type="EtcItem" name="Herb of the Warrior">
+	<item id="8612" type="EtcItem" name="전사용 허브">
 		<set name="icon" val="icon.etc_warrior_set_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -122,7 +122,7 @@
 		<set name="item_skill" val="2280-1;2282-1;2284-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8613" type="EtcItem" name="Herb of the Mystic">
+	<item id="8613" type="EtcItem" name="마법사용 허브">
 		<set name="icon" val="icon.etc_magic_set_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -132,7 +132,7 @@
 		<set name="item_skill" val="2281-1;2283-1" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8614" type="EtcItem" name="Herb of Recovery">
+	<item id="8614" type="EtcItem" name="회복의 허브">
 		<set name="icon" val="icon.etc_recovery_set_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -142,7 +142,7 @@
 		<set name="item_skill" val="2278-3;2279-3" />
 		<set name="for_npc" val="true" />
 	</item>
-	<item id="8615" type="EtcItem" name="Summoning Crystal">
+	<item id="8615" type="EtcItem" name="소환의 수정">
 		<set name="icon" val="icon.etc_recall_crystal_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -151,7 +151,7 @@
 		<set name="price" val="35000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8616" type="EtcItem" name="Spellbook: Summon Friend">
+	<item id="8616" type="EtcItem" name="마법서 - 서먼 프랜드">
 		<set name="icon" val="icon.etc_party_sommons_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -159,7 +159,7 @@
 		<set name="price" val="6250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8617" type="EtcItem" name="Spellbook: Word of Invitation">
+	<item id="8617" type="EtcItem" name="마법서 - 워드 오브 인비테이션">
 		<set name="icon" val="icon.etc_party_sommons_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -167,14 +167,14 @@
 		<set name="price" val="8700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8618" type="EtcItem" name="Ancient Book: Divine Inspiration (Modern Language Version)">
+	<item id="8618" type="EtcItem" name="고서 - 인크리스 오브 디비니티(현대어본)">
 		<set name="icon" val="icon.etc_add_buffslot_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8619" type="EtcItem" name="Ancient Book: Divine Inspiration (Original Language Version)">
+	<item id="8619" type="EtcItem" name="고서 - 인크리스 오브 디비니티(원어본)">
 		<set name="icon" val="icon.etc_add_buffslot_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -182,7 +182,7 @@
 		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8620" type="EtcItem" name="Ancient Book: Divine Inspiration (Manuscript)">
+	<item id="8620" type="EtcItem" name="고서 - 인크리스 오브 디비니티(필사본)">
 		<set name="icon" val="icon.etc_add_buffslot_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -190,7 +190,7 @@
 		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8621" type="EtcItem" name="Ancient Book: Divine Inspiration (Original Version)">
+	<item id="8621" type="EtcItem" name="고서 - 인크리스 오브 디비니티(원본)">
 		<set name="icon" val="icon.etc_add_buffslot_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -198,7 +198,7 @@
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8622" type="EtcItem" name="Elixir of Life (No Grade)">
+	<item id="8622" type="EtcItem" name="무급 생명의 비약">
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -216,7 +216,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8623" type="EtcItem" name="Elixir of Life (D-Grade)">
+	<item id="8623" type="EtcItem" name="생명의 비약 - D그레이드">
 		<set name="icon" val="icon.etc_super_hp_potion_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -235,7 +235,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8624" type="EtcItem" name="Elixir of Life (C-Grade)">
+	<item id="8624" type="EtcItem" name="생명의 비약 - C그레이드">
 		<set name="icon" val="icon.etc_super_hp_potion_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -254,7 +254,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8625" type="EtcItem" name="Elixir of Life (B-Grade)">
+	<item id="8625" type="EtcItem" name="생명의 비약 - B그레이드">
 		<set name="icon" val="icon.etc_super_hp_potion_i03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -273,7 +273,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8626" type="EtcItem" name="Elixir of Life (A-Grade)">
+	<item id="8626" type="EtcItem" name="생명의 비약 - A그레이드">
 		<set name="icon" val="icon.etc_super_hp_potion_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -292,7 +292,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8627" type="EtcItem" name="Elixir of Life (S-Grade)">
+	<item id="8627" type="EtcItem" name="생명의 비약 - S그레이드">
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -311,7 +311,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8628" type="EtcItem" name="Elixir of Mental Strength (No Grade)">
+	<item id="8628" type="EtcItem" name="무급 정신의 비약">
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -329,7 +329,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8629" type="EtcItem" name="Elixir of Mental Strength (D-Grade)">
+	<item id="8629" type="EtcItem" name="정신의 비약 - D그레이드">
 		<set name="icon" val="icon.etc_super_mp_potion_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -348,7 +348,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8630" type="EtcItem" name="Elixir of Mental Strength (C-Grade)">
+	<item id="8630" type="EtcItem" name="정신의 비약 - C그레이드">
 		<set name="icon" val="icon.etc_super_mp_potion_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -367,7 +367,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8631" type="EtcItem" name="Elixir of Mental Strength (B-Grade)">
+	<item id="8631" type="EtcItem" name="정신의 비약 - B그레이드">
 		<set name="icon" val="icon.etc_super_mp_potion_i03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -386,7 +386,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8632" type="EtcItem" name="Elixir of Mental Strength (A-Grade)">
+	<item id="8632" type="EtcItem" name="정신의 비약 - A그레이드">
 		<set name="icon" val="icon.etc_super_mp_potion_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -405,7 +405,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8633" type="EtcItem" name="Elixir of Mental Strength (S-Grade)">
+	<item id="8633" type="EtcItem" name="정신의 비약 - S그레이드">
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -424,7 +424,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="8634" type="EtcItem" name="Elixir of CP (No Grade)">
+	<item id="8634" type="EtcItem" name="무급 투지의 비약">
 		<set name="icon" val="icon.etc_super_cp_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -439,7 +439,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-1" />
 	</item>
-	<item id="8635" type="EtcItem" name="Elixir of CP (D-Grade)">
+	<item id="8635" type="EtcItem" name="투지의 비약 - D그레이드">
 		<set name="icon" val="icon.etc_super_cp_potion_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -455,7 +455,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-2" />
 	</item>
-	<item id="8636" type="EtcItem" name="Elixir of CP (C-Grade)">
+	<item id="8636" type="EtcItem" name="투지의 비약 - C그레이드">
 		<set name="icon" val="icon.etc_super_cp_potion_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -471,7 +471,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-3" />
 	</item>
-	<item id="8637" type="EtcItem" name="Elixir of CP (B-Grade)">
+	<item id="8637" type="EtcItem" name="투지의 비약 - B그레이드">
 		<set name="icon" val="icon.etc_super_cp_potion_i03" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -487,7 +487,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-4" />
 	</item>
-	<item id="8638" type="EtcItem" name="Elixir of CP (A-Grade)">
+	<item id="8638" type="EtcItem" name="투지의 비약 - A그레이드">
 		<set name="icon" val="icon.etc_super_cp_potion_i04" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -503,7 +503,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-5" />
 	</item>
-	<item id="8639" type="EtcItem" name="Elixir of CP (S-Grade)">
+	<item id="8639" type="EtcItem" name="투지의 비약 - S그레이드">
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -519,7 +519,7 @@
 		<set name="handler" val="Elixir" />
 		<set name="item_skill" val="2289-6" />
 	</item>
-	<item id="8640" type="EtcItem" name="Recipe: Elixir of Life (No Grade) (100%)">
+	<item id="8640" type="EtcItem" name="레시피 : 무급 생명의 비약(100%)">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -531,7 +531,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8641" type="EtcItem" name="Recipe: Elixir of Life (D-Grade)">
+	<item id="8641" type="EtcItem" name="레시피 : 생명의 비약 - D그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -543,7 +543,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8642" type="EtcItem" name="Recipe: Elixir of Life (C-Grade) (100%)">
+	<item id="8642" type="EtcItem" name="레시피 : 생명의 비약 - C그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -555,7 +555,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8643" type="EtcItem" name="Recipe: Elixir of Life (B-Grade) (100%)">
+	<item id="8643" type="EtcItem" name="레시피 : 생명의 비약 - B그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -567,7 +567,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8644" type="EtcItem" name="Recipe: Elixir of Life (A-Grade) (100%)">
+	<item id="8644" type="EtcItem" name="레시피 : 생명의 비약 - A그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -579,7 +579,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8645" type="EtcItem" name="Recipe: Elixir of Life (S-Grade) (100%)">
+	<item id="8645" type="EtcItem" name="레시피 : 생명의 비약 - S그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -591,7 +591,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8646" type="EtcItem" name="Recipe: Elixir of Mental Strength (No Grade) (100%)">
+	<item id="8646" type="EtcItem" name="레시피 : 무급 정신의 비약(100%)">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -603,7 +603,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8647" type="EtcItem" name="Recipe: Elixir of Mental Strength (D-Grade) (100%)">
+	<item id="8647" type="EtcItem" name="레시피 : 정신의 비약 - D그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -615,7 +615,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8648" type="EtcItem" name="Recipe: Elixir of Mental Strength (C-Grade) (100%)">
+	<item id="8648" type="EtcItem" name="레시피 : 정신의 비약 - C그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -627,7 +627,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8649" type="EtcItem" name="Recipe: Elixir of Mental Strength (B-Grade) (100%)">
+	<item id="8649" type="EtcItem" name="레시피 : 정신의 비약 - B그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -639,7 +639,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8650" type="EtcItem" name="Recipe: Elixir of Mental Strength (A-Grade) (100%)">
+	<item id="8650" type="EtcItem" name="레시피 : 정신의 비약 - A그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -651,7 +651,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8651" type="EtcItem" name="Recipe: Elixir of Mental Strength (S-Grade) (100%)">
+	<item id="8651" type="EtcItem" name="레시피 : 정신의 비약 - S그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -663,7 +663,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8652" type="EtcItem" name="Recipe: Elixir of CP (No Grade) (100%)">
+	<item id="8652" type="EtcItem" name="레시피 : 무급 투지의 비약(100%)">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -675,7 +675,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8653" type="EtcItem" name="Recipe: Elixir of CP (D-Grade) (100%)">
+	<item id="8653" type="EtcItem" name="레시피 : 투지의 비약 - D그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -687,7 +687,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8654" type="EtcItem" name="Recipe: Elixir of CP (C-Grade) (100%)">
+	<item id="8654" type="EtcItem" name="레시피 : 투지의 비약 - C그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -699,7 +699,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8655" type="EtcItem" name="Recipe: Elixir of CP (B-Grade) (100%)">
+	<item id="8655" type="EtcItem" name="레시피 : 투지의 비약 - B그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -711,7 +711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8656" type="EtcItem" name="Recipe: Elixir of CP (A-Grade) (100%)">
+	<item id="8656" type="EtcItem" name="레시피 : 투지의 비약 - A그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -723,7 +723,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8657" type="EtcItem" name="Recipe: Elixir of CP (S-Grade) (100%)">
+	<item id="8657" type="EtcItem" name="레시피 : 투지의 비약 - S그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -735,7 +735,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8658" type="EtcItem" name="Mysterious Solvent">
+	<item id="8658" type="EtcItem" name="신비한 용해제">
 		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -744,7 +744,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="8659" type="EtcItem" name="Coffer of Shadows">
+	<item id="8659" type="EtcItem" name="할로윈 상자">
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -753,7 +753,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2290-1" />
 	</item>
-	<item id="8660" type="Armor" name="Demon Horns">
+	<item id="8660" type="Armor" name="할로윈 뿔">
 		<set name="icon" val="icon.accessory_hair_cornu_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -761,7 +761,7 @@
 		<set name="material" val="wood" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="8661" type="Armor" name="Mask of Spirits">
+	<item id="8661" type="Armor" name="할로윈 마스크">
 		<set name="icon" val="icon.accessory_worldcup_mask_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair" />
@@ -769,7 +769,7 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="8662" type="Armor" name="Fairy Antennae (Event)">
+	<item id="8662" type="Armor" name="페어리의 더듬이 - 이벤트용">
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hair2" />
@@ -780,7 +780,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="8663" type="EtcItem" name="Mystery Potion (Event)">
+	<item id="8663" type="EtcItem" name="의문의 물약 (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -792,7 +792,7 @@
 		<set name="handler" val="SummonItems" />
 		<set name="item_skill" val="2103-1" />
 	</item>
-	<item id="8664" type="EtcItem" name="Facelifting Potion - A (Event)">
+	<item id="8664" type="EtcItem" name="성형의 물약 - A (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -803,7 +803,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2291-1" />
 	</item>
-	<item id="8665" type="EtcItem" name="Facelifting Potion - B (Event)">
+	<item id="8665" type="EtcItem" name="성형의 물약 - B (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -814,7 +814,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2292-1" />
 	</item>
-	<item id="8666" type="EtcItem" name="Facelifting Potion - C (Event)">
+	<item id="8666" type="EtcItem" name="성형의 물약 - C (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -825,7 +825,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2293-1" />
 	</item>
-	<item id="8667" type="EtcItem" name="Dye Potion - A (Event)">
+	<item id="8667" type="EtcItem" name="염색의 물약 - A (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -836,7 +836,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2294-1" />
 	</item>
-	<item id="8668" type="EtcItem" name="Dye Potion - B (Event)">
+	<item id="8668" type="EtcItem" name="염색의 물약 - B (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -847,7 +847,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2295-1" />
 	</item>
-	<item id="8669" type="EtcItem" name="Dye Potion - C (Event)">
+	<item id="8669" type="EtcItem" name="염색의 물약 - C (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -858,7 +858,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2296-1" />
 	</item>
-	<item id="8670" type="EtcItem" name="Dye Potion - D (Event)">
+	<item id="8670" type="EtcItem" name="염색의 물약 - D (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -872,7 +872,7 @@
 			<player races="Human,Elf,DarkElf,Orc,Dwarf" />
 		</cond>
 	</item>
-	<item id="8671" type="EtcItem" name="Hair Style Change Potion - A (Event)">
+	<item id="8671" type="EtcItem" name="헤어체인지 물약 - A (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -883,7 +883,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2298-1" />
 	</item>
-	<item id="8672" type="EtcItem" name="Hair Style Change Potion - B (Event)">
+	<item id="8672" type="EtcItem" name="헤어체인지 물약 - B (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -894,7 +894,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2299-1" />
 	</item>
-	<item id="8673" type="EtcItem" name="Hair Style Change Potion - C (Event)">
+	<item id="8673" type="EtcItem" name="헤어체인지 물약 - C (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -905,7 +905,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2300-1" />
 	</item>
-	<item id="8674" type="EtcItem" name="Hair Style Change Potion - D (Event)">
+	<item id="8674" type="EtcItem" name="헤어체인지 물약 - D (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -916,7 +916,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2301-1" />
 	</item>
-	<item id="8675" type="EtcItem" name="Hair Style Change Potion - E (Event)">
+	<item id="8675" type="EtcItem" name="헤어체인지 물약 - E (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -927,7 +927,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2302-1" />
 	</item>
-	<item id="8676" type="EtcItem" name="Hair Style Change Potion - F (Event)">
+	<item id="8676" type="EtcItem" name="헤어체인지 물약 - F (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -938,7 +938,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2303-1" />
 	</item>
-	<item id="8677" type="EtcItem" name="Hair Style Change Potion - G (Event)">
+	<item id="8677" type="EtcItem" name="헤어체인지 물약 - G (이벤트용)">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -949,7 +949,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2304-1" />
 	</item>
-	<item id="8678" type="Weapon" name="Sirra's Blade">
+	<item id="8678" type="Weapon" name="시르 블레이드">
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -976,7 +976,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8679" type="Weapon" name="Sword of Ipos">
+	<item id="8679" type="Weapon" name="소드 오브 이포스">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1003,7 +1003,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8680" type="Weapon" name="Barakiel's Axe">
+	<item id="8680" type="Weapon" name="바라키엘 엑스">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1030,7 +1030,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8681" type="Weapon" name="Behemoth's Tuning Fork">
+	<item id="8681" type="Weapon" name="베헤모스의 소리굽쇠">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1057,7 +1057,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8682" type="Weapon" name="Naga Storm">
+	<item id="8682" type="Weapon" name="나가 스톰">
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -1084,7 +1084,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8683" type="Weapon" name="Tiphon's Spear">
+	<item id="8683" type="Weapon" name="타이폰 스피어">
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1112,7 +1112,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8684" type="Weapon" name="Shyeed's Bow">
+	<item id="8684" type="Weapon" name="샤이드 보우">
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1142,7 +1142,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8685" type="Weapon" name="Sobekk's Hurricane">
+	<item id="8685" type="Weapon" name="소베크 허리케인">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1169,7 +1169,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8686" type="Weapon" name="Themis' Tongue">
+	<item id="8686" type="Weapon" name="테미스의 혀">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1196,7 +1196,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8687" type="Weapon" name="Cabrio's Hand">
+	<item id="8687" type="Weapon" name="핸드 오브 카브리오">
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1224,7 +1224,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8688" type="Weapon" name="Daimon Crystal">
+	<item id="8688" type="Weapon" name="데이몬의 결정">
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1252,7 +1252,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8689" type="Weapon" name="Blood Sword Akamanah">
+	<item id="8689" type="Weapon" name="혈검 아카마나프">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="fist" />
@@ -1279,7 +1279,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="8690" type="EtcItem" name="Recipe: Sirra's Blade (60%)">
+	<item id="8690" type="EtcItem" name="레시피 : 시르 블레이드(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1291,7 +1291,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8691" type="EtcItem" name="Recipe: Sirra's Blade (100%)">
+	<item id="8691" type="EtcItem" name="레시피 : 시르 블레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1303,7 +1303,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8692" type="EtcItem" name="Recipe: Sword of Ipos (60%)">
+	<item id="8692" type="EtcItem" name="레시피 : 소드 오브 이포스(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1315,7 +1315,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8693" type="EtcItem" name="Recipe: Sword of Ipos (100%)">
+	<item id="8693" type="EtcItem" name="레시피 : 소드 오브 이포스(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1327,7 +1327,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8694" type="EtcItem" name="Recipe: Barakiel's Axe (60%)">
+	<item id="8694" type="EtcItem" name="레시피 : 바라키엘 엑스(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1339,7 +1339,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8695" type="EtcItem" name="Recipe: Barakiel's Axe (100%)">
+	<item id="8695" type="EtcItem" name="레시피 : 바라키엘 엑스(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1351,7 +1351,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8696" type="EtcItem" name="Recipe: Behemoth's Tuning Fork (60%)">
+	<item id="8696" type="EtcItem" name="레시피 : 베헤모스의 소리굽쇠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1363,7 +1363,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8697" type="EtcItem" name="Recipe: Behemoth's Tuning Fork (100%)">
+	<item id="8697" type="EtcItem" name="레시피 : 베헤모스의 소리굽쇠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1375,7 +1375,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8698" type="EtcItem" name="Recipe: Naga Storm (60%)">
+	<item id="8698" type="EtcItem" name="레시피 : 나가 스톰(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1387,7 +1387,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8699" type="EtcItem" name="Recipe: Naga Storm (100%)">
+	<item id="8699" type="EtcItem" name="레시피 : 나가 스톰(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />

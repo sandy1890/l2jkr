@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="34900" name="謎樣憑證" type="EtcItem">
+	<item id="34900" type="EtcItem" name="의문의 증표">
 		<table name="#Desc">隱隱約約可以感覺到黑暗的力量。拿去交給位於各村莊的謎樣的執事看看吧。無法交易、丟棄、買賣，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_coins_black_i00"/>
 		<set name="material" val="leather"/>
@@ -10,7 +10,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34901" name="決議之證" type="EtcItem">
+	<item id="34901" type="EtcItem" name="결의의 증거">
 		<table name="#Desc">當血盟主要將血盟等級提升為等級4時所需的道具。僅限血盟主使用。無法交易、丟棄、買賣，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_paper_white_i00"/>
 		<set name="material" val="leather"/>
@@ -19,7 +19,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34902" name="盼望之證" type="EtcItem">
+	<item id="34902" type="EtcItem" name="대망의 증거">
 		<table name="#Desc">當血盟主要將血盟等級提升為等級5時所需的道具。僅限血盟主使用。無法交易、丟棄、買賣，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_paper_blue_i00"/>
 		<set name="material" val="leather"/>
@@ -28,7 +28,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34903" name="謎樣之影" type="EtcItem">
+	<item id="34903" type="EtcItem" name="의문의 그림자">
 		<table name="#Desc">只能在渾沌祭典競技場內使用的道具。使用時，將會變為隱身狀態，並降低移動速度30%。無法丟棄、交易、買賣，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_apprentices_spellbook_i00"/>
 		<set name="material" val="leather"/>
@@ -37,7 +37,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34904" name="謎樣之力" type="EtcItem">
+	<item id="34904" type="EtcItem" name="의문의 힘">
 		<table name="#Desc">只能在渾沌祭典競技場內使用的道具。自己的HP/MP/CP將全部變為1，但對目標將會以30%機率適用即死攻擊效果。無法丟棄、交易、買賣，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_apprentices_spellbook_i00"/>
 		<set name="material" val="leather"/>
@@ -46,7 +46,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34905" name="血盟專用寵物(浣熊)" type="EtcItem">
+	<item id="34905" type="EtcItem" name="혈맹 전용 펫(라쿤)">
 		<table name="#Desc">可以召喚培育用血盟寵物（浣熊）的道具。召喚72小時時，可獲得血盟聲望100，並可隨機獲得額外道具。只有加入等級5以上的血盟的玩家才可進行召喚。</table>
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00"/>
 		<set name="default_action" val="skill_maintain"/>
@@ -57,7 +57,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34906" name="血盟專用寵物(白貓)" type="EtcItem">
+	<item id="34906" type="EtcItem" name="혈맹 전용 펫(화이트 캣)">
 		<table name="#Desc">可以召喚培育用血盟寵物（白貓）的道具。召喚72小時時，可獲得血盟聲望100，並可隨機獲得額外道具。只有加入等級5以上的血盟的玩家才可進行召喚。</table>
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00"/>
 		<set name="default_action" val="skill_maintain"/>
@@ -68,7 +68,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34907" name="血盟專用寵物(沙漠小狐)" type="EtcItem">
+	<item id="34907" type="EtcItem" name="혈맹 전용 펫(사막 여우)">
 		<table name="#Desc">可以召喚培育用血盟寵物（沙漠小狐）的道具。召喚72小時時，可獲得血盟聲望100，並可隨機獲得額外道具。只有加入等級5以上的血盟的玩家才可進行召喚。</table>
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00"/>
 		<set name="default_action" val="skill_maintain"/>
@@ -79,7 +79,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="34908" name="對練用血盟寵物" type="EtcItem">
+	<item id="34908" type="EtcItem" name="대련용 혈맹 펫">
 		<table name="#Desc">可以召喚對練用血盟寵物的道具。在30秒內若將寵物的HP降為0的話，就可獲得血盟聲望50和個人聲望10。只有加入血盟的玩家才可進行召喚。</table>
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00"/>
 		<set name="default_action" val="skill_maintain"/>
@@ -91,7 +91,7 @@
 		</cond>
 	</item>
 
-	<item id="34925" name="光之斗篷" type="Armor">
+	<item id="34925" type="Armor" name="빛의 망토">
 		<table name="#Desc">象徵名譽和光芒的斗篷。侯爵階級以上才可裝備。增加物理防禦力50、魔法防禦力40、所有能力值+2、降低PVP時所受的傷害5%。可使用城堡返回技能。處於邪惡狀態時無法裝備，而且效果將不生效。</table>
 		<set name="icon" val="icon.amor_goodness_cloak"/>
 		<set name="default_action" val="equip"/>
@@ -102,7 +102,7 @@
 			<add order="0x10" stat="pDef" val="50"/>
 		</for>
 	</item>
-	<item id="34926" name="暗之斗篷" type="Armor">
+	<item id="34926" type="Armor" name="어둠의 망토">
 		<table name="#Desc">象徵貪欲和黑暗的斗篷。侯爵階級以上才可裝備。增加物理防禦力50、魔法防禦力40、所有能力值+2、降低PVP時所受的傷害5%。可使用城堡返回技能。</table>
 		<set name="icon" val="icon.amor_evilness_cloak"/>
 		<set name="default_action" val="equip"/>
@@ -114,7 +114,7 @@
 		</for>
 	</item>
 
-	<item id="34935" name="巨星壺精手鐲-張熙珍" type="Armor">
+	<item id="34935" type="Armor" name="스타 아가시온 팔찌 - 장희진">
 		<table name="#Plus">限時7日</table>
 		<table name="#Desc">限時7日裝備時，CON+3、MEN+3、增加負重懲罰上限10000、增加HP/MP/CP最大值300、魔法防禦力5%、HP最大值5%、6大屬性防禦力10。使用技能：祝福的返回能力。無法交易/丟棄/刪除/參與奧林匹亞/利用個人商店，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.bracelet_tersi_agathion"/>
@@ -127,7 +127,7 @@
 		<set name="unequip_skill" val="3267-1"/>
 		<set name="item_skill" val="3267-1;9407-1;9412-1;9531-1"/>
 	</item>
-	<item id="34936" name="巨星壺精手鐲-張赫" type="Armor">
+	<item id="34936" type="Armor" name="스타 아가시온 팔찌 - 장혁">
 		<table name="#Plus">限時7日</table>
 		<table name="#Desc">限時7日裝備時，CON+3、MEN+3、增加負重懲罰上限10000、增加HP/MP/CP最大值300、物理攻擊力5%、6大屬性防禦力10。使用技能：祝福的返回能力。無法交易/丟棄/刪除/參與奧林匹亞/利用個人商店，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.bracelet_tersi_agathion"/>
@@ -140,7 +140,7 @@
 		<set name="unequip_skill" val="3267-1"/>
 		<set name="item_skill" val="3267-1;9408-1;9413-1;9533-1"/>
 	</item>
-	<item id="34937" name="巨星壺精手鐲-金秀路" type="Armor">
+	<item id="34937" type="Armor" name="스타 아가시온 팔찌 - 김수로">
 		<table name="#Plus">限時7日</table>
 		<table name="#Desc">限時7日裝備時，CON+3、MEN+3、增加負重懲罰上限10000、增加HP/MP/CP最大值300、物理防禦力5%、HP最大值5%、6大屬性防禦力10。使用技能：祝福的返回能力。無法交易/丟棄/刪除/參與奧林匹亞/利用個人商店，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.bracelet_tersi_agathion"/>
@@ -153,7 +153,7 @@
 		<set name="unequip_skill" val="3267-1"/>
 		<set name="item_skill" val="3267-1;9409-1;9414-1;9535-1"/>
 	</item>
-	<item id="34938" name="巨星壺精手鐲-朴宰范" type="Armor">
+	<item id="34938" type="Armor" name="스타 아가시온 팔찌 - 박재범">
 		<table name="#Plus">限時7日</table>
 		<table name="#Desc">限時7日裝備時，CON+3、MEN+3、增加負重懲罰上限10000、增加HP/MP/CP最大值300、魔法攻擊力6%、6大屬性防禦力10。使用技能：祝福的返回能力。無法交易/丟棄/刪除/參與奧林匹亞/利用個人商店，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.bracelet_tersi_agathion"/>
@@ -166,7 +166,7 @@
 		<set name="unequip_skill" val="3267-1"/>
 		<set name="item_skill" val="3267-1;9410-1;9415-1;9537-1"/>
 	</item>
-	<item id="34939" name="巨星壺精手鐲-金信英" type="Armor">
+	<item id="34939" type="Armor" name="스타 아가시온 팔찌 - 김신영">
 		<table name="#Plus">限時7日</table>
 		<table name="#Desc">限時7日裝備時，CON+3、MEN+3、增加負重懲罰上限10000、增加HP/MP/CP最大值300、6大屬性防禦力10。縮短技能使用冷卻時間3%、降低技能MP消耗量3%。使用技能：祝福的返回能力。無法交易/丟棄/刪除/參與奧林匹亞/利用個人商店，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.bracelet_tersi_agathion"/>
@@ -180,7 +180,7 @@
 		<set name="item_skill" val="3267-1;9411-1;9416-1;9539-1"/>
 	</item>
 	
-	<item id="34996" name="燦爛的光輝斗篷" type="Armor">
+	<item id="34996" type="Armor" name="찬란한 빛의 망토">
 		<table name="#Desc">象徵名譽和光芒的斗篷。只有城主才可裝備。所有能力值+3、降低PVP時所受的傷害15%。可使用城堡返回技能。處於邪惡狀態時無法裝備，而且效果將不生效。</table>
 		<set name="icon" val="icon.amor_goodness_cloak"/>
 		<set name="default_action" val="equip"/>
@@ -191,7 +191,7 @@
 			<add order="0x10" stat="pDef" val="100"/>
 		</for>
 	</item>
-	<item id="34997" name="冷冽的黑暗斗篷" type="Armor">
+	<item id="34997" type="Armor" name="차가운 어둠의 망토">
 		<table name="#Desc">象徵貪欲和黑暗的斗篷。只有城主才可裝備。所有能力值+3、降低PVP時所受的傷害15%。可使用城堡返回技能。</table>
 		<set name="icon" val="icon.amor_evilness_cloak"/>
 		<set name="default_action" val="equip"/>
@@ -202,7 +202,7 @@
 			<add order="0x10" stat="pDef" val="100"/>
 		</for>
 	</item>
-	<item id="34998" name="塔武提單手巨斧" type="Weapon">
+	<item id="34998" type="Weapon" name="타우티의 한손 도끼">
 		<table name="#Desc">提煉塔武提的破片之後製造的武器。裝備時，可以使用塔武提的憤怒技能。裝備時，增加攻擊速度約15%、致命攻擊率150、HP最大值25%、物理攻擊力415。PVP時提升所造成的傷害。無法強化、賦予屬性、搜魂、精煉。</table>
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01"/>
 		<set name="default_action" val="equip"/>
@@ -227,7 +227,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="34999" name="塔武提巨斧" type="Weapon">
+	<item id="34999" type="Weapon" name="타우티의 도끼">
 		<table name="#Desc">提煉塔武提的破片之後製造的武器。裝備時，可以使用塔武提的憤怒技能。裝備時，增加攻擊速度約15%、致命攻擊率150、HP最大值25%、物理攻擊力415。PVP時提升所造成的傷害。無法強化、賦予屬性、搜魂、精煉。</table>
 		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01"/>
 		<set name="default_action" val="equip"/>

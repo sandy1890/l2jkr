@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="3000" type="EtcItem" name="Recipe: Dwarven Chain Shield">
+	<item id="3000" type="EtcItem" name="레시피 : 드워븐 체인 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3001" type="EtcItem" name="Recipe: Rind Leather Boots">
+	<item id="3001" type="EtcItem" name="레시피 : 라인드 레더 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -24,7 +24,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3002" type="EtcItem" name="Recipe: Dwarven Chain Gloves">
+	<item id="3002" type="EtcItem" name="레시피 : 드워븐 체인 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3003" type="EtcItem" name="Recipe: Gloves of Seal">
+	<item id="3003" type="EtcItem" name="레시피 : 봉인의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -48,7 +48,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3004" type="EtcItem" name="Recipe: Rind Leather Gloves">
+	<item id="3004" type="EtcItem" name="레시피 : 라인드 레더 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3005" type="EtcItem" name="Recipe: Demon's Boots">
+	<item id="3005" type="EtcItem" name="레시피 : 악마의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -72,7 +72,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3006" type="EtcItem" name="Recipe: Demon's Gloves">
+	<item id="3006" type="EtcItem" name="레시피 : 악마의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -84,7 +84,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3007" type="EtcItem" name="Recipe: Theca Leather Boots">
+	<item id="3007" type="EtcItem" name="레시피 : 씨커 레더 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -96,7 +96,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3008" type="EtcItem" name="Recipe: Theca Leather Gloves">
+	<item id="3008" type="EtcItem" name="레시피 : 씨커 레더 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3009" type="EtcItem" name="Recipe: Composite Boots">
+	<item id="3009" type="EtcItem" name="레시피 : 컴포짓 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -120,7 +120,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3010" type="EtcItem" name="Recipe: Composite Helmet">
+	<item id="3010" type="EtcItem" name="레시피 : 컴포짓 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -132,7 +132,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3011" type="EtcItem" name="Recipe: Divine Boots">
+	<item id="3011" type="EtcItem" name="레시피 : 디바인 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -144,7 +144,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3012" type="EtcItem" name="Recipe: Full Plate Helmet">
+	<item id="3012" type="EtcItem" name="레시피 : 풀 플레이트 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -156,7 +156,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3013" type="EtcItem" name="Recipe: Drake Leather Boots">
+	<item id="3013" type="EtcItem" name="레시피 : 드레이크 레더 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -168,7 +168,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3014" type="EtcItem" name="Recipe: Full Plate Boots">
+	<item id="3014" type="EtcItem" name="레시피 : 풀 플레이트 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -180,7 +180,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3015" type="EtcItem" name="Recipe: Drake Leather Gloves">
+	<item id="3015" type="EtcItem" name="레시피 : 드레이크 레더 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -192,7 +192,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3016" type="EtcItem" name="Recipe: Full Plate Gauntlets">
+	<item id="3016" type="EtcItem" name="레시피 : 풀 플레이트 건틀렛(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -204,7 +204,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3017" type="EtcItem" name="Recipe: Divine Gloves">
+	<item id="3017" type="EtcItem" name="레시피 : 신성의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -216,7 +216,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3018" type="EtcItem" name="Recipe: Blessed Gloves">
+	<item id="3018" type="EtcItem" name="레시피 : 디바인 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3019" type="EtcItem" name="Recipe: Full Plate Shield">
+	<item id="3019" type="EtcItem" name="레시피 : 풀 플레이트 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3020" type="EtcItem" name="Recipe: Elven Long Sword">
+	<item id="3020" type="EtcItem" name="레시피 : 엘븐 롱소드(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -252,7 +252,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3021" type="EtcItem" name="Recipe: Dwarven War Hammer">
+	<item id="3021" type="EtcItem" name="레시피 : 드워븐 워해머(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -264,7 +264,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3022" type="EtcItem" name="Recipe: Yaksa Mace">
+	<item id="3022" type="EtcItem" name="레시피 : 야크샤 메이스(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -276,7 +276,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3023" type="EtcItem" name="Recipe: Titan Key">
+	<item id="3023" type="EtcItem" name="레시피 : 하거인의 열쇠(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -292,7 +292,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3024" type="EtcItem" name="Recipe: Journeyman Ring">
+	<item id="3024" type="EtcItem" name="레시피 : 저니맨의 반지(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -308,7 +308,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3025" type="EtcItem" name="Recipe: Amber Bead">
+	<item id="3025" type="EtcItem" name="레시피 : 호박석 구슬(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -324,7 +324,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3026" type="Weapon" name="Talins Spear">
+	<item id="3026" type="Weapon" name="탈린의 창">
 		<set name="icon" val="icon.weapon_short_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -350,7 +350,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="3027" type="Weapon" name="Old Knight Sword">
+	<item id="3027" type="Weapon" name="낡은 나이트 소드">
 		<set name="icon" val="icon.weapon_brandish_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -374,7 +374,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="3028" type="Weapon" name="Crescent Moon Bow">
+	<item id="3028" type="Weapon" name="초승달의 활">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -401,7 +401,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="3029" type="Weapon" name="Sword of Binding">
+	<item id="3029" type="Weapon" name="봉인의 검">
 		<set name="icon" val="icon.weapon_gladius_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -425,14 +425,14 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="3030" type="EtcItem" name="Key of Titan">
+	<item id="3030" type="EtcItem" name="하거인의 열쇠">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3031" type="EtcItem" name="Spirit Ore">
+	<item id="3031" type="EtcItem" name="마정석">
 		<set name="icon" val="icon.etc_stone_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -440,7 +440,7 @@
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3032" type="EtcItem" name="Recipe: Spiritshot D">
+	<item id="3032" type="EtcItem" name="레시피 : 마정탄 - D그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -452,7 +452,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3033" type="EtcItem" name="Recipe: Spiritshot C">
+	<item id="3033" type="EtcItem" name="레시피 : 마정탄 - C그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -464,7 +464,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3034" type="EtcItem" name="Recipe: Spiritshot B">
+	<item id="3034" type="EtcItem" name="레시피 : 마정탄 - B그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -476,7 +476,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3035" type="EtcItem" name="Recipe: Spiritshot A">
+	<item id="3035" type="EtcItem" name="레시피 : 마정탄 - A그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -488,7 +488,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3036" type="EtcItem" name="Recipe: Spiritshot S">
+	<item id="3036" type="EtcItem" name="레시피 : 마정탄 - S그레이드(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -500,7 +500,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3037" type="EtcItem" name="Kakan's Letter">
+	<item id="3037" type="EtcItem" name="카칸의 편지">
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -511,7 +511,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3038" type="EtcItem" name="Blueprint: Summon Mechanic Golem">
+	<item id="3038" type="EtcItem" name="설계도 - 서먼 메카닉 골렘">
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -520,7 +520,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="3039" type="EtcItem" name="Spellbook: Summon Storm Cubic">
+	<item id="3039" type="EtcItem" name="마법서 - 서먼 스톰 큐빅">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -528,7 +528,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3040" type="EtcItem" name="Spellbook: Summon Vampiric Cubic">
+	<item id="3040" type="EtcItem" name="마법서 - 서먼 뱀피릭 큐빅">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -536,7 +536,7 @@
 		<set name="price" val="3700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3041" type="EtcItem" name="Spellbook: Summon Phantom Cubic">
+	<item id="3041" type="EtcItem" name="마법서 - 서먼 폴터가이스트 큐빅">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -544,7 +544,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3042" type="EtcItem" name="Spellbook: Life Scavenge">
+	<item id="3042" type="EtcItem" name="마법서 - 라이프 스케빈지">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -552,7 +552,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3043" type="EtcItem" name="Spellbook: Holy Strike">
+	<item id="3043" type="EtcItem" name="마법서 - 홀리 스트라이크">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -560,7 +560,7 @@
 		<set name="price" val="4250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3044" type="EtcItem" name="Spellbook: Horror">
+	<item id="3044" type="EtcItem" name="마법서 - 호러">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -568,7 +568,7 @@
 		<set name="price" val="4250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3045" type="EtcItem" name="Spellbook: Summon Life Cubic">
+	<item id="3045" type="EtcItem" name="마법서 - 서먼 라이프 큐빅">
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -576,7 +576,7 @@
 		<set name="price" val="3700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3046" type="EtcItem" name="Spellbook: Sacrifice">
+	<item id="3046" type="EtcItem" name="마법서 - 새크리파이스">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -584,7 +584,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3047" type="EtcItem" name="Spellbook: Iron Will">
+	<item id="3047" type="EtcItem" name="마법서 - 아이언 윌">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -592,7 +592,7 @@
 		<set name="price" val="3700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3048" type="EtcItem" name="Spellbook: Reflect Damage">
+	<item id="3048" type="EtcItem" name="마법서 - 리플렉트 대미지">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -600,7 +600,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3049" type="EtcItem" name="Spellbook: Corpse Plague">
+	<item id="3049" type="EtcItem" name="마법서 - 콥스 플레이그">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -608,7 +608,7 @@
 		<set name="price" val="4250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3050" type="EtcItem" name="Spellbook: Hex">
+	<item id="3050" type="EtcItem" name="마법서 - 헥스">
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -616,7 +616,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3051" type="EtcItem" name="Spellbook: Spirit Barrier">
+	<item id="3051" type="EtcItem" name="마법서 - 스피릿 배리어">
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -624,7 +624,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3052" type="EtcItem" name="Spellbook: Hamstring">
+	<item id="3052" type="EtcItem" name="마법서 - 햄스트링">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -632,7 +632,7 @@
 		<set name="price" val="3700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3053" type="EtcItem" name="Spellbook: Holy Blessing">
+	<item id="3053" type="EtcItem" name="마법서 - 홀리 블레싱">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -640,7 +640,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3054" type="EtcItem" name="Spellbook: Summon Viper Cubic">
+	<item id="3054" type="EtcItem" name="마법서 - 서먼 바이퍼 큐빅">
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -648,7 +648,7 @@
 		<set name="price" val="4800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3055" type="EtcItem" name="Spellbook: Lightning Strike">
+	<item id="3055" type="EtcItem" name="마법서 - 라이트닝 스트라이크">
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -656,7 +656,7 @@
 		<set name="price" val="6750" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3056" type="EtcItem" name="Spellbook: Summon Dark Panther">
+	<item id="3056" type="EtcItem" name="마법서 - 서먼 다크 팬서">
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -664,7 +664,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3057" type="EtcItem" name="Spellbook: Summon Reanimated Man">
+	<item id="3057" type="EtcItem" name="마법서 - 서먼 리애니메이티드 맨">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -672,7 +672,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3058" type="EtcItem" name="Spellbook: Summon Corrupted Man">
+	<item id="3058" type="EtcItem" name="마법서 - 서먼 커럽티드 맨">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -680,7 +680,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3059" type="EtcItem" name="Spellbook: Corpse Burst">
+	<item id="3059" type="EtcItem" name="마법서 - 콥스 버스트">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -688,7 +688,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3060" type="EtcItem" name="Spellbook: Forget">
+	<item id="3060" type="EtcItem" name="마법서 - 포겟">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -696,7 +696,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3061" type="EtcItem" name="Spellbook: Curse Discord">
+	<item id="3061" type="EtcItem" name="마법서 - 커스 디스코드">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -704,7 +704,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3062" type="EtcItem" name="Spellbook: Curse Fear">
+	<item id="3062" type="EtcItem" name="마법서 - 커스 피어">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -712,7 +712,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3063" type="EtcItem" name="Spellbook: Anchor">
+	<item id="3063" type="EtcItem" name="마법서 - 앵커">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -720,7 +720,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3064" type="EtcItem" name="Spellbook: Silence">
+	<item id="3064" type="EtcItem" name="마법서 - 사일런스">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -728,7 +728,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3065" type="EtcItem" name="Spellbook: Death Spike">
+	<item id="3065" type="EtcItem" name="마법서 - 데스 스파이크">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -736,7 +736,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3066" type="EtcItem" name="Spellbook: Curse Death Link">
+	<item id="3066" type="EtcItem" name="마법서 - 커스 데스 링크">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -744,7 +744,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3067" type="EtcItem" name="Spellbook: Vampiric Claw">
+	<item id="3067" type="EtcItem" name="마법서 - 뱀피릭 클로">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -752,7 +752,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3068" type="EtcItem" name="Spellbook: Vitalize">
+	<item id="3068" type="EtcItem" name="마법서 - 바이탈라이즈">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -760,7 +760,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3069" type="EtcItem" name="Spellbook: Repose">
+	<item id="3069" type="EtcItem" name="마법서 - 리포즈">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -768,7 +768,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3070" type="EtcItem" name="Spellbook: Hold Undead">
+	<item id="3070" type="EtcItem" name="마법서 - 홀드 언데드">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -776,7 +776,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3071" type="EtcItem" name="Spellbook: Requiem">
+	<item id="3071" type="EtcItem" name="마법서 - 레퀴엠">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -784,7 +784,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3072" type="EtcItem" name="Spellbook: Purify">
+	<item id="3072" type="EtcItem" name="마법서 - 퓨리파이">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -792,7 +792,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3073" type="EtcItem" name="Spellbook: Might of Heaven">
+	<item id="3073" type="EtcItem" name="마법서 - 마이트 오브 헤븐">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -800,7 +800,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3074" type="EtcItem" name="Spellbook: Surrender to Wind">
+	<item id="3074" type="EtcItem" name="마법서 - 서렌더 투 윈드">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -808,7 +808,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3075" type="EtcItem" name="Spellbook: Blazing Circle">
+	<item id="3075" type="EtcItem" name="마법서 - 블레이징 서클">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -816,7 +816,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3076" type="EtcItem" name="Spellbook: Prominence">
+	<item id="3076" type="EtcItem" name="마법서 - 프로미넌스">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -824,7 +824,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3077" type="EtcItem" name="Spellbook: Blazing Skin">
+	<item id="3077" type="EtcItem" name="마법서 - 블레이징 스킨">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -832,7 +832,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3078" type="EtcItem" name="Spellbook: Decay">
+	<item id="3078" type="EtcItem" name="마법서 - 디케이">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -840,7 +840,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3079" type="EtcItem" name="Spellbook: Cancel">
+	<item id="3079" type="EtcItem" name="마법서 - 캔슬">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -848,7 +848,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3080" type="EtcItem" name="Spellbook: Sleeping Cloud">
+	<item id="3080" type="EtcItem" name="마법서 - 슬리핑 클라우드">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -856,7 +856,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3081" type="EtcItem" name="Spellbook: Aura Flare">
+	<item id="3081" type="EtcItem" name="마법서 - 오라 플래어">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -864,7 +864,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3082" type="EtcItem" name="Spellbook: Surrender to Water">
+	<item id="3082" type="EtcItem" name="마법서 - 서렌더 투 워터">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -872,7 +872,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3083" type="EtcItem" name="Spellbook: Frost Wall">
+	<item id="3083" type="EtcItem" name="마법서 - 프로스트 월">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -880,7 +880,7 @@
 		<set name="price" val="5400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3084" type="EtcItem" name="Spellbook: Freezing Shackle">
+	<item id="3084" type="EtcItem" name="마법서 - 프리징 셰클">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -888,7 +888,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3085" type="EtcItem" name="Spellbook: Hydro Blast">
+	<item id="3085" type="EtcItem" name="마법서 - 하이드로 블래스트">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -896,7 +896,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3086" type="EtcItem" name="Spellbook: Frost Bolt">
+	<item id="3086" type="EtcItem" name="마법서 - 프로스트 볼트">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -904,7 +904,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3087" type="EtcItem" name="Spellbook: Ice Dagger">
+	<item id="3087" type="EtcItem" name="마법서 - 아이스 대거">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -912,7 +912,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3088" type="EtcItem" name="Spellbook: Freezing Skin">
+	<item id="3088" type="EtcItem" name="마법서 - 프리징 스킨">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -920,7 +920,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3089" type="EtcItem" name="Spellbook: Tempest">
+	<item id="3089" type="EtcItem" name="마법서 - 템페스트">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -928,7 +928,7 @@
 		<set name="price" val="4600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3090" type="EtcItem" name="Spellbook: Hurricane">
+	<item id="3090" type="EtcItem" name="마법서 - 허리케인">
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -936,7 +936,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3091" type="EtcItem" name="Spellbook: Servitor Magic Shield">
+	<item id="3091" type="EtcItem" name="마법서 - 서비터 매직 실드">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -944,7 +944,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3092" type="EtcItem" name="Spellbook: Servitor Physical Shield">
+	<item id="3092" type="EtcItem" name="마법서 - 서비터 피지컬 실드">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -952,7 +952,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3093" type="EtcItem" name="Spellbook: Servitor Haste">
+	<item id="3093" type="EtcItem" name="마법서 - 서비터 헤이스트">
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -960,7 +960,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3094" type="EtcItem" name="Spellbook: Invigor">
+	<item id="3094" type="EtcItem" name="마법서 - 인비거">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -968,7 +968,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3095" type="EtcItem" name="Spellbook: Magic Barrier">
+	<item id="3095" type="EtcItem" name="마법서 - 매직 배리어">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -976,7 +976,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3096" type="EtcItem" name="Spellbook: Blessed Body">
+	<item id="3096" type="EtcItem" name="마법서 - 블레스 더 바디">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -984,7 +984,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3097" type="EtcItem" name="Spellbook: Blessed Soul">
+	<item id="3097" type="EtcItem" name="마법서 - 블레스 더 소울">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -992,7 +992,7 @@
 		<set name="price" val="3850" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3098" type="EtcItem" name="Spellbook: Return">
+	<item id="3098" type="EtcItem" name="마법서 - 리콜">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1000,7 +1000,7 @@
 		<set name="price" val="3200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3099" type="EtcItem" name="Spellbook: Haste">
+	<item id="3099" type="EtcItem" name="마법서 - 헤이스트">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />

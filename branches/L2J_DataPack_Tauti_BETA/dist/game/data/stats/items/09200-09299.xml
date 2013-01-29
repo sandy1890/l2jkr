@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="9200" type="Armor" name="Shadow Item - Jester Hat - Firework">
+	<item id="9200" type="Armor" name="투영병기 - 광대 모자 폭죽">
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -15,7 +15,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9201" type="Armor" name="Shadow Item - Wizard Hat - Firework">
+	<item id="9201" type="Armor" name="투영병기 - 마법사 모자 폭죽">
 		<set name="icon" val="icon.accessory_magic_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -30,7 +30,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9202" type="Armor" name="Shadow Item - Dapper Cap - Firework">
+	<item id="9202" type="Armor" name="투영병기 - 맵시꾼의 모자 폭죽">
 		<set name="icon" val="icon.accessory_dandy_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -45,7 +45,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9203" type="Armor" name="Shadow Item - Romantic Chapeau - Firework">
+	<item id="9203" type="Armor" name="투영병기 - 로맨틱 샤프롱 폭죽">
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -60,7 +60,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9204" type="Armor" name="Shadow Item - Iron Circlet - Firework">
+	<item id="9204" type="Armor" name="투영병기 - 강철의 서클릿 폭죽">
 		<set name="icon" val="icon.accessory_iron_circlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -75,7 +75,7 @@
 		<set name="duration" val="360" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
-	<item id="9205" type="EtcItem" name="Alchemist's Chest Key">
+	<item id="9205" type="EtcItem" name="연금술사의 보물상자 열쇠">
 		<set name="icon" val="icon.etc_old_key_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="liquid" />
@@ -84,7 +84,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2322-1" />
 	</item>
-	<item id="9206" type="EtcItem" name="Greater Healing Potion (Event)">
+	<item id="9206" type="EtcItem" name="강력 체력 회복제 - 이벤트용">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -101,7 +101,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="9207" type="EtcItem" name="Quick Healing Potion (Event)">
+	<item id="9207" type="EtcItem" name="순간 체력 회복제 - 이벤트용">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -118,7 +118,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="9208" type="Armor" name="Phantom Mask (Event)">
+	<item id="9208" type="Armor" name="팬텀 마스크 - 이벤트용">
 		<set name="icon" val="icon.accessary_mask_of_chaotic_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -129,7 +129,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="9209" type="Weapon" name="Rapier">
+	<item id="9209" type="Weapon" name="레이피어">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -161,7 +161,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9210" type="Weapon" name="Talwar">
+	<item id="9210" type="Weapon" name="툴와르">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -192,7 +192,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9211" type="Weapon" name="Talwar">
+	<item id="9211" type="Weapon" name="툴와르">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -223,7 +223,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9212" type="Weapon" name="Field Gun">
+	<item id="9212" type="Weapon" name="헌팅건">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -255,7 +255,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9213" type="Weapon" name="Fleuret">
+	<item id="9213" type="Weapon" name="플뢰레">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -287,7 +287,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9214" type="Weapon" name="Fleuret">
+	<item id="9214" type="Weapon" name="플뢰레">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -319,7 +319,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9215" type="Weapon" name="Fleuret">
+	<item id="9215" type="Weapon" name="플뢰레">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -351,7 +351,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9216" type="Weapon" name="Military Talwar">
+	<item id="9216" type="Weapon" name="어설트 툴와르">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -381,7 +381,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9217" type="Weapon" name="Hand Crossbow">
+	<item id="9217" type="Weapon" name="핸드 보우건">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -413,7 +413,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9218" type="Weapon" name="Estoc">
+	<item id="9218" type="Weapon" name="에스터크">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -445,7 +445,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9219" type="Weapon" name="Estoc">
+	<item id="9219" type="Weapon" name="에스터크">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -477,7 +477,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9220" type="Weapon" name="Field Sword">
+	<item id="9220" type="Weapon" name="헌팅 소드">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -508,7 +508,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9221" type="Weapon" name="Crossbow">
+	<item id="9221" type="Weapon" name="크로스보우">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -540,7 +540,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9222" type="Weapon" name="Epee">
+	<item id="9222" type="Weapon" name="에페">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -572,7 +572,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9223" type="Weapon" name="Katzbalger">
+	<item id="9223" type="Weapon" name="카츠발게르">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -603,7 +603,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9224" type="Weapon" name="Arm Breaker">
+	<item id="9224" type="Weapon" name="암 버스터">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -635,7 +635,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9225" type="Weapon" name="Grand Epee">
+	<item id="9225" type="Weapon" name="그랑 에페">
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -667,7 +667,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9226" type="Weapon" name="General's Katzbalger">
+	<item id="9226" type="Weapon" name="제네랄 카츠발게르">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -698,7 +698,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9227" type="Weapon" name="Cranequin">
+	<item id="9227" type="Weapon" name="크레인 퀸">
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -730,7 +730,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9228" type="Weapon" name="Soldat Estoc">
+	<item id="9228" type="Weapon" name="솔다트 에스터크">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -762,7 +762,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9229" type="Weapon" name="Soldat Estoc - Critical Anger">
+	<item id="9229" type="Weapon" name="솔다트 에스터크 Crt.앵거">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -797,7 +797,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9230" type="Weapon" name="Soldat Estoc - Focus">
+	<item id="9230" type="Weapon" name="솔다트 에스터크 포커스">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -830,7 +830,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9231" type="Weapon" name="Soldat Estoc - Light">
+	<item id="9231" type="Weapon" name="솔다트 에스터크 라이트">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -863,7 +863,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9232" type="Weapon" name="Schlager">
+	<item id="9232" type="Weapon" name="슈레이거">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -894,7 +894,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9233" type="Weapon" name="Schlager - Critical Damage">
+	<item id="9233" type="Weapon" name="슈레이거 Crt.대미지">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -926,7 +926,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9234" type="Weapon" name="Schlager - Focus">
+	<item id="9234" type="Weapon" name="슈레이거 포커스">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -958,7 +958,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9235" type="Weapon" name="Schlager - Light">
+	<item id="9235" type="Weapon" name="슈레이거 라이트">
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -990,7 +990,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9236" type="Weapon" name="Arbalest">
+	<item id="9236" type="Weapon" name="알바레스트">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1022,7 +1022,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9237" type="Weapon" name="Arbalest - Guidance">
+	<item id="9237" type="Weapon" name="알바레스트 가이던스">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1055,7 +1055,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9238" type="Weapon" name="Arbalest - Evasion">
+	<item id="9238" type="Weapon" name="알바레스트 이베이젼">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1088,7 +1088,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9239" type="Weapon" name="Arbalest - Quick Recovery">
+	<item id="9239" type="Weapon" name="알바레스트 퀵리커버리">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1120,7 +1120,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9240" type="Weapon" name="Chevalier Rapier">
+	<item id="9240" type="Weapon" name="슈발리에 레이피어">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1152,7 +1152,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9241" type="Weapon" name="Chevalier Rapier - Guidance">
+	<item id="9241" type="Weapon" name="슈발리에 레이피어 가이던스">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1185,7 +1185,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9242" type="Weapon" name="Chevalier Rapier - Back Blow">
+	<item id="9242" type="Weapon" name="슈발리에 레이피어 백블로">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1218,7 +1218,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9243" type="Weapon" name="Chevalier Rapier - Rsk. Evasion">
+	<item id="9243" type="Weapon" name="슈발리에 레이피어 Rsk.이베이젼">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1251,7 +1251,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9244" type="Weapon" name="Chevalier Rapier">
+	<item id="9244" type="Weapon" name="슈발리에 레이피어">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1283,7 +1283,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9245" type="Weapon" name="Chevalier Rapier - Focus">
+	<item id="9245" type="Weapon" name="슈발리에 레이피어 포커스">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1316,7 +1316,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9246" type="Weapon" name="Chevalier Rapier - Critical Damage">
+	<item id="9246" type="Weapon" name="슈발리에 레이피어 Crt. 대미지">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1349,7 +1349,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9247" type="Weapon" name="Chevalier Rapier - Haste">
+	<item id="9247" type="Weapon" name="슈발리에 레이피어 헤이스트">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1382,7 +1382,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9248" type="Weapon" name="Chevalier Rapier">
+	<item id="9248" type="Weapon" name="슈발리에 레이피어">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1414,7 +1414,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9249" type="Weapon" name="Chevalier Rapier - Critical Damage">
+	<item id="9249" type="Weapon" name="슈발리에 레이피어 Crt. 대미지">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1447,7 +1447,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9250" type="Weapon" name="Chevalier Rapier - Critical Poison">
+	<item id="9250" type="Weapon" name="슈발리에 레이피어 Crt. 포이즌">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1481,7 +1481,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9251" type="Weapon" name="Chevalier Rapier - Haste">
+	<item id="9251" type="Weapon" name="슈발리에 레이피어 헤이스트">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1514,7 +1514,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9252" type="Weapon" name="Chevalier Rapier">
+	<item id="9252" type="Weapon" name="슈발리에 레이피어">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1546,7 +1546,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9253" type="Weapon" name="Chevalier Rapier - Focus">
+	<item id="9253" type="Weapon" name="슈발리에 레이피어 포커스">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1579,7 +1579,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9254" type="Weapon" name="Chevalier Rapier - Critical Drain">
+	<item id="9254" type="Weapon" name="슈발리에 레이피어 Crt. 드레인">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1613,7 +1613,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9255" type="Weapon" name="Chevalier Rapier - Critical Poison">
+	<item id="9255" type="Weapon" name="슈발리에 레이피어 Crt. 포이즌">
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1647,7 +1647,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9256" type="Weapon" name="Ballista">
+	<item id="9256" type="Weapon" name="발리스타">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1679,7 +1679,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9257" type="Weapon" name="Ballista - Guidance">
+	<item id="9257" type="Weapon" name="발리스타 가이던스">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1712,7 +1712,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9258" type="Weapon" name="Ballista - Miser">
+	<item id="9258" type="Weapon" name="발리스타 마이저">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1745,7 +1745,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9259" type="Weapon" name="Ballista - Quick Recovery">
+	<item id="9259" type="Weapon" name="발리스타 퀵리커버리">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1777,7 +1777,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9260" type="Weapon" name="Ballista">
+	<item id="9260" type="Weapon" name="발리스타">
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1809,7 +1809,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9261" type="Weapon" name="Ballista - Evasion">
+	<item id="9261" type="Weapon" name="발리스타 이베이젼">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1842,7 +1842,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9262" type="Weapon" name="Ballista - Miser">
+	<item id="9262" type="Weapon" name="발리스타 마이저">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1875,7 +1875,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9263" type="Weapon" name="Ballista - Cheap Shot">
+	<item id="9263" type="Weapon" name="발리스타 칩샷">
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -1908,7 +1908,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9264" type="Weapon" name="Blinzlasher">
+	<item id="9264" type="Weapon" name="블링크 슬래셔">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1940,7 +1940,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9265" type="Weapon" name="Blinzlasher - Guidance">
+	<item id="9265" type="Weapon" name="블링크 슬래셔 가이던스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -1973,7 +1973,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9266" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9266" type="Weapon" name="블링크 슬래셔 포커스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2006,7 +2006,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9267" type="Weapon" name="Blinzlasher - Critical Damage">
+	<item id="9267" type="Weapon" name="블링크 슬래셔 Crt.대미지">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2039,7 +2039,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9268" type="Weapon" name="Blinzlasher">
+	<item id="9268" type="Weapon" name="블링크 슬래셔">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2071,7 +2071,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9269" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9269" type="Weapon" name="블링크 슬래셔 포커스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2104,7 +2104,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9270" type="Weapon" name="Blinzlasher - Health">
+	<item id="9270" type="Weapon" name="블링크 슬래셔 헬스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2137,7 +2137,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9271" type="Weapon" name="Blinzlasher - Rsk. Haste">
+	<item id="9271" type="Weapon" name="블링크 슬래셔 Rsk.헤이스트">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2170,7 +2170,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9272" type="Weapon" name="Blinzlasher">
+	<item id="9272" type="Weapon" name="블링크 슬래셔">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2202,7 +2202,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9273" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9273" type="Weapon" name="블링크 슬래셔 포커스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2235,7 +2235,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9274" type="Weapon" name="Blinzlasher - Critical Damage">
+	<item id="9274" type="Weapon" name="블링크 슬래셔 Crt.대미지">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2268,7 +2268,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9275" type="Weapon" name="Blinzlasher - Haste">
+	<item id="9275" type="Weapon" name="블링크 슬래셔 헤이스트">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2301,7 +2301,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9276" type="Weapon" name="Blinzlasher">
+	<item id="9276" type="Weapon" name="블링크 슬래셔">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2333,7 +2333,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9277" type="Weapon" name="Blinzlasher - Health">
+	<item id="9277" type="Weapon" name="블링크 슬래셔 헬스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2366,7 +2366,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9278" type="Weapon" name="Blinzlasher - Focus">
+	<item id="9278" type="Weapon" name="블링크 슬래셔 포커스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2399,7 +2399,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9279" type="Weapon" name="Blinzlasher - Light">
+	<item id="9279" type="Weapon" name="블링크 슬래셔 라이트">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2432,7 +2432,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9280" type="Weapon" name="Blinzlasher">
+	<item id="9280" type="Weapon" name="블링크 슬래셔">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2464,7 +2464,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9281" type="Weapon" name="Blinzlasher - Guidance">
+	<item id="9281" type="Weapon" name="블링크 슬래셔 가이던스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2497,7 +2497,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9282" type="Weapon" name="Blinzlasher - Critical Drain">
+	<item id="9282" type="Weapon" name="블링크 슬래셔 Crt. 드레인">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2531,7 +2531,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9283" type="Weapon" name="Blinzlasher - Health">
+	<item id="9283" type="Weapon" name="블링크 슬래셔 헬스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2564,7 +2564,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9284" type="Weapon" name="Immortal Edge">
+	<item id="9284" type="Weapon" name="인빈시블 블레이드">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2595,7 +2595,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9285" type="Weapon" name="Immortal Edge - Focus">
+	<item id="9285" type="Weapon" name="인빈시블 블레이드 포커스">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2627,7 +2627,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9286" type="Weapon" name="Immortal Edge - Health">
+	<item id="9286" type="Weapon" name="인빈시블 블레이드 헬스">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2659,7 +2659,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9287" type="Weapon" name="Immortal Edge - Critical Drain">
+	<item id="9287" type="Weapon" name="인빈시블 블레이드 Crt.드레인">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2692,7 +2692,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9288" type="Weapon" name="Tathlum">
+	<item id="9288" type="Weapon" name="타스람">
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2724,7 +2724,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9289" type="Weapon" name="Tathlum - Guidance">
+	<item id="9289" type="Weapon" name="타스람 가이던스">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2757,7 +2757,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9290" type="Weapon" name="Tathlum - Evasion">
+	<item id="9290" type="Weapon" name="타스람 이베이젼">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2790,7 +2790,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9291" type="Weapon" name="Tathlum - Miser">
+	<item id="9291" type="Weapon" name="타스람 마이저">
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2823,7 +2823,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9292" type="Weapon" name="Admiral's Estoc">
+	<item id="9292" type="Weapon" name="아미랄 에스터크">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2855,7 +2855,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9293" type="Weapon" name="Admiral's Estoc - Focus">
+	<item id="9293" type="Weapon" name="아미랄 에스터크 포커스">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2888,7 +2888,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9294" type="Weapon" name="Admiral's Estoc - Critical Damage">
+	<item id="9294" type="Weapon" name="아미랄 에스터크 Crt.대미지">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2921,7 +2921,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9295" type="Weapon" name="Admiral's Estoc - Haste">
+	<item id="9295" type="Weapon" name="아미랄 에스터크 헤이스트">
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2954,7 +2954,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9296" type="Weapon" name="Saber Tooth">
+	<item id="9296" type="Weapon" name="세이버투스">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2985,7 +2985,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9297" type="Weapon" name="Saber Tooth - Focus">
+	<item id="9297" type="Weapon" name="세이버투스 포커스">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -3017,7 +3017,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9298" type="Weapon" name="Saber Tooth - Critical Damage">
+	<item id="9298" type="Weapon" name="세이버투스 Crt.대미지">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -3049,7 +3049,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="9299" type="Weapon" name="Saber Tooth - Haste">
+	<item id="9299" type="Weapon" name="세이버투스 헤이스트">
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="33507" name="酷酷魯騎乘卷軸" type="EtcItem">
+	<item id="33507" type="EtcItem" name="쿠쿠루 탑승 주문서">
 		<table name="#Desc">用於騎乘酷酷魯的卷軸。達到等級40以上後使用卷軸的話，就可騎乘酷酷魯。無法交易/丟棄/刪除，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.scroll_of_kukur_event"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -19,7 +19,7 @@
 		</cond>
 	</item>
 
-	<item id="33509" name="命運襯衫" type="Armor">
+	<item id="33509" type="Armor" name="운명의 티셔츠">
 		<table name="#Desc">為凱旋英雄所準備的命運襯衫。裝備時，將產生STR+1、INT+1的效果。無法交易/丟棄/刪除，但可以保管在個人倉庫。透過維他命管理者可與帳號內的其他角色共享。</table>
 		<set name="icon" val="icon.shirt_of_destination_event"/>
 		<set name="default_action" val="equip"/>
@@ -31,7 +31,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33510" name="命運腰帶" type="Armor">
+	<item id="33510" type="Armor" name="운명의 벨트">
 		<table name="#Desc">為凱旋英雄所準備的命運腰帶。裝備時，將產生放寬負重上限5000的效果。無法交易或丟棄，但可以保管在個人倉庫。透過維他命管理者可與帳號內的其他角色共享。</table>
 		<set name="icon" val="icon.belt_of_destination_event"/>
 		<set name="default_action" val="equip"/>

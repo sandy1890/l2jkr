@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="1500" type="EtcItem" name="Totem of Hestui">
+	<item id="1500" type="EtcItem" name="헤스투이 부족의 토템">
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -8,7 +8,7 @@
 		<set name="price" val="11000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1501" type="EtcItem" name="Maraku Werewolf Totem">
+	<item id="1501" type="EtcItem" name="마라쿠 늑대혈족의 토템">
 		<set name="icon" val="icon.etc_totem_green_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -16,7 +16,7 @@
 		<set name="price" val="1200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1502" type="EtcItem" name="Grandma's Pearl">
+	<item id="1502" type="EtcItem" name="할머니의 진주">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -24,7 +24,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1503" type="EtcItem" name="Grandma's Mirror">
+	<item id="1503" type="EtcItem" name="할머니의 거울">
 		<set name="icon" val="icon.etc_mirror_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -32,7 +32,7 @@
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1504" type="EtcItem" name="Grandma's Necklace">
+	<item id="1504" type="EtcItem" name="할머니의 목걸이">
 		<set name="icon" val="icon.accessary_aquastone_necklace_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -40,7 +40,7 @@
 		<set name="price" val="600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1505" type="EtcItem" name="Grandma's Hairpin">
+	<item id="1505" type="EtcItem" name="할머니의 머리핀">
 		<set name="icon" val="icon.etc_jewel_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -48,7 +48,7 @@
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1506" type="Armor" name="Necklace of Courage">
+	<item id="1506" type="Armor" name="용기의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_courage_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -60,7 +60,7 @@
 			<add order="0x10" stat="mDef" val="15" />
 		</for>
 	</item>
-	<item id="1507" type="Armor" name="Necklace of Valor">
+	<item id="1507" type="Armor" name="용맹의 목걸이">
 		<set name="icon" val="icon.accessary_necklace_of_valor_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -72,7 +72,7 @@
 			<add order="0x10" stat="mDef" val="21" />
 		</for>
 	</item>
-	<item id="1508" type="Armor" name="Ring of Raccoon">
+	<item id="1508" type="Armor" name="너구리의 반지">
 		<set name="icon" val="icon.accessary_ring_of_raccoon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -84,7 +84,7 @@
 			<add order="0x10" stat="mDef" val="11" />
 		</for>
 	</item>
-	<item id="1509" type="Armor" name="Ring of Firefly">
+	<item id="1509" type="Armor" name="반딧불의 반지">
 		<set name="icon" val="icon.accessary_ring_of_firefly_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -96,7 +96,7 @@
 			<add order="0x10" stat="mDef" val="11" />
 		</for>
 	</item>
-	<item id="1510" type="Weapon" name="Butcher's Sword">
+	<item id="1510" type="Weapon" name="도살자의 검">
 		<set name="icon" val="icon.weapon_orcish_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -117,7 +117,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="1511" type="Weapon" name="Silversmith Hammer">
+	<item id="1511" type="Weapon" name="실버스미스 해머">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -139,7 +139,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="1512" type="EtcItem" name="Spellbook: Confusion">
+	<item id="1512" type="EtcItem" name="마법서 - 컨퓨전">
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -147,7 +147,7 @@
 		<set name="price" val="1150" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1513" type="EtcItem" name="Spellbook: Charm">
+	<item id="1513" type="EtcItem" name="마법서 - 참">
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -155,7 +155,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1514" type="EtcItem" name="Spellbook: Resurrection">
+	<item id="1514" type="EtcItem" name="마법서 - 리저렉션">
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -163,7 +163,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1515" type="EtcItem" name="Spellbook: Kiss of Eva">
+	<item id="1515" type="EtcItem" name="마법서 - 키스 오브 에바">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -171,7 +171,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1516" type="EtcItem" name="Spellbook: Corpse Life Drain">
+	<item id="1516" type="EtcItem" name="마법서 - 콥스 라이프 드레인">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -179,7 +179,7 @@
 		<set name="price" val="1800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1517" type="EtcItem" name="Spellbook: Body To Mind">
+	<item id="1517" type="EtcItem" name="마법서 - 바디 투 마인드">
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -187,7 +187,7 @@
 		<set name="price" val="1250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1518" type="EtcItem" name="Amulet: Flame Chant">
+	<item id="1518" type="EtcItem" name="부적 - 챈트 오브 플레임">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -195,7 +195,7 @@
 		<set name="price" val="1800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1519" type="EtcItem" name="Amulet: Pa'agrio's Gift">
+	<item id="1519" type="EtcItem" name="부적 - 파워 오브 파아그리오">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -203,7 +203,7 @@
 		<set name="price" val="1800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1520" type="EtcItem" name="Amulet: Pa'agrio's Blessing">
+	<item id="1520" type="EtcItem" name="부적 - 블레싱 오브 파아그리오">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -211,7 +211,7 @@
 		<set name="price" val="2450" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1521" type="EtcItem" name="Amulet: Chant of Fire">
+	<item id="1521" type="EtcItem" name="부적 - 챈트 오브 파이어">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -219,7 +219,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1522" type="EtcItem" name="Amulet: Chant of Battle">
+	<item id="1522" type="EtcItem" name="부적 - 챈트 오브 배틀">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -227,7 +227,7 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1523" type="EtcItem" name="Amulet: Chant of Shielding">
+	<item id="1523" type="EtcItem" name="부적 - 챈트 오브 실딩">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -235,7 +235,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1524" type="EtcItem" name="Amulet: Soul Shield">
+	<item id="1524" type="EtcItem" name="부적 - 소울 실드">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -243,7 +243,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1525" type="EtcItem" name="Amulet: Life Drain">
+	<item id="1525" type="EtcItem" name="부적 - 라이프 드레인">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -251,7 +251,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1526" type="EtcItem" name="Amulet: Fear">
+	<item id="1526" type="EtcItem" name="부적 - 피어">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -259,7 +259,7 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1527" type="EtcItem" name="Amulet: Venom">
+	<item id="1527" type="EtcItem" name="부적 - 베넘">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -267,7 +267,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1528" type="EtcItem" name="Amulet: Seal of Chaos">
+	<item id="1528" type="EtcItem" name="부적 - 실 오브 카오스">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -275,7 +275,7 @@
 		<set name="price" val="1800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1529" type="EtcItem" name="Amulet: Dreaming Spirit">
+	<item id="1529" type="EtcItem" name="부적 - 드리밍 스피릿">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -283,7 +283,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1530" type="EtcItem" name="Amulet: Seal of Slow">
+	<item id="1530" type="EtcItem" name="부적 - 실 오브 슬로우">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -291,7 +291,7 @@
 		<set name="price" val="2450" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1531" type="EtcItem" name="Amulet: Chill Flame">
+	<item id="1531" type="EtcItem" name="부적 - 칠 플레임">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -299,7 +299,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1532" type="EtcItem" name="Amulet: Blaze Quake">
+	<item id="1532" type="EtcItem" name="부적 - 블레이즈 퀘이크">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -307,7 +307,7 @@
 		<set name="price" val="1250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1533" type="EtcItem" name="Amulet: Aura Sink">
+	<item id="1533" type="EtcItem" name="부적 - 오라 싱크">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -315,7 +315,7 @@
 		<set name="price" val="1250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1534" type="EtcItem" name="Amulet: Madness">
+	<item id="1534" type="EtcItem" name="부적 - 매드니스">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -323,7 +323,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1535" type="EtcItem" name="Amulet: Frost Flame">
+	<item id="1535" type="EtcItem" name="부적 - 프로스트 플레임">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -331,7 +331,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1536" type="EtcItem" name="Amulet: Seal of Binding">
+	<item id="1536" type="EtcItem" name="부적 - 실 오브 바인딩">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -339,7 +339,7 @@
 		<set name="price" val="1250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1537" type="EtcItem" name="Amulet: Seal of Poison">
+	<item id="1537" type="EtcItem" name="부적 - 실 오브 포이즌">
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -347,7 +347,7 @@
 		<set name="price" val="800" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1538" type="EtcItem" name="Blessed Scroll of Escape">
+	<item id="1538" type="EtcItem" name="축복받은 귀환 주문서">
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -359,7 +359,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2036-1" />
 	</item>
-	<item id="1539" type="EtcItem" name="Greater Healing Potion">
+	<item id="1539" type="EtcItem" name="강력 체력 회복제">
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -377,7 +377,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="1540" type="EtcItem" name="Quick Healing Potion">
+	<item id="1540" type="EtcItem" name="순간 체력 회복제">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -395,7 +395,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="1541" type="EtcItem" name="Honey Khandar">
+	<item id="1541" type="EtcItem" name="허니 칸다르">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -406,7 +406,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1542" type="EtcItem" name="Bear Fur Cloak">
+	<item id="1542" type="EtcItem" name="회색곰 가죽 망토">
 		<set name="icon" val="icon.etc_piece_of_cloth_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -417,7 +417,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1543" type="EtcItem" name="Bloody Axe">
+	<item id="1543" type="EtcItem" name="피로 물든 도끼">
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -428,7 +428,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1544" type="EtcItem" name="Ancestor Skull">
+	<item id="1544" type="EtcItem" name="선조의 두개골">
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -439,7 +439,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1545" type="EtcItem" name="Spider Dust">
+	<item id="1545" type="EtcItem" name="스파이더 더스트">
 		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -450,7 +450,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1546" type="EtcItem" name="Deep Sea Orb">
+	<item id="1546" type="EtcItem" name="심해의 구슬">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -461,7 +461,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1547" type="EtcItem" name="Bolter's List">
+	<item id="1547" type="EtcItem" name="볼터의 물품목록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -472,7 +472,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1548" type="EtcItem" name="Mining Boots">
+	<item id="1548" type="EtcItem" name="광부용 장화">
 		<set name="icon" val="icon.armor_apprentices_shoes_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -483,7 +483,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1549" type="EtcItem" name="Miner's Pick">
+	<item id="1549" type="EtcItem" name="광부용 곡괭이">
 		<set name="icon" val="icon.weapon_guard_spear_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -494,7 +494,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1550" type="EtcItem" name="Boomboom Powder">
+	<item id="1550" type="EtcItem" name="붐붐 화약">
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -505,7 +505,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1551" type="EtcItem" name="Redstone Beer">
+	<item id="1551" type="EtcItem" name="레드스톤 맥주">
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -516,7 +516,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1552" type="EtcItem" name="Bolter's Smelly Socks">
+	<item id="1552" type="EtcItem" name="볼터의 냄새 나는 양말">
 		<set name="icon" val="icon.armor_cotton_shoes_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -527,7 +527,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1553" type="EtcItem" name="Hatos's 1st Order">
+	<item id="1553" type="EtcItem" name="하토스의 명령서">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -538,7 +538,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1554" type="EtcItem" name="Hatos's 2nd Order">
+	<item id="1554" type="EtcItem" name="하토스의 명령서">
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -549,7 +549,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1555" type="EtcItem" name="Hatos's 3rd Order">
+	<item id="1555" type="EtcItem" name="하토스의 명령서">
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -560,7 +560,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1556" type="EtcItem" name="Letter to Dark Elf">
+	<item id="1556" type="EtcItem" name="다크엘프에게 보내는 밀서">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -571,7 +571,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1557" type="EtcItem" name="Letter to Human">
+	<item id="1557" type="EtcItem" name="인간에게 보내는 밀서">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -582,7 +582,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1558" type="EtcItem" name="Letter to Elf">
+	<item id="1558" type="EtcItem" name="엘프에게 보내는 밀서">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -593,7 +593,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1559" type="EtcItem" name="Gouph's Contract">
+	<item id="1559" type="EtcItem" name="고프의 계약서">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -604,7 +604,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1560" type="EtcItem" name="Reep's Contract">
+	<item id="1560" type="EtcItem" name="리프의 계약서">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -615,7 +615,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1561" type="EtcItem" name="Elven Wine">
+	<item id="1561" type="EtcItem" name="엘프 포도주">
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -626,7 +626,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1562" type="EtcItem" name="Brunon's Dice">
+	<item id="1562" type="EtcItem" name="브론프의 주사위">
 		<set name="icon" val="icon.etc_squares_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -637,7 +637,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1563" type="EtcItem" name="Brunon's Contract">
+	<item id="1563" type="EtcItem" name="브론프의 계약서">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -648,7 +648,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1564" type="EtcItem" name="Aquamarine">
+	<item id="1564" type="EtcItem" name="아쿠아마린">
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -659,7 +659,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1565" type="EtcItem" name="Chrysoberyl">
+	<item id="1565" type="EtcItem" name="크리소베릴">
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -670,7 +670,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1566" type="EtcItem" name="Gem Box">
+	<item id="1566" type="EtcItem" name="보석 상자">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -681,7 +681,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1567" type="EtcItem" name="Coal Piece">
+	<item id="1567" type="EtcItem" name="석탄 덩어리">
 		<set name="icon" val="icon.etc_plate_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -692,7 +692,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1568" type="EtcItem" name="Brunon's Letter">
+	<item id="1568" type="EtcItem" name="브론프의 편지">
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -703,7 +703,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1569" type="EtcItem" name="Berry Tart">
+	<item id="1569" type="EtcItem" name="딸기 과자">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -714,7 +714,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1570" type="EtcItem" name="Bat Diagram">
+	<item id="1570" type="EtcItem" name="박쥐 도감">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -725,7 +725,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1571" type="EtcItem" name="Star Diamond">
+	<item id="1571" type="EtcItem" name="스타 다이아몬드">
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1572" type="EtcItem" name="Starstone">
+	<item id="1572" type="EtcItem" name="스타스톤">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -747,7 +747,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1573" type="EtcItem" name="Starstone">
+	<item id="1573" type="EtcItem" name="스타스톤">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -758,7 +758,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1574" type="EtcItem" name="Mirien's Review">
+	<item id="1574" type="EtcItem" name="미리엔의 요리평가">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -769,7 +769,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1575" type="EtcItem" name="Mirien's Review">
+	<item id="1575" type="EtcItem" name="미리엔의 요리평가">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -780,7 +780,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1576" type="EtcItem" name="Mirien's Review">
+	<item id="1576" type="EtcItem" name="미리엔의 요리평가">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -791,7 +791,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1577" type="EtcItem" name="Mirien's Review">
+	<item id="1577" type="EtcItem" name="미리엔의 요리평가">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -802,7 +802,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1578" type="EtcItem" name="Green Blood">
+	<item id="1578" type="EtcItem" name="녹색피">
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -813,7 +813,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1579" type="EtcItem" name="Goblin Dwelling Map">
+	<item id="1579" type="EtcItem" name="고블린 서식지 지도">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -824,7 +824,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1580" type="EtcItem" name="Kuruka Ratman Tooth">
+	<item id="1580" type="EtcItem" name="쿠르카 랫맨 송곳니">
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -835,7 +835,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1581" type="EtcItem" name="Betrayer's Report">
+	<item id="1581" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -846,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1582" type="EtcItem" name="Betrayer's Report">
+	<item id="1582" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -857,7 +857,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1583" type="EtcItem" name="Betrayer's Report">
+	<item id="1583" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -868,7 +868,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1584" type="EtcItem" name="Betrayer's Report">
+	<item id="1584" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -879,7 +879,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1585" type="EtcItem" name="Betrayer's Report">
+	<item id="1585" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1586" type="EtcItem" name="Betrayer's Report">
+	<item id="1586" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -901,7 +901,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1587" type="EtcItem" name="Betrayer's Report">
+	<item id="1587" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -912,7 +912,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1588" type="EtcItem" name="Betrayer's Report">
+	<item id="1588" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -923,7 +923,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1589" type="EtcItem" name="Betrayer's Report">
+	<item id="1589" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -934,7 +934,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1590" type="EtcItem" name="Betrayer's Report">
+	<item id="1590" type="EtcItem" name="배신자의 기록">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -945,7 +945,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1591" type="EtcItem" name="Head of Betrayer">
+	<item id="1591" type="EtcItem" name="배신자의 목">
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -956,7 +956,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1592" type="EtcItem" name="Mark of Raider">
+	<item id="1592" type="EtcItem" name="레이더의 표식">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -967,7 +967,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1593" type="EtcItem" name="Pomegranate">
+	<item id="1593" type="EtcItem" name="석류 열매">
 		<set name="icon" val="icon.etc_fruit_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -978,7 +978,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1594" type="EtcItem" name="1st Leather Pouch">
+	<item id="1594" type="EtcItem" name="가죽 주머니">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -989,7 +989,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1595" type="EtcItem" name="2nd Leather Pouch">
+	<item id="1595" type="EtcItem" name="가죽 주머니">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1000,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1596" type="EtcItem" name="3rd Leather Pouch">
+	<item id="1596" type="EtcItem" name="가죽 주머니">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1011,7 +1011,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1597" type="EtcItem" name="1st Leather Pouch (Full)">
+	<item id="1597" type="EtcItem" name="가득찬 가죽 주머니">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1022,7 +1022,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1598" type="EtcItem" name="2nd Leather Pouch (Full)">
+	<item id="1598" type="EtcItem" name="가득찬 가죽 주머니">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1033,7 +1033,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1599" type="EtcItem" name="3rd Leather Pouch (Full)">
+	<item id="1599" type="EtcItem" name="가득찬 가죽 주머니">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="9500" type="EtcItem" name="Recipe: Sealed Dynasty Helmet (100%)">
+	<item id="9500" type="EtcItem" name="레시피 : 봉인된 다이너스티 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -11,7 +11,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9501" type="EtcItem" name="Recipe: Sealed Dynasty Gauntlet (100%)">
+	<item id="9501" type="EtcItem" name="레시피 : 봉인된 다이너스티 건틀렛(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -22,7 +22,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9502" type="EtcItem" name="Recipe: Sealed Dynasty Boots (100%)">
+	<item id="9502" type="EtcItem" name="레시피 : 봉인된 다이너스티 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -33,7 +33,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9503" type="EtcItem" name="Recipe: Sealed Dynasty Leather Armor (100%)">
+	<item id="9503" type="EtcItem" name="레시피 : 봉인된 다이너스티 레더 메일(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -44,7 +44,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9504" type="EtcItem" name="Recipe: Sealed Dynasty Leather Leggings (100%)">
+	<item id="9504" type="EtcItem" name="레시피 : 봉인된 다이너스티 레더 레깅(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -55,7 +55,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9505" type="EtcItem" name="Recipe: Sealed Dynasty Leather Helmet (100%)">
+	<item id="9505" type="EtcItem" name="레시피 : 봉인된 다이너스티 레더 헬멧(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -66,7 +66,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9506" type="EtcItem" name="Recipe: Sealed Dynasty Leather Gloves (100%)">
+	<item id="9506" type="EtcItem" name="레시피 : 봉인된 다이너스티 레더 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -77,7 +77,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9507" type="EtcItem" name="Recipe: Sealed Dynasty Leather Boots (100%)">
+	<item id="9507" type="EtcItem" name="레시피 : 봉인된 다이너스티 레더 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -88,7 +88,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9508" type="EtcItem" name="Recipe: Sealed Dynasty Tunic (100%)">
+	<item id="9508" type="EtcItem" name="레시피 : 봉인된 다이너스티 튜닉(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -99,7 +99,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9509" type="EtcItem" name="Recipe: Sealed Dynasty Stockings (100%)">
+	<item id="9509" type="EtcItem" name="레시피 : 봉인된 다이너스티 호즈(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -110,7 +110,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9510" type="EtcItem" name="Recipe: Sealed Dynasty Circlet (100%)">
+	<item id="9510" type="EtcItem" name="레시피 : 봉인된 다이너스티 써클릿(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -121,7 +121,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9511" type="EtcItem" name="Recipe: Sealed Dynasty Gloves (100%)">
+	<item id="9511" type="EtcItem" name="레시피 : 봉인된 다이너스티 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -132,7 +132,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9512" type="EtcItem" name="Recipe: Sealed Dynasty Shoes (100%)">
+	<item id="9512" type="EtcItem" name="레시피 : 봉인된 다이너스티 슈즈(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -143,7 +143,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9513" type="EtcItem" name="Recipe: Sealed Dynasty Shield (100%)">
+	<item id="9513" type="EtcItem" name="레시피 : 봉인된 다이너스티 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -154,7 +154,7 @@
 		<set name="recipe_id" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9514" type="Armor" name="Sealed Dynasty Breast Plate">
+	<item id="9514" type="Armor" name="봉인된 다이너스티 블레스트 플레이트">
 		<set name="icon" val="icon.armor_t91_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -175,7 +175,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9515" type="Armor" name="Sealed Dynasty Gaiter">
+	<item id="9515" type="Armor" name="봉인된 다이너스티 가이터">
 		<set name="icon" val="icon.armor_t91_l_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -196,7 +196,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9516" type="Armor" name="Sealed Dynasty Helmet">
+	<item id="9516" type="Armor" name="봉인된 다이너스티 헬멧">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -216,7 +216,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9517" type="Armor" name="Sealed Dynasty Gauntlets">
+	<item id="9517" type="Armor" name="봉인된 다이너스티 건틀렛">
 		<set name="icon" val="icon.armor_t91_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -236,7 +236,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9518" type="Armor" name="Sealed Dynasty Boots">
+	<item id="9518" type="Armor" name="봉인된 다이너스티 부츠">
 		<set name="icon" val="icon.armor_t91_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -256,7 +256,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9519" type="Armor" name="Sealed Dynasty Leather Armor">
+	<item id="9519" type="Armor" name="봉인된 다이너스티 레더 메일">
 		<set name="icon" val="icon.armor_t92_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -274,7 +274,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9520" type="Armor" name="Sealed Dynasty Leather Leggings">
+	<item id="9520" type="Armor" name="봉인된 다이너스티 레더 레깅">
 		<set name="icon" val="icon.armor_t92_l_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -292,7 +292,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9521" type="Armor" name="Sealed Dynasty Leather Helmet">
+	<item id="9521" type="Armor" name="봉인된 다이너스티 레더 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -309,7 +309,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9522" type="Armor" name="Sealed Dynasty Leather Gloves">
+	<item id="9522" type="Armor" name="봉인된 다이너스티 레더 글로브">
 		<set name="icon" val="icon.armor_t92_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -326,7 +326,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9523" type="Armor" name="Sealed Dynasty Leather Boots">
+	<item id="9523" type="Armor" name="봉인된 다이너스티 레더 부츠">
 		<set name="icon" val="icon.armor_t92_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -343,7 +343,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9524" type="Armor" name="Sealed Dynasty Tunic">
+	<item id="9524" type="Armor" name="봉인된 다이너스티 튜닉">
 		<set name="icon" val="icon.armor_t93_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -365,7 +365,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9525" type="Armor" name="Sealed Dynasty Stockings">
+	<item id="9525" type="Armor" name="봉인된 다이너스티 호즈">
 		<set name="icon" val="icon.armor_t93_l_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -387,7 +387,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9526" type="Armor" name="Sealed Dynasty Circlet">
+	<item id="9526" type="Armor" name="봉인된 다이너스티 써클릿">
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -407,7 +407,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9527" type="Armor" name="Sealed Dynasty Gloves">
+	<item id="9527" type="Armor" name="봉인된 다이너스티 글로브">
 		<set name="icon" val="icon.armor_t93_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -427,7 +427,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9528" type="Armor" name="Sealed Dynasty Shoes">
+	<item id="9528" type="Armor" name="봉인된 다이너스티 슈즈">
 		<set name="icon" val="icon.armor_t93_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -447,7 +447,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9529" type="Armor" name="Sealed Dynasty Shield">
+	<item id="9529" type="Armor" name="봉인된 다이너스티 쉴드">
 		<set name="icon" val="icon.shield_dynasty_shield_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -468,7 +468,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="9530" type="EtcItem" name="Sealed Dynasty Breast Plate Piece">
+	<item id="9530" type="EtcItem" name="봉인된 다이너스티 블레스트 플레이트 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -477,7 +477,7 @@
 		<set name="price" val="91551" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9531" type="EtcItem" name="Sealed Dynasty Gaiters Piece">
+	<item id="9531" type="EtcItem" name="봉인된 다이너스티 가이터 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -486,7 +486,7 @@
 		<set name="price" val="30951" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9532" type="EtcItem" name="Sealed Dynasty Helmet Piece">
+	<item id="9532" type="EtcItem" name="봉인된 다이너스티 헬멧 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -495,7 +495,7 @@
 		<set name="price" val="37081" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9533" type="EtcItem" name="Sealed Dynasty Gauntlet Piece">
+	<item id="9533" type="EtcItem" name="봉인된 다이너스티 건틀렛 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -504,7 +504,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9534" type="EtcItem" name="Sealed Dynasty Boot Piece">
+	<item id="9534" type="EtcItem" name="봉인된 다이너스티 부츠 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -513,7 +513,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9535" type="EtcItem" name="Sealed Dynasty Leather Armor Piece">
+	<item id="9535" type="EtcItem" name="봉인된 다이너스티 레더 메일 조각">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -522,7 +522,7 @@
 		<set name="price" val="74529" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9536" type="EtcItem" name="Sealed Dynasty Leather Leggings Piece">
+	<item id="9536" type="EtcItem" name="봉인된 다이너스티 레더 레깅 조각">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -531,7 +531,7 @@
 		<set name="price" val="50702" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9537" type="EtcItem" name="Sealed Dynasty Leather Helmet Piece">
+	<item id="9537" type="EtcItem" name="봉인된 다이너스티 레더 헬멧 조각">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -540,7 +540,7 @@
 		<set name="price" val="37081" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9538" type="EtcItem" name="Sealed Dynasty Leather Glove Piece">
+	<item id="9538" type="EtcItem" name="봉인된 다이너스티 레더 글로브 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -549,7 +549,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9539" type="EtcItem" name="Sealed Dynasty Leather Boots Piece">
+	<item id="9539" type="EtcItem" name="봉인된 다이너스티 레더 부츠 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -558,7 +558,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9540" type="EtcItem" name="Sealed Dynasty Tunic Piece">
+	<item id="9540" type="EtcItem" name="봉인된 다이너스티 튜닉 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -567,7 +567,7 @@
 		<set name="price" val="74529" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9541" type="EtcItem" name="Sealed Dynasty Stocking Piece">
+	<item id="9541" type="EtcItem" name="봉인된 다이너스티 호즈 조각">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -576,7 +576,7 @@
 		<set name="price" val="50702" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9542" type="EtcItem" name="Sealed Dynasty Circlet Piece">
+	<item id="9542" type="EtcItem" name="봉인된 다이너스티 써클릿 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -585,7 +585,7 @@
 		<set name="price" val="37081" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9543" type="EtcItem" name="Sealed Dynasty Glove Piece">
+	<item id="9543" type="EtcItem" name="봉인된 다이너스티 글로브 조각">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -594,7 +594,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9544" type="EtcItem" name="Sealed Dynasty Shoes Piece">
+	<item id="9544" type="EtcItem" name="봉인된 다이너스티 슈즈 조각">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -603,7 +603,7 @@
 		<set name="price" val="27870" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9545" type="EtcItem" name="Sealed Dynasty Shield Piece">
+	<item id="9545" type="EtcItem" name="봉인된 다이너스티 쉴드 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -612,7 +612,7 @@
 		<set name="price" val="31109" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9546" type="EtcItem" name="Fire Stone">
+	<item id="9546" type="EtcItem" name="불의 원석">
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -624,7 +624,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-1" />
 	</item>
-	<item id="9547" type="EtcItem" name="Water Stone">
+	<item id="9547" type="EtcItem" name="물의 원석">
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -636,7 +636,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-1" />
 	</item>
-	<item id="9548" type="EtcItem" name="Earth Stone">
+	<item id="9548" type="EtcItem" name="땅의 원석">
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -648,7 +648,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-1" />
 	</item>
-	<item id="9549" type="EtcItem" name="Wind Stone">
+	<item id="9549" type="EtcItem" name="바람의 원석">
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -660,7 +660,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-1" />
 	</item>
-	<item id="9550" type="EtcItem" name="Dark Stone">
+	<item id="9550" type="EtcItem" name="암흑의 원석">
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -672,7 +672,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-1" />
 	</item>
-	<item id="9551" type="EtcItem" name="Holy Stone">
+	<item id="9551" type="EtcItem" name="신성의 원석">
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -684,7 +684,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-1" />
 	</item>
-	<item id="9552" type="EtcItem" name="Fire Crystal">
+	<item id="9552" type="EtcItem" name="불의 수정">
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -696,7 +696,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-2" />
 	</item>
-	<item id="9553" type="EtcItem" name="Water Crystal">
+	<item id="9553" type="EtcItem" name="물의 수정">
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -708,7 +708,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-2" />
 	</item>
-	<item id="9554" type="EtcItem" name="Earth Crystal">
+	<item id="9554" type="EtcItem" name="땅의 수정">
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -720,7 +720,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-2" />
 	</item>
-	<item id="9555" type="EtcItem" name="Wind Crystal">
+	<item id="9555" type="EtcItem" name="바람의 수정">
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -732,7 +732,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-2" />
 	</item>
-	<item id="9556" type="EtcItem" name="Dark Crystal">
+	<item id="9556" type="EtcItem" name="암흑의 수정">
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -744,7 +744,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-2" />
 	</item>
-	<item id="9557" type="EtcItem" name="Holy Crystal">
+	<item id="9557" type="EtcItem" name="신성의 수정">
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -756,7 +756,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-2" />
 	</item>
-	<item id="9558" type="EtcItem" name="Fire Jewel">
+	<item id="9558" type="EtcItem" name="불의 보석">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -767,7 +767,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-3" />
 	</item>
-	<item id="9559" type="EtcItem" name="Water Jewel">
+	<item id="9559" type="EtcItem" name="물의 보석">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -778,7 +778,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-3" />
 	</item>
-	<item id="9560" type="EtcItem" name="Earth Jewel">
+	<item id="9560" type="EtcItem" name="땅의 보석">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -789,7 +789,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-3" />
 	</item>
-	<item id="9561" type="EtcItem" name="Wind Jewel">
+	<item id="9561" type="EtcItem" name="바람의 보석">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -800,7 +800,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-3" />
 	</item>
-	<item id="9562" type="EtcItem" name="Dark Jewel">
+	<item id="9562" type="EtcItem" name="암흑의 보석">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -811,7 +811,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-3" />
 	</item>
-	<item id="9563" type="EtcItem" name="Holy Jewel">
+	<item id="9563" type="EtcItem" name="신성의 보석">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -822,7 +822,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-3" />
 	</item>
-	<item id="9564" type="EtcItem" name="Fire Energy">
+	<item id="9564" type="EtcItem" name="불의 기운">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -833,7 +833,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-4" />
 	</item>
-	<item id="9565" type="EtcItem" name="Water Energy">
+	<item id="9565" type="EtcItem" name="물의 기운">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -844,7 +844,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-4" />
 	</item>
-	<item id="9566" type="EtcItem" name="Earth Energy">
+	<item id="9566" type="EtcItem" name="땅의 기운">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -855,7 +855,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-4" />
 	</item>
-	<item id="9567" type="EtcItem" name="Wind Energy">
+	<item id="9567" type="EtcItem" name="바람의 기운">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -866,7 +866,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-4" />
 	</item>
-	<item id="9568" type="EtcItem" name="Dark Energy">
+	<item id="9568" type="EtcItem" name="암흑의 기운">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -877,7 +877,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-4" />
 	</item>
-	<item id="9569" type="EtcItem" name="Holy Energy">
+	<item id="9569" type="EtcItem" name="신성의 기운">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_attr" />
@@ -888,7 +888,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-4" />
 	</item>
-	<item id="9570" type="EtcItem" name="Red Soul Crystal - Stage 14">
+	<item id="9570" type="EtcItem" name="붉은 집혼석 - 단계 14">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -898,7 +898,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="9571" type="EtcItem" name="Blue Soul Crystal - Stage 14">
+	<item id="9571" type="EtcItem" name="푸른 집혼석 - 단계 14">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -908,7 +908,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="9572" type="EtcItem" name="Green Soul Crystal - Stage 14">
+	<item id="9572" type="EtcItem" name="초록 집혼석 - 단계 14">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -918,7 +918,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="9573" type="EtcItem" name="Life Stone - Level 80">
+	<item id="9573" type="EtcItem" name="생명의 돌 - 80 레벨">
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -929,7 +929,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9574" type="EtcItem" name="Mid-Grade Life Stone - Level 80">
+	<item id="9574" type="EtcItem" name="중급 생명의 돌 - 80 레벨">
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -940,7 +940,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9575" type="EtcItem" name="High-Grade Life Stone - Level 80">
+	<item id="9575" type="EtcItem" name="상급 생명의 돌 - 80 레벨">
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -951,7 +951,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9576" type="EtcItem" name="Top-Grade Life Stone - Level 80">
+	<item id="9576" type="EtcItem" name="최상급 생명의 돌 - 80 레벨">
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -962,7 +962,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="9577" type="Armor" name="Cotton Shirt">
+	<item id="9577" type="Armor" name="면 셔츠">
 		<set name="icon" val="icon.etc_shirts_none_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -975,7 +975,7 @@
 			<add order="0x10" stat="pDef" val="6" />
 		</for>
 	</item>
-	<item id="9578" type="Armor" name="Linen Shirt">
+	<item id="9578" type="Armor" name="무명 셔츠">
 		<set name="icon" val="icon.etc_shirts_d_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -991,7 +991,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9579" type="Armor" name="Silk Shirt">
+	<item id="9579" type="Armor" name="비단 셔츠">
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1007,7 +1007,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9580" type="Armor" name="Thin Leather Shirt">
+	<item id="9580" type="Armor" name="얇은 가죽 셔츠">
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1023,7 +1023,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9581" type="Armor" name="Scale Shirt">
+	<item id="9581" type="Armor" name="미늘 셔츠">
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1039,7 +1039,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9582" type="Armor" name="Mithril Shirt">
+	<item id="9582" type="Armor" name="미스릴 셔츠">
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1055,7 +1055,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9583" type="Armor" name="Striped Cotton Shirt">
+	<item id="9583" type="Armor" name="줄무늬 면 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_none_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1068,7 +1068,7 @@
 			<add order="0x10" stat="pDef" val="8" />
 		</for>
 	</item>
-	<item id="9584" type="Armor" name="Stripe Linen Shirt">
+	<item id="9584" type="Armor" name="줄무늬 무명 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_d_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1084,7 +1084,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9585" type="Armor" name="Striped Silk Shirt">
+	<item id="9585" type="Armor" name="줄무늬 비단 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_c_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1100,7 +1100,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9586" type="Armor" name="Thin Striped Leather Shirt">
+	<item id="9586" type="Armor" name="얇은 줄무늬 가죽 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_b_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1116,7 +1116,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9587" type="Armor" name="Striped Scale Shirt">
+	<item id="9587" type="Armor" name="줄무늬 미늘 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1132,7 +1132,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9588" type="Armor" name="Striped Mithril Shirt">
+	<item id="9588" type="Armor" name="줄무늬 미스릴 셔츠">
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1148,7 +1148,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="9589" type="Armor" name="Iron Bracelet">
+	<item id="9589" type="Armor" name="쇠 팔찌">
 		<set name="icon" val="icon.etc_rbracelet_c_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rbracelet" />
@@ -1160,7 +1160,7 @@
 		<set name="price" val="216000" />
 		<set name="item_skill" val="3322-1" />
 	</item>
-	<item id="9590" type="Armor" name="Bronze Bracelet">
+	<item id="9590" type="Armor" name="청동 팔찌">
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rbracelet" />
@@ -1172,7 +1172,7 @@
 		<set name="price" val="480000" />
 		<set name="item_skill" val="3323-1" />
 	</item>
-	<item id="9591" type="Armor" name="Steel Bracelet">
+	<item id="9591" type="Armor" name="강철 팔찌">
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rbracelet" />
@@ -1184,7 +1184,7 @@
 		<set name="price" val="1144000" />
 		<set name="item_skill" val="3324-1" />
 	</item>
-	<item id="9592" type="Armor" name="Mithril Bracelet">
+	<item id="9592" type="Armor" name="미스릴 팔찌">
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rbracelet" />
@@ -1196,7 +1196,7 @@
 		<set name="price" val="3556000" />
 		<set name="item_skill" val="3325-1" />
 	</item>
-	<item id="9593" type="EtcItem" name="Yellow Seed of Evil - Shard">
+	<item id="9593" type="EtcItem" name="노란 악의 씨앗 파편">
 		<set name="icon" val="icon.etc_seed_of_evil_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1205,7 +1205,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9594" type="EtcItem" name="Green Seed of Evil - Shard">
+	<item id="9594" type="EtcItem" name="초록 악의 씨앗 파편">
 		<set name="icon" val="icon.etc_seed_of_evil_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1214,7 +1214,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9595" type="EtcItem" name="Blue Seed of Evil - Shard">
+	<item id="9595" type="EtcItem" name="푸른 악의 씨앗 파편">
 		<set name="icon" val="icon.etc_seed_of_evil_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1223,7 +1223,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9596" type="EtcItem" name="Red Seed of Evil - Shard">
+	<item id="9596" type="EtcItem" name="붉은 악의 씨앗 파편">
 		<set name="icon" val="icon.etc_seed_of_evil_i03" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1232,7 +1232,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9597" type="EtcItem" name="White Seed of Evil - Shard">
+	<item id="9597" type="EtcItem" name="하얀 악의 씨앗 파편">
 		<set name="icon" val="icon.etc_seed_of_evil_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1241,7 +1241,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9598" type="EtcItem" name="Black Seed of Evil - Shard">
+	<item id="9598" type="EtcItem" name="검은 악의 씨앗 파편">
 		<set name="icon" val="icon.etc_seed_of_evil_i05" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="liquid" />
@@ -1250,7 +1250,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="9599" type="EtcItem" name="Ancient Tome of the Demon">
+	<item id="9599" type="EtcItem" name="악마의 고서">
 		<set name="icon" val="icon.etc_old_evil_book_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />

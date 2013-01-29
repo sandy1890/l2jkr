@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14900" type="EtcItem" name="Rune Supply Box - Magic Ornament - Grade S, A">
+	<item id="14900" type="EtcItem" name="루운 보급 상자 - 마법 장식 S, A그레이드">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -13,7 +13,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2991-1" />
 	</item>
-	<item id="14901" type="EtcItem" name="Schuttgart Supply Box - Magic Ornament - Grade S, A">
+	<item id="14901" type="EtcItem" name="슈트가르트 보급 상자 - 마법 장식 S, A그레이드">
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -26,127 +26,127 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2992-1" />
 	</item>
-	<item id="14902" type="EtcItem" name="Sealed Magic Rune Clip (A-Grade)">
+	<item id="14902" type="EtcItem" name="봉인된 마법 룬 클립 - A그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14903" type="EtcItem" name="Sealed Magic Rune Clip (S-Grade)">
+	<item id="14903" type="EtcItem" name="봉인된 마법 룬 클립 - S그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14904" type="EtcItem" name="Sealed Magic Ornament (A-Grade)">
+	<item id="14904" type="EtcItem" name="봉인된 마법 장식 - A그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14905" type="EtcItem" name="Sealed Magic Ornament (S-Grade)">
+	<item id="14905" type="EtcItem" name="봉인된 마법 장식 - S그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14906" type="EtcItem" name="Low-level Magic Rune Clip (A-Grade)">
+	<item id="14906" type="EtcItem" name="하급 마법 룬 클립- A그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14907" type="EtcItem" name="Mid-level Magic Rune Clip (A-Grade)">
+	<item id="14907" type="EtcItem" name="중급 마법 룬 클립 - A그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14908" type="EtcItem" name="High-level Magic Rune Clip (A-Grade)">
+	<item id="14908" type="EtcItem" name="상급 마법 룬 클립 - A그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14909" type="EtcItem" name="Top-level Magic Rune Clip (A-Grade)">
+	<item id="14909" type="EtcItem" name="최상급 마법 룬 클립 - A그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14910" type="EtcItem" name="Low-level Magic Rune Clip (S-Grade)">
+	<item id="14910" type="EtcItem" name="하급 마법 룬 클립- S그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14911" type="EtcItem" name="Mid-level Magic Rune Clip (S-Grade)">
+	<item id="14911" type="EtcItem" name="중급 마법 룬 클립 - S그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14912" type="EtcItem" name="High-level Magic Rune Clip (S-Grade)">
+	<item id="14912" type="EtcItem" name="상급 마법 룬 클립 - S그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14913" type="EtcItem" name="Top-level Magic Rune Clip (S-Grade)">
+	<item id="14913" type="EtcItem" name="최상급 마법 룬 클립 - S그레이드">
 		<set name="icon" val="icon.etc_rune_clip_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14914" type="EtcItem" name="Low-grade Magic Ornament (A-Grade)">
+	<item id="14914" type="EtcItem" name="하급 마법 장식- A그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14915" type="EtcItem" name="Mid-grade Magic Ornament (A-Grade)">
+	<item id="14915" type="EtcItem" name="중급 마법 장식 - A그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14916" type="EtcItem" name="High-grade Magic Ornament (A-Grade)">
+	<item id="14916" type="EtcItem" name="상급 마법 장식 - A그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14917" type="EtcItem" name="Top-grade Magic Ornament (A-Grade)">
+	<item id="14917" type="EtcItem" name="최상급 마법 장식 - A그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14918" type="EtcItem" name="Low-grade Magic Ornament (S-Grade)">
+	<item id="14918" type="EtcItem" name="하급 마법 장식- S그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14919" type="EtcItem" name="Mid-grade Magic Ornament (S-Grade)">
+	<item id="14919" type="EtcItem" name="중급 마법 장식 - S그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14920" type="EtcItem" name="High-grade Magic Ornament (S-Grade)">
+	<item id="14920" type="EtcItem" name="상급 마법 장식 - S그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14921" type="EtcItem" name="Top-grade Magic Ornament (S-Grade)">
+	<item id="14921" type="EtcItem" name="최상급 마법 장식 - S그레이드">
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="14922" type="Armor" name="Low-grade Magic Rune Clip Iron Belt - HP Recovery">
+	<item id="14922" type="Armor" name="하급 마법 룬 클립 강철 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -164,7 +164,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14923" type="Armor" name="Ordinary Magic Rune Clip Iron Belt - HP Recovery">
+	<item id="14923" type="Armor" name="일반 마법 룬 클립 강철 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -182,7 +182,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14924" type="Armor" name="High-grade Magic Rune Clip Iron Belt - HP Recovery">
+	<item id="14924" type="Armor" name="상급 마법 룬 클립 강철 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -200,7 +200,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14925" type="Armor" name="Top-grade Magic Rune Clip Iron Belt - HP Recovery">
+	<item id="14925" type="Armor" name="최상급 마법 룬 클립 강철 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -218,7 +218,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14926" type="Armor" name="Low-grade Magic Rune Clip Mithril Belt - HP Recovery">
+	<item id="14926" type="Armor" name="하급 마법 룬 클립 미스릴 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -236,7 +236,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14927" type="Armor" name="Ordinary Magic Rune Clip Mithril Belt - HP Recovery">
+	<item id="14927" type="Armor" name="일반 마법 룬 클립 미스릴 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -254,7 +254,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14928" type="Armor" name="High-grade Magic Rune Clip Mithril Belt - HP Recovery">
+	<item id="14928" type="Armor" name="상급 마법 룬 클립 미스릴 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -272,7 +272,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14929" type="Armor" name="Top-grade Magic Rune Clip Mithril Belt - HP Recovery">
+	<item id="14929" type="Armor" name="최상급 마법 룬 클립 미스릴 벨트 HP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -290,7 +290,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14930" type="Armor" name="Low-grade Magic Rune Clip Iron Belt - MP Recovery">
+	<item id="14930" type="Armor" name="하급 마법 룬 클립 강철 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -308,7 +308,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14931" type="Armor" name="Ordinary Magic Rune Clip Iron Belt - MP Recovery">
+	<item id="14931" type="Armor" name="일반 마법 룬 클립 강철 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -326,7 +326,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14932" type="Armor" name="High-grade Magic Rune Clip Iron Belt - MP Recovery">
+	<item id="14932" type="Armor" name="상급 마법 룬 클립 강철 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -344,7 +344,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14933" type="Armor" name="Top-grade Magic Rune Clip Iron Belt - MP Recovery">
+	<item id="14933" type="Armor" name="최상급 마법 룬 클립 강철 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -362,7 +362,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14934" type="Armor" name="Low-grade Magic Rune Clip Mithril Belt - MP Recovery">
+	<item id="14934" type="Armor" name="하급 마법 룬 클립 미스릴 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -380,7 +380,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14935" type="Armor" name="Ordinary Magic Rune Clip Mithril Belt - MP Recovery">
+	<item id="14935" type="Armor" name="일반 마법 룬 클립 미스릴 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -398,7 +398,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14936" type="Armor" name="High-grade Magic Rune Clip Mithril Belt - MP Recovery">
+	<item id="14936" type="Armor" name="상급 마법 룬 클립 미스릴 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -416,7 +416,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14937" type="Armor" name="Top-grade Magic Rune Clip Mithril Belt - MP Recovery">
+	<item id="14937" type="Armor" name="최상급 마법 룬 클립 미스릴 벨트 MP 회복">
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -434,7 +434,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14938" type="Armor" name="Low-grade Magic Ornament Iron Belt - PvP Physical Attack">
+	<item id="14938" type="Armor" name="하급 마법 장식 강철 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -452,7 +452,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14939" type="Armor" name="Regular Magic Ornament Iron Belt - PvP Physical Attack">
+	<item id="14939" type="Armor" name="일반 마법 장식 강철 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -470,7 +470,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14940" type="Armor" name="High-grade Magic Ornament Iron Belt - PvP Physical Attack">
+	<item id="14940" type="Armor" name="상급 마법 장식 강철 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -488,7 +488,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14941" type="Armor" name="Top-grade Magic Ornament Iron Belt - PvP Physical Attack">
+	<item id="14941" type="Armor" name="최상급 마법 장식 강철 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -506,7 +506,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14942" type="Armor" name="Low-grade Magic Ornament Iron Belt - PvP Skill Attack">
+	<item id="14942" type="Armor" name="하급 마법 장식 강철 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -524,7 +524,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14943" type="Armor" name="Regular Magic Ornament Iron Belt - PvP Skill Attack">
+	<item id="14943" type="Armor" name="일반 마법 장식 강철 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -542,7 +542,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14944" type="Armor" name="High-grade Magic Ornament Iron Belt - PvP Skill Attack">
+	<item id="14944" type="Armor" name="상급 마법 장식 강철 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -560,7 +560,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14945" type="Armor" name="Top-grade Magic Ornament Iron Belt - PvP Skill Attack">
+	<item id="14945" type="Armor" name="최상급 마법 장식 강철 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -578,7 +578,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14946" type="Armor" name="Low-grade Magic Ornament Iron Belt - PVP Defense">
+	<item id="14946" type="Armor" name="하급 마법 장식 강철 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -596,7 +596,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14947" type="Armor" name="Regular Magic Ornament Iron Belt - PVP Defense">
+	<item id="14947" type="Armor" name="일반 마법 장식 강철 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -614,7 +614,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14948" type="Armor" name="High-grade Magic Ornament Iron Belt - PVP Defense">
+	<item id="14948" type="Armor" name="상급 마법 장식 강철 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -632,7 +632,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14949" type="Armor" name="Top-grade Magic Ornament Iron Belt - PVP Defense">
+	<item id="14949" type="Armor" name="최상급 마법 장식 강철 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -650,7 +650,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14950" type="Armor" name="Low-grade Magic Ornament Mithril Belt - PvP Physical Attack">
+	<item id="14950" type="Armor" name="하급 마법 장식 미스릴 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -668,7 +668,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14951" type="Armor" name="Regular Magic Ornament Mithril Belt - PvP Physical Attack">
+	<item id="14951" type="Armor" name="일반 마법 장식 미스릴 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -686,7 +686,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14952" type="Armor" name="High-grade Magic Ornament Mithril Belt - PvP Physical Attack">
+	<item id="14952" type="Armor" name="상급 마법 장식 미스릴 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -704,7 +704,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14953" type="Armor" name="Top-grade Magic Ornament Mithril Belt - PvP Physical Attack">
+	<item id="14953" type="Armor" name="최상급 마법 장식 미스릴 벨트 PVP 일반 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -722,7 +722,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14954" type="Armor" name="Low-grade Magic Ornament Mithril Belt - PvP Skill Attack">
+	<item id="14954" type="Armor" name="하급 마법 장식 미스릴 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -740,7 +740,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14955" type="Armor" name="Regular Magic Ornament Mithril Belt - PvP Skill Attack">
+	<item id="14955" type="Armor" name="일반 마법 장식 미스릴 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -758,7 +758,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14956" type="Armor" name="High-grade Magic Ornament Mithril Belt - PvP Skill Attack">
+	<item id="14956" type="Armor" name="상급 마법 장식 미스릴 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -776,7 +776,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14957" type="Armor" name="Top-grade Magic Ornament Mithril Belt - PvP Skill Attack">
+	<item id="14957" type="Armor" name="최상급 마법 장식 미스릴 벨트 PVP 스킬 공격">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -794,7 +794,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14958" type="Armor" name="Low-grade Magic Ornament Mithril Belt - PVP Defense">
+	<item id="14958" type="Armor" name="하급 마법 장식 미스릴 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -812,7 +812,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14959" type="Armor" name="Regular Magic Ornament Mithril Belt - PVP Defense">
+	<item id="14959" type="Armor" name="일반 마법 장식 미스릴 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -830,7 +830,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14960" type="Armor" name="High-grade Magic Ornament Mithril Belt - PVP Defense">
+	<item id="14960" type="Armor" name="상급 마법 장식 미스릴 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -848,7 +848,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14961" type="Armor" name="Top-grade Magic Ornament Mithril Belt - PVP Defense">
+	<item id="14961" type="Armor" name="최상급 마법 장식 미스릴 벨트 PVP 방어">
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -866,7 +866,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="14962" type="Armor" name="Gold Skeleton Circlet">
+	<item id="14962" type="Armor" name="골드 스켈레톤 써클릿">
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -875,7 +875,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="14963" type="Armor" name="Silver Skeleton Circlet">
+	<item id="14963" type="Armor" name="실버 스켈레톤 써클릿">
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -884,7 +884,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="14964" type="Armor" name="Red Skeleton Circlet">
+	<item id="14964" type="Armor" name="레드 스켈레톤 써클릿">
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -893,7 +893,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="14965" type="Armor" name="Black Skeleton Circlet">
+	<item id="14965" type="Armor" name="블랙 스켈레톤 써클릿">
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i03" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -902,7 +902,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="2000000" />
 	</item>
-	<item id="14966" type="Armor" name="Majestic Earring of Fortune - 30-day limited period">
+	<item id="14966" type="Armor" name="우정의 마제스틱 이어링  30일 기간제">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -920,7 +920,7 @@
 			<add order="0x40" stat="maxMp" val="25" />
 		</for>
 	</item>
-	<item id="14967" type="Armor" name="Majestic Necklace of Fortune - 30-day limited period">
+	<item id="14967" type="Armor" name="우정의 마제스틱 네크리스 30일 기간제">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -938,7 +938,7 @@
 			<add order="0x40" stat="maxMp" val="33" />
 		</for>
 	</item>
-	<item id="14968" type="Armor" name="Majestic Ring of Fortune - 30-day limited period">
+	<item id="14968" type="Armor" name="우정의 마제스틱 링 30일 기간제">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -956,7 +956,7 @@
 			<add order="0x40" stat="maxMp" val="17" />
 		</for>
 	</item>
-	<item id="14969" type="Armor" name="Fortune Earring of Black Ore - 30-day limited period">
+	<item id="14969" type="Armor" name="우정의 흑광의 귀걸이 30일 기간제">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -973,7 +973,7 @@
 			<add order="0x10" stat="mDef" val="54" />
 		</for>
 	</item>
-	<item id="14970" type="Armor" name="Fortune Necklace of Black Ore - 30-day limited period">
+	<item id="14970" type="Armor" name="우정의 흑광의 목걸이 30일 기간제">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -990,7 +990,7 @@
 			<add order="0x10" stat="mDef" val="72" />
 		</for>
 	</item>
-	<item id="14971" type="Armor" name="Fortune Ring of Black Ore - 30-day limited period">
+	<item id="14971" type="Armor" name="우정의 흑광의 반지 30일 기간제">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1007,7 +1007,7 @@
 			<add order="0x10" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="14972" type="Armor" name="Fortune Earring of Seal - 30-day limited period">
+	<item id="14972" type="Armor" name="우정의 봉인의 귀걸이 30일 기간제">
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -1024,7 +1024,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="14973" type="Armor" name="Fortune Necklace of Seal - 30-day limited period">
+	<item id="14973" type="Armor" name="우정의 봉인의 목걸이 30일 기간제">
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -1041,7 +1041,7 @@
 			<add order="0x10" stat="mDef" val="64" />
 		</for>
 	</item>
-	<item id="14974" type="Armor" name="Fortune Ring of Seal - 30-day limited period">
+	<item id="14974" type="Armor" name="우정의 봉인의 반지 30일 기간제">
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1058,7 +1058,7 @@
 			<add order="0x10" stat="mDef" val="32" />
 		</for>
 	</item>
-	<item id="14975" type="Armor" name="Elven Earring of Fortune - 30-day limited period">
+	<item id="14975" type="Armor" name="우정의 엘븐 이어링 30일 기간제">
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -1075,7 +1075,7 @@
 			<add order="0x10" stat="mDef" val="34" />
 		</for>
 	</item>
-	<item id="14976" type="Armor" name="Elven Earring of Fortune - 30-day limited period">
+	<item id="14976" type="Armor" name="우정의 엘븐 네크리스 30일 기간제">
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -1092,7 +1092,7 @@
 			<add order="0x10" stat="mDef" val="45" />
 		</for>
 	</item>
-	<item id="14977" type="Armor" name="Elven Ring of Fortune - 30-day limited period">
+	<item id="14977" type="Armor" name="우정의 엘븐 링 30일 기간제">
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1109,7 +1109,7 @@
 			<add order="0x10" stat="mDef" val="22" />
 		</for>
 	</item>
-	<item id="14978" type="Armor" name="Dark Crystal Robe of Fortune - 30-day limited period">
+	<item id="14978" type="Armor" name="우정의 다크 크리스탈 로브 30일 기간제">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1131,7 +1131,7 @@
 			<add order="0x40" stat="maxMp" val="665" />
 		</for>
 	</item>
-	<item id="14979" type="Armor" name="Dark Crystal Helmet of Fortune - 30-day limited period">
+	<item id="14979" type="Armor" name="우정의 다크 크리스탈 헬멧 30일 기간제">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1148,7 +1148,7 @@
 			<add order="0x10" stat="pDef" val="69" />
 		</for>
 	</item>
-	<item id="14980" type="Armor" name="Dark Crystal Gloves of Fortune - Robe - 30-day limited period">
+	<item id="14980" type="Armor" name="우정의 다크 크리스탈 글로브 - 로브용 30일 기간제">
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1168,7 +1168,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="14981" type="Armor" name="Dark Crystal Boots of Fortune - Robe - 30-day limited period">
+	<item id="14981" type="Armor" name="우정의 다크 크리스탈 부츠 - 로브용 30일 기간제">
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1188,7 +1188,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="14982" type="Armor" name="Dark Crystal Shield of Fortune - 30-day limited period">
+	<item id="14982" type="Armor" name="우정의 다크 크리스탈 쉴드 30일 기간제">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1210,7 +1210,7 @@
 			<set order="0x08" stat="sDef" val="243" />
 		</for>
 	</item>
-	<item id="14983" type="Armor" name="Avadon Robe of Fortune - 30-day limited period">
+	<item id="14983" type="Armor" name="우정의 아바돈 로브 30일 기간제">
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1232,7 +1232,7 @@
 			<add order="0x40" stat="maxMp" val="561" />
 		</for>
 	</item>
-	<item id="14984" type="Armor" name="Avadon Circlet of Fortune - 30-day limited period">
+	<item id="14984" type="Armor" name="우정의 아바돈 서클릿 30일 기간제">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1249,7 +1249,7 @@
 			<add order="0x10" stat="pDef" val="62" />
 		</for>
 	</item>
-	<item id="14985" type="Armor" name="Avadon Gloves of Fortune - Robe - 30-day limited period">
+	<item id="14985" type="Armor" name="우정의 아바돈 글로브 - 로브용 30일 기간제">
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1269,7 +1269,7 @@
 			<add order="0x10" stat="pDef" val="41" />
 		</for>
 	</item>
-	<item id="14986" type="Armor" name="Avadon Boots of Fortune - Robe - 30-day limited period">
+	<item id="14986" type="Armor" name="우정의 아바돈 부츠 - 로브용 30일 기간제">
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1289,7 +1289,7 @@
 			<add order="0x10" stat="pDef" val="41" />
 		</for>
 	</item>
-	<item id="14987" type="Armor" name="Avadon Shield of Fortune - 30-day limited period">
+	<item id="14987" type="Armor" name="우정의 아바돈 쉴드 30일 기간제">
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1311,7 +1311,7 @@
 			<set order="0x08" stat="sDef" val="216" />
 		</for>
 	</item>
-	<item id="14988" type="Armor" name="Karmian Tunic of Fortune - 30-day limited period">
+	<item id="14988" type="Armor" name="우정의 카르미안 튜닉 30일 기간제">
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1333,7 +1333,7 @@
 			<add order="0x40" stat="maxMp" val="225" />
 		</for>
 	</item>
-	<item id="14989" type="Armor" name="Karmian Stockings of Fortune - 30-day limited period">
+	<item id="14989" type="Armor" name="우정의 카르미안 호즈 30일 기간제">
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1355,7 +1355,7 @@
 			<add order="0x40" stat="maxMp" val="141" />
 		</for>
 	</item>
-	<item id="14990" type="Armor" name="Karmian Gloves of Fortune - 30-day limited period">
+	<item id="14990" type="Armor" name="우정의 카르미안 글로브 30일 기간제">
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1372,7 +1372,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="14991" type="Armor" name="Karmian Boots of Fortune - 30-day limited period">
+	<item id="14991" type="Armor" name="우정의 카르미안 부츠 30일 기간제">
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1389,7 +1389,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="14992" type="Armor" name="Mithril Tunic of Fortune - 30-day limited period">
+	<item id="14992" type="Armor" name="우정의 미스릴 튜닉 30일 기간제">
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1411,7 +1411,7 @@
 			<add order="0x40" stat="maxMp" val="169" />
 		</for>
 	</item>
-	<item id="14993" type="Armor" name="Mithril Stockings of Fortune - 30-day limited period">
+	<item id="14993" type="Armor" name="우정의 미스릴 호즈 30일 기간제">
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1433,7 +1433,7 @@
 			<add order="0x40" stat="maxMp" val="105" />
 		</for>
 	</item>
-	<item id="14994" type="Armor" name="Elven Mithril Gloves of Fortune - 30-day limited period">
+	<item id="14994" type="Armor" name="우정의 엘븐 미스릴 글로브 30일 기간제">
 		<set name="icon" val="icon.armor_t51_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1450,7 +1450,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="14995" type="Armor" name="Elven Mithril Boots of Fortune - 30-day limited period">
+	<item id="14995" type="Armor" name="우정의 엘븐 미스릴 부츠 30일 기간제">
 		<set name="icon" val="icon.armor_t51_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1467,7 +1467,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="14996" type="Armor" name="Dark Crystal Leather Armor of Fortune - 30-day limited period">
+	<item id="14996" type="Armor" name="우정의 다크 크리스탈 레더 메일 30일 기간제">
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1485,7 +1485,7 @@
 			<add order="0x10" stat="pDef" val="128" />
 		</for>
 	</item>
-	<item id="14997" type="Armor" name="Dark Crystal Leggings of Fortune - 30-day limited period">
+	<item id="14997" type="Armor" name="우정의 레깅 오브 다크 크리스탈 30일 기간제">
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1503,7 +1503,7 @@
 			<add order="0x10" stat="pDef" val="80" />
 		</for>
 	</item>
-	<item id="14998" type="Armor" name="Dark Crystal Gloves of Fortune - Light Armor - 30-day limited period">
+	<item id="14998" type="Armor" name="우정의 다크 크리스탈 글로브 - 경갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1520,7 +1520,7 @@
 			<add order="0x10" stat="pDef" val="46" />
 		</for>
 	</item>
-	<item id="14999" type="Armor" name="Dark Crystal Boots of Fortune - Light Armor - 30-day limited period">
+	<item id="14999" type="Armor" name="우정의 다크 크리스탈 부츠 - 경갑용 30일 기간제">
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />

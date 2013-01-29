@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="31343" name="束縛的襲擊劍*襲擊劍" type="Weapon">
+	<item id="31343" type="Weapon" name="속박의 레이드 소드*레이드 소드">
 		<table name="#Desc">束縛的襲擊劍*襲擊劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="31345" name="束縛的襲擊劍" type="Weapon">
+	<item id="31345" type="Weapon" name="속박의 레이드 소드 포커스">
 		<table name="#Plus">偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約82。</table>
 		<set name="icon" val="icon.weapon_raid_sword_i01"/>

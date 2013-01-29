@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
 	<!-- 回聲水晶 -->
-	<item id="35705" name="回聲水晶-永遠的冒險(第5屆 Fantic  Award)" type="EtcItem">
+	<item id="35705" type="EtcItem" name="소리수정 - 영원한 모험(제5회 팬픽어워드)">
 		<table name="#Desc">第5屆天堂II Fantic  Award 綜合大獎獲獎作品。藉由泰恩伺服器內的「Orange Elf」的作品，在輕鬆愉快的旋律中可以感受到天堂II的冒險精神。</table>
 		<set name="icon" val="icon.etc_echo_crystal_i03"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -13,7 +13,7 @@
 		<set name="handler" val="ItemSkills"/>
 		<set name="item_skill" val="9500-1"/>
 	</item>
-	<item id="35706" name="回聲水晶-戰爭的開端(第5屆 Fantic  Award)" type="EtcItem">
+	<item id="35706" type="EtcItem" name="소리수정 - 전쟁의 시작(제5회 팬픽어워드)">
 		<table name="#Desc">第5屆天堂II Fantic  Award 作曲優秀獎獲獎作品。藉由史坦瑞斯伺服器內的「蒼術」的作品，展現了天堂II夢幻世界觀的演奏曲。</table>
 		<set name="icon" val="icon.etc_echo_crystal_i04"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -24,7 +24,7 @@
 		<set name="handler" val="ItemSkills"/>
 		<set name="item_skill" val="9501-1"/>
 	</item>
-	<item id="35707" name="回聲水晶-Reload(第5屆 Fantic  Award)" type="EtcItem">
+	<item id="35707" type="EtcItem" name="소리수정 - Reload(제5회 팬픽어워드)">
 		<table name="#Desc">第5屆天堂II Fantic  Award 作曲優秀獎獲獎作品。藉由黎歐納伺服器內的「Suhr21」的作品，利用吉他即興重複段展現了工整卻帶有緊張感的演奏曲。</table>
 		<set name="icon" val="icon.etc_echo_crystal_i01"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -35,7 +35,7 @@
 		<set name="handler" val="ItemSkills"/>
 		<set name="item_skill" val="9502-1"/>
 	</item>
-	<item id="35748" name="紅龍帽" type="Armor">
+	<item id="35748" type="Armor" name="_">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可愛的紅龍帽。</table>
 		<set name="icon" val="icon.etc_ev_draco_hair_acc"/>

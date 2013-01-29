@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14400" type="Weapon" name="Icarus Hand {PvP} - Rsk. Evasion">
+	<item id="14400" type="Weapon" name="이카루스 핸드 {대인용} Rsk.이베이젼">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -31,7 +31,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14401" type="Weapon" name="Icarus Hand {PvP} - Focus">
+	<item id="14401" type="Weapon" name="이카루스 핸드 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -62,7 +62,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14402" type="Weapon" name="Icarus Hand {PvP} - Haste">
+	<item id="14402" type="Weapon" name="이카루스 핸드 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -93,7 +93,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14403" type="Weapon" name="Icarus Stinger {PvP} - Focus">
+	<item id="14403" type="Weapon" name="이카루스 스팅거 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -128,7 +128,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14404" type="Weapon" name="Icarus Stinger {PvP} - Health">
+	<item id="14404" type="Weapon" name="이카루스 스팅거 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -163,7 +163,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14405" type="Weapon" name="Icarus Stinger {PvP} - Light">
+	<item id="14405" type="Weapon" name="이카루스 스팅거 {대인용} 라이트">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -198,7 +198,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14406" type="Weapon" name="Icarus Wingblade {PvP} - Focus">
+	<item id="14406" type="Weapon" name="이카루스 윙블레이드 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -232,7 +232,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14407" type="Weapon" name="Icarus Wingblade {PvP} - Health">
+	<item id="14407" type="Weapon" name="이카루스 윙블레이드 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -266,7 +266,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14408" type="Weapon" name="Icarus Wingblade {PvP} - Light">
+	<item id="14408" type="Weapon" name="이카루스 윙블레이드 {대인용} 라이트">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -300,7 +300,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14409" type="Weapon" name="Icarus Shooter {PvP} - Cheap Shot">
+	<item id="14409" type="Weapon" name="이카루스 슈터 {대인용} 칩샷">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -335,7 +335,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14410" type="Weapon" name="Icarus Shooter {PvP} - Guidance">
+	<item id="14410" type="Weapon" name="이카루스 슈터 {대인용} 가이던스">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -370,7 +370,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14411" type="Weapon" name="Icarus Shooter {PvP} - Focus">
+	<item id="14411" type="Weapon" name="이카루스 슈터 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -405,7 +405,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14412" type="Weapon" name="Icarus Dual Sword - Destruction {PvP}">
+	<item id="14412" type="Weapon" name="이카루스 듀얼 소드 - 파괴 {대인용}">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -436,7 +436,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14413" type="Weapon" name="Icarus Disperser - Confusion {PvP}">
+	<item id="14413" type="Weapon" name="이카루스 디스퍼서 - 혼란 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -467,7 +467,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14414" type="Weapon" name="Icarus Disperser - Confusion {PvP} - Focus">
+	<item id="14414" type="Weapon" name="이카루스 디스퍼서 - 혼란 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -498,7 +498,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14415" type="Weapon" name="Icarus Disperser - Confusion {PvP} - Evasion">
+	<item id="14415" type="Weapon" name="이카루스 디스퍼서 - 혼란 {대인용} 이베이젼">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -529,7 +529,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14416" type="Weapon" name="Icarus Disperser - Confusion {PvP} - Critical Damage">
+	<item id="14416" type="Weapon" name="이카루스 디스퍼서 - 혼란 {대인용} Crt.대미지">
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -560,7 +560,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14417" type="Weapon" name="Icarus Sawsword - Destruction {PvP}">
+	<item id="14417" type="Weapon" name="이카루스 소우소드 - 파괴 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -590,7 +590,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14418" type="Weapon" name="Icarus Sawsword - Destruction {PvP} - Focus">
+	<item id="14418" type="Weapon" name="이카루스 소우소드 - 파괴 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -620,7 +620,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14419" type="Weapon" name="Icarus Sawsword - Destruction {PvP} - Health">
+	<item id="14419" type="Weapon" name="이카루스 소우소드 - 파괴 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -650,7 +650,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14420" type="Weapon" name="Icarus Sawsword - Destruction {PvP} - Light">
+	<item id="14420" type="Weapon" name="이카루스 소우소드 - 파괴 {대인용} 라이트">
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -680,7 +680,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14421" type="Weapon" name="Icarus Shooter - Concentration {PvP}">
+	<item id="14421" type="Weapon" name="이카루스 슈터 - 집중 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -715,7 +715,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14422" type="Weapon" name="Icarus Shooter - Concentration {PvP} - Cheap Shot">
+	<item id="14422" type="Weapon" name="이카루스 슈터 - 집중 {대인용} 칩샷">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -750,7 +750,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14423" type="Weapon" name="Icarus Shooter - Concentration {PvP} - Guidance">
+	<item id="14423" type="Weapon" name="이카루스 슈터 - 집중 {대인용} 가이던스">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -785,7 +785,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14424" type="Weapon" name="Icarus Shooter - Concentration {PvP} - Focus">
+	<item id="14424" type="Weapon" name="이카루스 슈터 - 집중 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -820,7 +820,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14425" type="Weapon" name="Icarus Stinger - Destruction {PvP}">
+	<item id="14425" type="Weapon" name="이카루스 스팅거 - 파괴 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -855,7 +855,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14426" type="Weapon" name="Icarus Stinger - Destruction {PvP} - Focus">
+	<item id="14426" type="Weapon" name="이카루스 스팅거 - 파괴 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -890,7 +890,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14427" type="Weapon" name="Icarus Stinger - Destruction {PvP} - Health">
+	<item id="14427" type="Weapon" name="이카루스 스팅거 - 파괴 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -925,7 +925,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14428" type="Weapon" name="Icarus Stinger - Destruction {PvP} - Light">
+	<item id="14428" type="Weapon" name="이카루스 스팅거 - 파괴 {대인용} 라이트">
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -960,7 +960,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14429" type="Weapon" name="Icarus Spirit - Nature {PvP}">
+	<item id="14429" type="Weapon" name="이카루스 스피릿 - 자연 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -991,7 +991,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14430" type="Weapon" name="Icarus Spirit - Nature {PvP} - Acumen">
+	<item id="14430" type="Weapon" name="이카루스 스피릿 - 자연 {대인용} 아큐멘">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1022,7 +1022,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14431" type="Weapon" name="Icarus Spirit - Nature {PvP} - Mana Up">
+	<item id="14431" type="Weapon" name="이카루스 스피릿 - 자연 {대인용} 마나업">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1053,7 +1053,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14432" type="Weapon" name="Icarus Spirit - Nature {PvP} - Conversion">
+	<item id="14432" type="Weapon" name="이카루스 스피릿 - 자연 {대인용} 업다운">
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1084,7 +1084,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14433" type="Weapon" name="Icarus Spitter - Concentration {PvP}">
+	<item id="14433" type="Weapon" name="이카루스 스피터 - 집중 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1117,7 +1117,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14434" type="Weapon" name="Icarus Spitter - Concentration {PvP} - Cheap Shot">
+	<item id="14434" type="Weapon" name="이카루스 스피터 - 집중 {대인용} 칩샷">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1150,7 +1150,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14435" type="Weapon" name="Icarus Spitter - Concentration {PvP} - Guidance">
+	<item id="14435" type="Weapon" name="이카루스 스피터 - 집중 {대인용} 가이던스">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1183,7 +1183,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14436" type="Weapon" name="Icarus Spitter - Concentration {PvP} - Focus">
+	<item id="14436" type="Weapon" name="이카루스 스피터 - 집중 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -1216,7 +1216,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14437" type="Weapon" name="Icarus Wingblade - Lightning {PvP}">
+	<item id="14437" type="Weapon" name="이카루스 윙블레이드 - 천둥 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1250,7 +1250,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14438" type="Weapon" name="Icarus Wingblade - Lightning {PvP} - Focus">
+	<item id="14438" type="Weapon" name="이카루스 윙블레이드 - 천둥 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1284,7 +1284,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14439" type="Weapon" name="Icarus Wingblade - Lightning {PvP} - Health">
+	<item id="14439" type="Weapon" name="이카루스 윙블레이드 - 천둥 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1318,7 +1318,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14440" type="Weapon" name="Icarus Wingblade - Lightning {PvP} - Light">
+	<item id="14440" type="Weapon" name="이카루스 윙블레이드 - 천둥 {대인용} 라이트">
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -1352,7 +1352,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14441" type="Weapon" name="Icarus Trident - Thunder {PvP}">
+	<item id="14441" type="Weapon" name="이카루스 트라이던트 - 전격 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1383,7 +1383,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14442" type="Weapon" name="Icarus Trident - Thunder {PvP} - Anger">
+	<item id="14442" type="Weapon" name="이카루스 트라이던트 - 전격 {대인용} 앵거">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1414,7 +1414,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14443" type="Weapon" name="Icarus Trident - Thunder {PvP} - Critical Stun">
+	<item id="14443" type="Weapon" name="이카루스 트라이던트 - 전격 {대인용} Crt.스턴">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1446,7 +1446,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14444" type="Weapon" name="Icarus Trident - Thunder {PvP} - Light">
+	<item id="14444" type="Weapon" name="이카루스 트라이던트 - 전격 {대인용} 라이트">
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1477,7 +1477,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14445" type="Weapon" name="Icarus Hammer - Earth {PvP}">
+	<item id="14445" type="Weapon" name="이카루스 해머 - 대지 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1508,7 +1508,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14446" type="Weapon" name="Icarus Hammer - Earth {PvP} - Anger">
+	<item id="14446" type="Weapon" name="이카루스 해머 - 대지 {대인용} 앵거">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1539,7 +1539,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14447" type="Weapon" name="Icarus Hammer - Earth {PvP} - Health">
+	<item id="14447" type="Weapon" name="이카루스 해머 - 대지 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1570,7 +1570,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14448" type="Weapon" name="Icarus Hammer - Earth {PvP} - Rsk. Focus">
+	<item id="14448" type="Weapon" name="이카루스 해머 - 대지 {대인용} Rsk.포커스">
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1601,7 +1601,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14449" type="Weapon" name="Icarus Hand - Destruction {PvP}">
+	<item id="14449" type="Weapon" name="이카루스 핸드 - 파괴 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1632,7 +1632,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14450" type="Weapon" name="Icarus Hand - Destruction {PvP} - Rsk. Evasion">
+	<item id="14450" type="Weapon" name="이카루스 핸드 - 파괴 {대인용} Rsk.이베이젼">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1663,7 +1663,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14451" type="Weapon" name="Icarus Hand - Destruction {PvP} - Focus">
+	<item id="14451" type="Weapon" name="이카루스 핸드 - 파괴 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1694,7 +1694,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14452" type="Weapon" name="Icarus Hand - Destruction {PvP} - Haste">
+	<item id="14452" type="Weapon" name="이카루스 핸드 - 파괴 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -1725,7 +1725,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14453" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP}">
+	<item id="14453" type="Weapon" name="이카루스 헤비 암스 - 천둥 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1755,7 +1755,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14454" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP} - Focus">
+	<item id="14454" type="Weapon" name="이카루스 헤비 암스 - 천둥 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1785,7 +1785,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14455" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP} - Health">
+	<item id="14455" type="Weapon" name="이카루스 헤비 암스 - 천둥 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1815,7 +1815,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14456" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP} - Light">
+	<item id="14456" type="Weapon" name="이카루스 헤비 암스 - 천둥 {대인용} 라이트">
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1845,7 +1845,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14457" type="Weapon" name="Icarus Hall - Hail {PvP}">
+	<item id="14457" type="Weapon" name="이카루스 홀 - 해일 {대인용}">
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1877,7 +1877,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14458" type="Weapon" name="Icarus Hall - Hail {PvP} - Mana Up">
+	<item id="14458" type="Weapon" name="이카루스 홀 - 해일 {대인용} 마나업">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1909,7 +1909,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14459" type="Weapon" name="Icarus Hall - Hail {PvP} - Conversion">
+	<item id="14459" type="Weapon" name="이카루스 홀 - 해일 {대인용} 업다운">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1941,7 +1941,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14460" type="Weapon" name="Icarus Hall - Hail {PvP} - Acumen">
+	<item id="14460" type="Weapon" name="이카루스 홀 - 해일 {대인용} 아큐멘">
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1973,7 +1973,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14461" type="Weapon" name="Icarus Dual Daggers {PvP}">
+	<item id="14461" type="Weapon" name="이카루스 단검 이도류 {대인용}">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualdagger" />
@@ -2012,7 +2012,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14462" type="Weapon" name="Vesper Dual Sword {PvP}">
+	<item id="14462" type="Weapon" name="베스페르 듀얼 소드 {대인용}">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -2043,7 +2043,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14463" type="Weapon" name="Vesper Cutter {PvP}">
+	<item id="14463" type="Weapon" name="베스페르 커터 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2073,7 +2073,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14464" type="Weapon" name="Vesper Slasher {PvP}">
+	<item id="14464" type="Weapon" name="베스페르 슬래셔 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -2103,7 +2103,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14465" type="Weapon" name="Vesper Buster {PvP}">
+	<item id="14465" type="Weapon" name="베스페르 버스터 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2134,7 +2134,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14466" type="Weapon" name="Vesper Shaper {PvP}">
+	<item id="14466" type="Weapon" name="베스페르 셰이퍼 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -2165,7 +2165,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14467" type="Weapon" name="Vesper Fighter {PvP}">
+	<item id="14467" type="Weapon" name="베스페르 파이터 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2196,7 +2196,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14468" type="Weapon" name="Vesper Stormer {PvP}">
+	<item id="14468" type="Weapon" name="베스페르 스토머 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -2227,7 +2227,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14469" type="Weapon" name="Vesper Avenger {PvP}">
+	<item id="14469" type="Weapon" name="베스페르 어벤져 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2258,7 +2258,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14470" type="Weapon" name="Vesper Retributer {PvP}">
+	<item id="14470" type="Weapon" name="베스페르 레트리뷰터 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -2289,7 +2289,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14471" type="Weapon" name="Vesper Caster {PvP}">
+	<item id="14471" type="Weapon" name="베스페르 캐스터 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -2321,7 +2321,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14472" type="Weapon" name="Vesper Singer {PvP}">
+	<item id="14472" type="Weapon" name="베스페르 싱어 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -2353,7 +2353,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14473" type="Weapon" name="Vesper Thrower {PvP}">
+	<item id="14473" type="Weapon" name="베스페르 스로워 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -2386,7 +2386,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14474" type="Weapon" name="Vesper Pincer {PvP}">
+	<item id="14474" type="Weapon" name="베스페르 핀서 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -2421,7 +2421,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14475" type="Weapon" name="Vesper Shooter {PvP}">
+	<item id="14475" type="Weapon" name="베스페르 슈트제 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -2456,7 +2456,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14476" type="Weapon" name="Vesper Nagan {PvP}">
+	<item id="14476" type="Weapon" name="베스페르 나간 {대인용}">
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -2490,7 +2490,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14477" type="Weapon" name="Vesper Dual Daggers {PvP}">
+	<item id="14477" type="Weapon" name="베스페르 단검 이도류 {대인용}">
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualdagger" />
@@ -2529,7 +2529,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14478" type="Weapon" name="Vesper Cutter {PvP} - Haste">
+	<item id="14478" type="Weapon" name="베스페르 커터 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2559,7 +2559,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14479" type="Weapon" name="Vesper Cutter {PvP} - Health">
+	<item id="14479" type="Weapon" name="베스페르 커터 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2589,7 +2589,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14480" type="Weapon" name="Vesper Cutter {PvP} - Focus">
+	<item id="14480" type="Weapon" name="베스페르 커터 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2619,7 +2619,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14481" type="Weapon" name="Vesper Slasher {PvP} - Haste">
+	<item id="14481" type="Weapon" name="베스페르 슬래셔 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -2649,7 +2649,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14482" type="Weapon" name="Vesper Slasher {PvP} - Health">
+	<item id="14482" type="Weapon" name="베스페르 슬래셔 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -2679,7 +2679,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14483" type="Weapon" name="Vesper Slasher {PvP} - Focus">
+	<item id="14483" type="Weapon" name="베스페르 슬래셔 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -2709,7 +2709,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14484" type="Weapon" name="Vesper Buster {PvP} - Mana Up">
+	<item id="14484" type="Weapon" name="베스페르 버스터 {대인용} 마나업">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2740,7 +2740,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14485" type="Weapon" name="Vesper Buster {PvP} - Acumen">
+	<item id="14485" type="Weapon" name="베스페르 버스터 {대인용} 아큐멘">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2771,7 +2771,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14486" type="Weapon" name="Vesper Buster {PvP} - Magic Hold">
+	<item id="14486" type="Weapon" name="베스페르 버스터 {대인용} 매직홀드">
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -2804,7 +2804,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14487" type="Weapon" name="Vesper Shaper {PvP} - Critical Damage">
+	<item id="14487" type="Weapon" name="베스페르 셰이퍼 {대인용} Crt.대미지">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -2835,7 +2835,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14488" type="Weapon" name="Vesper Shaper {PvP} - HP Drain">
+	<item id="14488" type="Weapon" name="베스페르 셰이퍼 {대인용} HP드레인">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -2866,7 +2866,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14489" type="Weapon" name="Vesper Shaper {PvP} - Haste">
+	<item id="14489" type="Weapon" name="베스페르 셰이퍼 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -2897,7 +2897,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14490" type="Weapon" name="Vesper Fighter {PvP} - Focus">
+	<item id="14490" type="Weapon" name="베스페르 파이터 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2928,7 +2928,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14491" type="Weapon" name="Vesper Fighter {PvP} - Health">
+	<item id="14491" type="Weapon" name="베스페르 파이터 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2959,7 +2959,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14492" type="Weapon" name="Vesper Fighter {PvP} - Critical Stun">
+	<item id="14492" type="Weapon" name="베스페르 파이터 {대인용} Crt.스턴">
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dualfist" />
@@ -2991,7 +2991,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14493" type="Weapon" name="Vesper Stormer {PvP} - Health">
+	<item id="14493" type="Weapon" name="베스페르 스토머 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -3022,7 +3022,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14494" type="Weapon" name="Vesper Stormer {PvP} - Guidance">
+	<item id="14494" type="Weapon" name="베스페르 스토머 {대인용} 가이던스">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -3053,7 +3053,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14495" type="Weapon" name="Vesper Stormer {PvP} - Haste">
+	<item id="14495" type="Weapon" name="베스페르 스토머 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -3084,7 +3084,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14496" type="Weapon" name="Vesper Avenger {PvP} - HP Drain">
+	<item id="14496" type="Weapon" name="베스페르 어벤져 {대인용} HP드레인">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -3115,7 +3115,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14497" type="Weapon" name="Vesper Avenger {PvP} - Health">
+	<item id="14497" type="Weapon" name="베스페르 어벤져 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -3146,7 +3146,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14498" type="Weapon" name="Vesper Avenger {PvP} - HP Regeneration">
+	<item id="14498" type="Weapon" name="베스페르 어벤져 {대인용} HP리제네레이션">
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -3177,7 +3177,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14499" type="Weapon" name="Vesper Retributer {PvP} - HP Regeneration">
+	<item id="14499" type="Weapon" name="베스페르 레트리뷰터 {대인용} HP리제네레이션">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />

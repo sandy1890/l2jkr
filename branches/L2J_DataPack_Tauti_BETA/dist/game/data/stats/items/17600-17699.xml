@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="17623" name="地蟲心臟戒指" type="Armor">
+	<item id="17623" type="Armor" name="어스웜 심장 반지">
 		<table name="#Desc">賦予裝備者MP+38、肉體系抗性、精神系抗性、魔力再生、致命傷害提升；命中率提升、毒抗性提升50%、毒攻擊率提升50%；擊退、擊倒、捕獲抗性提升20；增加攻擊速度、增加施法速度、風/水屬性防禦提升。對隊員可使用能提升攻擊速度、施法速度、吸血效果的技能和解毒效果。即使戴上兩個地蟲心臟戒指也只能發揮一個的特殊效果。</table>
 		<set name="icon" val="icon.ring_earthworm_heart"/>
 		<set name="default_action" val="equip"/>
@@ -18,7 +18,7 @@
 	</item>
 
 	<!-- R級紋章染料 -->
-	<item id="17697" name="LV5 巨人力量紋章染料" type="EtcItem">
+	<item id="17697" type="EtcItem" name="Lv5 거인의 힘문양 염료 Str+5">
 		<table name="#Plus">Str+5</table>
 		<table name="#Desc">Lv5 巨人力量紋章染料（Str+5）。去找村莊的紋章製造人的話，可以在身體刻上變化能力的魔法紋章。若想刻上紋章的話，需要有10個染料。可以使用的職業：全系列。四次轉職之後可以使用。</table>
 		<set name="icon" val="icon.lv5_1_dye_str"/>
@@ -27,7 +27,7 @@
 		<set name="weight" val="150"/>
 		<set name="is_stackable" val="true"/>
 	</item>
-	<item id="17698" name="LV5 巨人敏捷紋章染料" type="EtcItem">
+	<item id="17698" type="EtcItem" name="Lv5 거인의 민첩문양 염료 Dex+5">
 		<table name="#Plus">Dex+5</table>
 		<table name="#Desc">Lv5 巨人敏捷紋章染料（Dex+5）。去找村莊的紋章製造人的話，可以在身體刻上變化能力的魔法紋章。若想刻上紋章的話，需要有10個染料。可以使用的職業：全系列。四次轉職之後可以使用。</table>
 		<set name="icon" val="icon.lv5_1_dye_dex"/>
@@ -36,7 +36,7 @@
 		<set name="weight" val="150"/>
 		<set name="is_stackable" val="true"/>
 	</item>
-	<item id="17699" name="LV5 巨人體質紋章染料" type="EtcItem">
+	<item id="17699" type="EtcItem" name="Lv5 거인의 체력문양 염료 Con+5">
 		<table name="#Plus">Con+5</table>
 		<table name="#Desc">Lv5 巨人體質紋章染料（Con+5）。去找村莊的紋章製造人的話，可以在身體刻上變化能力的魔法紋章。若想刻上紋章的話，需要有10個染料。可以使用的職業：全系列。四次轉職之後可以使用。</table>
 		<set name="icon" val="icon.lv5_1_dye_con"/>

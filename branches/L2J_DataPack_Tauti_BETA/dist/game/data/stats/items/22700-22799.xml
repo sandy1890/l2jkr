@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="22711" name="和風刀" type="Weapon">
+	<item id="22711" type="Weapon" name="_">
 		<table name="#Desc">和風武器。單手劍型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_sword"/>
 		<set name="default_action" val="equip"/>
@@ -17,7 +17,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22712" name="和風匕首" type="Weapon">
+	<item id="22712" type="Weapon" name="_">
 		<table name="#Desc">和風武器。匕首型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_dagger"/>
 		<set name="default_action" val="equip"/>
@@ -33,7 +33,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22713" name="和風長刀" type="Weapon">
+	<item id="22713" type="Weapon" name="_">
 		<table name="#Desc">和風武器。雙手劍型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_sword"/>
 		<set name="default_action" val="equip"/>
@@ -49,7 +49,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22714" name="和風格鬥兵器" type="Weapon">
+	<item id="22714" type="Weapon" name="_">
 		<table name="#Desc">和風武器。格鬥兵器型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_dualfist"/>
 		<set name="default_action" val="equip"/>
@@ -65,7 +65,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22715" name="和風長矛" type="Weapon">
+	<item id="22715" type="Weapon" name="_">
 		<table name="#Desc">和風武器。長矛型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_pole"/>
 		<set name="default_action" val="equip"/>
@@ -81,7 +81,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22716" name="和風弓" type="Weapon">
+	<item id="22716" type="Weapon" name="_">
 		<table name="#Desc">和風武器。弓型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_bow"/>
 		<set name="default_action" val="equip"/>
@@ -99,7 +99,7 @@
 		<set name="enchant_enabled" val="1"/>
 		<set name="reuse_delay" val="1500"/>
 	</item>
-	<item id="22717" name="和風弩弓" type="Weapon">
+	<item id="22717" type="Weapon" name="_">
 		<table name="#Desc">和風武器。弩弓型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_crossbow"/>
 		<set name="default_action" val="equip"/>
@@ -116,7 +116,7 @@
 		<set name="enchant_enabled" val="1"/>
 		<set name="reuse_delay" val="400"/>
 	</item>
-	<item id="22718" name="和風鈍器" type="Weapon">
+	<item id="22718" type="Weapon" name="_">
 		<table name="#Desc">和風武器。單手鈍器型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -132,7 +132,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22719" name="和風巨大鈍器" type="Weapon">
+	<item id="22719" type="Weapon" name="_">
 		<table name="#Desc">和風武器。雙手鈍器型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -148,7 +148,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22720" name="和風魔法鈍器" type="Weapon">
+	<item id="22720" type="Weapon" name="_">
 		<table name="#Desc">和風武器。單手魔法鈍器型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -164,7 +164,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22721" name="和風巨大魔法鈍器" type="Weapon">
+	<item id="22721" type="Weapon" name="_">
 		<table name="#Desc">和風武器。雙手魔法鈍器型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_twohand_blunt"/>
 		<set name="default_action" val="equip"/>
@@ -180,7 +180,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22722" name="和風雙刀" type="Weapon">
+	<item id="22722" type="Weapon" name="_">
 		<table name="#Desc">和風武器。雙刀型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_dual"/>
 		<set name="default_action" val="equip"/>
@@ -196,7 +196,7 @@
 		<set name="spiritshots" val="3"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22723" name="和風雙匕首" type="Weapon">
+	<item id="22723" type="Weapon" name="_">
 		<table name="#Desc">和風武器。雙匕首型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_dualdagger"/>
 		<set name="default_action" val="equip"/>
@@ -212,7 +212,7 @@
 		<set name="spiritshots" val="1"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22724" name="和風雙鈍器" type="Weapon">
+	<item id="22724" type="Weapon" name="_">
 		<table name="#Desc">和風武器。雙鈍器型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_dualblunt"/>
 		<set name="default_action" val="equip"/>
@@ -228,7 +228,7 @@
 		<set name="spiritshots" val="1"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22725" name="和風盾牌" type="Armor">
+	<item id="22725" type="Armor" name="_">
 		<table name="#Desc">和風武器。盾牌型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_shield"/>
 		<set name="default_action" val="equip"/>
@@ -238,7 +238,7 @@
 		<set name="weight" val="200"/>
 		<set name="enchant_enabled" val="1"/>
 	</item>
-	<item id="22726" name="和風符印" type="Armor">
+	<item id="22726" type="Armor" name="_">
 		<table name="#Desc">和風武器。符印型態。和風武器加工石的基礎外型。</table>
 		<set name="icon" val="BranchSys3.Icon.g_japan_sigil"/>
 		<set name="default_action" val="equip"/>
@@ -250,7 +250,7 @@
 		<set name="enchant_enabled" val="1"/>
 	</item>
 	
-	<item id="22743" name="變身卷軸-晴空之伯盧那" type="EtcItem">
+	<item id="22743" type="EtcItem" name="_">
 		<table name="#Desc">維他命道具可維持30分鐘變身為晴空之伯盧那的卷軸。晴空之伯盧那具有菲歐巫師和艾羅牧師的能力，而且可以使用根據地返回技能。等級80以上可以使用。無法交易/丟棄的道具，但可以刪除，也可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_trans_4f_s_b_01"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -264,7 +264,7 @@
 		<set name="item_skill" val="22583-1"/>
 	</item>
 
-	<item id="22775" name="龍獸衝槌" type="Weapon">
+	<item id="22775" type="Weapon" name="_">
 		<table name="#Desc">龍獸之王使用的雙手鈍器。賦予裝備者特別的力量。可以賦予強健、HP吸收、體力再生其中之一的特殊效果。</table>
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00"/>
 		<set name="default_action" val="equip"/>
@@ -290,7 +290,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22776" name="龍獸衝槌" type="Weapon">
+	<item id="22776" type="Weapon" name="_">
 		<table name="#Plus">HP吸收</table>
 		<table name="#Desc">＜搜魂石特效＞龍獸之王使用的雙手鈍器。賦予裝備者特別的力量。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PVP時提升所造成的傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01"/>
@@ -317,7 +317,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22777" name="龍獸衝槌" type="Weapon">
+	<item id="22777" type="Weapon" name="_">
 		<table name="#Plus">體力再生</table>
 		<table name="#Desc">＜搜魂石特效＞龍獸之王使用的雙手鈍器。賦予裝備者特別的力量。提升HP的恢復速度。PVP時提升所造成的傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01"/>
@@ -344,7 +344,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22778" name="龍獸衝槌" type="Weapon">
+	<item id="22778" type="Weapon" name="_">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">＜搜魂石特效＞龍獸之王使用的雙手鈍器。賦予裝備者特別的力量。HP最大值提升約25%。PVP時提升所造成的傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01"/>
@@ -372,7 +372,7 @@
 		</for>
 	</item>
 
-	<item id="22791" name="芙蕾雅魔杖" type="Weapon">
+	<item id="22791" type="Weapon" name="_">
 		<table name="#Desc">芙蕾雅使用的雙手魔法鈍器。賦予裝備者特別的力量。可以賦予魔力再生、魔法束縛、魔力催化其中之一的特殊效果。</table>
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00"/>
 		<set name="default_action" val="equip"/>
@@ -398,7 +398,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22792" name="芙蕾雅魔杖" type="Weapon">
+	<item id="22792" type="Weapon" name="_">
 		<table name="#Plus">魔法束縛</table>
 		<table name="#Desc">＜搜魂石特效＞芙蕾雅使用的雙手魔法鈍器。賦予裝備者特別的力量。對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01"/>
@@ -425,7 +425,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22793" name="芙蕾雅魔杖" type="Weapon">
+	<item id="22793" type="Weapon" name="_">
 		<table name="#Plus">魔力催化</table>
 		<table name="#Desc">＜搜魂石特效＞芙蕾雅使用的雙手魔法鈍器。賦予裝備者特別的力量。魔法攻擊力提升約177。PVP時提升所造成的傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01"/>
@@ -452,7 +452,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="22794" name="芙蕾雅魔杖" type="Weapon">
+	<item id="22794" type="Weapon" name="_">
 		<table name="#Plus">魔力再生</table>
 		<table name="#Desc">＜搜魂石特效＞芙蕾雅使用的雙手魔法鈍器。賦予裝備者特別的力量。提升MP的恢復速度。PVP時提升所造成的傷害。</table>
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01"/>

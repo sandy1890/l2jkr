@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
 	<!-- 覺醒封印武器 -->
-	<item id="33717" name="封印著決鬥者力量的雙刀" type="Weapon">
+	<item id="33717" type="Weapon" name="듀얼리스트의 힘이 봉인된 듀얼소드">
 		<table name="#Desc">封印著決鬥者力量的雙刀。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -21,7 +21,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33718" name="封印著猛將力量的長戟" type="Weapon">
+	<item id="33718" type="Weapon" name="드레드노트의 힘이 봉인된 스피어">
 		<table name="#Desc">封印著猛將力量的長戟。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_eigelus_i00"/>
 		<set name="default_action" val="equip"/>
@@ -41,7 +41,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33719" name="封印著聖凰騎士力量的長劍" type="Weapon">
+	<item id="33719" type="Weapon" name="피닉스나이트의 힘이 봉인된 소드">
 		<table name="#Desc">封印著聖凰騎士力量的長劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -60,7 +60,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33720" name="封印著煉獄騎士力量的長劍" type="Weapon">
+	<item id="33720" type="Weapon" name="헬나이트의 힘이 봉인된 소드">
 		<table name="#Desc">封印著煉獄騎士力量的長劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -79,7 +79,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33721" name="封印著人馬力量的長弓" type="Weapon">
+	<item id="33721" type="Weapon" name="사지타리우스의 힘이 봉인된 보우">
 		<table name="#Desc">封印著人馬力量的長弓。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_karupis_i00"/>
 		<set name="default_action" val="equip"/>
@@ -101,7 +101,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293"/>
 		</for>
 	</item>
-	<item id="33722" name="封印著冒險英豪力量的雙匕首" type="Weapon">
+	<item id="33722" type="Weapon" name="어드벤쳐러의 힘이 봉인된 듀얼대거">
 		<table name="#Desc">封印著冒險英豪力量的雙匕首。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
 		<set name="default_action" val="equip"/>
@@ -121,7 +121,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433"/>
 		</for>
 	</item>
-	<item id="33723" name="封印著大魔導士力量的魔劍" type="Weapon">
+	<item id="33723" type="Weapon" name="아크메이지의 힘이 봉인된 소드">
 		<table name="#Desc">封印著大魔導士力量的魔劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_terakan_i00"/>
 		<set name="default_action" val="equip"/>
@@ -140,7 +140,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33724" name="封印著魂狩術士力量的魔劍" type="Weapon">
+	<item id="33724" type="Weapon" name="소울테이커의 힘이 봉인된 소드">
 		<table name="#Desc">封印著魂狩術士力量的魔劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_terakan_i00"/>
 		<set name="default_action" val="equip"/>
@@ -159,7 +159,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33725" name="封印著祕儀召主力量的法杖" type="Weapon">
+	<item id="33725" type="Weapon" name="아르카나로드의 힘이 봉인된 블런트">
 		<table name="#Desc">封印著祕儀召主力量的法杖。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_kitz_i00"/>
 		<set name="default_action" val="equip"/>
@@ -179,7 +179,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33726" name="封印著樞機主教力量的魔杖" type="Weapon">
+	<item id="33726" type="Weapon" name="카디날의 힘이 봉인된 스태프">
 		<table name="#Desc">封印著樞機主教力量的魔杖。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_arcorda_i00"/>
 		<set name="default_action" val="equip"/>
@@ -199,7 +199,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33727" name="封印著昭聖者力量的魔杖" type="Weapon">
+	<item id="33727" type="Weapon" name="하이로펀트의 힘이 봉인된 스태프">
 		<table name="#Desc">封印著昭聖者力量的魔杖。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_arcorda_i00"/>
 		<set name="default_action" val="equip"/>
@@ -219,7 +219,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33728" name="封印著伊娃神殿騎士力量的長劍" type="Weapon">
+	<item id="33728" type="Weapon" name="에바스템플러의 힘이 봉인된 소드">
 		<table name="#Desc">封印著伊娃神殿騎士力量的長劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -238,7 +238,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33729" name="封印著伊娃吟遊詩人力量的長劍" type="Weapon">
+	<item id="33729" type="Weapon" name="소드뮤즈의 힘이 봉인된 소드">
 		<table name="#Desc">封印著伊娃吟遊詩人力量的長劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -257,7 +257,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33730" name="封印著疾風浪人力量的匕首" type="Weapon">
+	<item id="33730" type="Weapon" name="윈드라이더의 힘이 봉인된 대거">
 		<table name="#Desc">封印著疾風浪人力量的匕首。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_radice_i00"/>
 		<set name="default_action" val="equip"/>
@@ -277,7 +277,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433"/>
 		</for>
 	</item>
-	<item id="33731" name="封印著月光箭靈力量的長弓" type="Weapon">
+	<item id="33731" type="Weapon" name="문라이트센티넬의 힘이 봉인된 보우">
 		<table name="#Desc">封印著月光箭靈力量的長弓。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_karupis_i00"/>
 		<set name="default_action" val="equip"/>
@@ -299,7 +299,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293"/>
 		</for>
 	</item>
-	<item id="33732" name="封印著伊娃祕術詩人力量的魔劍" type="Weapon">
+	<item id="33732" type="Weapon" name="미스틱뮤즈의 힘이 봉인된 소드">
 		<table name="#Desc">封印著伊娃祕術詩人力量的魔劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_terakan_i00"/>
 		<set name="default_action" val="equip"/>
@@ -318,7 +318,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33733" name="封印著元素支配者力量的法杖" type="Weapon">
+	<item id="33733" type="Weapon" name="엘레멘탈마스터의 힘이 봉인된 블런트">
 		<table name="#Desc">封印著元素支配者力量的法杖。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_kitz_i00"/>
 		<set name="default_action" val="equip"/>
@@ -338,7 +338,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33734" name="封印著伊娃聖者力量的法杖" type="Weapon">
+	<item id="33734" type="Weapon" name="에바스세인트의 힘이 봉인된 블런트">
 		<table name="#Desc">封印著伊娃聖者力量的法杖。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_kitz_i00"/>
 		<set name="default_action" val="equip"/>
@@ -358,7 +358,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33735" name="封印著席琳冥殿騎士力量的長劍" type="Weapon">
+	<item id="33735" type="Weapon" name="실리엔템플러의 힘이 봉인된 소드">
 		<table name="#Desc">封印著席琳冥殿騎士力量的長劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -377,7 +377,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33736" name="封印著幽冥舞者力量的雙刀" type="Weapon">
+	<item id="33736" type="Weapon" name="스펙트럴댄서의 힘이 봉인된 듀얼소드">
 		<table name="#Desc">封印著幽冥舞者力量的雙刀。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -396,7 +396,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33737" name="封印著魅影獵者力量的匕首" type="Weapon">
+	<item id="33737" type="Weapon" name="고스트헌터의 힘이 봉인된 대거">
 		<table name="#Desc">封印著魅影獵者力量的匕首。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_radice_i00"/>
 		<set name="default_action" val="equip"/>
@@ -416,7 +416,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433"/>
 		</for>
 	</item>
-	<item id="33738" name="封印著幽冥箭靈力量的長弓" type="Weapon">
+	<item id="33738" type="Weapon" name="고스트센티넬의 힘이 봉인된 보우">
 		<table name="#Desc">封印著幽冥箭靈力量的長弓。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_karupis_i00"/>
 		<set name="default_action" val="equip"/>
@@ -438,7 +438,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293"/>
 		</for>
 	</item>
-	<item id="33739" name="封印著暴風狂嘯者力量的魔劍" type="Weapon">
+	<item id="33739" type="Weapon" name="스톰스크리머의 힘이 봉인된 소드">
 		<table name="#Desc">封印著暴風狂嘯者力量的魔劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_terakan_i00"/>
 		<set name="default_action" val="equip"/>
@@ -457,7 +457,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33740" name="封印著闇影支配者力量的魔劍" type="Weapon">
+	<item id="33740" type="Weapon" name="스펙트럴마스터의 힘이 봉인된 소드">
 		<table name="#Desc">封印著闇影支配者力量的魔劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_terakan_i00"/>
 		<set name="default_action" val="equip"/>
@@ -476,7 +476,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33741" name="封印著席琳聖者力量的法杖" type="Weapon">
+	<item id="33741" type="Weapon" name="실리엔세인트의 힘이 봉인된 블런트">
 		<table name="#Desc">封印著席琳聖者力量的法杖。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_kitz_i00"/>
 		<set name="default_action" val="equip"/>
@@ -496,7 +496,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33742" name="封印著泰坦力量的雙手劍" type="Weapon">
+	<item id="33742" type="Weapon" name="타이탄의 힘이 봉인된 투핸드소드">
 		<table name="#Desc">封印著泰坦力量的雙手劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_spigel_i00"/>
 		<set name="default_action" val="equip"/>
@@ -515,7 +515,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33743" name="封印著卡巴塔里宗師力量的雙手拳套" type="Weapon">
+	<item id="33743" type="Weapon" name="그랜드카바타리의 힘이 봉인된 듀얼피스트">
 		<table name="#Desc">封印著卡巴塔里宗師力量的雙手拳套。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_fantasma_i00"/>
 		<set name="default_action" val="equip"/>
@@ -535,7 +535,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33744" name="封印著君主力量的魔劍" type="Weapon">
+	<item id="33744" type="Weapon" name="도미네이터의 힘이 봉인된 소드">
 		<table name="#Desc">封印著君主力量的魔劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -554,7 +554,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33745" name="封印著末日戰狂力量的雙刀" type="Weapon">
+	<item id="33745" type="Weapon" name="둠크라이어의 힘이 봉인된 듀얼소드">
 		<table name="#Desc">封印著末日戰狂力量的雙刀。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -573,7 +573,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33746" name="封印著財富獵人力量的匕首" type="Weapon">
+	<item id="33746" type="Weapon" name="포츈시커의 힘이 봉인된 대거">
 		<table name="#Desc">封印著財富獵人力量的匕首。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_radice_i00"/>
 		<set name="default_action" val="equip"/>
@@ -593,7 +593,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433"/>
 		</for>
 	</item>
-	<item id="33747" name="封印著巨匠力量的魔杖" type="Weapon">
+	<item id="33747" type="Weapon" name="마에스트로의 힘이 봉인된 스태프">
 		<table name="#Desc">封印著巨匠力量的魔杖。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_arcorda_i00"/>
 		<set name="default_action" val="equip"/>
@@ -613,7 +613,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325"/>
 		</for>
 	</item>
-	<item id="33760" name="封印著末日使者力量的長劍" type="Weapon">
+	<item id="33760" type="Weapon" name="둠브링거의 힘이 봉인된 소드">
 		<table name="#Desc">封印著末日使者力量的劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -632,7 +632,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33761" name="封印著追魂使(男)力量的長劍" type="Weapon">
+	<item id="33761" type="Weapon" name="소울하운드(남)의 힘이 봉인된 소드">
 		<table name="#Desc">封印著追魂使（男）力量的劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_terakan_i00"/>
 		<set name="default_action" val="equip"/>
@@ -651,7 +651,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33762" name="封印著追魂使(女)力量的長劍" type="Weapon">
+	<item id="33762" type="Weapon" name="소울하운드(여)의 힘이 봉인된 소드">
 		<table name="#Desc">封印著追魂使（女）力量的劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_terakan_i00"/>
 		<set name="default_action" val="equip"/>
@@ -670,7 +670,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379"/>
 		</for>
 	</item>
-	<item id="33763" name="封印著魔彈射手力量的十字弓" type="Weapon">
+	<item id="33763" type="Weapon" name="트릭스터의 힘이 봉인된 크로스보우">
 		<table name="#Desc">封印著魔彈射手力量的十字弓。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_netra_i00"/>
 		<set name="default_action" val="equip"/>
@@ -691,7 +691,7 @@
 			<set order="0x08" stat="pAtkSpd" val="303"/>
 		</for>
 	</item>
-	<item id="33765" name="封印著軍武判官力量的長劍" type="Weapon">
+	<item id="33765" type="Weapon" name="쥬디케이터의 힘이 봉인된 소드">
 		<table name="#Desc">封印著軍武判官力量的劍。無法交易/丟棄/刪除/出售於個人商店/利用代售系統。無法強化/精煉/賦予屬性的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aseldor_i00"/>
 		<set name="default_action" val="equip"/>
@@ -711,7 +711,7 @@
 		</for>
 	</item>
 
-	<item id="33780" name="靈魂彈-R級" type="EtcItem">
+	<item id="33780" type="EtcItem" name="정령탄 - R그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">精靈之光加持於武器，瞬間對敵人加以強力衝擊。R級武器專用。無法交易/丟棄/出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.soulshot_r_i00"/>
@@ -723,7 +723,7 @@
 		</cond>
 	</item>
 
-	<item id="33794" name="祝福的魔靈彈-R級" type="EtcItem">
+	<item id="33794" type="EtcItem" name="축복받은 마정탄 - R그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">上級精靈之光加持於武器，瞬間極大強化魔法的威力。R級武器專用。無法交易/丟棄/出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.blessed_spiritshot_r_i00"/>
@@ -735,7 +735,7 @@
 		</cond>
 	</item>
 
-	<item id="33797" name="壺精封印手鐲-泰爾錫之光" type="Armor">
+	<item id="33797" type="Armor" name="아가시온 봉인 팔찌 - 테르시의 빛 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以召喚在神殿分發的用於對抗席琳黑暗的泰爾錫之光的壺精手鐲。道具清單的空間和擁有的道具重量超出時，則無法領取光之幻影。無法交易/丟棄/出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.bracelet_tersi_agathion"/>

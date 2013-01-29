@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="30985" name="束縛的靈魂之劍*靈魂之劍" type="Weapon">
+	<item id="30985" type="Weapon" name="속박의 스피릿츠 소드*스피릿츠 소드">
 		<table name="#Desc">束縛的靈魂之劍*靈魂之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30986" name="束縛的靈魂之劍*襲擊劍" type="Weapon">
+	<item id="30986" type="Weapon" name="속박의 스피릿츠 소드*레이드 소드">
 		<table name="#Desc">束縛的靈魂之劍*襲擊劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30988" name="束縛的靈魂之劍" type="Weapon">
+	<item id="30988" type="Weapon" name="속박의 스피릿츠 소드 Crt.대미지">
 		<table name="#Plus">Crt.傷害</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時物理攻擊力提升約194。</table>
 		<set name="icon" val="icon.weapon_spirits_sword_i01"/>
@@ -83,7 +83,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30995" name="束縛的椎骨之劍*革命劍" type="Weapon">
+	<item id="30995" type="Weapon" name="속박의 스파인본 소드*혁명의 검">
 		<table name="#Desc">束縛的椎骨之劍*革命劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -110,7 +110,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30996" name="束縛的椎骨之劍*緋紅劍" type="Weapon">
+	<item id="30996" type="Weapon" name="속박의 스파인본 소드*크림슨소드">
 		<table name="#Desc">束縛的椎骨之劍*緋紅劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -137,7 +137,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30997" name="束縛的椎骨之劍*工匠之劍" type="Weapon">
+	<item id="30997" type="Weapon" name="속박의 스파인본 소드*장인의 검">
 		<table name="#Desc">束縛的椎骨之劍*工匠之劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -164,7 +164,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30998" name="束縛的椎骨之劍*精靈劍" type="Weapon">
+	<item id="30998" type="Weapon" name="속박의 스파인본 소드*엘븐소드">
 		<table name="#Desc">束縛的椎骨之劍*精靈劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>
@@ -191,7 +191,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30999" name="束縛的椎骨之劍*精靈長劍" type="Weapon">
+	<item id="30999" type="Weapon" name="속박의 스파인본 소드*엘븐 롱소드">
 		<table name="#Desc">束縛的椎骨之劍*精靈長劍。使用束縛解除卷軸後，可以變更為一般狀態的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_dual_sword_i00"/>
 		<set name="default_action" val="equip"/>

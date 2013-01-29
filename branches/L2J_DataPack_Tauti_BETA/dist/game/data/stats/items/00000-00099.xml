@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="1" type="Weapon" name="Short Sword">
+	<item id="1" type="Weapon" name="작은 검">
 		<set name="icon" val="icon.weapon_small_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -21,7 +21,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="2" type="Weapon" name="Long Sword">
+	<item id="2" type="Weapon" name="장검">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -42,7 +42,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="3" type="Weapon" name="Broadsword">
+	<item id="3" type="Weapon" name="브로드 소드">
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -63,7 +63,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="4" type="Weapon" name="Club">
+	<item id="4" type="Weapon" name="몽둥이">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -85,7 +85,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="5" type="Weapon" name="Mace">
+	<item id="5" type="Weapon" name="메이스">
 		<set name="icon" val="icon.weapon_mace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -107,7 +107,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="6" type="Weapon" name="Apprentice's Wand">
+	<item id="6" type="Weapon" name="견습사의 완드">
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -133,7 +133,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="7" type="Weapon" name="Apprentice's Rod">
+	<item id="7" type="Weapon" name="견습사의 로드">
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -156,7 +156,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="8" type="Weapon" name="Willow Staff">
+	<item id="8" type="Weapon" name="버드나무 지팡이">
 		<set name="icon" val="icon.weapon_willow_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -179,7 +179,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="9" type="Weapon" name="Cedar Staff">
+	<item id="9" type="Weapon" name="삼나무 지팡이">
 		<set name="icon" val="icon.weapon_cedar_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -202,7 +202,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="10" type="Weapon" name="Dagger">
+	<item id="10" type="Weapon" name="단검">
 		<set name="icon" val="icon.weapon_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -227,7 +227,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="11" type="Weapon" name="Bone Dagger">
+	<item id="11" type="Weapon" name="뼈 단검">
 		<set name="icon" val="icon.weapon_bone_dagger_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -249,7 +249,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="12" type="Weapon" name="Knife">
+	<item id="12" type="Weapon" name="나이프">
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dagger" />
@@ -271,7 +271,7 @@
 			<set order="0x08" stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="13" type="Weapon" name="Short Bow">
+	<item id="13" type="Weapon" name="작은 활">
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -295,7 +295,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="14" type="Weapon" name="Bow">
+	<item id="14" type="Weapon" name="활">
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -319,7 +319,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="15" type="Weapon" name="Short Spear">
+	<item id="15" type="Weapon" name="단창">
 		<set name="icon" val="icon.weapon_short_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -342,7 +342,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="16" type="Weapon" name="Great Spear">
+	<item id="16" type="Weapon" name="장창">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -365,7 +365,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="17" type="EtcItem" name="Wooden Arrow">
+	<item id="17" type="EtcItem" name="나무 화살">
 		<set name="icon" val="icon.etc_wooden_quiver_i00" />
 		<set name="default_action" val="equip" />
 		<set name="etcitem_type" val="arrow" />
@@ -376,7 +376,7 @@
 		<set name="price" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="18" type="Armor" name="Leather Shield">
+	<item id="18" type="Armor" name="가죽 방패">
 		<set name="icon" val="icon.shield_leather_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -393,7 +393,7 @@
 			<set order="0x08" stat="sDef" val="47" />
 		</for>
 	</item>
-	<item id="19" type="Armor" name="Small Shield">
+	<item id="19" type="Armor" name="작은 방패">
 		<set name="icon" val="icon.shield_small_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -410,7 +410,7 @@
 			<set order="0x08" stat="sDef" val="56" />
 		</for>
 	</item>
-	<item id="20" type="Armor" name="Buckler">
+	<item id="20" type="Armor" name="버클러">
 		<set name="icon" val="icon.shield_buckler_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -427,7 +427,7 @@
 			<set order="0x08" stat="sDef" val="67" />
 		</for>
 	</item>
-	<item id="21" type="Armor" name="Shirt">
+	<item id="21" type="Armor" name="천 셔츠">
 		<set name="icon" val="icon.armor_t02_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -440,7 +440,7 @@
 			<add order="0x10" stat="pDef" val="36" />
 		</for>
 	</item>
-	<item id="22" type="Armor" name="Leather Shirt">
+	<item id="22" type="Armor" name="가죽 셔츠">
 		<set name="icon" val="icon.armor_t04_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -453,7 +453,7 @@
 			<add order="0x10" stat="pDef" val="43" />
 		</for>
 	</item>
-	<item id="23" type="Armor" name="Wooden Breastplate">
+	<item id="23" type="Armor" name="나무 흉갑">
 		<set name="icon" val="icon.armor_t06_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -466,7 +466,7 @@
 			<add order="0x10" stat="pDef" val="47" />
 		</for>
 	</item>
-	<item id="24" type="Armor" name="Bone Breastplate">
+	<item id="24" type="Armor" name="뼈 흉갑">
 		<set name="icon" val="icon.armor_t32_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -479,7 +479,7 @@
 			<add order="0x10" stat="pDef" val="50" />
 		</for>
 	</item>
-	<item id="25" type="Armor" name="Piece Bone Breastplate">
+	<item id="25" type="Armor" name="조각뼈 흉갑">
 		<set name="icon" val="icon.armor_t33_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -495,7 +495,7 @@
 			<add order="0x10" stat="pDef" val="62" />
 		</for>
 	</item>
-	<item id="26" type="Armor" name="Bronze Breastplate">
+	<item id="26" type="Armor" name="청동 흉갑">
 		<set name="icon" val="icon.armor_t34_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -511,7 +511,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="27" type="Armor" name="Hard Leather Shirt">
+	<item id="27" type="Armor" name="질긴가죽 셔츠">
 		<set name="icon" val="icon.armor_t30_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -524,7 +524,7 @@
 			<add order="0x10" stat="pDef" val="53" />
 		</for>
 	</item>
-	<item id="28" type="Armor" name="Pants">
+	<item id="28" type="Armor" name="천 바지">
 		<set name="icon" val="icon.armor_t02_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -537,7 +537,7 @@
 			<add order="0x10" stat="pDef" val="22" />
 		</for>
 	</item>
-	<item id="29" type="Armor" name="Leather Pants">
+	<item id="29" type="Armor" name="가죽 바지">
 		<set name="icon" val="icon.armor_t04_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -550,7 +550,7 @@
 			<add order="0x10" stat="pDef" val="27" />
 		</for>
 	</item>
-	<item id="30" type="Armor" name="Hard Leather Pants">
+	<item id="30" type="Armor" name="질긴 가죽바지">
 		<set name="icon" val="icon.armor_t06_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -563,7 +563,7 @@
 			<add order="0x10" stat="pDef" val="29" />
 		</for>
 	</item>
-	<item id="31" type="Armor" name="Bone Gaiters">
+	<item id="31" type="Armor" name="뼈 각반">
 		<set name="icon" val="icon.armor_t32_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -576,7 +576,7 @@
 			<add order="0x10" stat="pDef" val="32" />
 		</for>
 	</item>
-	<item id="32" type="Armor" name="Piece Bone Gaiters">
+	<item id="32" type="Armor" name="조각뼈각반">
 		<set name="icon" val="icon.armor_t33_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -592,7 +592,7 @@
 			<add order="0x10" stat="pDef" val="39" />
 		</for>
 	</item>
-	<item id="33" type="Armor" name="Hard Leather Gaiters">
+	<item id="33" type="Armor" name="질긴가죽 각반">
 		<set name="icon" val="icon.armor_t30_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -605,7 +605,7 @@
 			<add order="0x10" stat="pDef" val="33" />
 		</for>
 	</item>
-	<item id="34" type="Armor" name="Bronze Gaiters">
+	<item id="34" type="Armor" name="청동 각반">
 		<set name="icon" val="icon.armor_t34_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -621,7 +621,7 @@
 			<add order="0x10" stat="pDef" val="43" />
 		</for>
 	</item>
-	<item id="35" type="Armor" name="Cloth Shoes">
+	<item id="35" type="Armor" name="천 신발">
 		<set name="icon" val="icon.armor_t02_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -633,7 +633,7 @@
 			<add order="0x10" stat="pDef" val="9" />
 		</for>
 	</item>
-	<item id="36" type="Armor" name="Leather Sandals">
+	<item id="36" type="Armor" name="가죽 샌들">
 		<set name="icon" val="icon.armor_t03_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -645,7 +645,7 @@
 			<add order="0x10" stat="pDef" val="9" />
 		</for>
 	</item>
-	<item id="37" type="Armor" name="Leather Shoes">
+	<item id="37" type="Armor" name="가죽 신발">
 		<set name="icon" val="icon.armor_t05_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -657,7 +657,7 @@
 			<add order="0x10" stat="pDef" val="13" />
 		</for>
 	</item>
-	<item id="38" type="Armor" name="Low Boots">
+	<item id="38" type="Armor" name="짧은 장화">
 		<set name="icon" val="icon.armor_t32_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -669,7 +669,7 @@
 			<add order="0x10" stat="pDef" val="15" />
 		</for>
 	</item>
-	<item id="39" type="Armor" name="Boots">
+	<item id="39" type="Armor" name="부츠">
 		<set name="icon" val="icon.armor_t30_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -681,7 +681,7 @@
 			<add order="0x10" stat="pDef" val="17" />
 		</for>
 	</item>
-	<item id="40" type="Armor" name="Leather Boots">
+	<item id="40" type="Armor" name="가죽부츠">
 		<set name="icon" val="icon.armor_t09_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -697,7 +697,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="41" type="Armor" name="Cloth Cap">
+	<item id="41" type="Armor" name="천 모자">
 		<set name="icon" val="icon.armor_cloth_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -709,7 +709,7 @@
 			<add order="0x10" stat="pDef" val="13" />
 		</for>
 	</item>
-	<item id="42" type="Armor" name="Leather Cap">
+	<item id="42" type="Armor" name="가죽 모자">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -721,7 +721,7 @@
 			<add order="0x10" stat="pDef" val="16" />
 		</for>
 	</item>
-	<item id="43" type="Armor" name="Wooden Helmet">
+	<item id="43" type="Armor" name="나무 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -733,7 +733,7 @@
 			<add order="0x10" stat="pDef" val="19" />
 		</for>
 	</item>
-	<item id="44" type="Armor" name="Leather Helmet">
+	<item id="44" type="Armor" name="가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -745,7 +745,7 @@
 			<add order="0x10" stat="pDef" val="23" />
 		</for>
 	</item>
-	<item id="45" type="Armor" name="Bone Helmet">
+	<item id="45" type="Armor" name="뼈 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -761,7 +761,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="46" type="Armor" name="Bronze Helmet">
+	<item id="46" type="Armor" name="청동 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -777,7 +777,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="47" type="Armor" name="Helmet">
+	<item id="47" type="Armor" name="헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -793,7 +793,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="48" type="Armor" name="Short Gloves">
+	<item id="48" type="Armor" name="짧은 장갑">
 		<set name="icon" val="icon.armor_t02_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -805,7 +805,7 @@
 			<add order="0x10" stat="pDef" val="9" />
 		</for>
 	</item>
-	<item id="49" type="Armor" name="Gloves">
+	<item id="49" type="Armor" name="장갑">
 		<set name="icon" val="icon.armor_t06_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -817,7 +817,7 @@
 			<add order="0x10" stat="pDef" val="13" />
 		</for>
 	</item>
-	<item id="50" type="Armor" name="Leather Gloves">
+	<item id="50" type="Armor" name="가죽 장갑">
 		<set name="icon" val="icon.armor_t32_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -829,7 +829,7 @@
 			<add order="0x10" stat="pDef" val="15" />
 		</for>
 	</item>
-	<item id="51" type="Armor" name="Bracer">
+	<item id="51" type="Armor" name="활골무">
 		<set name="icon" val="icon.armor_t30_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -841,7 +841,7 @@
 			<add order="0x10" stat="pDef" val="17" />
 		</for>
 	</item>
-	<item id="52" type="Weapon" name="Vesper Dual Sword">
+	<item id="52" type="Weapon" name="베스페르 듀얼 소드">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -870,7 +870,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="53" type="EtcItem" name="(Not In Use)">
+	<item id="53" type="EtcItem" name="(사용안함)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -884,7 +884,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13024,1,1,100" />
 	</item>
-	<item id="54" type="EtcItem" name="(Not In Use)">
+	<item id="54" type="EtcItem" name="(사용안함)">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -898,7 +898,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13025,1,1,100" />
 	</item>
-	<item id="55" type="EtcItem" name="Shiny Agathion 7-Day Pack (Event)">
+	<item id="55" type="EtcItem" name="샤방 아가시온 7일 팩 - 이벤트용">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -912,7 +912,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14102,1,1,100" />
 	</item>
-	<item id="56" type="EtcItem" name="Sobbing Agathion 7-Day Pack (Event)">
+	<item id="56" type="EtcItem" name="엉엉 아가시온 7일 팩 - 이벤트용">
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -926,14 +926,14 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="14103,1,1,100" />
 	</item>
-	<item id="57" type="EtcItem" name="Adena">
+	<item id="57" type="EtcItem" name="아데나">
 		<set name="icon" val="icon.etc_adena_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="gold" />
 		<set name="price" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="58" type="Armor" name="Mithril Breastplate">
+	<item id="58" type="Armor" name="미스릴 흉갑">
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -953,7 +953,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="59" type="Armor" name="Mithril Gaiters">
+	<item id="59" type="Armor" name="미스릴 각반">
 		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -973,7 +973,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="60" type="Armor" name="Composite Armor">
+	<item id="60" type="Armor" name="컴포짓아머">
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -993,7 +993,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="61" type="Armor" name="Mithril Plate Gloves">
+	<item id="61" type="Armor" name="미스릴 장갑">
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1009,7 +1009,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="62" type="Armor" name="Reinforced Mithril Boots">
+	<item id="62" type="Armor" name="강화 미스릴 부츠">
 		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1025,7 +1025,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="63" type="Armor" name="Gauntlets">
+	<item id="63" type="Armor" name="건틀렛">
 		<set name="icon" val="icon.armor_t10_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1041,7 +1041,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="64" type="Armor" name="Composite Boots">
+	<item id="64" type="Armor" name="컴포짓 부츠">
 		<set name="icon" val="icon.armor_t61_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -1057,7 +1057,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="65" type="EtcItem" name="Red Potion">
+	<item id="65" type="EtcItem" name="빨간물약">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -1071,7 +1071,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="66" type="Weapon" name="Gladius">
+	<item id="66" type="Weapon" name="글라디우스">
 		<set name="icon" val="icon.weapon_gladius_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1092,7 +1092,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="67" type="Weapon" name="Orcish Sword">
+	<item id="67" type="Weapon" name="오키쉬소드">
 		<set name="icon" val="icon.weapon_orcish_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1113,7 +1113,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="68" type="Weapon" name="Falchion">
+	<item id="68" type="Weapon" name="펄션">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1134,7 +1134,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="69" type="Weapon" name="Bastard Sword">
+	<item id="69" type="Weapon" name="바스타드 소드">
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1161,7 +1161,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="70" type="Weapon" name="Claymore">
+	<item id="70" type="Weapon" name="클레이모어">
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1188,7 +1188,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="71" type="Weapon" name="Flamberge">
+	<item id="71" type="Weapon" name="플랑베르주">
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1215,7 +1215,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="72" type="Weapon" name="Stormbringer">
+	<item id="72" type="Weapon" name="스톰 브링거">
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1242,7 +1242,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="73" type="Weapon" name="Shamshir">
+	<item id="73" type="Weapon" name="샴쉬르">
 		<set name="icon" val="icon.weapon_shamshir_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1269,7 +1269,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="74" type="Weapon" name="Katana">
+	<item id="74" type="Weapon" name="카타나">
 		<set name="icon" val="icon.weapon_katana_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1296,7 +1296,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="75" type="Weapon" name="Caliburs">
+	<item id="75" type="Weapon" name="카리브스">
 		<set name="icon" val="icon.weapon_caliburs_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1323,7 +1323,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="76" type="Weapon" name="Sword of Delusion">
+	<item id="76" type="Weapon" name="미혹의 검">
 		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1350,7 +1350,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="77" type="Weapon" name="Tsurugi">
+	<item id="77" type="Weapon" name="츠루기">
 		<set name="icon" val="icon.weapon_tsurugi_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1377,7 +1377,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="78" type="Weapon" name="Great Sword">
+	<item id="78" type="Weapon" name="그레이트 소드">
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1404,7 +1404,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="79" type="Weapon" name="Sword of Damascus">
+	<item id="79" type="Weapon" name="다마스커스 검">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1431,7 +1431,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="80" type="Weapon" name="Tallum Blade">
+	<item id="80" type="Weapon" name="탈룸 블레이드">
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1458,7 +1458,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="81" type="Weapon" name="Dragon Slayer">
+	<item id="81" type="Weapon" name="드래곤 슬레이어">
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1485,7 +1485,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="82" type="Weapon" name="Gaz Blade">
+	<item id="82" type="Weapon" name="가즈 블레이드">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1514,7 +1514,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="83" type="Weapon" name="Sword of Magic">
+	<item id="83" type="Weapon" name="소드 오브 매직">
 		<set name="icon" val="icon.weapon_sword_of_magic_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1541,7 +1541,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="84" type="Weapon" name="Homunkulus's Sword">
+	<item id="84" type="Weapon" name="호문쿨러스 소드">
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1568,7 +1568,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="85" type="Weapon" name="Phantom Sword">
+	<item id="85" type="Weapon" name="팬텀 소드">
 		<set name="icon" val="icon.weapon_phantom_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -1595,7 +1595,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="86" type="Weapon" name="Tomahawk">
+	<item id="86" type="Weapon" name="토마호크">
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1622,7 +1622,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="87" type="Weapon" name="Iron Hammer">
+	<item id="87" type="Weapon" name="쇠망치">
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1644,7 +1644,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="88" type="Weapon" name="Morning Star">
+	<item id="88" type="Weapon" name="모닝 스타">
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1671,7 +1671,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="89" type="Weapon" name="Big Hammer">
+	<item id="89" type="Weapon" name="큰망치">
 		<set name="icon" val="icon.weapon_big_hammer_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1698,7 +1698,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="90" type="Weapon" name="Goat Head Staff">
+	<item id="90" type="Weapon" name="산양머리 지팡이">
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1726,7 +1726,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="91" type="Weapon" name="Heavy War Axe">
+	<item id="91" type="Weapon" name="헤비 워 액스">
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1753,7 +1753,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="92" type="Weapon" name="Sprite's Staff">
+	<item id="92" type="Weapon" name="정령의 지팡이">
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -1781,7 +1781,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="93" type="Weapon" name="Winged Spear">
+	<item id="93" type="Weapon" name="윙드스피어">
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1809,7 +1809,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="94" type="Weapon" name="Bec de Corbin">
+	<item id="94" type="Weapon" name="배크 드 코르뱅">
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1837,7 +1837,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="95" type="Weapon" name="Poleaxe">
+	<item id="95" type="Weapon" name="폴액스">
 		<set name="icon" val="icon.weapon_poleaxe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1865,7 +1865,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="96" type="Weapon" name="Scythe">
+	<item id="96" type="Weapon" name="사이드">
 		<set name="icon" val="icon.weapon_scythe_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1893,7 +1893,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="97" type="Weapon" name="Lance">
+	<item id="97" type="Weapon" name="랜시아">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1921,7 +1921,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="98" type="Weapon" name="Halberd">
+	<item id="98" type="Weapon" name="핼버드">
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -1949,7 +1949,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="99" type="Weapon" name="Apprentice's Spellbook">
+	<item id="99" type="Weapon" name="견습사의 주문서">
 		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="etc" />

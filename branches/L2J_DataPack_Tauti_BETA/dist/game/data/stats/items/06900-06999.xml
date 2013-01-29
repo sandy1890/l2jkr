@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6900" type="EtcItem" name="Recipe: Arcana Mace (100%)">
+	<item id="6900" type="EtcItem" name="레시피 : 아르카나 메이스(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6901" type="EtcItem" name="Recipe: Shining Arrow (100%)">
+	<item id="6901" type="EtcItem" name="레시피 : 빛의 화살(100%)">
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -24,7 +24,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6902" type="Armor" name="Pledge Shield">
+	<item id="6902" type="Armor" name="혈맹의 방패">
 		<set name="icon" val="icon.shield_pledge_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -45,7 +45,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="6903" type="EtcItem" name="Music Box M">
+	<item id="6903" type="EtcItem" name="뮤직박스 M">
 		<set name="icon" val="icon.etc_m_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -56,7 +56,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2187-1" />
 	</item>
-	<item id="6904" type="EtcItem" name="Party Mask Fabric">
+	<item id="6904" type="EtcItem" name="파티 마스크 원단">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -65,7 +65,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6905" type="EtcItem" name="Hair Pin Piece">
+	<item id="6905" type="EtcItem" name="귀부인의 헤어핀 조각">
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -74,7 +74,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6906" type="EtcItem" name="Pirate's Eye Patch Material">
+	<item id="6906" type="EtcItem" name="해적의 안대 끈">
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -83,7 +83,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6907" type="EtcItem" name="Monocle Piece">
+	<item id="6907" type="EtcItem" name="모노클 조각">
 		<set name="icon" val="icon.etc_bark_blue_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -92,7 +92,7 @@
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6908" type="EtcItem" name="Fish Oil">
+	<item id="6908" type="EtcItem" name="물고기 기름">
 		<set name="icon" val="icon.etc_fish_oil_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -101,7 +101,7 @@
 		<set name="price" val="50" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6909" type="EtcItem" name="Greater Fish Oil">
+	<item id="6909" type="EtcItem" name="중급 물고기 기름">
 		<set name="icon" val="icon.etc_fish_oil_i01" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -110,7 +110,7 @@
 		<set name="price" val="250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6910" type="EtcItem" name="Premium Fish Oil">
+	<item id="6910" type="EtcItem" name="상급 물고기 기름">
 		<set name="icon" val="icon.etc_fish_oil_i02" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -119,7 +119,7 @@
 		<set name="price" val="1250" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6911" type="EtcItem" name="Fish Scale">
+	<item id="6911" type="EtcItem" name="물고기 비늘">
 		<set name="icon" val="icon.etc_fish_scale_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -128,7 +128,7 @@
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6912" type="EtcItem" name="Shiny Fish Scale">
+	<item id="6912" type="EtcItem" name="반짝이는 물고기 비늘">
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -137,7 +137,7 @@
 		<set name="price" val="300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6913" type="EtcItem" name="Fish Gem">
+	<item id="6913" type="EtcItem" name="물고기 보석">
 		<set name="icon" val="icon.etc_fish_gem_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -146,7 +146,7 @@
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6914" type="EtcItem" name="Shiny Fish Gem">
+	<item id="6914" type="EtcItem" name="반짝이는 물고기 보석">
 		<set name="icon" val="icon.etc_fish_gem_i01" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -155,7 +155,7 @@
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6915" type="EtcItem" name="Thin Fish Bone">
+	<item id="6915" type="EtcItem" name="가는 물고기 가시">
 		<set name="icon" val="icon.etc_fang_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -164,7 +164,7 @@
 		<set name="price" val="300" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6916" type="EtcItem" name="Thick Fish Bone">
+	<item id="6916" type="EtcItem" name="굵은 물고기 가시">
 		<set name="icon" val="icon.etc_fang_ivory_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -173,7 +173,7 @@
 		<set name="price" val="450" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6917" type="Weapon" name="Monster Only (Poison Sting)">
+	<item id="6917" type="Weapon" name="몹전용(독침)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rhand" />
@@ -187,7 +187,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6918" type="Weapon" name="Monster Only (Shield of Silenos)">
+	<item id="6918" type="Weapon" name="몹전용(실레노스방패)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -203,7 +203,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="6919" type="Weapon" name="Monster Only (Shield of Ketra Orc)">
+	<item id="6919" type="Weapon" name="몹전용(케트라오크방패)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -220,7 +220,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="6920" type="EtcItem" name="Recipe: Greater Fish Oil (100%)">
+	<item id="6920" type="EtcItem" name="레시피 : 중급 물고기 기름(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -232,7 +232,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6921" type="EtcItem" name="Recipe: Premium Fish Oil(100%)">
+	<item id="6921" type="EtcItem" name="레시피 : 상급 물고기 기름(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -244,7 +244,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6922" type="EtcItem" name="Recipe: Party Mask (100%)">
+	<item id="6922" type="EtcItem" name="레시피 : 파티 마스크(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -256,7 +256,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6923" type="EtcItem" name="Recipe: Lady's Hair Pin (100%)">
+	<item id="6923" type="EtcItem" name="레시피 : 귀부인의 헤어핀(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -268,7 +268,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6924" type="EtcItem" name="Recipe: Pirate's Eye Patch (100%)">
+	<item id="6924" type="EtcItem" name="레시피 : 해적의 안대(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -280,7 +280,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6925" type="EtcItem" name="Recipe: Monocle (100%)">
+	<item id="6925" type="EtcItem" name="레시피 : 모노클(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -292,7 +292,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6926" type="EtcItem" name="Recipe: Lesser Healing Potion (100%)">
+	<item id="6926" type="EtcItem" name="레시피 : 체력회복제(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -304,7 +304,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6927" type="EtcItem" name="Recipe: Healing Potion (100%)">
+	<item id="6927" type="EtcItem" name="레시피 : 고급 체력 회복제(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -316,7 +316,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6928" type="EtcItem" name="Recipe: Greater Healing Potion (100%)">
+	<item id="6928" type="EtcItem" name="레시피 : 강력 체력 회복제(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -328,7 +328,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6929" type="EtcItem" name="Recipe: Antidote (100%)">
+	<item id="6929" type="EtcItem" name="레시피 : 해독제(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -340,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6930" type="EtcItem" name="Recipe: Greater Antidote (100%)">
+	<item id="6930" type="EtcItem" name="레시피 : 고급해독제(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -352,7 +352,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6931" type="EtcItem" name="Recipe: Bandage (100%)">
+	<item id="6931" type="EtcItem" name="레시피 : 붕대(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -364,7 +364,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6932" type="EtcItem" name="Recipe: Emergency Dressing (100%)">
+	<item id="6932" type="EtcItem" name="레시피 : 구급붕대(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -376,7 +376,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6933" type="EtcItem" name="Recipe: Haste Potion (100%)">
+	<item id="6933" type="EtcItem" name="레시피 : 이동 속도 향상 물약(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -388,7 +388,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6934" type="EtcItem" name="Recipe: Alacrity Potion (100%)">
+	<item id="6934" type="EtcItem" name="레시피 : 공격 속도 향상 물약(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -400,7 +400,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6935" type="EtcItem" name="Recipe: Greater Haste Potion (100%)">
+	<item id="6935" type="EtcItem" name="레시피 : 고급 이동 속도 향상 물약(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -412,7 +412,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6936" type="EtcItem" name="Recipe: Greater Swift Attack Potion (100%)">
+	<item id="6936" type="EtcItem" name="레시피 : 고급 공격 속도 향상 물약(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -424,7 +424,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6937" type="EtcItem" name="Recipe: Magic Haste Potion (100%)">
+	<item id="6937" type="EtcItem" name="레시피 : 마법시전속도 향상물약(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -436,7 +436,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6938" type="EtcItem" name="Recipe: Greater Magic Haste Potion (100%)">
+	<item id="6938" type="EtcItem" name="레시피 : 고급 마법시전속도 향상물약(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -448,7 +448,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6939" type="EtcItem" name="Recipe: Mystery Potion (100%)">
+	<item id="6939" type="EtcItem" name="레시피 : 의문의 물약(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -460,7 +460,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6940" type="EtcItem" name="Recipe: Facelifting Potion - A (100%)">
+	<item id="6940" type="EtcItem" name="레시피 : 성형의 물약 - A(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -472,7 +472,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6941" type="EtcItem" name="Recipe: Facelifting Potion - B (100%)">
+	<item id="6941" type="EtcItem" name="레시피 : 성형의 물약 - B(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -484,7 +484,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6942" type="EtcItem" name="Recipe: Facelifting Potion - C (100%)">
+	<item id="6942" type="EtcItem" name="레시피 : 성형의 물약 - C(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -496,7 +496,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6943" type="EtcItem" name="Recipe: Dye Potion - A (100%)">
+	<item id="6943" type="EtcItem" name="레시피 : 염색의 물약 - A(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -508,7 +508,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6944" type="EtcItem" name="Recipe: Dye Potion - B (100%)">
+	<item id="6944" type="EtcItem" name="레시피 : 염색의 물약 - B(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -520,7 +520,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6945" type="EtcItem" name="Recipe: Dye Potion - C (100%)">
+	<item id="6945" type="EtcItem" name="레시피 : 염색의 물약 - C(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -532,7 +532,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6946" type="EtcItem" name="Recipe: Dye Potion - D (100%)">
+	<item id="6946" type="EtcItem" name="레시피 : 염색의 물약 - D(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -544,7 +544,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6947" type="EtcItem" name="Recipe: Hair Style Change Potion - A (100%)">
+	<item id="6947" type="EtcItem" name="레시피 : 헤어체인지 물약 - A(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -556,7 +556,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6948" type="EtcItem" name="Recipe: Hair Style Change Potion - B (100%)">
+	<item id="6948" type="EtcItem" name="레시피 : 헤어체인지 물약 - B(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -568,7 +568,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6949" type="EtcItem" name="Recipe: Hair Style Change Potion - C (100%)">
+	<item id="6949" type="EtcItem" name="레시피 : 헤어체인지 물약 - C(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -580,7 +580,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6950" type="EtcItem" name="Recipe: Hair Style Change Potion - D (100%)">
+	<item id="6950" type="EtcItem" name="레시피 : 헤어체인지 물약 - D(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -592,7 +592,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6951" type="EtcItem" name="Recipe: Hair Style Change Potion - E (100%)">
+	<item id="6951" type="EtcItem" name="레시피 : 헤어체인지 물약 - E(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -604,7 +604,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6952" type="EtcItem" name="Recipe: Hair Style Change Potion - F (100%)">
+	<item id="6952" type="EtcItem" name="레시피 : 헤어체인지 물약 - F(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -616,7 +616,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6953" type="EtcItem" name="Recipe: Hair Style Change Potion - G (100%)">
+	<item id="6953" type="EtcItem" name="레시피 : 헤어체인지 물약 - G(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -628,7 +628,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6954" type="EtcItem" name="Recipe: Dye of STR (Str+1 Con-1) (100%)">
+	<item id="6954" type="EtcItem" name="레시피 : 힘의 염료 &lt;Str+1 Con-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -640,7 +640,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6955" type="EtcItem" name="Recipe: Dye of STR (Str+1 Dex-1) (100%)">
+	<item id="6955" type="EtcItem" name="레시피 : 힘의 염료 &lt;Str+1 Dex-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -652,7 +652,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6956" type="EtcItem" name="Recipe: Dye of CON (Con+1 Str-1) (100%)">
+	<item id="6956" type="EtcItem" name="레시피 : 체력의 염료&lt;Con+1 Str-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -664,7 +664,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6957" type="EtcItem" name="Recipe: Dye of CON (Con+1 Dex-1) (100%)">
+	<item id="6957" type="EtcItem" name="레시피 : 체력의 염료&lt;Con+1 Dex-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -676,7 +676,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6958" type="EtcItem" name="Recipe: Dye of DEX (Dex+1 Str-1) (100%)">
+	<item id="6958" type="EtcItem" name="레시피 : 민첩의 염료&lt;Dex+1 Str-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -688,7 +688,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6959" type="EtcItem" name="Recipe: Dye of DEX (Dex+1 Con-1) (100%)">
+	<item id="6959" type="EtcItem" name="레시피 : 민첩의 염료&lt;Dex+1 Con-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -700,7 +700,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6960" type="EtcItem" name="Recipe: Dye of INT (Int+1 Men-1) (100%)">
+	<item id="6960" type="EtcItem" name="레시피 : 지능의 염료&lt;Int+1 Men-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -712,7 +712,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6961" type="EtcItem" name="Recipe: Dye of INT (Int+1 Wit-1) (100%)">
+	<item id="6961" type="EtcItem" name="레시피 : 지능의 염료&lt;Int+1 Wit-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -724,7 +724,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6962" type="EtcItem" name="Recipe: Dye of MEN (Men+1 Int-1) (100%)">
+	<item id="6962" type="EtcItem" name="레시피 : 정신의 염료&lt;Men+1 Int-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6963" type="EtcItem" name="Recipe: Dye of MEN (Men+1 Wit-1) (100%)">
+	<item id="6963" type="EtcItem" name="레시피 : 정신의 염료&lt;Men+1 Wit-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -748,7 +748,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6964" type="EtcItem" name="Recipe: Dye of WIT(Wit+1 Int-1) (100%)">
+	<item id="6964" type="EtcItem" name="레시피 : 재치의 염료&lt;Wit+1 Int-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -760,7 +760,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6965" type="EtcItem" name="Recipe: Dye of WIT(Wit+1 Men-1) (100%)">
+	<item id="6965" type="EtcItem" name="레시피 : 재치의 염료&lt;Wit+1 Men-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6966" type="EtcItem" name="Recipe: Greater Dye of STR (Str+1 Con-1) (100%)">
+	<item id="6966" type="EtcItem" name="레시피 : 고급 힘의 염료&lt;Str+1 Con-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -784,7 +784,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6967" type="EtcItem" name="Recipe: Greater Dye of STR (Str+1 Dex-1) (100%)">
+	<item id="6967" type="EtcItem" name="레시피 : 고급 힘의 염료&lt;Str+1 Dex-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -796,7 +796,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6968" type="EtcItem" name="Recipe: Greater Dye of CON (Con+1 Str-1) (100%)">
+	<item id="6968" type="EtcItem" name="레시피 : 고급 체력의 염료&lt;Con+1 Str-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -808,7 +808,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6969" type="EtcItem" name="Recipe: Greater Dye of CON (Con+1 Dex-1) (100%)">
+	<item id="6969" type="EtcItem" name="레시피 : 고급 체력의 염료&lt;Con+1 Dex-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -820,7 +820,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6970" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+1 Str-1) (100%)">
+	<item id="6970" type="EtcItem" name="레시피 : 고급 민첩의 염료&lt;Dex+1 Str-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -832,7 +832,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6971" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+1 Con-1) (100%)">
+	<item id="6971" type="EtcItem" name="레시피 : 고급 민첩의 염료&lt;Dex+1 Con-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -844,7 +844,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6972" type="EtcItem" name="Recipe: Greater Dye of INT (Int+1 Men-1) (100%)">
+	<item id="6972" type="EtcItem" name="레시피 : 고급 지능의 염료&lt;Int+1 Men-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -856,7 +856,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6973" type="EtcItem" name="Recipe: Greater Dye of INT (Int+1 Wit-1) (100%)">
+	<item id="6973" type="EtcItem" name="레시피 : 고급 지능의 염료&lt;Int+1 Wit-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -868,7 +868,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6974" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+1 Int-1) (100%)">
+	<item id="6974" type="EtcItem" name="레시피 : 고급 정신의 염료&lt;Men+1 Int-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -880,7 +880,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6975" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+1 Wit-1) (100%)">
+	<item id="6975" type="EtcItem" name="레시피 : 고급 정신의 염료&lt;Men+1 Wit-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -892,7 +892,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6976" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+1 Int-1) (100%)">
+	<item id="6976" type="EtcItem" name="레시피 : 고급 재치의 염료&lt;Wit+1 Int-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -904,7 +904,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6977" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+1 Men-1) (100%)">
+	<item id="6977" type="EtcItem" name="레시피 : 고급 재치의 염료&lt;Wit+1 Men-1&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -916,7 +916,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6978" type="EtcItem" name="Recipe: Greater Dye of STR (Str+2 Con-2) (100%)">
+	<item id="6978" type="EtcItem" name="레시피 : 고급 힘의 염료&lt;Str+2 Con-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -928,7 +928,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6979" type="EtcItem" name="Recipe: Greater Dye of STR (Str+2 Dex-2) (100%)">
+	<item id="6979" type="EtcItem" name="레시피 : 고급 힘의 염료&lt;Str+2 Dex-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -940,7 +940,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6980" type="EtcItem" name="Recipe: Greater Dye of CON (Con+2 Str-2) (100%)">
+	<item id="6980" type="EtcItem" name="레시피 : 고급 체력의 염료&lt;Con+2 Str-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -952,7 +952,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6981" type="EtcItem" name="Recipe: Greater Dye of CON (Con+2 Dex-2) (100%)">
+	<item id="6981" type="EtcItem" name="레시피 : 고급 체력의 염료&lt;Con+2 Dex-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -964,7 +964,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6982" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+2 Str-2) (100%)">
+	<item id="6982" type="EtcItem" name="레시피 : 고급 민첩의 염료&lt;Dex+2 Str-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -976,7 +976,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6983" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+2 Con-2) (100%)">
+	<item id="6983" type="EtcItem" name="레시피 : 고급 민첩의 염료&lt;Dex+2 Con-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -988,7 +988,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6984" type="EtcItem" name="Recipe: Greater Dye of INT (Int+2 Men-2) (100%)">
+	<item id="6984" type="EtcItem" name="레시피 : 고급 지능의 염료&lt;Int+2 Men-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1000,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6985" type="EtcItem" name="Recipe: Greater Dye of INT (Int+2 Wit-2) (100%)">
+	<item id="6985" type="EtcItem" name="레시피 : 고급 지능의 염료&lt;Int+2 Wit-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1012,7 +1012,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6986" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+2 Int-2) (100%)">
+	<item id="6986" type="EtcItem" name="레시피 : 고급 정신의 염료&lt;Men+2 Int-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1024,7 +1024,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6987" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+2 Wit-2) (100%)">
+	<item id="6987" type="EtcItem" name="레시피 : 고급 정신의 염료&lt;Men+2 Wit-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1036,7 +1036,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6988" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+2 Int-2) (100%)">
+	<item id="6988" type="EtcItem" name="레시피 : 고급 재치의 염료&lt;Wit+2 Int-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1048,7 +1048,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6989" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+2 Men-2) (100%)">
+	<item id="6989" type="EtcItem" name="레시피 : 고급 재치의 염료&lt;Wit+2 Men-2&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1060,7 +1060,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6990" type="EtcItem" name="Recipe: Greater Dye of STR (Str+3 Con-3) (100%)">
+	<item id="6990" type="EtcItem" name="레시피 : 고급 힘의 염료&lt;Str+3 Con-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1072,7 +1072,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6991" type="EtcItem" name="Recipe: Greater Dye of STR (Str+3 Dex-3) (100%)">
+	<item id="6991" type="EtcItem" name="레시피 : 고급 힘의 염료&lt;Str+3 Dex-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1084,7 +1084,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6992" type="EtcItem" name="Recipe: Greater Dye of CON (Con+3 Str-3) (100%)">
+	<item id="6992" type="EtcItem" name="레시피 : 고급 체력의 염료&lt;Con+3 Str-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1096,7 +1096,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6993" type="EtcItem" name="Recipe: Greater Dye of CON (Con+3 Dex-3) (100%)">
+	<item id="6993" type="EtcItem" name="레시피 : 고급 체력의 염료&lt;Con+3 Dex-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1108,7 +1108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6994" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+3 Str-3) (100%)">
+	<item id="6994" type="EtcItem" name="레시피 : 고급 민첩의 염료&lt;Dex+3 Str-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1120,7 +1120,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6995" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+3 Con-3) (100%)">
+	<item id="6995" type="EtcItem" name="레시피 : 고급 민첩의 염료&lt;Dex+3 Con-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1132,7 +1132,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6996" type="EtcItem" name="Recipe: Greater Dye of INT (Int+3 Men-3) (100%)">
+	<item id="6996" type="EtcItem" name="레시피 : 고급 지능의 염료&lt;Int+3 Men-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1144,7 +1144,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6997" type="EtcItem" name="Recipe: Greater Dye of INT (Int+3 Wit-3) (100%)">
+	<item id="6997" type="EtcItem" name="레시피 : 고급 지능의 염료&lt;Int+3 Wit-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1156,7 +1156,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6998" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+3 Int-3) (100%)">
+	<item id="6998" type="EtcItem" name="레시피 : 고급 정신의 염료&lt;Men+3 Int-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1168,7 +1168,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6999" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+3 Wit-3) (100%)">
+	<item id="6999" type="EtcItem" name="레시피 : 고급 정신의 염료&lt;Men+3 Wit-3&gt;(100%)">
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />

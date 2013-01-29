@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="33465" name="巨人的幸運禮盒" type="EtcItem">
+	<item id="33465" type="EtcItem" name="하거인의 행운 상자">
 		<table name="#Desc">進行技能強化後獲得的下巨人精髓獎勵品，與該物品交換的箱子。如果運氣好的話，就能獲得4種刻印祕傳書的其中之一。</table>
 		<set name="icon" val="icon.event_hero_treasure_box_i00"/>
 		<set name="material" val="paper"/>
@@ -12,7 +12,7 @@
 		</cond>
 	</item>
 
-	<item id="33475" name="勇氣護符-R級" type="EtcItem">
+	<item id="33475" type="EtcItem" name="용기의 부적 - R그레이드">
 		<table name="#Desc">一段時間內，在攻城戰/要塞戰/根據地戰的戰場上死亡時，可就地進行復活（用於等級85~99）。未滿等級85的角色也可使用。</table>
 		<set name="icon" val="icon.etc_charm_of_courage_i05"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -26,7 +26,7 @@
 		</cond>
 	</item>
 
-	<item id="33478" name="破滅武器強化卷軸-R級" type="EtcItem">
+	<item id="33478" type="EtcItem" name="파멸의 무기 강화 주문서-R그레이드">
 		<table name="#Desc">強化時，R級劍/單手、鈍器/單手、匕首、槍，以及其他類武器的物理攻擊力可提升6；劍/雙手、鈍器/雙手、二刀流、格鬥兵器/雙手、弩類武器的物理攻擊力可提升7；弓類武器的攻擊力可提升12；所有武器的魔法攻擊力可提升5。從強化+4開始，大幅提升物理攻擊力/魔法攻擊力。與一般武器相比，祝福的武器在所有層面上都有較大的增幅度。強化失敗時，藉由破滅女神之力，現有的裝備雖不會被結晶化，但將維持現有的強化數值。無法用於強化+15以上的防具。</table>
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -38,7 +38,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="12872-1"/>
 	</item>
-	<item id="33479" name="破滅防具強化卷軸-R級" type="EtcItem">
+	<item id="33479" type="EtcItem" name="파멸의 갑옷 강화 주문서-R그레이드">
 		<table name="#Desc">強化時，R級防具或飾品的物理防禦力可提升2，從強化+4開始大幅提升物理防禦力。至+3為止能安全進行強化。防具強化+4以上時，隨著強化值HP也會提升。強化失敗時，藉由破滅女神之力，現有的裝備雖不會被結晶化，但將維持現有的強化數值。無法用於強化+6以上的防具。</table>
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -50,7 +50,7 @@
 		<set name="handler" val="EnchantScrolls"/>
 		<set name="item_skill" val="12873-1"/>
 	</item>
-	<item id="33480" name="Wi-Fi頭盔" type="Armor">
+	<item id="33480" type="Armor" name="와이파이 헬멧">
 		<table name="#Desc">Wi-Fi頭盔。無法交易、丟棄、刪除、出售於個人商店，但可以保管在個人倉庫。透過維他命管理者可在相同帳號內的角色之間轉移。</table>
 		<set name="icon" val="icon.wifi_event_goggle_i00"/>
 		<set name="default_action" val="equip"/>

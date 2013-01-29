@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="3500" type="EtcItem" name="Dragonflute of Wind">
+	<item id="3500" type="EtcItem" name="바람의 드래곤플룻">
 		<set name="icon" val="icon.etc_flute_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -15,7 +15,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="3501" type="EtcItem" name="Dragonflute of Star">
+	<item id="3501" type="EtcItem" name="별의 드래곤플룻">
 		<set name="icon" val="icon.etc_flute_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -30,7 +30,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="3502" type="EtcItem" name="Dragonflute of Twilight">
+	<item id="3502" type="EtcItem" name="황혼의 드래곤플룻">
 		<set name="icon" val="icon.etc_flute_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -45,7 +45,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="3503" type="EtcItem" name="Deliverymen Decertificate">
+	<item id="3503" type="EtcItem" name="배달부 자격증">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -56,7 +56,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3504" type="EtcItem" name="Kirunas Horn">
+	<item id="3504" type="EtcItem" name="키루나의 뿔나팔">
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -67,7 +67,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3505" type="EtcItem" name="Mithril Mold">
+	<item id="3505" type="EtcItem" name="미스릴 거푸집">
 		<set name="icon" val="icon.etc_silver_mold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -78,7 +78,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3506" type="EtcItem" name="Bloody Letter">
+	<item id="3506" type="EtcItem" name="핏빛의 편지">
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -89,7 +89,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3507" type="EtcItem" name="Supplies to Alex">
+	<item id="3507" type="EtcItem" name="보급 물자">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -100,7 +100,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3508" type="EtcItem" name="Supplies to Endrigo">
+	<item id="3508" type="EtcItem" name="보급 물자">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -111,7 +111,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3509" type="EtcItem" name="Alex's Coins">
+	<item id="3509" type="EtcItem" name="알란켈의 동전">
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -122,7 +122,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3510" type="EtcItem" name="Wardens Appreciation">
+	<item id="3510" type="EtcItem" name="처형터 감시인의 감사장">
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -133,7 +133,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3511" type="EtcItem" name="Blackbox to Orim">
+	<item id="3511" type="EtcItem" name="검은 상자">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -144,7 +144,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3512" type="EtcItem" name="Deluxe Windsus Ham">
+	<item id="3512" type="EtcItem" name="특제 윈드수스 햄">
 		<set name="icon" val="icon.etc_meat_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -155,7 +155,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3513" type="EtcItem" name="Heart of Silenos">
+	<item id="3513" type="EtcItem" name="실레노스의 심장">
 		<set name="icon" val="icon.etc_heart_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -166,7 +166,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3514" type="EtcItem" name="Request Giran">
+	<item id="3514" type="EtcItem" name="기란성 마을 배달 의뢰서">
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -177,7 +177,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3515" type="EtcItem" name="Request Gludin">
+	<item id="3515" type="EtcItem" name="글루딘 마을 배달 의뢰서">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -188,7 +188,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3516" type="EtcItem" name="Request Hunters">
+	<item id="3516" type="EtcItem" name="사냥꾼의 마을 배달 의뢰서">
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -199,7 +199,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3517" type="EtcItem" name="Delivery Score Red">
+	<item id="3517" type="EtcItem" name="적색 배달표">
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -210,7 +210,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3518" type="EtcItem" name="Delivery Score Blue">
+	<item id="3518" type="EtcItem" name="청색 배달표">
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -221,7 +221,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3519" type="EtcItem" name="Deliverymen Advanced Certificate Super">
+	<item id="3519" type="EtcItem" name="마스터 배달부 자격증">
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -232,7 +232,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3520" type="EtcItem" name="1st Confirmation Document">
+	<item id="3520" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -243,7 +243,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3521" type="EtcItem" name="2nd Confirmation Document">
+	<item id="3521" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -254,7 +254,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3522" type="EtcItem" name="Delivery Goods 01">
+	<item id="3522" type="EtcItem" name="두루마리">
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -265,7 +265,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3523" type="EtcItem" name="Delivery Goods 02">
+	<item id="3523" type="EtcItem" name="편지">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -276,7 +276,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3524" type="EtcItem" name="Delivery Goods 03">
+	<item id="3524" type="EtcItem" name="책">
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -287,7 +287,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3525" type="EtcItem" name="Delivery Goods 04">
+	<item id="3525" type="EtcItem" name="서류">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -298,7 +298,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3526" type="EtcItem" name="Delivery Goods 05">
+	<item id="3526" type="EtcItem" name="편지">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -309,7 +309,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3527" type="EtcItem" name="Delivery Goods 06">
+	<item id="3527" type="EtcItem" name="자루">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -320,7 +320,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3528" type="EtcItem" name="Delivery Goods 07">
+	<item id="3528" type="EtcItem" name="편지">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -331,7 +331,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3529" type="EtcItem" name="Delivery Goods 08">
+	<item id="3529" type="EtcItem" name="그림">
 		<set name="icon" val="icon.etc_painting_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -342,7 +342,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3530" type="EtcItem" name="Delivery Goods 09">
+	<item id="3530" type="EtcItem" name="항아리">
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -353,7 +353,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3531" type="EtcItem" name="Delivery Goods 10">
+	<item id="3531" type="EtcItem" name="상자">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -364,7 +364,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3532" type="EtcItem" name="Delivery Goods 11">
+	<item id="3532" type="EtcItem" name="항아리">
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -375,7 +375,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3533" type="EtcItem" name="Delivery Goods 12">
+	<item id="3533" type="EtcItem" name="상자">
 		<set name="icon" val="icon.etc_squares_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -386,7 +386,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3534" type="EtcItem" name="Delivery Goods 13">
+	<item id="3534" type="EtcItem" name="기계장치">
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -397,7 +397,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3535" type="EtcItem" name="Delivery Goods 14">
+	<item id="3535" type="EtcItem" name="보석함">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -408,7 +408,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3536" type="EtcItem" name="Delivery Goods 15">
+	<item id="3536" type="EtcItem" name="보석함">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -419,7 +419,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3537" type="EtcItem" name="Delivery Goods 16">
+	<item id="3537" type="EtcItem" name="편지">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -430,7 +430,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3538" type="EtcItem" name="Delivery Goods 17">
+	<item id="3538" type="EtcItem" name="책">
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -441,7 +441,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3539" type="EtcItem" name="Delivery Goods 18">
+	<item id="3539" type="EtcItem" name="조각품">
 		<set name="icon" val="icon.etc_holy_statue_bronze_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -452,7 +452,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3540" type="EtcItem" name="Delivery Goods 19">
+	<item id="3540" type="EtcItem" name="상자">
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -463,7 +463,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3541" type="EtcItem" name="Delivery Goods 20">
+	<item id="3541" type="EtcItem" name="조각품">
 		<set name="icon" val="icon.etc_statue_of_einhasad_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -474,7 +474,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3542" type="EtcItem" name="Delivery Goods 21">
+	<item id="3542" type="EtcItem" name="보석함">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -485,7 +485,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3543" type="EtcItem" name="Delivery Goods 22">
+	<item id="3543" type="EtcItem" name="서류">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -496,7 +496,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3544" type="EtcItem" name="Delivery Goods 23">
+	<item id="3544" type="EtcItem" name="약병">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -507,7 +507,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3545" type="EtcItem" name="Delivery Goods 24">
+	<item id="3545" type="EtcItem" name="조각품">
 		<set name="icon" val="icon.etc_holy_statue_bronze_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -518,7 +518,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3546" type="EtcItem" name="Delivery Goods 25">
+	<item id="3546" type="EtcItem" name="광석">
 		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -529,7 +529,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3547" type="EtcItem" name="Delivery Goods 26">
+	<item id="3547" type="EtcItem" name="책">
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -540,7 +540,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3548" type="EtcItem" name="Delivery Goods 27">
+	<item id="3548" type="EtcItem" name="두루마리">
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -551,7 +551,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3549" type="EtcItem" name="Delivery Goods 28">
+	<item id="3549" type="EtcItem" name="그림">
 		<set name="icon" val="icon.etc_painting_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -562,7 +562,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3550" type="EtcItem" name="Delivery Goods 29">
+	<item id="3550" type="EtcItem" name="직물">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -573,7 +573,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3551" type="EtcItem" name="Delivery Goods 30">
+	<item id="3551" type="EtcItem" name="항아리">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -584,7 +584,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3552" type="EtcItem" name="Delivery Goods 31">
+	<item id="3552" type="EtcItem" name="다이아몬드">
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -595,7 +595,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3553" type="EtcItem" name="Delivery Goods 32">
+	<item id="3553" type="EtcItem" name="보석함">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -606,7 +606,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3554" type="EtcItem" name="Delivery Goods 33">
+	<item id="3554" type="EtcItem" name="금괴">
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -617,7 +617,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3555" type="EtcItem" name="Delivery Goods 34">
+	<item id="3555" type="EtcItem" name="자루">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -628,7 +628,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3556" type="EtcItem" name="Delivery Goods 35">
+	<item id="3556" type="EtcItem" name="편지">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -639,7 +639,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3557" type="EtcItem" name="Delivery Goods 36">
+	<item id="3557" type="EtcItem" name="직물">
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -650,7 +650,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3558" type="EtcItem" name="Delivery Goods 37">
+	<item id="3558" type="EtcItem" name="책">
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -661,7 +661,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3559" type="EtcItem" name="Delivery Goods 38">
+	<item id="3559" type="EtcItem" name="광석">
 		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -672,7 +672,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3560" type="EtcItem" name="Delivery Goods 39">
+	<item id="3560" type="EtcItem" name="약병">
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -683,7 +683,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3561" type="EtcItem" name="Delivery Goods 40">
+	<item id="3561" type="EtcItem" name="작은 상자들">
 		<set name="icon" val="icon.etc_adamantite_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -694,7 +694,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3562" type="EtcItem" name="Delivery Goods 41">
+	<item id="3562" type="EtcItem" name="서류">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -705,7 +705,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3563" type="EtcItem" name="Delivery Goods 42">
+	<item id="3563" type="EtcItem" name="두루마리">
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -716,7 +716,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3564" type="EtcItem" name="Delivery Goods 43">
+	<item id="3564" type="EtcItem" name="서류">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -727,7 +727,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3565" type="EtcItem" name="Delivery Goods 44">
+	<item id="3565" type="EtcItem" name="상자">
 		<set name="icon" val="icon.etc_squares_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3566" type="EtcItem" name="Delivery Goods 45">
+	<item id="3566" type="EtcItem" name="자루">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -749,7 +749,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3567" type="EtcItem" name="Delivery Goods 46">
+	<item id="3567" type="EtcItem" name="열쇠">
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -760,7 +760,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3568" type="EtcItem" name="Delivery Goods 47">
+	<item id="3568" type="EtcItem" name="기계장치">
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -771,7 +771,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3569" type="EtcItem" name="Delivery Goods 48">
+	<item id="3569" type="EtcItem" name="서류">
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -782,7 +782,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3570" type="EtcItem" name="Delivery Goods 49">
+	<item id="3570" type="EtcItem" name="작은 상자들">
 		<set name="icon" val="icon.etc_adamantite_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -793,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3571" type="EtcItem" name="Delivery Goods 50">
+	<item id="3571" type="EtcItem" name="자루">
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -804,7 +804,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3572" type="EtcItem" name="Delivery Goods 51">
+	<item id="3572" type="EtcItem" name="상자">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -815,7 +815,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3573" type="EtcItem" name="Delivery Goods 52">
+	<item id="3573" type="EtcItem" name="그림">
 		<set name="icon" val="icon.etc_painting_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -826,7 +826,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3574" type="EtcItem" name="Delivery Goods 53">
+	<item id="3574" type="EtcItem" name="두루마리">
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -837,7 +837,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3575" type="EtcItem" name="Delivery Goods 54">
+	<item id="3575" type="EtcItem" name="상자">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -848,7 +848,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3576" type="EtcItem" name="Delivery Goods 55">
+	<item id="3576" type="EtcItem" name="항아리">
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -859,7 +859,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3577" type="EtcItem" name="Delivery Goods 56">
+	<item id="3577" type="EtcItem" name="보석함">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -870,7 +870,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3578" type="EtcItem" name="Delivery Goods 57">
+	<item id="3578" type="EtcItem" name="책">
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3579" type="EtcItem" name="Delivery Goods 58">
+	<item id="3579" type="EtcItem" name="약병">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -892,7 +892,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3580" type="EtcItem" name="Delivery Goods 59">
+	<item id="3580" type="EtcItem" name="두루마리">
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -903,7 +903,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3581" type="EtcItem" name="Delivery Goods 60">
+	<item id="3581" type="EtcItem" name="작은 상자들">
 		<set name="icon" val="icon.etc_silver_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -914,7 +914,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3582" type="EtcItem" name="Delivery Goods 61">
+	<item id="3582" type="EtcItem" name="약병">
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -925,7 +925,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3583" type="EtcItem" name="Delivery Goods 62">
+	<item id="3583" type="EtcItem" name="두루마리">
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3584" type="EtcItem" name="Delivery Goods 63">
+	<item id="3584" type="EtcItem" name="편지">
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -947,7 +947,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3585" type="EtcItem" name="Delivery Goods 64">
+	<item id="3585" type="EtcItem" name="보석함">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -958,7 +958,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3586" type="EtcItem" name="Delivery Goods 65">
+	<item id="3586" type="EtcItem" name="표본">
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -969,7 +969,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3587" type="EtcItem" name="Delivery Goods 66">
+	<item id="3587" type="EtcItem" name="자루">
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -980,7 +980,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3588" type="EtcItem" name="Delivery Goods 67">
+	<item id="3588" type="EtcItem" name="책">
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -991,7 +991,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3589" type="EtcItem" name="Confirmation Document 01">
+	<item id="3589" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1002,7 +1002,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3590" type="EtcItem" name="Confirmation Document 02">
+	<item id="3590" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1013,7 +1013,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3591" type="EtcItem" name="Confirmation Document 03">
+	<item id="3591" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1024,7 +1024,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3592" type="EtcItem" name="Confirmation Document 04">
+	<item id="3592" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1035,7 +1035,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3593" type="EtcItem" name="Confirmation Document 05">
+	<item id="3593" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1046,7 +1046,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3594" type="EtcItem" name="Confirmation Document 06">
+	<item id="3594" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1057,7 +1057,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3595" type="EtcItem" name="Confirmation Document 07">
+	<item id="3595" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1068,7 +1068,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3596" type="EtcItem" name="Confirmation Document 08">
+	<item id="3596" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1079,7 +1079,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3597" type="EtcItem" name="Confirmation Document 09">
+	<item id="3597" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1090,7 +1090,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3598" type="EtcItem" name="Confirmation Document 10">
+	<item id="3598" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1101,7 +1101,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3599" type="EtcItem" name="Confirmation Document 11">
+	<item id="3599" type="EtcItem" name="인수증">
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />

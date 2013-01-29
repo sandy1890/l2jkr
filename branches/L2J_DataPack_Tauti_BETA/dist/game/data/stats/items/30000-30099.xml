@@ -4,7 +4,7 @@
 	<!-- R급 무기 -->
 	
 	<!-- R-2:英啟 -->
-	<item id="30022" name="英啟鉋刀" type="Weapon">
+	<item id="30022" type="Weapon" name="아포칼립스 셰이퍼 가이던스 + 헤이스트">
 		<table name="#Plus">導引 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.9、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_phasian_i01"/>
@@ -32,7 +32,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30023" name="英啟鉋刀" type="Weapon">
+	<item id="30023" type="Weapon" name="아포칼립스 셰이퍼 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約82.3。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_phasian_i01"/>
@@ -60,7 +60,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30024" name="英啟鉋刀" type="Weapon">
+	<item id="30024" type="Weapon" name="아포칼립스 셰이퍼 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約82.3、命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_phasian_i01"/>
@@ -88,7 +88,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30025" name="英啟切刃" type="Weapon">
+	<item id="30025" type="Weapon" name="아포칼립스 커터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_pasis_i01"/>
@@ -115,7 +115,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30026" name="英啟切刃" type="Weapon">
+	<item id="30026" type="Weapon" name="아포칼립스 커터 포커스 + 헬스">
 		<table name="#Plus">偵測 + 強健</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2、HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_pasis_i01"/>
@@ -142,7 +142,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30027" name="英啟切刃" type="Weapon">
+	<item id="30027" type="Weapon" name="아포칼립스 커터 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_pasis_i01"/>
@@ -169,7 +169,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30028" name="英啟殺刃" type="Weapon">
+	<item id="30028" type="Weapon" name="아포칼립스 슬래셔 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9、物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_volver_i01"/>
@@ -196,7 +196,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30029" name="英啟殺刃" type="Weapon">
+	<item id="30029" type="Weapon" name="아포칼립스 슬래셔 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_volver_i01"/>
@@ -223,7 +223,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30030" name="英啟殺刃" type="Weapon">
+	<item id="30030" type="Weapon" name="아포칼립스 슬래셔 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_volver_i01"/>
@@ -250,7 +250,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30031" name="英啟復仇者" type="Weapon">
+	<item id="30031" type="Weapon" name="아포칼립스 어벤져 헤이스트 + Crt. 대미지">
 		<table name="#Plus">速度激發 + Crt.傷害</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊時物理攻擊力提升約1158。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_raksilion_i01"/>
@@ -278,7 +278,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30032" name="英啟復仇者" type="Weapon">
+	<item id="30032" type="Weapon" name="아포칼립스 어벤져 Crt. 대미지 + 포커스">
 		<table name="#Plus">Crt.傷害 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時物理攻擊力提升約1158、致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_raksilion_i01"/>
@@ -306,7 +306,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30033" name="英啟復仇者" type="Weapon">
+	<item id="30033" type="Weapon" name="아포칼립스 어벤져 포커스 + 헤이스트">
 		<table name="#Plus">偵測 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_raksilion_i01"/>
@@ -334,7 +334,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30034" name="英啟戰爪" type="Weapon">
+	<item id="30034" type="Weapon" name="아포칼립스 파이터 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9、物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_kirche_i01"/>
@@ -362,7 +362,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30035" name="英啟戰爪" type="Weapon">
+	<item id="30035" type="Weapon" name="아포칼립스 파이터 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_kirche_i01"/>
@@ -390,7 +390,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30036" name="英啟戰爪" type="Weapon">
+	<item id="30036" type="Weapon" name="아포칼립스 파이터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約76。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_kirche_i01"/>
@@ -418,7 +418,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30037" name="英啟風暴者" type="Weapon">
+	<item id="30037" type="Weapon" name="아포칼립스 스토머 HP 드레인 + 가이던스">
 		<table name="#Plus">HP吸收 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_grave_i01"/>
@@ -446,7 +446,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30038" name="英啟風暴者" type="Weapon">
+	<item id="30038" type="Weapon" name="아포칼립스 스토머 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.7、物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_grave_i01"/>
@@ -474,7 +474,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30039" name="英啟風暴者" type="Weapon">
+	<item id="30039" type="Weapon" name="아포칼립스 스토머 대미지업 + HP 드레인">
 		<table name="#Plus">傷害上升 + HP吸收</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約288。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_grave_i01"/>
@@ -502,7 +502,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30040" name="英啟投弓" type="Weapon">
+	<item id="30040" type="Weapon" name="아포칼립스 스로워 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332、致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_spina_i01"/>
@@ -531,7 +531,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30041" name="英啟投弓" type="Weapon">
+	<item id="30041" type="Weapon" name="아포칼립스 스로워 포커스 + 롱블로">
 		<table name="#Plus">偵測 + 遠程打擊</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2、攻擊距離提升。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_spina_i01"/>
@@ -560,7 +560,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30042" name="英啟投弓" type="Weapon">
+	<item id="30042" type="Weapon" name="아포칼립스 스로워 롱블로 + 대미지업">
 		<table name="#Plus">遠程打擊 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊距離提升、物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_spina_i01"/>
@@ -589,7 +589,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30043" name="英啟射靈" type="Weapon">
+	<item id="30043" type="Weapon" name="아포칼립스 슈트제 포커스 + Crt. 슬로우">
 		<table name="#Plus">偵測 + Crt.緩速</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.2。致命攻擊時，以一定的機率造成目標移動速度下降。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_medianox_i01"/>
@@ -620,7 +620,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30044" name="英啟射靈" type="Weapon">
+	<item id="30044" type="Weapon" name="아포칼립스 슈트제 Crt. 슬로우 + 헤이스트">
 		<table name="#Plus">Crt.緩速 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_medianox_i01"/>
@@ -651,7 +651,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30045" name="英啟射靈" type="Weapon">
+	<item id="30045" type="Weapon" name="아포칼립스 슈트제 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_medianox_i01"/>
@@ -680,7 +680,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30046" name="英啟爆刃" type="Weapon">
+	<item id="30046" type="Weapon" name="아포칼립스 버스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_imerose_i01"/>
@@ -710,7 +710,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30047" name="英啟爆刃" type="Weapon">
+	<item id="30047" type="Weapon" name="아포칼립스 버스터 매직홀드 + 마나업">
 		<table name="#Plus">魔法束縛 + 魔力上升</table>
 		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。MP最大值提升約30%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_imerose_i01"/>
@@ -740,7 +740,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30048" name="英啟爆刃" type="Weapon">
+	<item id="30048" type="Weapon" name="아포칼립스 버스터 마나업 + 아큐멘">
 		<table name="#Plus">魔力上升 + 靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞MP最大值提升約30%、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_imerose_i01"/>
@@ -768,7 +768,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30049" name="英啟術杖" type="Weapon">
+	<item id="30049" type="Weapon" name="아포칼립스 캐스터 엠파워 + 아큐멘">
 		<table name="#Plus">魔力催化 + 靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約322、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_yuke_i01"/>
@@ -797,7 +797,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30050" name="英啟術杖" type="Weapon">
+	<item id="30050" type="Weapon" name="아포칼립스 캐스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_yuke_i01"/>
@@ -828,7 +828,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30051" name="英啟術杖" type="Weapon">
+	<item id="30051" type="Weapon" name="아포칼립스 캐스터 매직홀드 + 엠파워">
 		<table name="#Plus">魔法束縛 + 魔力催化</table>
 		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。魔法攻擊力提升約322。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_yuke_i01"/>
@@ -859,7 +859,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30052" name="英啟報恨者" type="Weapon">
+	<item id="30052" type="Weapon" name="아포칼립스 레트리뷰터 MP리제네레이션 + 아큐멘">
 		<table name="#Plus">魔力再生 + 靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞提升MP的恢復速度、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_herencia_i01"/>
@@ -888,7 +888,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30053" name="英啟報恨者" type="Weapon">
+	<item id="30053" type="Weapon" name="아포칼립스 레트리뷰터 아큐멘 + 엠파워">
 		<table name="#Plus">靈活思緒 + 魔力催化</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%、魔法攻擊力提升約322。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_herencia_i01"/>
@@ -917,7 +917,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30054" name="英啟報恨者" type="Weapon">
+	<item id="30054" type="Weapon" name="아포칼립스 레트리뷰터 엠파워 + MP리제네레이션">
 		<table name="#Plus">魔力催化 + 魔力再生</table>
 		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約296、提升MP的恢復速度。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_herencia_i01"/>
@@ -946,7 +946,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30055" name="英啟雙刀" type="Weapon">
+	<item id="30055" type="Weapon" name="아포칼립스 듀얼소드 헤이스트 + 대미지업">
 		<table name="#Plus">速度激發 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -973,7 +973,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30056" name="英啟雙刀" type="Weapon">
+	<item id="30056" type="Weapon" name="아포칼립스 듀얼소드 대미지업 + 헬스">
 		<table name="#Plus">傷害上升 + 強健</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約457、HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -1000,7 +1000,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30057" name="英啟雙刀" type="Weapon">
+	<item id="30057" type="Weapon" name="아포칼립스 듀얼소드 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -1027,7 +1027,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30058" name="英啟雙匕首" type="Weapon">
+	<item id="30058" type="Weapon" name="아포칼립스 듀얼대거 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332、致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1055,7 +1055,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30059" name="英啟雙匕首" type="Weapon">
+	<item id="30059" type="Weapon" name="아포칼립스 듀얼대거 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.5、命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1083,7 +1083,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30060" name="英啟雙匕首" type="Weapon">
+	<item id="30060" type="Weapon" name="아포칼립스 듀얼대거 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升 </table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1111,7 +1111,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30061" name="英啟雙鈍器" type="Weapon">
+	<item id="30061" type="Weapon" name="아포칼립스 듀얼블런트 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約76.3、命中能力提升7.7。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
@@ -1139,7 +1139,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30062" name="英啟雙鈍器" type="Weapon">
+	<item id="30062" type="Weapon" name="아포칼립스 듀얼블런트 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.7、物理攻擊力提升約332。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
@@ -1167,7 +1167,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="30063" name="英啟雙鈍器" type="Weapon">
+	<item id="30063" type="Weapon" name="아포칼립스 듀얼블런트 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測 </table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377、致命攻擊率提升約79.2。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>

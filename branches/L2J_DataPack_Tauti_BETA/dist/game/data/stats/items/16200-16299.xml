@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="16200" type="Weapon" name="Vesper Retributer - Gale {PvP} - HP Regeneration">
+	<item id="16200" type="Weapon" name="베스페르 레트리뷰터 - 질풍 {대인용} HP리제네레이션">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -31,7 +31,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16201" type="Weapon" name="Vesper Retributer - Gale {PvP} - Health">
+	<item id="16201" type="Weapon" name="베스페르 레트리뷰터 - 질풍 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -62,7 +62,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16202" type="Weapon" name="Vesper Retributer - Gale {PvP} - HP Drain">
+	<item id="16202" type="Weapon" name="베스페르 레트리뷰터 - 질풍 {대인용} HP드레인">
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -93,7 +93,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16203" type="Weapon" name="Vesper Caster - Cleverness {PvP} - Acumen">
+	<item id="16203" type="Weapon" name="베스페르 캐스터 - 총명 {대인용} 아큐멘">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -125,7 +125,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16204" type="Weapon" name="Vesper Caster - Cleverness {PvP} - MP Regeneration">
+	<item id="16204" type="Weapon" name="베스페르 캐스터 - 총명 {대인용} MP리제네레이션">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -157,7 +157,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16205" type="Weapon" name="Vesper Caster - Cleverness {PvP} - Mana Up">
+	<item id="16205" type="Weapon" name="베스페르 캐스터 - 총명 {대인용} 마나업">
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -189,7 +189,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16206" type="Weapon" name="Vesper Singer - Hail {PvP} - Empower">
+	<item id="16206" type="Weapon" name="베스페르 싱어 - 해일 {대인용} 엠파워">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -221,7 +221,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16207" type="Weapon" name="Vesper Singer - Hail {PvP} - MP Regeneration">
+	<item id="16207" type="Weapon" name="베스페르 싱어 - 해일 {대인용} MP리제네레이션">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -253,7 +253,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16208" type="Weapon" name="Vesper Singer - Hail {PvP} - Magic Hold">
+	<item id="16208" type="Weapon" name="베스페르 싱어 - 해일 {대인용} 매직홀드">
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -287,7 +287,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16209" type="Weapon" name="Vesper Thrower - Clairvoyance {PvP} - Cheap Shot">
+	<item id="16209" type="Weapon" name="베스페르 스로워 - 천리안 {대인용} 칩샷">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -320,7 +320,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16210" type="Weapon" name="Vesper Thrower - Clairvoyance {PvP} - Focus">
+	<item id="16210" type="Weapon" name="베스페르 스로워 - 천리안 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -353,7 +353,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16211" type="Weapon" name="Vesper Thrower - Clairvoyance {PvP} - Critical Slow">
+	<item id="16211" type="Weapon" name="베스페르 스로워 - 천리안 {대인용} Crt.슬로우">
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -387,7 +387,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16212" type="Weapon" name="Vesper Pincer- Thunder {PvP} - Haste">
+	<item id="16212" type="Weapon" name="베스페르 핀서 - 천둥 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -422,7 +422,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16213" type="Weapon" name="Vesper Pincer- Thunder {PvP} - Health">
+	<item id="16213" type="Weapon" name="베스페르 핀서 - 천둥 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -457,7 +457,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16214" type="Weapon" name="Vesper Pincer- Thunder {PvP} - Focus">
+	<item id="16214" type="Weapon" name="베스페르 핀서 - 천둥 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="rapier" />
@@ -492,7 +492,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16215" type="Weapon" name="Vesper Shooter - Clairvoyance {PvP} - Cheap Shot">
+	<item id="16215" type="Weapon" name="베스페르 슈트제 - 천리안 {대인용} 칩샷">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -527,7 +527,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16216" type="Weapon" name="Vesper Shooter - Clairvoyance {PvP} - Focus">
+	<item id="16216" type="Weapon" name="베스페르 슈트제 - 천리안 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -562,7 +562,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16217" type="Weapon" name="Vesper Shooter - Clairvoyance {PvP} - Critical Slow">
+	<item id="16217" type="Weapon" name="베스페르 슈트제 - 천리안 {대인용} Crt.슬로우">
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="crossbow" />
@@ -598,7 +598,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16218" type="Weapon" name="Vesper Nagan - Gale {PvP} - Haste">
+	<item id="16218" type="Weapon" name="베스페르 나간 - 질풍 {대인용} 헤이스트">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -632,7 +632,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16219" type="Weapon" name="Vesper Nagan - Gale {PvP} - Health">
+	<item id="16219" type="Weapon" name="베스페르 나간 - 질풍 {대인용} 헬스">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -666,7 +666,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16220" type="Weapon" name="Vesper Nagan - Gale {PvP} - Focus">
+	<item id="16220" type="Weapon" name="베스페르 나간 - 질풍 {대인용} 포커스">
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="ancientsword" />
@@ -700,7 +700,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="16221" type="EtcItem" name="Sealed Moirai Helmet of Chaos">
+	<item id="16221" type="EtcItem" name="혼돈의 봉인된 데스티노 헬멧">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -714,7 +714,7 @@
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
 	</item>
-	<item id="16222" type="EtcItem" name="Sealed Moirai Leather Helmet of Chaos">
+	<item id="16222" type="EtcItem" name="혼돈의 봉인된 데스티노 가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -725,7 +725,7 @@
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
 	</item>
-	<item id="16223" type="EtcItem" name="Sealed Moirai Circlet of Chaos">
+	<item id="16223" type="EtcItem" name="혼돈의 봉인된 데스티노 서클릿">
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -739,7 +739,7 @@
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
 	</item>
-	<item id="16224" type="EtcItem" name="Sealed Moirai Breastplate of Chaos">
+	<item id="16224" type="EtcItem" name="혼돈의 봉인된 데스티노 흉갑">
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -754,7 +754,7 @@
 			<add order="0x10" stat="pDef" val="225" />
 		</for>
 	</item>
-	<item id="16225" type="EtcItem" name="Sealed Moirai Leather Breastplate of Chaos">
+	<item id="16225" type="EtcItem" name="혼돈의 봉인된 데스티노 가죽 흉갑">
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -766,7 +766,7 @@
 			<add order="0x10" stat="pDef" val="169" />
 		</for>
 	</item>
-	<item id="16226" type="EtcItem" name="Sealed Moirai Tunic of Chaos">
+	<item id="16226" type="EtcItem" name="혼돈의 봉인된 데스티노 튜닉">
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -782,7 +782,7 @@
 			<add order="0x40" stat="maxMp" val="614" />
 		</for>
 	</item>
-	<item id="16227" type="EtcItem" name="Sealed Moirai Gaiter of Chaos">
+	<item id="16227" type="EtcItem" name="혼돈의 봉인된 데스티노 각반">
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -797,7 +797,7 @@
 			<add order="0x10" stat="pDef" val="141" />
 		</for>
 	</item>
-	<item id="16228" type="EtcItem" name="Sealed Moirai Leather Legging of Chaos">
+	<item id="16228" type="EtcItem" name="혼돈의 봉인된 데스티노 레더 레깅스">
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -809,7 +809,7 @@
 			<add order="0x10" stat="pDef" val="105" />
 		</for>
 	</item>
-	<item id="16229" type="EtcItem" name="Sealed Moirai Stockings of Chaos">
+	<item id="16229" type="EtcItem" name="혼돈의 봉인된 데스티노 호즈">
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -825,7 +825,7 @@
 			<add order="0x40" stat="maxMp" val="392" />
 		</for>
 	</item>
-	<item id="16230" type="EtcItem" name="Sealed Moirai Gauntlet of Chaos">
+	<item id="16230" type="EtcItem" name="혼돈의 봉인된 데스티노 건틀렛">
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -839,7 +839,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16231" type="EtcItem" name="Sealed Moirai Leather Gloves of Chaos">
+	<item id="16231" type="EtcItem" name="혼돈의 봉인된 데스티노 레더 글로브">
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -850,7 +850,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16232" type="EtcItem" name="Sealed Moirai Gloves of Chaos">
+	<item id="16232" type="EtcItem" name="혼돈의 봉인된 데스티노 글로브">
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -864,7 +864,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16233" type="EtcItem" name="Sealed Moirai Boots of Chaos">
+	<item id="16233" type="EtcItem" name="혼돈의 봉인된 데스티노 부츠">
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -878,7 +878,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16234" type="EtcItem" name="Sealed Moirai Leather Boots of Chaos">
+	<item id="16234" type="EtcItem" name="혼돈의 봉인된 데스티노 레더 부츠">
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -889,7 +889,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16235" type="EtcItem" name="Sealed Moirai Shoes of Chaos">
+	<item id="16235" type="EtcItem" name="혼돈의 봉인된 데스티노 신발">
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -903,7 +903,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16236" type="EtcItem" name="Sealed Moirai Shield of Chaos">
+	<item id="16236" type="EtcItem" name="혼돈의 봉인된 데스티노 쉴드">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -919,7 +919,7 @@
 			<set order="0x08" stat="sDef" val="337" />
 		</for>
 	</item>
-	<item id="16237" type="EtcItem" name="Sealed Moirai Sigil of Chaos">
+	<item id="16237" type="EtcItem" name="혼돈의 봉인된 데스티노 시길">
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -933,7 +933,7 @@
 			<sub order="0x10" stat="rEvas" val="8" />
 		</for>
 	</item>
-	<item id="16238" type="EtcItem" name="Sealed Vesper Helmet of Chaos">
+	<item id="16238" type="EtcItem" name="혼돈의 봉인된 베스페르 헬멧">
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -947,7 +947,7 @@
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
 	</item>
-	<item id="16239" type="EtcItem" name="Sealed Vesper Leather Helmet of Chaos">
+	<item id="16239" type="EtcItem" name="혼돈의 봉인된 베스페르 가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -958,7 +958,7 @@
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
 	</item>
-	<item id="16240" type="EtcItem" name="Sealed Vesper Circlet of Chaos">
+	<item id="16240" type="EtcItem" name="혼돈의 봉인된 베스페르 서클릿">
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -972,7 +972,7 @@
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
 	</item>
-	<item id="16241" type="EtcItem" name="Sealed Vesper Breastplate of Chaos">
+	<item id="16241" type="EtcItem" name="혼돈의 봉인된 베스페르 흉갑">
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -987,7 +987,7 @@
 			<add order="0x10" stat="pDef" val="250" />
 		</for>
 	</item>
-	<item id="16242" type="EtcItem" name="Sealed Vesper Leather Breastplate of Chaos">
+	<item id="16242" type="EtcItem" name="혼돈의 봉인된 베스페르 가죽 흉갑">
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -999,7 +999,7 @@
 			<add order="0x10" stat="pDef" val="187" />
 		</for>
 	</item>
-	<item id="16243" type="EtcItem" name="Sealed Moirai Tunic of Chaos">
+	<item id="16243" type="EtcItem" name="혼돈의 봉인된 베스페르 튜닉">
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -1015,7 +1015,7 @@
 			<add order="0x40" stat="maxMp" val="637" />
 		</for>
 	</item>
-	<item id="16244" type="EtcItem" name="Sealed Vesper Gaiter of Chaos">
+	<item id="16244" type="EtcItem" name="혼돈의 봉인된 베스페르 각반">
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -1030,7 +1030,7 @@
 			<add order="0x10" stat="pDef" val="156" />
 		</for>
 	</item>
-	<item id="16245" type="EtcItem" name="Sealed Vesper Leather Legging of Chaos">
+	<item id="16245" type="EtcItem" name="혼돈의 봉인된 베스페르 레더 레깅스">
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -1042,7 +1042,7 @@
 			<add order="0x10" stat="pDef" val="117" />
 		</for>
 	</item>
-	<item id="16246" type="EtcItem" name="Sealed Vesper Stockings of Chaos">
+	<item id="16246" type="EtcItem" name="혼돈의 봉인된 베스페르 호즈">
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -1058,7 +1058,7 @@
 			<add order="0x40" stat="maxMp" val="415" />
 		</for>
 	</item>
-	<item id="16247" type="EtcItem" name="Sealed Vesper Gauntlet of Chaos">
+	<item id="16247" type="EtcItem" name="혼돈의 봉인된 베스페르 건틀렛">
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1072,7 +1072,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16248" type="EtcItem" name="Sealed Vesper Leather Gloves of Chaos">
+	<item id="16248" type="EtcItem" name="혼돈의 봉인된 베스페르 레더 글로브">
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1083,7 +1083,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16249" type="EtcItem" name="Sealed Vesper Gloves of Chaos">
+	<item id="16249" type="EtcItem" name="혼돈의 봉인된 베스페르 글로브">
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1097,7 +1097,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16250" type="EtcItem" name="Sealed Vesper Boots of Chaos">
+	<item id="16250" type="EtcItem" name="혼돈의 봉인된 베스페르 부츠">
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1111,7 +1111,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16251" type="EtcItem" name="Sealed Vesper Leather Boots of Chaos">
+	<item id="16251" type="EtcItem" name="혼돈의 봉인된 베스페르 레더 부츠">
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1122,7 +1122,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16252" type="EtcItem" name="Sealed Vesper Shoes of Chaos">
+	<item id="16252" type="EtcItem" name="혼돈의 봉인된 베스페르 신발">
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1136,7 +1136,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16253" type="EtcItem" name="Sealed Vesper Shield of Chaos">
+	<item id="16253" type="EtcItem" name="혼돈의 봉인된 베스페르 쉴드">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1152,7 +1152,7 @@
 			<set order="0x08" stat="sDef" val="352" />
 		</for>
 	</item>
-	<item id="16254" type="EtcItem" name="Sealed Vesper Sigil of Chaos">
+	<item id="16254" type="EtcItem" name="혼돈의 봉인된 베스페르 시길">
 		<set name="icon" val="icon.armor_verper_sigil_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s80" />
@@ -1166,7 +1166,7 @@
 			<sub order="0x10" stat="rEvas" val="8" />
 		</for>
 	</item>
-	<item id="16255" type="EtcItem" name="Moirai Helmet of Chaos">
+	<item id="16255" type="EtcItem" name="혼돈의 데스티노 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="606" />
@@ -1181,7 +1181,7 @@
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
 	</item>
-	<item id="16256" type="EtcItem" name="Moirai Leather Helmet of Chaos">
+	<item id="16256" type="EtcItem" name="혼돈의 데스티노 가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="606" />
@@ -1193,7 +1193,7 @@
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
 	</item>
-	<item id="16257" type="EtcItem" name="Moirai Circlet of Chaos">
+	<item id="16257" type="EtcItem" name="혼돈의 데스티노 서클릿">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="606" />
@@ -1208,7 +1208,7 @@
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
 	</item>
-	<item id="16258" type="EtcItem" name="Moirai Breastplate of Chaos">
+	<item id="16258" type="EtcItem" name="혼돈의 데스티노 흉갑">
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -1224,7 +1224,7 @@
 			<add order="0x10" stat="pDef" val="238" />
 		</for>
 	</item>
-	<item id="16259" type="EtcItem" name="Moirai Leather Breastplate of Chaos">
+	<item id="16259" type="EtcItem" name="혼돈의 데스티노 가죽 흉갑">
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -1237,7 +1237,7 @@
 			<add order="0x10" stat="pDef" val="178" />
 		</for>
 	</item>
-	<item id="16260" type="EtcItem" name="Moirai Tunic of Chaos">
+	<item id="16260" type="EtcItem" name="혼돈의 데스티노 튜닉">
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -1254,7 +1254,7 @@
 			<add order="0x40" stat="maxMp" val="614" />
 		</for>
 	</item>
-	<item id="16261" type="EtcItem" name="Moirai Gaiter of Chaos">
+	<item id="16261" type="EtcItem" name="혼돈의 데스티노 각반">
 		<set name="icon" val="icon.armor_t100_l_i00" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -1270,7 +1270,7 @@
 			<add order="0x10" stat="pDef" val="149" />
 		</for>
 	</item>
-	<item id="16262" type="EtcItem" name="Moirai Leather Legging of Chaos">
+	<item id="16262" type="EtcItem" name="혼돈의 데스티노 레더 레깅스">
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -1283,7 +1283,7 @@
 			<add order="0x10" stat="pDef" val="111" />
 		</for>
 	</item>
-	<item id="16263" type="EtcItem" name="Moirai Stockings of Chaos">
+	<item id="16263" type="EtcItem" name="혼돈의 데스티노 호즈">
 		<set name="icon" val="icon.armor_t102_l_i00" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -1300,7 +1300,7 @@
 			<add order="0x40" stat="maxMp" val="392" />
 		</for>
 	</item>
-	<item id="16264" type="EtcItem" name="Moirai Gauntlet of Chaos">
+	<item id="16264" type="EtcItem" name="혼돈의 데스티노 건틀렛">
 		<set name="icon" val="icon.armor_t100_g_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="404" />
@@ -1315,7 +1315,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16265" type="EtcItem" name="Moirai Leather Gloves of Chaos">
+	<item id="16265" type="EtcItem" name="혼돈의 데스티노 레더 글로브">
 		<set name="icon" val="icon.armor_t101_g_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="404" />
@@ -1327,7 +1327,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16266" type="EtcItem" name="Moirai Gloves of Chaos">
+	<item id="16266" type="EtcItem" name="혼돈의 데스티노 글로브">
 		<set name="icon" val="icon.armor_t102_g_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="404" />
@@ -1342,7 +1342,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16267" type="EtcItem" name="Moirai Boots of Chaos">
+	<item id="16267" type="EtcItem" name="혼돈의 데스티노 부츠">
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="404" />
@@ -1357,7 +1357,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16268" type="EtcItem" name="Moirai Leather Boots of Chaos">
+	<item id="16268" type="EtcItem" name="혼돈의 데스티노 레더 부츠">
 		<set name="icon" val="icon.armor_t101_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="404" />
@@ -1369,7 +1369,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16269" type="EtcItem" name="Moirai Shoes of Chaos">
+	<item id="16269" type="EtcItem" name="혼돈의 데스티노 신발">
 		<set name="icon" val="icon.armor_t102_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="404" />
@@ -1384,7 +1384,7 @@
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
 	</item>
-	<item id="16270" type="EtcItem" name="Moirai Shield of Chaos">
+	<item id="16270" type="EtcItem" name="혼돈의 데스티노 쉴드">
 		<set name="icon" val="icon.weapon_tysandy_shield_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="424" />
@@ -1401,7 +1401,7 @@
 			<set order="0x08" stat="sDef" val="355" />
 		</for>
 	</item>
-	<item id="16271" type="EtcItem" name="Moirai Sigil of Chaos">
+	<item id="16271" type="EtcItem" name="혼돈의 데스티노 시길">
 		<set name="icon" val="icon.weapon_tysandy_sigil_i01" />
 		<set name="armor_type" val="sigil" />
 		<set name="immediate_effect" val="1" />
@@ -1419,7 +1419,7 @@
 			<set order="0x08" stat="sDef" val="355" />
 		</for>
 	</item>
-	<item id="16272" type="EtcItem" name="Vesper Helmet of Chaos">
+	<item id="16272" type="EtcItem" name="혼돈의 베스페르 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="840" />
@@ -1434,7 +1434,7 @@
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
 	</item>
-	<item id="16273" type="EtcItem" name="Vesper Leather Helmet of Chaos">
+	<item id="16273" type="EtcItem" name="혼돈의 베스페르 가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="840" />
@@ -1446,7 +1446,7 @@
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
 	</item>
-	<item id="16274" type="EtcItem" name="Vesper Circlet of Chaos">
+	<item id="16274" type="EtcItem" name="혼돈의 베스페르 서클릿">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="840" />
@@ -1461,7 +1461,7 @@
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
 	</item>
-	<item id="16275" type="EtcItem" name="Vesper Breastplate of Chaos">
+	<item id="16275" type="EtcItem" name="혼돈의 베스페르 흉갑">
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -1477,7 +1477,7 @@
 			<add order="0x10" stat="pDef" val="250" />
 		</for>
 	</item>
-	<item id="16276" type="EtcItem" name="Vesper Leather Breastplate of Chaos">
+	<item id="16276" type="EtcItem" name="혼돈의 베스페르 가죽 흉갑">
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -1490,7 +1490,7 @@
 			<add order="0x10" stat="pDef" val="187" />
 		</for>
 	</item>
-	<item id="16277" type="EtcItem" name="Vesper Tunic of Chaos">
+	<item id="16277" type="EtcItem" name="혼돈의 베스페르 튜닉">
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -1507,7 +1507,7 @@
 			<add order="0x40" stat="maxMp" val="637" />
 		</for>
 	</item>
-	<item id="16278" type="EtcItem" name="Vesper Gaiter of Chaos">
+	<item id="16278" type="EtcItem" name="혼돈의 베스페르 각반">
 		<set name="icon" val="icon.armor_t94_l_i00" />
 		<set name="armor_type" val="heavy" />
 		<set name="immediate_effect" val="1" />
@@ -1523,7 +1523,7 @@
 			<add order="0x10" stat="pDef" val="156" />
 		</for>
 	</item>
-	<item id="16279" type="EtcItem" name="Vesper Leather Legging of Chaos">
+	<item id="16279" type="EtcItem" name="혼돈의 베스페르 레더 레깅스">
 		<set name="icon" val="icon.armor_t95_l_i00" />
 		<set name="armor_type" val="light" />
 		<set name="immediate_effect" val="1" />
@@ -1536,7 +1536,7 @@
 			<add order="0x10" stat="pDef" val="117" />
 		</for>
 	</item>
-	<item id="16280" type="EtcItem" name="Vesper Stockings of Chaos">
+	<item id="16280" type="EtcItem" name="혼돈의 베스페르 호즈">
 		<set name="icon" val="icon.armor_t96_l_i00" />
 		<set name="armor_type" val="magic" />
 		<set name="immediate_effect" val="1" />
@@ -1553,7 +1553,7 @@
 			<add order="0x40" stat="maxMp" val="415" />
 		</for>
 	</item>
-	<item id="16281" type="EtcItem" name="Vesper Gauntlet of Chaos">
+	<item id="16281" type="EtcItem" name="혼돈의 베스페르 건틀렛">
 		<set name="icon" val="icon.armor_t94_g_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="560" />
@@ -1568,7 +1568,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16282" type="EtcItem" name="Vesper Leather Gloves of Chaos">
+	<item id="16282" type="EtcItem" name="혼돈의 베스페르 레더 글로브">
 		<set name="icon" val="icon.armor_t95_g_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="560" />
@@ -1580,7 +1580,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16283" type="EtcItem" name="Vesper Gloves of Chaos">
+	<item id="16283" type="EtcItem" name="혼돈의 베스페르 글로브">
 		<set name="icon" val="icon.armor_t96_g_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="560" />
@@ -1595,7 +1595,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16284" type="EtcItem" name="Vesper Boots of Chaos">
+	<item id="16284" type="EtcItem" name="혼돈의 베스페르 부츠">
 		<set name="icon" val="icon.armor_t94_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="560" />
@@ -1610,7 +1610,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16285" type="EtcItem" name="Vesper Leather Boots of Chaos">
+	<item id="16285" type="EtcItem" name="혼돈의 베스페르 레더 부츠">
 		<set name="icon" val="icon.armor_t95_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="560" />
@@ -1622,7 +1622,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16286" type="EtcItem" name="Vesper Shoes of Chaos">
+	<item id="16286" type="EtcItem" name="혼돈의 베스페르 신발">
 		<set name="icon" val="icon.armor_t96_b_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="560" />
@@ -1637,7 +1637,7 @@
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
 	</item>
-	<item id="16287" type="EtcItem" name="Vesper Shield of Chaos">
+	<item id="16287" type="EtcItem" name="혼돈의 베스페르 쉴드">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_count" val="588" />
@@ -1654,7 +1654,7 @@
 			<set order="0x08" stat="sDef" val="371" />
 		</for>
 	</item>
-	<item id="16288" type="EtcItem" name="Vesper Sigil of Chaos">
+	<item id="16288" type="EtcItem" name="혼돈의 베스페르 시길">
 		<set name="icon" val="icon.armor_verper_sigil_i01" />
 		<set name="armor_type" val="sigil" />
 		<set name="immediate_effect" val="1" />
@@ -1671,7 +1671,7 @@
 			<add order="0x10" stat="pDef" val="17" />
 		</for>
 	</item>
-	<item id="16289" type="Armor" name="Moirai Helmet">
+	<item id="16289" type="Armor" name="데스티노 헬멧">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1692,7 +1692,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16290" type="Armor" name="Moirai Leather Helmet">
+	<item id="16290" type="Armor" name="데스티노 가죽 헬멧">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1710,7 +1710,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16291" type="Armor" name="Moirai Circlet">
+	<item id="16291" type="Armor" name="데스티노 서클릿">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -1731,7 +1731,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16292" type="Armor" name="Moirai Breastplate">
+	<item id="16292" type="Armor" name="데스티노 흉갑">
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1753,7 +1753,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16293" type="Armor" name="Moirai Leather Breastplate">
+	<item id="16293" type="Armor" name="데스티노 가죽 흉갑">
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1772,7 +1772,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16294" type="Armor" name="Moirai Tunic">
+	<item id="16294" type="Armor" name="데스티노 튜닉">
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1795,7 +1795,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16295" type="Armor" name="Moirai Gaiter">
+	<item id="16295" type="Armor" name="데스티노 각반">
 		<set name="icon" val="icon.armor_t100_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -1817,7 +1817,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16296" type="Armor" name="Moirai Leather Legging">
+	<item id="16296" type="Armor" name="데스티노 레더 레깅스">
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -1836,7 +1836,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16297" type="Armor" name="Moirai Stockings">
+	<item id="16297" type="Armor" name="데스티노 호즈">
 		<set name="icon" val="icon.armor_t102_l_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -1859,7 +1859,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16298" type="Armor" name="Moirai Gauntlet">
+	<item id="16298" type="Armor" name="데스티노 건틀렛">
 		<set name="icon" val="icon.armor_t100_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -1880,7 +1880,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="16299" type="Armor" name="Moirai Leather Gloves">
+	<item id="16299" type="Armor" name="데스티노 레더 글로브">
 		<set name="icon" val="icon.armor_t101_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />

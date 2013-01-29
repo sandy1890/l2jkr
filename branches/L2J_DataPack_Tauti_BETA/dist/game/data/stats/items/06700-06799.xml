@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6700" type="EtcItem" name="Sealed Tateossian Necklace Chain">
+	<item id="6700" type="EtcItem" name="봉인된 타테오시안 네크리스 와이어">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -9,7 +9,7 @@
 		<set name="price" val="16706" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6701" type="EtcItem" name="Sealed Imperial Crusader Breastplate Part">
+	<item id="6701" type="EtcItem" name="봉인된 임페리얼 크루세이더 흉갑 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -18,7 +18,7 @@
 		<set name="price" val="37565" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6702" type="EtcItem" name="Sealed Imperial Crusader Gaiters Pattern">
+	<item id="6702" type="EtcItem" name="봉인된 임페리얼 크루세이더 각반 패턴">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -27,7 +27,7 @@
 		<set name="price" val="29182" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6703" type="EtcItem" name="Sealed Imperial Crusader Gauntlets Design">
+	<item id="6703" type="EtcItem" name="봉인된 임페리얼 크루세이더 건틀렛 원형">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -36,7 +36,7 @@
 		<set name="price" val="14047" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6704" type="EtcItem" name="Sealed Imperial Crusader Boots Design">
+	<item id="6704" type="EtcItem" name="봉인된 임페리얼 크루세이더 부츠 원형">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -45,7 +45,7 @@
 		<set name="price" val="14047" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6705" type="EtcItem" name="Sealed Imperial Crusader Shield Part">
+	<item id="6705" type="EtcItem" name="봉인된 임페리얼 크루세이더 쉴드 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -54,7 +54,7 @@
 		<set name="price" val="14341" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6706" type="EtcItem" name="Sealed Imperial Crusader Helmet Pattern">
+	<item id="6706" type="EtcItem" name="봉인된 임페리얼 크루세이더 헬멧 패턴">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -63,7 +63,7 @@
 		<set name="price" val="12329" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6707" type="EtcItem" name="Sealed Draconic Leather Armor Part">
+	<item id="6707" type="EtcItem" name="봉인된 드라코닉 레더 아머 조각">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -72,7 +72,7 @@
 		<set name="price" val="40365" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6708" type="EtcItem" name="Sealed Draconic Leather Gloves Fabric">
+	<item id="6708" type="EtcItem" name="봉인된 드라코닉 레더 글로브 원단">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -81,7 +81,7 @@
 		<set name="price" val="14047" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6709" type="EtcItem" name="Sealed Draconic Leather Boots Design">
+	<item id="6709" type="EtcItem" name="봉인된 드라코닉 레더 부츠 원형">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -90,7 +90,7 @@
 		<set name="price" val="14047" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6710" type="EtcItem" name="Sealed Draconic Leather Helmet Pattern">
+	<item id="6710" type="EtcItem" name="봉인된 드라코닉 레더 헬멧 패턴">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -99,7 +99,7 @@
 		<set name="price" val="12329" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6711" type="EtcItem" name="Sealed Major Arcana Robe Part">
+	<item id="6711" type="EtcItem" name="봉인된 메이저 아르카나 로브 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -108,7 +108,7 @@
 		<set name="price" val="40365" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6712" type="EtcItem" name="Sealed Major Arcana Gloves fabric">
+	<item id="6712" type="EtcItem" name="봉인된 메이저 아르카나 글로브 원단">
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -117,7 +117,7 @@
 		<set name="price" val="14047" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6713" type="EtcItem" name="Sealed Major Arcana Boots Design">
+	<item id="6713" type="EtcItem" name="봉인된 메이저 아르카나 부츠 원형">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -126,7 +126,7 @@
 		<set name="price" val="14047" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6714" type="EtcItem" name="Sealed Major Arcana Circlet Pattern">
+	<item id="6714" type="EtcItem" name="봉인된 메이저 아르카나 서클릿 패턴">
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />
@@ -135,7 +135,7 @@
 		<set name="price" val="12329" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6715" type="Weapon" name="Monster Only(Silenos Archer)">
+	<item id="6715" type="Weapon" name="몹전용(실레노스 아쳐)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -160,7 +160,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="6716" type="Weapon" name="Monster Only(Silenos Shaman)">
+	<item id="6716" type="Weapon" name="몹전용(실레노스 샤먼)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -184,7 +184,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="6717" type="Weapon" name="Monster Only(Einhasad Warrior)">
+	<item id="6717" type="Weapon" name="몹전용(아인하사드전사)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="sword" />
@@ -206,7 +206,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="6718" type="Weapon" name="Monster Only(Einhasad Shaman)">
+	<item id="6718" type="Weapon" name="몹전용(아인하사드법사)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -229,7 +229,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="6719" type="Weapon" name="Monster Only(Ketra Orc Chieftain)">
+	<item id="6719" type="Weapon" name="몹전용(케트라오크치프텐)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigblunt" />
@@ -257,7 +257,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6720" type="Weapon" name="Monster Only(Shadow of Halisha)">
+	<item id="6720" type="Weapon" name="몹전용(할리샤의그림자)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bow" />
@@ -282,7 +282,7 @@
 			<set order="0x08" stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="6721" type="Weapon" name="Monster Only(Shield of Imperial Warlord Zombie)">
+	<item id="6721" type="Weapon" name="몹전용(임페리얼워로드좀비방패)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -298,7 +298,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="6722" type="Weapon" name="Monster Only(Ahrimanes)">
+	<item id="6722" type="Weapon" name="몹전용(아리마네스)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -325,7 +325,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6723" type="Weapon" name="Monster Only(Vampire Warrior)">
+	<item id="6723" type="Weapon" name="몹전용(뱀파이어워리어)">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -351,7 +351,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk" />
 		</for>
 	</item>
-	<item id="6724" type="Armor" name="Sealed Tateossian Earring">
+	<item id="6724" type="Armor" name="봉인된 타테오시안 이어링">
 		<set name="icon" val="icon.accessory_tateossian_earring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rear;lear" />
@@ -367,7 +367,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6725" type="Armor" name="Sealed Tateossian Ring">
+	<item id="6725" type="Armor" name="봉인된 타테오시안 링">
 		<set name="icon" val="icon.accessory_tateossian_ring_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -383,7 +383,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6726" type="Armor" name="Sealed Tateossian Necklace">
+	<item id="6726" type="Armor" name="봉인된 타테오시안 네크리스">
 		<set name="icon" val="icon.accessory_tateossian_necklace_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="neck" />
@@ -399,7 +399,7 @@
 			<enchant order="0x0C" stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="6727" type="EtcItem" name="Seed: Alternative Great Coba">
+	<item id="6727" type="EtcItem" name="개량 대왕 코바 씨앗">
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -410,7 +410,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6728" type="EtcItem" name="Seed: Alternative Sea Coba">
+	<item id="6728" type="EtcItem" name="개량 바다 코바 씨앗">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -421,7 +421,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6729" type="EtcItem" name="Seed: Alternative Sea Coba">
+	<item id="6729" type="EtcItem" name="개량 바다 코바 씨앗">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -432,7 +432,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6730" type="EtcItem" name="Seed: Alternative Sea Coba">
+	<item id="6730" type="EtcItem" name="개량 바다 코바 씨앗">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -443,7 +443,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6731" type="EtcItem" name="Seed: Alternative Red Coba">
+	<item id="6731" type="EtcItem" name="개량 붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -454,7 +454,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6732" type="EtcItem" name="Seed: Alternative Red Coba">
+	<item id="6732" type="EtcItem" name="개량 붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -465,7 +465,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6733" type="EtcItem" name="Seed: Alternative Red Coba">
+	<item id="6733" type="EtcItem" name="개량 붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -476,7 +476,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6734" type="EtcItem" name="Seed: Alternative Red Coba">
+	<item id="6734" type="EtcItem" name="개량 붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -487,7 +487,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6735" type="EtcItem" name="Seed: Alternative Red Coba">
+	<item id="6735" type="EtcItem" name="개량 붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -498,7 +498,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6736" type="EtcItem" name="Seed: Alternative Desert Coba">
+	<item id="6736" type="EtcItem" name="개량 사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -509,7 +509,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6737" type="EtcItem" name="Seed: Alternative Desert Coba">
+	<item id="6737" type="EtcItem" name="개량 사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -520,7 +520,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6738" type="EtcItem" name="Seed: Alternative Desert Coba">
+	<item id="6738" type="EtcItem" name="개량 사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -531,7 +531,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6739" type="EtcItem" name="Seed: Alternative Desert Coba">
+	<item id="6739" type="EtcItem" name="개량 사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -542,7 +542,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6740" type="EtcItem" name="Seed: Alternative Desert Coba">
+	<item id="6740" type="EtcItem" name="개량 사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -553,7 +553,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6741" type="EtcItem" name="Seed: Alternative Twin Coba">
+	<item id="6741" type="EtcItem" name="개량 쌍둥 코바 씨앗">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -564,7 +564,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6742" type="EtcItem" name="Seed: Alternative Blue Coba">
+	<item id="6742" type="EtcItem" name="개량 푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -575,7 +575,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6743" type="EtcItem" name="Seed: Alternative Blue Coba">
+	<item id="6743" type="EtcItem" name="개량 푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -586,7 +586,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6744" type="EtcItem" name="Seed: Alternative Blue Coba">
+	<item id="6744" type="EtcItem" name="개량 푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -597,7 +597,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6745" type="EtcItem" name="Seed: Alternative Blue Coba">
+	<item id="6745" type="EtcItem" name="개량 푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -608,7 +608,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6746" type="EtcItem" name="Seed: Alternative Blue Coba">
+	<item id="6746" type="EtcItem" name="개량 푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -619,7 +619,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6747" type="EtcItem" name="Seed: Alternative Golden Coba">
+	<item id="6747" type="EtcItem" name="개량 황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -630,7 +630,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6748" type="EtcItem" name="Seed: Alternative Golden Coba">
+	<item id="6748" type="EtcItem" name="개량 황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -641,7 +641,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6749" type="EtcItem" name="Seed: Alternative Golden Coba">
+	<item id="6749" type="EtcItem" name="개량 황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -652,7 +652,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6750" type="EtcItem" name="Seed: Alternative Golden Coba">
+	<item id="6750" type="EtcItem" name="개량 황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -663,7 +663,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6751" type="EtcItem" name="Seed: Alternative Golden Coba">
+	<item id="6751" type="EtcItem" name="개량 황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -674,7 +674,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6752" type="EtcItem" name="Seed: Alternative Golden Coba">
+	<item id="6752" type="EtcItem" name="개량 황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed2" />
@@ -685,7 +685,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6753" type="EtcItem" name="Seed: Great Coba">
+	<item id="6753" type="EtcItem" name="대왕 코바 씨앗">
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -696,7 +696,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6754" type="EtcItem" name="Seed: Sea Coba">
+	<item id="6754" type="EtcItem" name="바다 코바 씨앗">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -707,7 +707,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6755" type="EtcItem" name="Seed: Sea Coba">
+	<item id="6755" type="EtcItem" name="바다 코바 씨앗">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -718,7 +718,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6756" type="EtcItem" name="Seed: Sea Coba">
+	<item id="6756" type="EtcItem" name="바다 코바 씨앗">
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -729,7 +729,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6757" type="EtcItem" name="Seed: Red Coba">
+	<item id="6757" type="EtcItem" name="붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -740,7 +740,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6758" type="EtcItem" name="Seed: Red Coba">
+	<item id="6758" type="EtcItem" name="붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -751,7 +751,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6759" type="EtcItem" name="Seed: Red Coba">
+	<item id="6759" type="EtcItem" name="붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -762,7 +762,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6760" type="EtcItem" name="Seed: Red Coba">
+	<item id="6760" type="EtcItem" name="붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -773,7 +773,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6761" type="EtcItem" name="Seed: Red Coba">
+	<item id="6761" type="EtcItem" name="붉은 코바 씨앗">
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -784,7 +784,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6762" type="EtcItem" name="Seed: Desert Coba">
+	<item id="6762" type="EtcItem" name="사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -795,7 +795,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6763" type="EtcItem" name="Seed: Desert Coba">
+	<item id="6763" type="EtcItem" name="사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -806,7 +806,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6764" type="EtcItem" name="Seed: Desert Coba">
+	<item id="6764" type="EtcItem" name="사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -817,7 +817,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6765" type="EtcItem" name="Seed: Desert Coba">
+	<item id="6765" type="EtcItem" name="사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -828,7 +828,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6766" type="EtcItem" name="Seed: Desert Coba">
+	<item id="6766" type="EtcItem" name="사막 코바 씨앗">
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -839,7 +839,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6767" type="EtcItem" name="Seed: Twin Coba">
+	<item id="6767" type="EtcItem" name="쌍둥 코바 씨앗">
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -850,7 +850,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6768" type="EtcItem" name="Seed: Blue Coba">
+	<item id="6768" type="EtcItem" name="푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -861,7 +861,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6769" type="EtcItem" name="Seed: Blue Coba">
+	<item id="6769" type="EtcItem" name="푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -872,7 +872,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6770" type="EtcItem" name="Seed: Blue Coba">
+	<item id="6770" type="EtcItem" name="푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -883,7 +883,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6771" type="EtcItem" name="Seed: Blue Coba">
+	<item id="6771" type="EtcItem" name="푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -894,7 +894,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6772" type="EtcItem" name="Seed: Blue Coba">
+	<item id="6772" type="EtcItem" name="푸른 코바 씨앗">
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -905,7 +905,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6773" type="EtcItem" name="Seed: Golden Coba">
+	<item id="6773" type="EtcItem" name="황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -916,7 +916,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6774" type="EtcItem" name="Seed: Golden Coba">
+	<item id="6774" type="EtcItem" name="황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -927,7 +927,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6775" type="EtcItem" name="Seed: Golden Coba">
+	<item id="6775" type="EtcItem" name="황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -938,7 +938,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6776" type="EtcItem" name="Seed: Golden Coba">
+	<item id="6776" type="EtcItem" name="황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -949,7 +949,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6777" type="EtcItem" name="Seed: Golden Coba">
+	<item id="6777" type="EtcItem" name="황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -960,7 +960,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6778" type="EtcItem" name="Seed: Golden Coba">
+	<item id="6778" type="EtcItem" name="황금 코바 씨앗">
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="seed" />
 		<set name="etcitem_type" val="seed" />
@@ -971,7 +971,7 @@
 		<set name="handler" val="Seed" />
 		<set name="item_skill" val="2097-3" />
 	</item>
-	<item id="6779" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="6779" type="EtcItem" name="용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -980,7 +980,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6780" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="6780" type="EtcItem" name="용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -989,7 +989,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6781" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="6781" type="EtcItem" name="용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -998,7 +998,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6782" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="6782" type="EtcItem" name="용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1007,7 +1007,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6783" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="6783" type="EtcItem" name="용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1016,7 +1016,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6784" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="6784" type="EtcItem" name="용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1025,7 +1025,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6785" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="6785" type="EtcItem" name="용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1034,7 +1034,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6786" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="6786" type="EtcItem" name="용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1043,7 +1043,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6787" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+	<item id="6787" type="EtcItem" name="용병배치표(클레릭/이동)">
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1052,7 +1052,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6788" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+	<item id="6788" type="EtcItem" name="용병배치표(위자드/이동)">
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1061,7 +1061,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6789" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+	<item id="6789" type="EtcItem" name="용병배치표(텔레포터1)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1070,7 +1070,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6790" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+	<item id="6790" type="EtcItem" name="용병배치표(텔레포터2)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1079,7 +1079,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6791" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+	<item id="6791" type="EtcItem" name="용병배치표(텔레포터3)">
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1088,7 +1088,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6792" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
+	<item id="6792" type="EtcItem" name="고급 용병배치표(칼/고정)">
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1097,7 +1097,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6793" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
+	<item id="6793" type="EtcItem" name="고급 용병배치표(창/고정)">
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1106,7 +1106,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6794" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
+	<item id="6794" type="EtcItem" name="고급 용병배치표(활/고정)">
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1115,7 +1115,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6795" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
+	<item id="6795" type="EtcItem" name="고급 용병배치표(클레릭/고정)">
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1124,7 +1124,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6796" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
+	<item id="6796" type="EtcItem" name="고급 용병배치표(위자드/고정)">
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1133,7 +1133,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6797" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
+	<item id="6797" type="EtcItem" name="고급 용병배치표(칼/이동)">
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1142,7 +1142,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6798" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
+	<item id="6798" type="EtcItem" name="고급 용병배치표(창/이동)">
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />
@@ -1151,7 +1151,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6799" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
+	<item id="6799" type="EtcItem" name="고급 용병배치표(활/이동)">
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="castle_guard" />
 		<set name="immediate_effect" val="1" />

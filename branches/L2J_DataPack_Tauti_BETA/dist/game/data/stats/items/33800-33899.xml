@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="33804" name="學徒憑證" type="EtcItem">
+	<item id="33804" type="EtcItem" name="멘티의 징표">
 		<table name="#Desc">當學徒升級時頒發給導師的道具。拜訪指導關係幫手的話，就可交換成其他實用的道具。無法交易/丟棄，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.mentee_mark"/>
 		<set name="material" val="wood"/>
@@ -10,7 +10,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33805" name="畢業證書" type="EtcItem">
+	<item id="33805" type="EtcItem" name="졸업의 증거">
 		<table name="#Desc">頒發給畢業的學徒角色的道具。拜訪指導關係幫手的話，就可交換成鎮魂/永生級裝備。無法交易/丟棄，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.mentee_graduate_proof"/>
 		<set name="material" val="wood"/>
@@ -19,7 +19,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33819" name="頭飾用生命石" type="EtcItem">
+	<item id="33819" type="EtcItem" name="헤어 액세서리용 생명의 돌 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">頭飾用生命石。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.life_dust_hairacc_general"/>
@@ -30,7 +30,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33828" name="搜魂變更石-A" type="EtcItem">
+	<item id="33828" type="EtcItem" name="집혼 변경석 - A 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更A級武器的搜魂特效。拜訪財富的鐵匠後，與A級寶石一同使用的話，就可變更A級武器的搜魂特效。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.etc_bead_red_i00"/>
@@ -41,7 +41,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33829" name="搜魂變更石-S" type="EtcItem">
+	<item id="33829" type="EtcItem" name="집혼 변경석 - S 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更S級武器的搜魂特效。拜訪財富的鐵匠後，與S級寶石一同使用的話，就可變更S級武器的搜魂特效。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.etc_bead_silver_i00"/>
@@ -52,7 +52,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33830" name="搜魂變更石-S80" type="EtcItem">
+	<item id="33830" type="EtcItem" name="집혼 변경석 - S80 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更S80級武器的搜魂特效。拜訪財富的鐵匠後，與S80級寶石一同使用的話，就可變更S80級武器的搜魂特效。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.etc_bead_silver_i00"/>
@@ -63,7 +63,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33831" name="搜魂變更石-R" type="EtcItem">
+	<item id="33831" type="EtcItem" name="집혼 변경석 - R 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更R級武器的搜魂特效。拜訪財富的鐵匠後，與R級寶石一同使用的話，就可變更R級武器的搜魂特效。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.etc_bead_gold_i00"/>
@@ -74,7 +74,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33832" name="搜魂變更石-R95" type="EtcItem">
+	<item id="33832" type="EtcItem" name="집혼 변경석 - R95 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更R95級武器的搜魂特效。拜訪財富的鐵匠後，與R95級寶石一同使用的話，就可變更R95級武器的搜魂特效。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.etc_bead_gold_i00"/>
@@ -85,7 +85,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33833" name="屬性變更水晶-S級" type="EtcItem">
+	<item id="33833" type="EtcItem" name="속성 변경 수정 - S그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更S級武器的屬性。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.change_elemental_crystal"/>
@@ -94,7 +94,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33834" name="屬性變更水晶-S80級" type="EtcItem">
+	<item id="33834" type="EtcItem" name="속성 변경 수정 - S80그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更S80級武器的屬性。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.change_elemental_crystal"/>
@@ -103,7 +103,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33835" name="屬性變更水晶-R級" type="EtcItem">
+	<item id="33835" type="EtcItem" name="속성 변경 수정 - R그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更R級武器的屬性。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.change_elemental_crystal"/>
@@ -112,7 +112,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33836" name="屬性變更水晶-R95級" type="EtcItem">
+	<item id="33836" type="EtcItem" name="속성 변경 수정 - R95그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更R95級武器的屬性。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.change_elemental_crystal"/>
@@ -121,7 +121,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33837" name="屬性變更水晶-R99級" type="EtcItem">
+	<item id="33837" type="EtcItem" name="속성 변경 수정 - R99그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以變更R99級武器的屬性。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.change_elemental_crystal"/>
@@ -130,7 +130,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33850" name="武器用強化輔助石-D級" type="EtcItem">
+	<item id="33850" type="EtcItem" name="무기용 강화 보조석 - D그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化D級武器時，可將機率提升20%的道具。僅限使用於強化3~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_wp_stone_i00"/>
@@ -142,7 +142,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33851" name="武器用強化輔助石-C級" type="EtcItem">
+	<item id="33851" type="EtcItem" name="무기용 강화 보조석 - C그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化C級武器時，可將機率提升18%的道具。僅限使用於強化3~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_wp_stone_i01"/>
@@ -154,7 +154,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33852" name="武器用強化輔助石-B級" type="EtcItem">
+	<item id="33852" type="EtcItem" name="무기용 강화 보조석 - B그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化B級武器時，可將機率提升15%的道具。僅限使用於強化3~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_wp_stone_i02"/>
@@ -166,7 +166,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33853" name="武器用強化輔助石-A級" type="EtcItem">
+	<item id="33853" type="EtcItem" name="무기용 강화 보조석 - A그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化A級武器時，可將機率提升12%的道具。僅限使用於強化3~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_wp_stone_i03"/>
@@ -178,7 +178,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33854" name="武器用強化輔助石-S級" type="EtcItem">
+	<item id="33854" type="EtcItem" name="무기용 강화 보조석 - S그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化S級武器時，可將機率提升10%的道具。僅限使用於強化3~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_wp_stone_i04"/>
@@ -190,7 +190,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33855" name="武器用強化輔助石-R級" type="EtcItem">
+	<item id="33855" type="EtcItem" name="무기용 강화 보조석 - R그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化R級武器時，可將機率提升10%的道具。僅限使用於強化3~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_wp_potion_violet_i00"/>
@@ -202,7 +202,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33856" name="防具用強化輔助石-D級" type="EtcItem">
+	<item id="33856" type="EtcItem" name="방어구용 강화 보조석 - D그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化D級防具時，可將機率提升35%的道具。僅限使用於強化3~9的道具；而連身防具則僅限使用於強化4~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_am_stone_i00"/>
@@ -214,7 +214,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33857" name="防具用強化輔助石-C級" type="EtcItem">
+	<item id="33857" type="EtcItem" name="방어구용 강화 보조석 - C그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化C級防具時，可將機率提升27%的道具。僅限使用於強化3~9的道具；而連身防具則僅限使用於強化4~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_am_stone_i01"/>
@@ -226,7 +226,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33858" name="防具用強化輔助石-B級" type="EtcItem">
+	<item id="33858" type="EtcItem" name="방어구용 강화 보조석 - B그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化B級防具時，可將機率提升23%的道具。僅限使用於強化3~9的道具；而連身防具則僅限使用於強化4~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_am_stone_i02"/>
@@ -238,7 +238,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33859" name="防具用強化輔助石-A級" type="EtcItem">
+	<item id="33859" type="EtcItem" name="방어구용 강화 보조석 - A그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化A級防具時，可將機率提升18%的道具。僅限使用於強化3~9的道具；而連身防具則僅限使用於強化4~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_am_stone_i03"/>
@@ -250,7 +250,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33860" name="防具用強化輔助石-S級" type="EtcItem">
+	<item id="33860" type="EtcItem" name="방어구용 강화 보조석 - S그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化S級防具時，可將機率提升15%的道具。僅限使用於強化3~9的道具；而連身防具則僅限使用於強化4~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_am_stone_i04"/>
@@ -262,7 +262,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33861" name="防具用強化輔助石-R級" type="EtcItem">
+	<item id="33861" type="EtcItem" name="방어구용 강화 보조석 - R그레이드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">強化R級防具時，可將機率提升15%的道具。僅限使用於強化3~9的道具；而連身防具則僅限使用於強化4~9的道具。無法交易或丟棄的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.ench_am_potion_violet_i00"/>
@@ -274,7 +274,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33862" name="祝福的秘藥" type="EtcItem">
+	<item id="33862" type="EtcItem" name="축복의 비약 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">在30分鐘內可以得到角笛之詩、吉他之詩、風琴之詩、琵琶之詩、豎琴之詩等級1的效果。用於等級85以上。使用冷卻時間為2分鐘。無法交易或丟棄的道具。</table>
 		<set name="icon" val="icon.etc_super_potion_i03"/>
@@ -288,7 +288,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33863" name="火之原石-Super 60" type="EtcItem">
+	<item id="33863" type="EtcItem" name="불의 원석 - Super 60 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">火屬性可一次賦予至60，且不賦予該數值以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_fire_stone_i00"/>
@@ -301,7 +301,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33864" name="水之原石-Super 60" type="EtcItem">
+	<item id="33864" type="EtcItem" name="물의 원석 - Super 60 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">水屬性可一次賦予至60，且不賦予該數值以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_water_stone_i00"/>
@@ -314,7 +314,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33865" name="地之原石-Super 60" type="EtcItem">
+	<item id="33865" type="EtcItem" name="땅의 원석 - Super 60 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">地屬性可一次賦予至60，且不賦予該數值以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_earth_stone_i00"/>
@@ -327,7 +327,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33866" name="風之原石-Super 60" type="EtcItem">
+	<item id="33866" type="EtcItem" name="바람의 원석 - Super 60 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">風屬性可一次賦予至60，且不賦予該數值以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_wind_stone_i00"/>
@@ -340,7 +340,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33867" name="暗之原石-Super 60" type="EtcItem">
+	<item id="33867" type="EtcItem" name="암흑의 원석 - Super 60 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">黑暗屬性可一次賦予至60，且不賦予該數值以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_unholy_stone_i00"/>
@@ -353,7 +353,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33868" name="聖之原石-Super 60" type="EtcItem">
+	<item id="33868" type="EtcItem" name="신성의 원석 - Super 60 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">神聖屬性可一次賦予至60，且不賦予該數值以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_holy_stone_i00"/>
@@ -366,7 +366,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33869" name="火之原石-Super 150" type="EtcItem">
+	<item id="33869" type="EtcItem" name="불의 원석 - Super 150 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">火屬性可一次賦予至等級3，且不賦予此等級以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_fire_stone_i00"/>
@@ -379,7 +379,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33870" name="水之原石-Super 150" type="EtcItem">
+	<item id="33870" type="EtcItem" name="물의 원석 - Super 150 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">水屬性可一次賦予至等級3，且不賦予此等級以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_water_stone_i00"/>
@@ -392,7 +392,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33871" name="地之原石-Super 150" type="EtcItem">
+	<item id="33871" type="EtcItem" name="땅의 원석 - Super 150 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">地屬性可一次賦予至等級3，且不賦予此等級以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_earth_stone_i00"/>
@@ -405,7 +405,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33872" name="風之原石-Super 150" type="EtcItem">
+	<item id="33872" type="EtcItem" name="바람의 원석 - Super 150 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">風屬性可一次賦予至等級3，且不賦予此等級以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_wind_stone_i00"/>
@@ -418,7 +418,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33873" name="暗之原石-Super 150" type="EtcItem">
+	<item id="33873" type="EtcItem" name="암흑의 원석 - Super 150 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">黑暗屬性可一次賦予至等級3，且不賦予此等級以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_unholy_stone_i00"/>
@@ -431,7 +431,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33874" name="聖之原石-Super 150" type="EtcItem">
+	<item id="33874" type="EtcItem" name="신성의 원석 - Super 150 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">神聖屬性可一次賦予至等級3，且不賦予此等級以上的元素屬性。另外，在防具上最多可以進行3種類的屬性強化，而相異的屬性則無法同時賦予。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.etc_holy_stone_i00"/>
@@ -444,7 +444,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="33875" name="鎮魂鉋刀" type="Weapon">
+	<item id="33875" type="Weapon" name="레퀴엠 셰이퍼 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予導引、速度激發、弱點偵測其中之一的特殊效果。強化+4時，增加物理致命傷害。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_aspeda_i00"/>
@@ -474,7 +474,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33876" name="鎮魂切刃" type="Weapon">
+	<item id="33876" type="Weapon" name="레퀴엠 커터 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予速度激發、弱點偵測、強健其中之一的特殊效果。強化+4時，增加命中率、物理致命攻擊率。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_estia_i00"/>
@@ -503,7 +503,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33877" name="鎮魂殺刃" type="Weapon">
+	<item id="33877" type="Weapon" name="레퀴엠 슬래셔 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。強化+4時，額外增加物理攻擊力。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_polion_i00"/>
@@ -532,7 +532,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33878" name="鎮魂復仇者" type="Weapon">
+	<item id="33878" type="Weapon" name="레퀴엠 어벤져 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予速度激發、Crt.傷害、弱點偵測其中之一的特殊效果。強化+4時，增加物理致命傷害。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_batista_i00"/>
@@ -562,7 +562,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33879" name="鎮魂戰爪" type="Weapon">
+	<item id="33879" type="Weapon" name="레퀴엠 파이터 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予弱點偵測、傷害提升、速度激發其中之一的特殊效果。強化+4時，增加攻擊速度，並額外增加物理攻擊力。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_fantasma_i00"/>
@@ -592,7 +592,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33880" name="鎮魂風暴者" type="Weapon">
+	<item id="33880" type="Weapon" name="레퀴엠 스토머 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予HP吸收、導引、傷害提升其中之一的特殊效果。強化+4時，額外增加連續攻擊。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_soryu_i00"/>
@@ -622,7 +622,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33881" name="鎮魂投弓" type="Weapon">
+	<item id="33881" type="Weapon" name="레퀴엠 스로워 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、遠程打擊其中之一的特殊效果。強化+4時，增加物理技能的威力。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_grabathus_i00"/>
@@ -653,7 +653,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33882" name="鎮魂射靈" type="Weapon">
+	<item id="33882" type="Weapon" name="레퀴엠 슈트제 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予弱點偵測、Crt.緩速、速度激發其中之一的特殊效果。強化+4時，增加攻擊速度。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_shyayaka_i00"/>
@@ -684,7 +684,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33883" name="鎮魂爆刃" type="Weapon">
+	<item id="33883" type="Weapon" name="레퀴엠 버스터 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予靈活思緒、魔法束縛、魔力上升其中之一的特殊效果。強化+4時，增加魔法命中能力和魔法致命攻擊率。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_kaynon_i00"/>
@@ -713,7 +713,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33884" name="鎮魂術杖" type="Weapon">
+	<item id="33884" type="Weapon" name="레퀴엠 캐스터 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予魔力催化、靈活思緒、魔法束縛其中之一的特殊效果。強化+4時，增加魔法命中能力和魔法致命傷害。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_anatrian_i00"/>
@@ -743,7 +743,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33885" name="鎮魂報恨者" type="Weapon">
+	<item id="33885" type="Weapon" name="레퀴엠 레트리뷰터 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予魔力再生、靈活思緒、魔力催化其中之一的特殊效果。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_grangkaz_i00"/>
@@ -773,7 +773,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33886" name="鎮魂雙刀" type="Weapon">
+	<item id="33886" type="Weapon" name="레퀴엠 듀얼소드 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予速度激發、傷害提升、強健其中之一的特殊效果。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
@@ -802,7 +802,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33887" name="鎮魂雙匕首" type="Weapon">
+	<item id="33887" type="Weapon" name="레퀴엠 듀얼대거 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予傷害提升、弱點偵測、導引其中之一的特殊效果。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i00"/>
@@ -832,7 +832,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33888" name="鎮魂雙鈍器" type="Weapon">
+	<item id="33888" type="Weapon" name="레퀴엠 듀얼블런트 이벤트">
 		<table name="#Plus">活動</table>
 		<table name="#Desc">可以賦予弱點偵測、導引、傷害提升其中之一的特殊效果。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i00"/>
@@ -862,7 +862,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="33889" name="永生頭盔" type="Armor">
+	<item id="33889" type="Armor" name="이모탈 헬멧 중갑용 / 이벤트">
 		<table name="#Plus">重裝用/活動</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
@@ -881,7 +881,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33890" name="永生胸甲" type="Armor">
+	<item id="33890" type="Armor" name="이모탈 흉갑 중갑용 / 이벤트">
 		<table name="#Plus">重裝用/活動</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。強化+4時，降低物理致命傷害，而額外增加物理防禦力。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t501_u_i00"/>
@@ -901,7 +901,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33891" name="永生脛甲" type="Armor">
+	<item id="33891" type="Armor" name="이모탈 각반 중갑용 / 이벤트">
 		<table name="#Plus">重裝用/活動</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t501_l_i00"/>
@@ -921,7 +921,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33892" name="永生護手" type="Armor">
+	<item id="33892" type="Armor" name="이모탈 건틀렛 중갑용 / 이벤트">
 		<table name="#Plus">重裝用/活動</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t501_g_i00"/>
@@ -940,7 +940,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33893" name="永生靴" type="Armor">
+	<item id="33893" type="Armor" name="이모탈 부츠 중갑용 / 이벤트">
 		<table name="#Plus">重裝用/活動</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t501_b_i00"/>
@@ -959,7 +959,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33894" name="永生盾" type="Armor">
+	<item id="33894" type="Armor" name="이모탈 쉴드 중갑용 / 이벤트">
 		<table name="#Plus">重裝用/活動</table>
 		<table name="#Desc">可以賦予攻擊型和防禦型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.weapon_sacon_i00"/>
@@ -979,7 +979,7 @@
 			<enchant order="0x0C" stat="sDef" val="0"/>
 		</for>
 	</item>
-	<item id="33895" name="永生皮頭盔" type="Armor">
+	<item id="33895" type="Armor" name="이모탈 레더 헬멧 경갑용 / 이벤트">
 		<table name="#Plus">輕裝用/活動</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
@@ -998,7 +998,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33896" name="永生皮甲" type="Armor">
+	<item id="33896" type="Armor" name="이모탈 레더 아머 경갑용 / 이벤트">
 		<table name="#Plus">輕裝用/活動</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t502_u_i00"/>
@@ -1018,7 +1018,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33897" name="永生皮脛甲" type="Armor">
+	<item id="33897" type="Armor" name="이모탈 레더 레깅스 경갑용 / 이벤트">
 		<table name="#Plus">輕裝用/活動</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t502_l_i00"/>
@@ -1038,7 +1038,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33898" name="永生皮手套" type="Armor">
+	<item id="33898" type="Armor" name="이모탈 레더 글로브 경갑용 / 이벤트">
 		<table name="#Plus">輕裝用/活動</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t502_g_i00"/>
@@ -1057,7 +1057,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="33899" name="永生皮靴" type="Armor">
+	<item id="33899" type="Armor" name="이모탈 레더 부츠 경갑용 / 이벤트">
 		<table name="#Plus">輕裝用/活動</table>
 		<table name="#Desc">可以賦予暗殺型和強化型的成套精煉效果。無法交易、丟棄、出售於個人商店的道具，但可以保管在個人倉庫。</table>
 		<set name="icon" val="icon.armor_t502_b_i00"/>

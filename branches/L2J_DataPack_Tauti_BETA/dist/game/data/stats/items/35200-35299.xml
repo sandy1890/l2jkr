@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="35200" name="血腥赫利奧斯射靈" type="Weapon">
+	<item id="35200" type="Weapon" name="블러디 헬리오스 슈트제">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予弱點偵測、Crt.緩速、速度激發其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i20"/>
 		<set name="default_action" val="equip"/>
@@ -28,7 +28,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35201" name="血腥赫利奧斯爆刃" type="Weapon">
+	<item id="35201" type="Weapon" name="블러디 헬리오스 버스터">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予靈活思緒、魔法束縛、魔力上升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i20"/>
 		<set name="default_action" val="equip"/>
@@ -53,7 +53,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35202" name="血腥赫利奧斯術杖" type="Weapon">
+	<item id="35202" type="Weapon" name="블러디 헬리오스 캐스터">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予魔力催化、靈活思緒、魔法束縛其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i20"/>
 		<set name="default_action" val="equip"/>
@@ -79,7 +79,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35203" name="血腥赫利奧斯報恨者" type="Weapon">
+	<item id="35203" type="Weapon" name="블러디 헬리오스 레트리뷰터">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予魔力再生、靈活思緒、魔力催化其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i20"/>
 		<set name="default_action" val="equip"/>
@@ -105,7 +105,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35204" name="血腥赫利奧斯雙刀" type="Weapon">
+	<item id="35204" type="Weapon" name="블러디 헬리오스 듀얼소드">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予速度激發、傷害提升、強健其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i20"/>
 		<set name="default_action" val="equip"/>
@@ -130,7 +130,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35205" name="血腥赫利奧斯雙匕首" type="Weapon">
+	<item id="35205" type="Weapon" name="블러디 헬리오스 듀얼대거">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予傷害提升、弱點偵測、導引其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i20"/>
 		<set name="default_action" val="equip"/>
@@ -156,7 +156,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35206" name="血腥赫利奧斯雙鈍器" type="Weapon">
+	<item id="35206" type="Weapon" name="블러디 헬리오스 듀얼블런트">
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。可以賦予弱點偵測、導引、傷害提升其中之一的特殊效果。透過特殊搜魂也能賦予兩種技能。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i20"/>
 		<set name="default_action" val="equip"/>
@@ -182,7 +182,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35207" name="血腥赫利奧斯鉋刀" type="Weapon">
+	<item id="35207" type="Weapon" name="블러디 헬리오스 셰이퍼 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i21"/>
@@ -209,7 +209,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35208" name="血腥赫利奧斯鉋刀" type="Weapon">
+	<item id="35208" type="Weapon" name="블러디 헬리오스 셰이퍼 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i21"/>
@@ -236,7 +236,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35209" name="血腥赫利奧斯鉋刀" type="Weapon">
+	<item id="35209" type="Weapon" name="블러디 헬리오스 셰이퍼 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約81.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i21"/>
@@ -263,7 +263,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35210" name="血腥赫利奧斯切刃" type="Weapon">
+	<item id="35210" type="Weapon" name="블러디 헬리오스 커터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i21"/>
@@ -289,7 +289,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35211" name="血腥赫利奧斯切刃" type="Weapon">
+	<item id="35211" type="Weapon" name="블러디 헬리오스 커터 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i21"/>
@@ -315,7 +315,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35212" name="血腥赫利奧斯切刃" type="Weapon">
+	<item id="35212" type="Weapon" name="블러디 헬리오스 커터 헬스">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i21"/>
@@ -341,7 +341,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35213" name="血腥赫利奧斯殺刃" type="Weapon">
+	<item id="35213" type="Weapon" name="블러디 헬리오스 슬래셔 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i21"/>
@@ -367,7 +367,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35214" name="血腥赫利奧斯殺刃" type="Weapon">
+	<item id="35214" type="Weapon" name="블러디 헬리오스 슬래셔 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i21"/>
@@ -393,7 +393,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35215" name="血腥赫利奧斯殺刃" type="Weapon">
+	<item id="35215" type="Weapon" name="블러디 헬리오스 슬래셔 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i21"/>
@@ -419,7 +419,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35216" name="血腥赫利奧斯復仇者" type="Weapon">
+	<item id="35216" type="Weapon" name="블러디 헬리오스 어벤져 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i21"/>
@@ -446,7 +446,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35217" name="血腥赫利奧斯復仇者" type="Weapon">
+	<item id="35217" type="Weapon" name="블러디 헬리오스 어벤져 Crt. 대미지">
 		<table name="#Plus">Crt.傷害</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊時物理攻擊力提升約1232。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i21"/>
@@ -473,7 +473,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35218" name="血腥赫利奧斯復仇者" type="Weapon">
+	<item id="35218" type="Weapon" name="블러디 헬리오스 어벤져 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i21"/>
@@ -500,7 +500,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35219" name="血腥赫利奧斯戰爪" type="Weapon">
+	<item id="35219" type="Weapon" name="블러디 헬리오스 파이터 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約75.5。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i21"/>
@@ -527,7 +527,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35220" name="血腥赫利奧斯戰爪" type="Weapon">
+	<item id="35220" type="Weapon" name="블러디 헬리오스 파이터 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i21"/>
@@ -554,7 +554,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35221" name="血腥赫利奧斯戰爪" type="Weapon">
+	<item id="35221" type="Weapon" name="블러디 헬리오스 파이터 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i21"/>
@@ -581,7 +581,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35222" name="血腥赫利奧斯風暴者" type="Weapon">
+	<item id="35222" type="Weapon" name="블러디 헬리오스 스토머 HP 드레인">
 		<table name="#Plus">HP吸收</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i21"/>
@@ -608,7 +608,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35223" name="血腥赫利奧斯風暴者" type="Weapon">
+	<item id="35223" type="Weapon" name="블러디 헬리오스 스토머 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i21"/>
@@ -635,7 +635,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35224" name="血腥赫利奧斯風暴者" type="Weapon">
+	<item id="35224" type="Weapon" name="블러디 헬리오스 스토머 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i21"/>
@@ -662,7 +662,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35225" name="血腥赫利奧斯投弓" type="Weapon">
+	<item id="35225" type="Weapon" name="블러디 헬리오스 스로워 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i21"/>
@@ -690,7 +690,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35226" name="血腥赫利奧斯投弓" type="Weapon">
+	<item id="35226" type="Weapon" name="블러디 헬리오스 스로워 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i21"/>
@@ -718,7 +718,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35227" name="血腥赫利奧斯投弓" type="Weapon">
+	<item id="35227" type="Weapon" name="블러디 헬리오스 스로워 롱블로">
 		<table name="#Plus">遠程打擊</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊距離提升。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i21"/>
@@ -746,7 +746,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35228" name="血腥赫利奧斯射靈" type="Weapon">
+	<item id="35228" type="Weapon" name="블러디 헬리오스 슈트제 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i21"/>
@@ -774,7 +774,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35229" name="血腥赫利奧斯射靈" type="Weapon">
+	<item id="35229" type="Weapon" name="블러디 헬리오스 슈트제 Crt. 슬로우">
 		<table name="#Plus">Crt.緩速</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i21"/>
@@ -802,7 +802,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35230" name="血腥赫利奧斯射靈" type="Weapon">
+	<item id="35230" type="Weapon" name="블러디 헬리오스 슈트제 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i21"/>
@@ -830,7 +830,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35231" name="血腥赫利奧斯爆刃" type="Weapon">
+	<item id="35231" type="Weapon" name="블러디 헬리오스 버스터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i21"/>
@@ -856,7 +856,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35232" name="血腥赫利奧斯爆刃" type="Weapon">
+	<item id="35232" type="Weapon" name="블러디 헬리오스 버스터 매직홀드">
 		<table name="#Plus">魔法束縛</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i21"/>
@@ -882,7 +882,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35233" name="血腥赫利奧斯爆刃" type="Weapon">
+	<item id="35233" type="Weapon" name="블러디 헬리오스 버스터 마나업">
 		<table name="#Plus">魔力上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞MP最大值提升約30%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i21"/>
@@ -908,7 +908,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35234" name="血腥赫利奧斯術杖" type="Weapon">
+	<item id="35234" type="Weapon" name="블러디 헬리오스 캐스터 엠파워">
 		<table name="#Plus">魔力催化</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i21"/>
@@ -935,7 +935,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35235" name="血腥赫利奧斯術杖" type="Weapon">
+	<item id="35235" type="Weapon" name="블러디 헬리오스 캐스터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i21"/>
@@ -962,7 +962,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35236" name="血腥赫利奧斯術杖" type="Weapon">
+	<item id="35236" type="Weapon" name="블러디 헬리오스 캐스터 매직홀드">
 		<table name="#Plus">魔法束縛</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i21"/>
@@ -989,7 +989,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35237" name="血腥赫利奧斯報恨者" type="Weapon">
+	<item id="35237" type="Weapon" name="블러디 헬리오스 레트리뷰터 MP리제네레이션">
 		<table name="#Plus">魔力再生</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞提升MP的恢復速度。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i21"/>
@@ -1016,7 +1016,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35238" name="血腥赫利奧斯報恨者" type="Weapon">
+	<item id="35238" type="Weapon" name="블러디 헬리오스 레트리뷰터 아큐멘">
 		<table name="#Plus">靈活思緒</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i21"/>
@@ -1043,7 +1043,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35239" name="血腥赫利奧斯報恨者" type="Weapon">
+	<item id="35239" type="Weapon" name="블러디 헬리오스 레트리뷰터 엠파워">
 		<table name="#Plus">魔力催化</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i21"/>
@@ -1070,7 +1070,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35240" name="血腥赫利奧斯雙刀" type="Weapon">
+	<item id="35240" type="Weapon" name="블러디 헬리오스 듀얼소드 헤이스트">
 		<table name="#Plus">速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
@@ -1096,7 +1096,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35241" name="血腥赫利奧斯雙刀" type="Weapon">
+	<item id="35241" type="Weapon" name="블러디 헬리오스 듀얼소드 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
@@ -1122,7 +1122,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35242" name="血腥赫利奧斯雙刀" type="Weapon">
+	<item id="35242" type="Weapon" name="블러디 헬리오스 듀얼소드 헬스">
 		<table name="#Plus">強健</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
@@ -1148,7 +1148,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35243" name="血腥赫利奧斯雙匕首" type="Weapon">
+	<item id="35243" type="Weapon" name="블러디 헬리오스 듀얼대거 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
@@ -1175,7 +1175,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35244" name="血腥赫利奧斯雙匕首" type="Weapon">
+	<item id="35244" type="Weapon" name="블러디 헬리오스 듀얼대거 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
@@ -1202,7 +1202,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35245" name="血腥赫利奧斯雙匕首" type="Weapon">
+	<item id="35245" type="Weapon" name="블러디 헬리오스 듀얼대거 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
@@ -1229,7 +1229,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35246" name="血腥赫利奧斯雙鈍器" type="Weapon">
+	<item id="35246" type="Weapon" name="블러디 헬리오스 듀얼블런트 포커스">
 		<table name="#Plus">偵測 </table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
@@ -1256,7 +1256,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35247" name="血腥赫利奧斯雙鈍器" type="Weapon">
+	<item id="35247" type="Weapon" name="블러디 헬리오스 듀얼블런트 가이던스">
 		<table name="#Plus">導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
@@ -1283,7 +1283,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35248" name="血腥赫利奧斯雙鈍器" type="Weapon">
+	<item id="35248" type="Weapon" name="블러디 헬리오스 듀얼블런트 대미지업">
 		<table name="#Plus">傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
@@ -1310,7 +1310,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35249" name="血腥赫利奧斯鉋刀" type="Weapon">
+	<item id="35249" type="Weapon" name="블러디 헬리오스 셰이퍼 가이던스 + 헤이스트">
 		<table name="#Plus">導引 + 速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升8、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i21"/>
@@ -1337,7 +1337,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35250" name="血腥赫利奧斯鉋刀" type="Weapon">
+	<item id="35250" type="Weapon" name="블러디 헬리오스 셰이퍼 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約81.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i21"/>
@@ -1364,7 +1364,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35251" name="血腥赫利奧斯鉋刀" type="Weapon">
+	<item id="35251" type="Weapon" name="블러디 헬리오스 셰이퍼 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約79.2、命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_stanpid_i21"/>
@@ -1391,7 +1391,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35252" name="血腥赫利奧斯切刃" type="Weapon">
+	<item id="35252" type="Weapon" name="블러디 헬리오스 커터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i21"/>
@@ -1417,7 +1417,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35253" name="血腥赫利奧斯切刃" type="Weapon">
+	<item id="35253" type="Weapon" name="블러디 헬리오스 커터 포커스 + 헬스">
 		<table name="#Plus">偵測 + 強健</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約75.4、HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i21"/>
@@ -1443,7 +1443,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35254" name="血腥赫利奧斯切刃" type="Weapon">
+	<item id="35254" type="Weapon" name="블러디 헬리오스 커터 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_plenitas_i21"/>
@@ -1469,7 +1469,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35255" name="血腥赫利奧斯殺刃" type="Weapon">
+	<item id="35255" type="Weapon" name="블러디 헬리오스 슬래셔 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i21"/>
@@ -1495,7 +1495,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35256" name="血腥赫利奧斯殺刃" type="Weapon">
+	<item id="35256" type="Weapon" name="블러디 헬리오스 슬래셔 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i21"/>
@@ -1521,7 +1521,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35257" name="血腥赫利奧斯殺刃" type="Weapon">
+	<item id="35257" type="Weapon" name="블러디 헬리오스 슬래셔 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_bauen_i21"/>
@@ -1547,7 +1547,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35258" name="血腥赫利奧斯復仇者" type="Weapon">
+	<item id="35258" type="Weapon" name="블러디 헬리오스 어벤져 헤이스트 + Crt. 대미지">
 		<table name="#Plus">速度激發 + Crt.傷害</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊時物理攻擊力提升約1232。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i21"/>
@@ -1574,7 +1574,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35259" name="血腥赫利奧斯復仇者" type="Weapon">
+	<item id="35259" type="Weapon" name="블러디 헬리오스 어벤져 Crt. 대미지 + 포커스">
 		<table name="#Plus">Crt.傷害 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊時物理攻擊力提升約1232、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i21"/>
@@ -1601,7 +1601,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35260" name="血腥赫利奧斯復仇者" type="Weapon">
+	<item id="35260" type="Weapon" name="블러디 헬리오스 어벤져 포커스 + 헤이스트">
 		<table name="#Plus">偵測 + 速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_qutram_i21"/>
@@ -1628,7 +1628,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35261" name="血腥赫利奧斯戰爪" type="Weapon">
+	<item id="35261" type="Weapon" name="블러디 헬리오스 파이터 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約81.9、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i21"/>
@@ -1655,7 +1655,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35262" name="血腥赫利奧斯戰爪" type="Weapon">
+	<item id="35262" type="Weapon" name="블러디 헬리오스 파이터 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約415、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i21"/>
@@ -1682,7 +1682,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35263" name="血腥赫利奧斯戰爪" type="Weapon">
+	<item id="35263" type="Weapon" name="블러디 헬리오스 파이터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約75.5。PVP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_durga_i21"/>
@@ -1709,7 +1709,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35264" name="血腥赫利奧斯風暴者" type="Weapon">
+	<item id="35264" type="Weapon" name="블러디 헬리오스 스토머 HP 드레인 + 가이던스">
 		<table name="#Plus">HP吸收 + 導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i21"/>
@@ -1736,7 +1736,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35265" name="血腥赫利奧斯風暴者" type="Weapon">
+	<item id="35265" type="Weapon" name="블러디 헬리오스 스토머 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i21"/>
@@ -1763,7 +1763,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35266" name="血腥赫利奧斯風暴者" type="Weapon">
+	<item id="35266" type="Weapon" name="블러디 헬리오스 스토머 대미지업 + HP 드레인">
 		<table name="#Plus">傷害上升 + HP吸收</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約288。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PVP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_crabel_i21"/>
@@ -1790,7 +1790,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35267" name="血腥赫利奧斯投弓" type="Weapon">
+	<item id="35267" type="Weapon" name="블러디 헬리오스 스로워 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約332、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i21"/>
@@ -1818,7 +1818,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35268" name="血腥赫利奧斯投弓" type="Weapon">
+	<item id="35268" type="Weapon" name="블러디 헬리오스 스로워 포커스 + 롱블로">
 		<table name="#Plus">偵測 + 遠程打擊</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7、攻擊距離提升。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i21"/>
@@ -1846,7 +1846,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35269" name="血腥赫利奧斯投弓" type="Weapon">
+	<item id="35269" type="Weapon" name="블러디 헬리오스 스로워 롱블로 + 대미지업">
 		<table name="#Plus">遠程打擊 + 傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊距離提升、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_castron_i21"/>
@@ -1874,7 +1874,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35270" name="血腥赫利奧斯射靈" type="Weapon">
+	<item id="35270" type="Weapon" name="블러디 헬리오스 슈트제 포커스 + Crt. 슬로우">
 		<table name="#Plus">偵測 + Crt.緩速</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約78.7。致命攻擊時，以一定的機率造成目標移動速度下降。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i21"/>
@@ -1902,7 +1902,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35271" name="血腥赫利奧斯射靈" type="Weapon">
+	<item id="35271" type="Weapon" name="블러디 헬리오스 슈트제 Crt. 슬로우 + 헤이스트">
 		<table name="#Plus">Crt.緩速 + 速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i21"/>
@@ -1930,7 +1930,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35272" name="血腥赫利奧斯射靈" type="Weapon">
+	<item id="35272" type="Weapon" name="블러디 헬리오스 슈트제 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_stilla_i21"/>
@@ -1958,7 +1958,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35273" name="血腥赫利奧斯爆刃" type="Weapon">
+	<item id="35273" type="Weapon" name="블러디 헬리오스 버스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i21"/>
@@ -1984,7 +1984,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35274" name="血腥赫利奧斯爆刃" type="Weapon">
+	<item id="35274" type="Weapon" name="블러디 헬리오스 버스터 매직홀드 + 마나업">
 		<table name="#Plus">魔法束縛 + 魔力上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。MP最大值提升約30%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i21"/>
@@ -2010,7 +2010,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35275" name="血腥赫利奧斯爆刃" type="Weapon">
+	<item id="35275" type="Weapon" name="블러디 헬리오스 버스터 마나업 + 아큐멘">
 		<table name="#Plus">魔力上升 + 靈活思緒</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞MP最大值提升約30%、施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weaon_serapear_i21"/>
@@ -2036,7 +2036,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35276" name="血腥赫利奧斯術杖" type="Weapon">
+	<item id="35276" type="Weapon" name="블러디 헬리오스 캐스터 엠파워 + 아큐멘">
 		<table name="#Plus">魔力催化 + 靈活思緒</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞魔法攻擊力提升約460、施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i21"/>
@@ -2063,7 +2063,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35277" name="血腥赫利奧斯術杖" type="Weapon">
+	<item id="35277" type="Weapon" name="블러디 헬리오스 캐스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i21"/>
@@ -2090,7 +2090,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35278" name="血腥赫利奧斯術杖" type="Weapon">
+	<item id="35278" type="Weapon" name="블러디 헬리오스 캐스터 매직홀드 + 엠파워">
 		<table name="#Plus">魔法束縛 + 魔力催化</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_pilia_i21"/>
@@ -2117,7 +2117,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35279" name="血腥赫利奧斯報恨者" type="Weapon">
+	<item id="35279" type="Weapon" name="블러디 헬리오스 레트리뷰터 MP리제네레이션 + 아큐멘">
 		<table name="#Plus">魔力再生 + 靈活思緒</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞提升MP的恢復速度、施法速度加快約15%。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i21"/>
@@ -2144,7 +2144,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35280" name="血腥赫利奧斯報恨者" type="Weapon">
+	<item id="35280" type="Weapon" name="블러디 헬리오스 레트리뷰터 아큐멘 + 엠파워">
 		<table name="#Plus">靈活思緒 + 魔力催化</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞施法速度加快約15%、魔法攻擊力提升約460。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i21"/>
@@ -2171,7 +2171,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35281" name="血腥赫利奧斯報恨者" type="Weapon">
+	<item id="35281" type="Weapon" name="블러디 헬리오스 레트리뷰터 엠파워 + MP리제네레이션">
 		<table name="#Plus">魔力催化 + 魔力再生</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞魔法攻擊力提升約322、提升MP的恢復速度。PVP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_shaelon_i21"/>
@@ -2198,7 +2198,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35282" name="血腥赫利奧斯雙刀" type="Weapon">
+	<item id="35282" type="Weapon" name="블러디 헬리오스 듀얼소드 헤이스트 + 대미지업">
 		<table name="#Plus">速度激發 + 傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞攻擊速度提升約15%、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
@@ -2224,7 +2224,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35283" name="血腥赫利奧斯雙刀" type="Weapon">
+	<item id="35283" type="Weapon" name="블러디 헬리오스 듀얼소드 대미지업 + 헬스">
 		<table name="#Plus">傷害上升 + 強健</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約457、HP最大值提升約25%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
@@ -2250,7 +2250,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35284" name="血腥赫利奧斯雙刀" type="Weapon">
+	<item id="35284" type="Weapon" name="블러디 헬리오스 듀얼소드 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PVP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i21"/>
@@ -2276,7 +2276,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35285" name="血腥赫利奧斯雙匕首" type="Weapon">
+	<item id="35285" type="Weapon" name="블러디 헬리오스 듀얼대거 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約377、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
@@ -2303,7 +2303,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35286" name="血腥赫利奧斯雙匕首" type="Weapon">
+	<item id="35286" type="Weapon" name="블러디 헬리오스 듀얼대거 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約79.2、命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
@@ -2330,7 +2330,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35287" name="血腥赫利奧斯雙匕首" type="Weapon">
+	<item id="35287" type="Weapon" name="블러디 헬리오스 듀얼대거 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升7.9、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i21"/>
@@ -2357,7 +2357,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35288" name="血腥赫利奧斯雙鈍器" type="Weapon">
+	<item id="35288" type="Weapon" name="블러디 헬리오스 듀얼블런트 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞致命攻擊率提升約79.2、命中能力提升7.9。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
@@ -2384,7 +2384,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35289" name="血腥赫利奧斯雙鈍器" type="Weapon">
+	<item id="35289" type="Weapon" name="블러디 헬리오스 듀얼블런트 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約415。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
@@ -2411,7 +2411,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35290" name="血腥赫利奧斯雙鈍器" type="Weapon">
+	<item id="35290" type="Weapon" name="블러디 헬리오스 듀얼블런트 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">PVE強化型道具，提升給予NPC的傷害12%。＜搜魂石特效＞物理攻擊力提升約377、致命攻擊率提升約78.7。PVP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i21"/>
@@ -2438,7 +2438,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="35291" name="名譽襯衫" type="Armor">
+	<item id="35291" type="Armor" name="명예의 티셔츠">
 		<table name="#Desc">名譽襯衫。增加HP465。</table>
 		<set name="icon" val="icon.honor_shirt_i00"/>
 		<set name="default_action" val="equip"/>
@@ -2449,7 +2449,7 @@
 			<add order="0x10" stat="pDef" val="60"/>
 		</for>
 	</item>
-	<item id="35293" name="塔武提手鐲" type="Armor">
+	<item id="35293" type="Armor" name="타우티 팔찌">
 		<table name="#Desc">MP+216。裝備時，可啟用護身符欄位5格。</table>
 		<set name="icon" val="icon.accessory_bracelet_of_tauti_i01"/>
 		<set name="default_action" val="equip"/>
@@ -2462,7 +2462,7 @@
 			<add order="0x40" stat="maxMp" val="216"/>
 		</for>
 	</item>
-	<item id="35294" name="進階型塔武提手鐲" type="Armor">
+	<item id="35294" type="Armor" name="향상된 타우티 팔찌">
 		<table name="#Desc">功能提升的塔武提手鐲。裝備時，可以開啟護身符欄位5個。具有MP+216、Str+1、Int+1的功能。無法交易/丟棄/強化/利用個人商店的道具。</table>
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01"/>
 		<set name="default_action" val="equip"/>

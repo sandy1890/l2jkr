@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5300" type="Armor" name="Sealed Boots of Underworld">
+	<item id="5300" type="Armor" name="봉인된 부츠 오브 언더월드">
 		<set name="icon" val="icon.armor_t10_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -16,7 +16,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5301" type="Armor" name="Sealed Tallum Leather Armor">
+	<item id="5301" type="Armor" name="봉인된 탈룸 레더 메일">
 		<set name="icon" val="icon.armor_t78_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -33,7 +33,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5302" type="Armor" name="Sealed Gust Bracer">
+	<item id="5302" type="Armor" name="봉인된 질풍의 장갑">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -49,7 +49,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5303" type="Armor" name="Sealed Gust Boots">
+	<item id="5303" type="Armor" name="봉인된 질풍의 부츠">
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -65,7 +65,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5304" type="Armor" name="Sealed Tallum Tunic">
+	<item id="5304" type="Armor" name="봉인된 탈룸 튜닉">
 		<set name="icon" val="icon.armor_t79_u_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -86,7 +86,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5305" type="Armor" name="Sealed Tallum Stockings">
+	<item id="5305" type="Armor" name="봉인된 탈룸 호즈">
 		<set name="icon" val="icon.armor_t79_l_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -107,7 +107,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5306" type="Armor" name="Sealed Gloves of Black Ore">
+	<item id="5306" type="Armor" name="봉인된 홍염의 장갑">
 		<set name="icon" val="icon.armor_t14_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -123,7 +123,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5307" type="Armor" name="Sealed Red Flame Boots">
+	<item id="5307" type="Armor" name="봉인된 홍염의 부츠">
 		<set name="icon" val="icon.armor_t14_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -139,7 +139,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5308" type="Armor" name="Sealed Dark Crystal Robe">
+	<item id="5308" type="Armor" name="봉인된 다크 크리스탈 로브">
 		<set name="icon" val="icon.armor_t76_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -160,7 +160,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5309" type="Armor" name="Sealed Phoenix Gloves">
+	<item id="5309" type="Armor" name="봉인된 피닉스 장갑">
 		<set name="icon" val="icon.armor_t44_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -176,7 +176,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5310" type="Armor" name="Sealed Phoenix Boots">
+	<item id="5310" type="Armor" name="봉인된 피닉스 부츠">
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -192,7 +192,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5311" type="Armor" name="Sealed Armor of Nightmare">
+	<item id="5311" type="Armor" name="봉인된 악몽의 갑옷">
 		<set name="icon" val="icon.armor_t80_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -212,7 +212,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5312" type="Armor" name="Sealed Helm of Nightmare">
+	<item id="5312" type="Armor" name="봉인된 악몽의 투구">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -228,7 +228,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5313" type="Armor" name="Sealed Gauntlets of Nightmare">
+	<item id="5313" type="Armor" name="봉인된 악몽의 건틀렛">
 		<set name="icon" val="icon.armor_t80_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -244,7 +244,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5314" type="Armor" name="Sealed Boots of Nightmare">
+	<item id="5314" type="Armor" name="봉인된 악몽의 부츠">
 		<set name="icon" val="icon.armor_t80_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -260,7 +260,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5315" type="Armor" name="Sealed Shield of Nightmare">
+	<item id="5315" type="Armor" name="봉인된 악몽의 쉴드">
 		<set name="icon" val="icon.shield_shield_of_nightmare_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -281,7 +281,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="5316" type="Armor" name="Sealed Majestic Plate Armor">
+	<item id="5316" type="Armor" name="봉인된 마제스틱 플레이트 아머">
 		<set name="icon" val="icon.armor_t83_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="heavy" />
@@ -301,7 +301,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5317" type="Armor" name="Sealed Majestic Circlet">
+	<item id="5317" type="Armor" name="봉인된 마제스틱 서클릿">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -317,7 +317,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5318" type="Armor" name="Sealed Majestic Gauntlets">
+	<item id="5318" type="Armor" name="봉인된 마제스틱 건틀렛">
 		<set name="icon" val="icon.armor_t83_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -333,7 +333,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5319" type="Armor" name="Sealed Majestic Boots">
+	<item id="5319" type="Armor" name="봉인된 마제스틱 부츠">
 		<set name="icon" val="icon.armor_t83_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -349,7 +349,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5320" type="Armor" name="Sealed Leather Armor of Nightmare">
+	<item id="5320" type="Armor" name="봉인된 악몽의 레더 메일">
 		<set name="icon" val="icon.armor_t81_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -366,7 +366,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5321" type="Armor" name="Sealed Dark Legion Gloves">
+	<item id="5321" type="Armor" name="봉인된 다크 레기온 글로브">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -382,7 +382,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5322" type="Armor" name="Sealed Dark Legion Boots">
+	<item id="5322" type="Armor" name="봉인된 다크 레기온 부츠">
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -398,7 +398,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5323" type="Armor" name="Sealed Majestic Leather Armor">
+	<item id="5323" type="Armor" name="봉인된 마제스틱 레더 메일">
 		<set name="icon" val="icon.armor_t84_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -415,7 +415,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5324" type="Armor" name="Sealed Gloves of Phantom">
+	<item id="5324" type="Armor" name="봉인된 글로브 오브 팬텀">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -431,7 +431,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5325" type="Armor" name="Sealed Boots of Phantom">
+	<item id="5325" type="Armor" name="봉인된 부츠 오브 팬텀">
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -447,7 +447,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5326" type="Armor" name="Sealed Robe of Nightmare">
+	<item id="5326" type="Armor" name="봉인된 악몽의 로브">
 		<set name="icon" val="icon.armor_t82_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -468,7 +468,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5327" type="Armor" name="Sealed Cerberus Gloves">
+	<item id="5327" type="Armor" name="봉인된 켈베로스 장갑">
 		<set name="icon" val="icon.armor_t44_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -484,7 +484,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5328" type="Armor" name="Sealed Cerberus Boots">
+	<item id="5328" type="Armor" name="봉인된 켈베로스 부츠">
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -500,7 +500,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5329" type="Armor" name="Sealed Majestic Robe">
+	<item id="5329" type="Armor" name="봉인된 마제스틱 로브">
 		<set name="icon" val="icon.armor_t85_ul_i02" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="magic" />
@@ -521,7 +521,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5330" type="Armor" name="Sealed Dasparion's Gloves">
+	<item id="5330" type="Armor" name="봉인된 데스페리온 장갑">
 		<set name="icon" val="icon.armor_t44_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -537,7 +537,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5331" type="Armor" name="Sealed Dasparion's Boots">
+	<item id="5331" type="Armor" name="봉인된 데스페리온 부츠">
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="1" />
@@ -552,7 +552,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="5332" type="EtcItem" name="Recipe: Sealed Dark Crystal Leather Armor(60%)">
+	<item id="5332" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 레더 메일(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -567,7 +567,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5333" type="EtcItem" name="Recipe: Sealed Dark Crystal Leather Armor(100%)">
+	<item id="5333" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 레더 메일(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -582,7 +582,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5334" type="EtcItem" name="Recipe: Sealed Tallum Leather Armor(60%)">
+	<item id="5334" type="EtcItem" name="레시피 : 봉인된 탈룸 레더 메일(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -597,7 +597,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5335" type="EtcItem" name="Recipe: Sealed Tallum Leather Armor(100%)">
+	<item id="5335" type="EtcItem" name="레시피 : 봉인된 탈룸 레더 메일(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -612,7 +612,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5336" type="EtcItem" name="Recipe: Sealed Leather Armor of Nightmare(60%)">
+	<item id="5336" type="EtcItem" name="레시피 : 봉인된 악몽의 레더 메일(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -627,7 +627,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5337" type="EtcItem" name="Recipe: Sealed Leather Armor of Nightmare(100%)">
+	<item id="5337" type="EtcItem" name="레시피 : 봉인된 악몽의 레더 메일(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -642,7 +642,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5338" type="EtcItem" name="Recipe: Sealed Majestic Leather Armor(60%)">
+	<item id="5338" type="EtcItem" name="레시피 : 봉인된 마제스틱 레더 메일(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -657,7 +657,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5339" type="EtcItem" name="Recipe: Sealed Majestic Leather Armor(100%)">
+	<item id="5339" type="EtcItem" name="레시피 : 봉인된 마제스틱 레더 메일(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -672,7 +672,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5340" type="EtcItem" name="Recipe: Sealed Dark Crystal Leggings(60%)">
+	<item id="5340" type="EtcItem" name="레시피 : 봉인된 레깅 오브 다크 크리스탈(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -687,7 +687,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5341" type="EtcItem" name="Recipe: Sealed Dark Crystal Leggings(100%)">
+	<item id="5341" type="EtcItem" name="레시피 : 봉인된 레깅 오브 다크 크리스탈(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -702,7 +702,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5342" type="EtcItem" name="Echo Crystal - Sad Song">
+	<item id="5342" type="EtcItem" name="소리수정 - 새드 송">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -713,7 +713,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2584-1" />
 	</item>
-	<item id="5343" type="EtcItem" name="Echo Crystal - Holy Song">
+	<item id="5343" type="EtcItem" name="소리수정 - 홀리 송">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -724,7 +724,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2585-1" />
 	</item>
-	<item id="5344" type="EtcItem" name="Recipe: Inferno Earring(70%)">
+	<item id="5344" type="EtcItem" name="(안씀) 레시피 : 마제스틱 이어링(70%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -733,7 +733,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5345" type="EtcItem" name="Recipe: Inferno Earring(70%)">
+	<item id="5345" type="EtcItem" name="(안씀) 레시피 : 마제스틱 이어링(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -742,7 +742,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5346" type="EtcItem" name="Recipe: Sealed Tallum Tunic(60%)">
+	<item id="5346" type="EtcItem" name="레시피 : 봉인된 탈룸 튜닉(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -757,7 +757,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5347" type="EtcItem" name="Recipe: Sealed Tallum Tunic(100%)">
+	<item id="5347" type="EtcItem" name="레시피 : 봉인된 탈룸 튜닉(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -772,7 +772,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5348" type="EtcItem" name="Recipe: Sealed Dark Crystal Robe(60%)">
+	<item id="5348" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 로브(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -787,7 +787,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5349" type="EtcItem" name="Recipe: Sealed Dark Crystal Robe(100%)">
+	<item id="5349" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 로브(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -802,7 +802,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5350" type="EtcItem" name="Recipe: Sealed Robe of Nightmare(60%)">
+	<item id="5350" type="EtcItem" name="레시피 : 봉인된 악몽의 로브(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -817,7 +817,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5351" type="EtcItem" name="Recipe: Sealed Robe of Nightmare(100%)">
+	<item id="5351" type="EtcItem" name="레시피 : 봉인된 악몽의 로브(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -832,7 +832,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5352" type="EtcItem" name="Recipe: Sealed Majestic Robe(60%)">
+	<item id="5352" type="EtcItem" name="레시피 : 봉인된 마제스틱 로브(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -844,10 +844,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Recipes" />
 		<for>
-			<add order="0x10" stat="pDef" val="49" />
+			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5353" type="EtcItem" name="Recipe: Sealed Majestic Robe(100%)">
+	<item id="5353" type="EtcItem" name="레시피 : 봉인된 마제스틱 로브(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -862,7 +862,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5354" type="EtcItem" name="Recipe: Sealed Tallum Stockings(60%)">
+	<item id="5354" type="EtcItem" name="레시피 : 봉인된 탈룸 호즈(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -877,7 +877,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5355" type="EtcItem" name="Recipe: Sealed Tallum Stockings(100%)">
+	<item id="5355" type="EtcItem" name="레시피 : 봉인된 탈룸 호즈(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -892,7 +892,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5356" type="EtcItem" name="(Not in Use) Recipe: Phoenix Necklace(70%)">
+	<item id="5356" type="EtcItem" name="(안씀) 레시피 : 피닉스 네크리스(70%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -901,7 +901,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5357" type="EtcItem" name="(Not in Use) Recipe: Phoenix Necklace(100%)">
+	<item id="5357" type="EtcItem" name="(안씀) 레시피 : 피닉스 네크리스(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -910,7 +910,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5358" type="EtcItem" name="(Not in Use) Recipe: Inferno Necklace(70%)">
+	<item id="5358" type="EtcItem" name="(안씀) 레시피 : 마제스틱 네크리스(70%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -919,7 +919,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5359" type="EtcItem" name="(Not in Use) Recipe: Inferno Necklace(100%)">
+	<item id="5359" type="EtcItem" name="(안씀) 레시피 : 마제스틱 네크리스(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -928,7 +928,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5360" type="EtcItem" name="(Not in Use) Recipe: Phoenix Ring(70%)">
+	<item id="5360" type="EtcItem" name="(안씀) 레시피 : 피닉스 링(70%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -937,7 +937,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5361" type="EtcItem" name="(Not in Use) Recipe: Phoenix Ring(100%)">
+	<item id="5361" type="EtcItem" name="(안씀) 레시피 : 피닉스 링(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -946,7 +946,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5362" type="EtcItem" name="(Not in Use) Recipe: Inferno Ring(70%)">
+	<item id="5362" type="EtcItem" name="(안씀) 레시피 : 마제스틱 링(70%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -955,7 +955,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5363" type="EtcItem" name="(Not in Use) Recipe: Inferno Ring(100%)">
+	<item id="5363" type="EtcItem" name="(안씀) 레시피 : 마제스틱 링(100%)">
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="material" val="paper" />
 		<set name="weight" val="20" />
@@ -964,7 +964,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2097-1" />
 	</item>
-	<item id="5364" type="EtcItem" name="Recipe: Sealed Dark Crystal Shield(60%)">
+	<item id="5364" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 쉴드(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -979,7 +979,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5365" type="EtcItem" name="Recipe: Sealed Dark Crystal Shield(100%)">
+	<item id="5365" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -994,7 +994,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5366" type="EtcItem" name="Recipe: Sealed Shield of Nightmare(60%)">
+	<item id="5366" type="EtcItem" name="레시피 : 봉인된 악몽의 쉴드(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1009,7 +1009,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5367" type="EtcItem" name="Recipe: Sealed Shield of Nightmare(100%)">
+	<item id="5367" type="EtcItem" name="레시피 : 봉인된 악몽의 쉴드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1024,7 +1024,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5368" type="EtcItem" name="Recipe: Sealed Dark Crystal Boots(60%)">
+	<item id="5368" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1039,7 +1039,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5369" type="EtcItem" name="Recipe: Sealed Dark Crystal Boots(100%)">
+	<item id="5369" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1054,7 +1054,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5370" type="EtcItem" name="Recipe: Sealed Tallum Boots(60%)">
+	<item id="5370" type="EtcItem" name="레시피 : 봉인된 탈룸 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1069,7 +1069,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5371" type="EtcItem" name="Recipe: Sealed Tallum Boots(100%)">
+	<item id="5371" type="EtcItem" name="레시피 : 봉인된 탈룸 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1084,7 +1084,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5372" type="EtcItem" name="Recipe: Sealed Boots of Underworld(60%)">
+	<item id="5372" type="EtcItem" name="레시피 : 봉인된 부츠 오브 언더월드(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1097,7 +1097,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5373" type="EtcItem" name="Recipe: Sealed Boots of Underworld(100%)">
+	<item id="5373" type="EtcItem" name="레시피 : 봉인된 부츠 오브 언더월드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1110,7 +1110,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5374" type="EtcItem" name="Recipe: Sealed Gust Boots(60%)">
+	<item id="5374" type="EtcItem" name="레시피 : 봉인된 질풍의 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1123,7 +1123,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5375" type="EtcItem" name="Recipe: Sealed Gust Boots(100%)">
+	<item id="5375" type="EtcItem" name="레시피 : 봉인된 질풍의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1136,7 +1136,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5376" type="EtcItem" name="Recipe: Sealed Red Flame Boots(60%)">
+	<item id="5376" type="EtcItem" name="레시피 : 봉인된 홍염의 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1149,7 +1149,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5377" type="EtcItem" name="Recipe: Sealed Red Flame Boots(100%)">
+	<item id="5377" type="EtcItem" name="레시피 : 봉인된 홍염의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1162,7 +1162,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5378" type="EtcItem" name="Recipe: Sealed Phoenix Boots(60%)">
+	<item id="5378" type="EtcItem" name="레시피 : 봉인된 피닉스 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1175,7 +1175,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5379" type="EtcItem" name="Recipe: Sealed Phoenix Boots(100%)">
+	<item id="5379" type="EtcItem" name="레시피 : 봉인된 피닉스 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1188,7 +1188,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5380" type="EtcItem" name="Recipe: Sealed Boots of Nightmare(60%)">
+	<item id="5380" type="EtcItem" name="레시피 : 봉인된 악몽의 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1203,7 +1203,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5381" type="EtcItem" name="Recipe: Sealed Boots of Nightmare(100%)">
+	<item id="5381" type="EtcItem" name="레시피 : 봉인된 악몽의 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1218,7 +1218,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5382" type="EtcItem" name="Recipe: Sealed Majestic Boots(60%)">
+	<item id="5382" type="EtcItem" name="레시피 : 봉인된 마제스틱 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1233,7 +1233,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5383" type="EtcItem" name="Recipe: Sealed Majestic Boots(100%)">
+	<item id="5383" type="EtcItem" name="레시피 : 봉인된 마제스틱 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1248,7 +1248,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5384" type="EtcItem" name="Recipe: Sealed Dark Legion Boots(60%)">
+	<item id="5384" type="EtcItem" name="레시피 : 봉인된 다크 레기온 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1261,7 +1261,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5385" type="EtcItem" name="Recipe: Sealed Dark Legion Boots(100%)">
+	<item id="5385" type="EtcItem" name="레시피 : 봉인된 다크 레기온 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1274,7 +1274,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5386" type="EtcItem" name="Recipe: Sealed Boots of Phantom(60%)">
+	<item id="5386" type="EtcItem" name="레시피 : 봉인된 부츠 오브 팬텀(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1287,7 +1287,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5387" type="EtcItem" name="Recipe: Sealed Boots of Phantom(100%)">
+	<item id="5387" type="EtcItem" name="레시피 : 봉인된 부츠 오브 팬텀(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1300,7 +1300,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5388" type="EtcItem" name="Recipe: Sealed Cerberus Boots(60%)">
+	<item id="5388" type="EtcItem" name="레시피 : 봉인된 켈베로스 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1313,7 +1313,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5389" type="EtcItem" name="Recipe: Sealed Cerberus Boots(100%)">
+	<item id="5389" type="EtcItem" name="레시피 : 봉인된 켈베로스 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1326,7 +1326,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5390" type="EtcItem" name="Recipe: Sealed Dasparion's Boots Boots(60%)">
+	<item id="5390" type="EtcItem" name="레시피 : 봉인된 데스페리온 부츠(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1339,7 +1339,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5391" type="EtcItem" name="Recipe: Sealed Dasparion's Boots Boots(100%)">
+	<item id="5391" type="EtcItem" name="레시피 : 봉인된 데스페리온 부츠(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1352,7 +1352,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5392" type="EtcItem" name="Recipe: Sealed Dark Crystal Gloves(60%)">
+	<item id="5392" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 글로브(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1367,7 +1367,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5393" type="EtcItem" name="Recipe: Sealed Dark Crystal Gloves(100%)">
+	<item id="5393" type="EtcItem" name="레시피 : 봉인된 다크 크리스탈 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1382,7 +1382,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5394" type="EtcItem" name="Recipe: Sealed Tallum Gloves(60%)">
+	<item id="5394" type="EtcItem" name="레시피 : 봉인된 탈룸 글로브(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1397,7 +1397,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5395" type="EtcItem" name="Recipe: Sealed Tallum Gloves(100%)">
+	<item id="5395" type="EtcItem" name="레시피 : 봉인된 탈룸 글로브(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1412,7 +1412,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5396" type="EtcItem" name="Recipe: Sealed Gloves of Underworld(60%)">
+	<item id="5396" type="EtcItem" name="레시피 : 봉인된 글로브 오브 언더월드(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1425,7 +1425,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5397" type="EtcItem" name="Recipe: Sealed Gloves of Underworld(100%)">
+	<item id="5397" type="EtcItem" name="레시피 : 봉인된 글로브 오브 언더월드(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1438,7 +1438,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5398" type="EtcItem" name="Recipe: Sealed Gust Bracer(60%)">
+	<item id="5398" type="EtcItem" name="레시피 : 봉인된 질풍의 장갑(60%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />
@@ -1451,7 +1451,7 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="5399" type="EtcItem" name="Recipe: Sealed Gust Bracer(100%)">
+	<item id="5399" type="EtcItem" name="레시피 : 봉인된 질풍의 장갑(100%)">
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="recipe" />
 		<set name="etcitem_type" val="recipe" />

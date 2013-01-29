@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 
-	<item id="35929" name="謎樣的戒指" type="Armor">
+	<item id="35929" type="Armor" name="_">
 		<table name="#Desc">在謎樣的宅邸購買的戒指。可使用60天，而且可以將所選的血盟員召喚到自已的位置。使用冷卻時間為1小時。無法交易/丟棄/個人商店/利用個人商店/參與奧林匹亞。</table>
 		<set name="icon" val="icon.accessory_shiny_couple_ring"/>
 		<set name="default_action" val="equip"/>
@@ -12,7 +12,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="35930" name="渾沌體力治癒藥水" type="EtcItem">
+	<item id="35930" type="EtcItem" name="_">
 		<table name="#Desc">在謎樣的宅邸購買的體力治癒藥水。使用時恢復HP2500，剩餘的威力用來恢復CP。無持續時間。可以交易、丟棄、出售於個人商店。</table>
 		<set name="icon" val="icon.etc_potion_gold_i00"/>
 		<set name="default_action" val="skill_reduce"/>
@@ -24,7 +24,7 @@
 			<player level="100"/>
 		</cond>
 	</item>
-	<item id="35931" name="謎樣的卷軸" type="EtcItem">
+	<item id="35931" type="EtcItem" name="_">
 		<table name="#Desc">在謎樣的宅邸購買的卷軸。隱隱約約可以感受到黑暗力量。只能用於邪惡角色，而且可以讓所選的邪惡角色返回。無法交易、丟棄、買賣，但可以保管在個人倉庫。使用冷卻時間為30分鐘。</table>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="default_action" val="skill_reduce"/>

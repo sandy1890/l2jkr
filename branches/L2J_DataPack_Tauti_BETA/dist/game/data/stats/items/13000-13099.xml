@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="13000" type="Armor" name="Sealed Helm of Nightmare - Light Armor Use">
+	<item id="13000" type="Armor" name="봉인된 악몽의 투구 경갑용">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -16,7 +16,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13001" type="Armor" name="Sealed Helm of Nightmare - Robe">
+	<item id="13001" type="Armor" name="봉인된 악몽의 투구 로브용">
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="head" />
@@ -35,7 +35,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13002" type="EtcItem" name="Essence of Kamaloka">
+	<item id="13002" type="EtcItem" name="카마로카의 정수">
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
@@ -45,7 +45,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13003" type="EtcItem" name="Pathfinder's Reward (D-Grade)">
+	<item id="13003" type="EtcItem" name="패스파인더 포상품 - D그레이드">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -58,7 +58,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2572-1" />
 	</item>
-	<item id="13004" type="EtcItem" name="Pathfinder's Reward (C-Grade)">
+	<item id="13004" type="EtcItem" name="패스파인더 포상품 - C그레이드">
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -71,7 +71,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2573-1" />
 	</item>
-	<item id="13005" type="EtcItem" name="Pathfinder's Reward (B-Grade)">
+	<item id="13005" type="EtcItem" name="패스파인더 포상품 - B그레이드">
 		<set name="icon" val="icon.etc_bead_green_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -84,7 +84,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2574-1" />
 	</item>
-	<item id="13006" type="EtcItem" name="Pathfinder's Reward (A-Grade)">
+	<item id="13006" type="EtcItem" name="패스파인더 포상품 - A그레이드">
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -97,7 +97,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2575-1" />
 	</item>
-	<item id="13007" type="EtcItem" name="Pathfinder's Reward (S-Grade)">
+	<item id="13007" type="EtcItem" name="패스파인더 포상품 - S그레이드">
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="default_action" val="capsule" />
 		<set name="immediate_effect" val="1" />
@@ -110,7 +110,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2576-1" />
 	</item>
-	<item id="13008" type="EtcItem" name="Spellbook - Bless the Blood">
+	<item id="13008" type="EtcItem" name="마법서 - 블레스 더 블러드">
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -118,7 +118,7 @@
 		<set name="price" val="3650" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13009" type="EtcItem" name="inven_toll_iii">
+	<item id="13009" type="EtcItem" name="_">
 		<!-- Doesn't exist in client. -->
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
@@ -128,7 +128,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13010" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
+	<item id="13010" type="EtcItem" name="추가 입장권 - 카마로카 (심연의 홀)">
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -142,7 +142,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2589-1" />
 	</item>
-	<item id="13011" type="EtcItem" name="Extra Entrance Pass - Near Kamaloka">
+	<item id="13011" type="EtcItem" name="추가 입장권 - 니어 카마로카">
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -156,7 +156,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2590-1" />
 	</item>
-	<item id="13012" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
+	<item id="13012" type="EtcItem" name="추가 입장권 - 카마로카 (심연의 미궁)">
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
@@ -170,7 +170,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2591-1" />
 	</item>
-	<item id="13013" type="EtcItem" name="Gesto's Box">
+	<item id="13013" type="EtcItem" name="게스토의 상자">
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -178,14 +178,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13014" type="EtcItem" name="Freight Chest's Seal">
+	<item id="13014" type="EtcItem" name="화물 상자의 인장">
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 	</item>
-	<item id="13015" type="EtcItem" name="My Teleport Spellbook">
+	<item id="13015" type="EtcItem" name="자유 텔레포트의 서">
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="call_skill" />
 		<set name="material" val="paper" />
@@ -199,7 +199,7 @@
 		<set name="handler" val="TeleportBookmark" />
 		<set name="item_skill" val="2587-1" />
 	</item>
-	<item id="13016" type="EtcItem" name="My Teleport Scroll">
+	<item id="13016" type="EtcItem" name="자유 텔레포트 주문서">
 		<set name="icon" val="icon.bookmark_scroll_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -211,7 +211,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13017" type="EtcItem" name="White Weasel Hunting Helper Necklace">
+	<item id="13017" type="EtcItem" name="흰족제비 사냥 도우미 목걸이">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -229,7 +229,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13018" type="EtcItem" name="Fairy Princess Hunting Helper Necklace">
+	<item id="13018" type="EtcItem" name="요정공주 사냥 도우미 목걸이">
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -247,7 +247,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13019" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace">
+	<item id="13019" type="EtcItem" name="야수투사 사냥 도우미 목걸이">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -265,7 +265,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13020" type="EtcItem" name="Fox Shaman Hunting Helper Necklace">
+	<item id="13020" type="EtcItem" name="여우술사 사냥 도우미 목걸이">
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="skill_maintain" />
 		<set name="etcitem_type" val="pet_collar" />
@@ -283,7 +283,7 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="13021" type="EtcItem" name="Color Name">
+	<item id="13021" type="EtcItem" name="컬러 호칭">
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="nick_color" />
 		<set name="immediate_effect" val="1" />
@@ -297,7 +297,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13022" type="Armor" name="Light Purple-Maned Horse Mount Bracelet - 7-day limited period">
+	<item id="13022" type="Armor" name="연보라빛 갈기 말 탑승용 팔찌 7일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -312,7 +312,7 @@
 		<set name="item_skill" val="8247-1" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="13023" type="Armor" name="Agathion of Love - 30-day limited period">
+	<item id="13023" type="Armor" name="사랑 아가시온 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -327,7 +327,7 @@
 		<set name="item_skill" val="5763-1;8245-1;3267-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13024" type="Armor" name="Sudden Agathion - 30-day limited period">
+	<item id="13024" type="Armor" name="버럭 아가시온 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -342,7 +342,7 @@
 		<set name="item_skill" val="8257-1;3267-1;5956-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13025" type="Armor" name="Shiny Agathion - 30-day limited period">
+	<item id="13025" type="Armor" name="샤방 아가시온 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -357,7 +357,7 @@
 		<set name="item_skill" val="8256-1;3267-1;5955-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13026" type="Armor" name="Sobbing Agathion - 30-day limited period">
+	<item id="13026" type="Armor" name="엉엉 아가시온 30일 기간제">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lbracelet" />
@@ -372,7 +372,7 @@
 		<set name="item_skill" val="8258-1;3267-1;5957-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13027" type="EtcItem" name="Gran Kain's Gift Box - 30-day limited period">
+	<item id="13027" type="EtcItem" name="그랑카인의 선물 상자 30일 기간제">
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="elixir" />
@@ -386,7 +386,7 @@
 		<set name="item_skill" val="2606-1" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="13028" type="EtcItem" name="Vitality Replenishing Herb">
+	<item id="13028" type="EtcItem" name="활력 충전 허브">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
@@ -395,22 +395,22 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2580-1" />
 	</item>
-	<item id="13029" type="EtcItem" name="Vitality Replenishing Transformation Herb - Timitran">
+	<item id="13029" type="EtcItem" name="활력 충전 변신 허브 - 티미트란">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="13030" type="EtcItem" name="Vitality Replenishing Transformation Herb - Lava Golem">
+	<item id="13030" type="EtcItem" name="활력 충전 변신 허브 - 라바골렘">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="13031" type="EtcItem" name="Vitality Replenishing Transformation Herb - Yeti">
+	<item id="13031" type="EtcItem" name="활력 충전 변신 허브 - 예티">
 		<set name="immediate_effect" val="1" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="paper" />
 	</item>
-	<item id="13032" type="EtcItem" name="Pailaka Instant Shield">
+	<item id="13032" type="EtcItem" name="파이라카 인스턴트 쉴드">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -430,7 +430,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13033" type="EtcItem" name="Quick Healing Potion">
+	<item id="13033" type="EtcItem" name="순간 체력 회복제">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -450,7 +450,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13034" type="Weapon" name="Sprite's Sword">
+	<item id="13034" type="Weapon" name="정령의 검">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -478,7 +478,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13035" type="Weapon" name="Enhanced Sprite's Sword">
+	<item id="13035" type="Weapon" name="강화된 정령의 검">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -507,7 +507,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13036" type="Weapon" name="Sword of Ice and Fire">
+	<item id="13036" type="Weapon" name="얼음과 불의 검">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="dual" />
@@ -536,7 +536,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13037" type="EtcItem" name="Pailaka Soulshot - Grade D">
+	<item id="13037" type="EtcItem" name="파이라카 정령탄 - D그레이드">
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="soulshot" />
 		<set name="immediate_effect" val="1" />
@@ -550,7 +550,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2150-1" />
 	</item>
-	<item id="13038" type="EtcItem" name="Essence of Water">
+	<item id="13038" type="EtcItem" name="물의 정수">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -566,7 +566,7 @@
 			<player instanceId="43" />
 		</cond>
 	</item>
-	<item id="13039" type="EtcItem" name="Essence of Fire">
+	<item id="13039" type="EtcItem" name="불의 정수">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -582,7 +582,7 @@
 			<player instanceId="43" />
 		</cond>
 	</item>
-	<item id="13040" type="EtcItem" name="Fire Attribute Enhancer">
+	<item id="13040" type="EtcItem" name="불 속성 강화제">
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -600,7 +600,7 @@
 			<player instanceId="43" />
 		</cond>
 	</item>
-	<item id="13041" type="EtcItem" name="Water Attribute Enhancer">
+	<item id="13041" type="EtcItem" name="물 속성 강화제">
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -618,7 +618,7 @@
 			<player instanceId="43" />
 		</cond>
 	</item>
-	<item id="13042" type="Weapon" name="Ancient Legacy Sword">
+	<item id="13042" type="Weapon" name="고대 유산의 검">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -647,7 +647,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13043" type="Weapon" name="Enhanced Ancient Legacy Sword">
+	<item id="13043" type="Weapon" name="강화된 고대 유산의 검">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -676,7 +676,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13044" type="Weapon" name="Complete Ancient Legacy Sword">
+	<item id="13044" type="Weapon" name="완전해진 고대 유산의 검">
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -705,7 +705,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13045" type="EtcItem" name="Pailaka Soulshot - Grade C">
+	<item id="13045" type="EtcItem" name="파이라카 정령탄 - C그레이드">
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="soulshot" />
 		<set name="immediate_effect" val="1" />
@@ -722,7 +722,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13046" type="EtcItem" name="Pailaka Weapon Upgrade Stage 1">
+	<item id="13046" type="EtcItem" name="파이라카 무기 업그레이드 1단계">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -738,7 +738,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13047" type="EtcItem" name="Pailaka Weapon Upgrade Stage 2">
+	<item id="13047" type="EtcItem" name="파이라카 무기 업그레이드 2단계">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -754,7 +754,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13048" type="EtcItem" name="Pailaka Antidote">
+	<item id="13048" type="EtcItem" name="파이라카 해독제">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -771,7 +771,7 @@
 			<player instanceId="44" />
 		</cond>
 	</item>
-	<item id="13049" type="EtcItem" name="Divine Soul">
+	<item id="13049" type="EtcItem" name="성스러운 영혼">
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="immediate_effect" val="1" />
@@ -787,7 +787,7 @@
 			<player instanceId="44" />
 		</cond>
 	</item>
-	<item id="13050" type="Armor" name="Tigress exclusive armor">
+	<item id="13050" type="Armor" name="티그리스 전용 방어구">
 		<set name="icon" val="icon.etc_wolf_r_a_01" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="light" />
@@ -807,14 +807,14 @@
 			<add order="0x10" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="13051" type="EtcItem" name="Hair Accessory">
+	<item id="13051" type="EtcItem" name="머리장식">
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13052" type="Weapon" name="Spear of Silenos">
+	<item id="13052" type="Weapon" name="실레노스의 창">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -845,7 +845,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13053" type="Weapon" name="Enhanced Spear of Silenos">
+	<item id="13053" type="Weapon" name="강화된 실레노스의 창">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -876,7 +876,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13054" type="Weapon" name="Complete Spear of Silenos">
+	<item id="13054" type="Weapon" name="완전해진 실레노스의 창">
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="pole" />
@@ -907,7 +907,7 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13055" type="EtcItem" name="Pailaka Soulshot - Grade A">
+	<item id="13055" type="EtcItem" name="파이라카 정령탄 - A그레이드">
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="soulshot" />
 		<set name="immediate_effect" val="1" />
@@ -924,7 +924,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13056" type="EtcItem" name="Weapon Upgrade Stage 1">
+	<item id="13056" type="EtcItem" name="무기 업그레이드 1단계">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -939,7 +939,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13057" type="EtcItem" name="Weapon Upgrade Stage 2">
+	<item id="13057" type="EtcItem" name="무기 업그레이드 2단계">
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -954,7 +954,7 @@
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
-	<item id="13058" type="Armor" name="Silenos Hair Accessory">
+	<item id="13058" type="Armor" name="실레노스 머리장식">
 		<set name="icon" val="icon.accessory_barka_karm_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -965,7 +965,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="13059" type="EtcItem" name="Long-Range Defense Increasing Potion">
+	<item id="13059" type="EtcItem" name="원거리 방어 능력 향상 물약">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="potion" />
@@ -984,14 +984,14 @@
 			<player instanceId="44" />
 		</cond>
 	</item>
-	<item id="13060" type="EtcItem" name="Tinplate Golem Transformation Stick">
+	<item id="13060" type="EtcItem" name="양철 골렘 변신 막대기">
 		<set name="icon" val="icon.etc_gateleeper_stick_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13061" type="Weapon" name="Exclusive to Monsters (Baroness' Employee)">
+	<item id="13061" type="Weapon" name="몹전용(남작부인고용인)">
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="blunt" />
@@ -1018,7 +1018,7 @@
 			<set order="0x08" stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="13062" type="Weapon" name="Exclusive to Monsters (Employee's Friend)">
+	<item id="13062" type="Weapon" name="몹전용(고용인친구)">
 		<set name="icon" val="icon.weapon_mon_friend_employee_i00" />
 		<set name="default_action" val="equip" />
 		<set name="weapon_type" val="bigsword" />
@@ -1044,35 +1044,35 @@
 			<set order="0x08" stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="13063" type="EtcItem" name="Unfair Joystick">
+	<item id="13063" type="EtcItem" name="비공정조종간">
 		<set name="icon" val="icon.etc_gateleeper_stick_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13064" type="EtcItem" name="Unfair Naval Cannon Joystick">
+	<item id="13064" type="EtcItem" name="비공정함포조종간">
 		<set name="icon" val="icon.etc_gateleeper_stick_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13065" type="EtcItem" name="Lucky 7 Treasure">
+	<item id="13065" type="EtcItem" name="일곱 행운의 보물">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13066" type="EtcItem" name="Treasure of the Seven Fortunes">
+	<item id="13066" type="EtcItem" name="일곱 행운의 보물">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13067" type="EtcItem" name="Fantasy Isle Coin">
+	<item id="13067" type="EtcItem" name="환상의 섬 코인">
 		<set name="icon" val="icon.etc_pig_adena_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1081,7 +1081,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13068" type="EtcItem" name="Fantasy Isle Coin (Player Commendation)">
+	<item id="13068" type="EtcItem" name="환상의 섬 코인(PC방)">
 		<set name="icon" val="icon.etc_pig_adena_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1090,14 +1090,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13069" type="EtcItem" name="Long Prolonging Dream">
+	<item id="13069" type="EtcItem" name="생명 연장의 꿈">
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13070" type="EtcItem" name="Premium Parcel Box Test">
+	<item id="13070" type="EtcItem" name="프리미엄 꾸러미 상자 테스트">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1108,7 +1108,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="13071" type="EtcItem" name="Red Soul Crystal - Stage 16">
+	<item id="13071" type="EtcItem" name="붉은 집혼석 - 단계 16">
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1117,7 +1117,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="13072" type="EtcItem" name="Blue Soul Crystal - Stage 16">
+	<item id="13072" type="EtcItem" name="푸른 집혼석 - 단계 16">
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1126,7 +1126,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="13073" type="EtcItem" name="Green Soul Crystal - Stage 16">
+	<item id="13073" type="EtcItem" name="초록 집혼석 - 단계 16">
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scroll" />
@@ -1135,7 +1135,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2096-1" />
 	</item>
-	<item id="13074" type="Armor" name="Shadow Item - Top Hat">
+	<item id="13074" type="Armor" name="투영병기 - 마술사 모자">
 		<set name="icon" val="icon.accessory_magicial_cap_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1147,7 +1147,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="10080" />
 	</item>
-	<item id="13075" type="Armor" name="Shadow Item - Black Mask">
+	<item id="13075" type="Armor" name="투영병기 - 검은 가면">
 		<set name="icon" val="icon.accessory_jjoro_masj_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1159,7 +1159,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="10080" />
 	</item>
-	<item id="13076" type="Armor" name="Shadow Item - Rider Goggles">
+	<item id="13076" type="Armor" name="투영병기 - 잠자리 고글">
 		<set name="icon" val="icon.accessory_dragonfly_goggle_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="hairall" />
@@ -1171,7 +1171,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="10080" />
 	</item>
-	<item id="13077" type="EtcItem" name="Chaotic Arcana Sigil">
+	<item id="13077" type="EtcItem" name="혼돈의 아르카나 시길">
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="crystal_type" val="s" />
@@ -1186,7 +1186,7 @@
 			<set order="0x08" stat="rShld" val="20" />
 		</for>
 	</item>
-	<item id="13078" type="Armor" name="Arcana Sigil">
+	<item id="13078" type="Armor" name="아르카나 시길">
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="default_action" val="equip" />
 		<set name="armor_type" val="sigil" />
@@ -1208,7 +1208,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="13079" type="EtcItem" name="My Teleport Spellbook 1-Sheet Pack">
+	<item id="13079" type="EtcItem" name="자유 텔레포트의 서 1장 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1222,7 +1222,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13015,1,1,100" />
 	</item>
-	<item id="13080" type="EtcItem" name="My Teleport Scroll 30-Sheet Pack">
+	<item id="13080" type="EtcItem" name="자유 텔레포트 주문서 30장 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1236,7 +1236,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13016,30,30,100" />
 	</item>
-	<item id="13081" type="EtcItem" name="Kamaloka Entrance Pass Pack">
+	<item id="13081" type="EtcItem" name="카마로카 입장권 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="fish" />
@@ -1248,7 +1248,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 	</item>
-	<item id="13082" type="EtcItem" name="Feather of Blessing 3-Sheet Pack">
+	<item id="13082" type="EtcItem" name="축복의 깃털 3장 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1262,7 +1262,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="10649,3,3,100" />
 	</item>
-	<item id="13083" type="EtcItem" name="Agathion of Love 30-Day Pack">
+	<item id="13083" type="EtcItem" name="아가시온 - 사랑 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1276,7 +1276,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13023,1,1,100" />
 	</item>
-	<item id="13084" type="EtcItem" name="Pumpkin Transformation Stick 30-Day Pack">
+	<item id="13084" type="EtcItem" name="호박 변신 막대기 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1290,7 +1290,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12800,1,1,100" />
 	</item>
-	<item id="13085" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack">
+	<item id="13085" type="EtcItem" name="카마로카 입장권 3종 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1305,7 +1305,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" />
 	</item>
-	<item id="13086" type="EtcItem" name="Kat the Cat Hat 30-Day Pack">
+	<item id="13086" type="EtcItem" name="캣 더 캣 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1319,7 +1319,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12782,1,1,100" />
 	</item>
-	<item id="13087" type="EtcItem" name="Feline Queen Hat 30-Day Pack">
+	<item id="13087" type="EtcItem" name="퀸 오브 캣 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1333,7 +1333,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12783,1,1,100" />
 	</item>
-	<item id="13088" type="EtcItem" name="Monster Eye Hat 30-Day Pack">
+	<item id="13088" type="EtcItem" name="괴물눈 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1347,7 +1347,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12786,1,1,100" />
 	</item>
-	<item id="13089" type="EtcItem" name="Brown Bear Hat 30-Day Pack">
+	<item id="13089" type="EtcItem" name="갈색 곰 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1361,7 +1361,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12787,1,1,100" />
 	</item>
-	<item id="13090" type="EtcItem" name="Fungus Hat 30-Day Pack">
+	<item id="13090" type="EtcItem" name="펑거스 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1375,7 +1375,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12788,1,1,100" />
 	</item>
-	<item id="13091" type="EtcItem" name="Skull Hat 30-Day Pack">
+	<item id="13091" type="EtcItem" name="해골 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1389,7 +1389,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12789,1,1,100" />
 	</item>
-	<item id="13092" type="EtcItem" name="Ornithomimus Hat 30-Day Pack">
+	<item id="13092" type="EtcItem" name="오르니토미무스 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1403,7 +1403,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12790,1,1,100" />
 	</item>
-	<item id="13093" type="EtcItem" name="Feline King Hat 30-Day Pack">
+	<item id="13093" type="EtcItem" name="킹 오브 캣 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1417,7 +1417,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12791,1,1,100" />
 	</item>
-	<item id="13094" type="EtcItem" name="Kai the Cat Hat 30-Day Pack">
+	<item id="13094" type="EtcItem" name="카이 더 캣 모자 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1431,7 +1431,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12792,1,1,100" />
 	</item>
-	<item id="13095" type="EtcItem" name="OX Stick 30-Day Pack">
+	<item id="13095" type="EtcItem" name="OX 막대기 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1445,7 +1445,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" />
 	</item>
-	<item id="13096" type="EtcItem" name="Rock-Paper-Scissors Stick 30-Day Pack">
+	<item id="13096" type="EtcItem" name="가위바위보 막대기 30일 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1459,7 +1459,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" />
 	</item>
-	<item id="13097" type="EtcItem" name="Purple Maned Horse Bracelet Pack">
+	<item id="13097" type="EtcItem" name="연보라빛 갈기말 팔찌 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1473,7 +1473,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13022,1,1,100" />
 	</item>
-	<item id="13098" type="EtcItem" name="Color Name 3-Sheet Pack">
+	<item id="13098" type="EtcItem" name="컬러 호칭 3장 팩">
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="peel" />
 		<set name="immediate_effect" val="1" />
@@ -1487,7 +1487,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="13021,3,3,100" />
 	</item>
-	<item id="13099" type="EtcItem" name="Sealed Arcana Sigil Piece">
+	<item id="13099" type="EtcItem" name="봉인된 아르카나 시길 조각">
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="material" />
 		<set name="immediate_effect" val="1" />

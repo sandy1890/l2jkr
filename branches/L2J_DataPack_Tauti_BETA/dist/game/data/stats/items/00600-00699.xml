@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="600" type="Armor" name="Sealed Avadon Boots">
+	<item id="600" type="Armor" name="봉인된 아바돈 부츠">
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -16,7 +16,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="601" type="Armor" name="Sealed Doom Boots">
+	<item id="601" type="Armor" name="봉인된 둠 부츠">
 		<set name="icon" val="icon.armor_t71_b_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -32,7 +32,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="602" type="Armor" name="Boots of Pledge">
+	<item id="602" type="Armor" name="맹약의 부츠">
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -48,7 +48,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="603" type="Armor" name="Divine Boots">
+	<item id="603" type="Armor" name="디바인 부츠">
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="feet" />
@@ -64,7 +64,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="604" type="Armor" name="Crafted Leather Gloves">
+	<item id="604" type="Armor" name="고급 가죽 장갑">
 		<set name="icon" val="icon.armor_t09_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -80,7 +80,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="605" type="Armor" name="Leather Gauntlets">
+	<item id="605" type="Armor" name="가죽 건틀렛">
 		<set name="icon" val="icon.armor_t18_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -96,7 +96,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="606" type="Armor" name="Rip Gauntlets">
+	<item id="606" type="Armor" name="진혼의 건틀렛">
 		<set name="icon" val="icon.armor_t40_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -112,7 +112,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="607" type="Armor" name="Ogre Power Gauntlets">
+	<item id="607" type="Armor" name="오거 파워 건틀렛">
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -128,7 +128,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="608" type="Armor" name="Mithril Gauntlets">
+	<item id="608" type="Armor" name="미스릴 건틀렛">
 		<set name="icon" val="icon.armor_t61_g_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -144,7 +144,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="609" type="Armor" name="Gauntlets of Ghost">
+	<item id="609" type="Armor" name="사령의 건틀렛">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -160,7 +160,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="610" type="Armor" name="Saint Knight's Gauntlets">
+	<item id="610" type="Armor" name="성기사의 건틀렛">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -176,7 +176,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="611" type="Armor" name="Soul Leech Gauntlets">
+	<item id="611" type="Armor" name="흡령 건틀렛">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -192,7 +192,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="612" type="Armor" name="Sealed Zubei's Gauntlets">
+	<item id="612" type="Armor" name="봉인된 쉬르노엔의 건틀렛">
 		<set name="icon" val="icon.armor_t64_g_i02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -208,7 +208,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="613" type="Armor" name="Sand Dragon Gloves">
+	<item id="613" type="Armor" name="사룡의 장갑">
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="gloves" />
@@ -224,7 +224,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="614" type="Armor" name="Knight's Cloak">
+	<item id="614" type="Armor" name="기사의 망토">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -240,7 +240,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="615" type="Armor" name="Cobweb Cloak">
+	<item id="615" type="Armor" name="거미줄 망토">
 		<set name="icon" val="icon.armor_back05" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -256,7 +256,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="616" type="Armor" name="Cloak of Magic">
+	<item id="616" type="Armor" name="마법의 망토">
 		<set name="icon" val="icon.armor_back06" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -272,7 +272,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="617" type="Armor" name="Mithril Cloak">
+	<item id="617" type="Armor" name="미스릴 망토">
 		<set name="icon" val="icon.armor_back07" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -288,7 +288,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="618" type="Armor" name="Cloak of Self Protection">
+	<item id="618" type="Armor" name="호신 망토">
 		<set name="icon" val="icon.armor_back08" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -304,7 +304,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="619" type="Armor" name="(Not In Use) Ancient Cloak">
+	<item id="619" type="Armor" name="(사용안함)고대의 망토">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -320,7 +320,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="620" type="Armor" name="Cloak of Protection">
+	<item id="620" type="Armor" name="수호의 망토">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -336,7 +336,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="621" type="Armor" name="Cloak of Hell">
+	<item id="621" type="Armor" name="지옥의 망토">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -352,7 +352,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="622" type="Armor" name="(Not In Use) Holy Spirit's Cloak">
+	<item id="622" type="Armor" name="(사용안함)성령의 망토">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -368,7 +368,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="623" type="Armor" name="Divine Cloak">
+	<item id="623" type="Armor" name="신성의 망토">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -384,7 +384,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="624" type="Armor" name="Cloak of Invisibility">
+	<item id="624" type="Armor" name="투명 망토">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="back" />
@@ -397,7 +397,7 @@
 			<add order="0x10" stat="pDef" val="2" />
 		</for>
 	</item>
-	<item id="625" type="Armor" name="Bone Shield">
+	<item id="625" type="Armor" name="골각 방패">
 		<set name="icon" val="icon.shield_bone_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -415,7 +415,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="626" type="Armor" name="Bronze Shield">
+	<item id="626" type="Armor" name="청동 방패">
 		<set name="icon" val="icon.shield_bronze_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -436,7 +436,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="627" type="Armor" name="Aspis">
+	<item id="627" type="Armor" name="아스피스">
 		<set name="icon" val="icon.shield_aspis_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -457,7 +457,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="628" type="Armor" name="Hoplon">
+	<item id="628" type="Armor" name="호플론">
 		<set name="icon" val="icon.shield_hoplon_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -478,7 +478,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="629" type="Armor" name="Kite Shield">
+	<item id="629" type="Armor" name="카이트쉴드">
 		<set name="icon" val="icon.shield_kite_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -499,7 +499,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="630" type="Armor" name="Square Shield">
+	<item id="630" type="Armor" name="사각 방패">
 		<set name="icon" val="icon.shield_square_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -520,7 +520,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="631" type="Armor" name="Eldarake">
+	<item id="631" type="Armor" name="엘다라크">
 		<set name="icon" val="icon.shield_eldarake_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -541,7 +541,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="632" type="Armor" name="Knight's Shield">
+	<item id="632" type="Armor" name="나이트 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -562,7 +562,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="633" type="Armor" name="Zubei's Shield">
+	<item id="633" type="Armor" name="쉬르노엔의 쉴드">
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -583,7 +583,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="634" type="Armor" name="Dragon Shield">
+	<item id="634" type="Armor" name="드래곤 카이트">
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -605,7 +605,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="635" type="Armor" name="Wolf Shield">
+	<item id="635" type="Armor" name="늑대의 방패">
 		<set name="icon" val="icon.shield_small_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -626,7 +626,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="636" type="Armor" name="Shining Dragon Shield">
+	<item id="636" type="Armor" name="광룡의 방패">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -647,7 +647,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="637" type="Armor" name="Shield of Valor">
+	<item id="637" type="Armor" name="무용의 방패">
 		<set name="icon" val="icon.shield_small_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -668,7 +668,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="638" type="Armor" name="Glorious Shield">
+	<item id="638" type="Armor" name="명예의 방패">
 		<set name="icon" val="icon.shield_shield_of_victory_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -689,7 +689,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="639" type="Armor" name="Red Flame Shield">
+	<item id="639" type="Armor" name="홍염의 방패">
 		<set name="icon" val="icon.shield_tower_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -710,7 +710,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="640" type="Armor" name="Elven Crystal Shield">
+	<item id="640" type="Armor" name="엘븐 크리스탈 쉴드">
 		<set name="icon" val="icon.shield_masterpiece_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -731,7 +731,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="641" type="Armor" name="Dark Crystal Shield">
+	<item id="641" type="Armor" name="다크 크리스탈 쉴드">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -752,7 +752,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="642" type="Armor" name="Elven Vagian Shield">
+	<item id="642" type="Armor" name="엘븐배지언쉴드">
 		<set name="icon" val="icon.shield_shield_of_victory_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -773,7 +773,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="643" type="Armor" name="Dark Vagian Shield">
+	<item id="643" type="Armor" name="다크배지언쉴드">
 		<set name="icon" val="icon.shield_shield_of_victory_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -794,7 +794,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="644" type="Armor" name="Hell Shield">
+	<item id="644" type="Armor" name="헬 쉴드">
 		<set name="icon" val="icon.shield_shield_of_grace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -815,7 +815,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="645" type="Armor" name="Art of Shield">
+	<item id="645" type="Armor" name="아트 오브 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -836,7 +836,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="646" type="Armor" name="Shield of Silence">
+	<item id="646" type="Armor" name="침묵의 방패">
 		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -857,7 +857,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="647" type="Armor" name="Gust Shield">
+	<item id="647" type="Armor" name="질풍의 방패">
 		<set name="icon" val="icon.shield_shield_of_grace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -878,7 +878,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="648" type="Armor" name="Prairie Shield">
+	<item id="648" type="Armor" name="프레어리 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -899,7 +899,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="649" type="Armor" name="Shield of Underworld">
+	<item id="649" type="Armor" name="쉴드 오브 언더월드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -920,7 +920,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="650" type="Armor" name="Shield of Concentration">
+	<item id="650" type="Armor" name="집중의 방패">
 		<set name="icon" val="icon.shield_shield_of_grace_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -941,7 +941,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="651" type="Armor" name="Ace's Shield">
+	<item id="651" type="Armor" name="신궁의 방패">
 		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -962,7 +962,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="652" type="Armor" name="Guardian's Shield">
+	<item id="652" type="Armor" name="가디언스 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -983,7 +983,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="653" type="Armor" name="Marksman Shield">
+	<item id="653" type="Armor" name="스나이퍼 쉴드">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1004,7 +1004,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="654" type="Armor" name="Shield of Mana">
+	<item id="654" type="Armor" name="마나의 방패">
 		<set name="icon" val="icon.shield_shield_of_pledge_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1025,7 +1025,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="655" type="Armor" name="Sage's Shield">
+	<item id="655" type="Armor" name="현자의 방패">
 		<set name="icon" val="icon.shield_sages_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1046,7 +1046,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="656" type="Armor" name="Paradia Shield">
+	<item id="656" type="Armor" name="패러디아 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1067,7 +1067,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="657" type="Armor" name="Inferno Shield">
+	<item id="657" type="Armor" name="인페르노 쉴드">
 		<set name="icon" val="icon.shield_shield_of_victory_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1088,7 +1088,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="658" type="Armor" name="Shield of Black Ore">
+	<item id="658" type="Armor" name="흑광의 방패">
 		<set name="icon" val="icon.shield_composite_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1109,7 +1109,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="659" type="Armor" name="Shield of Summoning">
+	<item id="659" type="Armor" name="소환의 방패">
 		<set name="icon" val="icon.shield_shield_of_sola_eclipse_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1130,7 +1130,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="660" type="Armor" name="Otherworldly Shield">
+	<item id="660" type="Armor" name="이계의 방패">
 		<set name="icon" val="icon.shield_round_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1151,7 +1151,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="661" type="Armor" name="Elemental Shield">
+	<item id="661" type="Armor" name="엘레멘탈 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1172,7 +1172,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="662" type="Armor" name="Shield of Phantom">
+	<item id="662" type="Armor" name="쉴드 오브 팬텀">
 		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1193,7 +1193,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="663" type="Armor" name="Shield of Grace">
+	<item id="663" type="Armor" name="은총의 방패">
 		<set name="icon" val="icon.shield_leather_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1214,7 +1214,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="664" type="Armor" name="Shield of Holy Spirit">
+	<item id="664" type="Armor" name="성령의 방패">
 		<set name="icon" val="icon.shield_composite_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1235,7 +1235,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="665" type="Armor" name="Phoenix Shield">
+	<item id="665" type="Armor" name="피닉스 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1256,7 +1256,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="666" type="Armor" name="Cerberus Shield">
+	<item id="666" type="Armor" name="켈베로스 쉴드">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1277,7 +1277,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="667" type="Armor" name="Shield of Aid">
+	<item id="667" type="Armor" name="조력의 방패">
 		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1298,7 +1298,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="668" type="Armor" name="Shield of Blessing">
+	<item id="668" type="Armor" name="축복의 방패">
 		<set name="icon" val="icon.shield_shield_of_pledge_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1319,7 +1319,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="669" type="Armor" name="Flame Shield">
+	<item id="669" type="Armor" name="프레임 쉴드">
 		<set name="icon" val="icon.shield_composite_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1340,7 +1340,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="670" type="Armor" name="Shield of Bravery">
+	<item id="670" type="Armor" name="브레이즈 쉴드">
 		<set name="icon" val="icon.shield_shield_of_assistance_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1361,7 +1361,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="671" type="Armor" name="Blood Shield">
+	<item id="671" type="Armor" name="블러드 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1382,7 +1382,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="672" type="Armor" name="Absolute Shield">
+	<item id="672" type="Armor" name="앱솔루트 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1403,7 +1403,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="673" type="Armor" name="Avadon Shield">
+	<item id="673" type="Armor" name="아바돈 쉴드">
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1424,7 +1424,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="674" type="Armor" name="Divine Shield">
+	<item id="674" type="Armor" name="디바인 쉴드">
 		<set name="icon" val="icon.shield_knight_shield_i00" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="lhand" />
@@ -1445,7 +1445,7 @@
 			<enchant val="0" order="0x0C" stat="sDef" />
 		</for>
 	</item>
-	<item id="675" type="Armor" name="Silk Yarn Undergarment Set">
+	<item id="675" type="Armor" name="견사 속옷세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1457,7 +1457,7 @@
 			<add order="0x10" stat="pDef" val="6" />
 		</for>
 	</item>
-	<item id="676" type="Armor" name="Pure White Undergarment Set">
+	<item id="676" type="Armor" name="순백의 속옷 세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1469,7 +1469,7 @@
 			<add order="0x10" stat="pDef" val="9" />
 		</for>
 	</item>
-	<item id="677" type="Armor" name="One-Piece Swimsuit">
+	<item id="677" type="Armor" name="원피스 수영복 세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1485,7 +1485,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="678" type="Armor" name="Bikini Set">
+	<item id="678" type="Armor" name="비키니 수영복 세트">
 		<set name="icon" val="icon.armor_underwear02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1501,7 +1501,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="679" type="Armor" name="Cursed Undergarment Set">
+	<item id="679" type="Armor" name="저주받은 속옷 세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1517,7 +1517,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="680" type="Armor" name="Mithril Undergarment Set">
+	<item id="680" type="Armor" name="미스릴 속옷 세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1533,7 +1533,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="681" type="Armor" name="Fascination Undergarment Set">
+	<item id="681" type="Armor" name="매혹의 속옷 세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1549,7 +1549,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="682" type="Armor" name="Demon's Undergarment Set">
+	<item id="682" type="Armor" name="악마의 속옷 세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1565,7 +1565,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="683" type="Armor" name="Holy Undergarment Set">
+	<item id="683" type="Armor" name="신성한 속옷 세트">
 		<set name="icon" val="icon.armor_underwear01" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1581,7 +1581,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="684" type="Armor" name="Underwear of Rule">
+	<item id="684" type="Armor" name="지배의 수영복 세트">
 		<set name="icon" val="icon.armor_underwear02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1597,7 +1597,7 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="685" type="Armor" name="Crystal Swimsuit Set">
+	<item id="685" type="Armor" name="크리스탈 수영복 세트">
 		<set name="icon" val="icon.armor_underwear02" />
 		<set name="default_action" val="equip" />
 		<set name="bodypart" val="underwear" />
@@ -1613,14 +1613,14 @@
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="686" type="EtcItem" name="Chair">
+	<item id="686" type="EtcItem" name="의자">
 		<set name="icon" val="icon.etc_branch_blue_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="wood" />
 		<set name="weight" val="100" />
 		<set name="price" val="1000" />
 	</item>
-	<item id="687" type="EtcItem" name="Darin's Letter">
+	<item id="687" type="EtcItem" name="다링의 편지">
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1630,7 +1630,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="688" type="EtcItem" name="Roxxy's Kerchief">
+	<item id="688" type="EtcItem" name="라푼젤의 손수건">
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="cloth" />
@@ -1640,7 +1640,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="689" type="EtcItem" name="Poetry Book">
+	<item id="689" type="EtcItem" name="아루지엔의 시집">
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1650,7 +1650,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="690" type="EtcItem" name="Lyrics Book">
+	<item id="690" type="EtcItem" name="허브티엔의 노래가사집">
 		<set name="icon" val="icon.item_normal06" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1660,7 +1660,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="691" type="EtcItem" name="Romance Novel">
+	<item id="691" type="EtcItem" name="로맨스 소설">
 		<set name="icon" val="icon.item_normal07" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1670,7 +1670,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="692" type="EtcItem" name="Arujien's Letter">
+	<item id="692" type="EtcItem" name="아루지엔의 편지">
 		<set name="icon" val="icon.item_canuse37" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1680,7 +1680,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="693" type="EtcItem" name="Greenis's Letter">
+	<item id="693" type="EtcItem" name="그리니스의 편지">
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1690,7 +1690,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="694" type="EtcItem" name="Ingredient List">
+	<item id="694" type="EtcItem" name="재료목록">
 		<set name="icon" val="icon.item_normal37" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -1700,7 +1700,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="695" type="EtcItem" name="Omen Beast's Blood">
+	<item id="695" type="EtcItem" name="오닉스 비스트의 피">
 		<set name="icon" val="icon.item_canuse48" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1711,7 +1711,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="696" type="EtcItem" name="Mana Seeker's Husk">
+	<item id="696" type="EtcItem" name="마나 뱀파이어의 허물">
 		<set name="icon" val="icon.item_normal30" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1722,7 +1722,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="697" type="EtcItem" name="Gargoyle's Horn">
+	<item id="697" type="EtcItem" name="가고일의 뿔">
 		<set name="icon" val="icon.item_normal24" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1733,7 +1733,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="698" type="EtcItem" name="Gilbert's List">
+	<item id="698" type="EtcItem" name="퇴치 리스트">
 		<set name="icon" val="icon.item_normal37" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />
@@ -1743,7 +1743,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="699" type="EtcItem" name="Orc's Nose">
+	<item id="699" type="EtcItem" name="오크의 코">
 		<set name="icon" val="icon.item_canuse05" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="steel" />

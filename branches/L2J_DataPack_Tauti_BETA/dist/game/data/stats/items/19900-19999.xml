@@ -3,7 +3,7 @@
 
 	<!-- R級搜魂石武器(鎮魂/英啟/幻靈/赫利奧斯/祝福的凱利爾) -->
 	<!-- R-99+:祝福的都蘭迪亞防具(防禦型/強化型/恢復型) -->
-	<item id="19922" name="祝福的都蘭迪亞頭盔" type="Armor">
+	<item id="19922" type="Armor" name="축복받은 듀란디아 헬멧 방어형 / 중갑용">
 		<table name="#Plus">防禦型/重裝用</table>
 		<set name="icon" val="icon.armor_helmet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -19,7 +19,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19923" name="祝福的都蘭迪亞胸甲" type="Armor">
+	<item id="19923" type="Armor" name="축복받은 듀란디아 흉갑 방어형 / 중갑용">
 		<table name="#Plus">防禦型/重裝用</table>
 		<table name="#Desc">強化+4時，降低物理致命傷害，而額外增加物理防禦力。</table>
 		<set name="icon" val="icon.armor_t97_u_i00"/>
@@ -38,7 +38,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19924" name="祝福的都蘭迪亞脛甲" type="Armor">
+	<item id="19924" type="Armor" name="축복받은 듀란디아 각반 방어형 / 중갑용">
 		<table name="#Plus">防禦型/重裝用</table>
 		<set name="icon" val="icon.armor_t97_l_i00"/>
 		<set name="default_action" val="equip"/>
@@ -55,7 +55,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19925" name="祝福的都蘭迪亞護手" type="Armor">
+	<item id="19925" type="Armor" name="축복받은 듀란디아 건틀렛 방어형 / 중갑용">
 		<table name="#Plus">防禦型/重裝用</table>
 		<set name="icon" val="icon.armor_t97_g_i00"/>
 		<set name="default_action" val="equip"/>
@@ -71,7 +71,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19926" name="祝福的都蘭迪亞靴" type="Armor">
+	<item id="19926" type="Armor" name="축복받은 듀란디아 부츠 방어형 / 중갑용">
 		<table name="#Plus">防禦型/重裝用</table>
 		<set name="icon" val="icon.armor_t97_b_i00"/>
 		<set name="default_action" val="equip"/>
@@ -86,7 +86,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19927" name="祝福的都蘭迪亞盾" type="Armor">
+	<item id="19927" type="Armor" name="축복받은 듀란디아 쉴드 방어형 / 중갑용">
 		<table name="#Plus">防禦型/重裝用</table>
 		<table name="#Desc">額外增加盾牌防禦率的狀態。</table>
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01"/>
@@ -103,7 +103,7 @@
 			<enchant order="0x0C" stat="sDef" val="0"/>
 		</for>
 	</item>
-	<item id="19928" name="祝福的都蘭迪亞皮頭盔" type="Armor">
+	<item id="19928" type="Armor" name="축복받은 듀란디아 레더 헬멧 강화형 / 경갑용">
 		<table name="#Plus">強化型/輕裝用</table>
 		<set name="icon" val="icon.armor_leather_helmet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -119,7 +119,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19929" name="祝福的都蘭迪亞皮甲" type="Armor">
+	<item id="19929" type="Armor" name="축복받은 듀란디아 레더 아머 강화형 / 경갑용">
 		<table name="#Plus">強化型/輕裝用</table>
 		<table name="#Desc">強化+4時，增加迴避能力、降低物理致命被擊率、增加肉體系抗性。</table>
 		<set name="icon" val="icon.armor_t98_u_i00"/>
@@ -138,7 +138,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19930" name="祝福的都蘭迪亞皮脛甲" type="Armor">
+	<item id="19930" type="Armor" name="축복받은 듀란디아 레더 레깅스 강화형 / 경갑용">
 		<table name="#Plus">強化型/輕裝用</table>
 		<set name="icon" val="icon.armor_t98_l_i00"/>
 		<set name="default_action" val="equip"/>
@@ -155,7 +155,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19931" name="祝福的都蘭迪亞皮手套" type="Armor">
+	<item id="19931" type="Armor" name="축복받은 듀란디아 레더 글로브 강화형 / 경갑용">
 		<table name="#Plus">強化型/輕裝用</table>
 		<set name="icon" val="icon.armor_t98_g_i00"/>
 		<set name="default_action" val="equip"/>
@@ -171,7 +171,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19932" name="祝福的都蘭迪亞皮靴" type="Armor">
+	<item id="19932" type="Armor" name="축복받은 듀란디아 레더 부츠 강화형 / 경갑용">
 		<table name="#Plus">強化型/輕裝用</table>
 		<set name="icon" val="icon.armor_t98_b_i00"/>
 		<set name="default_action" val="equip"/>
@@ -186,7 +186,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19933" name="祝福的都蘭迪亞頭箍" type="Armor">
+	<item id="19933" type="Armor" name="축복받은 듀란디아 서클릿 회복형 / 로브용">
 		<table name="#Plus">恢復型/長袍用</table>
 		<set name="icon" val="icon.armor_circlet_i00"/>
 		<set name="default_action" val="equip"/>
@@ -202,7 +202,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19934" name="祝福的都蘭迪亞外衣" type="Armor">
+	<item id="19934" type="Armor" name="축복받은 듀란디아 튜닉 회복형 / 로브용">
 		<table name="#Plus">恢復型/長袍用</table>
 		<table name="#Desc">強化+4時，增加魔法迴避能力、精神系抗性。</table>
 		<set name="icon" val="icon.armor_t99_u_i00"/>
@@ -222,7 +222,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19935" name="祝福的都蘭迪亞長襪" type="Armor">
+	<item id="19935" type="Armor" name="축복받은 듀란디아 호즈 회복형 / 로브용">
 		<table name="#Plus">恢復型/長袍用</table>
 		<set name="icon" val="icon.armor_t99_l_i00"/>
 		<set name="default_action" val="equip"/>
@@ -240,7 +240,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19936" name="祝福的都蘭迪亞手套" type="Armor">
+	<item id="19936" type="Armor" name="축복받은 듀란디아 글로브 회복형 / 로브용">
 		<table name="#Plus">恢復型/長袍用</table>
 		<set name="icon" val="icon.armor_t99_g_i00"/>
 		<set name="default_action" val="equip"/>
@@ -256,7 +256,7 @@
 			<enchant order="0x0C" stat="pDef" val="0"/>
 		</for>
 	</item>
-	<item id="19937" name="祝福的都蘭迪亞鞋" type="Armor">
+	<item id="19937" type="Armor" name="축복받은 듀란디아 슈즈 회복형 / 로브용">
 		<table name="#Plus">恢復型/長袍用</table>
 		<set name="icon" val="icon.armor_t99_b_i00"/>
 		<set name="default_action" val="equip"/>
@@ -273,7 +273,7 @@
 	</item>
 
 	<!-- R-1:鎮魂 -->
-	<item id="19938" name="鎮魂鉋刀" type="Weapon">
+	<item id="19938" type="Weapon" name="레퀴엠 셰이퍼 가이던스 + 헤이스트">
 		<table name="#Plus">導引 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.9、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_aspeda_i01"/>
@@ -301,7 +301,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19939" name="鎮魂鉋刀" type="Weapon">
+	<item id="19939" type="Weapon" name="레퀴엠 셰이퍼 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約82.7。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_aspeda_i01"/>
@@ -329,7 +329,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19940" name="鎮魂鉋刀" type="Weapon">
+	<item id="19940" type="Weapon" name="레퀴엠 셰이퍼 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約82.7、命中能力提升7.6。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_aspeda_i01"/>
@@ -357,7 +357,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19941" name="鎮魂切刃" type="Weapon">
+	<item id="19941" type="Weapon" name="레퀴엠 커터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約79.5。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_estia_i01"/>
@@ -384,7 +384,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19942" name="鎮魂切刃" type="Weapon">
+	<item id="19942" type="Weapon" name="레퀴엠 커터 포커스 + 헬스">
 		<table name="#Plus">偵測 + 強健</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.7、HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_estia_i01"/>
@@ -411,7 +411,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19943" name="鎮魂切刃" type="Weapon">
+	<item id="19943" type="Weapon" name="레퀴엠 커터 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加命中率、物理致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_estia_i01"/>
@@ -438,7 +438,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19944" name="鎮魂殺刃" type="Weapon">
+	<item id="19944" type="Weapon" name="레퀴엠 슬래셔 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9、物理攻擊力提升約288。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_polion_i01"/>
@@ -465,7 +465,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19945" name="鎮魂殺刃" type="Weapon">
+	<item id="19945" type="Weapon" name="레퀴엠 슬래셔 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_polion_i01"/>
@@ -492,7 +492,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19946" name="鎮魂殺刃" type="Weapon">
+	<item id="19946" type="Weapon" name="레퀴엠 슬래셔 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約79.5。PvP時提升所造成的傷害。強化+4時，額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_polion_i01"/>
@@ -519,7 +519,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19947" name="鎮魂復仇者" type="Weapon">
+	<item id="19947" type="Weapon" name="레퀴엠 어벤져 헤이스트 + Crt. 대미지">
 		<table name="#Plus">速度激發 + Crt.傷害</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊時物理攻擊力提升約1108。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_batista_i01"/>
@@ -547,7 +547,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19948" name="鎮魂復仇者" type="Weapon">
+	<item id="19948" type="Weapon" name="레퀴엠 어벤져 Crt. 대미지 + 포커스">
 		<table name="#Plus">Crt.傷害 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時物理攻擊力提升約1108、致命攻擊率提升約79.5。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_batista_i01"/>
@@ -575,7 +575,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19949" name="鎮魂復仇者" type="Weapon">
+	<item id="19949" type="Weapon" name="레퀴엠 어벤져 포커스 + 헤이스트">
 		<table name="#Plus">偵測 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.5、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害。</table>
 		<set name="icon" val="icon.weapon_batista_i01"/>
@@ -603,7 +603,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19950" name="鎮魂戰爪" type="Weapon">
+	<item id="19950" type="Weapon" name="레퀴엠 파이터 포커스 + 대미지업">
 		<table name="#Plus">偵測 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約78.9、物理攻擊力提升約288。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_fantasma_i01"/>
@@ -631,7 +631,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19951" name="鎮魂戰爪" type="Weapon">
+	<item id="19951" type="Weapon" name="레퀴엠 파이터 대미지업 + 헤이스트">
 		<table name="#Plus">傷害上升 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_fantasma_i01"/>
@@ -659,7 +659,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19952" name="鎮魂戰爪" type="Weapon">
+	<item id="19952" type="Weapon" name="레퀴엠 파이터 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約76.3。PvP時提升所造成的傷害。強化+4時，增加攻擊速度，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_fantasma_i01"/>
@@ -687,7 +687,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19953" name="鎮魂風暴者" type="Weapon">
+	<item id="19953" type="Weapon" name="레퀴엠 스토머 HP 드레인 + 가이던스">
 		<table name="#Plus">HP吸收 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。命中能力提升7.6。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_soryu_i01"/>
@@ -715,7 +715,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19954" name="鎮魂風暴者" type="Weapon">
+	<item id="19954" type="Weapon" name="레퀴엠 스토머 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.6、物理攻擊力提升約288。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_soryu_i01"/>
@@ -743,7 +743,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19955" name="鎮魂風暴者" type="Weapon">
+	<item id="19955" type="Weapon" name="레퀴엠 스토머 대미지업 + HP 드레인">
 		<table name="#Plus">傷害上升 + HP吸收</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約288。普通攻擊的同時能恢復自己的HP，恢復量為所造成傷害值的4%。PvP時提升所造成的傷害。強化+4時，額外增加連續攻擊。</table>
 		<set name="icon" val="icon.weapon_soryu_i01"/>
@@ -771,7 +771,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19956" name="鎮魂投弓" type="Weapon">
+	<item id="19956" type="Weapon" name="레퀴엠 스로워 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332、致命攻擊率提升約79.5。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_grabathus_i01"/>
@@ -800,7 +800,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19957" name="鎮魂投弓" type="Weapon">
+	<item id="19957" type="Weapon" name="레퀴엠 스로워 포커스 + 롱블로">
 		<table name="#Plus">偵測 + 遠程打擊</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.5、攻擊距離提升。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_grabathus_i01"/>
@@ -829,7 +829,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19958" name="鎮魂投弓" type="Weapon">
+	<item id="19958" type="Weapon" name="레퀴엠 스로워 롱블로 + 대미지업">
 		<table name="#Plus">遠程打擊 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊距離提升、物理攻擊力提升約288。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力。</table>
 		<set name="icon" val="icon.weapon_grabathus_i01"/>
@@ -858,7 +858,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19959" name="鎮魂射靈" type="Weapon">
+	<item id="19959" type="Weapon" name="레퀴엠 슈트제 포커스 + Crt. 슬로우">
 		<table name="#Plus">偵測 + Crt.緩速</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.5。致命攻擊時，以一定的機率造成目標移動速度下降。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_shyayaka_i01"/>
@@ -889,7 +889,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19960" name="鎮魂射靈" type="Weapon">
+	<item id="19960" type="Weapon" name="레퀴엠 슈트제 Crt. 슬로우 + 헤이스트">
 		<table name="#Plus">Crt.緩速 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊時，以一定的機率造成目標移動速度下降。攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_shyayaka_i01"/>
@@ -920,7 +920,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19961" name="鎮魂射靈" type="Weapon">
+	<item id="19961" type="Weapon" name="레퀴엠 슈트제 헤이스트 + 포커스">
 		<table name="#Plus">速度激發 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、致命攻擊率提升約79.5。PvP時提升所造成的傷害。強化+4時，增加攻擊速度。</table>
 		<set name="icon" val="icon.weapon_shyayaka_i01"/>
@@ -949,7 +949,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19962" name="鎮魂爆刃" type="Weapon">
+	<item id="19962" type="Weapon" name="레퀴엠 버스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_kaynon_i01"/>
@@ -979,7 +979,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19963" name="鎮魂爆刃" type="Weapon">
+	<item id="19963" type="Weapon" name="레퀴엠 버스터 매직홀드 + 마나업">
 		<table name="#Plus">魔法束縛 + 魔力上升</table>
 		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。MP最大值提升約30%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_kaynon_i01"/>
@@ -1009,7 +1009,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19964" name="鎮魂爆刃" type="Weapon">
+	<item id="19964" type="Weapon" name="레퀴엠 버스터 마나업 + 아큐멘">
 		<table name="#Plus">魔力上升 + 靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞MP最大值提升約30%、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命攻擊率。</table>
 		<set name="icon" val="icon.weapon_kaynon_i01"/>
@@ -1037,7 +1037,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19965" name="鎮魂術杖" type="Weapon">
+	<item id="19965" type="Weapon" name="레퀴엠 캐스터 엠파워 + 아큐멘">
 		<table name="#Plus">魔力催化 + 靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約296、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_anatrian_i01"/>
@@ -1066,7 +1066,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19966" name="鎮魂術杖" type="Weapon">
+	<item id="19966" type="Weapon" name="레퀴엠 캐스터 아큐멘 + 매직홀드">
 		<table name="#Plus">靈活思緒 + 魔法束縛</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%。對目標施展魔法技能時，以20%的機率施放樹精之足。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_anatrian_i01"/>
@@ -1097,7 +1097,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19967" name="鎮魂術杖" type="Weapon">
+	<item id="19967" type="Weapon" name="레퀴엠 캐스터 매직홀드 + 엠파워">
 		<table name="#Plus">魔法束縛 + 魔力催化</table>
 		<table name="#Desc">＜搜魂石特效＞對目標施展魔法技能時，以20%的機率施放樹精之足。魔法攻擊力提升約296。PvP時提升所造成的傷害。強化+4時，增加魔法命中能力和魔法致命傷害。</table>
 		<set name="icon" val="icon.weapon_anatrian_i01"/>
@@ -1128,7 +1128,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19968" name="鎮魂報恨者" type="Weapon">
+	<item id="19968" type="Weapon" name="레퀴엠 레트리뷰터 MP리제네레이션 + 아큐멘">
 		<table name="#Plus">魔力再生 + 靈活思緒</table>
 		<table name="#Desc">＜搜魂石特效＞提升MP的恢復速度、施法速度加快約15%。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_grangkaz_i01"/>
@@ -1157,7 +1157,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19969" name="鎮魂報恨者" type="Weapon">
+	<item id="19969" type="Weapon" name="레퀴엠 레트리뷰터 아큐멘 + 엠파워">
 		<table name="#Plus">靈活思緒 + 魔力催化</table>
 		<table name="#Desc">＜搜魂石特效＞施法速度加快約15%、魔法攻擊力提升約296。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_grangkaz_i01"/>
@@ -1186,7 +1186,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19970" name="鎮魂報恨者" type="Weapon">
+	<item id="19970" type="Weapon" name="레퀴엠 레트리뷰터 엠파워 + MP리제네레이션">
 		<table name="#Plus">魔力催化 + 魔力再生</table>
 		<table name="#Desc">＜搜魂石特效＞魔法攻擊力提升約296、提升MP的恢復速度。PvP時提升所造成的傷害。強化+4時，增加魔法攻擊力和魔法致命傷害、施法速度。</table>
 		<set name="icon" val="icon.weapon_grangkaz_i01"/>
@@ -1215,7 +1215,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19971" name="鎮魂雙刀" type="Weapon">
+	<item id="19971" type="Weapon" name="레퀴엠 듀얼소드 헤이스트 + 대미지업">
 		<table name="#Plus">速度激發 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞攻擊速度提升約15%、物理攻擊力提升約288。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -1242,7 +1242,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19972" name="鎮魂雙刀" type="Weapon">
+	<item id="19972" type="Weapon" name="레퀴엠 듀얼소드 대미지업 + 헬스">
 		<table name="#Plus">傷害上升 + 強健</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約415、HP最大值提升約25%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -1269,7 +1269,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19973" name="鎮魂雙刀" type="Weapon">
+	<item id="19973" type="Weapon" name="레퀴엠 듀얼소드 헬스 + 헤이스트">
 		<table name="#Plus">強健 + 速度激發</table>
 		<table name="#Desc">＜搜魂石特效＞HP最大值提升約25%、攻擊速度提升約15%。PvP時提升所造成的傷害。強化+4時，增加物理致命攻擊率，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualsword_i01"/>
@@ -1296,7 +1296,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19974" name="鎮魂雙匕首" type="Weapon">
+	<item id="19974" type="Weapon" name="레퀴엠 듀얼대거 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測</table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升約332、致命攻擊率提升約79.5。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1324,7 +1324,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19975" name="鎮魂雙匕首" type="Weapon">
+	<item id="19975" type="Weapon" name="레퀴엠 듀얼대거 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.5、命中能力提升7.6。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1352,7 +1352,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19976" name="鎮魂雙匕首" type="Weapon">
+	<item id="19976" type="Weapon" name="레퀴엠 듀얼대거 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升 </table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.8、物理攻擊力提升約288。PvP時提升所造成的傷害。強化+4時，增加物理致命傷害，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualdagger_i01"/>
@@ -1380,7 +1380,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19977" name="鎮魂雙鈍器" type="Weapon">
+	<item id="19977" type="Weapon" name="레퀴엠 듀얼블런트 포커스 + 가이던스">
 		<table name="#Plus">偵測 + 導引</table>
 		<table name="#Desc">＜搜魂石特效＞致命攻擊率提升約79.5、命中能力提升7.6。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
@@ -1408,7 +1408,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19978" name="鎮魂雙鈍器" type="Weapon">
+	<item id="19978" type="Weapon" name="레퀴엠 듀얼블런트 가이던스 + 대미지업">
 		<table name="#Plus">導引 + 傷害上升</table>
 		<table name="#Desc">＜搜魂石特效＞命中能力提升7.7、物理攻擊力提升約288。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
@@ -1436,7 +1436,7 @@
 			<enchant order="0x0C" stat="mAtk" val="0"/>
 		</for>
 	</item>
-	<item id="19979" name="鎮魂雙鈍器" type="Weapon">
+	<item id="19979" type="Weapon" name="레퀴엠 듀얼블런트 대미지업 + 포커스">
 		<table name="#Plus">傷害上升 + 偵測 </table>
 		<table name="#Desc">＜搜魂石特效＞物理攻擊力提升377、致命攻擊率提升約79.5。PvP時提升所造成的傷害。強化+4時，增加物理技能的威力，並額外增加物理攻擊力。</table>
 		<set name="icon" val="icon.weapon_r_dualblunt_i01"/>
