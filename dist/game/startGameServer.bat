@@ -1,6 +1,6 @@
 @echo off
 REM ------------------------------------------------------
-if not exist ..\libs\*.jar echo 您必須重新解壓縮「編譯完成」的 GS，才可以繼續執行
+if not exist ..\libs\*.jar echo "*.jar Not Found"
 if not exist ..\libs\*.jar echo.
 if not exist ..\libs\*.jar pause
 if not exist ..\libs\*.jar exit
