@@ -1,18 +1,18 @@
 /*
  * Copyright (C) 2004-2013 L2J Server
- *
+ * 
  * This file is part of L2J Server.
- *
+ * 
  * L2J Server is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *
+ * 
  * L2J Server is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- *
+ * 
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -23,8 +23,11 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.network.serverpackets.KeyPacket;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
+
+//Update by rocknow
 
 /**
  * This class ...
@@ -36,6 +39,7 @@ public final class ProtocolVersion extends L2GameClientPacket {
 	private static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	private int _version;
+	private final int _support = 440; // Update by rocknow
 	
 	@Override
 	protected void readImpl() {
@@ -51,8 +55,64 @@ public final class ProtocolVersion extends L2GameClientPacket {
 			}
 			// this is just a ping attempt from the new C2 client
 			getClient().close((L2GameServerPacket) null);
-		} else if (!Config.PROTOCOL_LIST.contains(_version)) {
-			LogRecord record = new LogRecord(Level.WARNING, "프로토콜 버전이 다릅니다.");
+		}
+		// Update by rocknow-Start
+		//@formatter:off
+		/*
+		else if (_version < (_support - 50))
+		{
+			LogRecord record = new LogRecord(Level.WARNING, "Protocol too old");
+			record.setParameters(new Object[]{_version, getClient()});
+			_logAccounting.log(record);
+			_log.info(getClient() + MessageTable.Messages[1].getExtra(1) +
+									MessageTable.Messages[1].getExtra(3) +
+									MessageTable.Messages[1].getExtra(2));
+			KeyPacket pk = new KeyPacket(getClient().enableCrypt(),0);
+			getClient().setProtocolOk(false);
+			getClient().close(pk);
+		}
+		else if (_version > (_support + 50))
+		{
+			LogRecord record = new LogRecord(Level.WARNING, "Protocol too new");
+			record.setParameters(new Object[]{_version, getClient()});
+			_logAccounting.log(record);
+			_log.info(getClient() + MessageTable.Messages[1].getExtra(1) +
+									MessageTable.Messages[1].getExtra(4) +
+									MessageTable.Messages[1].getExtra(2));
+			KeyPacket pk = new KeyPacket(getClient().enableCrypt(),0);
+			getClient().setProtocolOk(false);
+			getClient().close(pk);
+		}
+		*/
+		//@formatter:on
+		else if (_version < _support) {
+			LogRecord record = new LogRecord(Level.WARNING, "Older protocol");
+			record.setParameters(new Object[]
+			{
+				_version,
+				getClient()
+			});
+			_logAccounting.log(record);
+			_log.fine(getClient() + MessageTable.Messages[2].getExtra(1) + MessageTable.Messages[2].getExtra(4) + MessageTable.Messages[2].getExtra(2) + _version + MessageTable.Messages[2].getExtra(3) + MessageTable.Messages[2].getExtra(6));
+			KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 0);
+			getClient().setProtocolOk(false);
+			getClient().close(pk);
+		} else if (_version > _support) {
+			LogRecord record = new LogRecord(Level.WARNING, "Newer protocol");
+			record.setParameters(new Object[]
+			{
+				_version,
+				getClient()
+			});
+			_logAccounting.log(record);
+			_log.fine(getClient() + MessageTable.Messages[2].getExtra(1) + MessageTable.Messages[2].getExtra(5) + MessageTable.Messages[2].getExtra(2) + _version + MessageTable.Messages[2].getExtra(3) + MessageTable.Messages[2].getExtra(6));
+			KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 0);
+			getClient().setProtocolOk(false);
+			getClient().close(pk);
+		}
+		// Update by rocknow-End
+		else if (!Config.PROTOCOL_LIST.contains(_version)) {
+			LogRecord record = new LogRecord(Level.WARNING, "Wrong protocol");
 			record.setParameters(new Object[]
 			{
 				_version,

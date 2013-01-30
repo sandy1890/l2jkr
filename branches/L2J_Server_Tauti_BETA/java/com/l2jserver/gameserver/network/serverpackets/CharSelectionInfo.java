@@ -76,15 +76,15 @@ public class CharSelectionInfo extends L2GameServerPacket {
 	
 	@Override
 	protected final void writeImpl() {
-		writeC(9);
-		int size = _characterPackages.length;
+		writeC(0x09);
+		int size = (_characterPackages.length);
 		writeD(size);
 		
 		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-		writeD(7);
-		writeC(0);
-		writeC(1); // rocknow-God
-		writeD(0); // rocknow-God
+		writeD(0x07);
+		writeC(0x00);
+		writeC(0x01); // rocknow-God
+		writeD(0x00); // rocknow-God
 		
 		long lastAccess = 0L;
 		
@@ -96,6 +96,7 @@ public class CharSelectionInfo extends L2GameServerPacket {
 				}
 			}
 		}
+		
 		for (int i = 0; i < size; i++) {
 			CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 			
@@ -104,7 +105,7 @@ public class CharSelectionInfo extends L2GameServerPacket {
 			writeS(_loginName);
 			writeD(_sessionId);
 			writeD(charInfoPackage.getClanId());
-			writeD(0); // ??
+			writeD(0x00); // ??
 			
 			writeD(charInfoPackage.getSex());
 			writeD(charInfoPackage.getRace());
@@ -115,7 +116,7 @@ public class CharSelectionInfo extends L2GameServerPacket {
 				writeD(charInfoPackage.getBaseClassId());
 			}
 			
-			writeD(1); // active ??
+			writeD(0x01); // active ??
 			
 			writeD(charInfoPackage.getX()); // x
 			writeD(charInfoPackage.getY()); // y
@@ -126,8 +127,8 @@ public class CharSelectionInfo extends L2GameServerPacket {
 			
 			writeD(charInfoPackage.getSp());
 			writeQ(charInfoPackage.getExp());
-			writeF((float) (charInfoPackage.getExp() - ExperienceTable.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (float) (ExperienceTable.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceTable.getInstance().getExpForLevel(charInfoPackage.getLevel())));
-			
+			writeF((float) (charInfoPackage.getExp() - ExperienceTable.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceTable.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceTable.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High Five
+																																																																								// exp %
 			writeD(charInfoPackage.getLevel());
 			
 			int Karma = charInfoPackage.getKarma(); // rocknow-God-Test
@@ -137,13 +138,13 @@ public class CharSelectionInfo extends L2GameServerPacket {
 			writeD(Karma); // karma //rocknow-God-Test
 			writeD(charInfoPackage.getPkKills());
 			writeD(charInfoPackage.getPvPKills());
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
+			writeD(0x00);
 			
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_REAR));
@@ -172,6 +173,21 @@ public class CharSelectionInfo extends L2GameServerPacket {
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_DECO6));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_BELT));
 			
+			//@formatter:off
+			// protocol 440 ilovefree
+			/*
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			writeD(0); //rocknow-God
+			*/
+			//@formatter:on
+			
 			writeD(charInfoPackage.getHairStyle());
 			writeD(charInfoPackage.getHairColor());
 			writeD(charInfoPackage.getFace());
@@ -181,33 +197,33 @@ public class CharSelectionInfo extends L2GameServerPacket {
 			
 			long deleteTime = charInfoPackage.getDeleteTimer();
 			int deletedays = 0;
-			if (deleteTime > 0L) {
-				deletedays = (int) ((deleteTime - System.currentTimeMillis()) / 1000L);
+			if (deleteTime > 0) {
+				deletedays = (int) ((deleteTime - System.currentTimeMillis()) / 1000);
 			}
 			writeD(deletedays); // days left before
 			// delete .. if != 0
 			// then char is inactive
 			writeD(charInfoPackage.getClassId());
 			if (i == _activeId) {
-				writeD(1);
+				writeD(0x01);
 			} else {
-				writeD(0); // c3 auto-select char
+				writeD(0x00); // c3 auto-select char
 			}
-			writeC(charInfoPackage.getEnchantEffect() <= 127 ? charInfoPackage.getEnchantEffect() : 127);
+			writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
 			writeH(0);
 			writeH(0);
 			// writeD(charInfoPackage.getAugmentationId());
 			
 			// writeD(charInfoPackage.getTransformId()); // Used to display Transformations
-			writeD(0); // Currently on retail when you are on character select you don't see your transformation.
+			writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
 			
 			// Freya by Vistall:
 			writeD(0); // npdid - 16024 Tame Tiny Baby Kookaburra A9E89C
 			writeD(0); // level
 			writeD(0); // ?
 			writeD(0); // food? - 1200
-			writeF(0.0D); // max Hp
-			writeF(0.0D); // cur Hp
+			writeF(0); // max Hp
+			writeF(0); // cur Hp
 			
 			// High Five by Vistall:
 			writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
