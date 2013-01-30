@@ -18,9 +18,6 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.Iterator;
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.MessageTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -32,27 +29,27 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 
 //@formatter:off
 /**
- * 0000: 03 32 15 00 00 44 fe 00 00 80 f1 ff ff 00 00 00    .2...D..........<p>
- * 0010: 00 6b b4 c0 4a 45 00 6c 00 6c 00 61 00 6d 00 69    .k..JE.l.l.a.m.i<p>
- * 0020: 00 00 00 01 00 00 00 01 00 00 00 12 00 00 00 00    ................<p>
- * 0030: 00 00 00 2a 00 00 00 42 00 00 00 71 02 00 00 31    ...*...B...q...1<p>
- * 0040: 00 00 00 18 00 00 00 1f 00 00 00 25 00 00 00 00    ...........%....<p>
- * 0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f9    ................<p>
- * 0060: 00 00 00 b3 01 00 00 00 00 00 00 00 00 00 00 7d    ...............}<p>
- * 0070: 00 00 00 5a 00 00 00 32 00 00 00 32 00 00 00 00    ...Z...2...2....<p>
- * 0080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 67    ...............g<p>
- * 0090: 66 66 66 66 66 f2 3f 5f 63 97 a8 de 1a f9 3f 00    fffff.?_c.....?.<p>
- * 00a0: 00 00 00 00 00 1e 40 00 00 00 00 00 00 37 40 01    .............7..<p>
- * 00b0: 00 00 00 01 00 00 00 01 00 00 00 00 00 c1 0c 00    ................<p>
- * 00c0: 00 00 00 00 00 00 00 00 00 01 01 00 00 00 00 00    ................<p>
- * 00d0: 00 00<p>
- * <p>
- *  dddddSdddddddddddddddddddddddddddffffdddSdddccccccc (h)<p>
- *  dddddSdddddddddddddddddddddddddddffffdddSdddddccccccch
- *  dddddSddddddddddddddddddddddddddddffffdddSdddddccccccch (h) c (dchd) ddc dcc c cddd d
- *  dddddSdddddddddddddddhhhhhhhhhhhhhhhhhhhhhhhhddddddddddddddffffdddSdddddccccccch [h] c (ddhd) ddc c ddc cddd d d dd d d d
- * @version $Revision: 1.7.2.6.2.11 $ $Date: 2005/04/11 10:05:54 $
- */
+* 0000: 03 32 15 00 00 44 fe 00 00 80 f1 ff ff 00 00 00    .2...D..........<p>
+* 0010: 00 6b b4 c0 4a 45 00 6c 00 6c 00 61 00 6d 00 69    .k..JE.l.l.a.m.i<p>
+* 0020: 00 00 00 01 00 00 00 01 00 00 00 12 00 00 00 00    ................<p>
+* 0030: 00 00 00 2a 00 00 00 42 00 00 00 71 02 00 00 31    ...*...B...q...1<p>
+* 0040: 00 00 00 18 00 00 00 1f 00 00 00 25 00 00 00 00    ...........%....<p>
+* 0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f9    ................<p>
+* 0060: 00 00 00 b3 01 00 00 00 00 00 00 00 00 00 00 7d    ...............}<p>
+* 0070: 00 00 00 5a 00 00 00 32 00 00 00 32 00 00 00 00    ...Z...2...2....<p>
+* 0080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 67    ...............g<p>
+* 0090: 66 66 66 66 66 f2 3f 5f 63 97 a8 de 1a f9 3f 00    fffff.?_c.....?.<p>
+* 00a0: 00 00 00 00 00 1e 40 00 00 00 00 00 00 37 40 01    .............7..<p>
+* 00b0: 00 00 00 01 00 00 00 01 00 00 00 00 00 c1 0c 00    ................<p>
+* 00c0: 00 00 00 00 00 00 00 00 00 01 01 00 00 00 00 00    ................<p>
+* 00d0: 00 00<p>
+* <p>
+*  dddddSdddddddddddddddddddddddddddffffdddSdddccccccc (h)<p>
+*  dddddSdddddddddddddddddddddddddddffffdddSdddddccccccch
+*  dddddSddddddddddddddddddddddddddddffffdddSdddddccccccch (h) c (dchd) ddc dcc c cddd d
+*  dddddSdddddddddddddddhhhhhhhhhhhhhhhhhhhhhhhhddddddddddddddffffdddSdddddccccccch [h] c (ddhd) ddc c ddc cddd d d dd d d d
+* @version $Revision: 1.7.2.6.2.11 $ $Date: 2005/04/11 10:05:54 $
+*/
 //@formatter:on
 public class CharInfo extends L2GameServerPacket {
 	
@@ -139,15 +136,15 @@ public class CharInfo extends L2GameServerPacket {
 			L2NpcTemplate template = NpcTable.getInstance().getTemplate(_activeChar.getPoly().getPolyId());
 			
 			if (template != null) {
-				writeC(12);
+				writeC(0x0c);
 				writeD(_objId);
-				writeD(template.getNpcId() + 0xf4240); // npctype id //rocknow-Sync L2J
-				writeD(_activeChar.getKarma() <= 0 ? 0 : 1);
+				writeD(template.getNpcId() + 1000000); // npctype id //rocknow-Sync L2J
+				writeD(_activeChar.getKarma() > 0 ? 1 : 0);
 				writeD(_x);
 				writeD(_y);
 				writeD(_z);
 				writeD(_heading);
-				writeD(0);
+				writeD(0x00);
 				writeD(_mAtkSpd);
 				writeD(_pAtkSpd);
 				writeD(_runSpd); // TODO: the order of the speeds should be confirmed
@@ -181,9 +178,6 @@ public class CharInfo extends L2GameServerPacket {
 				writeD(-1); // High Five NPCString ID //rocknow-Sync L2J
 				
 				if (gmSeeInvis) {
-					/*
-					 * Move To MessageTable For L2JTW writeS("Invisible");
-					 */
 					writeS(MessageTable.Messages[214].getMessage());
 				} else {
 					writeS(_activeChar.getAppearance().getVisibleTitle());
@@ -197,7 +191,7 @@ public class CharInfo extends L2GameServerPacket {
 				}
 				writeD(Karma); // karma ?? //rocknow-Sync L2J //rocknow-God-Test
 				
-				writeD(0); // rocknow-God
+				writeD(0x00); // rocknow-God
 				
 				writeD(_activeChar.getClanId()); // clan id
 				writeD(_activeChar.getClanCrestId()); // crest id
@@ -207,14 +201,14 @@ public class CharInfo extends L2GameServerPacket {
 				writeC(_activeChar.getTeam()); // C3 team circle 1-blue, 2-red
 				writeF(template.getfCollisionRadius());
 				writeF(template.getfCollisionHeight());
-				writeD(0); // C4
+				writeD(0x00); // C4
 				writeD(_activeChar.isFlying() ? 2 : 0); // is Flying again? //rocknow-Sync L2J
-				writeD(0);
-				writeD(0);
-				writeC(template.getAIDataStatic().showName() ? 1 : 0); // show name //rocknow-Sync L2J
-				writeC(template.getAIDataStatic().isTargetable() ? 1 : 0); // targetable //rocknow-Sync L2J
-				writeD(0); // rocknow-God
-				writeD(0); // rocknow-Sync L2J
+				writeD(0x00);
+				writeD(0x00);
+				writeC(template.getAIDataStatic().showName() ? 0x01 : 0x00); // show name //rocknow-Sync L2J
+				writeC(template.getAIDataStatic().isTargetable() ? 0x01 : 0x00); // targetable //rocknow-Sync L2J
+				writeD(0x00); // rocknow-God
+				writeD(0x00); // rocknow-Sync L2J
 				// rocknow-God
 				writeD((int) _activeChar.getCurrentHp()); // rocknow-God
 				writeD(_activeChar.getMaxHp()); // rocknow-God
@@ -222,22 +216,21 @@ public class CharInfo extends L2GameServerPacket {
 				writeD(_activeChar.getMaxMp()); // rocknow-God
 				writeD((int) _activeChar.getCurrentCp()); // rocknow-God
 				writeD(_activeChar.getMaxCp()); // rocknow-God
-				writeD(0); // rocknow-God
-				writeC(0); // rocknow-God
-				writeF(1.0D); // rocknow-God
+				writeD(0x00); // rocknow-God
+				writeC(0x00); // rocknow-God
+				writeF(0x01); // rocknow-God
 				// l2jtw start
-				List<?> el = _activeChar.getEffectIdList();
+				java.util.List<Integer> el = _activeChar.getEffectIdList();
 				writeD(el.size());
-				int i;
-				for (Iterator<?> i$ = el.iterator(); i$.hasNext(); writeD(i)) {
-					i = ((Integer) i$.next()).intValue();
+				for (int i : el) {
+					writeD(i);
 				}
 				// l2jtw end
 			} else {
-				_log.warning((new StringBuilder()).append("Character ").append(_activeChar.getName()).append(" (").append(_activeChar.getObjectId()).append(") morphed in a Npc (").append(_activeChar.getPoly().getPolyId()).append(") w/o template.").toString());
+				_log.warning("Character " + _activeChar.getName() + " (" + _activeChar.getObjectId() + ") morphed in a Npc (" + _activeChar.getPoly().getPolyId() + ") w/o template.");
 			}
 		} else {
-			writeC(49);
+			writeC(0x31);
 			writeD(_x);
 			writeD(_y);
 			writeD(_z);
@@ -307,8 +300,15 @@ public class CharInfo extends L2GameServerPacket {
 			writeD(_inv.getPaperdollAugmentationId(Inventory.PAPERDOLL_DECO6));
 			writeD(_inv.getPaperdollAugmentationId(Inventory.PAPERDOLL_BELT));
 			
-			writeD(0);
-			writeD(1);
+			writeD(0x00);
+			writeD(0x01);
+			// 440 protocol ilovefree
+			// writeD(0); //rocknow-God
+			// writeD(0); //rocknow-God
+			// writeD(0); //rocknow-God
+			// writeD(0); // rocknow-God
+			// writeD(0); // rocknow-God
+			// writeD(0); // rocknow-God
 			writeD(0); // rocknow-God
 			writeD(0); // rocknow-God
 			writeD(0); // rocknow-God
@@ -324,7 +324,7 @@ public class CharInfo extends L2GameServerPacket {
 			writeD(_mAtkSpd);
 			writeD(_pAtkSpd);
 			
-			writeD(0);
+			writeD(0x00);
 			
 			writeD(_runSpd); // TODO: the order of the speeds should be confirmed
 			writeD(_walkSpd);
@@ -337,9 +337,6 @@ public class CharInfo extends L2GameServerPacket {
 			writeF(_activeChar.getMovementSpeedMultiplier()); // _activeChar.getProperMultiplier()
 			writeF(_activeChar.getAttackSpeedMultiplier()); // _activeChar.getAttackSpeedMultiplier()
 			
-			/*
-			 * l2jtw start writeF(_activeChar.getCollisionRadius()); //rocknow-Sync L2J writeF(_activeChar.getCollisionHeight()); //rocknow-Sync L2J
-			 */
 			if (_activeChar.isTransformed()) {
 				writeF(_activeChar.getTransformation().getCollisionRadius());
 				writeF(_activeChar.getTransformation().getCollisionHeight());
@@ -347,16 +344,12 @@ public class CharInfo extends L2GameServerPacket {
 				writeF(_activeChar.getCollisionRadius());
 				writeF(_activeChar.getCollisionHeight());
 			}
-			// l2jtw end
 			
 			writeD(_activeChar.getAppearance().getHairStyle());
 			writeD(_activeChar.getAppearance().getHairColor());
 			writeD(_activeChar.getAppearance().getFace());
 			
 			if (gmSeeInvis) {
-				/*
-				 * Move To MessageTable For L2JTW writeS("Invisible");
-				 */
 				writeS(MessageTable.Messages[214].getMessage());
 			} else {
 				writeS(_activeChar.getAppearance().getVisibleTitle());
@@ -394,30 +387,25 @@ public class CharInfo extends L2GameServerPacket {
 			writeC(_activeChar.getPrivateStoreType()); // 1 - sellshop
 			
 			writeH(_activeChar.getCubics().size());
-			int id;
-			for (Iterator<?> i$ = _activeChar.getCubics().keySet().iterator(); i$.hasNext(); writeH(id)) {
-				id = ((Integer) i$.next()).intValue();
+			for (int id : _activeChar.getCubics().keySet()) {
+				writeH(id);
 			}
 			
 			writeC(_activeChar.isInPartyMatchRoom() ? 1 : 0);
 			
-			/*
-			 * //rocknow-God if (gmSeeInvis) { writeD( (_activeChar.getAbnormalEffect() | AbnormalEffect.STEALTH.getMask()) ); } else { writeD(_activeChar.getAbnormalEffect()); } //rocknow-God
-			 */
-			
 			writeC(_activeChar.isFlyingMounted() ? 2 : 0);
 			
 			writeH(_activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
-			writeD(_activeChar.getMountNpcId() <= 0 ? 0 : _activeChar.getMountNpcId() + 0xf4240); // rocknow-God
+			writeD(_activeChar.getMountNpcId() > 0 ? _activeChar.getMountNpcId() + 1000000 : 0); // rocknow-God
 			writeD(_activeChar.getClassId().getId());
-			writeD(0); // ?
-			writeC(!_activeChar.isMounted() && (_airShipHelm == 0) ? _activeChar.getEnchantEffect() : 0);
+			writeD(0x00); // ?
+			writeC(_activeChar.isMounted() || (_airShipHelm != 0) ? 0 : _activeChar.getEnchantEffect());
 			
 			writeC(_activeChar.getTeam()); // team circle around feet 1= Blue, 2 = red
 			
 			writeD(_activeChar.getClanCrestLargeId());
 			writeC(_activeChar.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
-			writeC(!_activeChar.isHero() && (!_activeChar.isGM() || !Config.GM_HERO_AURA) ? 0 : 1); // Hero Aura
+			writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
 			
 			writeC(_activeChar.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
 			writeD(_activeChar.getFishx());
@@ -436,13 +424,13 @@ public class CharInfo extends L2GameServerPacket {
 			if (_activeChar.isCursedWeaponEquipped()) {
 				writeD(CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()));
 			} else {
-				writeD(0);
+				writeD(0x00);
 			}
 			
 			if (_activeChar.getClanId() > 0) {
 				writeD(_activeChar.getClan().getReputationScore());
 			} else {
-				writeD(0);
+				writeD(0x00);
 			}
 			
 			// T1
@@ -450,7 +438,7 @@ public class CharInfo extends L2GameServerPacket {
 			writeD(_activeChar.getAgathionId());
 			
 			// T2
-			writeD(1);
+			writeD(0x01);
 			
 			// T2.3
 			writeD(0); // rocknow-God
@@ -465,25 +453,10 @@ public class CharInfo extends L2GameServerPacket {
 			writeD(0); // rocknow-God
 			writeC(0); // rocknow-God
 			
-			//@formatter:off
-			// l2jtw start
-			/*
-			writeD(2); // rocknow-God AbnormalEffect-Number
-			// writeD(0); //rocknow-God AbnormalEffect-ID
-			if (_activeChar.getAppearance().getInvisible() && _activeChar.isGM()) {
-				writeD(_activeChar.getAbnormalEffect() | AbnormalEffect.STEALTH.getMask()); // rocknow-God
-			} else {
-				// rocknow-God
-				writeD(_activeChar.getAbnormalEffect()); // rocknow-God
-			}
-			writeD(_activeChar.getSpecialEffect()); // rocknow-God
-			*/
-			//@formatter:on
-			List<?> el = _activeChar.getEffectIdList();
+			java.util.List<Integer> el = _activeChar.getEffectIdList();
 			writeD(el.size());
-			int i;
-			for (Iterator<?> i$ = el.iterator(); i$.hasNext(); writeD(i)) {
-				i = ((Integer) i$.next()).intValue();
+			for (int i : el) {
+				writeD(i);
 			}
 			// l2jtw end
 			writeC(0); // rocknow-God
