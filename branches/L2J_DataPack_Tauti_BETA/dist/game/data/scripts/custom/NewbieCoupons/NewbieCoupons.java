@@ -136,7 +136,7 @@ public class NewbieCoupons extends Quest {
 	public String onTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
 		if (st == null) {
-			st = this.newQuestState(player);
+			st = newQuestState(player);
 		}
 		
 		return "30598.htm";

@@ -78,7 +78,7 @@ public class PurchaseBracelet extends Quest {
 		String htmltext = "";
 		QuestState st = player.getQuestState(qn);
 		if (st == null) {
-			st = this.newQuestState(player);
+			st = newQuestState(player);
 		}
 		htmltext = "30098.htm";
 		return htmltext;

@@ -159,7 +159,7 @@ public class Sailren extends L2AttackableAIScript {
 			if (temp > 600000) {
 				npc.deleteMe();
 				GrandBossManager.getInstance().setBossStatus(SAILREN, DORMANT);
-				this.cancelQuestTimer("sailren_despawn", npc, null);
+				cancelQuestTimer("sailren_despawn", npc, null);
 			}
 		} else if (event.equalsIgnoreCase("mob_has_arrived")) {
 			int dx = Math.abs(npc.getX() - 27628);
@@ -171,7 +171,7 @@ public class Sailren extends L2AttackableAIScript {
 				npc.getSpawn().setLocy(-6109);
 				npc.getSpawn().setLocz(-1982);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				this.cancelQuestTimer("mob_has_arrived", npc, null);
+				cancelQuestTimer("mob_has_arrived", npc, null);
 			}
 		} else if (event.equalsIgnoreCase("spawn_cubes")) {
 			addSpawn(32107, 27734, -6838, -1982, 0, false, 600000);
@@ -226,7 +226,7 @@ public class Sailren extends L2AttackableAIScript {
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
 		if ((GrandBossManager.getInstance().getBossStatus(SAILREN) == FIGHTING) && (npc.getNpcId() == SAILREN)) {
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-			this.cancelQuestTimer("sailren_despawn", npc, null);
+			cancelQuestTimer("sailren_despawn", npc, null);
 			this.startQuestTimer("spawn_cubes", 5000, npc, null);
 			GrandBossManager.getInstance().setBossStatus(SAILREN, DEAD);
 			long respawnTime = (Config.Interval_Of_Sailren_Spawn + Rnd.get(Config.Random_Of_Sailren_Spawn));
@@ -236,13 +236,13 @@ public class Sailren extends L2AttackableAIScript {
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(SAILREN, info);
 		} else if ((GrandBossManager.getInstance().getBossStatus(SAILREN) == FIGHTING) && (npc.getNpcId() == VELOCIRAPTOR)) {
-			this.cancelQuestTimer("sailren_despawn", npc, null);
+			cancelQuestTimer("sailren_despawn", npc, null);
 			this.startQuestTimer("waiting2", 15000, npc, null);
 		} else if ((GrandBossManager.getInstance().getBossStatus(SAILREN) == FIGHTING) && (npc.getNpcId() == PTEROSAUR)) {
-			this.cancelQuestTimer("sailren_despawn", npc, null);
+			cancelQuestTimer("sailren_despawn", npc, null);
 			this.startQuestTimer("waiting3", 15000, npc, null);
 		} else if ((GrandBossManager.getInstance().getBossStatus(SAILREN) == FIGHTING) && (npc.getNpcId() == TYRANNOSAURUS)) {
-			this.cancelQuestTimer("sailren_despawn", npc, null);
+			cancelQuestTimer("sailren_despawn", npc, null);
 			this.startQuestTimer("waiting_boss", 15000, npc, null);
 		}
 		return super.onKill(npc, killer, isPet);

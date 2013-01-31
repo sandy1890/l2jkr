@@ -2105,8 +2105,8 @@ public class CrystalCaverns extends Quest {
 				addSpawn((getRandom(10) < 5 ? 29116 : 29117), 154243, 141411, -12741, 55500, false, 300000, false, world.instanceId);
 				// Update by rocknow-End
 				addSpawn(ORACLE_GUIDE_4, 153572, 142075, -12738, 10800, false, 0, false, world.instanceId);
-				this.cancelQuestTimer("loc_check", npc, null); // Update by rocknow
-				this.cancelQuestTimers("baylor_skill");
+				cancelQuestTimer("loc_check", npc, null); // Update by rocknow
+				cancelQuestTimers("baylor_skill");
 			} else if (event.equalsIgnoreCase("baylorEffect0")) {
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				npc.broadcastSocialAction(1);

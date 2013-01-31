@@ -121,7 +121,7 @@ public class VarkaSilenosSupport extends Quest {
 		String htmltext = Quest.getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
 		if (st == null) {
-			st = this.newQuestState(player);
+			st = newQuestState(player);
 		}
 		int npcId = npc.getNpcId();
 		int Alevel = player.getAllianceWithVarkaKetra();
