@@ -25,7 +25,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 public final class JoinPledge extends L2GameServerPacket {
 	private static final String _S__45_JOINPLEDGE = "[S] 2d JoinPledge";
 	
-	private int _pledgeId;
+	private final int _pledgeId;
 	
 	public JoinPledge(int pledgeId) {
 		_pledgeId = pledgeId;

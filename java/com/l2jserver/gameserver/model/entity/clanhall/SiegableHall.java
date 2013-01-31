@@ -88,7 +88,7 @@ public final class SiegableHall extends ClanHall {
 	}
 	
 	public void spawnDoor(boolean isDoorWeak) {
-		for (L2DoorInstance door : this.getDoors()) {
+		for (L2DoorInstance door : getDoors()) {
 			if (door.isDead()) {
 				door.doRevive();
 				if (isDoorWeak) {

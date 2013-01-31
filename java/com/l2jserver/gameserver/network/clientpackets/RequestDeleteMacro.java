@@ -30,8 +30,9 @@ public final class RequestDeleteMacro extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (getClient().getActiveChar() == null)
+		if (getClient().getActiveChar() == null) {
 			return;
+		}
 		getClient().getActiveChar().deleteMacro(_id);
 	}
 	

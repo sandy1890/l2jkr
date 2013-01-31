@@ -37,15 +37,18 @@ public class RequestExAddContactToContactList extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (!Config.ALLOW_MAIL)
+		if (!Config.ALLOW_MAIL) {
 			return;
+		}
 		
-		if (_name == null)
+		if (_name == null) {
 			return;
+		}
 		
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		boolean charAdded = activeChar.getContactList().add(_name);
 		activeChar.sendPacket(new ExConfirmAddingContact(_name, charAdded));

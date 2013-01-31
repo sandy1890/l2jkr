@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class ChairSit extends L2GameServerPacket {
 	private static final String _S__e1_CHAIRSIT = "[S] ed ChairSit";
 	
-	private L2PcInstance _activeChar;
-	private int _staticObjectId;
+	private final L2PcInstance _activeChar;
+	private final int _staticObjectId;
 	
 	/**
 	 * @param player

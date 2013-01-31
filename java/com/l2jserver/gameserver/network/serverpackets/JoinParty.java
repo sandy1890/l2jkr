@@ -29,7 +29,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 public final class JoinParty extends L2GameServerPacket {
 	private static final String _S__4C_JOINPARTY = "[S] 3a JoinParty";
 	
-	private int _response;
+	private final int _response;
 	
 	/**
 	 * @param response

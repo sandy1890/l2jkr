@@ -58,12 +58,14 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (_skillId <= 0 || _skillLvl <= 0) // minimal sanity check
+		if ((_skillId <= 0) || (_skillLvl <= 0)) {
 			return;
+		}
 		
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (player.getClassId().level() < 3) // requires to have 3rd class quest completed
 		{
@@ -82,22 +84,25 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket {
 		}
 		
 		L2EnchantSkillLearn s = EnchantGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
-		if (s == null)
+		if (s == null) {
 			return;
+		}
 		
-		if (_skillLvl % 100 == 0) {
+		if ((_skillLvl % 100) == 0) {
 			_skillLvl = s.getBaseLevel();
 		}
 		
 		L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
-		if (skill == null)
+		if (skill == null) {
 			return;
+		}
 		
 		int reqItemId = EnchantGroupsData.UNTRAIN_ENCHANT_BOOK;
 		
 		final int beforeUntrainSkillLevel = player.getSkillLevel(_skillId);
-		if (beforeUntrainSkillLevel - 1 != _skillLvl && (beforeUntrainSkillLevel % 100 != 1 || _skillLvl != s.getBaseLevel()))
+		if (((beforeUntrainSkillLevel - 1) != _skillLvl) && (((beforeUntrainSkillLevel % 100) != 1) || (_skillLvl != s.getBaseLevel()))) {
 			return;
+		}
 		
 		EnchantSkillHolder esd = s.getEnchantSkillHolder(beforeUntrainSkillLevel);
 		

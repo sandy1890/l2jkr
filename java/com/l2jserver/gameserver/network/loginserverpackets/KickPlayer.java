@@ -22,7 +22,7 @@ import com.l2jserver.util.network.BaseRecievePacket;
 
 public class KickPlayer extends BaseRecievePacket {
 	
-	private String _account;
+	private final String _account;
 	
 	/**
 	 * @param decrypt

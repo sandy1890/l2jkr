@@ -39,12 +39,14 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
-		if (item == null)
+		if (item == null) {
 			return;
+		}
 		
 		if (!isValid(activeChar, item)) {
 			// Different system message here

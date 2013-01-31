@@ -26,10 +26,10 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public class TargetUnselected extends L2GameServerPacket {
 	private static final String _S__3A_TARGETUNSELECTED = "[S] 24 TargetUnselected";
-	private int _targetObjId;
-	private int _x;
-	private int _y;
-	private int _z;
+	private final int _targetObjId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	/**
 	 * @param character

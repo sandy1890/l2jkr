@@ -32,9 +32,9 @@ import com.l2jserver.gameserver.model.L2World;
  */
 public class FriendStatusPacket extends L2GameServerPacket {
 	private static final String _S__FA_FRIENDLIST = "[S] 77 FriendStatusPacket";
-	private boolean _online;
-	private int _objid;
-	private String _name;
+	private final boolean _online;
+	private final int _objid;
+	private final String _name;
 	
 	public FriendStatusPacket(int objId) {
 		_objid = objId;

@@ -47,7 +47,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 	@Override
 	protected void readImpl() {
 		final int count = readD();
-		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
 		}
 		
@@ -55,7 +55,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 		for (int i = 0; i < count; i++) {
 			int objId = readD();
 			long cnt = readQ();
-			if (objId < 1 || cnt < 0) {
+			if ((objId < 1) || (cnt < 0)) {
 				_items = null;
 				return;
 			}
@@ -65,12 +65,14 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (_items == null)
+		if (_items == null) {
 			return;
+		}
 		
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("withdraw")) {
 			/*
@@ -81,8 +83,9 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 		}
 		
 		final ItemContainer warehouse = player.getActiveWarehouse();
-		if (warehouse == null)
+		if (warehouse == null) {
 			return;
+		}
 		
 		final L2Npc manager = player.getLastFolkNPC();
 		if ((manager == null
@@ -90,8 +93,10 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 		 * l2jtw start || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())
 		 */
 		))
+		{
 			// l2jtw end
 			return;
+		}
 		
 		if (!(warehouse instanceof PcWarehouse) && !player.getAccessLevel().allowTransaction()) {
 			/*
@@ -102,14 +107,16 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 		}
 		
 		// Alt game - Karma punishment
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && player.getKarma() > 0)
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (player.getKarma() > 0)) {
 			return;
+		}
 		
 		if (Config.ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH) {
-			if (warehouse instanceof ClanWarehouse && ((player.getClanPrivileges() & L2Clan.CP_CL_VIEW_WAREHOUSE) != L2Clan.CP_CL_VIEW_WAREHOUSE))
+			if ((warehouse instanceof ClanWarehouse) && ((player.getClanPrivileges() & L2Clan.CP_CL_VIEW_WAREHOUSE) != L2Clan.CP_CL_VIEW_WAREHOUSE)) {
 				return;
+			}
 		} else {
-			if (warehouse instanceof ClanWarehouse && !player.isClanLeader()) {
+			if ((warehouse instanceof ClanWarehouse) && !player.isClanLeader()) {
 				player.sendPacket(SystemMessageId.ONLY_CLAN_LEADER_CAN_RETRIEVE_ITEMS_FROM_CLAN_WAREHOUSE);
 				return;
 			}
@@ -121,16 +128,17 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 		for (ItemHolder i : _items) {
 			// Calculate needed slots
 			L2ItemInstance item = warehouse.getItemByObjectId(i.getId());
-			if (item == null || item.getCount() < i.getCount()) {
+			if ((item == null) || (item.getCount() < i.getCount())) {
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to withdraw non-existent item from warehouse.", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			weight += i.getCount() * item.getItem().getWeight();
-			if (!item.isStackable())
+			if (!item.isStackable()) {
 				slots += i.getCount();
-			else if (player.getInventory().getItemByItemId(item.getItemId()) == null)
+			} else if (player.getInventory().getItemByItemId(item.getItemId()) == null) {
 				slots++;
+			}
 		}
 		
 		// Item Max Limit Check
@@ -149,7 +157,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (ItemHolder i : _items) {
 			L2ItemInstance oldItem = warehouse.getItemByObjectId(i.getId());
-			if (oldItem == null || oldItem.getCount() < i.getCount()) {
+			if ((oldItem == null) || (oldItem.getCount() < i.getCount())) {
 				_log.warning("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
 				return;
 			}
@@ -160,18 +168,20 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket {
 			}
 			
 			if (playerIU != null) {
-				if (newItem.getCount() > i.getCount())
+				if (newItem.getCount() > i.getCount()) {
 					playerIU.addModifiedItem(newItem);
-				else
+				} else {
 					playerIU.addNewItem(newItem);
+				}
 			}
 		}
 		
 		// Send updated item list to the player
-		if (playerIU != null)
+		if (playerIU != null) {
 			player.sendPacket(playerIU);
-		else
+		} else {
 			player.sendPacket(new ItemList(player, false));
+		}
 		
 		// Update current load status on player
 		StatusUpdate su = new StatusUpdate(player);

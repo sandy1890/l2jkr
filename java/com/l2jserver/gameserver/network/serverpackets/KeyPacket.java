@@ -25,8 +25,8 @@ package com.l2jserver.gameserver.network.serverpackets;
 public final class KeyPacket extends L2GameServerPacket {
 	private static final String _S__01_KEYPACKET = "[S] 2e KeyPacket";
 	
-	private byte[] _key;
-	private int _id;
+	private final byte[] _key;
+	private final int _id;
 	
 	public KeyPacket(byte[] key, int id) {
 		_key = key;

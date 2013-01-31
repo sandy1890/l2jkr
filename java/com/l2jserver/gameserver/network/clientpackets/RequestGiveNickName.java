@@ -43,8 +43,9 @@ public class RequestGiveNickName extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		// Noblesse can bestow a title to themselves
 		if (activeChar.isNoble() && _target.matches(activeChar.getName())) {
@@ -72,16 +73,18 @@ public class RequestGiveNickName extends L2GameClientPacket {
 					member.sendPacket(sm);
 					member.broadcastTitleInfo();
 					sm = null;
-				} else
+				} else {
 					/*
 					 * activeChar.sendMessage("Target needs to be online to get a title");
 					 */
 					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
-			} else
+				}
+			} else {
 				/*
 				 * activeChar.sendMessage("Target does not belong to your clan");
 				 */
 				activeChar.sendPacket(SystemMessageId.TARGET_MUST_BE_IN_CLAN);
+			}
 		}
 	}
 	

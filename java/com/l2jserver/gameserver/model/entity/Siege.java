@@ -1005,7 +1005,7 @@ public class Siege implements Siegable {
 			if (siege == this) {
 				continue;
 			}
-			if (siege.getSiegeDate().get(Calendar.DAY_OF_WEEK) == this.getSiegeDate().get(Calendar.DAY_OF_WEEK)) {
+			if (siege.getSiegeDate().get(Calendar.DAY_OF_WEEK) == getSiegeDate().get(Calendar.DAY_OF_WEEK)) {
 				if (siege.checkIsAttacker(clan)) {
 					return true;
 				}

@@ -32,9 +32,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class PledgeShowMemberListAll extends L2GameServerPacket {
 	private static final String _S__68_PLEDGESHOWMEMBERLISTALL = "[S] 5a PledgeShowMemberListAll";
-	private L2Clan _clan;
-	private L2PcInstance _activeChar;
-	private L2ClanMember[] _members;
+	private final L2Clan _clan;
+	private final L2PcInstance _activeChar;
+	private final L2ClanMember[] _members;
 	private int _pledgeType;
 	
 	public PledgeShowMemberListAll(L2Clan clan, L2PcInstance activeChar) {
@@ -54,8 +54,9 @@ public class PledgeShowMemberListAll extends L2GameServerPacket {
 		}
 		
 		for (L2ClanMember m : _members) {
-			if (m.getPledgeType() == 0)
+			if (m.getPledgeType() == 0) {
 				continue;
+			}
 			_activeChar.sendPacket(new PledgeShowMemberListAdd(m));
 		}
 		
@@ -92,8 +93,9 @@ public class PledgeShowMemberListAll extends L2GameServerPacket {
 		writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		
 		for (L2ClanMember m : _members) {
-			if (m.getPledgeType() != _pledgeType)
+			if (m.getPledgeType() != _pledgeType) {
 				continue;
+			}
 			writeS(m.getName());
 			writeD(m.getLevel());
 			writeD(m.getClassId());

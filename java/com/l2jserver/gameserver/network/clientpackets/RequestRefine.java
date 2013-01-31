@@ -49,17 +49,21 @@ public final class RequestRefine extends AbstractRefinePacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
-		if (targetItem == null)
+		if (targetItem == null) {
 			return;
+		}
 		L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
-		if (refinerItem == null)
+		if (refinerItem == null) {
 			return;
+		}
 		L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_gemStoneItemObjId);
-		if (gemStoneItem == null)
+		if (gemStoneItem == null) {
 			return;
+		}
 		
 		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem)) {
 			activeChar.sendPacket(new ExVariationResult(0, 0, 0));
@@ -68,8 +72,9 @@ public final class RequestRefine extends AbstractRefinePacket {
 		}
 		
 		final LifeStone ls = getLifeStone(refinerItem.getItemId());
-		if (ls == null)
+		if (ls == null) {
 			return;
+		}
 		
 		final int lifeStoneLevel = ls.getLevel();
 		final int lifeStoneGrade = ls.getGrade();
@@ -83,19 +88,22 @@ public final class RequestRefine extends AbstractRefinePacket {
 		if (targetItem.isEquipped()) {
 			L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
 			InventoryUpdate iu = new InventoryUpdate();
-			for (L2ItemInstance itm : unequiped)
+			for (L2ItemInstance itm : unequiped) {
 				iu.addModifiedItem(itm);
+			}
 			activeChar.sendPacket(iu);
 			activeChar.broadcastUserInfo();
 		}
 		
 		// consume the life stone
-		if (!activeChar.destroyItem("RequestRefine", refinerItem, 1, null, false))
+		if (!activeChar.destroyItem("RequestRefine", refinerItem, 1, null, false)) {
 			return;
+		}
 		
 		// consume the gemstones
-		if (!activeChar.destroyItem("RequestRefine", gemStoneItem, _gemStoneCount, null, false))
+		if (!activeChar.destroyItem("RequestRefine", gemStoneItem, _gemStoneCount, null, false)) {
 			return;
+		}
 		
 		final L2Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getItem().getBodyPart());
 		targetItem.setAugmentation(aug);

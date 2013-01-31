@@ -27,9 +27,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class ExDominionWarStart extends L2GameServerPacket {
 	private static final String TYPE = "[S] FE:A3 ExDominionWarStart";
 	
-	private int _objId;
-	private int _terId;
-	private boolean _isDisguised;
+	private final int _objId;
+	private final int _terId;
+	private final boolean _isDisguised;
 	
 	public ExDominionWarStart(L2PcInstance player) {
 		_objId = player.getObjectId();

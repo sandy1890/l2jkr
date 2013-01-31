@@ -39,8 +39,9 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket {
 	@Override
 	protected void readImpl() {
 		_length = readD();
-		if (_length > 2176)
+		if (_length > 2176) {
 			return;
+		}
 		
 		_data = new byte[_length];
 		readB(_data);
@@ -49,12 +50,14 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		L2Clan clan = activeChar.getClan();
-		if (clan == null)
+		if (clan == null) {
 			return;
+		}
 		
 		if (_length < 0) {
 			/*
@@ -74,9 +77,10 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket {
 		boolean updated = false;
 		int crestLargeId = -1;
 		if ((activeChar.getClanPrivileges() & L2Clan.CP_CL_REGISTER_CREST) == L2Clan.CP_CL_REGISTER_CREST) {
-			if (_length == 0 || _data == null) {
-				if (clan.getCrestLargeId() == 0)
+			if ((_length == 0) || (_data == null)) {
+				if (clan.getCrestLargeId() == 0) {
 					return;
+				}
 				
 				crestLargeId = 0;
 				/*
@@ -85,7 +89,7 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket {
 				activeChar.sendPacket(SystemMessageId.CLAN_CREST_HAS_BEEN_DELETED); // Update by pmq
 				updated = true;
 			} else {
-				if (clan.getCastleId() == 0 && clan.getHideoutId() == 0) {
+				if ((clan.getCastleId() == 0) && (clan.getHideoutId() == 0)) {
 					/*
 					 * activeChar.sendMessage("Only a clan that owns a clan hall or a castle can get their emblem displayed on clan related items"); //there is a system message for that but didnt found the id
 					 */
@@ -104,7 +108,7 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket {
 			}
 		}
 		
-		if (updated && crestLargeId != -1) {
+		if (updated && (crestLargeId != -1)) {
 			clan.changeLargeCrest(crestLargeId);
 		}
 	}

@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public final class CreatureSay extends L2GameServerPacket {
 	// ddSS
 	private static final String _S__4A_CREATURESAY = "[S] 4A CreatureSay";
-	private int _objectId;
-	private int _textType;
+	private final int _objectId;
+	private final int _textType;
 	private String _charName = null;
 	private int _charId = 0;
 	private String _text = null;
@@ -79,8 +79,9 @@ public final class CreatureSay extends L2GameServerPacket {
 	 * @param text
 	 */
 	public void addStringParameter(String text) {
-		if (_parameters == null)
+		if (_parameters == null) {
 			_parameters = new ArrayList<>();
+		}
 		_parameters.add(text);
 	}
 	
@@ -89,17 +90,19 @@ public final class CreatureSay extends L2GameServerPacket {
 		writeC(0x4a);
 		writeD(_objectId);
 		writeD(_textType);
-		if (_charName != null)
+		if (_charName != null) {
 			writeS(_charName);
-		else
+		} else {
 			writeD(_charId);
+		}
 		writeD(_npcString); // High Five NPCString ID
-		if (_text != null)
+		if (_text != null) {
 			writeS(_text);
-		else {
+		} else {
 			if (_parameters != null) {
-				for (String s : _parameters)
+				for (String s : _parameters) {
 					writeS(s);
+				}
 			}
 		}
 		

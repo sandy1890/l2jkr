@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class RecipeShopSellList extends L2GameServerPacket {
 	
 	private static final String _S__D9_RecipeShopSellList = "[S] df RecipeShopSellList";
-	private L2PcInstance _buyer, _manufacturer;
+	private final L2PcInstance _buyer, _manufacturer;
 	
 	public RecipeShopSellList(L2PcInstance buyer, L2PcInstance manufacturer) {
 		_buyer = buyer;

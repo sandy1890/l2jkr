@@ -24,8 +24,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  * @author Kerberos
  */
 public class VehicleStarted extends L2GameServerPacket {
-	private int _objectId;
-	private int _state;
+	private final int _objectId;
+	private final int _state;
 	
 	/**
 	 * @param boat

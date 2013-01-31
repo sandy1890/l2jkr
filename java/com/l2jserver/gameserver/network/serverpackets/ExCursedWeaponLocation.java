@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.util.Point3D;
  */
 public class ExCursedWeaponLocation extends L2GameServerPacket {
 	private static final String _S__FE_46_EXCURSEDWEAPONLOCATION = "[S] FE:47 ExCursedWeaponLocation";
-	private List<CursedWeaponInfo> _cursedWeaponInfo;
+	private final List<CursedWeaponInfo> _cursedWeaponInfo;
 	
 	public ExCursedWeaponLocation(List<CursedWeaponInfo> cursedWeaponInfo) {
 		_cursedWeaponInfo = cursedWeaponInfo;

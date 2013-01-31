@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2Clan;
  */
 public class PledgeInfo extends L2GameServerPacket {
 	private static final String _S__9C_PLEDGEINFO = "[S] 89 PledgeInfo";
-	private L2Clan _clan;
+	private final L2Clan _clan;
 	
 	public PledgeInfo(L2Clan clan) {
 		_clan = clan;

@@ -42,8 +42,9 @@ public final class RequestQuestAbort extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		Quest qe = QuestManager.getInstance().getQuest(_questId);
 		if (qe != null) {
@@ -52,12 +53,14 @@ public final class RequestQuestAbort extends L2GameClientPacket {
 				qs.exitQuest(true);
 				activeChar.sendPacket(new QuestList());
 			} else {
-				if (Config.DEBUG)
+				if (Config.DEBUG) {
 					_log.info("Player '" + activeChar.getName() + "' try to abort quest " + qe.getName() + " but he didn't have it started.");
+				}
 			}
 		} else {
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.warning("Quest (id='" + _questId + "') not found.");
+			}
 		}
 	}
 	

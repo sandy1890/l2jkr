@@ -50,8 +50,9 @@ public final class RequestFriendDel extends L2GameClientPacket {
 		SystemMessage sm;
 		
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		int id = CharNameTable.getInstance().getIdByName(_name);
 		

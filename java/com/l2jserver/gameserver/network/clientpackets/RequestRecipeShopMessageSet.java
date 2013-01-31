@@ -41,16 +41,18 @@ public class RequestRecipeShopMessageSet extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
-		if (_name != null && _name.length() > MAX_MSG_LENGTH) {
+		if ((_name != null) && (_name.length() > MAX_MSG_LENGTH)) {
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to overflow recipe shop message", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if (player.getCreateList() != null)
+		if (player.getCreateList() != null) {
 			player.getCreateList().setStoreName(_name);
+		}
 	}
 	
 	@Override

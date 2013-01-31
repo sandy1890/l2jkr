@@ -42,18 +42,21 @@ public final class RequestPledgeInfo extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (Config.DEBUG)
+		if (Config.DEBUG) {
 			_log.log(Level.FINE, "Info for clan " + _clanId + " requested");
+		}
 		
 		L2PcInstance activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		L2Clan clan = ClanTable.getInstance().getClan(_clanId);
 		if (clan == null) {
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.warning("Clan data for clanId " + _clanId + " is missing for player " + activeChar.getName());
+			}
 			return; // we have no clan data ?!? should not happen
 		}
 		

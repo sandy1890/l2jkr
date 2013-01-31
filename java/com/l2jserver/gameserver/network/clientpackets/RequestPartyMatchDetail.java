@@ -56,12 +56,14 @@ public final class RequestPartyMatchDetail extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance _activeChar = getClient().getActiveChar();
-		if (_activeChar == null)
+		if (_activeChar == null) {
 			return;
+		}
 		
 		PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		if (_room == null) {
 			return;
+		}
 		
 		if ((_activeChar.getLevel() >= _room.getMinLvl()) && (_activeChar.getLevel() <= _room.getMaxLvl())) {
 			// Remove from waiting list
@@ -73,8 +75,9 @@ public final class RequestPartyMatchDetail extends L2GameClientPacket {
 			_activeChar.sendPacket(new ExPartyRoomMember(_activeChar, _room, 0));
 			
 			for (L2PcInstance _member : _room.getPartyMembers()) {
-				if (_member == null)
+				if (_member == null) {
 					continue;
+				}
 				
 				_member.sendPacket(new ExManagePartyRoomMember(_activeChar, _room, 0));
 				

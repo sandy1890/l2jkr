@@ -126,14 +126,16 @@ public final class RequestWorldInfo extends BaseReadPacket {
 			case PLAYER_DATA_UPDATE:
 				int playerObjId = super.readD();
 				L2PcInstance player = L2World.getInstance().getPlayer(playerObjId);
-				if (player != null)
+				if (player != null) {
 					_cst.sendPacket(new WorldInfo(player, null, WorldInfo.TYPE_UPDATE_PLAYER_DATA));
+				}
 			break;
 			case CLAN_DATA_UPDATE:
 				int clanObjId = super.readD();
 				L2Clan clan = ClanTable.getInstance().getClan(clanObjId);
-				if (clan != null)
+				if (clan != null) {
 					_cst.sendPacket(new WorldInfo(null, clan, WorldInfo.TYPE_UPDATE_CLAN_DATA));
+				}
 			break;
 		}
 	}

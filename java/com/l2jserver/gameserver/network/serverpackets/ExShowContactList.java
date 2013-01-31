@@ -39,8 +39,9 @@ public class ExShowContactList extends L2GameServerPacket {
 	
 	@Override
 	protected void writeImpl() {
-		if (_contacts.size() < 1)
+		if (_contacts.size() < 1) {
 			return;
+		}
 		
 		writeC(0xFE);
 		writeH(0xD3);

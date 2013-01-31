@@ -30,8 +30,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 public final class EquipUpdate extends L2GameServerPacket {
 	private static final String _S__5E_EQUIPUPDATE = "[S] 4b EquipUpdate";
 	
-	private L2ItemInstance _item;
-	private int _change;
+	private final L2ItemInstance _item;
+	private final int _change;
 	
 	public EquipUpdate(L2ItemInstance item, int change) {
 		_item = item;
@@ -95,8 +95,9 @@ public final class EquipUpdate extends L2GameServerPacket {
 			break;
 		}
 		
-		if (Config.DEBUG)
+		if (Config.DEBUG) {
 			_log.fine("body:" + bodypart);
+		}
 		writeD(bodypart);
 	}
 	

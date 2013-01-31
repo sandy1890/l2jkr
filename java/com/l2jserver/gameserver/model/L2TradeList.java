@@ -64,7 +64,7 @@ public class L2TradeList {
 	public void addItem(L2TradeItem item) {
 		_items.put(item.getItemId(), item);
 		if (item.hasLimitedStock()) {
-			this.setHasLimitedStockItem(true);
+			setHasLimitedStockItem(true);
 		}
 	}
 	
@@ -213,7 +213,7 @@ public class L2TradeList {
 		 * @return Returns the currentCount.
 		 */
 		public long getCurrentCount() {
-			if (hasLimitedStock() && this.isPendingStockUpdate()) {
+			if (hasLimitedStock() && isPendingStockUpdate()) {
 				restoreInitialCount();
 			}
 			long ret = _currentCount.get();
@@ -226,10 +226,10 @@ public class L2TradeList {
 		
 		public void restoreInitialCount() {
 			setCurrentCount(getMaxCount());
-			_nextRestoreTime = _nextRestoreTime + this.getRestoreDelay();
+			_nextRestoreTime = _nextRestoreTime + getRestoreDelay();
 			
 			// consume until next update is on future
-			if (this.isPendingStockUpdate() && (this.getRestoreDelay() > 0)) {
+			if (isPendingStockUpdate() && (getRestoreDelay() > 0)) {
 				_nextRestoreTime = System.currentTimeMillis() + getRestoreDelay();
 			}
 			
@@ -295,7 +295,7 @@ public class L2TradeList {
 			 */
 			@Override
 			public void run() {
-				L2TradeItem.this.saveDataTimer();
+				saveDataTimer();
 			}
 		}
 		

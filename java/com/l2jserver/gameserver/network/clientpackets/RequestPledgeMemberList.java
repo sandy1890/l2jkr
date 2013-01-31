@@ -37,8 +37,9 @@ public final class RequestPledgeMemberList extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		L2Clan clan = activeChar.getClan();
 		if (clan != null) {

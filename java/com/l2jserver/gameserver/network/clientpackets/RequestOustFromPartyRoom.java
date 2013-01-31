@@ -54,7 +54,7 @@ public final class RequestOustFromPartyRoom extends L2GameClientPacket {
 		}
 		
 		PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(member);
-		if (room == null || room.getOwner() != player) {
+		if ((room == null) || (room.getOwner() != player)) {
 			return;
 		}
 		

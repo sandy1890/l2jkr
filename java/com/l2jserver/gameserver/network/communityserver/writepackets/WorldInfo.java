@@ -63,8 +63,9 @@ public final class WorldInfo extends BaseWritePacket {
 				super.writeC(player.isOnlineInt());
 				List<Integer> list = player.getFriendList();
 				super.writeD(list.size());
-				for (int j : list)
+				for (int j : list) {
 					super.writeD(j);
+				}
 				break;
 			}
 			
@@ -87,13 +88,15 @@ public final class WorldInfo extends BaseWritePacket {
 				super.writeC((clan.isNoticeEnabled() ? 1 : 0));
 				super.writeS(clan.getAllyName());
 				FastList<Integer> allyClanIdList = FastList.newInstance();
-				if (clan.getAllyId() != 0)
+				if (clan.getAllyId() != 0) {
 					for (L2Clan c : ClanTable.getInstance().getClanAllies(clan.getAllyId())) {
 						allyClanIdList.add(c.getClanId());
 					}
+				}
 				super.writeD(allyClanIdList.size());
-				for (int k : allyClanIdList)
+				for (int k : allyClanIdList) {
 					super.writeD(k);
+				}
 				FastList.recycle(allyClanIdList);
 				break;
 			}

@@ -55,14 +55,15 @@ public class ExOlympiadMatchList extends L2GameServerPacket {
 			if (game != null) {
 				writeD(game.getStadiumId()); // Stadium Id (Arena 1 = 0)
 				
-				if (game instanceof OlympiadGameNonClassed)
+				if (game instanceof OlympiadGameNonClassed) {
 					writeD(1);
-				else if (game instanceof OlympiadGameClassed)
+				} else if (game instanceof OlympiadGameClassed) {
 					writeD(2);
-				else if (game instanceof OlympiadGameTeams)
+				} else if (game instanceof OlympiadGameTeams) {
 					writeD(-1);
-				else
+				} else {
 					writeD(0);
+				}
 				
 				writeD(curGame.isRunning() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
 				writeS(game.getPlayerNames()[0]); // Player 1 Name

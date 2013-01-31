@@ -46,12 +46,14 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		L2PcInstance requestor = activeChar.getRequest().getPartner();
-		if (requestor == null)
+		if (requestor == null) {
 			return;
+		}
 		
 		if (_answer == 0) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DID_NOT_RESPOND_TO_S1_CLAN_INVITATION);
@@ -63,9 +65,10 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket {
 			requestor.sendPacket(sm);
 			sm = null;
 		} else {
-			if (!(requestor.getRequest().getRequestPacket() instanceof RequestJoinPledge))
+			if (!(requestor.getRequest().getRequestPacket() instanceof RequestJoinPledge)) {
 				return; // hax
-				
+			}
+			
 			RequestJoinPledge requestPacket = (RequestJoinPledge) requestor.getRequest().getRequestPacket();
 			L2Clan clan = requestor.getClan();
 			// we must double check this cause during response time conditions can be changed, i.e. another player could join clan
@@ -76,9 +79,10 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket {
 				if (requestPacket.getPledgeType() == L2Clan.SUBUNIT_ACADEMY) {
 					activeChar.setPowerGrade(9); // adademy
 					activeChar.setLvlJoinedAcademy(activeChar.getLevel());
-				} else
+				} else {
 					activeChar.setPowerGrade(5); // new member starts at 5, not confirmed
-					
+				}
+				
 				clan.addClanMember(activeChar);
 				activeChar.setClanPrivileges(activeChar.getClan().getRankPrivs(activeChar.getPowerGrade()));
 				
@@ -89,10 +93,12 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket {
 				clan.broadcastToOnlineMembers(sm);
 				sm = null;
 				
-				if (activeChar.getClan().getCastleId() > 0)
+				if (activeChar.getClan().getCastleId() > 0) {
 					CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
-				if (activeChar.getClan().getFortId() > 0)
+				}
+				if (activeChar.getClan().getFortId() > 0) {
 					FortManager.getInstance().getFortByOwner(activeChar.getClan()).giveResidentialSkills(activeChar);
+				}
 				activeChar.sendSkillList();
 				
 				clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(activeChar), activeChar);

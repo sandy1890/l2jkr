@@ -24,7 +24,7 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class TradeDone extends L2GameServerPacket {
 	private static final String _S__32_SENDTRADEDONE = "[S] 1c SendTradeDone";
-	private int _num;
+	private final int _num;
 	
 	public TradeDone(int num) {
 		_num = num;

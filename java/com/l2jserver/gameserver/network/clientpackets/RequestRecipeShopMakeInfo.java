@@ -41,12 +41,14 @@ public final class RequestRecipeShopMakeInfo extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		final L2PcInstance shop = L2World.getInstance().getPlayer(_playerObjectId);
-		if (shop == null || shop.getPrivateStoreType() != 5)
+		if ((shop == null) || (shop.getPrivateStoreType() != 5)) {
 			return;
+		}
 		
 		player.sendPacket(new RecipeShopItemInfo(shop, _recipeId));
 		

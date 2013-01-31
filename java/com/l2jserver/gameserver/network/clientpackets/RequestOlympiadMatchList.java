@@ -38,12 +38,14 @@ public final class RequestOlympiadMatchList extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null || !activeChar.inObserverMode())
+		if ((activeChar == null) || !activeChar.inObserverMode()) {
 			return;
+		}
 		
 		IBypassHandler handler = BypassHandler.getInstance().getHandler(COMMAND);
-		if (handler != null)
+		if (handler != null) {
 			handler.useBypass(COMMAND, activeChar, null);
+		}
 	}
 	
 	@Override

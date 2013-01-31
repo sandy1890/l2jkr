@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.L2Clan;
  */
 public class PledgeReceiveWarList extends L2GameServerPacket {
 	private static final String _S__FE_3E_PLEDGERECEIVEWARELIST = "[S] FE:3F PledgeReceiveWarList";
-	private L2Clan _clan;
-	private int _tab;
+	private final L2Clan _clan;
+	private final int _tab;
 	
 	public PledgeReceiveWarList(L2Clan clan, int tab) {
 		_clan = clan;
@@ -47,8 +47,9 @@ public class PledgeReceiveWarList extends L2GameServerPacket {
 		writeD(_tab == 0 ? _clan.getWarList().size() : _clan.getAttackerList().size());
 		for (Integer i : _tab == 0 ? _clan.getWarList() : _clan.getAttackerList()) {
 			L2Clan clan = ClanTable.getInstance().getClan(i);
-			if (clan == null)
+			if (clan == null) {
 				continue;
+			}
 			
 			writeS(clan.getName());
 			writeD(_tab); // ??

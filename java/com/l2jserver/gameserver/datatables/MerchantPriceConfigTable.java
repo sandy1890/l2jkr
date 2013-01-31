@@ -86,7 +86,7 @@ public class MerchantPriceConfigTable implements InstanceListManager {
 			
 			MerchantPriceConfig mpc;
 			for (n = n.getFirstChild(); n != null; n = n.getNextSibling()) {
-				mpc = this.parseMerchantPriceConfig(n);
+				mpc = parseMerchantPriceConfig(n);
 				if (mpc != null) {
 					_mpcs.put(mpc.getId(), mpc);
 				}
@@ -144,7 +144,7 @@ public class MerchantPriceConfigTable implements InstanceListManager {
 	@Override
 	public void loadInstances() {
 		try {
-			this.loadXML();
+			loadXML();
 			_log.info("MerchantPriceConfigTable: Loaded " + _mpcs.size() + " merchant price configs.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Failed loading MerchantPriceConfigTable. Reason: " + e.getMessage(), e);
@@ -228,15 +228,15 @@ public class MerchantPriceConfigTable implements InstanceListManager {
 		}
 		
 		public double getCastleTaxRate() {
-			return this.hasCastle() ? this.getCastle().getTaxRate() : 0.0;
+			return hasCastle() ? getCastle().getTaxRate() : 0.0;
 		}
 		
 		public int getTotalTax() {
-			return this.hasCastle() ? (getCastle().getTaxPercent() + getBaseTax()) : getBaseTax();
+			return hasCastle() ? (getCastle().getTaxPercent() + getBaseTax()) : getBaseTax();
 		}
 		
 		public double getTotalTaxRate() {
-			return this.getTotalTax() / 100.0;
+			return getTotalTax() / 100.0;
 		}
 		
 		public void updateReferences() {

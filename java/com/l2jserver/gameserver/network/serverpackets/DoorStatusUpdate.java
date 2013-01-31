@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
  */
 public final class DoorStatusUpdate extends L2GameServerPacket {
 	private static final String _S__61_DOORSTATUSUPDATE = "[S] 4d DoorStatusUpdate";
-	private L2DoorInstance _door;
+	private final L2DoorInstance _door;
 	
 	public DoorStatusUpdate(L2DoorInstance door) {
 		_door = door;

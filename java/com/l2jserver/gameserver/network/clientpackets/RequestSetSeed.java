@@ -51,7 +51,7 @@ public class RequestSetSeed extends L2GameClientPacket {
 	protected void readImpl() {
 		_manorId = readD();
 		int count = readD();
-		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
 		}
 		
@@ -60,7 +60,7 @@ public class RequestSetSeed extends L2GameClientPacket {
 			int itemId = readD();
 			long sales = readQ();
 			long price = readQ();
-			if (itemId < 1 || sales < 0 || price < 0) {
+			if ((itemId < 1) || (sales < 0) || (price < 0)) {
 				_items = null;
 				return;
 			}
@@ -70,32 +70,39 @@ public class RequestSetSeed extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (_items == null)
+		if (_items == null) {
 			return;
+		}
 		
 		L2PcInstance player = getClient().getActiveChar();
 		// check player privileges
-		if (player == null || player.getClan() == null || (player.getClanPrivileges() & L2Clan.CP_CS_MANOR_ADMIN) == 0)
+		if ((player == null) || (player.getClan() == null) || ((player.getClanPrivileges() & L2Clan.CP_CS_MANOR_ADMIN) == 0)) {
 			return;
+		}
 		
 		// check castle owner
 		Castle currentCastle = CastleManager.getInstance().getCastleById(_manorId);
-		if (currentCastle.getOwnerId() != player.getClanId())
+		if (currentCastle.getOwnerId() != player.getClanId()) {
 			return;
+		}
 		
 		L2Object manager = player.getTarget();
 		
-		if (!(manager instanceof L2CastleChamberlainInstance))
+		if (!(manager instanceof L2CastleChamberlainInstance)) {
 			manager = player.getLastFolkNPC();
+		}
 		
-		if (!(manager instanceof L2CastleChamberlainInstance))
+		if (!(manager instanceof L2CastleChamberlainInstance)) {
 			return;
+		}
 		
-		if (((L2CastleChamberlainInstance) manager).getCastle() != currentCastle)
+		if (((L2CastleChamberlainInstance) manager).getCastle() != currentCastle) {
 			return;
+		}
 		
-		if (!player.isInsideRadius(manager, INTERACTION_DISTANCE, true, false))
+		if (!player.isInsideRadius(manager, INTERACTION_DISTANCE, true, false)) {
 			return;
+		}
 		
 		List<SeedProduction> seeds = new ArrayList<>(_items.length);
 		for (Seed i : _items) {
@@ -108,8 +115,9 @@ public class RequestSetSeed extends L2GameClientPacket {
 		}
 		
 		currentCastle.setSeedProduction(seeds, CastleManorManager.PERIOD_NEXT);
-		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
+		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS) {
 			currentCastle.saveSeedData(CastleManorManager.PERIOD_NEXT);
+		}
 	}
 	
 	private static class Seed {
@@ -124,8 +132,9 @@ public class RequestSetSeed extends L2GameClientPacket {
 		}
 		
 		public SeedProduction getSeed() {
-			if (_sales != 0 && (MAX_ADENA / _sales) < _price)
+			if ((_sales != 0) && ((MAX_ADENA / _sales) < _price)) {
 				return null;
+			}
 			
 			return CastleManorManager.getInstance().getNewSeedProduction(_itemId, _sales, _price, _sales);
 		}

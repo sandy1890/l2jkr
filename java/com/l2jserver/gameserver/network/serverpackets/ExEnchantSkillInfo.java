@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2EnchantSkillLearn;
 
 public final class ExEnchantSkillInfo extends L2GameServerPacket {
 	private static final String _S__FE_18_EXENCHANTSKILLINFO = "[S] FE:2a ExEnchantSkillInfo";
-	private FastList<Integer> _routes; // skill lvls for each route
+	private final FastList<Integer> _routes; // skill lvls for each route
 	
 	private final int _id;
 	private final int _lvl;
@@ -55,11 +55,12 @@ public final class ExEnchantSkillInfo extends L2GameServerPacket {
 				int skillLvL = (_lvl % 100);
 				
 				for (int route : enchantLearn.getAllRoutes()) {
-					if ((route * 100 + skillLvL) == _lvl) // skip current
+					if (((route * 100) + skillLvL) == _lvl) {
 						continue;
+					}
 					// add other levels of all routes - same lvl as enchanted
 					// lvl
-					_routes.add(route * 100 + skillLvL);
+					_routes.add((route * 100) + skillLvL);
 				}
 				
 			} else
@@ -67,7 +68,7 @@ public final class ExEnchantSkillInfo extends L2GameServerPacket {
 			{
 				for (int route : enchantLearn.getAllRoutes()) {
 					// add first level (+1) of all routes
-					_routes.add(route * 100 + 1);
+					_routes.add((route * 100) + 1);
 				}
 			}
 		}

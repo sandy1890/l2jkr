@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2ClanMember;
  */
 public class PledgeReceivePowerInfo extends L2GameServerPacket {
 	private static final String _S__FE_3C_PLEDGERECEIVEPOWERINFO = "[S] FE:3D PledgeReceivePowerInfo";
-	private L2ClanMember _member;
+	private final L2ClanMember _member;
 	
 	/**
 	 * @param member

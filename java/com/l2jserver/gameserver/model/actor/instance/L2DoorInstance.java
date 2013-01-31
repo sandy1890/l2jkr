@@ -120,7 +120,7 @@ public class L2DoorInstance extends L2Character {
 		if (clanhallId > 0) {
 			ClanHall hall = ClanHallManager.getAllClanHalls().get(clanhallId);
 			if (hall != null) {
-				this.setClanHall(hall);
+				setClanHall(hall);
 				hall.getDoors().add(this);
 			}
 		}

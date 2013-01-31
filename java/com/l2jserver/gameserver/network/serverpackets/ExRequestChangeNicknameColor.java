@@ -22,7 +22,7 @@ package com.l2jserver.gameserver.network.serverpackets;
  * @author Gnacik
  */
 public class ExRequestChangeNicknameColor extends L2GameServerPacket {
-	private int _itemObjectId;
+	private final int _itemObjectId;
 	
 	public ExRequestChangeNicknameColor(int itemObjectId) {
 		_itemObjectId = itemObjectId;

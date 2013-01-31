@@ -32,7 +32,8 @@ public class ChangePasswordResponse extends BaseRecievePacket {
 		
 		L2PcInstance player = L2World.getInstance().getPlayer(character);
 		
-		if (player != null)
+		if (player != null) {
 			player.sendMessage(msgToSend);
+		}
 	}
 }

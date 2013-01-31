@@ -39,22 +39,26 @@ public final class RequestRecipeBookDestroy extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy"))
+		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("RecipeDestroy")) {
 			return;
+		}
 		
 		final L2RecipeList rp = RecipeData.getInstance().getRecipeList(_recipeID);
-		if (rp == null)
+		if (rp == null) {
 			return;
+		}
 		activeChar.unregisterRecipeList(_recipeID);
 		
 		RecipeBookItemList response = new RecipeBookItemList(rp.isDwarvenRecipe(), activeChar.getMaxMp());
-		if (rp.isDwarvenRecipe())
+		if (rp.isDwarvenRecipe()) {
 			response.addRecipes(activeChar.getDwarvenRecipeBook());
-		else
+		} else {
 			response.addRecipes(activeChar.getCommonRecipeBook());
+		}
 		
 		activeChar.sendPacket(response);
 	}

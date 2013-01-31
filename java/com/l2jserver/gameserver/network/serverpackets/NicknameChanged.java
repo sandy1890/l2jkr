@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public class NicknameChanged extends L2GameServerPacket {
 	private static final String _S__CC_TITLE_UPDATE = "[S] cc NicknameChanged";
-	private String _title;
-	private int _objectId;
+	private final String _title;
+	private final int _objectId;
 	
 	public NicknameChanged(L2Character cha) {
 		_objectId = cha.getObjectId();

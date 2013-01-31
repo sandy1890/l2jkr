@@ -267,13 +267,13 @@ public class L2Manor {
 		private int _limitCrops;
 		
 		public SeedData(int level, int crop, int mature) {
-			this._level = level;
-			this._crop = crop;
-			this._mature = mature;
+			_level = level;
+			_crop = crop;
+			_mature = mature;
 		}
 		
 		public void setData(int id, int t1, int t2, int manorId, boolean isAlt, int lim1, int lim2) {
-			this._id = id;
+			_id = id;
 			_type1 = t1;
 			_type2 = t2;
 			_manorId = manorId;

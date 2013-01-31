@@ -24,8 +24,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExAutoSoulShot extends L2GameServerPacket {
 	private static final String _S__FE_12_EXAUTOSOULSHOT = "[S] FE:0c ExAutoSoulShot";
-	private int _itemId;
-	private int _type;
+	private final int _itemId;
+	private final int _type;
 	
 	/**
 	 * 0xfe:0x12 ExAutoSoulShot (ch)dd

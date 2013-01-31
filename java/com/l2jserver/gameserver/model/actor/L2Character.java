@@ -470,7 +470,7 @@ public abstract class L2Character extends L2Object {
 	@Override
 	public void onSpawn() {
 		super.onSpawn();
-		this.revalidateZone(true);
+		revalidateZone(true);
 	}
 	
 	public void onTeleported() {
@@ -3622,7 +3622,7 @@ public abstract class L2Character extends L2Object {
 		 * @param offset
 		 */
 		public void moveTo(int x, int y, int z, int offset) {
-			L2Character.this.moveToLocation(x, y, z, offset);
+			moveToLocation(x, y, z, offset);
 		}
 		
 		/**
@@ -3633,7 +3633,7 @@ public abstract class L2Character extends L2Object {
 		 * @param z
 		 */
 		public void moveTo(int x, int y, int z) {
-			L2Character.this.moveToLocation(x, y, z, 0);
+			moveToLocation(x, y, z, 0);
 		}
 		
 		/**
@@ -4309,7 +4309,7 @@ public abstract class L2Character extends L2Object {
 			// quite a big difference, compare to validatePosition packet
 			if (isPlayer() && (Math.abs(((L2PcInstance) this).getClientZ() - geoHeight) > 200) && (Math.abs(((L2PcInstance) this).getClientZ() - geoHeight) < 1500)) {
 				dz = m._zDestination - zPrev; // allow diff
-			} else if (this.isInCombat() && (Math.abs(dz) > 200) && (((dx * dx) + (dy * dy)) < 40000)) // allow mob to climb up to pcinstance
+			} else if (isInCombat() && (Math.abs(dz) > 200) && (((dx * dx) + (dy * dy)) < 40000)) // allow mob to climb up to pcinstance
 			{
 				dz = m._zDestination - zPrev; // climbing
 			} else {
@@ -4406,7 +4406,7 @@ public abstract class L2Character extends L2Object {
 		}
 		broadcastPacket(new StopMove(this));
 		if (Config.MOVE_BASED_KNOWNLIST && updateKnownObjects) {
-			this.getKnownList().findObjects();
+			getKnownList().findObjects();
 		}
 	}
 	
@@ -4613,7 +4613,7 @@ public abstract class L2Character extends L2Object {
 			// Movement checks:
 			// when geodata == 2, for all characters except mobs returning home (could be changed later to teleport if pathfinding fails)
 			// when geodata == 1, for l2playableinstance and l2riftinstance only
-			if (((Config.GEODATA == 2) && !(isL2Attackable() && ((L2Attackable) this).isReturningToSpawnPoint())) || (isPlayer() && !(isInVehicle && (distance > 1500))) || (isSummon() && !(this.getAI().getIntention() == AI_INTENTION_FOLLOW)) // assuming intention_follow only when following owner
+			if (((Config.GEODATA == 2) && !(isL2Attackable() && ((L2Attackable) this).isReturningToSpawnPoint())) || (isPlayer() && !(isInVehicle && (distance > 1500))) || (isSummon() && !(getAI().getIntention() == AI_INTENTION_FOLLOW)) // assuming intention_follow only when following owner
 				|| isAfraid() || (this instanceof L2RiftInvaderInstance))
 			{
 				if (isOnGeodataPath()) {
@@ -4629,14 +4629,14 @@ public abstract class L2Character extends L2Object {
 				
 				if ((curX < L2World.MAP_MIN_X) || (curX > L2World.MAP_MAX_X) || (curY < L2World.MAP_MIN_Y) || (curY > L2World.MAP_MAX_Y)) {
 					// Temporary fix for character outside world region errors
-					_log.warning("Character " + this.getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
+					_log.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
 					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					if (isPlayer()) {
 						((L2PcInstance) this).logout();
 					} else if (isSummon()) {
 						return; // preventation when summon get out of world coords, player will not loose him, unsummon handled from pcinstance
 					} else {
-						this.onDecay();
+						onDecay();
 					}
 					return;
 				}
@@ -4653,10 +4653,10 @@ public abstract class L2Character extends L2Object {
 			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result
 			// than the original movement was and the LoS gives a shorter distance than 2000
 			// This way of detecting need for pathfinding could be changed.
-			if ((Config.GEODATA == 2) && ((originalDistance - distance) > 30) && (distance < 2000) && !this.isAfraid()) {
+			if ((Config.GEODATA == 2) && ((originalDistance - distance) > 30) && (distance < 2000) && !isAfraid()) {
 				// Path calculation
 				// Overrides previous movement check
-				if ((isPlayable() && !isInVehicle) || this.isMinion() || this.isInCombat()) {
+				if ((isPlayable() && !isInVehicle) || isMinion() || isInCombat()) {
 					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayable());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
@@ -4668,7 +4668,7 @@ public abstract class L2Character extends L2Object {
 						// * Summons will follow their masters no matter what.
 						// * Currently minions also must move freely since L2AttackableAI commands
 						// them to move along with their leader
-						if (isPlayer() || (!isPlayable() && !this.isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus())) {
+						if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus())) {
 							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 							return;
 						}
@@ -4713,7 +4713,7 @@ public abstract class L2Character extends L2Object {
 				}
 			}
 			// If no distance to go through, the movement is canceled
-			if ((distance < 1) && ((Config.GEODATA == 2) || isPlayable() || (this instanceof L2RiftInvaderInstance) || this.isAfraid())) {
+			if ((distance < 1) && ((Config.GEODATA == 2) || isPlayable() || (this instanceof L2RiftInvaderInstance) || isAfraid())) {
 				if (isSummon()) {
 					((L2Summon) this).setFollowStatus(false);
 				}
@@ -4764,7 +4764,7 @@ public abstract class L2Character extends L2Object {
 	}
 	
 	public boolean moveToNextRoutePoint() {
-		if (!this.isOnGeodataPath()) {
+		if (!isOnGeodataPath()) {
 			// Cancel the move action
 			_move = null;
 			return false;
@@ -5496,7 +5496,7 @@ public abstract class L2Character extends L2Object {
 		if (!(target.isPlayable() && (attacker instanceof L2Playable))) {
 			return false;
 		}
-		if (InstanceManager.getInstance().getInstance(this.getInstanceId()).isPvPInstance()) {
+		if (InstanceManager.getInstance().getInstance(getInstanceId()).isPvPInstance()) {
 			return false;
 		}
 		
@@ -6641,7 +6641,7 @@ public abstract class L2Character extends L2Object {
 		}
 		maxAngleDiff = maxAngle / 2.;
 		angleTarget = Util.calculateAngleFrom(this, target);
-		angleChar = Util.convertHeadingToDegree(this.getHeading());
+		angleChar = Util.convertHeadingToDegree(getHeading());
 		angleDiff = angleChar - angleTarget;
 		if (angleDiff <= (-360 + maxAngleDiff)) {
 			angleDiff += 360;

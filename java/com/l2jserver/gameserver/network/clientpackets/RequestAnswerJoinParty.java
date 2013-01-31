@@ -40,12 +40,14 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		final L2PcInstance requestor = player.getActiveRequester();
-		if (requestor == null)
+		if (requestor == null) {
 			return;
+		}
 		
 		requestor.sendPacket(new JoinParty(_response));
 		
@@ -64,13 +66,14 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket {
 			
 			if (requestor.isInPartyMatchRoom() && player.isInPartyMatchRoom()) {
 				final PartyMatchRoomList list = PartyMatchRoomList.getInstance();
-				if (list != null && (list.getPlayerRoomId(requestor) == list.getPlayerRoomId(player))) {
+				if ((list != null) && (list.getPlayerRoomId(requestor) == list.getPlayerRoomId(player))) {
 					final PartyMatchRoom room = list.getPlayerRoom(requestor);
 					if (room != null) {
 						final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
 						for (L2PcInstance member : room.getPartyMembers()) {
-							if (member != null)
+							if (member != null) {
 								member.sendPacket(packet);
+							}
 						}
 					}
 				}
@@ -82,8 +85,9 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket {
 						room.addMember(player);
 						ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
 						for (L2PcInstance member : room.getPartyMembers()) {
-							if (member != null)
+							if (member != null) {
 								member.sendPacket(packet);
+							}
 						}
 						player.setPartyRoom(room.getId());
 						// player.setPartyMatching(1);
@@ -97,20 +101,23 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket {
 			requestor.sendPacket(sm);
 			
 			// activate garbage collection if there are no other members in party (happens when we were creating new one)
-			if (requestor.isInParty() && requestor.getParty().getMemberCount() == 1)
+			if (requestor.isInParty() && (requestor.getParty().getMemberCount() == 1)) {
 				requestor.getParty().removePartyMember(requestor, messageType.None);
+			}
 		} else // 0
 		{
 			// requestor.sendPacket(SystemMessageId.PLAYER_DECLINED); FIXME: Done in client?
 			
 			// activate garbage collection if there are no other members in party (happens when we were creating new one)
-			if (requestor.isInParty() && requestor.getParty().getMemberCount() == 1)
+			if (requestor.isInParty() && (requestor.getParty().getMemberCount() == 1)) {
 				requestor.getParty().removePartyMember(requestor, messageType.None);
+			}
 		}
 		
-		if (requestor.isInParty())
+		if (requestor.isInParty()) {
 			requestor.getParty().setPendingInvitation(false); // if party is null, there is no need of decreasing
-			
+		}
+		
 		player.setActiveRequester(null);
 		requestor.onTransactionResponse();
 	}

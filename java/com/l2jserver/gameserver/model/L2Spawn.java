@@ -615,7 +615,7 @@ public class L2Spawn {
 	
 	// Add by pmq Start
 	public void setOnKillDelay(int delay) {
-		this._onKillDelay = delay;
+		_onKillDelay = delay;
 	}
 	
 	// Add by pmq End

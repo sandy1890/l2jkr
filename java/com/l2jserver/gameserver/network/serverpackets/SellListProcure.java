@@ -33,10 +33,10 @@ public class SellListProcure extends L2GameServerPacket {
 	private static final String _S__E9_SELLLISTPROCURE = "[S] ef SellListProcure";
 	
 	private final L2PcInstance _activeChar;
-	private long _money;
-	private Map<L2ItemInstance, Long> _sellList = new FastMap<>();
+	private final long _money;
+	private final Map<L2ItemInstance, Long> _sellList = new FastMap<>();
 	private List<CropProcure> _procureList = new FastList<>();
-	private int _castle;
+	private final int _castle;
 	
 	public SellListProcure(L2PcInstance player, int castleId) {
 		_money = player.getAdena();
@@ -45,7 +45,7 @@ public class SellListProcure extends L2GameServerPacket {
 		_procureList = CastleManager.getInstance().getCastleById(_castle).getCropProcure(0);
 		for (CropProcure c : _procureList) {
 			L2ItemInstance item = _activeChar.getInventory().getItemByItemId(c.getId());
-			if (item != null && c.getAmount() > 0) {
+			if ((item != null) && (c.getAmount() > 0)) {
 				_sellList.put(item, c.getAmount());
 			}
 		}

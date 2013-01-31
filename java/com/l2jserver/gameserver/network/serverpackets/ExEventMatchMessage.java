@@ -24,8 +24,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExEventMatchMessage extends L2GameServerPacket {
 	private static final String _S__FE_0F_EXEVENTMATCHMESSAGE = "[S] FE:0f ExEventMatchMessage";
-	private int _type;
-	private String _message;
+	private final int _type;
+	private final String _message;
 	
 	/**
 	 * Create an event match message.

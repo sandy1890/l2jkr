@@ -24,9 +24,9 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class ExChangePostState extends L2GameServerPacket {
 	private static final String _S__FE_B3_EXCHANGEPOSTSTATE = "[S] B3 ExChangePostState";
 	
-	private boolean _receivedBoard;
-	private int[] _changedMsgIds;
-	private int _changeId;
+	private final boolean _receivedBoard;
+	private final int[] _changedMsgIds;
+	private final int _changeId;
 	
 	public ExChangePostState(boolean receivedBoard, int[] changedMsgIds, int changeId) {
 		_receivedBoard = receivedBoard;

@@ -92,7 +92,7 @@ public final class RequestMagicSkillUse extends L2GameClientPacket {
 			}
 			
 			// players mounted on pets cannot use any toggle skills
-			if (skill.isToggle() && activeChar.isMounted() && skill.getId() != 7029) // Update by rocknow
+			if (skill.isToggle() && activeChar.isMounted() && (skill.getId() != 7029)) // Update by rocknow
 			{
 				return;
 			}

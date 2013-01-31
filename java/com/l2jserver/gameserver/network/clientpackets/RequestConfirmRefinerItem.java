@@ -42,16 +42,19 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
-		if (targetItem == null)
+		if (targetItem == null) {
 			return;
+		}
 		
 		final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
-		if (refinerItem == null)
+		if (refinerItem == null) {
 			return;
+		}
 		
 		if (!isValid(activeChar, targetItem, refinerItem)) {
 			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);

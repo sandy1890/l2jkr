@@ -48,8 +48,9 @@ public final class RequestGetOnVehicle extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		L2BoatInstance boat;
 		if (activeChar.isInBoat()) {
@@ -60,7 +61,7 @@ public final class RequestGetOnVehicle extends L2GameClientPacket {
 			}
 		} else {
 			boat = BoatManager.getInstance().getBoat(_boatId);
-			if (boat == null || boat.isMoving() || !activeChar.isInsideRadius(boat, 1000, true, false)) {
+			if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius(boat, 1000, true, false)) {
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

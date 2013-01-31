@@ -24,12 +24,12 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class Dice extends L2GameServerPacket {
 	private static final String _S__D4_Dice = "[S] da Dice";
-	private int _charObjId;
-	private int _itemId;
-	private int _number;
-	private int _x;
-	private int _y;
-	private int _z;
+	private final int _charObjId;
+	private final int _itemId;
+	private final int _number;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	/**
 	 * 0xd4 Dice dddddd

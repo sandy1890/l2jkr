@@ -53,15 +53,18 @@ public final class RequestPostAttachment extends L2GameClientPacket {
 	
 	@Override
 	public void runImpl() {
-		if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
+		if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS) {
 			return;
+		}
 		
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("getattach"))
+		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("getattach")) {
 			return;
+		}
 		
 		if (!activeChar.getAccessLevel().allowTransaction()) {
 			/*
@@ -92,27 +95,31 @@ public final class RequestPostAttachment extends L2GameClientPacket {
 		}
 		
 		final Message msg = MailManager.getInstance().getMessage(_msgId);
-		if (msg == null)
+		if (msg == null) {
 			return;
+		}
 		
 		if (msg.getReceiverId() != activeChar.getObjectId()) {
 			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get not own attachment!", Config.DEFAULT_PUNISH);
 			return;
 		}
 		
-		if (!msg.hasAttachments())
+		if (!msg.hasAttachments()) {
 			return;
+		}
 		
 		final ItemContainer attachments = msg.getAttachments();
-		if (attachments == null)
+		if (attachments == null) {
 			return;
+		}
 		
 		int weight = 0;
 		int slots = 0;
 		
 		for (L2ItemInstance item : attachments.getItems()) {
-			if (item == null)
+			if (item == null) {
 				continue;
+			}
 			
 			// Calculate needed slots
 			if (item.getOwnerId() != msg.getSenderId()) {
@@ -131,10 +138,11 @@ public final class RequestPostAttachment extends L2GameClientPacket {
 			}
 			
 			weight += item.getCount() * item.getItem().getWeight();
-			if (!item.isStackable())
+			if (!item.isStackable()) {
 				slots += item.getCount();
-			else if (activeChar.getInventory().getItemByItemId(item.getItemId()) == null)
+			} else if (activeChar.getInventory().getItemByItemId(item.getItemId()) == null) {
 				slots++;
+			}
 		}
 		
 		// Item Max Limit Check
@@ -150,7 +158,7 @@ public final class RequestPostAttachment extends L2GameClientPacket {
 		}
 		
 		long adena = msg.getReqAdena();
-		if (adena > 0 && !activeChar.reduceAdena("PayMail", adena, null, true)) {
+		if ((adena > 0) && !activeChar.reduceAdena("PayMail", adena, null, true)) {
 			activeChar.sendPacket(SystemMessageId.CANT_RECEIVE_NO_ADENA);
 			return;
 		}
@@ -158,8 +166,9 @@ public final class RequestPostAttachment extends L2GameClientPacket {
 		// Proceed to the transfer
 		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (L2ItemInstance item : attachments.getItems()) {
-			if (item == null)
+			if (item == null) {
 				continue;
+			}
 			
 			if (item.getOwnerId() != msg.getSenderId()) {
 				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to get items with owner != sender !", Config.DEFAULT_PUNISH);
@@ -168,14 +177,16 @@ public final class RequestPostAttachment extends L2GameClientPacket {
 			
 			long count = item.getCount();
 			final L2ItemInstance newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), activeChar.getInventory(), activeChar, null);
-			if (newItem == null)
+			if (newItem == null) {
 				return;
+			}
 			
 			if (playerIU != null) {
-				if (newItem.getCount() > count)
+				if (newItem.getCount() > count) {
 					playerIU.addModifiedItem(newItem);
-				else
+				} else {
 					playerIU.addNewItem(newItem);
+				}
 			}
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_ACQUIRED_S2_S1);
 			sm.addItemName(item.getItemId());
@@ -184,10 +195,11 @@ public final class RequestPostAttachment extends L2GameClientPacket {
 		}
 		
 		// Send updated item list to the player
-		if (playerIU != null)
+		if (playerIU != null) {
 			activeChar.sendPacket(playerIU);
-		else
+		} else {
 			activeChar.sendPacket(new ItemList(activeChar, false));
+		}
 		
 		msg.removeAttachments();
 		

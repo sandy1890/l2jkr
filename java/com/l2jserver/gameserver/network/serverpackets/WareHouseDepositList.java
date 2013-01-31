@@ -45,8 +45,9 @@ public final class WareHouseDepositList extends L2GameServerPacket {
 		
 		final boolean isPrivate = _whType == PRIVATE;
 		for (L2ItemInstance temp : player.getInventory().getAvailableItems(true, isPrivate, false)) {
-			if (temp != null && temp.isDepositable(isPrivate))
+			if ((temp != null) && temp.isDepositable(isPrivate)) {
 				_items.add(temp);
+			}
 		}
 	}
 	
@@ -59,11 +60,13 @@ public final class WareHouseDepositList extends L2GameServerPacket {
 		writeH(_whType);
 		writeQ(_playerAdena);
 		writeD(0x00); // rocknow-God
-		if (_whType == 1 || _whType == 2) // rocknow-God
+		if ((_whType == 1) || (_whType == 2)) {
 			writeH(0x00); // rocknow-God
+		}
 		final int count = _items.size();
-		if (Config.DEBUG)
+		if (Config.DEBUG) {
 			_log.fine("count:" + count);
+		}
 		writeH(count);
 		
 		for (L2ItemInstance item : _items) {
@@ -77,10 +80,11 @@ public final class WareHouseDepositList extends L2GameServerPacket {
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getEnchantLevel());
 			writeH(item.getCustomType2());
-			if (item.isAugmented())
+			if (item.isAugmented()) {
 				writeD(item.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(item.getMana());
 			writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God

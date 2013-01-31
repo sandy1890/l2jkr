@@ -40,8 +40,9 @@ public final class RequestFriendList extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		SystemMessage sm;
 		
@@ -53,12 +54,13 @@ public final class RequestFriendList extends L2GameClientPacket {
 			// int friendId = rset.getInt("friendId");
 			String friendName = CharNameTable.getInstance().getNameById(id);
 			
-			if (friendName == null)
+			if (friendName == null) {
 				continue;
+			}
 			
 			friend = L2World.getInstance().getPlayer(friendName);
 			
-			if (friend == null || !friend.isOnline()) {
+			if ((friend == null) || !friend.isOnline()) {
 				// (Currently: Offline)
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_OFFLINE);
 				sm.addString(friendName);

@@ -147,11 +147,11 @@ public class JumpManager {
 		
 		public JumpNode(int id, int maxNum, int moveX, int moveY, int moveZ) {
 			super();
-			this._id = id;
-			this._maxNum = maxNum;
-			this._moveX = moveX;
-			this._moveY = moveY;
-			this._moveZ = moveZ;
+			_id = id;
+			_maxNum = maxNum;
+			_moveX = moveX;
+			_moveY = moveY;
+			_moveZ = moveZ;
 		}
 		
 		public int getRouteId() {

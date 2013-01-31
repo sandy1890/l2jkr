@@ -56,6 +56,7 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jserver.util.Rnd;
+
 //rocknow-God-Test Only
 
 /**

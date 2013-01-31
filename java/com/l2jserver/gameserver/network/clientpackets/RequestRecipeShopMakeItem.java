@@ -44,18 +44,22 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (!getClient().getFloodProtectors().getManufacture().tryPerformAction("RecipeShopMake"))
+		if (!getClient().getFloodProtectors().getManufacture().tryPerformAction("RecipeShopMake")) {
 			return;
+		}
 		
 		L2PcInstance manufacturer = L2World.getInstance().getPlayer(_id);
-		if (manufacturer == null)
+		if (manufacturer == null) {
 			return;
+		}
 		
-		if (manufacturer.getInstanceId() != activeChar.getInstanceId() && activeChar.getInstanceId() != -1)
+		if ((manufacturer.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1)) {
 			return;
+		}
 		
 		if (activeChar.getPrivateStoreType() != 0) {
 			/*
@@ -76,8 +80,9 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket {
 			activeChar.sendMessage(326);
 			return;
 		}
-		if (Util.checkIfInRange(150, activeChar, manufacturer, true))
+		if (Util.checkIfInRange(150, activeChar, manufacturer, true)) {
 			RecipeController.getInstance().requestManufactureItem(manufacturer, _recipeId, activeChar);
+		}
 	}
 	
 	@Override

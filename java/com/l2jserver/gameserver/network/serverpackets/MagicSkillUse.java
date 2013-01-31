@@ -26,12 +26,12 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public final class MagicSkillUse extends L2GameServerPacket {
 	private static final String _S__5A_MAGICSKILLUSER = "[S] 48 MagicSkillUser";
-	private int _targetId, _tx, _ty, _tz;
-	private int _skillId;
-	private int _skillLevel;
-	private int _hitTime;
-	private int _reuseDelay;
-	private int _charObjId, _x, _y, _z;
+	private final int _targetId, _tx, _ty, _tz;
+	private final int _skillId;
+	private final int _skillLevel;
+	private final int _hitTime;
+	private final int _reuseDelay;
+	private final int _charObjId, _x, _y, _z;
 	
 	// private int _flags;
 	

@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.entity.Message;
 public class ExShowReceivedPostList extends L2GameServerPacket {
 	private static final String _S__FE_AA_EXSHOWRECEIVEDPOSTLIST = "[S] FE:AA ExShowReceivedPostList";
 	
-	private List<Message> _inbox;
+	private final List<Message> _inbox;
 	
 	public ExShowReceivedPostList(int objectId) {
 		_inbox = MailManager.getInstance().getInbox(objectId);
@@ -40,7 +40,7 @@ public class ExShowReceivedPostList extends L2GameServerPacket {
 		writeC(0xfe);
 		writeH(0xaa);
 		writeD((int) (System.currentTimeMillis() / 1000));
-		if (_inbox != null && _inbox.size() > 0) {
+		if ((_inbox != null) && (_inbox.size() > 0)) {
 			writeD(_inbox.size());
 			for (Message msg : _inbox) {
 				writeD(0x00); // rocknow-God

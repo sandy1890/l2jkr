@@ -29,8 +29,8 @@ public class ChangeMoveType extends L2GameServerPacket {
 	public static final int WALK = 0;
 	public static final int RUN = 1;
 	
-	private int _charObjId;
-	private boolean _running;
+	private final int _charObjId;
+	private final boolean _running;
 	
 	public ChangeMoveType(L2Character character) {
 		_charObjId = character.getObjectId();

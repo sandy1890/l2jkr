@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class ObservationReturn extends L2GameServerPacket {
 	// ddSS
 	private static final String _S__E0_OBSERVRETURN = "[S] ec ObservationReturn";
-	private L2PcInstance _activeChar;
+	private final L2PcInstance _activeChar;
 	
 	/**
 	 * @param observer

@@ -45,8 +45,9 @@ public final class RequestGetItemFromPet extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null || !(player.getPet() instanceof L2PetInstance))
+		if ((player == null) || !(player.getPet() instanceof L2PetInstance)) {
 			return;
+		}
 		
 		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("getfrompet")) {
 			/*
@@ -57,13 +58,15 @@ public final class RequestGetItemFromPet extends L2GameClientPacket {
 		}
 		
 		L2PetInstance pet = (L2PetInstance) player.getPet();
-		if (player.getActiveEnchantItem() != null)
+		if (player.getActiveEnchantItem() != null) {
 			return;
+		}
 		if (_amount < 0) {
 			Util.handleIllegalPlayerAction(player, "[RequestGetItemFromPet] Character " + player.getName() + " of account " + player.getAccountName() + " tried to get item with oid " + _objectId + " from pet but has count < 0!", Config.DEFAULT_PUNISH);
 			return;
-		} else if (_amount == 0)
+		} else if (_amount == 0) {
 			return;
+		}
 		
 		if (pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet) == null) {
 			_log.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());

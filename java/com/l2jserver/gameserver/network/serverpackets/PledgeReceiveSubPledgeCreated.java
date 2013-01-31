@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.L2Clan.SubPledge;
  */
 public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket {
 	private static final String _S__FE_3F_PLEDGERECEIVESUBPLEDGECREATED = "[S] FE:40 PledgeReceiveSubPledgeCreated";
-	private SubPledge _subPledge;
-	private L2Clan _clan;
+	private final SubPledge _subPledge;
+	private final L2Clan _clan;
 	
 	/**
 	 * @param subPledge
@@ -54,13 +54,14 @@ public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket {
 	
 	private String getLeaderName() {
 		int LeaderId = _subPledge.getLeaderId();
-		if (_subPledge.getId() == L2Clan.SUBUNIT_ACADEMY || LeaderId == 0)
+		if ((_subPledge.getId() == L2Clan.SUBUNIT_ACADEMY) || (LeaderId == 0)) {
 			return "";
-		else if (_clan.getClanMember(LeaderId) == null) {
+		} else if (_clan.getClanMember(LeaderId) == null) {
 			_log.warning("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getClanId() + "]");
 			return "";
-		} else
+		} else {
 			return _clan.getClanMember(LeaderId).getName();
+		}
 	}
 	
 	/**

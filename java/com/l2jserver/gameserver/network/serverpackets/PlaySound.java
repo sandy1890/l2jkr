@@ -24,14 +24,14 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class PlaySound extends L2GameServerPacket {
 	private static final String _S__98_PlaySound = "[S] 9e PlaySound";
-	private int _unknown1;
-	private String _soundFile;
-	private int _unknown3;
-	private int _unknown4;
-	private int _unknown5;
-	private int _unknown6;
-	private int _unknown7;
-	private int _unknown8;
+	private final int _unknown1;
+	private final String _soundFile;
+	private final int _unknown3;
+	private final int _unknown4;
+	private final int _unknown5;
+	private final int _unknown6;
+	private final int _unknown7;
+	private final int _unknown8;
 	
 	public PlaySound(String soundFile) {
 		_unknown1 = 0;

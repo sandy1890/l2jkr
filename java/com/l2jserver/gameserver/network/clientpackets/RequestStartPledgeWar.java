@@ -44,14 +44,16 @@ public final class RequestStartPledgeWar extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		_clan = getClient().getActiveChar().getClan();
-		if (_clan == null)
+		if (_clan == null) {
 			return;
+		}
 		
-		if (_clan.getLevel() < 3 || _clan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR) {
+		if ((_clan.getLevel() < 3) || (_clan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR)) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_WAR_DECLARED_IF_CLAN_LVL3_OR_15_MEMBER);
 			player.sendPacket(sm);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -69,7 +71,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket {
 			player.sendPacket(sm);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
-		} else if (_clan.getAllyId() == clan.getAllyId() && _clan.getAllyId() != 0) {
+		} else if ((_clan.getAllyId() == clan.getAllyId()) && (_clan.getAllyId() != 0)) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_WAR_AGAINST_A_ALLIED_CLAN_NOT_WORK);
 			player.sendPacket(sm);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -77,7 +79,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket {
 			return;
 		}
 		// else if(clan.getLevel() < 3)
-		else if (clan.getLevel() < 3 || clan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR) {
+		else if ((clan.getLevel() < 3) || (clan.getMembersCount() < Config.ALT_CLAN_MEMBERS_FOR_WAR)) {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_WAR_DECLARED_IF_CLAN_LVL3_OR_15_MEMBER);
 			player.sendPacket(sm);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -141,8 +143,9 @@ public final class RequestStartPledgeWar extends L2GameClientPacket {
 		
 		@Override
 		public final boolean execute(final L2PcInstance cha) {
-			if (cha.getClan() == _ply.getClan() || cha.getClan() == _cln)
+			if ((cha.getClan() == _ply.getClan()) || (cha.getClan() == _cln)) {
 				cha.broadcastUserInfo();
+			}
 			return true;
 		}
 	}

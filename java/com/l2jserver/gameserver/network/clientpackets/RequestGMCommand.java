@@ -50,15 +50,16 @@ public final class RequestGMCommand extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		// prevent non gm or low level GMs from vieweing player stuff
-		if (!getClient().getActiveChar().isGM() || !getClient().getActiveChar().getAccessLevel().allowAltG())
+		if (!getClient().getActiveChar().isGM() || !getClient().getActiveChar().getAccessLevel().allowAltG()) {
 			return;
+		}
 		
 		L2PcInstance player = L2World.getInstance().getPlayer(_targetName);
 		
 		L2Clan clan = ClanTable.getInstance().getClanByName(_targetName);
 		
 		// player name was incorrect?
-		if (player == null && (clan == null || _command != 6)) {
+		if ((player == null) && ((clan == null) || (_command != 6))) {
 			return;
 		}
 		
@@ -71,8 +72,9 @@ public final class RequestGMCommand extends L2GameClientPacket {
 			}
 			case 2: // player clan
 			{
-				if ((player != null) && (player.getClan() != null))
+				if ((player != null) && (player.getClan() != null)) {
 					sendPacket(new GMViewPledgeInfo(player.getClan(), player));
+				}
 				break;
 			}
 			case 3: // player skills
@@ -94,11 +96,12 @@ public final class RequestGMCommand extends L2GameClientPacket {
 			case 6: // player warehouse
 			{
 				// gm warehouse view to be implemented
-				if (player != null)
+				if (player != null) {
 					sendPacket(new GMViewWarehouseWithdrawList(player));
-				// clan warehouse
-				else
+					// clan warehouse
+				} else {
 					sendPacket(new GMViewWarehouseWithdrawList(clan));
+				}
 				break;
 			}
 			

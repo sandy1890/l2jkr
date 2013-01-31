@@ -26,9 +26,9 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public class ExFishingStartCombat extends L2GameServerPacket {
 	private static final String _S__FE_15_EXFISHINGSTARTCOMBAT = "[S] FE:27 ExFishingStartCombat";
-	private L2Character _activeChar;
-	private int _time, _hp;
-	private int _lureType, _deceptiveMode, _mode;
+	private final L2Character _activeChar;
+	private final int _time, _hp;
+	private final int _lureType, _deceptiveMode, _mode;
 	
 	public ExFishingStartCombat(L2Character character, int time, int hp, int mode, int lureType, int deceptiveMode) {
 		_activeChar = character;

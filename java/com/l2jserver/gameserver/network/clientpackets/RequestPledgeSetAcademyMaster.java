@@ -46,8 +46,9 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		L2Clan clan = activeChar.getClan();
-		if (clan == null)
+		if (clan == null) {
 			return;
+		}
 		
 		if ((activeChar.getClanPrivileges() & L2Clan.CP_CL_APPRENTICE) != L2Clan.CP_CL_APPRENTICE) {
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_DISMISS_AN_APPRENTICE);
@@ -56,8 +57,9 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket {
 		
 		L2ClanMember currentMember = clan.getClanMember(_currPlayerName);
 		L2ClanMember targetMember = clan.getClanMember(_targetPlayerName);
-		if (currentMember == null || targetMember == null)
+		if ((currentMember == null) || (targetMember == null)) {
 			return;
+		}
 		
 		L2ClanMember apprenticeMember, sponsorMember;
 		if (currentMember.getPledgeType() == L2Clan.SUBUNIT_ACADEMY) {
@@ -74,41 +76,45 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket {
 		SystemMessage sm = null;
 		if (_set == 0) {
 			// test: do we get the current sponsor & apprentice from this packet or no?
-			if (apprentice != null)
+			if (apprentice != null) {
 				apprentice.setSponsor(0);
-			else
+			} else {
 				// offline
 				apprenticeMember.initApprenticeAndSponsor(0, 0);
+			}
 			
-			if (sponsor != null)
+			if (sponsor != null) {
 				sponsor.setApprentice(0);
-			else
+			} else {
 				// offline
 				sponsorMember.initApprenticeAndSponsor(0, 0);
+			}
 			
 			apprenticeMember.saveApprenticeAndSponsor(0, 0);
 			sponsorMember.saveApprenticeAndSponsor(0, 0);
 			
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CLAN_MEMBER_C1_APPRENTICE_HAS_BEEN_REMOVED);
 		} else {
-			if (apprenticeMember.getSponsor() != 0 || sponsorMember.getApprentice() != 0 || apprenticeMember.getApprentice() != 0 || sponsorMember.getSponsor() != 0) {
+			if ((apprenticeMember.getSponsor() != 0) || (sponsorMember.getApprentice() != 0) || (apprenticeMember.getApprentice() != 0) || (sponsorMember.getSponsor() != 0)) {
 				/*
 				 * Move To MessageTable For L2JTW activeChar.sendMessage("Remove previous connections first.");
 				 */
 				activeChar.sendMessage(304);
 				return;
 			}
-			if (apprentice != null)
+			if (apprentice != null) {
 				apprentice.setSponsor(sponsorMember.getObjectId());
-			else
+			} else {
 				// offline
 				apprenticeMember.initApprenticeAndSponsor(0, sponsorMember.getObjectId());
+			}
 			
-			if (sponsor != null)
+			if (sponsor != null) {
 				sponsor.setApprentice(apprenticeMember.getObjectId());
-			else
+			} else {
 				// offline
 				sponsorMember.initApprenticeAndSponsor(apprenticeMember.getObjectId(), 0);
+			}
 			
 			// saving to database even if online, since both must match
 			apprenticeMember.saveApprenticeAndSponsor(0, sponsorMember.getObjectId());
@@ -118,12 +124,15 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket {
 		}
 		sm.addString(sponsorMember.getName());
 		sm.addString(apprenticeMember.getName());
-		if (sponsor != activeChar && sponsor != apprentice)
+		if ((sponsor != activeChar) && (sponsor != apprentice)) {
 			activeChar.sendPacket(sm);
-		if (sponsor != null)
+		}
+		if (sponsor != null) {
 			sponsor.sendPacket(sm);
-		if (apprentice != null)
+		}
+		if (apprentice != null) {
 			apprentice.sendPacket(sm);
+		}
 	}
 	
 	@Override

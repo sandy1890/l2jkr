@@ -25,10 +25,10 @@ package com.l2jserver.gameserver.network.serverpackets;
 public final class AskJoinPledge extends L2GameServerPacket {
 	private static final String _S__44_ASKJOINPLEDGE = "[S] 2c AskJoinPledge";
 	
-	private int _requestorObjId;
-	private String _subPledgeName;
-	private int _pledgeType;
-	private String _pledgeName;
+	private final int _requestorObjId;
+	private final String _subPledgeName;
+	private final int _pledgeType;
+	private final String _pledgeName;
 	
 	public AskJoinPledge(int requestorObjId, String subPledgeName, int pledgeType, String pledgeName) {
 		_requestorObjId = requestorObjId;
@@ -41,10 +41,12 @@ public final class AskJoinPledge extends L2GameServerPacket {
 	protected final void writeImpl() {
 		writeC(0x2c);
 		writeD(_requestorObjId);
-		if (_subPledgeName != null)
+		if (_subPledgeName != null) {
 			writeS(_pledgeType > 0 ? _subPledgeName : _pledgeName);
-		if (_pledgeType != 0)
+		}
+		if (_pledgeType != 0) {
 			writeD(_pledgeType);
+		}
 		writeS(_pledgeName);
 	}
 	

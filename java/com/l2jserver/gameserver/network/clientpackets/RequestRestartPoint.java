@@ -60,7 +60,7 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 		
 		@Override
 		public void run() {
-			RequestRestartPoint.this.portPlayer(activeChar);
+			portPlayer(activeChar);
 		}
 	}
 	
@@ -68,11 +68,13 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(activeChar.getObjectId()))
+		if (TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(activeChar.getObjectId())) {
 			return;
+		}
 		
 		// SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessage.S1_S2);
 		// sm2.addString("type:"+requestedPointType);
@@ -87,15 +89,16 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 		}
 		
 		Castle castle = CastleManager.getInstance().getCastle(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-		if (castle != null && castle.getSiege().getIsInProgress()) {
-			if (activeChar.getClan() != null && castle.getSiege().checkIsAttacker(activeChar.getClan())) {
+		if ((castle != null) && castle.getSiege().getIsInProgress()) {
+			if ((activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan())) {
 				// Schedule respawn delay for attacker
 				ThreadPoolManager.getInstance().scheduleGeneral(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
-				if (castle.getSiege().getAttackerRespawnDelay() > 0)
+				if (castle.getSiege().getAttackerRespawnDelay() > 0) {
 					/*
 					 * Move To MessageTable For L2JTW activeChar.sendMessage("You will be re-spawned in " + castle.getSiege().getAttackerRespawnDelay()/1000 + " seconds");
 					 */
-					activeChar.sendMessage(MessageTable.Messages[337].getExtra(1) + castle.getSiege().getAttackerRespawnDelay() / 1000 + MessageTable.Messages[337].getExtra(2));
+					activeChar.sendMessage(MessageTable.Messages[337].getExtra(1) + (castle.getSiege().getAttackerRespawnDelay() / 1000) + MessageTable.Messages[337].getExtra(2));
+				}
 				return;
 			}
 		}
@@ -119,13 +122,13 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 		}
 		switch (_requestedPointType) {
 			case 1: // to clanhall
-				if (activeChar.getClan() == null || activeChar.getClan().getHideoutId() == 0) {
+				if ((activeChar.getClan() == null) || (activeChar.getClan().getHideoutId() == 0)) {
 					_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Clanhall and he doesn't have Clanhall!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.ClanHall);
 				
-				if (ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()) != null && ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null) {
+				if ((ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()) != null) && (ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP) != null)) {
 					activeChar.restoreExp(ClanHallManager.getInstance().getClanHallByOwner(activeChar.getClan()).getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl());
 				}
 			break;
@@ -133,23 +136,23 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 			case 2: // to castle
 				castle = CastleManager.getInstance().getCastle(activeChar);
 				
-				if (castle != null && castle.getSiege().getIsInProgress()) {
+				if ((castle != null) && castle.getSiege().getIsInProgress()) {
 					// Siege in progress
-					if (castle.getSiege().checkIsDefender(activeChar.getClan()))
+					if (castle.getSiege().checkIsDefender(activeChar.getClan())) {
 						loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.Castle);
-					// Just in case you lost castle while being dead.. Port to nearest Town.
-					else if (castle.getSiege().checkIsAttacker(activeChar.getClan()))
+					} else if (castle.getSiege().checkIsAttacker(activeChar.getClan())) {
 						loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.Town);
-					else {
+					} else {
 						_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Castle and he doesn't have Castle!");
 						return;
 					}
 				} else {
-					if (activeChar.getClan() == null || activeChar.getClan().getCastleId() == 0)
+					if ((activeChar.getClan() == null) || (activeChar.getClan().getCastleId() == 0)) {
 						return;
+					}
 					loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.Castle);
 				}
-				if (CastleManager.getInstance().getCastleByOwner(activeChar.getClan()) != null && CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).getFunction(Castle.FUNC_RESTORE_EXP) != null) {
+				if ((CastleManager.getInstance().getCastleByOwner(activeChar.getClan()) != null) && (CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).getFunction(Castle.FUNC_RESTORE_EXP) != null)) {
 					activeChar.restoreExp(CastleManager.getInstance().getCastleByOwner(activeChar.getClan()).getFunction(Castle.FUNC_RESTORE_EXP).getLvl());
 				}
 			break;
@@ -157,12 +160,12 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 			case 3: // to fortress
 				// fort = FortManager.getInstance().getFort(activeChar);
 				
-				if ((activeChar.getClan() == null || activeChar.getClan().getFortId() == 0) && !isInDefense) {
+				if (((activeChar.getClan() == null) || (activeChar.getClan().getFortId() == 0)) && !isInDefense) {
 					_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.Fortress);
-				if (FortManager.getInstance().getFortByOwner(activeChar.getClan()) != null && FortManager.getInstance().getFortByOwner(activeChar.getClan()).getFunction(Fort.FUNC_RESTORE_EXP) != null) {
+				if ((FortManager.getInstance().getFortByOwner(activeChar.getClan()) != null) && (FortManager.getInstance().getFortByOwner(activeChar.getClan()).getFunction(Fort.FUNC_RESTORE_EXP) != null)) {
 					activeChar.restoreExp(FortManager.getInstance().getFortByOwner(activeChar.getClan()).getFunction(Fort.FUNC_RESTORE_EXP).getLvl());
 				}
 			break;
@@ -174,16 +177,18 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 				hall = CHSiegeManager.getInstance().getNearbyClanHall(activeChar);
 				L2SiegeFlagInstance flag = TerritoryWarManager.getInstance().getFlagForClan(activeChar.getClan());
 				
-				if (castle != null && castle.getSiege().getIsInProgress())
+				if ((castle != null) && castle.getSiege().getIsInProgress()) {
 					siegeClan = castle.getSiege().getAttackerClan(activeChar.getClan());
-				else if (fort != null && fort.getSiege().getIsInProgress())
+				} else if ((fort != null) && fort.getSiege().getIsInProgress()) {
 					siegeClan = fort.getSiege().getAttackerClan(activeChar.getClan());
-				else if (hall != null && hall.isInSiege())
+				} else if ((hall != null) && hall.isInSiege()) {
 					siegeClan = hall.getSiege().getAttackerClan(activeChar.getClan());
-				if ((siegeClan == null || siegeClan.getFlag().isEmpty()) && flag == null) {
+				}
+				if (((siegeClan == null) || siegeClan.getFlag().isEmpty()) && (flag == null)) {
 					// Check if clan hall has inner spawns loc
-					if (hall != null && (loc = hall.getSiege().getInnerSpawnLoc(activeChar)) != null)
+					if ((hall != null) && ((loc = hall.getSiege().getInnerSpawnLoc(activeChar)) != null)) {
 						break;
+					}
 					
 					_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Siege HQ and he doesn't have Siege HQ!");
 					return;
@@ -207,8 +212,9 @@ public final class RequestRestartPoint extends L2GameClientPacket {
 			case 6: // TODO: agathion ress
 			break;
 			case 27: // to jail
-				if (!activeChar.isInJail())
+				if (!activeChar.isInJail()) {
 					return;
+				}
 				loc = new Location(-114356, -249645, -2984);
 			break;
 			

@@ -34,8 +34,9 @@ public final class RequestGmList extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (getClient().getActiveChar() == null)
+		if (getClient().getActiveChar() == null) {
 			return;
+		}
 		AdminTable.getInstance().sendListToPlayer(getClient().getActiveChar());
 	}
 	

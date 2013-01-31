@@ -44,8 +44,9 @@ public final class RequestPlayerShowMessage extends BaseReadPacket {
 		final int type = super.readD();
 		
 		L2PcInstance player = L2World.getInstance().getPlayer(playerObjId);
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		switch (type) {
 			case -1: // mail arrived

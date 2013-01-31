@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public class ValidateLocation extends L2GameServerPacket {
 	private static final String _S__76_SETTOLOCATION = "[S] 79 ValidateLocation";
-	private int _charObjId;
-	private int _x, _y, _z, _heading;
+	private final int _charObjId;
+	private final int _x, _y, _z, _heading;
 	
 	public ValidateLocation(L2Character cha) {
 		_charObjId = cha.getObjectId();

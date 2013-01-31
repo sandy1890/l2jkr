@@ -119,7 +119,7 @@ public class L2BlockInstance extends L2MonsterInstance {
 	
 	@Override
 	public void onAction(L2PcInstance player, boolean interact) {
-		if (!this.canTarget(player)) {
+		if (!canTarget(player)) {
 			return;
 		}
 		
@@ -127,7 +127,7 @@ public class L2BlockInstance extends L2MonsterInstance {
 		
 		if (player.getTarget() != this) {
 			player.setTarget(this);
-			this.getAI(); // wake up ai
+			getAI(); // wake up ai
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());

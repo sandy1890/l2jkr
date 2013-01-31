@@ -33,10 +33,11 @@ public class ExReplySentPost extends L2GameServerPacket {
 		_msg = msg;
 		if (msg.hasAttachments()) {
 			final ItemContainer attachments = msg.getAttachments();
-			if (attachments != null && attachments.getSize() > 0)
+			if ((attachments != null) && (attachments.getSize() > 0)) {
 				_items = attachments.getItems();
-			else
+			} else {
 				_log.warning("Message " + msg.getId() + " has attachments but itemcontainer is empty.");
+			}
 		}
 	}
 	
@@ -51,7 +52,7 @@ public class ExReplySentPost extends L2GameServerPacket {
 		writeS(_msg.getSubject());
 		writeS(_msg.getContent());
 		
-		if (_items != null && _items.length > 0) {
+		if ((_items != null) && (_items.length > 0)) {
 			writeD(_items.length);
 			for (L2ItemInstance item : _items) {
 				writeD(0x00);
@@ -64,10 +65,11 @@ public class ExReplySentPost extends L2GameServerPacket {
 				writeD(item.getItem().getBodyPart());
 				writeH(item.getEnchantLevel());
 				writeH(item.getCustomType2());
-				if (item.isAugmented())
+				if (item.isAugmented()) {
 					writeD(item.getAugmentation().getAugmentationId());
-				else
+				} else {
 					writeD(0x00);
+				}
 				writeD(item.getMana());
 				writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999);
 				writeH(0x01); // rocknow-God
@@ -85,8 +87,9 @@ public class ExReplySentPost extends L2GameServerPacket {
 			}
 			writeQ(_msg.getReqAdena());
 			writeD(_msg.getSendBySystem());
-		} else
+		} else {
 			writeD(0x00);
+		}
 		
 		_items = null;
 		_msg = null;

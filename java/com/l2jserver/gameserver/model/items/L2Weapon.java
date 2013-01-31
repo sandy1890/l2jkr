@@ -188,7 +188,7 @@ public final class L2Weapon extends L2Item {
 					level = Integer.parseInt(info[1]);
 				} catch (Exception nfe) {
 					// Incorrect syntax, dont add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon unequip skills! item ", this.toString()));
+					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon unequip skills! item ", toString()));
 				}
 				if ((id > 0) && (level > 0)) {
 					_unequipSkill = new SkillHolder(id, level);

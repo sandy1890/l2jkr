@@ -406,7 +406,7 @@ public final class HandysBlockCheckerManager {
 					if (plr == null) {
 						continue;
 					}
-					changePlayerToTeam(plr, this._arena, 1);
+					changePlayerToTeam(plr, _arena, 1);
 				}
 			} else if (blueSize > (redSize + 1)) {
 				broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_ADJUSTED_BECAUSE_WRONG_POPULATION_RATIO));
@@ -416,7 +416,7 @@ public final class HandysBlockCheckerManager {
 					if (plr == null) {
 						continue;
 					}
-					changePlayerToTeam(plr, this._arena, 0);
+					changePlayerToTeam(plr, _arena, 0);
 				}
 			}
 		}

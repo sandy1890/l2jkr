@@ -27,10 +27,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket {
 	private static final String _S__FE_4A_EXMPCCSHOWPARTYMEMBERINFO = "[S] FE:4b ExMPCCShowPartyMemberInfo";
-	private L2Party _party;
+	private final L2Party _party;
 	
 	public ExMPCCShowPartyMemberInfo(L2Party party) {
-		this._party = party;
+		_party = party;
 	}
 	
 	/**

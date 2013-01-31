@@ -42,8 +42,9 @@ public final class RequestBidItemAuction extends L2GameClientPacket {
 	@Override
 	protected final void runImpl() {
 		final L2PcInstance activeChar = super.getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		// can't use auction fp here
 		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("auction")) {
@@ -54,14 +55,16 @@ public final class RequestBidItemAuction extends L2GameClientPacket {
 			return;
 		}
 		
-		if (_bid < 0 || _bid > PcInventory.MAX_ADENA)
+		if ((_bid < 0) || (_bid > PcInventory.MAX_ADENA)) {
 			return;
+		}
 		
 		final ItemAuctionInstance instance = ItemAuctionManager.getInstance().getManagerInstance(_instanceId);
 		if (instance != null) {
 			final ItemAuction auction = instance.getCurrentAuction();
-			if (auction != null)
+			if (auction != null) {
 				auction.registerBid(activeChar, _bid);
+			}
 		}
 	}
 	

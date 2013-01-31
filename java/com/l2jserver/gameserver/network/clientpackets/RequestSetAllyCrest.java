@@ -38,8 +38,9 @@ public final class RequestSetAllyCrest extends L2GameClientPacket {
 	@Override
 	protected void readImpl() {
 		_length = readD();
-		if (_length > 192)
+		if (_length > 192) {
 			return;
+		}
 		
 		_data = new byte[_length];
 		readB(_data);
@@ -48,8 +49,9 @@ public final class RequestSetAllyCrest extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		if (_length < 0) {
 			/*
@@ -69,17 +71,19 @@ public final class RequestSetAllyCrest extends L2GameClientPacket {
 		if (activeChar.getAllyId() != 0) {
 			L2Clan leaderclan = ClanTable.getInstance().getClan(activeChar.getAllyId());
 			
-			if (activeChar.getClanId() != leaderclan.getClanId() || !activeChar.isClanLeader()) {
+			if ((activeChar.getClanId() != leaderclan.getClanId()) || !activeChar.isClanLeader()) {
 				return;
 			}
 			
 			boolean remove = false;
-			if (_length == 0 || _data.length == 0)
+			if ((_length == 0) || (_data.length == 0)) {
 				remove = true;
+			}
 			
 			int newId = 0;
-			if (!remove)
+			if (!remove) {
 				newId = IdFactory.getInstance().getNextId();
+			}
 			
 			if (!remove && !CrestCache.getInstance().saveAllyCrest(newId, _data)) {
 				_log.log(Level.INFO, "Error saving crest for ally " + leaderclan.getAllyName() + " [" + leaderclan.getAllyId() + "]");

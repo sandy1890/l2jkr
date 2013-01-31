@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
 import com.l2jserver.gameserver.network.communityserver.writepackets.WorldInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
 //rocknow-God
 
 public final class RequestAnswerJoinAlly extends L2GameClientPacket {

@@ -27,9 +27,9 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public class GMViewItemList extends L2GameServerPacket {
 	private static final String _S__AD_GMVIEWITEMLIST = "[S] 9a GMViewItemList";
-	private L2ItemInstance[] _items;
-	private int _limit;
-	private String _playerName;
+	private final L2ItemInstance[] _items;
+	private final int _limit;
+	private final String _playerName;
 	
 	public GMViewItemList(L2PcInstance cha) {
 		_items = cha.getInventory().getItems();
@@ -62,10 +62,11 @@ public class GMViewItemList extends L2GameServerPacket {
 			writeD(temp.getItem().getBodyPart());
 			writeH(temp.getEnchantLevel());
 			writeH(temp.getCustomType2());
-			if (temp.isAugmented())
+			if (temp.isAugmented()) {
 				writeD(temp.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(temp.getMana());
 			writeD(temp.isTimeLimitedItem() ? (int) (temp.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God

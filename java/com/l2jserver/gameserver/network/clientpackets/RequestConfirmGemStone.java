@@ -45,17 +45,21 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
-		if (targetItem == null)
+		if (targetItem == null) {
 			return;
+		}
 		L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
-		if (refinerItem == null)
+		if (refinerItem == null) {
 			return;
+		}
 		L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_gemstoneItemObjId);
-		if (gemStoneItem == null)
+		if (gemStoneItem == null) {
 			return;
+		}
 		
 		// Make sure the item is a gemstone
 		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem)) {
@@ -65,8 +69,9 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket {
 		
 		// Check for gemstone count
 		final LifeStone ls = getLifeStone(refinerItem.getItemId());
-		if (ls == null)
+		if (ls == null) {
 			return;
+		}
 		
 		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getItemGrade(), ls.getGrade())) {
 			activeChar.sendPacket(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT);

@@ -32,8 +32,9 @@ public class TempBan extends BaseSendablePacket {
 		if (reason != null) {
 			writeC(0x01);
 			writeS(reason);
-		} else
+		} else {
 			writeC(0x00);
+		}
 	}
 	
 	public TempBan(String accountName, String ip, long time) {

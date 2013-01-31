@@ -31,7 +31,7 @@ public final class RestartResponse extends L2GameServerPacket {
 		return result ? STATIC_PACKET_TRUE : STATIC_PACKET_FALSE;
 	}
 	
-	private boolean _result;
+	private final boolean _result;
 	
 	public RestartResponse(boolean result) {
 		_result = result;

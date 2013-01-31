@@ -57,10 +57,11 @@ public final class RequestRestart extends L2GameClientPacket {
 	protected void runImpl() {
 		final L2PcInstance player = getClient().getActiveChar();
 		
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
-		if (player.getActiveEnchantItem() != null || player.getActiveEnchantAttrItem() != null) {
+		if ((player.getActiveEnchantItem() != null) || (player.getActiveEnchantAttrItem() != null)) {
 			sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
@@ -81,8 +82,9 @@ public final class RequestRestart extends L2GameClientPacket {
 		}
 		
 		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) && !(player.isGM() && Config.GM_RESTART_FIGHTING)) {
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.fine("Player " + player.getName() + " tried to logout while fighting.");
+			}
 			
 			player.sendPacket(SystemMessageId.CANT_RESTART_WHILE_FIGHTING);
 			sendPacket(RestartResponse.valueOf(false));
@@ -104,11 +106,12 @@ public final class RequestRestart extends L2GameClientPacket {
 			
 			final L2Party playerParty = player.getParty();
 			
-			if (playerParty != null)
+			if (playerParty != null) {
 				/*
 				 * Move To MessageTable For L2JTW player.getParty().broadcastString(player.getName() + " has been removed from the upcoming festival.");
 				 */
 				player.getParty().broadcastString(player.getName() + MessageTable.Messages[334].getMessage());
+			}
 		}
 		
 		for (PlayerDespawnListener listener : despawnListeners) {

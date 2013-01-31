@@ -52,7 +52,7 @@ public final class RequestSellItem extends L2GameClientPacket {
 	protected void readImpl() {
 		_listId = readD();
 		int count = readD();
-		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
 		}
 		
@@ -61,7 +61,7 @@ public final class RequestSellItem extends L2GameClientPacket {
 			int objectId = readD();
 			int itemId = readD();
 			long cnt = readQ();
-			if (objectId < 1 || itemId < 1 || cnt < 1) {
+			if ((objectId < 1) || (itemId < 1) || (cnt < 1)) {
 				_items = null;
 				return;
 			}
@@ -71,14 +71,15 @@ public final class RequestSellItem extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		this.processSell();
+		processSell();
 	}
 	
 	protected void processSell() {
 		L2PcInstance player = getClient().getActiveChar();
 		
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("buy")) {
 			/*
@@ -94,7 +95,7 @@ public final class RequestSellItem extends L2GameClientPacket {
 		}
 		
 		// Alt game - Karma punishment
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && player.getKarma() > 0) {
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getKarma() > 0)) {
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -102,15 +103,15 @@ public final class RequestSellItem extends L2GameClientPacket {
 		L2Object target = player.getTarget();
 		L2Character merchant = null;
 		if (!player.isGM()) {
-			if (target == null || (!player.isInsideRadius(target, INTERACTION_DISTANCE, true, false)) // Distance is too far)
+			if ((target == null) || (!player.isInsideRadius(target, INTERACTION_DISTANCE, true, false)) // Distance is too far)
 				|| (player.getInstanceId() != target.getInstanceId()))
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			if ((target instanceof L2MerchantInstance) || (target instanceof L2MerchantSummonInstance))
+			if ((target instanceof L2MerchantInstance) || (target instanceof L2MerchantSummonInstance)) {
 				merchant = (L2Character) target;
-			else {
+			} else {
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -135,13 +136,16 @@ public final class RequestSellItem extends L2GameClientPacket {
 					return;
 				}
 				for (L2TradeList tradeList : lists) {
-					if (tradeList.getListId() == _listId)
+					if (tradeList.getListId() == _listId) {
 						list = tradeList;
+					}
 				}
-			} else
+			} else {
 				list = TradeController.getInstance().getBuyList(_listId);
-		} else
+			}
+		} else {
 			list = TradeController.getInstance().getBuyList(_listId);
+		}
 		
 		if (list == null) {
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
@@ -152,20 +156,22 @@ public final class RequestSellItem extends L2GameClientPacket {
 		// Proceed the sell
 		for (Item i : _items) {
 			L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
-			if (item == null || (!item.isSellable()))
+			if ((item == null) || (!item.isSellable())) {
 				continue;
+			}
 			
 			long price = item.getReferencePrice() / 2;
 			totalPrice += price * i.getCount();
-			if ((MAX_ADENA / i.getCount()) < price || totalPrice > MAX_ADENA) {
+			if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA)) {
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + MAX_ADENA + " adena worth of goods.", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
-			if (Config.ALLOW_REFUND)
+			if (Config.ALLOW_REFUND) {
 				item = player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
-			else
+			} else {
 				item = player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, merchant);
+			}
 		}
 		player.addAdena("Sell", totalPrice, merchant, false);
 		

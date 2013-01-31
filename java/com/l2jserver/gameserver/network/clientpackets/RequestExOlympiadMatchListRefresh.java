@@ -41,16 +41,18 @@ public class RequestExOlympiadMatchListRefresh extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null || !activeChar.inObserverMode())
+		if ((activeChar == null) || !activeChar.inObserverMode()) {
 			return;
+		}
 		
 		List<OlympiadGameTask> games = new ArrayList<>();
 		OlympiadGameTask task;
 		for (int i = 0; i < OlympiadGameManager.getInstance().getNumberOfStadiums(); i++) {
 			task = OlympiadGameManager.getInstance().getOlympiadTask(i);
 			if (task != null) {
-				if (!task.isBattleFinished())
+				if (!task.isBattleFinished()) {
 					games.add(task);
+				}
 			}
 		}
 		activeChar.sendPacket(new ExOlympiadMatchList(games));

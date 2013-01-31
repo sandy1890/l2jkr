@@ -30,25 +30,27 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class RecipeShopManageList extends L2GameServerPacket {
 	
 	private static final String _S__D8_RecipeShopManageList = "[S] de RecipeShopManageList";
-	private L2PcInstance _seller;
-	private boolean _isDwarven;
+	private final L2PcInstance _seller;
+	private final boolean _isDwarven;
 	private L2RecipeList[] _recipes;
 	
 	public RecipeShopManageList(L2PcInstance seller, boolean isDwarven) {
 		_seller = seller;
 		_isDwarven = isDwarven;
 		
-		if (_isDwarven && _seller.hasDwarvenCraft())
+		if (_isDwarven && _seller.hasDwarvenCraft()) {
 			_recipes = _seller.getDwarvenRecipeBook();
-		else
+		} else {
 			_recipes = _seller.getCommonRecipeBook();
+		}
 		
 		// clean previous recipes
 		if (_seller.getCreateList() != null) {
 			L2ManufactureList list = _seller.getCreateList();
 			for (L2ManufactureItem item : list.getList()) {
-				if (item.isDwarven() != _isDwarven || !seller.hasRecipeList(item.getRecipeId()))
+				if ((item.isDwarven() != _isDwarven) || !seller.hasRecipeList(item.getRecipeId())) {
 					list.getList().remove(item);
+				}
 			}
 		}
 	}

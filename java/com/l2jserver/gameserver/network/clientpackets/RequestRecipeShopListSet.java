@@ -50,7 +50,7 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket {
 	@Override
 	protected void readImpl() {
 		int count = readD();
-		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
 		}
 		
@@ -69,8 +69,9 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (_items == null) {
 			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
@@ -128,8 +129,9 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket {
 		}
 		
 		public boolean addToList(L2ManufactureList list) {
-			if (_cost > MAX_ADENA)
+			if (_cost > MAX_ADENA) {
 				return false;
+			}
 			
 			list.add(new L2ManufactureItem(_recipeId, _cost));
 			return true;

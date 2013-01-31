@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class PartyMatchDetail extends L2GameServerPacket {
 	private static final String _S__9D_PARTYMATCHDETAIL = "[S] 9d PartyMatchDetail";
 	
-	private PartyMatchRoom _room;
+	private final PartyMatchRoom _room;
 	
 	/**
 	 * @param player

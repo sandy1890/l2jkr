@@ -43,8 +43,9 @@ public final class RequestRefineCancel extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null) {
@@ -66,26 +67,29 @@ public final class RequestRefineCancel extends L2GameClientPacket {
 		int price = 0;
 		switch (targetItem.getItem().getCrystalType()) {
 			case L2Item.CRYSTAL_C:
-				if (targetItem.getCrystalCount() < 1720)
+				if (targetItem.getCrystalCount() < 1720) {
 					price = 95000;
-				else if (targetItem.getCrystalCount() < 2452)
+				} else if (targetItem.getCrystalCount() < 2452) {
 					price = 150000;
-				else
+				} else {
 					price = 210000;
+				}
 			break;
 			case L2Item.CRYSTAL_B:
-				if (targetItem.getCrystalCount() < 1746)
+				if (targetItem.getCrystalCount() < 1746) {
 					price = 240000;
-				else
+				} else {
 					price = 270000;
+				}
 			break;
 			case L2Item.CRYSTAL_A:
-				if (targetItem.getCrystalCount() < 2160)
+				if (targetItem.getCrystalCount() < 2160) {
 					price = 330000;
-				else if (targetItem.getCrystalCount() < 2824)
+				} else if (targetItem.getCrystalCount() < 2824) {
 					price = 390000;
-				else
+				} else {
 					price = 420000;
+				}
 			break;
 			case L2Item.CRYSTAL_S:
 				price = 480000;
@@ -119,8 +123,9 @@ public final class RequestRefineCancel extends L2GameClientPacket {
 		}
 		
 		// unequip item
-		if (targetItem.isEquipped())
+		if (targetItem.isEquipped()) {
 			activeChar.disarmWeapons();
+		}
 		
 		// remove the augmentation
 		targetItem.removeAugmentation();

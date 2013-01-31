@@ -43,8 +43,9 @@ public final class RequestExCubeGameReadyAnswer extends L2GameClientPacket {
 	public void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
 		
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		switch (_answer) {
 			case 0:

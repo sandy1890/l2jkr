@@ -45,12 +45,14 @@ public final class RequestReceivedPost extends L2GameClientPacket {
 	@Override
 	public void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null || !Config.ALLOW_MAIL)
+		if ((activeChar == null) || !Config.ALLOW_MAIL) {
 			return;
+		}
 		
 		final Message msg = MailManager.getInstance().getMessage(_msgId);
-		if (msg == null)
+		if (msg == null) {
 			return;
+		}
 		
 		if (!activeChar.isInsideZone(ZONE_PEACE) && msg.hasAttachments()) {
 			activeChar.sendPacket(SystemMessageId.CANT_USE_MAIL_OUTSIDE_PEACE_ZONE);
@@ -62,8 +64,9 @@ public final class RequestReceivedPost extends L2GameClientPacket {
 			return;
 		}
 		
-		if (msg.isDeletedByReceiver())
+		if (msg.isDeletedByReceiver()) {
 			return;
+		}
 		
 		activeChar.sendPacket(new ExReplyReceivedPost(msg));
 		activeChar.sendPacket(new ExChangePostState(true, _msgId, Message.READED));

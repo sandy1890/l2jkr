@@ -41,8 +41,9 @@ public final class RequestPlayerShowBoard extends BaseReadPacket {
 		final byte[] html = super.readB(length);
 		
 		L2PcInstance player = L2World.getInstance().getPlayer(playerObjId);
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		player.sendPacket(new CSShowComBoard(html));
 	}

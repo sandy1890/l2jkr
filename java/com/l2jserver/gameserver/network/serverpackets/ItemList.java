@@ -33,11 +33,11 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 public final class ItemList extends L2GameServerPacket {
 	private static final String _S__11_ITEMLIST = "[S] 11 ItemList";
 	
-	private PcInventory _inventory;
-	private L2ItemInstance[] _items;
-	private boolean _showWindow;
+	private final PcInventory _inventory;
+	private final L2ItemInstance[] _items;
+	private final boolean _showWindow;
 	private int length;
-	private FastList<L2ItemInstance> questItems;
+	private final FastList<L2ItemInstance> questItems;
 	
 	public ItemList(L2PcInstance cha, boolean showWindow) {
 		_inventory = cha.getInventory();
@@ -45,11 +45,12 @@ public final class ItemList extends L2GameServerPacket {
 		_showWindow = showWindow;
 		questItems = FastList.newInstance();
 		for (int i = 0; i < _items.length; i++) {
-			if (_items[i] != null && _items[i].isQuestItem()) {
+			if ((_items[i] != null) && _items[i].isQuestItem()) {
 				questItems.add(_items[i]); // add to questinv
 				_items[i] = null; // remove from list
-			} else
+			} else {
 				length++; // increase size
+			}
 		}
 	}
 	
@@ -69,8 +70,9 @@ public final class ItemList extends L2GameServerPacket {
 		writeH(length);
 		
 		for (L2ItemInstance temp : _items) {
-			if (temp == null || temp.getItem() == null)
+			if ((temp == null) || (temp.getItem() == null)) {
 				continue;
+			}
 			
 			writeD(temp.getObjectId());
 			writeD(temp.getDisplayId());
@@ -83,10 +85,11 @@ public final class ItemList extends L2GameServerPacket {
 			writeH(temp.getEnchantLevel()); // enchant level
 			// race tickets
 			writeH(temp.getCustomType2()); // item type3
-			if (temp.isAugmented())
+			if (temp.isAugmented()) {
 				writeD(temp.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(temp.getMana());
 			writeD(temp.isTimeLimitedItem() ? (int) (temp.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God
@@ -104,10 +107,12 @@ public final class ItemList extends L2GameServerPacket {
 		if (_inventory.hasInventoryBlock()) {
 			writeH(_inventory.getBlockItems().length);
 			writeC(_inventory.getBlockMode());
-			for (int i : _inventory.getBlockItems())
+			for (int i : _inventory.getBlockItems()) {
 				writeD(i);
-		} else
+			}
+		} else {
 			writeH(0x00);
+		}
 	}
 	
 	@Override

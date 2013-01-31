@@ -80,9 +80,9 @@ public class FortSiege implements Siegable {
 			
 			try {
 				_siegeEnd = null;
-				FortSiege.this.endSiege();
+				endSiege();
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Exception: ScheduleEndSiegeTask() for Fort: " + FortSiege.this._fort.getName() + " " + e.getMessage(), e);
+				_log.log(Level.WARNING, "Exception: ScheduleEndSiegeTask() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
 			}
 		}
 	}
@@ -92,7 +92,7 @@ public class FortSiege implements Siegable {
 		private final int _time;
 		
 		public ScheduleStartSiegeTask(int time) {
-			_fortInst = FortSiege.this._fort;
+			_fortInst = _fort;
 			_time = time;
 		}
 		
@@ -170,9 +170,9 @@ public class FortSiege implements Siegable {
 			}
 			
 			try {
-				FortSiege.this._fort.spawnSuspiciousMerchant();
+				_fort.spawnSuspiciousMerchant();
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Exception: ScheduleSuspicoiusMerchantSpawn() for Fort: " + FortSiege.this._fort.getName() + " " + e.getMessage(), e);
+				_log.log(Level.WARNING, "Exception: ScheduleSuspicoiusMerchantSpawn() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
 			}
 		}
 	}
@@ -186,10 +186,10 @@ public class FortSiege implements Siegable {
 			
 			try {
 				_siegeRestore = null;
-				FortSiege.this.resetSiege();
+				resetSiege();
 				announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.BARRACKS_FUNCTION_RESTORED));
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Exception: ScheduleSiegeRestore() for Fort: " + FortSiege.this._fort.getName() + " " + e.getMessage(), e);
+				_log.log(Level.WARNING, "Exception: ScheduleSiegeRestore() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
 			}
 		}
 	}

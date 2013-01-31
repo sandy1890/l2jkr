@@ -21,9 +21,9 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class ExRegMax extends L2GameServerPacket {
 	
 	private static final String _S__FE_01_EXREGMAX = "[S] FE:01 ExRegenMax";
-	private double _max;
-	private int _count;
-	private int _time;
+	private final double _max;
+	private final int _count;
+	private final int _time;
 	
 	public ExRegMax(double max, int count, int time) {
 		_max = max;

@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class GMViewPledgeInfo extends L2GameServerPacket {
 	private static final String _S__A9_GMVIEWPLEDGEINFO = "[S] 96 GMViewPledgeInfo";
-	private L2Clan _clan;
-	private L2PcInstance _activeChar;
+	private final L2Clan _clan;
+	private final L2PcInstance _activeChar;
 	
 	public GMViewPledgeInfo(L2Clan clan, L2PcInstance activeChar) {
 		_clan = clan;

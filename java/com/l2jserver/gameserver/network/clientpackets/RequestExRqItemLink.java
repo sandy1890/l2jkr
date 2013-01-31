@@ -39,7 +39,7 @@ public class RequestExRqItemLink extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		L2GameClient client = this.getClient();
+		L2GameClient client = getClient();
 		if (client != null) {
 			L2Object object = L2World.getInstance().findObject(_objectId);
 			if (object instanceof L2ItemInstance) {
@@ -47,8 +47,9 @@ public class RequestExRqItemLink extends L2GameClientPacket {
 				if (item.isPublished()) {
 					client.sendPacket(new ExRpItemLink(item));
 				} else {
-					if (Config.DEBUG)
+					if (Config.DEBUG) {
 						_log.info(getClient() + " requested item link for item which wasnt published! ID:" + _objectId);
+					}
 				}
 			}
 		}

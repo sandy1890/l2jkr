@@ -38,10 +38,11 @@ public class OnEventTrigger extends L2GameServerPacket {
 	public OnEventTrigger(L2DoorInstance door, boolean opened) {
 		_emitterId = door.getEmitter();
 		
-		if (Util.contains(_reverse_doors, door.getDoorId()))
+		if (Util.contains(_reverse_doors, door.getDoorId())) {
 			_opened = !opened;
-		else
+		} else {
 			_opened = opened;
+		}
 	}
 	
 	// Add IQ by pmq Start

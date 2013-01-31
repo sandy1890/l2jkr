@@ -38,8 +38,9 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (player.isAlikeDead()) {
@@ -49,8 +50,9 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket {
 		if (player.getPrivateStoreType() != 0) {
 			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
 			player.broadcastUserInfo();
-			if (player.isSitting())
+			if (player.isSitting()) {
 				player.standUp();
+			}
 		}
 		if (player.getCreateList() == null) {
 			player.setCreateList(new L2ManufactureList());

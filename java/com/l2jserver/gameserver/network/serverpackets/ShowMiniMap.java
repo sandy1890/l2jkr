@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.SevenSigns;
  */
 public class ShowMiniMap extends L2GameServerPacket {
 	private static final String _S__A3_SHOWMINIMAP = "[S] a3 ShowMiniMap";
-	private int _mapId;
+	private final int _mapId;
 	
 	/**
 	 * @param mapId

@@ -34,7 +34,7 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket {
 	private final byte _atribute;
 	private final int _level;
 	// l2jtw add start
-	private List<L2ItemInstance> _items;
+	private final List<L2ItemInstance> _items;
 	
 	// l2jtw add end
 	
@@ -46,8 +46,9 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket {
 	{
 		_itemId = item.getDisplayId();
 		_atribute = Elementals.getItemElement(_itemId);
-		if (_atribute == Elementals.NONE)
+		if (_atribute == Elementals.NONE) {
 			throw new IllegalArgumentException("Undefined Atribute item: " + item);
+		}
 		_level = Elementals.getMaxElementLevel(_itemId);
 		// l2jtw add start
 		_items = new FastList<>();

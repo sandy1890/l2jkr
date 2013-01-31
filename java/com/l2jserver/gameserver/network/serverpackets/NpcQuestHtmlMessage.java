@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:57 $
  */
 public final class NpcQuestHtmlMessage extends L2GameServerPacket {
-	private int _npcObjId;
+	private final int _npcObjId;
 	private String _html;
 	private int _questId = 0;
 	
@@ -45,16 +45,18 @@ public final class NpcQuestHtmlMessage extends L2GameServerPacket {
 	
 	@Override
 	public void runImpl() {
-		if (Config.BYPASS_VALIDATION)
+		if (Config.BYPASS_VALIDATION) {
 			buildBypassCache(getClient().getActiveChar());
+		}
 	}
 	
 	public void setHtml(String text) {
-		if (!text.contains("<html>"))
+		if (!text.contains("<html>")) {
 			/*
 			 * Move To MessageTable For L2JTW text = "<html><body>" + text + "</body></html>";
 			 */
 			text = "<html><body>" + MessageTable.Messages[221].getMessage() + "</body></html>";
+		}
 		
 		_html = text;
 	}
@@ -80,8 +82,9 @@ public final class NpcQuestHtmlMessage extends L2GameServerPacket {
 	}
 	
 	private final void buildBypassCache(L2PcInstance activeChar) {
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		activeChar.clearBypass();
 		int len = _html.length();
@@ -89,16 +92,18 @@ public final class NpcQuestHtmlMessage extends L2GameServerPacket {
 			int start = _html.indexOf("bypass -h", i);
 			int finish = _html.indexOf("\"", start);
 			
-			if (start < 0 || finish < 0)
+			if ((start < 0) || (finish < 0)) {
 				break;
+			}
 			
 			start += 10;
 			i = finish;
 			int finish2 = _html.indexOf("$", start);
-			if (finish2 < finish && finish2 > 0)
+			if ((finish2 < finish) && (finish2 > 0)) {
 				activeChar.addBypass2(_html.substring(start, finish2).trim());
-			else
+			} else {
 				activeChar.addBypass(_html.substring(start, finish).trim());
+			}
 		}
 	}
 	

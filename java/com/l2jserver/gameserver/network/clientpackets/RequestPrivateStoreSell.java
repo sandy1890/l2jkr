@@ -43,7 +43,7 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket {
 	protected void readImpl() {
 		_storePlayerId = readD();
 		int count = readD();
-		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
 		}
 		_items = new ItemRequest[count];
@@ -58,7 +58,7 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket {
 			readH(); // TODO analyse this //rocknow-God
 			readH(); // TODO analyse this //rocknow-God
 			
-			if (objectId < 1 || itemId < 1 || cnt < 1 || price < 0) {
+			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0)) {
 				_items = null;
 				return;
 			}
@@ -69,8 +69,9 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (_items == null) {
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -86,25 +87,31 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket {
 		}
 		
 		L2PcInstance object = L2World.getInstance().getPlayer(_storePlayerId);
-		if (object == null)
+		if (object == null) {
 			return;
+		}
 		
 		L2PcInstance storePlayer = object;
-		if (!player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false))
+		if (!player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false)) {
 			return;
+		}
 		
-		if (player.getInstanceId() != storePlayer.getInstanceId() && player.getInstanceId() != -1)
+		if ((player.getInstanceId() != storePlayer.getInstanceId()) && (player.getInstanceId() != -1)) {
 			return;
+		}
 		
-		if (storePlayer.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_BUY)
+		if (storePlayer.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_BUY) {
 			return;
+		}
 		
-		if (player.isCursedWeaponEquipped())
+		if (player.isCursedWeaponEquipped()) {
 			return;
+		}
 		
 		TradeList storeList = storePlayer.getBuyList();
-		if (storeList == null)
+		if (storeList == null) {
 			return;
+		}
 		
 		if (!player.getAccessLevel().allowTransaction()) {
 			/*

@@ -38,8 +38,9 @@ public class PackageSendableList extends L2GameServerPacket {
 	@Override
 	protected void writeImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		writeC(0xD2);
 		writeD(_playerObjId);
@@ -56,10 +57,11 @@ public class PackageSendableList extends L2GameServerPacket {
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getEnchantLevel());
 			writeH(item.getCustomType2());
-			if (item.isAugmented())
+			if (item.isAugmented()) {
 				writeD(item.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(item.getMana());
 			writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God

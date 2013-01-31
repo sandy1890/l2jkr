@@ -68,7 +68,7 @@ public class L2FortManagerInstance extends L2MerchantInstance {
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command) {
 		// BypassValidation Exploit plug.
-		if (player.getLastFolkNPC().getObjectId() != this.getObjectId()) {
+		if (player.getLastFolkNPC().getObjectId() != getObjectId()) {
 			return;
 		}
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM HH"); // Update by pmq Start
@@ -852,7 +852,7 @@ public class L2FortManagerInstance extends L2MerchantInstance {
 						if (skill.getSkillType() == L2SkillType.SUMMON) {
 							player.doCast(skill);
 						} else {
-							if (!((skill.getMpConsume() + skill.getMpInitialConsume()) > this.getCurrentMp())) {
+							if (!((skill.getMpConsume() + skill.getMpInitialConsume()) > getCurrentMp())) {
 								this.doCast(skill);
 							} else {
 								html.setFile(player.getHtmlPrefix(), "data/html/fortress/support-no_mana.htm");

@@ -42,11 +42,13 @@ public class RequestKeyMapping extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (Config.STORE_UI_SETTINGS)
+		if (Config.STORE_UI_SETTINGS) {
 			activeChar.sendPacket(new ExUISetting(activeChar));
+		}
 	}
 	
 	@Override

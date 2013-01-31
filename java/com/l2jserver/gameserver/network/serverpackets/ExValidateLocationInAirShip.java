@@ -24,8 +24,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * @author kerberos JIV update 27.8.10
  */
 public class ExValidateLocationInAirShip extends L2GameServerPacket {
-	private L2PcInstance _activeChar;
-	private int shipId, x, y, z, h;
+	private final L2PcInstance _activeChar;
+	private final int shipId, x, y, z, h;
 	
 	public ExValidateLocationInAirShip(L2PcInstance player) {
 		_activeChar = player;

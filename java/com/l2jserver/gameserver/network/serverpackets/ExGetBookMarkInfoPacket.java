@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TeleportBookma
 public class ExGetBookMarkInfoPacket extends L2GameServerPacket {
 	private static final String _S__FE_84_EXGETBOOKMARKINFOPACKET = "[S] FE:84 ExGetBookMarkInfoPacket";
 	
-	private L2PcInstance player;
+	private final L2PcInstance player;
 	
 	public ExGetBookMarkInfoPacket(L2PcInstance cha) {
 		player = cha;

@@ -21,7 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 public final class ChooseInventoryItem extends L2GameServerPacket {
 	private static final String _S__6F_CHOOSEINVENTORYITEM = "[S] 7c ChooseInventoryItem";
 	
-	private int _itemId;
+	private final int _itemId;
 	
 	public ChooseInventoryItem(int itemId) {
 		_itemId = itemId;

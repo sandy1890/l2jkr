@@ -38,8 +38,9 @@ public final class RequestPrivateStoreManageSell extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (player.isAlikeDead()) {

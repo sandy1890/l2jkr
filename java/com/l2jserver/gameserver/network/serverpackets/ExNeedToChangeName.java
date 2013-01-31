@@ -25,8 +25,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  * @author JIV
  */
 public class ExNeedToChangeName extends L2GameServerPacket {
-	private int type, subType;
-	private String name;
+	private final int type, subType;
+	private final String name;
 	
 	public ExNeedToChangeName(int type, int subType, String name) {
 		super();

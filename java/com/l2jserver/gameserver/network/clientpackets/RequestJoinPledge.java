@@ -43,12 +43,14 @@ public final class RequestJoinPledge extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		final L2Clan clan = activeChar.getClan();
-		if (clan == null)
+		if (clan == null) {
 			return;
+		}
 		
 		final L2PcInstance target = L2World.getInstance().getPlayer(_target);
 		if (target == null) {
@@ -56,11 +58,13 @@ public final class RequestJoinPledge extends L2GameClientPacket {
 			return;
 		}
 		
-		if (!clan.checkClanJoinCondition(activeChar, target, _pledgeType))
+		if (!clan.checkClanJoinCondition(activeChar, target, _pledgeType)) {
 			return;
+		}
 		
-		if (!activeChar.getRequest().setRequest(target, this))
+		if (!activeChar.getRequest().setRequest(target, this)) {
 			return;
+		}
 		
 		final String pledgeName = activeChar.getClan().getName();
 		final String subPledgeName = (activeChar.getClan().getSubPledge(_pledgeType) != null ? activeChar.getClan().getSubPledge(_pledgeType).getName() : null);

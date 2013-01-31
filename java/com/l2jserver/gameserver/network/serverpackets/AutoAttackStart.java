@@ -26,7 +26,7 @@ public final class AutoAttackStart extends L2GameServerPacket {
 	// dh
 	
 	private static final String _S__3B_AUTOATTACKSTART = "[S] 25 AutoAttackStart";
-	private int _targetObjId;
+	private final int _targetObjId;
 	
 	/**
 	 * @param targetId

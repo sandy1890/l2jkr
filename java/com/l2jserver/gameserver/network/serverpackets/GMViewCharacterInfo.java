@@ -206,8 +206,9 @@ public class GMViewCharacterInfo extends L2GameServerPacket {
 		
 		writeD(_activeChar.getPvpFlag()); // 0-non-pvp 1-pvp = violett name
 		int Karma = _activeChar.getKarma(); // rocknow-God-Test
-		if (Karma > 0) // rocknow-God-Test
+		if (Karma > 0) {
 			Karma = 0 - Karma; // rocknow-God-Test
+		}
 		writeD(Karma); // rocknow-God-Test
 		
 		writeD(_runSpd);

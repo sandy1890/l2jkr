@@ -337,7 +337,7 @@ public abstract class L2Vehicle extends L2Character {
 		}
 		
 		if (Config.MOVE_BASED_KNOWNLIST && updateKnownObjects) {
-			this.getKnownList().findObjects();
+			getKnownList().findObjects();
 		}
 	}
 	

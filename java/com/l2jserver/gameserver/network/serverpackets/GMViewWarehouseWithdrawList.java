@@ -28,10 +28,10 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public class GMViewWarehouseWithdrawList extends L2GameServerPacket {
 	private static final String _S__95_GMViewWarehouseWithdrawList = "[S] 9b GMViewWarehouseWithdrawList";
-	private L2ItemInstance[] _items;
-	private String _playerName;
+	private final L2ItemInstance[] _items;
+	private final String _playerName;
 	private L2PcInstance _activeChar;
-	private long _money;
+	private final long _money;
 	
 	public GMViewWarehouseWithdrawList(L2PcInstance cha) {
 		_activeChar = cha;
@@ -64,10 +64,11 @@ public class GMViewWarehouseWithdrawList extends L2GameServerPacket {
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getEnchantLevel());
 			writeH(item.getCustomType2());
-			if (item.isAugmented())
+			if (item.isAugmented()) {
 				writeD(item.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(item.getMana());
 			writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God

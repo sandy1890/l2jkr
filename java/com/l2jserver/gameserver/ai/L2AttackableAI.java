@@ -2252,7 +2252,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
 	 * @param TP The timepass to set.
 	 */
 	public void setTimepass(int TP) {
-		this.timepass = TP;
+		timepass = TP;
 	}
 	
 	/**
