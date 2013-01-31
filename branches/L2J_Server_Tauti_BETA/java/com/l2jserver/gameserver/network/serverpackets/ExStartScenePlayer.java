@@ -25,7 +25,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class ExStartScenePlayer extends L2GameServerPacket {
 	private static final String _S__FE99_PLAYQUESTMOVIE = "[S] FE:99 ExStartScenePlayer";
 	
-	private int _movieId;
+	private final int _movieId;
 	
 	public ExStartScenePlayer(int id) {
 		_movieId = id;

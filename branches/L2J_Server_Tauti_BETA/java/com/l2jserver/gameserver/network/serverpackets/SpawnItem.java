@@ -27,9 +27,9 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public final class SpawnItem extends L2GameServerPacket {
 	private static final String _S__15_SPAWNITEM = "[S] 05 SpawnItem";
-	private int _objectId;
+	private final int _objectId;
 	private int _itemId;
-	private int _x, _y, _z;
+	private final int _x, _y, _z;
 	private int _stackable;
 	private long _count;
 	

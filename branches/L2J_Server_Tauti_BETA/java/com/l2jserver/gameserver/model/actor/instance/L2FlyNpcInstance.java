@@ -29,7 +29,7 @@ public final class L2FlyNpcInstance extends L2NpcInstance {
 	
 	@Override
 	public void onSpawn() {
-		this.setIsFlying(true);
+		setIsFlying(true);
 		super.onSpawn();
 	}
 	

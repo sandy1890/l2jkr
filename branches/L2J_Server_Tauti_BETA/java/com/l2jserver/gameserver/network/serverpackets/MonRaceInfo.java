@@ -26,10 +26,10 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
  */
 public class MonRaceInfo extends L2GameServerPacket {
 	private static final String _S__DD_MonRaceInfo = "[S] e3 MonRaceInfo";
-	private int _unknown1;
-	private int _unknown2;
-	private L2Npc[] _monsters;
-	private int[][] _speeds;
+	private final int _unknown1;
+	private final int _unknown2;
+	private final L2Npc[] _monsters;
+	private final int[][] _speeds;
 	
 	public MonRaceInfo(int unknown1, int unknown2, L2Npc[] monsters, int[][] speeds) {
 		/*
@@ -67,8 +67,9 @@ public class MonRaceInfo extends L2GameServerPacket {
 			for (int j = 0; j < 20; j++) {
 				if (_unknown1 == 0) {
 					writeC(_speeds[i][j]);
-				} else
+				} else {
 					writeC(0);
+				}
 			}
 			writeD(0);
 			writeD(0); // CT2.3 special effect

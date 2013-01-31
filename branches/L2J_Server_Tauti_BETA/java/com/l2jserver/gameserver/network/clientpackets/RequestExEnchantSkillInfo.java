@@ -42,28 +42,33 @@ public final class RequestExEnchantSkillInfo extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (_skillId <= 0 || _skillLvl <= 0) // minimal sanity check
-			return;
-		
-		L2PcInstance activeChar = getClient().getActiveChar();
-		
-		if (activeChar == null)
-			return;
-		
-		if (activeChar.getLevel() < 76)
-			return;
-		
-		final L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
-		if (skill == null || skill.getId() != _skillId) {
+		if ((_skillId <= 0) || (_skillLvl <= 0)) {
 			return;
 		}
 		
-		if (EnchantGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId) == null)
+		L2PcInstance activeChar = getClient().getActiveChar();
+		
+		if (activeChar == null) {
 			return;
+		}
+		
+		if (activeChar.getLevel() < 76) {
+			return;
+		}
+		
+		final L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		if ((skill == null) || (skill.getId() != _skillId)) {
+			return;
+		}
+		
+		if (EnchantGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId) == null) {
+			return;
+		}
 		
 		int playerSkillLvl = activeChar.getSkillLevel(_skillId);
-		if (playerSkillLvl == -1 || playerSkillLvl != _skillLvl)
+		if ((playerSkillLvl == -1) || (playerSkillLvl != _skillLvl)) {
 			return;
+		}
 		
 		activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl));
 	}

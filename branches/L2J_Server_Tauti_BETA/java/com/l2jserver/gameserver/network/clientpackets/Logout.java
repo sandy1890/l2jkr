@@ -51,10 +51,11 @@ public final class Logout extends L2GameClientPacket {
 		// Don't allow leaving if player is fighting
 		final L2PcInstance player = getClient().getActiveChar();
 		
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
-		if (player.getActiveEnchantItem() != null || player.getActiveEnchantAttrItem() != null) {
+		if ((player.getActiveEnchantItem() != null) || (player.getActiveEnchantAttrItem() != null)) {
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -66,8 +67,9 @@ public final class Logout extends L2GameClientPacket {
 		}
 		
 		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) && !(player.isGM() && Config.GM_RESTART_FIGHTING)) {
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.fine("Player " + player.getName() + " tried to logout while fighting");
+			}
 			
 			player.sendPacket(SystemMessageId.CANT_LOGOUT_WHILE_FIGHTING);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -97,11 +99,12 @@ public final class Logout extends L2GameClientPacket {
 			}
 			final L2Party playerParty = player.getParty();
 			
-			if (playerParty != null)
+			if (playerParty != null) {
 				/*
 				 * Move To MessageTable For L2JTW player.getParty().broadcastPacket(SystemMessage.sendString(player.getName() + " has been removed from the upcoming Festival."));
 				 */
 				player.getParty().broadcastPacket(SystemMessage.sendString(player.getName() + MessageTable.Messages[240].getMessage()));
+			}
 		}
 		
 		// Remove player from Boss Zone
@@ -110,7 +113,7 @@ public final class Logout extends L2GameClientPacket {
 		LogRecord record = new LogRecord(Level.INFO, "Disconnected");
 		record.setParameters(new Object[]
 		{
-			this.getClient()
+			getClient()
 		});
 		_logAccounting.log(record);
 		

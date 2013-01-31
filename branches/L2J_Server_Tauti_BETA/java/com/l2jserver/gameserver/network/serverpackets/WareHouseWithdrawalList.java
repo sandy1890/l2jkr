@@ -49,9 +49,11 @@ public final class WareHouseWithdrawalList extends L2GameServerPacket {
 		}
 		
 		_items = _activeChar.getActiveWarehouse().getItems();
-		if (Config.DEBUG)
-			for (L2ItemInstance item : _items)
+		if (Config.DEBUG) {
+			for (L2ItemInstance item : _items) {
 				_log.fine("item:" + item.getItem().getName() + " type1:" + item.getItem().getType1() + " type2:" + item.getItem().getType2());
+			}
+		}
 	}
 	
 	@Override
@@ -64,9 +66,10 @@ public final class WareHouseWithdrawalList extends L2GameServerPacket {
 		writeQ(_playerAdena);
 		writeH(_items.length);
 		writeD(0x00); // rocknow-God
-		if (_whType == 1 || _whType == 2) // rocknow-God
+		if ((_whType == 1) || (_whType == 2)) {
 			writeH(0x00); // rocknow-God
-			
+		}
+		
 		for (L2ItemInstance item : _items) {
 			writeD(item.getObjectId());
 			writeD(item.getDisplayId());
@@ -78,10 +81,11 @@ public final class WareHouseWithdrawalList extends L2GameServerPacket {
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getEnchantLevel());
 			writeH(item.getCustomType2());
-			if (item.isAugmented())
+			if (item.isAugmented()) {
 				writeD(item.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(item.getMana());
 			writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God

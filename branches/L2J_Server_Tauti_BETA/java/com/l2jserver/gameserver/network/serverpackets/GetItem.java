@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public final class GetItem extends L2GameServerPacket {
 	private static final String _S__17_GETITEM = "[S] 17 GetItem";
-	private L2ItemInstance _item;
-	private int _playerId;
+	private final L2ItemInstance _item;
+	private final int _playerId;
 	
 	public GetItem(L2ItemInstance item, int playerId) {
 		_item = item;

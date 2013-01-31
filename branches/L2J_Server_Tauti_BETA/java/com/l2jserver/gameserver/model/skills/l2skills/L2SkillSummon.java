@@ -226,7 +226,7 @@ public class L2SkillSummon extends L2Skill {
 		L2ServitorInstance summon;
 		L2NpcTemplate summonTemplate = NpcTable.getInstance().getTemplate(_npcId);
 		if (summonTemplate == null) {
-			_log.warning("Summon attempt for nonexisting NPC ID:" + _npcId + ", skill ID:" + this.getId());
+			_log.warning("Summon attempt for nonexisting NPC ID:" + _npcId + ", skill ID:" + getId());
 			return; // npcID doesn't exist
 		}
 		

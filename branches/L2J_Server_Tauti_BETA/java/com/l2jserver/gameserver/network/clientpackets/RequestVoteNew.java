@@ -39,23 +39,26 @@ public final class RequestVoteNew extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		L2Object object = activeChar.getTarget();
 		
 		if (!(object instanceof L2PcInstance)) {
-			if (object == null)
+			if (object == null) {
 				activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
-			else
+			} else {
 				activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
+			}
 			return;
 		}
 		
 		L2PcInstance target = (L2PcInstance) object;
 		
-		if (target.getObjectId() != _targetId)
+		if (target.getObjectId() != _targetId) {
 			return;
+		}
 		
 		if (target == activeChar) {
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF);

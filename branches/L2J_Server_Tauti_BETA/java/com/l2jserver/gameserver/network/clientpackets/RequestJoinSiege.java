@@ -48,8 +48,9 @@ public final class RequestJoinSiege extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		if ((activeChar.getClanPrivileges() & L2Clan.CP_CS_MANAGE_SIEGE) != L2Clan.CP_CS_MANAGE_SIEGE) {
 			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
@@ -57,8 +58,9 @@ public final class RequestJoinSiege extends L2GameClientPacket {
 		}
 		
 		L2Clan clan = activeChar.getClan();
-		if (clan == null)
+		if (clan == null) {
 			return;
+		}
 		
 		Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if (castle != null) {
@@ -67,12 +69,14 @@ public final class RequestJoinSiege extends L2GameClientPacket {
 					activeChar.sendPacket(SystemMessageId.CANT_PARTICIPATE_IN_SIEGE_WHILE_DISSOLUTION_IN_PROGRESS);
 					return;
 				}
-				if (_isAttacker == 1)
+				if (_isAttacker == 1) {
 					castle.getSiege().registerAttacker(activeChar);
-				else
+				} else {
 					castle.getSiege().registerDefender(activeChar);
-			} else
+				}
+			} else {
 				castle.getSiege().removeSiegeClan(activeChar);
+			}
 			castle.getSiege().listRegisterClan(activeChar);
 		}
 		
@@ -84,8 +88,9 @@ public final class RequestJoinSiege extends L2GameClientPacket {
 					return;
 				}
 				CHSiegeManager.getInstance().registerClan(clan, hall, activeChar);
-			} else
+			} else {
 				CHSiegeManager.getInstance().unRegisterClan(clan, hall);
+			}
 			activeChar.sendPacket(new SiegeInfo(hall));
 		}
 	}

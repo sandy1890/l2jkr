@@ -21,8 +21,8 @@ package com.l2jserver.gameserver.network.loginserverpackets;
 import com.l2jserver.util.network.BaseRecievePacket;
 
 public class InitLS extends BaseRecievePacket {
-	private int _rev;
-	private byte[] _key;
+	private final int _rev;
+	private final byte[] _key;
 	
 	public int getRevision() {
 		return _rev;

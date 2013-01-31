@@ -22,10 +22,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.util.Point3D;
 
 public class ExMoveToLocationInAirShip extends L2GameServerPacket {
-	private int _charObjId;
-	private int _airShipId;
-	private Point3D _destination;
-	private int _heading;
+	private final int _charObjId;
+	private final int _airShipId;
+	private final Point3D _destination;
+	private final int _heading;
 	
 	/**
 	 * @param player

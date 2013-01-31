@@ -27,9 +27,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class PartySmallWindowAll extends L2GameServerPacket {
 	private static final String _S__63_PARTYSMALLWINDOWALL = "[S] 4e PartySmallWindowAll";
-	private L2Party _party;
-	private L2PcInstance _exclude;
-	private int _dist, _LeaderOID;
+	private final L2Party _party;
+	private final L2PcInstance _exclude;
+	private final int _dist, _LeaderOID;
 	
 	public PartySmallWindowAll(L2PcInstance exclude, L2Party party) {
 		_exclude = exclude;

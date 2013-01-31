@@ -63,8 +63,9 @@ public final class InitWorldInfo extends BaseWritePacket {
 					if (c == null) {
 						continue;
 					}
-					if (i++ == info)
+					if (i++ == info) {
 						break;
+					}
 					super.writeD(c.getClanId());
 					super.writeS(c.getName());
 					super.writeD(c.getLevel());
@@ -91,8 +92,9 @@ public final class InitWorldInfo extends BaseWritePacket {
 				super.writeD(info != -1 ? info : players.length);
 				i = 0;
 				for (StatsSet p : players) {
-					if (i++ == info)
+					if (i++ == info) {
 						break;
+					}
 					super.writeD(p.getInteger("charId"));
 					super.writeS(p.getString("char_name"));
 					super.writeS(p.getString("account_name"));
@@ -109,8 +111,9 @@ public final class InitWorldInfo extends BaseWritePacket {
 						statement.setInt(1, p.getInteger("charId"));
 						ResultSet rset = statement.executeQuery();
 						
-						while (rset.next())
+						while (rset.next()) {
 							list.add(rset.getInt("friendId"));
+						}
 						
 						rset.close();
 						statement.close();
@@ -120,8 +123,9 @@ public final class InitWorldInfo extends BaseWritePacket {
 						L2DatabaseFactory.close(con);
 					}
 					super.writeD(list.size());
-					for (int j : list)
+					for (int j : list) {
 						super.writeD(j);
+					}
 					FastList.recycle(list);
 				}
 			break;

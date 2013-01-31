@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.L2RecipeList;
 public class RecipeBookItemList extends L2GameServerPacket {
 	private static final String _S__D6_RECIPEBOOKITEMLIST = "[S] dc RecipeBookItemList";
 	private L2RecipeList[] _recipes;
-	private boolean _isDwarvenCraft;
-	private int _maxMp;
+	private final boolean _isDwarvenCraft;
+	private final int _maxMp;
 	
 	public RecipeBookItemList(boolean isDwarvenCraft, int maxMp) {
 		_isDwarvenCraft = isDwarvenCraft;

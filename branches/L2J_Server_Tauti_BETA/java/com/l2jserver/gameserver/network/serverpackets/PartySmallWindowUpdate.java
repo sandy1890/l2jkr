@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class PartySmallWindowUpdate extends L2GameServerPacket {
 	private static final String _S__67_PARTYSMALLWINDOWUPDATE = "[S] 52 PartySmallWindowUpdate";
-	private L2PcInstance _member;
+	private final L2PcInstance _member;
 	
 	public PartySmallWindowUpdate(L2PcInstance member) {
 		_member = member;

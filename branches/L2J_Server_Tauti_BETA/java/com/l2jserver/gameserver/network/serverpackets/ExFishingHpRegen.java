@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public class ExFishingHpRegen extends L2GameServerPacket {
 	private static final String _S__FE_16_EXFISHINGHPREGEN = "[S] FE:28 ExFishingHPRegen";
-	private L2Character _activeChar;
-	private int _time, _fishHP, _hpMode, _anim, _goodUse, _penalty, _hpBarColor;
+	private final L2Character _activeChar;
+	private final int _time, _fishHP, _hpMode, _anim, _goodUse, _penalty, _hpBarColor;
 	
 	public ExFishingHpRegen(L2Character character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor) {
 		_activeChar = character;

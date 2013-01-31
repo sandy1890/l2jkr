@@ -45,8 +45,9 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed reading: " + getType() + " - L2J Server Version: " + Config.SERVER_VERSION + " - DP Revision: " + Config.DATAPACK_VERSION + " ; " + e.getMessage(), e);
 			
-			if (e instanceof BufferUnderflowException) // only one allowed per client per minute
+			if (e instanceof BufferUnderflowException) {
 				getClient().onBufferUnderflow();
+			}
 		}
 		return false;
 	}
@@ -63,17 +64,19 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 			 */
 			if (triggersOnActionRequest()) {
 				final L2PcInstance actor = getClient().getActiveChar();
-				if (actor != null && (actor.isSpawnProtected() || actor.isInvul())) {
+				if ((actor != null) && (actor.isSpawnProtected() || actor.isInvul())) {
 					actor.onActionRequest();
-					if (Config.DEBUG)
+					if (Config.DEBUG) {
 						_log.info("Spawn protection for player " + actor.getName() + " removed by packet: " + getType());
+					}
 				}
 			}
 		} catch (Throwable t) {
 			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed running: " + getType() + " - L2J Server Version: " + Config.SERVER_VERSION + " - DP Revision: " + Config.DATAPACK_VERSION + " ; " + t.getMessage(), t);
 			// in case of EnterWorld error kick player from game
-			if (this instanceof EnterWorld)
+			if (this instanceof EnterWorld) {
 				getClient().closeNow();
+			}
 		}
 	}
 	

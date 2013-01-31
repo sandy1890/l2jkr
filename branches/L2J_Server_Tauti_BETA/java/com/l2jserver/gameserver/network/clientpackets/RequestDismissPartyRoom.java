@@ -42,13 +42,15 @@ public class RequestDismissPartyRoom extends L2GameClientPacket {
 	protected void runImpl() {
 		final L2PcInstance _activeChar = getClient().getActiveChar();
 		
-		if (_activeChar == null)
+		if (_activeChar == null) {
 			return;
+		}
 		
 		PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
 		
-		if (_room == null)
+		if (_room == null) {
 			return;
+		}
 		
 		PartyMatchRoomList.getInstance().deleteRoom(_roomid);
 	}

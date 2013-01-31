@@ -89,7 +89,7 @@ public abstract class L2Summon extends L2Playable {
 		}
 		
 		public boolean isAutoFollow() {
-			return L2Summon.this.getFollowStatus();
+			return getFollowStatus();
 		}
 		
 		public void doPickupItem(L2Object object) {
@@ -118,13 +118,13 @@ public abstract class L2Summon extends L2Playable {
 				restoreEffects();
 			}
 			
-			this.setFollowStatus(true);
+			setFollowStatus(true);
 			updateAndBroadcastStatus(0);
 			sendPacket(new RelationChanged(this, getOwner().getRelation(getOwner()), false));
 			for (L2PcInstance player : getOwner().getKnownList().getKnownPlayersInRadius(800)) {
 				player.sendPacket(new RelationChanged(this, getOwner().getRelation(player), isAutoAttackable(player)));
 			}
-			L2Party party = this.getOwner().getParty();
+			L2Party party = getOwner().getParty();
 			if (party != null) {
 				party.broadcastToPartyMembers(getOwner(), new ExPartyPetWindowAdd(this));
 			}
@@ -296,7 +296,7 @@ public abstract class L2Summon extends L2Playable {
 		L2PcInstance owner = getOwner();
 		
 		if (owner != null) {
-			Collection<L2Character> KnownTarget = this.getKnownList().getKnownCharacters();
+			Collection<L2Character> KnownTarget = getKnownList().getKnownCharacters();
 			for (L2Character TgMob : KnownTarget) {
 				// get the mobs which have aggro on the this instance
 				if (TgMob instanceof L2Attackable) {
@@ -618,7 +618,7 @@ public abstract class L2Summon extends L2Playable {
 				return false;
 			}
 			
-			if ((target.getActingPlayer() != null) && (this.getOwner().getSiegeState() > 0) && this.getOwner().isInsideZone(L2Character.ZONE_SIEGE) && (target.getActingPlayer().getSiegeState() == this.getOwner().getSiegeState()) && (target.getActingPlayer() != this.getOwner()) && (target.getActingPlayer().getSiegeSide() == this.getOwner().getSiegeSide()))
+			if ((target.getActingPlayer() != null) && (getOwner().getSiegeState() > 0) && getOwner().isInsideZone(L2Character.ZONE_SIEGE) && (target.getActingPlayer().getSiegeState() == getOwner().getSiegeState()) && (target.getActingPlayer() != getOwner()) && (target.getActingPlayer().getSiegeSide() == getOwner().getSiegeSide()))
 			{
 				//
 				if (TerritoryWarManager.getInstance().isTWInProgress()) {
@@ -701,7 +701,7 @@ public abstract class L2Summon extends L2Playable {
 				sm.addNpcName(this);
 				sm.addCharName(target);
 				sm.addNumber(damage);
-				sm.addDamage(target.getObjectId(), this.getObjectId(), damage * -1); // rocknow-God (by otfnir)
+				sm.addDamage(target.getObjectId(), getObjectId(), damage * -1); // rocknow-God (by otfnir)
 			}
 			
 			sendPacket(sm);
@@ -716,7 +716,7 @@ public abstract class L2Summon extends L2Playable {
 			sm.addNpcName(this);
 			sm.addCharName(attacker);
 			sm.addNumber((int) damage);
-			sm.addDamage(this.getObjectId(), attacker.getObjectId(), (int) damage * -1); // rocknow-God (by otfnir)
+			sm.addDamage(getObjectId(), attacker.getObjectId(), (int) damage * -1); // rocknow-God (by otfnir)
 			sendPacket(sm);
 		}
 	}

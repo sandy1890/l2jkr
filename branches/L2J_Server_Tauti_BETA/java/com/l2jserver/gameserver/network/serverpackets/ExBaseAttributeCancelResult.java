@@ -24,8 +24,8 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class ExBaseAttributeCancelResult extends L2GameServerPacket {
 	private static final String TYPE = "[S] FE:75 ExBaseAttributeCancelResult";
 	
-	private int _objId;
-	private byte _attribute;
+	private final int _objId;
+	private final byte _attribute;
 	
 	public ExBaseAttributeCancelResult(int objId, byte attribute) {
 		_objId = objId;

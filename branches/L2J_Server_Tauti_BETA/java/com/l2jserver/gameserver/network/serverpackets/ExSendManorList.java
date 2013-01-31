@@ -29,7 +29,7 @@ import javolution.util.FastList;
 public class ExSendManorList extends L2GameServerPacket {
 	private static final String _S__FE_1B_EXSENDMANORLIST = "[S] FE:22 ExSendManorList";
 	
-	private List<String> _manors;
+	private final List<String> _manors;
 	
 	public ExSendManorList(FastList<String> manors) {
 		_manors = manors;

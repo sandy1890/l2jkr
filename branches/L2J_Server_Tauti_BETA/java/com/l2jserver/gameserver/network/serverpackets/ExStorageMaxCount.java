@@ -29,16 +29,16 @@ import com.l2jserver.gameserver.model.stats.Stats;
  */
 public class ExStorageMaxCount extends L2GameServerPacket {
 	private static final String _S__FE_2E_EXSTORAGEMAXCOUNT = "[S] FE:2f ExStorageMaxCount";
-	private L2PcInstance _activeChar;
-	private int _inventory;
-	private int _warehouse;
-	private int _clan;
-	private int _privateSell;
-	private int _privateBuy;
-	private int _receipeD;
-	private int _recipe;
-	private int _inventoryExtraSlots;
-	private int _inventoryQuestItems;
+	private final L2PcInstance _activeChar;
+	private final int _inventory;
+	private final int _warehouse;
+	private final int _clan;
+	private final int _privateSell;
+	private final int _privateBuy;
+	private final int _receipeD;
+	private final int _recipe;
+	private final int _inventoryExtraSlots;
+	private final int _inventoryQuestItems;
 	
 	public ExStorageMaxCount(L2PcInstance character) {
 		_activeChar = character;

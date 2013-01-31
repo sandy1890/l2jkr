@@ -53,19 +53,22 @@ public final class RequestRefundItem extends L2GameClientPacket {
 	protected void readImpl() {
 		_listId = readD();
 		final int count = readD();
-		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining())
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
+		}
 		
 		_items = new int[count];
-		for (int i = 0; i < count; i++)
+		for (int i = 0; i < count; i++) {
 			_items[i] = readD();
+		}
 	}
 	
 	@Override
 	protected void runImpl() {
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("refund")) {
 			/*
@@ -86,17 +89,17 @@ public final class RequestRefundItem extends L2GameClientPacket {
 		}
 		
 		L2Object target = player.getTarget();
-		if (!player.isGM() && (target == null // No target (ie GM Shop)
-			|| !(target instanceof L2MerchantInstance || target instanceof L2MerchantSummonInstance) || player.getInstanceId() != target.getInstanceId() || !player.isInsideRadius(target, INTERACTION_DISTANCE, true, false))) // Distance is too far
+		if (!player.isGM() && ((target == null // No target (ie GM Shop)
+			) || !((target instanceof L2MerchantInstance) || (target instanceof L2MerchantSummonInstance)) || (player.getInstanceId() != target.getInstanceId()) || !player.isInsideRadius(target, INTERACTION_DISTANCE, true, false))) // Distance is too far
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		L2Character merchant = null;
-		if (target instanceof L2MerchantInstance || target instanceof L2MerchantSummonInstance)
+		if ((target instanceof L2MerchantInstance) || (target instanceof L2MerchantSummonInstance)) {
 			merchant = (L2Character) target;
-		else if (!player.isGM()) {
+		} else if (!player.isGM()) {
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -120,13 +123,16 @@ public final class RequestRefundItem extends L2GameClientPacket {
 					return;
 				}
 				for (L2TradeList tradeList : lists) {
-					if (tradeList.getListId() == _listId)
+					if (tradeList.getListId() == _listId) {
 						list = tradeList;
+					}
 				}
-			} else
+			} else {
 				list = TradeController.getInstance().getBuyList(_listId);
-		} else
+			}
+		} else {
 			list = TradeController.getInstance().getBuyList(_listId);
+		}
 		
 		if (list == null) {
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
@@ -142,45 +148,48 @@ public final class RequestRefundItem extends L2GameClientPacket {
 		
 		for (int i = 0; i < _items.length; i++) {
 			int idx = _items[i];
-			if (idx < 0 || idx >= refund.length) {
+			if ((idx < 0) || (idx >= refund.length)) {
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent invalid refund index", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
 			// check for duplicates - indexes
-			for (int j = i + 1; j < _items.length; j++)
+			for (int j = i + 1; j < _items.length; j++) {
 				if (idx == _items[j]) {
 					Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent duplicate refund index", Config.DEFAULT_PUNISH);
 					return;
 				}
+			}
 			
 			final L2ItemInstance item = refund[idx];
 			final L2Item template = item.getItem();
 			objectIds[i] = item.getObjectId();
 			
 			// second check for duplicates - object ids
-			for (int j = 0; j < i; j++)
+			for (int j = 0; j < i; j++) {
 				if (objectIds[i] == objectIds[j]) {
 					Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " has duplicate items in refund list", Config.DEFAULT_PUNISH);
 					return;
 				}
+			}
 			
 			long count = item.getCount();
 			weight += count * template.getWeight();
-			adena += count * template.getReferencePrice() / 2;
-			if (!template.isStackable())
+			adena += (count * template.getReferencePrice()) / 2;
+			if (!template.isStackable()) {
 				slots += count;
-			else if (player.getInventory().getItemByItemId(template.getItemId()) == null)
+			} else if (player.getInventory().getItemByItemId(template.getItemId()) == null) {
 				slots++;
+			}
 		}
 		
-		if (weight > Integer.MAX_VALUE || weight < 0 || !player.getInventory().validateWeight((int) weight)) {
+		if ((weight > Integer.MAX_VALUE) || (weight < 0) || !player.getInventory().validateWeight((int) weight)) {
 			player.sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (slots > Integer.MAX_VALUE || slots < 0 || !player.getInventory().validateCapacity((int) slots)) {
+		if ((slots > Integer.MAX_VALUE) || (slots < 0) || !player.getInventory().validateCapacity((int) slots)) {
 			player.sendPacket(SystemMessageId.SLOTS_FULL);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;

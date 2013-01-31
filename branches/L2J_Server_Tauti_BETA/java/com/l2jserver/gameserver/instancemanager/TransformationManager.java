@@ -47,7 +47,7 @@ public class TransformationManager {
 	}
 	
 	public boolean transformPlayer(int id, L2PcInstance player) {
-		L2Transformation template = this.getTransformationById(id);
+		L2Transformation template = getTransformationById(id);
 		if (template != null) {
 			L2Transformation trans = template.createTransformationForPlayer(player);
 			trans.start();

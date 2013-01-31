@@ -26,7 +26,7 @@ import com.l2jserver.util.network.BaseSendablePacket;
  * @author -Wooden-
  */
 public class ServerStatus extends BaseSendablePacket {
-	private ArrayList<Attribute> _attributes;
+	private final ArrayList<Attribute> _attributes;
 	
 	public static final String[] STATUS_STRING =
 	{

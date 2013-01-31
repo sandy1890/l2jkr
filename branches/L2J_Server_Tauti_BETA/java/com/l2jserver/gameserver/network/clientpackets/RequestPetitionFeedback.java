@@ -51,11 +51,13 @@ public class RequestPetitionFeedback extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
 		
-		if (player == null || player.getLastPetitionGmName() == null)
+		if ((player == null) || (player.getLastPetitionGmName() == null)) {
 			return;
+		}
 		
-		if (_rate > 4 || _rate < 0) // Ilegal vote
+		if ((_rate > 4) || (_rate < 0)) {
 			return;
+		}
 		
 		Connection con = null;
 		try {

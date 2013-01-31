@@ -25,7 +25,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class ObservationMode extends L2GameServerPacket {
 	// ddSS
 	private static final String _S__DF_OBSERVMODE = "[S] eb ObservationMode";
-	private int _x, _y, _z;
+	private final int _x, _y, _z;
 	
 	/**
 	 * @param x

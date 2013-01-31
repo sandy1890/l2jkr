@@ -55,10 +55,11 @@ public class ExQuestItemList extends L2GameServerPacket {
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getEnchantLevel()); // enchant level
 			writeH(item.getCustomType2()); // item type3
-			if (item.isAugmented())
+			if (item.isAugmented()) {
 				writeD(item.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(item.getMana());
 			writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God
@@ -76,10 +77,12 @@ public class ExQuestItemList extends L2GameServerPacket {
 		if (_inventory.hasInventoryBlock()) {
 			writeH(_inventory.getBlockItems().length);
 			writeC(_inventory.getBlockMode());
-			for (int i : _inventory.getBlockItems())
+			for (int i : _inventory.getBlockItems()) {
 				writeD(i);
-		} else
+			}
+		} else {
 			writeH(0x00);
+		}
 		FastList.recycle(_items);
 	}
 	

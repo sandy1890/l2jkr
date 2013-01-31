@@ -173,14 +173,17 @@ public final class ExBasicActionList extends L2GameServerPacket {
 		_defaultActionList = new int[count1 + count2 + count3];
 		int i;
 		
-		for (i = count1; i-- > 0;)
+		for (i = count1; i-- > 0;) {
 			_defaultActionList[i] = i;
+		}
 		
-		for (i = count2; i-- > 0;)
+		for (i = count2; i-- > 0;) {
 			_defaultActionList[count1 + i] = 1000 + i;
+		}
 		
-		for (i = count3; i-- > 0;)
+		for (i = count3; i-- > 0;) {
 			_defaultActionList[count1 + count2 + i] = 5000 + i;
+		}
 	}
 	
 	private static final ExBasicActionList STATIC_PACKET_TRANSFORMED = new ExBasicActionList(_actionsOnTransform);
@@ -212,8 +215,8 @@ public final class ExBasicActionList extends L2GameServerPacket {
 		writeC(0xfe);
 		writeH(0x5f);
 		writeD(_actionIds.length);
-		for (int i = 0; i < _actionIds.length; i++) {
-			writeD(_actionIds[i]);
+		for (int _actionId : _actionIds) {
+			writeD(_actionId);
 		}
 	}
 }

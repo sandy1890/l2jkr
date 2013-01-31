@@ -42,18 +42,19 @@ public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		L2PcInstance activeChar = this.getClient().getActiveChar();
+		L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar != null) {
 			if (activeChar.isEnchanting()) {
 				L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_enchantObjectId);
 				L2ItemInstance support = activeChar.getInventory().getItemByObjectId(_supportObjectId);
 				
-				if (item == null || support == null)
+				if ((item == null) || (support == null)) {
 					return;
+				}
 				
 				EnchantItem supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
 				
-				if (supportTemplate == null || !supportTemplate.isValid(item)) {
+				if ((supportTemplate == null) || !supportTemplate.isValid(item)) {
 					// message may be custom
 					activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITION);
 					activeChar.setActiveEnchantSupportItem(null);

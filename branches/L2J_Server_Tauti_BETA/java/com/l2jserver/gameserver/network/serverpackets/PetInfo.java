@@ -28,15 +28,19 @@ import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
  */
 public class PetInfo extends L2GameServerPacket {
 	private static final String _S__B2_PETINFO = "[S] b2 PetInfo";
-	private L2Summon _summon;
-	private int _x, _y, _z, _heading;
-	private boolean _isSummoned;
-	private int _val;
-	private int _mAtkSpd, _pAtkSpd;
-	private int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
-	private int _maxHp, _maxMp;
+	private final L2Summon _summon;
+	private final int _x, _y, _z, _heading;
+	private final boolean _isSummoned;
+	private final int _val;
+	private final int _mAtkSpd, _pAtkSpd;
+	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
+	private int _flRunSpd;
+	private int _flWalkSpd;
+	private int _flyRunSpd;
+	private int _flyWalkSpd;
+	private final int _maxHp, _maxMp;
 	private int _maxFed, _curFed;
-	private float _multiplier;
+	private final float _multiplier;
 	
 	/**
 	 * rev 478 dddddddddddddddddddffffdddcccccSSdddddddddddddddddddddddddddhc
@@ -118,8 +122,9 @@ public class PetInfo extends L2GameServerPacket {
 		writeD(1);
 		writeD(_summon.getOwner() != null ? _summon.getOwner().getPvpFlag() : 0); // 0 = white,2= purpleblink, if its greater then karma = purple
 		int Karma = _summon.getOwner().getKarma(); // rocknow-God-Test
-		if (Karma > 0) // rocknow-God-Test
+		if (Karma > 0) {
 			Karma = 0 - Karma; // rocknow-God-Test
+		}
 		writeD(_summon.getOwner() != null ? Karma : 0); // karma //rocknow-God-Test
 		writeD(_curFed); // how fed it is
 		writeD(_maxFed); // max fed it can be
@@ -131,11 +136,12 @@ public class PetInfo extends L2GameServerPacket {
 		writeD(_summon.getLevel());// lvl
 		writeQ(_summon.getStat().getExp());
 		
-		if (_summon.getExpForThisLevel() > _summon.getStat().getExp())
+		if (_summon.getExpForThisLevel() > _summon.getStat().getExp()) {
 			writeQ(_summon.getStat().getExp());// 0% absolute value
-		else
+		} else {
 			writeQ(_summon.getExpForThisLevel());// 0% absolute value
-			
+		}
+		
 		writeQ(_summon.getExpForNextLevel());// 100% absoulte value
 		writeD(_summon instanceof L2PetInstance ? _summon.getInventory().getTotalWeight() : 0);// weight
 		writeD(_summon.getMaxLoad());// max weight it can carry
@@ -166,20 +172,22 @@ public class PetInfo extends L2GameServerPacket {
 		
 		int form = 0;
 		final int npcId = _summon.getNpcId();
-		if (npcId == 16041 || npcId == 16042) {
-			if (_summon.getLevel() > 84)
+		if ((npcId == 16041) || (npcId == 16042)) {
+			if (_summon.getLevel() > 84) {
 				form = 3;
-			else if (_summon.getLevel() > 79)
+			} else if (_summon.getLevel() > 79) {
 				form = 2;
-			else if (_summon.getLevel() > 74)
+			} else if (_summon.getLevel() > 74) {
 				form = 1;
-		} else if (npcId == 16025 || npcId == 16037) {
-			if (_summon.getLevel() > 69)
+			}
+		} else if ((npcId == 16025) || (npcId == 16037)) {
+			if (_summon.getLevel() > 69) {
 				form = 3;
-			else if (_summon.getLevel() > 64)
+			} else if (_summon.getLevel() > 64) {
 				form = 2;
-			else if (_summon.getLevel() > 59)
+			} else if (_summon.getLevel() > 59) {
 				form = 1;
+			}
 		}
 		writeD(form);// CT1.5 Pet form and skills
 		writeD(0); // rocknow-God-displayEffect

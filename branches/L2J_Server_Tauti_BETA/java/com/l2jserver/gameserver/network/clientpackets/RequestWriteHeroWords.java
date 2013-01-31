@@ -38,11 +38,13 @@ public final class RequestWriteHeroWords extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null || !player.isHero())
+		if ((player == null) || !player.isHero()) {
 			return;
+		}
 		
-		if (_heroWords == null || _heroWords.length() > 300)
+		if ((_heroWords == null) || (_heroWords.length() > 300)) {
 			return;
+		}
 		
 		Hero.getInstance().setHeroMessage(player, _heroWords);
 	}

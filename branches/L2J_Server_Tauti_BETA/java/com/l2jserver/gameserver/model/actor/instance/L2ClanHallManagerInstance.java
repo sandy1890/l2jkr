@@ -1448,8 +1448,8 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance {
 					file = "data/html/clanHallManager/chamberlain.htm";
 				}
 				html.setFile(player.getHtmlPrefix(), file);
-				html.replace("%objectId%", String.valueOf(this.getObjectId()));
-				html.replace("%npcname%", this.getName());
+				html.replace("%objectId%", String.valueOf(getObjectId()));
+				html.replace("%npcname%", getName());
 				sendHtmlMessage(player, html);
 				return;
 			} else if (actualCommand.equalsIgnoreCase("support_back")) {

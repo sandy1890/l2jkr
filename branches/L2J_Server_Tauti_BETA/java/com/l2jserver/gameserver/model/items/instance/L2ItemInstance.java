@@ -482,7 +482,7 @@ public final class L2ItemInstance extends L2Object {
 	
 	// No logging (function designed for shots only)
 	public void changeCountWithoutTrace(int count, L2PcInstance creator, Object reference) {
-		this.changeCount(null, count, creator, reference);
+		changeCount(null, count, creator, reference);
 	}
 	
 	/**

@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.cache.CrestCache;
  */
 public class AllyCrest extends L2GameServerPacket {
 	private static final String _S__AF_ALLYCREST = "[S] af AllyCrest";
-	private int _crestId;
-	private byte[] _data;
+	private final int _crestId;
+	private final byte[] _data;
 	
 	public AllyCrest(int crestId) {
 		_crestId = crestId;
@@ -48,8 +48,9 @@ public class AllyCrest extends L2GameServerPacket {
 		if (_data != null) {
 			writeD(_data.length);
 			writeB(_data);
-		} else
+		} else {
 			writeD(0);
+		}
 	}
 	
 	@Override

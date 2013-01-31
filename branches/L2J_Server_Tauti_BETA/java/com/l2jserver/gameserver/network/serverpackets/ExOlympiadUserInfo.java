@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.olympiad.Participant;
 public class ExOlympiadUserInfo extends L2GameServerPacket {
 	// chcdSddddd
 	private static final String _S__FE_29_OLYMPIADUSERINFO = "[S] FE:7A ExOlympiadUserInfo";
-	private L2PcInstance _player;
+	private final L2PcInstance _player;
 	private Participant _par = null;
 	private int _curHp;
 	private int _maxHp;

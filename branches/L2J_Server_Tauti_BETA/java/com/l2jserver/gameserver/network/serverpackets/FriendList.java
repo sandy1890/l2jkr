@@ -77,8 +77,9 @@ public class FriendList extends L2GameServerPacket {
 					ResultSet rset = statement.executeQuery();
 					if (rset.next()) {
 						_info.add(new FriendInfo(objId, rset.getString(1), rset.getInt(2) == 1, rset.getInt(3), rset.getInt(4)));
-					} else
+					} else {
 						continue;
+					}
 				} catch (Exception e) {
 					// Who cares?
 				} finally {
@@ -88,8 +89,9 @@ public class FriendList extends L2GameServerPacket {
 				continue;
 			}
 			// rocknow-God-End
-			if (player1.isOnline()) // rocknow-God
+			if (player1.isOnline()) {
 				online = true;
+			}
 			classid = player1.getClassId().getId(); // rocknow-God
 			level = player1.getLevel(); // rocknow-God
 			_info.add(new FriendInfo(objId, name, online, classid, level)); // rocknow-God

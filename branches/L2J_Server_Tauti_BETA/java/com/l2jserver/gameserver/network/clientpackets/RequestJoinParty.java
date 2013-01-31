@@ -48,8 +48,9 @@ public final class RequestJoinParty extends L2GameClientPacket {
 		L2PcInstance requestor = getClient().getActiveChar();
 		L2PcInstance target = L2World.getInstance().getPlayer(_name);
 		
-		if (requestor == null)
+		if (requestor == null) {
 			return;
+		}
 		
 		if (target == null) {
 			requestor.sendPacket(SystemMessageId.FIRST_SELECT_USER_TO_INVITE_TO_PARTY);
@@ -103,7 +104,7 @@ public final class RequestJoinParty extends L2GameClientPacket {
 		}
 		
 		if (target.isInOlympiadMode() || requestor.isInOlympiadMode()) {
-			if (target.isInOlympiadMode() != requestor.isInOlympiadMode() || target.getOlympiadGameId() != requestor.getOlympiadGameId() || target.getOlympiadSide() != requestor.getOlympiadSide()) {
+			if ((target.isInOlympiadMode() != requestor.isInOlympiadMode()) || (target.getOlympiadGameId() != requestor.getOlympiadGameId()) || (target.getOlympiadSide() != requestor.getOlympiadSide())) {
 				requestor.sendPacket(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS);
 				return;
 			}
@@ -154,16 +155,18 @@ public final class RequestJoinParty extends L2GameClientPacket {
 			target.sendPacket(new AskJoinParty(requestor.getName(), party.getLootDistribution()));
 			party.setPendingInvitation(true);
 			
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.fine("sent out a party invitation to:" + target.getName());
+			}
 			
 		} else {
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_BUSY_TRY_LATER);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.warning(requestor.getName() + " already received a party invitation");
+			}
 		}
 	}
 	
@@ -179,14 +182,16 @@ public final class RequestJoinParty extends L2GameClientPacket {
 			target.sendPacket(new AskJoinParty(requestor.getName(), _itemDistribution));
 			requestor.getParty().setPendingInvitation(true);
 			
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.fine("sent out a party invitation to:" + target.getName());
+			}
 			
 		} else {
 			requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
 			
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.warning(requestor.getName() + " already received a party invitation");
+			}
 		}
 	}
 	

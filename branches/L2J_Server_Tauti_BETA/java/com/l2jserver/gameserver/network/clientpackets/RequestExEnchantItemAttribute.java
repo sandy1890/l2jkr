@@ -44,8 +44,9 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (_objectId == 0xFFFFFFFF) {
 			// Player canceled enchant
@@ -79,7 +80,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket {
 		
 		L2ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
 		L2ItemInstance stone = player.getActiveEnchantAttrItem();
-		if (item == null || stone == null) {
+		if ((item == null) || (stone == null)) {
 			player.setActiveEnchantAttrItem(null);
 			return;
 		}
@@ -109,8 +110,9 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket {
 		int stoneId = stone.getItemId();
 		byte elementToAdd = Elementals.getItemElement(stoneId);
 		// Armors have the opposite element
-		if (item.isArmor())
+		if (item.isArmor()) {
 			elementToAdd = Elementals.getOppositeElement(elementToAdd);
+		}
 		byte opositeElement = Elementals.getOppositeElement(elementToAdd);
 		
 		Elementals oldElement = item.getElemental(elementToAdd);
@@ -118,13 +120,13 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket {
 		int limit = getLimit(item, stoneId);
 		int powerToAdd = getPowerToAdd(stoneId, elementValue, item);
 		
-		if ((item.isWeapon() && oldElement != null && oldElement.getElement() != elementToAdd && oldElement.getElement() != -2) || (item.isArmor() && item.getElemental(elementToAdd) == null && item.getElementals() != null && item.getElementals().length >= 3)) {
+		if ((item.isWeapon() && (oldElement != null) && (oldElement.getElement() != elementToAdd) && (oldElement.getElement() != -2)) || (item.isArmor() && (item.getElemental(elementToAdd) == null) && (item.getElementals() != null) && (item.getElementals().length >= 3))) {
 			player.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_ALREADY_ADDED);
 			player.setActiveEnchantAttrItem(null);
 			return;
 		}
 		
-		if (item.isArmor() && item.getElementals() != null) {
+		if (item.isArmor() && (item.getElementals() != null)) {
 			// cant add opposite element
 			for (Elementals elm : item.getElementals()) {
 				if (elm.getElement() == opositeElement) {
@@ -177,36 +179,42 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket {
 			
 			SystemMessage sm;
 			if (item.getEnchantLevel() == 0) {
-				if (item.isArmor())
+				if (item.isArmor()) {
 					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_S2_ATTRIBUTE_WAS_SUCCESSFULLY_BESTOWED_ON_S1_RES_TO_S3_INCREASED);
-				else
+				} else {
 					sm = SystemMessage.getSystemMessage(SystemMessageId.ELEMENTAL_POWER_S2_SUCCESSFULLY_ADDED_TO_S1);
+				}
 				sm.addItemName(item);
 				sm.addElemental(realElement);
-				if (item.isArmor())
+				if (item.isArmor()) {
 					sm.addElemental(Elementals.getOppositeElement(realElement));
+				}
 			} else {
-				if (item.isArmor())
+				if (item.isArmor()) {
 					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_S3_ATTRIBUTE_BESTOWED_ON_S1_S2_RESISTANCE_TO_S4_INCREASED);
-				else
+				} else {
 					sm = SystemMessage.getSystemMessage(SystemMessageId.ELEMENTAL_POWER_S3_SUCCESSFULLY_ADDED_TO_S1_S2);
+				}
 				sm.addNumber(item.getEnchantLevel());
 				sm.addItemName(item);
 				sm.addElemental(realElement);
-				if (item.isArmor())
+				if (item.isArmor()) {
 					sm.addElemental(Elementals.getOppositeElement(realElement));
+				}
 			}
 			player.sendPacket(sm);
 			item.setElementAttr(elementToAdd, newPower);
-			if (item.isEquipped())
+			if (item.isEquipped()) {
 				item.updateElementAttrBonus(player);
+			}
 			
 			// send packets
 			InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(item);
 			player.sendPacket(iu);
-		} else
+		} else {
 			player.sendPacket(SystemMessageId.FAILED_ADDING_ELEMENTAL_POWER);
+		}
 		
 		player.sendPacket(new ExAttributeEnchantResult(powerToAdd));
 		player.sendPacket(new UserInfo(player));
@@ -216,22 +224,26 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket {
 	
 	public int getLimit(L2ItemInstance item, int sotneId) {
 		Elementals.ElementalItems elementItem = Elementals.getItemElemental(sotneId);
-		if (elementItem == null)
+		if (elementItem == null) {
 			return 0;
+		}
 		
-		if (item.isWeapon())
+		if (item.isWeapon()) {
 			return Elementals.WEAPON_VALUES[elementItem._type._maxLevel];
+		}
 		return Elementals.ARMOR_VALUES[elementItem._type._maxLevel];
 	}
 	
 	public int getPowerToAdd(int stoneId, int oldValue, L2ItemInstance item) {
 		if (Elementals.getItemElement(stoneId) != Elementals.NONE) {
 			if (item.isWeapon()) {
-				if (oldValue == 0)
+				if (oldValue == 0) {
 					return Elementals.FIRST_WEAPON_BONUS;
+				}
 				return Elementals.NEXT_WEAPON_BONUS;
-			} else if (item.isArmor())
+			} else if (item.isArmor()) {
 				return Elementals.ARMOR_BONUS;
+			}
 		}
 		return 0;
 	}

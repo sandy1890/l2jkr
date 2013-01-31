@@ -25,10 +25,10 @@ import com.l2jserver.gameserver.util.Point3D;
  * @author Maktakien
  */
 public class MoveToLocationInVehicle extends L2GameServerPacket {
-	private int _charObjId;
-	private int _boatId;
-	private Point3D _destination;
-	private Point3D _origin;
+	private final int _charObjId;
+	private final int _boatId;
+	private final Point3D _destination;
+	private final Point3D _origin;
 	
 	/**
 	 * @param player

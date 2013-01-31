@@ -24,7 +24,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 @Deprecated
 public class GMHide extends L2GameServerPacket {
 	// cd
-	private int _mode;
+	private final int _mode;
 	
 	/**
 	 * @param mode (0 = display windows, 1 = hide windows)

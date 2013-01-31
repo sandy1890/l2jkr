@@ -43,8 +43,9 @@ public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance _activeChar = getClient().getActiveChar();
 		
-		if (_activeChar == null)
+		if (_activeChar == null) {
 			return;
+		}
 		
 		_activeChar.sendPacket(new ExListPartyMatchingWaitingRoom(_activeChar, _page, _minlvl, _maxlvl, _mode));
 	}

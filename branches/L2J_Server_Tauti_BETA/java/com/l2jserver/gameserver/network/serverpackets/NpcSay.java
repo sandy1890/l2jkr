@@ -33,7 +33,7 @@ public final class NpcSay extends L2GameServerPacket {
 	private final int _textType;
 	private final int _npcId;
 	private String _text;
-	private int _npcString;
+	private final int _npcString;
 	private List<String> _parameters;
 	
 	/**
@@ -62,8 +62,9 @@ public final class NpcSay extends L2GameServerPacket {
 	 * @return this NpcSay packet object
 	 */
 	public NpcSay addStringParameter(String text) {
-		if (_parameters == null)
+		if (_parameters == null) {
 			_parameters = new ArrayList<>();
+		}
 		_parameters.add(text);
 		return this;
 	}
@@ -75,11 +76,13 @@ public final class NpcSay extends L2GameServerPacket {
 		writeD(_textType);
 		writeD(_npcId);
 		writeD(_npcString);
-		if (_npcString == -1)
+		if (_npcString == -1) {
 			writeS(_text);
-		else if (_parameters != null)
-			for (String s : _parameters)
+		} else if (_parameters != null) {
+			for (String s : _parameters) {
 				writeS(s);
+			}
+		}
 	}
 	
 	/**

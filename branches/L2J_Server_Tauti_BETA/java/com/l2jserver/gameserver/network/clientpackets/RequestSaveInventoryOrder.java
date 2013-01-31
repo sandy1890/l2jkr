@@ -52,12 +52,12 @@ public final class RequestSaveInventoryOrder extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		L2PcInstance player = this.getClient().getActiveChar();
+		L2PcInstance player = getClient().getActiveChar();
 		if (player != null) {
 			Inventory inventory = player.getInventory();
 			for (InventoryOrder order : _order) {
 				L2ItemInstance item = inventory.getItemByObjectId(order.objectID);
-				if (item != null && item.getLocation() == ItemLocation.INVENTORY) {
+				if ((item != null) && (item.getLocation() == ItemLocation.INVENTORY)) {
 					item.setLocation(ItemLocation.INVENTORY, order.order);
 				}
 			}

@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2Clan;
  */
 public class PledgeShowInfoUpdate extends L2GameServerPacket {
 	private static final String _S__8E_PLEDGESHOWINFOUPDATE = "[S] 8E PledgeShowInfoUpdate";
-	private L2Clan _clan;
+	private final L2Clan _clan;
 	
 	public PledgeShowInfoUpdate(L2Clan clan) {
 		_clan = clan;

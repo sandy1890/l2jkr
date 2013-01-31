@@ -24,7 +24,7 @@ import com.l2jserver.util.network.BaseRecievePacket;
  * @author mrTJO Thanks to mochitto
  */
 public class RequestCharacters extends BaseRecievePacket {
-	private String _account;
+	private final String _account;
 	
 	public RequestCharacters(byte[] decrypt) {
 		super(decrypt);

@@ -28,7 +28,7 @@ import javolution.util.FastList;
  */
 public class AbnormalStatusUpdate extends L2GameServerPacket {
 	private static final String _S__97_ABNORMALSTATUSUPDATE = "[S] 85 AbnormalStatusUpdate";
-	private List<Effect> _effects;
+	private final List<Effect> _effects;
 	
 	private static class Effect {
 		protected int _skillId;
@@ -52,8 +52,9 @@ public class AbnormalStatusUpdate extends L2GameServerPacket {
 	 * @param duration
 	 */
 	public void addEffect(int skillId, int level, int duration) {
-		if (skillId == 2031 || skillId == 2032 || skillId == 2037 || skillId == 26025 || skillId == 26026)
+		if ((skillId == 2031) || (skillId == 2032) || (skillId == 2037) || (skillId == 26025) || (skillId == 26026)) {
 			return;
+		}
 		_effects.add(new Effect(skillId, level, duration));
 	}
 	
@@ -67,10 +68,11 @@ public class AbnormalStatusUpdate extends L2GameServerPacket {
 			writeD(temp._skillId);
 			writeH(temp._level);
 			
-			if (temp._duration == -1)
+			if (temp._duration == -1) {
 				writeD(-1);
-			else
+			} else {
 				writeD(temp._duration / 1000);
+			}
 		}
 	}
 	

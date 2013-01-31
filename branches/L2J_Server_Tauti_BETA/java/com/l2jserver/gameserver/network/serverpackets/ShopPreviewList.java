@@ -27,9 +27,9 @@ import com.l2jserver.gameserver.model.items.L2Item;
 
 public class ShopPreviewList extends L2GameServerPacket {
 	private static final String _S__EF_WEARLIST = "[S] f5 WearList";
-	private int _listId;
-	private Collection<L2TradeItem> _list;
-	private long _money;
+	private final int _listId;
+	private final Collection<L2TradeItem> _list;
+	private final long _money;
 	private int _expertise;
 	
 	public ShopPreviewList(L2TradeList list, long currentMoney, int expertiseIndex) {
@@ -57,13 +57,14 @@ public class ShopPreviewList extends L2GameServerPacket {
 		
 		int newlength = 0;
 		for (L2TradeItem item : _list) {
-			if (item.getTemplate().getCrystalType() <= _expertise && item.getTemplate().isEquipable())
+			if ((item.getTemplate().getCrystalType() <= _expertise) && item.getTemplate().isEquipable()) {
 				newlength++;
+			}
 		}
 		writeH(newlength);
 		
 		for (L2TradeItem item : _list) {
-			if (item.getTemplate().getCrystalType() <= _expertise && item.getTemplate().isEquipable()) {
+			if ((item.getTemplate().getCrystalType() <= _expertise) && item.getTemplate().isEquipable()) {
 				writeD(item.getItemId());
 				writeH(item.getTemplate().getType2()); // item type2
 				

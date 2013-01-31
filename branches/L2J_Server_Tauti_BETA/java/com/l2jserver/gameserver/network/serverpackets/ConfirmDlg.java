@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public class ConfirmDlg extends L2GameServerPacket {
 	private static final String _S__ED_CONFIRMDLG = "[S] f3 ConfirmDlg";
-	private int _messageId;
+	private final int _messageId;
 	
 	private int _skillLvL = 1;
 	
@@ -81,12 +81,15 @@ public class ConfirmDlg extends L2GameServerPacket {
 	}
 	
 	public ConfirmDlg addCharName(L2Character cha) {
-		if (cha instanceof L2Npc)
+		if (cha instanceof L2Npc) {
 			return addNpcName((L2Npc) cha);
-		if (cha instanceof L2PcInstance)
+		}
+		if (cha instanceof L2PcInstance) {
 			return addPcName((L2PcInstance) cha);
-		if (cha instanceof L2Summon)
+		}
+		if (cha instanceof L2Summon) {
 			return addNpcName((L2Summon) cha);
+		}
 		return addString(cha.getName());
 	}
 	
@@ -103,8 +106,9 @@ public class ConfirmDlg extends L2GameServerPacket {
 	}
 	
 	public ConfirmDlg addNpcName(L2NpcTemplate tpl) {
-		if (tpl.isCustom())
+		if (tpl.isCustom()) {
 			return addString(tpl.getName());
+		}
 		return addNpcName(tpl.getNpcId());
 	}
 	
@@ -143,8 +147,9 @@ public class ConfirmDlg extends L2GameServerPacket {
 	}
 	
 	public ConfirmDlg addSkillName(L2Skill skill) {
-		if (skill.getId() != skill.getDisplayId()) // custom skill - need nameId or smth like this.
+		if (skill.getId() != skill.getDisplayId()) {
 			return addString(skill.getName());
+		}
 		return addSkillName(skill.getId(), skill.getLevel());
 	}
 	
@@ -204,10 +209,12 @@ public class ConfirmDlg extends L2GameServerPacket {
 					break;
 				}
 			}
-			if (_time != 0)
+			if (_time != 0) {
 				writeD(_time);
-			if (_requesterId != 0)
+			}
+			if (_requesterId != 0) {
 				writeD(_requesterId);
+			}
 		}
 	}
 	

@@ -53,7 +53,7 @@ public class RequestBuySeed extends L2GameClientPacket {
 		_manorId = readD();
 		
 		int count = readD();
-		if (count <= 0 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
 		}
 		
@@ -72,11 +72,13 @@ public class RequestBuySeed extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
-		if (!getClient().getFloodProtectors().getManor().tryPerformAction("BuySeed"))
+		if (!getClient().getFloodProtectors().getManor().tryPerformAction("BuySeed")) {
 			return;
+		}
 		
 		if (_seeds == null) {
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -85,14 +87,17 @@ public class RequestBuySeed extends L2GameClientPacket {
 		
 		L2Object manager = player.getTarget();
 		
-		if (!(manager instanceof L2ManorManagerInstance))
+		if (!(manager instanceof L2ManorManagerInstance)) {
 			manager = player.getLastFolkNPC();
+		}
 		
-		if (!(manager instanceof L2ManorManagerInstance))
+		if (!(manager instanceof L2ManorManagerInstance)) {
 			return;
+		}
 		
-		if (!player.isInsideRadius(manager, INTERACTION_DISTANCE, true, false))
+		if (!player.isInsideRadius(manager, INTERACTION_DISTANCE, true, false)) {
 			return;
+		}
 		
 		Castle castle = CastleManager.getInstance().getCastleById(_manorId);
 		
@@ -101,8 +106,9 @@ public class RequestBuySeed extends L2GameClientPacket {
 		int totalWeight = 0;
 		
 		for (Seed i : _seeds) {
-			if (!i.setProduction(castle))
+			if (!i.setProduction(castle)) {
 				return;
+			}
 			
 			totalPrice += i.getPrice();
 			
@@ -113,10 +119,11 @@ public class RequestBuySeed extends L2GameClientPacket {
 			
 			L2Item template = ItemTable.getInstance().getTemplate(i.getSeedId());
 			totalWeight += i.getCount() * template.getWeight();
-			if (!template.isStackable())
+			if (!template.isStackable()) {
 				slots += i.getCount();
-			else if (player.getInventory().getItemByItemId(i.getSeedId()) == null)
+			} else if (player.getInventory().getItemByItemId(i.getSeedId()) == null) {
 				slots++;
+			}
 		}
 		
 		if (!player.getInventory().validateWeight(totalWeight)) {
@@ -129,7 +136,7 @@ public class RequestBuySeed extends L2GameClientPacket {
 			return;
 		}
 		
-		if (totalPrice < 0 || player.getAdena() < totalPrice) {
+		if ((totalPrice < 0) || (player.getAdena() < totalPrice)) {
 			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
 			return;
 		}
@@ -181,14 +188,17 @@ public class RequestBuySeed extends L2GameClientPacket {
 		public boolean setProduction(Castle c) {
 			_seed = c.getSeed(_seedId, CastleManorManager.PERIOD_CURRENT);
 			// invalid price - seed disabled
-			if (_seed.getPrice() <= 0)
+			if (_seed.getPrice() <= 0) {
 				return false;
+			}
 			// try to buy more than castle can produce
-			if (_seed.getCanProduce() < _count)
+			if (_seed.getCanProduce() < _count) {
 				return false;
+			}
 			// check for overflow
-			if ((MAX_ADENA / _count) < _seed.getPrice())
+			if ((MAX_ADENA / _count) < _seed.getPrice()) {
 				return false;
+			}
 			
 			return true;
 		}
@@ -196,13 +206,15 @@ public class RequestBuySeed extends L2GameClientPacket {
 		public boolean updateProduction(Castle c) {
 			synchronized (_seed) {
 				long amount = _seed.getCanProduce();
-				if (_count > amount)
+				if (_count > amount) {
 					return false; // not enough seeds
+				}
 				_seed.setCanProduce(amount - _count);
 			}
 			// Update Castle Seeds Amount
-			if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
+			if (Config.ALT_MANOR_SAVE_ALL_ACTIONS) {
 				c.updateSeed(_seedId, _seed.getCanProduce(), CastleManorManager.PERIOD_CURRENT);
+			}
 			return true;
 		}
 	}

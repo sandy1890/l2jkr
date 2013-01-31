@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 public class GmViewQuestInfo extends L2GameServerPacket {
 	private static final String _S__AC_GMVIEWQUESTLIST = "[S] 99 GMViewQuestList";
 	
-	private L2PcInstance _activeChar;
+	private final L2PcInstance _activeChar;
 	
 	public GmViewQuestInfo(L2PcInstance cha) {
 		_activeChar = cha;

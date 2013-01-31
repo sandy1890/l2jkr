@@ -48,10 +48,11 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance _activeChar = getClient().getActiveChar();
 		
-		if (_activeChar == null)
+		if (_activeChar == null) {
 			return;
+		}
 		
-		if (!_activeChar.isInPartyMatchRoom() && _activeChar.getParty() != null && _activeChar.getParty().getLeader() != _activeChar) {
+		if (!_activeChar.isInPartyMatchRoom() && (_activeChar.getParty() != null) && (_activeChar.getParty().getLeader() != _activeChar)) {
 			_activeChar.sendPacket(SystemMessageId.CANT_VIEW_PARTY_ROOMS);
 			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -60,12 +61,14 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket {
 		if (_activeChar.isInPartyMatchRoom()) {
 			// If Player is in Room show him room, not list
 			PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
-			if (_list == null)
+			if (_list == null) {
 				return;
+			}
 			
 			PartyMatchRoom _room = _list.getPlayerRoom(_activeChar);
-			if (_room == null)
+			if (_room == null) {
 				return;
+			}
 			
 			_activeChar.sendPacket(new PartyMatchDetail(_activeChar, _room));
 			_activeChar.sendPacket(new ExPartyRoomMember(_activeChar, _room, 2));

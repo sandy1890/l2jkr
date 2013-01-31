@@ -39,8 +39,9 @@ public final class RequestTargetCanceld extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		if (activeChar.isLockedTarget()) {
 			activeChar.sendPacket(SystemMessageId.FAILED_DISABLE_TARGET);
@@ -48,14 +49,16 @@ public final class RequestTargetCanceld extends L2GameClientPacket {
 		}
 		
 		if (_unselect == 0) {
-			if (activeChar.isCastingNow() && activeChar.canAbortCast())
+			if (activeChar.isCastingNow() && activeChar.canAbortCast()) {
 				activeChar.abortCast();
-			else if (activeChar.getTarget() != null)
+			} else if (activeChar.getTarget() != null) {
 				activeChar.setTarget(null);
-		} else if (activeChar.getTarget() != null)
+			}
+		} else if (activeChar.getTarget() != null) {
 			activeChar.setTarget(null);
-		else if (activeChar.isInAirShip())
+		} else if (activeChar.isInAirShip()) {
 			activeChar.broadcastPacket(new TargetUnselected(activeChar));
+		}
 	}
 	
 	@Override

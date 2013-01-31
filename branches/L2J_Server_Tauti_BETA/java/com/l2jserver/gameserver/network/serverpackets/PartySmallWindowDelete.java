@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class PartySmallWindowDelete extends L2GameServerPacket {
 	private static final String _S__66_PARTYSMALLWINDOWDELETE = "[S] 51 PartySmallWindowDelete";
-	private L2PcInstance _member;
+	private final L2PcInstance _member;
 	
 	public PartySmallWindowDelete(L2PcInstance member) {
 		_member = member;

@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class ExOlympiadSpelledInfo extends L2GameServerPacket {
 	// chdd(dhd)
 	private static final String _S__FE_2A_OLYMPIADSPELLEDINFO = "[S] FE:7b ExOlympiadSpelledInfo";
-	private int _playerID;
-	private List<Effect> _effects;
+	private final int _playerID;
+	private final List<Effect> _effects;
 	
 	private static class Effect {
 		protected int _skillId;

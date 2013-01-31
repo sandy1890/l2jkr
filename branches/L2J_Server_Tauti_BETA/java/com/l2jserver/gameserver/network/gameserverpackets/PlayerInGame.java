@@ -35,8 +35,9 @@ public class PlayerInGame extends BaseSendablePacket {
 	public PlayerInGame(FastList<String> players) {
 		writeC(0x02);
 		writeH(players.size());
-		for (String pc : players)
+		for (String pc : players) {
 			writeS(pc);
+		}
 	}
 	
 	@Override

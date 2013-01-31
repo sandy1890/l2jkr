@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.olympiad.Olympiad;
  */
 public class ExHeroList extends L2GameServerPacket {
 	private static final String _S__FE_23_EXHEROLIST = "[S] FE:79 ExHeroList";
-	private Map<Integer, StatsSet> _heroList;
+	private final Map<Integer, StatsSet> _heroList;
 	
 	public ExHeroList() {
 		_heroList = Hero.getInstance().getHeroes();

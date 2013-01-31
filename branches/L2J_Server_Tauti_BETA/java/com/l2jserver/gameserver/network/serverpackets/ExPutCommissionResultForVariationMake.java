@@ -24,12 +24,12 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class ExPutCommissionResultForVariationMake extends L2GameServerPacket {
 	private static final String _S__FE_54_EXCONFIRMVARIATIONGEMSTONE = "[S] FE:55 ExPutCommissionResultForVariationMake";
 	
-	private int _gemstoneObjId;
-	private int _itemId;
-	private long _gemstoneCount;
-	private int _unk1;
-	private int _unk2;
-	private int _unk3;
+	private final int _gemstoneObjId;
+	private final int _itemId;
+	private final long _gemstoneCount;
+	private final int _unk1;
+	private final int _unk2;
+	private final int _unk3;
 	
 	public ExPutCommissionResultForVariationMake(int gemstoneObjId, long count, int itemId) {
 		_gemstoneObjId = gemstoneObjId;

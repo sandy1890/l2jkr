@@ -46,8 +46,9 @@ public final class TradeRequest extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getActiveChar(); // rocknow-Sync L2J
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (!player.getAccessLevel().allowTransaction()) {
 			/*
@@ -77,8 +78,9 @@ public final class TradeRequest extends L2GameClientPacket {
 		final L2PcInstance partner = target.getActingPlayer(); // rocknow-Sync L2J
 		
 		// cant trade with players from other instance except from multiverse
-		if (partner.getInstanceId() != player.getInstanceId() && player.getInstanceId() != -1)
+		if ((partner.getInstanceId() != player.getInstanceId()) && (player.getInstanceId() != -1)) {
 			return;
+		}
 		
 		if (partner.isInOlympiadMode() || player.isInOlympiadMode()) {
 			/*
@@ -120,16 +122,18 @@ public final class TradeRequest extends L2GameClientPacket {
 		}
 		
 		if (player.isProcessingTransaction()) {
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.fine("Already trading with someone else.");
+			}
 			player.sendPacket(SystemMessageId.ALREADY_TRADING);
 			return;
 		}
 		
 		SystemMessage sm;
 		if (partner.isProcessingRequest() || partner.isProcessingTransaction()) {
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.info("Transaction already in progress.");
+			}
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_BUSY_TRY_LATER);
 			sm.addString(partner.getName());
 			player.sendPacket(sm);

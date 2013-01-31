@@ -28,8 +28,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public final class TradeStart extends L2GameServerPacket {
 	private static final String _S__2E_TRADESTART = "[S] 14 TradeStart";
-	private L2PcInstance _activeChar;
-	private L2ItemInstance[] _itemList;
+	private final L2PcInstance _activeChar;
+	private final L2ItemInstance[] _itemList;
 	
 	public TradeStart(L2PcInstance player) {
 		_activeChar = player;
@@ -38,8 +38,9 @@ public final class TradeStart extends L2GameServerPacket {
 	
 	@Override
 	protected final void writeImpl() {// 0x2e TradeStart d h (h dddhh dhhh)
-		if (_activeChar.getActiveTradeList() == null || _activeChar.getActiveTradeList().getPartner() == null)
+		if ((_activeChar.getActiveTradeList() == null) || (_activeChar.getActiveTradeList().getPartner() == null)) {
 			return;
+		}
 		
 		writeC(0x14);
 		writeD(_activeChar.getActiveTradeList().getPartner().getObjectId());

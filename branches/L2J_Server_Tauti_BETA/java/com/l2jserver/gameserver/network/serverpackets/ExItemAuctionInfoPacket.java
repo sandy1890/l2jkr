@@ -33,14 +33,16 @@ public final class ExItemAuctionInfoPacket extends L2GameServerPacket {
 	private final ItemAuction _nextAuction;
 	
 	public ExItemAuctionInfoPacket(final boolean refresh, final ItemAuction currentAuction, final ItemAuction nextAuction) {
-		if (currentAuction == null)
+		if (currentAuction == null) {
 			throw new NullPointerException();
+		}
 		
-		if (currentAuction.getAuctionState() != ItemAuctionState.STARTED)
+		if (currentAuction.getAuctionState() != ItemAuctionState.STARTED) {
 			_timeRemaining = 0;
-		else
+		} else {
 			_timeRemaining = (int) (currentAuction.getFinishingTimeRemaining() / 1000); // in seconds
-			
+		}
+		
 		_refresh = refresh;
 		_currentAuction = currentAuction;
 		_nextAuction = nextAuction;
@@ -84,8 +86,9 @@ public final class ExItemAuctionInfoPacket extends L2GameServerPacket {
 		
 		writeH(item.getAttackElementType());
 		writeH(item.getAttackElementPower());
-		for (byte i = 0; i < 6; i++)
+		for (byte i = 0; i < 6; i++) {
 			super.writeH(item.getElementDefAttr(i));
+		}
 		
 		writeH(0x00); // enchant effect 1
 		writeH(0x00); // enchant effect 2

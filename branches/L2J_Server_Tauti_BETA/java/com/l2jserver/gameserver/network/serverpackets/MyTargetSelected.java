@@ -44,8 +44,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class MyTargetSelected extends L2GameServerPacket {
 	private static final String _S__BF_MYTARGETSELECTED = "[S] b9 MyTargetSelected";
-	private int _objectId;
-	private int _color;
+	private final int _objectId;
+	private final int _color;
 	
 	/**
 	 * @param objectId of the target

@@ -45,7 +45,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket {
 	@Override
 	protected void readImpl() {
 		int count = readD();
-		if (count < 1 || count > Config.MAX_ITEM_IN_PACKET || count * BATCH_LENGTH != _buf.remaining()) {
+		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining())) {
 			return;
 		}
 		
@@ -58,7 +58,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket {
 			long cnt = readQ();
 			long price = readQ();
 			
-			if (itemId < 1 || cnt < 1 || price < 0) {
+			if ((itemId < 1) || (cnt < 1) || (price < 0)) {
 				_items = null;
 				return;
 			}
@@ -75,8 +75,9 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (_items == null) {
 			player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
@@ -152,8 +153,9 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket {
 		}
 		
 		public boolean addToTradeList(TradeList list) {
-			if ((MAX_ADENA / _count) < _price)
+			if ((MAX_ADENA / _count) < _price) {
 				return false;
+			}
 			
 			list.addItemByItemId(_itemId, _count, _price);
 			return true;

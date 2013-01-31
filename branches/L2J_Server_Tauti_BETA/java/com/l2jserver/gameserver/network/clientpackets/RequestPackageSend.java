@@ -52,7 +52,7 @@ public class RequestPackageSend extends L2GameClientPacket {
 		for (int i = 0; i < _count; i++) {
 			int objId = readD();
 			long cnt = readQ();
-			if (objId < 1 || cnt < 0) {
+			if ((objId < 1) || (cnt < 0)) {
 				_items = null;
 				return;
 			}
@@ -63,12 +63,14 @@ public class RequestPackageSend extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (_items == null)
+		if (_items == null) {
 			return;
+		}
 		
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit")) {
 			player.sendMessage("You depositing items too fast.");
@@ -78,12 +80,14 @@ public class RequestPackageSend extends L2GameClientPacket {
 		player.setActiveWarehouse(new PcFreight(_objectId));
 		
 		final ItemContainer warehouse = player.getActiveWarehouse();
-		if (warehouse == null)
+		if (warehouse == null) {
 			return;
+		}
 		
 		L2Npc manager = player.getLastFolkNPC();
-		if ((manager == null || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false)) && !player.isGM())
+		if (((manager == null) || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false)) && !player.isGM()) {
 			return;
+		}
 		
 		if (player.getActiveEnchantItem() != null) {
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to use enchant Exploit!", Config.DEFAULT_PUNISH);
@@ -91,8 +95,9 @@ public class RequestPackageSend extends L2GameClientPacket {
 		}
 		
 		// Alt game - Karma punishment
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && player.getKarma() > 0)
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE && (player.getKarma() > 0)) {
 			return;
+		}
 		
 		// Freight price from config or normal price per item slot (30)
 		int fee = _count * Config.ALT_FREIGHT_PRICE; // Config.ALT_GAME_FREIGHT_PRICE;
@@ -107,16 +112,18 @@ public class RequestPackageSend extends L2GameClientPacket {
 				return;
 			}
 			
-			if (!item.isFreightable())
+			if (!item.isFreightable()) {
 				return;
+			}
 			
 			// Calculate needed adena and slots
-			if (item.getItemId() == PcInventory.ADENA_ID)
+			if (item.getItemId() == PcInventory.ADENA_ID) {
 				currentAdena -= i.getCount();
-			else if (!item.isStackable())
+			} else if (!item.isStackable()) {
 				slots += i.getCount();
-			else if (warehouse.getItemByItemId(item.getItemId()) == null)
+			} else if (warehouse.getItemByItemId(item.getItemId()) == null) {
 				slots++;
+			}
 		}
 		
 		// Item Max Limit Check
@@ -126,14 +133,15 @@ public class RequestPackageSend extends L2GameClientPacket {
 		}
 		
 		// Check if enough adena and charge the fee
-		if (currentAdena < fee || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
+		if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
 			player.sendPacket(SystemMessageId.YOU_NOT_ENOUGH_ADENA);
 			return;
 		}
 		
 		// get current tradelist if any
-		if (player.getActiveTradeList() != null)
+		if (player.getActiveTradeList() != null) {
 			return;
+		}
 		
 		// Proceed to the transfer
 		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
@@ -152,20 +160,22 @@ public class RequestPackageSend extends L2GameClientPacket {
 			}
 			
 			if (playerIU != null) {
-				if (oldItem.getCount() > 0 && oldItem != newItem)
+				if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
 					playerIU.addModifiedItem(oldItem);
-				else
+				} else {
 					playerIU.addRemovedItem(oldItem);
+				}
 			}
 		}
 		
 		warehouse.deleteMe();
 		
 		// Send updated item list to the player
-		if (playerIU != null)
+		if (playerIU != null) {
 			player.sendPacket(playerIU);
-		else
+		} else {
 			player.sendPacket(new ItemList(player, false));
+		}
 		
 		// Update current load status on player
 		StatusUpdate su = new StatusUpdate(player);

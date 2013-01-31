@@ -34,8 +34,9 @@ public final class RequestRecipeItemMakeInfo extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		RecipeItemMakeInfo response = new RecipeItemMakeInfo(_id, player);
 		sendPacket(response);

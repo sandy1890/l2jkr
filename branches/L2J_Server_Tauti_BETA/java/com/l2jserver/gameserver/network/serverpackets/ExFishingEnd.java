@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class ExFishingEnd extends L2GameServerPacket {
 	private static final String _S__FE_14_EXFISHINGEND = "[S] FE:1f ExFishingEnd";
-	private boolean _win;
+	private final boolean _win;
 	L2Character _activeChar;
 	
 	public ExFishingEnd(boolean win, L2PcInstance character) {

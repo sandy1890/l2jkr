@@ -64,11 +64,13 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (!getClient().getFloodProtectors().getServerBypass().tryPerformAction(_command))
+		if (!getClient().getFloodProtectors().getServerBypass().tryPerformAction(_command)) {
 			return;
+		}
 		
 		if (_command.isEmpty()) {
 			_log.info(activeChar.getName() + " send empty requestbypass");
@@ -117,8 +119,9 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 			} else if (_command.equals("come_here") && activeChar.isGM()) {
 				comeHere(activeChar);
 			} else if (_command.startsWith("npc_")) {
-				if (!activeChar.validateBypass(_command))
+				if (!activeChar.validateBypass(_command)) {
 					return;
+				}
 				
 				int endOfId = _command.indexOf('_', 5);
 				String id;
@@ -130,15 +133,16 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 				if (Util.isDigit(id)) {
 					L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
 					
-					if (object != null && object.isNpc() && endOfId > 0 && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false)) {
+					if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false)) {
 						((L2Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
 					}
 				}
 				
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			} else if (_command.startsWith("summon_")) {
-				if (!activeChar.validateBypass(_command))
+				if (!activeChar.validateBypass(_command)) {
 					return;
+				}
 				
 				int endOfId = _command.indexOf('_', 8);
 				String id;
@@ -152,7 +156,7 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 				if (Util.isDigit(id)) {
 					L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
 					
-					if (object instanceof L2MerchantSummonInstance && endOfId > 0 && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false)) {
+					if ((object instanceof L2MerchantSummonInstance) && (endOfId > 0) && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false)) {
 						((L2MerchantSummonInstance) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
 					}
 				}
@@ -166,8 +170,9 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 				}
 			} else if (_command.startsWith("_bbs")) {
 				if (Config.ENABLE_COMMUNITY_BOARD) {
-					if (!CommunityServerThread.getInstance().sendPacket(new RequestShowCommunityBoard(activeChar.getObjectId(), _command)))
+					if (!CommunityServerThread.getInstance().sendPacket(new RequestShowCommunityBoard(activeChar.getObjectId(), _command))) {
 						activeChar.sendPacket(SystemMessageId.CB_OFFLINE);
+					}
 				} else {
 					CommunityBoard.getInstance().handleCommands(getClient(), _command);
 				}
@@ -188,8 +193,9 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 					activeChar.sendPacket(SystemMessageId.CB_OFFLINE);
 				}
 			} else if (_command.startsWith("Quest ")) {
-				if (!activeChar.validateBypass(_command))
+				if (!activeChar.validateBypass(_command)) {
 					return;
+				}
 				
 				String p = _command.substring(6).trim();
 				int idx = p.indexOf(' ');
@@ -232,8 +238,9 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 				sb.append("Bypass error: " + e + "<br1>");
 				sb.append("Bypass command: " + _command + "<br1>");
 				sb.append("StackTrace:<br1>");
-				for (StackTraceElement ste : e.getStackTrace())
+				for (StackTraceElement ste : e.getStackTrace()) {
 					sb.append(ste.toString() + "<br1>");
+				}
 				sb.append("</body></html>");
 				// item html
 				NpcHtmlMessage msg = new NpcHtmlMessage(0, 12807);
@@ -249,8 +256,9 @@ public final class RequestBypassToServer extends L2GameClientPacket {
 	 */
 	private static void comeHere(L2PcInstance activeChar) {
 		L2Object obj = activeChar.getTarget();
-		if (obj == null)
+		if (obj == null) {
 			return;
+		}
 		if (obj instanceof L2Npc) {
 			L2Npc temp = (L2Npc) obj;
 			temp.setTarget(activeChar);

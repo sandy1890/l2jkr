@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2Clan.RankPrivs;
  */
 public class PledgePowerGradeList extends L2GameServerPacket {
 	private static final String _S__FE_3B_PLEDGEPOWERGRADELIST = "[S] FE:3c PledgePowerGradeList";
-	private RankPrivs[] _privs;
+	private final RankPrivs[] _privs;
 	
 	public PledgePowerGradeList(RankPrivs[] privs) {
 		_privs = privs;

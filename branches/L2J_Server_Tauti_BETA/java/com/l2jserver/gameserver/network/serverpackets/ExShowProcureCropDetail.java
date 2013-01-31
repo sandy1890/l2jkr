@@ -32,9 +32,9 @@ import com.l2jserver.gameserver.model.entity.Castle;
 public class ExShowProcureCropDetail extends L2GameServerPacket {
 	private static final String _S__FE_22_EXSHOWPROCURECROPDETAIL = "[S] FE:78 ExShowProcureCropDetail";
 	
-	private int _cropId;
+	private final int _cropId;
 	
-	private FastMap<Integer, CropProcure> _castleCrops;
+	private final FastMap<Integer, CropProcure> _castleCrops;
 	
 	public ExShowProcureCropDetail(int cropId) {
 		_cropId = cropId;
@@ -42,7 +42,7 @@ public class ExShowProcureCropDetail extends L2GameServerPacket {
 		
 		for (Castle c : CastleManager.getInstance().getCastles()) {
 			CropProcure cropItem = c.getCrop(_cropId, CastleManorManager.PERIOD_CURRENT);
-			if (cropItem != null && cropItem.getAmount() > 0) {
+			if ((cropItem != null) && (cropItem.getAmount() > 0)) {
 				_castleCrops.put(c.getCastleId(), cropItem);
 			}
 		}

@@ -30,9 +30,9 @@ public final class SetupGauge extends L2GameServerPacket {
 	public static final int GREEN_MINI = 3; // rocknow-God-Awaking
 	public static final int RED_MINI = 4; // rocknow-God-Awaking
 	
-	private int _dat1;
-	private int _time;
-	private int _time2;
+	private final int _dat1;
+	private final int _time;
+	private final int _time2;
 	private int _charObjId;
 	
 	public SetupGauge(int dat1, int time) {

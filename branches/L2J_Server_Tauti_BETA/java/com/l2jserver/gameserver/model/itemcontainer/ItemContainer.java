@@ -402,7 +402,7 @@ public abstract class ItemContainer {
 					return null;
 				}
 				
-				boolean removed = this.removeItem(item);
+				boolean removed = removeItem(item);
 				if (!removed) {
 					return null;
 				}

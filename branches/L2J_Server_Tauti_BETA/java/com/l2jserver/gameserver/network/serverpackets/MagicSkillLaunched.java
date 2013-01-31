@@ -27,12 +27,12 @@ import com.l2jserver.gameserver.model.actor.L2Character;
  */
 public class MagicSkillLaunched extends L2GameServerPacket {
 	private static final String _S__8E_MAGICSKILLLAUNCHED = "[S] 54 MagicSkillLaunched";
-	private int _charObjId;
-	private int _skillId;
-	private int _skillLevel;
+	private final int _charObjId;
+	private final int _skillId;
+	private final int _skillLevel;
 	private int _numberOfTargets;
 	private L2Object[] _targets;
-	private int _singleTargetId;
+	private final int _singleTargetId;
 	
 	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, L2Object[] targets) {
 		_charObjId = cha.getObjectId();
@@ -69,12 +69,13 @@ public class MagicSkillLaunched extends L2GameServerPacket {
 		writeD(_skillId);
 		writeD(_skillLevel);
 		writeD(_numberOfTargets); // also failed or not?
-		if (_singleTargetId != 0 || _numberOfTargets == 0) {
+		if ((_singleTargetId != 0) || (_numberOfTargets == 0)) {
 			writeD(_singleTargetId);
-		} else
+		} else {
 			for (L2Object target : _targets) {
 				writeD(target.getObjectId());
 			}
+		}
 	}
 	
 	@Override

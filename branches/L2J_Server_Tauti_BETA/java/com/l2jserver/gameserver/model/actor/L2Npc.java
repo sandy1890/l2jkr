@@ -1506,8 +1506,8 @@ public class L2Npc extends L2Character {
 	protected class DespawnTask implements Runnable {
 		@Override
 		public void run() {
-			if (!L2Npc.this.isDecayed()) {
-				L2Npc.this.deleteMe();
+			if (!isDecayed()) {
+				deleteMe();
 			}
 		}
 	}

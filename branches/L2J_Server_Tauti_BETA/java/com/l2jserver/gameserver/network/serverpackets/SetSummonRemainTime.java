@@ -24,8 +24,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public final class SetSummonRemainTime extends L2GameServerPacket {
 	private static final String _S__D1_SET_SUMMON_REMAIN_TIME = "[S] d1 SetSummonRemainTime";
-	private int _maxTime;
-	private int _remainingTime;
+	private final int _maxTime;
+	private final int _remainingTime;
 	
 	public SetSummonRemainTime(int maxTime, int remainingTime) {
 		_remainingTime = remainingTime;

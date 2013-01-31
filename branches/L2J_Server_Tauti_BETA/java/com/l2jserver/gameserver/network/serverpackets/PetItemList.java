@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public class PetItemList extends L2GameServerPacket {
 	private static final String _S__cb_PETITEMLIST = "[S] b3 PetItemList";
-	private L2PetInstance _activeChar;
+	private final L2PetInstance _activeChar;
 	
 	public PetItemList(L2PetInstance character) {
 		_activeChar = character;
@@ -59,10 +59,11 @@ public class PetItemList extends L2GameServerPacket {
 			writeD(temp.getItem().getBodyPart());
 			writeH(temp.getEnchantLevel());
 			writeH(temp.getCustomType2());
-			if (temp.isAugmented())
+			if (temp.isAugmented()) {
 				writeD(temp.getAugmentation().getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(temp.getMana());
 			writeD(temp.isTimeLimitedItem() ? (int) (temp.getRemainingTime() / 1000) : -9999);
 			writeH(0x01); // rocknow-God

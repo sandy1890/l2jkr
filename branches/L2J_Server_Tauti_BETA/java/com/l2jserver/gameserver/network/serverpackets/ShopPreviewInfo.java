@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
  ** @author Gnacik
  */
 public class ShopPreviewInfo extends L2GameServerPacket {
-	private Map<Integer, Integer> _itemlist;
+	private final Map<Integer, Integer> _itemlist;
 	
 	public ShopPreviewInfo(Map<Integer, Integer> itemlist) {
 		_itemlist = itemlist;

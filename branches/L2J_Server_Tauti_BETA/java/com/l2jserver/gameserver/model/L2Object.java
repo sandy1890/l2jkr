@@ -202,9 +202,9 @@ public abstract class L2Object {
 		private InstanceType(InstanceType parent) {
 			_parent = parent;
 			
-			final int high = this.ordinal() - (Long.SIZE - 1);
+			final int high = ordinal() - (Long.SIZE - 1);
 			if (high < 0) {
-				_typeL = 1L << this.ordinal();
+				_typeL = 1L << ordinal();
 				_typeH = 0;
 			} else {
 				_typeL = 0;
@@ -212,7 +212,7 @@ public abstract class L2Object {
 			}
 			
 			if ((_typeL < 0) || (_typeH < 0)) {
-				throw new Error("Too many instance types, failed to load " + this.name());
+				throw new Error("Too many instance types, failed to load " + name());
 			}
 			
 			if (parent != null) {

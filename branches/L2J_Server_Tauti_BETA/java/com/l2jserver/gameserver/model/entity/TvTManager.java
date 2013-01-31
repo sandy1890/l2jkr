@@ -43,7 +43,7 @@ public class TvTManager {
 	protected TvTManager() {
 		if (Config.TVT_EVENT_ENABLED) {
 			TvTEvent.init();
-			this.scheduleEventStart();
+			scheduleEventStart();
 			_log.info("TvTEventEngine[TvTManager.TvTManager()]: Started.");
 		} else {
 			_log.info("TvTEventEngine[TvTManager.TvTManager()]: Engine is disabled.");
@@ -100,7 +100,7 @@ public class TvTManager {
 			Announcements.getInstance().announceToAll(MessageTable.Messages[464].getMessage());
 			_log.warning("TvTEventEngine[TvTManager.run()]: Error spawning event npc for participation.");
 			
-			this.scheduleEventStart();
+			scheduleEventStart();
 		} else {
 			Announcements.getInstance().announceToAll(MessageTable.Messages[465].getExtra(1) + Config.TVT_EVENT_PARTICIPATION_TIME + MessageTable.Messages[465].getExtra(2));
 			
@@ -118,7 +118,7 @@ public class TvTManager {
 			Announcements.getInstance().announceToAll(MessageTable.Messages[466].getMessage());
 			_log.info("TvTEventEngine[TvTManager.run()]: Lack of registration, abort event.");
 			
-			this.scheduleEventStart();
+			scheduleEventStart();
 		} else {
 			TvTEvent.sysMsgToAllParticipants(MessageTable.Messages[467].getExtra(1) + Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY + MessageTable.Messages[467].getExtra(2));
 			_task.setStartTime(System.currentTimeMillis() + (60000L * Config.TVT_EVENT_RUNNING_TIME));
@@ -134,7 +134,7 @@ public class TvTManager {
 		TvTEvent.sysMsgToAllParticipants(MessageTable.Messages[468].getExtra(1) + Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY + MessageTable.Messages[468].getExtra(2));
 		TvTEvent.stopFight();
 		
-		this.scheduleEventStart();
+		scheduleEventStart();
 	}
 	
 	public void skipDelay() {
@@ -167,7 +167,7 @@ public class TvTManager {
 			int delay = (int) Math.round((_startTime - System.currentTimeMillis()) / 1000.0);
 			
 			if (delay > 0) {
-				this.announce(delay);
+				announce(delay);
 			}
 			
 			int nextMsg = 0;
@@ -190,11 +190,11 @@ public class TvTManager {
 			} else {
 				// start
 				if (TvTEvent.isInactive()) {
-					TvTManager.this.startReg();
+					startReg();
 				} else if (TvTEvent.isParticipating()) {
-					TvTManager.this.startEvent();
+					startEvent();
 				} else {
-					TvTManager.this.endEvent();
+					endEvent();
 				}
 			}
 			

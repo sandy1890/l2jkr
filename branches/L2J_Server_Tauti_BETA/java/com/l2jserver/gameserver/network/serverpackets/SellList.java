@@ -35,8 +35,8 @@ public class SellList extends L2GameServerPacket {
 	private static final String _S__10_SELLLIST = "[S] 06 SellList";
 	private final L2PcInstance _activeChar;
 	private final L2MerchantInstance _lease;
-	private long _money;
-	private List<L2ItemInstance> _selllist = new FastList<>();
+	private final long _money;
+	private final List<L2ItemInstance> _selllist = new FastList<>();
 	
 	public SellList(L2PcInstance player) {
 		_activeChar = player;
@@ -57,12 +57,13 @@ public class SellList extends L2GameServerPacket {
 			for (L2ItemInstance item : _activeChar.getInventory().getItems()) {
 				if (!item.isEquipped() && // Not equipped
 				item.isSellable() && // Item is sellable
-				(_activeChar.getPet() == null || // Pet not summoned or
-				item.getObjectId() != _activeChar.getPet().getControlObjectId())) // Pet is summoned and not the item that summoned the pet
+				((_activeChar.getPet() == null) || // Pet not summoned or
+				(item.getObjectId() != _activeChar.getPet().getControlObjectId()))) // Pet is summoned and not the item that summoned the pet
 				{
 					_selllist.add(item);
-					if (Config.DEBUG)
+					if (Config.DEBUG) {
 						_log.fine("item added to selllist: " + item.getItem().getName());
+					}
 				}
 			}
 		}
@@ -91,8 +92,9 @@ public class SellList extends L2GameServerPacket {
 			// T1
 			writeH(item.getAttackElementType());
 			writeH(item.getAttackElementPower());
-			for (byte i = 0; i < 6; i++)
+			for (byte i = 0; i < 6; i++) {
 				writeH(item.getElementDefAttr(i));
+			}
 			
 			writeH(0x00); // Enchant effect 1
 			writeH(0x00); // Enchant effect 2

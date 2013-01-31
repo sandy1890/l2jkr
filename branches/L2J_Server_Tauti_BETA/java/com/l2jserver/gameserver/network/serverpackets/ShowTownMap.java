@@ -24,9 +24,9 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ShowTownMap extends L2GameServerPacket {
 	private static final String _S__DE_ShowTownMap = "[S] ea ShowTownMap";
-	private String _texture;
-	private int _x;
-	private int _y;
+	private final String _texture;
+	private final int _x;
+	private final int _y;
 	
 	/**
 	 * @param texture

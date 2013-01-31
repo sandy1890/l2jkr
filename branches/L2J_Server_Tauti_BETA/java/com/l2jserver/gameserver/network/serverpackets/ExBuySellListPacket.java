@@ -40,13 +40,15 @@ public class ExBuySellListPacket extends L2GameServerPacket {
 	
 	public ExBuySellListPacket(L2PcInstance player, L2TradeList list, double taxRate, boolean done) {
 		for (L2TradeItem item : list.getItems()) {
-			if (item.hasLimitedStock() && item.getCurrentCount() <= 0)
+			if (item.hasLimitedStock() && (item.getCurrentCount() <= 0)) {
 				continue;
+			}
 			_buyList.add(item);
 		}
 		_sellList = player.getInventory().getAvailableItems(false, false, false);
-		if (player.hasRefund())
+		if (player.hasRefund()) {
 			_refundList = player.getRefund().getItems();
+		}
 		_done = done;
 	}
 	
@@ -57,7 +59,7 @@ public class ExBuySellListPacket extends L2GameServerPacket {
 		writeD(0x01);
 		writeD(0x00); // rocknow-God
 		
-		if (_sellList != null && _sellList.length > 0) {
+		if ((_sellList != null) && (_sellList.length > 0)) {
 			writeH(_sellList.length);
 			for (L2ItemInstance item : _sellList) {
 				writeD(item.getObjectId());
@@ -88,10 +90,11 @@ public class ExBuySellListPacket extends L2GameServerPacket {
 				
 				writeQ(item.getItem().getReferencePrice() / 2);
 			}
-		} else
+		} else {
 			writeH(0x00);
+		}
 		
-		if (_refundList != null && _refundList.length > 0) {
+		if ((_refundList != null) && (_refundList.length > 0)) {
 			writeH(_refundList.length);
 			int idx = 0;
 			for (L2ItemInstance item : _refundList) {
@@ -121,10 +124,11 @@ public class ExBuySellListPacket extends L2GameServerPacket {
 				writeH(0x00);
 				writeD(0x00); // rocknow-God-Weapon Appearance
 				writeD(idx++);
-				writeQ(item.getItem().getReferencePrice() / 2 * item.getCount());
+				writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
 			}
-		} else
+		} else {
 			writeH(0x00);
+		}
 		
 		writeC(_done ? 0x01 : 0x00);
 		

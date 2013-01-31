@@ -26,10 +26,10 @@ import com.l2jserver.gameserver.model.L2Party;
  */
 public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket {
 	private static final String _S__FE_31_EXMULTIPARTYCOMMANDCHANNELINFO = "[S] FE:31 ExMultiPartyCommandChannelInfo";
-	private L2CommandChannel _channel;
+	private final L2CommandChannel _channel;
 	
 	public ExMultiPartyCommandChannelInfo(L2CommandChannel channel) {
-		this._channel = channel;
+		_channel = channel;
 	}
 	
 	/**
@@ -45,8 +45,9 @@ public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket {
 	 */
 	@Override
 	protected void writeImpl() {
-		if (_channel == null)
+		if (_channel == null) {
 			return;
+		}
 		
 		// L2PcInstance player = this.getClient().getActiveChar();
 		

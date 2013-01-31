@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.L2Object;
  */
 public final class Revive extends L2GameServerPacket {
 	private static final String _S__0C_REVIVE = "[S] 01 Revive";
-	private int _objectId;
+	private final int _objectId;
 	
 	public Revive(L2Object obj) {
 		_objectId = obj.getObjectId();

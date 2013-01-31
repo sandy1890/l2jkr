@@ -140,7 +140,7 @@ public class L2TrapInstance extends L2Trap {
 			sm.addCharName(this);
 			sm.addCharName(target);
 			sm.addNumber(damage);
-			sm.addDamage(target.getObjectId(), this.getObjectId(), damage * -1); // rocknow-God (by otfnir)
+			sm.addDamage(target.getObjectId(), getObjectId(), damage * -1); // rocknow-God (by otfnir)
 		}
 		
 		_owner.sendPacket(sm);

@@ -29,8 +29,8 @@ public class SendMail extends BaseSendablePacket {
 		writeS(accountName);
 		writeS(mailId);
 		writeC(args.length);
-		for (int i = 0; i < args.length; i++) {
-			writeS(args[i]);
+		for (String arg : args) {
+			writeS(arg);
 		}
 	}
 	

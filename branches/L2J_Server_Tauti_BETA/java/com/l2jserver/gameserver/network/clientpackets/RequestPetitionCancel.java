@@ -49,14 +49,16 @@ public final class RequestPetitionCancel extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		if (PetitionManager.getInstance().isPlayerInConsultation(activeChar)) {
-			if (activeChar.isGM())
+			if (activeChar.isGM()) {
 				PetitionManager.getInstance().endActivePetition(activeChar);
-			else
+			} else {
 				activeChar.sendPacket(SystemMessageId.PETITION_UNDER_PROCESS);
+			}
 		} else {
 			if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar)) {
 				if (PetitionManager.getInstance().cancelActivePetition(activeChar)) {

@@ -41,11 +41,13 @@ public final class RequestReplyStartPledgeWar extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		L2PcInstance requestor = activeChar.getActiveRequester();
-		if (requestor == null)
+		if (requestor == null) {
 			return;
+		}
 		
 		if (_answer == 1) {
 			ClanTable.getInstance().storeclanswars(requestor.getClanId(), activeChar.getClanId());

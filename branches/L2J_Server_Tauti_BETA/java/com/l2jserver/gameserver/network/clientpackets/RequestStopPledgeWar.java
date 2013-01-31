@@ -42,11 +42,13 @@ public final class RequestStopPledgeWar extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		L2Clan playerClan = player.getClan();
-		if (playerClan == null)
+		if (playerClan == null) {
 			return;
+		}
 		
 		L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		
@@ -94,8 +96,9 @@ public final class RequestStopPledgeWar extends L2GameClientPacket {
 		// }
 		
 		for (L2ClanMember member : playerClan.getMembers()) {
-			if (member == null || member.getPlayerInstance() == null)
+			if ((member == null) || (member.getPlayerInstance() == null)) {
 				continue;
+			}
 			if (AttackStanceTaskManager.getInstance().getAttackStanceTask(member.getPlayerInstance())) {
 				player.sendPacket(SystemMessageId.CANT_STOP_CLAN_WAR_WHILE_IN_COMBAT);
 				return;
@@ -117,8 +120,9 @@ public final class RequestStopPledgeWar extends L2GameClientPacket {
 		
 		@Override
 		public final boolean execute(final L2PcInstance cha) {
-			if (cha.getClan() == _player.getClan() || cha.getClan() == _cln)
+			if ((cha.getClan() == _player.getClan()) || (cha.getClan() == _cln)) {
 				cha.broadcastUserInfo();
+			}
 			return true;
 		}
 	}

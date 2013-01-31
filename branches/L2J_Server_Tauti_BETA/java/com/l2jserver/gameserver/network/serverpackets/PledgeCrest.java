@@ -42,8 +42,9 @@ public final class PledgeCrest extends L2GameServerPacket {
 		if (_data != null) {
 			writeD(_data.length);
 			writeB(_data);
-		} else
+		} else {
 			writeD(0);
+		}
 	}
 	
 	@Override

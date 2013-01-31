@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 public class GMViewSkillInfo extends L2GameServerPacket {
 	private static final String _S__91_GMViewSkillInfo = "[S] 97 GMViewSkillInfo";
 	private final L2PcInstance _activeChar;
-	private Collection<L2Skill> _skills;
+	private final Collection<L2Skill> _skills;
 	
 	public GMViewSkillInfo(L2PcInstance cha) {
 		_activeChar = cha;

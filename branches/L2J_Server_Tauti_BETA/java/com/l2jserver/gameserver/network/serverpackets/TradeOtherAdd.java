@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.TradeItem;
  */
 public final class TradeOtherAdd extends L2GameServerPacket {
 	private static final String _S__31_TRADEOTHERADD = "[S] 1b TradeOtherAdd";
-	private TradeItem _item;
+	private final TradeItem _item;
 	
 	public TradeOtherAdd(TradeItem item) {
 		_item = item;
@@ -53,8 +53,9 @@ public final class TradeOtherAdd extends L2GameServerPacket {
 		// T1
 		writeH(_item.getAttackElementType());
 		writeH(_item.getAttackElementPower());
-		for (byte i = 0; i < 6; i++)
+		for (byte i = 0; i < 6; i++) {
 			writeH(_item.getElementDefAttr(i));
+		}
 		
 		writeH(0x00); // Enchant effect 1
 		writeH(0x00); // Enchant effect 2

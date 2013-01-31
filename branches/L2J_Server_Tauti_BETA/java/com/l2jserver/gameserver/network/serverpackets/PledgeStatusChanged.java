@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.L2Clan;
  * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
  */
 public final class PledgeStatusChanged extends L2GameServerPacket {
-	private L2Clan _clan;
+	private final L2Clan _clan;
 	
 	public PledgeStatusChanged(L2Clan clan) {
 		_clan = clan;

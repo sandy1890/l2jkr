@@ -36,8 +36,9 @@ public class RequestEx2ndPasswordVerify extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (!Config.SECOND_AUTH_ENABLED)
+		if (!Config.SECOND_AUTH_ENABLED) {
 			return;
+		}
 		
 		getClient().getSecondaryAuth().checkPassword(_password, false);
 	}

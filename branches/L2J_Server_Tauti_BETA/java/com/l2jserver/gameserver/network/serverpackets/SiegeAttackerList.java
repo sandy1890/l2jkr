@@ -82,8 +82,9 @@ public final class SiegeAttackerList extends L2GameServerPacket {
 				writeD(size);
 				for (L2SiegeClan siegeclan : _castle.getSiege().getAttackerClans()) {
 					clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-					if (clan == null)
+					if (clan == null) {
 						continue;
+					}
 					
 					writeD(clan.getClanId());
 					writeS(clan.getName());
@@ -111,8 +112,9 @@ public final class SiegeAttackerList extends L2GameServerPacket {
 				writeD(size);
 				for (L2SiegeClan sClan : attackers) {
 					final L2Clan clan = ClanTable.getInstance().getClan(sClan.getClanId());
-					if (clan == null)
+					if (clan == null) {
 						continue;
+					}
 					
 					writeD(clan.getClanId());
 					writeS(clan.getName());

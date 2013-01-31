@@ -29,7 +29,7 @@ public class ExEnchantSkillResult extends L2GameServerPacket {
 		return result ? STATIC_PACKET_TRUE : STATIC_PACKET_FALSE;
 	}
 	
-	private boolean _enchanted;
+	private final boolean _enchanted;
 	
 	public ExEnchantSkillResult(boolean enchanted) {
 		_enchanted = enchanted;

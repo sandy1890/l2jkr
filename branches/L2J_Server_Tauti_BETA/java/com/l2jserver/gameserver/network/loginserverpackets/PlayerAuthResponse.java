@@ -25,8 +25,8 @@ import com.l2jserver.util.network.BaseRecievePacket;
  */
 public class PlayerAuthResponse extends BaseRecievePacket {
 	
-	private String _account;
-	private boolean _authed;
+	private final String _account;
+	private final boolean _authed;
 	
 	/**
 	 * @param decrypt

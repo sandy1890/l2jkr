@@ -29,8 +29,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 public class PetStatusUpdate extends L2GameServerPacket {
 	private static final String _S__CE_PETSTATUSSHOW = "[S] b6 PetStatusUpdate";
 	
-	private L2Summon _summon;
-	private int _maxHp, _maxMp;
+	private final L2Summon _summon;
+	private final int _maxHp, _maxMp;
 	private int _maxFed, _curFed;
 	
 	public PetStatusUpdate(L2Summon summon) {

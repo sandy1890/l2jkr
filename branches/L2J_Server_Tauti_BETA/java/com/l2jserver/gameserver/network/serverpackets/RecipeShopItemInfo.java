@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class RecipeShopItemInfo extends L2GameServerPacket {
 	
 	private static final String _S__DA_RecipeShopItemInfo = "[S] e0 RecipeShopItemInfo";
-	private L2PcInstance _player;
-	private int _recipeId;
+	private final L2PcInstance _player;
+	private final int _recipeId;
 	
 	public RecipeShopItemInfo(L2PcInstance player, int recipeId) {
 		_player = player;

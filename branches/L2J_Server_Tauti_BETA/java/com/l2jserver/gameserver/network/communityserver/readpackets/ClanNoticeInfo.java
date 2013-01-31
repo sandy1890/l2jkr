@@ -67,10 +67,11 @@ public final class ClanNoticeInfo extends BaseReadPacket {
 			case 2:
 				clanId = super.readD();
 				L2Clan clan = ClanTable.getInstance().getClan(clanId);
-				if (clan != null)
+				if (clan != null) {
 					_cst.sendPacket(new WorldInfo(null, clan, WorldInfo.TYPE_SEND_CLAN_NOTICE));
-				else
+				} else {
 					_log.warning("Can't find clan with id: " + clanId);
+				}
 			break;
 		}
 	}

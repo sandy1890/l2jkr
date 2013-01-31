@@ -203,7 +203,7 @@ public class Instance {
 	 */
 	public void ejectPlayer(int objectId) {
 		L2PcInstance player = L2World.getInstance().getPlayer(objectId);
-		if ((player != null) && (player.getInstanceId() == this.getId())) {
+		if ((player != null) && (player.getInstanceId() == getId())) {
 			player.setInstanceId(0);
 			/*
 			 * Move To MessageTable For L2JTW player.sendMessage("You were removed from the instance");
@@ -241,7 +241,7 @@ public class Instance {
 		
 		for (L2DoorInstance door : _doors) {
 			if (door.getDoorId() == doorId) {
-				_log.warning("Door ID " + doorId + " already exists in instance " + this.getId());
+				_log.warning("Door ID " + doorId + " already exists in instance " + getId());
 				return;
 			}
 		}

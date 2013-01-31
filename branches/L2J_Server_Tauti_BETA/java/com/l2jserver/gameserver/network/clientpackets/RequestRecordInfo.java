@@ -48,17 +48,18 @@ public class RequestRecordInfo extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance _activeChar = getClient().getActiveChar();
 		
-		if (_activeChar == null)
+		if (_activeChar == null) {
 			return;
+		}
 		
 		_activeChar.sendPacket(new UserInfo(_activeChar));
 		_activeChar.sendPacket(new ExBrExtraUserInfo(_activeChar));
 		
 		Collection<L2Object> objs = _activeChar.getKnownList().getKnownObjects().values();
 		for (L2Object object : objs) {
-			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
+			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item")) {
 				_activeChar.sendPacket(new SpawnItem(object));
-			else {
+			} else {
 				object.sendInfo(_activeChar);
 				
 				if (object instanceof L2Character) {
@@ -67,8 +68,9 @@ public class RequestRecordInfo extends L2GameClientPacket {
 					// MoveToPawn/CharMoveToLocation and AutoAttackStart to
 					// the L2PcInstance
 					L2Character obj = (L2Character) object;
-					if (obj.getAI() != null)
+					if (obj.getAI() != null) {
 						obj.getAI().describeStateToPlayer(_activeChar);
+					}
 				}
 			}
 		}

@@ -33,9 +33,9 @@ import com.l2jserver.gameserver.model.L2World;
  */
 public class FriendPacket extends L2GameServerPacket {
 	private static final String _S__FA_FRIENDLIST = "[S] 76 FriendPacket";
-	private boolean _action, _online;
-	private int _objid;
-	private String _name;
+	private final boolean _action, _online;
+	private final int _objid;
+	private final String _name;
 	
 	/**
 	 * @param action - true for adding, false for remove

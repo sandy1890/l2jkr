@@ -43,14 +43,15 @@ public final class RequestFriendInvite extends L2GameClientPacket {
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		final L2PcInstance friend = L2World.getInstance().getPlayer(_name);
 		
 		SystemMessage sm;
 		// can't use friend invite for locating invisible characters
-		if (friend == null || !friend.isOnline() || friend.getAppearance().getInvisible()) {
+		if ((friend == null) || !friend.isOnline() || friend.getAppearance().getInvisible()) {
 			// Target is not found in the game.
 			activeChar.sendPacket(SystemMessageId.THE_USER_YOU_REQUESTED_IS_NOT_IN_GAME);
 			return;

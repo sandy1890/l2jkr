@@ -22,11 +22,11 @@ package com.l2jserver.gameserver.network.serverpackets;
  * Halloween rank list server packet. Format: (ch)ddddd
  */
 public class ExBrLoadEventTopRankers extends L2GameServerPacket {
-	private int _eventId;
-	private int _day;
-	private int _count;
-	private int _bestScore;
-	private int _myScore;
+	private final int _eventId;
+	private final int _day;
+	private final int _count;
+	private final int _bestScore;
+	private final int _myScore;
 	
 	public ExBrLoadEventTopRankers(int eventId, int day, int count, int bestScore, int myScore) {
 		_eventId = eventId;

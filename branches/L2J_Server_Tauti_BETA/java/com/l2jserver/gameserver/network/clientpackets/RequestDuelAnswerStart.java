@@ -47,12 +47,14 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		L2PcInstance requestor = player.getActiveRequester();
-		if (requestor == null)
+		if (requestor == null) {
 			return;
+		}
 		
 		if (_response == 1) {
 			SystemMessage msg1 = null, msg2 = null;
@@ -90,9 +92,9 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket {
 			requestor.sendPacket(sm);
 		} else {
 			SystemMessage msg = null;
-			if (_partyDuel == 1)
+			if (_partyDuel == 1) {
 				msg = SystemMessage.getSystemMessage(SystemMessageId.THE_OPPOSING_PARTY_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
-			else {
+			} else {
 				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
 				msg.addPcName(player);
 			}

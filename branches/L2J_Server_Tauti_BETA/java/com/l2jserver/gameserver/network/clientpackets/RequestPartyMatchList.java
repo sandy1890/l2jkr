@@ -53,8 +53,9 @@ public class RequestPartyMatchList extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance _activeChar = getClient().getActiveChar();
 		
-		if (_activeChar == null)
+		if (_activeChar == null) {
 			return;
+		}
 		
 		if (_roomid > 0) {
 			PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
@@ -67,8 +68,9 @@ public class RequestPartyMatchList extends L2GameClientPacket {
 				_room.setTitle(_roomtitle);
 				
 				for (L2PcInstance _member : _room.getPartyMembers()) {
-					if (_member == null)
+					if (_member == null) {
 						continue;
+					}
 					
 					_member.sendPacket(new PartyMatchDetail(_activeChar, _room));
 					_member.sendPacket(SystemMessageId.PARTY_ROOM_REVISED);
@@ -87,10 +89,12 @@ public class RequestPartyMatchList extends L2GameClientPacket {
 			
 			if (_activeChar.isInParty()) {
 				for (L2PcInstance ptmember : _activeChar.getParty().getMembers()) {
-					if (ptmember == null)
+					if (ptmember == null) {
 						continue;
-					if (ptmember == _activeChar)
+					}
+					if (ptmember == _activeChar) {
 						continue;
+					}
 					
 					ptmember.setPartyRoom(_maxid);
 					// ptmember.setPartyMatching(1);

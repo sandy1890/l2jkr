@@ -26,12 +26,12 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
  */
 public final class ServerObjectInfo extends L2GameServerPacket {
 	private static final String _S__92_SERVEROBJECTINFO = "[S] 92 ServerObjectInfo";
-	private L2Npc _activeChar;
-	private int _x, _y, _z, _heading;
-	private int _idTemplate;
-	private boolean _isAttackable;
-	private double _collisionHeight, _collisionRadius;
-	private String _name;
+	private final L2Npc _activeChar;
+	private final int _x, _y, _z, _heading;
+	private final int _idTemplate;
+	private final boolean _isAttackable;
+	private final double _collisionHeight, _collisionRadius;
+	private final String _name;
 	
 	public ServerObjectInfo(L2Npc activeChar, L2Character actor) {
 		_activeChar = activeChar;

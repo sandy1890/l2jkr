@@ -36,7 +36,7 @@ public final class NpcHtmlMessage extends L2GameServerPacket {
 	// d is usually 0, S is the html text starting with <html> and ending with </html>
 	//
 	private static final String _S__1B_NPCHTMLMESSAGE = "[S] 19 NpcHtmlMessage";
-	private int _npcObjId;
+	private final int _npcObjId;
 	private String _html;
 	private int _itemId = 0;
 	private boolean _validate = true;
@@ -72,8 +72,9 @@ public final class NpcHtmlMessage extends L2GameServerPacket {
 	
 	@Override
 	public void runImpl() {
-		if (Config.BYPASS_VALIDATION && _validate)
+		if (Config.BYPASS_VALIDATION && _validate) {
 			buildBypassCache(getClient().getActiveChar());
+		}
 	}
 	
 	public void setHtml(String text) {
@@ -81,11 +82,12 @@ public final class NpcHtmlMessage extends L2GameServerPacket {
 			_log.log(Level.WARNING, "Html is too long! this will crash the client!", new Throwable());
 			_html = text.substring(0, 17200);
 		}
-		if (!text.contains("<html>"))
+		if (!text.contains("<html>")) {
 			/*
 			 * Move To MessageTable For L2JTW text = "<html><body>" + text + "</body></html>";
 			 */
 			text = "<html><body>" + MessageTable.Messages[217].getMessage() + "</body></html>";
+		}
 		
 		_html = text;
 	}
@@ -111,28 +113,32 @@ public final class NpcHtmlMessage extends L2GameServerPacket {
 	}
 	
 	private final void buildBypassCache(L2PcInstance activeChar) {
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		activeChar.clearBypass();
 		int len = _html.length();
 		for (int i = 0; i < len; i++) {
 			int start = _html.indexOf("\"bypass ", i);
 			int finish = _html.indexOf("\"", start + 1);
-			if (start < 0 || finish < 0)
+			if ((start < 0) || (finish < 0)) {
 				break;
+			}
 			
-			if (_html.substring(start + 8, start + 10).equals("-h"))
+			if (_html.substring(start + 8, start + 10).equals("-h")) {
 				start += 11;
-			else
+			} else {
 				start += 8;
+			}
 			
 			i = finish;
 			int finish2 = _html.indexOf("$", start);
-			if (finish2 < finish && finish2 > 0)
+			if ((finish2 < finish) && (finish2 > 0)) {
 				activeChar.addBypass2(_html.substring(start, finish2).trim());
-			else
+			} else {
 				activeChar.addBypass(_html.substring(start, finish).trim());
+			}
 		}
 	}
 	
@@ -142,8 +148,9 @@ public final class NpcHtmlMessage extends L2GameServerPacket {
 		
 		writeD(_npcObjId);
 		writeS(_html);
-		if (_npcObjId != 0)
+		if (_npcObjId != 0) {
 			writeD(_itemId);
+		}
 	}
 	
 	/**

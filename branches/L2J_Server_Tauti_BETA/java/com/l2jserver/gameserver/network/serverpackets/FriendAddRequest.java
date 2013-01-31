@@ -29,7 +29,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class FriendAddRequest extends L2GameServerPacket {
 	private static final String _S__7d_ASKJoinFriend_0X7d = "[S] 83 FriendAddRequest";
 	
-	private String _requestorName;
+	private final String _requestorName;
 	
 	/**
 	 * @param requestorName

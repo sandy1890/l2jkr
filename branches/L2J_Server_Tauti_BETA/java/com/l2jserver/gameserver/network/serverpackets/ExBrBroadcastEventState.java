@@ -24,8 +24,8 @@ package com.l2jserver.gameserver.network.serverpackets;
  * @author mrTJO Format: (ch)dddddddSS
  */
 public class ExBrBroadcastEventState extends L2GameServerPacket {
-	private int _eventId;
-	private int _eventState;
+	private final int _eventId;
+	private final int _eventState;
 	private int _param0;
 	private int _param1;
 	private int _param2;

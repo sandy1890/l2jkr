@@ -32,9 +32,9 @@ import com.l2jserver.gameserver.model.L2TradeList.L2TradeItem;
  */
 public final class BuyList extends L2GameServerPacket {
 	private static final String _S__1D_BUYLIST = "[S] 07 BuyList";
-	private int _listId;
-	private Collection<L2TradeItem> _list;
-	private long _money;
+	private final int _listId;
+	private final Collection<L2TradeItem> _list;
+	private final long _money;
 	private double _taxRate = 0;
 	
 	public BuyList(L2TradeList list, long currentMoney, double taxRate) {
@@ -56,7 +56,7 @@ public final class BuyList extends L2GameServerPacket {
 		writeH(_list.size());
 		
 		for (L2TradeItem item : _list) {
-			if (item.getCurrentCount() > 0 || !item.hasLimitedStock()) {
+			if ((item.getCurrentCount() > 0) || !item.hasLimitedStock()) {
 				writeD(item.getItemId());
 				writeD(item.getItemId());
 				writeD(0);
@@ -82,10 +82,11 @@ public final class BuyList extends L2GameServerPacket {
 				writeH(0x00);
 				writeD(0x00); // rocknow-God-Weapon Appearance
 				
-				if (item.getItemId() >= 3960 && item.getItemId() <= 4026)// Config.RATE_SIEGE_GUARDS_PRICE-//'
+				if ((item.getItemId() >= 3960) && (item.getItemId() <= 4026)) {
 					writeQ((long) (item.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
-				else
+				} else {
 					writeQ((long) (item.getPrice() * (1 + _taxRate)));
+				}
 			}
 		}
 	}

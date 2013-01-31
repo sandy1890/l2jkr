@@ -41,26 +41,29 @@ public final class SendBypassBuildCmd extends L2GameClientPacket {
 	@Override
 	protected void readImpl() {
 		_command = readS();
-		if (_command != null)
+		if (_command != null) {
 			_command = _command.trim();
+		}
 	}
 	
 	@Override
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		String command = "admin_" + _command.split(" ")[0];
 		
 		IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
 		
 		if (ach == null) {
-			if (activeChar.isGM())
+			if (activeChar.isGM()) {
 				/*
 				 * Move To MessageTable For L2JTW activeChar.sendMessage("The command " + command.substring(6) + " does not exists!");
 				 */
 				activeChar.sendMessage(MessageTable.Messages[369].getExtra(1) + command.substring(6) + MessageTable.Messages[369].getExtra(2));
+			}
 			
 			_log.warning("No handler registered for admin command '" + command + "'");
 			return;
@@ -75,8 +78,9 @@ public final class SendBypassBuildCmd extends L2GameClientPacket {
 			return;
 		}
 		
-		if (Config.GMAUDIT)
+		if (Config.GMAUDIT) {
 			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", _command, (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target"));
+		}
 		
 		ach.useAdminCommand("admin_" + _command, activeChar);
 	}

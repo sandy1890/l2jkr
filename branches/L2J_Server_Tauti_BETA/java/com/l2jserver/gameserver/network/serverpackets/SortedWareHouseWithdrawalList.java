@@ -154,7 +154,7 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 					Collections.sort(_objects, new WarehouseItemNameComparator(_sortorder));
 				break;
 				case GRADE:
-					if (_itemtype == WarehouseListType.ARMOR || _itemtype == WarehouseListType.WEAPON) {
+					if ((_itemtype == WarehouseListType.ARMOR) || (_itemtype == WarehouseListType.WEAPON)) {
 						Collections.sort(_objects, new WarehouseItemNameComparator(A2Z));
 						Collections.sort(_objects, new WarehouseItemGradeComparator(A2Z));
 					}
@@ -188,19 +188,19 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	 * @return the integer of the sortorder or 1 as default value
 	 */
 	public static byte getOrder(String order) {
-		if (order == null)
+		if (order == null) {
 			return A2Z;
-		else if (order.startsWith("A2Z"))
+		} else if (order.startsWith("A2Z")) {
 			return A2Z;
-		else if (order.startsWith("Z2A"))
+		} else if (order.startsWith("Z2A")) {
 			return Z2A;
-		else if (order.startsWith("GRADE"))
+		} else if (order.startsWith("GRADE")) {
 			return GRADE;
-		else if (order.startsWith("TYPE"))
+		} else if (order.startsWith("TYPE")) {
 			return TYPE;
-		else if (order.startsWith("WEAR"))
+		} else if (order.startsWith("WEAR")) {
 			return WEAR;
-		else {
+		} else {
 			try {
 				return Byte.parseByte(order);
 			} catch (NumberFormatException ex) {
@@ -221,10 +221,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 		
 		@Override
 		public int compare(L2WarehouseItem o1, L2WarehouseItem o2) {
-			if (o1.getType2() == L2Item.TYPE2_MONEY && o2.getType2() != L2Item.TYPE2_MONEY)
+			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? Z2A : A2Z);
-			if (o2.getType2() == L2Item.TYPE2_MONEY && o1.getType2() != L2Item.TYPE2_MONEY)
+			}
+			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? A2Z : Z2A);
+			}
 			String s1 = o1.getItemName();
 			String s2 = o2.getItemName();
 			return (order == A2Z ? s1.compareTo(s2) : s2.compareTo(s1));
@@ -246,19 +248,23 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 		
 		@Override
 		public int compare(L2WarehouseItem o1, L2WarehouseItem o2) {
-			if (o1.getType2() == L2Item.TYPE2_MONEY && o2.getType2() != L2Item.TYPE2_MONEY)
+			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? Z2A : A2Z);
-			if (o2.getType2() == L2Item.TYPE2_MONEY && o1.getType2() != L2Item.TYPE2_MONEY)
+			}
+			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? A2Z : Z2A);
-			if ((o1.isEtcItem() && o1.getItemType() == L2EtcItemType.RECIPE) && (o2.isEtcItem() && o2.getItemType() == L2EtcItemType.RECIPE)) {
+			}
+			if ((o1.isEtcItem() && (o1.getItemType() == L2EtcItemType.RECIPE)) && (o2.isEtcItem() && (o2.getItemType() == L2EtcItemType.RECIPE))) {
 				try {
 					L2RecipeList rp1 = rd.getRecipeByItemId(o1.getItemId());
 					L2RecipeList rp2 = rd.getRecipeByItemId(o2.getItemId());
 					
-					if (rp1 == null)
+					if (rp1 == null) {
 						return (order == A2Z ? A2Z : Z2A);
-					if (rp2 == null)
+					}
+					if (rp2 == null) {
 						return (order == A2Z ? Z2A : A2Z);
+					}
 					
 					Integer i1 = rp1.getLevel();
 					Integer i2 = rp2.getLevel();
@@ -287,10 +293,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 		
 		@Override
 		public int compare(L2WarehouseItem o1, L2WarehouseItem o2) {
-			if (o1.getType2() == L2Item.TYPE2_MONEY && o2.getType2() != L2Item.TYPE2_MONEY)
+			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? Z2A : A2Z);
-			if (o2.getType2() == L2Item.TYPE2_MONEY && o1.getType2() != L2Item.TYPE2_MONEY)
+			}
+			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? A2Z : Z2A);
+			}
 			Integer i1 = o1.getBodyPart();
 			Integer i2 = o2.getBodyPart();
 			return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
@@ -309,10 +317,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 		
 		@Override
 		public int compare(L2WarehouseItem o1, L2WarehouseItem o2) {
-			if (o1.getType2() == L2Item.TYPE2_MONEY && o2.getType2() != L2Item.TYPE2_MONEY)
+			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? Z2A : A2Z);
-			if (o2.getType2() == L2Item.TYPE2_MONEY && o1.getType2() != L2Item.TYPE2_MONEY)
+			}
+			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? A2Z : Z2A);
+			}
 			Integer i1 = o1.getItemGrade();
 			Integer i2 = o2.getItemGrade();
 			return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
@@ -331,10 +341,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 		
 		@Override
 		public int compare(L2WarehouseItem o1, L2WarehouseItem o2) {
-			if (o1.getType2() == L2Item.TYPE2_MONEY && o2.getType2() != L2Item.TYPE2_MONEY)
+			if ((o1.getType2() == L2Item.TYPE2_MONEY) && (o2.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? Z2A : A2Z);
-			if (o2.getType2() == L2Item.TYPE2_MONEY && o1.getType2() != L2Item.TYPE2_MONEY)
+			}
+			if ((o2.getType2() == L2Item.TYPE2_MONEY) && (o1.getType2() != L2Item.TYPE2_MONEY)) {
 				return (order == A2Z ? A2Z : Z2A);
+			}
 			try {
 				Integer i1 = o1.getItem().getMaterialType();
 				Integer i2 = o2.getItem().getMaterialType();
@@ -353,11 +365,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createWeaponList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isWeapon() || item.getItem().getType2() == L2Item.TYPE2_WEAPON || (item.isEtcItem() && item.getItemType() == L2EtcItemType.ARROW) || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if (item.isWeapon() || (item.getItem().getType2() == L2Item.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == L2EtcItemType.ARROW)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -371,11 +384,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createArmorList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isArmor() || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if (item.isArmor() || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -389,11 +403,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createEtcItemList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if (item.isEtcItem() || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -407,11 +422,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createMatList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && item.getEtcItem().getItemType() == L2EtcItemType.MATERIAL || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == L2EtcItemType.MATERIAL)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -425,11 +441,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createRecipeList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && item.getEtcItem().getItemType() == L2EtcItemType.RECIPE || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == L2EtcItemType.RECIPE)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -443,11 +460,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createAmulettList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET")) || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -461,11 +479,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createSpellbookList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET")) || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -479,11 +498,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createConsumableList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && (item.getEtcItem().getItemType() == L2EtcItemType.SCROLL || item.getEtcItem().getItemType() == L2EtcItemType.SHOT) || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() == L2EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == L2EtcItemType.SHOT))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -497,11 +517,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createShotList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && item.getEtcItem().getItemType() == L2EtcItemType.SHOT || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == L2EtcItemType.SHOT)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -515,11 +536,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createScrollList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && item.getEtcItem().getItemType() == L2EtcItemType.SCROLL || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == L2EtcItemType.SCROLL)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -533,11 +555,12 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createSeedList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && item.getEtcItem().getItemType() == L2EtcItemType.SEED || item.getItem().getType2() == L2Item.TYPE2_MONEY) {
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == L2EtcItemType.SEED)) || (item.getItem().getType2() == L2Item.TYPE2_MONEY)) {
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -551,12 +574,13 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createOtherList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (item.isEtcItem() && (item.getEtcItem().getItemType() != L2EtcItemType.MATERIAL && item.getEtcItem().getItemType() != L2EtcItemType.RECIPE && item.getEtcItem().getItemType() != L2EtcItemType.SCROLL && item.getEtcItem().getItemType() != L2EtcItemType.SHOT) || item.getItem().getType2() == L2Item.TYPE2_MONEY)
+			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() != L2EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != L2EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != L2EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != L2EtcItemType.SHOT))) || (item.getItem().getType2() == L2Item.TYPE2_MONEY))
 			{
-				if (_list.size() < MAX_SORT_LIST_ITEMS)
+				if (_list.size() < MAX_SORT_LIST_ITEMS) {
 					_list.add(new L2WarehouseItem(item));
-				else
+				} else {
 					continue;
+				}
 			}
 		}
 		return _list;
@@ -570,10 +594,11 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 	private List<L2WarehouseItem> createAllList(L2ItemInstance[] _items) {
 		List<L2WarehouseItem> _list = new FastList<>();
 		for (L2ItemInstance item : _items) {
-			if (_list.size() < MAX_SORT_LIST_ITEMS)
+			if (_list.size() < MAX_SORT_LIST_ITEMS) {
 				_list.add(new L2WarehouseItem(item));
-			else
+			} else {
 				continue;
+			}
 		}
 		return _list;
 	}
@@ -588,9 +613,10 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 		writeQ(_playerAdena);
 		writeH(_objects.size());
 		writeD(0x00); // rocknow-God
-		if (_whType == 1 || _whType == 2) // rocknow-God
+		if ((_whType == 1) || (_whType == 2)) {
 			writeH(0x00); // rocknow-God
-			
+		}
+		
 		for (L2WarehouseItem item : _objects) {
 			writeD(item.getObjectId());
 			writeD(item.getItem().getDisplayId());
@@ -602,10 +628,11 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket {
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getEnchantLevel());
 			writeH(item.getCustomType2());
-			if (item.isAugmented())
+			if (item.isAugmented()) {
 				writeD(item.getAugmentationId());
-			else
+			} else {
 				writeD(0x00);
+			}
 			writeD(item.getMana());
 			writeD(item.getTime());
 			writeH(0x01); // rocknow-God

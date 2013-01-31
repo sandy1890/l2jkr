@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public class PetInventoryUpdate extends L2GameServerPacket {
 	private static final String _S__37_INVENTORYUPDATE = "[S] b4 InventoryUpdate";
-	private List<ItemInfo> _items;
+	private final List<ItemInfo> _items;
 	
 	/**
 	 * @param items
@@ -66,8 +66,9 @@ public class PetInventoryUpdate extends L2GameServerPacket {
 	}
 	
 	public void addItems(List<L2ItemInstance> items) {
-		for (L2ItemInstance item : items)
+		for (L2ItemInstance item : items) {
 			_items.add(new ItemInfo(item));
+		}
 	}
 	
 	private void showDebug() {

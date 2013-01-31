@@ -35,8 +35,9 @@ public class RequestPrivateStoreQuitBuy extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		player.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
 		player.standUp();

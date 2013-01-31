@@ -24,7 +24,7 @@ package com.l2jserver.gameserver.network.serverpackets;
  */
 public class ExDuelReady extends L2GameServerPacket {
 	private static final String _S__FE_4C_EXDUELREADY = "[S] FE:4d ExDuelReady";
-	private int _unk1;
+	private final int _unk1;
 	
 	public ExDuelReady(int unk1) {
 		_unk1 = unk1;

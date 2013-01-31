@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.TradeList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
+
 //rocknow-Sync L2J
 
 /**
@@ -43,8 +44,9 @@ public final class TradeDone extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance player = getActiveChar(); // rocknow-Sync L2J
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("trade")) {
 			/*
@@ -56,12 +58,14 @@ public final class TradeDone extends L2GameClientPacket {
 		
 		final TradeList trade = player.getActiveTradeList();
 		if (trade == null) {
-			if (Config.DEBUG)
+			if (Config.DEBUG) {
 				_log.warning("player.getTradeList == null in " + getType() + " for player " + player.getName());
+			}
 			return;
 		}
-		if (trade.isLocked())
+		if (trade.isLocked()) {
 			return;
+		}
 		
 		if (_response == 1) {
 			if ((trade.getPartner() == null) || (L2World.getInstance().getPlayer(trade.getPartner().getObjectId()) == null)) // rocknow-Sync L2J
@@ -72,8 +76,9 @@ public final class TradeDone extends L2GameClientPacket {
 				return;
 			}
 			
-			if ((trade.getOwner().getActiveEnchantItem() != null) || (trade.getPartner().getActiveEnchantItem() != null)) // rocknow-Sync L2J
+			if ((trade.getOwner().getActiveEnchantItem() != null) || (trade.getPartner().getActiveEnchantItem() != null)) {
 				return;
+			}
 			
 			if (!player.getAccessLevel().allowTransaction()) {
 				player.cancelActiveTrade();
@@ -92,8 +97,9 @@ public final class TradeDone extends L2GameClientPacket {
 				return;
 			}
 			trade.confirm();
-		} else
+		} else {
 			player.cancelActiveTrade();
+		}
 	}
 	
 	@Override

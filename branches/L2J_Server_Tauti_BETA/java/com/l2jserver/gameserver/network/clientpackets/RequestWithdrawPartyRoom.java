@@ -44,12 +44,14 @@ public final class RequestWithdrawPartyRoom extends L2GameClientPacket {
 	protected void runImpl() {
 		final L2PcInstance _activeChar = getClient().getActiveChar();
 		
-		if (_activeChar == null)
+		if (_activeChar == null) {
 			return;
+		}
 		
 		PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		if (_room == null) {
 			return;
+		}
 		
 		if ((_activeChar.isInParty() && _room.getOwner().isInParty()) && (_activeChar.getParty().getLeaderObjectId() == _room.getOwner().getParty().getLeaderObjectId())) {
 			// If user is in party with Room Owner

@@ -3116,8 +3116,8 @@ public final class L2PcInstance extends L2Playable {
 	protected class SitDownTask implements Runnable {
 		@Override
 		public void run() {
-			L2PcInstance.this.setIsParalyzed(false);
-			L2PcInstance.this.getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+			setIsParalyzed(false);
+			getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		}
 	}
 	
@@ -3127,8 +3127,8 @@ public final class L2PcInstance extends L2Playable {
 	protected class StandUpTask implements Runnable {
 		@Override
 		public void run() {
-			L2PcInstance.this.setIsSitting(false);
-			L2PcInstance.this.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			setIsSitting(false);
+			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}
 	
@@ -3442,7 +3442,7 @@ public final class L2PcInstance extends L2Playable {
 			else if (FortSiegeManager.getInstance().isCombat(item.getItemId())) {
 				if (FortSiegeManager.getInstance().activateCombatFlag(this, item)) {
 					Fort fort = FortManager.getInstance().getFort(this);
-					fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.C1_ACQUIRED_THE_FLAG), this.getName());
+					fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.C1_ACQUIRED_THE_FLAG), getName());
 				}
 			}
 			// Territory Ward
@@ -3528,7 +3528,7 @@ public final class L2PcInstance extends L2Playable {
 				} else if (FortSiegeManager.getInstance().isCombat(createdItem.getItemId())) {
 					if (FortSiegeManager.getInstance().activateCombatFlag(this, item)) {
 						Fort fort = FortManager.getInstance().getFort(this);
-						fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.C1_ACQUIRED_THE_FLAG), this.getName());
+						fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.C1_ACQUIRED_THE_FLAG), getName());
 					}
 				}
 				// Territory Ward
@@ -4009,7 +4009,7 @@ public final class L2PcInstance extends L2Playable {
 		}
 		
 		// We cannot put a Weapon with Augmention in WH while casting (Possible Exploit)
-		if (item.isAugmented() && (isCastingNow() || this.isCastingSimultaneouslyNow())) {
+		if (item.isAugmented() && (isCastingNow() || isCastingSimultaneouslyNow())) {
 			return null;
 		}
 		
@@ -4402,7 +4402,7 @@ public final class L2PcInstance extends L2Playable {
 	}
 	
 	public void queryGameGuard() {
-		this.getClient().setGameGuardOk(false);
+		getClient().setGameGuardOk(false);
 		this.sendPacket(new GameGuardQuery());
 		if (Config.GAMEGUARD_ENFORCE) {
 			ThreadPoolManager.getInstance().scheduleGeneral(new GameGuardCheck(), 30 * 1000);
@@ -4415,8 +4415,8 @@ public final class L2PcInstance extends L2Playable {
 		 */
 		@Override
 		public void run() {
-			L2GameClient client = L2PcInstance.this.getClient();
-			if ((client != null) && !client.isAuthedGG() && L2PcInstance.this.isOnline() && !isGM()) // modify By Tiger 091023
+			L2GameClient client = getClient();
+			if ((client != null) && !client.isAuthedGG() && isOnline() && !isGM()) // modify By Tiger 091023
 			{
 				AdminTable.getInstance().broadcastMessageToGMs("Client " + client + " failed to reply GameGuard query and is being kicked!");
 				_log.info("Client " + client + " failed to reply GameGuard query and is being kicked!");
@@ -4688,7 +4688,7 @@ public final class L2PcInstance extends L2Playable {
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (canOpenPrivateStore()) {
 			if ((getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_SELL) || (getPrivateStoreType() == (L2PcInstance.STORE_PRIVATE_SELL + 1)) || (getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_PACKAGE_SELL)) {
-				this.setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
+				setPrivateStoreType(L2PcInstance.STORE_PRIVATE_NONE);
 			}
 			
 			if (getPrivateStoreType() == L2PcInstance.STORE_PRIVATE_NONE) {
@@ -5265,7 +5265,7 @@ public final class L2PcInstance extends L2Playable {
 		
 		if (isPhoenixBlessed()) {
 			reviveRequest(this, null, false);
-		} else if (isAffected(CharEffectList.EFFECT_FLAG_CHARM_OF_COURAGE) && this.isInSiege()) {
+		} else if (isAffected(CharEffectList.EFFECT_FLAG_CHARM_OF_COURAGE) && isInSiege()) {
 			reviveRequest(this, null, false);
 		}
 		return true;
@@ -6416,7 +6416,7 @@ public final class L2PcInstance extends L2Playable {
 		} else if (isRentedPet()) {
 			stopRentPet();
 		} else if (isMounted()) {
-			if ((getMountType() == 2) && this.isInsideZone(L2Character.ZONE_NOLANDING)) {
+			if ((getMountType() == 2) && isInsideZone(L2Character.ZONE_NOLANDING)) {
 				sendPacket(ActionFailed.STATIC_PACKET);
 				sendPacket(SystemMessageId.NO_DISMOUNT_HERE);
 				return false;
@@ -6447,7 +6447,7 @@ public final class L2PcInstance extends L2Playable {
 			setMountObjectID(0);
 			storePetFood(petId);
 			// Notify self and others about speed change
-			this.broadcastUserInfo();
+			broadcastUserInfo();
 			return true;
 		}
 		return false;
@@ -8648,7 +8648,7 @@ public final class L2PcInstance extends L2Playable {
 				return false;
 			}
 			// And this skill cannot be used in peace zone, not even on NPCs!
-			if (this.isInsideZone(L2Character.ZONE_PEACE)) {
+			if (isInsideZone(L2Character.ZONE_PEACE)) {
 				// Sends a sys msg to client
 				sendPacket(SystemMessageId.TARGET_IN_PEACEZONE);
 				
@@ -9338,10 +9338,10 @@ public final class L2PcInstance extends L2Playable {
 	protected class WarnUserTakeBreak implements Runnable {
 		@Override
 		public void run() {
-			if (L2PcInstance.this.isOnline()) {
+			if (isOnline()) {
 				SystemMessageId.PLAYING_FOR_LONG_TIME.setParamCount(1); // Update by pmq
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.PLAYING_FOR_LONG_TIME);
-				msg.addNumber((int) (L2PcInstance.this.getUptime() / 3600000)); // Update by rocknow
+				msg.addNumber((int) (getUptime() / 3600000)); // Update by rocknow
 				L2PcInstance.this.sendPacket(msg);
 			} else {
 				stopWarnUserTakeBreak();
@@ -10318,7 +10318,7 @@ public final class L2PcInstance extends L2Playable {
 				teleToLocation(MapRegionManager.TeleportWhereType.Town);
 			}
 			
-			if (this.dismount()) // this should always be true now, since we teleported already
+			if (dismount()) // this should always be true now, since we teleported already
 			{
 				_taskRentPet.cancel(true);
 				_taskRentPet = null;
@@ -12258,7 +12258,7 @@ public final class L2PcInstance extends L2Playable {
 	protected class SoulTask implements Runnable {
 		@Override
 		public void run() {
-			L2PcInstance.this.clearSouls();
+			clearSouls();
 		}
 	}
 	
@@ -12291,7 +12291,7 @@ public final class L2PcInstance extends L2Playable {
 	}
 	
 	public void calculateDeathPenaltyBuffLevel(L2Character killer) {
-		if (((getKarma() > 0) || (Rnd.get(1, 100) <= Config.DEATH_PENALTY_CHANCE)) && !(killer instanceof L2PcInstance) && !(this.isGM()) && !(this.getCharmOfLuck() && killer.isRaid()) && !isPhoenixBlessed() && !isLucky() && !(TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(getObjectId())) && !(this.isInsideZone(L2Character.ZONE_PVP) || this.isInsideZone(L2Character.ZONE_SIEGE)))
+		if (((getKarma() > 0) || (Rnd.get(1, 100) <= Config.DEATH_PENALTY_CHANCE)) && !(killer instanceof L2PcInstance) && !(isGM()) && !(getCharmOfLuck() && killer.isRaid()) && !isPhoenixBlessed() && !isLucky() && !(TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(getObjectId())) && !(isInsideZone(L2Character.ZONE_PVP) || isInsideZone(L2Character.ZONE_SIEGE)))
 		{
 			increaseDeathPenaltyBuffLevel();
 		}
@@ -12475,7 +12475,7 @@ public final class L2PcInstance extends L2Playable {
 			sm.addPcName(this);
 			sm.addCharName(target);
 			sm.addNumber(damage);
-			sm.addDamage(target.getObjectId(), this.getObjectId(), damage * -1); // rocknow-God (by otfnir)
+			sm.addDamage(target.getObjectId(), getObjectId(), damage * -1); // rocknow-God (by otfnir)
 		}
 		
 		sendPacket(sm);
@@ -12880,7 +12880,7 @@ public final class L2PcInstance extends L2Playable {
 		@Override
 		public void run() {
 			try {
-				L2PcInstance.this.dismount();
+				dismount();
 			} catch (Exception e) {
 				_log.log(Level.WARNING, "Exception on dismount(): " + e.getMessage(), e);
 			}
@@ -13048,7 +13048,7 @@ public final class L2PcInstance extends L2Playable {
 	protected class ChargeTask implements Runnable {
 		@Override
 		public void run() {
-			L2PcInstance.this.clearCharges();
+			clearCharges();
 		}
 	}
 	
@@ -13155,41 +13155,41 @@ public final class L2PcInstance extends L2Playable {
 	}
 	
 	public boolean teleportBookmarkCondition(int type) {
-		if (this.isInCombat()) {
+		if (isInCombat()) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_BATTLE);
 			return false;
-		} else if (this.isInSiege() || (this.getSiegeState() != 0)) {
+		} else if (isInSiege() || (getSiegeState() != 0)) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING);
 			return false;
-		} else if (this.isInDuel()) {
+		} else if (isInDuel()) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_DUEL);
 			return false;
-		} else if (this.isFlying()) {
+		} else if (isFlying()) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_FLYING);
 			return false;
-		} else if (this.isInOlympiadMode()) {
+		} else if (isInOlympiadMode()) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_IN_AN_OLYMPIAD_MATCH);
 			return false;
-		} else if (this.isParalyzed()) {
+		} else if (isParalyzed()) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_PARALYZED);
 			return false;
-		} else if (this.isDead()) {
+		} else if (isDead()) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_DEAD);
 			return false;
 		} else if ((type == 1) && (isIn7sDungeon() || (isInParty() && getParty().isInDimensionalRift()))) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
 			return false;
-		} else if (this.isInBoat() || this.isInAirShip() || this.isInJail() || this.isInsideZone(ZONE_NOSUMMONFRIEND)) {
+		} else if (isInBoat() || isInAirShip() || isInJail() || isInsideZone(ZONE_NOSUMMONFRIEND)) {
 			if (type == 0) {
 				sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
 			} else if (type == 1) {
 				sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
 			}
 			return false;
-		} else if (this.isInWater()) {
+		} else if (isInWater()) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_UNDERWATER);
 			return false;
-		} else if ((type == 1) && (this.isInsideZone(ZONE_SIEGE) || this.isInsideZone(ZONE_CLANHALL) || this.isInsideZone(ZONE_JAIL) || this.isInsideZone(ZONE_CASTLE) || this.isInsideZone(ZONE_NOSUMMONFRIEND) || this.isInsideZone(ZONE_FORT))) {
+		} else if ((type == 1) && (isInsideZone(ZONE_SIEGE) || isInsideZone(ZONE_CLANHALL) || isInsideZone(ZONE_JAIL) || isInsideZone(ZONE_CASTLE) || isInsideZone(ZONE_NOSUMMONFRIEND) || isInsideZone(ZONE_FORT))) {
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
 			return false;
 		} else if (isInsideZone(ZONE_NOBOOKMARK)) {
@@ -14224,7 +14224,7 @@ public final class L2PcInstance extends L2Playable {
 			}
 			
 			// L2PcInstance.this.sendPacket(new ExVoteSystemInfo(L2PcInstance.this));
-			L2PcInstance.this.setRecoBonusActive(false); // Add recobonus by pmq
+			setRecoBonusActive(false); // Add recobonus by pmq
 		}
 	}
 	
@@ -14529,7 +14529,7 @@ public final class L2PcInstance extends L2Playable {
 	private class AdventPoints implements Runnable {
 		@Override
 		public void run() {
-			L2PcInstance.this.incAdventPoints(Config.BODY_ZA_MINUTU, true);
+			incAdventPoints(Config.BODY_ZA_MINUTU, true);
 		}
 	}
 	

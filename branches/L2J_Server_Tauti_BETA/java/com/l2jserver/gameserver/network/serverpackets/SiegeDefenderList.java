@@ -52,7 +52,7 @@ import com.l2jserver.gameserver.model.entity.Castle;
 public final class SiegeDefenderList extends L2GameServerPacket {
 	private static final String _S__CA_SiegeDefenderList = "[S] cb SiegeDefenderList";
 	
-	private Castle _castle;
+	private final Castle _castle;
 	
 	public SiegeDefenderList(Castle castle) {
 		_castle = castle;
@@ -74,8 +74,9 @@ public final class SiegeDefenderList extends L2GameServerPacket {
 			// Listing the Lord and the approved clans
 			for (L2SiegeClan siegeclan : _castle.getSiege().getDefenderClans()) {
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-				if (clan == null)
+				if (clan == null) {
 					continue;
+				}
 				
 				writeD(clan.getClanId());
 				writeS(clan.getName());

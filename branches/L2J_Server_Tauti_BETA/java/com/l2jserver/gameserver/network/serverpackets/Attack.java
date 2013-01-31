@@ -43,15 +43,18 @@ public class Attack extends L2GameServerPacket {
 				_flags = HITFLAG_MISS;
 				return;
 			}
-			if (soulshot)
+			if (soulshot) {
 				_flags = HITFLAG_USESS; // rocknow-God (by otfnir)
-			if (crit)
+			}
+			if (crit) {
 				_flags |= HITFLAG_CRIT;
+			}
 			// dirty fix for lags on olympiad
-			if (shld > 0 && !(target instanceof L2PcInstance && ((L2PcInstance) target).isInOlympiadMode()))
+			if ((shld > 0) && !((target instanceof L2PcInstance) && ((L2PcInstance) target).isInOlympiadMode())) {
 				_flags |= HITFLAG_SHLD;
-			// if (shld > 0)
-			// _flags |= HITFLAG_SHLD;
+				// if (shld > 0)
+				// _flags |= HITFLAG_SHLD;
+			}
 		}
 	}
 	
@@ -127,13 +130,14 @@ public class Attack extends L2GameServerPacket {
 		
 		writeH(_hits.length - 1);
 		// prevent sending useless packet while there is only one target.
-		if (_hits.length > 1)
+		if (_hits.length > 1) {
 			for (Hit hit : _hits) {
 				writeD(hit._targetId);
 				writeD(hit._damage);
 				writeD(hit._flags); // rocknow-God
 				writeD(Attack.this._ssGrade); // rocknow-God
 			}
+		}
 		
 		writeD(_tx);
 		writeD(_ty);

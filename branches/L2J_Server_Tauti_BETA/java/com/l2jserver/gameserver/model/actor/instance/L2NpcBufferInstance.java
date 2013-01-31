@@ -82,7 +82,7 @@ public class L2NpcBufferInstance extends L2Npc {
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command) {
 		// BypassValidation Exploit plug.
-		if ((player == null) || (player.getLastFolkNPC() == null) || (player.getLastFolkNPC().getObjectId() != this.getObjectId())) {
+		if ((player == null) || (player.getLastFolkNPC() == null) || (player.getLastFolkNPC().getObjectId() != getObjectId())) {
 			return;
 		}
 		

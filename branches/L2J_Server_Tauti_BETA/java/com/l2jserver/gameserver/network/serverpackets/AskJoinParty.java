@@ -29,8 +29,8 @@ package com.l2jserver.gameserver.network.serverpackets;
 public class AskJoinParty extends L2GameServerPacket {
 	private static final String _S__4B_ASKJOINPARTY_0X4B = "[S] 39 AskJoinParty";
 	
-	private String _requestorName;
-	private int _itemDistribution;
+	private final String _requestorName;
+	private final int _itemDistribution;
 	
 	/**
 	 * @param requestorName

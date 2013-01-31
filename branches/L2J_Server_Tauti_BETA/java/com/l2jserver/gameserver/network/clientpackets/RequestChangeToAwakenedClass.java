@@ -39,11 +39,13 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket {
 	protected void runImpl() {
 		L2PcInstance activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (_newId > 0)
+		if (_newId > 0) {
 			AwakingManager.getInstance().SetAwakingId(activeChar);
+		}
 	}
 	
 	@Override

@@ -47,22 +47,26 @@ public final class RequestCursedWeaponLocation extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		L2Character activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		List<CursedWeaponInfo> list = new FastList<>();
 		for (CursedWeapon cw : CursedWeaponsManager.getInstance().getCursedWeapons()) {
-			if (!cw.isActive())
+			if (!cw.isActive()) {
 				continue;
+			}
 			
 			Point3D pos = cw.getWorldPosition();
-			if (pos != null)
+			if (pos != null) {
 				list.add(new CursedWeaponInfo(pos, cw.getItemId(), cw.isActivated() ? 1 : 0));
+			}
 		}
 		
 		// send the ExCursedWeaponLocation
-		if (!list.isEmpty())
+		if (!list.isEmpty()) {
 			activeChar.sendPacket(new ExCursedWeaponLocation(list));
+		}
 	}
 	
 	/**

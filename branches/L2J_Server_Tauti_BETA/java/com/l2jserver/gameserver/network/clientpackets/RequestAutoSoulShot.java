@@ -45,16 +45,19 @@ public final class RequestAutoSoulShot extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
-		if (activeChar.getPrivateStoreType() == 0 && activeChar.getActiveRequester() == null && !activeChar.isDead()) {
-			if (Config.DEBUG)
+		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getActiveRequester() == null) && !activeChar.isDead()) {
+			if (Config.DEBUG) {
 				_log.fine("AutoSoulShot:" + _itemId);
+			}
 			
 			final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
-			if (item == null)
+			if (item == null) {
 				return;
+			}
 			
 			if (_type == 1) {
 				if (!activeChar.getInventory().canManipulateWithItemId(item.getItemId())) {
@@ -66,9 +69,9 @@ public final class RequestAutoSoulShot extends L2GameClientPacket {
 				}
 				
 				// Fishingshots are not automatic on retail
-				if (_itemId < 6535 || _itemId > 6540) {
+				if ((_itemId < 6535) || (_itemId > 6540)) {
 					// Attempt to charge first shot on activation
-					if (_itemId == 6645 || _itemId == 6646 || _itemId == 6647 || _itemId == 20332 || _itemId == 20333 || _itemId == 20334) {
+					if ((_itemId == 6645) || (_itemId == 6646) || (_itemId == 6647) || (_itemId == 20332) || (_itemId == 20333) || (_itemId == 20334)) {
 						if (activeChar.getPet() != null) {
 							if (item.getEtcItem().getHandlerName().equals("BeastSoulShot")) {
 								if (activeChar.getPet().getSoulShotsPerHit() > item.getCount()) {
@@ -90,17 +93,19 @@ public final class RequestAutoSoulShot extends L2GameClientPacket {
 							activeChar.sendPacket(sm);
 							
 							activeChar.rechargeAutoSoulShot(true, true, true);
-						} else
+						} else {
 							activeChar.sendPacket(SystemMessageId.NO_SERVITOR_CANNOT_AUTOMATE_USE);
+						}
 					} else {
-						if (activeChar.getActiveWeaponItem() != activeChar.getFistsWeaponItem() && item.getItem().getCrystalType() == activeChar.getActiveWeaponItem().getItemGradeSPlus()) {
+						if ((activeChar.getActiveWeaponItem() != activeChar.getFistsWeaponItem()) && (item.getItem().getCrystalType() == activeChar.getActiveWeaponItem().getItemGradeSPlus())) {
 							activeChar.addAutoSoulShot(_itemId);
 							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
 						} else {
-							if ((_itemId >= 2509 && _itemId <= 2514) || (_itemId >= 3947 && _itemId <= 3952) || _itemId == 5790 || (_itemId >= 22072 && _itemId <= 22081))
+							if (((_itemId >= 2509) && (_itemId <= 2514)) || ((_itemId >= 3947) && (_itemId <= 3952)) || (_itemId == 5790) || ((_itemId >= 22072) && (_itemId <= 22081))) {
 								activeChar.sendPacket(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH);
-							else
+							} else {
 								activeChar.sendPacket(SystemMessageId.SOULSHOTS_GRADE_MISMATCH);
+							}
 							
 							activeChar.addAutoSoulShot(_itemId);
 							activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));

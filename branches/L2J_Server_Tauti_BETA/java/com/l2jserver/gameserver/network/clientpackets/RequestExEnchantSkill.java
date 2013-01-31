@@ -59,12 +59,14 @@ public final class RequestExEnchantSkill extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (_skillId <= 0 || _skillLvl <= 0) // minimal sanity check
+		if ((_skillId <= 0) || (_skillLvl <= 0)) {
 			return;
+		}
 		
 		final L2PcInstance player = getClient().getActiveChar();
-		if (player == null)
+		if (player == null) {
 			return;
+		}
 		
 		if (player.getClassId().level() < 3) // requires to have 3rd class quest completed
 		{
@@ -101,7 +103,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket {
 		final int requiredSp = esd.getSpCost() * costMultiplier;
 		if (player.getSp() >= requiredSp) {
 			// only first lvl requires book
-			final boolean usesBook = _skillLvl % 100 == 1; // 101, 201, 301 ...
+			final boolean usesBook = (_skillLvl % 100) == 1; // 101, 201, 301 ...
 			final int reqItemId = EnchantGroupsData.NORMAL_ENCHANT_BOOK;
 			final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 			

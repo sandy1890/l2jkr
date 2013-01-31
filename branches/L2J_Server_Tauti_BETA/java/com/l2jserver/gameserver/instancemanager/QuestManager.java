@@ -149,7 +149,7 @@ public class QuestManager extends ScriptManager<Quest> {
 	@Override
 	public boolean unload(Quest ms) {
 		ms.saveGlobalData();
-		return this.removeQuest(ms);
+		return removeQuest(ms);
 	}
 	
 	/**

@@ -26,13 +26,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class PrivateStoreMsgSell extends L2GameServerPacket {
 	private static final String _S__B5_PRIVATESTOREMSGSELL = "[S] a2 PrivateStoreMsgSell";
-	private int _objId;
+	private final int _objId;
 	private String _storeMsg;
 	
 	public PrivateStoreMsgSell(L2PcInstance player) {
 		_objId = player.getObjectId();
-		if (player.getSellList() != null)
+		if (player.getSellList() != null) {
 			_storeMsg = player.getSellList().getTitle();
+		}
 	}
 	
 	@Override

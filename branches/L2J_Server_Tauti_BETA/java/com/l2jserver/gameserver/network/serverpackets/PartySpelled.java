@@ -32,8 +32,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
  */
 public class PartySpelled extends L2GameServerPacket {
 	private static final String _S__EE_PartySpelled = "[S] f4 PartySpelled";
-	private List<Effect> _effects;
-	private L2Character _activeChar;
+	private final List<Effect> _effects;
+	private final L2Character _activeChar;
 	
 	private static class Effect {
 		protected int _skillId;

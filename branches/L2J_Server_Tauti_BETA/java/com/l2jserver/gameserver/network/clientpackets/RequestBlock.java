@@ -39,7 +39,7 @@ public final class RequestBlock extends L2GameClientPacket {
 	protected void readImpl() {
 		_type = readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
 		
-		if (_type == BLOCK || _type == UNBLOCK) {
+		if ((_type == BLOCK) || (_type == UNBLOCK)) {
 			_name = readS();
 		}
 	}
@@ -50,8 +50,9 @@ public final class RequestBlock extends L2GameClientPacket {
 		final int targetId = CharNameTable.getInstance().getIdByName(_name);
 		final int targetAL = CharNameTable.getInstance().getAccessLevelById(targetId);
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		switch (_type) {
 			case BLOCK:
@@ -69,13 +70,15 @@ public final class RequestBlock extends L2GameClientPacket {
 					return;
 				}
 				
-				if (activeChar.getObjectId() == targetId)
+				if (activeChar.getObjectId() == targetId) {
 					return;
+				}
 				
-				if (_type == BLOCK)
+				if (_type == BLOCK) {
 					BlockList.addToBlockList(activeChar, targetId);
-				else
+				} else {
 					BlockList.removeFromBlockList(activeChar, targetId);
+				}
 			break;
 			case BLOCKLIST:
 				BlockList.sendListToOwner(activeChar);

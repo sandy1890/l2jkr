@@ -28,10 +28,10 @@ import com.l2jserver.gameserver.util.Point3D;
 public class ValidateLocationInVehicle extends L2GameServerPacket {
 	private static final String _S__80_ValidateLocationInVehicle = "[S] 80 ValidateLocationInVehicle";
 	
-	private int _charObjId;
-	private int _boatObjId;
-	private int _heading;
-	private Point3D _pos;
+	private final int _charObjId;
+	private final int _boatObjId;
+	private final int _heading;
+	private final Point3D _pos;
 	
 	/**
 	 * 0x80 ValidateLocationInVehicle hdd

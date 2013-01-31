@@ -40,8 +40,9 @@ public final class StartRotating extends L2GameClientPacket {
 	@Override
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		final StartRotation br;
 		if (activeChar.isInAirShip() && activeChar.getAirShip().isCaptain(activeChar)) {

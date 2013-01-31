@@ -43,44 +43,51 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket {
 	
 	@Override
 	protected void runImpl() {
-		if (_skillId <= 0 || _skillLvl <= 0) // minimal sanity check
+		if ((_skillId <= 0) || (_skillLvl <= 0)) {
 			return;
+		}
 		
 		L2PcInstance activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		int reqSkillLvl = -2;
 		
-		if (_type == 0 || _type == 1)
+		if ((_type == 0) || (_type == 1)) {
 			reqSkillLvl = _skillLvl - 1; // enchant
-		else if (_type == 2)
+		} else if (_type == 2) {
 			reqSkillLvl = _skillLvl + 1; // untrain
-		else if (_type == 3)
+		} else if (_type == 3) {
 			reqSkillLvl = _skillLvl; // change route
-			
+		}
+		
 		int playerSkillLvl = activeChar.getSkillLevel(_skillId);
 		
 		// dont have such skill
-		if (playerSkillLvl == -1)
+		if (playerSkillLvl == -1) {
 			return;
+		}
 		
 		// if reqlvl is 100,200,.. check base skill lvl enchant
 		if ((reqSkillLvl % 100) == 0) {
 			L2EnchantSkillLearn esl = EnchantGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 			if (esl != null) {
 				// if player dont have min level to enchant
-				if (playerSkillLvl != esl.getBaseLevel())
+				if (playerSkillLvl != esl.getBaseLevel()) {
 					return;
+				}
 			}
 			// enchant data dont exist?
-			else
+			else {
 				return;
+			}
 		} else if (playerSkillLvl != reqSkillLvl) {
 			// change route is different skill lvl but same enchant
-			if (_type == 3 && ((playerSkillLvl % 100) != (_skillLvl % 100)))
+			if ((_type == 3) && ((playerSkillLvl % 100) != (_skillLvl % 100))) {
 				return;
+			}
 		}
 		
 		// send skill enchantment detail

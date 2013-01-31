@@ -45,15 +45,18 @@ public final class RequestPledgeMemberPowerInfo extends L2GameClientPacket {
 		// _log.info("C5: RequestPledgeMemberPowerInfo d:"+_unk1);
 		// _log.info("C5: RequestPledgeMemberPowerInfo S:"+_player);
 		L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		// do we need powers to do that??
 		L2Clan clan = activeChar.getClan();
-		if (clan == null)
+		if (clan == null) {
 			return;
+		}
 		L2ClanMember member = clan.getClanMember(_player);
-		if (member == null)
+		if (member == null) {
 			return;
+		}
 		activeChar.sendPacket(new PledgeReceivePowerInfo(member));
 	}
 	

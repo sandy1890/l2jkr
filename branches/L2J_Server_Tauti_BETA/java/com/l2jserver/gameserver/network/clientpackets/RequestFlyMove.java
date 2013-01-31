@@ -44,8 +44,9 @@ public final class RequestFlyMove extends L2GameClientPacket {
 	protected void runImpl() {
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if (activeChar == null) {
 			return;
+		}
 		
 		JumpManager.getInstance().NextJump(activeChar, _nextPoint);
 		// if (_mode == 0)
