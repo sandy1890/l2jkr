@@ -141,6 +141,10 @@ public class ZoneManager extends DocumentParser {
 						minZ = parseInt(attrs, "minZ");
 						maxZ = parseInt(attrs, "maxZ");
 						
+						if (minZ > maxZ) {
+							_log.warning("ZoneData: minZ > maxZ: " + zoneName + " in file: " + getCurrentFile().getName());
+						}
+						
 						zoneType = attrs.getNamedItem("type").getNodeValue();
 						zoneShape = attrs.getNamedItem("shape").getNodeValue();
 						
