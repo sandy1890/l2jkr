@@ -88,7 +88,7 @@ public class Core extends L2AttackableAIScript {
 				// the time has already expired while the server was offline. Immediately spawn Core.
 				L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(CORE, ALIVE);
-				this.spawnBoss(core);
+				spawnBoss(core);
 			}
 		} else {
 			String test = loadGlobalQuestVar("Core_Attacked");
@@ -103,7 +103,7 @@ public class Core extends L2AttackableAIScript {
 			int mp = info.getInteger("currentMP");
 			L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
 			core.setCurrentHpMp(hp, mp);
-			this.spawnBoss(core);
+			spawnBoss(core);
 		}
 	}
 	
@@ -201,7 +201,7 @@ public class Core extends L2AttackableAIScript {
 			info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
 			GrandBossManager.getInstance().setStatsSet(CORE, info);
 			this.startQuestTimer("despawn_minions", 20000, null, null);
-			this.cancelQuestTimers("spawn_minion");
+			cancelQuestTimers("spawn_minion");
 		} else if ((GrandBossManager.getInstance().getBossStatus(CORE) == ALIVE) && (Minions != null) && Minions.contains(npc)) {
 			Minions.remove(npc);
 			startQuestTimer("spawn_minion", 60000, npc, null);

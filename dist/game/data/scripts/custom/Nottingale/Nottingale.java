@@ -79,7 +79,7 @@ public class Nottingale extends Quest {
 	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(qn);
 		if (st == null) {
-			st = this.newQuestState(player);
+			st = newQuestState(player);
 		}
 		player.setLastQuestNpcObject(npc.getObjectId());
 		npc.showChatWindow(player);

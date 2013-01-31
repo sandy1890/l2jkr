@@ -785,7 +785,7 @@ public class Stage1 extends Quest {
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet) {
 		if (npc.getNpcId() == SPAWN_DEVICE) {
-			this.cancelQuestTimer("Spawn", npc, null);
+			cancelQuestTimer("Spawn", npc, null);
 			return "";
 		}
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());

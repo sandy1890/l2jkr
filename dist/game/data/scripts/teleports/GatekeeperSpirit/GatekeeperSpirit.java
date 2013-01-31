@@ -35,8 +35,8 @@ public class GatekeeperSpirit extends Quest {
 		addStartNpc(EnterGk);
 		addFirstTalkId(EnterGk);
 		addTalkId(EnterGk);
-		this.addEventId(Lilith, Quest.QuestEventType.ON_KILL);
-		this.addEventId(Anakim, Quest.QuestEventType.ON_KILL);
+		addEventId(Lilith, Quest.QuestEventType.ON_KILL);
+		addEventId(Anakim, Quest.QuestEventType.ON_KILL);
 	}
 	
 	@Override

@@ -517,7 +517,7 @@ public class FeedableBeasts extends L2AttackableAIScript {
 			
 			// Polymorph the mob, with a certain chance, given its current growth level
 			if (getRandom(100) < _GrowthCapableMobs.get(npcId).getChance()) {
-				this.spawnNext(npc, growthLevel, caster, food);
+				spawnNext(npc, growthLevel, caster, food);
 			}
 		} else if (Util.contains(TAMED_BEASTS, npcId) && (npc instanceof L2TamedBeastInstance)) {
 			L2TamedBeastInstance beast = ((L2TamedBeastInstance) npc);

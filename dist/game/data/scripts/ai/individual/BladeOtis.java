@@ -113,7 +113,7 @@ public class BladeOtis extends L2AttackableAIScript {
 					_guardMaster.remove(i);
 				}
 			}
-			this.cancelQuestTimer("time_to_spawn", npc, killer);
+			cancelQuestTimer("time_to_spawn", npc, killer);
 		}
 		return super.onKill(npc, killer, isPet);
 	}
