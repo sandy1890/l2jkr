@@ -19,6 +19,6 @@
 	<classpathentry kind="lib" path="dist/libs/bsh-engine-2.0b5.jar"/>
 	<classpathentry kind="lib" path="dist/libs/ecj-4.2.1.jar"/>
 	<classpathentry kind="lib" path="dist/libs/java-engine-1.7.1.jar"/>
-	<classpathentry kind="lib" path="dist/libs/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="dist/libs/mysql-connector-java-5.1.23-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
