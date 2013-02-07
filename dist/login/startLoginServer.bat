@@ -1,55 +1,84 @@
 @echo off
-REM ------------------------------------------------------
-if not exist ..\libs\*.jar echo "*.jar Not Found"
-if not exist ..\libs\*.jar echo.
-if not exist ..\libs\*.jar pause
-if not exist ..\libs\*.jar exit
-REM ------------------------------------------------------
 title Login Server Console
+call :init
+:: ----- Setting java memory usage and other parameters -----
+set javaheap=128m
+
+set java_param=com.l2jserver.loginserver.L2LoginServer
+set java_param=-cp "%iii%libs\*";"%LLL%l2jlogin.jar" %java_param%
+set java_param=-Xms%javaheap% -Xmx%javaheap% %java_param%
+:: set java_param=-XX:PermSize=50m %java_param%
+:: set java_param=-XX:MaxPermSize=100m %java_param%
+set java_param=-XX:+CMSIncrementalMode %java_param%
+set java_param=-XX:+UseCMSCompactAtFullCollection %java_param%
+set java_param=-XX:+UseParNewGC %java_param%
+set java_param=-XX:+CMSParallelRemarkEnabled %java_param%
+set java_param=-XX:+UseParNewGC %java_param%
+set java_param=-XX:+CMSParallelRemarkEnabled %java_param%
+set java_param=-XX:+UseConcMarkSweepGC %java_param%
+:: set java_param=-Djava.util.logging.manager=com.l2jserver.util.L2LogManager %java_param%
+:: set java_param=-Djava.util.logging.manager=com.l2jserver.util.L2LogManager -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseParNewGC -XX:+UseCMSCompactAtFullCollection -XX:+CMSIncrementalMode -Xms%javaheap% -Xmx%javaheap% -cp "%iii%libs\*";"%LLL%l2jserver.jar" com.l2jserver.gameserver.GameServer
+goto start
+
+:init
+set LLL=%~dp0
+FOR /F "delims=login" %%i IN ("%LLL%") do set iii=%%i
+call :check_libs
+call :try_java
+goto :eof
+
+:check_libs
+REM ------------------------------------------------------
+if not exist ..\libs\*.jar (
+	echo You must unzip the compilation is completed "GS can continue
+	echo.
+	pause
+	exit
+)
+goto :eof
+REM ------------------------------------------------------
+
+:check_java
+if "%found%"=="1" goto :eof
+if not exist %1 goto :eof
+set found=1
+set PATH=%~dp1
+echo %Path% java location
+goto :eof
+
+:set_java
+echo Search java location
+call :check_java "%ProgramFiles%\Java\jre7\bin\java.exe"
+call :check_java "%ProgramFiles(x86)%\Java\jre7\bin\java.exe"
+call :check_java "%windir%\system32\java.exe"
+if "%found%"=="" (
+	echo Can not find java.exe
+	echo Please install java v1.7
+	echo Download and install Reference Forum
+	echo http://www.l2jtw.com/l2jtwbbs/viewtopic.php?f=42^&t=6264
+	echo.
+	pause
+	exit
+)
+goto :eof
+
+:try_java
+java -version:1.7 -cp "%iii%libs\*";"%LLL%l2jlogin.jar" com.l2jserver.JavaTest
+if not %ERRORLEVEL% == 0 call :set_java
+goto :eof
+
 :start
-echo Starting L2J Login Server.
-echo.
-java -Xms128m -Xmx128m  -cp ./../libs/*;l2jlogin.jar com.l2jserver.loginserver.L2LoginServer
-if ERRORLEVEL 2 goto path_change1
-if ERRORLEVEL 1 goto path_change1
-goto end
-:path_change1
-if not exist "%ProgramFiles%\Java\jre7\bin\java.exe" goto path_change2
-set PATH=%ProgramFiles%\Java\jre7\bin;%PATH%
-echo test > %temp%\check.txt
-FOR /F %%L IN (%temp%\check.txt) DO set LLL=%%~dpL
-echo %LLL% > %temp%\check.txt
-FOR /F "delims=login" %%i IN (%temp%\check.txt) do set iii=%%i
-"%ProgramFiles%\Java\jre7\bin\java.exe" -Xms128m -Xmx128m -cp "%iii%libs\*";"%LLL%l2jlogin.jar" com.l2jserver.loginserver.L2LoginServer
+java %java_param%
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
 goto end
-:path_change2
-if not exist "%ProgramFiles(x86)%\Java\jre7\bin\java.exe" goto path_change3
-set PATH=%ProgramFiles(x86)%\Java\jre7\bin;%PATH%
-echo test > %temp%\check.txt
-FOR /F %%L IN (%temp%\check.txt) DO set LLL=%%~dpL
-echo %LLL% > %temp%\check.txt
-FOR /F "delims=login" %%i IN (%temp%\check.txt) do set iii=%%i
-"%ProgramFiles(x86)%\Java\jre7\bin\java.exe" -Xms128m -Xmx128m -cp "%iii%libs\*";"%LLL%l2jlogin.jar" com.l2jserver.loginserver.L2LoginServer
-if ERRORLEVEL 2 goto restart
-if ERRORLEVEL 1 goto error
-goto end
-:path_change3
-set PATH=%windir%\system32;%PATH%
-echo test > %temp%\check.txt
-FOR /F %%L IN (%temp%\check.txt) DO set LLL=%%~dpL
-echo %LLL% > %temp%\check.txt
-FOR /F "delims=login" %%i IN (%temp%\check.txt) do set iii=%%i
-"%windir%\system32\java.exe" -Xms128m -Xmx128m -cp "%iii%libs\*";"%LLL%l2jlogin.jar" com.l2jserver.loginserver.L2LoginServer
-if ERRORLEVEL 2 goto restart
-if ERRORLEVEL 1 goto error
-goto end
+
 :restart
 echo.
 echo Admin Restart ...
 echo.
 goto start
+
 :error
 echo.
 echo Server terminated abnormally
