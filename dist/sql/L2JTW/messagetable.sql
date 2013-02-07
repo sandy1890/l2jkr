@@ -4259,17 +4259,17 @@ INSERT INTO `messagetable` VALUES
 
 (1620, 'cn', '', '增加技能;NPC：;技能ID：;等级：;增加技能;返回技能清单', 'AdminEditNpc.java'),
 (1620, 'en', '', 'NPC Skill Add;NPC: ;SkillId: ;Level: ;Add Skill;Back to SkillList', 'AdminEditNpc.java'),
-(1620, 'ko', '', 'NPC Skill Add;NPC: ;SkillId: ;Level: ;Add Skill;Back to SkillList', 'AdminEditNpc.java'),
+(1620, 'ko', '', 'NPC 스킬추가;NPC: ;스킬ID: ;레벨: ;스킬추가;스킬 목록으로', 'AdminEditNpc.java'),
 (1620, 'tw', '', '增加技能;NPC：;技能ID：;等級：;增加技能;返回技能清單', 'AdminEditNpc.java'),
 
 (1621, 'cn', '', '增加技能;给 NPC ID：;。', 'AdminEditNpc.java'),
 (1621, 'en', '', 'Added skill ; to npc id ;.', 'AdminEditNpc.java'),
-(1621, 'ko', '', 'Added skill ; to npc id ;.', 'AdminEditNpc.java'),
+(1621, 'ko', '', '스킬추가; NPC ID:;.', 'AdminEditNpc.java'),
 (1621, 'tw', '', '增加技能;給 NPC ID：;。', 'AdminEditNpc.java'),
 
 (1622, 'cn', '', '删除技能 ID：; 从 NPC ID：;。', 'AdminEditNpc.java'),
 (1622, 'en', '', 'Deleted skill id ; from npc id ;.', 'AdminEditNpc.java'),
-(1622, 'ko', '', 'Deleted skill id ; from npc id ;.', 'AdminEditNpc.java'),
+(1622, 'ko', '', '스킬삭제 ID:; NPC ID:;.', 'AdminEditNpc.java'),
 (1622, 'tw', '', '刪除技能 ID：; 從 NPC ID：;。', 'AdminEditNpc.java'),
 
 (1651, 'cn', '', '「;」出现所要求的动作。', 'AdminEffects.java'),
@@ -4319,7 +4319,7 @@ INSERT INTO `messagetable` VALUES
 
 (1666, 'cn', '强化等级范围只限于 0-65535 之间。', '', 'AdminEnchant.java'),
 (1666, 'en', 'You must set the enchant level to be between 0-65535.', '', 'AdminEnchant.java'),
-(1666, 'ko', 'You must set the enchant level to be between 0-65535.', '', 'AdminEnchant.java'),
+(1666, 'ko', '0-65535사이에서 인챈트 레벨을 설정해야 합니다.', '', 'AdminEnchant.java'),
 (1666, 'tw', '強化等級範圍只限於 0-65535 之間。', '', 'AdminEnchant.java'),
 
 (1667, 'cn', '', '强化「;」的「;」，从 ; 变 ;。', 'AdminEnchant.java'),
@@ -4364,12 +4364,12 @@ INSERT INTO `messagetable` VALUES
 
 (1680, 'cn', '功能尚未实装。', '', 'AdminFortSiege.java'),
 (1680, 'en', 'Not implemented yet.', '', 'AdminFortSiege.java'),
-(1680, 'ko', 'Not implemented yet.', '', 'AdminFortSiege.java'),
+(1680, 'ko', '구현되지 않았습니다.', '', 'AdminFortSiege.java'),
 (1680, 'tw', '功能尚未實裝。', '', 'AdminFortSiege.java'),
 
 (1681, 'cn', '要塞已无血盟占领。', '', 'AdminFortSiege.java'),
 (1681, 'en', 'Unable to remove fort', '', 'AdminFortSiege.java'),
-(1681, 'ko', 'Unable to remove fort', '', 'AdminFortSiege.java'),
+(1681, 'ko', '요새를 제거 할 수 없습니다', '', 'AdminFortSiege.java'),
 (1681, 'tw', '要塞已無血盟佔領。', '', 'AdminFortSiege.java'),
 
 (1685, 'cn', '你已经不再拥有GM权限。', '', 'AdminGm.java'),
@@ -4384,27 +4384,27 @@ INSERT INTO `messagetable` VALUES
 
 (1691, 'cn', '即时地区创造成功。', '', 'AdminInstance.java'),
 (1691, 'en', 'Instance created', '', 'AdminInstance.java'),
-(1691, 'ko', 'Instance created', '', 'AdminInstance.java'),
+(1691, 'ko', '인스턴스가 생성되었습니다', '', 'AdminInstance.java'),
 (1691, 'tw', '即時地區創造成功。', '', 'AdminInstance.java'),
 
 (1692, 'cn', '即时地区创造失败。', '', 'AdminInstance.java'),
 (1692, 'en', 'Failed to create instance', '', 'AdminInstance.java'),
-(1692, 'ko', 'Failed to create instance', '', 'AdminInstance.java'),
+(1692, 'ko', '인스턴스를 생성하지 못했습니다', '', 'AdminInstance.java'),
 (1692, 'tw', '即時地區創造失敗。', '', 'AdminInstance.java'),
 
 (1693, 'cn', '', 'ID：; 名称：', 'AdminInstance.java'),
 (1693, 'en', '', 'Id: ; Name: ', 'AdminInstance.java'),
-(1693, 'ko', '', 'Id: ; Name: ', 'AdminInstance.java'),
+(1693, 'ko', '', 'ID: ; 이름: ', 'AdminInstance.java'),
 (1693, 'tw', '', 'ID：; 名稱：', 'AdminInstance.java'),
 
 (1694, 'cn', '', '即时地区「;」并不存在。', 'AdminInstance.java'),
 (1694, 'en', '', 'Instance ; doesnt exist.', 'AdminInstance.java'),
-(1694, 'ko', '', 'Instance ; doesnt exist.', 'AdminInstance.java'),
+(1694, 'ko', '', '인스턴스 ; 존재하지 않습니다', 'AdminInstance.java'),
 (1694, 'tw', '', '即時地區「;」並不存在。', 'AdminInstance.java'),
 
 (1695, 'cn', '目标错误。', '', 'AdminInstance.java'),
 (1695, 'en', 'Incorrect target.', '', 'AdminInstance.java'),
-(1695, 'ko', 'Incorrect target.', '', 'AdminInstance.java'),
+(1695, 'ko', '잘못된 대상.', '', 'AdminInstance.java'),
 (1695, 'tw', '目標錯誤。', '', 'AdminInstance.java'),
 
 (1696, 'cn', '管理者设置你的即时地区为：', '', 'AdminInstance.java'),
@@ -4419,37 +4419,37 @@ INSERT INTO `messagetable` VALUES
 
 (1698, 'cn', '', '移动「;」到即时地区：', 'AdminInstance.java'),
 (1698, 'en', '', 'Moved ; to instance ', 'AdminInstance.java'),
-(1698, 'ko', '', 'Moved ; to instance ', 'AdminInstance.java'),
+(1698, 'ko', '', '이동 ; 인스턴스 ', 'AdminInstance.java'),
 (1698, 'tw', '', '移動「;」到即時地區：', 'AdminInstance.java'),
 
 (1699, 'cn', '删除即时地区。', '', 'AdminInstance.java'),
 (1699, 'en', 'Instance destroyed', '', 'AdminInstance.java'),
-(1699, 'ko', 'Instance destroyed', '', 'AdminInstance.java'),
+(1699, 'ko', '인스턴스가 소멸되었습니다', '', 'AdminInstance.java'),
 (1699, 'tw', '刪除即時地區。', '', 'AdminInstance.java'),
 
 (1700, 'cn', '幽灵模式开启。', '', 'AdminInstance.java'),
 (1700, 'en', 'Ghost mode enabled', '', 'AdminInstance.java'),
-(1700, 'ko', 'Ghost mode enabled', '', 'AdminInstance.java'),
+(1700, 'ko', '고스트 모드가 활성화되었습니다', '', 'AdminInstance.java'),
 (1700, 'tw', '幽靈模式開啟。', '', 'AdminInstance.java'),
 
 (1701, 'cn', '幽灵模式关闭。', '', 'AdminInstance.java'),
 (1701, 'en', 'Ghost mode disabled', '', 'AdminInstance.java'),
-(1701, 'ko', 'Ghost mode disabled', '', 'AdminInstance.java'),
+(1701, 'ko', '고스트 모드가 비활성화되었습니다', '', 'AdminInstance.java'),
 (1701, 'tw', '幽靈模式關閉。', '', 'AdminInstance.java'),
 
 (1705, 'cn', '没有目标', '', 'AdminInstanceZone.java'),
 (1705, 'en', 'no-target', '', 'AdminInstanceZone.java'),
 (1705, 'ko', 'no-target', '', 'AdminInstanceZone.java'),
-(1705, 'tw', '沒有目標', '', 'AdminInstanceZone.java'),
+(1705, 'tw', '대상이 없습니다', '', 'AdminInstanceZone.java'),
 
 (1706, 'cn', '', '即时地区 ; 由「;」所清除。', 'AdminInstanceZone.java'),
 (1706, 'en', '', 'Instance zone ; cleared for player ;', 'AdminInstanceZone.java'),
-(1706, 'ko', '', 'Instance zone ; cleared for player ;', 'AdminInstanceZone.java'),
+(1706, 'ko', '', '인스턴스존 ; 플레이어가 제거되었습니다 ;', 'AdminInstanceZone.java'),
 (1706, 'tw', '', '即時地區 ; 由「;」所清除。', 'AdminInstanceZone.java'),
 
 (1707, 'cn', '', '管理者清除即时地区：;。', 'AdminInstanceZone.java'),
 (1707, 'en', '', 'Admin cleared instance zone ; for you', 'AdminInstanceZone.java'),
-(1707, 'ko', '', 'Admin cleared instance zone ; for you', 'AdminInstanceZone.java'),
+(1707, 'ko', '', '지엠이 인스턴스존에서 제거했습니다 ; for you', 'AdminInstanceZone.java'),
 (1707, 'tw', '', '管理者清除即時地區：;。', 'AdminInstanceZone.java'),
 
 (1708, 'cn', '首页', '', 'AdminInstanceZone.java'),
@@ -4469,7 +4469,7 @@ INSERT INTO `messagetable` VALUES
 
 (1711, 'cn', '即时地区的玩家：', '', 'AdminInstanceZone.java'),
 (1711, 'en', 'Instances for ', '', 'AdminInstanceZone.java'),
-(1711, 'ko', 'Instances for ', '', 'AdminInstanceZone.java'),
+(1711, 'ko', '인스턴스, ', '', 'AdminInstanceZone.java'),
 (1711, 'tw', '即時地區的玩家：', '', 'AdminInstanceZone.java'),
 
 (1712, 'cn', '', '名字;时间;动作', 'AdminInstanceZone.java'),
@@ -4484,22 +4484,22 @@ INSERT INTO `messagetable` VALUES
 
 (1717, 'cn', '取消无敌。', '', 'AdminInvul.java'),
 (1717, 'en', ' is now mortal', '', 'AdminInvul.java'),
-(1717, 'ko', ' is now mortal', '', 'AdminInvul.java'),
+(1717, 'ko', ' 무적모드가 해제되었습니다', '', 'AdminInvul.java'),
 (1717, 'tw', '取消無敵。', '', 'AdminInvul.java'),
 
 (1718, 'cn', '启动无敌。', '', 'AdminInvul.java'),
 (1718, 'en', ' is now invulnerable', '', 'AdminInvul.java'),
-(1718, 'ko', ' is now invulnerable', '', 'AdminInvul.java'),
+(1718, 'ko', ' 무적모드가 설정되었습니다', '', 'AdminInvul.java'),
 (1718, 'tw', '啟動無敵。', '', 'AdminInvul.java'),
 
 (1721, 'cn', '', '踢除玩家「;」。', 'AdminKick.java'),
 (1721, 'en', '', 'You kicked ; from the game.', 'AdminKick.java'),
-(1721, 'ko', '', 'You kicked ; from the game.', 'AdminKick.java'),
+(1721, 'ko', '', '게임에서 ; 추방되었습니다.', 'AdminKick.java'),
 (1721, 'tw', '', '踢除玩家「;」。', 'AdminKick.java'),
 
 (1722, 'cn', '', '踢除「;」位玩家。', 'AdminKick.java'),
 (1722, 'en', '', 'Kicked ; players', 'AdminKick.java'),
-(1722, 'ko', '', 'Kicked ; players', 'AdminKick.java'),
+(1722, 'ko', '', '추방되었습니다 ; 플레이어', 'AdminKick.java'),
 (1722, 'tw', '', '踢除「;」位玩家。', 'AdminKick.java'),
 
 (1725, 'cn', '', '杀死范围「;」内的玩家。', 'AdminKill.java'),
@@ -4514,12 +4514,12 @@ INSERT INTO `messagetable` VALUES
 
 (1731, 'cn', '服务端目前为 GM 专属。', '', 'AdminLogin.java'),
 (1731, 'en', 'Server is now GM only', '', 'AdminLogin.java'),
-(1731, 'ko', 'Server is now GM only', '', 'AdminLogin.java'),
+(1731, 'ko', 'GM 전용', '', 'AdminLogin.java'),
 (1731, 'tw', '伺服器目前為 GM 專屬。', '', 'AdminLogin.java'),
 
 (1732, 'cn', '服务端目前为全部开放。', '', 'AdminLogin.java'),
 (1732, 'en', 'Server is not GM only anymore', '', 'AdminLogin.java'),
-(1732, 'ko', 'Server is not GM only anymore', '', 'AdminLogin.java'),
+(1732, 'ko', '모두', '', 'AdminLogin.java'),
 (1732, 'tw', '伺服器目前為全部開放。', '', 'AdminLogin.java'),
 
 (1733, 'cn', '最大玩家数量设置为：', '', 'AdminLogin.java'),
@@ -4689,17 +4689,17 @@ INSERT INTO `messagetable` VALUES
 
 (1777, 'cn', '管理者对你进行传送。', '', 'AdminMenu.java'),
 (1777, 'en', 'Admin is teleporting you.', '', 'AdminMenu.java'),
-(1777, 'ko', 'Admin is teleporting you.', '', 'AdminMenu.java'),
+(1777, 'ko', '지엠이 당신을 소환했습니다.', '', 'AdminMenu.java'),
 (1777, 'tw', '管理者對你進行傳送。', '', 'AdminMenu.java'),
 
 (1778, 'cn', '玩家不在队伍中。', '', 'AdminMenu.java'),
 (1778, 'en', 'Player is not in party.', '', 'AdminMenu.java'),
-(1778, 'ko', 'Player is not in party.', '', 'AdminMenu.java'),
+(1778, 'ko', '플레이어가 파티상태가 아닙니다.', '', 'AdminMenu.java'),
 (1778, 'tw', '玩家不在隊伍中。', '', 'AdminMenu.java'),
 
 (1779, 'cn', '管理者向队伍进行传送。', '', 'AdminMenu.java'),
 (1779, 'en', 'Your party is being teleported by an Admin.', '', 'AdminMenu.java'),
-(1779, 'ko', 'Your party is being teleported by an Admin.', '', 'AdminMenu.java'),
+(1779, 'ko', '지엠이 당신의 파티를 소환했습니다.', '', 'AdminMenu.java'),
 (1779, 'tw', '管理者向隊伍進行傳送。', '', 'AdminMenu.java'),
 
 (1780, 'cn', '并未加入血盟。', '', 'AdminMenu.java'),
@@ -4714,12 +4714,12 @@ INSERT INTO `messagetable` VALUES
 
 (1782, 'cn', '', '踢除玩家「;」。', 'AdminMenu.java'),
 (1782, 'en', '', 'You kicked ; from the game.', 'AdminMenu.java'),
-(1782, 'ko', '', 'You kicked ; from the game.', 'AdminMenu.java'),
+(1782, 'ko', '', '게임에서 ; 추방되었습니다.', 'AdminMenu.java'),
 (1782, 'tw', '', '踢除玩家「;」。', 'AdminMenu.java'),
 
 (1783, 'cn', '', '玩家「;」不在游戏中。', 'AdminMenu.java'),
 (1783, 'en', '', 'Player ; was not found in the game.', 'AdminMenu.java'),
-(1783, 'ko', '', 'Player ; was not found in the game.', 'AdminMenu.java'),
+(1783, 'ko', '', '플레이어 ; 게임에서 찾을 수 없습니다.', 'AdminMenu.java'),
 (1783, 'tw', '', '玩家「;」不在遊戲中。', 'AdminMenu.java'),
 
 (1784, 'cn', '没有相关权限。', '', 'AdminMenu.java'),
@@ -4729,7 +4729,7 @@ INSERT INTO `messagetable` VALUES
 
 (1785, 'cn', '', '杀死玩家「;」。', 'AdminMenu.java'),
 (1785, 'en', '', 'You killed ;', 'AdminMenu.java'),
-(1785, 'ko', '', 'You killed ;', 'AdminMenu.java'),
+(1785, 'ko', '', '당신을 죽였습니다 ;', 'AdminMenu.java'),
 (1785, 'tw', '', '殺死玩家「;」。', 'AdminMenu.java'),
 
 (1786, 'cn', '', '传送至玩家「;」。', 'AdminMenu.java'),
@@ -4754,7 +4754,7 @@ INSERT INTO `messagetable` VALUES
 
 (1793, 'cn', '', '设定等级「;」给血盟：', 'AdminPledge.java'),
 (1793, 'en', '', 'You set level ; for clan ', 'AdminPledge.java'),
-(1793, 'ko', '', 'You set level ; for clan ', 'AdminPledge.java'),
+(1793, 'ko', '', '혈맹 ; 레벨 설정 ', 'AdminPledge.java'),
 (1793, 'tw', '', '設定等級「;」給血盟：', 'AdminPledge.java'),
 
 (1794, 'cn', '等级错误。', '', 'AdminPledge.java'),
@@ -4764,17 +4764,17 @@ INSERT INTO `messagetable` VALUES
 
 (1795, 'cn', '血盟等级必须达到等級「5」以上。', '', 'AdminPledge.java'),
 (1795, 'en', 'Only clans of level 5 or above may receive reputation points.', '', 'AdminPledge.java'),
-(1795, 'ko', 'Only clans of level 5 or above may receive reputation points.', '', 'AdminPledge.java'),
+(1795, 'ko', '혈맹 레벨5이상 명성 포인트를 받을 수 있습니다', '', 'AdminPledge.java'),
 (1795, 'tw', '血盟等級必須達到等級「5」以上。', '', 'AdminPledge.java'),
 
 (1796, 'cn', '', '你;增加「;移除「;」点声望;给「;从「;」血盟。目前总分：', 'AdminPledge.java'),
 (1796, 'en', '', 'You ;add ;remove ; points ;to ;from ;\'s reputation. Their current score is ', 'AdminPledge.java'),
-(1796, 'ko', '', 'You ;add ;remove ; points ;to ;from ;\'s reputation. Their current score is ', 'AdminPledge.java'),
+(1796, 'ko', '', 'You ;추가 ;제거 ; points ;to ;from ;\'s reputation. Their current score is ', 'AdminPledge.java'),
 (1796, 'tw', '', '你;增加「;移除「;」點聲望;給「;從「;」血盟。目前總分：', 'AdminPledge.java'),
 
 (1800, 'cn', '未知的变身ID：', '', 'AdminPolymorph.java'),
 (1800, 'en', 'Unknow transformation id: ', '', 'AdminPolymorph.java'),
-(1800, 'ko', 'Unknow transformation id: ', '', 'AdminPolymorph.java'),
+(1800, 'ko', '알 수 없는 변신 ID: ', '', 'AdminPolymorph.java'),
 (1800, 'tw', '未知的變身ID：', '', 'AdminPolymorph.java'),
 
 (1801, 'cn', '变身成功。', '', 'AdminPolymorph.java'),
@@ -4824,17 +4824,17 @@ INSERT INTO `messagetable` VALUES
 
 (1819, 'cn', '无法更改攻城战时间。', '', 'AdminSiege.java'),
 (1819, 'en', 'Unable to change Siege Date', '', 'AdminSiege.java'),
-(1819, 'ko', 'Unable to change Siege Date', '', 'AdminSiege.java'),
+(1819, 'ko', '공성전 날짜를 변경할 수 없습니다', '', 'AdminSiege.java'),
 (1819, 'tw', '無法更改攻城戰時間。', '', 'AdminSiege.java'),
 
 (1820, 'cn', '此根据地已有主人！', '', 'AdminSiege.java'),
 (1820, 'en', 'This ClanHall isn\'t free!', '', 'AdminSiege.java'),
-(1820, 'ko', 'This ClanHall isn\'t free!', '', 'AdminSiege.java'),
+(1820, 'ko', '이 아지트는 무료가 아닙니다!', '', 'AdminSiege.java'),
 (1820, 'tw', '此根據地已有主人！', '', 'AdminSiege.java'),
 
 (1821, 'cn', '已有根据地！', '', 'AdminSiege.java'),
 (1821, 'en', 'You have already a ClanHall!', '', 'AdminSiege.java'),
-(1821, 'ko', 'You have already a ClanHall!', '', 'AdminSiege.java'),
+(1821, 'ko', '이미 아지트가 있습니다!', '', 'AdminSiege.java'),
 (1821, 'tw', '已有根據地！', '', 'AdminSiege.java'),
 
 (1822, 'cn', '此根据地已无主人！', '', 'AdminSiege.java'),
@@ -4849,17 +4849,17 @@ INSERT INTO `messagetable` VALUES
 
 (1824, 'cn', '没有主人', '', 'AdminSiege.java'),
 (1824, 'en', 'No Owner', '', 'AdminSiege.java'),
-(1824, 'ko', 'No Owner', '', 'AdminSiege.java'),
+(1824, 'ko', '주인이 없습니다', '', 'AdminSiege.java'),
 (1824, 'tw', '沒有主人', '', 'AdminSiege.java'),
 
 (1828, 'cn', '', '移除「;」的全部技能。', 'AdminSkill.java'),
 (1828, 'en', '', 'You removed all skills from ;', 'AdminSkill.java'),
-(1828, 'ko', '', 'You removed all skills from ;', 'AdminSkill.java'),
+(1828, 'ko', '', '당신은 모든 스킬이 제거되었습니다, ;', 'AdminSkill.java'),
 (1828, 'tw', '', '移除「;」的全部技能。', 'AdminSkill.java'),
 
 (1829, 'cn', '管理者移除你的全部技能。', '', 'AdminSkill.java'),
 (1829, 'en', 'Admin removed all skills from you.', '', 'AdminSkill.java'),
-(1829, 'ko', 'Admin removed all skills from you.', '', 'AdminSkill.java'),
+(1829, 'ko', '지엠이 모든 스킬을 제거했습니다.', '', 'AdminSkill.java'),
 (1829, 'tw', '管理者移除你的全部技能。', '', 'AdminSkill.java'),
 
 (1830, 'cn', '', '增加「;」个技能给：', 'AdminSkill.java'),
@@ -4894,7 +4894,7 @@ INSERT INTO `messagetable` VALUES
 
 (1836, 'cn', '注意：修改玩家的技能，', '', 'AdminSkill.java'),
 (1836, 'en', 'Note: Dont forget that modifying players skills can', '', 'AdminSkill.java'),
-(1836, 'ko', 'Note: Dont forget that modifying players skills can', '', 'AdminSkill.java'),
+(1836, 'ko', '주의: Dont forget that modifying players skills can', '', 'AdminSkill.java'),
 (1836, 'tw', '注意：修改玩家的技能，', '', 'AdminSkill.java'),
 
 (1837, 'cn', '可能会破坏游戏平衡...', '', 'AdminSkill.java'),
@@ -5034,12 +5034,12 @@ INSERT INTO `messagetable` VALUES
 
 (1878, 'cn', '传送至 ', '', 'AdminTeleport.java'),
 (1878, 'en', 'You have been teleported to ', '', 'AdminTeleport.java'),
-(1878, 'ko', 'You have been teleported to ', '', 'AdminTeleport.java'),
+(1878, 'ko', '텔레포트되었습니다, ', '', 'AdminTeleport.java'),
 (1878, 'tw', '傳送至 ', '', 'AdminTeleport.java'),
 
 (1879, 'cn', '传送玩家', '', 'AdminTeleport.java'),
 (1879, 'en', 'Teleport Character', '', 'AdminTeleport.java'),
-(1879, 'ko', 'Teleport Character', '', 'AdminTeleport.java'),
+(1879, 'ko', '캐릭터 텔레포트', '', 'AdminTeleport.java'),
 (1879, 'tw', '傳送玩家', '', 'AdminTeleport.java'),
 
 (1880, 'cn', '传送玩家「', '', 'AdminTeleport.java'),
@@ -5064,7 +5064,7 @@ INSERT INTO `messagetable` VALUES
 
 (1884, 'cn', '召唤', '', 'AdminTeleport.java'),
 (1884, 'en', 'Teleport near you', '', 'AdminTeleport.java'),
-(1884, 'ko', 'Teleport near you', '', 'AdminTeleport.java'),
+(1884, 'ko', '당신 근처에 텔레포트', '', 'AdminTeleport.java'),
 (1884, 'tw', '召喚', '', 'AdminTeleport.java'),
 
 (1885, 'cn', '返回', '', 'AdminTeleport.java'),
