@@ -1,98 +1,98 @@
 @echo off
-REM 功能說明：每隔一段時間刪除 libs 和快取，以防止 GS 出錯
-if not exist ..\libs\*.jar echo 您必須重新解壓縮「編譯完成」的 GS，才可以繼續安裝資料庫
+REM Function: every once in a while to delete libs and cache to prevent GS error
+if not exist ..\libs\*.jar echo GS, you must re-unzip the compilation is completed before they can proceed with the installation database
 if not exist ..\libs\*.jar echo.
 if not exist ..\libs\*.jar pause
 if not exist ..\libs\*.jar exit
 
-REM 如果 libs 快取不存在，表示還沒有啟動過伺服器，則跳過檢查
+REM Libs cache does not exist, said that has not started server, skip the check
 if not exist ..\libs\cachedir\ md ..\libs\cachedir\
 if not exist ..\libs\cachedir\packages\*.pkc goto _lib_update
 
-REM 如果 log 不存在，表示還沒有啟動過伺服器，則跳過檢查
+REM If the log does not exist, that also did not start the server, skip the check
 if not exist ..\game\log\*.log goto _lib_update
 
 REM ------------------------------------------------------
-REM _lib_check1 的檢查 開始
-REM 如果 Windows 的 CMD 版本資訊已存在，則跳到檢查1
+REM _lib_check1 Inspections begin
+REM If the the Windows CMD version information already exists, the jump to check 1
 if exist ..\libs\cachedir\check_w_ver.txt goto _lib_check1
 
-REM 如果 Windows 的 CMD 版本資訊不存在，則建立資訊
+REM If the Windows CMD version information does not exist, the establishment of information
 ver > ..\libs\cachedir\check_w_ver.txt
 goto _lib_del
 
 :_lib_check1
-REM 取得目前的 Windows CMD 版本資訊
+REM To Windows CMD get the current version information
 ver > %temp%\check.txt
 FOR /F "skip=1 delims=*" %%a IN (%temp%\check.txt) do set aaa=%%a
 
-REM 取得已存在的 Windows CMD 版本資訊
+REM To obtain existing Windows CMD version information
 FOR /F "skip=1 delims=*" %%b IN (..\libs\cachedir\check_w_ver.txt) do set bbb=%%b
 
-REM 比較 Windows 的 CMD 版本資訊
+REM Windows-CMD version information
 if "%aaa%"=="%bbb%" goto _lib_check2
-echo 因為您的 Windows 版本有更新，所以必須刪除舊的 libs 和快取，以防止 GS 出錯
+echo Update your version of Windows, so you must remove the old libs and cache to prevent errors of GS
 echo.
 pause
 goto _lib_del
-REM _lib_check1 的檢查 結束
+REM _lib_check1 Check the end of
 REM ------------------------------------------------------
 
 
 REM ------------------------------------------------------
-REM _lib_check2 的檢查 開始
-REM 如果 Java 路徑不存在，則跳到下一個檢查
+REM _lib_check2 Inspections begin
+REM If the Java path does not exist, skip to the next check
 if not exist "%ProgramFiles%\Java\jdk1.7.*" goto _lib_check3
 
-REM 如果 Java 版本資訊已存在，則跳到檢查2
+REM If the Java version information already exists, the jump to check 2
 if exist ..\libs\cachedir\check_j_ver.txt goto _lib_check2
 
-REM 如果 Java 版本資訊不存在，則建立資訊
+REM If the Java version information does not exist, the establishment of information
 dir "%ProgramFiles%\Java\jdk1.7.*" /A:D /B /O > ..\libs\cachedir\check_j_ver.txt
 goto _lib_del
 
 :_lib_check2
-REM 取得目前的 Java 版本資訊
+REM Get the current version of Java information
 dir "%ProgramFiles%\Java\jdk1.7.*" /A:D /B /O > %temp%\check.txt
 FOR /F %%j IN (%temp%\check.txt) DO set jjj=%%j
 
-REM 取得已存在的 Java 版本資訊
+REM To obtain existing Java version information
 FOR /F %%k IN (..\libs\cachedir\check_j_ver.txt) do set kkk=%%k
 
-REM 比較 Java 版本資訊
+REM Java version information
 if "%jjj%"=="%kkk%" goto _lib_check3
-echo 因為您的 Java 版本有更新，所以必須刪除舊的 libs 和快取，以防止 GS 出錯
+echo Update your Java version, so you must remove the old libs and cache to prevent errors of GS
 echo.
 pause
 goto _lib_del
-REM _lib_check2 的檢查 結束
+REM _lib_check2 Check the end of
 REM ------------------------------------------------------
 
 
 REM ------------------------------------------------------
-REM _lib_check3 的檢查 開始
-REM 如果 日期-月份 的資訊已存在，則跳到檢查3
+REM _lib_check3 Inspections begin
+REM Date - month, skip checking 3
 if exist ..\libs\cachedir\check_d_ver.txt goto _lib_check3
 
-REM 如果 日期-月份 的資訊不存在，則建立資訊
+REM Date - the month of the information does not exist, the establishment of information
 date/t > ..\libs\cachedir\check_d_ver.txt
 goto _lib_del
 
 :_lib_check3
-REM 取得目前的 日期-月份 資訊
+REM Get the current date - month information
 date/t > %temp%\check.txt
 FOR /F "tokens=2 delims=/" %%d IN (%temp%\check.txt) DO set ddd=%%d
 
-REM 取得已存在的 日期-月份 資訊
+REM Date - Month Information made ​​existing
 FOR /F "tokens=2 delims=/" %%m IN (..\libs\cachedir\check_d_ver.txt) do set mmm=%%m
 
-REM 比較 日期-月份 資訊
+REM Comparison Date - Month Information
 if "%ddd%"=="%mmm%" goto _lib_end
-echo 此為每個月自動清理舊的 libs 和快取，以防止 GS 出錯
+echo This is the month automatically clean up the old libs and cache to prevent errors of GS
 echo.
 pause
 goto _lib_del
-REM _lib_check3 的檢查 結束
+REM _lib_check3 Check the end of
 REM ------------------------------------------------------
 
 
@@ -103,11 +103,11 @@ if not exist ..\libs\backup\ md ..\libs\backup\
 copy ..\libs\*.* ..\libs\backup\ /Y > nul
 del ..\libs\*.* /F /Q > nul
 del ..\libs\cachedir\packages\*.* /F /Q > nul
-if exist ..\libs\*.jar echo 無法刪除 libs 和快取！請先關閉伺服器或重新開機，然後再試一次
+if exist ..\libs\*.jar echo You can not delete libs and cache! Turn off the server or reboot and try again
 if exist ..\libs\*.jar echo.
 if exist ..\libs\*.jar pause
 if exist ..\libs\*.jar exit
-if exist ..\libs\cachedir\packages\*.pkc echo 無法刪除 libs 和快取！請先關閉伺服器或重新開機，然後再試一次
+if exist ..\libs\cachedir\packages\*.pkc echo You can not delete libs and cache! Turn off the server or reboot and try again
 if exist ..\libs\cachedir\packages\*.pkc echo.
 if exist ..\libs\cachedir\packages\*.pkc pause
 if exist ..\libs\cachedir\packages\*.pkc exit
@@ -115,8 +115,8 @@ ver > ..\libs\cachedir\check_w_ver.txt
 dir "%ProgramFiles%\Java\jdk1.7.*" /A:D /B /O > ..\libs\cachedir\check_j_ver.txt
 date/t > ..\libs\cachedir\check_d_ver.txt
 CLS
-echo 舊的 libs 和快取清理完畢！
-echo 您必須重新解壓縮「編譯完成」的 GS，才可以繼續安裝資料庫
+echo Old libs and cache cleared!
+echo GS, you must re-unzip the compilation is completed before they can proceed with the installation database
 echo.
 pause
 exit
@@ -169,7 +169,7 @@ set fresh_setup=0
 
 :loadconfig
 cls
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 if not exist %config_file% goto configure
 ren %config_file% vars.bat
 call vars.bat
@@ -177,23 +177,23 @@ ren vars.bat %config_file%
 call :colors 17
 if /i %config_version% == 2 goto ls_backup
 set upgrade_mode=2
-echo 您似乎是第一次使用這個版本的 database_installer
-echo 但是我發現安裝資料庫的設定檔已經存在
-echo 因此我將問您幾個問題，引導您繼續安裝
+echo You seem to be the first to use this version of database_installer
+echo However, I found that to install the database profile already exists
+echo Therefore, I will ask you a few questions, and guide you to proceed with the installation
 echo.
-echo 更新設定選項：
+echo Update setting options:
 echo.
-echo (1) 導入＆繼續使用舊的設定：將使用原本舊的資料並且進行更新作業
+echo (1) Import & continue to use the old settings: the original old data and update job
 echo.
-echo (2) 導入＆使用新的設定：導入新的資料並且重新設定資料
+echo (2) Import & new set: import new data and re-set data
 echo.
-echo (3) 導入全新的資料：所有舊的資料將會移除並且導入新的資料
+echo (3) Import brand new: all old data will be removed and the import of new information
 echo.
-echo (4) 查看存取的設定值
+echo (4) See setting access
 echo.
-echo (5) 退出
+echo (5) Quit
 echo.
-set /P upgrade_mode="輸入數字後，請按 Enter（預設值為「%upgrade_mode%」）: "
+set /P upgrade_mode="Enter a number, press Enter (the default value is "%upgrade_mode%):"
 if %upgrade_mode%==1 goto ls_backup
 if %upgrade_mode%==2 goto configure
 if %upgrade_mode%==3 goto configure
@@ -210,7 +210,7 @@ goto :eof
 :configure
 cls
 call :colors 17
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 set config_version=2
 if NOT %upgrade_mode% == 2 (
 set fresh_setup=1
@@ -250,17 +250,17 @@ set backup=.
 set logdir=.
 )
 set mysqlPath=%mysqlBinPath%\mysql.exe
-echo 新的設定值：
+echo New Setting:
 echo.
-echo 1.MySql 程式
+echo 1.MySQL Program
 echo --------------------
-echo 請設定 mysql.exe 和 mysqldump.exe 的位置
+echo Please set mysql.exe and mysqldump.exe position
 echo.
 if "%mysqlBinPath%" == "" (
 set mysqlBinPath=use path
-echo 沒有找到 MySQL 的位置
+echo Did not find the location of MySQL
 ) else (
-echo 請測試以下所找到的 MySQL 位置，是否可以進行導入作業
+echo Please test the MySQL location below to find whether the import job
 echo.
 echo %mysqlPath%
 )
@@ -268,63 +268,63 @@ if not "%mysqlBinPath%" == "use path" call :binaryfind
 echo.
 path|find "MySQL">NUL
 if %errorlevel% == 0 (
-echo 上面是找到的 MySQL，此位置將會被設為預設值，如果想換位置請修改...
+echo Above is found MySQL, this location will be set to the default value, if you want to change the location to modify the...
 set mysqlBinPath=use path
 ) else (
-echo 無法找到 MySQL，請輸入 mysql.exe 的位置...
+echo Can not find the MySQL Please to enter the mysql.exe the position...
 echo.
-echo 如果不確定這是什麼意思和如何操作，請到相關網站查詢或者至 L2JTW 官方網站發問或尋找相關資訊
+echo If you are not sure what this means and how to do this, please go to the website or to L2JKR official Web site to ask questions or find relevant information
 )
 echo.
-echo 請輸入 mysql.exe 的位置：
+echo Requests the input mysql.exe position:
 set /P mysqlBinPath="(default %mysqlBinPath%): "
 cls
 echo.
-echo 2.登入伺服器設定
+echo 2.Login to the server settings
 echo --------------------
-echo 此作業將會連線至所指定的 MySQL 伺服器，並且進行導入作業
+echo This job will connect to the specified MySQL server, and import jobs
 echo.
-set /P lsuser="使用者名稱（預設值「%lsuser%」）: "
+set /P lsuser="Username (default "%lsuser%"):"
 :_lspass
-set /P lspass="使用者密碼（預設值「%lspass%」）: "
+set /P lspass="User password (default "%lspass%"):"
 if "%lspass%"=="" goto _lspass
-set /P lsdb="資料庫（預設值「%lsdb%」）: "
-set /P lshost="位置（預設值「%lshost%」）: "
+set /P lsdb="Database (default "%lsdb%"):"
+set /P lshost="Location (default "%lshost%"):"
 echo.
 cls
 echo.
-echo 3-討論版伺服器設定
+echo 3-Forums Server Settings
 echo --------------------
-echo 此作業將會連線至「討論版專用」的 MySQL 伺服器，並且進行導入作業
+echo This job will connect to the "discussion" MySQL server, and import jobs
 echo.
-set /P cbuser="使用者名稱（預設值「%cbuser%」）: "
+set /P cbuser="Username (default "%cbuser%"):"
 :_cbpass
-set /P cbpass="使用者密碼（預設值「%cbpass%」）: "
+set /P cbpass="User password (default "%cbpass%"):"
 if "%cbpass%"=="" goto _cbpass
-set /P cbdb="資料庫（預設值「%cbdb%」）: "
-set /P cbhost="位置（預設值「%cbhost%」）: "
+set /P cbdb="Database (default "%cbdb%"):"
+set /P cbhost="Location (default "%cbhost%"):"
 echo.
 cls
 echo.
-echo 4.遊戲伺服器設定
+echo 4.Game server settings
 echo --------------------
-set /P gsuser="使用者名稱（預設值「%gsuser%」）: "
+set /P gsuser="Username (default "%gsuser%"):"
 :_gspass
-set /P gspass="使用者密碼（預設值「%gspass%」）: "
+set /P gspass="User password (default "%gspass%"):"
 if "%gspass%"=="" goto _gspass
-set /P gsdb="資料庫（預設值「%gsdb%」）: "
-set /P gshost="位置（預設值「%gshost%」）: "
+set /P gsdb="Database (default "%gsdb%"):"
+set /P gshost="Location (default "%gshost%"):"
 echo.
 cls
 echo.
-echo 5.其他設定
+echo 5.Other Settings
 echo --------------------
-set /P cmode="顏色模式 (c)為顏色 或 (n)為無顏色（預設值「%cmode%」）: "
-set /P backup="備份位置（預設值「%backup%」）: "
-set /P logdir="Logs訊息位置（預設值「%logdir%」）: "
+set /P cmode="Color mode for color or (n), (c) color (default "%cmode%):"
+set /P backup="Backup location (default %backup%):"
+set /P logdir="Logs message position (default "%logdir%"):"
 :safe1
 set safemode=y
-set /P safemode="Debug 模式（y/n， 預設值「%safemode%」）: "
+set /P safemode="Debug mode (y / n, default "%safemode%"):"
 if /i %safemode%==y (set safe_mode=1&goto safe2)
 if /i %safemode%==n (set safe_mode=0&goto safe2)
 goto safe1
@@ -362,8 +362,8 @@ echo set gshost=%gshost%>> %config_file%
 echo set logdir=%logdir%>> %config_file%
 echo set backup=%backup%>> %config_file%
 echo.
-echo 設定成功！
-echo 你的設定值將會儲存在「%config_file%」，所有的帳號密碼將以明文顯示
+echo Setting success!
+echo Your settings will be saved in the "%config_file%", account password in clear text display
 echo.
 pause
 goto loadconfig
@@ -373,9 +373,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=1
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在備份登入伺服器的資料庫...
+echo Login to the server being backed up database...
 set cmdline="%mysqldumpPath%" --add-drop-table -h %lshost% -u %lsuser% --password=%lspass% %lsdb% ^> "%backup%\ls_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto ls_db_ok
@@ -384,23 +384,23 @@ if %ERRORLEVEL% == 0 goto ls_db_ok
 cls
 set lsdbprompt=y
 call :colors 47
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 備份失敗！
-echo 原因是因為資料庫不存在
-echo 現在可以幫你建立 %lsdb%，或者繼續其它設定
+echo Backup failed!
+echo The reason is because the database does not exist
+echo Now can help you establish %lsdb% command to, or continue to other settings
 echo.
-echo 建立登入伺服器的資料庫？
+echo Create a database to login to the server?
 echo.
-echo (y)確定
+echo (y)Determine
 echo.
-echo (n)取消
+echo (n)Cancel
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p lsdbprompt=請選擇（預設值-確定）:
+set /p lsdbprompt=Please select (default - OK):
 if /i %lsdbprompt%==y goto ls_db_create
 if /i %lsdbprompt%==n goto cs_backup
 if /i %lsdbprompt%==r goto configure
@@ -412,9 +412,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=2
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation- For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在建立登入伺服器的資料庫...
+echo Being set up to log on to the server database...
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -e "CREATE DATABASE %lsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto ls_db_ok
@@ -424,24 +424,24 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 登入伺服器的資料庫建立失敗！
+echo Login to the server database creation failed!
 echo.
-echo 可能的原因：
-echo 1.輸入的資料錯誤，例如：使用者名稱/使用者密碼/其他相關資料
-echo 2.使用者「%lsuser%」的權限不足
-echo 3.資料庫已存在
+echo Possible reasons:
+echo 1.Input data errors, such as: username / user password / other relevant information
+echo 2.User "%lsuser%" of insufficient permissions
+echo 3.Existing database
 echo.
-echo 請檢查設定並且修正，或者直接重新設定
+echo Please check the settings and correction or reset
 echo.
-echo (c)繼續
+echo (c)Continue
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p omfgprompt=請選擇（預設值-退出）:
+set /p omfgprompt=Please choose (default - exit):
 if /i %omfgprompt%==c goto cs_backup
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
@@ -451,21 +451,21 @@ goto ls_err2
 cls
 set loginprompt=u
 call :colors 17
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 登入伺服器的資料庫安裝：
+echo Login to the server database installation:
 echo.
-echo (f) 完整：將移除所有舊的資料，重新導入新的資料
+echo (f) Full: will remove all the old data and re-import the new information
 echo.
-echo (u) 更新：我會盡力保持登錄的所有資料
+echo (u) Update: I will try to keep all of the login
 echo.
-echo (s) 省略：跳過此選項
+echo (s) Omitted: skip this option
 echo.
-echo (r) 重新設定
+echo (r) Reconfigure
 echo.
-echo (q) 退出
+echo (q) Quit
 echo.
-set /p loginprompt=請選擇（預設值-更新）:
+set /p loginprompt=Please choose (default - Updated):
 if /i %loginprompt%==f goto ls_cleanup
 if /i %loginprompt%==u goto ls_upgrade
 if /i %loginprompt%==s goto cs_backup
@@ -476,21 +476,21 @@ goto ls_db_ok
 :ls_cleanup
 call :colors 17
 set cmdline=
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在移除登入伺服器的資料庫，然後導入新的資料庫...
+echo Removing login to the server database, and then import the new database...
 set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ls_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
-echo 登入伺服器資料庫已被刪除
+echo Login to the server database has been deleted
 goto ls_install
 
 :ls_upgrade
 cls
 echo.
-echo 更新登入伺服器資料庫結構
+echo Update login to the server database structure
 echo.
 echo @echo off> temp.bat
 if exist ls_errors.log del ls_errors.log
@@ -504,21 +504,21 @@ goto ls_install
 cls
 set cmdline=
 if %full% == 1 (
-title L2JTW 正在安裝登入伺服器的資料庫...
+title L2JKR Login to the server database is being installed...
 echo.
-echo 正在安裝新的登入伺服器的資料庫內容
+echo Database contents are installing a new login server
 echo.
 ) else (
-title L2JTW 正在更新登入伺服器的資料庫...
+title L2JKR Login to the server database is being updated...
 echo.
-echo 正在更新登入伺服器的資料庫內容
+echo Log on to the server database content being updated
 echo.
 )
 if %logging% == 0 set output=NUL
 set dest=ls
 for %%i in (..\sql\login\*.sql) do call :dump %%i
 
-echo 完成...
+echo Complete...
 echo.
 goto cs_backup
 
@@ -527,9 +527,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=3
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在備份「討論版專用」的資料庫...
+echo Being backed up "discussion" database...
 set cmdline="%mysqldumpPath%" --add-drop-table -h %cbhost% -u %cbuser% --password=%cbpass% %cbdb% ^> "%backup%\cs_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto cs_db_ok
@@ -538,23 +538,23 @@ if %ERRORLEVEL% == 0 goto cs_db_ok
 cls
 set cbdbprompt=y
 call :colors 47
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 備份失敗！
-echo 原因是因為「討論版專用」的資料庫不存在
-echo 現在可以幫你建立 %cbdb%，或者繼續其它設定
+echo Backup failed!
+echo The reason is because there is no discussion boards dedicated database
+echo Can help you create %cbdb%, or continue to other settings
 echo.
-echo 建立「討論版專用」的資料庫？
+echo Create a special version of the discussion "database"?
 echo.
-echo (y)確定
+echo (y)Determine
 echo.
-echo (n)取消
+echo (n)Cancel
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p cbdbprompt=請選擇（預設值-確定）:
+set /p cbdbprompt=Please select (default - OK):
 if /i %cbdbprompt%==y goto cs_db_create
 if /i %cbdbprompt%==n goto gs_backup
 if /i %cbdbprompt%==r goto configure
@@ -566,9 +566,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=4
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在建立「討論版專用」的資料庫...
+echo Forums dedicated database being created...
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -e "CREATE DATABASE %cbdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto cs_db_ok
@@ -578,24 +578,24 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 「討論版專用」的資料庫建立失敗！
+echo Forums dedicated database creation failed!
 echo.
-echo 可能的原因：
-echo 1.輸入的資料錯誤，例如：使用者名稱/使用者密碼/其他相關資料
-echo 2.使用者「%cbuser%」的權限不足
-echo 3.資料庫已存在
+echo Possible reasons:
+echo 1.Input data errors, such as: username / user password / other relevant information
+echo 2.Users "%cbuser%" permissions, insufficient
+echo 3.Existing database
 echo.
-echo 請檢查設定並且修正，或者直接重新設定
+echo Please check the settings and correction or reset
 echo.
-echo (c)繼續
+echo (c)Continue
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p omfgprompt=請選擇（預設值-退出）:
+set /p omfgprompt=Please choose (default - exit):
 if /i %omfgprompt%==c goto gs_backup
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
@@ -605,21 +605,21 @@ goto cs_err2
 cls
 set communityprompt=u
 call :colors 17
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 「討論版專用」的資料庫安裝：
+echo Forums dedicated database installation:
 echo.
-echo (f)完整：將移除所有舊的資料，重新導入新的資料
+echo (f)Full: will remove all the old data and re-import the new information
 echo.
-echo (u)更新：將保留所有舊的資料，並且進行更新作業
+echo (u)Update: will keep all the old data and update job
 echo.
-echo (s)省略：跳過此選項
+echo (s)Omitted: skip this option
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p communityprompt=請選擇（預設值-更新）:
+set /p communityprompt=Please choose (default - Updated):
 if /i %communityprompt%==f goto cs_cleanup
 if /i %communityprompt%==u goto cs_upgrade
 if /i %communityprompt%==s goto gs_backup
@@ -630,21 +630,21 @@ goto cs_db_ok
 :cs_cleanup
 call :colors 17
 set cmdline=
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在移除「討論版專用」的資料庫，然後導入新的資料庫...
+echo Removing the "discussion" database, and then import the new database...
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< cs_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
-echo 「討論版專用」的資料庫已被刪除
+echo Forums dedicated database has been deleted
 goto cs_install
 
 :cs_upgrade
 cls
 echo.
-echo 更新「討論版專用」的資料庫結構
+echo Update Forum dedicated database structure
 echo.
 echo @echo off> temp.bat
 if exist cs_errors.log del cs_errors.log
@@ -658,14 +658,14 @@ goto cs_install
 cls
 set cmdline=
 if %full% == 1 (
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation- For:L2JKR GameServer HighFive Alpha
 echo.
-echo 安裝新的「討論版專用」資料庫...
+echo Installation of a new discussion dedicated database...
 echo.
 ) else (
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 更新「討論版專用」資料庫...
+echo Update "discussion dedicated" database...
 echo.
 )
 if %logging% == 0 set output=NUL
@@ -681,9 +681,9 @@ cls
 call :colors 17
 set cmdline=
 set stage=5
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation- For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在備份遊戲伺服器的資料庫...
+echo Database being backed up game servers...
 set cmdline="%mysqldumpPath%" --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> "%backup%\gs_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gs_db_ok
@@ -692,23 +692,23 @@ if %ERRORLEVEL% == 0 goto gs_db_ok
 cls
 set gsdbprompt=y
 call :colors 47
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 備份失敗！
-echo 原因是因為資料庫不存在
-echo 現在可以幫你建立 %gsdb%，或者繼續其它設定
+echo Backup failed!
+echo The reason is because the database does not exist
+echo Can help you create %gsdb%, or continue to other settings
 echo.
-echo 建立遊戲伺服器的資料庫？
+echo Create a database server of the game?
 echo.
-echo (y)確定
+echo (y)Determine
 echo.
-echo (n)取消
+echo (n)Cancel
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p gsdbprompt=請選擇（預設值-確定）:
+set /p gsdbprompt=Please select (default - OK):
 if /i %gsdbprompt%==y goto gs_db_create
 if /i %gsdbprompt%==n goto eof
 if /i %gsdbprompt%==r goto configure
@@ -720,9 +720,9 @@ cls
 call :colors 17
 set stage=6
 set cmdline=
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation- For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在建立遊戲伺服器的資料庫...
+echo Is to create a game server database...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -e "CREATE DATABASE %gsdb%" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gs_db_ok
@@ -732,22 +732,22 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 遊戲伺服器的資料庫建立失敗！
+echo Game server database creation failed!
 echo.
-echo 可能的原因：
-echo 1.輸入的資料錯誤，例如：使用者名稱/使用者密碼/其他相關資料
-echo 2.使用者「%gsuser%」的權限不足
-echo 3.資料庫已存在
+echo Possible reasons:
+echo 1.Input data errors, such as: user name / user password / other relevant information
+echo 2.User "%gsuser%" of insufficient permissions
+echo 3.Existing database
 echo.
-echo 請檢查設定並且修正，或者直接重新設定
+echo Please check the settings and correction or reset
 echo.
-echo (r)重新執行並且進行設定
+echo (r)Re-run and set
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p omfgprompt=請選擇（預設值-退出）:
+set /p omfgprompt=Please choose (default - exit):
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
 goto gs_err2
@@ -756,19 +756,19 @@ goto gs_err2
 cls
 set installtype=u
 call :colors 17
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 遊戲伺服器的資料庫安裝：
+echo Game Server database installation:
 echo.
-echo (f)完整：將移除所有舊的資料，重新導入新的資料
+echo (f)Full: will remove all the old data and re-import the new information
 echo.
-echo (u)更新：將保留所有舊的資料，並且進行更新作業
+echo (u)Update: will keep all the old data and update job
 echo.
-echo (s)省略：跳過此選項
+echo (s)Omitted: skip this option
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p installtype=請選擇（預設值-更新）:
+set /p installtype=Please choose (default - Updated):
 if /i %installtype%==f goto gs_cleanup
 if /i %installtype%==u goto gs_upgrade
 if /i %installtype%==s goto custom_ask
@@ -778,21 +778,21 @@ goto gs_db_ok
 :gs_cleanup
 call :colors 17
 set cmdline=
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 正在移除遊戲伺服器的資料庫，然後導入新的資料庫...
+echo Removing the game server database, and then import the new database...
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< gs_cleanup.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
 echo.
-echo 遊戲資料庫移除完成
+echo Game database Remove
 goto gs_install
 
 :gs_upgrade
 cls
 echo.
-echo 更新遊戲資料庫結構
+echo Update the game database structure
 echo.
 echo @echo off> temp.bat
 if exist gs_errors.log del gs_errors.log
@@ -806,14 +806,14 @@ goto gs_install
 cls
 set cmdline=
 if %full% == 1 (
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 安裝新的遊戲資料庫...
+echo Install the new game database...
 echo.
 ) else (
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 更新遊戲資料庫...
+echo Update the game database...
 echo.
 )
 if %logging% == 0 set output=NUL
@@ -821,25 +821,25 @@ set dest=gs
 for %%i in (..\sql\game\*.sql) do call :dump %%i
 for %%i in (..\sql\game\mods\*.sql) do call :dump %%i
 for %%i in (..\sql\game\custom\*.sql) do call :dump %%i
-for %%i in (..\sql\L2JTW\*.sql) do call :dump %%i
+for %%i in (..\sql\L2JKR\*.sql) do call :dump %%i
 
-echo 完成...
+echo Complete...
 echo.
 set charprompt=y
-set /p charprompt=安裝「技能/物品/職業/NPC說話」中文化: (y) 確定 或 (N) 取消？（預設值-確定）:
+set /p charprompt=Installation skills / items / career / NPC speak in culture: (y) is determined or (N) to cancel? (Default - OK):
 if /i %charprompt%==n goto custom_ask
-for %%i in (..\sql\L2JTW_2\*.sql) do call :dump %%i
-echo 完成...
+for %%i in (..\sql\L2JKR_2\*.sql) do call :dump %%i
+echo Complete...
 echo.
-echo ☆注意：部分系統安裝中文化會失敗，導致遊戲中出現亂碼
-echo 　　　　如果遇到這種情形，請再手動導入 SQL 裡面的
+echo Note: Some systems installed in culture will fail, resulting in game garbled
+echo 　　　　If you encounter this situation, and then manually import SQL inside
 echo 　　　　skill_tw.sql / item_tw.sql / messagetable /
-echo 　　　　auto_chat_text_tw / char_templates_tw 這 5 個 SQL
+echo 　　　　auto_chat_text_kr / char_templates_kr 5 SQL
 goto custom_ask
 
 :dump
 set cmdline=
-if /i %full% == 1 (set action=安裝) else (set action=更新)
+if /i %full% == 1 (set action=Installation) else (set action=Update)
 echo %action% %1>>"%output%"
 echo %action% %~nx1
 if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %1 2^>^>"%output%"
@@ -853,24 +853,24 @@ goto :eof
 cls
 set ntpebcak=c
 call :colors 47
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 出現錯誤：
+echo Error:
 echo %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb%
 echo.
-echo 檔案 %~nx1
+echo File %~nx1
 echo.
-echo 處理方式？
+echo Approach?
 echo.
-echo (l)建立訊息檔案方便查詢
+echo (l)Create a message file and easily accessible
 echo.
-echo (c)繼續
+echo (c)Continue
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p ntpebcak=請選擇（預設值-繼續）:
+set /p ntpebcak=Please select (default - continue):
 if /i %ntpebcak%==c (call :colors 17 & goto :eof)
 if /i %ntpebcak%==l (call :logginon %1 & goto :eof)
 if /i %ntpebcak%==r (call :configure & exit)
@@ -880,7 +880,7 @@ goto omfg2
 :logginon
 cls
 call :colors 17
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 set logging=1
 if %full% == 1 (
   set output=%logdir%\install-%~nx1.log
@@ -888,42 +888,42 @@ if %full% == 1 (
   set output=%logdir%\upgrade-%~nx1.log
 )
 echo.
-echo 建立訊息檔案...
+echo Create a message file...
 echo.
-echo 檔案為「%output%」
+echo File "%output%"
 echo.
-echo 如果此檔案已存在，請進行備份，否則將會覆蓋過去
+echo If this file already exists, backup, otherwise it will overwrite the past
 echo.
 pause
 set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^<..\sql\%1 2^>^>"%output%"
 date /t >"%output%"
 time /t >>"%output%"
 %cmdline%
-echo 建立訊息資料...
+echo Create messages INFORMATION...
 call :colors 17
 set logging=0
 set output=NUL
 goto :eof
 
 :custom_ask
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JTW Datapack Installation - For:L2JKR GameServer HighFive Alpha
 cls
 set cstprompt=y
 echo.
-echo custom 自訂資料表加入資料庫完成
-echo 所有錯誤資訊將放入「custom_errors.log」
+echo custom tables added to the database to complete
+echo All error information will be placed in the "custom_errors.log"
 echo.
-echo 請注意，如果要使這些自訂資料表能夠啟用
-echo 你必須修改 config 的檔案設定
+echo Please note, if you want these custom tables can be enabled
+echo You must modify the config file settings
 echo.
-set /p cstprompt=安裝 custom 自訂資料表: (y) 確定 或 (N) 取消（預設值-確定）:
+set /p cstprompt=Install custom custom tables: (y) determine (N) to cancel (the default - OK):
 if /i %cstprompt%==y goto custom_install
 if /i %cstprompt%==n goto mod_ask
 
 :custom_install
 cls
 echo.
-echo 安裝 custom 自訂內容
+echo Custom install custom content
 echo @echo off> temp.bat
 if exist custom_errors.log del custom_errors.log
 for %%i in (..\sql\game\custom\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.log >> temp.bat
@@ -933,25 +933,25 @@ move custom_errors.log %workdir%
 goto mod_ask
 
 :mod_ask
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 cls
 set cstprompt=y
 echo.
-echo Mod 自訂資料表加入資料庫完成
-echo 所有錯誤資訊將放入「mod_errors.log」
+echo Mod custom tables added to the database to complete
+echo All error information will be placed in the "mod_errors.log"
 echo.
-echo 請注意，如果要使這些自訂資料表能夠啟用
-echo 你必須修改 config 的檔案設定
+echo Please note, if you want these custom tables can be enabled
+echo You must modify the config file settings
 echo.
 echo.
-set /p cstprompt=安裝 Mods 自訂資料表: (y) 確定 或 (N) 取消（預設值-確定）:
+set /p cstprompt=Install Mods custom data tables: (y) determine (N) to cancel (the default - OK):
 if /i %cstprompt%==y goto mod_install
 if /i %cstprompt%==n goto end
 
 :mod_install
 cls
 echo.
-echo 安裝 Mods 自訂內容
+echo Custom content installed Mods
 echo @echo off> temp.bat
 if exist mods_errors.log del mods_errors.log
 for %%i in (..\sql\game\mods\*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> mods_errors.log >> temp.bat
@@ -964,13 +964,13 @@ goto end
 set omfgprompt=q
 call :colors 57
 cls
-title L2JTW Datapack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
 echo.
-echo 執行時出現錯誤：
+echo Execution error:
 echo.
 echo "%cmdline%"
 echo.
-echo 建議檢查一下設定的資料，以確保所有輸入的數值沒有錯誤！
+echo Recommended to check the data set, all input values ​​to ensure there are no errors!
 echo.
 if %stage% == 1 set label=ls_err1
 if %stage% == 2 set label=ls_err2
@@ -979,31 +979,31 @@ if %stage% == 4 set label=cs_err2
 if %stage% == 5 set label=gs_err1
 if %stage% == 6 set label=gs_err2
 echo.
-echo (c)繼續
+echo (c)Continue
 echo.
-echo (r)重新設定
+echo (r)Reconfigure
 echo.
-echo (q)退出
+echo (q)Quit
 echo.
-set /p omfgprompt=請選擇（預設值-退出）:
+set /p omfgprompt=Please choose (default - exit):
 if /i %omfgprompt%==c goto %label%
 if /i %omfgprompt%==r goto configure
 if /i %omfgprompt%==q goto end
 goto omfg
 
 :binaryfind
-if EXIST "%mysqlBinPath%" (echo 找到的 MySQL) else (echo 沒有找到 MySQL，請在下面輸入正確的位置...)
+if EXIST "%mysqlBinPath%" (echo Found MySQL) else (echo Did not find MySQL, please enter the correct location below...)
 goto :eof
 
 :end
 call :colors 17
-title L2JTW DataPack 安裝 - For：L2JTW GameServer HighFive Alpha
+title L2JKR DataPack Installation - For:L2JKR GameServer HighFive Alpha
 cls
 echo.
-echo L2JTW DataPack 安裝程序 - For：L2JTW GameServer HighFive Alpha
-echo (C) 2007-2012 L2JTW DataPack 開發團隊
+echo L2JKR DataPack Installation - For:L2JKR GameServer HighFive Alpha
+echo (C) 2007-2013 L2JKR DataPack Developer Team
 echo.
-echo 感謝使用 L2JTW 伺服器
-echo 相關資訊可以在 http://www.l2jtw.com 查詢到
+echo L2JKR
+echo https://code.google.com/p/l2jkr/
 echo.
 pause
