@@ -131,11 +131,11 @@ REM ------------------------------------------------------
 
 
 REM ##############################################
-REM ## L2JDP Database Installer - (by DrLecter) ##
+REM ## L2JKR Database Installer - (by DrLecter) ##
 REM ##############################################
 REM ## Interactive script setup -  (by TanelTM) ##
 REM ##############################################
-REM Copyright (C) 2012 L2J DataPack
+REM Copyright (C) 2013 L2JKR DataPack
 REM This program is free software; you can redistribute it and/or modify
 REM it under the terms of the GNU General Public License as published by
 REM the Free Software Foundation; either version 3 of the License, or (at
@@ -149,8 +149,7 @@ REM
 REM You should have received a copy of the GNU General Public License along
 REM with this program; if not, write to the Free Software Foundation, Inc.,
 REM 675 Mass Ave, Cambridge, MA 02139, USA. Or contact the Official L2J
-REM DataPack Project at http://www.l2jdp.com, http://www.l2jdp.com/forum or
-REM #l2j @ irc://irc.freenode.net
+REM DataPack Project at https://code.google.com/p/l2jkr/
 
 set config_file=vars.txt
 set config_version=0
@@ -177,21 +176,27 @@ ren vars.bat %config_file%
 call :colors 17
 if /i %config_version% == 2 goto ls_backup
 set upgrade_mode=2
-echo You seem to be the first to use this version of database_installer
-echo However, I found that to install the database profile already exists
-echo Therefore, I will ask you a few questions, and guide you to proceed with the installation
+echo It seems to be the first time you run this version of
+echo database_installer but I found a settings file already.
+echo I'll hopefully ask this questions just once.
 echo.
-echo Update setting options:
+echo Configuration upgrade options:
 echo.
-echo (1) Import & continue to use the old settings: the original old data and update job
+echo (1) Import and continue: I'll read your old settings and
+echo     continue execution, but since no new settings will be
+echo     saved, you'll see this menu again next time.
 echo.
-echo (2) Import & new set: import new data and re-set data
+echo (2) Import and configure: This tool has some new available
+echo     options, you choose the values that fit your needs
+echo     using former settings as a base.
 echo.
-echo (3) Import brand new: all old data will be removed and the import of new information
+echo (3) Ignose stored settings: I'll let you configure me
+echo     with a fresh set of default values as a base.
 echo.
-echo (4) See setting access
+echo (4) View saved settings: See the contents of the config
+echo     file.
 echo.
-echo (5) Quit
+echo (5) Quit: Did you came here by mistake?
 echo.
 set /P upgrade_mode="Enter a number, press Enter (the default value is "%upgrade_mode%):"
 if %upgrade_mode%==1 goto ls_backup
@@ -388,21 +393,22 @@ if %ERRORLEVEL% == 0 goto ls_db_ok
 cls
 set lsdbprompt=y
 call :colors 47
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Login Server DataBase Backup ERROR!
 echo.
-echo Backup failed!
-echo The reason is because the database does not exist
-echo Now can help you establish %lsdb% command to, or continue to other settings
+echo Backup attempt failed! A possible reason for this to
+echo happen, is that your DB doesn't exist yet. I could
+echo try to create %lsdb% for you, or maybe you prefer to
+echo contunue with the Community Server part of this tool.
 echo.
-echo Create a database to login to the server?
+echo ATTEMPT TO CREATE LOGINSERVER DATABASE:
 echo.
-echo (y)Determine
+echo (y) Yes
 echo.
-echo (n)Cancel
+echo (n) No
 echo.
-echo (r)Reconfigure
+echo (r) Reconfigure
 echo.
-echo (q)Quit
+echo (q) Quit
 echo.
 set /p lsdbprompt=Please select (default - OK):
 if /i %lsdbprompt%==y goto ls_db_create
@@ -428,22 +434,26 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Login Server DataBase Creation ERROR!
 echo.
-echo Login to the server database creation failed!
+echo An error occured while trying to create a database for
+echo your login server.
 echo.
 echo Possible reasons:
-echo 1.Input data errors, such as: username / user password / other relevant information
-echo 2.User "%lsuser%" of insufficient permissions
-echo 3.Existing database
+echo 1-You provided innacurate info , check user, password, etc.
+echo 2-User %lsuser% don't have enough privileges for
+echo database creation. Check your MySQL privileges.
+echo 3-Database exists already...?
 echo.
-echo Please check the settings and correction or reset
+echo Unless you're sure that the pending actions of this tool
+echo could work, i'd suggest you to look for correct values
+echo and try this script again later.
 echo.
-echo (c)Continue
+echo (c) Continue running
 echo.
-echo (r)Reconfigure
+echo (r) Reconfigure
 echo.
-echo (q)Quit
+echo (q) Quit now
 echo.
 set /p omfgprompt=Please choose (default - exit):
 if /i %omfgprompt%==c goto cs_backup
@@ -455,17 +465,21 @@ goto ls_err2
 cls
 set loginprompt=u
 call :colors 17
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Login Server DataBase WARNING!
 echo.
-echo Login to the server database installation:
+echo LOGINSERVER DATABASE install type:
 echo.
-echo (f) Full: will remove all the old data and re-import the new information
+echo (f) Full: WARNING! I'll destroy ALL of your existing login
+echo     data.
 echo.
-echo (u) Update: I will try to keep all of the login
+echo (u) Upgrade: I'll do my best to preserve all login data.
 echo.
-echo (s) Omitted: skip this option
+echo (s) Skip: I'll take you to the communityserver database
+echo     installation and upgrade options.
 echo.
-echo (r) Reconfigure
+echo (r) Reconfigure: You'll be able to redefine MySQL path,
+echo     user and database information and start over with
+echo     those fresh values.
 echo.
 echo (q) Quit
 echo.
@@ -542,21 +556,22 @@ if %ERRORLEVEL% == 0 goto cs_db_ok
 cls
 set cbdbprompt=y
 call :colors 47
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Community Server DataBase Backup ERROR!
 echo.
-echo Backup failed!
-echo The reason is because there is no discussion boards dedicated database
-echo Can help you create %cbdb%, or continue to other settings
+echo Backup attempt failed! A possible reason for this to
+echo happen, is that your DB doesn't exist yet. I could
+echo try to create %cbdb% for you, or maybe you prefer to
+echo continue with the GameServer part of this tool.
 echo.
-echo Create a special version of the discussion "database"?
+echo ATTEMPT TO CREATE COMMUNITY SERVER DATABASE:
 echo.
-echo (y)Determine
+echo (y) Yes
 echo.
-echo (n)Cancel
+echo (n) No
 echo.
-echo (r)Reconfigure
+echo (r) Reconfigure
 echo.
-echo (q)Quit
+echo (q) Quit
 echo.
 set /p cbdbprompt=Please select (default - OK):
 if /i %cbdbprompt%==y goto cs_db_create
@@ -582,22 +597,26 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Community Server DataBase Creation ERROR!
 echo.
-echo Forums dedicated database creation failed!
+echo An error occured while trying to create a database for
+echo your Community Server.
 echo.
 echo Possible reasons:
-echo 1.Input data errors, such as: username / user password / other relevant information
-echo 2.Users "%cbuser%" permissions, insufficient
-echo 3.Existing database
+echo 1-You provided innacurate info , check user, password, etc.
+echo 2-User %cbuser% don't have enough privileges for
+echo database creation. Check your MySQL privileges.
+echo 3-Database exists already...?
 echo.
-echo Please check the settings and correction or reset
+echo Unless you're sure that the pending actions of this tool
+echo could work, i'd suggest you to look for correct values
+echo and try this script again later.
 echo.
-echo (c)Continue
+echo (c) Continue running
 echo.
-echo (r)Reconfigure
+echo (r) Reconfigure
 echo.
-echo (q)Quit
+echo (q) Quit now
 echo.
 set /p omfgprompt=Please choose (default - exit):
 if /i %omfgprompt%==c goto gs_backup
@@ -609,19 +628,24 @@ goto cs_err2
 cls
 set communityprompt=u
 call :colors 17
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Community Server DataBase WARNING!
 echo.
-echo Forums dedicated database installation:
+echo COMMUNITY SERVER DATABASE install type:
 echo.
-echo (f)Full: will remove all the old data and re-import the new information
+echo (f) Full: WARNING! I'll destroy ALL of your existing community
+echo     data (i really mean it: mail, forum, memo.. ALL)
 echo.
-echo (u)Update: will keep all the old data and update job
+echo (u) Upgrade: I'll do my best to preserve all of your community
+echo     data.
 echo.
-echo (s)Omitted: skip this option
+echo (s) Skip: I'll take you to the gameserver database
+echo     installation and upgrade options.
 echo.
-echo (r)Reconfigure
+echo (r) Reconfigure: You'll be able to redefine MySQL path,
+echo     user and database information and start over with
+echo     those fresh values.
 echo.
-echo (q)Quit
+echo (q) Quit
 echo.
 set /p communityprompt=Please choose (default - Updated):
 if /i %communityprompt%==f goto cs_cleanup
@@ -696,21 +720,22 @@ if %ERRORLEVEL% == 0 goto gs_db_ok
 cls
 set gsdbprompt=y
 call :colors 47
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Game Server DataBase Backup ERROR!
 echo.
-echo Backup failed!
-echo The reason is because the database does not exist
-echo Can help you create %gsdb%, or continue to other settings
+echo Backup attempt failed! A possible reason for this to
+echo happen, is that your DB doesn't exist yet. I could
+echo try to create %gsdb% for you, but maybe you prefer to
+echo continue with last part of the script.
 echo.
-echo Create a database server of the game?
+echo ATTEMPT TO CREATE GAME SERVER DATABASE?
 echo.
-echo (y)Determine
+echo (y) Yes
 echo.
-echo (n)Cancel
+echo (n) No
 echo.
-echo (r)Reconfigure
+echo (r) Reconfigure
 echo.
-echo (q)Quit
+echo (q) Quit
 echo.
 set /p gsdbprompt=Please select (default - OK):
 if /i %gsdbprompt%==y goto gs_db_create
@@ -736,20 +761,23 @@ if %safe_mode% == 1 goto omfg
 cls
 set omfgprompt=q
 call :colors 47
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Game Server DataBase Creation ERROR!
 echo.
-echo Game server database creation failed!
+echo An error occured while trying to create a database for
+echo your Game Server.
 echo.
 echo Possible reasons:
-echo 1.Input data errors, such as: user name / user password / other relevant information
-echo 2.User "%gsuser%" of insufficient permissions
-echo 3.Existing database
+echo 1-You provided innacurate info, check username, pass, etc.
+echo 2-User %gsuser% don't have enough privileges for
+echo database creation.
+echo 3-Database exists already...?
 echo.
-echo Please check the settings and correction or reset
+echo I'd suggest you to look for correct values and try this
+echo script again later. But you can try to reconfigure it now.
 echo.
-echo (r)Re-run and set
+echo (r) Reconfigure
 echo.
-echo (q)Quit
+echo (q) Quit now
 echo.
 set /p omfgprompt=Please choose (default - exit):
 if /i %omfgprompt%==r goto configure
@@ -760,17 +788,20 @@ goto gs_err2
 cls
 set installtype=u
 call :colors 17
-title L2JKR Datapack Installation - For:L2JKR GameServer HighFive Alpha
+title L2JKR Installer - Game Server DataBase WARNING!
 echo.
-echo Game Server database installation:
+echo GAME SERVER DATABASE install:
 echo.
-echo (f)Full: will remove all the old data and re-import the new information
+echo (f) Full: WARNING! I'll destroy ALL of your existing character
+echo     data (i really mean it: items, pets.. ALL)
 echo.
-echo (u)Update: will keep all the old data and update job
+echo (u) Upgrade: I'll do my best to preserve all of your character
+echo     data.
 echo.
-echo (s)Omitted: skip this option
+echo (s) Skip: We'll get into the last set of questions (cummulative
+echo     updates, custom stuff...)
 echo.
-echo (q)Quit
+echo (q) Quit
 echo.
 set /p installtype=Please choose (default - Updated):
 if /i %installtype%==f goto gs_cleanup
@@ -864,15 +895,19 @@ echo %mysqlPath% -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb%
 echo.
 echo File %~nx1
 echo.
-echo Approach?
+echo What we should do now?
 echo.
-echo (l)Create a message file and easily accessible
+echo (l) Log it: I will create a log for this file, then continue
+echo     with the rest of the list in non-logging mode.
 echo.
-echo (c)Continue
+echo (c) Continue: Let's pretend that nothing happened and continue with
+echo     the rest of the list.
 echo.
-echo (r)Reconfigure
+echo (r) Reconfigure: Perhaps these errors were caused by a typo.
+echo     you can restart from scratch and redefine paths, databases
+echo     and user info again.
 echo.
-echo (q)Quit
+echo (q) Quit now
 echo.
 set /p ntpebcak=Please select (default - continue):
 if /i %ntpebcak%==c (call :colors 17 & goto :eof)
