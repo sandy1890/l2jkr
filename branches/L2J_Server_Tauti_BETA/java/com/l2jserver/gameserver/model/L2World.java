@@ -52,9 +52,13 @@ public final class L2World {
 	public static final int GRACIA_MAX_Z = 6105;
 	public static final int GRACIA_MIN_Z = -895;
 	
+	//@formatter:off
 	/*
-	 * biteshift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 12 divides one tile to 8x8 regions
+	 * biteshift, defines number of regions
+	 * note, shifting by 15 will result in regions corresponding to map tiles
+	 * shifting by 12 divides one tile to 8x8 regions
 	 */
+	//@formatter:on
 	public static final int SHIFT_BY = 12;
 	
 	private static final int TILE_SIZE = 32768;
@@ -120,13 +124,17 @@ public final class L2World {
 			_log.log(Level.WARNING, "--------[L2World] object: " + object + " already exist in OID map!--------");
 			_log.log(Level.WARNING, "New object: " + StringUtil.getTraceString(Thread.currentThread().getStackTrace()));
 			_log.log(Level.WARNING, "----------------- Previous Put -----------------");
-			_log.log(Level.WARNING, "Previous: " + _allObjectsDebug.get(object.getObjectId()));
+			if (Config.DEBUG) {
+				_log.log(Level.WARNING, "Previous: " + _allObjectsDebug.get(object.getObjectId()));
+			}
 			_log.log(Level.WARNING, "---------------------- End ---------------------");
 			return;
 		}
 		
 		_allObjects.put(object.getObjectId(), object);
-		_allObjectsDebug.put(object.getObjectId(), StringUtil.getTraceString(Thread.currentThread().getStackTrace()));
+		if (Config.DEBUG) {
+			_allObjectsDebug.put(object.getObjectId(), StringUtil.getTraceString(Thread.currentThread().getStackTrace()));
+		}
 	}
 	
 	/**
@@ -139,14 +147,18 @@ public final class L2World {
 	 */
 	public void removeObject(L2Object object) {
 		_allObjects.remove(object.getObjectId()); // suggestion by whatev
-		_allObjectsDebug.remove(object.getObjectId());
+		if (Config.DEBUG) {
+			_allObjectsDebug.remove(object.getObjectId());
+		}
 	}
 	
 	public void removeObjects(List<L2Object> list) {
 		for (L2Object o : list) {
 			if (o != null) {
 				_allObjects.remove(o.getObjectId()); // suggestion by whatev
-				_allObjectsDebug.remove(o.getObjectId());
+				if (Config.DEBUG) {
+					_allObjectsDebug.remove(o.getObjectId());
+				}
 			}
 		}
 	}
@@ -154,7 +166,9 @@ public final class L2World {
 	public void removeObjects(L2Object[] objects) {
 		for (L2Object o : objects) {
 			_allObjects.remove(o.getObjectId()); // suggestion by whatev
-			_allObjectsDebug.remove(o.getObjectId());
+			if (Config.DEBUG) {
+				_allObjectsDebug.remove(o.getObjectId());
+			}
 		}
 	}
 	
@@ -328,11 +342,13 @@ public final class L2World {
 				continue;
 			}
 			
+			//@formatter:off
 			// Add the object in L2ObjectHashSet(L2Object) _knownObjects of the visible L2Character according to conditions :
-			// - L2Character is visible
-			// - object is not already known
-			// - object is in the watch distance
+			//   - L2Character is visible
+			//   - object is not already known
+			//   - object is in the watch distance
 			// If L2Object is a L2PcInstance, add L2Object in L2ObjectHashSet(L2PcInstance) _knownPlayer of the visible L2Character
+			//@formatter:on
 			visible.getKnownList().addKnownObject(object);
 			
 			// Add the visible L2Object in L2ObjectHashSet(L2Object) _knownObjects of the object according to conditions
