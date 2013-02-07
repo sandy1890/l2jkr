@@ -93,6 +93,8 @@ public abstract class DocumentParser {
 			return;
 		}
 		parseDocument();
+		_currentFile = null;
+		_currentDocument = null;
 	}
 	
 	/**
