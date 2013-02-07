@@ -440,11 +440,11 @@ for gs in $(ls ../sql/game/*.sql);do
 	echo "Installing GameServer table : $gs"
 	$MYG < $gs
 done
-for gs in $(ls ../sql/L2JTW/*.sql);do
+for gs in $(ls ../sql/L2JKR/*.sql);do
 	echo "Installing GameServer table : $gs"
 	$MYG < $gs
 done
-for gs in $(ls ../sql/L2JTW_2/*.sql);do
+for gs in $(ls ../sql/L2JKR_2/*.sql);do
 	echo "Installing GameServer table : $gs"
 	$MYG < $gs
 done
@@ -516,17 +516,17 @@ finish
 
 finish(){
 clear
-echo "L2JDP Database Installer 2012"
+echo "L2JDP Database Installer 2013"
 echo ""
-echo "(C) 2004-2012 L2J DataPack Team"
-echo "L2JDP Database Installer comes with ABSOLUTELY NO WARRANTY"
+echo "(C) 2004-2013 L2JKR DataPack Team"
+echo "L2JKRDP Database Installer comes with ABSOLUTELY NO WARRANTY"
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; See the file gpl.txt for further"
 echo "details."
 echo ""
 echo "Thanks for using our software."
-echo "visit http://www.l2jdp.com for more info about"
-echo "the L2J DataPack Project."
+echo "visit https://code.google.com/p/l2jkr/ for more info about"
+echo "the L2JKR DataPack Project."
 exit 0
 }
 
@@ -535,9 +535,9 @@ load_config $1
 MYL="$MYSQLPATH -h $LSDBHOST -u $LSUSER --password=$LSPASS -D $LSDB"
 MYG="$MYSQLPATH -h $GSDBHOST -u $GSUSER --password=$GSPASS -D $GSDB"
 MYC="$MYSQLPATH -h $CBDBHOST -u $CBUSER --password=$CBPASS -D $CBDB"
-# l2jtw add start
+# l2jkr add start
 echo "create database $LSDB;" | $MYSQLPATH -h $LSDBHOST -u $LSUSER --password=$LSPASS
 echo "create database $GSDB;" | $MYSQLPATH -h $GSDBHOST -u $GSUSER --password=$GSPASS
 echo "create database $CBDB;" | $MYSQLPATH -h $CBDBHOST -u $CBUSER --password=$CBPASS
-# l2jtw add end
+# l2jkr add end
 ls_backup
