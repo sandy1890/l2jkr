@@ -31,27 +31,26 @@ import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
  */
 public class TalkingIsland extends Quest {
 	
-	private static final String qn = "TalkingIsland";
 	private static final int[] NPCs =
 	{
-		32972,
-		33123,
-		33180
+		32972, // 판테온
+		33123, // 라이켈
+		33180, // 에 사기라 이동장치
 	};
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(TalkingIsland.class.getName());
 		if (st == null) {
 			st = newQuestState(player);
 		}
 		int npcId = npc.getNpcId();
-		if (npcId == 32972) {
-			if ((player.getClassId().level() == 0) && (player.getLevel() < 21)) {
+		if (npcId == 32972) { // 판테온 일 때
+			if ((player.getClassId().level() > 0) && (player.getLevel() < 21)) {
 				player.sendPacket(new ExShowScreenMessage(1, -1, 2, 0, 0, 0, 1, false, 5000, false, "", NpcStringId.BEGIN_TUTORIAL_QUESTS));
 			}
 			npc.showChatWindow(player);
-		} else if (npcId == 33123) {
+		} else if (npcId == 33123) { // 라이켈 - 퀘스트가 시작되었을때
 			if (st.getState() == State.STARTED) {
 				npc.showChatWindow(player, 1);
 			} else {
@@ -59,22 +58,26 @@ public class TalkingIsland extends Quest {
 			}
 		}
 		return null;
-		
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public TalkingIsland(int questId, String name, String descr) {
 		super(questId, name, descr);
 		for (int i : NPCs) {
 			addStartNpc(i);
 			addTalkId(i);
 		}
-		addFirstTalkId(32972);
-		addFirstTalkId(33123);
+		addFirstTalkId(32972); // 판테온
+		addFirstTalkId(33123); // 라이켈
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(TalkingIsland.class.getName());
 		if (st == null) {
 			st = newQuestState(player);
 		}
@@ -90,7 +93,7 @@ public class TalkingIsland extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new TalkingIsland(-1, qn, "custom");
+		new TalkingIsland(-1, TalkingIsland.class.getName(), "custom");
 	}
 	
 }
