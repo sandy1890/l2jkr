@@ -30,7 +30,7 @@ public final class TutorialShowHtml extends L2GameServerPacket {
 	@Override
 	protected void writeImpl() {
 		writeC(166);
-		writeD(0); // rocknow-God-Awaking
+		writeD(2); // rocknow-God-Awaking
 		writeS(_html);
 	}
 	
