@@ -445,8 +445,7 @@ public class EnterWorld extends L2GameClientPacket {
 			PetitionManager.getInstance().checkPetitionMessages(activeChar);
 		}
 		
-		if (activeChar.isAlikeDead()) // dead or fake dead
-		{
+		if (activeChar.isAlikeDead()) { // dead or fake dead
 			// no broadcast needed since the player will already spawn dead to others
 			sendPacket(new Die(activeChar));
 		}
@@ -455,14 +454,9 @@ public class EnterWorld extends L2GameClientPacket {
 		
 		sendPacket(new SkillCoolTime(activeChar));
 		sendPacket(new ExVoteSystemInfo(activeChar));
-		// l2jtw add start
-		boolean skip = true;
-		if (!skip) {
-			sendPacket(new ExNevitAdventEffect(0)); // Add NevitAdvent by pmq
-			sendPacket(new ExNevitAdventPointInfoPacket(activeChar)); // Add NevitAdvent by pmq
-			sendPacket(new ExNevitAdventTimeChange(activeChar.getAdventTime(), false)); // Add NevitAdvent by pmq
-		}
-		// l2jtw add end
+		sendPacket(new ExNevitAdventEffect(0)); // Add NevitAdvent by pmq
+		sendPacket(new ExNevitAdventPointInfoPacket(activeChar)); // Add NevitAdvent by pmq
+		sendPacket(new ExNevitAdventTimeChange(activeChar.getAdventTime(), false)); // Add NevitAdvent by pmq
 		sendPacket(new ExShowContactList(activeChar));
 		
 		for (L2ItemInstance i : activeChar.getInventory().getItems()) {
@@ -571,7 +565,6 @@ public class EnterWorld extends L2GameClientPacket {
 	 */
 	private void engage(L2PcInstance cha) {
 		int _chaid = cha.getObjectId();
-		
 		for (Couple cl : CoupleManager.getInstance().getCouples()) {
 			if ((cl.getPlayer1Id() == _chaid) || (cl.getPlayer2Id() == _chaid)) {
 				if (cl.getMaried()) {
@@ -601,9 +594,12 @@ public class EnterWorld extends L2GameClientPacket {
 				L2PcInstance partner = L2World.getInstance().getPlayer(objId);
 				
 				if (partner != null) {
+					//@formatter:off
 					/*
-					 * Move To MessageTable For L2JTW partner.sendMessage("Your Partner has logged in.");
-					 */
+					Move To MessageTable For L2JTW
+					partner.sendMessage("Your Partner has logged in.");
+					*/
+					//@formatter:on
 					partner.sendMessage(235);
 				}
 				
@@ -637,7 +633,6 @@ public class EnterWorld extends L2GameClientPacket {
 	private void notifySponsorOrApprentice(L2PcInstance activeChar) {
 		if (activeChar.getSponsor() != 0) {
 			L2PcInstance sponsor = L2World.getInstance().getPlayer(activeChar.getSponsor());
-			
 			if (sponsor != null) {
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
 				msg.addString(activeChar.getName());
@@ -645,7 +640,6 @@ public class EnterWorld extends L2GameClientPacket {
 			}
 		} else if (activeChar.getApprentice() != 0) {
 			L2PcInstance apprentice = L2World.getInstance().getPlayer(activeChar.getApprentice());
-			
 			if (apprentice != null) {
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN);
 				msg.addString(activeChar.getName());
@@ -669,7 +663,6 @@ public class EnterWorld extends L2GameClientPacket {
 	
 	private void loadTutorial(L2PcInstance player) {
 		QuestState qs = player.getQuestState("255_Tutorial");
-		
 		if (qs != null) {
 			qs.getQuest().notifyEvent("UC", null, player);
 		}

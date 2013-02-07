@@ -22,13 +22,21 @@ package com.l2jserver.gameserver.network.serverpackets;
  * @author mochitto Format: (ch)cd c: state 0 - pause 1 - started d: left time in ms max is 16000 its 4m and state is automatically changed to quit
  */
 public class ExNevitAdventTimeChange extends L2GameServerPacket {
+	
 	private static final String _S__FE_E1_EXNAVITADVENTTIMECHANGE = "[S] FE:E1 ExNavitAdventTimeChange";
 	private final boolean _paused;
 	private final int _time;
 	
+	//@formatter:off
 	/*
-	 * //rocknow-God-Awaking-Start public ExNevitAdventTimeChange(int time) { _time = time > 240000 ? 240000 : time; _paused = _time < 1; } //rocknow-God-Awaking-End
-	 */
+	//rocknow-God-Awaking-Start
+	public ExNevitAdventTimeChange(int time) {
+		_time = time > 240000 ? 240000 : time;
+		_paused = _time < 1;
+	}
+	//rocknow-God-Awaking-End
+	*/
+	//@formatter:on
 	
 	// Add NevitAdvent by pmq Start
 	public ExNevitAdventTimeChange(int time, boolean paused) {
@@ -41,7 +49,7 @@ public class ExNevitAdventTimeChange extends L2GameServerPacket {
 	@Override
 	protected void writeImpl() {
 		writeC(0xFE);
-		writeH(0xE1);
+		writeH(0xE4); // Fix by rocknow
 		writeC(_paused ? 0x01 : 0x00);
 		writeD(_time); // time in ms (16000 = 4mins = state quit)
 	}
@@ -50,4 +58,5 @@ public class ExNevitAdventTimeChange extends L2GameServerPacket {
 	public String getType() {
 		return _S__FE_E1_EXNAVITADVENTTIMECHANGE;
 	}
+	
 }

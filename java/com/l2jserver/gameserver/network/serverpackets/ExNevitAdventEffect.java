@@ -19,9 +19,15 @@
 package com.l2jserver.gameserver.network.serverpackets;
 
 /**
- * @author mochitto Format: (ch)d d: time to left effect in seconds
+ * <pre>
+ * @author mochitto
+ * 
+ * Format: (ch)d
+ * d: time to left effect in seconds
+ * </pre>
  */
 public class ExNevitAdventEffect extends L2GameServerPacket {
+	
 	private static final String _S__FE_E0_EXNAVITADVENTEFFECT = "[S] FE:E0 ExNavitAdventEffect";
 	private final int _timeLeft;
 	
@@ -32,7 +38,7 @@ public class ExNevitAdventEffect extends L2GameServerPacket {
 	@Override
 	protected void writeImpl() {
 		writeC(0xFE);
-		writeH(0xE0);
+		writeH(0xE3); // Fix by rocknow
 		writeD(_timeLeft);
 	}
 	
@@ -40,4 +46,5 @@ public class ExNevitAdventEffect extends L2GameServerPacket {
 	public String getType() {
 		return _S__FE_E0_EXNAVITADVENTEFFECT;
 	}
+	
 }
