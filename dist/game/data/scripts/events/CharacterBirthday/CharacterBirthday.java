@@ -27,34 +27,36 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * 캐릭터 생성일 생일 도우미
  * @author Gnacik. Updated to H5 by Nyaran
  */
 public class CharacterBirthday extends Quest {
 	
-	private static final int _npc = 32600;
-	private static int _spawns = 0;
+	private static final int NPC = 32600; // 알레그리아
 	
-	private final static int[] _gk =
+	private static int SPAWNS = 0;
+	
+	private final static int[] GATE_KEEPER =
 	{
-		30006,
-		30059,
-		30080,
-		30134,
-		30146,
-		30177,
-		30233,
-		30256,
-		30320,
-		30540,
-		30576,
-		30836,
-		30848,
-		30878,
-		30899,
-		31275,
-		31320,
-		31964,
-		32163
+		30006, // 밀리아 - 말하는 섬 마을 게이트키퍼
+		30059, // 트리시아
+		30080, // 크라비아
+		30134, // 텔레포트 장치
+		30146, // 텔레포트 장치
+		30177, // 발렌티나
+		30233, // 에스메랄다
+		30256, // 베라돈나
+		30320, // 리클린
+		30540, // 텔레포트 장치
+		30576, // 텔레포트 장치
+		30836, // 미네베아
+		30848, // 엘리자베스
+		30878, // 안젤리나
+		30899, // 플라우엔
+		31275, // 타티아나
+		31320, // 일리야나
+		31964, // 빌리아
+		32163, // 텔레포트 장치
 	};
 	
 	/**
@@ -64,9 +66,9 @@ public class CharacterBirthday extends Quest {
 	 */
 	public CharacterBirthday(int questId, String name, String descr) {
 		super(questId, name, descr);
-		addStartNpc(_npc);
-		addTalkId(_npc);
-		for (int id : _gk) {
+		addStartNpc(NPC);
+		addTalkId(NPC);
+		for (int id : GATE_KEEPER) {
 			addStartNpc(id);
 			addTalkId(id);
 		}
@@ -76,21 +78,19 @@ public class CharacterBirthday extends Quest {
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		
 		if (event.equalsIgnoreCase("despawn_npc")) {
 			npc.doDie(player);
-			_spawns--;
-			
+			SPAWNS--;
 			htmltext = null;
 		} else if (event.equalsIgnoreCase("change")) {
-			// Change Hat
+			// 모자 변경
 			if (st.hasQuestItems(10250)) {
-				st.takeItems(10250, 1); // Adventurer Hat (Event)
-				st.giveItems(21594, 1); // Birthday Hat
-				htmltext = null; // FIXME: Probably has html
+				st.takeItems(10250, 1); // 탐험가 모자 - 이벤트
+				st.giveItems(21594, 1); // 생일 모자
+				htmltext = null;
 				// Despawn npc
 				npc.doDie(player);
-				_spawns--;
+				SPAWNS--;
 			} else {
 				htmltext = "32600-nohat.htm";
 			}
@@ -100,21 +100,19 @@ public class CharacterBirthday extends Quest {
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player) {
-		if (_spawns >= 3) {
+		if (SPAWNS >= 3) {
 			return "busy.htm";
 		}
-		
 		QuestState st = player.getQuestState(getName());
 		if (st == null) {
 			st = newQuestState(player);
 		}
-		
 		if (!Util.checkIfInRange(10, npc, player, true)) {
 			L2Npc spawned = st.addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
 			player.sendPacket(new PlaySound(1, "HB01", 0, 0, 0, 0, 0));
 			st.setState(State.STARTED);
 			st.startQuestTimer("despawn_npc", 180000, spawned);
-			_spawns++;
+			SPAWNS++;
 		} else {
 			return "tooclose.htm";
 		}
@@ -122,7 +120,7 @@ public class CharacterBirthday extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new CharacterBirthday(-1, "CharacterBirthday", "events");
+		new CharacterBirthday(-1, CharacterBirthday.class.getName(), "events");
 	}
 	
 }
