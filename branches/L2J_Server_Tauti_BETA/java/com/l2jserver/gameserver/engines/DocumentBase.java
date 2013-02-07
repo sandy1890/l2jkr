@@ -132,7 +132,7 @@ public abstract class DocumentBase {
 	
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
-	private final File _file;
+	private File _file;
 	protected Map<String, String[]> _tables;
 	
 	protected DocumentBase(File pFile) {
@@ -157,6 +157,8 @@ public abstract class DocumentBase {
 			_log.log(Level.SEVERE, "Error in file " + _file, e);
 			return null;
 		}
+		_file = null;
+		_tables = null;
 		return doc;
 	}
 	
