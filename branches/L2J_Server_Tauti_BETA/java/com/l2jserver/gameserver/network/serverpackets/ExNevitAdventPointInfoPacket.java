@@ -22,15 +22,25 @@ import com.l2jserver.gameserver.datatables.LovecTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * @author mochitto Format: (ch)d d: points - max 7200 is 100%
+ * <pre>
+ * @author mochitto
+ * 
+ * Format: (ch)d
+ * d: points - max 7200 is 100%
+ * </pre>
  */
 public class ExNevitAdventPointInfoPacket extends L2GameServerPacket {
+	
 	private static final String _S__FE_DF_EXNAVITADVENTPOINTINFOPACKET = "[S] FE:DF ExNavitAdventPointInfoPacket";
 	private final int _points;
 	
+	//@formatter:off
 	/*
-	 * public ExNevitAdventPointInfoPacket(int points) { _points = points; }
-	 */
+	public ExNevitAdventPointInfoPacket(int points) {
+		_points = points;
+	}
+	*/
+	//@formatter:on
 	
 	// Add NevitAdvent by pmq Start
 	public ExNevitAdventPointInfoPacket(L2PcInstance player) {
@@ -42,7 +52,7 @@ public class ExNevitAdventPointInfoPacket extends L2GameServerPacket {
 	@Override
 	protected void writeImpl() {
 		writeC(0xFE);
-		writeH(0xDF);
+		writeH(0xE2); // Fix by rocknow
 		writeD(_points); // 72 = 1%
 	}
 	
@@ -50,4 +60,5 @@ public class ExNevitAdventPointInfoPacket extends L2GameServerPacket {
 	public String getType() {
 		return _S__FE_DF_EXNAVITADVENTPOINTINFOPACKET;
 	}
+	
 }
