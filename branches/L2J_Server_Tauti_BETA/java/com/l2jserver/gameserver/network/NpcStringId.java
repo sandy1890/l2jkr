@@ -36,6 +36,8 @@ import org.w3c.dom.Node;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * NpcStringId implementation, based on SystemMessageId class
  * @author mrTJO
@@ -21611,7 +21613,7 @@ public final class NpcStringId {
 	 * Array containing all NpcStringId<br>
 	 * Important: Always initialize with a length of the highest NpcStringId + 1!!!
 	 */
-	private static NpcStringId[] VALUES;
+	// private static NpcStringId[] VALUES;
 	
 	static {
 		HELLO_I_AM_S1_YOU_ARE_S2_RIGHT_HEHEHE = new NpcStringId(1);
@@ -25214,9 +25216,11 @@ public final class NpcStringId {
 		buildFastLookupTable();
 	}
 	
+	static TIntObjectHashMap<NpcStringId> nsIds;
+	
 	private static final void buildFastLookupTable() {
 		final Field[] fields = NpcStringId.class.getDeclaredFields();
-		final ArrayList<NpcStringId> nsIds = new ArrayList<>(fields.length);
+		nsIds = new TIntObjectHashMap<>(fields.length);
 		
 		int maxId = 0, mod;
 		NpcStringId nsId;
@@ -25228,17 +25232,11 @@ public final class NpcStringId {
 					nsId.setName(field.getName());
 					nsId.setParamCount(parseMessageParameters(field.getName()));
 					maxId = Math.max(maxId, nsId.getId());
-					nsIds.add(nsId);
+					nsIds.put(nsId.getId(), nsId);
 				} catch (final Exception e) {
 					_log.log(Level.WARNING, "NpcStringId: Failed field access for '" + field.getName() + "'", e);
 				}
 			}
-		}
-		
-		VALUES = new NpcStringId[maxId + 1];
-		for (int i = nsIds.size(); i-- > 0;) {
-			nsId = nsIds.get(i);
-			VALUES[nsId.getId()] = nsId;
 		}
 	}
 	
@@ -25264,11 +25262,7 @@ public final class NpcStringId {
 	}
 	
 	private static final NpcStringId getNpcStringIdInternal(final int id) {
-		if ((id < 0) || (id >= VALUES.length)) {
-			return null;
-		}
-		
-		return VALUES[id];
+		return nsIds.get(id);
 	}
 	
 	public static final NpcStringId getNpcStringId(final String name) {
@@ -25280,7 +25274,7 @@ public final class NpcStringId {
 	}
 	
 	public static final void reloadLocalisations() {
-		for (final NpcStringId nsId : VALUES) {
+		for (final NpcStringId nsId : nsIds.values()) {
 			if (nsId != null) {
 				nsId.removeAllLocalisations();
 			}
