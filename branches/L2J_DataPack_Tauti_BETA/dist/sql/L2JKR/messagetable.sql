@@ -2124,12 +2124,12 @@ INSERT INTO `messagetable` VALUES
 
 (693, 'cn', '', '习得 ; 种新技能！', 'L2PcInstance.java'),
 (693, 'en', '', 'You have learned ; new skills.', 'L2PcInstance.java'),
-(693, 'ko', '', 'You have learned ; new skills.', 'L2PcInstance.java'),
+(693, 'ko', '', ';개 새로운 스킬을 습득했습니다.', 'L2PcInstance.java'),
 (693, 'tw', '', '習得 ; 種新技能！', 'L2PcInstance.java'),
 
 (694, 'cn', '坐下时无法使用技能！', '', 'L2PcInstance.java'),
 (694, 'en', 'Cannot sit while casting', '', 'L2PcInstance.java'),
-(694, 'ko', 'Cannot sit while casting', '', 'L2PcInstance.java'),
+(694, 'ko', '캐스팅하는 동안 앉을 수 없습니다', '', 'L2PcInstance.java'),
 (694, 'tw', '坐下時無法使用技能！', '', 'L2PcInstance.java'),
 
 (695, 'cn', '一股未知的黑暗力量让脚发抖起来，导致无法站起。', '', 'L2PcInstance.java'),
@@ -5439,7 +5439,7 @@ INSERT INTO `messagetable` VALUES
 
 (2000, 'cn', '', '没有找到这个技能的资料，技能ID:「;」等级:「;」\n请管理者删除 skillTrees 资料表里面的这个学习技能ID\n和删除资料库 character_skills 里面的这个已学习技能ID\n', 'SkillTable.java'),
 (2000, 'en', '', 'No skill info found for skill id ; and skill level ;.', 'SkillTable.java'),
-(2000, 'ko', '', 'No skill info found for skill id ; and skill level ;.', 'SkillTable.java'),
+(2000, 'ko', '', '; 스킬 ID를 찾을 수 없습니다. 스킬 레벨: ;.', 'SkillTable.java'),
 (2000, 'tw', '', '沒有找到這個技能的資料，技能ID:「;」等級:「;」\n請管理者刪除 skillTrees 資料夾裡面的這個學習技能ID\n和刪除資料庫 character_skills 裡面的這個已學習技能ID\n ', 'SkillTable.java'),
 
 (2001, 'cn', '', ': 技能ID:「;」等级:「;」的资料并不存在。「;」载入失败\n', 'RequestAcquireSkillInfo.java'),
