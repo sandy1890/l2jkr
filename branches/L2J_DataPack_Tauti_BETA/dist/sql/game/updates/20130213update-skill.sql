@@ -1,3 +1,4 @@
+SET NAMES UTF8;
 UPDATE `skill` SET `name` = TRIM('파워 스트라이크             ') WHERE `skill_id` = 3;
 UPDATE `skill` SET `name` = TRIM('대시              ') WHERE `skill_id` = 4;
 UPDATE `skill` SET `name` = TRIM('모탈 블로우             ') WHERE `skill_id` = 16;
