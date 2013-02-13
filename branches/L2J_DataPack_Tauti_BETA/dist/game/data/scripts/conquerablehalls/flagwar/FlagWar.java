@@ -405,14 +405,13 @@ public abstract class FlagWar extends ClanHallSiegeEngine {
 		
 		// Schedule open doors closement and siege start in 2 minutes
 		ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
-			@SuppressWarnings("synthetic-access")
 			@Override
 			public void run() {
 				for (int door : OUTTER_DOORS_TO_OPEN) {
 					_hall.openCloseDoor(door, false);
 				}
 				_hall.getZone().banishNonSiegeParticipants();
-				FlagWar.super.startSiege();
+				startSiege();
 			}
 		}, 300000);
 	}
