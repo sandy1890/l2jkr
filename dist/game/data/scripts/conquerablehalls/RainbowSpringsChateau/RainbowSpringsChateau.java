@@ -177,53 +177,54 @@ public class RainbowSpringsChateau extends Quest {
 		}
 	}
 	
-	private static final String qn = "RainbowSpringsChateau";
-	
 	private static final int RAINBOW_SPRINGS = 62;
 	
-	private static final int WAR_DECREES = 8034;
-	private static final int RAINBOW_NECTAR = 8030;
-	private static final int RAINBOW_MWATER = 8031;
-	private static final int RAINBOW_WATER = 8032;
-	private static final int RAINBOW_SULFUR = 8033;
+	// 아이템
+	private static final int WAR_DECREES = 8034; // 온천 아지트전 참가증
+	private static final int RAINBOW_NECTAR = 8030; // 온천 넥타
+	private static final int RAINBOW_MWATER = 8031; // 온천 광천수
+	private static final int RAINBOW_WATER = 8032; // 온천 광천수
+	private static final int RAINBOW_SULFUR = 8033; // 온천 유황
 	
-	private static final int MESSENGER = 35604;
-	private static final int CARETAKER = 35603;
-	private static final int CHEST = 35593;
-	
+	// NPCs
+	private static final int MESSENGER = 35604; // 전령
+	private static final int CARETAKER = 35603; // 입장 관리인
+	private static final int CHEST = 35593; // 보물 상자
 	private static final int[] GOURDS =
 	{
-		35588,
-		35589,
-		35590,
-		35591
+		35588, // 온천 대박
+		35589, // 온천 대박
+		35590, // 온천 대박
+		35591, // 온천 대박
 	};
+	
 	private static L2Spawn[] _gourds = new L2Spawn[4];
 	
+	// NPCs
 	private static final int[] YETIS =
 	{
-		35596,
-		35597,
-		35598,
-		35599
+		35596, // 온천장 예티
+		35597, // 온천장 예티
+		35598, // 온천장 예티
+		35599, // 온천장 예티
 	};
 	
 	//@formatter:off
 	private static final int[][] ARENAS =
 	{
-		{ 151562, -127080, -2214 }, // Arena 1
-		{ 153141, -125335, -2214 }, // Arena 2
-		{ 153892, -127530, -2214 }, // Arena 3
-		{ 155657, -125752, -2214 }, // Arena 4
+		{ 151562, -127080, -2214 }, // 경기장 1
+		{ 153141, -125335, -2214 }, // 경기장 2
+		{ 153892, -127530, -2214 }, // 경기장 3
+		{ 155657, -125752, -2214 }, // 경기장 4
 	};
 	//@formatter:on
 	
 	protected static final int[] ARENA_ZONES =
 	{
-		112081,
-		112082,
-		112083,
-		112084
+		112081, // 경기장 존
+		112082, // 경기장 존
+		112083, // 경기장 존
+		112084, // 경기장 존
 	};
 	
 	private static final String[] _textPassages =
@@ -710,10 +711,10 @@ public class RainbowSpringsChateau extends Quest {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement;
 			if (remove) {
-				statement = con.prepareStatement("DELETE FROM rainbowsprings_attacker_list WHERE clanId = ?");
+				statement = con.prepareStatement("DELETE FROM `rainbowsprings_attacker_list` WHERE `clanId` = ?");
 				statement.setInt(1, clanId);
 			} else {
-				statement = con.prepareStatement("INSERT INTO rainbowsprings_attacker_list VALUES (?,?)");
+				statement = con.prepareStatement("INSERT INTO `rainbowsprings_attacker_list` VALUES (?,?)");
 				statement.setInt(1, clanId);
 				statement.setLong(2, count);
 			}
@@ -730,7 +731,7 @@ public class RainbowSpringsChateau extends Quest {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT * FROM rainbowsprings_attacker_list");
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM `rainbowsprings_attacker_list`");
 			ResultSet rset = statement.executeQuery();
 			while (rset.next()) {
 				int clanId = rset.getInt("clan_id");
@@ -791,7 +792,7 @@ public class RainbowSpringsChateau extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new RainbowSpringsChateau(-1, qn, "conquerablehalls");
+		new RainbowSpringsChateau(-1, RainbowSpringsChateau.class.getName(), "conquerablehalls");
 	}
 	
 }
