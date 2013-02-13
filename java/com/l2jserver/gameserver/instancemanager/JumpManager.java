@@ -1,27 +1,22 @@
 /*
- * Copyright (C) 2004-2013 L2J Server
- * 
- * This file is part of L2J Server.
- * 
- * L2J Server is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * L2J Server is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2jserver.gameserver.instancemanager;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -47,141 +42,194 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author ALF
  */
 
-public class JumpManager {
-	
+public class JumpManager
+{
 	private static final Logger _log = Logger.getLogger(JumpManager.class.getName());
-	
-	private final TIntObjectHashMap<List<JumpNode>> _routes = new TIntObjectHashMap<>();
+	private final TIntObjectHashMap<Track> _tracks = new TIntObjectHashMap<>();
 	private final Map<String, Integer> _zoneRoutesList = new HashMap<>();
 	
-	private JumpManager() {
+	public class Track extends TIntObjectHashMap<JumpWay>
+	{
+	}
+	
+	public class JumpWay extends ArrayList<JumpNode>
+	{
+		
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+	}
+	
+	public class JumpNode
+	{
+		private final int _x;
+		private final int _y;
+		private final int _z;
+		private final int _next;
+		
+		public JumpNode(int x, int y, int z, int next)
+		{
+			this._x = x;
+			this._y = y;
+			this._z = z;
+			this._next = next;
+		}
+		
+		public int getX()
+		{
+			return _x;
+		}
+		
+		public int getY()
+		{
+			return _y;
+		}
+		
+		public int getZ()
+		{
+			return _z;
+		}
+		
+		public int getNext()
+		{
+			return _next;
+		}
+	}
+	
+	private JumpManager()
+	{
 		load();
 	}
 	
-	public void load() {
+	public void load()
+	{
 		_log.info(getClass().getSimpleName() + ": Initializing");
-		_routes.clear();
+		_tracks.clear();
 		_zoneRoutesList.clear();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/JumpTrack.xml");
 		Document doc = null;
-		if (file.exists()) {
-			try {
+		
+		if (file.exists())
+		{
+			try
+			{
 				doc = factory.newDocumentBuilder().parse(file);
-				Node n = doc.getFirstChild();
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
-					if (d.getNodeName().equals("track")) {
-						List<JumpNode> list = new ArrayList<>();
-						int trackId = Integer.parseInt(d.getAttributes().getNamedItem("trackId").getNodeValue());
-						int maxNum = Integer.parseInt(d.getAttributes().getNamedItem("maxNum").getNodeValue());
-						for (Node r = d.getFirstChild(); r != null; r = r.getNextSibling()) {
-							if (r.getNodeName().equals("jumpLoc")) {
-								NamedNodeMap attrs = r.getAttributes();
-								int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-								int x = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
-								int y = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
-								int z = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
-								list.add(new JumpNode(id, maxNum, x, y, z));
-							}
-						}
-						_routes.put(trackId, list);
-						_zoneRoutesList.put(d.getAttributes().getNamedItem("zone").getNodeValue(), trackId);
-					}
-				}
-			} catch (Exception e) {
+			}
+			catch (Exception e)
+			{
 				_log.log(Level.WARNING, "Could not parse JumpTrack.xml file: " + e.getMessage(), e);
+				return;
+			}
+			Node root = doc.getFirstChild();
+			for (Node t = root.getFirstChild(); t != null; t = t.getNextSibling())
+			{
+				if (t.getNodeName().equals("track"))
+				{
+					Track track = new Track();
+					int trackId = Integer.parseInt(t.getAttributes().getNamedItem("trackId").getNodeValue());
+					String zoneName = t.getAttributes().getNamedItem("zone").getNodeValue();
+					for (Node w = t.getFirstChild(); w != null; w = w.getNextSibling())
+					{
+						if (w.getNodeName().equals("way"))
+						{
+							JumpWay jw = new JumpWay();
+							int wayId = Integer.parseInt(w.getAttributes().getNamedItem("id").getNodeValue());
+							for (Node j = w.getFirstChild(); j != null; j = j.getNextSibling())
+							{
+								if (j.getNodeName().equals("jumpLoc"))
+								{
+									NamedNodeMap attrs = j.getAttributes();
+									int next = Integer.parseInt(attrs.getNamedItem("next").getNodeValue());
+									int x = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
+									int y = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
+									int z = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
+									jw.add(new JumpNode(x, y, z, next));
+								}
+							}
+							track.put(wayId, jw);
+						}
+					}
+					_tracks.put(trackId, track);
+					_zoneRoutesList.put(zoneName, trackId);
+				}
 			}
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " Jump Routes.");
+		_log.info(getClass().getSimpleName() + ": Loaded " + _tracks.size() + " Jump Routes.");
 	}
 	
-	public int getTrackId(L2PcInstance player) {
-		for (L2ZoneType zone : L2World.getInstance().getRegion(player.getX(), player.getY()).getZones()) {
-			if (zone.isCharacterInZone(player) && (zone instanceof L2JumpZone)) {
-				return _zoneRoutesList.get(zone.getName());
+	public int getTrackId(L2PcInstance player)
+	{
+		for (L2ZoneType zone : L2World.getInstance().getRegion(player.getX(), player.getY()).getZones())
+		{
+			if (zone.isCharacterInZone(player) && (zone instanceof L2JumpZone))
+			{
+				Integer i = _zoneRoutesList.get(zone.getName());
+				return i == null ? -1 : i;
 			}
 		}
-		return 0;
+		return -1;
 	}
 	
-	public void StartJump(L2PcInstance player) {
-		if (!player.isInsideZone(L2Character.ZONE_JUMP)) {
+	public JumpWay getJumpWay(int trackId, int wayId)
+	{
+		Track t = _tracks.get(trackId);
+		if (t != null)
+		{
+			return t.get(wayId);
+		}
+		return null;
+	}
+	
+	public void StartJump(L2PcInstance player)
+	{
+		if (!player.isInsideZone(L2Character.ZONE_JUMP))
+		{
 			return;
 		}
-		
 		player.jumpTrackId = getTrackId(player);
-		
-		if (player.jumpTrackId == 0) {
+		if (player.jumpTrackId == -1)
+		{
 			return;
 		}
-		JumpNode n = getRouteForId(player.jumpTrackId).get(0);
-		player.sendPacket(new ExFlyMove(player.getObjectId(), n.getMaxNum(), n.getMoveX(), n.getMoveY(), n.getMoveZ(), n.getRouteId()));
-		player.setXYZ(n.getMoveX(), n.getMoveY(), n.getMoveZ());
-	}
-	
-	public void NextJump(L2PcInstance player, int nextId) {
-		List<JumpNode> jn = getRouteForId(player.jumpTrackId);
-		if ((nextId < 0) || (player.jumpTrackId == 0) || (jn == null) || (nextId >= jn.size())) {
+		JumpWay jw = getJumpWay(player.jumpTrackId, 0);
+		if (jw == null)
+		{
 			return;
 		}
-		JumpNode n = jn.get(nextId);
-		if (n == null) {
+		player.sendPacket(new ExFlyMove(player.getObjectId(), player.jumpTrackId, jw));
+		JumpNode n = jw.get(0); // need fix
+		player.setXYZ(n.getX(), n.getY(), n.getZ()); // need fix
+	}
+	
+	public void NextJump(L2PcInstance player, int nextId)
+	{
+		if (player.jumpTrackId == -1)
+		{
 			return;
 		}
-		player.sendPacket(new ExFlyMove(player.getObjectId(), n.getMaxNum(), n.getMoveX(), n.getMoveY(), n.getMoveZ(), n.getRouteId()));
-		player.setXYZ(n.getMoveX(), n.getMoveY(), n.getMoveZ());
+		
+		JumpWay jw = getJumpWay(player.jumpTrackId, nextId);
+		if (jw == null)
+		{
+			return;
+		}
+		player.sendPacket(new ExFlyMove(player.getObjectId(), player.jumpTrackId, jw));
+		JumpNode n = jw.get(0); // need fix
+		player.setXYZ(n.getX(), n.getY(), n.getZ()); // need fix
 	}
 	
-	public List<JumpNode> getRouteForId(int id) {
-		return _routes.get(id);
-	}
-	
-	public class JumpNode {
-		private final int _id;
-		private final int _maxNum;
-		private final int _moveX;
-		private final int _moveY;
-		private final int _moveZ;
-		
-		public JumpNode(int id, int maxNum, int moveX, int moveY, int moveZ) {
-			super();
-			_id = id;
-			_maxNum = maxNum;
-			_moveX = moveX;
-			_moveY = moveY;
-			_moveZ = moveZ;
-		}
-		
-		public int getRouteId() {
-			return _id;
-		}
-		
-		public int getMoveX() {
-			return _moveX;
-		}
-		
-		public int getMoveY() {
-			return _moveY;
-		}
-		
-		public int getMoveZ() {
-			return _moveZ;
-		}
-		
-		public int getMaxNum() {
-			return _maxNum;
-		}
-	}
-	
-	public static final JumpManager getInstance() {
+	public static final JumpManager getInstance()
+	{
 		return SingletonHolder._instance;
 	}
 	
 	@SuppressWarnings("synthetic-access")
-	private static class SingletonHolder {
+	private static class SingletonHolder
+	{
 		protected static final JumpManager _instance = new JumpManager();
 	}
-	
 }

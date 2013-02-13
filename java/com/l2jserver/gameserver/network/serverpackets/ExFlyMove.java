@@ -18,49 +18,70 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.instancemanager.JumpManager.JumpNode;
+import com.l2jserver.gameserver.instancemanager.JumpManager.JumpWay;
+
 /**
- * Created by IntelliJ IDEA. User: Keiichi Date: 27.05.2011 Time: 12:06:19 To change this template use File | Settings | File Templates.
+ * Created by IntelliJ IDEA.
+ * 
+ * <pre>
+ * User: Keiichi
+ * Date: 27.05.2011
+ * Time: 12:06:19 To change this template use File | Settings | File Templates.
+ * </pre>
  */
 public class ExFlyMove extends L2GameServerPacket {
+	
 	private static final String _S__FE_E7_EXFLYMOVE = "[S] FE:E7 ExFlyMove";
 	
 	int _objId;
-	int _x;
-	int _y;
-	int _z;
-	int _na;
-	int _n;
+	int _trackId;
+	JumpWay _jw;
 	
-	public ExFlyMove(int objid, int na, int x, int y, int z, int n) {
+	/**
+	 * @param objid
+	 * @param trackId
+	 * @param jw
+	 */
+	public ExFlyMove(int objid, int trackId, JumpWay jw) {
 		_objId = objid;
-		_x = x;
-		_y = y;
-		_z = z;
-		_n = n;
-		_na = na;
+		_trackId = trackId;
+		_jw = jw;
 	}
 	
 	@Override
 	protected void writeImpl() {
+		if (_jw == null) {
+			return;
+		}
 		writeC(0xfe);
 		writeH(0xe7);
 		writeD(_objId);
 		
-		writeD(2);
+		if (_jw.size() == 1) {
+			writeD(2);
+			
+		} else {
+			writeD(0);
+		}
 		writeD(0);
-		writeD(_na);
+		writeD(_trackId);
 		
-		writeD(1);
-		writeD(_n);
-		writeD(0);
-		
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		writeD(_jw.size());
+		for (JumpNode n : _jw) {
+			writeD(n.getNext());
+			writeD(0);
+			
+			writeD(n.getX());
+			writeD(n.getY());
+			writeD(n.getZ());
+			
+		}
 	}
 	
 	@Override
 	public String getType() {
 		return _S__FE_E7_EXFLYMOVE;
 	}
+	
 }

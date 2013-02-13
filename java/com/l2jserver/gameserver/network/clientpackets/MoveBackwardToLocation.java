@@ -23,6 +23,8 @@ import java.nio.BufferUnderflowException;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.TaskPriority;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.instancemanager.JumpManager;
+import com.l2jserver.gameserver.instancemanager.JumpManager.JumpWay;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -117,7 +119,10 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
 					activeChar.setTeleMode(0);
 				}
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), 1, _targetX, _targetY, _targetZ, -1));
+				// activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), 1, _targetX, _targetY, _targetZ, -1));
+				JumpWay jw = JumpManager.getInstance().new JumpWay();
+				jw.add(JumpManager.getInstance().new JumpNode(_targetX, _targetY, _targetZ, -1));
+				activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), -1, jw));
 				activeChar.setXYZ(_targetX, _targetY, _targetZ);
 				return;
 			}
@@ -140,6 +145,14 @@ public class MoveBackwardToLocation extends L2GameClientPacket {
 				return;
 			}
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(_targetX, _targetY, _targetZ, 0));
+			
+			//@formatter:off
+			/*
+			if (activeChar.getParty() != null) {
+				activeChar.getParty().broadcastToPartyMembers(activeChar, new PartyMemberPosition(activeChar));
+			}
+			*/
+			//@formatter:on
 		}
 	}
 	
