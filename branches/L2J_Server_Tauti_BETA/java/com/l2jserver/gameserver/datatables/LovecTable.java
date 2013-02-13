@@ -65,7 +65,7 @@ public class LovecTable {
 	
 	private final FastMap<Integer, RecoState> recommends = new FastMap<>();
 	
-	private LovecTable() {
+	protected LovecTable() {
 		load();
 	}
 	
@@ -189,7 +189,6 @@ public class LovecTable {
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 		protected static final LovecTable _instance = new LovecTable();
 	}
