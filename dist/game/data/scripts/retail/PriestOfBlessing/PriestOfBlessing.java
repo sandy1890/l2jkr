@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * 축복의 신관 (보너스 경험치)
  * @author Gnacik
  */
 public class PriestOfBlessing extends Quest {
@@ -37,12 +38,13 @@ public class PriestOfBlessing extends Quest {
 	private static boolean _spawned = false;
 	
 	// NPC
-	private static final int _priest = 32783;
+	private static final int _priest = 32783; // 축복의 신관
 	
 	// Prices
 	private static final int _price_voice = 100000;
 	
 	private static final int _nevit_voice = 17094;
+	
 	private static final int[] _prices_hourglass =
 	{
 		4000,
@@ -53,165 +55,41 @@ public class PriestOfBlessing extends Quest {
 		2160000,
 		5000000
 	};
-	//
-	private static final int[][] _hourglasses =
-	{
-		{
-			17095,
-			17096,
-			17097,
-			17098,
-			17099
-		},
-		{
-			17100,
-			17101,
-			17102,
-			17103,
-			17104
-		},
-		{
-			17105,
-			17106,
-			17107,
-			17108,
-			17109
-		},
-		{
-			17110,
-			17111,
-			17112,
-			17113,
-			17114
-		},
-		{
-			17115,
-			17116,
-			17117,
-			17118,
-			17119
-		},
-		{
-			17120,
-			17121,
-			17122,
-			17123,
-			17124
-		},
-		{
-			17125,
-			17126,
-			17127,
-			17128,
-			17129
-		}
+	
+	//@formatter:off
+	private static final int[][] _hourglasses = {
+		{ 17095, 17096, 17097, 17098, 17099 },
+		{ 17100, 17101, 17102, 17103, 17104 },
+		{ 17105, 17106, 17107, 17108, 17109 },
+		{ 17110, 17111, 17112, 17113, 17114 },
+		{ 17115, 17116, 17117, 17118, 17119 },
+		{ 17120, 17121, 17122, 17123, 17124 },
+		{ 17125, 17126, 17127, 17128, 17129 }
 	};
+	//@formatter:on
+	
 	// Spawns
-	private static final int[][] _spawns =
-	{
-		{
-			-84139,
-			243145,
-			-3704,
-			8473
-		},
-		{
-			-119702,
-			44557,
-			360,
-			33023
-		},
-		{
-			45413,
-			48351,
-			-3056,
-			50020
-		},
-		{
-			115607,
-			-177945,
-			-896,
-			38058
-		},
-		{
-			12086,
-			16589,
-			-4584,
-			3355
-		},
-		{
-			-45032,
-			-113561,
-			-192,
-			32767
-		},
-		{
-			-83112,
-			150922,
-			-3120,
-			2280
-		},
-		{
-			-13931,
-			121938,
-			-2984,
-			30212
-		},
-		{
-			87127,
-			-141330,
-			-1336,
-			49153
-		},
-		{
-			43520,
-			-47590,
-			-792,
-			43738
-		},
-		{
-			148060,
-			-55314,
-			-2728,
-			40961
-		},
-		{
-			82801,
-			149381,
-			-3464,
-			53707
-		},
-		{
-			82433,
-			53285,
-			-1488,
-			22942
-		},
-		{
-			147059,
-			25930,
-			-2008,
-			56399
-		},
-		{
-			111171,
-			221053,
-			-3544,
-			2058
-		},
-		{
-			15907,
-			142901,
-			-2688,
-			14324
-		},
-		{
-			116972,
-			77255,
-			-2688,
-			41951
-		}
+	//@formatter:off
+	private static final int[][] _spawns = {
+		{ -84139, 243145, -3704, 8473 },
+		{ -119702, 44557, 360, 33023 },
+		{ 45413, 48351, -3056, 50020 },
+		{ 115607, -177945, -896, 38058 },
+		{ 12086, 16589, -4584, 3355 },
+		{ -45032, -113561, -192, 32767 },
+		{ -83112, 150922, -3120, 2280 },
+		{ -13931, 121938, -2984, 30212 },
+		{ 87127, -141330, -1336, 49153 },
+		{ 43520, -47590, -792, 43738 },
+		{ 148060, -55314, -2728, 40961 },
+		{ 82801, 149381, -3464, 53707 },
+		{ 82433, 53285, -1488, 22942 },
+		{ 147059, 25930, -2008, 56399 },
+		{ 111171, 221053, -3544, 2058 },
+		{ 15907, 142901, -2688, 14324 },
+		{ 116972, 77255, -2688, 41951 }
 	};
+	//@formatter:on
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
@@ -225,7 +103,6 @@ public class PriestOfBlessing extends Quest {
 			if (st.getQuestItemsCount(57) >= _price_voice) {
 				String value = loadGlobalQuestVar(player.getAccountName() + "_voice");
 				long _reuse_time = value == "" ? 0 : Long.parseLong(value);
-				
 				if (System.currentTimeMillis() > _reuse_time) {
 					st.setState(State.STARTED);
 					st.takeItems(57, _price_voice);
@@ -247,15 +124,12 @@ public class PriestOfBlessing extends Quest {
 		} else if (event.equalsIgnoreCase("buy_hourglass")) {
 			int _index = getHGIndex(player.getLevel());
 			int _price_hourglass = _prices_hourglass[_index];
-			
 			if (st.getQuestItemsCount(57) >= _price_hourglass) {
 				String value = loadGlobalQuestVar(player.getAccountName() + "_hg_" + _index);
 				long _reuse_time = value == "" ? 0 : Long.parseLong(value);
-				
 				if (System.currentTimeMillis() > _reuse_time) {
 					int[] _hg = _hourglasses[_index];
 					int _nevit_hourglass = _hg[getRandom(0, _hg.length - 1)];
-					
 					st.setState(State.STARTED);
 					st.takeItems(57, _price_hourglass);
 					st.giveItems(_nevit_hourglass, 1);
@@ -265,7 +139,7 @@ public class PriestOfBlessing extends Quest {
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
-					sm.addString("�`��S�F�|");
+					sm.addString("보너스 경험치를 추가로 얻으실 수 있습니다.");
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
@@ -279,19 +153,27 @@ public class PriestOfBlessing extends Quest {
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
-		QuestState st = player.getQuestState(getName());
-		if (st == null) {
-			st = newQuestState(player);
+		if (player.getLevel() > 85) {
+			player.sendMessage("레벨 86이상은 사용할 수 없습니다.");
+		} else {
+			QuestState st = player.getQuestState(getName());
+			if (st == null) {
+				st = newQuestState(player);
+			}
+			final NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final String content = getHtm(player.getHtmlPrefix(), "32783.htm");
+			html.setHtml(content);
+			html.replace("%donate%", Util.formatAdena(_prices_hourglass[getHGIndex(player.getLevel())]));
+			html.replace("%lv%", String.valueOf(player.getLevel())); // pmq
+			player.sendPacket(html);
 		}
-		final NpcHtmlMessage html = new NpcHtmlMessage(0);
-		final String content = getHtm(player.getHtmlPrefix(), "32783.htm");
-		html.setHtml(content);
-		html.replace("%donate%", Util.formatAdena(_prices_hourglass[getHGIndex(player.getLevel())]));
-		html.replace("%lv%", String.valueOf(player.getLevel())); // pmq
-		player.sendPacket(html);
 		return null;
 	}
 	
+	/**
+	 * @param lvl
+	 * @return
+	 */
 	private int getHGIndex(int lvl) {
 		int index = 0;
 		if (lvl < 20) {
@@ -312,9 +194,13 @@ public class PriestOfBlessing extends Quest {
 		return index;
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public PriestOfBlessing(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(_priest);
 		addFirstTalkId(_priest);
 		addTalkId(_priest);
@@ -327,7 +213,7 @@ public class PriestOfBlessing extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new PriestOfBlessing(-1, "PriestOfBlessing", "retail");
+		new PriestOfBlessing(-1, PriestOfBlessing.class.getName(), "retail");
 	}
 	
 }
