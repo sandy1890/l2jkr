@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.L2Object;
  * @author mkizub
  */
 public final class L2ObjectHashMap<T extends L2Object> extends L2ObjectMap<T> {
+	
 	private static final boolean TRACE = false;
 	private static final boolean DEBUG = false;
 	
@@ -146,8 +147,8 @@ public final class L2ObjectHashMap<T extends L2Object> extends L2ObjectMap<T> {
 		return _count == 0;
 	}
 	
-	@Override
 	@SuppressWarnings("unchecked")
+	@Override
 	public synchronized void clear() {
 		int size = PRIMES[0];
 		_table = (T[]) new L2Object[size];
@@ -319,7 +320,7 @@ public final class L2ObjectHashMap<T extends L2Object> extends L2ObjectMap<T> {
 	}
 	
 	@SuppressWarnings("unchecked")
-	private/* already synchronized in put() */void expand() {
+	private void expand() {
 		int newSize = getPrime(_table.length + 1);
 		L2Object[] newTable = new L2Object[newSize];
 		int[] newKeys = new int[newSize];
@@ -416,4 +417,5 @@ public final class L2ObjectHashMap<T extends L2Object> extends L2ObjectMap<T> {
 			L2ObjectHashMap.this.remove(_lastRet);
 		}
 	}
+	
 }

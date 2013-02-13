@@ -208,7 +208,6 @@ public enum L2SkillType {
 	public L2Skill makeSkill(StatsSet set) {
 		try {
 			Constructor<? extends L2Skill> c = _class.getConstructor(StatsSet.class);
-			
 			return c.newInstance(set);
 		} catch (Exception e) {
 			throw new RuntimeException(e);

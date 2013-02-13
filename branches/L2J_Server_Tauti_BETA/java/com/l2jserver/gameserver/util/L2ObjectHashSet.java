@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.L2Object;
  * @param <T> type of values stored in this hash table.
  */
 public final class L2ObjectHashSet<T extends L2Object> extends L2ObjectSet<T> {
+	
 	private static final boolean TRACE = false;
 	private static final boolean DEBUG = false;
 	
@@ -319,7 +320,7 @@ public final class L2ObjectHashSet<T extends L2Object> extends L2ObjectSet<T> {
 	}
 	
 	@SuppressWarnings("unchecked")
-	private/* already synchronized in put() */void expand() {
+	private void expand() {
 		int newSize = getPrime(_table.length + 1);
 		L2Object[] newTable = new L2Object[newSize];
 		int[] newCollisions = new int[(newSize + 31) >> 5];
@@ -413,4 +414,5 @@ public final class L2ObjectHashSet<T extends L2Object> extends L2ObjectSet<T> {
 			L2ObjectHashSet.this.remove(_lastRet);
 		}
 	}
+	
 }
