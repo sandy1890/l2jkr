@@ -36,6 +36,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
  * @param <T>
  */
 public class L2SyncList<T extends Object> implements List<T> {
+	
 	private final List<T> _list;
 	private final ReentrantReadWriteLock _rw = new ReentrantReadWriteLock();
 	private final ReadLock _rl = _rw.readLock();
@@ -337,4 +338,5 @@ public class L2SyncList<T extends Object> implements List<T> {
 			_rl.unlock();
 		}
 	}
+	
 }

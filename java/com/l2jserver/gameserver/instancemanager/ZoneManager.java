@@ -320,8 +320,8 @@ public class ZoneManager extends DocumentParser {
 	 * @param id
 	 * @param zone
 	 */
-	@SuppressWarnings("unchecked")
 	public <T extends L2ZoneType> void addZone(Integer id, T zone) {
+		@SuppressWarnings("unchecked")
 		Map<Integer, T> map = (Map<Integer, T>) _classZones.get(zone.getClass());
 		if (map == null) {
 			map = new HashMap<>();

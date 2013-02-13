@@ -49,6 +49,9 @@ public class FastMRUCache<K, V> extends FastCollection<Object> implements Reusab
 		long _lastModified;
 		V _node;
 		
+		/**
+		 * @param object
+		 */
 		public CacheNode(V object) {
 			_lastModified = System.currentTimeMillis();
 			_node = object;
@@ -88,14 +91,26 @@ public class FastMRUCache<K, V> extends FastCollection<Object> implements Reusab
 		this(new FastMap<K, V>(), DEFAULT_CAPACITY, DEFAULT_FORGET_TIME);
 	}
 	
+	/**
+	 * @param map
+	 */
 	public FastMRUCache(FastMap<K, V> map) {
 		this(map, DEFAULT_CAPACITY, DEFAULT_FORGET_TIME);
 	}
 	
+	/**
+	 * @param map
+	 * @param max
+	 */
 	public FastMRUCache(FastMap<K, V> map, int max) {
 		this(map, max, DEFAULT_FORGET_TIME);
 	}
 	
+	/**
+	 * @param map
+	 * @param max
+	 * @param forgetTime
+	 */
 	public FastMRUCache(FastMap<K, V> map, int max, int forgetTime) {
 		_map = map;
 		_cacheSize = max;
@@ -113,6 +128,10 @@ public class FastMRUCache<K, V> extends FastCollection<Object> implements Reusab
 		_cache.setKeyComparator(FastComparator.DIRECT);
 	}
 	
+	/**
+	 * @param key
+	 * @return
+	 */
 	public synchronized V get(K key) {
 		V result;
 		

@@ -33,10 +33,11 @@ import java.util.Set;
  * This class is used to show how you can sort a java.util.Map for values.<br>
  * This also takes care of null and duplicate values present in the map.
  */
-@SuppressWarnings("unchecked")
 public class ValueSortMap {
+	
+	@SuppressWarnings("unchecked")
 	public Map<Integer, Integer> sortThis(Map<Integer, Integer> map, boolean asc) {
-		return sortMapByValue(map, asc);
+		return (Map<Integer, Integer>) sortMapByValue(map, asc);
 	}
 	
 	/**
@@ -48,8 +49,7 @@ public class ValueSortMap {
 	 * @param comparator Values will be sorted as per passed Comparator
 	 * @return LinkedHashMap Sorted new LinkedHashMap
 	 */
-	@SuppressWarnings("rawtypes")
-	public static LinkedHashMap sortMapByValue(Map inMap, Comparator comparator) {
+	public static LinkedHashMap<?, ?> sortMapByValue(Map<?, ?> inMap, Comparator<?> comparator) {
 		return sortMapByValue(inMap, comparator, null);
 	}
 	
@@ -62,8 +62,7 @@ public class ValueSortMap {
 	 * @param ascendingOrder Values will be sorted as per value of ascendingOrder
 	 * @return LinkedHashMap Sorted new LinkedHashMap
 	 */
-	@SuppressWarnings("rawtypes")
-	public static LinkedHashMap sortMapByValue(Map inMap, boolean ascendingOrder) {
+	public static LinkedHashMap<?, ?> sortMapByValue(Map<?, ?> inMap, boolean ascendingOrder) {
 		return sortMapByValue(inMap, null, ascendingOrder);
 	}
 	
@@ -75,8 +74,7 @@ public class ValueSortMap {
 	 * @param inMap Map to be sorted
 	 * @return LinkedHashMap Sorted new LinkedHashMap
 	 */
-	@SuppressWarnings("rawtypes")
-	public static LinkedHashMap sortMapByValue(Map inMap) {
+	public static LinkedHashMap<?, ?> sortMapByValue(Map<?, ?> inMap) {
 		return sortMapByValue(inMap, null, null);
 	}
 	
@@ -91,20 +89,17 @@ public class ValueSortMap {
 	 * @param ascendingOrder Values will be sorted as per value of ascendingOrder
 	 * @return LinkedHashMap Sorted new LinkedHashMap
 	 */
-	@SuppressWarnings(
-	{
-		"rawtypes",
-		"null"
-	})
-	private static LinkedHashMap sortMapByValue(Map inMap, Comparator comparator, Boolean ascendingOrder) {
+	@SuppressWarnings("unchecked")
+	private static LinkedHashMap<?, ?> sortMapByValue(Map<?, ?> inMap, @SuppressWarnings("rawtypes") Comparator comparator, Boolean ascendingOrder) {
 		int iSize = inMap.size();
 		
 		// Create new LinkedHashMap that need to be returned
-		LinkedHashMap sortedMap = new LinkedHashMap(iSize);
+		LinkedHashMap<Object, Object> sortedMap = new LinkedHashMap<>(iSize);
 		
-		Collection values = inMap.values();
-		ArrayList valueList = new ArrayList(values); // To get List of all values in passed Map
-		HashSet distinctValues = new HashSet(values); // To know the distinct values in passed Map
+		Collection<?> values = inMap.values();
+		@SuppressWarnings("rawtypes")
+		ArrayList valueList = new ArrayList<>(values); // To get List of all values in passed Map
+		HashSet<?> distinctValues = new HashSet<>(values); // To know the distinct values in passed Map
 		
 		// Do handing for null values. remove them from the list that will be used for sorting
 		int iNullValueCount = 0; // Total number of null values present in passed Map
@@ -140,10 +135,12 @@ public class ValueSortMap {
 		}
 		
 		Object key = null, value = null, sortedValue;
-		Set keySet = null;
-		Iterator itKeyList = null;
-		HashMap hmTmpMap = new HashMap(iSize);
-		HashMap hmNullValueMap = new HashMap();
+		Set<?> keySet = null;
+		Iterator<?> itKeyList = null;
+		@SuppressWarnings("rawtypes")
+		HashMap hmTmpMap = new HashMap<>(iSize);
+		@SuppressWarnings("rawtypes")
+		HashMap hmNullValueMap = new HashMap<>();
 		
 		if (bAllDistinct) {
 			// There are no multiple same values in the passed map (without consedring null)
@@ -173,7 +170,7 @@ public class ValueSortMap {
 				sortedMap.put(key, value);
 			}
 			
-			if ((ascendingOrder == null) || ascendingOrder) {
+			if ((ascendingOrder == null) || (ascendingOrder == true)) {
 				// Add Null Values in the last of the LinkedHasMap
 				sortedMap.putAll(hmNullValueMap);
 			}
@@ -215,11 +212,12 @@ public class ValueSortMap {
 				}
 			}
 			
-			if ((ascendingOrder == null) || ascendingOrder) {
+			if ((ascendingOrder == null) || (ascendingOrder == true)) {
 				// Add Null Values in the last of the LinkedHasMap
 				sortedMap.putAll(hmNullValueMap);
 			}
 		}
 		return sortedMap;
 	}
+	
 }
