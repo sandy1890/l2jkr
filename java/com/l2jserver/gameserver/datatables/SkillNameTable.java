@@ -44,7 +44,7 @@ public class SkillNameTable {
 	private static SkillNameTable _instance;
 	private final FastList<Nametable> tables = new FastList<>();
 	
-	private class Nametable {
+	protected class Nametable {
 		public String name;
 		public int id;
 		public int level;
@@ -62,7 +62,6 @@ public class SkillNameTable {
 		reload();
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private void reload() {
 		Connection con = null;
 		int count = 0;

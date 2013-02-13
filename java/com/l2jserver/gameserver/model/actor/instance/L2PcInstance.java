@@ -16714,7 +16714,7 @@ public final class L2PcInstance extends L2Playable {
 	/** Advent 4h task **/
 	private ScheduledFuture<?> _adventBonusTask;
 	/** Advent Blessing task **/
-	private ScheduledFuture<?> _adventBlessingTask;
+	protected ScheduledFuture<?> _adventBlessingTask;
 	
 	public void stopAdventBlessingTask()
 	{
@@ -16734,7 +16734,7 @@ public final class L2PcInstance extends L2Playable {
 		}
 	}
 	
-	private class AdventPoints implements Runnable
+	protected class AdventPoints implements Runnable
 	{
 		@Override
 		public void run()
@@ -16743,7 +16743,6 @@ public final class L2PcInstance extends L2Playable {
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	public void startAdventTask()
 	{
 		if (_adventBonusTask == null)
@@ -16757,9 +16756,8 @@ public final class L2PcInstance extends L2Playable {
 		}
 	}
 	
-	private class AdventBlessingEnd implements Runnable
+	protected class AdventBlessingEnd implements Runnable
 	{
-		@SuppressWarnings("synthetic-access")
 		@Override
 		public void run()
 		{
@@ -16782,7 +16780,6 @@ public final class L2PcInstance extends L2Playable {
 		return LovecTable.getInstance().getAdventTime(getObjectId());
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	public void incAdventPoints(int value, boolean decreasetime)
 	{
 		int adventPoints = LovecTable.getInstance().getAdventPoints(getObjectId());

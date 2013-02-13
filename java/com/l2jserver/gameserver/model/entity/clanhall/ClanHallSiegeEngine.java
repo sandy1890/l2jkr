@@ -291,8 +291,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable {
 	
 	@Override
 	public void startSiege() {
-		if ((getAttackers().size() < 1) && (_hall.getId() != 21)) // Fortress of resistance dont have attacker list
-		{
+		if ((getAttackers().size() < 1) && (_hall.getId() != 21)) { // Fortress of resistance dont have attacker list
 			onSiegeEnds();
 			getAttackers().clear();
 			_hall.updateNextSiege();
