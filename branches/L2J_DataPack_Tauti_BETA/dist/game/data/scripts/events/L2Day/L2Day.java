@@ -34,30 +34,35 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.script.DateRange;
 import com.l2jserver.util.Rnd;
 
+/**
+ * 문자 수집 이벤트
+ */
 public class L2Day extends Quest {
 	
-	private static final String EVENT_DATE = "28 08 2011-05 10 2011"; // Change date as you want
-	private static final DateRange EVENT_DATES = DateRange.parse(EVENT_DATE, new SimpleDateFormat("dd MM yyyy", Locale.US));
+	private static final String EVENT_DATE = "2011 08 28-2011 10 05"; // 이벤트 기간 설정
+	
+	private static final DateRange EVENT_DATES = DateRange.parse(EVENT_DATE, new SimpleDateFormat("yyyy MM dd", Locale.KOREAN));
+	
 	private static final String[] EVENT_ANNOUNCE =
 	{
-		"L2Day-���r�ʦL�u�Y�A�G����"
+		"L2Day-문자 수집 이벤트가 시작되었습니다."
 	};
 	private static final Date EndDate = EVENT_DATES.getEndDate();
 	private static final Date currentDate = new Date();
 	
-	// Items A�BC�BE�BF�BG�BI�BL�BN�BO�BS�BT�BII
-	private final static int letterA = 3875;
-	private final static int letterC = 3876;
-	private final static int letterE = 3877;
-	private final static int letterF = 3878;
-	private final static int letterG = 3879;
-	private final static int letterI = 3881;
-	private final static int letterL = 3882;
-	private final static int letterN = 3883;
-	private final static int letterO = 3884;
-	private final static int letterS = 3886;
-	private final static int letterT = 3887;
-	private final static int letterII = 3888;
+	// L2데이 이벤트용 아이템
+	private final static int letterA = 3875; // L2day - 문자 A
+	private final static int letterC = 3876; // L2day - 문자 C
+	private final static int letterE = 3877; // L2day - 문자 E
+	private final static int letterF = 3878; // L2day - 문자 F
+	private final static int letterG = 3879; // L2day - 문자 G
+	private final static int letterI = 3881; // L2day - 문자 I
+	private final static int letterL = 3882; // L2day - 문자 L
+	private final static int letterN = 3883; // L2day - 문자 N
+	private final static int letterO = 3884; // L2day - 문자 O
+	private final static int letterS = 3886; // L2day - 문자 S
+	private final static int letterT = 3887; // L2day - 문자 T
+	private final static int letterII = 3888; // L2day - 문자 II
 	private final static int[] dropList =
 	{
 		letterA,
@@ -79,6 +84,7 @@ public class L2Day extends Quest {
 		1
 	};
 	private final static int dropChance = 25000; // actually 2.5%
+	
 	// Kamael TI Dark Elf Dwarf Elf Orc Gludin Gludio Dion Giran Heine Oren Hunters Aden Goddard Rune Schuttgart
 	private final static int[] EventSpawnX =
 	{
@@ -118,6 +124,7 @@ public class L2Day extends Quest {
 		86863,
 		87791,
 	};
+	
 	// Kamael TI Dark Elf Dwarf Elf Orc Gludin Gludio Dion Giran Heine Oren Hunters Aden Goddard Rune Schuttgart
 	private final static int[] EventSpawnY =
 	{
@@ -157,6 +164,7 @@ public class L2Day extends Quest {
 		-142917,
 		-142236,
 	};
+	
 	// Kamael TI Dark Elf Dwarf Elf Orc Gludin Gludio Dion Giran Heine Oren Hunters Aden Goddard Rune Schuttgart
 	private final static int[] EventSpawnZ =
 	{
@@ -196,6 +204,7 @@ public class L2Day extends Quest {
 		-1345,
 		-1348,
 	};
+	
 	// Kamael TI Dark Elf Dwarf Elf Orc Gludin Gludio Dion Giran Heine Oren Hunters Aden Goddard Rune Schuttgart
 	private final static int[] EventSpawnH =
 	{
@@ -236,42 +245,40 @@ public class L2Day extends Quest {
 		43140,
 	};
 	
-	private final static int EventNPC = 4313;
+	// NPC
+	private final static int EventNPC = 4313; // 앤젤 캣
 	
 	private static List<L2Npc> eventManagers = new ArrayList<>();
 	
 	private static boolean L2DayEvent = false;
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public L2Day(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		EventDroplist.getInstance().addGlobalDrop(dropList, dropCount, dropChance, EVENT_DATES);
-		
 		Announcements.getInstance().addEventAnnouncement(EVENT_DATES, EVENT_ANNOUNCE);
-		
 		addStartNpc(EventNPC);
 		addFirstTalkId(EventNPC);
 		addTalkId(EventNPC);
 		startQuestTimer("EventCheck", 1800000, null, null);
-		
 		if (EVENT_DATES.isWithinRange(currentDate)) {
 			L2DayEvent = true;
 		}
-		
 		if (L2DayEvent) {
-			_log.info("L2Day-���r�ʦL�u�Y�A�G���� - ON");
-			
+			_log.info("L2Day-이벤트 - ON");
 			for (int i = 0; i < EventSpawnX.length; i++) {
 				L2Npc eventManager = addSpawn(EventNPC, EventSpawnX[i], EventSpawnY[i], EventSpawnZ[i], EventSpawnH[i], false, 0);
 				eventManagers.add(eventManager);
 			}
 		} else {
-			_log.info("L2Day-���r�ʦL�u�Y�A�G���� - OFF");
-			
+			_log.info("L2Day-이벤트 - OFF");
 			Calendar endWeek = Calendar.getInstance();
 			endWeek.setTime(EndDate);
 			endWeek.add(Calendar.DATE, 7);
-			
 			if (EndDate.before(currentDate) && endWeek.getTime().after(currentDate)) {
 				for (int i = 0; i < EventSpawnX.length; i++) {
 					L2Npc eventManager = addSpawn(EventNPC, EventSpawnX[i], EventSpawnY[i], EventSpawnZ[i], EventSpawnH[i], false, 0);
@@ -286,7 +293,6 @@ public class L2Day extends Quest {
 		String htmltext = "";
 		QuestState st;
 		int prize;
-		
 		if (npc == null) {
 			if (event.equalsIgnoreCase("EventCheck")) {
 				startQuestTimer("EventCheck", 1800000, null, null);
@@ -295,11 +301,10 @@ public class L2Day extends Quest {
 				if (EVENT_DATES.isWithinRange(currentDate)) {
 					Event1 = true;
 				}
-				
 				if (!L2DayEvent && Event1) {
 					L2DayEvent = true;
-					_log.info("L2Day-���r�ʦL�u�Y�A�G���� - ON");
-					Announcements.getInstance().announceToAll("L2Day-���r�ʦL�u�Y�A�G���ʡA�Ш�U������-��r���îa�u�ѨϿߡv");
+					_log.info("L2Day-이벤트 - ON");
+					Announcements.getInstance().announceToAll("L2Day-문자 수집 이벤트가 시작되었습니다.");
 					
 					for (int i = 0; i < EventSpawnX.length; i++) {
 						L2Npc eventManager = addSpawn(EventNPC, EventSpawnX[i], EventSpawnY[i], EventSpawnZ[i], EventSpawnH[i], false, 0);
@@ -307,7 +312,7 @@ public class L2Day extends Quest {
 					}
 				} else if (L2DayEvent && !Event1) {
 					L2DayEvent = false;
-					_log.info("L2Day-���r�ʦL�u�Y�A�G���� - OFF");
+					_log.info("L2Day-이벤트 - OFF");
 					for (L2Npc eventManager : eventManagers) {
 						eventManager.deleteMe();
 					}
@@ -315,9 +320,15 @@ public class L2Day extends Quest {
 			}
 		} else if ((player != null) && event.equalsIgnoreCase("LINEAGEII")) {
 			st = player.getQuestState(getName());
-			
-			if ((st.getQuestItemsCount(letterL) >= 1) && (st.getQuestItemsCount(letterI) >= 1) && (st.getQuestItemsCount(letterN) >= 1) && (st.getQuestItemsCount(letterE) >= 2) && (st.getQuestItemsCount(letterA) >= 1) && (st.getQuestItemsCount(letterG) >= 1) && (st.getQuestItemsCount(letterII) >= 1))
-			{
+			//@formatter:off
+			if ((st.getQuestItemsCount(letterL) >= 1) &&
+				(st.getQuestItemsCount(letterI) >= 1) &&
+				(st.getQuestItemsCount(letterN) >= 1) &&
+				(st.getQuestItemsCount(letterE) >= 2) &&
+				(st.getQuestItemsCount(letterA) >= 1) &&
+				(st.getQuestItemsCount(letterG) >= 1) &&
+				(st.getQuestItemsCount(letterII) >= 1)) {
+				//@formatter:on
 				st.takeItems(letterL, 1);
 				st.takeItems(letterI, 1);
 				st.takeItems(letterN, 1);
@@ -327,10 +338,6 @@ public class L2Day extends Quest {
 				st.takeItems(letterII, 1);
 				
 				prize = Rnd.get(1000);
-				
-				/**
-				 * ��~��ƨӷ� http://lineage2.plaync.com.tw/Event/event/110902/event4.asp ������uLINEAGEII�v�A�N�i�o��U�C��~���@�G - �ڷŧ٫� - ���ǪZ�� - �j���-���q14~16 - L2Day-���֪��_�����b2�i - L2Day-���֪���^���b2�i - �W�j�O������O�v¡�Ĥ�5�� - ��r���îa��§��
-				 */
 				
 				if (prize <= 5) {
 					st.giveItems(6658, 1);
@@ -394,8 +401,14 @@ public class L2Day extends Quest {
 			}
 		} else if ((player != null) && event.equalsIgnoreCase("NCSOFT")) {
 			st = player.getQuestState(getName());
-			
-			if ((st.getQuestItemsCount(letterN) >= 1) && (st.getQuestItemsCount(letterC) >= 1) && (st.getQuestItemsCount(letterS) >= 1) && (st.getQuestItemsCount(letterO) >= 1) && (st.getQuestItemsCount(letterF) >= 1) && (st.getQuestItemsCount(letterT) >= 1)) {
+			//@formatter:off
+			if ((st.getQuestItemsCount(letterN) >= 1) &&
+				(st.getQuestItemsCount(letterC) >= 1) &&
+				(st.getQuestItemsCount(letterS) >= 1) &&
+				(st.getQuestItemsCount(letterO) >= 1) &&
+				(st.getQuestItemsCount(letterF) >= 1) &&
+				(st.getQuestItemsCount(letterT) >= 1)) {
+				//@formatter:on
 				st.takeItems(letterN, 1);
 				st.takeItems(letterC, 1);
 				st.takeItems(letterS, 1);
@@ -470,7 +483,6 @@ public class L2Day extends Quest {
 		} else if (event.equalsIgnoreCase("chat1")) {
 			htmltext = "4313-02.htm";
 		}
-		
 		return htmltext;
 	}
 	
@@ -480,12 +492,11 @@ public class L2Day extends Quest {
 		if (st == null) {
 			st = newQuestState(player);
 		}
-		
 		return "4313.htm";
 	}
 	
 	public static void main(String[] args) {
-		new L2Day(-1, "L2Day", "events");
+		new L2Day(-1, L2Day.class.getName(), "events");
 	}
 	
 }
