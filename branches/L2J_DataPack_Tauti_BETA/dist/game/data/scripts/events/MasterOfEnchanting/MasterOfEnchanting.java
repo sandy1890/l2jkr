@@ -37,9 +37,9 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class MasterOfEnchanting extends Quest {
 	
-	private static final int _master_yogi = 32599;
-	private static final int _master_yogi_staff = 13539;
-	private static final int _master_yogi_scroll = 13540;
+	private static final int _master_yogi = 32599; // 산속의 도인 - 마스터 요기
+	private static final int _master_yogi_staff = 13539; // 마스터요기의 지팡이
+	private static final int _master_yogi_scroll = 13540; // 마스터요기의 무기강화 주문서
 	
 	private static final int _staff_price = 1000;
 	private static final int _scroll_24_price = 6000;
@@ -48,24 +48,19 @@ public class MasterOfEnchanting extends Quest {
 	private static final int _scroll_1_price = 77777;
 	private static final int _scroll_10_price = 777770;
 	
-	private static final int[] _hat_shadow_reward =
-	{
-		13074,
-		13075,
-		13076
+	//@formatter:off
+	private static final int[] _hat_shadow_reward = {
+		13074, 13075, 13076
 	};
-	private static final int[] _hat_event_reward =
-	{
-		13518,
-		13519,
-		13522
+	
+	private static final int[] _hat_event_reward = {
+		13518, 13519, 13522
 	};
-	private static final int[] _crystal_reward =
-	{
-		9570,
-		9571,
-		9572
+	
+	private static final int[] _crystal_reward = {
+		9570, 9571, 9572
 	};
+	//@formatter:on
 	
 	@SuppressWarnings("deprecation")
 	private static final Date _eventStart = new Date(2011, 7, 1);
@@ -109,6 +104,11 @@ public class MasterOfEnchanting extends Quest {
 		new Location(43966, -47709, -798, 49999)
 	};
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public MasterOfEnchanting(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(_master_yogi);
@@ -284,7 +284,7 @@ public class MasterOfEnchanting extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new MasterOfEnchanting(-1, "MasterOfEnchanting", "events");
+		new MasterOfEnchanting(-1, MasterOfEnchanting.class.getName(), "events");
 	}
 	
 }
