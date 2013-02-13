@@ -2754,4 +2754,20 @@ public class Quest extends ManagedScript {
 		return GameTimeController.getGameTicks();
 	}
 	
+	/**
+	 * Check for multiple items in player's inventory.
+	 * @param player the player whose inventory to check for quest items
+	 * @param itemIds a list of item Ids to check for
+	 * @return {@code true} if at least one items exist in player's inventory, {@code false} otherwise
+	 */
+	public boolean hasAtLeastOneQuestItem(L2PcInstance player, int... itemIds) {
+		final PcInventory inv = player.getInventory();
+		for (int itemId : itemIds) {
+			if (inv.getItemByItemId(itemId) != null) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 }
