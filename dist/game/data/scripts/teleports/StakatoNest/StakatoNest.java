@@ -35,8 +35,13 @@ public class StakatoNest extends Quest {
 		new Location(87682, -43291, -4128)
 	};
 	
-	private final static int npcId = 32640;
+	private final static int npcId = 32640; // 현상금 사냥꾼 - 카이타칸
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public StakatoNest(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(npcId);
@@ -84,7 +89,7 @@ public class StakatoNest extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new StakatoNest(-1, "StakatoNest", "teleports");
+		new StakatoNest(-1, StakatoNest.class.getName(), "teleports");
 	}
 	
 }
