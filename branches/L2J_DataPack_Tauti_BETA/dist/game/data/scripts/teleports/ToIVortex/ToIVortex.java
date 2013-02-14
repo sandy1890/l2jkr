@@ -24,24 +24,25 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
+ * 오만의 탑 층간 텔레포트
  * @author Plim update to H5 by pmq
  */
 public class ToIVortex extends Quest {
 	
 	// NPCs
-	private static final int KEPLON = 30949;
-	private static final int EUCLIE = 30950;
-	private static final int PITHGON = 30951;
-	private static final int DIMENSION_VORTEX_1 = 30952;
-	private static final int DIMENSION_VORTEX_2 = 30953;
-	private static final int DIMENSION_VORTEX_3 = 30954;
-	private static final int TELEPORT_CUBIC = 29055;
+	private static final int KEPLON = 30949; // 탐사원 - 케플론
+	private static final int EUCLIE = 30950; // 탐사원 - 유클리
+	private static final int PITHGON = 30951; // 탐사원 - 피타곤
+	private static final int DIMENSION_VORTEX_1 = 30952; // 디멘션 버텍스
+	private static final int DIMENSION_VORTEX_2 = 30953; // 디멘션 버텍스
+	private static final int DIMENSION_VORTEX_3 = 30954; // 디멘션 버텍스
+	private static final int TELEPORT_CUBIC = 29055; // 텔레포트 큐브
 	
 	// ITEMS
-	private static final int ADENA = 57;
-	private static final int BLUE_DIMENSION_STONE = 4402;
-	private static final int GREEN_DIMENSION_STONE = 4401;
-	private static final int RED_DIMENSION_STONE = 4403;
+	private static final int ADENA = 57; // 아데나
+	private static final int GREEN_DIMENSION_STONE = 4401; // 녹색 디멘션스톤 - 이것으로 디멘션 버텍스를 발동시키면 오만의 탑 1~3층으로 이동할 수 있다.
+	private static final int BLUE_DIMENSION_STONE = 4402; // 푸른색 디멘션스톤 - 이것으로 디멘션 버텍스를 발동시키면 오만의 탑 4~6층으로 이동할 수 있다.
+	private static final int RED_DIMENSION_STONE = 4403; // 붉은색 디멘션스톤 - 이것으로 디멘션 버텍스를 발동시키면 오만의 탑 7~10층으로 이동할 수 있다.
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
@@ -49,8 +50,8 @@ public class ToIVortex extends Quest {
 		QuestState st = player.getQuestState(getName());
 		
 		int npcId = npc.getNpcId();
-		// 1st Floor
-		if (event.equalsIgnoreCase("1")) {
+		
+		if (event.equalsIgnoreCase("1")) { // 1층
 			if (st.hasQuestItems(GREEN_DIMENSION_STONE)) {
 				st.takeItems(GREEN_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114356, 13423, -5096);
@@ -59,9 +60,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 2nd Floor
-		else if (event.equalsIgnoreCase("2")) {
+		} else if (event.equalsIgnoreCase("2")) { // 2층
 			if (st.hasQuestItems(GREEN_DIMENSION_STONE)) {
 				st.takeItems(GREEN_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114666, 13380, -3608);
@@ -70,9 +69,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 3rd Floor
-		else if (event.equalsIgnoreCase("3")) {
+		} else if (event.equalsIgnoreCase("3")) { // 3층
 			if (st.hasQuestItems(GREEN_DIMENSION_STONE)) {
 				st.takeItems(GREEN_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(111982, 16028, -2120);
@@ -81,9 +78,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 4th Floor
-		else if (event.equalsIgnoreCase("4")) {
+		} else if (event.equalsIgnoreCase("4")) { // 4층
 			if (st.hasQuestItems(BLUE_DIMENSION_STONE)) {
 				st.takeItems(BLUE_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114636, 13413, -640);
@@ -92,9 +87,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 5th Floor
-		else if (event.equalsIgnoreCase("5")) {
+		} else if (event.equalsIgnoreCase("5")) { // 5층
 			if (st.hasQuestItems(BLUE_DIMENSION_STONE)) {
 				st.takeItems(BLUE_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114152, 19902, 928);
@@ -103,9 +96,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 6th Floor
-		else if (event.equalsIgnoreCase("6")) {
+		} else if (event.equalsIgnoreCase("6")) { // 6층
 			if (st.hasQuestItems(BLUE_DIMENSION_STONE)) {
 				st.takeItems(BLUE_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(117131, 16044, 1944);
@@ -114,9 +105,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 7th Floor
-		else if (event.equalsIgnoreCase("7")) {
+		} else if (event.equalsIgnoreCase("7")) { // 7층
 			if (st.hasQuestItems(RED_DIMENSION_STONE)) {
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(113026, 17687, 2952);
@@ -125,9 +114,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 8th Floor
-		else if (event.equalsIgnoreCase("8")) {
+		} else if (event.equalsIgnoreCase("8")) { // 8층
 			if (st.hasQuestItems(RED_DIMENSION_STONE)) {
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(115571, 13723, 3960);
@@ -136,9 +123,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 9th Floor
-		else if (event.equalsIgnoreCase("9")) {
+		} else if (event.equalsIgnoreCase("9")) { // 9층
 			if (st.hasQuestItems(RED_DIMENSION_STONE)) {
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(114649, 14144, 4976);
@@ -147,9 +132,7 @@ public class ToIVortex extends Quest {
 				st.exitQuest(true);
 				htmltext = "no-stones.htm";
 			}
-		}
-		// 10 Floor
-		else if (event.equalsIgnoreCase("10")) {
+		} else if (event.equalsIgnoreCase("10")) { // 10 층
 			if (st.hasQuestItems(RED_DIMENSION_STONE)) {
 				st.takeItems(RED_DIMENSION_STONE, 1);
 				st.getPlayer().teleToLocation(118507, 16605, 5984);
@@ -230,9 +213,13 @@ public class ToIVortex extends Quest {
 		return htmltext;
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public ToIVortex(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(KEPLON);
 		addTalkId(KEPLON);
 		addStartNpc(EUCLIE);
