@@ -27,6 +27,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 
+/**
+ * 헬바운드 텔레포트
+ * @author lineage2kr
+ */
 public class Warpgate extends Quest {
 	
 	private static final String THATS_BLOODY_HOT = "133_ThatsBloodyHot";
@@ -37,19 +41,22 @@ public class Warpgate extends Quest {
 	
 	private static final int[] WARPGATES =
 	{
-		32314,
-		32315,
-		32316,
-		32317,
-		32318,
-		32319
+		32314, // 워프게이트
+		32315, // 워프게이트
+		32316, // 워프게이트
+		32317, // 워프게이트
+		32318, // 워프게이트
+		32319, // 워프게이트
 	};
 	
+	/**
+	 * @param player
+	 * @return
+	 */
 	private static final boolean canEnter(L2PcInstance player) {
 		if (player.isFlying()) {
 			return false;
 		}
-		
 		QuestState st;
 		if (!HellboundManager.getInstance().isLocked()) {
 			st = player.getQuestState(PATH_TO_HELLBOUND);
@@ -57,12 +64,10 @@ public class Warpgate extends Quest {
 				return true;
 			}
 		}
-		
 		st = player.getQuestState(THATS_BLOODY_HOT);
 		if ((st != null) && st.isCompleted()) {
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -73,7 +78,6 @@ public class Warpgate extends Quest {
 				return "warpgate-locked.htm";
 			}
 		}
-		
 		return npc.getNpcId() + ".htm";
 	}
 	
@@ -82,7 +86,6 @@ public class Warpgate extends Quest {
 		if (!canEnter(player)) {
 			return "warpgate-no.htm";
 		}
-		
 		player.teleToLocation(-11272, 236464, -3248, true);
 		HellboundManager.getInstance().unlock();
 		return null;
@@ -130,7 +133,7 @@ public class Warpgate extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new Warpgate(-1, "Warpgate", "teleports");
+		new Warpgate(-1, Warpgate.class.getName(), "teleports");
 	}
 	
 }
