@@ -2,20 +2,20 @@ SET NAMES UTF8;
 
 -- NPC 그룹 수정
 DELETE FROM `spawnlist` WHERE `npc_templateid` IN (
-	30880, /* 국경 수비대 대장 - 빅토르 반 데이크 */
-	30881, /* 국경 수비대 서기관 - 샌더즈 */
-	30882, /* 국경 수비대원 */
-	30883, /* 국경 수비대원 */
-	30884, /* 국경 수비대원 */
-	30885, /* 국경 수비대원 */
-	30886, /* 국경 수비대원 */
-	30887, /* 국경 수비대원 */
-	30888, /* 국경 수비대원 */
-	30889  /* 국경 수비대원 */
+	30880, -- 국경 수비대 대장 - 빅토르 반 데이크
+	30881, -- 국경 수비대 서기관 - 샌더즈
+	30882, -- 국경 수비대원
+	30883, -- 국경 수비대원
+	30884, -- 국경 수비대원
+	30885, -- 국경 수비대원
+	30886, -- 국경 수비대원
+	30887, -- 국경 수비대원
+	30888, -- 국경 수비대원
+	30889  -- 국경 수비대원
 ); -- 刪除官服不存在的NPC
 
 -- 修正NPC掉落:修正封印大天使的掉落,因為spawnlist只有21070封印大天使,沒有21071封印大天使
-UPDATE `droplist` SET `mobId` = 21070 WHERE `mobId` = 21071; /* 봉인 대천사 */
+UPDATE `droplist` SET `mobId` = 21070 WHERE `mobId` = 21071; -- 봉인 대천사
 
 -- 導入l2jtw_addon_1.sql後,就可以馬上挑戰BOSS(等待下次挑戰的時間歸0)
 REPLACE INTO `grandboss_data` VALUES
@@ -35,27 +35,27 @@ REPLACE INTO `grandboss_data` VALUES
 (29118, 0, 0, 0, 0, 0, 4109288, 1220547, 0); -- 베레스 (83)
 
 -- 修正賽爾蘭/巴爾勒
-UPDATE `npc` SET `hp` = '1532678', `mp` = '4255', `type` = 'L2GrandBoss', `level` = '87' WHERE `id` IN (29065); /* 사이렌 */
-UPDATE `npc` SET `atkspd` = '540', `matkspd` = '253', `walkspd` = '80', `runspd` = '120' WHERE `id` IN (29099); /* 발러 */
+UPDATE `npc` SET `hp` = '1532678', `mp` = '4255', `type` = 'L2GrandBoss', `level` = '87' WHERE `id` IN (29065); -- 사이렌
+UPDATE `npc` SET `atkspd` = '540', `matkspd` = '253', `walkspd` = '80', `runspd` = '120' WHERE `id` IN (29099); -- 발러
 UPDATE `npc` SET `collision_radius` = '38.00', `collision_height` = '77.00' WHERE `id` IN (29108);
 
 -- NPC 스킬 삭제
-DELETE FROM `npcskills` Where `skillid` IN (5118); /* 사이렌 전용 캔슬 */
+DELETE FROM `npcskills` Where `skillid` IN (5118); -- 사이렌 전용 캔슬
 
 -- 아이템 드랍 목록 수정
 REPLACE INTO `droplist` VALUES
-(29099,6578,1,10,2,500000), /* 발러 (축복받은 갑옷 강화 주문서-S그레이드) */
-(29099,9458,1,1,1,300000), /* 발러 (다이너스티 이어링 - 스턴 내성, MP +35, 스턴 내성 +12의 효과) */
-(29099,9467,1,1,1,300000), /* 발러 (다이너스티 이어링 - 슬리프 내성, MP +35, 수면 내성 +12의 효과) */
-(29099,10170,1,1,1,1000000), /* 발러 */
-(29099,57,180000,220000,0,1000000); /* 발러 */
+(29099,6578,1,10,2,500000), -- 발러 (축복받은 갑옷 강화 주문서-S그레이드)
+(29099,9458,1,1,1,300000), -- 발러 (다이너스티 이어링 - 스턴 내성, MP +35, 스턴 내성 +12의 효과)
+(29099,9467,1,1,1,300000), -- 발러 (다이너스티 이어링 - 슬리프 내성, MP +35, 수면 내성 +12의 효과)
+(29099,10170,1,1,1,1000000), -- 발러
+(29099,57,180000,220000,0,1000000); -- 발러
 
 -- 몹 스킬 수정
 REPLACE INTO `npcskills` VALUES
-(29099,4298,1), /* 발러 (종족 - 악마) */
-(29099,4422,5), /* 발러 (암흑 속성 - 암흑의 기운이 더해진 공격을 한다. 암흑 속성 공격에 강하다.) */
-(29099,4789,1), /* 발러 (하이레벨) */
-(29100,4305,1); /* 수정감옥의 경비병 (강화형 - HP가 4배인 몬스터)*/
+(29099,4298,1), -- 발러 (종족 - 악마)
+(29099,4422,5), -- 발러 (암흑 속성 - 암흑의 기운이 더해진 공격을 한다. 암흑 속성 공격에 강하다.)
+(29099,4789,1), -- 발러 (하이레벨)
+(29100,4305,1); -- 수정감옥의 경비병 (강화형 - HP가 4배인 몬스터)
 
 -- 修正城堡資料庫的PRIMARY KEY,由name改為id,以防止中文化後,還可以導入英文名稱的城堡資料庫
 ALTER TABLE `castle` DROP PRIMARY KEY, ADD PRIMARY KEY (`id`);
@@ -74,11 +74,11 @@ UPDATE `npc`, `raidboss_spawnlist` SET
 WHERE `npc`.`type` = 'L2RaidBoss' AND `npc`.`id` = `raidboss_spawnlist`.`boss_id`;
 
 -- 碼頭巡邏兵改成AI控制
-DELETE FROM `spawnlist` WHERE `npc_templateid` IN (32628,32629); /* 선착장 순찰병 */
+DELETE FROM `spawnlist` WHERE `npc_templateid` IN (32628,32629); -- 선착장 순찰병
 
 -- 修正NPC
-UPDATE `npc` SET `type` = 'L2Npc' WHERE `id` IN (32628,32629); -- 碼頭巡邏兵的類型改為一般NPC
-UPDATE `npc` SET `type` = 'L2Teleporter' WHERE `id` IN (32540,32542,32602); -- 深淵的守門人/安定的再生種子/臨時傳送師的類型改為傳送
+UPDATE `npc` SET `type` = 'L2Npc' WHERE `id` IN (32628,32629); -- 선착장 순찰병
+UPDATE `npc` SET `type` = 'L2Teleporter' WHERE `id` IN (32540,32542,32602); -- 심연의 문지기, 안정된 재생의 씨앗, 임시 텔레포터
 
 -- 加入新傳送
 REPLACE INTO `teleport` VALUES
@@ -88,264 +88,264 @@ REPLACE INTO `teleport` VALUES
 ('3260203', '3260203', '-249774', '207316', '-11952', '0', '0', '57'); -- 臨時傳送師
 
 -- 刪除村莊的彩券商人,因為官服沒有彩券商人
-DELETE FROM `spawnlist` WHERE `npc_templateid` IN (30990,30992,30993,30994); /* 복권 판매인 */
+DELETE FROM `spawnlist` WHERE `npc_templateid` IN (30990,30992,30993,30994); -- 복권 판매인
 
 -- 「新說話之島村莊」加入轉職管理員
 REPLACE INTO `spawnlist` (`location`, `count`, `npc_templateid`, `locx`, `locy`, `locz`, `heading`, `respawn_delay`) VALUES
-('말하는 섬 마을',1,31756,-113661,255162,-1499,33264,60), /* 캣 군 */
-('말하는 섬 마을',1,31757,-113658,255456,-1499,32414,60); /* 퀸 양 */
+('말하는 섬 마을',1,31756,-113661,255162,-1499,33264,60), -- 캣 군
+('말하는 섬 마을',1,31757,-113658,255456,-1499,32414,60); -- 퀸 양
 
 -- 刪除其中一隻轉職管理員(不定時改刪另一個)
-DELETE FROM `spawnlist` WHERE `npc_templateid` IN (31756); /* 캣 군 */
--- DELETE FROM `spawnlist` WHERE `npc_templateid` IN (31757); / 퀸 양 */
+DELETE FROM `spawnlist` WHERE `npc_templateid` IN (31756); -- 캣 군
+-- DELETE FROM `spawnlist` WHERE `npc_templateid` IN (31757); -- 퀸 양
 
 
 /************ Add by pmq *********/
 -- 加入漏掉的NPC
 DELETE FROM `spawnlist` WHERE `npc_templateid` IN (
-	35601, /* 문지기 */
-	35602, /* 문지기 */
-	35603, /* 입장 관리인 */
-	35605, /* 집사 - 앙고트 */
-	35623, /* 내성문지기 */
-	35624, /* 내성문지기 */
-	35628, /* 농장 관리인 - 퀴비에 */
-	35638, /* 와이번 관리인 - 발렌스 */
-	35639, /* 전령 - 자카르 */
-	35640, /* 집사 - 반델로 */
-	35641, /* 요새 문지기 */
-	35642, /* 요새 문지기 */
-	32761, /* 케고르 */
-	32777, /* 지니아길드 - 상급기사 */
-	32778, /* 지니아길드 - 용병전사 */
-	32781 /* 지니아 */
+	35601, -- 문지기
+	35602, -- 문지기
+	35603, -- 입장 관리인
+	35605, -- 집사 - 앙고트
+	35623, -- 내성문지기
+	35624, -- 내성문지기
+	35628, -- 농장 관리인 - 퀴비에
+	35638, -- 와이번 관리인 - 발렌스
+	35639, -- 전령 - 자카르
+	35640, -- 집사 - 반델로
+	35641, -- 요새 문지기
+	35642, -- 요새 문지기
+	32761, -- 케고르
+	32777, -- 지니아길드 - 상급기사
+	32778, -- 지니아길드 - 용병전사
+	32781  -- 지니아
 ); -- 刪除不正確位置的NPC
 
 INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES
-('unset', 1, 35638, 56736, -26400, 568, 0, 0, 49000, 60, 0, 0),      -- 巴倫斯 飛龍管理員
-('unset', 1, 35639, 58128, -32000, 296, 0, 0, 0, 60, 0, 0),          -- 傑卡德 傳令
-('unset', 1, 35640, 58024, -25744, 592, 0, 0, 49000, 60, 0, 0),      -- 凡德羅 執事
-('unset', 1, 35641, 58080, -29552, 568, 0, 0, 49000, 60, 0, 0),      -- 要塞守門人
-('unset', 1, 35641, 58137, -29223, 568, 0, 0, 16500, 60, 0, 0),      -- 要塞守門人
-('unset', 1, 35642, 58024, -26456, 592, 0, 0, 49000, 60, 0, 0),      -- 要塞守門人
-('unset', 1, 35642, 58074, -26325, 597, 0, 0, 15732, 60, 0, 0),      -- 要塞守門人
-('unset', 1, 32778, 102471, -124260, -2774, 0, 0, 47093, 60, 0, 0),  -- 傭兵戰士 吉妮亞工會
-('unset', 1, 32777, 102305, -124365, -2759, 0, 0, 63881, 60, 0, 0),  -- 上級騎士 吉妮亞工會
-('unset', 1, 32761, 102537, -124429, -2792, 0, 0, 30357, 60, 0, 0),  -- 凱高爾
-('unset', 1, 32781, 102393, -124493, -2787, 0, 0, 17538, 60, 0, 0);  -- 吉妮亞
+('unset', 1, 35638, 56736, -26400, 568, 0, 0, 49000, 60, 0, 0),      -- 와이번 관리인 - 발렌스
+('unset', 1, 35639, 58128, -32000, 296, 0, 0, 0, 60, 0, 0),          -- 자카르
+('unset', 1, 35640, 58024, -25744, 592, 0, 0, 49000, 60, 0, 0),      -- 집사 - 반델로
+('unset', 1, 35641, 58080, -29552, 568, 0, 0, 49000, 60, 0, 0),      -- 요새 문지기
+('unset', 1, 35641, 58137, -29223, 568, 0, 0, 16500, 60, 0, 0),      -- 요새 문지기
+('unset', 1, 35642, 58024, -26456, 592, 0, 0, 49000, 60, 0, 0),      -- 요새 문지기
+('unset', 1, 35642, 58074, -26325, 597, 0, 0, 15732, 60, 0, 0),      -- 요새 문지기
+('unset', 1, 32778, 102471, -124260, -2774, 0, 0, 47093, 60, 0, 0),  -- 지니아길드 - 용병전사
+('unset', 1, 32777, 102305, -124365, -2759, 0, 0, 63881, 60, 0, 0),  -- 지니아길드 - 상급기사
+('unset', 1, 32761, 102537, -124429, -2792, 0, 0, 30357, 60, 0, 0),  -- 케고르
+('unset', 1, 32781, 102393, -124493, -2787, 0, 0, 17538, 60, 0, 0);  -- 지니아
 
 -- 怪物手拿武器
-UPDATE `npc` SET`rhand`= 127 where id = 22485;
-UPDATE `npc` SET`rhand`= 127 where id = 22486;
-UPDATE `npc` SET`rhand`= 72 where id = 22487;
-UPDATE `npc` SET`rhand`= 201 where id = 25616;
-UPDATE `npc` SET`rhand`= 72 where id = 29130;
-UPDATE `npc` SET`rhand`= 201 where id = 29131;
-UPDATE `npc` SET`rhand`= 68 where id = 22488;
-UPDATE `npc` SET`rhand`= 68 where id = 22489;
-UPDATE `npc` SET`rhand`= 93 where id = 22490;
-UPDATE `npc` SET`rhand`= 221 where id = 25617;
-UPDATE `npc` SET`rhand`= 16 where id = 29133;
-UPDATE `npc` SET`rhand`= 159 where id = 29134;
-UPDATE `npc` SET`rhand`= 946, `lhand`= 945 where id = 22495;
-UPDATE `npc` SET`rhand`= 124 where id = 29138;
-UPDATE `npc` SET`rhand`= 148 where id = 22500;
-UPDATE `npc` SET`rhand`= 148 where id = 22501;
-UPDATE `npc` SET`rhand`= 148 where id = 22502;
-UPDATE `npc` SET`rhand`= 8221 where id = 25621;
-UPDATE `npc` SET`rhand`= 8221 where id = 29144;
-UPDATE `npc` SET`rhand`= 6717 where id = 29145;
-UPDATE `npc` SET`rhand`= 6718 where id = 29146;
-UPDATE `npc` SET`rhand`= 78 where id = 25622;
-UPDATE `npc` SET`rhand`= 1472 where id = 22364;
-UPDATE `npc` SET`rhand`= 6722 where id = 22449;
-UPDATE `npc` SET`rhand`= 13983 where id = 25648;
-UPDATE `npc` SET`rhand`= 78 where id = 22368;
+UPDATE `npc` SET `rhand` = 127 WHERE `id` = 22485;               -- 미궁의 감시자
+UPDATE `npc` SET `rhand` = 127 WHERE `id` = 22486;               -- 미궁의 감시자
+UPDATE `npc` SET `rhand` = 72 WHERE `id` = 22487;                -- 미궁의 주시자
+UPDATE `npc` SET `rhand` = 201 WHERE `id` = 25616;               -- 미궁의 간수
+UPDATE `npc` SET `rhand` = 72 WHERE `id` = 29130;                -- 미궁의 경비병
+UPDATE `npc` SET `rhand` = 201 WHERE `id` = 29131;               -- 미궁의 경비보조
+UPDATE `npc` SET `rhand` = 68 WHERE `id` = 22488;                -- 미궁의 감시자
+UPDATE `npc` SET `rhand` = 68 WHERE `id` = 22489;                -- 미궁의 감시자
+UPDATE `npc` SET `rhand` = 93 WHERE `id` = 22490;                -- 미궁의 주시자
+UPDATE `npc` SET `rhand` = 221 WHERE `id` = 25617;               -- 미궁의 간수
+UPDATE `npc` SET `rhand` = 16 WHERE `id` = 29133;                -- 미궁의 경비병
+UPDATE `npc` SET `rhand` = 159 WHERE `id` = 29134;               -- 미궁의 경비보조
+UPDATE `npc` SET `rhand` = 946, `lhand`= 945 WHERE `id` = 22495; -- 미궁의 감시자
+UPDATE `npc` SET `rhand` = 124 WHERE `id` = 29138;               -- 미궁의 경비대장
+UPDATE `npc` SET `rhand` = 148 WHERE `id` = 22500;               -- 미궁의 감시자
+UPDATE `npc` SET `rhand` = 148 WHERE `id` = 22501;               -- 미궁의 감시자
+UPDATE `npc` SET `rhand` = 148 WHERE `id` = 22502;               -- 미궁의 주시자
+UPDATE `npc` SET `rhand` = 8221 WHERE `id` = 25621;              -- 미궁의 간수
+UPDATE `npc` SET `rhand` = 8221 WHERE `id` = 29144;              -- 미궁의 경비대장
+UPDATE `npc` SET `rhand` = 6717 WHERE `id` = 29145;              -- 미궁의 경비병
+UPDATE `npc` SET `rhand` = 6718 WHERE `id` = 29146;              -- 미궁의 경비보조
+UPDATE `npc` SET `rhand` = 78 WHERE `id` = 25622;                -- 미궁의 간수
+UPDATE `npc` SET `rhand` = 1472 WHERE `id` = 22364;              -- 영혼잠식자
+UPDATE `npc` SET `rhand` = 6722 WHERE `id` = 22449;              -- 고문 전문가 - 아마스카리
+UPDATE `npc` SET `rhand` = 13983 WHERE `id` = 25648;             -- 레이드 보스 - 깨어난 고대 무투가
+UPDATE `npc` SET `rhand` = 78 WHERE `id` = 22368;                -- 미로 경비대장
 
 -- 修改地獄之島怪物
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `hp`=3835, `mp`=1777, `exp`=0, `sp`=0, `walkspd`=0, `runspd`=0 where id='18484';  -- 奈雅塔門
-UPDATE `npc` SET `level`=81, `hp`=338766, `mp`=1708, `exp`=2629657, `sp`=267913 where id='22326';         -- 奈雅的守護者 海琳納克
-UPDATE `npc` SET `level`=81, `hp`=111546, `mp`=1846, `exp`=0, `sp`=0 where id='18466';                    -- 外廓警衛隊長
-UPDATE `npc` SET `level`=86, `hp`=194672, `mp`=1881, `exp`=944308, `sp`=93684 where id='22448';           -- 雷歐達斯 反抗軍指揮官
-UPDATE `npc` SET `level`=86, `hp`=4439, `mp`=1881, `exp`=16123, `sp`=1680 where id='22451';               -- 原住民精銳軍
-UPDATE `npc` SET `level`=81, `hp`=197755, `mp`=1708, `exp`=449479, `sp`=47956 where id='22341';           -- 凱達士
-UPDATE `npc` SET `level`=81, `hp`=3461, `mp`=1708, `exp`=12425, `sp`=1325 where id='22342';               -- 達里昂的執行者
-UPDATE `npc` SET `level`=81, `hp`=3461, `mp`=1708, `exp`=9997, `sp`=1066 where id='22343';                -- 達里昂的處刑者
+UPDATE `npc` SET `type` = 'L2Monster', `level` = 83, `hp` = 3835, `mp` = 1777, `exp` = 0, `sp` = 0, `walkspd` = 0, `runspd` = 0 WHERE `id` = '18484';  -- 나이아 파일런
+UPDATE `npc` SET `level` = 81, `hp` = 338766, `mp` = 1708, `exp` = 2629657, `sp` = 267913 WHERE `id` = '22326';         -- 나이아의 수호자 - 헬리나크
+UPDATE `npc` SET `level` = 81, `hp` = 111546, `mp` = 1846, `exp` = 0, `sp` = 0 WHERE `id` = '18466';                    -- 외곽 경비대장
+UPDATE `npc` SET `level` = 86, `hp` = 194672, `mp` = 1881, `exp` = 944308, `sp` = 93684 WHERE `id` = '22448';           -- 저항군 지휘관 - 레오다스
+UPDATE `npc` SET `level` = 86, `hp` = 4439, `mp` = 1881, `exp` = 16123, `sp` = 1680 WHERE `id` = '22451';               -- 원주민 정예군
+UPDATE `npc` SET `level` = 81, `hp` = 197755, `mp` = 1708, `exp` = 449479, `sp` = 47956 WHERE `id` = '22341';           -- 켈타스
+UPDATE `npc` SET `level` = 81, `hp` = 3461, `mp` = 1708, `exp` = 12425, `sp` = 1325 WHERE `id` = '22342';               -- 다리온의 집행자
+UPDATE `npc` SET `level` = 81, `hp` = 3461, `mp` = 1708, `exp` = 9997, `sp` = 1066 WHERE `id` = '22343';                -- 다리온의 처형자
 
 -- Seed OF Destruction
-UPDATE `npc` SET `type`='L2Monster' where id='29167';  --
+UPDATE `npc` SET `type`='L2Monster' WHERE id = '29167';  --
 
 REPLACE INTO npcskills VALUES
--- 龍馬軍 步兵
+-- 용마군 보병
 -- Dragon Steed Troop Infantry
 (22541,4299,1),
--- 龍馬軍 步兵
+-- 용마군 보병
 -- Dragon Steed Troop Infantry
 (22597,4299,1),
--- 龍馬軍 步兵
+-- 용마군 보병
 -- Dragon Steed Troop Infantry
 (22589,4299,1),
--- 龍馬軍 步兵
+-- 용마군 보병
 -- Dragon Steed Troop Infantry
 (22575,4299,1),
 (22575,5827,6),
--- 黑暗祭司
+-- 암흑사제
 -- Priest of Darkness
 (22551,4295,1),
 (22551,5839,1),
--- 龍馬軍 魔法師
+-- 용마군 마법사
 -- Dragon Steed Troop Magician
 (22543,4299,1),
--- 龍馬軍 魔法師
+-- 용마군 마법사
 -- Dragon Steed Troop Magician
 (22577,4299,1),
 (22577,5827,6),
--- 龍馬軍 魔法師
+-- 용마군 마법사
 -- Dragon Steed Troop Magician
 (22584,4299,1),
--- 龍馬軍 魔法師
+-- 용마군 마법사
 -- Dragon Steed Troop Magician
 (22592,4299,1),
--- 突變龍獸
+-- 돌연변이 드레이크
 -- Mutation Drake
 (22552,4299,1),
--- 龍馬軍 標槍兵
+-- 용마군 투창병
 -- Dragon Steed Troop Javelin Thrower
 (22549,4299,1),
--- 龍馬軍 標槍兵
+-- 용마군 투창병
 -- Dragon Steed Troop Javelin Thrower
 (22548,4299,1),
--- 龍馬軍 標槍兵
+-- 용마군 투창병
 -- Dragon Steed Troop Javelin Thrower
 (22581,4299,1),
--- 龍馬軍 標槍兵
+-- 용마군 투창병
 -- Dragon Steed Troop Javelin Thrower
 (22582,4299,1),
--- 龍馬軍 軍團長
+-- 용마군 군단장
 -- Dragon Steed Troop Commander
 (22538,4299,1),
 (22538,4441,5),
 (22538,4071,5),
--- 龍馬軍 軍團長
+-- 용마군 군단장
 -- Dragon Steed Troop Commander
 (22572,4299,1),
 (22572,5827,6),
 (22572,4441,5),
 (22572,4071,5),
--- 龍馬軍 軍團長
+-- 용마군 군단장
 -- Dragon Steed Troop Commander
 (22586,4299,1),
 (22586,5827,6),
 (22586,4441,5),
 (22586,4071,5),
--- 龍馬軍 軍團長
+-- 용마군 군단장
 -- Dragon Steed Troop Commander
 (22594,4299,1),
 (22594,5827,6),
 (22594,4441,5),
 (22594,4071,5),
--- 親衛隊長
+-- 근위대장
 -- Royal Guard Captain
 (22536,4299,1),
 (22536,5362,9),
--- 親衛隊長
+-- 근위대장
 -- Royal Guard Captain
 (22570,4299,1),
 (22570,5362,9),
--- 敢死隊 蒂雅特親衛隊
+-- 티아트 친위대 - 용기병대
 -- Soldiers of Bravery (Tiats Bodyguards)
 (29162,4299,1),
 (29162,5259,12),
--- 敢死隊 蒂雅特親衛隊
+-- 티아트 친위대 - 용기병대
 -- Soldiers of Bravery (Tiats Bodyguards)
 (22569,4299,1),
 (22569,5259,12),
--- 龍馬軍 大魔法師
+-- 용마군 대마법사
 -- Dragon Steed Troop Grand Magician
 (22537,4299,1),
--- 龍馬軍 大魔法師
+-- 용마군 대마법사
 -- Dragon Steed Troop Grand Magician
 (22571,4299,1),
--- 龍馬軍 治療師
+-- 용마군 힐러
 -- Dragon Steed Troop Healer
 (22547,4299,1),
--- 龍馬軍 治療師
+-- 용마군 힐러
 -- Dragon Steed Troop Healer
 (22580,4299,1),
--- 狂戰士
+-- 광전사
 -- Warrior of Light
 (22546,4299,1),
--- 狂戰士
+-- 광전사
 -- Warrior of Light
 (22579,4299,1),
--- 闇龍的族人
+-- 암흑용의 권속
 -- Wife of the Dragon of Darkness
 (22545,4299,1),
--- 不死的狂信徒
+-- 불사의 광신도
 -- Fanatic of Infinity
 (22509,5909,1),
 (22509,5465,1),
--- 腐敗的傳令
+-- 부패의 전령
 -- Rotten Messenger
 (22510,5909,1),
--- 不死的狂信者
+-- 불사의 광신자
 -- Zealot of Infinity
 (22511,5910,1),
--- 屍體切割機
+-- 사체 절단기
 -- Body Severer
 (22512,5909,1),
--- 屍體收割機
+-- 사체 수확기
 -- Body Harvester
 (22513,5909,1),
--- 靈魂抽取者
+-- 영혼 착취자
 -- Soul Exploiter
 (22514,5910,1),
--- 靈魂掠食者
+-- 영혼 포식자
 -- Soul Devourer
 (22515,5909,1),
--- 羅格那獸人 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크
 -- Ragna Orc (Spirit Infested)
 (22691,4333,6),
 (22691,4312,1),
--- 羅格那獸人戰士 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 전사
 -- Ragna Orc Warrior (Spirit Infested)
 (22692,4333,6),
 (22692,4312,1),
--- 羅格那獸人英雄 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 영웅
 -- Ragna Orc Hero (Spirit Infested)
 (22693,4333,6),
 (22693,4312,1),
--- 羅格那獸人司令官 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 사령관
 -- Ragna Orc Commander (Spirit Infested)
 (22694,4333,6),
--- 羅格那獸人治療師 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 힐러
 -- Ragna Orc Healer (Spirit Infested)
 (22695,4333,6),
--- 羅格那獸人咒術士 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 주술사
 -- Ragna Orc Shaman (Spirit Infested)
 (22696,4333,6),
--- 羅格那獸人預言者 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 제사장
 -- Ragna Orc Seer (Spirit Infested)
 (22697,4333,6),
--- 羅格那獸人射手 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 궁수
 -- Ragna Orc Archer (Spirit Infested)
 (22698,4333,6),
 (22698,4313,1),
--- 羅格那獸人狙擊手 被惡靈附身的
+-- 악령이 깃든 - 라그나 오크 저격수
 -- Ragna Orc Sniper (Spirit Infested)
 (22699,4333,6),
--- 巴蘭卡的守護者
+-- 바랑카의 수호자
 (22700,4417,14),
 (22700,4333,6),
 (22700,4410,13),
 (22700,4413,17),
 (22700,4444,5),
 (22700,5620,2),
--- 巴蘭卡的魔物
+-- 바랑카의 마물
 -- Varangkas Dre Vanul
 (22701,4417,14),
 (22701,4333,6),
--- 巴蘭卡的毀滅者
+-- 바랑카의 파멸자
 -- Varangkas Destroyer
 (22702,4417,14),
 (22702,4333,6);
@@ -365,290 +365,290 @@ REPLACE INTO npcskills VALUES
 -- (25254,3,-248699,249660);
 
 -- 四方結界怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86802,  `sp`=9470,  `hp`=3461, `mp`=1708 where id='22708';  -- 惡夢的侵略戰士
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86975,  `sp`=9490,  `hp`=3461, `mp`=1708 where id='22709';  -- 惡夢的侵略治癒者
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=55431,  `sp`=6053,  `hp`=3461, `mp`=1708 where id='22710';  -- 惡夢的侵略引導者
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=76351,  `sp`=8361,  `hp`=3461, `mp`=1708 where id='22711';  -- 惡夢的侵略破壞者
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=56907,  `sp`=6223,  `hp`=3461, `mp`=1708 where id='22712';  -- 惡夢的侵略暗殺者
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=71490,  `sp`=7803,  `hp`=3461, `mp`=1708 where id='22713';  -- 惡夢的侵略咒術士
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=54103,  `sp`=5901,  `hp`=3461, `mp`=1708 where id='22714';  -- 惡夢的侵略弓箭手
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86802,  `sp`=9470,  `hp`=3461, `mp`=1708 where id='22715';  -- 惡夢的侵略士兵
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86802,  `sp`=9470,  `hp`=3461, `mp`=1708 where id='22716';  -- 惡夢的侵略士兵
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=94735,  `sp`=10335, `hp`=3461, `mp`=1708 where id='22717';  -- 惡夢的侵略使徒
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=102165, `sp`=11188, `hp`=3461, `mp`=1708 where id='22718';  -- 惡夢的侵略精銳兵
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86802,  `sp`=9470,  `hp`=3461, `mp`=1708 WHERE `id` = '22708';  -- 악몽의 침략군 전사
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86975,  `sp`=9490,  `hp`=3461, `mp`=1708 WHERE `id` = '22709';  -- 악몽의 침략군 치유사
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=55431,  `sp`=6053,  `hp`=3461, `mp`=1708 WHERE `id` = '22710';  -- 악몽의 침략군 인도자
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=76351,  `sp`=8361,  `hp`=3461, `mp`=1708 WHERE `id` = '22711';  -- 악몽의 침략군 파괴자
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=56907,  `sp`=6223,  `hp`=3461, `mp`=1708 WHERE `id` = '22712';  -- 악몽의 침략군 암살자
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=71490,  `sp`=7803,  `hp`=3461, `mp`=1708 WHERE `id` = '22713';  -- 악몽의 침략군 주술사
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=54103,  `sp`=5901,  `hp`=3461, `mp`=1708 WHERE `id` = '22714';  -- 악몽의 침략군 궁수
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86802,  `sp`=9470,  `hp`=3461, `mp`=1708 WHERE `id` = '22715';  -- 악몽의 침략군 병사
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=86802,  `sp`=9470,  `hp`=3461, `mp`=1708 WHERE `id` = '22716';  -- 악몽의 침략군 병사
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=94735,  `sp`=10335, `hp`=3461, `mp`=1708 WHERE `id` = '22717';  -- 악몽의 침략군 사도
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=102165, `sp`=11188, `hp`=3461, `mp`=1708 WHERE `id` = '22718';  -- 악몽의 침략군 정예병
 
 -- 廣場結界怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=173525, `sp`=19428, `hp`=65802, `mp`=1743 where id='22719';  -- 虛無的侵略戰士
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165990, `sp`=18584, `hp`=65802, `mp`=1743 where id='22720';  -- 虛無的侵略治癒者
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=91554,  `sp`=10250, `hp`=32946, `mp`=1743 where id='22721';  -- 虛無的侵略引導者
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 where id='22722';  -- 虛無的侵略破壞者
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=93237,  `sp`=10439, `hp`=32946, `mp`=1743 where id='22723';  -- 虛無的侵略暗殺者
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=166465, `sp`=18638, `hp`=65802, `mp`=1743 where id='22724';  -- 虛無的侵略咒術士
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=162858, `sp`=18234, `hp`=65802, `mp`=1743 where id='22725';  -- 虛無的侵略弓箭手
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 where id='22726';  -- 虛無的侵略士兵
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 where id='22727';  -- 虛無的侵略士兵
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 where id='22728';  -- 虛無的侵略使徒
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=310252, `sp`=33057, `hp`=65802, `mp`=1743 where id='22729';  -- 虛無的侵略精銳兵
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=173525, `sp`=19428, `hp`=65802, `mp`=1743 WHERE `id` = '22719';  -- 허무의 침략군 전사
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165990, `sp`=18584, `hp`=65802, `mp`=1743 WHERE `id` = '22720';  -- 허무의 침략군 치유사
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=91554,  `sp`=10250, `hp`=32946, `mp`=1743 WHERE `id` = '22721';  -- 허무의 침략군 인도자
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 WHERE `id` = '22722';  -- 허무의 침략군 파괴자
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=93237,  `sp`=10439, `hp`=32946, `mp`=1743 WHERE `id` = '22723';  -- 허무의 침략군 암살자
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=166465, `sp`=18638, `hp`=65802, `mp`=1743 WHERE `id` = '22724';  -- 허무의 침략군 주술사
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=162858, `sp`=18234, `hp`=65802, `mp`=1743 WHERE `id` = '22725';  -- 허무의 침략군 궁수
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 WHERE `id` = '22726';  -- 허무의 침략군 병사
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 WHERE `id` = '22727';  -- 허무의 침략군 병사
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=165520, `sp`=18532, `hp`=65802, `mp`=1743 WHERE `id` = '22728';  -- 허무의 침략군 사도
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=310252, `sp`=33057, `hp`=65802, `mp`=1743 WHERE `id` = '22729';  -- 허무의 침략군 정예병
 
 -- 塔之結界怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=357615, `sp`=38610, `hp`=112020, `mp`=1812 where id='22730';  -- 怨靈的侵略戰士
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=337518, `sp`=36440, `hp`=112020, `mp`=1812 where id='22731';  -- 怨靈的侵略治癒者
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=338470, `sp`=36543, `hp`=112020, `mp`=1812 where id='22732';  -- 怨靈的侵略引導者
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=356663, `sp`=38507, `hp`=112020, `mp`=1812 where id='22733';  -- 怨靈的侵略破壞者
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=166805, `sp`=18009, `hp`=56054,  `mp`=1812 where id='22734';  -- 怨靈的侵略暗殺者
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=338470, `sp`=36543, `hp`=112020, `mp`=1812 where id='22735';  -- 怨靈的侵略咒術士
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=159361, `sp`=17205, `hp`=56054,  `mp`=1812 where id='22736';  -- 怨靈的侵略弓箭手
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=336554, `sp`=36336, `hp`=112020, `mp`=1812 where id='22737';  -- 怨靈的侵略士兵
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=336554, `sp`=36336, `hp`=112020, `mp`=1812 where id='22738';  -- 怨靈的侵略士兵
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=618577, `sp`=63492, `hp`=112020, `mp`=1812 where id='22739';  -- 怨靈的侵略使徒
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=650929, `sp`=66985, `hp`=112020, `mp`=1812 where id='22740';  -- 怨靈的侵略精銳兵
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=357615, `sp`=38610, `hp`=112020, `mp`=1812 WHERE `id` = '22730';  -- 망량의 침략군 전사
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=337518, `sp`=36440, `hp`=112020, `mp`=1812 WHERE `id` = '22731';  -- 망량의 침략군 치유사
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=338470, `sp`=36543, `hp`=112020, `mp`=1812 WHERE `id` = '22732';  -- 망량의 침략군 인도자
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=356663, `sp`=38507, `hp`=112020, `mp`=1812 WHERE `id` = '22733';  -- 망량의 침략군 파괴자
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=166805, `sp`=18009, `hp`=56054,  `mp`=1812 WHERE `id` = '22734';  -- 망량의 침략군 암살자
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=338470, `sp`=36543, `hp`=112020, `mp`=1812 WHERE `id` = '22735';  -- 망량의 침략군 주술사
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=159361, `sp`=17205, `hp`=56054,  `mp`=1812 WHERE `id` = '22736';  -- 망량의 침략군 저격수
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=336554, `sp`=36336, `hp`=112020, `mp`=1812 WHERE `id` = '22737';  -- 망량의 침략군 병사
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=336554, `sp`=36336, `hp`=112020, `mp`=1812 WHERE `id` = '22738';  -- 망량의 침략군 병사
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=618577, `sp`=63492, `hp`=112020, `mp`=1812 WHERE `id` = '22739';  -- 망량의 침략군 사도
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=650929, `sp`=66985, `hp`=112020, `mp`=1812 WHERE `id` = '22740';  -- 망량의 침략군 정예병
 
 -- 結界首領怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 where id='25690';  -- 亞恩奇奈爾 夢境的侵蝕者  可吸魂
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 where id='25691';  -- 亞恩奇奈爾 夢境的侵蝕者  可吸魂
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 where id='25692';  -- 亞恩奇奈爾 夢境的侵蝕者  可吸魂
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 where id='25693';  -- 亞恩奇奈爾 夢境的侵蝕者  可吸魂
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=82, `exp`=37775745, `sp`=1117041, `hp`=436294, `mp`=18120 where id='25694';  -- 亞恩奇奈爾(Lv82) 夢境的侵蝕者  可吸魂
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=84, `exp`=42720365, `sp`=1206690, `hp`=449514, `mp`=19170 where id='25695';  -- 亞恩奇奈爾(Lv84) 夢境的侵蝕者  可吸魂
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 WHERE `id` = '25690';  -- 꿈의 침식자 - 아엔키넬
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 WHERE `id` = '25691';  -- 꿈의 침식자 - 아엔키넬
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 WHERE `id` = '25692';  -- 꿈의 침식자 - 아엔키넬
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=81, `exp`=3327990,  `sp`=394141,  `hp`=436294, `mp`=18120 WHERE `id` = '25693';  -- 꿈의 침식자 - 아엔키넬
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=82, `exp`=37775745, `sp`=1117041, `hp`=436294, `mp`=18120 WHERE `id` = '25694';  -- 꿈의 침식자 - 아엔키넬
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=84, `exp`=42720365, `sp`=1206690, `hp`=449514, `mp`=19170 WHERE `id` = '25695';  -- 꿈의 침식자 - 아엔키넬
 
 -- 受傷的龍怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=21105, `sp`=2186, `hp`=2856, `mp`=1574 where id='18635';  -- 巴瑞卡賽勒諾斯訓練兵
-UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=18501, `sp`=1904, `hp`=2856, `mp`=1574 where id='18636';  -- 巴瑞卡賽勒諾斯步兵
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=11090, `sp`=1200, `hp`=2856, `mp`=1574 where id='18637';  -- 放牧的羚羊
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=25065, `sp`=2642, `hp`=2974, `mp`=1607 where id='18638';  -- 巴瑞卡賽勒諾斯偵查兵
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=24846, `sp`=2618, `hp`=2974, `mp`=1607 where id='18639';  -- 巴瑞卡賽勒諾斯狩獵者
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=24583, `sp`=2580, `hp`=2974, `mp`=1607 where id='18640';  -- 巴瑞卡賽勒諾斯咒術士
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=25424, `sp`=2681, `hp`=2974, `mp`=1607 where id='18641';  -- 巴瑞卡賽勒諾斯祭司
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=25564, `sp`=2696, `hp`=2974, `mp`=1607 where id='18642';  -- 巴瑞卡賽勒諾斯戰士
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=11090, `sp`=1200, `hp`=2856, `mp`=1574 where id='18643';  -- 放牧的羚羊
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=33107, `sp`=3490, `hp`=2974, `mp`=1607 where id='18644';  -- 巴瑞卡賽勒諾斯靈媒
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=23321, `sp`=2452, `hp`=2974, `mp`=1607 where id='18645';  -- 巴瑞卡賽勒諾斯魔導士
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=25564, `sp`=2696, `hp`=2974, `mp`=1607 where id='18646';  -- 巴瑞卡賽勒諾斯下士
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=23952, `sp`=2522, `hp`=2974, `mp`=1607 where id='18647';  -- 放牧的芙拉瓦
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=18178, `sp`=1988, `hp`=2974, `mp`=1607 where id='18648';  -- 巴瑞卡賽勒諾斯祭司長
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=25065, `sp`=2642, `hp`=2974, `mp`=1607 where id='18649';  -- 巴瑞卡賽勒諾斯大魔導士
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=27045, `sp`=2858, `hp`=2974, `mp`=1607 where id='18650';  -- 巴瑞卡賽勒諾斯軍官
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=15760, `sp`=1724, `hp`=2974, `mp`=1607 where id='18651';  -- 放牧的羚羊長老
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=32231, `sp`=3394, `hp`=2974, `mp`=1607 where id='18652';  -- 巴瑞卡賽勒諾斯大祭司長
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=26151, `sp`=2761, `hp`=2974, `mp`=1607 where id='18653';  -- 巴瑞卡精銳親衛隊
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=31469, `sp`=3310, `hp`=2974, `mp`=1607 where id='18654';  -- 巴瑞卡軍團長
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=16812, `sp`=1840, `hp`=2974, `mp`=1607 where id='18655';  -- 巴瑞卡首席親衛隊
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=24846, `sp`=2618, `hp`=2974, `mp`=1607 where id='18656';  -- 巴瑞卡首席魔導士
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=16952, `sp`=1855, `hp`=2974, `mp`=1607 where id='18657';  -- 預言者的親衛兵
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=16339, `sp`=1788, `hp`=2974, `mp`=1607 where id='18658';  -- 預言者的門徒
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=32073, `sp`=3370, `hp`=2974, `mp`=1607 where id='18659';  -- 巴瑞卡預言者
+UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=21105, `sp`=2186, `hp`=2856, `mp`=1574 WHERE `id` = '18635';  -- 바르카 실레노스 훈련병
+UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=18501, `sp`=1904, `hp`=2856, `mp`=1574 WHERE `id` = '18636';  -- 바르카 실레노스 보병
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=11090, `sp`=1200, `hp`=2856, `mp`=1574 WHERE `id` = '18637';  -- 방목 앤틸로프
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=25065, `sp`=2642, `hp`=2974, `mp`=1607 WHERE `id` = '18638';  -- 바르카 실레노스 정찰병
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=24846, `sp`=2618, `hp`=2974, `mp`=1607 WHERE `id` = '18639';  -- 바르카 실레노스 사냥꾼
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=24583, `sp`=2580, `hp`=2974, `mp`=1607 WHERE `id` = '18640';  -- 바르카 실레노스 주술사
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=25424, `sp`=2681, `hp`=2974, `mp`=1607 WHERE `id` = '18641';  -- 바르카 실레노스 사제
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=25564, `sp`=2696, `hp`=2974, `mp`=1607 WHERE `id` = '18642';  -- 바르카 실레노스 전사
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=11090, `sp`=1200, `hp`=2856, `mp`=1574 WHERE `id` = '18643';  -- 방목 앤틸로프
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=33107, `sp`=3490, `hp`=2974, `mp`=1607 WHERE `id` = '18644';  -- 바르카 실레노스 영매
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=23321, `sp`=2452, `hp`=2974, `mp`=1607 WHERE `id` = '18645';  -- 바르카 실레노스 마도사
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=25564, `sp`=2696, `hp`=2974, `mp`=1607 WHERE `id` = '18646';  -- 바르카 실레노스 하사관
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=23952, `sp`=2522, `hp`=2974, `mp`=1607 WHERE `id` = '18647';  -- 방목 플라바
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=18178, `sp`=1988, `hp`=2974, `mp`=1607 WHERE `id` = '18648';  -- 바르카 실레노스 제사장
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=25065, `sp`=2642, `hp`=2974, `mp`=1607 WHERE `id` = '18649';  -- 바르카 실레노스 대마도사
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=27045, `sp`=2858, `hp`=2974, `mp`=1607 WHERE `id` = '18650';  -- 바르카 실레노스 장교
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=15760, `sp`=1724, `hp`=2974, `mp`=1607 WHERE `id` = '18651';  -- 방목 엘더 앤틸로프
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=32231, `sp`=3394, `hp`=2974, `mp`=1607 WHERE `id` = '18652';  -- 바르카 실레노스 대제사장
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=26151, `sp`=2761, `hp`=2974, `mp`=1607 WHERE `id` = '18653';  -- 바르카의 정예 호위병
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=31469, `sp`=3310, `hp`=2974, `mp`=1607 WHERE `id` = '18654';  -- 바르카의 군단장
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=16812, `sp`=1840, `hp`=2974, `mp`=1607 WHERE `id` = '18655';  -- 바르카의 수석 호위병
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=24846, `sp`=2618, `hp`=2974, `mp`=1607 WHERE `id` = '18656';  -- 바르카의 수석 마도사
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=16952, `sp`=1855, `hp`=2974, `mp`=1607 WHERE `id` = '18657';  -- 예언자의 근위병
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=16339, `sp`=1788, `hp`=2974, `mp`=1607 WHERE `id` = '18658';  -- 예언자의 제자
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=32073, `sp`=3370, `hp`=2974, `mp`=1607 WHERE `id` = '18659';  -- 바르카의 예언자
 
 -- 邊緣菲拉卡(城堡)怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=0, `sp`=0, `hp`=8710, `mp`=1641 where id='25656';  -- 卡納迪斯 狂信徒(Lv79)
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=2730278, `sp`=394141, `hp`=423463, `mp`=1708 where id='25653';  -- 卡納迪斯 先驅者(Lv81) 侵略軍
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 where id='25657';  -- 卡納迪斯 狂信徒(Lv81)
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=2911026, `sp`=402310, `hp`=431974, `mp`=1777 where id='25654';  -- 卡納迪斯 先驅者(Lv83) 侵略軍
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=0, `sp`=0, `hp`=8789, `mp`=1777 where id='25658';  -- 卡納迪斯 狂信徒(Lv83)
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=3100451, `sp`=410692, `hp`=440657, `mp`=1846 where id='25655';  -- 卡納迪斯 先驅者(Lv85) 侵略軍
+UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=0, `sp`=0, `hp`=8710, `mp`=1641 WHERE `id` = '25656';  -- 카나디스 광신도
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=2730278, `sp`=394141, `hp`=423463, `mp`=1708 WHERE `id` = '25653';  -- 침략군 - 카나디스 선구자
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 WHERE `id` = '25657';  -- 카나디스 광신도
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=2911026, `sp`=402310, `hp`=431974, `mp`=1777 WHERE `id` = '25654';  -- 침략군 - 카나디스 선구자
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=0, `sp`=0, `hp`=8789, `mp`=1777 WHERE `id` = '25658';  -- 카나디스 광신도
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=3100451, `sp`=410692, `hp`=440657, `mp`=1846 WHERE `id` = '25655';  -- 카나디스 선구자
 
 -- 邊緣菲拉卡(要塞)怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=0, `sp`=0, `hp`=8551, `mp`=1507 where id='25662';  -- 卡納迪斯 追從者(Lv75)
-UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=2588731, `sp`=332450, `hp`=406426, `mp`=1574 where id='25659';  -- 卡納迪斯 前導者(Lv77) 侵略軍
-UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 where id='25663';  -- 卡納迪斯 追從者(Lv78)
-UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=2706502, `sp`=353878, `hp`=419270, `mp`=1674 where id='25660';  -- 卡納迪斯 前導者(Lv80) 侵略軍
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 where id='25664';  -- 卡納迪斯 追從者(Lv81) 
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=2853103, `sp`=373311, `hp`=431974, `mp`=1777 where id='25661';  -- 卡納迪斯 前導者(Lv83) 侵略軍
+UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=0, `sp`=0, `hp`=8551, `mp`=1507 WHERE `id` = '25662';  -- 카나디스 추종자
+UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=2588731, `sp`=332450, `hp`=406426, `mp`=1574 WHERE `id` = '25659';  -- 침략군 - 카나디스 선도자
+UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 WHERE `id` = '25663';  -- 카나디스 추종자
+UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=2706502, `sp`=353878, `hp`=419270, `mp`=1674 WHERE `id` = '25660';  -- 침략군 - 카나디스 선도자
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 WHERE `id` = '25664';  -- 카나디스 추종자 
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=2853103, `sp`=373311, `hp`=431974, `mp`=1777 WHERE `id` = '25661';  -- 침략군 - 카나디스 선도자
 
 -- 地下競技場怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=45, `exp`=3834,  `sp`=266,  `hp`=1183, `mp`=610  where id='22443';  -- 柯爾堂的使者(Lv45)
-UPDATE `npc` SET `type`='L2Monster', `level`=55, `exp`=5728,  `sp`=462,  `hp`=1673, `mp`=889  where id='22444';  -- 柯爾堂的使者(Lv55)
-UPDATE `npc` SET `type`='L2Monster', `level`=65, `exp`=7797,  `sp`=724,  `hp`=2193, `mp`=1188 where id='22445';  -- 柯爾堂的使者(Lv65)
-UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=9659,  `sp`=1018, `hp`=2676, `mp`=1507 where id='22446';  -- 柯爾堂的使者(Lv75)
-UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=10183, `sp`=1143, `hp`=3290, `mp`=1674 where id='22447';  -- 柯爾堂的使者(Lv80)
+UPDATE `npc` SET `type`='L2Monster', `level`=45, `exp`=3834,  `sp`=266,  `hp`=1183, `mp`=610  WHERE `id` = '22443';  -- 케르탕의 사자
+UPDATE `npc` SET `type`='L2Monster', `level`=55, `exp`=5728,  `sp`=462,  `hp`=1673, `mp`=889  WHERE `id` = '22444';  -- 케르탕의 사자
+UPDATE `npc` SET `type`='L2Monster', `level`=65, `exp`=7797,  `sp`=724,  `hp`=2193, `mp`=1188 WHERE `id` = '22445';  -- 케르탕의 사자
+UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=9659,  `sp`=1018, `hp`=2676, `mp`=1507 WHERE `id` = '22446';  -- 케르탕의 사자
+UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=10183, `sp`=1143, `hp`=3290, `mp`=1674 WHERE `id` = '22447';  -- 케르탕의 사자
 
 -- 增加地下收容所怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=2192267, `sp`=353878, `hp`=192008, `mp`=1410 where id='25572';  -- 不法者哈爾庫 過去的囚犯
-UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=0, `sp`=0, `hp`=8318, `mp`=1377 where id='25574';  -- 哈爾庫的警衛
-UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=0, `sp`=0, `hp`=8318, `mp`=1377 where id='25573';  -- 哈爾庫的追隨者
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=2192267, `sp`=353878, `hp`=192008, `mp`=1410 WHERE `id` = '25572';  -- 과거의 수감자 - 무법자 하쿡
+UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=0, `sp`=0, `hp`=8318, `mp`=1377 WHERE `id` = '25574';  -- 하쿡의 호위병
+UPDATE `npc` SET `type`='L2Monster', `level`=71, `exp`=0, `sp`=0, `hp`=8318, `mp`=1377 WHERE `id` = '25573';  -- 하쿡의 추종자
 REPLACE INTO `minions` VALUES (25572, 25574, 1, 1);
 REPLACE INTO `minions` VALUES (25572, 25573, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=2234730, `sp`=360602, `hp`=194342, `mp`=1442 where id='25575';  -- 透視者朗鐵 過去的囚犯
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=0, `sp`=0, `hp`=8383, `mp`=1410 where id='25577';  -- 朗鐵的水晶體
-UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=0, `sp`=0, `hp`=8383, `mp`=1410 where id='25576';  -- 朗鐵的虹膜
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=2234730, `sp`=360602, `hp`=194342, `mp`=1442 WHERE `id` = '25575';  -- 과거의 수감자 - 투시의 람토
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=0, `sp`=0, `hp`=8383, `mp`=1410 WHERE `id` = '25577';  -- 람토의 수정체
+UPDATE `npc` SET `type`='L2Monster', `level`=72, `exp`=0, `sp`=0, `hp`=8383, `mp`=1410 WHERE `id` = '25576';  -- 람토의 홍채
 REPLACE INTO `minions` VALUES (25575, 25577, 1, 1);
 REPLACE INTO `minions` VALUES (25575, 25576, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=2234730, `sp`=360602, `hp`=388684, `mp`=1442 where id='25578';  -- 史克雷 過去的囚犯
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=2234730, `sp`=360602, `hp`=388684, `mp`=1442 WHERE `id` = '25578';  -- 과거의 수감자 - 지크레
 
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=2280800, `sp`=367102, `hp`=196619, `mp`=1475 where id='25579';  -- 海西奈爾 過去的囚犯
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=0, `sp`=0, `hp`=8444, `mp`=1442 where id='25581';  -- 海西奈爾的刺客
-UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=0, `sp`=0, `hp`=8444, `mp`=1442 where id='25580';  -- 海西奈爾的守護兵
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=2280800, `sp`=367102, `hp`=196619, `mp`=1475 WHERE `id` = '25579';  -- 과거의 수감자 - 헬시넬
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=0, `sp`=0, `hp`=8444, `mp`=1442 WHERE `id` = '25581';  -- 헬시넬의 자객
+UPDATE `npc` SET `type`='L2Monster', `level`=73, `exp`=0, `sp`=0, `hp`=8444, `mp`=1442 WHERE `id` = '25580';  -- 헬시넬의 수호병
 REPLACE INTO `minions` VALUES (25579, 25581, 1, 1);
 REPLACE INTO `minions` VALUES (25579, 25580, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=2329613, `sp`=373311, `hp`=198851, `mp`=1507 where id='25582';  -- 加爾力安 過去的囚犯
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 where id='25584';  -- 加爾力安的僕人
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 where id='25583';  -- 加爾力安的女兒
+UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=2329613, `sp`=373311, `hp`=198851, `mp`=1507 WHERE `id` = '25582';  -- 과거의 수감자 - 갈리안
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 WHERE `id` = '25584';  -- 갈리안의 종복
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 WHERE `id` = '25583';  -- 갈리안의 딸
 REPLACE INTO `minions` VALUES (25582, 25584, 1, 1);
 REPLACE INTO `minions` VALUES (25582, 25583, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=76, `exp`=2383518, `sp`=369370, `hp`=201046, `mp`=1540 where id='25585';  -- 麥以迪 過去的囚犯
-UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=0, `sp`=0, `hp`=8551, `mp`=1507 where id='25586';  -- 麥以迪之妹
-UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=0, `sp`=0, `hp`=8551, `mp`=1507 where id='25587';  -- 麥以迪之弟
+UPDATE `npc` SET `type`='L2Monster', `level`=76, `exp`=2383518, `sp`=369370, `hp`=201046, `mp`=1540 WHERE `id` = '25585';  -- 과거의 수감자 - 메이디
+UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=0, `sp`=0, `hp`=8551, `mp`=1507 WHERE `id` = '25586';  -- 메이디 여동생
+UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=0, `sp`=0, `hp`=8551, `mp`=1507 WHERE `id` = '25587';  -- 메이디 남동생
 REPLACE INTO `minions` VALUES (25585, 25586, 1, 1);
 REPLACE INTO `minions` VALUES (25585, 25587, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=2441393, `sp`=374864, `hp`=406426, `mp`=1574 where id='25588';  -- 無法阻止的幕烏士 過去的囚犯
+UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=2441393, `sp`=374864, `hp`=406426, `mp`=1574 WHERE `id` = '25588';  -- 과거의 수감자 - 죽지않는 뮤우스
 
-UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=2504377, `sp`=380180, `hp`=205362, `mp`=1607 where id='25589';  -- 被放逐的巴里達 過去的囚犯
-UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 where id='25591';  -- 巴里達的侍女
-UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 where id='25590';  -- 巴里達的侍從
+UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=2504377, `sp`=380180, `hp`=205362, `mp`=1607 WHERE `id` = '25589';  -- 과거의 수감자 - 추방당한 바리다
+UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 WHERE `id` = '25591';  -- 바리다의 몸종
+UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 WHERE `id` = '25590';  -- 바리다의 시종
 REPLACE INTO `minions` VALUES (25589, 25591, 1, 1);
 REPLACE INTO `minions` VALUES (25589, 25590, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=2643172, `sp`=390090, `hp`=209635, `mp`=1674 where id='25593';  -- 掠食者凱爾格 過去的囚犯
-UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=0, `sp`=0, `hp`=8710, `mp`=1641 where id='25594';  -- 凱爾格的追隨者
-UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=0, `sp`=0, `hp`=8710, `mp`=1641 where id='25595';  -- 凱爾格的部下
+UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=2643172, `sp`=390090, `hp`=209635, `mp`=1674 WHERE `id` = '25593';  -- 과거의 수감자 - 포식자 게르그
+UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=0, `sp`=0, `hp`=8710, `mp`=1641 WHERE `id` = '25594';  -- 게르그의 추종자
+UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=0, `sp`=0, `hp`=8710, `mp`=1641 WHERE `id` = '25595';  -- 게르그의 부하
 REPLACE INTO `minions` VALUES (25593, 25594, 1, 1);
 REPLACE INTO `minions` VALUES (25593, 25595, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=2571288, `sp`=385228, `hp`=415001, `mp`=1641 where id='25592';  -- 大將軍卡拉隆 過去的囚犯
+UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=2571288, `sp`=385228, `hp`=415001, `mp`=1641 WHERE `id` = '25592';  -- 과거의 수감자 - 대장군 카나렝
 
 -- 增加城堡地監怪物資料 Update 23-08-2010
-UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=2329613, `sp`=373311, `hp`=198851, `mp`=1507 where id='25546';  -- 背信的拉尼安 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 where id='25547';  -- 拉尼安的同夥
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 where id='25548';  -- 拉尼安的治癒者
+UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=2329613, `sp`=373311, `hp`=198851, `mp`=1507 WHERE `id` = '25546';  -- 과거의 죄수 - 배신당한 레니안느
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 WHERE `id` = '25547';  -- 레니안느의 동행자
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 WHERE `id` = '25548';  -- 레니안느의 치유사
 REPLACE INTO `minions` VALUES (25546, 25547, 1, 1);
 REPLACE INTO `minions` VALUES (25546, 25548, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=2329613, `sp`=373311, `hp`=198851, `mp`=1507 where id='25549';  -- 詐欺犯泰西亞 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 where id='25550';  -- 泰西亞的大弟子
-UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 where id='25551';  -- 泰西亞的跑腿
+UPDATE `npc` SET `type`='L2Monster', `level`=75, `exp`=2329613, `sp`=373311, `hp`=198851, `mp`=1507 WHERE `id` = '25549';  -- 과거의 죄수 - 사기꾼 테시아
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 WHERE `id` = '25550';  -- 테시아의 수제자
+UPDATE `npc` SET `type`='L2Monster', `level`=74, `exp`=0, `sp`=0, `hp`=8500, `mp`=1475 WHERE `id` = '25551';  -- 테시아의 심부름꾼
 REPLACE INTO `minions` VALUES (25549, 25550, 1, 1);
 REPLACE INTO `minions` VALUES (25549, 25551, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=76, `exp`=2383518, `sp`=369370, `hp`=402092, `mp`=1540 where id='25552';  -- 靈魂獵人查昆迪 過去的罪犯
+UPDATE `npc` SET `type`='L2Monster', `level`=76, `exp`=2383518, `sp`=369370, `hp`=402092, `mp`=1540 WHERE `id` = '25552';  -- 과거의 죄수 - 영혼 사냥꾼 챠쿤델
 
-UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=2441393, `sp`=374864, `hp`=406426, `mp`=1574 where id='25553';  -- 岩石拳杜泰格 過去的罪犯
+UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=2441393, `sp`=374864, `hp`=406426, `mp`=1574 WHERE `id` = '25553';  -- 과거의 죄수 - 바위주먹 두탕고
 
-UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=2504377, `sp`=380180, `hp`=205362, `mp`=1607 where id='25554';  -- 不屈的布魯泰齊歐 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 where id='25555';  -- 布魯泰齊歐的右手
-UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 where id='25556';  -- 布魯泰齊歐的左手
+UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=2504377, `sp`=380180, `hp`=205362, `mp`=1607 WHERE `id` = '25554';  -- 과거의 죄수 - 불굴의 부루테치오
+UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 WHERE `id` = '25555';  -- 부루테치오의 오른팔
+UPDATE `npc` SET `type`='L2Monster', `level`=77, `exp`=0, `sp`=0, `hp`=8641, `mp`=1574 WHERE `id` = '25556';  -- 부루테치오의 왼팔
 REPLACE INTO `minions` VALUES (25554, 25555, 1, 1);
 REPLACE INTO `minions` VALUES (25554, 25556, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=2571288, `sp`=385228, `hp`=207500, `mp`=1641 where id='25557';  -- 森林掠食者凱凱諾斯 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 where id='25558';  -- 凱凱諾斯的側根
-UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 where id='25559';  -- 凱凱諾斯的花
+UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=2571288, `sp`=385228, `hp`=207500, `mp`=1641 WHERE `id` = '25557';  -- 과거의 죄수 - 숲의 포식자 케케노스
+UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 WHERE `id` = '25558';  -- 케케노스의 잔뿌리
+UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 WHERE `id` = '25559';  -- 케케노스의 꽃
 REPLACE INTO `minions` VALUES (25557, 25558, 1, 1);
 REPLACE INTO `minions` VALUES (25557, 25559, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=2571288, `sp`=385228, `hp`=207500, `mp`=1641 where id='25560';  -- 暴走劍士斯里卡德 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 where id='25561';  -- 斯里卡德的鐘
-UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 where id='25562';  -- 斯里卡德的見習生
+UPDATE `npc` SET `type`='L2Monster', `level`=79, `exp`=2571288, `sp`=385228, `hp`=207500, `mp`=1641 WHERE `id` = '25560';  -- 과거의 죄수 - 폭주검사 실리카드
+UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 WHERE `id` = '25561';  -- 실리카드의 종
+UPDATE `npc` SET `type`='L2Monster', `level`=78, `exp`=0, `sp`=0, `hp`=8678, `mp`=1607 WHERE `id` = '25562';  -- 실리카드의 견습생
 REPLACE INTO `minions` VALUES (25560, 25561, 1, 1);
 REPLACE INTO `minions` VALUES (25560, 25562, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=2730278, `sp`=394141, `hp`=211731, `mp`=1708 where id='25563';  -- 美貌的奈茲里耶 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=0, `sp`=0, `hp`=8738, `mp`=1674 where id='25564';  -- 奈茲里耶的追隨者
-UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=0, `sp`=0, `hp`=8738, `mp`=1674 where id='25565';  -- 奈茲里耶的部下
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=2730278, `sp`=394141, `hp`=211731, `mp`=1708 WHERE `id` = '25563';  -- 과거의 죄수 - 미모의 나츠리엘
+UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=0, `sp`=0, `hp`=8738, `mp`=1674 WHERE `id` = '25564';  -- 나츠리엘의 추종자
+UPDATE `npc` SET `type`='L2Monster', `level`=80, `exp`=0, `sp`=0, `hp`=8738, `mp`=1674 WHERE `id` = '25565';  -- 나츠리엘의 부하
 REPLACE INTO `minions` VALUES (25563, 25564, 1, 1);
 REPLACE INTO `minions` VALUES (25563, 25565, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=2819564, `sp`=398177, `hp`=213848, `mp`=1743 where id='25566';  -- 粗野的南龐 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 where id='25567';  -- 南龐的至交
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 where id='25568';  -- 南龐的老友
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=2819564, `sp`=398177, `hp`=213848, `mp`=1743 WHERE `id` = '25566';  -- 과거의 죄수 - 말괄량이 네퐁
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 WHERE `id` = '25567';  -- 네퐁의 소꿉친구
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 WHERE `id` = '25568';  -- 네퐁의 친구
 REPLACE INTO `minions` VALUES (25566, 25567, 1, 1);
 REPLACE INTO `minions` VALUES (25566, 25568, 1, 1);
 
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=2819564, `sp`=398177, `hp`=213848, `mp`=1743 where id='25569';  -- 破壞者加斯 過去的罪犯
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 where id='25570';  -- 加斯的偵查兵
-UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 where id='25571';  -- 加斯的突擊兵
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=2819564, `sp`=398177, `hp`=213848, `mp`=1743 WHERE `id` = '25569';  -- 과거의 죄수 - 파괴자 작스
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 WHERE `id` = '25570';  -- 작스의 정찰병
+UPDATE `npc` SET `type`='L2Monster', `level`=81, `exp`=0, `sp`=0, `hp`=8760, `mp`=1708 WHERE `id` = '25571';  -- 작스의 돌격병
 REPLACE INTO `minions` VALUES (25569, 25570, 1, 1);
 REPLACE INTO `minions` VALUES (25569, 25571, 1, 1);
 
 -- 權能培訓場
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=8453,  `sp`=912,   `hp`=3835, `mp`=1777 where id='22780';  -- 賽爾豺狼士兵(弓手)
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=8453,  `sp`=912,   `hp`=3835, `mp`=1777 where id='22782';  -- 賽爾豺狼士兵(戰士)
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=8453,  `sp`=912,   `hp`=3835, `mp`=1777 where id='22784';  -- 賽爾豺狼士兵(法師)
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=17547, `sp`=1759,  `hp`=3835, `mp`=1777 where id='18908';  -- 賽爾豺狼料理長
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=20751, `sp`=2063,  `hp`=4039, `mp`=1812 where id='22786';  -- 賽爾豺狼十夫長(弓手)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=20751, `sp`=2063,  `hp`=4039, `mp`=1812 where id='22787';  -- 賽爾豺狼十夫長(戰士)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=20751, `sp`=2063,  `hp`=4039, `mp`=1812 where id='22788';  -- 賽爾豺狼十夫長(法師)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=4807,  `sp`=512,   `hp`=4039, `mp`=1812 where id='22781';  -- 賽爾豺狼熟練兵(弓手)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=8532,  `sp`=910,   `hp`=4039, `mp`=1812 where id='22783';  -- 賽爾豺狼熟練兵(戰士)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=11192, `sp`=1194,  `hp`=4039, `mp`=1812 where id='22785';  -- 賽爾豺狼熟練兵(法師)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=25111, `sp`=2528,  `hp`=4039, `mp`=1812 where id='22778';  -- 賽爾豺狼訓練教官(弓手)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=25111, `sp`=2528,  `hp`=4039, `mp`=1812 where id='22775';  -- 賽爾豺狼訓練教官(法師)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=25111, `sp`=2528,  `hp`=4039, `mp`=1812 where id='22777';  -- 賽爾豺狼訓練教官(戰士)
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=37863, `sp`=3820,  `hp`=4039, `mp`=1812 where id='22776';  -- 賽爾豺狼訓練教官長
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=24663, `sp`= 2481, `hp`=4039, `mp`=1812 where id='22779';  -- 賽爾豺狼護衛戰士
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=8453,  `sp`=912,   `hp`=3835, `mp`=1777 WHERE `id` = '22780';  -- 賽爾豺狼士兵(弓手)
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=8453,  `sp`=912,   `hp`=3835, `mp`=1777 WHERE `id` = '22782';  -- 賽爾豺狼士兵(戰士)
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=8453,  `sp`=912,   `hp`=3835, `mp`=1777 WHERE `id` = '22784';  -- 賽爾豺狼士兵(法師)
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=17547, `sp`=1759,  `hp`=3835, `mp`=1777 WHERE `id` = '18908';  -- 賽爾豺狼料理長
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=20751, `sp`=2063,  `hp`=4039, `mp`=1812 WHERE `id` = '22786';  -- 賽爾豺狼十夫長(弓手)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=20751, `sp`=2063,  `hp`=4039, `mp`=1812 WHERE `id` = '22787';  -- 賽爾豺狼十夫長(戰士)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=20751, `sp`=2063,  `hp`=4039, `mp`=1812 WHERE `id` = '22788';  -- 賽爾豺狼十夫長(法師)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=4807,  `sp`=512,   `hp`=4039, `mp`=1812 WHERE `id` = '22781';  -- 賽爾豺狼熟練兵(弓手)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=8532,  `sp`=910,   `hp`=4039, `mp`=1812 WHERE `id` = '22783';  -- 賽爾豺狼熟練兵(戰士)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=11192, `sp`=1194,  `hp`=4039, `mp`=1812 WHERE `id` = '22785';  -- 賽爾豺狼熟練兵(法師)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=25111, `sp`=2528,  `hp`=4039, `mp`=1812 WHERE `id` = '22778';  -- 賽爾豺狼訓練教官(弓手)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=25111, `sp`=2528,  `hp`=4039, `mp`=1812 WHERE `id` = '22775';  -- 賽爾豺狼訓練教官(法師)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=25111, `sp`=2528,  `hp`=4039, `mp`=1812 WHERE `id` = '22777';  -- 賽爾豺狼訓練教官(戰士)
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=37863, `sp`=3820,  `hp`=4039, `mp`=1812 WHERE `id` = '22776';  -- 賽爾豺狼訓練教官長
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=24663, `sp`= 2481, `hp`=4039, `mp`=1812 WHERE `id` = '22779';  -- 賽爾豺狼護衛戰士
 -- 蜥蜴草原
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=19616, `sp`=2145, `hp`=3643, `mp`=1743 where id='18862';  -- 坦塔蜥蜴人守護者 幽谷勒斯的隨行員
-UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=14826, `sp`=1621, `hp`=3643, `mp`=1743 where id='22768';  -- 坦塔蜥蜴人巡守
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=21133, `sp`=2282, `hp`=3835, `mp`=1777 where id='22772';  -- 坦塔蜥蜴人弓箭手
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=19888, `sp`=2147, `hp`=3835, `mp`=1777 where id='22769';  -- 坦塔蜥蜴人戰士
-UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=20911, `sp`=2258, `hp`=3835, `mp`=1777 where id='22773';  -- 坦塔蜥蜴人魔法師
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=34362, `sp`=3499, `hp`=4039, `mp`=1812 where id='22770';  -- 坦塔蜥蜴人勇士
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=38824, `sp`=3950, `hp`=4039, `mp`=1812 where id='22774';  -- 坦塔蜥蜴人召喚士
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=35295, `sp`=3599, `hp`=4039, `mp`=1812 where id='22771';  -- 坦塔蜥蜴人狂戰士
-UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=0,     `sp`=0,    `hp`=4039, `mp`=1812 where id='18863';  -- 祭司長 幽谷勒斯 坦塔蜥蜴人
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=19616, `sp`=2145, `hp`=3643, `mp`=1743 WHERE `id` = '18862';  -- 坦塔蜥蜴人守護者 幽谷勒斯的隨行員
+UPDATE `npc` SET `type`='L2Monster', `level`=82, `exp`=14826, `sp`=1621, `hp`=3643, `mp`=1743 WHERE `id` = '22768';  -- 坦塔蜥蜴人巡守
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=21133, `sp`=2282, `hp`=3835, `mp`=1777 WHERE `id` = '22772';  -- 坦塔蜥蜴人弓箭手
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=19888, `sp`=2147, `hp`=3835, `mp`=1777 WHERE `id` = '22769';  -- 坦塔蜥蜴人戰士
+UPDATE `npc` SET `type`='L2Monster', `level`=83, `exp`=20911, `sp`=2258, `hp`=3835, `mp`=1777 WHERE `id` = '22773';  -- 坦塔蜥蜴人魔法師
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=34362, `sp`=3499, `hp`=4039, `mp`=1812 WHERE `id` = '22770';  -- 坦塔蜥蜴人勇士
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=38824, `sp`=3950, `hp`=4039, `mp`=1812 WHERE `id` = '22774';  -- 坦塔蜥蜴人召喚士
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=35295, `sp`=3599, `hp`=4039, `mp`=1812 WHERE `id` = '22771';  -- 坦塔蜥蜴人狂戰士
+UPDATE `npc` SET `type`='L2Monster', `level`=84, `exp`=0,     `sp`=0,    `hp`=4039, `mp`=1812 WHERE `id` = '18863';  -- 祭司長 幽谷勒斯 坦塔蜥蜴人
 -- 柯克拉闊 -- 殄滅之種
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579450,  `sp`=58220,  `hp`=55817,  `mp`=1846 where id='22762';  -- 卡伊歐納
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 where id='22760';  -- 卡尼比
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 where id='22761';  -- 奇里歐納
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 where id='22765';  -- 精銳卡伊歐納 柯克拉闊
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 where id='22763';  -- 精銳卡尼比 柯克拉闊
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1206702, `sp`=121260, `hp`=111546, `mp`=1846 where id='22764';  -- 精銳奇里歐納 柯克拉闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579450,  `sp`=58220,  `hp`=55817,  `mp`=1846 WHERE `id` = '22762';  -- 卡伊歐納
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 WHERE `id` = '22760';  -- 卡尼比
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 WHERE `id` = '22761';  -- 奇里歐納
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 WHERE `id` = '22765';  -- 精銳卡伊歐納 柯克拉闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 WHERE `id` = '22763';  -- 精銳卡尼比 柯克拉闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1206702, `sp`=121260, `hp`=111546, `mp`=1846 WHERE `id` = '22764';  -- 精銳奇里歐納 柯克拉闊
 -- 比斯塔闊 -- 殄滅之種
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=585939,  `sp`=58904,  `hp`=55817,  `mp`=1846 where id='22749';  -- 特雷坎
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 where id='22746';  -- 巴格連特
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 where id='22747';  -- 布拉奇安
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579450,  `sp`=58220,  `hp`=55817,  `mp`=1846 where id='22748';  -- 格洛伊坎
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 where id='22750';  -- 精銳巴格連特 比斯塔闊
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 where id='22751';  -- 精銳布拉齊安 比斯塔闊
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1206702, `sp`=121260, `hp`=111546, `mp`=1846 where id='22752';  -- 精銳格洛伊坎 比斯塔闊
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 where id='22753';  -- 精銳特雷坎 比斯塔闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=585939,  `sp`=58904,  `hp`=55817,  `mp`=1846 WHERE `id` = '22749';  -- 特雷坎
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 WHERE `id` = '22746';  -- 巴格連特
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 WHERE `id` = '22747';  -- 布拉奇安
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579450,  `sp`=58220,  `hp`=55817,  `mp`=1846 WHERE `id` = '22748';  -- 格洛伊坎
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 WHERE `id` = '22750';  -- 精銳巴格連特 比斯塔闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 WHERE `id` = '22751';  -- 精銳布拉齊安 比斯塔闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1206702, `sp`=121260, `hp`=111546, `mp`=1846 WHERE `id` = '22752';  -- 精銳格洛伊坎 比斯塔闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 WHERE `id` = '22753';  -- 精銳特雷坎 比斯塔闊
 -- 雷提里闊 -- 殄滅之種
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 where id='22755';  -- 克拉奇安
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579450,  `sp`=58220,  `hp`=55817,  `mp`=1846 where id='22756';  -- 塔迪翁
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 where id='22754';  -- 托特黎安
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1206702, `sp`=121260, `hp`=111546, `mp`=1846 where id='22758';  -- 精銳克拉奇安 雷提里闊
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 where id='22759';  -- 精銳塔迪翁 雷提里闊
-UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 where id='22757';  -- 精銳托特黎安 雷提里闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 WHERE `id` = '22755';  -- 克拉奇安
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579450,  `sp`=58220,  `hp`=55817,  `mp`=1846 WHERE `id` = '22756';  -- 塔迪翁
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=579303,  `sp`=58205,  `hp`=55817,  `mp`=1846 WHERE `id` = '22754';  -- 托特黎安
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1206702, `sp`=121260, `hp`=111546, `mp`=1846 WHERE `id` = '22758';  -- 精銳克拉奇安 雷提里闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 WHERE `id` = '22759';  -- 精銳塔迪翁 雷提里闊
+UPDATE `npc` SET `type`='L2Monster', `level`=85, `exp`=1209443, `sp`=121549, `hp`=111546, `mp`=1846 WHERE `id` = '22757';  -- 精銳托特黎安 雷提里闊
 -- 殄滅之種 85級狩獵首領
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=85, `exp`=3233771, `sp`=403115, `hp`=631293, `mp`=18468 where id='25697';  -- 土倫巴 雷提里闊
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=85, `exp`=3078748, `sp`=399008, `hp`=763865, `mp`=18468 where id='25696';  -- 塔克拉甘 比斯塔闊  可吸魂
-UPDATE `npc` SET `type`='L2RaidBoss', `level`=85, `exp`=3233771, `sp`=403115, `hp`=631293, `mp`=18468 where id='25698';  -- 多帕建 柯克拉闊  可吸魂
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=85, `exp`=3233771, `sp`=403115, `hp`=631293, `mp`=18468 WHERE `id` = '25697';  -- 土倫巴 雷提里闊
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=85, `exp`=3078748, `sp`=399008, `hp`=763865, `mp`=18468 WHERE `id` = '25696';  -- 塔克拉甘 比斯塔闊  可吸魂
+UPDATE `npc` SET `type`='L2RaidBoss', `level`=85, `exp`=3233771, `sp`=403115, `hp`=631293, `mp`=18468 WHERE `id` = '25698';  -- 多帕建 柯克拉闊  可吸魂
 
 -- new npc for 葫蘆
 DELETE FROM npcskills WHERE npcid IN (12774,12775,12776,12777,12778,12779,13016,13017);
 -- DELETE FROM npcaidata WHERE npcId IN (12774,12775,12776,12777,12778,12779,13016,13017);
 UPDATE npc SET `type`='L2ChronoMonster' WHERE id IN (12774,12775,12776,12777,12778,12779,13016,13017);
 
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=12774;  -- 未成熟的葫蘆
-UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=12775;  -- 優良的葫蘆
-UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=12776;  -- 不良的葫蘆
-UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=12777;  -- 未成熟的大葫蘆
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=12778;  -- 優良的大葫蘆
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=12779;  -- 不良的大葫蘆
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13016;  -- 優良的葫蘆王
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13017;  -- 優良的大葫蘆王
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 12774;  -- 未成熟的葫蘆
+UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 12775;  -- 優良的葫蘆
+UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 12776;  -- 不良的葫蘆
+UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 12777;  -- 未成熟的大葫蘆
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 12778;  -- 優良的大葫蘆
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 12779;  -- 不良的大葫蘆
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13016;  -- 優良的葫蘆王
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13017;  -- 優良的大葫蘆王
 
 -- NPC
 DELETE FROM npcskills WHERE  npcid IN (13271,13272,13273,13274,13275,13276,13277,13278);
 -- DELETE FROM npcaidata WHERE npcId IN (13271,13272,13273,13274,13275,13276,13277,13278);
 UPDATE npc SET `type`='L2ChronoMonster' WHERE id IN (13271,13272,13273,13274,13275,13276,13277,13278);
 
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13271; -- 未成熟的西瓜
-UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13272; -- 不良的西瓜
-UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13273; -- 優良的西瓜
-UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13274; -- 優良的西瓜王
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13275; -- 未成熟的香甜西瓜
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13276; -- 不良的香甜西瓜
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13277; -- 優良的香甜西瓜
-UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE id=13278; -- 優良的香甜西瓜王
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13271; -- 未成熟的西瓜
+UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13272; -- 不良的西瓜
+UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13273; -- 優良的西瓜
+UPDATE npc SET level=1,hp=300 ,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13274; -- 優良的西瓜王
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13275; -- 未成熟的香甜西瓜
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13276; -- 不良的香甜西瓜
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13277; -- 優良的香甜西瓜
+UPDATE npc SET level=1,hp=3000,mp=0,hpreg=0,mpreg=0,str=10,con=10,dex=10,`int`=10,wit=10,men=10,patk=0,pdef=15,matk=0,mdef=32,walkspd=1,runspd=1 WHERE `id` = 13278; -- 優良的香甜西瓜王
 
 -- 諾爾妮庭園首領怪物資料 
-UPDATE `npc` SET `type`='L2RaidBoss' where id='25528';  -- 最終試練官 塔庇里歐斯
-UPDATE `npc` SET `type`='L2Monster', `exp`=0,  `sp`=0 where id='25529';  -- 試練官的部下 庭園的警衛隊
-UPDATE `npc` SET `type`='L2Monster', `exp`=0,  `sp`=0 where id='25530';  -- 試練官的部下 庭園的警衛隊
+UPDATE `npc` SET `type`='L2RaidBoss' WHERE `id` = '25528';  -- 最終試練官 塔庇里歐斯
+UPDATE `npc` SET `type`='L2Monster', `exp`=0,  `sp`=0 WHERE `id` = '25529';  -- 試練官的部下 庭園的警衛隊
+UPDATE `npc` SET `type`='L2Monster', `exp`=0,  `sp`=0 WHERE `id` = '25530';  -- 試練官的部下 庭園的警衛隊
 REPLACE INTO `minions` VALUES (25528, 25529, 3, 3);
 REPLACE INTO `minions` VALUES (25528, 25530, 1, 1);
 
@@ -704,23 +704,23 @@ REPLACE INTO npcskills VALUES
 (18660,5759,1); -- 展示-拉塔那起身
 
 -- 沉默修道院狩獵首領
-UPDATE `npc` SET `hp`=837564.609209036, `patk`=4094.68934, `pdef`=1428.96384939, `matk`=1092.88500315956, `mdef`=576.114, `matkspd`=6000 where id='25701';  -- 輝煌的支配者 亞奈斯
+UPDATE `npc` SET `hp`=837564.609209036, `patk`=4094.68934, `pdef`=1428.96384939, `matk`=1092.88500315956, `mdef`=576.114, `matkspd`=6000 WHERE `id` = '25701';  -- 輝煌的支配者 亞奈斯
 UPDATE `spawnlist` SET `locx` = 119120, `locy` = -80576, `locz` = -2694 WHERE `npc_templateid` = 32757;
 UPDATE `raidboss_spawnlist` SET `boss_id` = 25701 WHERE `boss_id` = 29096;
 UPDATE `minions` SET `boss_id` = 25701 WHERE `boss_id` = 29096;
 UPDATE `npcaidata` SET `clan` = 'solina_clan', `clanRange` = 1000, `aiType` = 'balanced' WHERE `npcId` = 25701;
 
 -- Remove from spawnlist mobov 50 + of School Authority
--- DELETE  FROM spawnlist where  (npc_templateid=20948 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20944 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20946 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20945 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20947 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20952 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20950 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20951 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20949 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
--- DELETE  FROM spawnlist where  (npc_templateid=20953 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20948 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20944 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20946 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20945 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20947 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20952 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20950 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20951 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20949 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
+-- DELETE  FROM spawnlist WHERE  (npc_templateid=20953 AND locx<=97580 AND locx>=76270 AND locy<=73220 AND locy>=54290);
 
 -- 修正貝斯之塔怪物新掉落
 DELETE FROM `droplist` WHERE `mobId` IN (22373,22374,22375,22376);
