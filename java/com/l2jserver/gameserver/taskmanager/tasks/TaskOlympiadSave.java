@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.taskmanager.TaskTypes;
  * @author godson
  */
 public class TaskOlympiadSave extends Task {
+	
 	public static final String NAME = "olympiad_save";
 	
 	@Override
@@ -40,7 +41,7 @@ public class TaskOlympiadSave extends Task {
 	public void onTimeElapsed(ExecutedTask task) {
 		if (Olympiad.getInstance().inCompPeriod()) {
 			Olympiad.getInstance().saveOlympiadStatus();
-			_log.info("Olympiad System: Data updated.");
+			_log.info("올림피아드 시스템: 데이터가 업데이트되었습니다.");
 		}
 	}
 	
@@ -49,4 +50,5 @@ public class TaskOlympiadSave extends Task {
 		super.initializate();
 		TaskManager.addUniqueTask(NAME, TaskTypes.TYPE_FIXED_SHEDULED, "900000", "1800000", "");
 	}
+	
 }

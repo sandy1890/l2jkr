@@ -198,20 +198,20 @@ public class Olympiad {
 			rset.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Olympiad System: Error loading olympiad data from database: ", e);
+			_log.log(Level.WARNING, "올림피아드 시스템: 데이터베이스에서 올림피아드 데이터 로딩 중 오류가 발생했습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		
 		if (!loaded) {
-			_log.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
+			_log.log(Level.INFO, "올림피아드 시스템: 파일에서 로드 하려는 데이터베이스에서 데이터를 로드하지 못했습니다.");
 			
 			Properties OlympiadProperties = new Properties();
 			try (InputStream is = new FileInputStream(new File("./" + OLYMPIAD_DATA_FILE))) {
 				
 				OlympiadProperties.load(is);
 			} catch (Exception e) {
-				_log.log(Level.SEVERE, "Olympiad System: Error loading olympiad properties: ", e);
+				_log.log(Level.SEVERE, "올림피아드 시스템: 올림피아드 속성 로딩 중 오류가 발생했습니다: ", e);
 				return;
 			}
 			
@@ -242,7 +242,7 @@ public class Olympiad {
 				}
 			break;
 			default:
-				_log.warning("Olympiad System: Omg something went wrong in loading!! Period = " + _period);
+				_log.warning("올림피아드 시스템: 로딩에 문제가 발생했습니다!! 기간 = " + _period);
 				return;
 		}
 		
@@ -272,17 +272,17 @@ public class Olympiad {
 			rset.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Olympiad System: Error loading noblesse data from database: ", e);
+			_log.log(Level.WARNING, "올림피아드 시스템: 데이터베이스에서 노블레스 데이터 로딩 중 오류가 발생했습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		
 		synchronized (this) {
-			_log.info("Olympiad System: Loading Olympiad System....");
+			_log.info("올림피아드 시스템: 올림피아드 시스템 로딩 중....");
 			if (_period == 0) {
-				_log.info("Olympiad System: Currently in Olympiad Period");
+				_log.info("올림피아드 시스템: 현재 올림피아드 기간");
 			} else {
-				_log.info("Olympiad System: Currently in Validation Period");
+				_log.info("올림피아드 시스템: 현재 유효 기간");
 			}
 			
 			long milliToEnd;
@@ -292,16 +292,16 @@ public class Olympiad {
 				milliToEnd = getMillisToValidationEnd();
 			}
 			
-			_log.info("Olympiad System: " + (milliToEnd / 60000) + " minutes until period ends");
+			_log.info("올림피아드 시스템: " + (milliToEnd / 60000) + "분 남았습니다.");
 			
 			if (_period == 0) {
 				milliToEnd = getMillisToWeekChange();
 				
-				_log.info("Olympiad System: Next weekly change is in " + (milliToEnd / 60000) + " minutes");
+				_log.info("올림피아드 시스템: 다음 주간 변경이 " + (milliToEnd / 60000) + "분 남았습니다.");
 			}
 		}
 		
-		_log.info("Olympiad System: Loaded " + _nobles.size() + " Nobles");
+		_log.info("올림피아드 시스템: " + _nobles.size() + "개 노블레스가 로드되었습니다.");
 		
 	}
 	
@@ -323,7 +323,7 @@ public class Olympiad {
 			rset.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Olympiad System: Error loading noblesse data from database for Ranking: ", e);
+			_log.log(Level.WARNING, "올림피아드 시스템: 데이터베이스에서 랭킹 순위 노블레스 데이터 로딩 중 오류가 발생했습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -378,9 +378,7 @@ public class Olympiad {
 			sm.addNumber(_currentCycle);
 			
 			Announcements.getInstance().announceToAll(sm);
-			/*
-			 * Announcements.getInstance().announceToAll("Olympiad Validation Period has began");
-			 */
+			// Announcements.getInstance().announceToAll("Olympiad Validation Period has began");
 			Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAME_HAS_STARTED)); // Update by pmq
 			
 			if (_scheduledWeeklyTask != null) {
@@ -408,9 +406,7 @@ public class Olympiad {
 	protected class ValidationEndTask implements Runnable {
 		@Override
 		public void run() {
-			/*
-			 * Announcements.getInstance().announceToAll("Olympiad Validation Period has ended");
-			 */
+			// Announcements.getInstance().announceToAll("Olympiad Validation Period has ended");
 			Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAME_HAS_ENDED)); // Update by pmq
 			_period = 0;
 			_currentCycle++;
@@ -441,9 +437,9 @@ public class Olympiad {
 			int numHours = (int) Math.floor(countDown % 24);
 			int numDays = (int) Math.floor((countDown - numHours) / 24);
 			
-			_log.info("Olympiad System: Competition Period Starts in " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
+			_log.info("올림피아드 시스템: 올림피아드 경쟁기간이 시작되었습니다, " + numDays + "일, " + numHours + "시간, " + numMins + "분.");
 			
-			_log.info("Olympiad System: Event starts/started : " + _compStart.getTime());
+			_log.info("올림피아드 시스템: 이벤트가 시작되었습니다: " + _compStart.getTime());
 		}
 		
 		_scheduledCompStart = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
@@ -456,7 +452,7 @@ public class Olympiad {
 				_inCompPeriod = true;
 				
 				Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAME_HAS_STARTED));
-				_log.info("Olympiad System: Olympiad Game Started");
+				_log.info("올림피아드 시스템: 올림피아드 경기가 시작되었습니다.");
 				_logResults.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 				
 				_gameManager = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
@@ -482,10 +478,9 @@ public class Olympiad {
 						}
 						_inCompPeriod = false;
 						Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAME_HAS_ENDED));
-						_log.info("Olympiad System: Olympiad Game Ended");
+						_log.info("올림피아드 시스템: 올림피아드 경기가 종료되었습니다.");
 						
-						while (OlympiadGameManager.getInstance().isBattleStarted()) // cleared in game manager
-						{
+						while (OlympiadGameManager.getInstance().isBattleStarted()) { // cleared in game manager
 							try {
 								// wait 1 minutes for end of pendings games
 								Thread.sleep(60000);
@@ -580,7 +575,7 @@ public class Olympiad {
 		_compStart.add(Calendar.HOUR_OF_DAY, 24);
 		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
 		
-		_log.info("Olympiad System: New Schedule @ " + _compStart.getTime());
+		_log.info("올림피아드 시스템: 새로운 스케쥴 @ " + _compStart.getTime());
 		
 		return (_compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
 	}
@@ -603,9 +598,9 @@ public class Olympiad {
 			@Override
 			public void run() {
 				addWeeklyPoints();
-				_log.info("Olympiad System: Added weekly points to nobles");
+				_log.info("올림피아드 시스템: 노블레스 주간 포인트가 추가되었습니다.");
 				resetWeeklyMatches();
-				_log.info("Olympiad System: Reset weekly matches to nobles");
+				_log.info("올림피아드 시스템: 노블레스 매주 경기가 재설정되었습니다.");
 				
 				Calendar nextChange = Calendar.getInstance();
 				_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
@@ -646,6 +641,10 @@ public class Olympiad {
 		return _currentCycle;
 	}
 	
+	/**
+	 * @param player
+	 * @return
+	 */
 	public boolean playerInStadia(L2PcInstance player) {
 		return (ZoneManager.getInstance().getOlympiadStadium(player) != null);
 	}
@@ -714,7 +713,7 @@ public class Olympiad {
 				statement.close();
 			}
 		} catch (SQLException e) {
-			_log.log(Level.SEVERE, "Olympiad System: Failed to save noblesse data to database: ", e);
+			_log.log(Level.SEVERE, "올림피아드 시스템: 데이터베이스에 노블레스 데이터 저장이 실패되었습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -745,25 +744,22 @@ public class Olympiad {
 			statement.execute();
 			statement.close();
 		} catch (SQLException e) {
-			_log.log(Level.SEVERE, "Olympiad System: Failed to save olympiad data to database: ", e);
+			_log.log(Level.SEVERE, "올림피아드 시스템: 데이터베이스에 올림피아드 데이터 저장이 실패되었습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		//@formatter:off
 		/*
 		Properties OlympiadProperties = new Properties();
-		try (FileOutputStream fos = new FileOutputStream(new File("./" + OLYMPIAD_DATA_FILE));)
-		{
+		try (FileOutputStream fos = new FileOutputStream(new File("./" + OLYMPIAD_DATA_FILE));) {
 			OlympiadProperties.setProperty("CurrentCycle", String.valueOf(_currentCycle));
 			OlympiadProperties.setProperty("Period", String.valueOf(_period));
 			OlympiadProperties.setProperty("OlympiadEnd", String.valueOf(_olympiadEnd));
 			OlympiadProperties.setProperty("ValdationEnd", String.valueOf(_validationEnd));
 			OlympiadProperties.setProperty("NextWeeklyChange", String.valueOf(_nextWeeklyChange));
 			OlympiadProperties.store(fos, "Olympiad Properties");
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Olympiad System: Unable to save olympiad properties to file: ", e);
+		} catch (Exception e) {
+			_log.log(Level.WARNING, "올림피아드 시스템: 파일에 올림피아드 속성을 저장할 수 없습니다: ", e);
 		}
 		*/
 		//@formatter:on
@@ -780,7 +776,7 @@ public class Olympiad {
 			statement.execute();
 			statement.close();
 		} catch (SQLException e) {
-			_log.log(Level.SEVERE, "Olympiad System: Failed to update monthly noblese data: ", e);
+			_log.log(Level.SEVERE, "올림피아드 시스템: 월 노블레스 데이터를 업데이트하지 못했습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -926,12 +922,16 @@ public class Olympiad {
 				}
 			}
 		} catch (SQLException e) {
-			_log.warning("Olympiad System: Couldnt load heros from DB");
+			_log.warning("올림피아드 시스템: DB에서 영웅을 로드할 수 없습니다.");
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
+	/**
+	 * @param classId
+	 * @return
+	 */
 	public L2FastList<String> getClassLeaderBoard(int classId) {
 		// if (_period != 1) return;
 		final L2FastList<String> names = new L2FastList<>();
@@ -960,13 +960,18 @@ public class Olympiad {
 			statement.close();
 			rset.close();
 		} catch (SQLException e) {
-			_log.warning("Olympiad System: Couldn't load olympiad leaders from DB!");
+			_log.warning("올림피아드 시스템: DB에서 올림피아드 리더를 로드할 수 없습니다!");
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		return names;
 	}
 	
+	/**
+	 * @param player
+	 * @param clear
+	 * @return
+	 */
 	public int getNoblessePasses(L2PcInstance player, boolean clear) {
 		if ((player == null) || (_period != 1) || _noblesRank.isEmpty()) {
 			return 0;
@@ -1015,12 +1020,16 @@ public class Olympiad {
 		return _nobles.get(objId).getInteger(POINTS);
 	}
 	
+	/**
+	 * @param objId
+	 * @return
+	 */
 	public int getLastNobleOlympiadPoints(int objId) {
 		int result = 0;
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			final PreparedStatement statement = con.prepareStatement("SELECT olympiad_points FROM olympiad_nobles_eom WHERE charId = ?");
+			final PreparedStatement statement = con.prepareStatement("SELECT `olympiad_points` FROM `olympiad_nobles_eom` WHERE `charId` = ?");
 			statement.setInt(1, objId);
 			final ResultSet rs = statement.executeQuery();
 			if (rs.first()) {
@@ -1029,13 +1038,17 @@ public class Olympiad {
 			rs.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Could not load last olympiad points:", e);
+			_log.log(Level.WARNING, "마지막 올림피아드 포인트를 로드할 수 없습니다:", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		return result;
 	}
 	
+	/**
+	 * @param objId
+	 * @return
+	 */
 	public int getCompetitionDone(int objId) {
 		if ((_nobles == null) || !_nobles.containsKey(objId)) {
 			return 0;
@@ -1043,6 +1056,10 @@ public class Olympiad {
 		return _nobles.get(objId).getInteger(COMP_DONE);
 	}
 	
+	/**
+	 * @param objId
+	 * @return
+	 */
 	public int getCompetitionWon(int objId) {
 		if ((_nobles == null) || !_nobles.containsKey(objId)) {
 			return 0;
@@ -1050,6 +1067,10 @@ public class Olympiad {
 		return _nobles.get(objId).getInteger(COMP_WON);
 	}
 	
+	/**
+	 * @param objId
+	 * @return
+	 */
 	public int getCompetitionLost(int objId) {
 		if ((_nobles == null) || !_nobles.containsKey(objId)) {
 			return 0;
@@ -1161,7 +1182,7 @@ public class Olympiad {
 			statement.execute();
 			statement.close();
 		} catch (SQLException e) {
-			_log.warning("Olympiad System: Couldn't delete nobles from DB!");
+			_log.warning("올림피아드 시스템: DB에서 노블레스를 삭제할 수 없습니다!");
 		} finally {
 			L2DatabaseFactory.close(con);
 		}

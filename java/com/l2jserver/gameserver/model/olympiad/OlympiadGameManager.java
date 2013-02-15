@@ -40,7 +40,7 @@ public class OlympiadGameManager implements Runnable {
 	protected OlympiadGameManager() {
 		final Collection<L2OlympiadStadiumZone> zones = ZoneManager.getInstance().getAllZones(L2OlympiadStadiumZone.class);
 		if ((zones == null) || zones.isEmpty()) {
-			throw new Error("No olympiad stadium zones defined !");
+			throw new Error("올림피아드 경기장 존이 정의되지 않았습니다!");
 		}
 		
 		_tasks = new OlympiadGameTask[zones.size()];
@@ -49,7 +49,7 @@ public class OlympiadGameManager implements Runnable {
 			_tasks[i++] = new OlympiadGameTask(zone);
 		}
 		
-		_log.log(Level.INFO, "Olympiad System: Loaded " + _tasks.length + " stadiums.");
+		_log.log(Level.INFO, "올림피아드 시스템: " + _tasks.length + "개 경기장이 로드되었습니다.");
 	}
 	
 	public static final OlympiadGameManager getInstance() {
@@ -130,7 +130,7 @@ public class OlympiadGameManager implements Runnable {
 			if (isAllTasksFinished()) {
 				OlympiadManager.getInstance().clearRegistered();
 				_battleStarted = false;
-				_log.log(Level.INFO, "Olympiad System: All current games finished.");
+				_log.log(Level.INFO, "올림피아드 시스템: 현재 모든 경기가 완료되었습니다.");
 			}
 		}
 	}
@@ -144,6 +144,10 @@ public class OlympiadGameManager implements Runnable {
 		return true;
 	}
 	
+	/**
+	 * @param id
+	 * @return
+	 */
 	public final OlympiadGameTask getOlympiadTask(int id) {
 		if ((id < 0) || (id >= _tasks.length)) {
 			return null;
@@ -156,6 +160,10 @@ public class OlympiadGameManager implements Runnable {
 		return _tasks.length;
 	}
 	
+	/**
+	 * @param player
+	 * @param damage
+	 */
 	public final void notifyCompetitorDamage(L2PcInstance player, int damage) {
 		if (player == null) {
 			return;
