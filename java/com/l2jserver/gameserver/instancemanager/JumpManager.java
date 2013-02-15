@@ -20,8 +20,6 @@ package com.l2jserver.gameserver.instancemanager;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -50,7 +48,6 @@ public class JumpManager {
 	private static final Logger _log = Logger.getLogger(JumpManager.class.getName());
 	
 	private final TIntObjectHashMap<Track> _tracks = new TIntObjectHashMap<>();
-	private final Map<String, Integer> _zoneRoutesList = new HashMap<>();
 	
 	public class Track extends TIntObjectHashMap<JumpWay> {
 	}
@@ -104,7 +101,6 @@ public class JumpManager {
 	public void load() {
 		_log.info(getClass().getSimpleName() + ": 초기화");
 		_tracks.clear();
-		_zoneRoutesList.clear();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
@@ -125,10 +121,6 @@ public class JumpManager {
 					int trackId = Integer.parseInt(t.getAttributes().getNamedItem("trackId").getNodeValue());
 					if (Config.DEBUG) {
 						_log.info("trackId: " + trackId);
-					}
-					String zoneName = t.getAttributes().getNamedItem("zone").getNodeValue();
-					if (Config.DEBUG) {
-						_log.info("zoneName: " + zoneName);
 					}
 					for (Node w = t.getFirstChild(); w != null; w = w.getNextSibling()) {
 						if (w.getNodeName().equals("way")) {
@@ -154,7 +146,6 @@ public class JumpManager {
 						}
 					}
 					_tracks.put(trackId, track);
-					_zoneRoutesList.put(zoneName, trackId);
 				}
 			}
 		}
@@ -168,8 +159,7 @@ public class JumpManager {
 	public int getTrackId(L2PcInstance player) {
 		for (L2ZoneType zone : L2World.getInstance().getRegion(player.getX(), player.getY()).getZones()) {
 			if (zone.isCharacterInZone(player) && (zone instanceof L2JumpZone)) {
-				Integer i = _zoneRoutesList.get(zone.getName());
-				return i == null ? -1 : i;
+				return ((L2JumpZone) zone).getTrackId();
 			}
 		}
 		return -1;
@@ -236,8 +226,8 @@ public class JumpManager {
 		if (Config.DEBUG) {
 			_log.info("점프 시작 패킷 발송 후");
 		}
-		JumpNode n = jw.get(0); // need fix
-		player.setXYZ(n.getX(), n.getY(), n.getZ()); // need fix
+		JumpNode n = jw.get(0); // fixme
+		player.setXYZ(n.getX(), n.getY(), n.getZ());
 		if (Config.DEBUG) {
 			_log.info("점프 시작 패킷 발송!");
 		}
@@ -262,8 +252,8 @@ public class JumpManager {
 			_log.info("다음 점프 시작 패킷 발송!");
 		}
 		player.sendPacket(new ExFlyMove(player.getObjectId(), player.jumpTrackId, jw));
-		JumpNode n = jw.get(0); // need fix
-		player.setXYZ(n.getX(), n.getY(), n.getZ()); // need fix
+		JumpNode n = jw.get(0); // fixme
+		player.setXYZ(n.getX(), n.getY(), n.getZ());
 		if (Config.DEBUG) {
 			_log.info("다음 점프 시작 패킷 발송 후");
 		}
