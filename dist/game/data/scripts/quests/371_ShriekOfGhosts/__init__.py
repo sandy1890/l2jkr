@@ -8,23 +8,23 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "371_ShriekOfGhosts"
 
 #NPC
-PATRIN = 30929
-REVA = 30867
+PATRIN = 30929   # 골동품상 패트린
+REVA = 30867     # 제사장 래바
 #Quest items
-URN = 5903
-PORCELAIN = 6002
+URN = 5903       # 고대의 유골 단지
+PORCELAIN = 6002 # 고대의 도자기
 # item : [chance, html]
 PORC = {
-    6003 : [ 2 , "30929-03.htm"],
-    6004 : [ 32, "30929-04.htm"],
-    6005 : [ 62, "30929-05.htm"],
-    6006 : [ 77, "30929-06.htm"]
+    6003 : [ 2 , "30929-03.htm"], # 고대의 도자기 - 명기
+    6004 : [ 32, "30929-04.htm"], # 고대의 도자기 - 상급
+    6005 : [ 62, "30929-05.htm"], # 고대의 도자기 - 하급
+    6006 : [ 77, "30929-06.htm"]  # 고대의 도자기 - 최하급
     }
 # mobid : [urn chance, porcelain chance]
 MOBS = {
-    20818 : [38, 43],
-    20820 : [48, 56],
-    20824 : [50, 58]
+    20818 : [38, 43], # 할라트의 전사
+    20820 : [48, 56], # 할라트의 기사
+    20824 : [50, 58]  # 할라트의 지휘관
     }
 
 class Quest (JQuest) :
@@ -75,7 +75,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
      npcId = npc.getNpcId()
-     htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+     htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
      id = st.getState()
@@ -115,7 +115,7 @@ class Quest (JQuest) :
              st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST       = Quest(371, qn, "魂靈們的哭聲")
+QUEST       = Quest(371, qn, "혼령들의 울부짖음")
 
 QUEST.addStartNpc(REVA)
 
