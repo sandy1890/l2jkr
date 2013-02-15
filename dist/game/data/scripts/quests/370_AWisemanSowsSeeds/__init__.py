@@ -6,13 +6,19 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "370_AWisemanSowsSeeds"
 
-#NPC
-CASIAN = 30612
+# NPC
+CASIAN = 30612 # 현자 카시안
 
-#MOBS
-MOBS = [20082,20084,20086,20089,20090]
+# MOBS
+MOBS = [
+    20082, # 병정개미 신병
+    20084, # 병정개미 척후병
+    20086, # 병정개미 경비병
+    20089, # 수개미
+    20090  # 수개미 대장
+]
 
-#ITEMS
+# ITEMS
 CHAPTER_OF_FIRE,CHAPTER_OF_WATER,CHAPTER_OF_WIND,CHAPTER_OF_EARTH = range(5917,5921)
 
 class Quest (JQuest) :
@@ -45,7 +51,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+   htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -85,7 +91,7 @@ class Quest (JQuest) :
        st.unset("awaitsPartyDrop")
    return
 
-QUEST       = Quest(370,qn,"賢者在荒原裡埋下種子")
+QUEST       = Quest(370,qn,"현자는 황무지에 씨를 심는다")
 
 QUEST.addStartNpc(CASIAN)
 QUEST.addTalkId(CASIAN)
