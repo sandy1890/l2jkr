@@ -63,8 +63,47 @@ public class EffectTemplate {
 	
 	public final boolean passiveEffect;
 	
-	public EffectTemplate(Condition pAttachCond, Condition pApplayCond, String func, Lambda pLambda, int pCounter, int pAbnormalTime, AbnormalEffect pAbnormalEffect, AbnormalEffect[] pSpecialEffect, AbnormalEffect pEventEffect, String pAbnormalType, byte pAbnormalLvl, boolean showicon, double ePower, L2SkillType eType, int trigId, int trigLvl, ChanceCondition chanceCond, boolean passiveEff)
-	{
+	/**
+	 * @param pAttachCond
+	 * @param pApplayCond
+	 * @param func
+	 * @param pLambda
+	 * @param pCounter
+	 * @param pAbnormalTime
+	 * @param pAbnormalEffect
+	 * @param pSpecialEffect
+	 * @param pEventEffect
+	 * @param pAbnormalType
+	 * @param pAbnormalLvl
+	 * @param showicon
+	 * @param ePower
+	 * @param eType
+	 * @param trigId
+	 * @param trigLvl
+	 * @param chanceCond
+	 * @param passiveEff
+	 */
+	//@formatter:off
+	public EffectTemplate(
+		Condition pAttachCond,
+		Condition pApplayCond,
+		String func,
+		Lambda pLambda,
+		int pCounter,
+		int pAbnormalTime,
+		AbnormalEffect pAbnormalEffect,
+		AbnormalEffect[] pSpecialEffect,
+		AbnormalEffect pEventEffect,
+		String pAbnormalType,
+		byte pAbnormalLvl,
+		boolean showicon,
+		double ePower,
+		L2SkillType eType,
+		int trigId,
+		int trigLvl,
+		ChanceCondition chanceCond,
+		boolean passiveEff) {
+		//@formatter:on
 		attachCond = pAttachCond;
 		applayCond = pApplayCond;
 		lambda = pLambda;
@@ -88,7 +127,7 @@ public class EffectTemplate {
 		
 		_func = EffectHandler.getInstance().getHandler(func);
 		if (func == null) {
-			_log.warning("EffectTemplate: Requested Unexistent effect: " + func);
+			_log.warning(getClass().getSimpleName() + ": 존재하지 않는 효과가 요청되었습니다: " + func);
 			throw new RuntimeException();
 		}
 		
@@ -99,6 +138,10 @@ public class EffectTemplate {
 		}
 	}
 	
+	/**
+	 * @param env
+	 * @return
+	 */
 	public L2Effect getEffect(Env env) {
 		if ((attachCond != null) && !attachCond.test(env)) {
 			return null;
@@ -154,6 +197,9 @@ public class EffectTemplate {
 		}
 	}
 	
+	/**
+	 * @param f
+	 */
 	public void attach(FuncTemplate f) {
 		if (funcTemplates == null) {
 			funcTemplates = new FuncTemplate[]
