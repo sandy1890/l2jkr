@@ -34,12 +34,18 @@ import com.l2jserver.Config;
  * @author -Wooden-
  */
 public abstract class FloodProtectedListener extends Thread {
+	
 	private final Logger _log = Logger.getLogger(FloodProtectedListener.class.getName());
 	private final Map<String, ForeignConnection> _floodProtection = new FastMap<>();
 	private final String _listenIp;
 	private final int _port;
 	private ServerSocket _serverSocket;
 	
+	/**
+	 * @param listenIp
+	 * @param port
+	 * @throws IOException
+	 */
 	public FloodProtectedListener(String listenIp, int port) throws IOException {
 		_port = port;
 		_listenIp = listenIp;
@@ -53,7 +59,6 @@ public abstract class FloodProtectedListener extends Thread {
 	@Override
 	public void run() {
 		Socket connection = null;
-		
 		while (true) {
 			try {
 				connection = _serverSocket.accept();
@@ -61,21 +66,24 @@ public abstract class FloodProtectedListener extends Thread {
 					ForeignConnection fConnection = _floodProtection.get(connection.getInetAddress().getHostAddress());
 					if (fConnection != null) {
 						fConnection.connectionNumber += 1;
-						if (((fConnection.connectionNumber > Config.FAST_CONNECTION_LIMIT) && ((System.currentTimeMillis() - fConnection.lastConnection) < Config.NORMAL_CONNECTION_TIME)) || ((System.currentTimeMillis() - fConnection.lastConnection) < Config.FAST_CONNECTION_TIME) || (fConnection.connectionNumber > Config.MAX_CONNECTION_PER_IP))
-						{
+						//@formatter:off
+						if (((fConnection.connectionNumber > Config.FAST_CONNECTION_LIMIT) &&
+							((System.currentTimeMillis() - fConnection.lastConnection) < Config.NORMAL_CONNECTION_TIME)) ||
+							((System.currentTimeMillis() - fConnection.lastConnection) < Config.FAST_CONNECTION_TIME) ||
+							(fConnection.connectionNumber > Config.MAX_CONNECTION_PER_IP)) {
+							//@formatter:on
 							fConnection.lastConnection = System.currentTimeMillis();
 							connection.close();
 							fConnection.connectionNumber -= 1;
 							if (!fConnection.isFlooding) {
-								_log.warning("Potential Flood from " + connection.getInetAddress().getHostAddress());
+								_log.warning(connection.getInetAddress().getHostAddress() + "에서 과도한 연결을 시도했습니다!");
 							}
 							fConnection.isFlooding = true;
 							continue;
 						}
-						if (fConnection.isFlooding) // if connection was flooding server but now passed the check
-						{
+						if (fConnection.isFlooding) { // if connection was flooding server but now passed the check
 							fConnection.isFlooding = false;
-							_log.info(connection.getInetAddress().getHostAddress() + " is not considered as flooding anymore.");
+							_log.info(connection.getInetAddress().getHostAddress() + " 과도한 연결에서 제외되었습니다.");
 						}
 						fConnection.lastConnection = System.currentTimeMillis();
 					} else {
@@ -131,7 +139,7 @@ public abstract class FloodProtectedListener extends Thread {
 				_floodProtection.remove(ip);
 			}
 		} else {
-			_log.warning("Removing a flood protection for a GameServer that was not in the connection map??? :" + ip);
+			_log.warning("연결 목록에 해당 게임서버가 없습니다, 과도한 보호가 제거되었습니다:" + ip);
 		}
 	}
 	
@@ -142,4 +150,5 @@ public abstract class FloodProtectedListener extends Thread {
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
+	
 }

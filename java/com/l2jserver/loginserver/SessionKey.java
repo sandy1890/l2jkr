@@ -30,11 +30,18 @@ import com.l2jserver.Config;
  * @author -Wooden-
  */
 public class SessionKey {
+	
 	public int playOkID1;
 	public int playOkID2;
 	public int loginOkID1;
 	public int loginOkID2;
 	
+	/**
+	 * @param loginOK1
+	 * @param loginOK2
+	 * @param playOK1
+	 * @param playOK2
+	 */
 	public SessionKey(int loginOK1, int loginOK2, int playOK1, int playOK2) {
 		playOkID1 = playOK1;
 		playOkID2 = playOK2;
@@ -47,6 +54,11 @@ public class SessionKey {
 		return "PlayOk: " + playOkID1 + " " + playOkID2 + " LoginOk:" + loginOkID1 + " " + loginOkID2;
 	}
 	
+	/**
+	 * @param loginOk1
+	 * @param loginOk2
+	 * @return
+	 */
 	public boolean checkLoginPair(int loginOk1, int loginOk2) {
 		return (loginOkID1 == loginOk1) && (loginOkID2 == loginOk2);
 	}
@@ -71,4 +83,5 @@ public class SessionKey {
 		}
 		return ((playOkID1 == key.playOkID1) && (playOkID2 == key.playOkID2));
 	}
+	
 }

@@ -51,11 +51,15 @@ import com.l2jserver.util.Rnd;
  * @author KenM, Zoey76
  */
 public final class GameServerTable {
+	
 	private static final Logger _log = Logger.getLogger(GameServerTable.class.getName());
+	
 	// Server Names Config
 	private static final Map<Integer, String> _serverNames = new HashMap<>();
+	
 	// Game Server Table
 	private static final Map<Integer, GameServerInfo> _gameServerTable = new HashMap<>();
+	
 	// RSA Config
 	private static final int KEYS_SIZE = 10;
 	private KeyPair[] _keyPairs;
@@ -65,13 +69,13 @@ public final class GameServerTable {
 	 */
 	public GameServerTable() {
 		loadGameServerNames();
-		_log.info(getClass().getSimpleName() + ": Loaded " + _serverNames.size() + " server names");
+		_log.info(getClass().getSimpleName() + ": " + _serverNames.size() + "개 서버 이름이 로드되었습니다.");
 		
 		loadRegisteredGameServers();
-		_log.info(getClass().getSimpleName() + ": Loaded " + _gameServerTable.size() + " registered Game Servers");
+		_log.info(getClass().getSimpleName() + ": " + _gameServerTable.size() + "개 게임서버 등록이 로드되었습니다.");
 		
 		initRSAKeys();
-		_log.info(getClass().getSimpleName() + ": Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
+		_log.info(getClass().getSimpleName() + ": 게임서버와 통신을 위한 " + _keyPairs.length + " RSA 키가 캐시되었습니다.");
 	}
 	
 	/**
@@ -95,7 +99,7 @@ public final class GameServerTable {
 			utf8StreamReader.close();
 			xpp.close();
 		} catch (Exception e) {
-			_log.info(getClass().getSimpleName() + ": Cannot load " + xml.getAbsolutePath() + "!");
+			_log.info(getClass().getSimpleName() + ": " + xml.getAbsolutePath() + "(을)를 로드할 수 없습니다!");
 		}
 	}
 	
@@ -111,7 +115,7 @@ public final class GameServerTable {
 				_keyPairs[i] = keyGen.genKeyPair();
 			}
 		} catch (Exception e) {
-			_log.severe(getClass().getSimpleName() + ": Error loading RSA keys for Game Server communication!");
+			_log.severe(getClass().getSimpleName() + ": 게임서버와 통신 중 RSA 키 로딩 중 오류가 발생했습니다!");
 		}
 	}
 	
@@ -122,7 +126,7 @@ public final class GameServerTable {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			final PreparedStatement statement = con.prepareStatement("SELECT * FROM gameservers");
+			final PreparedStatement statement = con.prepareStatement("SELECT * FROM `gameservers`");
 			final ResultSet rset = statement.executeQuery();
 			int id;
 			while (rset.next()) {
@@ -132,7 +136,7 @@ public final class GameServerTable {
 			rset.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.severe(getClass().getSimpleName() + ": Error loading registered game servers!");
+			_log.severe(getClass().getSimpleName() + ": 게임서버 등록 로딩 중 오류가 발생했습니다! hexid를 확인해 주십시오!");
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -219,7 +223,7 @@ public final class GameServerTable {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			final PreparedStatement statement = con.prepareStatement("INSERT INTO gameservers (hexid,server_id,host) values (?,?,?)");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO `gameservers` (`hexid`,`server_id`,`host`) values (?,?,?)");
 			statement.setString(1, hexToString(hexId));
 			statement.setInt(2, id);
 			statement.setString(3, externalHost);
@@ -227,7 +231,7 @@ public final class GameServerTable {
 			statement.close();
 			register(id, new GameServerInfo(id, hexId));
 		} catch (Exception e) {
-			_log.severe(getClass().getSimpleName() + ": Error while saving gameserver!");
+			_log.severe(getClass().getSimpleName() + ": 게임서버 DB에 저장 중 오류가 발생했습니다!");
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -606,4 +610,5 @@ public final class GameServerTable {
 	private static class SingletonHolder {
 		protected static final GameServerTable _instance = new GameServerTable();
 	}
+	
 }
