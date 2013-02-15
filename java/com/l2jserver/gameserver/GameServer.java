@@ -184,10 +184,10 @@ public class GameServer {
 		_log.finest("used mem:" + getUsedMemoryMB() + "MB");
 		
 		if (Config.SERVER_VERSION != null) {
-			_log.info("L2JTW Server Version:    " + Config.SERVER_VERSION);
+			_log.info("L2JKR Server Version:    " + Config.SERVER_VERSION);
 		}
 		if (Config.DATAPACK_VERSION != null) {
-			_log.info("L2JTW Datapack Version:  " + Config.DATAPACK_VERSION);
+			_log.info("L2JKR Datapack Version:  " + Config.DATAPACK_VERSION);
 		}
 		
 		_idFactory = IdFactory.getInstance();
