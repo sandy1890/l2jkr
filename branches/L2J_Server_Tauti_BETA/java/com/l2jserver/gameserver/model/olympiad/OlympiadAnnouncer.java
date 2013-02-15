@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  */
 public final class OlympiadAnnouncer implements Runnable {
 	
-	private static final int OLY_MANAGER = 31688;
+	private static final int OLY_MANAGER = 31688; // 올림피아드 운영자
 	
 	private final List<L2Spawn> _managers = new FastList<>();
 	private int _currentStadium = 0;

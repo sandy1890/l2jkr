@@ -479,7 +479,7 @@ public class Shutdown extends Thread {
 		ItemAuctionManager.getInstance().shutdown();
 		_log.info("Item Auction Manager: All tasks stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		Olympiad.getInstance().saveOlympiadStatus();
-		_log.info("Olympiad System: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("올림피아드 시스템: 데이터가 저장되었습니다. (" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		Hero.getInstance().shutdown();
 		_log.info("Hero System: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		ClanTable.getInstance().storeClanScore();
