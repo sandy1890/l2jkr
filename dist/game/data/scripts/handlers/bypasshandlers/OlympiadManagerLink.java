@@ -18,8 +18,6 @@
  */
 package handlers.bypasshandlers;
 
-//import java.util.Collection;
-//import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
@@ -58,8 +56,6 @@ public class OlympiadManagerLink implements IBypassHandler {
 		"olympiad"
 	};
 	
-	// private static final String FEWER_THAN = "Fewer than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
-	// private static final String MORE_THAN = "More than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
 	private static final int GATE_PASS = Config.ALT_OLY_COMP_RITEM;
 	
 	@Override
@@ -240,7 +236,7 @@ public class OlympiadManagerLink implements IBypassHandler {
 					// Add by pmq End
 					break;
 					default:
-						_log.warning("Olympiad System: Couldnt send packet for request " + val);
+						_log.warning("올림피아드 시스템: 요청에 패킷을 보내지 못했습니다 " + val);
 					break;
 				}
 			} else if (command.toLowerCase().startsWith(COMMANDS[2])) { // buff
@@ -250,13 +246,13 @@ public class OlympiadManagerLink implements IBypassHandler {
 				NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				String[] params = command.split(" ");
 				if (params[1] == null) {
-					_log.warning("Olympiad Buffer Warning: npcId = " + ((L2Npc) target).getNpcId() + " has no buffGroup set in the bypass for the buff selected.");
+					_log.warning("올림피아드 버프 경고: npcId = " + ((L2Npc) target).getNpcId() + " has no buffGroup set in the bypass for the buff selected.");
 					return false;
 				}
 				int buffGroup = Integer.parseInt(params[1]);
 				int[] npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(((L2Npc) target).getNpcId(), buffGroup);
 				if (npcBuffGroupInfo == null) {
-					_log.warning("Olympiad Buffer Warning: npcId = " + ((L2Npc) target).getNpcId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + buffGroup + ") not assigned to the NPC Buffer!");
+					_log.warning("올림피아드 버프 경고: npcId = " + ((L2Npc) target).getNpcId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + buffGroup + ") not assigned to the NPC Buffer!");
 					return false;
 				}
 				int skillId = npcBuffGroupInfo[0];
@@ -316,12 +312,12 @@ public class OlympiadManagerLink implements IBypassHandler {
 						activeChar.sendPacket(new ExHeroList());
 					break;
 					default:
-						_log.warning("Olympiad System: Couldnt send packet for request " + val);
+						_log.warning("올림피아드 시스템: 요청에 패킷을 보내지 못했습니다 " + val);
 					break;
 				}
 			}
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
+			_log.log(Level.WARNING, "예외: " + getClass().getSimpleName(), e);
 		}
 		return true;
 	}
