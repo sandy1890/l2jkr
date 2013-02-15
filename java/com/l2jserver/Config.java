@@ -2932,7 +2932,7 @@ public final class Config {
 				_log.warning("Config: " + e.getMessage());
 			}
 		} else if (Server.serverMode == Server.MODE_LOGINSERVER) {
-			_log.info("loading login config");
+			_log.info("로그인 환경 로딩 중");
 			final File login = new File(LOGIN_CONFIGURATION_FILE);
 			try (InputStream is = new FileInputStream(login)) {
 				L2Properties serverSettings = new L2Properties();
@@ -2981,7 +2981,7 @@ public final class Config {
 			// MMO
 			final File mmo = new File(MMO_CONFIG_FILE);
 			try (InputStream is = new FileInputStream(mmo)) {
-				_log.info("Loading " + MMO_CONFIG_FILE.replaceAll("./config/", ""));
+				_log.info(MMO_CONFIG_FILE.replaceAll("./config/", "") + " 파일 로딩 중");
 				L2Properties mmoSettings = new L2Properties();
 				mmoSettings.load(is);
 				MMO_SELECTOR_SLEEP_TIME = Integer.parseInt(mmoSettings.getProperty("SleepTime", "20"));
