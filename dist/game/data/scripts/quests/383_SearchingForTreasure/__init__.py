@@ -6,13 +6,26 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "383_SearchingForTreasure"
 
-SHARK=20314
+SHARK=20314                 # 거대 백상어
 PIRATES_TREASURE_MAP = 5915
-PIRATES_CHEST = 31148
-ESPEN = 30890
+PIRATES_CHEST = 31148       # 해적의 보물 상자
+ESPEN = 30890               # 방어구 상인 에스펜
 
 #itemid:[maxqty,chance in 1000].
-REWARDS={1338:[2,150],3452:[1,140],1337:[1,130],3455:[1,120],4409:[1,220],4408:[1,220],4418:[1,220],4419:[1,220],956:[1,15],952:[1,8],2451:[1,2],2450:[1,2]}
+REWARDS = {
+    1338:[2,150], # 블루 오닉스
+    3452:[1,140], # 메카닉 골렘 부속품
+    1337:[1,130], # 에머랄드
+    3455:[1,120], # 페리오스의 자기 항아리
+    4409:[1,220], # 악보 - 결전의 테마
+    4408:[1,220], # 악보 - 사랑의 테마
+    4418:[1,220], # 악보 - 축하의 테마
+    4419:[1,220], # 악보 - 희극의 테마
+    956:[1,15],   # 갑옷 강화 주문서-D그레이드
+    952:[1,8],    # 갑옷 강화 주문서-C그레이드
+    2451:[1,2],   # 현자의 낡은 장갑
+    2450:[1,2]    # 엘븐 미스릴 글로브
+}
 
 class Quest (JQuest) :
 
@@ -33,7 +46,7 @@ class Quest (JQuest) :
            st.addSpawn(SHARK,106590,197743,-4209,900000)
            st.playSound("ItemSound.quest_accept")
         else:
-           htmltext="You don't have required items"
+           htmltext="퀘스트에 필요한 아이템을 갖고 있지 않습니다."
            st.exitquest(1)
      elif event == "30890-02b.htm":
         if st.getQuestItemsCount(PIRATES_TREASURE_MAP) :
@@ -41,7 +54,7 @@ class Quest (JQuest) :
            st.giveItems(57,1000)
            st.playSound("ItemSound.quest_finish")
         else:
-           htmltext="You don't have required items"
+           htmltext="아데나가 부족합니다."
         st.exitQuest(1)
      elif event == "31148-02.htm":
         if st.getQuestItemsCount(1661):
@@ -66,7 +79,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+     htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
 
@@ -88,7 +101,7 @@ class Quest (JQuest) :
         htmltext = "31148-01.htm"
      return htmltext
 
-QUEST       = Quest(383,qn,"尋寶")
+QUEST       = Quest(383,qn,"보물 찾기")
 
 
 QUEST.addStartNpc(ESPEN)
