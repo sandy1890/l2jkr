@@ -18,16 +18,17 @@
  */
 package ai.npc.MonumentOfHeroes;
 
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.util.Util;
 
 /**
  * Monument of Heroes AI.
  * @author Adry_85
  */
-public class MonumentOfHeroes extends Quest {
+public class MonumentOfHeroes extends AbstractNpcAI {
 	
 	// NPCs
 	private static final int[] MONUMENTS =
@@ -60,12 +61,11 @@ public class MonumentOfHeroes extends Quest {
 	};
 	
 	/**
-	 * @param questId
 	 * @param name
 	 * @param descr
 	 */
-	private MonumentOfHeroes(int questId, String name, String descr) {
-		super(questId, name, descr);
+	private MonumentOfHeroes(String name, String descr) {
+		super(name, descr);
 		addStartNpc(MONUMENTS);
 		addTalkId(MONUMENTS);
 	}
@@ -103,7 +103,7 @@ public class MonumentOfHeroes extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new MonumentOfHeroes(-1, MonumentOfHeroes.class.getSimpleName(), "ai/npc");
+		new MonumentOfHeroes(MonumentOfHeroes.class.getSimpleName(), "ai/npc");
 	}
 	
 }
