@@ -102,7 +102,7 @@ public class JumpManager {
 	}
 	
 	public void load() {
-		_log.info(getClass().getSimpleName() + ": Initializing");
+		_log.info(getClass().getSimpleName() + ": 초기화");
 		_tracks.clear();
 		_zoneRoutesList.clear();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -115,7 +115,7 @@ public class JumpManager {
 			try {
 				doc = factory.newDocumentBuilder().parse(file);
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Could not parse JumpTrack.xml file: " + e.getMessage(), e);
+				_log.log(Level.WARNING, "JumpTrack.xml 파일을 파싱하지 못했습니다: " + e.getMessage(), e);
 				return;
 			}
 			Node root = doc.getFirstChild();
@@ -123,11 +123,20 @@ public class JumpManager {
 				if (t.getNodeName().equals("track")) {
 					Track track = new Track();
 					int trackId = Integer.parseInt(t.getAttributes().getNamedItem("trackId").getNodeValue());
+					if (Config.DEBUG) {
+						_log.info("trackId: " + trackId);
+					}
 					String zoneName = t.getAttributes().getNamedItem("zone").getNodeValue();
+					if (Config.DEBUG) {
+						_log.info("zoneName: " + zoneName);
+					}
 					for (Node w = t.getFirstChild(); w != null; w = w.getNextSibling()) {
 						if (w.getNodeName().equals("way")) {
 							JumpWay jw = new JumpWay();
 							int wayId = Integer.parseInt(w.getAttributes().getNamedItem("id").getNodeValue());
+							if (Config.DEBUG) {
+								_log.info("wayId: " + wayId);
+							}
 							for (Node j = w.getFirstChild(); j != null; j = j.getNextSibling()) {
 								if (j.getNodeName().equals("jumpLoc")) {
 									NamedNodeMap attrs = j.getAttributes();
@@ -135,6 +144,9 @@ public class JumpManager {
 									int x = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
 									int y = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
 									int z = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
+									if (Config.DEBUG) {
+										_log.info("next: " + next + "x: " + x + "y: " + y + "z: " + z);
+									}
 									jw.add(new JumpNode(x, y, z, next));
 								}
 							}
@@ -146,7 +158,7 @@ public class JumpManager {
 				}
 			}
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _tracks.size() + " Jump Routes.");
+		_log.info(getClass().getSimpleName() + ": " + _tracks.size() + " 점프 경로가 로드되었습니다.");
 	}
 	
 	/**
@@ -169,8 +181,19 @@ public class JumpManager {
 	 * @return
 	 */
 	public JumpWay getJumpWay(int trackId, int wayId) {
+		if (Config.DEBUG) {
+			_log.info("track id 가져 오기 전!");
+			_log.info("trackId: " + trackId);
+		}
 		Track t = _tracks.get(trackId);
+		if (Config.DEBUG) {
+			_log.info("track id: " + t);
+		}
 		if (t != null) {
+			if (Config.DEBUG) {
+				_log.info("wayId: " + wayId);
+				_log.info("track id: " + t.get(wayId));
+			}
 			return t.get(wayId);
 		}
 		return null;
@@ -180,20 +203,44 @@ public class JumpManager {
 	 * @param player
 	 */
 	public void StartJump(L2PcInstance player) {
+		if (Config.DEBUG) {
+			_log.info("점프 시작!");
+		}
 		if (!player.isInsideZone(L2Character.ZONE_JUMP)) {
+			if (Config.DEBUG) {
+				_log.info("점프 존이 아닐때");
+			}
 			return;
 		}
 		player.jumpTrackId = getTrackId(player);
 		if (player.jumpTrackId == -1) {
+			if (Config.DEBUG) {
+				_log.info("점프트랙 무한 (다음 경로 대기중인 상태)");
+			}
 			return;
 		}
 		JumpWay jw = getJumpWay(player.jumpTrackId, 0);
+		if (Config.DEBUG) {
+			_log.info("JumpWay: " + jw);
+		}
 		if (jw == null) {
+			if (Config.DEBUG) {
+				_log.info("점프 경로가 null");
+			}
 			return;
 		}
+		if (Config.DEBUG) {
+			_log.info("점프 시작 패킷 발송 전");
+		}
 		player.sendPacket(new ExFlyMove(player.getObjectId(), player.jumpTrackId, jw));
+		if (Config.DEBUG) {
+			_log.info("점프 시작 패킷 발송 후");
+		}
 		JumpNode n = jw.get(0); // need fix
 		player.setXYZ(n.getX(), n.getY(), n.getZ()); // need fix
+		if (Config.DEBUG) {
+			_log.info("점프 시작 패킷 발송!");
+		}
 	}
 	
 	/**
@@ -201,6 +248,9 @@ public class JumpManager {
 	 * @param nextId
 	 */
 	public void NextJump(L2PcInstance player, int nextId) {
+		if (Config.DEBUG) {
+			_log.info("다음 점프 시작!");
+		}
 		if (player.jumpTrackId == -1) {
 			return;
 		}
@@ -208,9 +258,15 @@ public class JumpManager {
 		if (jw == null) {
 			return;
 		}
+		if (Config.DEBUG) {
+			_log.info("다음 점프 시작 패킷 발송!");
+		}
 		player.sendPacket(new ExFlyMove(player.getObjectId(), player.jumpTrackId, jw));
 		JumpNode n = jw.get(0); // need fix
 		player.setXYZ(n.getX(), n.getY(), n.getZ()); // need fix
+		if (Config.DEBUG) {
+			_log.info("다음 점프 시작 패킷 발송 후");
+		}
 	}
 	
 	/**
