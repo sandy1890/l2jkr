@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.instancemanager.JumpManager.JumpNode;
 import com.l2jserver.gameserver.instancemanager.JumpManager.JumpWay;
 
@@ -60,7 +61,6 @@ public class ExFlyMove extends L2GameServerPacket {
 		
 		if (_jw.size() == 1) {
 			writeD(2);
-			
 		} else {
 			writeD(0);
 		}
@@ -75,7 +75,9 @@ public class ExFlyMove extends L2GameServerPacket {
 			writeD(n.getX());
 			writeD(n.getY());
 			writeD(n.getZ());
-			
+			if (Config.DEBUG) {
+				_log.info("getNext: " + n.getNext() + ", X: " + n.getX() + "Y: " + n.getY() + "Z: " + n.getZ());
+			}
 		}
 	}
 	
