@@ -35,24 +35,50 @@ public class L2JumpZone extends L2ZoneType {
 	private Future<?> _task;
 	private final int _startTask;
 	private final int _reuseTask;
+	private int _trackId;
 	
+	/**
+	 * @param id
+	 */
 	public L2JumpZone(int id) {
 		super(id);
-		
 		_startTask = 10;
 		_reuseTask = 500;
+		_trackId = -1;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#setParameter(java.lang.String, java.lang.String)
+	 */
+	@Override
+	public void setParameter(String name, String value) {
+		if (name.equals("trackId")) {
+			_trackId = Integer.parseInt(value);
+		} else {
+			super.setParameter(name, value);
+		}
+	}
+	
+	/**
+	 * @return
+	 */
+	public int getTrackId() {
+		return _trackId;
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onEnter(com.l2jserver.gameserver.model.actor.L2Character)
+	 */
 	@Override
 	protected void onEnter(L2Character character) {
 		character.setInsideZone(L2Character.ZONE_JUMP, true);
-		
 		if (character instanceof L2PcInstance) {
 			L2PcInstance plr = (L2PcInstance) character;
 			if (!plr.isAwaken()) {
 				return;
 			}
-			
 			synchronized (this) {
 				if (_task == null) {
 					_task = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new JumpReq(plr), _startTask, _reuseTask);
@@ -61,17 +87,29 @@ public class L2JumpZone extends L2ZoneType {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onExit(com.l2jserver.gameserver.model.actor.L2Character)
+	 */
 	@Override
 	protected void onExit(L2Character character) {
 		character.setInsideZone(L2Character.ZONE_JUMP, false);
 		stopTask();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onDieInside(com.l2jserver.gameserver.model.actor.L2Character)
+	 */
 	@Override
 	public void onDieInside(L2Character character) {
 		onExit(character);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onReviveInside(com.l2jserver.gameserver.model.actor.L2Character)
+	 */
 	@Override
 	public void onReviveInside(L2Character character) {
 		onEnter(character);
@@ -85,16 +123,25 @@ public class L2JumpZone extends L2ZoneType {
 	}
 	
 	class JumpReq implements Runnable {
+		
 		private final L2PcInstance player;
 		
+		/**
+		 * @param pl
+		 */
 		JumpReq(L2PcInstance pl) {
 			player = pl;
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run() {
 			player.sendPacket(new ExNotifyFlyMoveStart());
 		}
+		
 	}
 	
 }
