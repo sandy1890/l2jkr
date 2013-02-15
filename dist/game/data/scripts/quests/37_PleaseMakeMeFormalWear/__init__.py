@@ -8,15 +8,15 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "37_PleaseMakeMeFormalWear"
 
-# ITEM
-MYSTERIOUS_CLOTH = 7076
-JEWEL_BOX        = 7077
-SEWING_KIT       = 7078
-DRESS_SHOES_BOX  = 7113
-FORMAL_WEAR      = 6408
-SIGNET_RING      = 7164
-ICE_WINE         = 7160
-BOX_OF_COOKIES   = 7159
+# 아이템
+MYSTERIOUS_CLOTH = 7076 # 신비한 옷감
+JEWEL_BOX        = 7077 # 보석상자
+SEWING_KIT       = 7078 # 반짇고리
+DRESS_SHOES_BOX  = 7113 # 예장용 구두 상자
+FORMAL_WEAR      = 6408 # 예복
+SIGNET_RING      = 7164 # 가문의 인장
+ICE_WINE         = 7160 # 특제 포도주
+BOX_OF_COOKIES   = 7159 # 쿠키 선물 세트
 
 class Quest (JQuest) :
 
@@ -45,7 +45,7 @@ class Quest (JQuest) :
 				st.set("cond","4")
 				st.playSound("ItemSound.quest_accept")
 			else:
-				htmltext = "道具不符。"
+				htmltext = "소품이 일치하지 않습니다."
 		elif event == "31521-3.htm" :
 			st.giveItems(BOX_OF_COOKIES,1)
 			st.set("cond","5")
@@ -61,7 +61,7 @@ class Quest (JQuest) :
 				st.set("cond","7")
 				st.playSound("ItemSound.quest_accept")
 			else :
-				htmltext = "道具不符。"
+				htmltext = "소품이 일치하지 않습니다."
 		elif event == "31520-7.htm" :
 			if st.getQuestItemsCount(DRESS_SHOES_BOX) :
 				st.takeItems(DRESS_SHOES_BOX,1)
@@ -70,11 +70,11 @@ class Quest (JQuest) :
 				st.exitQuest(False)
 				st.playSound("ItemSound.quest_finish")
 			else :
-				htmltext = "道具不符。"
+				htmltext = "소품이 일치하지 않습니다."
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+		htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
@@ -83,7 +83,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if id == State.COMPLETED :
-			htmltext = "<html><body>這是已經完成的任務。</body></html>"
+			htmltext = "<html><body>이미 수행한 퀘스트입니다.</body></html>"
 		elif id == State.CREATED :
 			if npcId == 30842 and cond == 0 :
 				if player.getLevel() >= 60 :
@@ -131,11 +131,11 @@ class Quest (JQuest) :
 					htmltext = "31627-1a.htm"
 		return htmltext
 
-QUEST		= Quest(37,qn,"請幫我做禮服!")
+QUEST		= Quest(37,qn,"예복을 만들어 주세요!")
 
-QUEST.addStartNpc(30842)
+QUEST.addStartNpc(30842) # 장신구 상인 알렉시스
 
-QUEST.addTalkId(30842)
-QUEST.addTalkId(31520)
-QUEST.addTalkId(31521)
-QUEST.addTalkId(31627)
+QUEST.addTalkId(30842) # 장신구 상인 알렉시스
+QUEST.addTalkId(31520) # 하녀 레이카
+QUEST.addTalkId(31521) # 주방장 제레미
+QUEST.addTalkId(31627) # 정보상 미스트
