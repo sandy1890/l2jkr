@@ -37,6 +37,7 @@ import com.l2jserver.util.IPv4Filter;
  * @author KenM
  */
 public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFactory<L2LoginClient>, IAcceptFilter {
+	
 	private final ThreadPoolExecutor _generalPacketsThreadPool;
 	private final IPv4Filter _ipv4filter;
 	
@@ -70,4 +71,5 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 	public boolean accept(SocketChannel sc) {
 		return _ipv4filter.accept(sc) && !LoginController.getInstance().isBannedAddress(sc.socket().getInetAddress());
 	}
+	
 }

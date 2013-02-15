@@ -31,9 +31,13 @@ import com.l2jserver.Config;
  * @author KenM
  */
 public class GameServerListener extends FloodProtectedListener {
+	
 	private static Logger _log = Logger.getLogger(GameServerListener.class.getName());
 	private static List<GameServerThread> _gameServers = new FastList<>();
 	
+	/**
+	 * @throws IOException
+	 */
 	public GameServerListener() throws IOException {
 		super(Config.GAME_SERVER_LOGIN_HOST, Config.GAME_SERVER_LOGIN_PORT);
 		setName(getClass().getSimpleName());
@@ -45,13 +49,17 @@ public class GameServerListener extends FloodProtectedListener {
 	@Override
 	public void addClient(Socket s) {
 		if (Config.DEBUG) {
-			_log.info("Received gameserver connection from: " + s.getInetAddress().getHostAddress());
+			_log.info(s.getInetAddress().getHostAddress() + "에서 게임서버 연결이 수신되었습니다.");
 		}
 		GameServerThread gst = new GameServerThread(s);
 		_gameServers.add(gst);
 	}
 	
+	/**
+	 * @param gst
+	 */
 	public void removeGameServer(GameServerThread gst) {
 		_gameServers.remove(gst);
 	}
+	
 }

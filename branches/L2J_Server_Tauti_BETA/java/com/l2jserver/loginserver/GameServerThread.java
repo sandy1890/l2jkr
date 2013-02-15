@@ -49,6 +49,7 @@ import com.l2jserver.util.network.BaseSendablePacket;
  * @author KenM
  */
 public class GameServerThread extends Thread {
+	
 	protected static final Logger _log = Logger.getLogger(GameServerThread.class.getName());
 	private final Socket _connection;
 	private InputStream _in;
@@ -62,7 +63,9 @@ public class GameServerThread extends Thread {
 	
 	private GameServerInfo _gsi;
 	
-	/** Authed Clients on a GameServer */
+	/**
+	 * Authed Clients on a GameServer
+	 */
 	private final Set<String> _accountsOnGameServer = new FastSet<>();
 	
 	private String _connectionIPAddress;
@@ -71,7 +74,7 @@ public class GameServerThread extends Thread {
 	public void run() {
 		_connectionIPAddress = _connection.getInetAddress().getHostAddress();
 		if (GameServerThread.isBannedGameserverIP(_connectionIPAddress)) {
-			_log.info("GameServerRegistration: IP Address " + _connectionIPAddress + " is on Banned IP list.");
+			_log.info("GameServerRegistration: IP 주소 " + _connectionIPAddress + " IP 차단 목록에 있습니다.");
 			forceClose(LoginServerFail.REASON_IP_BANNED);
 			// ensure no further processing for this connection
 			return;
@@ -91,7 +94,7 @@ public class GameServerThread extends Thread {
 				length = (lengthHi * 256) + lengthLo;
 				
 				if ((lengthHi < 0) || _connection.isClosed()) {
-					_log.finer("LoginServerThread: Login terminated the connection.");
+					_log.finer("LoginServerThread: 로그인 연결을 종료했습니다.");
 					break;
 				}
 				
@@ -107,7 +110,7 @@ public class GameServerThread extends Thread {
 				}
 				
 				if (receivedBytes != (length - 2)) {
-					_log.warning("Incomplete Packet is sent to the server, closing connection.(LS)");
+					_log.warning("불완전한 패킷이 서버로 전송됩니다, 연결 종료 중.(LS)");
 					break;
 				}
 				
@@ -115,7 +118,7 @@ public class GameServerThread extends Thread {
 				data = _blowfish.decrypt(data);
 				checksumOk = NewCrypt.verifyChecksum(data);
 				if (!checksumOk) {
-					_log.warning("Incorrect packet checksum, closing connection (LS)");
+					_log.warning("잘못된 패킷 체크섬, 연결 종료 중 (LS)");
 					return;
 				}
 				
@@ -127,23 +130,30 @@ public class GameServerThread extends Thread {
 			}
 		} catch (IOException e) {
 			String serverName = (getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")");
-			String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
+			String msg = "게임서버 " + serverName + ": 연결이 끊어졌습니다: " + e.getMessage();
 			_log.info(msg);
 			broadcastToTelnet(msg);
 		} finally {
 			if (isAuthed()) {
 				_gsi.setDown();
-				_log.info("Server [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " is now set as disconnected");
+				_log.info("서버 [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " 현재 연결로 설정되어 있습니다.");
 			}
 			L2LoginServer.getInstance().getGameServerListener().removeGameServer(this);
 			L2LoginServer.getInstance().getGameServerListener().removeFloodProtection(_connectionIp);
 		}
 	}
 	
+	/**
+	 * @param account
+	 * @return
+	 */
 	public boolean hasAccountOnGameServer(String account) {
 		return _accountsOnGameServer.contains(account);
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getPlayerCount() {
 		return _accountsOnGameServer.size();
 	}
@@ -168,13 +178,15 @@ public class GameServerThread extends Thread {
 		gsi.setAuthed(true);
 	}
 	
+	/**
+	 * @param reason
+	 */
 	public void forceClose(int reason) {
 		sendPacket(new LoginServerFail(reason));
-		
 		try {
 			_connection.close();
 		} catch (IOException e) {
-			_log.finer("GameServerThread: Failed disconnecting banned server, server already disconnected.");
+			_log.finer(GameServerThread.class.getSimpleName() + ": 금지 서버 연결 해제가 실패되었습니다, 서버는 이미 연결이 끊어졌습니다.");
 		}
 	}
 	
@@ -223,24 +235,38 @@ public class GameServerThread extends Thread {
 				_out.flush();
 			}
 		} catch (IOException e) {
-			_log.severe("IOException while sending packet " + sl.getClass().getSimpleName());
+			_log.severe("IOException 패킷을 보내는 동안 " + sl.getClass().getSimpleName());
 		}
 	}
 	
+	/**
+	 * @param msg
+	 */
 	public void broadcastToTelnet(String msg) {
 		if (L2LoginServer.getInstance().getStatusServer() != null) {
 			L2LoginServer.getInstance().getStatusServer().sendMessageToTelnets(msg);
 		}
 	}
 	
+	/**
+	 * @param account
+	 */
 	public void kickPlayer(String account) {
 		sendPacket(new KickPlayer(account));
 	}
 	
+	/**
+	 * @param account
+	 */
 	public void requestCharacters(String account) {
 		sendPacket(new RequestCharacters(account));
 	}
 	
+	/**
+	 * @param successful
+	 * @param characterName
+	 * @param msgToSend
+	 */
 	public void ChangePasswordResponse(byte successful, String characterName, String msgToSend) {
 		sendPacket(new ChangePasswordResponse(successful, characterName, msgToSend));
 	}
@@ -249,14 +275,14 @@ public class GameServerThread extends Thread {
 	 * @param hosts The gameHost to set.
 	 */
 	public void setGameHosts(String[] hosts) {
-		_log.info("Updated Gameserver [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP's:");
+		_log.info("게임서버 [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP가 업데이트 되었습니다.");
 		
 		_gsi.clearServerAddresses();
 		for (int i = 0; i < hosts.length; i += 2) {
 			try {
 				_gsi.addServerAddress(hosts[i], hosts[i + 1]);
 			} catch (Exception e) {
-				_log.warning("Couldn't resolve hostname \"" + e + "\"");
+				_log.warning("호스트 이름을 확인할 수 없습니다 \"" + e + "\"");
 			}
 		}
 		
@@ -275,10 +301,16 @@ public class GameServerThread extends Thread {
 		return getGameServerInfo().isAuthed();
 	}
 	
+	/**
+	 * @param gsi
+	 */
 	public void setGameServerInfo(GameServerInfo gsi) {
 		_gsi = gsi;
 	}
 	
+	/**
+	 * @return
+	 */
 	public GameServerInfo getGameServerInfo() {
 		return _gsi;
 	}
@@ -290,6 +322,9 @@ public class GameServerThread extends Thread {
 		return _connectionIPAddress;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getServerId() {
 		if (getGameServerInfo() != null) {
 			return getGameServerInfo().getId();
@@ -297,27 +332,46 @@ public class GameServerThread extends Thread {
 		return -1;
 	}
 	
+	/**
+	 * @return
+	 */
 	public RSAPrivateKey getPrivateKey() {
 		return _privateKey;
 	}
 	
+	/**
+	 * @param blowfish
+	 */
 	public void SetBlowFish(NewCrypt blowfish) {
 		_blowfish = blowfish;
 	}
 	
+	/**
+	 * @param account
+	 */
 	public void addAccountOnGameServer(String account) {
 		_accountsOnGameServer.add(account);
 	}
 	
+	/**
+	 * @param account
+	 */
 	public void removeAccountOnGameServer(String account) {
 		_accountsOnGameServer.remove(account);
 	}
 	
+	/**
+	 * @return
+	 */
 	public GameServerState getLoginConnectionState() {
 		return _loginConnectionState;
 	}
 	
+	/**
+	 * @param state
+	 */
 	public void setLoginConnectionState(GameServerState state) {
 		_loginConnectionState = state;
 	}
+	
 }

@@ -47,6 +47,7 @@ import com.l2jserver.status.Status;
  * @author KenM
  */
 public final class L2LoginServer {
+	
 	private final Logger _log = Logger.getLogger(L2LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0106;
@@ -60,6 +61,9 @@ public final class L2LoginServer {
 		_instance = new L2LoginServer();
 	}
 	
+	/**
+	 * @return
+	 */
 	public static L2LoginServer getInstance() {
 		return _instance;
 	}
@@ -90,14 +94,14 @@ public final class L2LoginServer {
 		try {
 			L2DatabaseFactory.getInstance();
 		} catch (SQLException e) {
-			_log.log(Level.SEVERE, "FATAL: Failed initializing database. Reason: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "치명적인: 데이터베이스를 초기화 하지 못했습니다. 이유: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
 		try {
 			LoginController.load();
 		} catch (GeneralSecurityException e) {
-			_log.log(Level.SEVERE, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "치명적인: 로그인 제어 초기화 하지 못했습니다. 이유: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
@@ -114,7 +118,7 @@ public final class L2LoginServer {
 			try {
 				bindAddress = InetAddress.getByName(Config.LOGIN_BIND_ADDRESS);
 			} catch (UnknownHostException e) {
-				_log.log(Level.WARNING, "WARNING: The LoginServer bind address is invalid, using all avaliable IPs. Reason: " + e.getMessage(), e);
+				_log.log(Level.WARNING, "경고: 로그인 서버 바인드 주소는 사용 가능한 모든 IP를 사용하여 유효하지 않습니다. 이유: " + e.getMessage(), e);
 			}
 		}
 		
@@ -129,16 +133,16 @@ public final class L2LoginServer {
 		try {
 			_selectorThread = new SelectorThread<>(sc, sh, lph, sh, sh);
 		} catch (IOException e) {
-			_log.log(Level.SEVERE, "FATAL: Failed to open Selector. Reason: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "치명적인: 선택을 열지 못했습니다. 이유: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
 		try {
 			_gameServerListener = new GameServerListener();
 			_gameServerListener.start();
-			_log.info("Listening for GameServers on " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
+			_log.info("게임서버 리스닝: " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
 		} catch (IOException e) {
-			_log.log(Level.SEVERE, "FATAL: Failed to start the Game Server Listener. Reason: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "치명적인: 게임서버 리스너 시작이 실패되었습니다. 이유: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
@@ -147,27 +151,33 @@ public final class L2LoginServer {
 				_statusServer = new Status(Server.serverMode);
 				_statusServer.start();
 			} catch (IOException e) {
-				_log.log(Level.WARNING, "Failed to start the Telnet Server. Reason: " + e.getMessage(), e);
+				_log.log(Level.WARNING, "텔넷서버 시작이 실패되었습니다. 이유: " + e.getMessage(), e);
 			}
 		} else {
-			_log.info("Telnet server is currently disabled.");
+			_log.info("텔넷서버가 비활성화 되어있습니다.");
 		}
 		
 		try {
 			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
 		} catch (IOException e) {
-			_log.log(Level.SEVERE, "FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "치명적인: 서버 소켓을 열지 못했습니다. 이유: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		_selectorThread.start();
 		
-		_log.info("Login Server ready on " + (bindAddress == null ? "*" : bindAddress.getHostAddress()) + ":" + Config.PORT_LOGIN);
+		_log.info("로그인 서버 준비: " + (bindAddress == null ? "*" : bindAddress.getHostAddress()) + ":" + Config.PORT_LOGIN);
 	}
 	
+	/**
+	 * @return
+	 */
 	public Status getStatusServer() {
 		return _statusServer;
 	}
 	
+	/**
+	 * @return
+	 */
 	public GameServerListener getGameServerListener() {
 		return _gameServerListener;
 	}
@@ -200,7 +210,7 @@ public final class L2LoginServer {
 							try {
 								duration = Long.parseLong(parts[1]);
 							} catch (NumberFormatException e) {
-								_log.warning("Skipped: Incorrect ban duration (" + parts[1] + ") on (" + bannedFile.getName() + "). Line: " + reader.getLineNumber());
+								_log.warning("건너 뜀: 잘못된 차단 기간 (" + parts[1] + "), (" + bannedFile.getName() + "). 라인: " + reader.getLineNumber());
 								continue;
 							}
 						}
@@ -208,20 +218,20 @@ public final class L2LoginServer {
 						try {
 							LoginController.getInstance().addBanForAddress(address, duration);
 						} catch (UnknownHostException e) {
-							_log.warning("Skipped: Invalid address (" + parts[0] + ") on (" + bannedFile.getName() + "). Line: " + reader.getLineNumber());
+							_log.warning("건너 뜀: 잘못된 주소 (" + parts[0] + "), (" + bannedFile.getName() + "). 라인: " + reader.getLineNumber());
 						}
 					}
 				}
 			} catch (IOException e) {
-				_log.log(Level.WARNING, "Error while reading the bans file (" + bannedFile.getName() + "). Details: " + e.getMessage(), e);
+				_log.log(Level.WARNING, "차단 파일 읽는 중 오류가 발생했습니다. (" + bannedFile.getName() + "). 세부: " + e.getMessage(), e);
 			}
-			_log.info("Loaded " + LoginController.getInstance().getBannedIps().size() + " IP Bans.");
+			_log.info(LoginController.getInstance().getBannedIps().size() + "개 IP 차단이 로드되었습니다.");
 		} else {
-			_log.warning("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
+			_log.warning("IP 차단 파일(" + bannedFile.getName() + ")을 찾을 수 없습니다, 건너 뛰었습니다.");
 		}
 		
 		if (Config.LOGIN_SERVER_SCHEDULE_RESTART) {
-			_log.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
+			_log.info("예약 LS는 " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + "시간 후 다시 시작");
 			_restartLoginServer = new LoginServerRestart();
 			_restartLoginServer.setDaemon(true);
 			_restartLoginServer.start();
@@ -246,7 +256,11 @@ public final class L2LoginServer {
 		}
 	}
 	
+	/**
+	 * @param restart
+	 */
 	public void shutdown(boolean restart) {
 		Runtime.getRuntime().exit(restart ? 2 : 0);
 	}
+	
 }
