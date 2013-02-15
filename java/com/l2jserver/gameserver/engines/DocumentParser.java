@@ -73,7 +73,7 @@ public abstract class DocumentParser {
 	 */
 	protected void parseFile(File f) {
 		if (!xmlFilter.accept(f)) {
-			_log.warning(getClass().getSimpleName() + ": Could not parse " + f.getName() + " is not a file or it doesn't exist!");
+			_log.warning(getClass().getSimpleName() + ": " + f.getName() + " 파싱에 필요한 파일이 존재하지 않습니다!!");
 			return;
 		}
 		
@@ -89,7 +89,7 @@ public abstract class DocumentParser {
 			db.setErrorHandler(new XMLErrorHandler());
 			_currentDocument = db.parse(f);
 		} catch (Exception e) {
-			_log.warning(getClass().getSimpleName() + ": Could not parse " + f.getName() + " file: " + e.getMessage());
+			_log.warning(getClass().getSimpleName() + ": " + f.getName() + " 파일을 파싱할 수 없습니다: " + e.getMessage());
 			return;
 		}
 		parseDocument();
@@ -129,7 +129,7 @@ public abstract class DocumentParser {
 	 */
 	protected boolean parseDirectory(File dir) {
 		if (!dir.exists()) {
-			_log.warning(getClass().getSimpleName() + ": Folder " + dir.getAbsolutePath() + " doesn't exist!");
+			_log.warning(getClass().getSimpleName() + ": " + dir.getAbsolutePath() + " 디렉토리(폴더)가 존재하지 않습니다!");
 			return false;
 		}
 		

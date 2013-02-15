@@ -59,10 +59,14 @@ public class DocumentEngine {
 		}
 	}
 	
+	/**
+	 * @param dirname
+	 * @param hash
+	 */
 	private void hashFiles(String dirname, List<File> hash) {
 		File dir = new File(Config.DATAPACK_ROOT, dirname);
 		if (!dir.exists()) {
-			_log.warning("Dir " + dir.getAbsolutePath() + " not exists");
+			_log.warning(dir.getAbsolutePath() + " 디렉토리(폴더)가 존재하지 않습니다.");
 			return;
 		}
 		File[] files = dir.listFiles(new XMLFilter());
@@ -71,6 +75,10 @@ public class DocumentEngine {
 		}
 	}
 	
+	/**
+	 * @param file
+	 * @return
+	 */
 	public List<L2Skill> loadSkills(File file) {
 		if (file == null) {
 			_log.warning("Skill file not found.");
@@ -81,6 +89,9 @@ public class DocumentEngine {
 		return doc.getSkills();
 	}
 	
+	/**
+	 * @param allSkills
+	 */
 	public void loadAllSkills(final TIntObjectHashMap<L2Skill> allSkills) {
 		int count = 0;
 		for (File file : _skillFiles) {
@@ -93,7 +104,7 @@ public class DocumentEngine {
 				count++;
 			}
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + count + " Skill templates from XML files.");
+		_log.info(getClass().getSimpleName() + ": " + count + "개 스킬 템플릿 XML 파일이 로드되었습니다.");
 	}
 	
 	/**

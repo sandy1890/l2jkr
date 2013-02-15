@@ -135,11 +135,17 @@ public abstract class DocumentBase {
 	private File _file;
 	protected Map<String, String[]> _tables;
 	
+	/**
+	 * @param pFile
+	 */
 	protected DocumentBase(File pFile) {
 		_file = pFile;
 		_tables = new FastMap<>();
 	}
 	
+	/**
+	 * @return
+	 */
 	public Document parse() {
 		Document doc;
 		try {
@@ -162,22 +168,45 @@ public abstract class DocumentBase {
 		return doc;
 	}
 	
+	/**
+	 * @param doc
+	 */
 	protected abstract void parseDocument(Document doc);
 	
+	/**
+	 * @return
+	 */
 	protected abstract StatsSet getStatsSet();
 	
+	/**
+	 * @param name
+	 * @return
+	 */
 	protected abstract String getTableValue(String name);
 	
+	/**
+	 * @param name
+	 * @param idx
+	 * @return
+	 */
 	protected abstract String getTableValue(String name, int idx);
 	
 	protected void resetTable() {
 		_tables = new FastMap<>();
 	}
 	
+	/**
+	 * @param name
+	 * @param table
+	 */
 	protected void setTable(String name, String[] table) {
 		_tables.put(name, table);
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 */
 	protected void parseTemplate(Node n, Object template) {
 		Condition condition = null;
 		n = n.getFirstChild();
@@ -225,6 +254,12 @@ public abstract class DocumentBase {
 		}
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @param name
+	 * @param attachCond
+	 */
 	protected void attachFunc(Node n, Object template, String name, Condition attachCond) {
 		Stats stat = Stats.valueOfXml(n.getAttributes().getNamedItem("stat").getNodeValue());
 		String order = n.getAttributes().getNamedItem("order").getNodeValue();
@@ -241,6 +276,11 @@ public abstract class DocumentBase {
 		}
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @param calc
+	 */
 	protected void attachLambdaFunc(Node n, Object template, LambdaCalc calc) {
 		String name = n.getNodeName();
 		final StringBuilder sb = new StringBuilder(name);
@@ -251,6 +291,11 @@ public abstract class DocumentBase {
 		calc.addFunc(ft.getFunc(new Env(), calc));
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @param attachCond
+	 */
 	protected void attachEffect(Node n, Object template, Condition attachCond) {
 		NamedNodeMap attrs = n.getAttributes();
 		String name = getValue(attrs.getNamedItem("name").getNodeValue().intern(), template);
@@ -411,6 +456,11 @@ public abstract class DocumentBase {
 		}
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @return
+	 */
 	protected Condition parseCondition(Node n, Object template) {
 		while ((n != null) && (n.getNodeType() != Node.ELEMENT_NODE)) {
 			n = n.getNextSibling();
@@ -445,6 +495,11 @@ public abstract class DocumentBase {
 		return null;
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @return
+	 */
 	protected Condition parseLogicAnd(Node n, Object template) {
 		ConditionLogicAnd cond = new ConditionLogicAnd();
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling()) {
@@ -458,6 +513,11 @@ public abstract class DocumentBase {
 		return cond;
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @return
+	 */
 	protected Condition parseLogicOr(Node n, Object template) {
 		ConditionLogicOr cond = new ConditionLogicOr();
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling()) {
@@ -471,6 +531,11 @@ public abstract class DocumentBase {
 		return cond;
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @return
+	 */
 	protected Condition parseLogicNot(Node n, Object template) {
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling()) {
 			if (n.getNodeType() == Node.ELEMENT_NODE) {
@@ -481,6 +546,11 @@ public abstract class DocumentBase {
 		return null;
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @return
+	 */
 	protected Condition parsePlayerCondition(Node n, Object template) {
 		Condition cond = null;
 		byte[] forces = new byte[2];
@@ -701,6 +771,11 @@ public abstract class DocumentBase {
 		return cond;
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @return
+	 */
 	protected Condition parseTargetCondition(Node n, Object template) {
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -825,12 +900,20 @@ public abstract class DocumentBase {
 		return cond;
 	}
 	
+	/**
+	 * @param n
+	 * @return
+	 */
 	protected Condition parseSkillCondition(Node n) {
 		NamedNodeMap attrs = n.getAttributes();
 		Stats stat = Stats.valueOfXml(attrs.getNamedItem("stat").getNodeValue());
 		return new ConditionSkillStats(stat);
 	}
 	
+	/**
+	 * @param n
+	 * @return
+	 */
 	protected Condition parseUsingCondition(Node n) {
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -878,6 +961,10 @@ public abstract class DocumentBase {
 		return cond;
 	}
 	
+	/**
+	 * @param n
+	 * @return
+	 */
 	protected Condition parseGameCondition(Node n) {
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -902,6 +989,9 @@ public abstract class DocumentBase {
 		return cond;
 	}
 	
+	/**
+	 * @param n
+	 */
 	protected void parseTable(Node n) {
 		NamedNodeMap attrs = n.getAttributes();
 		String name = attrs.getNamedItem("name").getNodeValue();
@@ -916,6 +1006,11 @@ public abstract class DocumentBase {
 		setTable(name, array.toArray(new String[array.size()]));
 	}
 	
+	/**
+	 * @param n
+	 * @param set
+	 * @param level
+	 */
 	protected void parseBeanSet(Node n, StatsSet set, Integer level) {
 		String name = n.getAttributes().getNamedItem("name").getNodeValue().trim();
 		String value = n.getAttributes().getNamedItem("val").getNodeValue().trim();
@@ -927,10 +1022,19 @@ public abstract class DocumentBase {
 		}
 	}
 	
+	/**
+	 * @param set
+	 * @param value
+	 */
 	protected void setExtractableSkillData(StatsSet set, String value) {
 		set.set("capsuled_items_skill", value);
 	}
 	
+	/**
+	 * @param n
+	 * @param template
+	 * @return
+	 */
 	protected Lambda getLambda(Node n, Object template) {
 		Node nval = n.getAttributes().getNamedItem("val");
 		if (nval != null) {
@@ -980,6 +1084,11 @@ public abstract class DocumentBase {
 		return calc;
 	}
 	
+	/**
+	 * @param value
+	 * @param template
+	 * @return
+	 */
 	protected String getValue(String value, Object template) {
 		// is it a table?
 		if (value.charAt(0) == '#') {
@@ -994,6 +1103,11 @@ public abstract class DocumentBase {
 		return value;
 	}
 	
+	/**
+	 * @param cond
+	 * @param c
+	 * @return
+	 */
 	protected Condition joinAnd(Condition cond, Condition c) {
 		if (cond == null) {
 			return c;
