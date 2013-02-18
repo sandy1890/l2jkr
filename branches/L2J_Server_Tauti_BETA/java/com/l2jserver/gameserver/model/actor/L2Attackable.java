@@ -74,8 +74,6 @@ import com.l2jserver.gameserver.util.L2TIntObjectHashMap;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
-//Add pcbangpoints by pmq
-
 public class L2Attackable extends L2Npc {
 	
 	private boolean _isRaid = false;
@@ -91,26 +89,41 @@ public class L2Attackable extends L2Npc {
 		private int _hate = 0;
 		private int _damage = 0;
 		
+		/**
+		 * @param pAttacker
+		 */
 		AggroInfo(L2Character pAttacker) {
 			_attacker = pAttacker;
 		}
 		
+		/**
+		 * @return
+		 */
 		public final L2Character getAttacker() {
 			return _attacker;
 		}
 		
+		/**
+		 * @return
+		 */
 		public final int getHate() {
 			return _hate;
 		}
 		
+		/**
+		 * @param owner
+		 * @return
+		 */
 		public final int checkHate(L2Character owner) {
 			if (_attacker.isAlikeDead() || !_attacker.isVisible() || !owner.getKnownList().knowsObject(_attacker)) {
 				_hate = 0;
 			}
-			
 			return _hate;
 		}
 		
+		/**
+		 * @param value
+		 */
 		public final void addHate(int value) {
 			_hate = (int) Math.min(_hate + (long) value, 999999999);
 		}
@@ -119,14 +132,24 @@ public class L2Attackable extends L2Npc {
 			_hate = 0;
 		}
 		
+		/**
+		 * @return
+		 */
 		public final int getDamage() {
 			return _damage;
 		}
 		
+		/**
+		 * @param value
+		 */
 		public final void addDamage(int value) {
 			_damage = (int) Math.min(_damage + (long) value, 999999999);
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Object#equals(java.lang.Object)
+		 */
 		@Override
 		public final boolean equals(Object obj) {
 			if (this == obj) {
@@ -140,6 +163,10 @@ public class L2Attackable extends L2Npc {
 			return false;
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Object#hashCode()
+		 */
 		@Override
 		public final int hashCode() {
 			return _attacker.getObjectId();
@@ -155,15 +182,26 @@ public class L2Attackable extends L2Npc {
 		
 		protected int _dmg = 0;
 		
+		/**
+		 * @param pAttacker
+		 * @param pDmg
+		 */
 		public RewardInfo(L2Character pAttacker, int pDmg) {
 			_attacker = pAttacker;
 			_dmg = pDmg;
 		}
 		
+		/**
+		 * @param pDmg
+		 */
 		public void addDamage(int pDmg) {
 			_dmg += pDmg;
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Object#equals(java.lang.Object)
+		 */
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj) {
@@ -177,6 +215,10 @@ public class L2Attackable extends L2Npc {
 			return false;
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Object#hashCode()
+		 */
 		@Override
 		public int hashCode() {
 			return _attacker.getObjectId();
@@ -190,11 +232,19 @@ public class L2Attackable extends L2Npc {
 		public int _objId;
 		public double _absorbedHP;
 		
+		/**
+		 * @param objId
+		 * @param pAbsorbedHP
+		 */
 		AbsorberInfo(int objId, double pAbsorbedHP) {
 			_objId = objId;
 			_absorbedHP = pAbsorbedHP;
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Object#equals(java.lang.Object)
+		 */
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj) {
@@ -208,6 +258,10 @@ public class L2Attackable extends L2Npc {
 			return false;
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Object#hashCode()
+		 */
 		@Override
 		public int hashCode() {
 			return _objId;
@@ -216,18 +270,27 @@ public class L2Attackable extends L2Npc {
 	
 	public static final class RewardItem {
 		protected int _itemId;
-		
 		protected int _count;
 		
+		/**
+		 * @param itemId
+		 * @param count
+		 */
 		public RewardItem(int itemId, int count) {
 			_itemId = itemId;
 			_count = count;
 		}
 		
+		/**
+		 * @return
+		 */
 		public int getItemId() {
 			return _itemId;
 		}
 		
+		/**
+		 * @return
+		 */
 		public int getCount() {
 			return _count;
 		}
@@ -235,36 +298,57 @@ public class L2Attackable extends L2Npc {
 	
 	private final FastMap<L2Character, AggroInfo> _aggroList = new FastMap<L2Character, AggroInfo>().shared();
 	
+	/**
+	 * @return
+	 */
 	public final FastMap<L2Character, AggroInfo> getAggroList() {
 		return _aggroList;
 	}
 	
 	private boolean _isReturningToSpawnPoint = false;
 	
+	/**
+	 * @return
+	 */
 	public final boolean isReturningToSpawnPoint() {
 		return _isReturningToSpawnPoint;
 	}
 	
+	/**
+	 * @param value
+	 */
 	public final void setisReturningToSpawnPoint(boolean value) {
 		_isReturningToSpawnPoint = value;
 	}
 	
 	private boolean _canReturnToSpawnPoint = true;
 	
+	/**
+	 * @return
+	 */
 	public final boolean canReturnToSpawnPoint() {
 		return _canReturnToSpawnPoint;
 	}
 	
+	/**
+	 * @param value
+	 */
 	public final void setCanReturnToSpawnPoint(boolean value) {
 		_canReturnToSpawnPoint = value;
 	}
 	
 	private boolean _seeThroughSilentMove = false;
 	
+	/**
+	 * @return
+	 */
 	public boolean canSeeThroughSilentMove() {
 		return _seeThroughSilentMove;
 	}
 	
+	/**
+	 * @param val
+	 */
 	public void setSeeThroughSilentMove(boolean val) {
 		_seeThroughSilentMove = val;
 	}
@@ -292,7 +376,9 @@ public class L2Attackable extends L2Npc {
 	
 	private boolean _mustGiveExpSp;
 	
-	/** True if a Dwarf has used Spoil on this L2NpcInstance */
+	/**
+	 * True if a Dwarf has used Spoil on this L2NpcInstance
+	 */
 	private boolean _isSpoil = false;
 	
 	private int _isSpoiledBy = 0;
@@ -312,21 +398,37 @@ public class L2Attackable extends L2Npc {
 		_mustGiveExpSp = true;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Npc#getKnownList()
+	 */
 	@Override
 	public AttackableKnownList getKnownList() {
 		return (AttackableKnownList) super.getKnownList();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Npc#initKnownList()
+	 */
 	@Override
 	public void initKnownList() {
 		setKnownList(new AttackableKnownList(this));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Npc#getStatus()
+	 */
 	@Override
 	public AttackableStatus getStatus() {
 		return (AttackableStatus) super.getStatus();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Npc#initCharStatus()
+	 */
 	@Override
 	public void initCharStatus() {
 		setStatus(new AttackableStatus(this));
@@ -350,6 +452,9 @@ public class L2Attackable extends L2Npc {
 		return ai;
 	}
 	
+	/**
+	 * @param skill
+	 */
 	public void useMagic(L2Skill skill) {
 		if ((skill == null) || isAlikeDead()) {
 			return;
@@ -426,14 +531,14 @@ public class L2Attackable extends L2Npc {
 							_commandChannelLastAttack = System.currentTimeMillis();
 							ThreadPoolManager.getInstance().scheduleGeneral(_commandChannelTimer, 10000); // check for last attack
 							/*
-							 * Move To MessageTable For L2JTW _firstCommandChannelAttacked.broadcastPacket(new CreatureSay(0, Say2.PARTYROOM_ALL, "", "You have looting rights!")); //TODO: retail msg
+							 * Move To MessageTable For L2JTW
 							 */
+							// _firstCommandChannelAttacked.broadcastPacket(new CreatureSay(0, Say2.PARTYROOM_ALL, "", "You have looting rights!")); // TODO: retail msg
 							_firstCommandChannelAttacked.broadcastPacket(new CreatureSay(0, Say2.PARTYROOM_ALL, "", MessageTable.Messages[511].getMessage())); // TODO: retail msg
 						}
 					}
 				}
-			} else if (attacker.getParty().getCommandChannel().equals(_firstCommandChannelAttacked)) // is in same channel
-			{
+			} else if (attacker.getParty().getCommandChannel().equals(_firstCommandChannelAttacked)) { // is in same channel
 				_commandChannelLastAttack = System.currentTimeMillis(); // update last attack time
 			}
 		}
@@ -464,10 +569,16 @@ public class L2Attackable extends L2Npc {
 		super.reduceCurrentHp(damage, attacker, awake, isDOT, skill);
 	}
 	
+	/**
+	 * @param value
+	 */
 	public synchronized void setMustRewardExpSp(boolean value) {
 		_mustGiveExpSp = value;
 	}
 	
+	/**
+	 * @return
+	 */
 	public synchronized boolean getMustRewardExpSP() {
 		return _mustGiveExpSp;
 	}
@@ -511,6 +622,12 @@ public class L2Attackable extends L2Npc {
 		private final L2PcInstance _killer;
 		private final boolean _isPet;
 		
+		/**
+		 * @param attackable
+		 * @param quest
+		 * @param killer
+		 * @param isPet
+		 */
 		public OnKillNotifyTask(L2Attackable attackable, Quest quest, L2PcInstance killer, boolean isPet) {
 			_attackable = attackable;
 			_quest = quest;
@@ -518,6 +635,10 @@ public class L2Attackable extends L2Npc {
 			_isPet = isPet;
 		}
 		
+		/*
+		 * (non-Javadoc)
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run() {
 			_quest.notifyKill(_attackable, _killer, _isPet);
@@ -748,9 +869,7 @@ public class L2Attackable extends L2Npc {
 							
 							if ((summon != null) && summon.isPet()) {
 								reward2 = rewards.get(summon);
-								
-								if (reward2 != null) // Pets are only added if they have done damage
-								{
+								if (reward2 != null) { // Pets are only added if they have done damage
 									if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, summon, true)) {
 										partyDmg += reward2._dmg; // Add summon damages to party damages
 										rewardedMembers.add(summon);
@@ -794,7 +913,6 @@ public class L2Attackable extends L2Npc {
 						// (When in party, the over-hit exp bonus is given to the whole party and splitted proportionally through the party members)
 						if (attacker instanceof L2PcInstance) {
 							L2PcInstance player = (L2PcInstance) attacker;
-							
 							if (isOverhit() && (attacker == getOverhitAttacker())) {
 								player.sendPacket(SystemMessageId.OVER_HIT);
 								exp += calculateOverhitExp(exp);
@@ -813,7 +931,8 @@ public class L2Attackable extends L2Npc {
 		}
 	}
 	
-	/**
+	/*
+	 * (non-Javadoc)
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#addAttackerToAttackByList(com.l2jserver.gameserver.model.actor.L2Character)
 	 */
 	@Override
@@ -901,6 +1020,10 @@ public class L2Attackable extends L2Npc {
 		}
 	}
 	
+	/**
+	 * @param target
+	 * @param amount
+	 */
 	public void reduceHate(L2Character target, int amount) {
 		if ((getAI() instanceof L2SiegeGuardAI) || (getAI() instanceof L2FortSiegeGuardAI)) {
 			// TODO: this just prevents error until siege guards are handled properly
@@ -910,12 +1033,10 @@ public class L2Attackable extends L2Npc {
 			return;
 		}
 		
-		if (target == null) // whole aggrolist
-		{
+		if (target == null) { // whole aggrolist
 			L2Character mostHated = getMostHated();
 			
-			if (mostHated == null) // makes target passive for a moment more
-			{
+			if (mostHated == null) { // makes target passive for a moment more
 				((L2AttackableAI) getAI()).setGlobalAggro(-25);
 				return;
 			}
@@ -1034,6 +1155,9 @@ public class L2Attackable extends L2Npc {
 		return result;
 	}
 	
+	/**
+	 * @return
+	 */
 	public List<L2Character> getHateList() {
 		if (getAggroList().isEmpty() || isAlikeDead()) {
 			return null;
@@ -1358,6 +1482,11 @@ public class L2Attackable extends L2Npc {
 		return 0;
 	}
 	
+	/**
+	 * @param lastAttacker
+	 * @param categoryDrops
+	 * @return
+	 */
 	private RewardItem calculateCategorizedHerbItem(L2PcInstance lastAttacker, L2DropCategory categoryDrops) {
 		if (categoryDrops == null) {
 			return null;
@@ -1486,6 +1615,9 @@ public class L2Attackable extends L2Npc {
 		return null;
 	}
 	
+	/**
+	 * @param mainDamageDealer
+	 */
 	public void doItemDrop(L2Character mainDamageDealer) {
 		doItemDrop(getTemplate(), mainDamageDealer);
 	}
@@ -1530,7 +1662,7 @@ public class L2Attackable extends L2Npc {
 						}
 						
 						if (Config.DEBUG) {
-							_log.fine("Item id to spoil: " + item.getItemId() + " amount: " + item.getCount());
+							_log.fine("스포일 아이템 ID: " + item.getItemId() + " 수량: " + item.getCount());
 						}
 						sweepList.add(item);
 					}
@@ -1554,7 +1686,7 @@ public class L2Attackable extends L2Npc {
 				
 				if (item != null) {
 					if (Config.DEBUG) {
-						_log.fine("Item id to drop: " + item.getItemId() + " amount: " + item.getCount());
+						_log.fine("드랍 아이템 ID: " + item.getItemId() + " 수량: " + item.getCount());
 					}
 					
 					// Check if the autoLoot mode is active
@@ -1580,7 +1712,6 @@ public class L2Attackable extends L2Npc {
 		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE > 0) || (Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE > 0))) {
 			int champqty = Rnd.get(Config.L2JMOD_CHAMPION_REWARD_QTY);
 			RewardItem item = new RewardItem(Config.L2JMOD_CHAMPION_REWARD_ID, ++champqty);
-			
 			if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE)) {
 				if (Config.AUTO_LOOT || isFlying()) {
 					player.addItem("ChampionLoot", item.getItemId(), item.getCount(), this, true); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
@@ -1696,6 +1827,12 @@ public class L2Attackable extends L2Npc {
 		return ditem;
 	}
 	
+	/**
+	 * @param lastAttacker
+	 * @param itemId
+	 * @param itemCount
+	 * @return
+	 */
 	public L2ItemInstance dropItem(L2PcInstance lastAttacker, int itemId, int itemCount) {
 		return dropItem(lastAttacker, new RewardItem(itemId, itemCount));
 	}
@@ -1897,6 +2034,9 @@ public class L2Attackable extends L2Npc {
 		_absorbersList.clear();
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2TIntObjectHashMap<AbsorberInfo> getAbsorbersList() {
 		return _absorbersList;
 	}
@@ -1948,6 +2088,10 @@ public class L2Attackable extends L2Npc {
 		return tmp;
 	}
 	
+	/**
+	 * @param normalExp
+	 * @return
+	 */
 	public long calculateOverhitExp(long normalExp) {
 		// Get the percentage based on the total of extra (over-hit) damage done relative to the total (maximum) ammount of HP on the L2Attackable
 		double overhitPercentage = ((getOverhitDamage() * 100) / getMaxHp());
@@ -1966,14 +2110,19 @@ public class L2Attackable extends L2Npc {
 		return bonusOverhit;
 	}
 	
-	/**
-	 * Return True.
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Npc#isAttackable()
 	 */
 	@Override
 	public boolean isAttackable() {
 		return true;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Npc#onSpawn()
+	 */
 	@Override
 	public void onSpawn() {
 		super.onSpawn();
@@ -2019,10 +2168,16 @@ public class L2Attackable extends L2Npc {
 		_isSpoil = isSpoil;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getIsSpoiledBy() {
 		return _isSpoiledBy;
 	}
 	
+	/**
+	 * @param value
+	 */
 	public final void setIsSpoiledBy(int value) {
 		_isSpoiledBy = value;
 	}
@@ -2049,6 +2204,10 @@ public class L2Attackable extends L2Npc {
 		}
 	}
 	
+	/**
+	 * @param id
+	 * @param seederLvl
+	 */
 	private void setSeeded(int id, int seederLvl) {
 		_seeded = true;
 		_seedType = id;
@@ -2101,14 +2260,23 @@ public class L2Attackable extends L2Npc {
 		_harvestItems = harvested.toArray(new RewardItem[harvested.size()]);
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getSeederId() {
 		return _seederObjId;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getSeedType() {
 		return _seedType;
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isSeeded() {
 		return _seeded;
 	}
@@ -2130,23 +2298,39 @@ public class L2Attackable extends L2Npc {
 		return ((Config.MAX_MONSTER_ANIMATION > 0) && !(this instanceof L2GrandBossInstance));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Npc#isMob()
+	 */
 	@Override
 	public boolean isMob() {
 		return true; // This means we use MAX_MONSTER_ANIMATION instead of MAX_NPC_ANIMATION
 	}
 	
+	/**
+	 * @param commandChannelTimer
+	 */
 	protected void setCommandChannelTimer(CommandChannelTimer commandChannelTimer) {
 		_commandChannelTimer = commandChannelTimer;
 	}
 	
+	/**
+	 * @return
+	 */
 	public CommandChannelTimer getCommandChannelTimer() {
 		return _commandChannelTimer;
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2CommandChannel getFirstCommandChannelAttacked() {
 		return _firstCommandChannelAttacked;
 	}
 	
+	/**
+	 * @param firstCommandChannelAttacked
+	 */
 	public void setFirstCommandChannelAttacked(L2CommandChannel firstCommandChannelAttacked) {
 		_firstCommandChannelAttacked = firstCommandChannelAttacked;
 	}
@@ -2168,11 +2352,15 @@ public class L2Attackable extends L2Npc {
 	private static class CommandChannelTimer implements Runnable {
 		private final L2Attackable _monster;
 		
+		/**
+		 * @param monster
+		 */
 		public CommandChannelTimer(L2Attackable monster) {
 			_monster = monster;
 		}
 		
-		/**
+		/*
+		 * (non-Javadoc)
 		 * @see java.lang.Runnable#run()
 		 */
 		@Override
@@ -2189,14 +2377,15 @@ public class L2Attackable extends L2Npc {
 	
 	public void returnHome() {
 		clearAggroList();
-		
 		if (hasAI() && (getSpawn() != null)) {
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(getSpawn().getLocx(), getSpawn().getLocy(), getSpawn().getLocz(), 0));
 		}
 	}
 	
-	/*
+	/**
 	 * Return vitality points decrease (if positive) or increase (if negative) based on damage. Maximum for damage = maxHp.
+	 * @param damage
+	 * @return
 	 */
 	public float getVitalityPoints(int damage) {
 		// sanity check
@@ -2213,8 +2402,9 @@ public class L2Attackable extends L2Npc {
 		return -Math.min(damage, getMaxHp()) / divider;
 	}
 	
-	/*
+	/**
 	 * True if vitality rate for exp and sp should be applied
+	 * @return
 	 */
 	public boolean useVitalityRate() {
 		if (isChampion() && !Config.L2JMOD_CHAMPION_ENABLE_VITALITY) {
@@ -2224,7 +2414,9 @@ public class L2Attackable extends L2Npc {
 		return true;
 	}
 	
-	/** Return True if the L2Character is RaidBoss or his minion. */
+	/**
+	 * Return True if the L2Character is RaidBoss or his minion.
+	 */
 	@Override
 	public boolean isRaid() {
 		return _isRaid;
@@ -2249,11 +2441,19 @@ public class L2Attackable extends L2Npc {
 		_isRaidMinion = val;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#isRaidMinion()
+	 */
 	@Override
 	public boolean isRaidMinion() {
 		return _isRaidMinion;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#isMinion()
+	 */
 	@Override
 	public boolean isMinion() {
 		return getLeader() != null;
@@ -2266,15 +2466,26 @@ public class L2Attackable extends L2Npc {
 		return null;
 	}
 	
+	/**
+	 * @param champ
+	 */
 	public void setChampion(boolean champ) {
 		_champion = champ;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#isChampion()
+	 */
 	@Override
 	public boolean isChampion() {
 		return _champion;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#isL2Attackable()
+	 */
 	@Override
 	public boolean isL2Attackable() {
 		return true;

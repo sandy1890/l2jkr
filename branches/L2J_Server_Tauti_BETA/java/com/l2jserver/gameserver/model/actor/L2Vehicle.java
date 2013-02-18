@@ -60,34 +60,56 @@ public abstract class L2Vehicle extends L2Character {
 	protected VehiclePathPoint[] _currentPath = null;
 	protected int _runState = 0;
 	
+	/**
+	 * @param objectId
+	 * @param template
+	 */
 	public L2Vehicle(int objectId, L2CharTemplate template) {
 		super(objectId, template);
 		setInstanceType(InstanceType.L2Vehicle);
 		setIsFlying(true);
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isBoat() {
 		return false;
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isAirShip() {
 		return false;
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean canBeControlled() {
 		return _engine == null;
 	}
 	
+	/**
+	 * @param r
+	 */
 	public void registerEngine(Runnable r) {
 		_engine = r;
 	}
 	
+	/**
+	 * @param delay
+	 */
 	public void runEngine(int delay) {
 		if (_engine != null) {
 			ThreadPoolManager.getInstance().scheduleGeneral(_engine, delay);
 		}
 	}
 	
+	/**
+	 * @param path
+	 */
 	public void executePath(VehiclePathPoint[] path) {
 		_runState = 0;
 		_currentPath = path;
@@ -107,6 +129,9 @@ public abstract class L2Vehicle extends L2Character {
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#moveToNextRoutePoint()
+	 */
 	@Override
 	public boolean moveToNextRoutePoint() {
 		_move = null;
@@ -158,37 +183,61 @@ public abstract class L2Vehicle extends L2Character {
 		return false;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#initKnownList()
+	 */
 	@Override
 	public void initKnownList() {
 		setKnownList(new VehicleKnownList(this));
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getStat()
+	 */
 	@Override
 	public VehicleStat getStat() {
 		return (VehicleStat) super.getStat();
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#initCharStat()
+	 */
 	@Override
 	public void initCharStat() {
 		setStat(new VehicleStat(this));
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isInDock() {
 		return _dockId > 0;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getDockId() {
 		return _dockId;
 	}
 	
+	/**
+	 * @param d
+	 */
 	public void setInDock(int d) {
 		_dockId = d;
 	}
 	
+	/**
+	 * @param loc
+	 */
 	public void setOustLoc(Location loc) {
 		_oustLoc = loc;
 	}
 	
+	/**
+	 * @return
+	 */
 	public Location getOustLoc() {
 		return _oustLoc != null ? _oustLoc : MapRegionManager.getInstance().getTeleToLocation(this, MapRegionManager.TeleportWhereType.Town);
 	}
@@ -207,12 +256,19 @@ public abstract class L2Vehicle extends L2Character {
 		}
 	}
 	
+	/**
+	 * @param player
+	 */
 	public void oustPlayer(L2PcInstance player) {
 		player.setVehicle(null);
 		player.setInVehiclePosition(null);
 		removePassenger(player);
 	}
 	
+	/**
+	 * @param player
+	 * @return
+	 */
 	public boolean addPassenger(L2PcInstance player) {
 		if ((player == null) || _passengers.contains(player)) {
 			return false;
@@ -227,6 +283,9 @@ public abstract class L2Vehicle extends L2Character {
 		return true;
 	}
 	
+	/**
+	 * @param player
+	 */
 	public void removePassenger(L2PcInstance player) {
 		try {
 			_passengers.remove(player);
@@ -234,14 +293,23 @@ public abstract class L2Vehicle extends L2Character {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isEmpty() {
 		return _passengers.isEmpty();
 	}
 	
+	/**
+	 * @return
+	 */
 	public List<L2PcInstance> getPassengers() {
 		return _passengers;
 	}
 	
+	/**
+	 * @param sm
+	 */
 	public void broadcastToPassengers(L2GameServerPacket sm) {
 		for (L2PcInstance player : _passengers) {
 			if (player != null) {
@@ -285,20 +353,24 @@ public abstract class L2Vehicle extends L2Character {
 		}
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#updatePosition(int)
+	 */
 	@Override
 	public boolean updatePosition(int gameTicks) {
 		final boolean result = super.updatePosition(gameTicks);
-		
 		for (L2PcInstance player : _passengers) {
 			if ((player != null) && (player.getVehicle() == this)) {
 				player.getPosition().setXYZ(getX(), getY(), getZ());
 				player.revalidateZone(false);
 			}
 		}
-		
 		return result;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#teleToLocation(int, int, int, int, boolean)
+	 */
 	@Override
 	public void teleToLocation(int x, int y, int z, int heading, boolean allowRandomOffset) {
 		if (isMoving()) {
@@ -327,6 +399,9 @@ public abstract class L2Vehicle extends L2Character {
 		revalidateZone(true);
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#stopMove(com.l2jserver.gameserver.model.L2CharPosition, boolean)
+	 */
 	@Override
 	public void stopMove(L2CharPosition pos, boolean updateKnownObjects) {
 		_move = null;
@@ -335,12 +410,14 @@ public abstract class L2Vehicle extends L2Character {
 			setHeading(pos.heading);
 			revalidateZone(true);
 		}
-		
 		if (Config.MOVE_BASED_KNOWNLIST && updateKnownObjects) {
 			getKnownList().findObjects();
 		}
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#deleteMe()
+	 */
 	@Override
 	public void deleteMe() {
 		_engine = null;
@@ -383,40 +460,64 @@ public abstract class L2Vehicle extends L2Character {
 		super.deleteMe();
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#updateAbnormalEffect()
+	 */
 	@Override
 	public void updateAbnormalEffect() {
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getActiveWeaponInstance()
+	 */
 	@Override
 	public L2ItemInstance getActiveWeaponInstance() {
 		return null;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getActiveWeaponItem()
+	 */
 	@Override
 	public L2Weapon getActiveWeaponItem() {
 		return null;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getSecondaryWeaponInstance()
+	 */
 	@Override
 	public L2ItemInstance getSecondaryWeaponInstance() {
 		return null;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getSecondaryWeaponItem()
+	 */
 	@Override
 	public L2Weapon getSecondaryWeaponItem() {
 		return null;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getLevel()
+	 */
 	@Override
 	public int getLevel() {
 		return 0;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.L2Object#isAutoAttackable(com.l2jserver.gameserver.model.actor.L2Character)
+	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker) {
 		return false;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#setAI(com.l2jserver.gameserver.ai.L2CharacterAI)
+	 */
 	@Override
 	public void setAI(L2CharacterAI newAI) {
 		if (_ai == null) {
@@ -425,6 +526,9 @@ public abstract class L2Vehicle extends L2Character {
 	}
 	
 	public class AIAccessor extends L2Character.AIAccessor {
+		/*
+		 * @see com.l2jserver.gameserver.model.actor.L2Character.AIAccessor#detachAI()
+		 */
 		@Override
 		public void detachAI() {
 		}

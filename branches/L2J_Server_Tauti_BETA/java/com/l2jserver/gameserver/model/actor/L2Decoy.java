@@ -34,6 +34,11 @@ public abstract class L2Decoy extends L2Character {
 	
 	private final L2PcInstance _owner;
 	
+	/**
+	 * @param objectId
+	 * @param template
+	 * @param owner
+	 */
 	public L2Decoy(int objectId, L2CharTemplate template, L2PcInstance owner) {
 		super(objectId, template);
 		setInstanceType(InstanceType.L2Decoy);
@@ -42,12 +47,20 @@ public abstract class L2Decoy extends L2Character {
 		setIsInvul(false);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#onSpawn()
+	 */
 	@Override
 	public void onSpawn() {
 		super.onSpawn();
 		sendPacket(new CharInfo(this));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#updateAbnormalEffect()
+	 */
 	@Override
 	public void updateAbnormalEffect() {
 		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
@@ -63,53 +76,89 @@ public abstract class L2Decoy extends L2Character {
 		DecayTaskManager.getInstance().cancelDecayTask(this);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#onDecay()
+	 */
 	@Override
 	public void onDecay() {
 		deleteMe(_owner);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#isAutoAttackable(com.l2jserver.gameserver.model.actor.L2Character)
+	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker) {
 		return _owner.isAutoAttackable(attacker);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getActiveWeaponInstance()
+	 */
 	@Override
 	public L2ItemInstance getActiveWeaponInstance() {
 		return null;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getActiveWeaponItem()
+	 */
 	@Override
 	public L2Weapon getActiveWeaponItem() {
 		return null;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getSecondaryWeaponInstance()
+	 */
 	@Override
 	public L2ItemInstance getSecondaryWeaponInstance() {
 		return null;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getSecondaryWeaponItem()
+	 */
 	@Override
 	public L2Weapon getSecondaryWeaponItem() {
 		return null;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getNpcId() {
 		return getTemplate().getNpcId();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getLevel()
+	 */
 	@Override
 	public int getLevel() {
 		return getTemplate().getLevel();
 	}
 	
+	/**
+	 * @param owner
+	 */
 	public void deleteMe(L2PcInstance owner) {
 		decayMe();
 		getKnownList().removeAllKnownObjects();
 		owner.setDecoy(null);
 	}
 	
+	/**
+	 * @param owner
+	 */
 	public synchronized void unSummon(L2PcInstance owner) {
-		
 		if (isVisible() && !isDead()) {
 			if (getWorldRegion() != null) {
 				getWorldRegion().removeFromZones(this);
@@ -120,25 +169,44 @@ public abstract class L2Decoy extends L2Character {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public final L2PcInstance getOwner() {
 		return _owner;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#getActingPlayer()
+	 */
 	@Override
 	public L2PcInstance getActingPlayer() {
 		return _owner;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#getTemplate()
+	 */
 	@Override
 	public L2NpcTemplate getTemplate() {
 		return (L2NpcTemplate) super.getTemplate();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#sendInfo(com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
+	 */
 	@Override
 	public void sendInfo(L2PcInstance activeChar) {
 		activeChar.sendPacket(new CharInfo(this));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#sendPacket(com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket)
+	 */
 	@Override
 	public void sendPacket(L2GameServerPacket mov) {
 		if (getOwner() != null) {
@@ -146,6 +214,10 @@ public abstract class L2Decoy extends L2Character {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#sendPacket(com.l2jserver.gameserver.network.SystemMessageId)
+	 */
 	@Override
 	public void sendPacket(SystemMessageId id) {
 		if (getOwner() != null) {
