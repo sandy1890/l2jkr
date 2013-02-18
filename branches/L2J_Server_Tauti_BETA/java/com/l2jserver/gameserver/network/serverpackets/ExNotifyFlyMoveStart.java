@@ -22,25 +22,29 @@ package com.l2jserver.gameserver.network.serverpackets;
  * @author mrTJO
  */
 public final class ExNotifyFlyMoveStart extends L2GameServerPacket {
-	private static final String _S__FE_E7_EXNOTIFYFLYMOVESTART = "[S] FE:E7 ExNotifyFlyMoveStart";
 	
-	// public static final ExNotifyFlyMoveStart STATIC_PACKET = new ExNotifyFlyMoveStart();
+	private static final String _S__FE_E7_EXNOTIFYFLYMOVESTART = "[S] FE:E7 ExNotifyFlyMoveStart";
 	
 	public ExNotifyFlyMoveStart() {
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
+	 */
 	@Override
 	protected void writeImpl() {
 		writeC(0xFE);
-		/*
-		 * l2jtw start writeH(0xE7); //writeH(0x114);
-		 */
 		writeH(0x114);
-		// l2jtw end
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket#getType()
+	 */
 	@Override
 	public String getType() {
 		return _S__FE_E7_EXNOTIFYFLYMOVESTART;
 	}
+	
 }
