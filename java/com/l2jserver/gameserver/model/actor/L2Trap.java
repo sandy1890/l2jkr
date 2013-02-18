@@ -78,7 +78,7 @@ public class L2Trap extends L2Character {
 		}
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#getKnownList()
 	 */
 	@Override
@@ -86,25 +86,27 @@ public class L2Trap extends L2Character {
 		return (TrapKnownList) super.getKnownList();
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#initKnownList()
+	 */
 	@Override
 	public void initKnownList() {
 		setKnownList(new TrapKnownList(this));
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.L2Object#isAutoAttackable(com.l2jserver.gameserver.model.actor.L2Character)
+	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker) {
 		return !canSee(attacker);
 	}
 	
-	/**
-	 * 
-	 *
-	 */
 	public void stopDecay() {
 		DecayTaskManager.getInstance().cancelDecayTask(this);
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#onDecay()
 	 */
 	@Override
@@ -119,7 +121,7 @@ public class L2Trap extends L2Character {
 		return getTemplate().getNpcId();
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#doDie(com.l2jserver.gameserver.model.actor.L2Character)
 	 */
 	@Override
@@ -132,6 +134,9 @@ public class L2Trap extends L2Character {
 		return true;
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#deleteMe()
+	 */
 	@Override
 	public void deleteMe() {
 		decayMe();
@@ -144,12 +149,11 @@ public class L2Trap extends L2Character {
 			if (getWorldRegion() != null) {
 				getWorldRegion().removeFromZones(this);
 			}
-			
 			deleteMe();
 		}
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#getActiveWeaponInstance()
 	 */
 	@Override
@@ -157,7 +161,7 @@ public class L2Trap extends L2Character {
 		return null;
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#getActiveWeaponItem()
 	 */
 	@Override
@@ -165,7 +169,7 @@ public class L2Trap extends L2Character {
 		return null;
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#getLevel()
 	 */
 	@Override
@@ -173,7 +177,7 @@ public class L2Trap extends L2Character {
 		return getTemplate().getLevel();
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#getTemplate()
 	 */
 	@Override
@@ -181,7 +185,7 @@ public class L2Trap extends L2Character {
 		return (L2NpcTemplate) super.getTemplate();
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#getSecondaryWeaponInstance()
 	 */
 	@Override
@@ -189,7 +193,7 @@ public class L2Trap extends L2Character {
 		return null;
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#getSecondaryWeaponItem()
 	 */
 	@Override
@@ -197,7 +201,7 @@ public class L2Trap extends L2Character {
 		return null;
 	}
 	
-	/**
+	/*
 	 * @see com.l2jserver.gameserver.model.actor.L2Character#updateAbnormalEffect()
 	 */
 	@Override
@@ -205,18 +209,30 @@ public class L2Trap extends L2Character {
 		
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2Skill getSkill() {
 		return _skill;
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2PcInstance getOwner() {
 		return null;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getKarma() {
 		return 0;
 	}
 	
+	/**
+	 * @return
+	 */
 	public byte getPvpFlag() {
 		return 0;
 	}
@@ -256,6 +272,9 @@ public class L2Trap extends L2Character {
 	}
 	
 	protected class TrapTask implements Runnable {
+		/*
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run() {
 			try {
@@ -317,6 +336,9 @@ public class L2Trap extends L2Character {
 	}
 	
 	protected class TriggerTask implements Runnable {
+		/*
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run() {
 			try {
@@ -329,12 +351,18 @@ public class L2Trap extends L2Character {
 	}
 	
 	protected class UnsummonTask implements Runnable {
+		/*
+		 * @see java.lang.Runnable#run()
+		 */
 		@Override
 		public void run() {
 			unSummon();
 		}
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.L2Object#sendInfo(com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
+	 */
 	@Override
 	public void sendInfo(L2PcInstance activeChar) {
 		if (_isTriggered || canSee(activeChar)) {
@@ -342,6 +370,9 @@ public class L2Trap extends L2Character {
 		}
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#broadcastPacket(com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket)
+	 */
 	@Override
 	public void broadcastPacket(L2GameServerPacket mov) {
 		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
@@ -352,6 +383,9 @@ public class L2Trap extends L2Character {
 		}
 	}
 	
+	/*
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#broadcastPacket(com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket, int)
+	 */
 	@Override
 	public void broadcastPacket(L2GameServerPacket mov, int radiusInKnownlist) {
 		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();

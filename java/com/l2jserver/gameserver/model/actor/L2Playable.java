@@ -166,6 +166,10 @@ public abstract class L2Playable extends L2Character {
 		return true;
 	}
 	
+	/**
+	 * @param target
+	 * @return
+	 */
 	public boolean checkIfPvP(L2Character target) {
 		if (target == null) {
 			return false; // Target is null
@@ -213,8 +217,16 @@ public abstract class L2Playable extends L2Character {
 		
 		return true;
 		/*
-		 * Even at war, there should be PvP flag if( player.getClan() == null || targetPlayer.getClan() == null || ( !targetPlayer.getClan().isAtWarWith(player.getClanId()) && targetPlayer.getWantsPeace() == 0 && player.getWantsPeace() == 0 ) ) { return true; } return false;
+		 * Even at war, there should be PvP flag
 		 */
+		//@formatter:off
+		/*
+		if ((player.getClan() == null) || (targetPlayer.getClan() == null) || (!targetPlayer.getClan().isAtWarWith(player.getClanId()) && (targetPlayer.getWantsPeace() == 0) && (player.getWantsPeace() == 0))) {
+			return true;
+		}
+		return false;
+		*/
+		//@formatter:on
 	}
 	
 	/**
@@ -226,12 +238,17 @@ public abstract class L2Playable extends L2Character {
 		return true;
 	}
 	
-	// Support for Noblesse Blessing skill, where buffs are retained
-	// after resurrect
+	/**
+	 * Support for Noblesse Blessing skill, where buffs are retained after resurrect
+	 * @return
+	 */
 	public final boolean isNoblesseBlessed() {
 		return _effects.isAffected(CharEffectList.EFFECT_FLAG_NOBLESS_BLESSING);
 	}
 	
+	/**
+	 * @param effect
+	 */
 	public final void stopNoblesseBlessing(L2Effect effect) {
 		if (effect == null) {
 			stopEffects(L2EffectType.NOBLESSE_BLESSING);
@@ -241,18 +258,23 @@ public abstract class L2Playable extends L2Character {
 		updateAbnormalEffect();
 	}
 	
-	// Support for Soul of the Phoenix and Salvation skills
+	/**
+	 * Support for Soul of the Phoenix and Salvation skills
+	 * @return
+	 */
 	public final boolean isPhoenixBlessed() {
 		return _effects.isAffected(CharEffectList.EFFECT_FLAG_PHOENIX_BLESSING);
 	}
 	
+	/**
+	 * @param effect
+	 */
 	public final void stopPhoenixBlessing(L2Effect effect) {
 		if (effect == null) {
 			stopEffects(L2EffectType.PHOENIX_BLESSING);
 		} else {
 			removeEffect(effect);
 		}
-		
 		updateAbnormalEffect();
 	}
 	
@@ -263,7 +285,10 @@ public abstract class L2Playable extends L2Character {
 		return _effects.isAffected(CharEffectList.EFFECT_FLAG_SILENT_MOVE);
 	}
 	
-	// for Newbie Protection Blessing skill, keeps you safe from an attack by a chaotic character >= 10 levels apart from you
+	/**
+	 * for Newbie Protection Blessing skill, keeps you safe from an attack by a chaotic character >= 10 levels apart from you
+	 * @return
+	 */
 	public final boolean getProtectionBlessing() {
 		return _effects.isAffected(CharEffectList.EFFECT_FLAG_PROTECTION_BLESSING);
 	}
@@ -277,15 +302,20 @@ public abstract class L2Playable extends L2Character {
 		} else {
 			removeEffect(effect);
 		}
-		
 		updateAbnormalEffect();
 	}
 	
-	// Charm of Luck - During a Raid/Boss war, decreased chance for death penalty
+	/**
+	 * Charm of Luck - During a Raid/Boss war, decreased chance for death penalty
+	 * @return
+	 */
 	public final boolean getCharmOfLuck() {
 		return _effects.isAffected(CharEffectList.EFFECT_FLAG_CHARM_OF_LUCK);
 	}
 	
+	/**
+	 * @param effect
+	 */
 	public final void stopCharmOfLuck(L2Effect effect) {
 		if (effect == null) {
 			stopEffects(L2EffectType.CHARM_OF_LUCK);
@@ -301,40 +331,74 @@ public abstract class L2Playable extends L2Character {
 		_effects.updateEffectIcons(partyOnly);
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isLockedTarget() {
 		return _lockedTarget != null;
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2Character getLockedTarget() {
 		return _lockedTarget;
 	}
 	
+	/**
+	 * @param cha
+	 */
 	public void setLockedTarget(L2Character cha) {
 		_lockedTarget = cha;
 	}
 	
 	L2PcInstance transferDmgTo;
 	
+	/**
+	 * @param val
+	 */
 	public void setTransferDamageTo(L2PcInstance val) {
 		transferDmgTo = val;
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2PcInstance getTransferingDamageTo() {
 		return transferDmgTo;
 	}
 	
+	/**
+	 * @return
+	 */
 	public abstract int getKarma();
 	
+	/**
+	 * @return
+	 */
 	public abstract byte getPvpFlag();
 	
+	/**
+	 * @param skill
+	 * @param forceUse
+	 * @param dontMove
+	 * @return
+	 */
 	public abstract boolean useMagic(L2Skill skill, boolean forceUse, boolean dontMove);
 	
 	public abstract void store();
 	
+	/**
+	 * @param storeEffects
+	 */
 	public abstract void storeEffect(boolean storeEffects);
 	
 	public abstract void restoreEffects();
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#isPlayable()
+	 */
 	@Override
 	public boolean isPlayable() {
 		return true;

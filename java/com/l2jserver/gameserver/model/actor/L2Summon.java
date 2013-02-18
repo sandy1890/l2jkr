@@ -84,19 +84,33 @@ public abstract class L2Summon extends L2Playable {
 		protected AIAccessor() {
 		}
 		
+		/**
+		 * @return
+		 */
 		public L2Summon getSummon() {
 			return L2Summon.this;
 		}
 		
+		/**
+		 * @return
+		 */
 		public boolean isAutoFollow() {
 			return getFollowStatus();
 		}
 		
+		/**
+		 * @param object
+		 */
 		public void doPickupItem(L2Object object) {
 			L2Summon.this.doPickupItem(object);
 		}
 	}
 	
+	/**
+	 * @param objectId
+	 * @param template
+	 * @param owner
+	 */
 	public L2Summon(int objectId, L2NpcTemplate template, L2PcInstance owner) {
 		super(objectId, template);
 		setInstanceType(InstanceType.L2Summon);
@@ -183,7 +197,10 @@ public abstract class L2Summon extends L2Playable {
 		return (L2NpcTemplate) super.getTemplate();
 	}
 	
-	// this defines the action buttons, 1 for Summon, 2 for Pets
+	/**
+	 * this defines the action buttons, 1 for Summon, 2 for Pets
+	 * @return
+	 */
 	public abstract int getSummonType();
 	
 	@Override
@@ -213,6 +230,9 @@ public abstract class L2Summon extends L2Playable {
 		return false;
 	}
 	
+	/**
+	 * @return
+	 */
 	public long getExpForThisLevel() {
 		if (getLevel() >= ExperienceTable.getInstance().getMaxPetLevel()) {
 			return 0;
@@ -220,6 +240,9 @@ public abstract class L2Summon extends L2Playable {
 		return ExperienceTable.getInstance().getExpForLevel(getLevel());
 	}
 	
+	/**
+	 * @return
+	 */
 	public long getExpForNextLevel() {
 		if (getLevel() >= (ExperienceTable.getInstance().getMaxPetLevel() - 1)) {
 			return 0;
@@ -242,14 +265,23 @@ public abstract class L2Summon extends L2Playable {
 		return getOwner() != null ? getOwner().getTeam() : 0;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final L2PcInstance getOwner() {
 		return _owner;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getNpcId() {
 		return getTemplate().getNpcId();
 	}
 	
+	/**
+	 * @return
+	 */
 	public short getSoulShotsPerHit() {
 		if (getTemplate().getAIDataStatic().getSoulShot() > 0) {
 			return (short) getTemplate().getAIDataStatic().getSoulShot();
@@ -258,6 +290,9 @@ public abstract class L2Summon extends L2Playable {
 		return 1;
 	}
 	
+	/**
+	 * @return
+	 */
 	public short getSpiritShotsPerHit() {
 		if (getTemplate().getAIDataStatic().getSpiritShot() > 0) {
 			return (short) getTemplate().getAIDataStatic().getSpiritShot();
@@ -266,10 +301,16 @@ public abstract class L2Summon extends L2Playable {
 		return 1;
 	}
 	
+	/**
+	 * @param shotType
+	 */
 	public void setChargedSoulShot(int shotType) {
 		_chargedSoulShot = shotType;
 	}
 	
+	/**
+	 * @param shotType
+	 */
 	public void setChargedSpiritShot(int shotType) {
 		_chargedSpiritShot = shotType;
 	}
@@ -320,6 +361,11 @@ public abstract class L2Summon extends L2Playable {
 		return true;
 	}
 	
+	/**
+	 * @param killer
+	 * @param decayed
+	 * @return
+	 */
 	public boolean doDie(L2Character killer, boolean decayed) {
 		if (!super.doDie(killer)) {
 			return false;
@@ -345,6 +391,9 @@ public abstract class L2Summon extends L2Playable {
 		updateAndBroadcastStatus(1);
 	}
 	
+	/**
+	 * @param owner
+	 */
 	public void deleteMe(L2PcInstance owner) {
 		owner.sendPacket(new PetDelete(getSummonType(), getObjectId()));
 		
@@ -358,6 +407,9 @@ public abstract class L2Summon extends L2Playable {
 		super.deleteMe();
 	}
 	
+	/**
+	 * @param owner
+	 */
 	public void unSummon(L2PcInstance owner) {
 		if (isVisible() && !isDead()) {
 			getAI().stopFollow();
@@ -400,10 +452,16 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getAttackRange() {
 		return _attackRange;
 	}
 	
+	/**
+	 * @param range
+	 */
 	public void setAttackRange(int range) {
 		if (range < 36) {
 			range = 36;
@@ -411,6 +469,9 @@ public abstract class L2Summon extends L2Playable {
 		_attackRange = range;
 	}
 	
+	/**
+	 * @param state
+	 */
 	public void setFollowStatus(boolean state) {
 		_follow = state;
 		if (_follow) {
@@ -420,6 +481,9 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean getFollowStatus() {
 		return _follow;
 	}
@@ -429,18 +493,30 @@ public abstract class L2Summon extends L2Playable {
 		return _owner.isAutoAttackable(attacker);
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getChargedSoulShot() {
 		return _chargedSoulShot;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getChargedSpiritShot() {
 		return _chargedSpiritShot;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getControlObjectId() {
 		return 0;
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2Weapon getActiveWeapon() {
 		return null;
 	}
@@ -450,9 +526,15 @@ public abstract class L2Summon extends L2Playable {
 		return null;
 	}
 	
+	/**
+	 * @param object
+	 */
 	protected void doPickupItem(L2Object object) {
 	}
 	
+	/**
+	 * @param val
+	 */
 	public void setRestoreSummon(boolean val) {
 	}
 	
@@ -618,9 +700,14 @@ public abstract class L2Summon extends L2Playable {
 				return false;
 			}
 			
-			if ((target.getActingPlayer() != null) && (getOwner().getSiegeState() > 0) && getOwner().isInsideZone(L2Character.ZONE_SIEGE) && (target.getActingPlayer().getSiegeState() == getOwner().getSiegeState()) && (target.getActingPlayer() != getOwner()) && (target.getActingPlayer().getSiegeSide() == getOwner().getSiegeSide()))
-			{
-				//
+			//@formatter:off
+			if ((target.getActingPlayer() != null) &&
+				(getOwner().getSiegeState() > 0) &&
+				getOwner().isInsideZone(L2Character.ZONE_SIEGE) &&
+				(target.getActingPlayer().getSiegeState() == getOwner().getSiegeState()) &&
+				(target.getActingPlayer() != getOwner()) &&
+				(target.getActingPlayer().getSiegeSide() == getOwner().getSiegeSide())) {
+				//@formatter:on
 				if (TerritoryWarManager.getInstance().isTWInProgress()) {
 					sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_A_MEMBER_OF_THE_SAME_TERRITORY);
 				} else {
@@ -668,10 +755,17 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/**
+	 * @param newOwner
+	 */
 	public void setOwner(L2PcInstance newOwner) {
 		_owner = newOwner;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#sendDamageMessage(com.l2jserver.gameserver.model.actor.L2Character, int, boolean, boolean, boolean)
+	 */
 	@Override
 	public void sendDamageMessage(L2Character target, int damage, boolean mcrit, boolean pcrit, boolean miss) {
 		if (miss || (getOwner() == null)) {
@@ -708,6 +802,10 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#reduceCurrentHp(double, com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.skills.L2Skill)
+	 */
 	@Override
 	public void reduceCurrentHp(double damage, L2Character attacker, L2Skill skill) {
 		super.reduceCurrentHp(damage, attacker, skill);
@@ -721,6 +819,10 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#doCast(com.l2jserver.gameserver.model.skills.L2Skill)
+	 */
 	@Override
 	public void doCast(L2Skill skill) {
 		final L2PcInstance actingPlayer = getActingPlayer();
@@ -737,39 +839,55 @@ public abstract class L2Summon extends L2Playable {
 		super.doCast(skill);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#isInCombat()
+	 */
 	@Override
 	public boolean isInCombat() {
 		return getOwner() != null ? getOwner().isInCombat() : false;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#getActingPlayer()
+	 */
 	@Override
 	public L2PcInstance getActingPlayer() {
 		return getOwner();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#broadcastPacket(com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket)
+	 */
 	@Override
 	public final void broadcastPacket(L2GameServerPacket mov) {
 		if (getOwner() != null) {
 			mov.setInvisible(getOwner().getAppearance().getInvisible());
 		}
-		
 		super.broadcastPacket(mov);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#broadcastPacket(com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket, int)
+	 */
 	@Override
 	public final void broadcastPacket(L2GameServerPacket mov, int radiusInKnownlist) {
 		if (getOwner() != null) {
 			mov.setInvisible(getOwner().getAppearance().getInvisible());
 		}
-		
 		super.broadcastPacket(mov, radiusInKnownlist);
 	}
 	
+	/**
+	 * @param val
+	 */
 	public void updateAndBroadcastStatus(int val) {
 		if (getOwner() == null) {
 			return;
 		}
-		
 		sendPacket(new PetInfo(this, val));
 		sendPacket(new PetStatusUpdate(this));
 		if (isVisible()) {
@@ -782,6 +900,9 @@ public abstract class L2Summon extends L2Playable {
 		updateEffectIcons(true);
 	}
 	
+	/**
+	 * @param val
+	 */
 	public void broadcastNpcInfo(int val) {
 		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs) {
@@ -792,23 +913,40 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isHungry() {
 		return false;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#isAttackingNow()
+	 */
 	@Override
 	public final boolean isAttackingNow() {
 		return isInCombat();
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getWeapon() {
 		return 0;
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getArmor() {
 		return 0;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#sendInfo(com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
+	 */
 	@Override
 	public void sendInfo(L2PcInstance activeChar) {
 		// Check if the L2PcInstance is the owner of the Pet
@@ -824,22 +962,38 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#onTeleported()
+	 */
 	@Override
 	public void onTeleported() {
 		super.onTeleported();
 		sendPacket(new TeleportToLocation(this, getPosition().getX(), getPosition().getY(), getPosition().getZ(), getPosition().getHeading()));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#toString()
+	 */
 	@Override
 	public String toString() {
 		return super.toString() + "(" + getNpcId() + ") Owner: " + getOwner();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.actor.L2Character#isUndead()
+	 */
 	@Override
 	public boolean isUndead() {
 		return getTemplate().isUndead();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#sendPacket(com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket)
+	 */
 	@Override
 	public void sendPacket(L2GameServerPacket mov) {
 		if (getOwner() != null) {
@@ -847,6 +1001,10 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#sendPacket(com.l2jserver.gameserver.network.SystemMessageId)
+	 */
 	@Override
 	public void sendPacket(SystemMessageId id) {
 		if (getOwner() != null) {
@@ -854,6 +1012,10 @@ public abstract class L2Summon extends L2Playable {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.gameserver.model.L2Object#isSummon()
+	 */
 	@Override
 	public boolean isSummon() {
 		return true;
