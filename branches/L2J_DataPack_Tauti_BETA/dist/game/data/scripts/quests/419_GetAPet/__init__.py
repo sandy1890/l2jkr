@@ -1,6 +1,5 @@
 # version 0.2
 # by DrLecter, with fixes from Ryo_Saeba
-
 import sys
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
@@ -10,45 +9,47 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "419_GetAPet"
 
 # constants section
-
 REQUIRED_SPIDER_LEGS = 50
-#Quest items
+
+# 퀘스트 아이템
 ANIMAL_LOVERS_LIST1,ANIMAL_SLAYER_LIST1,ANIMAL_SLAYER_LIST2,ANIMAL_SLAYER_LIST3,\
 ANIMAL_SLAYER_LIST4,ANIMAL_SLAYER_LIST5,SPIDER_LEG1,SPIDER_LEG2,SPIDER_LEG3,    \
 SPIDER_LEG4,SPIDER_LEG5,ANIMAL_SLAYER_LIST6,SPIDER_LEG6 = range(3417,3428)+range(10164,10166)
-#Chance of drop in %
+
+# 드랍 찬스 확율 %
 SPIDER_LEG_DROP = 100
-#mobs
-#1 humans
-SPIDER_H1 = 20103 # Giant Spider
-SPIDER_H2 = 20106 # Talon Spider
-SPIDER_H3 = 20108 # Blade Spider
-#2 elves
-SPIDER_LE1 = 20460 # Crimson Spider
-SPIDER_LE2 = 20308 # Hook Spider
-SPIDER_LE3 = 20466 # Pincer Spider
-#3 dark elves
-SPIDER_DE1 = 20025 # Lesser Dark Horror
-SPIDER_DE2 = 20105 # Dark Horror 
-SPIDER_DE3 = 20034 # Prowler
-#4 orcs
-SPIDER_O1 = 20474 # Kasha Spider
-SPIDER_O2 = 20476 # Kasha Fang Spider
-SPIDER_O3 = 20478 # Kasha Blade Spider
-#5 dwarves
-SPIDER_D1 = 20403 # Hunter Tarantula
-SPIDER_D2 = 20508 # Plunder Tarantula
-#6 kamael
-SPIDER_K1 = 22244 # Crimson Spider
 
-#NPCs
-PET_MANAGER_MARTIN = 30731
-GK_BELLA = 30256
-MC_ELLIE = 30091
-GD_METTY = 30072
+# 몹들
+# 1 휴먼
+SPIDER_H1 = 20103 # 거대 거미
+SPIDER_H2 = 20106 # 거대 송곳니 거미
+SPIDER_H3 = 20108 # 거대 칼날 거미
+# 2 엘프
+SPIDER_LE1 = 20460 # 주홍 거미
+SPIDER_LE2 = 20308 # 갈고리 거미
+SPIDER_LE3 = 20466 # 집게발 거미
+# 3 다크엘프
+SPIDER_DE1 = 20025 # 레서 다크 호러
+SPIDER_DE2 = 20105 # 다크 호러 
+SPIDER_DE3 = 20034 # 스토펠
+# 4 오크
+SPIDER_O1 = 20474 # 카샤 거미
+SPIDER_O2 = 20476 # 카샤 송곳 거미
+SPIDER_O3 = 20478 # 카샤 칼날 거미
+# 5 드워프
+SPIDER_D1 = 20403 # 사냥꾼 타란툴라
+SPIDER_D2 = 20508 # 포식자 타란툴라
+# 6 카마엘
+SPIDER_K1 = 22244 # 붉은 거미
 
-#Rewards
-WOLF_COLLAR = 2375
+# NPCs
+PET_MANAGER_MARTIN = 30731 # 펫 관리인 - 마틴
+GK_BELLA = 30256 # 게이트키퍼 - 베라돈나
+MC_ELLIE = 30091 # 장신구 상인 - 엘리아니
+GD_METTY = 30072 # 경비병 - 매티
+
+# 보상 아이템
+WOLF_COLLAR = 2375 # 늑대 목걸이
 
 # helper functions section
 def getCount_proof(st) :
@@ -179,7 +180,7 @@ class Quest (JQuest):
     return
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+    htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
 
@@ -259,7 +260,7 @@ class Quest (JQuest):
       return
 
 # Quest class and state definition
-QUEST       = Quest(419, qn, "得到寵物")
+QUEST       = Quest(419, qn, "펫을 얻어라")
 
 # Quest NPC starter initialization
 QUEST.addStartNpc(PET_MANAGER_MARTIN)
