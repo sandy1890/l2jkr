@@ -190,31 +190,25 @@ public final class EffectMasterHandler {
 	public static void main(String[] args) {
 		Object loadInstance = null;
 		Method method = null;
-		
 		try {
 			method = _loadInstances.getMethod("getInstance");
 			loadInstance = method.invoke(_loadInstances);
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances.getSimpleName(), e);
+			_log.log(Level.WARNING, "핸들러 getInstance 메서드 호출이 실패되었습니다: " + _loadInstances.getSimpleName(), e);
 			return;
 		}
-		
 		method = null; // Releasing variable for next method
-		
 		for (Class<?> c : _effects) {
 			try {
 				if (c == null) {
 					continue; // Disabled handler
 				}
-				
 				if (method == null) {
 					method = loadInstance.getClass().getMethod("registerHandler", String.class, Class.class);
 				}
-				
 				method.invoke(loadInstance, c.getSimpleName(), c);
-				
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Failed loading effect handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
+				_log.log(Level.WARNING, "효과 핸들러 로딩이 실패되었습니다" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
 				continue;
 			}
 		}
@@ -223,9 +217,9 @@ public final class EffectMasterHandler {
 		try {
 			method = loadInstance.getClass().getMethod("size");
 			Object returnVal = method.invoke(loadInstance);
-			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
+			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": " + returnVal + "개 핸들어가 로드되었습니다.");
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
+			_log.log(Level.WARNING, "핸들러 메서드 사이즈 호출이 실패되었습니다: " + loadInstance.getClass().getSimpleName(), e);
 		}
 	}
 	

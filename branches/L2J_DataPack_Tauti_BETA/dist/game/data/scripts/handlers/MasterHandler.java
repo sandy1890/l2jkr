@@ -664,24 +664,20 @@ public class MasterHandler {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		_log.log(Level.INFO, "Loading Handlers...");
-		
+		_log.log(Level.INFO, "핸들러 로딩 중...");
 		Object loadInstance = null;
 		Method method = null;
 		Class<?>[] interfaces = null;
 		Object handler = null;
-		
 		for (int i = 0; i < _loadInstances.length; i++) {
 			try {
 				method = _loadInstances[i].getMethod("getInstance");
 				loadInstance = method.invoke(_loadInstances[i]);
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances[i].getSimpleName(), e);
+				_log.log(Level.WARNING, "핸들러 getInstance 메서드 호출이 실패되었습니다: " + _loadInstances[i].getSimpleName(), e);
 				continue;
 			}
-			
 			method = null;
-			
 			for (Class<?> c : _handlers[i]) {
 				try {
 					if (c == null) {
@@ -699,7 +695,7 @@ public class MasterHandler {
 						method.invoke(loadInstance, handler);
 					}
 				} catch (Exception e) {
-					_log.log(Level.WARNING, "Failed loading handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
+					_log.log(Level.WARNING, "핸들러 로딩이 실패되었습니다. " + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
 					continue;
 				}
 			}
@@ -707,13 +703,13 @@ public class MasterHandler {
 			try {
 				method = loadInstance.getClass().getMethod("size");
 				Object returnVal = method.invoke(loadInstance);
-				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
+				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": " + returnVal + "개 핸들러가 로드되었습니다.");
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
+				_log.log(Level.WARNING, "핸들러 메서드 사이즈 호출이 실패되었습니다: " + loadInstance.getClass().getSimpleName(), e);
 				continue;
 			}
 		}
-		_log.log(Level.INFO, "Handlers Loaded...");
+		_log.log(Level.INFO, "핸들러가 로드되었습니다...");
 	}
 	
 }
