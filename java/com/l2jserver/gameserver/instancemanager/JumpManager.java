@@ -36,6 +36,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.type.L2JumpZone;
 import com.l2jserver.gameserver.network.serverpackets.ExFlyMove;
+import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
+import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -50,6 +52,9 @@ public class JumpManager {
 	private final TIntObjectHashMap<Track> _tracks = new TIntObjectHashMap<>();
 	
 	public class Track extends TIntObjectHashMap<JumpWay> {
+		public int x = 0;
+		public int y = 0;
+		public int z = 0;
 	}
 	
 	public class JumpWay extends ArrayList<JumpNode> {
@@ -106,6 +111,9 @@ public class JumpManager {
 		
 	}
 	
+	/**
+	 * 점프관리 로드
+	 */
 	protected JumpManager() {
 		load();
 	}
@@ -123,7 +131,7 @@ public class JumpManager {
 			try {
 				doc = factory.newDocumentBuilder().parse(file);
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "JumpTrack.xml 파일을 파싱하지 못했습니다: " + e.getMessage(), e);
+				_log.log(Level.WARNING, "JumpTrack.xml 파일을 파싱할 수 없습니다: " + e.getMessage(), e);
 				return;
 			}
 			Node root = doc.getFirstChild();
@@ -131,16 +139,17 @@ public class JumpManager {
 				if (t.getNodeName().equals("track")) {
 					Track track = new Track();
 					int trackId = Integer.parseInt(t.getAttributes().getNamedItem("trackId").getNodeValue());
-					if (Config.DEBUG) {
-						_log.info("load(): XML trackId: " + trackId);
+					try {
+						track.x = Integer.parseInt(t.getAttributes().getNamedItem("ToX").getNodeValue());
+						track.y = Integer.parseInt(t.getAttributes().getNamedItem("ToY").getNodeValue());
+						track.z = Integer.parseInt(t.getAttributes().getNamedItem("ToZ").getNodeValue());
+					} catch (Exception e) {
+						_log.info("track id:" + trackId + " XML파일에서 ToX, ToY, ToZ 값이 누락되었습니다.");
 					}
 					for (Node w = t.getFirstChild(); w != null; w = w.getNextSibling()) {
 						if (w.getNodeName().equals("way")) {
 							JumpWay jw = new JumpWay();
 							int wayId = Integer.parseInt(w.getAttributes().getNamedItem("id").getNodeValue());
-							if (Config.DEBUG) {
-								_log.info("load(): XML wayId: " + wayId);
-							}
 							for (Node j = w.getFirstChild(); j != null; j = j.getNextSibling()) {
 								if (j.getNodeName().equals("jumpLoc")) {
 									NamedNodeMap attrs = j.getAttributes();
@@ -148,9 +157,6 @@ public class JumpManager {
 									int x = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
 									int y = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
 									int z = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
-									if (Config.DEBUG) {
-										_log.info("load(): XML next: " + next + ", x: " + x + ", y: " + y + ", z: " + z);
-									}
 									jw.add(new JumpNode(x, y, z, next));
 								}
 							}
@@ -171,17 +177,18 @@ public class JumpManager {
 	public int getTrackId(L2PcInstance player) {
 		for (L2ZoneType zone : L2World.getInstance().getRegion(player.getX(), player.getY()).getZones()) {
 			if (zone.isCharacterInZone(player) && (zone instanceof L2JumpZone)) {
-				L2JumpZone l2JumpZone = (L2JumpZone) zone;
-				if (Config.DEBUG) {
-					_log.info("================================================================================");
-					_log.info("getTrackId(): " + l2JumpZone.getName());
-					_log.info("getTrackId(): " + l2JumpZone.getTrackId());
-					_log.info("================================================================================");
-				}
-				return l2JumpZone.getTrackId();
+				return ((L2JumpZone) zone).getTrackId();
 			}
 		}
 		return -1;
+	}
+	
+	/**
+	 * @param trackId
+	 * @return
+	 */
+	public Track getTrack(int trackId) {
+		return _tracks.get(trackId);
 	}
 	
 	/**
@@ -190,19 +197,8 @@ public class JumpManager {
 	 * @return
 	 */
 	public JumpWay getJumpWay(int trackId, int wayId) {
-		if (Config.DEBUG) {
-			_log.info("getJumpWay(): track id 가져 오기 전!");
-			_log.info("getJumpWay(): trackId: " + trackId);
-		}
 		Track t = _tracks.get(trackId);
-		if (Config.DEBUG) {
-			_log.info("getJumpWay(): track id: " + t);
-		}
 		if (t != null) {
-			if (Config.DEBUG) {
-				_log.info("getJumpWay(): wayId: " + wayId);
-				_log.info("getJumpWay(): track id: " + t.get(wayId));
-			}
 			return t.get(wayId);
 		}
 		return null;
@@ -212,44 +208,23 @@ public class JumpManager {
 	 * @param player
 	 */
 	public void StartJump(L2PcInstance player) {
-		if (Config.DEBUG) {
-			_log.info("StartJump(): 점프 시작!");
-		}
 		if (!player.isInsideZone(L2Character.ZONE_JUMP)) {
-			if (Config.DEBUG) {
-				_log.info("StartJump(): 점프 존이 아닐때");
-			}
 			return;
 		}
 		player.jumpTrackId = getTrackId(player);
 		if (player.jumpTrackId == -1) {
-			if (Config.DEBUG) {
-				_log.info("StartJump(): 점프트랙 무한 (다음 경로 대기중인 상태)");
-			}
 			return;
 		}
 		JumpWay jw = getJumpWay(player.jumpTrackId, 0);
-		if (Config.DEBUG) {
-			_log.info("StartJump(): JumpWay: " + jw);
-		}
 		if (jw == null) {
-			if (Config.DEBUG) {
-				_log.info("StartJump(): 점프 경로가 null");
-			}
 			return;
 		}
-		if (Config.DEBUG) {
-			_log.info("StartJump(): 점프 시작 패킷 발송 전");
+		Track t = getTrack(player.jumpTrackId);
+		if (!((t.x == 0) && (t.y == 0) && (t.z == 0))) {
+			player.broadcastPacket(new FlyToLocation(player, t.x, t.y, t.z, FlyType.DUMMY));
+			player.setXYZ(t.x, t.y, t.z);
 		}
 		player.sendPacket(new ExFlyMove(player.getObjectId(), player.jumpTrackId, jw));
-		if (Config.DEBUG) {
-			_log.info("StartJump(): 점프 시작 패킷 발송 후");
-		}
-		JumpNode n = jw.get(0); // fixme
-		player.setXYZ(n.getX(), n.getY(), n.getZ());
-		if (Config.DEBUG) {
-			_log.info("StartJump(): 점프 시작 패킷 발송!");
-		}
 	}
 	
 	/**
@@ -257,31 +232,17 @@ public class JumpManager {
 	 * @param nextId
 	 */
 	public void NextJump(L2PcInstance player, int nextId) {
-		if (Config.DEBUG) {
-			_log.info("NextJump(): 다음 점프 시작!");
-		}
 		if (player.jumpTrackId == -1) {
-			if (Config.DEBUG) {
-				_log.info("NextJump(): 다음 점프 시작 대기 상태");
-			}
 			return;
 		}
+		
 		JumpWay jw = getJumpWay(player.jumpTrackId, nextId);
 		if (jw == null) {
-			if (Config.DEBUG) {
-				_log.info("NextJump(): 다음 점프 시작 JumpWay null");
-			}
 			return;
-		}
-		if (Config.DEBUG) {
-			_log.info("NextJump(): 다음 점프 시작 패킷 발송!");
 		}
 		player.sendPacket(new ExFlyMove(player.getObjectId(), player.jumpTrackId, jw));
 		JumpNode n = jw.get(0); // fixme
 		player.setXYZ(n.getX(), n.getY(), n.getZ());
-		if (Config.DEBUG) {
-			_log.info("NextJump(): 다음 점프 시작 패킷 발송 후");
-		}
 	}
 	
 	/**
