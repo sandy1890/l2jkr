@@ -49,7 +49,7 @@ public class GameServerListener extends FloodProtectedListener {
 	@Override
 	public void addClient(Socket s) {
 		if (Config.DEBUG) {
-			_log.info(s.getInetAddress().getHostAddress() + "에서 게임서버 연결이 수신되었습니다.");
+			_log.info(s.getInetAddress().getHostAddress() + "에서 게임 서버 연결이 수신되었습니다.");
 		}
 		GameServerThread gst = new GameServerThread(s);
 		_gameServers.add(gst);

@@ -60,10 +60,16 @@ public class Announcements {
 		loadAnnouncements();
 	}
 	
+	/**
+	 * @return
+	 */
 	public static Announcements getInstance() {
 		return SingletonHolder._instance;
 	}
 	
+	/**
+	 * 공지사항 로드
+	 */
 	public void loadAnnouncements() {
 		_announcements.clear();
 		_critAnnouncements.clear();
@@ -71,10 +77,13 @@ public class Announcements {
 		readFromDisk("data/critannouncements.txt", _critAnnouncements);
 		
 		if (Config.DEBUG) {
-			_log.info("Announcements: Loaded " + (_announcements.size() + _critAnnouncements.size()) + " announcements.");
+			_log.info("공지사항: " + (_announcements.size() + _critAnnouncements.size()) + "개 공지사항이 로드되었습니다.");
 		}
 	}
 	
+	/**
+	 * @param activeChar
+	 */
 	public void showAnnouncements(L2PcInstance activeChar) {
 		for (String announce : _announcements) {
 			CreatureSay cs = new CreatureSay(0, Say2.ANNOUNCEMENT, activeChar.getName(), announce);
@@ -104,6 +113,10 @@ public class Announcements {
 		}
 	}
 	
+	/**
+	 * @param validDateRange
+	 * @param msg
+	 */
 	public void addEventAnnouncement(DateRange validDateRange, String[] msg) {
 		List<Object> entry = new FastList<>();
 		entry.add(validDateRange);
@@ -111,6 +124,9 @@ public class Announcements {
 		_eventAnnouncements.add(entry);
 	}
 	
+	/**
+	 * @param activeChar
+	 */
 	public void listAnnouncements(L2PcInstance activeChar) {
 		String content = HtmCache.getInstance().getHtmForce(activeChar.getHtmlPrefix(), "data/html/admin/announce.htm");
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -119,14 +135,18 @@ public class Announcements {
 		for (int i = 0; i < _announcements.size(); i++) {
 			StringUtil.append(replyMSG, "<table width=260><tr><td width=220>", _announcements.get(i), "</td><td width=40>"
 			/*
-			 * Move To MessageTable For L2JTW + "<button value=\"Delete\" action=\"bypass -h admin_del_announcement ", String.valueOf(i), "\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
+			 * Move To MessageTable For L2JTW
 			 */
+			// + "<button value=\"Delete\" action=\"bypass -h admin_del_announcement ", String.valueOf(i), "\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 			+ "<button value=\"" + MessageTable.Messages[0].getMessage() + "\" action=\"bypass -h admin_del_announcement ", String.valueOf(i), "\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 		}
 		adminReply.replace("%announces%", replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * @param activeChar
+	 */
 	public void listCritAnnouncements(L2PcInstance activeChar) {
 		String content = HtmCache.getInstance().getHtmForce(activeChar.getHtmlPrefix(), "data/html/admin/critannounce.htm");
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -135,34 +155,56 @@ public class Announcements {
 		for (int i = 0; i < _critAnnouncements.size(); i++) {
 			StringUtil.append(replyMSG, "<table width=260><tr><td width=220>", _critAnnouncements.get(i), "</td><td width=40>"
 			/*
-			 * Move To MessageTable For L2JTW + "<button value=\"Delete\" action=\"bypass -h admin_del_critannouncement ", String.valueOf(i), "\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
+			 * Move To MessageTable For L2JTW
 			 */
+			// + "<button value=\"Delete\" action=\"bypass -h admin_del_critannouncement ", String.valueOf(i), "\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 			+ "<button value=\"" + MessageTable.Messages[0].getMessage() + "\" action=\"bypass -h admin_del_critannouncement ", String.valueOf(i), "\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 		}
 		adminReply.replace("%critannounces%", replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
 	
+	/**
+	 * 공지사항 추가
+	 * @param text
+	 */
 	public void addAnnouncement(String text) {
 		_announcements.add(text);
 		saveToDisk(false);
 	}
 	
+	/**
+	 * 공지사항 삭제
+	 * @param line
+	 */
 	public void delAnnouncement(int line) {
 		_announcements.remove(line);
 		saveToDisk(false);
 	}
 	
+	/**
+	 * 크리티컬 공지 추가
+	 * @param text
+	 */
 	public void addCritAnnouncement(String text) {
 		_critAnnouncements.add(text);
 		saveToDisk(true);
 	}
 	
+	/**
+	 * 크리티컬 공지 삭제
+	 * @param line
+	 */
 	public void delCritAnnouncement(int line) {
 		_critAnnouncements.remove(line);
 		saveToDisk(true);
 	}
 	
+	/**
+	 * 디스크에서 읽기
+	 * @param path
+	 * @param list
+	 */
 	private void readFromDisk(String path, List<String> list) {
 		final File file = new File(Config.DATAPACK_ROOT, path);
 		try (FileReader fr = new FileReader(file);
@@ -175,10 +217,14 @@ public class Announcements {
 				}
 			}
 		} catch (IOException e1) {
-			_log.log(Level.SEVERE, "Error reading announcements: ", e1);
+			_log.log(Level.SEVERE, "공지사항 읽는 중 오류가 발생했습니다: ", e1);
 		}
 	}
 	
+	/**
+	 * 디스크에 저장
+	 * @param isCritical
+	 */
 	private void saveToDisk(boolean isCritical) {
 		String path;
 		List<String> list;
@@ -198,22 +244,36 @@ public class Announcements {
 				save.write("\r\n");
 			}
 		} catch (IOException e) {
-			_log.log(Level.SEVERE, "Saving to the announcements file has failed: ", e);
+			_log.log(Level.SEVERE, "공지사항 announcements.txt 파일에 저장이 실패되었습니다: ", e);
 		}
 	}
 	
+	/**
+	 * @param text
+	 */
 	public void announceToAll(String text) {
 		announceToAll(text, false);
 	}
 	
+	/**
+	 * @param text
+	 * @param isCritical
+	 */
 	public void announceToAll(String text, boolean isCritical) {
 		Broadcast.announceToOnlinePlayers(text, isCritical);
 	}
 	
+	/**
+	 * @param sm
+	 */
 	public void announceToAll(SystemMessage sm) {
 		Broadcast.toAllOnlinePlayers(sm);
 	}
 	
+	/**
+	 * @param sm
+	 * @param instanceId
+	 */
 	public void announceToInstance(SystemMessage sm, int instanceId) {
 		Broadcast.toPlayersInInstance(sm, instanceId);
 	}

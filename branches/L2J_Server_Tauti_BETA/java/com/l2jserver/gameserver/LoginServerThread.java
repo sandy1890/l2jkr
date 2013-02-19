@@ -256,7 +256,7 @@ public class LoginServerThread extends Thread {
 							_serverID = aresp.getServerId();
 							_serverName = aresp.getServerName();
 							Config.saveHexid(_serverID, hexToString(_hexID));
-							_log.info("Registered on login as Server " + _serverID + " : " + _serverName);
+							_log.info(_serverID + "번 서버가 로그인 서버에 등록되었습니다. 서버 이름: " + _serverName);
 							_log.info(MessageTable.Messages[1975].getMessage() + Config.PROTOCOL_LIST); // Update by rocknow
 							// _log.info(MessageTable.Messages[1976].getMessage()); //Update by rocknow
 							_log.info(MessageTable.Messages[1978].getMessage() + Config.GAME_SERVER_LOGIN_HOST_ADD); // Update by rocknow (Add GameServer Host)

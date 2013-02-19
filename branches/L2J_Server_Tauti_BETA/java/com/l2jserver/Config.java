@@ -1163,7 +1163,8 @@ public final class Config {
 			FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
 			FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 			
-			_log.info("Loading GameServer Configuration Files...");
+			_log.info("================================================================================");
+			_log.info("게임 서버 환경파일 로딩 중...");
 			final File server = new File(CONFIGURATION_FILE);
 			try (InputStream is = new FileInputStream(server)) {
 				L2Properties serverSettings = new L2Properties();
@@ -1180,7 +1181,7 @@ public final class Config {
 				ACCEPT_ALTERNATE_ID = Boolean.parseBoolean(serverSettings.getProperty("AcceptAlternateID", "True"));
 				
 				DATABASE_DRIVER = serverSettings.getProperty("Driver", "com.mysql.jdbc.Driver");
-				DATABASE_URL = serverSettings.getProperty("URL", "jdbc:mysql://localhost/l2jgs");
+				DATABASE_URL = serverSettings.getProperty("URL", "jdbc:mysql://localhost/l2jgs?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true");
 				DATABASE_LOGIN = serverSettings.getProperty("Login", "root");
 				DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
 				DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
@@ -1195,19 +1196,18 @@ public final class Config {
 				MAX_CHARACTERS_NUMBER_PER_ACCOUNT = Integer.parseInt(serverSettings.getProperty("CharMaxNumber", "0"));
 				MAXIMUM_ONLINE_USERS = Integer.parseInt(serverSettings.getProperty("MaximumOnlineUsers", "100"));
 				
-				String[] protocols = serverSettings.getProperty("AllowedProtocolRevisions", "267;268;271;273").split(";");
+				String[] protocols = serverSettings.getProperty("AllowedProtocolRevisions", "440;448").split(";");
 				PROTOCOL_LIST = new TIntArrayList(protocols.length);
 				for (String protocol : protocols) {
 					try {
 						PROTOCOL_LIST.add(Integer.parseInt(protocol.trim()));
 					} catch (NumberFormatException e) {
-						_log.info("Wrong config protocol version: " + protocol + ". Skipped.");
+						_log.info("잘못된 환경 프로토콜 버전: " + protocol + ". 건너 뛰었습니다.");
 					}
 				}
-				
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + CONFIGURATION_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(CONFIGURATION_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			File file = new File(IP_CONFIG_FILE);
@@ -1244,7 +1244,7 @@ public final class Config {
 								hosts.add(att.getNodeValue());
 								
 								if (hosts.size() != subnets.size()) {
-									throw new Error("Failed to Load " + IP_CONFIG_FILE + " File - subnets does not match server addresses.");
+									throw new Error("로드가 실패되었으며, " + IP_CONFIG_FILE + " 파일 - 서버 주소 서브넷이 일치하지 않습니다.");
 								}
 							}
 						}
@@ -1254,7 +1254,7 @@ public final class Config {
 						att = attrs.getNamedItem("address");
 						GAME_SERVER_LOGIN_HOST_ADD = attrs.getNamedItem("address").getNodeValue(); // Update by rocknow (Add GameServer Host)
 						if (att == null) {
-							throw new Error("Failed to Load " + IP_CONFIG_FILE + " File - default server address is missing.");
+							throw new Error("로드가 실패되었으며, " + IP_CONFIG_FILE + " 파일 - 기본값 서버 주소가 누락되었습니다.");
 						}
 						
 						subnets.add("0.0.0.0/0");
@@ -1264,8 +1264,8 @@ public final class Config {
 				GAME_SERVER_SUBNETS = subnets.toArray(new String[subnets.size()]);
 				GAME_SERVER_HOSTS = hosts.toArray(new String[hosts.size()]);
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + IP_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(IP_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load Community Properties file (if exists)
@@ -1279,8 +1279,8 @@ public final class Config {
 				COMMUNITY_SERVER_HEX_ID = new BigInteger(communityServerSettings.getProperty("CommunityServerHexId"), 16).toByteArray();
 				COMMUNITY_SERVER_SQL_DP_ID = Integer.parseInt(communityServerSettings.getProperty("CommunityServerSqlDpId", "200"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + COMMUNITY_CONFIGURATION_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(COMMUNITY_CONFIGURATION_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load Feature L2Properties file (if exists)
@@ -1354,7 +1354,7 @@ public final class Config {
 							}
 							CL_SET_SIEGE_TIME_LIST.add(st.toLowerCase());
 						} else {
-							_log.warning(StringUtil.concat("[CLSetSiegeTimeList]: invalid config property -> CLSetSiegeTimeList \"", st, "\""));
+							_log.warning(StringUtil.concat("[CLSetSiegeTimeList]: 잘못된 환경 속성 -> CLSetSiegeTimeList \"", st, "\""));
 						}
 					}
 					if (isHour) {
@@ -1363,7 +1363,7 @@ public final class Config {
 							if (!st.equalsIgnoreCase("")) {
 								int val = Integer.parseInt(st);
 								if ((val > 23) || (val < 0)) {
-									_log.warning(StringUtil.concat("[SiegeHourList]: invalid config property -> SiegeHourList \"", st, "\""));
+									_log.warning(StringUtil.concat("[SiegeHourList]: 잘못된 환경 속성 -> SiegeHourList \"", st, "\""));
 								} else if (val < 12) {
 									SIEGE_HOUR_LIST_MORNING.add(val);
 								} else {
@@ -1373,7 +1373,7 @@ public final class Config {
 							}
 						}
 						if (Config.SIEGE_HOUR_LIST_AFTERNOON.isEmpty() && Config.SIEGE_HOUR_LIST_AFTERNOON.isEmpty()) {
-							_log.warning("[SiegeHourList]: invalid config property -> SiegeHourList is empty");
+							_log.warning("[SiegeHourList]: 잘못된 환경 속성 -> SiegeHourList가 비어 있습니다");
 							CL_SET_SIEGE_TIME_LIST.remove("hour");
 						}
 					}
@@ -1487,8 +1487,8 @@ public final class Config {
 				CLAN_LEVEL_11_REQUIREMENT = Integer.parseInt(Feature.getProperty("ClanLevel11Requirement", "170"));
 				ALLOW_WYVERN_DURING_SIEGE = Boolean.parseBoolean(Feature.getProperty("AllowRideWyvernDuringSiege", "True"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + FEATURE_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(FEATURE_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load Character L2Properties file (if exists)
@@ -1518,13 +1518,13 @@ public final class Config {
 					for (String skill : propertySplit) {
 						String[] skillSplit = skill.split(",");
 						if (skillSplit.length != 2) {
-							_log.warning(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillDurationList \"", skill, "\""));
+							_log.warning(StringUtil.concat("[SkillDurationList]: 잘못된 환경 속성 -> SkillDurationList \"", skill, "\""));
 						} else {
 							try {
 								SKILL_DURATION_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
 							} catch (NumberFormatException nfe) {
 								if (!skill.isEmpty()) {
-									_log.warning(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
+									_log.warning(StringUtil.concat("[SkillDurationList]: 잘못된 환경 속성 -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
 								}
 							}
 						}
@@ -1538,13 +1538,13 @@ public final class Config {
 					for (String skill : propertySplit) {
 						String[] skillSplit = skill.split(",");
 						if (skillSplit.length != 2) {
-							_log.warning(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillReuseList \"", skill, "\""));
+							_log.warning(StringUtil.concat("[SkillReuseList]: 잘못된 환경 속성 -> SkillReuseList \"", skill, "\""));
 						} else {
 							try {
 								SKILL_REUSE_LIST.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
 							} catch (NumberFormatException nfe) {
 								if (!skill.isEmpty()) {
-									_log.warning(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
+									_log.warning(StringUtil.concat("[SkillReuseList]: 잘못된 환경 속성 -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
 								}
 							}
 						}
@@ -1710,7 +1710,7 @@ public final class Config {
 					try {
 						itm = Integer.parseInt(item);
 					} catch (NumberFormatException nfe) {
-						_log.warning("Player Spawn Protection: Wrong ItemId passed: " + item);
+						_log.warning("플레이어 스폰 보호: 잘못된 ItemId 통과: " + item);
 						_log.warning(nfe.getMessage());
 					}
 					if (itm != 0) {
@@ -1742,8 +1742,8 @@ public final class Config {
 				SILENCE_MODE_EXCLUDE = Boolean.parseBoolean(Character.getProperty("SilenceModeExclude", "False"));
 				PLAYER_MOVEMENT_BLOCK_TIME = Integer.parseInt(Character.getProperty("NpcTalkBlockingTime", "0")) * 1000;
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + CHARACTER_CONFIG_FILE + " file.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(CHARACTER_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load L2J Server Version L2Properties file (if exists)
@@ -1780,8 +1780,8 @@ public final class Config {
 				
 				IS_TELNET_ENABLED = Boolean.parseBoolean(telnetSettings.getProperty("EnableTelnet", "false"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + TELNET_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(TELNET_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// MMO
@@ -1795,8 +1795,8 @@ public final class Config {
 				MMO_HELPER_BUFFER_COUNT = Integer.parseInt(mmoSettings.getProperty("HelperBufferCount", "20"));
 				MMO_TCP_NODELAY = Boolean.parseBoolean(mmoSettings.getProperty("TcpNoDelay", "False"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + MMO_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(MMO_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load IdFactory L2Properties file (if exists)
@@ -1810,8 +1810,8 @@ public final class Config {
 				IDFACTORY_TYPE = IdFactoryType.valueOf(idSettings.getProperty("IDFactory", "Compaction"));
 				BAD_ID_CHECKING = Boolean.parseBoolean(idSettings.getProperty("BadIdChecking", "True"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + ID_CONFIG_FILE + " file.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(ID_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load General L2Properties file (if exists)
@@ -2066,8 +2066,8 @@ public final class Config {
 				SAFE_ENCHANT_COST_MULTIPLIER = Integer.parseInt(General.getProperty("SafeEnchantCostMultipiler", "5"));
 				
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + GENERAL_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(GENERAL_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load FloodProtector L2Properties file
@@ -2078,8 +2078,8 @@ public final class Config {
 				
 				loadFloodProtectorConfigs(security);
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + FLOOD_PROTECTOR_FILE);
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(FLOOD_PROTECTOR_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load NPC L2Properties file (if exists)
@@ -2130,14 +2130,14 @@ public final class Config {
 				for (String prop : propertySplit) {
 					String[] propSplit = prop.split(",");
 					if (propSplit.length != 2) {
-						_log.warning(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", prop, "\""));
+						_log.warning(StringUtil.concat("[CustomMinionsRespawnTime]: 잘못된 환경 속성 -> CustomMinionsRespawnTime \"", prop, "\""));
 					}
 					
 					try {
 						MINIONS_RESPAWN_TIME.put(Integer.parseInt(propSplit[0]), Integer.parseInt(propSplit[1]));
 					} catch (NumberFormatException nfe) {
 						if (!prop.isEmpty()) {
-							_log.warning(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", propSplit[0], "\"", propSplit[1]));
+							_log.warning(StringUtil.concat("[CustomMinionsRespawnTime]: 잘못된 환경 속성 -> CustomMinionsRespawnTime \"", propSplit[0], "\"", propSplit[1]));
 						}
 					}
 				}
@@ -2161,8 +2161,8 @@ public final class Config {
 					}
 				}
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + NPC_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(NPC_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load Rates L2Properties file (if exists)
@@ -2253,7 +2253,7 @@ public final class Config {
 					}
 				} catch (Exception e) {
 					_log.warning("Error while loading Player XP percent lost");
-					_log.warning("Config: " + e.getMessage());
+					_log.warning("환경: " + e.getMessage());
 				}
 				
 				String[] propertySplit = ratesSettings.getProperty("RateDropItemsById", "").split(";");
@@ -2262,13 +2262,13 @@ public final class Config {
 					for (String item : propertySplit) {
 						String[] itemSplit = item.split(",");
 						if (itemSplit.length != 2) {
-							_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+							_log.warning(StringUtil.concat("Config.load(): 잘못된 환경 속성 -> RateDropItemsById \"", item, "\""));
 						} else {
 							try {
 								RATE_DROP_ITEMS_ID.put(Integer.parseInt(itemSplit[0]), Float.parseFloat(itemSplit[1]));
 							} catch (NumberFormatException nfe) {
 								if (!item.isEmpty()) {
-									_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+									_log.warning(StringUtil.concat("Config.load(): 잘못된 환경 속성 -> RateDropItemsById \"", item, "\""));
 								}
 							}
 						}
@@ -2278,8 +2278,8 @@ public final class Config {
 					RATE_DROP_ITEMS_ID.put(PcInventory.ADENA_ID, RATE_DROP_ITEMS); // for Adena rate if not defined
 				}
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + RATES_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(RATES_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load pcbangpoints L2Properties file (if exists)
@@ -2304,8 +2304,8 @@ public final class Config {
 				}
 				RANDOM_PC_BANG_POINT = Boolean.parseBoolean(pccaffeSettings.getProperty("AcquisitionPointsRandom", "false"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + PCBANG_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(PCBANG_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load L2JMod L2Properties file (if exists)
@@ -2356,12 +2356,12 @@ public final class Config {
 				
 				if (TVT_EVENT_PARTICIPATION_NPC_ID == 0) {
 					TVT_EVENT_ENABLED = false;
-					_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationNpcId");
+					_log.warning("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventParticipationNpcId");
 				} else {
 					String[] propertySplit = L2JModSettings.getProperty("TvTEventParticipationNpcCoordinates", "0,0,0").split(",");
 					if (propertySplit.length < 3) {
 						TVT_EVENT_ENABLED = false;
-						_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationNpcCoordinates");
+						_log.warning("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventParticipationNpcCoordinates");
 					} else {
 						TVT_EVENT_REWARDS = new ArrayList<>();
 						TVT_DOORS_IDS_TO_OPEN = new ArrayList<>();
@@ -2388,7 +2388,7 @@ public final class Config {
 						propertySplit = L2JModSettings.getProperty("TvTEventTeam1Coordinates", "0,0,0").split(",");
 						if (propertySplit.length < 3) {
 							TVT_EVENT_ENABLED = false;
-							_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventTeam1Coordinates");
+							_log.warning("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventTeam1Coordinates");
 						} else {
 							TVT_EVENT_TEAM_1_COORDINATES[0] = Integer.parseInt(propertySplit[0]);
 							TVT_EVENT_TEAM_1_COORDINATES[1] = Integer.parseInt(propertySplit[1]);
@@ -2397,7 +2397,7 @@ public final class Config {
 							propertySplit = L2JModSettings.getProperty("TvTEventTeam2Coordinates", "0,0,0").split(",");
 							if (propertySplit.length < 3) {
 								TVT_EVENT_ENABLED = false;
-								_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventTeam2Coordinates");
+								_log.warning("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventTeam2Coordinates");
 							} else {
 								TVT_EVENT_TEAM_2_COORDINATES[0] = Integer.parseInt(propertySplit[0]);
 								TVT_EVENT_TEAM_2_COORDINATES[1] = Integer.parseInt(propertySplit[1]);
@@ -2408,14 +2408,14 @@ public final class Config {
 									TVT_EVENT_PARTICIPATION_FEE[1] = Integer.parseInt(propertySplit[1]);
 								} catch (NumberFormatException nfe) {
 									if (propertySplit.length > 0) {
-										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationFee");
+										_log.warning("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventParticipationFee");
 									}
 								}
 								propertySplit = L2JModSettings.getProperty("TvTEventReward", "57,100000").split(";");
 								for (String reward : propertySplit) {
 									String[] rewardSplit = reward.split(",");
 									if (rewardSplit.length != 2) {
-										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"", reward, "\""));
+										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventReward \"", reward, "\""));
 									} else {
 										try {
 											TVT_EVENT_REWARDS.add(new int[]
@@ -2425,7 +2425,7 @@ public final class Config {
 											});
 										} catch (NumberFormatException nfe) {
 											if (!reward.isEmpty()) {
-												_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"", reward, "\""));
+												_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventReward \"", reward, "\""));
 											}
 										}
 									}
@@ -2442,7 +2442,7 @@ public final class Config {
 										TVT_DOORS_IDS_TO_OPEN.add(Integer.parseInt(door));
 									} catch (NumberFormatException nfe) {
 										if (!door.isEmpty()) {
-											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToOpen \"", door, "\""));
+											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTDoorsToOpen \"", door, "\""));
 										}
 									}
 								}
@@ -2453,7 +2453,7 @@ public final class Config {
 										TVT_DOORS_IDS_TO_CLOSE.add(Integer.parseInt(door));
 									} catch (NumberFormatException nfe) {
 										if (!door.isEmpty()) {
-											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToClose \"", door, "\""));
+											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTDoorsToClose \"", door, "\""));
 										}
 									}
 								}
@@ -2464,13 +2464,13 @@ public final class Config {
 									for (String skill : propertySplit) {
 										String[] skillSplit = skill.split(",");
 										if (skillSplit.length != 2) {
-											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"", skill, "\""));
+											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventFighterBuffs \"", skill, "\""));
 										} else {
 											try {
 												TVT_EVENT_FIGHTER_BUFFS.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
 											} catch (NumberFormatException nfe) {
 												if (!skill.isEmpty()) {
-													_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"", skill, "\""));
+													_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventFighterBuffs \"", skill, "\""));
 												}
 											}
 										}
@@ -2483,13 +2483,13 @@ public final class Config {
 									for (String skill : propertySplit) {
 										String[] skillSplit = skill.split(",");
 										if (skillSplit.length != 2) {
-											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"", skill, "\""));
+											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventMageBuffs \"", skill, "\""));
 										} else {
 											try {
 												TVT_EVENT_MAGE_BUFFS.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
 											} catch (NumberFormatException nfe) {
 												if (!skill.isEmpty()) {
-													_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"", skill, "\""));
+													_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: 잘못된 환경 속성 -> TvTEventMageBuffs \"", skill, "\""));
 												}
 											}
 										}
@@ -2574,23 +2574,23 @@ public final class Config {
 				for (String entry : propertySplit) {
 					String[] entrySplit = entry.split(",");
 					if (entrySplit.length != 2) {
-						_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"", entry, "\""));
+						_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: 잘못된 환경 속성 -> DualboxCheckWhitelist \"", entry, "\""));
 					} else {
 						try {
 							int num = Integer.parseInt(entrySplit[1]);
 							num = num == 0 ? -1 : num;
 							L2JMOD_DUALBOX_CHECK_WHITELIST.put(InetAddress.getByName(entrySplit[0]).hashCode(), num);
 						} catch (UnknownHostException e) {
-							_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid address -> DualboxCheckWhitelist \"", entrySplit[0], "\""));
+							_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: 잘못된 주소 -> DualboxCheckWhitelist \"", entrySplit[0], "\""));
 						} catch (NumberFormatException e) {
-							_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid number -> DualboxCheckWhitelist \"", entrySplit[1], "\""));
+							_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: 잘못된 숫자 -> DualboxCheckWhitelist \"", entrySplit[1], "\""));
 						}
 					}
 				}
 				L2JMOD_ALLOW_CHANGE_PASSWORD = Boolean.parseBoolean(L2JModSettings.getProperty("AllowChangePassword", "False"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + L2JMOD_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(L2JMOD_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load PvP L2Properties file (if exists)
@@ -2630,8 +2630,8 @@ public final class Config {
 				PVP_NORMAL_TIME = Integer.parseInt(pvpSettings.getProperty("PvPVsNormalTime", "120000"));
 				PVP_PVP_TIME = Integer.parseInt(pvpSettings.getProperty("PvPVsPvPTime", "60000"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + PVP_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(PVP_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load Olympiad L2Properties file (if exists)
@@ -2682,8 +2682,8 @@ public final class Config {
 				ALT_OLY_ENCHANT_LIMIT = Integer.parseInt(olympiad.getProperty("AltOlyEnchantLimit", "-1"));
 				ALT_OLY_WAIT_TIME = Integer.parseInt(olympiad.getProperty("AltOlyWaitTime", "120"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + OLYMPIAD_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(OLYMPIAD_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			final File hex = new File(HEXID_FILE);
@@ -2702,10 +2702,10 @@ public final class Config {
 				L2Properties languageSettings = new L2Properties();
 				languageSettings.load(is);
 				
-				LANGUAGE = languageSettings.getProperty("Language", "en");
+				LANGUAGE = languageSettings.getProperty("Language", "ko");
 			} catch (Exception e) {
 				e.printStackTrace();
-				throw new Error("Failed to Load " + LANGUAGE_FILE + " File.");
+				throw new Error(LANGUAGE_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Custom Setting
@@ -2731,8 +2731,8 @@ public final class Config {
 				MAX_FREYA_HC_PLAYERS = Integer.parseInt(customSettings.getProperty("MaxFreyaHcPlayers", "45"));
 				MIN_LEVEL_HC_PLAYERS = Integer.parseInt(customSettings.getProperty("MinLevelHcPlayers", "82"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + CUSTOM_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(CUSTOM_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Grandboss
@@ -2863,8 +2863,8 @@ public final class Config {
 				}
 				Random_Of_Sailren_Spawn = Random_Of_Sailren_Spawn * 3600000;
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + GRANDBOSS_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(GRANDBOSS_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Gracia Seeds
@@ -2877,8 +2877,8 @@ public final class Config {
 				SOD_TIAT_KILL_COUNT = Integer.parseInt(graciaseedsSettings.getProperty("TiatKillCountForNextState", "10"));
 				SOD_STAGE_2_LENGTH = Long.parseLong(graciaseedsSettings.getProperty("Stage2Length", "720")) * 60000;
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + GRACIASEEDS_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(GRACIASEEDS_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			final File chat_filter = new File(CHAT_FILTER_FILE);
@@ -2895,10 +2895,10 @@ public final class Config {
 					
 					FILTER_LIST.add(line.trim());
 				}
-				_log.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
+				_log.info(FILTER_LIST.size() + "개 단어 필터가 로드되었습니다.");
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + CHAT_FILTER_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(CHAT_FILTER_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Security
@@ -2913,8 +2913,8 @@ public final class Config {
 				SECOND_AUTH_BAN_TIME = Integer.parseInt(securitySettings.getProperty("SecondAuthBanTime", "480"));
 				SECOND_AUTH_REC_LINK = securitySettings.getProperty("SecondAuthRecoveryLink", "5");
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + SECURITY_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(SECURITY_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			final File ch_siege = new File(CH_SIEGE_FILE);
@@ -2929,9 +2929,10 @@ public final class Config {
 				CHS_FAME_AMOUNT = Integer.parseInt(chSiege.getProperty("FameAmount", "0"));
 				CHS_FAME_FREQUENCY = Integer.parseInt(chSiege.getProperty("FameFrequency", "0"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
+				_log.warning("환경: " + e.getMessage());
 			}
 		} else if (Server.serverMode == Server.MODE_LOGINSERVER) {
+			_log.info("================================================================================");
 			_log.info("로그인 환경 로딩 중");
 			final File login = new File(LOGIN_CONFIGURATION_FILE);
 			try (InputStream is = new FileInputStream(login)) {
@@ -2959,7 +2960,7 @@ public final class Config {
 				LOGIN_SERVER_SCHEDULE_RESTART_TIME = Long.parseLong(serverSettings.getProperty("LoginRestartTime", "24"));
 				
 				DATABASE_DRIVER = serverSettings.getProperty("Driver", "com.mysql.jdbc.Driver");
-				DATABASE_URL = serverSettings.getProperty("URL", "jdbc:mysql://localhost/l2jls");
+				DATABASE_URL = serverSettings.getProperty("URL", "jdbc:mysql://localhost/l2jls?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true");
 				DATABASE_LOGIN = serverSettings.getProperty("Login", "root");
 				DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
 				DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
@@ -2975,8 +2976,8 @@ public final class Config {
 				FAST_CONNECTION_TIME = Integer.parseInt(serverSettings.getProperty("FastConnectionTime", "350"));
 				MAX_CONNECTION_PER_IP = Integer.parseInt(serverSettings.getProperty("MaxConnectionPerIP", "50"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + LOGIN_CONFIGURATION_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(LOGIN_CONFIGURATION_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			// MMO
 			final File mmo = new File(MMO_CONFIG_FILE);
@@ -2990,8 +2991,8 @@ public final class Config {
 				MMO_HELPER_BUFFER_COUNT = Integer.parseInt(mmoSettings.getProperty("HelperBufferCount", "20"));
 				MMO_TCP_NODELAY = Boolean.parseBoolean(mmoSettings.getProperty("TcpNoDelay", "False"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + MMO_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(MMO_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Load Telnet L2Properties file (if exists)
@@ -3002,8 +3003,8 @@ public final class Config {
 				
 				IS_TELNET_ENABLED = Boolean.parseBoolean(telnetSettings.getProperty("EnableTelnet", "false"));
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + TELNET_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(TELNET_FILE + " 파일 로드가 실패되었습니다.");
 			}
 			
 			// Email
@@ -3027,8 +3028,8 @@ public final class Config {
 				EMAIL_SYS_SELECTQUERY = emailSettings.getProperty("EmailDBSelectQuery", "SELECT value FROM account_data WHERE account_name=? AND var='email_addr'");
 				EMAIL_SYS_DBFIELD = emailSettings.getProperty("EmailDBField", "value");
 			} catch (Exception e) {
-				_log.warning("Config: " + e.getMessage());
-				throw new Error("Failed to Load " + EMAIL_CONFIG_FILE + " File.");
+				_log.warning("환경: " + e.getMessage());
+				throw new Error(EMAIL_CONFIG_FILE + " 파일 로드가 실패되었습니다.");
 			}
 		} else {
 			_log.severe("Could not Load Config: server mode was not set");
@@ -3926,7 +3927,7 @@ public final class Config {
 			out.close();
 		} catch (Exception e) {
 			_log.warning(StringUtil.concat("Failed to save hex id to ", fileName, " File."));
-			_log.warning("Config: " + e.getMessage());
+			_log.warning("환경: " + e.getMessage());
 		}
 	}
 	
@@ -3968,6 +3969,10 @@ public final class Config {
 		config.PUNISHMENT_TIME = Integer.parseInt(properties.getProperty(StringUtil.concat("FloodProtector", configString, "PunishmentTime"), "0"));
 	}
 	
+	/**
+	 * @param serverTypes
+	 * @return
+	 */
 	public static int getServerTypeId(String[] serverTypes) {
 		int tType = 0;
 		for (String cType : serverTypes) {
@@ -4005,6 +4010,9 @@ public final class Config {
 		private final TIntObjectHashMap<TIntIntHashMap> _rewardItems;
 		private final TIntObjectHashMap<Boolean> _allowedClassChange;
 		
+		/**
+		 * @param _configLine
+		 */
 		public ClassMasterSettings(String _configLine) {
 			_claimItems = new TIntObjectHashMap<>(3);
 			_rewardItems = new TIntObjectHashMap<>(3);
@@ -4014,6 +4022,9 @@ public final class Config {
 			}
 		}
 		
+		/**
+		 * @param _configLine
+		 */
 		private void parseConfigLine(String _configLine) {
 			StringTokenizer st = new StringTokenizer(_configLine, ";");
 			
@@ -4055,6 +4066,10 @@ public final class Config {
 			}
 		}
 		
+		/**
+		 * @param job
+		 * @return
+		 */
 		public boolean isAllowed(int job) {
 			if (_allowedClassChange == null) {
 				return false;
@@ -4066,6 +4081,10 @@ public final class Config {
 			return false;
 		}
 		
+		/**
+		 * @param job
+		 * @return
+		 */
 		public TIntIntHashMap getRewardItems(int job) {
 			if (_rewardItems.containsKey(job)) {
 				return _rewardItems.get(job);
@@ -4074,6 +4093,10 @@ public final class Config {
 			return null;
 		}
 		
+		/**
+		 * @param job
+		 * @return
+		 */
 		public TIntIntHashMap getRequireItems(int job) {
 			if (_claimItems.containsKey(job)) {
 				return _claimItems.get(job);

@@ -140,9 +140,9 @@ public final class L2LoginServer {
 		try {
 			_gameServerListener = new GameServerListener();
 			_gameServerListener.start();
-			_log.info("게임서버 리스닝: " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
+			_log.info("게임 서버 리스닝: " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
 		} catch (IOException e) {
-			_log.log(Level.SEVERE, "치명적인: 게임서버 리스너 시작이 실패되었습니다. 이유: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "치명적인: 게임 서버 리스너 시작이 실패되었습니다. 이유: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
@@ -166,6 +166,7 @@ public final class L2LoginServer {
 		_selectorThread.start();
 		
 		_log.info("로그인 서버 준비: " + (bindAddress == null ? "*" : bindAddress.getHostAddress()) + ":" + Config.PORT_LOGIN);
+		_log.info("================================================================================");
 	}
 	
 	/**
@@ -225,9 +226,9 @@ public final class L2LoginServer {
 			} catch (IOException e) {
 				_log.log(Level.WARNING, "차단 파일 읽는 중 오류가 발생했습니다. (" + bannedFile.getName() + "). 세부: " + e.getMessage(), e);
 			}
-			_log.info(LoginController.getInstance().getBannedIps().size() + "개 IP 차단이 로드되었습니다.");
+			_log.info("차단된 IP " + LoginController.getInstance().getBannedIps().size() + "개 로드되었습니다.");
 		} else {
-			_log.warning("IP 차단 파일(" + bannedFile.getName() + ")을 찾을 수 없습니다, 건너 뛰었습니다.");
+			_log.warning("차단된 IP 파일(" + bannedFile.getName() + ")을 찾을 수 없습니다, 건너 뛰었습니다.");
 		}
 		
 		if (Config.LOGIN_SERVER_SCHEDULE_RESTART) {

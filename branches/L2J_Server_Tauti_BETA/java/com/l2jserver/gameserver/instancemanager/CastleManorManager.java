@@ -268,24 +268,24 @@ public class CastleManorManager {
 	}
 	
 	public void updateManorRefresh() {
-		_log.info("Manor System: Manor refresh updated");
+		_log.info("장원 시스템: Manor refresh updated");
 		
 		_scheduledManorRefresh = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
 			@Override
 			public void run() {
 				if (!isDisabled()) {
 					setUnderMaintenance(true);
-					_log.info("Manor System: Under maintenance mode started");
+					_log.info("장원 시스템: Under maintenance mode started");
 					
 					_scheduledMaintenanceEnd = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
 						@Override
 						public void run() {
-							_log.info("Manor System: Next period started");
+							_log.info("장원 시스템: Next period started");
 							setNextPeriod();
 							try {
 								save();
 							} catch (Exception e) {
-								_log.log(Level.WARNING, "Manor System: Failed to save manor data: " + e.getMessage(), e);
+								_log.log(Level.WARNING, "장원 시스템: Failed to save manor data: " + e.getMessage(), e);
 							}
 							setUnderMaintenance(false);
 						}
@@ -297,14 +297,14 @@ public class CastleManorManager {
 	}
 	
 	public void updatePeriodApprove() {
-		_log.info("Manor System: Manor period approve updated");
+		_log.info("장원 시스템: Manor period approve updated");
 		
 		_scheduledNextPeriodapprove = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
 			@Override
 			public void run() {
 				if (!isDisabled()) {
 					approveNextPeriod();
-					_log.info("Manor System: Next period approved");
+					_log.info("장원 시스템: Next period approved");
 				}
 				updatePeriodApprove();
 			}
@@ -317,7 +317,7 @@ public class CastleManorManager {
 			setNewManorRefresh();
 		}
 		
-		_log.info("Manor System: New Schedule for manor refresh @ " + _manorRefresh.getTime());
+		_log.info("장원 시스템: New Schedule for manor refresh @ " + _manorRefresh.getTime());
 		
 		return (_manorRefresh.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
 	}
@@ -336,7 +336,7 @@ public class CastleManorManager {
 			setNewPeriodApprove();
 		}
 		
-		_log.info("Manor System: New Schedule for period approve @ " + _periodApprove.getTime());
+		_log.info("장원 시스템: New Schedule for period approve @ " + _periodApprove.getTime());
 		
 		return (_periodApprove.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
 	}

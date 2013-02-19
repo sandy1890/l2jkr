@@ -130,7 +130,7 @@ public class GameServerThread extends Thread {
 			}
 		} catch (IOException e) {
 			String serverName = (getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")");
-			String msg = "게임서버 " + serverName + ": 연결이 끊어졌습니다: " + e.getMessage();
+			String msg = "게임 서버 " + serverName + ": 연결이 끊어졌습니다: " + e.getMessage();
 			_log.info(msg);
 			broadcastToTelnet(msg);
 		} finally {
@@ -275,7 +275,7 @@ public class GameServerThread extends Thread {
 	 * @param hosts The gameHost to set.
 	 */
 	public void setGameHosts(String[] hosts) {
-		_log.info("게임서버 [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP가 업데이트 되었습니다.");
+		_log.info("게임 서버 [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP가 업데이트 되었습니다.");
 		
 		_gsi.clearServerAddresses();
 		for (int i = 0; i < hosts.length; i += 2) {
