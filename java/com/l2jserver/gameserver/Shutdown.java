@@ -58,6 +58,7 @@ import gnu.trove.procedure.TObjectProcedure;
 public class Shutdown extends Thread {
 	
 	private static Logger _log = Logger.getLogger(Shutdown.class.getName());
+	
 	private static Shutdown _counterInstance = null;
 	
 	private int _secondsShut;
@@ -84,6 +85,11 @@ public class Shutdown extends Thread {
 		Broadcast.toAllOnlinePlayers(sysm);
 	}
 	
+	/**
+	 * @param IP
+	 * @param seconds
+	 * @param restart
+	 */
 	public void startTelnetShutdown(String IP, int seconds, boolean restart) {
 		_log.warning("IP: " + IP + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		// _an.announceToAll("Server is " + _modeText[shutdownMode] + " in "+seconds+ " seconds!");
@@ -189,15 +195,15 @@ public class Shutdown extends Thread {
 			try {
 				if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS) {
 					OfflineTradersTable.storeOffliners();
-					_log.info("Offline Traders Table: Offline shops stored(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+					_log.info("오프라인 거래 테이블: 오프라인 상점이 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 				}
 			} catch (Throwable t) {
-				_log.log(Level.WARNING, "Error saving offline shops.", t);
+				_log.log(Level.WARNING, "오프라인 상점 저장 중 오류가 발생했습니다.", t);
 			}
 			
 			try {
 				disconnectAllCharacters();
-				_log.info("All players disconnected and saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				_log.info("모든 플레이어가 연결이 끊어진것을 저장했습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			} catch (Throwable t) {
 				// ignore
 			}
@@ -205,7 +211,7 @@ public class Shutdown extends Thread {
 			// ensure all services are stopped
 			try {
 				GameTimeController.getInstance().stopTimer();
-				_log.info("Game Time Controller: Timer stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				_log.info("Game Time Controller: 타이머가 중지되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			} catch (Throwable t) {
 				// ignore
 			}
@@ -213,21 +219,21 @@ public class Shutdown extends Thread {
 			// stop all threadpolls
 			try {
 				ThreadPoolManager.getInstance().shutdown();
-				_log.info("Thread Pool Manager: Manager has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				_log.info("Thread Pool Manager: 관리가 종료되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			} catch (Throwable t) {
 				// ignore
 			}
 			
 			try {
 				CommunityServerThread.getInstance().interrupt();
-				_log.info("Community Server Thread: Thread interruped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				_log.info("Community Server Thread: 쓰레드가 중단되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			} catch (Throwable t) {
 				// ignore
 			}
 			
 			try {
 				LoginServerThread.getInstance().interrupt();
-				_log.info("Login Server Thread: Thread interruped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				_log.info("Login Server Thread: 쓰레드가 중단되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			} catch (Throwable t) {
 				// ignore
 			}
@@ -239,7 +245,7 @@ public class Shutdown extends Thread {
 			// saveData sends messages to exit players, so shutdown selector after it
 			try {
 				GameServer.gameServer.getSelectorThread().shutdown();
-				_log.info("Game Server: Selector thread has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				_log.info("Game Server: 선택 쓰레드는 종료되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			} catch (Throwable t) {
 				// ignore
 			}
@@ -247,7 +253,7 @@ public class Shutdown extends Thread {
 			// commit data, last chance
 			try {
 				L2DatabaseFactory.getInstance().shutdown();
-				_log.info("L2Database Factory: Database connection has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				_log.info("L2Database Factory: 데이터베이스 연결이 종료되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			} catch (Throwable t) {
 				
 			}
@@ -336,8 +342,9 @@ public class Shutdown extends Thread {
 			_counterInstance._abort();
 			Announcements _an = Announcements.getInstance();
 			/*
-			 * Move To MessageTable For L2JTW _an.announceToAll("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!");
+			 * Move To MessageTable For L2JTW
 			 */
+			// _an.announceToAll("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!");
 			L2CoreMessage cm = new L2CoreMessage(MessageTable.Messages[44]);
 			cm.addExtra(_shutdownMode);
 			_an.announceToAll(cm.renderMsg());
@@ -439,20 +446,23 @@ public class Shutdown extends Thread {
 	private void saveData() {
 		switch (_shutdownMode) {
 			case SIGTERM:
-				_log.info("SIGTERM received. Shutting down NOW!");
+				_log.info("서버 중지 시그널이 수신되었습니다!");
 			break;
 			case GM_SHUTDOWN:
-				_log.info("GM shutdown received. Shutting down NOW!");
+				_log.info("지엠에 의해 서버 중지가 수신되었습니다!");
 			break;
 			case GM_RESTART:
-				_log.info("GM restart received. Restarting NOW!");
+				_log.info("지엠에 의해 서버 재시작이 수신되었습니다!");
 			break;
 		
 		}
-		
+		//@formatter:off
 		/*
-		 * if (Config.ACTIVATE_POSITION_RECORDER) Universe.getInstance().implode(true);
-		 */
+		if (Config.ACTIVATE_POSITION_RECORDER) {
+			Universe.getInstance().implode(true);
+		}
+		*/
+		//@formatter:on
 		TimeCounter tc = new TimeCounter();
 		// Seven Signs data is now saved along with Festival data.
 		if (!SevenSigns.getInstance().isSealValidationPeriod()) {
@@ -462,54 +472,54 @@ public class Shutdown extends Thread {
 		
 		// Save Seven Signs data before closing. :)
 		SevenSigns.getInstance().saveSevenSignsData();
-		_log.info("SevenSigns: Seven Signs data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("세븐사인: 세븐사인 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		SevenSigns.getInstance().saveSevenSignsStatus();
-		_log.info("SevenSigns: Seven Signs status saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("세븐사인: 세븐사인 상태가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
 		// Save all raidboss and GrandBoss status ^_^
 		RaidBossSpawnManager.getInstance().cleanUp();
-		_log.info("RaidBossSpawnManager: All raidboss info saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("레이드보스 스폰 관리: 모든 레이드 보스 정보가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		GrandBossManager.getInstance().cleanUp();
-		_log.info("GrandBossManager: All Grand Boss info saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("그랜드보스 관리: 모든 그랜드보스 정보가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		HellboundManager.getInstance().cleanUp();
-		_log.info("Hellbound Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
-		_log.info("TradeController saving data.. This action may take some minutes! Please wait until completed!");
+		_log.info("헬바운드 관리: 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("거래 제어 데이터 저장 중.. 이 작업은 몇 분의 시간이 걸릴 수 있습니다! 완료 될 때까지 기다리십시오!");
 		TradeController.getInstance().dataCountStore();
-		_log.info("TradeController: All count Item saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("거래 제어: 모든 아이템 갯수가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		ItemAuctionManager.getInstance().shutdown();
-		_log.info("Item Auction Manager: All tasks stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("아이템 액션 관리: 모든 작업이 중지되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		Olympiad.getInstance().saveOlympiadStatus();
 		_log.info("올림피아드 시스템: 데이터가 저장되었습니다. (" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		Hero.getInstance().shutdown();
-		_log.info("Hero System: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("영웅 시스템: 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		ClanTable.getInstance().storeClanScore();
-		_log.info("Clan System: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("혈맹 시스템: 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
 		// Save Cursed Weapons data before closing.
 		CursedWeaponsManager.getInstance().saveData();
-		_log.info("Cursed Weapons Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("저주받은 무기 관리: 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
 		// Save all manor data
 		CastleManorManager.getInstance().save();
-		_log.info("Castle Manor Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("성 장원 관리: 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
 		CHSiegeManager.getInstance().onServerShutDown();
 		_log.info("CHSiegeManager: Siegable hall attacker lists saved!");
 		
 		// Save all global (non-player specific) Quest data that needs to persist after reboot
 		QuestManager.getInstance().save();
-		_log.info("Quest Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("퀘스트 관리: 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
 		// Save all global variables data
 		GlobalVariablesManager.getInstance().saveVars();
-		_log.info("Global Variables Manager: Variables saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+		_log.info("글로벌 변수 관리: 변수가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		
 		// Save items on ground before closing
 		if (Config.SAVE_DROPPED_ITEM) {
 			ItemsOnGroundManager.getInstance().saveInDb();
-			_log.info("Items On Ground Manager: Data saved(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+			_log.info("Items On Ground Manager: 데이터가 저장되었습니다(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			ItemsOnGroundManager.getInstance().cleanUp();
-			_log.info("Items On Ground Manager: Cleaned up(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+			_log.info("Items On Ground Manager: 정리(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 		}
 		
 		try {
@@ -543,7 +553,7 @@ public class Shutdown extends Thread {
 					}
 					player.deleteMe();
 				} catch (Throwable t) {
-					_log.log(Level.WARNING, "Failed logour char " + player, t);
+					_log.log(Level.WARNING, "캐릭터 로그아웃이 실패되었습니다 " + player, t);
 				}
 			}
 			return true;
@@ -564,12 +574,18 @@ public class Shutdown extends Thread {
 			_startTime = System.currentTimeMillis();
 		}
 		
+		/**
+		 * @return
+		 */
 		protected long getEstimatedTimeAndRestartCounter() {
 			final long toReturn = System.currentTimeMillis() - _startTime;
 			restartCounter();
 			return toReturn;
 		}
 		
+		/**
+		 * @return
+		 */
 		protected long getEstimatedTime() {
 			return System.currentTimeMillis() - _startTime;
 		}

@@ -36,15 +36,20 @@ import com.l2jserver.gameserver.util.Broadcast;
  * @author nBd
  */
 public class AutoAnnounceTaskManager {
+	
 	private static final Logger _log = Logger.getLogger(AutoAnnounceTaskManager.class.getName());
 	
 	protected final List<AutoAnnouncement> _announces = new FastList<>();
+	
 	private int _nextId = 1;
 	
 	protected AutoAnnounceTaskManager() {
 		restore();
 	}
 	
+	/**
+	 * @return
+	 */
 	public List<AutoAnnouncement> getAutoAnnouncements() {
 		return _announces;
 	}
@@ -81,13 +86,20 @@ public class AutoAnnounceTaskManager {
 			data.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.log(Level.SEVERE, "AutoAnnoucements: Failed to load announcements data.", e);
+			_log.log(Level.SEVERE, "자동 공지: 공지사항 데이터 로드가 실패되었습니다.", e);
 		} finally {
 			L2DatabaseFactory.close(conn);
 		}
-		_log.log(Level.INFO, "AutoAnnoucements: Loaded " + count + " Auto Annoucement Data.");
+		_log.log(Level.INFO, "자동 공지: " + count + " 자동 공지사항 데이터가 로드되었습니다.");
 	}
 	
+	/**
+	 * @param initial
+	 * @param delay
+	 * @param repeat
+	 * @param memo
+	 * @param isCritical
+	 */
 	public void addAutoAnnounce(long initial, long delay, int repeat, String memo, boolean isCritical) {
 		Connection conn = null;
 		try {
@@ -100,41 +112,39 @@ public class AutoAnnounceTaskManager {
 			statement.setString(5, memo);
 			statement.setString(6, String.valueOf(isCritical));
 			statement.execute();
-			
 			statement.close();
-			
 			String[] text = memo.split("/n");
 			ThreadPoolManager.getInstance().scheduleGeneral(new AutoAnnouncement(_nextId++, delay, repeat, text, isCritical), initial);
 		} catch (Exception e) {
-			_log.log(Level.SEVERE, "AutoAnnoucements: Failed to add announcements data.", e);
+			_log.log(Level.SEVERE, "자동 공지: 공지사항 데이터 추가가 실패되었습니다.", e);
 		} finally {
 			L2DatabaseFactory.close(conn);
 		}
 	}
 	
+	/**
+	 * @param index
+	 */
 	public void deleteAutoAnnounce(int index) {
 		Connection conn = null;
-		
 		try {
 			AutoAnnouncement a = _announces.get(index);
 			a.stopAnnounce();
-			
 			conn = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = conn.prepareStatement("DELETE FROM auto_announcements WHERE id = ?");
 			statement.setInt(1, a.getId());
 			statement.execute();
-			
 			statement.close();
-			
 			_announces.remove(index);
 		} catch (Exception e) {
-			_log.log(Level.SEVERE, "AutoAnnoucements: Failed to delete announcements data.", e);
+			_log.log(Level.SEVERE, "자동 공지: 공지사항 데이터 삭제가 실패되었습니다.", e);
 		} finally {
 			L2DatabaseFactory.close(conn);
 		}
 	}
 	
 	public class AutoAnnouncement implements Runnable {
+		
 		private final int _id;
 		private final long _delay;
 		private int _repeat = -1;
@@ -142,6 +152,13 @@ public class AutoAnnounceTaskManager {
 		private boolean _stopped = false;
 		private final boolean _isCritical;
 		
+		/**
+		 * @param id
+		 * @param delay
+		 * @param repeat
+		 * @param memo
+		 * @param isCritical
+		 */
 		public AutoAnnouncement(int id, long delay, int repeat, String[] memo, boolean isCritical) {
 			_id = id;
 			_delay = delay;
@@ -153,10 +170,16 @@ public class AutoAnnounceTaskManager {
 			}
 		}
 		
+		/**
+		 * @return
+		 */
 		public int getId() {
 			return _id;
 		}
 		
+		/**
+		 * @return
+		 */
 		public String[] getMemo() {
 			return _memo;
 		}
@@ -165,6 +188,9 @@ public class AutoAnnounceTaskManager {
 			_stopped = true;
 		}
 		
+		/**
+		 * @return
+		 */
 		public boolean isCritical() {
 			return _isCritical;
 		}
@@ -184,8 +210,13 @@ public class AutoAnnounceTaskManager {
 				stopAnnounce();
 			}
 		}
+		
 	}
 	
+	/**
+	 * @param text
+	 * @param isCritical
+	 */
 	public void announce(String text, boolean isCritical) {
 		Broadcast.announceToOnlinePlayers(text, isCritical);
 		if (Config.LOG_AUTO_ANNOUNCEMENTS) {
@@ -193,6 +224,9 @@ public class AutoAnnounceTaskManager {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public static AutoAnnounceTaskManager getInstance() {
 		return SingletonHolder._instance;
 	}
@@ -200,4 +234,5 @@ public class AutoAnnounceTaskManager {
 	private static class SingletonHolder {
 		protected static final AutoAnnounceTaskManager _instance = new AutoAnnounceTaskManager();
 	}
+	
 }

@@ -139,7 +139,7 @@ public abstract class FloodProtectedListener extends Thread {
 				_floodProtection.remove(ip);
 			}
 		} else {
-			_log.warning("연결 목록에 해당 게임서버가 없습니다, 과도한 보호가 제거되었습니다:" + ip);
+			_log.warning("연결 목록에 해당 게임 서버가 없습니다, 과도한 보호가 제거되었습니다:" + ip);
 		}
 	}
 	

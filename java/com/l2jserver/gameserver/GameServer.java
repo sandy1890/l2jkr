@@ -161,33 +161,48 @@ public class GameServer {
 	private static Status _statusServer;
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
 	
+	/**
+	 * @return
+	 */
 	public long getUsedMemoryMB() {
-		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576; // ;
+		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
 	}
 	
+	/**
+	 * @return
+	 */
 	public SelectorThread<L2GameClient> getSelectorThread() {
 		return _selectorThread;
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2GamePacketHandler getL2GamePacketHandler() {
 		return _gamePacketHandler;
 	}
 	
+	/**
+	 * @return
+	 */
 	public DeadLockDetector getDeadLockDetectorThread() {
 		return _deadDetectThread;
 	}
 	
+	/**
+	 * @throws Exception
+	 */
 	public GameServer() throws Exception {
 		long serverLoadStart = System.currentTimeMillis();
 		
 		gameServer = this;
-		_log.finest("used mem:" + getUsedMemoryMB() + "MB");
+		_log.finest("사용 메모리:" + getUsedMemoryMB() + "MB");
 		
 		if (Config.SERVER_VERSION != null) {
-			_log.info("L2JKR Server Version:    " + Config.SERVER_VERSION);
+			_log.info("L2JKR 서버 버전:    " + Config.SERVER_VERSION);
 		}
 		if (Config.DATAPACK_VERSION != null) {
-			_log.info("L2JKR Datapack Version:  " + Config.DATAPACK_VERSION);
+			_log.info("L2JKR 데이터 팩 버전:  " + Config.DATAPACK_VERSION);
 		}
 		
 		_idFactory = IdFactory.getInstance();
@@ -320,7 +335,7 @@ public class GameServer {
 		GraciaSeedsManager.getInstance();
 		
 		try {
-			_log.info("Loading Server Scripts");
+			_log.info("서버 스크립트 로딩 중..");
 			File scripts = new File(Config.DATAPACK_ROOT, "data/scripts.cfg");
 			if (!Config.ALT_DEV_NO_HANDLERS || !Config.ALT_DEV_NO_QUESTS) {
 				L2ScriptEngineManager.getInstance().executeScriptList(scripts);
@@ -350,8 +365,8 @@ public class GameServer {
 		FaenorScriptEngine.getInstance();
 		// Init of a cursed weapon manager
 		
-		_log.info("AutoChatHandler: Loaded " + AutoChatHandler.getInstance().size() + " handlers in total.");
-		_log.info("AutoSpawnHandler: Loaded " + AutoSpawnHandler.getInstance().size() + " handlers in total.");
+		_log.info("자동 채팅 핸들러: " + AutoChatHandler.getInstance().size() + "개 핸들러가 로드되었습니다.");
+		_log.info("자동 스폰 핸들러: " + AutoSpawnHandler.getInstance().size() + "개 핸들러가 로드되었습니다.");
 		
 		if (Config.L2JMOD_ALLOW_WEDDING) {
 			CoupleManager.getInstance();
@@ -398,7 +413,7 @@ public class GameServer {
 		// allocation pool
 		long freeMem = ((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576;
 		long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
-		_log.info("GameServer Started, free memory " + freeMem + " Mb of " + totalMem + " Mb");
+		_log.info("게임 서버가 시작되었습니다, 남은 메모리: " + freeMem + " MB, 전체 메모리:" + totalMem + "MB.");
 		Toolkit.getDefaultToolkit().beep();
 		
 		_loginThread = LoginServerThread.getInstance();
@@ -421,24 +436,28 @@ public class GameServer {
 			try {
 				bindAddress = InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
 			} catch (UnknownHostException e1) {
-				_log.log(Level.SEVERE, "WARNING: The GameServer bind address is invalid, using all avaliable IPs. Reason: " + e1.getMessage(), e1);
+				_log.log(Level.SEVERE, "경고: 게임 서버 바운드 주소가 잘못되었습니다, 사용 가능한 모든 IP를 사용합니다. 이유: " + e1.getMessage(), e1);
 			}
 		}
 		
 		try {
 			_selectorThread.openServerSocket(bindAddress, Config.PORT_GAME);
 		} catch (IOException e) {
-			_log.log(Level.SEVERE, "FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "치명적인: 서버 소켓 오픈이 실패되었습니다. 이유: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		_selectorThread.start();
-		_log.info("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_USERS);
+		_log.info("동시 접속 최대 수: " + Config.MAXIMUM_ONLINE_USERS);
 		long serverLoadEnd = System.currentTimeMillis();
-		_log.info("Server Loaded in " + ((serverLoadEnd - serverLoadStart) / 1000) + " seconds");
+		_log.info("서버 기동이 " + ((serverLoadEnd - serverLoadStart) / 1000) + "초 걸렸습니다.");
 		
 		AutoAnnounceTaskManager.getInstance();
 	}
 	
+	/**
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		Server.serverMode = Server.MODE_GAMESERVER;
 		// Local Constants
@@ -465,10 +484,13 @@ public class GameServer {
 			_statusServer = new Status(Server.serverMode);
 			_statusServer.start();
 		} else {
-			_log.info("Telnet server is currently disabled.");
+			_log.info("텔넷 서버가 현재 비활성화 되어 있습니다.");
 		}
 	}
 	
+	/**
+	 * @param s
+	 */
 	public static void printSection(String s) {
 		s = "=[ " + s + " ]";
 		while (s.length() < 78) {

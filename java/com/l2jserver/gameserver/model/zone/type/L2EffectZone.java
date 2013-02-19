@@ -79,13 +79,13 @@ public class L2EffectZone extends L2ZoneType {
 			for (String skill : propertySplit) {
 				String[] skillSplit = skill.split("-");
 				if (skillSplit.length != 2) {
-					_log.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skill, "\""));
+					_log.warning(StringUtil.concat(getClass().getSimpleName() + ": 잘못된 환경 속성 -> skillsIdLvl \"", skill, "\""));
 				} else {
 					try {
 						_skills.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
 					} catch (NumberFormatException nfe) {
 						if (!skill.isEmpty()) {
-							_log.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skillSplit[0], "\"", skillSplit[1]));
+							_log.warning(StringUtil.concat(getClass().getSimpleName() + ": 잘못된 환경 속성 -> skillsIdLvl \"", skillSplit[0], "\"", skillSplit[1]));
 						}
 					}
 				}

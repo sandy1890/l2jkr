@@ -72,10 +72,10 @@ public final class GameServerTable {
 		_log.info(getClass().getSimpleName() + ": " + _serverNames.size() + "개 서버 이름이 로드되었습니다.");
 		
 		loadRegisteredGameServers();
-		_log.info(getClass().getSimpleName() + ": " + _gameServerTable.size() + "개 게임서버 등록이 로드되었습니다.");
+		_log.info(getClass().getSimpleName() + ": 등록된 게임 서버 " + _gameServerTable.size() + "개 로드되었습니다.");
 		
 		initRSAKeys();
-		_log.info(getClass().getSimpleName() + ": 게임서버와 통신을 위한 " + _keyPairs.length + " RSA 키가 캐시되었습니다.");
+		_log.info(getClass().getSimpleName() + ": 게임 서버와 통신을 위한 " + _keyPairs.length + " RSA 키가 캐시되었습니다.");
 	}
 	
 	/**
@@ -115,7 +115,7 @@ public final class GameServerTable {
 				_keyPairs[i] = keyGen.genKeyPair();
 			}
 		} catch (Exception e) {
-			_log.severe(getClass().getSimpleName() + ": 게임서버와 통신 중 RSA 키 로딩 중 오류가 발생했습니다!");
+			_log.severe(getClass().getSimpleName() + ": 게임 서버와 통신 중 RSA 키 로딩 중 오류가 발생했습니다!");
 		}
 	}
 	
@@ -136,7 +136,7 @@ public final class GameServerTable {
 			rset.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.severe(getClass().getSimpleName() + ": 게임서버 등록 로딩 중 오류가 발생했습니다! hexid를 확인해 주십시오!");
+			_log.severe(getClass().getSimpleName() + ": 게임 서버 등록 로딩 중 오류가 발생했습니다! hexid를 확인해 주십시오!");
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -231,7 +231,7 @@ public final class GameServerTable {
 			statement.close();
 			register(id, new GameServerInfo(id, hexId));
 		} catch (Exception e) {
-			_log.severe(getClass().getSimpleName() + ": 게임서버 DB에 저장 중 오류가 발생했습니다!");
+			_log.severe(getClass().getSimpleName() + ": 게임 서버 DB에 저장 중 오류가 발생했습니다!");
 		} finally {
 			L2DatabaseFactory.close(con);
 		}

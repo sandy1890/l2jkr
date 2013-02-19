@@ -45,10 +45,16 @@ public class ItemsAutoDestroy {
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckItemsForDestroy(), 5000, 5000);
 	}
 	
+	/**
+	 * @return
+	 */
 	public static ItemsAutoDestroy getInstance() {
 		return SingletonHolder._instance;
 	}
 	
+	/**
+	 * @param item
+	 */
 	public synchronized void addItem(L2ItemInstance item) {
 		item.setDropTime(System.currentTimeMillis());
 		_items.add(item);
@@ -56,7 +62,7 @@ public class ItemsAutoDestroy {
 	
 	public synchronized void removeItems() {
 		if (Config.DEBUG) {
-			_log.info("[ItemsAutoDestroy] : " + _items.size() + " items to check.");
+			_log.info("[아이템 자동 파괴] : " + _items.size() + "개 아이템 체크.");
 		}
 		
 		if (_items.isEmpty()) {
@@ -98,7 +104,7 @@ public class ItemsAutoDestroy {
 		}
 		
 		if (Config.DEBUG) {
-			_log.info("[ItemsAutoDestroy] : " + _items.size() + " items remaining.");
+			_log.info("[아이템 자동 파괴] : " + _items.size() + "개 남아있는 아이템.");
 		}
 	}
 	
