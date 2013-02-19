@@ -8152,7 +8152,6 @@ public final class L2PcInstance extends L2Playable
 		return _premiumItems;
 	}
 	// Add PI by pmq Start
-	@SuppressWarnings("unused")
 	public void loadPremiumItemList()
 	{
 		Connection con = null;
@@ -8169,17 +8168,22 @@ public final class L2PcInstance extends L2Playable
 				int itemId = rset.getInt("itemId");
 				long itemCount = rset.getLong("itemCount");
 				String itemSender = rset.getString("itemSender");
+				@SuppressWarnings("unused")
 				byte itemElementType = rset.getByte("itemElementType");
+				@SuppressWarnings("unused")
 				int itemElementValue = rset.getInt("itemElementValue");
+				@SuppressWarnings("unused")
 				int itemEnchantLevel = rset.getInt("itemEnchantLevel");
+				@SuppressWarnings("unused")
 				int itemAugumentSkillId = rset.getInt("itemAugumentSkillId");
+				@SuppressWarnings("unused")
 				int itemAugumentSkillLevel = rset.getInt("itemAugumentSkillLevel");
 				L2Item item = ItemTable.getInstance().getTemplate(itemId);
 				L2PremiumItem _item = new L2PremiumItem(itemId, itemCount, itemSender);
 				if (item != null)
-				 {
+				{
 					_premiumItems.put(itemNum, _item);
-				// Add PI by pmq End
+					// Add PI by pmq End
 				}
 			}
 			rset.close();
@@ -16726,7 +16730,7 @@ public final class L2PcInstance extends L2Playable
 	/** Advent 4h task **/
 	private ScheduledFuture<?> _adventBonusTask;
 	/** Advent Blessing task **/
-	private ScheduledFuture<?> _adventBlessingTask;
+	protected ScheduledFuture<?> _adventBlessingTask;
 	
 	public void stopAdventBlessingTask()
 	{
@@ -16746,7 +16750,7 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	private class AdventPoints implements Runnable
+	protected class AdventPoints implements Runnable
 	{
 		@Override
 		public void run()
@@ -16755,7 +16759,6 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	public void startAdventTask()
 	{
 		if (_adventBonusTask == null)
@@ -16769,9 +16772,8 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	private class AdventBlessingEnd implements Runnable
+	protected class AdventBlessingEnd implements Runnable
 	{
-		@SuppressWarnings("synthetic-access")
 		@Override
 		public void run()
 		{
@@ -16794,7 +16796,6 @@ public final class L2PcInstance extends L2Playable
 		return LovecTable.getInstance().getAdventTime(getObjectId());
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	public void incAdventPoints(int value, boolean decreasetime)
 	{
 		int adventPoints = LovecTable.getInstance().getAdventPoints(getObjectId());
