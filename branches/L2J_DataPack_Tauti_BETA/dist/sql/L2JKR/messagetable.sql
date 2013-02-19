@@ -5054,7 +5054,7 @@ INSERT INTO `messagetable` VALUES
 
 (1882, 'cn', '', 'X 座标;Y 座标;Z 座标', 'AdminTeleport.java'),
 (1882, 'en', '', 'Co-ordinate x;Co-ordinate y;Co-ordinate z', 'AdminTeleport.java'),
-(1882, 'ko', '', 'Co-ordinate x;Co-ordinate y;Co-ordinate z', 'AdminTeleport.java'),
+(1882, 'ko', '', '좌표 x;좌표 y;좌표 z', 'AdminTeleport.java'),
 (1882, 'tw', '', 'X 座標;Y 座標;Z 座標', 'AdminTeleport.java'),
 
 (1883, 'cn', '传送', '', 'AdminTeleport.java'),
@@ -5079,22 +5079,22 @@ INSERT INTO `messagetable` VALUES
 
 (1887, 'cn', '', '召唤玩家「;」。', 'AdminTeleport.java'),
 (1887, 'en', '', 'You have recalled ;', 'AdminTeleport.java'),
-(1887, 'ko', '', 'You have recalled ;', 'AdminTeleport.java'),
+(1887, 'ko', '', '당신은 재소환되었습니다 ;', 'AdminTeleport.java'),
 (1887, 'tw', '', '召喚玩家「;」。', 'AdminTeleport.java'),
 
 (1888, 'cn', '管理者对你进行传送。', '', 'AdminTeleport.java'),
 (1888, 'en', 'Admin is teleporting you.', '', 'AdminTeleport.java'),
-(1888, 'ko', 'Admin is teleporting you.', '', 'AdminTeleport.java'),
+(1888, 'ko', '지엠이 당신을 텔레포트 했습니다.', '', 'AdminTeleport.java'),
 (1888, 'tw', '管理者對你進行傳送。', '', 'AdminTeleport.java'),
 
 (1889, 'cn', '', '传送至玩家「;」。', 'AdminTeleport.java'),
 (1889, 'en', '', 'You have teleported to character ;.', 'AdminTeleport.java'),
-(1889, 'ko', '', 'You have teleported to character ;.', 'AdminTeleport.java'),
+(1889, 'ko', '', '당신은 캐릭터에게 순간 이동되었습니다 ;.', 'AdminTeleport.java'),
 (1889, 'tw', '', '傳送至玩家「;」。', 'AdminTeleport.java'),
 
 (1890, 'cn', '玩家不存在或位置并未改变。', '', 'AdminTeleport.java'),
 (1890, 'en', 'Character not found or position unaltered.', '', 'AdminTeleport.java'),
-(1890, 'ko', 'Character not found or position unaltered.', '', 'AdminTeleport.java'),
+(1890, 'ko', '캐릭터를 찾을 수 없거나, 위치 변경되지 않았습니다.', '', 'AdminTeleport.java'),
 (1890, 'tw', '玩家不存在或位置並未改變。', '', 'AdminTeleport.java'),
 
 (1891, 'cn', '', '玩家「;」的位置变更为 (', 'AdminTeleport.java'),
@@ -5119,22 +5119,22 @@ INSERT INTO `messagetable` VALUES
 
 (1895, 'cn', '狩猎首领召唤错误。', '', 'AdminTeleport.java'),
 (1895, 'en', 'Incorrect raid spawn.', '', 'AdminTeleport.java'),
-(1895, 'ko', 'Incorrect raid spawn.', '', 'AdminTeleport.java'),
+(1895, 'ko', '잘못된 레이드 스폰.', '', 'AdminTeleport.java'),
 (1895, 'tw', '狩獵首領召喚錯誤。', '', 'AdminTeleport.java'),
 
 (1901, 'cn', '目标错误。', '', 'AdminTvTEvent.java'),
 (1901, 'en', 'You should select a player!', '', 'AdminTvTEvent.java'),
-(1901, 'ko', 'You should select a player!', '', 'AdminTvTEvent.java'),
+(1901, 'ko', '플레이어를 선택해야 합니다!', '', 'AdminTvTEvent.java'),
 (1901, 'tw', '目標錯誤。', '', 'AdminTvTEvent.java'),
 
 (1902, 'cn', '玩家已经参加活动！', '', 'AdminTvTEvent.java'),
 (1902, 'en', 'Player already participated in the event!', '', 'AdminTvTEvent.java'),
-(1902, 'ko', 'Player already participated in the event!', '', 'AdminTvTEvent.java'),
+(1902, 'ko', '플레이어는 이벤트에 이미 참여 했습니다!', '', 'AdminTvTEvent.java'),
 (1902, 'tw', '玩家已經參加活動！', '', 'AdminTvTEvent.java'),
 
 (1903, 'cn', '玩家无法加入！', '', 'AdminTvTEvent.java'),
 (1903, 'en', 'Player instance could not be added, it seems to be null!', '', 'AdminTvTEvent.java'),
-(1903, 'ko', 'Player instance could not be added, it seems to be null!', '', 'AdminTvTEvent.java'),
+(1903, 'ko', '플레이어를 인스턴스에 추가할 수 없습니다, null!', '', 'AdminTvTEvent.java'),
 (1903, 'tw', '玩家無法加入！', '', 'AdminTvTEvent.java'),
 
 (1904, 'cn', '玩家不是活动的一员！', '', 'AdminTvTEvent.java'),
@@ -5144,12 +5144,12 @@ INSERT INTO `messagetable` VALUES
 
 (1907, 'cn', '', '移除封锁 IP「;」！', 'AdminUnblockIp.java'),
 (1907, 'en', '', 'Removed IP ; from blocklist!', 'AdminUnblockIp.java'),
-(1907, 'ko', '', 'Removed IP ; from blocklist!', 'AdminUnblockIp.java'),
+(1907, 'ko', '', 'IP 제거 ; 차단 목록에서!', 'AdminUnblockIp.java'),
 (1907, 'tw', '', '移除封鎖 IP「;」！', 'AdminUnblockIp.java'),
 
 (1910, 'cn', '服务端尚未启用活力系统。', '', 'AdminVitality.java'),
 (1910, 'en', 'Vitality is not enabled on the server!', '', 'AdminVitality.java'),
-(1910, 'ko', 'Vitality is not enabled on the server!', '', 'AdminVitality.java'),
+(1910, 'ko', '서버에서 활력 시스템이 비활성화 되어있습니다!', '', 'AdminVitality.java'),
 (1910, 'tw', '伺服器尚未啟用活力系統。', '', 'AdminVitality.java'),
 
 (1911, 'cn', '不正确的活力数值。', '', 'AdminVitality.java'),
@@ -5159,7 +5159,7 @@ INSERT INTO `messagetable` VALUES
 
 (1912, 'cn', '管理员将您的活力点数改变为：', '', 'AdminVitality.java'),
 (1912, 'en', 'Admin set your Vitality points to ', '', 'AdminVitality.java'),
-(1912, 'ko', 'Admin set your Vitality points to ', '', 'AdminVitality.java'),
+(1912, 'ko', '지엠이 당신의 활력 포인트를 설정했습니다 ', '', 'AdminVitality.java'),
 (1912, 'tw', '管理員將您的活力點數改變為：', '', 'AdminVitality.java'),
 
 (1913, 'cn', '不正确的活力阶段 (0-4)。', '', 'AdminVitality.java'),
@@ -5199,12 +5199,12 @@ INSERT INTO `messagetable` VALUES
 
 (1923, 'cn', '血剑阿卡玛纳夫', '', 'Akamanah.java'),
 (1923, 'en', 'Akamanah', '', 'Akamanah.java'),
-(1923, 'ko', 'Akamanah', '', 'Akamanah.java'),
+(1923, 'ko', '아카마나프', '', 'Akamanah.java'),
 (1923, 'tw', '血劍‧阿卡瑪那夫', '', 'Akamanah.java'),
 
 (1924, 'cn', '魔剑萨雷奇', '', 'Zariche.java'),
 (1924, 'en', 'Zariche', '', 'Zariche.java'),
-(1924, 'ko', 'Zariche', '', 'Zariche.java'),
+(1924, 'ko', '자리체', '', 'Zariche.java'),
 (1924, 'tw', '魔劍‧薩雷奇', '', 'Zariche.java'),
 
 (1927, 'cn', '黑暗的祭典已开始，无法再登记参加。', '', 'Festival.java'),
@@ -5274,7 +5274,7 @@ INSERT INTO `messagetable` VALUES
 
 (1940, 'cn', '<FONT color=LEVEL>历代最高纪录</FONT>：', '', 'Festival.java'),
 (1940, 'en', 'Consecutive top scores: ', '', 'Festival.java'),
-(1940, 'ko', 'Consecutive top scores: ', '', 'Festival.java'),
+(1940, 'ko', '연속 최고 점수: ', '', 'Festival.java'),
 (1940, 'tw', '<FONT color=LEVEL>歷代最高紀錄</FONT>：', '', 'Festival.java'),
 
 (1941, 'cn', '所属阵营：', '', 'Festival.java'),
@@ -5284,7 +5284,7 @@ INSERT INTO `messagetable` VALUES
 
 (1942, 'cn', '<FONT color=LEVEL>历代最高纪录</FONT>：无。分数 0', '', 'Festival.java'),
 (1942, 'en', 'Consecutive top scores: No record exists. Score 0', '', 'Festival.java'),
-(1942, 'ko', 'Consecutive top scores: No record exists. Score 0', '', 'Festival.java'),
+(1942, 'ko', '연속 최고 점수: 기록이 없습니다. 점수 0', '', 'Festival.java'),
 (1942, 'tw', '<FONT color=LEVEL>歷代最高紀錄</FONT>：無。分數 0', '', 'Festival.java'),
 
 (1943, 'cn', '返回', '', 'Festival.java'),
@@ -5374,7 +5374,7 @@ INSERT INTO `messagetable` VALUES
 
 (1965, 'cn', '地龍的邊境', '', 'Fort.java'),
 (1965, 'en', 'Antharas', '', 'Fort.java'),
-(1965, 'ko', '안타라스', '', 'Fort.java'),
+(1965, 'ko', 'Antharas', '', 'Fort.java'),
 (1965, 'tw', '地龍的邊境', '', 'Fort.java'),
 
 (1966, 'cn', '西部國境邊境', '', 'Fort.java'),
@@ -5414,27 +5414,27 @@ INSERT INTO `messagetable` VALUES
 
 (1976, 'cn', '现在已经新增一个 GS，支援最新的「？？？」', '', 'LoginServerThread.java'),
 (1976, 'en', 'Now a New GS Support ???', '', 'LoginServerThread.java'),
-(1976, 'ko', 'Now a New GS Support ???', '', 'LoginServerThread.java'),
+(1976, 'ko', '이제 새로운 GS 지원 ???', '', 'LoginServerThread.java'),
 (1976, 'tw', '現在已經新增一個 GS，支援最新的「？？？」', '', 'LoginServerThread.java'),
 
 (1977, 'cn', '请重新注册游戏服务端（就是登录时，可以选择巴茨服务端）', '', 'LoginServerThread.java'),
 (1977, 'en', 'Register GameServer Again.', '', 'LoginServerThread.java'),
-(1977, 'ko', '다시 게임서버를 등록합니다.', '', 'LoginServerThread.java'),
+(1977, 'ko', '게임서버를 다시 등록합니다.', '', 'LoginServerThread.java'),
 (1977, 'tw', '請重新註冊遊戲伺服器（就是登入時，可以選擇巴茨伺服器）', '', 'LoginServerThread.java'),
 
 (1978, 'cn', '服务端连线位置：', '', 'LoginServerThread.java'),
 (1978, 'en', 'Server Address: ', '', 'LoginServerThread.java'),
-(1978, 'ko', '서버 주소:', '', 'LoginServerThread.java'),
+(1978, 'ko', '서버 주소: ', '', 'LoginServerThread.java'),
 (1978, 'tw', '伺服器連線位置：', '', 'LoginServerThread.java'),
 
 (1994, 'cn', '红队', '', 'BlockCheckerEngine.java'),
 (1994, 'en', 'Red Team', '', 'BlockCheckerEngine.java'),
-(1994, 'ko', 'Red Team', '', 'BlockCheckerEngine.java'),
+(1994, 'ko', '레드 팀', '', 'BlockCheckerEngine.java'),
 (1994, 'tw', '紅隊', '', 'BlockCheckerEngine.java'),
 
 (1995, 'cn', '蓝队', '', 'BlockCheckerEngine.java'),
 (1995, 'en', 'Blue Team', '', 'BlockCheckerEngine.java'),
-(1995, 'ko', 'Blue Team', '', 'BlockCheckerEngine.java'),
+(1995, 'ko', '블루 팀', '', 'BlockCheckerEngine.java'),
 (1995, 'tw', '藍隊', '', 'BlockCheckerEngine.java'),
 
 (2000, 'cn', '', '没有找到这个技能的资料，技能ID:「;」等级:「;」\n请管理者删除 skillTrees 资料表里面的这个学习技能ID\n和删除资料库 character_skills 里面的这个已学习技能ID\n', 'SkillTable.java'),
@@ -5444,15 +5444,15 @@ INSERT INTO `messagetable` VALUES
 
 (2001, 'cn', '', ': 技能ID:「;」等级:「;」的资料并不存在。「;」载入失败\n', 'RequestAcquireSkillInfo.java'),
 (2001, 'en', '', ': Skill Id: ; level: ; is undefined. ; failed.', 'RequestAcquireSkillInfo.java'),
-(2001, 'ko', '', ': 스킬 ID: ; level: ; is undefined. ; failed.', 'RequestAcquireSkillInfo.java'),
+(2001, 'ko', '', ': 스킬 ID: ; 레벨: ; is undefined. ; failed.', 'RequestAcquireSkillInfo.java'),
 (2001, 'tw', '', ': 技能ID:「;」等級:「;」的資料並不存在。「;」載入失敗\n', 'RequestAcquireSkillInfo.java'),
 
 (2002, 'cn', '', '略过资料不存在的技能ID:「;」等级:「;」，需要修正后才能载入\n拥有此技能的玩家ObjId: ', 'L2PcInstance.java'),
 (2002, 'en', '', 'Skipped null skill Id: ; Level: ; while restoring player skills for playerObjId: ', 'L2PcInstance.java'),
-(2002, 'ko', '', 'Skipped null skill Id: ; Level: ; while restoring player skills for playerObjId: ', 'L2PcInstance.java'),
+(2002, 'ko', '', '스킬 ID null 건너 뜀: ; 레벨: ; while restoring player skills for playerObjId: ', 'L2PcInstance.java'),
 (2002, 'tw', '', '略過資料不存在的技能ID:「;」等級:「;」，需要修正後才能載入\n擁有此技能的玩家ObjId: ', 'L2PcInstance.java'),
 
 (2003, 'cn', '', '略过资料不存在的技能ID:「;」等级:「;」\n请管理者删除 skillTrees 资料表里面的这个学习技能ID\n学习此技能失败的玩家: ', 'L2PcInstance.java'),
 (2003, 'en', '', 'Skipped null skill Id: ; Level: ; autoGet Skill for player: ', 'L2PcInstance.java'),
-(2003, 'ko', '', 'Skipped null skill Id: ; Level: ; autoGet Skill for player: ', 'L2PcInstance.java'),
+(2003, 'ko', '', '스킬 ID null 건너 뜀: ; 레벨: ; autoGet Skill for player: ', 'L2PcInstance.java'),
 (2003, 'tw', '', '略過資料不存在的技能ID:「;」等級:「;」\n請管理者刪除 skillTrees 資料夾裡面的這個學習技能ID\n學習此技能失敗的玩家: ', 'L2PcInstance.java');
