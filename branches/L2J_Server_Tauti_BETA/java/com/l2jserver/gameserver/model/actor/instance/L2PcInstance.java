@@ -301,14 +301,15 @@ import com.l2jserver.util.Rnd;
 
 import gnu.trove.list.array.TIntArrayList;
 
+//@formatter:off
 /**
- * This class represents all player characters in the world. There is always a client-thread connected to this (except if a player-store is activated upon logout).<BR>
- * <BR>
+ * This class represents all player characters in the world.
+ * There is always a client-thread connected to this (except if a player-store is activated upon logout).<BR><BR>
+ *
  * @version $Revision: 1.66.2.41.2.33 $ $Date: 2005/04/11 10:06:09 $
  */
-//@formatter:off
-public final class L2PcInstance extends L2Playable {
-	
+public final class L2PcInstance extends L2Playable
+{
 	// Character Skill SQL String Definitions:
 	private static final String RESTORE_SKILLS_FOR_CHAR = "SELECT skill_id,skill_level FROM character_skills WHERE charId=? AND class_index=?";
 	private static final String ADD_NEW_SKILL = "INSERT INTO character_skills (charId,skill_id,skill_level,class_index) VALUES (?,?,?,?)";
@@ -9208,13 +9209,24 @@ public final class L2PcInstance extends L2Playable {
 			{
 				continue;
 			}
-			
-			_hennaINT += ((_hennaINT + h.getStatINT()) > 5) ? 5 - _hennaINT : h.getStatINT();
-			_hennaSTR += ((_hennaSTR + h.getStatSTR()) > 5) ? 5 - _hennaSTR : h.getStatSTR();
-			_hennaMEN += ((_hennaMEN + h.getStatMEN()) > 5) ? 5 - _hennaMEN : h.getStatMEN();
-			_hennaCON += ((_hennaCON + h.getStatCON()) > 5) ? 5 - _hennaCON : h.getStatCON();
-			_hennaWIT += ((_hennaWIT + h.getStatWIT()) > 5) ? 5 - _hennaWIT : h.getStatWIT();
-			_hennaDEX += ((_hennaDEX + h.getStatDEX()) > 5) ? 5 - _hennaDEX : h.getStatDEX();
+			if (isAwaken())
+			{
+				_hennaINT += h.getStatINT();
+				_hennaMEN += h.getStatMEN();
+				_hennaSTR += h.getStatSTR();
+				_hennaCON += h.getStatCON();
+				_hennaWIT += h.getStatWIT();
+				_hennaDEX += h.getStatDEX();
+			}
+			else
+			{
+				_hennaINT += ((_hennaINT + h.getStatINT()) > 5) ? 5 - _hennaINT : h.getStatINT();
+				_hennaSTR += ((_hennaSTR + h.getStatSTR()) > 5) ? 5 - _hennaSTR : h.getStatSTR();
+				_hennaMEN += ((_hennaMEN + h.getStatMEN()) > 5) ? 5 - _hennaMEN : h.getStatMEN();
+				_hennaCON += ((_hennaCON + h.getStatCON()) > 5) ? 5 - _hennaCON : h.getStatCON();
+				_hennaWIT += ((_hennaWIT + h.getStatWIT()) > 5) ? 5 - _hennaWIT : h.getStatWIT();
+				_hennaDEX += ((_hennaDEX + h.getStatDEX()) > 5) ? 5 - _hennaDEX : h.getStatDEX();
+			}
  		}
  	}
 	
@@ -16714,7 +16726,7 @@ public final class L2PcInstance extends L2Playable {
 	/** Advent 4h task **/
 	private ScheduledFuture<?> _adventBonusTask;
 	/** Advent Blessing task **/
-	protected ScheduledFuture<?> _adventBlessingTask;
+	private ScheduledFuture<?> _adventBlessingTask;
 	
 	public void stopAdventBlessingTask()
 	{
@@ -16734,7 +16746,7 @@ public final class L2PcInstance extends L2Playable {
 		}
 	}
 	
-	protected class AdventPoints implements Runnable
+	private class AdventPoints implements Runnable
 	{
 		@Override
 		public void run()
@@ -16743,6 +16755,7 @@ public final class L2PcInstance extends L2Playable {
 		}
 	}
 	
+	@SuppressWarnings("synthetic-access")
 	public void startAdventTask()
 	{
 		if (_adventBonusTask == null)
@@ -16756,8 +16769,9 @@ public final class L2PcInstance extends L2Playable {
 		}
 	}
 	
-	protected class AdventBlessingEnd implements Runnable
+	private class AdventBlessingEnd implements Runnable
 	{
+		@SuppressWarnings("synthetic-access")
 		@Override
 		public void run()
 		{
@@ -16780,6 +16794,7 @@ public final class L2PcInstance extends L2Playable {
 		return LovecTable.getInstance().getAdventTime(getObjectId());
 	}
 	
+	@SuppressWarnings("synthetic-access")
 	public void incAdventPoints(int value, boolean decreasetime)
 	{
 		int adventPoints = LovecTable.getInstance().getAdventPoints(getObjectId());
@@ -16869,6 +16884,5 @@ public final class L2PcInstance extends L2Playable {
 		return false; 
 	}
 	// l2jtw add end
-	
 }
 //@formatter:on
