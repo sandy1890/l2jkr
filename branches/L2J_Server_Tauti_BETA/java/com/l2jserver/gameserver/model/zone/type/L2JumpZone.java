@@ -26,13 +26,15 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.serverpackets.ExNotifyFlyMoveStart;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 /**
  * L2JumpZone zones
  * @author ALF (r2max)
  */
 public class L2JumpZone extends L2ZoneType {
 	
-	private Future<?> _task;
+	private final TIntObjectHashMap<Future<?>> _task = new TIntObjectHashMap<>();
 	private final int _startTask;
 	private final int _reuseTask;
 	private int _trackId;
@@ -47,10 +49,6 @@ public class L2JumpZone extends L2ZoneType {
 		_trackId = -1;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#setParameter(java.lang.String, java.lang.String)
-	 */
 	@Override
 	public void setParameter(String name, String value) {
 		if (name.equals("trackId")) {
@@ -67,63 +65,49 @@ public class L2JumpZone extends L2ZoneType {
 		return _trackId;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onEnter(com.l2jserver.gameserver.model.actor.L2Character)
-	 */
 	@Override
 	protected void onEnter(L2Character character) {
 		character.setInsideZone(L2Character.ZONE_JUMP, true);
+		
 		if (character instanceof L2PcInstance) {
 			L2PcInstance plr = (L2PcInstance) character;
 			if (!plr.isAwaken()) {
 				return;
 			}
-			synchronized (this) {
-				if (_task == null) {
-					_task = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new JumpReq(plr), _startTask, _reuseTask);
-				}
-			}
+			stopTask(plr);
+			_task.put(plr.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new JumpReq(plr), _startTask, _reuseTask));
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onExit(com.l2jserver.gameserver.model.actor.L2Character)
-	 */
 	@Override
 	protected void onExit(L2Character character) {
 		character.setInsideZone(L2Character.ZONE_JUMP, false);
-		stopTask();
+		stopTask(character);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onDieInside(com.l2jserver.gameserver.model.actor.L2Character)
-	 */
 	@Override
 	public void onDieInside(L2Character character) {
 		onExit(character);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jserver.gameserver.model.zone.L2ZoneType#onReviveInside(com.l2jserver.gameserver.model.actor.L2Character)
-	 */
 	@Override
 	public void onReviveInside(L2Character character) {
 		onEnter(character);
 	}
 	
-	protected void stopTask() {
-		if (_task != null) {
-			_task.cancel(false);
-			_task = null;
+	/**
+	 * @param character
+	 */
+	protected void stopTask(L2Character character) {
+		int poid = character.getObjectId();
+		Future<?> t = _task.get(poid);
+		_task.remove(poid);
+		if (t != null) {
+			t.cancel(false);
 		}
 	}
 	
 	class JumpReq implements Runnable {
-		
 		private final L2PcInstance player;
 		
 		/**
@@ -133,15 +117,10 @@ public class L2JumpZone extends L2ZoneType {
 			player = pl;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run() {
 			player.sendPacket(new ExNotifyFlyMoveStart());
 		}
-		
 	}
 	
 }
