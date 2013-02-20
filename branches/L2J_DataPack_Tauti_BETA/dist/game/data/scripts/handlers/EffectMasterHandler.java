@@ -217,7 +217,7 @@ public final class EffectMasterHandler {
 		try {
 			method = loadInstance.getClass().getMethod("size");
 			Object returnVal = method.invoke(loadInstance);
-			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": " + returnVal + "개 핸들어가 로드되었습니다.");
+			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": " + returnVal + "개 핸들러가 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.WARNING, "핸들러 메서드 사이즈 호출이 실패되었습니다: " + loadInstance.getClass().getSimpleName(), e);
 		}
