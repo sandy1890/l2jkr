@@ -67,7 +67,7 @@ public class EnchantGroupsData extends DocumentParser {
 		for (L2EnchantSkillGroup group : _enchantSkillGroups.values()) {
 			routes += group.getEnchantGroupDetails().size();
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _enchantSkillGroups.size() + " groups and " + routes + " routes.");
+		_log.info(getClass().getSimpleName() + ": " + _enchantSkillGroups.size() + "개 그룹, " + routes + "개 경로가 로드되었습니다.");
 	}
 	
 	@Override

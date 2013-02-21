@@ -49,7 +49,7 @@ public final class PetDataTable extends DocumentParser {
 	public void load() {
 		_pets.clear();
 		parseDatapackFile("data/stats/npc/PetData.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _pets.size() + " Pets.");
+		_log.info(getClass().getSimpleName() + ": " + _pets.size() + "개 펫이 로드되었습니다.");
 	}
 	
 	@Override

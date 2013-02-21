@@ -406,7 +406,7 @@ public class NpcTable {
 				statement.close();
 			}
 			
-			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") NPC template(s).");
+			_log.info(getClass().getSimpleName() + ": " + cont + " (커스텀: " + cCont + ") NPC 템플릿이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error creating NPC table.", e);
 		} finally {
@@ -507,7 +507,7 @@ public class NpcTable {
 				statement.close();
 			}
 			
-			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") npc skills.");
+			_log.info(getClass().getSimpleName() + ": " + cont + " (Custom: " + cCont + ") NPC 스킬이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC skills table.", e);
 		} finally {
@@ -604,7 +604,7 @@ public class NpcTable {
 				rset.close();
 				statement.close();
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") drops.");
+			_log.info(getClass().getSimpleName() + ": " + cont + " (커스텀: " + cCont + ") 드랍이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC dropdata. ", e);
 		} finally {
@@ -650,7 +650,7 @@ public class NpcTable {
 			rset.close();
 			statement.close();
 			
-			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " Skill Learn.");
+			_log.info(getClass().getSimpleName() + ": " + cont + "개 스킬 습득이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC trainer data.", e);
 		} finally {
@@ -699,7 +699,7 @@ public class NpcTable {
 			
 			rset.close();
 			statement.close();
-			_log.info(getClass().getSimpleName() + ": Loaded " + cnt + " Minions.");
+			_log.info(getClass().getSimpleName() + ": " + cnt + "개 부하가 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error loading minion data.", e);
 		} finally {
@@ -711,7 +711,6 @@ public class NpcTable {
 	 * Id equals to zero or lesser means all.
 	 * @param id of the NPC to load it's AI data.
 	 */
-	@SuppressWarnings("resource")
 	public void loadNpcsAI(int id) {
 		Connection con = null;
 		try {
@@ -777,6 +776,7 @@ public class NpcTable {
 					statement = con.prepareStatement("SELECT * FROM custom_npcaidata WHERE npcId = ?");
 					statement.setInt(1, id);
 				} else {
+					statement.close();
 					statement = con.prepareStatement("SELECT * FROM custom_npcaidata ORDER BY npcId");
 				}
 				
@@ -821,7 +821,7 @@ public class NpcTable {
 				statement.close();
 			}
 			
-			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCont + ") AI Data.");
+			_log.info(getClass().getSimpleName() + ": " + cont + " (커스텀: " + cCont + ") 인공지능 데이터가 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC AI Data: " + e.getMessage(), e);
 		} finally {
@@ -946,7 +946,7 @@ public class NpcTable {
 				statement.close();
 			}
 			
-			_log.info(getClass().getSimpleName() + ": Loaded " + cont + " (Custom: " + cCount + ") elementals Data.");
+			_log.info(getClass().getSimpleName() + ": " + cont + " (커스텀: " + cCount + ") 속작(물,불,암흑,바람 등) 데이터가 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error reading NPC Elementals Data: " + e.getMessage(), e);
 		} finally {

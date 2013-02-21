@@ -37,6 +37,7 @@ import com.l2jserver.gameserver.script.ScriptEngine;
  * @author Luis Arias
  */
 public class FaenorEventParser extends FaenorParser {
+	
 	static Logger _log = Logger.getLogger(FaenorEventParser.class.getName());
 	private DateRange _eventDates = null;
 	
@@ -47,12 +48,12 @@ public class FaenorEventParser extends FaenorParser {
 		
 		Date currentDate = new Date();
 		if (_eventDates.getEndDate().before(currentDate)) {
-			_log.info("Event ID: (" + ID + ") has passed... Ignored.");
+			_log.info("이벤트 ID: (" + ID + ") 해당 이벤트 무시되었습니다.");
 			return;
 		}
 		
 		if (_eventDates.getStartDate().after(currentDate)) {
-			_log.info("Event ID: (" + ID + ") is not active yet... Ignored.");
+			_log.info("이벤트 ID: (" + ID + ") 아직 활성화되지 않았습니다... 무시되었습니다.");
 			ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
 				@Override
 				public void run() {
@@ -65,6 +66,9 @@ public class FaenorEventParser extends FaenorParser {
 		parseEventDropAndMessage(eventNode);
 	}
 	
+	/**
+	 * @param eventNode
+	 */
 	protected void parseEventDropAndMessage(Node eventNode) {
 		for (Node node = eventNode.getFirstChild(); node != null; node = node.getNextSibling()) {
 			if (isNodeName(node, "DropList")) {
@@ -75,6 +79,9 @@ public class FaenorEventParser extends FaenorParser {
 		}
 	}
 	
+	/**
+	 * @param sysMsg
+	 */
 	private void parseEventMessage(Node sysMsg) {
 		try {
 			String type = attribute(sysMsg, "Type");
@@ -84,10 +91,13 @@ public class FaenorEventParser extends FaenorParser {
 				_bridge.onPlayerLogin(message, _eventDates);
 			}
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Error in event parser: " + e.getMessage(), e);
+			_log.log(Level.WARNING, "이벤트 파싱 중 오류가 발생했습니다: " + e.getMessage(), e);
 		}
 	}
 	
+	/**
+	 * @param dropList
+	 */
 	private void parseEventDropList(Node dropList) {
 		for (Node node = dropList.getFirstChild(); node != null; node = node.getNextSibling()) {
 			if (isNodeName(node, "AllDrop")) {
@@ -96,6 +106,9 @@ public class FaenorEventParser extends FaenorParser {
 		}
 	}
 	
+	/**
+	 * @param drop
+	 */
 	private void parseEventDrop(Node drop) {
 		try {
 			int[] items = IntList.parse(attribute(drop, "Items"));
@@ -118,4 +131,5 @@ public class FaenorEventParser extends FaenorParser {
 	static {
 		ScriptEngine.parserFactories.put(getParserName("Event"), new FaenorEventParserFactory());
 	}
+	
 }

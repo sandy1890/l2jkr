@@ -73,7 +73,7 @@ public class MapRegionManager extends DocumentParser {
 	public void load() {
 		_regions.clear();
 		parseDirectory(new File(Config.DATAPACK_ROOT, "data/mapregion/"));
-		_log.info(getClass().getSimpleName() + ": Loaded " + _regions.size() + " map regions.");
+		_log.info(getClass().getSimpleName() + ": " + _regions.size() + "개 지도 지역이 로드되었습니다.");
 	}
 	
 	@Override

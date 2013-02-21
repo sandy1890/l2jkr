@@ -88,7 +88,7 @@ public class SummonItemsData {
 			_summonitems.put(itemID, summonitem);
 		}
 		
-		_log.info("Summon items data: Loaded " + _summonitems.size() + " summon items.");
+		_log.info("Summon items data: " + _summonitems.size() + "개 소환사 아이템이 로드되었습니다.");
 	}
 	
 	public L2SummonItem getSummonItem(int itemId) {

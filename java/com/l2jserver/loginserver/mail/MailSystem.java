@@ -95,7 +95,7 @@ public class MailSystem {
 					}
 				}
 			}
-			_log.info("eMail System Loaded");
+			_log.info("이메일 시스템이 로드되었습니다.");
 		} else {
 			_log.warning("Cannot load eMail System - Missing file MailList.xml");
 		}

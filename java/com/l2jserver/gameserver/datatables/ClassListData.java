@@ -48,7 +48,7 @@ public final class ClassListData extends DocumentParser {
 	public void load() {
 		_classData.clear();
 		parseDatapackFile("data/stats/chars/classList.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _classData.size() + " Class data.");
+		_log.info(getClass().getSimpleName() + ": " + _classData.size() + "개 클래스 데이터가 로드되었습니다.");
 	}
 	
 	@Override

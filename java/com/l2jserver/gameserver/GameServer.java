@@ -413,7 +413,7 @@ public class GameServer {
 		// allocation pool
 		long freeMem = ((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576;
 		long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
-		_log.info("게임 서버가 시작되었습니다, 남은 메모리: " + freeMem + " MB, 전체 메모리:" + totalMem + "MB.");
+		_log.info("게임 서버가 시작되었습니다, 남은 메모리: " + freeMem + " MB, 전체 메모리: " + totalMem + "MB.");
 		Toolkit.getDefaultToolkit().beep();
 		
 		_loginThread = LoginServerThread.getInstance();

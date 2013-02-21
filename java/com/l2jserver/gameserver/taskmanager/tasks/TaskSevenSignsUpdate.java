@@ -44,9 +44,9 @@ public class TaskSevenSignsUpdate extends Task {
 			if (!SevenSigns.getInstance().isSealValidationPeriod()) {
 				SevenSignsFestival.getInstance().saveFestivalData(false);
 			}
-			_log.info("SevenSigns: Data updated successfully.");
+			_log.info("세븐사인: Data updated successfully.");
 		} catch (Exception e) {
-			_log.warning(getClass().getSimpleName() + ": SevenSigns: Failed to save Seven Signs configuration: " + e.getMessage());
+			_log.warning(getClass().getSimpleName() + ": 세븐사인: Failed to save Seven Signs configuration: " + e.getMessage());
 		}
 	}
 	

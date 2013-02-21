@@ -81,7 +81,7 @@ public class WalkingManager extends DocumentParser {
 	@Override
 	public final void load() {
 		parseDatapackFile("data/Routes.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " walking routes.");
+		_log.info(getClass().getSimpleName() + ": " + _routes.size() + "개 보행 경로가 로드되었습니다.");
 	}
 	
 	@Override

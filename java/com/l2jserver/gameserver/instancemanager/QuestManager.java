@@ -86,7 +86,7 @@ public class QuestManager extends ScriptManager<Quest> {
 	}
 	
 	public final void report() {
-		_log.info("Loaded: " + _quests.size() + " quests");
+		_log.info(_quests.size() + "개 퀘스트가 로드되었습니다.");
 	}
 	
 	public final void save() {

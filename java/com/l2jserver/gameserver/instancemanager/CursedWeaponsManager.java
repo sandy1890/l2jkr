@@ -81,7 +81,7 @@ public class CursedWeaponsManager {
 		load();
 		restore();
 		controlPlayers();
-		_log.info("Loaded : " + _cursedWeapons.size() + " cursed weapon(s).");
+		_log.info(_cursedWeapons.size() + "개 저주받은 무기가 로드되었습니다.");
 	}
 	
 	public final void reload() {
@@ -90,7 +90,7 @@ public class CursedWeaponsManager {
 	
 	private final void load() {
 		if (Config.DEBUG) {
-			_log.info("  Parsing ... ");
+			_log.info("  파싱 중 ... ");
 		}
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

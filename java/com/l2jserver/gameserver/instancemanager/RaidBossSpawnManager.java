@@ -103,8 +103,8 @@ public class RaidBossSpawnManager {
 				}
 			}
 			
-			_log.info("RaidBossSpawnManager: Loaded " + _bosses.size() + " Instances");
-			_log.info("RaidBossSpawnManager: Scheduled " + _schedules.size() + " Instances");
+			_log.info("RaidBossSpawnManager: " + _bosses.size() + "개 인스턴스가 로드되었습니다.");
+			_log.info("RaidBossSpawnManager: " + _schedules.size() + "개 인스턴스가 예약되었습니다.");
 			
 			rset.close();
 			statement.close();

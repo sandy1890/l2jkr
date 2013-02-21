@@ -93,7 +93,7 @@ public class SummonSkillsTable {
 			} catch (Exception e) {
 				_log.log(Level.SEVERE, "Error while creating pet skill tree (Pet ID " + npcId + "): " + e.getMessage(), e);
 			}
-			_log.info("PetSkillsTable: Loaded " + count + " skills.");
+			_log.info("PetSkillsTable: " + count + "개 스킬이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Error while loading pet skills tables: " + e.getMessage(), e);
 		} finally {

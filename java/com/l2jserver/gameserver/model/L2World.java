@@ -707,7 +707,7 @@ public final class L2World {
 			}
 		}
 		
-		_log.info("L2World: (" + REGIONS_X + " by " + REGIONS_Y + ") World Region Grid set up.");
+		_log.info("L2World: (" + REGIONS_X + " by " + REGIONS_Y + ") 월드 지역 그리드 설정합니다.");
 		
 	}
 	

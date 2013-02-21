@@ -94,7 +94,7 @@ public class LovecTable {
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + recommends.size() + " Recommendations.");
+		_log.log(Level.INFO, getClass().getSimpleName() + ": " + recommends.size() + "개 추천이 로드되었습니다.");
 	}
 	
 	public int getAdventTime(int charId) {

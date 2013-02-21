@@ -52,7 +52,7 @@ public class RecipeData extends DocumentParser {
 	public void load() {
 		_recipes.clear();
 		parseDatapackFile("data/recipes.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _recipes.size() + " recipes.");
+		_log.info(getClass().getSimpleName() + ": " + _recipes.size() + "개 레시피가 로드되었습니다.");
 	}
 	
 	@Override

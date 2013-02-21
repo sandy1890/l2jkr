@@ -64,9 +64,9 @@ public class AdminTable extends DocumentParser {
 		_accessLevels.clear();
 		_adminCommandAccessRights.clear();
 		parseFile(new File(Config.DATAPACK_ROOT, "config/accessLevels.xml"));
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _accessLevels.size() + " Access Levels");
+		_log.log(Level.INFO, getClass().getSimpleName() + ": " + _accessLevels.size() + "개 접근 레벨이 로드되었습니다.");
 		parseFile(new File(Config.DATAPACK_ROOT, "config/adminCommands.xml"));
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _adminCommandAccessRights.size() + " Access Commands");
+		_log.log(Level.INFO, getClass().getSimpleName() + ": " + _adminCommandAccessRights.size() + "개 액세스 명령이 로드되었습니다.");
 	}
 	
 	@Override

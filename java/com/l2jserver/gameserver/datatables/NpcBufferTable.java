@@ -157,7 +157,7 @@ public class NpcBufferTable {
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
-		_log.info("NpcBufferSkillIdsTable: Loaded " + _buffers.size() + " buffers and " + skillCount + " skills.");
+		_log.info("NpcBufferSkillIdsTable: " + _buffers.size() + "개 버프, " + skillCount + "개 스킬이 로드되었습니다.");
 	}
 	
 	public int[] getSkillInfo(int npcId, int buffGroup) {

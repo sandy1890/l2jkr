@@ -54,7 +54,7 @@ public final class InitialEquipmentData extends DocumentParser {
 	public void load() {
 		_initialEquipmentList.clear();
 		parseDatapackFile(Config.INITIAL_EQUIPMENT_EVENT ? filePathEvent : filePathNormal);
-		_log.info(getClass().getSimpleName() + ": Loaded " + _initialEquipmentList.size() + " Initial Equipment data.");
+		_log.info(getClass().getSimpleName() + ": " + _initialEquipmentList.size() + "개 초기 장비 데이터가 로드되었습니다.");
 	}
 	
 	@Override

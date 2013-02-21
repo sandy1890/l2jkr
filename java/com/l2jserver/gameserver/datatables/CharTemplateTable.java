@@ -101,7 +101,7 @@ public final class CharTemplateTable {
 			}
 			rset.close();
 			statement.close();
-			_log.info("CharTemplateTable: Loaded " + _charTemplates.size() + " Character Templates.");
+			_log.info("CharTemplateTable: " + _charTemplates.size() + "개 캐릭터 템플릿이 로드되었습니다.");
 		} catch (SQLException e) {
 			_log.log(Level.SEVERE, "Failed loading char templates", e);
 		} finally {

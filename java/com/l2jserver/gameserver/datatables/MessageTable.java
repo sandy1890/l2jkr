@@ -126,7 +126,7 @@ public class MessageTable {
 			_log.warning("Message Table: Error loading from database:" + e);
 		} finally {
 			try {
-				_log.warning("Message Table: Loading " + i + " Core Message Sucessfully");
+				_log.warning("Message Table: " + i + "개 코어 메시지가 성공적으로 로드되었습니다.");
 				L2DatabaseFactory.close(con);
 			} catch (Exception e) {
 			}
@@ -137,7 +137,7 @@ public class MessageTable {
 	
 	private void initializeMessage(FastList<L2CoreMessage> msglist) {
 		if (!Config.LANGUAGE.equalsIgnoreCase("en")) {
-			_log.warning("Message Table: Multi Language System Initializing in language - " + Config.LANGUAGE);
+			_log.warning("Message Table: 다중 언어 시스템 언어로 초기화 - " + Config.LANGUAGE);
 		}
 		
 		int i = 0;
@@ -151,7 +151,7 @@ public class MessageTable {
 			 * else { i++; Messages[msg.getMessageId()] = msg; }
 			 */
 		}
-		_log.warning("Message Table: Initialize " + i + " Core Message Successfully");
+		_log.warning("Message Table: " + i + "개 코어 메시지를 성공적으로 초기화했습니다.");
 	}
 	
 	private void initializeSystem(String split, String fill, String extrafill) {

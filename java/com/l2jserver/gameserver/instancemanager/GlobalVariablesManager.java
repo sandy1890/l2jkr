@@ -61,7 +61,7 @@ public class GlobalVariablesManager {
 			rset.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.warning("GlobalVariablesManager: problem while loading variables: " + e);
+			_log.warning("글로벌 변수 관리: problem while loading variables: " + e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -81,9 +81,9 @@ public class GlobalVariablesManager {
 				statement.execute();
 			}
 			statement.close();
-			_log.info("GlobalVariablesManager: Database updated.");
+			_log.info("글로벌 변수 관리: Database updated.");
 		} catch (Exception e) {
-			_log.warning("GlobalVariablesManager: problem while saving variables: " + e);
+			_log.warning("글로벌 변수 관리: problem while saving variables: " + e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}

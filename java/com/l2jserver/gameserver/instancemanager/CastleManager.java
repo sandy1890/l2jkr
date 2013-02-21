@@ -254,7 +254,7 @@ public class CastleManager implements InstanceListManager {
 			rs.close();
 			statement.close();
 			
-			_log.info("Loaded: " + getCastles().size() + " castles");
+			_log.info(getCastles().size() + "개 성이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: loadCastleData(): " + e.getMessage(), e);
 		} finally {

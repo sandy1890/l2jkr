@@ -241,7 +241,7 @@ public class CharNameTable {
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _chars.size() + " char names.");
+		_log.info(getClass().getSimpleName() + ": " + _chars.size() + "개 캐릭터 이름이 로드되었습니다.");
 	}
 	
 	private static class SingletonHolder {

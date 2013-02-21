@@ -48,7 +48,7 @@ public final class ArmorSetsData extends DocumentParser {
 	public void load() {
 		_armorSets.clear();
 		parseDirectory(new File(Config.DATAPACK_ROOT, "data/stats/armorsets"));
-		_log.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " Armor sets.");
+		_log.info(getClass().getSimpleName() + ": " + _armorSets.size() + "개 방어구 셋이 로드되었습니다.");
 	}
 	
 	@Override

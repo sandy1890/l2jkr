@@ -38,7 +38,7 @@ public class TaskGlobalVariablesSave extends Task {
 	@Override
 	public void onTimeElapsed(ExecutedTask task) {
 		GlobalVariablesManager.getInstance().saveVars();
-		_log.info("GlobalVariablesManager: Data updated successfully.");
+		_log.info("글로벌 변수 관리: Data updated successfully.");
 	}
 	
 	@Override

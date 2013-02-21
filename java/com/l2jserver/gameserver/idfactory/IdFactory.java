@@ -162,7 +162,7 @@ public abstract class IdFactory {
 			statement.executeUpdate("UPDATE characters SET online = 0");
 			statement.close();
 			
-			_log.info("Updated characters online status.");
+			_log.info("캐릭터 온라인 상태가 업데이트되었습니다.");
 		} catch (SQLException e) {
 			_log.log(Level.WARNING, "Could not update characters online status: " + e.getMessage(), e);
 		} finally {
@@ -295,8 +295,7 @@ public abstract class IdFactory {
 			statement.executeUpdate("DELETE FROM mods_wedding WHERE player1Id NOT IN (SELECT charId FROM characters)");
 			statement.executeUpdate("DELETE FROM mods_wedding WHERE player2Id NOT IN (SELECT charId FROM characters)");
 			statement.close();
-			
-			_log.info("Cleaned up invalid Weddings.");
+			_log.info("잘못된 결혼이 정리되었습니다.");
 		} catch (SQLException e) {
 			_log.log(Level.WARNING, "Could not clean up invalid Weddings: " + e.getMessage(), e);
 		} finally {

@@ -257,7 +257,7 @@ public class HellboundManager {
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
-		_log.config("HellboundManager: Loaded " + _population.size() + " npc spawn locations.");
+		_log.config("HellboundManager: " + _population.size() + "개 NPC 스폰 위치가 로드되었습니다.");
 	}
 	
 	public static final class HellboundSpawn extends L2Spawn {

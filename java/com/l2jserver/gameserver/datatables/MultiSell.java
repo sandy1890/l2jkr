@@ -227,7 +227,7 @@ public class MultiSell {
 			}
 		}
 		verify();
-		_log.log(Level.INFO, "MultiSell: Loaded " + _entries.size() + " lists.");
+		_log.log(Level.INFO, "MultiSell: " + _entries.size() + "개 목록이 로드되었습니다.");
 	}
 	
 	private final ListContainer parseDocument(Document doc) {

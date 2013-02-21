@@ -275,7 +275,7 @@ public class GameServerThread extends Thread {
 	 * @param hosts The gameHost to set.
 	 */
 	public void setGameHosts(String[] hosts) {
-		_log.info("게임 서버 [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP가 업데이트 되었습니다.");
+		_log.info("게임 서버 [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP가 업데이트되었습니다.");
 		
 		_gsi.clearServerAddresses();
 		for (int i = 0; i < hosts.length; i += 2) {

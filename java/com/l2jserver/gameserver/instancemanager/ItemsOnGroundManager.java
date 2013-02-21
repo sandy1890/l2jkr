@@ -138,7 +138,7 @@ public class ItemsOnGroundManager {
 			rset.close();
 			statement.close();
 			
-			_log.info("ItemsOnGroundManager: Loaded " + count + " items.");
+			_log.info("ItemsOnGroundManager: " + count + "개 아이템이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Error while loading ItemsOnGround " + e.getMessage(), e);
 		} finally {

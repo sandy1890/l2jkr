@@ -57,12 +57,12 @@ public class InstanceManager extends DocumentParser {
 		final Instance multiverse = new Instance(-1);
 		multiverse.setName("multiverse");
 		_instanceList.put(-1, multiverse);
-		_log.info(getClass().getSimpleName() + ": Multiverse Instance created.");
+		_log.info(getClass().getSimpleName() + ": 멀티버스 인스턴스가 만들어졌습니다.");
 		// Creates the universe.
 		final Instance universe = new Instance(0);
 		universe.setName("universe");
 		_instanceList.put(0, universe);
-		_log.info(getClass().getSimpleName() + ": Universe Instance created.");
+		_log.info(getClass().getSimpleName() + ": 유니버스 인스턴스가 만들어졌습니다.");
 		load();
 	}
 	
@@ -70,7 +70,7 @@ public class InstanceManager extends DocumentParser {
 	public void load() {
 		_instanceIdNames.clear();
 		parseDatapackFile("data/instancenames.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _instanceIdNames.size() + " instance names.");
+		_log.info(getClass().getSimpleName() + ": " + _instanceIdNames.size() + "개 인스턴스 이름이 로드되었습니다.");
 	}
 	
 	/**

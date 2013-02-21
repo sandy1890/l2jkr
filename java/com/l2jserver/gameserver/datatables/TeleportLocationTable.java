@@ -75,7 +75,7 @@ public class TeleportLocationTable {
 			rset.close();
 			statement.close();
 			
-			_log.info("TeleportLocationTable: Loaded " + _teleports.size() + " Teleport Location Templates.");
+			_log.info("TeleportLocationTable: " + _teleports.size() + "개 텔레포트 위치 템플릿이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Error loading Teleport Table.", e);
 		} finally {
@@ -105,7 +105,7 @@ public class TeleportLocationTable {
 				statement.close();
 				_cTeleCount = _teleports.size() - _cTeleCount;
 				if (_cTeleCount > 0) {
-					_log.info("TeleportLocationTable: Loaded " + _cTeleCount + " Custom Teleport Location Templates.");
+					_log.info("TeleportLocationTable: " + _cTeleCount + "개 커스텀 텔레포트 위치 템플릿이 로드되었습니다.");
 				}
 			} catch (Exception e) {
 				_log.log(Level.WARNING, "Error while creating custom teleport table " + e.getMessage(), e);
