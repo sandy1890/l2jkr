@@ -25,41 +25,40 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
+ * 노블레스 전용 텔레포트
  * @author Plim Original python script by Ham Wong
  */
 public class NoblesseTeleport extends AbstractNpcAI {
 	
 	private static final int[] NPCs =
 	{
-		30006,
-		30059,
-		30080,
-		30134,
-		30146,
-		30177,
-		30233,
-		30256,
-		30320,
-		30540,
-		30576,
-		30836,
-		30848,
-		30878,
-		30899,
-		31275,
-		31320,
-		31964,
-		32163
+		30006, // 밀리아 - 말하는 섬 마을 게이트키퍼
+		30059, // 트리시아 - 디온성 마을 게이트키퍼
+		30080, // 크라비아 - 기란성 마을 게이트키퍼
+		30134, // 텔레포트 장치 - 다크엘프 마을
+		30146, // 텔레포트 장치 - 엘프 마을
+		30177, // 발렌티나 - 오렌성 마을 게이트키퍼
+		30233, // 에스메랄다 - 사냥꾼 마을 게이트키퍼
+		30256, // 베라돈나 - 글루디오성 마을 게이트키퍼
+		30320, // 리클린 - 글루딘 마을 게이트키퍼
+		30540, // 텔레포트 장치 - 드워프 마을
+		30576, // 텔레포트 장치 - 오크 마을
+		30836, // 미네베아 - 하딘의 사숙
+		30848, // 엘리자베스 - 아덴성 마을 게이트키퍼
+		30878, // 안젤리나 - 기란 항구
+		30899, // 플라우엔 - 하이네스 마을 게이트키퍼
+		31275, // 타티아나 - 고다드성 마을 게이트키퍼
+		31320, // 일리야나 - 루운성 마을 게이트키퍼
+		31964, // 빌리아 - 슈트가르트성 마을 게이트키퍼
+		32163, // 텔레포트 장치 - 카마엘 마을
 	};
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
-		
 		if (st == null) {
 			return null;
 		}
-		
 		if (event.equalsIgnoreCase("teleportWithToken")) {
 			if (st.hasQuestItems(13722)) {
 				npc.showChatWindow(player, 3);
@@ -67,7 +66,6 @@ public class NoblesseTeleport extends AbstractNpcAI {
 				return "noble-nopass.htm";
 			}
 		}
-		
 		return null;
 	}
 	
@@ -75,17 +73,14 @@ public class NoblesseTeleport extends AbstractNpcAI {
 	public String onTalk(L2Npc npc, L2PcInstance player) {
 		QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg(player);
-		
 		if (st == null) {
 			return htmltext;
 		}
-		
 		if (player.isNoble()) {
 			htmltext = "nobleteleporter.htm";
 		} else {
 			htmltext = "nobleteleporter-no.htm";
 		}
-		
 		return htmltext;
 	}
 	
