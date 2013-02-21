@@ -22,7 +22,8 @@ goto start
 
 :init
 set LLL=%~dp0
-FOR /F "delims=game" %%i IN ("%LLL%") do set iii=%%i
+::FOR /F "delims=game" %%i IN ("%LLL%") do set iii=%%i
+set iii=%LLL:~0,-5%
 call :check_libs
 call :try_java
 goto :eof
