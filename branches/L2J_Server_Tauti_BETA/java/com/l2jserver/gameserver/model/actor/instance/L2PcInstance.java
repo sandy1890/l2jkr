@@ -7460,7 +7460,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else if (level > 0)
 		{
-			_log.warning(_accessLevel.getName() + " access level set for character " + getName() + "! Just a warning to be careful ;)");
+			_log.warning("캐릭터: " + getName() + "님은 " + _accessLevel.getName() + " 접근 레벨이 설정되어 있습니다.");
 		}
 	}
 	
