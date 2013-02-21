@@ -50,7 +50,7 @@ public final class StaticObjects extends DocumentParser {
 	public void load() {
 		_staticObjects.clear();
 		parseDatapackFile("data/staticObjects.xml");
-		_log.info("StaticObject: Loaded " + _staticObjects.size() + " StaticObject Templates.");
+		_log.info("StaticObject: " + _staticObjects.size() + " StaticObject 템플릿이 로드되었습니다.");
 	}
 	
 	@Override

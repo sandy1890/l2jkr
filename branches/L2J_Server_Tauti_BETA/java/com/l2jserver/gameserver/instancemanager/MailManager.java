@@ -48,6 +48,9 @@ public class MailManager {
 	
 	private final L2TIntObjectHashMap<Message> _messages = new L2TIntObjectHashMap<>();
 	
+	/**
+	 * @return
+	 */
 	public static MailManager getInstance() {
 		return SingletonHolder._instance;
 	}
@@ -61,22 +64,15 @@ public class MailManager {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM messages ORDER BY expiration");
 			// stmt2 = con.prepareStatement("SELECT * FROM attachments WHERE messageId = ?");
-			
 			ResultSet rset1 = statement.executeQuery();
 			while (rset1.next()) {
-				
 				Message msg = new Message(rset1);
-				
 				int msgId = msg.getId();
 				_messages.put(msgId, msg);
-				
 				count++;
-				
 				long expiration = msg.getExpiration();
-				
 				if (expiration < System.currentTimeMillis()) {
 					ThreadPoolManager.getInstance().scheduleGeneral(new MessageDeletionTask(msgId), 10000);
 				} else {
@@ -86,21 +82,32 @@ public class MailManager {
 			rset1.close();
 			statement.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Mail Manager: Error loading from database:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "메일 관리: 데이터베이스에서 가져오는 중 오류가 발생했습니다:" + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
-		_log.info("Mail Manager: Successfully loaded " + count + " messages.");
+		_log.info("메일 관리: " + count + "개 메시지가 성공적으로 로드되었습니다.");
 	}
 	
+	/**
+	 * @param msgId
+	 * @return
+	 */
 	public final Message getMessage(int msgId) {
 		return _messages.get(msgId);
 	}
 	
+	/**
+	 * @return
+	 */
 	public final Message[] getMessages() {
 		return _messages.values(new Message[0]);
 	}
 	
+	/**
+	 * @param player
+	 * @return
+	 */
 	public final boolean hasUnreadPost(L2PcInstance player) {
 		final int objectId = player.getObjectId();
 		for (Message msg : getMessages()) {
@@ -111,6 +118,10 @@ public class MailManager {
 		return false;
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public final int getInboxSize(int objectId) {
 		int size = 0;
 		for (Message msg : getMessages()) {
@@ -121,6 +132,10 @@ public class MailManager {
 		return size;
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public final int getOutboxSize(int objectId) {
 		int size = 0;
 		for (Message msg : getMessages()) {
@@ -131,6 +146,10 @@ public class MailManager {
 		return size;
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public final List<Message> getInbox(int objectId) {
 		List<Message> inbox = new FastList<>();
 		for (Message msg : getMessages()) {
@@ -141,6 +160,10 @@ public class MailManager {
 		return inbox;
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public final List<Message> getOutbox(int objectId) {
 		List<Message> outbox = new FastList<>();
 		for (Message msg : getMessages()) {
@@ -151,6 +174,9 @@ public class MailManager {
 		return outbox;
 	}
 	
+	/**
+	 * @param msg
+	 */
 	public void sendMessage(Message msg) {
 		_messages.put(msg.getId(), msg);
 		
@@ -161,7 +187,7 @@ public class MailManager {
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Mail Manager: Error saving message:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "메일 관리: 메시지 저장 중 오류가 발생했습니다:" + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -179,6 +205,9 @@ public class MailManager {
 		
 		final int _msgId;
 		
+		/**
+		 * @param msgId
+		 */
 		public MessageDeletionTask(int msgId) {
 			_msgId = msgId;
 		}
@@ -210,13 +239,16 @@ public class MailManager {
 						receiver.sendPacket(sm);
 					}
 				} catch (Exception e) {
-					_log.log(Level.WARNING, "Mail Manager: Error returning items:" + e.getMessage(), e);
+					_log.log(Level.WARNING, "메일 관리: 아이템 리턴중 오류가 발생했습니다:" + e.getMessage(), e);
 				}
 			}
 			deleteMessageInDb(msg.getId());
 		}
 	}
 	
+	/**
+	 * @param msgId
+	 */
 	public final void markAsReadInDb(int msgId) {
 		Connection con = null;
 		try {
@@ -226,81 +258,81 @@ public class MailManager {
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Mail Manager: Error marking as read message:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "메일 관리: 메시지 읽기 마크 중 오류가 발생했습니다:" + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
+	/**
+	 * @param msgId
+	 */
 	public final void markAsDeletedBySenderInDb(int msgId) {
 		Connection con = null;
 		PreparedStatement stmt = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			stmt = con.prepareStatement("UPDATE messages SET isDeletedBySender = 'true' WHERE messageId = ?");
-			
 			stmt.setInt(1, msgId);
-			
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Mail Manager: Error marking as deleted by sender message:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "메일 관리: 보낸 메시지에서 삭제 된 것으로 표시 오류가 발생했습니다.:" + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
+	/**
+	 * @param msgId
+	 */
 	public final void markAsDeletedByReceiverInDb(int msgId) {
 		Connection con = null;
 		PreparedStatement stmt = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			stmt = con.prepareStatement("UPDATE messages SET isDeletedByReceiver = 'true' WHERE messageId = ?");
-			
 			stmt.setInt(1, msgId);
-			
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Mail Manager: Error marking as deleted by receiver message:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "메일 관리: 수신자 메시지가 삭제 된 것으로 표시 오류가 발생했습니다.:" + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
+	/**
+	 * @param msgId
+	 */
 	public final void removeAttachmentsInDb(int msgId) {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement stmt = con.prepareStatement("UPDATE messages SET hasAttachments = 'false' WHERE messageId = ?");
-			
 			stmt.setInt(1, msgId);
-			
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Mail Manager: Error removing attachments in message:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "메일 관리: 메시지에서 첨부 파일을 제거하는 동안 오류가 발생했습니다.:" + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
+	/**
+	 * @param msgId
+	 */
 	public final void deleteMessageInDb(int msgId) {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement stmt = con.prepareStatement("DELETE FROM messages WHERE messageId = ?");
-			
 			stmt.setInt(1, msgId);
-			
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Mail Manager: Error deleting message:" + e.getMessage(), e);
+			_log.log(Level.WARNING, "메일 관리: 메시지 삭제 중 오류가 발생했습니다:" + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}

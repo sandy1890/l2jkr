@@ -79,7 +79,7 @@ public class RaidBossPointsManager {
 			}
 			rset.close();
 			statement.close();
-			_log.info(getClass().getSimpleName() + ": Loaded " + _list.size() + " Characters Raid Points.");
+			_log.info(getClass().getSimpleName() + ": " + _list.size() + "개 캐릭터 레이드 포인트가 로드되었습니다.");
 		} catch (SQLException e) {
 			_log.log(Level.WARNING, "RaidPointsManager: Couldnt load raid points ", e);
 		} finally {

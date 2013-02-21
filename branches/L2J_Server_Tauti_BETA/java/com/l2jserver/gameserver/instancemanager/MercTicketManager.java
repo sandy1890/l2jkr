@@ -190,7 +190,7 @@ public class MercTicketManager {
 			rs.close();
 			statement.close();
 			
-			_log.info("Loaded: " + _droppedTickets.size() + " Mercenary Tickets");
+			_log.info(_droppedTickets.size() + "개 용병 티켓이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: loadMercenaryData(): " + e.getMessage(), e);
 		} finally {

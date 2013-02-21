@@ -559,7 +559,7 @@ public class L2SignsPriestInstance extends L2Npc {
 						
 						player.teleToLocation(x, y, z);
 					} catch (Exception e) {
-						_log.log(Level.WARNING, "SevenSigns: Error occurred while teleporting player: " + e.getMessage(), e);
+						_log.log(Level.WARNING, "세븐사인: Error occurred while teleporting player: " + e.getMessage(), e);
 					}
 				break;
 				case 16:

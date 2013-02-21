@@ -362,6 +362,9 @@ public class AwakingManager {
 		1600
 	};
 	
+	/**
+	 * @return
+	 */
 	public static final AwakingManager getInstance() {
 		return SingletonHolder._instance;
 	}
@@ -371,7 +374,7 @@ public class AwakingManager {
 	}
 	
 	public void load() {
-		_log.info(getClass().getSimpleName() + ": Initializing");
+		_log.info(getClass().getSimpleName() + ": 초기화");
 		_CA.clear();
 		
 		//@formatter:off
@@ -420,7 +423,7 @@ public class AwakingManager {
 		_CA.put(105, 146);
 		_CA.put(112, 146);
 		
-		_log.info(getClass().getSimpleName() + ": Loaded 8 Awaking class for " + _CA.size() + " normal class.");
+		_log.info(getClass().getSimpleName() + ": 8개 각성 클래스, " + _CA.size() + "개 일반 클래스가 로드되었습니다.");
 	}
 	
 	/**

@@ -113,8 +113,8 @@ public final class ClanHallManager {
 			
 			rs.close();
 			statement.close();
-			_log.info("Loaded: " + getClanHalls().size() + " clan halls");
-			_log.info("Loaded: " + getFreeClanHalls().size() + " free clan halls");
+			_log.info(getClanHalls().size() + "개 아지트가 로드되었습니다.");
+			_log.info(getFreeClanHalls().size() + "개 무료 아지트가 로드되었습니다.");
 			_loaded = true;
 		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception: ClanHallManager.load(): " + e.getMessage(), e);

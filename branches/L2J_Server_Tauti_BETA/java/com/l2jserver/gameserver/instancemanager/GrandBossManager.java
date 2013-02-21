@@ -127,7 +127,7 @@ public class GrandBossManager {
 				
 				info = null;
 			}
-			_log.info("GrandBossManager: Loaded " + _storedInfo.size() + " Instances");
+			_log.info("GrandBossManager: " + _storedInfo.size() + "개 인스턴스가 로드되었습니다.");
 			
 			rset.close();
 			statement.close();

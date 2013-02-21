@@ -32,12 +32,16 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Couple;
 
 /**
+ * 커플 관리
  * @author evill33t
  */
 public class CoupleManager {
 	
 	private static final Logger _log = Logger.getLogger(CoupleManager.class.getName());
 	
+	/**
+	 * 커플 관리 로드
+	 */
 	protected CoupleManager() {
 		load();
 	}
@@ -48,36 +52,41 @@ public class CoupleManager {
 	
 	private FastList<Couple> _couples;
 	
+	/**
+	 * 커플 리로드
+	 */
 	public void reload() {
 		getCouples().clear();
 		load();
 	}
 	
+	/**
+	 * 커플 로드
+	 */
 	private final void load() {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement("SELECT id FROM mods_wedding ORDER BY id");
 			ResultSet rs = statement.executeQuery();
-			
 			while (rs.next()) {
 				getCouples().add(new Couple(rs.getInt("id")));
 			}
-			
 			rs.close();
 			statement.close();
-			
-			_log.info("Loaded: " + getCouples().size() + " couples(s)");
+			_log.info(getCouples().size() + "개 커플이 로드되었습니다.");
 		} catch (Exception e) {
-			_log.log(Level.SEVERE, "Exception: CoupleManager.load(): " + e.getMessage(), e);
-		}
-		
-		finally {
+			_log.log(Level.SEVERE, "예외: CoupleManager.load(): " + e.getMessage(), e);
+		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
+	/**
+	 * 커플 가져옴
+	 * @param coupleId
+	 * @return
+	 */
 	public final Couple getCouple(int coupleId) {
 		int index = getCoupleIndex(coupleId);
 		if (index >= 0) {
@@ -86,12 +95,16 @@ public class CoupleManager {
 		return null;
 	}
 	
+	/**
+	 * 커플 생성
+	 * @param player1
+	 * @param player2
+	 */
 	public void createCouple(L2PcInstance player1, L2PcInstance player2) {
 		if ((player1 != null) && (player2 != null)) {
 			if ((player1.getPartnerId() == 0) && (player2.getPartnerId() == 0)) {
 				int _player1id = player1.getObjectId();
 				int _player2id = player2.getObjectId();
-				
 				Couple _new = new Couple(player1, player2);
 				getCouples().add(_new);
 				player1.setPartnerId(_player2id);
@@ -102,6 +115,10 @@ public class CoupleManager {
 		}
 	}
 	
+	/**
+	 * 커플 삭제
+	 * @param coupleId
+	 */
 	public void deleteCouple(int coupleId) {
 		int index = getCoupleIndex(coupleId);
 		Couple couple = getCouples().get(index);
@@ -125,6 +142,11 @@ public class CoupleManager {
 		}
 	}
 	
+	/**
+	 * 커플 ID 가져옴
+	 * @param coupleId
+	 * @return
+	 */
 	public final int getCoupleIndex(int coupleId) {
 		int i = 0;
 		for (Couple temp : getCouples()) {
@@ -136,6 +158,9 @@ public class CoupleManager {
 		return -1;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final FastList<Couple> getCouples() {
 		if (_couples == null) {
 			_couples = new FastList<>();

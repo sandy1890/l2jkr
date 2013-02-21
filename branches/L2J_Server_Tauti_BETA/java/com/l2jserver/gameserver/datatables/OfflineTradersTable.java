@@ -122,21 +122,24 @@ public class OfflineTradersTable {
 						con.commit(); // flush
 					}
 				} catch (Exception e) {
-					_log.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: Error while saving offline trader: " + pc.getObjectId() + " " + e, e);
+					_log.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: 오프라인 거래 저장 중 오류가 발생했습니다: " + pc.getObjectId() + " " + e, e);
 				}
 			}
 			stm.close();
 			stm_items.close();
-			_log.info("Offline traders stored.");
+			_log.info("오프라인 거래가 저장되었습니다.");
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: Error while saving offline traders: " + e, e);
+			_log.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: 오프라인 거래 저장 중 오류가 발생했습니다: " + e, e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 	}
 	
+	/**
+	 * 오프라인 거래 복구
+	 */
 	public static void restoreOfflineTraders() {
-		_log.info("Loading offline traders...");
+		_log.info("오프라인 거래 로딩 중...");
 		Connection con = null;
 		int nTraders = 0;
 		try {
@@ -218,7 +221,7 @@ public class OfflineTradersTable {
 					player.broadcastUserInfo();
 					nTraders++;
 				} catch (Exception e) {
-					_log.log(Level.WARNING, "OfflineTradersTable[loadOffliners()]: Error loading trader: " + player, e);
+					_log.log(Level.WARNING, "OfflineTradersTable[loadOffliners()]: 거래 로딩 중 오류가 발생했습니다: " + player, e);
 					if (player != null) {
 						player.deleteMe();
 					}
@@ -226,7 +229,7 @@ public class OfflineTradersTable {
 			}
 			rs.close();
 			stm.close();
-			_log.info("Loaded: " + nTraders + " offline trader(s)");
+			_log.info(nTraders + "개 오프라인 거래가 로드되었습니다.");
 			stm = con.prepareStatement(CLEAR_OFFLINE_TABLE);
 			stm.execute();
 			stm.close();
@@ -234,7 +237,7 @@ public class OfflineTradersTable {
 			stm.execute();
 			stm.close();
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "OfflineTradersTable[loadOffliners()]: Error while loading offline traders: ", e);
+			_log.log(Level.WARNING, "OfflineTradersTable[loadOffliners()]: 오프라인 거래 로딩 중 오류가 발생했습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}

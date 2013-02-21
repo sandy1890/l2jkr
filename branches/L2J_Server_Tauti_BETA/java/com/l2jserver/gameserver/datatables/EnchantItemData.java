@@ -52,8 +52,8 @@ public class EnchantItemData extends DocumentParser {
 		_scrolls.clear();
 		_supports.clear();
 		parseDatapackFile("data/enchantData.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _scrolls.size() + " Enchant Scrolls.");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _supports.size() + " Support Items.");
+		_log.info(getClass().getSimpleName() + ": " + _scrolls.size() + "개 인챈트 주문서가 로드되었습니다.");
+		_log.info(getClass().getSimpleName() + ": " + _supports.size() + "개 지원 아이템이 로드되었습니다.");
 	}
 	
 	@Override

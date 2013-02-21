@@ -87,7 +87,7 @@ public class LevelUpData {
 			rset.close();
 			statement.close();
 			
-			_log.info("LevelUpData: Loaded " + _lvlTable.size() + " Character Level Up Templates.");
+			_log.info("LevelUpData: " + _lvlTable.size() + "개 캐릭터 레벨 업 템플릿이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Error loading Level Up data.", e);
 		} finally {

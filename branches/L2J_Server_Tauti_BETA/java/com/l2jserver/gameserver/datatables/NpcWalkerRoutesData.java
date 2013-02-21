@@ -50,7 +50,7 @@ public class NpcWalkerRoutesData extends DocumentParser {
 	public void load() {
 		_routes.clear();
 		parseDatapackFile("data/WalkerRoutes.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _routes.size() + " Npc Walker Routes.");
+		_log.info(getClass().getSimpleName() + ": " + _routes.size() + "개 NPC 보행 경로가 로드되었습니다.");
 	}
 	
 	@Override

@@ -144,7 +144,7 @@ public class HelperBuffTable {
 			_helperBuff.add(template);
 		}
 		
-		_log.info("Helper Buff Table: Loaded " + _helperBuff.size() + " Templates.");
+		_log.info("Helper Buff Table: " + _helperBuff.size() + "개 버프 템플릿이 로드되었습니다.");
 		
 	}
 	

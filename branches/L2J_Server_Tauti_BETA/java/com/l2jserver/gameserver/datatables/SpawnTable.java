@@ -121,7 +121,7 @@ public class SpawnTable {
 			L2DatabaseFactory.close(con);
 		}
 		
-		_log.info("SpawnTable: Loaded " + _spawntable.size() + " Npc Spawn Locations.");
+		_log.info("SpawnTable: " + _spawntable.size() + "개 NPC 스폰 위치가 로드되었습니다.");
 		
 		if (Config.CUSTOM_SPAWNLIST_TABLE) {
 			try {
@@ -181,7 +181,7 @@ public class SpawnTable {
 			} finally {
 				L2DatabaseFactory.close(con);
 			}
-			_log.info("CustomSpawnTable: Loaded " + _customSpawnCount + " Npc Spawn Locations.");
+			_log.info("CustomSpawnTable: " + _customSpawnCount + "개 NPC 스폰 위치가 로드되었습니다.");
 			
 		}
 		

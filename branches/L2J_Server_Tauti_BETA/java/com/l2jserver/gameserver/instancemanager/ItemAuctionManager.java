@@ -109,7 +109,7 @@ public final class ItemAuctionManager {
 					}
 				}
 			}
-			_log.log(Level.INFO, "ItemAuctionManager: Loaded " + _managerInstances.size() + " instance(s).");
+			_log.log(Level.INFO, "ItemAuctionManager: " + _managerInstances.size() + "개 인스턴스가 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "ItemAuctionManager: Failed loading auctions from xml.", e);
 		}

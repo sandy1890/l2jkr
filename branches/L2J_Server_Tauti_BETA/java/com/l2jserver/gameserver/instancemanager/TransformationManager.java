@@ -43,7 +43,7 @@ public class TransformationManager {
 	}
 	
 	public void report() {
-		_log.info("Loaded: " + _transformations.size() + " transformations.");
+		_log.info(_transformations.size() + "개 변신이 로드되었습니다.");
 	}
 	
 	public boolean transformPlayer(int id, L2PcInstance player) {

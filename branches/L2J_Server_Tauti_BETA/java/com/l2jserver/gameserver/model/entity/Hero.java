@@ -219,13 +219,13 @@ public class Hero {
 			rset.close();
 			statement.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Hero System: Couldnt load Heroes", e);
+			_log.log(Level.WARNING, "영웅 시스템: Couldnt load Heroes", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
 		
-		_log.info("Hero System: Loaded " + _heroes.size() + " Heroes.");
-		_log.info("Hero System: Loaded " + _completeHeroes.size() + " all time Heroes.");
+		_log.info("영웅 시스템: " + _heroes.size() + "개 영웅이 로드되었습니다.");
+		_log.info("영웅 시스템: " + _completeHeroes.size() + "개 모든 영웅 시간이 로드되었습니다.");
 	}
 	
 	private String calcFightTime(long FightTime) {
@@ -255,7 +255,7 @@ public class Hero {
 			rset.close();
 			statement.close();
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Hero System: Couldnt load Hero Message for CharId: " + charId, e);
+			_log.log(Level.WARNING, "영웅 시스템: Couldnt load Hero Message for CharId: " + charId, e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -311,9 +311,9 @@ public class Hero {
 			
 			_herodiary.put(charId, _diary);
 			
-			_log.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
+			_log.info("영웅 시스템: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Hero System: Couldnt load Hero Diary for CharId: " + charId, e);
+			_log.log(Level.WARNING, "영웅 시스템: Couldnt load Hero Diary for CharId: " + charId, e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -447,9 +447,9 @@ public class Hero {
 			_herocounts.put(charId, _herocountdata);
 			_herofights.put(charId, _fights);
 			
-			_log.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
+			_log.info("영웅 시스템: " + numberoffights + "개 파이터, 영웅: " + CharNameTable.getInstance().getNameById(charId) + " 로드되었습니다.");
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Hero System: Couldnt load Hero fights history for CharId: " + charId, e);
+			_log.log(Level.WARNING, "영웅 시스템: Couldnt load Hero fights history for CharId: " + charId, e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -849,7 +849,7 @@ public class Hero {
 				}
 			}
 		} catch (SQLException e) {
-			_log.log(Level.WARNING, "Hero System: Couldnt update Heroes", e);
+			_log.log(Level.WARNING, "영웅 시스템: 영웅 업데이트 중에 오류가 발생했습니다: ", e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}

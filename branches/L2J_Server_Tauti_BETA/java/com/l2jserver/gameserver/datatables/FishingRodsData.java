@@ -47,7 +47,7 @@ public final class FishingRodsData extends DocumentParser {
 	public void load() {
 		_fishingRods.clear();
 		parseDatapackFile("data/stats/fishing/fishingRods.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _fishingRods.size() + " Fishing Rods.");
+		_log.info(getClass().getSimpleName() + ": " + _fishingRods.size() + "개 낚시대가 로드되었습니다.");
 	}
 	
 	@Override

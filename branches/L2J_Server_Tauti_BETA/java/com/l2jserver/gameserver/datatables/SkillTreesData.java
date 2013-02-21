@@ -1028,21 +1028,21 @@ public final class SkillTreesData extends DocumentParser {
 		}
 		
 		final String className = getClass().getSimpleName();
-		_log.info(className + ": Loaded " + classSkillTreeCount + " Class Skills for " + _classSkillTrees.size() + " Class Skill Trees.");
-		_log.info(className + ": Loaded " + _subClassSkillTree.size() + " Sub-Class Skills.");
+		_log.info(className + ": " + classSkillTreeCount + "개 클래스 스킬, " + _classSkillTrees.size() + "개 클래스 스킬 트리가 로드되었습니다.");
+		_log.info(className + ": " + _subClassSkillTree.size() + "개 서브 스킬이 로드되었습니다.");
 		_log.info(className + ": Loaded " + trasferSkillTreeCount + " Transfer Skills for " + _transferSkillTrees.size() + " Transfer Skill Trees.");
-		_log.info(className + ": Loaded " + _fishingSkillTree.size() + " Fishing Skills, " + dwarvenOnlyFishingSkillCount + " Dwarven only Fishing Skills.");
-		_log.info(className + ": Loaded " + _collectSkillTree.size() + " Collect Skills.");
+		_log.info(className + ": " + _fishingSkillTree.size() + " Fishing Skills, " + dwarvenOnlyFishingSkillCount + "개 드워프 전용 낚시 스킬이 로드되었습니다.");
+		_log.info(className + ": " + _collectSkillTree.size() + "개 배운 스킬이 로드되었습니다.");
 		_log.info(className + ": Loaded " + _pledgeSkillTree.size() + " Pledge Skills, " + (_pledgeSkillTree.size() - resSkillCount) + " for Pledge and " + resSkillCount + " Residential.");
-		_log.info(className + ": Loaded " + _subPledgeSkillTree.size() + " Sub-Pledge Skills.");
-		_log.info(className + ": Loaded " + _transformSkillTree.size() + " Transform Skills.");
-		_log.info(className + ": Loaded " + _nobleSkillTree.size() + " Noble Skills.");
-		_log.info(className + ": Loaded " + _heroSkillTree.size() + " Hero Skills.");
-		_log.info(className + ": Loaded " + _gameMasterSkillTree.size() + " Game Master Skills.");
-		_log.info(className + ": Loaded " + _gameMasterAuraSkillTree.size() + " Game Master Aura Skills.");
+		_log.info(className + ": " + _subPledgeSkillTree.size() + "개 서브잡 스킬이 로드되었습니다.");
+		_log.info(className + ": " + _transformSkillTree.size() + "개 변신 스킬이 로드되었습니다.");
+		_log.info(className + ": " + _nobleSkillTree.size() + "개 노블레스 스킬이 로드되었습니다.");
+		_log.info(className + ": " + _heroSkillTree.size() + "개 영웅 스킬이 로드되었습니다.");
+		_log.info(className + ": " + _gameMasterSkillTree.size() + "개 GM 스킬이 로드되었습니다.");
+		_log.info(className + ": " + _gameMasterAuraSkillTree.size() + "개 GM 아우라 스킬이 로드되었습니다.");
 		final int commonSkills = _commonSkillTree.size();
 		if (commonSkills > 0) {
-			_log.info(className + ": Loaded " + commonSkills + " Common Skills to all classes.");
+			_log.info(className + ": " + commonSkills + "개 공통 스킬, 모든 클래스가 로드되었습니다.");
 		}
 	}
 	

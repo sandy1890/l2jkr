@@ -145,7 +145,7 @@ public class MerchantPriceConfigTable implements InstanceListManager {
 	public void loadInstances() {
 		try {
 			loadXML();
-			_log.info("MerchantPriceConfigTable: Loaded " + _mpcs.size() + " merchant price configs.");
+			_log.info("MerchantPriceConfigTable: " + _mpcs.size() + "개 판매자 가격 환경이 로드되었습니다.");
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "Failed loading MerchantPriceConfigTable. Reason: " + e.getMessage(), e);
 		}

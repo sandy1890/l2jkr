@@ -48,9 +48,9 @@ public final class ExperienceTable extends DocumentParser {
 	public void load() {
 		_expTable.clear();
 		parseDatapackFile("data/stats/experience.xml");
-		_log.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
-		_log.info(getClass().getSimpleName() + ": Max Player Level is: " + (MAX_LEVEL - 1));
-		_log.info(getClass().getSimpleName() + ": Max Pet Level is: " + (MAX_PET_LEVEL - 1));
+		_log.info(getClass().getSimpleName() + ": " + _expTable.size() + " 레벨이 로드되었습니다.");
+		_log.info(getClass().getSimpleName() + ": 최대 플레이어 레벨: " + (MAX_LEVEL - 1));
+		_log.info(getClass().getSimpleName() + ": 최대 펫 레벨: " + (MAX_PET_LEVEL - 1));
 	}
 	
 	@Override

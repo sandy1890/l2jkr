@@ -30,9 +30,6 @@ import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-//rocknow-God-Awaking
-//rocknow-God-Awaking
-//rocknow-God-Awaking
 
 /**
  * This class ...
@@ -45,16 +42,18 @@ public class SkillNameTable {
 	private final FastList<Nametable> tables = new FastList<>();
 	
 	protected class Nametable {
-		public String name;
-		public int id;
-		public int level;
+		public String name; // 스킬 이름
+		public int id; // 스킬 번호
+		public int level; // 스킬 레벨
 	}
 	
+	/**
+	 * @return
+	 */
 	public static SkillNameTable getInstance() {
 		if (_instance == null) {
 			_instance = new SkillNameTable();
 		}
-		
 		return _instance;
 	}
 	
@@ -80,18 +79,16 @@ public class SkillNameTable {
 				data.id = skilldata.getInt("skill_id");
 				data.level = skilldata.getInt("level");
 				data.name = skilldata.getString("name");
-				
 				if (tables == null) {
 					new FastList<Nametable>();
 				}
-				
 				tables.add(data);
 				count++;
 			}
 			skilldata.close();
 			statement.close();
 		} catch (Exception e) {
-			_log.warning("Skill Name Table: FAILED");
+			_log.warning("스킬 이름 테이블: 스킬 이름 데이터를 가져 오는중 오류가 발생했습니다.");
 			_log.warning("" + e);
 		} finally {
 			L2DatabaseFactory.close(con);
@@ -104,14 +101,17 @@ public class SkillNameTable {
 				SkillTable.getInstance()._skills.get(SkillTable.getSkillHashCode(n.id, n.level)).setName(n.name);
 			}
 		}
-		_log.warning("Skill Name Table: " + count + " Name.");
+		_log.warning("스킬 이름 테이블: " + count + "개 이름.");
 	}
 	
-	// rocknow-God-Awaking-Start
+	/**
+	 * @param player
+	 * @param classId
+	 * @return
+	 */
 	public L2SkillLearn[] getAvailableSkills(L2PcInstance player, ClassId classId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	// rocknow-God-Awaking-End
 	
 }

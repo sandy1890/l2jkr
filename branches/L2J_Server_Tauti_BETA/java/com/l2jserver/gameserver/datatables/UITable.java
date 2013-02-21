@@ -51,8 +51,8 @@ public class UITable {
 	protected UITable() {
 		parseCatData();
 		parseKeyData();
-		_log.info("UITable: Loaded " + _storedCategories.size() + " Categories.");
-		_log.info("UITable: Loaded " + _storedKeys.size() + " Keys.");
+		_log.info("UITable: " + _storedCategories.size() + "개 카테고리가 로드되었습니다.");
+		_log.info("UITable: " + _storedKeys.size() + "개 키.");
 	}
 	
 	private void parseCatData() {
