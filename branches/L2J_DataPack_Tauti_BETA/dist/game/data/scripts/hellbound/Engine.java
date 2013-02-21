@@ -45,25 +45,14 @@ public class Engine extends Quest implements Runnable {
 	
 	private static final int UPDATE_INTERVAL = 10000;
 	
-	private static final int[][] DOOR_LIST =
-	{
-		{
-			19250001,
-			5
-		},
-		{
-			19250002,
-			5
-		},
-		{
-			20250001,
-			9
-		},
-		{
-			20250002,
-			7
-		}
+	//@formatter:off
+	private static final int[][] DOOR_LIST = {
+		{ 19250001, 5 },
+		{ 19250002, 5 },
+		{ 20250001, 9 },
+		{ 20250002, 7 }
 	};
+	//@formatter:on
 	
 	private static final int[] MAX_TRUST =
 	{
@@ -81,7 +70,7 @@ public class Engine extends Quest implements Runnable {
 		0
 	};
 	
-	private static final String ANNOUNCE = "Hellbound now has reached level: %lvl%";
+	private static final String ANNOUNCE = "헬바운드는 지금 %lvl%단계에 도달했습니다.";
 	
 	private int _cachedLevel = -1;
 	
@@ -94,6 +83,12 @@ public class Engine extends Quest implements Runnable {
 		protected int maxHbLvl;
 		protected int lowestTrustLimit;
 		
+		/**
+		 * @param points
+		 * @param min
+		 * @param max
+		 * @param trust
+		 */
 		protected PointsInfoHolder(int points, int min, int max, int trust) {
 			pointsAmount = points;
 			minHbLvl = min;
@@ -102,6 +97,9 @@ public class Engine extends Quest implements Runnable {
 		}
 	}
 	
+	/**
+	 * @param newLevel
+	 */
 	private final void onLevelChange(int newLevel) {
 		try {
 			HellboundManager.getInstance().setMaxTrust(MAX_TRUST[newLevel]);
@@ -127,13 +125,13 @@ public class Engine extends Quest implements Runnable {
 					}
 				}
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "Hellbound doors problem!", e);
+				_log.log(Level.WARNING, "헬바운드 문에 오류가 발생했습니다!", e);
 			}
 		}
 		
 		if (_cachedLevel > 0) {
 			Announcements.getInstance().announceToAll(ANNOUNCE.replace("%lvl%", String.valueOf(newLevel)));
-			_log.info("HellboundEngine: New Level: " + newLevel);
+			_log.info("헬바운드 엔진: 새로운 단계: " + newLevel);
 		}
 		_cachedLevel = newLevel;
 	}
@@ -141,7 +139,7 @@ public class Engine extends Quest implements Runnable {
 	private void loadPointsInfoData() {
 		final File file = new File(Config.DATAPACK_ROOT, pointsInfoFile);
 		if (!file.exists()) {
-			_log.warning("Cannot locate points info file: " + pointsInfoFile);
+			_log.warning("포인트 정보 파일을 찾을 수 없습니다: " + pointsInfoFile);
 			return;
 		}
 		
@@ -152,7 +150,7 @@ public class Engine extends Quest implements Runnable {
 			factory.setIgnoringComments(true);
 			doc = factory.newDocumentBuilder().parse(file);
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Could not parse " + pointsInfoFile + " file: " + e.getMessage(), e);
+			_log.log(Level.WARNING, pointsInfoFile + " 파일을 파싱할 수 없습니다: " + e.getMessage(), e);
 			return;
 		}
 		
@@ -165,7 +163,7 @@ public class Engine extends Quest implements Runnable {
 						
 						att = attrs.getNamedItem("id");
 						if (att == null) {
-							_log.severe("[Hellbound Trust Points Info] Missing NPC ID, skipping record");
+							_log.severe("[헬바운드 신뢰 포인트 정보] Missing NPC ID, skipping record");
 							continue;
 						}
 						
@@ -173,21 +171,21 @@ public class Engine extends Quest implements Runnable {
 						
 						att = attrs.getNamedItem("points");
 						if (att == null) {
-							_log.severe("[Hellbound Trust Points Info] Missing reward point info for NPC ID " + npcId + ", skipping record");
+							_log.severe("[헬바운드 신뢰 포인트 정보] Missing reward point info for NPC ID " + npcId + ", skipping record");
 							continue;
 						}
 						int points = Integer.parseInt(att.getNodeValue());
 						
 						att = attrs.getNamedItem("minHellboundLvl");
 						if (att == null) {
-							_log.severe("[Hellbound Trust Points Info] Missing minHellboundLvl info for NPC ID " + npcId + ", skipping record");
+							_log.severe("[헬바운드 신뢰 포인트 정보] Missing minHellboundLvl info for NPC ID " + npcId + ", skipping record");
 							continue;
 						}
 						int minHbLvl = Integer.parseInt(att.getNodeValue());
 						
 						att = attrs.getNamedItem("maxHellboundLvl");
 						if (att == null) {
-							_log.severe("[Hellbound Trust Points Info] Missing maxHellboundLvl info for NPC ID " + npcId + ", skipping record");
+							_log.severe("[헬바운드 신뢰 포인트 정보] Missing maxHellboundLvl info for NPC ID " + npcId + ", skipping record");
 							continue;
 						}
 						int maxHbLvl = Integer.parseInt(att.getNodeValue());
@@ -203,15 +201,14 @@ public class Engine extends Quest implements Runnable {
 				}
 			}
 		}
-		_log.info("HellboundEngine: Loaded: " + pointsInfo.size() + " trust point reward data");
+		_log.info("헬바운드 엔진: " + pointsInfo.size() + " 신뢰 포인트 보상 데이터가 로드되었습니다.");
 	}
 	
 	@Override
 	public void run() {
 		int level = HellboundManager.getInstance().getLevel();
 		if ((level > 0) && (level == _cachedLevel)) {
-			if ((HellboundManager.getInstance().getTrust() == HellboundManager.getInstance().getMaxTrust()) && (level != 4)) // only exclusion is kill of Derek
-			{
+			if ((HellboundManager.getInstance().getTrust() == HellboundManager.getInstance().getMaxTrust()) && (level != 4)) { // only exclusion is kill of Derek
 				level++;
 				HellboundManager.getInstance().setLevel(level);
 				onLevelChange(level);
@@ -227,36 +224,36 @@ public class Engine extends Quest implements Runnable {
 		int npcId = npc.getNpcId();
 		if (pointsInfo.containsKey(npcId)) {
 			PointsInfoHolder npcInfo = pointsInfo.get(npcId);
-			
 			if ((HellboundManager.getInstance().getLevel() >= npcInfo.minHbLvl) && (HellboundManager.getInstance().getLevel() <= npcInfo.maxHbLvl) && ((npcInfo.lowestTrustLimit == 0) || (HellboundManager.getInstance().getTrust() > npcInfo.lowestTrustLimit))) {
 				HellboundManager.getInstance().updateTrust(npcInfo.pointsAmount, true);
 			}
-			
 			if ((npc.getNpcId() == 18465) && (HellboundManager.getInstance().getLevel() == 4)) {
 				HellboundManager.getInstance().setLevel(5);
 			}
 		}
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public Engine(int questId, String name, String descr) {
 		super(questId, name, descr);
 		HellboundManager.getInstance().registerEngine(this, UPDATE_INTERVAL);
 		loadPointsInfoData();
-		
 		// Register onKill for all rewardable monsters
 		for (int npcId : pointsInfo.keySet()) {
 			addKillId(npcId);
 		}
-		
-		_log.info("HellboundEngine: Mode: levels 0-3");
-		_log.info("HellboundEngine: Level: " + HellboundManager.getInstance().getLevel());
-		_log.info("HellboundEngine: Trust: " + HellboundManager.getInstance().getTrust());
+		_log.info("헬바운드 엔진: 모드: 단계 0-3");
+		_log.info("헬바운드 엔진: 단계: " + HellboundManager.getInstance().getLevel());
+		_log.info("헬바운드 엔진: 신뢰도: " + HellboundManager.getInstance().getTrust());
 		if (HellboundManager.getInstance().isLocked()) {
-			_log.info("HellboundEngine: State: locked");
+			_log.info("헬바운드 엔진: 상태: 잠겼습니다.");
 		} else {
-			_log.info("HellboundEngine: State: unlocked");
+			_log.info("헬바운드 엔진: 상태: 해제되었습니다.");
 		}
 	}
 	
