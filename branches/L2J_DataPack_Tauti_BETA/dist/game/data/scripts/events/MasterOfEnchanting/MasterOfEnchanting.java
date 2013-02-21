@@ -284,7 +284,7 @@ public class MasterOfEnchanting extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new MasterOfEnchanting(-1, MasterOfEnchanting.class.getName(), "events");
+		new MasterOfEnchanting(-1, MasterOfEnchanting.class.getSimpleName(), "events");
 	}
 	
 }

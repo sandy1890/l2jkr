@@ -496,7 +496,7 @@ public class L2Day extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new L2Day(-1, L2Day.class.getName(), "events");
+		new L2Day(-1, L2Day.class.getSimpleName(), "events");
 	}
 	
 }

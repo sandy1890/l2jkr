@@ -213,7 +213,7 @@ public class PriestOfBlessing extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new PriestOfBlessing(-1, PriestOfBlessing.class.getName(), "retail");
+		new PriestOfBlessing(-1, PriestOfBlessing.class.getSimpleName(), "retail");
 	}
 	
 }
