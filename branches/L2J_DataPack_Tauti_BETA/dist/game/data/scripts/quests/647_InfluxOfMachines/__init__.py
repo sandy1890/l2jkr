@@ -44,7 +44,7 @@ class Quest (JQuest) :
 
  def onTalk (self, npc, player):
     st = player.getQuestState(qn)
-    htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+    htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
     if st :
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
@@ -86,10 +86,8 @@ class Quest (JQuest) :
                     st.giveItems(BROKEN_GOLEM_FRAGMENT,int(numItems))
     return
 
-QUEST       = Quest(647,qn,"暴走的機械們")
-
+QUEST       = Quest(647,qn,"폭주하는 기계들")
 QUEST.addStartNpc(32069)
-
 QUEST.addTalkId(32069)
 
 for i in range(22801,22812):
