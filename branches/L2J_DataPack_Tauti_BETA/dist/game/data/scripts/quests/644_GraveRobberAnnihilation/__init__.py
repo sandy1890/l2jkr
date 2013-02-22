@@ -7,13 +7,13 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "644_GraveRobberAnnihilation" 
 
-#Drop rate
+# 드랍 배율 %
 DROP_CHANCE = 75
-#Npc
-KARUDA      = 32017
-#Items
+# NPC
+KARUDA      = 32017 # 카루다
+# 아이템
 ORC_GOODS   = 8088
-#Rewards
+# 보상
 REWARDS = {
     "1" : [1865 , 30], #Varnish
     "2" : [1867 , 40], #Animal Skin
@@ -50,7 +50,7 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+		htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 
@@ -98,7 +98,7 @@ class Quest (JQuest) :
 						st.giveItems(ORC_GOODS,int(numItems))       
 		return
 
-QUEST       = Quest(644, qn, "盜墓者消滅作戰")
+QUEST       = Quest(644, qn, "도굴꾼 소탕작전")
 
 QUEST.addStartNpc(KARUDA)
 QUEST.addTalkId(KARUDA) 
