@@ -25,11 +25,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
+ * 글루디오 비행선 선착장 텔레포트
  * @author Plim Original python script by Kerberos
  */
 public class Survivor extends AbstractNpcAI {
 	
-	private static final int SURVIVOR = 32632;
+	private static final int SURVIVOR = 32632; // 그레시아 패잔병
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {

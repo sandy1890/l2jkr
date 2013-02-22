@@ -29,21 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
  */
 public class Nottingale extends Quest {
 	
-	private static final String qn = "Nottingale";
-	
-	private static final int NPC = 32627;
-	
-	/**
-	 * @param questId
-	 * @param name
-	 * @param descr
-	 */
-	public Nottingale(int questId, String name, String descr) {
-		super(questId, name, descr);
-		addStartNpc(NPC);
-		addFirstTalkId(NPC);
-		addTalkId(NPC);
-	}
+	private static final int NPC = 32627; // 마법사 노팅게일
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
@@ -77,7 +63,7 @@ public class Nottingale extends Quest {
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(Nottingale.class.getSimpleName());
 		if (st == null) {
 			st = newQuestState(player);
 		}
@@ -86,8 +72,20 @@ public class Nottingale extends Quest {
 		return null;
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public Nottingale(int questId, String name, String descr) {
+		super(questId, name, descr);
+		addStartNpc(NPC);
+		addFirstTalkId(NPC);
+		addTalkId(NPC);
+	}
+	
 	public static void main(String[] args) {
-		new Nottingale(-1, qn, "custom");
+		new Nottingale(-1, Nottingale.class.getSimpleName(), "custom");
 	}
 	
 }
