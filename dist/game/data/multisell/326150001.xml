@@ -1,195 +1,682 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<!-- 이도류 제작 -->
 	<item>
-		<!-- Vesper Cutter -->
+		<!-- 베스페르 커터 -->
 		<ingredient count="1" id="13457" />
-		<!-- Sirra's Blade -->
+		<!-- 시르 블레이드 -->
 		<ingredient count="1" id="8678" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="7168000" id="57" />
-		<!-- Vesper Dual Sword -->
+		<!-- 베스페르 듀얼 소드 -->
 		<production count="1" id="52" />
 	</item>
 	<item>
-		<!-- Dynasty Sword -->
+		<!-- 다이너스티 소드 -->
 		<ingredient count="1" id="9442" />
-		<!-- Dark Legion's Edge -->
+		<!-- 다크 레기온 -->
 		<ingredient count="1" id="2500" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="3747300" id="57" />
-		<!-- Dynasty Dual Sword -->
+		<!-- 다이너스티 듀얼 소드 -->
 		<production count="1" id="10004" />
 	</item>
 	<item>
-		<!-- Icarus Sawsword -->
+		<!-- 이카루스 소우소드 -->
 		<ingredient count="1" id="10215" />
-		<!-- Dark Legion's Edge -->
+		<!-- 다크 레기온 -->
 		<ingredient count="1" id="2500" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="5172000" id="57" />
-		<!-- Icarus Dual Sword -->
+		<!-- 이카루스 듀얼 소드 -->
 		<production count="1" id="10415" />
 	</item>
 	<item>
-		<!-- Dynasty Sword - Earth -->
+		<!-- 다이너스티 소드 - 대지 -->
 		<ingredient count="1" id="11272" />
-		<!-- Dark Legion's Edge -->
+		<!-- 다크 레기온 -->
 		<ingredient count="1" id="2500" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="3747300" id="57" />
-		<!-- Dynasty Dual Sword - Earth -->
+		<!-- 다이너스티 듀얼 소드 - 대지 -->
 		<production count="1" id="11251" />
 	</item>
 	<item>
-		<!-- Icarus Sawsword - Destruction -->
+		<!-- 이카루스 소우소드 - 파괴 -->
 		<ingredient count="1" id="11305" />
-		<!-- Dark Legion's Edge -->
+		<!-- 다크 레기온 -->
 		<ingredient count="1" id="2500" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="5172000" id="57" />
-		<!-- Icarus Dual Sword - Destruction -->
+		<!-- 이카루스 듀얼 소드 - 파괴 -->
 		<production count="1" id="11300" />
 	</item>
 	<item>
-		<!-- Dynasty Knife -->
+		<!-- 다이너스티 나이프 -->
 		<ingredient count="1" id="9446" />
-		<!-- Soul Separator -->
+		<!-- 소울세퍼레이터 -->
 		<ingredient count="1" id="236" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="4395000" id="57" />
-		<!-- Dynasty Dual Daggers -->
+		<!-- 다이너스티 단검 이도류 -->
 		<production count="1" id="13882" />
 	</item>
 	<item>
-		<!-- Icarus Disperser -->
+		<!-- 이카루스 디스퍼서 -->
 		<ingredient count="1" id="10216" />
-		<!-- Soul Separator -->
+		<!-- 소울세퍼레이터 -->
 		<ingredient count="1" id="236" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="6089000" id="57" />
-		<!-- Icarus Dual Daggers -->
+		<!-- 이카루스 단검 이도류 -->
 		<production count="1" id="13883" />
 	</item>
 	<item>
-		<!-- Dynasty Knife - Great Gale -->
+		<!-- 다이너스티 나이프 - 질풍 -->
 		<ingredient count="1" id="11247" />
-		<!-- Soul Separator -->
+		<!-- 소울세퍼레이터 -->
 		<ingredient count="1" id="236" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="4395000" id="57" />
-		<!-- Dynasty Dual Daggers - Great Gale -->
+		<!-- 다이너스티 단검 이도류 - 질풍 -->
 		<production count="1" id="14526" />
 	</item>
 	<item>
-		<!-- Icarus Disperser - Confusion -->
+		<!-- 이카루스 디스퍼서 - 혼란 -->
 		<ingredient count="1" id="11301" />
-		<!-- Soul Separator -->
+		<!-- 소울세퍼레이터 -->
 		<ingredient count="1" id="236" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="6089000" id="57" />
-		<!-- Icarus Dual Daggers - Confusion -->
+		<!-- 이카루스 단검 이도류 - 혼란 -->
 		<production count="1" id="14527" />
 	</item>
 	<item>
-		<!-- Vesper Shaper -->
+		<!-- 베스페르 셰이퍼 -->
 		<ingredient count="1" id="13460" />
-		<!-- Naga Storm -->
+		<!-- 나가 스톰 -->
 		<ingredient count="1" id="8682" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="8577000" id="57" />
-		<!-- Vesper Dual Daggers -->
+		<!-- 베스페르 단검 이도류 -->
 		<production count="1" id="13884" />
 	</item>
 	<item>
-		<!-- Vesper Cutter - Thunder -->
+		<!-- 베스페르 커터 - 천둥 -->
 		<ingredient count="1" id="16042" />
-		<!-- Sirra's Blade -->
+		<!-- 시르 블레이드 -->
 		<ingredient count="1" id="8678" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="7168000" id="57" />
-		<!-- Vesper Dual Sword - Destruction -->
+		<!-- 베스페르 듀얼 소드 - 파괴 -->
 		<production count="1" id="16150" />
 	</item>
 	<item>
-		<!-- Vesper Shaper - Gale -->
+		<!-- 베스페르 셰이퍼 - 질풍 -->
 		<ingredient count="1" id="16045" />
-		<!-- Naga Storm -->
+		<!-- 나가 스톰 -->
 		<ingredient count="1" id="8682" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="8577000" id="57" />
-		<!-- Vesper Dual Daggers - Gale -->
+		<!-- 베스페르 단검 이도류 - 질풍 -->
 		<production count="1" id="16148" />
 	</item>
 	<item>
-		<!-- Skull Edge -->
+		<!-- 스컬엣지 -->
 		<ingredient count="1" id="15559" />
-		<!-- Naga Storm -->
+		<!-- 나가 스톰 -->
 		<ingredient count="1" id="8682" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="12280000" id="57" />
-		<!-- Skull Edge Dual Daggers -->
+		<!-- 스컬엣지 단검 이도류 -->
 		<production count="1" id="16152" />
 	</item>
 	<item>
-		<!-- Periel Sword -->
+		<!-- 페리 엘 소드 -->
 		<ingredient count="1" id="15558" />
-		<!-- Sirra's Blade -->
+		<!-- 시르 블레이드 -->
 		<ingredient count="1" id="8678" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="9975000" id="57" />
-		<!-- Periel Dual Sword -->
+		<!-- 페리 엘 듀얼 소드 -->
 		<production count="1" id="16154" />
 	</item>
 	<item>
-		<!-- Mamba Edge -->
+		<!-- 맘바 엣지 -->
 		<ingredient count="1" id="15545" />
-		<!-- Angel Slayer -->
+		<!-- 엔젤 슬레이어 -->
 		<ingredient count="1" id="6367" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="17867000" id="57" />
-		<!-- Mamba Edge Dual Daggers -->
+		<!-- 맘바엣지 단검 이도류 -->
 		<production count="1" id="16156" />
 	</item>
 	<item>
-		<!-- Eternal Core Sword -->
+		<!-- 인세슨트코어 소드 -->
 		<ingredient count="1" id="15544" />
-		<!-- Forgotten Blade -->
+		<!-- 포가튼 블레이드 -->
 		<ingredient count="1" id="6364" />
-		<!-- Dualsword Craft Stamp -->
+		<!-- 이도류 제작 인지 -->
 		<ingredient count="1" id="5126" />
-		<!-- Adena -->
+		<!-- 아데나 -->
 		<ingredient count="13939000" id="57" />
-		<!-- Eternal Core Dual Sword -->
+		<!-- 인세슨트코어 듀얼 소드 -->
 		<production count="1" id="16158" />
+	</item>
+	<item>
+		<!-- 속박의 레퀴엠 커터 -->
+		<ingredient count="1" id="17832" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="1056500" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="43" id="17371" />
+		<!-- 속박의 레퀴엠 듀얼소드 -->
+		<production count="1" id="17842" />
+	</item>
+	<item>
+		<!-- 속박의 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17831" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="1056500" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="43" id="17371" />
+		<!-- 속박의 레퀴엠 듀얼대거 -->
+		<production count="1" id="17843" />
+	</item>
+	<item>
+		<!-- 속박의 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17834" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="1056500" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="43" id="17371" />
+		<!-- 속박의 레퀴엠 듀얼블런트 -->
+		<production count="1" id="17844" />
+	</item>
+	<item>
+		<!-- 속박의 레퀴엠 커터 -->
+		<ingredient count="1" id="17832" />
+		<!-- 속박의 레퀴엠 커터 -->
+		<ingredient count="1" id="17832" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="1782000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="72" id="17371" />
+		<!-- 속박의 아포칼립스 듀얼소드 -->
+		<production count="1" id="17876" />
+	</item>
+	<item>
+		<!-- 속박의 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17831" />
+		<!-- 속박의 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17831" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="1782000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="72" id="17371" />
+		<!-- 속박의 아포칼립스 듀얼대거 -->
+		<production count="1" id="17877" />
+	</item>
+	<item>
+		<!-- 속박의 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17834" />
+		<!-- 속박의 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17834" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="1782000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="72" id="17371" />
+		<!-- 속박의 아포칼립스 듀얼블런트 -->
+		<production count="1" id="17878" />
+	</item>
+	<item>
+		<!-- 속박의 아포칼립스 커터 -->
+		<ingredient count="1" id="17866" />
+		<!-- 속박의 아포칼립스 커터 -->
+		<ingredient count="1" id="17866" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="23681100" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="948" id="17371" />
+		<!-- 속박의 판타스마 듀얼소드 -->
+		<production count="1" id="17910" />
+	</item>
+	<item>
+		<!-- 속박의 아포칼립스 셰이퍼 -->
+		<ingredient count="1" id="17865" />
+		<!-- 속박의 아포칼립스 셰이퍼 -->
+		<ingredient count="1" id="17865" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="23681100" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="948" id="17371" />
+		<!-- 속박의 판타스마 듀얼대거 -->
+		<production count="1" id="17911" />
+	</item>
+	<item>
+		<!-- 속박의 아포칼립스 어벤져 -->
+		<ingredient count="1" id="17868" />
+		<!-- 속박의 아포칼립스 어벤져 -->
+		<ingredient count="1" id="17868" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="23681100" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="948" id="17371" />
+		<!-- 속박의 판타스마 듀얼블런트 -->
+		<production count="1" id="17912" />
+	</item>
+	<item>
+		<!-- 속박의 판타스마 커터 -->
+		<ingredient count="1" id="17900" />
+		<!-- 속박의 판타스마 커터 -->
+		<ingredient count="1" id="17900" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="23681100" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="948" id="17371" />
+		<!-- 속박의 헬리오스 듀얼소드 -->
+		<production count="1" id="17944" />
+	</item>
+	<item>
+		<!-- 속박의 판타스마 셰이퍼 -->
+		<ingredient count="1" id="17899" />
+		<!-- 속박의 판타스마 셰이퍼 -->
+		<ingredient count="1" id="17899" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="23681100" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="948" id="17371" />
+		<!-- 속박의 헬리오스 듀얼대거 -->
+		<production count="1" id="17945" />
+	</item>
+	<item>
+		<!-- 속박의 판타스마 어벤져 -->
+		<ingredient count="1" id="17902" />
+		<!-- 속박의 판타스마 어벤져 -->
+		<ingredient count="1" id="17902" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="23681100" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="948" id="17371" />
+		<!-- 속박의 헬리오스 듀얼블런트 -->
+		<production count="1" id="17946" />
+	</item>
+	<item>
+		<!-- 레퀴엠 커터 -->
+		<ingredient count="1" id="17291" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="7043198" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="188" id="17371" />
+		<!-- 레퀴엠 듀얼소드 -->
+		<production count="1" id="17301" />
+	</item>
+	<item>
+		<!-- 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17290" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="7043198" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="188" id="17371" />
+		<!-- 레퀴엠 듀얼대거 -->
+		<production count="1" id="17302" />
+	</item>
+	<item>
+		<!-- 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17293" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="7043198" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="188" id="17371" />
+		<!-- 레퀴엠 듀얼블런트 -->
+		<production count="1" id="17303" />
+	</item>
+	<item>
+		<!-- 레퀴엠 커터 -->
+		<ingredient count="1" id="17291" />
+		<!-- 레퀴엠 커터 -->
+		<ingredient count="1" id="17291" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="39578190" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="1056" id="17371" />
+		<!-- 아포칼립스 듀얼소드 -->
+		<production count="1" id="17335" />
+	</item>
+	<item>
+		<!-- 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17290" />
+		<!-- 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17290" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="39578190" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="1056" id="17371" />
+		<!-- 아포칼립스 듀얼대거 -->
+		<production count="1" id="17336" />
+	</item>
+	<item>
+		<!-- 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17293" />
+		<!-- 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17293" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="39578190" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="1056" id="17371" />
+		<!-- 아포칼립스 듀얼블런트 -->
+		<production count="1" id="17337" />
+	</item>
+	<item>
+		<!-- 아포칼립스 커터 -->
+		<ingredient count="1" id="17325" />
+		<!-- 아포칼립스 커터 -->
+		<ingredient count="1" id="17325" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="378898400" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="15156" id="17371" />
+		<!-- 판타스마 듀얼소드 -->
+		<production count="1" id="17393" />
+	</item>
+	<item>
+		<!-- 아포칼립스 셰이퍼 -->
+		<ingredient count="1" id="17324" />
+		<!-- 아포칼립스 셰이퍼 -->
+		<ingredient count="1" id="17324" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="378898400" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="15156" id="17371" />
+		<!-- 판타스마 듀얼대거 -->
+		<production count="1" id="17394" />
+	</item>
+	<item>
+		<!-- 아포칼립스 어벤져 -->
+		<ingredient count="1" id="17327" />
+		<!-- 아포칼립스 어벤져 -->
+		<ingredient count="1" id="17327" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="378898400" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="15156" id="17371" />
+		<!-- 판타스마 듀얼블런트 -->
+		<production count="1" id="17395" />
+	</item>
+	<item>
+		<!-- 판타스마 커터 -->
+		<ingredient count="1" id="17383" />
+		<!-- 판타스마 커터 -->
+		<ingredient count="1" id="17383" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="378898400" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="15156" id="17371" />
+		<!-- 헬리오스 듀얼소드 -->
+		<production count="1" id="17427" />
+	</item>
+	<item>
+		<!-- 판타스마 셰이퍼 -->
+		<ingredient count="1" id="17382" />
+		<!-- 판타스마 셰이퍼 -->
+		<ingredient count="1" id="17382" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="378898400" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="15156" id="17371" />
+		<!-- 헬리오스 듀얼대거 -->
+		<production count="1" id="17428" />
+	</item>
+	<item>
+		<!-- 판타스마 어벤져 -->
+		<ingredient count="1" id="17385" />
+		<!-- 판타스마 어벤져 -->
+		<ingredient count="1" id="17385" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="378898400" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="15156" id="17371" />
+		<!-- 헬리오스 듀얼블런트 -->
+		<production count="1" id="17429" />
+	</item>
+	<item>
+		<!-- 축복받은 레퀴엠 커터 -->
+		<ingredient count="1" id="17968" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="8375814" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="224" id="17371" />
+		<!-- 축복받은 레퀴엠 듀얼소드 -->
+		<production count="1" id="17978" />
+	</item>
+	<item>
+		<!-- 축복받은 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17967" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="8375814" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="224" id="17371" />
+		<!-- 축복받은 레퀴엠 듀얼대거 -->
+		<production count="1" id="17979" />
+	</item>
+	<item>
+		<!-- 축복받은 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17970" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="8375814" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="224" id="17371" />
+		<!-- 축복받은 레퀴엠 듀얼블런트 -->
+		<production count="1" id="17980" />
+	</item>
+	<item>
+		<!-- 축복받은 레퀴엠 커터 -->
+		<ingredient count="1" id="17968" />
+		<!-- 축복받은 레퀴엠 커터 -->
+		<ingredient count="1" id="17968" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="42086194" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="1123" id="17371" />
+		<!-- 축복받은 아포칼립스 듀얼소드 -->
+		<production count="1" id="18012" />
+	</item>
+	<item>
+		<!-- 축복받은 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17967" />
+		<!-- 축복받은 레퀴엠 셰이퍼 -->
+		<ingredient count="1" id="17967" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="42086194" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="1123" id="17371" />
+		<!-- 축복받은 아포칼립스 듀얼대거 -->
+		<production count="1" id="18013" />
+	</item>
+	<item>
+		<!-- 축복받은 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17970" />
+		<!-- 축복받은 레퀴엠 어벤져 -->
+		<ingredient count="1" id="17970" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="42086194" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="1123" id="17371" />
+		<!-- 축복받은 아포칼립스 듀얼블런트 -->
+		<production count="1" id="18014" />
+	</item>
+	<item>
+		<!-- 축복받은 아포칼립스 커터 -->
+		<ingredient count="1" id="18002" />
+		<!-- 축복받은 아포칼립스 커터 -->
+		<ingredient count="1" id="18002" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="473623000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="18945" id="17371" />
+		<!-- 축복받은 판타스마 듀얼소드 -->
+		<production count="1" id="18046" />
+	</item>
+	<item>
+		<!-- 축복받은 아포칼립스 셰이퍼 -->
+		<ingredient count="1" id="18001" />
+		<!-- 축복받은 아포칼립스 셰이퍼 -->
+		<ingredient count="1" id="18001" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="473623000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="18945" id="17371" />
+		<!-- 축복받은 판타스마 듀얼대거 -->
+		<production count="1" id="18047" />
+	</item>
+	<item>
+		<!-- 축복받은 아포칼립스 어벤져 -->
+		<ingredient count="1" id="18001" />
+		<!-- 축복받은 아포칼립스 어벤져 -->
+		<ingredient count="1" id="18001" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="473623000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="18945" id="17371" />
+		<!-- 축복받은 판타스마 듀얼블런트 -->
+		<production count="1" id="18048" />
+	</item>
+	<item>
+		<!-- 축복받은 판타스마 커터 -->
+		<ingredient count="1" id="18036" />
+		<!-- 축복받은 판타스마 커터 -->
+		<ingredient count="1" id="18036" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="473623000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="18945" id="17371" />
+		<!-- 축복받은 헬리오스 듀얼소드 -->
+		<production count="1" id="18080" />
+	</item>
+	<item>
+		<!-- 축복받은 판타스마 셰이퍼 -->
+		<ingredient count="1" id="18035" />
+		<!-- 축복받은 판타스마 셰이퍼 -->
+		<ingredient count="1" id="18035" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="473623000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="18945" id="17371" />
+		<!-- 축복받은 헬리오스 듀얼대거 -->
+		<production count="1" id="18081" />
+	</item>
+	<item>
+		<!-- 축복받은 판타스마 어벤져 -->
+		<ingredient count="1" id="18035" />
+		<!-- 축복받은 판타스마 어벤져 -->
+		<ingredient count="1" id="18035" />
+		<!-- 이도류 제작 인지 - R그레이드 -->
+		<ingredient count="1" id="30408" />
+		<!-- 아데나 -->
+		<ingredient count="473623000" id="57" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="18945" id="17371" />
+		<!-- 축복받은 헬리오스 듀얼블런트 -->
+		<production count="1" id="18082" />
 	</item>
 </list>
