@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<item>
+		<!-- 타우티의 조각 -->
+		<ingredient count="10" id="35667" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="17952" id="17371" />
+		<!-- 젬스톤 - R그레이드 -->
+		<ingredient count="1496" id="19440" />
+		<!-- 타우티의 한손 도끼 -->
+		<production count="1" id="34998" />
+	</item>
+	<item>
+		<!-- 타우티의 조각 -->
+		<ingredient count="10" id="35667" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="17952" id="17371" />
+		<!-- 젬스톤 - R그레이드 -->
+		<ingredient count="1496" id="19440" />
+		<!-- 타우티의 도끼 -->
+		<production count="1" id="34999" />
+	</item>
+	<item>
+		<!-- 타우티의 조각 -->
+		<ingredient count="10" id="35667" />
+		<!-- 결정체 - R그레이드 -->
+		<ingredient count="17952" id="17371" />
+		<!-- 젬스톤 - R그레이드 -->
+		<ingredient count="1496" id="19440" />
+		<!-- 타우티의 이도 도끼 -->
+		<production count="1" id="35001" />
+	</item>
+</list>
