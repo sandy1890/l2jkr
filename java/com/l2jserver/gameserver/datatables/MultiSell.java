@@ -397,11 +397,13 @@ public class MultiSell {
 				for (Ingredient ing : ent.getIngredients()) {
 					if (!verifyIngredient(ing)) {
 						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. 멀티셀 번호: " + list.getListId());
+						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호가 데이터 팩 data/stats/items XML 파일에 등록되어 있는지 확인해 주십시오.");
 					}
 				}
 				for (Ingredient ing : ent.getProducts()) {
 					if (!verifyIngredient(ing)) {
 						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. 멀티셀 번호: " + list.getListId());
+						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호가 데이터 팩 data/stats/items XML 파일에 등록되어 있는지 확인해 주십시오.");
 					}
 				}
 			}
