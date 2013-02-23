@@ -3429,7 +3429,7 @@ INSERT INTO `messagetable` VALUES
 
 (1396, 'cn', '掉落：', '', 'AdminAdmin.java'),
 (1396, 'en', 'Drop:', '', 'AdminAdmin.java'),
-(1396, 'ko', '드랍:', '', 'AdminAdmin.java'),
+(1396, 'ko', '드랍 배율:', '', 'AdminAdmin.java'),
 (1396, 'tw', '掉落：', '', 'AdminAdmin.java'),
 
 (1397, 'cn', 'EXP 倍率', '', 'AdminAdmin.java'),
@@ -3449,17 +3449,17 @@ INSERT INTO `messagetable` VALUES
 
 (1400, 'cn', '掉落倍率', '', 'AdminAdmin.java'),
 (1400, 'en', 'Rate Drop Spoil', '', 'AdminAdmin.java'),
-(1400, 'ko', '스포일 드랍 배율', '', 'AdminAdmin.java'),
+(1400, 'ko', '스포일 드랍', '', 'AdminAdmin.java'),
 (1400, 'tw', '掉落倍率', '', 'AdminAdmin.java'),
 
 (1401, 'cn', '强化：', '', 'AdminAdmin.java'),
-(1401, 'en', 'Enchant:', '', 'AdminAdmin.java'),
-(1401, 'ko', '강화:', '', 'AdminAdmin.java'),
+(1401, 'en', '% Rate Enchant:', '', 'AdminAdmin.java'),
+(1401, 'ko', '강화 확율 %:', '', 'AdminAdmin.java'),
 (1401, 'tw', '強化：', '', 'AdminAdmin.java'),
 
 (1402, 'cn', '武器强化', '', 'AdminAdmin.java'),
-(1402, 'en', 'Enchant Weapon', '', 'AdminAdmin.java'),
-(1402, 'ko', '무기 강화 확율', '', 'AdminAdmin.java'),
+(1402, 'en', 'Enchant Stone', '', 'AdminAdmin.java'),
+(1402, 'ko', '원석 강화 확율', '', 'AdminAdmin.java'),
 (1402, 'tw', '武器強化', '', 'AdminAdmin.java'),
 
 (1403, 'cn', 'Enchant Element Crystal', '', 'AdminAdmin.java'),
