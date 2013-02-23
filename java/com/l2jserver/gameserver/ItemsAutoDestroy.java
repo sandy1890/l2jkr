@@ -62,7 +62,7 @@ public class ItemsAutoDestroy {
 	
 	public synchronized void removeItems() {
 		if (Config.DEBUG) {
-			_log.info("[아이템 자동 파괴] : " + _items.size() + "개 아이템 체크.");
+			// _log.info("[아이템 자동 파괴] : " + _items.size() + "개 아이템 체크.");
 		}
 		
 		if (_items.isEmpty()) {
