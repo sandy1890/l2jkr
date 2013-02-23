@@ -3459,8 +3459,28 @@ INSERT INTO `messagetable` VALUES
 
 (1402, 'cn', '武器强化', '', 'AdminAdmin.java'),
 (1402, 'en', 'Enchant Weapon', '', 'AdminAdmin.java'),
-(1402, 'ko', '무기 강화', '', 'AdminAdmin.java'),
+(1402, 'ko', '무기 강화 확율', '', 'AdminAdmin.java'),
 (1402, 'tw', '武器強化', '', 'AdminAdmin.java'),
+
+(1403, 'cn', 'Enchant Element Crystal', '', 'AdminAdmin.java'),
+(1403, 'en', 'Enchant Element Crystal', '', 'AdminAdmin.java'),
+(1403, 'ko', '수정 강화 확율', '', 'AdminAdmin.java'),
+(1403, 'tw', 'Enchant Element Crystal', '', 'AdminAdmin.java'),
+
+(1404, 'cn', 'Enchant Element Jewel', '', 'AdminAdmin.java'),
+(1404, 'en', 'Enchant Element Jewel', '', 'AdminAdmin.java'),
+(1404, 'ko', '보석 강화 확율', '', 'AdminAdmin.java'),
+(1404, 'tw', 'Enchant Element Jewel', '', 'AdminAdmin.java'),
+
+(1405, 'cn', 'Enchant Element Energy', '', 'AdminAdmin.java'),
+(1405, 'en', 'Enchant Element Energy', '', 'AdminAdmin.java'),
+(1405, 'ko', '에너지 강화 확율', '', 'AdminAdmin.java'),
+(1405, 'tw', 'Enchant Element Energy', '', 'AdminAdmin.java'),
+
+(1406, 'cn', 'L2JCN :: Config', '', 'AdminAdmin.java'),
+(1406, 'en', 'L2J :: Config', '', 'AdminAdmin.java'),
+(1406, 'ko', 'L2JKR :: 환경', '', 'AdminAdmin.java'),
+(1406, 'tw', 'L2JTW :: Config', '', 'AdminAdmin.java'),
 
 (1420, 'cn', '自动公告重新载入。', '', 'AdminAnnouncements.java'),
 (1420, 'en', 'AutoAnnouncement Reloaded.', '', 'AdminAnnouncements.java'),
