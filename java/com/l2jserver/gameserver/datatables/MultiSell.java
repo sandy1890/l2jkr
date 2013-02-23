@@ -49,8 +49,6 @@ import com.l2jserver.util.file.filter.XMLFilter;
 import gnu.trove.iterator.TIntObjectIterator;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-//Add pcbangpoints by pmq
-
 public class MultiSell {
 	
 	public static final int PAGE_SIZE = 40;
@@ -63,15 +61,24 @@ public class MultiSell {
 	
 	private final TIntObjectHashMap<ListContainer> _entries;
 	
+	/**
+	 * @return
+	 */
 	public static MultiSell getInstance() {
 		return SingletonHolder._instance;
 	}
 	
+	/**
+	 * 멀티셀 로드
+	 */
 	protected MultiSell() {
 		_entries = new TIntObjectHashMap<>();
 		load();
 	}
 	
+	/**
+	 * 리로드
+	 */
 	public final void reload() {
 		_entries.clear();
 		load();
@@ -93,7 +100,7 @@ public class MultiSell {
 	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier) {
 		ListContainer template = _entries.get(listId);
 		if (template == null) {
-			_log.warning("[MultiSell] can't find list id: " + listId + " requested by player: " + player.getName() + ", npcId:" + (npc != null ? npc.getNpcId() : 0));
+			_log.warning("[멀티셀] can't find list id: " + listId + " requested by player: " + player.getName() + ", npcId:" + (npc != null ? npc.getNpcId() : 0));
 			return;
 		}
 		
@@ -123,10 +130,22 @@ public class MultiSell {
 		player.setMultiSell(list);
 	}
 	
+	/**
+	 * @param listId
+	 * @param player
+	 * @param npc
+	 * @param inventoryOnly
+	 */
 	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly) {
 		separateAndSend(listId, player, npc, inventoryOnly, 1, 1);
 	}
 	
+	/**
+	 * @param id
+	 * @param amount
+	 * @param player
+	 * @return
+	 */
 	public static final boolean checkSpecialIngredient(int id, long amount, L2PcInstance player) {
 		switch (id) {
 			case PC_BANG_POINTS:
@@ -159,6 +178,12 @@ public class MultiSell {
 		return false;
 	}
 	
+	/**
+	 * @param id
+	 * @param amount
+	 * @param player
+	 * @return
+	 */
 	public static final boolean getSpecialIngredient(int id, long amount, L2PcInstance player) {
 		switch (id) {
 			case PC_BANG_POINTS: // PcBang points
@@ -184,6 +209,11 @@ public class MultiSell {
 		return false;
 	}
 	
+	/**
+	 * @param id
+	 * @param amount
+	 * @param player
+	 */
 	public static final void addSpecialProduct(int id, long amount, L2PcInstance player) {
 		switch (id) {
 			case CLAN_REPUTATION:
@@ -197,6 +227,9 @@ public class MultiSell {
 		}
 	}
 	
+	/**
+	 * 멀티셀 로드
+	 */
 	private final void load() {
 		Document doc = null;
 		int id = 0;
@@ -214,7 +247,7 @@ public class MultiSell {
 				factory.setIgnoringComments(true);
 				doc = factory.newDocumentBuilder().parse(f);
 			} catch (Exception e) {
-				_log.log(Level.SEVERE, "Error loading file " + f, e);
+				_log.log(Level.SEVERE, "파일 로딩 중 오류가 발생했습니다: " + f, e);
 				continue;
 			}
 			
@@ -223,13 +256,17 @@ public class MultiSell {
 				list.setListId(id);
 				_entries.put(id, list);
 			} catch (Exception e) {
-				_log.log(Level.SEVERE, "Error in file " + f, e);
+				_log.log(Level.SEVERE, "파일에 오류가 발생했습니다: " + f, e);
 			}
 		}
 		verify();
-		_log.log(Level.INFO, "MultiSell: " + _entries.size() + "개 목록이 로드되었습니다.");
+		_log.log(Level.INFO, "멀티셀: " + _entries.size() + "개 목록이 로드되었습니다.");
 	}
 	
+	/**
+	 * @param doc
+	 * @return
+	 */
 	private final ListContainer parseDocument(Document doc) {
 		int entryId = 1;
 		Node attribute;
@@ -288,6 +325,12 @@ public class MultiSell {
 		return list;
 	}
 	
+	/**
+	 * @param n
+	 * @param entryId
+	 * @param list
+	 * @return
+	 */
 	private final Entry parseEntry(Node n, int entryId, ListContainer list) {
 		Node attribute;
 		Node first = n.getFirstChild();
@@ -325,41 +368,50 @@ public class MultiSell {
 		return entry;
 	}
 	
+	/**
+	 * @param dirname
+	 * @param hash
+	 */
 	private final void hashFiles(String dirname, List<File> hash) {
 		File dir = new File(Config.DATAPACK_ROOT, dirname);
 		if (!dir.exists()) {
-			_log.log(Level.WARNING, "Dir " + dir.getAbsolutePath() + " not exists");
+			_log.log(Level.WARNING, dir.getAbsolutePath() + " 디렉토리(폴더)를 찾을 수 없습니다.");
 			return;
 		}
-		
 		File[] files = dir.listFiles(new XMLFilter());
 		for (File f : files) {
 			hash.add(f);
 		}
 	}
 	
+	/**
+	 * 멀티셀 확인
+	 */
 	private final void verify() {
 		ListContainer list;
 		final TIntObjectIterator<ListContainer> iter = _entries.iterator();
 		while (iter.hasNext()) {
 			iter.advance();
 			list = iter.value();
-			
 			for (Entry ent : list.getEntries()) {
 				for (Ingredient ing : ent.getIngredients()) {
 					if (!verifyIngredient(ing)) {
-						_log.warning("[MultiSell] can't find ingredient with itemId: " + ing.getItemId() + " in list: " + list.getListId());
+						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. (items 테이블에 아이템 번호가 있는지 확인해 주십시오) 멀티셀 번호: " + list.getListId());
 					}
 				}
 				for (Ingredient ing : ent.getProducts()) {
 					if (!verifyIngredient(ing)) {
-						_log.warning("[MultiSell] can't find product with itemId: " + ing.getItemId() + " in list: " + list.getListId());
+						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. (items 테이블에 아이템 번호가 있는지 확인해 주십시오) 멀티셀 번호: " + list.getListId());
 					}
 				}
 			}
 		}
 	}
 	
+	/**
+	 * @param ing
+	 * @return
+	 */
 	private final boolean verifyIngredient(Ingredient ing) {
 		switch (ing.getItemId()) {
 			case PC_BANG_POINTS:
@@ -371,7 +423,6 @@ public class MultiSell {
 					return true;
 				}
 		}
-		
 		return false;
 	}
 	
