@@ -396,12 +396,12 @@ public class MultiSell {
 			for (Entry ent : list.getEntries()) {
 				for (Ingredient ing : ent.getIngredients()) {
 					if (!verifyIngredient(ing)) {
-						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. (items 테이블에 아이템 번호가 있는지 확인해 주십시오) 멀티셀 번호: " + list.getListId());
+						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. 멀티셀 번호: " + list.getListId());
 					}
 				}
 				for (Ingredient ing : ent.getProducts()) {
 					if (!verifyIngredient(ing)) {
-						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. (items 테이블에 아이템 번호가 있는지 확인해 주십시오) 멀티셀 번호: " + list.getListId());
+						_log.warning("멀티셀: " + ing.getItemId() + " 아이템 번호를 찾을 수 없습니다. 멀티셀 번호: " + list.getListId());
 					}
 				}
 			}
