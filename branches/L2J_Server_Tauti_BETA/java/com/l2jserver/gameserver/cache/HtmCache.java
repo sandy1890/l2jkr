@@ -59,36 +59,54 @@ public class HtmCache {
 		reload();
 	}
 	
+	/**
+	 * 데이터 팩 경로 리로드
+	 */
 	public void reload() {
 		reload(Config.DATAPACK_ROOT);
 	}
 	
+	/**
+	 * @param f
+	 */
 	public void reload(File f) {
 		if (!Config.LAZY_CACHE) {
-			_log.info("Html cache start...");
+			_log.info("HTML 캐시 시작...");
 			parseDir(f);
-			_log.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + getLoadedFiles() + " files loaded");
+			_log.info("캐시[HTML]: " + String.format("%.3f", getMemoryUsage()) + "MB, " + getLoadedFiles() + "개 파일이 로드되었습니다.");
 		} else {
 			_cache.clear();
 			_loadedFiles = 0;
 			_bytesBuffLen = 0;
-			_log.info("Cache[HTML]: Running lazy cache");
+			_log.info("캐시[HTML]: 캐시되었습니다.");
 		}
 	}
 	
+	/**
+	 * @param f
+	 */
 	public void reloadPath(File f) {
 		parseDir(f);
-		_log.info("Cache[HTML]: Reloaded specified path.");
+		_log.info("캐시[HTML]: 지정된 경로를 갱신했습니다.");
 	}
 	
+	/**
+	 * @return
+	 */
 	public double getMemoryUsage() {
 		return ((float) _bytesBuffLen / 1048576);
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getLoadedFiles() {
 		return _loadedFiles;
 	}
 	
+	/**
+	 * @param dir
+	 */
 	private void parseDir(File dir) {
 		final File[] files = dir.listFiles();
 		for (File file : files) {
@@ -100,11 +118,14 @@ public class HtmCache {
 		}
 	}
 	
+	/**
+	 * @param file
+	 * @return
+	 */
 	public String loadFile(File file) {
 		if (!htmlFilter.accept(file)) {
 			return null;
 		}
-		
 		final String relpath = Util.getRelativePath(Config.DATAPACK_ROOT, file);
 		final int hashcode = relpath.hashCode();
 		String content = null;
@@ -112,11 +133,9 @@ public class HtmCache {
 			BufferedInputStream bis = new BufferedInputStream(fis);) {
 			final int bytes = bis.available();
 			byte[] raw = new byte[bytes];
-			
 			bis.read(raw);
 			content = new String(raw, "UTF-8");
 			content = content.replaceAll("\r\n", "\n");
-			
 			String oldContent = _cache.get(hashcode);
 			if (oldContent == null) {
 				_bytesBuffLen += bytes;
@@ -126,23 +145,34 @@ public class HtmCache {
 			}
 			_cache.put(hashcode, content);
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "Problem with htm file " + e.getMessage(), e);
+			_log.log(Level.WARNING, "HTML 파일에 문제가 있습니다: " + e.getMessage(), e);
 		}
 		return content;
 	}
 	
+	/**
+	 * @param prefix
+	 * @param path
+	 * @return
+	 */
 	public String getHtmForce(String prefix, String path) {
 		String content = getHtm(prefix, path);
 		if (content == null) {
 			/*
-			 * Move To MessageTable For L2JTW content = "<html><body>My text is missing:<br>" + path + "</body></html>";
+			 * Move To MessageTable For L2JTW
 			 */
+			// content = "<html><body>My text is missing:<br>" + path + "</body></html>";
 			content = "<html><body>" + MessageTable.Messages[47].getMessage() + "<br>" + path + "</body></html>";
-			_log.warning("Cache[HTML]: Missing HTML page: " + path);
+			_log.warning("캐시[HTML]: HTML 파일을 찾을 수 없습니다: " + path);
 		}
 		return content;
 	}
 	
+	/**
+	 * @param prefix
+	 * @param path
+	 * @return
+	 */
 	public String getHtm(String prefix, String path) {
 		String newPath = null;
 		String content;
@@ -162,6 +192,10 @@ public class HtmCache {
 		return content;
 	}
 	
+	/**
+	 * @param path
+	 * @return
+	 */
 	private String getHtm(String path) {
 		if ((path == null) || path.isEmpty()) {
 			return ""; // avoid possible NPE
@@ -175,6 +209,10 @@ public class HtmCache {
 		return content;
 	}
 	
+	/**
+	 * @param path
+	 * @return
+	 */
 	public boolean contains(String path) {
 		return _cache.containsKey(path.hashCode());
 	}
