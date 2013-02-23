@@ -63,7 +63,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+   htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
    st = player.getQuestState(qn)
    if st :
      npcId = npc.getNpcId()
@@ -108,7 +108,7 @@ class Quest (JQuest) :
            st.giveItems(BEAD_OF_OBEDIENCE,int(numItems))
   return
 
-QUEST       = Quest(627,qn,"追求力量的心")
+QUEST       = Quest(627,qn,"힘을 추구하는 마음")
 
 
 QUEST.addStartNpc(31518)
