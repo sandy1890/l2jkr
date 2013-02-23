@@ -8800,8 +8800,12 @@ public final class L2PcInstance extends L2Playable
 				{
 					if (!SkillTreesData.getInstance().isSkillAllowed(this, skill))
 					{
-						Util.handleIllegalPlayerAction(this, "Player " + getName() + " has invalid skill " + skill.getName() +
-							" ("+skill.getId() + "/" + skill.getLevel() + "), class:" + ClassListData.getInstance().getClass(getClassId()).getClassName(), 1);
+						Util.handleIllegalPlayerAction(
+							this,
+							"캐릭터: " + getName() + ", " + skill.getName() + " 잘못된 스킬이 제거되었습니다.\n" +
+							"(" + skill.getId() + "/" + skill.getLevel() + "), 클래스:" + ClassListData.getInstance().getClass(getClassId()).getClassName(),
+							1
+						);
 						if (Config.SKILL_CHECK_REMOVE) {
 							removeSkill(skill);
 						}
