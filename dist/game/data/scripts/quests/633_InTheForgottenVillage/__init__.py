@@ -82,7 +82,7 @@ class Quest (JQuest):
     
 
     def onTalk (self,npc,player):        
-        htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>"
+        htmltext = "<html><body>퀘스트를 수행하고 있지 않거나 조건이 맞지 않습니다.</body></html>"
         st = player.getQuestState(qn)
         if not st: return
         npcId = npc.getNpcId()
@@ -125,7 +125,7 @@ class Quest (JQuest):
                     st.playSound("ItemSound.quest_itemget") 
         return        
 
-QUEST       = Quest(633, qn, "在被遺忘的村莊")
+QUEST       = Quest(633, qn, "잊혀진 마을에서")
 
 for i in DAMOBS.keys():
     QUEST.addKillId(i)
