@@ -81,8 +81,8 @@ MaximumOnlineUsers = 100
 # Numbers of protocol revisions that server allows to connect.
 # Delimiter is ;
 # WARNING: <u><b><font color="red">Changing the protocol revision may result in incompatible communication and many errors in game!</font></b></u>
-# Default: 448
-AllowedProtocolRevisions = 440
+# Default: 440;448
+AllowedProtocolRevisions = 440;448
 
 
 # ---------------------------------------------------------------------------
