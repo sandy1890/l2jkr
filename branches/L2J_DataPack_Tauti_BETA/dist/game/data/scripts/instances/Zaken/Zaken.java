@@ -27,6 +27,7 @@ import javolution.util.FastList;
 import javolution.util.FastMap;
 import ai.group_template.L2AttackableAIScript;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
@@ -55,16 +56,13 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
-/* l2jtw
- import com.l2jserver.gameserver.GeoEngine;
- */
-
 /**
  * @author Nyaran (based on org.inc? work)
  */
 public class Zaken extends L2AttackableAIScript {
 	
 	private class ZWorld extends InstanceWorld {
+		
 		List<L2PcInstance> _playersInInstance = new FastList<>();
 		List<L2PcInstance> _playersInZakenZone = new FastList<>();
 		int _zakenZone = 0;
@@ -111,37 +109,40 @@ public class Zaken extends L2AttackableAIScript {
 		L2Npc _zakenBarel2;
 		L2Npc _zakenBarel3;
 		L2Npc _zakenBarel4;
+		
 		public List<L2Npc> _barrels = new FastList<>();
 		
 		public ZWorld() {
 		}
+		
 	}
 	
-	private static final String qn = "Zaken";
-	
-	private static final int INSTANCEID_NIGHT = 114; // this is the client number
-	private static final int INSTANCEID_DAY = 133; // this is the client number
-	private static final int INSTANCEID_DAY83 = 135; // this is the client number
-	private static final boolean DEBUG = false;
+	private static final int INSTANCEID_NIGHT = 114; // 해적왕의 거처 (악몽)
+	private static final int INSTANCEID_DAY = 133; // 해적왕의 거처 (백일몽)
+	private static final int INSTANCEID_DAY83 = 135; // 해적왕의 거처 (원항의 백일몽)
+	private static final boolean DEBUG = Config.DEBUG; // 서버 환경 General.properties 파일에서 디버그 여부 설정
 	
 	// NPCs
 	// Bosses
-	private static final int ZAKEN_NIGHT = 29022;
-	private static final int ZAKEN_DAY = 29176;
-	private static final int ZAKEN_DAY83 = 29181;
+	private static final int ZAKEN_NIGHT = 29022; // 자켄
+	private static final int ZAKEN_DAY = 29176; // 자켄
+	private static final int ZAKEN_DAY83 = 29181; // 자켄
+	
 	// Mobs
-	private static final int DOLL_BLADER = 29023;
-	private static final int VALE_MASTER = 29024;
-	private static final int ZOMBIE_CAPTAIN = 29026;
-	private static final int ZOMBIE = 29027;
-	private static final int DOLL_BLADER_DAY83 = 29182;
-	private static final int VALE_MASTER_DAY83 = 29183;
-	private static final int ZOMBIE_CAPTAIN_DAY83 = 29184;
-	private static final int ZOMBIE_DAY83 = 29185;
+	private static final int DOLL_BLADER = 29023; // 돌 블레이더
+	private static final int VALE_MASTER = 29024; // 베일 마스터
+	private static final int ZOMBIE_CAPTAIN = 29026; // 해적 좀비 캡틴
+	private static final int ZOMBIE = 29027; // 해적 좀비
+	private static final int DOLL_BLADER_DAY83 = 29182; // 돌 블레이더
+	private static final int VALE_MASTER_DAY83 = 29183; // 베일 마스터
+	private static final int ZOMBIE_CAPTAIN_DAY83 = 29184; // 해적 좀비 캡틴
+	private static final int ZOMBIE_DAY83 = 29185; // 해적 좀비
+	
 	// Telepoters
-	private static final int PATHFINDER = 32713;
+	private static final int PATHFINDER = 32713; // 패스파인더 요원
+	
 	// Barrel
-	private static final int BARREL = 32705;
+	private static final int BARREL = 32705; // 오크통
 	
 	private static List<L2PcInstance> _playersInside = new FastList<>();
 	
@@ -166,6 +167,7 @@ public class Zaken extends L2AttackableAIScript {
 	private static int _room15_zone = 120125;
 	
 	protected enum candleStates {
+		
 		NONE(0),
 		SPARKS(15280),
 		RED(15281),
@@ -173,13 +175,20 @@ public class Zaken extends L2AttackableAIScript {
 		
 		private int _id;
 		
+		/**
+		 * @param id
+		 */
 		candleStates(int id) {
 			_id = id;
 		}
 		
+		/**
+		 * @return
+		 */
 		protected int getId() {
 			return _id;
 		}
+		
 	}
 	
 	private static final int[] _zones =
@@ -241,113 +250,25 @@ public class Zaken extends L2AttackableAIScript {
 	};
 	
 	private static final FastMap<Integer, Integer[]> zoneBarrels = new FastMap<>();
+	//@formatter:off
 	static {
-		zoneBarrels.put(_room1_zone, new Integer[]
-		{
-			3,
-			4,
-			5,
-			12
-		});
-		zoneBarrels.put(_room2_zone, new Integer[]
-		{
-			5,
-			9,
-			10,
-			11
-		});
-		zoneBarrels.put(_room3_zone, new Integer[]
-		{
-			3,
-			5,
-			6,
-			9
-		});
-		zoneBarrels.put(_room4_zone, new Integer[]
-		{
-			1,
-			2,
-			3,
-			6
-		});
-		zoneBarrels.put(_room5_zone, new Integer[]
-		{
-			6,
-			7,
-			8,
-			9
-		});
-		zoneBarrels.put(_room6_zone, new Integer[]
-		{
-			15,
-			16,
-			17,
-			24
-		});
-		zoneBarrels.put(_room7_zone, new Integer[]
-		{
-			17,
-			21,
-			22,
-			23
-		});
-		zoneBarrels.put(_room8_zone, new Integer[]
-		{
-			15,
-			17,
-			18,
-			21
-		});
-		zoneBarrels.put(_room9_zone, new Integer[]
-		{
-			13,
-			14,
-			15,
-			18
-		});
-		zoneBarrels.put(_room10_zone, new Integer[]
-		{
-			18,
-			19,
-			20,
-			21
-		});
-		zoneBarrels.put(_room11_zone, new Integer[]
-		{
-			27,
-			28,
-			29,
-			36
-		});
-		zoneBarrels.put(_room12_zone, new Integer[]
-		{
-			29,
-			33,
-			34,
-			35
-		});
-		zoneBarrels.put(_room13_zone, new Integer[]
-		{
-			27,
-			29,
-			30,
-			33
-		});
-		zoneBarrels.put(_room14_zone, new Integer[]
-		{
-			25,
-			26,
-			27,
-			30
-		});
-		zoneBarrels.put(_room15_zone, new Integer[]
-		{
-			30,
-			31,
-			32,
-			33
-		});
+		zoneBarrels.put(_room1_zone, new Integer[] { 3, 4, 5, 12 });
+		zoneBarrels.put(_room2_zone, new Integer[] { 5, 9, 10, 11 });
+		zoneBarrels.put(_room3_zone, new Integer[] { 3, 5, 6, 9 });
+		zoneBarrels.put(_room4_zone, new Integer[] { 1, 2, 3, 6 });
+		zoneBarrels.put(_room5_zone, new Integer[] { 6, 7, 8, 9 });
+		zoneBarrels.put(_room6_zone, new Integer[] { 15, 16, 17, 24 });
+		zoneBarrels.put(_room7_zone, new Integer[] { 17, 21, 22, 23 });
+		zoneBarrels.put(_room8_zone, new Integer[] { 15, 17, 18, 21 });
+		zoneBarrels.put(_room9_zone, new Integer[] { 13, 14, 15, 18 });
+		zoneBarrels.put(_room10_zone, new Integer[] { 18, 19, 20, 21 });
+		zoneBarrels.put(_room11_zone, new Integer[] { 27, 28, 29, 36 });
+		zoneBarrels.put(_room12_zone, new Integer[] { 29, 33, 34, 35 });
+		zoneBarrels.put(_room13_zone, new Integer[] { 27, 29, 30, 33 });
+		zoneBarrels.put(_room14_zone, new Integer[] { 25, 26, 27, 30 });
+		zoneBarrels.put(_room15_zone, new Integer[] { 30, 31, 32, 33 });
 	}
+	//@formatter:on
 	
 	private static final FastList<Location> _spawnPcLocationDaytime = new FastList<>();
 	static {
@@ -391,6 +312,11 @@ public class Zaken extends L2AttackableAIScript {
 		
 	}
 	
+	/**
+	 * @param player
+	 * @param choice
+	 * @return
+	 */
 	private boolean checkConditions(L2PcInstance player, String choice) {
 		if (DEBUG) {
 			return true;
@@ -406,8 +332,8 @@ public class Zaken extends L2AttackableAIScript {
 		
 		List<L2PcInstance> members;
 		int minLevel = 0; // nighttime haven't level limit
-		int minMembers = 9; // for daytime
-		int maxMembers = 27; // for daytime
+		int minMembers = 7; // 낮의 자켄 최소 인원 7명
+		int maxMembers = 21; // 낮의 자켄 최대 인원 21명
 		
 		if (party.isInCommandChannel()) {
 			members = party.getCommandChannel().getMembers();
@@ -416,14 +342,14 @@ public class Zaken extends L2AttackableAIScript {
 		}
 		
 		if (choice.equalsIgnoreCase("daytime")) {
-			minLevel = 55;
+			minLevel = 55; // 낮의 자켄 최소 레벨 55
 		} else if (choice.equalsIgnoreCase("daytime83")) {
-			minLevel = 78;
+			minLevel = 78; // 상위 낮의 자켄 최소 레벨 78
 		}
 		
 		if (choice.equalsIgnoreCase("nighttime")) {
-			minMembers = 72;
-			maxMembers = 450;
+			minMembers = 56; // 밤의 자켄 최소 인원 56명
+			maxMembers = 420; // 밤의 자켄 최대 인원 420명
 		}
 		
 		for (L2PcInstance member : members) {
@@ -448,7 +374,7 @@ public class Zaken extends L2AttackableAIScript {
 				}
 				return false;
 			} else if (members.size() > maxMembers) {
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_MAXIMUM_ENTRANTS); // FIXME: Need correct msg
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_MAXIMUM_ENTRANTS);
 				sm.addNumber(maxMembers);
 				if (party.isInCommandChannel()) {
 					party.getCommandChannel().broadcastPacket(sm);
@@ -493,8 +419,13 @@ public class Zaken extends L2AttackableAIScript {
 		return true;
 	}
 	
+	/**
+	 * @param player
+	 * @param spawnLoc
+	 * @param world
+	 */
 	private void teleportPlayer(L2PcInstance player, FastList<Location> spawnLoc, ZWorld world) {
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(Zaken.class.getSimpleName());
 		if (st == null) {
 			st = newQuestState(player);
 		}
@@ -514,10 +445,16 @@ public class Zaken extends L2AttackableAIScript {
 		
 		world._playersInInstance.add(player);
 		if (DEBUG) {
-			System.out.println("Player " + player + " teleported to " + loc.getX() + " " + loc.getY() + " " + loc.getZ() + " in instance " + world.instanceId + "[" + world.templateId + "]");
+			_log.info("캐릭터: " + player + " 텔레포트되었습니다.\n좌표: " + loc.getX() + " " + loc.getY() + " " + loc.getZ() + "\n인스턴스: " + world.instanceId + "[" + world.templateId + "]");
 		}
 	}
 	
+	/**
+	 * @param player
+	 * @param template
+	 * @param choice
+	 * @return
+	 */
 	protected synchronized int enterInstance(L2PcInstance player, String template, String choice) {
 		FastList<Location> spawnLocs;
 		if (choice.equalsIgnoreCase("nighttime")) {
@@ -553,7 +490,7 @@ public class Zaken extends L2AttackableAIScript {
 		}
 		
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("Zaken (" + choice + ") started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		_log.info("자켄 (" + choice + ") 시작되었습니다.\n" + template + " 인스턴스: " + instanceId + "\n캐릭터에 의해 생성: " + player.getName());
 		
 		if (choice.equalsIgnoreCase("nighttime")) {
 			startQuestTimer("ZakenSpawn", 1000, null, player);
@@ -567,8 +504,7 @@ public class Zaken extends L2AttackableAIScript {
 		// teleport players
 		List<L2PcInstance> players;
 		L2Party party = player.getParty();
-		if (party == null) // this can happen only if debug is true
-		{
+		if (party == null) { // this can happen only if debug is true
 			players = new FastList<>();
 			players.add(player);
 		} else if (party.isInCommandChannel()) {
@@ -585,9 +521,12 @@ public class Zaken extends L2AttackableAIScript {
 		return instanceId;
 	}
 	
+	/**
+	 * @param instanceId
+	 * @param zoneId
+	 */
 	private void spawnRoom(int instanceId, int zoneId) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(instanceId);
-		
 		if (tmpworld instanceof ZWorld) {
 			ZWorld world = (ZWorld) tmpworld;
 			int[] position =
@@ -632,12 +571,15 @@ public class Zaken extends L2AttackableAIScript {
 				}
 			}
 		}
-		
 		if (DEBUG) {
-			System.out.println("Zaken minions spawned");
+			_log.info("자켄 부하가 스폰되었습니다.");
 		}
 	}
 	
+	/**
+	 * @param npc
+	 * @return
+	 */
 	private L2Character getRandomTarget(L2Npc npc) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		L2Character character = null;
@@ -646,11 +588,7 @@ public class Zaken extends L2AttackableAIScript {
 			FastList<L2Character> result = new FastList<>();
 			{
 				for (L2Character obj : world._playersInZakenZone) {
-					/*
-					 * l2jtw start if (!(GeoEngine.getInstance().canSeeTarget(obj, npc)))
-					 */
 					if (!(GeoData.getInstance().canSeeTarget(obj, npc))) {
-						// l2jtw end
 						continue;
 					}
 					
@@ -668,19 +606,21 @@ public class Zaken extends L2AttackableAIScript {
 			if (!result.isEmpty() && (result.size() != 0)) {
 				Object[] characters = result.toArray();
 				character = (L2Character) characters[Rnd.get(characters.length)];
-				System.out.println("Zaken target to " + character);
+				_log.info("Zaken target to " + character);
 			}
 		}
 		return character;
 	}
 	
+	/**
+	 * @param player
+	 */
 	private void savePlayerReenter(L2PcInstance player) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
 		Calendar reuseTime = Calendar.getInstance();
 		int dayWeek = reuseTime.get(Calendar.DAY_OF_WEEK);
 		
-		if ((tmpworld.templateId == INSTANCEID_DAY) || (tmpworld.templateId == INSTANCEID_DAY83)) // Monday, Wednesday, Friday (confirmed at leaked Freya)
-		{
+		if ((tmpworld.templateId == INSTANCEID_DAY) || (tmpworld.templateId == INSTANCEID_DAY83)) { // Monday, Wednesday, Friday (confirmed at leaked Freya)
 			if ((dayWeek == Calendar.MONDAY) || (dayWeek == Calendar.TUESDAY)) {
 				reuseTime.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
 			} else if ((dayWeek == Calendar.WEDNESDAY) || (dayWeek == Calendar.THURSDAY)) {
@@ -703,12 +643,14 @@ public class Zaken extends L2AttackableAIScript {
 		InstanceManager.getInstance().setInstanceTime(player.getObjectId(), tmpworld.templateId, reuseTime.getTimeInMillis());
 		
 		if (DEBUG) {
-			System.out.println("Player " + player + " Zaken reuse set to: " + reuseTime.getTime());
+			_log.info("캐릭터: " + player + ", 자켄 인스턴스 재사용 설정: " + reuseTime.getTime());
 		}
 	}
 	
+	/**
+	 * @param npc
+	 */
 	protected void npcUpdate(L2Npc npc) {
-		
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof ZWorld) {
 			ZWorld world = (ZWorld) tmpworld;
@@ -720,6 +662,9 @@ public class Zaken extends L2AttackableAIScript {
 		}
 	}
 	
+	/**
+	 * @param instanceId
+	 */
 	private void spawnBarrels(int instanceId) {
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(instanceId);
 		if (tmpworld instanceof ZWorld) {
@@ -804,7 +749,7 @@ public class Zaken extends L2AttackableAIScript {
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
 		int npcId = npc.getNpcId();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null) {
 			st = newQuestState(player);
 		}
@@ -833,9 +778,9 @@ public class Zaken extends L2AttackableAIScript {
 					return "no-minimum-party.htm";
 				}
 			}
-			
 			enterInstance(player, "Zaken-" + event + ".xml", event);
 		}
+		
 		InstanceWorld tmpworld;
 		
 		if (npc != null) {
@@ -850,35 +795,66 @@ public class Zaken extends L2AttackableAIScript {
 				if (npc != null) {
 					npc.setRHandId(candleStates.SPARKS.getId());
 					npcUpdate(npc);
-				}
-				if ((npc == world._zakenBarel1) || (npc == world._zakenBarel2) || (npc == world._zakenBarel3) || (npc == world._zakenBarel4)) {
-					startQuestTimer("BlueBarrel", 5000, npc, player);
+					if ((npc == world._zakenBarel1) || (npc == world._zakenBarel2) || (npc == world._zakenBarel3) || (npc == world._zakenBarel4)) {
+						if (DEBUG) {
+							_log.info("오크통 파란 촛불 켬");
+						}
+						startQuestTimer("BlueBarrel", 5000, npc, player);
+						if (DEBUG) {
+							_log.info("npc: " + npc);
+							_log.info("오크통 파란 촛불이 켜졌을때");
+						}
+					} else {
+						if (DEBUG) {
+							_log.info("오크통 빨간색 촛불 켬");
+						}
+						startQuestTimer("RedBarrel", 5000, npc, player);
+						if (DEBUG) {
+							_log.info("npc: " + npc);
+							_log.info("오크통 빨간색 촛불이 켜졌을때");
+						}
+					}
 				} else {
-					startQuestTimer("RedBarrel", 5000, npc, player);
+					_log.warning("npc null!!");
 				}
 			} else if (event.equalsIgnoreCase("RedBarrel")) {
 				if (npc != null) {
 					npc.setRHandId(candleStates.RED.getId());
 					npcUpdate(npc);
-				}
-				for (L2Npc barrel : world._barrels) {
-					if (barrel.equals(npc)) {
-						if (npc != null) {
+					for (L2Npc barrel : world._barrels) {
+						if (barrel.equals(npc)) {
 							spawnRoom(npc.getInstanceId(), _barrelSpawnZones[world._barrels.indexOf(barrel)]);
+							if (DEBUG) {
+								_log.info("npc: " + npc);
+								_log.info("오크통 빨간색 촛불");
+							}
 						}
 					}
+				} else {
+					_log.warning("npc null!!");
 				}
 			} else if (event.equalsIgnoreCase("BlueBarrel")) {
 				if (npc != null) {
 					npc.setRHandId(candleStates.BLUE.getId());
 					npcUpdate(npc);
-				}
-				world._blueCandles++;
-				if (world._blueCandles == 4) {
-					startQuestTimer("ZakenSpawn", 1000, npc, player);
+					world._blueCandles++;
+					if (world._blueCandles == 4) {
+						if (DEBUG) {
+							_log.info("오크통 파란 촛불이 4개 켜졌을 때");
+						}
+						startQuestTimer("ZakenSpawn", 1000, npc, player);
+						if (DEBUG) {
+							_log.info("자켄 스폰 콜!");
+						}
+					}
+				} else {
+					_log.warning("npc null!!");
 				}
 			} else if (event.equalsIgnoreCase("ZakenSpawn")) {
 				if (world.templateId == INSTANCEID_DAY) {
+					if (DEBUG) {
+						_log.info("낮의 자켄 스폰 시작!");
+					}
 					int[] position = ZoneManager.getInstance().getZoneById(world._zakenZone).getZone().getRandomPoint();
 					world._zaken = (L2Attackable) addSpawn(ZAKEN_DAY, position[0], position[1], position[2], 32768, false, 0, false, world.instanceId);
 					world._zaken.addSkill(SkillTable.getInstance().getInfo(4216, 1));
@@ -892,6 +868,9 @@ public class Zaken extends L2AttackableAIScript {
 					world._zaken.getAI().setIntention(AI_INTENTION_ATTACK, player);
 					world._target = player;
 				} else if (world.templateId == INSTANCEID_DAY83) {
+					if (DEBUG) {
+						_log.info("상위 낮의 자켄 스폰 시작!");
+					}
 					int[] position = ZoneManager.getInstance().getZoneById(world._zakenZone).getZone().getRandomPoint();
 					world._zaken = (L2Attackable) addSpawn(ZAKEN_DAY83, position[0], position[1], position[2], 32768, false, 0, false, world.instanceId);
 					world._zaken.addSkill(SkillTable.getInstance().getInfo(4216, 1));
@@ -905,6 +884,9 @@ public class Zaken extends L2AttackableAIScript {
 					world._zaken.getAI().setIntention(AI_INTENTION_ATTACK, player);
 					world._target = player;
 				} else if (world.templateId == INSTANCEID_NIGHT) {
+					if (DEBUG) {
+						_log.info("밤의 자켄 스폰 시작!");
+					}
 					Location loc = _spawnsZaken.get(Rnd.get(_spawnsZaken.size()));
 					world._zaken = (L2Attackable) addSpawn(ZAKEN_NIGHT, loc.getX(), loc.getY(), loc.getZ(), 32768, false, 0, false, world.instanceId);
 					world._zaken.addSkill(SkillTable.getInstance().getInfo(4216, 1));
@@ -1202,14 +1184,17 @@ public class Zaken extends L2AttackableAIScript {
 		return super.onExitZone(character, zone);
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public Zaken(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(PATHFINDER);
 		addTalkId(PATHFINDER);
 		addFirstTalkId(PATHFINDER);
 		addFirstTalkId(BARREL);
-		
 		registerMobs(new int[]
 		{
 			ZAKEN_DAY,
@@ -1224,7 +1209,7 @@ public class Zaken extends L2AttackableAIScript {
 	}
 	
 	public static void main(String[] args) {
-		// now call the constructor (starts up the)
-		new Zaken(-1, qn, "instances");
+		new Zaken(-1, Zaken.class.getSimpleName(), "instances");
 	}
+	
 }
