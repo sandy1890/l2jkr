@@ -48,27 +48,14 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
+/**
+ * 림 카마로카
+ */
 public class RimKamaloka extends Quest {
 	
-	public RimKamaloka(int questId, String name, String descr) {
-		super(questId, name, descr);
-		
-		addStartNpc(START_NPC);
-		// addFirstTalkId(START_NPC);
-		addFirstTalkId(REWARDER);
-		addTalkId(START_NPC);
-		addTalkId(REWARDER);
-		
-		for (int[] list : KANABIONS) {
-			addFactionCallId(list[0]);
-			for (int mob : list) {
-				addAttackId(mob);
-				addKillId(mob);
-			}
-		}
-	}
-	
-	private static String qn = "RimKamaloka";
+	// NPCs
+	private static final int PATHFINDER = 32484; // 패스파인더 요원
+	private static final int REWARDER = 32485; // 패스파인더 요원
 	
 	/*
 	 * Reset time for all kamaloka Default: 6:30AM on server time
@@ -141,822 +128,196 @@ public class RimKamaloka extends Quest {
 	/*
 	 * Teleport points into instances x, y, z
 	 */
-	private static final int[][] TELEPORTS =
-	{
+	//@formatter:off
+	private static final int[][] TELEPORTS = {
+		{ 10025, -219868, -8021 },
+		{ 15617, -219883, -8021 },
+		{ 22742, -220079, -7802 },
+		{ 8559, -212987, -7802 },
+		{ 15867, -212994, -7802 },
+		{ 23038, -213052, -8007 },
+		{ 9139, -205132, -8007 },
+		{ 15943, -205740, -8008 },
+		{ 22343, -206237, -7991 },
+		{ 41496, -219694, -8759 },
+		{ 48137, -219716, -8759 }
+	};
+	
+	private static final int[][] KANABIONS = {
+		{ 22452, 22453, 22454 },
+		{ 22455, 22456, 22457 },
+		{ 22458, 22459, 22460 },
+		{ 22461, 22462, 22463 },
+		{ 22464, 22465, 22466 },
+		{ 22467, 22468, 22469 },
+		{ 22470, 22471, 22472 },
+		{ 22473, 22474, 22475 },
+		{ 22476, 22477, 22478 },
+		{ 22479, 22480, 22481 },
+		{ 22482, 22483, 22484 }
+	};
+	
+	private static final int[][][] SPAWNLIST = {
 		{
-			10025,
-			-219868,
-			-8021
-		},
-		{
-			15617,
-			-219883,
-			-8021
-		},
-		{
-			22742,
-			-220079,
-			-7802
-		},
-		{
-			8559,
-			-212987,
-			-7802
-		},
-		{
-			15867,
-			-212994,
-			-7802
-		},
-		{
-			23038,
-			-213052,
-			-8007
-		},
-		{
-			9139,
-			-205132,
-			-8007
-		},
-		{
-			15943,
-			-205740,
-			-8008
-		},
-		{
-			22343,
-			-206237,
-			-7991
-		},
-		{
-			41496,
-			-219694,
-			-8759
-		},
-		{
-			48137,
-			-219716,
-			-8759
+			{ 8971, -219546, -8021 },
+			{ 9318, -219644, -8021 },
+			{ 9266, -220208, -8021 },
+			{ 9497, -220054, -8024 }
+		}, {
+			{ 16107, -219574, -8021 },
+			{ 16769, -219885, -8021 },
+			{ 16363, -220219, -8021 },
+			{ 16610, -219523, -8021 }
+		}, {
+			{ 23019, -219730, -7803 },
+			{ 23351, -220455, -7803 },
+			{ 23900, -219864, -7803 },
+			{ 23851, -220294, -7803 }
+		}, {
+			{ 9514, -212478, -7803 },
+			{ 9236, -213348, -7803 },
+			{ 8868, -212683, -7803 },
+			{ 9719, -213042, -7803 }
+		}, {
+			{ 16925, -212811, -7803 },
+			{ 16885, -213199, -7802 },
+			{ 16487, -213339, -7803 },
+			{ 16337, -212529, -7803 }
+		}, {
+			{ 23958, -213282, -8009 },
+			{ 23292, -212782, -8012 },
+			{ 23844, -212781, -8009 },
+			{ 23533, -213301, -8009 }
+		}, {
+			{ 8828, -205518, -8009 },
+			{ 8895, -205989, -8009 },
+			{ 9398, -205967, -8009 },
+			{ 9393, -205409, -8009 }
+		}, {
+			{ 16185, -205472, -8009 },
+			{ 16808, -205929, -8009 },
+			{ 16324, -206042, -8009 },
+			{ 16782, -205454, -8009 }
+		}, {
+			{ 23476, -206310, -7991 },
+			{ 23230, -205861, -7991 },
+			{ 22644, -205888, -7994 },
+			{ 23078, -206714, -7991 }
+		}, {
+			{ 42981, -219308, -8759 },
+			{ 42320, -220160, -8759 },
+			{ 42434, -219181, -8759 },
+			{ 42101, -219550, -8759 },
+			{ 41859, -220236, -8759 },
+			{ 42881, -219942, -8759 }
+		}, {
+			{ 48770, -219304, -8759 },
+			{ 49036, -220190, -8759 },
+			{ 49363, -219814, -8759 },
+			{ 49393, -219102, -8759 },
+			{ 49618, -220490, -8759 },
+			{ 48526, -220493, -8759 }
 		}
 	};
 	
-	private static final int[][] KANABIONS =
-	{
-		{
-			22452,
-			22453,
-			22454
-		},
-		{
-			22455,
-			22456,
-			22457
-		},
-		{
-			22458,
-			22459,
-			22460
-		},
-		{
-			22461,
-			22462,
-			22463
-		},
-		{
-			22464,
-			22465,
-			22466
-		},
-		{
-			22467,
-			22468,
-			22469
-		},
-		{
-			22470,
-			22471,
-			22472
-		},
-		{
-			22473,
-			22474,
-			22475
-		},
-		{
-			22476,
-			22477,
-			22478
-		},
-		{
-			22479,
-			22480,
-			22481
-		},
-		{
-			22482,
-			22483,
-			22484
-		}
+	protected static final int[][] REWARDERS = {
+		{ 9261, -219862, -8021 },
+		{ 16301, -219806, -8021 },
+		{ 23478, -220079, -7799 },
+		{ 9290, -212993, -7799 },
+		{ 16598, -212997, -7802 },
+		{ 23650, -213051, -8007 },
+		{ 9136, -205733, -8007 },
+		{ 16508, -205737, -8007 },
+		{ 23229, -206316, -7991 },
+		{ 42638, -219781, -8759 },
+		{ 49014, -219737, -8759 }
 	};
 	
-	private static final int[][][] SPAWNLIST =
-	{
-		{
-			{
-				8971,
-				-219546,
-				-8021
-			},
-			{
-				9318,
-				-219644,
-				-8021
-			},
-			{
-				9266,
-				-220208,
-				-8021
-			},
-			{
-				9497,
-				-220054,
-				-8024
-			}
-		},
-		{
-			{
-				16107,
-				-219574,
-				-8021
-			},
-			{
-				16769,
-				-219885,
-				-8021
-			},
-			{
-				16363,
-				-220219,
-				-8021
-			},
-			{
-				16610,
-				-219523,
-				-8021
-			}
-		},
-		{
-			{
-				23019,
-				-219730,
-				-7803
-			},
-			{
-				23351,
-				-220455,
-				-7803
-			},
-			{
-				23900,
-				-219864,
-				-7803
-			},
-			{
-				23851,
-				-220294,
-				-7803
-			}
-		},
-		{
-			{
-				9514,
-				-212478,
-				-7803
-			},
-			{
-				9236,
-				-213348,
-				-7803
-			},
-			{
-				8868,
-				-212683,
-				-7803
-			},
-			{
-				9719,
-				-213042,
-				-7803
-			}
-		},
-		{
-			{
-				16925,
-				-212811,
-				-7803
-			},
-			{
-				16885,
-				-213199,
-				-7802
-			},
-			{
-				16487,
-				-213339,
-				-7803
-			},
-			{
-				16337,
-				-212529,
-				-7803
-			}
-		},
-		{
-			{
-				23958,
-				-213282,
-				-8009
-			},
-			{
-				23292,
-				-212782,
-				-8012
-			},
-			{
-				23844,
-				-212781,
-				-8009
-			},
-			{
-				23533,
-				-213301,
-				-8009
-			}
-		},
-		{
-			{
-				8828,
-				-205518,
-				-8009
-			},
-			{
-				8895,
-				-205989,
-				-8009
-			},
-			{
-				9398,
-				-205967,
-				-8009
-			},
-			{
-				9393,
-				-205409,
-				-8009
-			}
-		},
-		{
-			{
-				16185,
-				-205472,
-				-8009
-			},
-			{
-				16808,
-				-205929,
-				-8009
-			},
-			{
-				16324,
-				-206042,
-				-8009
-			},
-			{
-				16782,
-				-205454,
-				-8009
-			}
-		},
-		{
-			{
-				23476,
-				-206310,
-				-7991
-			},
-			{
-				23230,
-				-205861,
-				-7991
-			},
-			{
-				22644,
-				-205888,
-				-7994
-			},
-			{
-				23078,
-				-206714,
-				-7991
-			}
-		},
-		{
-			{
-				42981,
-				-219308,
-				-8759
-			},
-			{
-				42320,
-				-220160,
-				-8759
-			},
-			{
-				42434,
-				-219181,
-				-8759
-			},
-			{
-				42101,
-				-219550,
-				-8759
-			},
-			{
-				41859,
-				-220236,
-				-8759
-			},
-			{
-				42881,
-				-219942,
-				-8759
-			}
-		},
-		{
-			{
-				48770,
-				-219304,
-				-8759
-			},
-			{
-				49036,
-				-220190,
-				-8759
-			},
-			{
-				49363,
-				-219814,
-				-8759
-			},
-			{
-				49393,
-				-219102,
-				-8759
-			},
-			{
-				49618,
-				-220490,
-				-8759
-			},
-			{
-				48526,
-				-220493,
-				-8759
-			}
-		}
-	};
-	
-	protected static final int[][] REWARDERS =
-	{
-		{
-			9261,
-			-219862,
-			-8021
-		},
-		{
-			16301,
-			-219806,
-			-8021
-		},
-		{
-			23478,
-			-220079,
-			-7799
-		},
-		{
-			9290,
-			-212993,
-			-7799
-		},
-		{
-			16598,
-			-212997,
-			-7802
-		},
-		{
-			23650,
-			-213051,
-			-8007
-		},
-		{
-			9136,
-			-205733,
-			-8007
-		},
-		{
-			16508,
-			-205737,
-			-8007
-		},
-		{
-			23229,
-			-206316,
-			-7991
-		},
-		{
-			42638,
-			-219781,
-			-8759
-		},
-		{
-			49014,
-			-219737,
-			-8759
-		}
-	};
-	
-	private static final int START_NPC = 32484;
-	
-	private static final int REWARDER = 32485;
-	
-	private static final int[][][] REWARDS =
-	{
+	private static final int[][][] REWARDS = {
 		{ // 20-30
-			null, // Grade F
-			{
-				13002,
-				2,
-				10839,
-				1
-			}, // Grade D
-			{
-				13002,
-				2,
-				10838,
-				1
-			}, // Grade C
-			{
-				13002,
-				2,
-				10837,
-				1
-			}, // Grade B
-			{
-				13002,
-				2,
-				10836,
-				1
-			}, // Grade A
-			{
-				13002,
-				2,
-				12824,
-				1
-			}
-		// Grade S
-		},
-		{ // 25-35
+			null, // F등급
+			{ 13002, 2, 10839, 1 }, // D등급
+			{ 13002, 2, 10838, 1 }, // C등급
+			{ 13002, 2, 10837, 1 }, // B등급
+			{ 13002, 2, 10836, 1 }, // A등급
+			{ 13002, 2, 12824, 1 }, // S등급
+		}, { // 25-35
 			null,
-			{
-				13002,
-				3,
-				10838,
-				1
-			},
-			{
-				13002,
-				3,
-				10837,
-				1
-			},
-			{
-				13002,
-				3,
-				10836,
-				1
-			},
-			{
-				13002,
-				3,
-				10840,
-				1
-			},
-			{
-				13002,
-				3,
-				12825,
-				1
-			}
-		},
-		{ // 30-40
+			{ 13002, 3, 10838, 1 },
+			{ 13002, 3, 10837, 1 },
+			{ 13002, 3, 10836, 1 },
+			{ 13002, 3, 10840, 1 },
+			{ 13002, 3, 12825, 1 }
+		}, { // 30-40
 			null,
-			{
-				13002,
-				3,
-				10841,
-				1
-			},
-			{
-				13002,
-				3,
-				10842,
-				1
-			},
-			{
-				13002,
-				3,
-				10843,
-				1
-			},
-			{
-				13002,
-				3,
-				10844,
-				1
-			},
-			{
-				13002,
-				3,
-				12826,
-				1
-			}
-		},
-		{ // 35-45
+			{ 13002, 3, 10841, 1 },
+			{ 13002, 3, 10842, 1 },
+			{ 13002, 3, 10843, 1 },
+			{ 13002, 3, 10844, 1 },
+			{ 13002, 3, 12826, 1 }
+		}, { // 35-45
 			null,
-			{
-				13002,
-				5,
-				10842,
-				1
-			},
-			{
-				13002,
-				5,
-				10843,
-				1
-			},
-			{
-				13002,
-				5,
-				10844,
-				1
-			},
-			{
-				13002,
-				5,
-				10845,
-				1
-			},
-			{
-				13002,
-				5,
-				12827,
-				1
-			}
-		},
-		{ // 40-50
+			{ 13002, 5, 10842, 1 },
+			{ 13002, 5, 10843, 1 },
+			{ 13002, 5, 10844, 1 },
+			{ 13002, 5, 10845, 1 },
+			{ 13002, 5, 12827, 1 }
+		}, { // 40-50
 			null,
-			{
-				13002,
-				7,
-				10846,
-				1
-			},
-			{
-				13002,
-				7,
-				10847,
-				1
-			},
-			{
-				13002,
-				7,
-				10848,
-				1
-			},
-			{
-				13002,
-				7,
-				10849,
-				1
-			},
-			{
-				13002,
-				7,
-				12828,
-				1
-			}
-		},
-		{ // 45-55
+			{ 13002, 7, 10846, 1 },
+			{ 13002, 7, 10847, 1 },
+			{ 13002, 7, 10848, 1 },
+			{ 13002, 7, 10849, 1 },
+			{ 13002, 7, 12828, 1 }
+		}, { // 45-55
 			null,
-			{
-				13002,
-				8,
-				10847,
-				1
-			},
-			{
-				13002,
-				8,
-				10848,
-				1
-			},
-			{
-				13002,
-				8,
-				10849,
-				1
-			},
-			{
-				13002,
-				8,
-				10850,
-				1
-			},
-			{
-				13002,
-				8,
-				12829,
-				1
-			}
-		},
-		{ // 50-60
+			{ 13002, 8, 10847, 1 },
+			{ 13002, 8, 10848, 1 },
+			{ 13002, 8, 10849, 1 },
+			{ 13002, 8, 10850, 1 },
+			{ 13002, 8, 12829, 1 }
+		}, { // 50-60
 			null,
-			{
-				13002,
-				10,
-				10851,
-				1
-			},
-			{
-				13002,
-				10,
-				10852,
-				1
-			},
-			{
-				13002,
-				10,
-				10853,
-				1
-			},
-			{
-				13002,
-				10,
-				10854,
-				1
-			},
-			{
-				13002,
-				10,
-				12830,
-				1
-			}
-		},
-		{ // 55-65
+			{ 13002, 10, 10851, 1 },
+			{ 13002, 10, 10852, 1 },
+			{ 13002, 10, 10853, 1 },
+			{ 13002, 10, 10854, 1 },
+			{ 13002, 10, 12830, 1 }
+		}, { // 55-65
 			null,
-			{
-				13002,
-				12,
-				10852,
-				1
-			},
-			{
-				13002,
-				12,
-				10853,
-				1
-			},
-			{
-				13002,
-				12,
-				10854,
-				1
-			},
-			{
-				13002,
-				12,
-				10855,
-				1
-			},
-			{
-				13002,
-				12,
-				12831,
-				1
-			}
-		},
-		{ // 60-70
+			{ 13002, 12, 10852, 1 },
+			{ 13002, 12, 10853, 1 },
+			{ 13002, 12, 10854, 1 },
+			{ 13002, 12, 10855, 1 },
+			{ 13002, 12, 12831, 1 }
+		}, { // 60-70
 			null,
-			{
-				13002,
-				13,
-				10856,
-				1
-			},
-			{
-				13002,
-				13,
-				10857,
-				1
-			},
-			{
-				13002,
-				13,
-				10858,
-				1
-			},
-			{
-				13002,
-				13,
-				10859,
-				1
-			},
-			{
-				13002,
-				13,
-				12832,
-				1
-			}
-		},
-		{ // 65-75
+			{ 13002, 13, 10856, 1 },
+			{ 13002, 13, 10857, 1 },
+			{ 13002, 13, 10858, 1 },
+			{ 13002, 13, 10859, 1 },
+			{ 13002, 13, 12832, 1 }
+		}, { // 65-75
 			null,
-			{
-				13002,
-				15,
-				10857,
-				1
-			},
-			{
-				13002,
-				15,
-				10858,
-				1
-			},
-			{
-				13002,
-				15,
-				10859,
-				1
-			},
-			{
-				13002,
-				15,
-				10860,
-				1
-			},
-			{
-				13002,
-				15,
-				12833,
-				1
-			}
-		},
-		{ // 70-80
+			{ 13002, 15, 10857, 1 },
+			{ 13002, 15, 10858, 1 },
+			{ 13002, 15, 10859, 1 },
+			{ 13002, 15, 10860, 1 },
+			{ 13002, 15, 12833, 1 }
+		}, { // 70-80
 			null,
-			{
-				13002,
-				17,
-				10861,
-				1
-			},
-			{
-				13002,
-				17,
-				12834,
-				1
-			},
-			{
-				13002,
-				17,
-				10862,
-				1
-			},
-			{
-				13002,
-				17,
-				10863,
-				1
-			},
-			{
-				13002,
-				17,
-				10864,
-				1
-			}
+			{ 13002, 17, 10861, 1 },
+			{ 13002, 17, 12834, 1 },
+			{ 13002, 17, 10862, 1 },
+			{ 13002, 17, 10863, 1 },
+			{ 13002, 17, 10864, 1 }
 		}
 	};
+	//@formatter:on
 	
 	private class RimKamaWorld extends InstanceWorld {
+		
 		public int index;
 		public int KANABION;
 		public int DOPPLER;
@@ -980,6 +341,7 @@ public class RimKamaloka extends Quest {
 		public RimKamaWorld() {
 			// InstanceManager.getInstance().super();
 		}
+		
 	}
 	
 	/**
@@ -1079,9 +441,7 @@ public class RimKamaloka extends Quest {
 			if (inst != null) {
 				teleportPlayer(player, TELEPORTS[index], world.instanceId);
 			}
-		}
-		// Creating new kamaloka instance
-		else {
+		} else { // Creating new kamaloka instance
 			if (!checkConditions(player, index)) {
 				return;
 			}
@@ -1154,10 +514,16 @@ public class RimKamaloka extends Quest {
 				spawn.doSpawn();
 			}
 		} catch (Exception e) {
-			_log.log(Level.WARNING, "RimKamaloka: error during spawn: ", e);
+			_log.log(Level.WARNING, "림 카마로카: error during spawn: ", e);
 		}
 	}
 	
+	/**
+	 * @param world
+	 * @param oldNpc
+	 * @param npcId
+	 * @param player
+	 */
 	private static final void spawnNextMob(RimKamaWorld world, L2Npc oldNpc, int npcId, L2PcInstance player) {
 		if (world.isFinished) {
 			return;
@@ -1197,6 +563,10 @@ public class RimKamaloka extends Quest {
 		monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 	}
 	
+	/**
+	 * @param world
+	 * @param npc
+	 */
 	private synchronized final void rewardPlayer(RimKamaWorld world, L2Npc npc) {
 		if (!world.isFinished || world.isRewarded) {
 			return;
@@ -1212,7 +582,7 @@ public class RimKamaloka extends Quest {
 		for (int objectId : world.allowed) {
 			L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 			if ((player != null) && player.isOnline()) {
-				player.sendMessage("Grade:" + world.grade);
+				player.sendMessage("등급:" + world.grade);
 				for (int i = 0; i < reward.length; i += 2) {
 					player.addItem("Reward", reward[i], reward[i + 1], npc, true);
 				}
@@ -1221,8 +591,12 @@ public class RimKamaloka extends Quest {
 	}
 	
 	class LockTask implements Runnable {
+		
 		private final RimKamaWorld _world;
 		
+		/**
+		 * @param world
+		 */
 		LockTask(RimKamaWorld world) {
 			_world = world;
 		}
@@ -1263,16 +637,20 @@ public class RimKamaloka extends Quest {
 						_world.despawnTask.cancel(false);
 						_world.despawnTask = null;
 					}
-					
 					InstanceManager.getInstance().destroyInstance(_world.instanceId);
 				}
 			}
 		}
+		
 	}
 	
 	class FinishTask implements Runnable {
+		
 		private final RimKamaWorld _world;
 		
+		/**
+		 * @param world
+		 */
 		FinishTask(RimKamaWorld world) {
 			_world = world;
 		}
@@ -1312,11 +690,16 @@ public class RimKamaloka extends Quest {
 				addSpawn(REWARDER, REWARDERS[index][0], REWARDERS[index][1], REWARDERS[index][2], 0, false, 0, false, _world.instanceId);
 			}
 		}
+		
 	}
 	
 	class DespawnTask implements Runnable {
+		
 		private final RimKamaWorld _world;
 		
+		/**
+		 * @param world
+		 */
 		DespawnTask(RimKamaWorld world) {
 			_world = world;
 		}
@@ -1338,6 +721,7 @@ public class RimKamaloka extends Quest {
 				}
 			}
 		}
+		
 	}
 	
 	@Override
@@ -1345,7 +729,6 @@ public class RimKamaloka extends Quest {
 		if ((npc == null) || (player == null)) {
 			return null;
 		}
-		
 		if (event.equalsIgnoreCase("Exit")) {
 			try {
 				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
@@ -1354,7 +737,7 @@ public class RimKamaloka extends Quest {
 					teleportPlayer(player, inst.getSpawnLoc(), 0);
 				}
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "RimKamaloka: problem with exit: ", e);
+				_log.log(Level.WARNING, "림 카마로카: 종료에 오류가 발생했습니다: ", e);
 			}
 			return null;
 		} else if (event.equalsIgnoreCase("Reward")) {
@@ -1364,11 +747,10 @@ public class RimKamaloka extends Quest {
 					rewardPlayer((RimKamaWorld) world, npc);
 				}
 			} catch (Exception e) {
-				_log.log(Level.WARNING, "RimKamaloka: problem with reward: ", e);
+				_log.log(Level.WARNING, "림 카마로카: 보상에 오류가 발생했습니다: ", e);
 			}
 			return "Rewarded.htm";
 		}
-		
 		try {
 			enterInstance(player, Integer.parseInt(event));
 		} catch (Exception e) {
@@ -1381,11 +763,9 @@ public class RimKamaloka extends Quest {
 		if ((npc == null) || (caller == null)) {
 			return null;
 		}
-		
 		if (npc.getNpcId() == caller.getNpcId()) {
 			return null;
 		}
-		
 		return super.onFactionCall(npc, caller, attacker, isPet);
 	}
 	
@@ -1394,9 +774,8 @@ public class RimKamaloka extends Quest {
 		if (npc == null) {
 			return null;
 		}
-		
 		final int npcId = npc.getNpcId();
-		if (npcId == START_NPC) {
+		if (npcId == PATHFINDER) {
 			return npc.getCastle().getName() + ".htm";
 		} else if (npcId == REWARDER) {
 			final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
@@ -1405,7 +784,6 @@ public class RimKamaloka extends Quest {
 				if (!world.isFinished) {
 					return "";
 				}
-				
 				switch (world.grade) {
 					case 0:
 						return "GradeF.htm";
@@ -1422,7 +800,6 @@ public class RimKamaloka extends Quest {
 				}
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1436,21 +813,18 @@ public class RimKamaloka extends Quest {
 		if ((npc == null) || (attacker == null)) {
 			return null;
 		}
-		
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpWorld instanceof RimKamaWorld) {
 			final RimKamaWorld world = (RimKamaWorld) tmpWorld;
 			synchronized (world.lastAttack) {
 				world.lastAttack.put(npc.getObjectId(), System.currentTimeMillis());
 			}
-			
 			final int maxHp = npc.getMaxHp();
 			if (npc.getCurrentHp() == maxHp) {
 				if (((damage * 100) / maxHp) > 40) {
 					final int npcId = npc.getNpcId();
 					final int chance = Rnd.get(100);
 					int nextId = 0;
-					
 					if (npcId == world.KANABION) {
 						if (chance < 5) {
 							nextId = world.DOPPLER;
@@ -1466,14 +840,12 @@ public class RimKamaloka extends Quest {
 							nextId = world.VOIDER;
 						}
 					}
-					
 					if (nextId > 0) {
 						spawnNextMob(world, npc, nextId, attacker);
 					}
 				}
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	
@@ -1482,18 +854,15 @@ public class RimKamaloka extends Quest {
 		if ((npc == null) || (player == null)) {
 			return null;
 		}
-		
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpWorld instanceof RimKamaWorld) {
 			final RimKamaWorld world = (RimKamaWorld) tmpWorld;
 			synchronized (world.lastAttack) {
 				world.lastAttack.remove(npc.getObjectId());
 			}
-			
 			final int npcId = npc.getNpcId();
 			final int chance = Rnd.get(100);
 			int nextId = 0;
-			
 			if (npcId == world.KANABION) {
 				world.kanabionsCount++;
 				if (((L2Attackable) npc).isOverhit()) {
@@ -1530,17 +899,36 @@ public class RimKamaloka extends Quest {
 					nextId = world.VOIDER;
 				}
 			}
-			
 			if (nextId > 0) {
 				spawnNextMob(world, npc, nextId, player);
 			}
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
+	public RimKamaloka(int questId, String name, String descr) {
+		super(questId, name, descr);
+		addStartNpc(PATHFINDER);
+		// addFirstTalkId(PATHFINDER);
+		addFirstTalkId(REWARDER);
+		addTalkId(PATHFINDER);
+		addTalkId(REWARDER);
+		for (int[] list : KANABIONS) {
+			addFactionCallId(list[0]);
+			for (int mob : list) {
+				addAttackId(mob);
+				addKillId(mob);
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
-		new RimKamaloka(-1, qn, "instances");
+		new RimKamaloka(-1, RimKamaloka.class.getSimpleName(), "instances");
 	}
 	
 }
