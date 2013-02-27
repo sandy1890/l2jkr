@@ -191,7 +191,9 @@ public abstract class L2Character extends L2Object {
 	private double _hpUpdateDecCheck = .0;
 	private double _hpUpdateInterval = .0;
 	
-	/** Table of Calculators containing all used calculator */
+	/**
+	 * Table of Calculators containing all used calculator
+	 */
 	private Calculator[] _calculators;
 	
 	/**
@@ -204,13 +206,19 @@ public abstract class L2Character extends L2Object {
 	 */
 	private final FastMap<Integer, SkillHolder> _customSkills = new FastMap<>();
 	
-	/** FastMap containing the active chance skills on this character */
+	/**
+	 * FastMap containing the active chance skills on this character
+	 */
 	private volatile ChanceSkillList _chanceSkills;
 	
-	/** Current force buff this caster is casting to a target */
+	/**
+	 * Current force buff this caster is casting to a target
+	 */
 	protected FusionSkill _fusionSkill;
 	
-	/** Zone system */
+	/**
+	 * Zone system
+	 */
 	public static final byte ZONE_PVP = 0;
 	public static final byte ZONE_PEACE = 1;
 	public static final byte ZONE_SIEGE = 2;
@@ -537,7 +545,6 @@ public abstract class L2Character extends L2Object {
 		}
 	}
 	
-	// rocknow-God-Awaking-Start
 	/**
 	 * @param mov
 	 * @param sendToSelf
@@ -557,7 +564,6 @@ public abstract class L2Character extends L2Object {
 		}
 	}
 	
-	// rocknow-God-Awaking-End
 	/**
 	 * Send a packet to the L2Character AND to all L2PcInstance in the radius (max knownlist radius) from the L2Character.<BR>
 	 * <BR>
@@ -625,11 +631,6 @@ public abstract class L2Character extends L2Object {
 	 * <li>L2PcInstance : Send current HP,MP and CP to the L2PcInstance and only current HP, MP and Level to all other L2PcInstance of the Party</li><BR>
 	 * <BR>
 	 */
-	/*
-	 * l2jtw start public void broadcastStatusUpdate() { if (getStatus().getStatusListener().isEmpty()) return; if (!needHpUpdate(352)) return; if (Config.DEBUG) _log.fine("Broadcast Status Update for " + getObjectId() + "(" + getName() + "). HP: " + getCurrentHp()); // Create the Server->Client
-	 * packet StatusUpdate with current HP StatusUpdate su = new StatusUpdate(this); su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp()); // Go through the StatusListener // Send the Server->Client packet StatusUpdate with current HP and MP for (L2Character temp :
-	 * getStatus().getStatusListener()) { if (temp != null) temp.sendPacket(su); } }
-	 */
 	public void broadcastStatusUpdate() {
 		if (!Config.Update_Others) { // by rocknow
 			if (getStatus().getStatusListener().isEmpty()) {
@@ -642,7 +643,7 @@ public abstract class L2Character extends L2Object {
 		}
 		
 		if (Config.DEBUG) {
-			_log.fine("Broadcast Status Update for " + getObjectId() + "(" + getName() + "). HP: " + getCurrentHp());
+			_log.fine("브로드캐스트 상태 업데이트: " + getObjectId() + "(" + getName() + "). HP: " + getCurrentHp());
 		}
 		
 		// Create the Server->Client packet StatusUpdate with current HP
@@ -668,8 +669,6 @@ public abstract class L2Character extends L2Object {
 			}
 		}
 	}
-	
-	// l2jtw end
 	
 	/**
 	 * Not Implemented.<BR>
@@ -734,7 +733,7 @@ public abstract class L2Character extends L2Object {
 		z += 5;
 		
 		if (Config.DEBUG) {
-			_log.fine("Teleporting to: " + x + ", " + y + ", " + z);
+			_log.fine(x + ", " + y + ", " + z + " 텔레포트 좌표가 지정되었습니다.");
 		}
 		
 		// Send a Server->Client packet TeleportToLocationt to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
@@ -1777,8 +1776,22 @@ public abstract class L2Character extends L2Object {
 				}
 				
 				/*
-				 * handled on first switch switch (skill.getTargetType()) { case TARGET_SELF: case TARGET_PET: case TARGET_SUMMON: case TARGET_PARTY: case TARGET_CLAN: case TARGET_ALLY: doit = true; break; }
+				 * handled on first switch
 				 */
+				//@formatter:off
+				/*
+				switch (skill.getTargetType()) {
+					case TARGET_SELF:
+					case TARGET_PET:
+					case TARGET_SUMMON:
+					case TARGET_PARTY:
+					case TARGET_CLAN:
+					case TARGET_ALLY:
+						doit = true;
+					break;
+				}
+				*/
+				//@formatter:on
 				
 				if (doit) {
 					target = (L2Character) targets[0];
@@ -2371,7 +2384,6 @@ public abstract class L2Character extends L2Object {
 	
 	public void deleteMe() {
 		setDebug(null);
-		
 		if (hasAI()) {
 			getAI().stopAITask();
 		}
@@ -2383,7 +2395,9 @@ public abstract class L2Character extends L2Object {
 	protected void calculateRewards(L2Character killer) {
 	}
 	
-	/** Sets HP, MP and CP and revives the L2Character. */
+	/**
+	 * Sets HP, MP and CP and revives the L2Character.
+	 */
 	public void doRevive() {
 		if (!isDead()) {
 			return;
@@ -2748,7 +2762,9 @@ public abstract class L2Character extends L2Object {
 		}
 	}
 	
-	/** Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance. */
+	/**
+	 * Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance.
+	 */
 	public final void setRunning() {
 		if (!isRunning()) {
 			setIsRunning(true);
@@ -3012,7 +3028,6 @@ public abstract class L2Character extends L2Object {
 		}
 		
 		/*
-		 * (non-Javadoc)
 		 * @see java.lang.Runnable#run()
 		 */
 		@Override
@@ -3025,8 +3040,11 @@ public abstract class L2Character extends L2Object {
 		}
 	}
 	
-	/** Task launching the magic skill phases */
+	/**
+	 * Task launching the magic skill phases
+	 */
 	class MagicUseTask implements Runnable {
+		
 		L2Object[] targets;
 		L2Skill skill;
 		int count;
@@ -3056,7 +3074,6 @@ public abstract class L2Character extends L2Object {
 		}
 		
 		/*
-		 * (non-Javadoc)
 		 * @see java.lang.Runnable#run()
 		 */
 		@Override
@@ -3084,10 +3101,14 @@ public abstract class L2Character extends L2Object {
 				}
 			}
 		}
+		
 	}
 	
-	/** Task launching the function useMagic() */
+	/**
+	 * Task launching the function useMagic()
+	 */
 	private static class QueuedMagicUseTask implements Runnable {
+		
 		L2PcInstance _currPlayer;
 		L2Skill _queuedSkill;
 		boolean _isCtrlPressed;
@@ -3107,7 +3128,6 @@ public abstract class L2Character extends L2Object {
 		}
 		
 		/*
-		 * (non-Javadoc)
 		 * @see java.lang.Runnable#run()
 		 */
 		@Override
@@ -3118,6 +3138,7 @@ public abstract class L2Character extends L2Object {
 				_log.log(Level.SEVERE, "Failed executing QueuedMagicUseTask.", e);
 			}
 		}
+		
 	}
 	
 	/**
@@ -3134,7 +3155,6 @@ public abstract class L2Character extends L2Object {
 		}
 		
 		/*
-		 * (non-Javadoc)
 		 * @see java.lang.Runnable#run()
 		 */
 		@Override
@@ -3151,6 +3171,7 @@ public abstract class L2Character extends L2Object {
 	 * Task launching the magic skill phases
 	 */
 	class FlyToLocationTask implements Runnable {
+		
 		private final L2Object _tgt;
 		private final L2Character _actor;
 		private final L2Skill _skill;
@@ -3167,7 +3188,6 @@ public abstract class L2Character extends L2Object {
 		}
 		
 		/*
-		 * (non-Javadoc)
 		 * @see java.lang.Runnable#run()
 		 */
 		@Override
@@ -3183,22 +3203,20 @@ public abstract class L2Character extends L2Object {
 				_log.log(Level.SEVERE, "Failed executing FlyToLocationTask.", e);
 			}
 		}
+		
 	}
 	
-	// Abnormal Effect - NEED TO REMOVE ONCE L2CHARABNORMALEFFECT IS COMPLETE
 	/**
+	 * <pre>
+	 * Abnormal Effect - NEED TO REMOVE ONCE L2CHARABNORMALEFFECT IS COMPLETE
 	 * Map 32 bits (0x0000) containing all abnormal effect in progress
+	 * </pre>
 	 */
 	private int _AbnormalEffects;
 	
 	protected CharEffectList _effects = new CharEffectList(this);
 	
 	private int _SpecialEffects;
-	
-	// l2jtw add start
-	// private Set<Integer> _AbnormalEffectsList = new javolution.util.FastSet<>();
-	// private Set<Integer> _SpecialEffectsList = new javolution.util.FastSet<>();
-	// l2jtw add end
 	
 	/**
 	 * Launch and add L2Effect (including Stack Group management) to L2Character and update client magic icon.<BR>
@@ -3268,6 +3286,7 @@ public abstract class L2Character extends L2Object {
 		updateAbnormalEffect();
 	}
 	
+	//@formatter:off
 	// Add NevitAdvent by pmq Start
 	/**
 	 * @param mask
@@ -3279,8 +3298,9 @@ public abstract class L2Character extends L2Object {
 		// l2jtw add end
 		updateAbnormalEffect();
 	}
-	
 	// Add NevitAdvent by pmq End
+	//@formatter:on
+	
 	/**
 	 * @param mask
 	 */
@@ -3344,7 +3364,9 @@ public abstract class L2Character extends L2Object {
 	 * <BR>
 	 */
 	public final void startMuted() {
-		/* Aborts any casts if muted */
+		/*
+		 * Aborts any casts if muted
+		 */
 		abortCast();
 		getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 		updateAbnormalEffect();
@@ -3374,7 +3396,9 @@ public abstract class L2Character extends L2Object {
 	 * <BR>
 	 */
 	public final void startSleeping() {
-		/* Aborts any attacks/casts if asleep */
+		/*
+		 * Aborts any attacks/casts if asleep
+		 */
 		abortAttack();
 		abortCast();
 		stopMove(null);
@@ -3403,11 +3427,10 @@ public abstract class L2Character extends L2Object {
 		updateAbnormalEffect();
 	}
 	
-	/**
-	 * 
-	 */
 	public final void startParalyze() {
-		/* Aborts any attacks/casts if paralyzed */
+		/*
+		 * Aborts any attacks/casts if paralyzed
+		 */
 		abortAttack();
 		abortCast();
 		stopMove(null);
@@ -3442,6 +3465,7 @@ public abstract class L2Character extends L2Object {
 		updateAbnormalEffect();
 	}
 	
+	//@formatter:off
 	// Add NevitAdvent by pmq Start
 	/**
 	 * @param mask
@@ -3453,8 +3477,9 @@ public abstract class L2Character extends L2Object {
 		// l2jtw add end
 		updateAbnormalEffect();
 	}
-	
 	// Add NevitAdvent by pmq End
+	//@formatter:on
+	
 	/**
 	 * @param mask
 	 */
@@ -3632,7 +3657,6 @@ public abstract class L2Character extends L2Object {
 		if (removeEffects) {
 			stopEffects(L2EffectType.MUTE);
 		}
-		
 		updateAbnormalEffect();
 	}
 	
@@ -3643,7 +3667,6 @@ public abstract class L2Character extends L2Object {
 		if (removeEffects) {
 			stopEffects(L2EffectType.PHYSICAL_MUTE);
 		}
-		
 		updateAbnormalEffect();
 	}
 	
@@ -3714,7 +3737,6 @@ public abstract class L2Character extends L2Object {
 		if (removeEffects) {
 			stopEffects(L2EffectType.PARALYZE);
 		}
-		
 		if (!isPlayer()) {
 			getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
@@ -3819,6 +3841,7 @@ public abstract class L2Character extends L2Object {
 		return ae;
 	}
 	
+	//@formatter:off
 	// l2jtw add start
 	/**
 	 * @return
@@ -3839,8 +3862,8 @@ public abstract class L2Character extends L2Object {
 		}
 		return el;
 	}
-	
 	// l2jtw add end
+	//@formatter:on
 	
 	/**
 	 * <B><U> Concept</U> :</B><BR>
@@ -3919,6 +3942,7 @@ public abstract class L2Character extends L2Object {
 	// NEED TO ORGANIZE AND MOVE TO PROPER PLACE
 	/** This class permit to the L2Character AI to obtain informations and uses L2Character method */
 	public class AIAccessor {
+		
 		public AIAccessor() {
 		}
 		
@@ -3996,6 +4020,7 @@ public abstract class L2Character extends L2Object {
 		public void detachAI() {
 			_ai = null;
 		}
+		
 	}
 	
 	/**
@@ -4008,6 +4033,7 @@ public abstract class L2Character extends L2Object {
 	 * <BR>
 	 */
 	public static class MoveData {
+		
 		// when we retrieve x/y/z we use GameTimeControl.getGameTicks()
 		// if we are moving, but move timestamp==gameticks, we don't need
 		// to recalculate position
@@ -4028,6 +4054,7 @@ public abstract class L2Character extends L2Object {
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
 		public int geoPathGty;
+		
 	}
 	
 	/**

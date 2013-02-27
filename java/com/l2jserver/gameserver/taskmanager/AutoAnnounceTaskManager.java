@@ -90,7 +90,7 @@ public class AutoAnnounceTaskManager {
 		} finally {
 			L2DatabaseFactory.close(conn);
 		}
-		_log.log(Level.INFO, "자동 공지: " + count + " 자동 공지사항 데이터가 로드되었습니다.");
+		_log.log(Level.INFO, "자동 공지: " + count + "개 자동 공지사항 데이터가 로드되었습니다.");
 	}
 	
 	/**

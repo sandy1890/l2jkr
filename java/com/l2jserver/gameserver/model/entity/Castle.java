@@ -803,9 +803,8 @@ public class Castle {
 				_doors.add(door);
 			}
 		}
-		
 		if (Config.DEBUG) {
-			_log.info("Castle " + this + " loaded " + _doors.size() + " doors.");
+			_log.info(this + "성 " + _doors.size() + "개 문이 로드되었습니다.");
 		}
 	}
 	
@@ -853,6 +852,12 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param doorId
+	 * @param hp
+	 * @param pDef
+	 * @param mDef
+	 */
 	private void saveDoorUpgrade(int doorId, int hp, int pDef, int mDef) {
 		Connection con = null;
 		try {
@@ -871,6 +876,9 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param clan
+	 */
 	private void updateOwnerInDB(L2Clan clan) {
 		if (clan != null) {
 			_ownerId = clan.getClanId(); // Update owner id property
@@ -909,10 +917,17 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getCastleId() {
 		return _castleId;
 	}
 	
+	/**
+	 * @param doorId
+	 * @return
+	 */
 	public final L2DoorInstance getDoor(int doorId) {
 		if (doorId <= 0) {
 			return null;
@@ -926,19 +941,31 @@ public class Castle {
 		return null;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final List<L2DoorInstance> getDoors() {
 		return _doors;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final String getName() {
 		return _name;
 	}
 	
-	// Add By Tiger Castle Name Multi Language
+	/**
+	 * Add By Tiger Castle Name Multi Language
+	 * @return
+	 */
 	public final String getCName() {
 		return _cname;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getOwnerId() {
 		return _ownerId;
 	}
@@ -953,18 +980,30 @@ public class Castle {
 		return _siege;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final Calendar getSiegeDate() {
 		return _siegeDate;
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean getIsTimeRegistrationOver() {
 		return _isTimeRegistrationOver;
 	}
 	
+	/**
+	 * @param val
+	 */
 	public void setIsTimeRegistrationOver(boolean val) {
 		_isTimeRegistrationOver = val;
 	}
 	
+	/**
+	 * @return
+	 */
 	public Calendar getTimeRegistrationOverDate() {
 		if (_siegeTimeRegistrationEndDate == null) {
 			_siegeTimeRegistrationEndDate = Calendar.getInstance();
@@ -972,22 +1011,37 @@ public class Castle {
 		return _siegeTimeRegistrationEndDate;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getTaxPercent() {
 		return _taxPercent;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final double getTaxRate() {
 		return _taxRate;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final long getTreasury() {
 		return _treasury;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final boolean getShowNpcCrest() {
 		return _showNpcCrest;
 	}
 	
+	/**
+	 * @param showNpcCrest
+	 */
 	public final void setShowNpcCrest(boolean showNpcCrest) {
 		if (_showNpcCrest != showNpcCrest) {
 			_showNpcCrest = showNpcCrest;
@@ -995,14 +1049,26 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param period
+	 * @return
+	 */
 	public List<SeedProduction> getSeedProduction(int period) {
 		return (period == CastleManorManager.PERIOD_CURRENT ? _production : _productionNext);
 	}
 	
+	/**
+	 * @param period
+	 * @return
+	 */
 	public List<CropProcure> getCropProcure(int period) {
 		return (period == CastleManorManager.PERIOD_CURRENT ? _procure : _procureNext);
 	}
 	
+	/**
+	 * @param seed
+	 * @param period
+	 */
 	public void setSeedProduction(List<SeedProduction> seed, int period) {
 		if (period == CastleManorManager.PERIOD_CURRENT) {
 			_production = seed;
@@ -1011,6 +1077,10 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param crop
+	 * @param period
+	 */
 	public void setCropProcure(List<CropProcure> crop, int period) {
 		if (period == CastleManorManager.PERIOD_CURRENT) {
 			_procure = crop;
@@ -1019,6 +1089,11 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param seedId
+	 * @param period
+	 * @return
+	 */
 	public SeedProduction getSeed(int seedId, int period) {
 		for (SeedProduction seed : getSeedProduction(period)) {
 			if (seed.getId() == seedId) {
@@ -1028,6 +1103,11 @@ public class Castle {
 		return null;
 	}
 	
+	/**
+	 * @param cropId
+	 * @param period
+	 * @return
+	 */
 	public CropProcure getCrop(int cropId, int period) {
 		for (CropProcure crop : getCropProcure(period)) {
 			if (crop.getId() == cropId) {
@@ -1037,6 +1117,10 @@ public class Castle {
 		return null;
 	}
 	
+	/**
+	 * @param period
+	 * @return
+	 */
 	public long getManorCost(int period) {
 		List<CropProcure> procure;
 		List<SeedProduction> production;
@@ -1068,10 +1152,8 @@ public class Castle {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement(CASTLE_MANOR_DELETE_PRODUCTION);
 			statement.setInt(1, getCastleId());
-			
 			statement.execute();
 			statement.close();
 			
@@ -1119,7 +1201,10 @@ public class Castle {
 		}
 	}
 	
-	// save manor production data for specified period
+	/**
+	 * save manor production data for specified period
+	 * @param period
+	 */
 	public void saveSeedData(int period) {
 		Connection con = null;
 		try {
@@ -1159,7 +1244,9 @@ public class Castle {
 		}
 	}
 	
-	// save crop procure data
+	/**
+	 * save crop procure data
+	 */
 	public void saveCropData() {
 		Connection con = null;
 		try {
@@ -1212,7 +1299,10 @@ public class Castle {
 		}
 	}
 	
-	// save crop procure data for specified period
+	/**
+	 * save crop procure data for specified period
+	 * @param period
+	 */
 	public void saveCropData(int period) {
 		Connection con = null;
 		try {
@@ -1254,11 +1344,15 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param cropId
+	 * @param amount
+	 * @param period
+	 */
 	public void updateCrop(int cropId, long amount, int period) {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement(CASTLE_UPDATE_CROP);
 			statement.setLong(1, amount);
 			statement.setInt(2, cropId);
@@ -1273,11 +1367,15 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param seedId
+	 * @param amount
+	 * @param period
+	 */
 	public void updateSeed(int seedId, long amount, int period) {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement(CASTLE_UPDATE_SEED);
 			statement.setLong(1, amount);
 			statement.setInt(2, seedId);
@@ -1292,10 +1390,16 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public boolean isNextPeriodApproved() {
 		return _isNextPeriodApproved;
 	}
 	
+	/**
+	 * @param val
+	 */
 	public void setNextPeriodApproved(boolean val) {
 		_isNextPeriodApproved = val;
 	}
@@ -1324,7 +1428,6 @@ public class Castle {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement("UPDATE castle SET showNpcCrest = ? WHERE id = ?");
 			statement.setString(1, String.valueOf(getShowNpcCrest()));
 			statement.setInt(2, getCastleId());
@@ -1337,10 +1440,16 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public List<L2Skill> getResidentialSkills() {
 		return _residentialSkills;
 	}
 	
+	/**
+	 * @param player
+	 */
 	public void giveResidentialSkills(L2PcInstance player) {
 		for (L2Skill sk : _residentialSkills) {
 			player.addSkill(sk, false);
@@ -1361,6 +1470,9 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @param player
+	 */
 	public void removeResidentialSkills(L2PcInstance player) {
 		for (L2Skill sk : _residentialSkills) {
 			player.removeSkill(sk, false, true);
@@ -1391,6 +1503,9 @@ public class Castle {
 		_artefacts.add(artefact);
 	}
 	
+	/**
+	 * @return
+	 */
 	public List<L2ArtefactInstance> getArtefacts() {
 		return _artefacts;
 	}
@@ -1406,10 +1521,16 @@ public class Castle {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public int getBloodAlliance() {
 		return _bloodAlliance;
 	}
 	
+	/**
+	 * @param count
+	 */
 	public void setBloodAlliance(int count) {
 		_bloodAlliance = count;
 		

@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
  * @author KenM
  */
 public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> {
+	
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
 	@Override
@@ -43,8 +44,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 			readImpl();
 			return true;
 		} catch (Exception e) {
-			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed reading: " + getType() + " - L2J Server Version: " + Config.SERVER_VERSION + " - DP Revision: " + Config.DATAPACK_VERSION + " ; " + e.getMessage(), e);
-			
+			_log.log(Level.SEVERE, "클라이언트: " + getClient().toString() + " - 읽을 수 없습니다: " + getType() + " - L2JKR 서버 버전: " + Config.SERVER_VERSION + " - DP Revision: " + Config.DATAPACK_VERSION + " ; " + e.getMessage(), e);
 			if (e instanceof BufferUnderflowException) {
 				getClient().onBufferUnderflow();
 			}
@@ -67,12 +67,12 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 				if ((actor != null) && (actor.isSpawnProtected() || actor.isInvul())) {
 					actor.onActionRequest();
 					if (Config.DEBUG) {
-						_log.info("Spawn protection for player " + actor.getName() + " removed by packet: " + getType());
+						_log.info(actor.getName() + ": 플레이어 스폰 보호가 제거되었습니다. 패킷: " + getType());
 					}
 				}
 			}
 		} catch (Throwable t) {
-			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed running: " + getType() + " - L2J Server Version: " + Config.SERVER_VERSION + " - DP Revision: " + Config.DATAPACK_VERSION + " ; " + t.getMessage(), t);
+			_log.log(Level.SEVERE, "클라이언트: " + getClient().toString() + " - 실행 불가능합니다: " + getType() + " - L2JKR 서버 버전: " + Config.SERVER_VERSION + " - DP 리비전: " + Config.DATAPACK_VERSION + " ; " + t.getMessage(), t);
 			// in case of EnterWorld error kick player from game
 			if (this instanceof EnterWorld) {
 				getClient().closeNow();
@@ -82,6 +82,9 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 	
 	protected abstract void runImpl();
 	
+	/**
+	 * @param gsp
+	 */
 	protected final void sendPacket(L2GameServerPacket gsp) {
 		getClient().sendPacket(gsp);
 	}
@@ -111,4 +114,5 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient> 
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
+	
 }

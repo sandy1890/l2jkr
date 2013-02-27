@@ -83,9 +83,12 @@ public class DoorTable extends DocumentParser {
 			}
 		}
 		
-		_log.info("DoorTable: Loaded " + _doors.size() + " Door Templates for " + _regions.size() + " regions.");
+		_log.info("DoorTable: " + _doors.size() + "개 문 템플릿, " + _regions.size() + "개 지역이 로드되었습니다.");
 	}
 	
+	/**
+	 * @param set
+	 */
 	public void insertCollisionData(StatsSet set) {
 		int posX, posY, nodeX, nodeY, height;
 		height = set.getInteger("height");
@@ -117,17 +120,28 @@ public class DoorTable extends DocumentParser {
 		putDoor(door, MapRegionManager.getInstance().getMapRegionLocId(door.getX(), door.getY()));
 	}
 	
+	/**
+	 * @param doorId
+	 * @return
+	 */
 	public L2DoorTemplate getDoorTemplate(int doorId) {
 		return _doors.get(doorId).getTemplate();
 	}
 	
+	/**
+	 * @param doorId
+	 * @return
+	 */
 	public L2DoorInstance getDoor(int doorId) {
 		return _doors.get(doorId);
 	}
 	
+	/**
+	 * @param door
+	 * @param region
+	 */
 	public void putDoor(L2DoorInstance door, int region) {
 		_doors.put(door.getDoorId(), door);
-		
 		if (_regions.contains(region)) {
 			_regions.get(region).add(door);
 		} else {
@@ -137,6 +151,10 @@ public class DoorTable extends DocumentParser {
 		}
 	}
 	
+	/**
+	 * @param groupName
+	 * @param doorId
+	 */
 	public static void addDoorGroup(String groupName, int doorId) {
 		Set<Integer> set = _groups.get(groupName.hashCode());
 		if (set == null) {
@@ -148,18 +166,41 @@ public class DoorTable extends DocumentParser {
 		}
 	}
 	
+	/**
+	 * @param groupName
+	 * @return
+	 */
 	public static Set<Integer> getDoorsByGroup(String groupName) {
 		return _groups.get(groupName.hashCode());
 	}
 	
+	/**
+	 * @return
+	 */
 	public L2DoorInstance[] getDoors() {
 		return _doors.values(new L2DoorInstance[0]);
 	}
 	
+	/**
+	 * @param start
+	 * @param end
+	 * @param instanceId
+	 * @return
+	 */
 	public boolean checkIfDoorsBetween(AbstractNodeLoc start, AbstractNodeLoc end, int instanceId) {
 		return checkIfDoorsBetween(start.getX(), start.getY(), start.getZ(), end.getX(), end.getY(), end.getZ(), instanceId);
 	}
 	
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param tx
+	 * @param ty
+	 * @param tz
+	 * @param instanceId
+	 * @return
+	 */
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId) {
 		return checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, false);
 	}
@@ -220,6 +261,9 @@ public class DoorTable extends DocumentParser {
 		return false;
 	}
 	
+	/**
+	 * @return
+	 */
 	public static DoorTable getInstance() {
 		return SingletonHolder._instance;
 	}

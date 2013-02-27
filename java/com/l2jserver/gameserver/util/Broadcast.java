@@ -39,6 +39,7 @@ import gnu.trove.procedure.TObjectProcedure;
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
 public final class Broadcast {
+	
 	private static Logger _log = Logger.getLogger(Broadcast.class.getName());
 	
 	/**
@@ -52,7 +53,7 @@ public final class Broadcast {
 	 */
 	public static void toPlayersTargettingMyself(L2Character character, L2GameServerPacket mov) {
 		if (Config.DEBUG) {
-			_log.fine("players to notify:" + character.getKnownList().getKnownPlayers().size() + " packet:" + mov.getType());
+			_log.fine("플레이어 알림: " + character.getKnownList().getKnownPlayers().size() + "개 패킷:" + mov.getType());
 		}
 		
 		Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
@@ -62,7 +63,6 @@ public final class Broadcast {
 				if (player.getTarget() != character) {
 					continue;
 				}
-				
 				player.sendPacket(mov);
 			}
 		}
@@ -79,7 +79,7 @@ public final class Broadcast {
 	 */
 	public static void toKnownPlayers(L2Character character, L2GameServerPacket mov) {
 		if (Config.DEBUG) {
-			_log.fine("players to notify:" + character.getKnownList().getKnownPlayers().size() + " packet:" + mov.getType());
+			_log.fine("플레이어 알림: " + character.getKnownList().getKnownPlayers().size() + "개 패킷:" + mov.getType());
 		}
 		
 		Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
@@ -141,11 +141,15 @@ public final class Broadcast {
 		if (character instanceof L2PcInstance) {
 			character.sendPacket(mov);
 		}
-		
 		toKnownPlayers(character, mov);
 	}
 	
-	// To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
+	/**
+	 * To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time<BR>
+	 * @param character
+	 * @param mov
+	 * @param radius
+	 */
 	public static void toSelfAndKnownPlayersInRadius(L2Character character, L2GameServerPacket mov, int radius) {
 		if (radius < 0) {
 			radius = 600;
@@ -172,12 +176,15 @@ public final class Broadcast {
 	 */
 	public static void toAllOnlinePlayers(L2GameServerPacket mov) {
 		if (Config.DEBUG) {
-			_log.fine("Players to notify: " + L2World.getInstance().getAllPlayersCount() + " (with packet " + mov.getType() + ")");
+			_log.fine("플레이어 알림: " + L2World.getInstance().getAllPlayersCount() + "명 (패킷: " + mov.getType() + ")");
 		}
-		
 		L2World.getInstance().forEachPlayer(new ForEachPlayerBroadcast(mov));
 	}
 	
+	/**
+	 * @param text
+	 * @param isCritical
+	 */
 	public static void announceToOnlinePlayers(String text, boolean isCritical) {
 		CreatureSay cs;
 		
@@ -190,13 +197,21 @@ public final class Broadcast {
 		toAllOnlinePlayers(cs);
 	}
 	
+	/**
+	 * @param mov
+	 * @param instanceId
+	 */
 	public static void toPlayersInInstance(L2GameServerPacket mov, int instanceId) {
 		L2World.getInstance().forEachPlayer(new ForEachPlayerInInstanceBroadcast(mov, instanceId));
 	}
 	
 	private static final class ForEachPlayerBroadcast implements TObjectProcedure<L2PcInstance> {
+		
 		L2GameServerPacket _packet;
 		
+		/**
+		 * @param packet
+		 */
 		protected ForEachPlayerBroadcast(L2GameServerPacket packet) {
 			_packet = packet;
 		}
@@ -208,12 +223,18 @@ public final class Broadcast {
 			}
 			return true;
 		}
+		
 	}
 	
 	private static final class ForEachPlayerInInstanceBroadcast implements TObjectProcedure<L2PcInstance> {
+		
 		L2GameServerPacket _packet;
 		int _instanceId;
 		
+		/**
+		 * @param packet
+		 * @param instanceId
+		 */
 		protected ForEachPlayerInInstanceBroadcast(L2GameServerPacket packet, int instanceId) {
 			_packet = packet;
 			_instanceId = instanceId;
@@ -226,5 +247,7 @@ public final class Broadcast {
 			}
 			return true;
 		}
+		
 	}
+	
 }
