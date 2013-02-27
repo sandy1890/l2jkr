@@ -27,34 +27,33 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * Good Day to Fly (10273).<br>
+ * 날기 좋은 날 (10273).<br>
  * Original Jython script by Kerberos v1.0 on 2009/04/25
  * @author nonom
+ * @author lineage2kr
  */
 public class Q10273_GoodDayToFly extends Quest {
 	
-	private static final String qn = "10273_GoodDayToFly";
-	
 	// NPCs
-	private static final int LEKON = 32557;
+	private static final int LEKON = 32557; // 엔지니어 레콘
 	
 	private static final int[] MOBS =
 	{
-		22614,
-		22615
+		22614, // 벌쳐 라이더
+		22615, // 벌쳐 라이더
 	};
 	
 	// Items
-	private static final int MARK = 13856;
+	private static final int MARK = 13856; // 라이더의 표식
 	
 	// Skills
-	private static final L2Skill AuraBirdFalcon = SkillTable.getInstance().getInfo(5982, 1);
-	private static final L2Skill AuraBirdOwl = SkillTable.getInstance().getInfo(5983, 1);
+	private static final L2Skill AuraBirdFalcon = SkillTable.getInstance().getInfo(5982, 1); // 오라버드 - 팔콘
+	private static final L2Skill AuraBirdOwl = SkillTable.getInstance().getInfo(5983, 1); // 오라버드 - 오울
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player) {
-		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
-		final QuestState st = player.getQuestState(qn);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null) {
 			return htmltext;
 		}
@@ -92,7 +91,7 @@ public class Q10273_GoodDayToFly extends Quest {
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null) {
 			return htmltext;
 		}
@@ -124,7 +123,7 @@ public class Q10273_GoodDayToFly extends Quest {
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet) {
-		final QuestState st = killer.getQuestState(qn);
+		final QuestState st = killer.getQuestState(getName());
 		if ((st == null) || !st.isStarted()) {
 			return null;
 		}
@@ -142,12 +141,16 @@ public class Q10273_GoodDayToFly extends Quest {
 		return null;
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public Q10273_GoodDayToFly(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(MOBS);
-		
 		questItemIds = new int[]
 		{
 			MARK
@@ -155,7 +158,7 @@ public class Q10273_GoodDayToFly extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new Q10273_GoodDayToFly(10273, qn, "Good Day to Fly");
+		new Q10273_GoodDayToFly(10273, Q10273_GoodDayToFly.class.getSimpleName(), "날기 좋은 날");
 	}
 	
 }

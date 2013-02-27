@@ -18,6 +18,8 @@
  */
 package custom.Nottingale;
 
+import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -33,43 +35,52 @@ public class Nottingale extends Quest {
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
-		String htmltext = event;
-		QuestState qs = player.getQuestState("10273_GoodDayToFly");
+		QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 		if ((qs == null) || !qs.isCompleted()) {
-			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
-			player.sendPacket(new RadarControl(0, 2, -184545, 243120, 1581));
-			htmltext = "32627.htm";
-		} else if (event.equals("32627-3.htm")) {
-			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
-			player.sendPacket(new RadarControl(0, 2, -192361, 254528, 3598));
-		} else if (event.equals("32627-4.htm")) {
-			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
-			player.sendPacket(new RadarControl(0, 2, -174600, 219711, 4424));
-		} else if (event.equals("32627-5.htm")) {
-			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
-			player.sendPacket(new RadarControl(0, 2, -181989, 208968, 4424));
-		} else if (event.equals("32627-6.htm")) {
-			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
-			player.sendPacket(new RadarControl(0, 2, -252898, 235845, 5343));
-		} else if (event.equals("32627-8.htm")) {
-			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
-			player.sendPacket(new RadarControl(0, 2, -212819, 209813, 4288));
-		} else if (event.equals("32627-9.htm")) {
-			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
-			player.sendPacket(new RadarControl(0, 2, -246899, 251918, 4352));
+			switch (event) {
+				case "32627-3.htm": { // 마스터 라이더 발드스톤
+					player.sendPacket(new RadarControl(1, 1, 0, 0, 0));
+					player.sendPacket(new RadarControl(0, 1, -192361, 254528, 3598));
+					break;
+				}
+				case "32627-4.htm": { // 새들의 왕 록
+					player.sendPacket(new RadarControl(1, 1, 0, 0, 0));
+					player.sendPacket(new RadarControl(0, 1, -174600, 219711, 4424));
+					break;
+				}
+				case "32627-5.htm": { // 밴시 퀸 에니라
+					player.sendPacket(new RadarControl(1, 1, 0, 0, 0));
+					player.sendPacket(new RadarControl(0, 1, -181989, 208968, 4424));
+					break;
+				}
+				case "32627-6.htm": { // 파멸의 사자 디우스
+					player.sendPacket(new RadarControl(1, 1, 0, 0, 0));
+					player.sendPacket(new RadarControl(0, 1, -252898, 235845, 5343));
+					break;
+				}
+				case "32627-8.htm": { // 불멸의 씨앗
+					player.sendPacket(new RadarControl(1, 1, 0, 0, 0));
+					player.sendPacket(new RadarControl(0, 1, -212819, 209813, 4288));
+					break;
+				}
+				case "32627-9.htm": { // 파멸의 씨앗
+					player.sendPacket(new RadarControl(1, 1, 0, 0, 0));
+					player.sendPacket(new RadarControl(0, 1, -246899, 251918, 4352));
+					break;
+				}
+			}
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player) {
-		QuestState st = player.getQuestState(Nottingale.class.getSimpleName());
+		QuestState st = player.getQuestState(getName());
 		if (st == null) {
-			st = newQuestState(player);
+			newQuestState(player);
 		}
 		player.setLastQuestNpcObject(npc.getObjectId());
-		npc.showChatWindow(player);
-		return null;
+		return "32627.htm";
 	}
 	
 	/**
