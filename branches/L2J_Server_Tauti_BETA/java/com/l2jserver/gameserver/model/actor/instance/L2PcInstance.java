@@ -4834,7 +4834,7 @@ public final class L2PcInstance extends L2Playable
 		
 		// Send a Server->Client packet CharInfo to all L2PcInstance in _KnownPlayers of the L2PcInstance
 		if (Config.DEBUG) {
-			_log.fine("players to notify:" + getKnownList().getKnownPlayers().size() + " packet: [S] 03 CharInfo");
+			_log.fine("플레이어 알림: " + getKnownList().getKnownPlayers().size() + "개 패킷: [S] 03 CharInfo");
 		}
 		
 		broadcastPacket(new CharInfo(this));
@@ -4855,7 +4855,7 @@ public final class L2PcInstance extends L2Playable
 		
 		// Send a Server->Client packet TitleUpdate to all L2PcInstance in _KnownPlayers of the L2PcInstance
 		if (Config.DEBUG) {
-			_log.fine("players to notify:" + getKnownList().getKnownPlayers().size() + " packet: [S] cc TitleUpdate");
+			_log.fine("플레이어 알림: " + getKnownList().getKnownPlayers().size() + "개 패킷: [S] cc TitleUpdate");
 		}
 		
 		broadcastPacket(new NicknameChanged(this));

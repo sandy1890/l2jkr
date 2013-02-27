@@ -39,7 +39,6 @@ public class GlobalVariablesManager {
 	
 	protected GlobalVariablesManager() {
 		_variablesMap = new FastMap<>();
-		
 		loadVars();
 	}
 	
@@ -73,7 +72,6 @@ public class GlobalVariablesManager {
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SAVE_VAR);
-			
 			for (String var : _variablesMap.keySet()) {
 				statement.setString(1, var);
 				statement.setString(2, _variablesMap.get(var));
@@ -81,7 +79,7 @@ public class GlobalVariablesManager {
 				statement.execute();
 			}
 			statement.close();
-			_log.info("글로벌 변수 관리: Database updated.");
+			_log.info("글로벌 변수 관리: 데이터베이스에 업데이트했습니다.");
 		} catch (Exception e) {
 			_log.warning("글로벌 변수 관리: problem while saving variables: " + e);
 		} finally {
@@ -89,18 +87,33 @@ public class GlobalVariablesManager {
 		}
 	}
 	
+	/**
+	 * @param var
+	 * @param value
+	 */
 	public void storeVariable(String var, String value) {
 		_variablesMap.put(var, value);
 	}
 	
+	/**
+	 * @param var
+	 * @return
+	 */
 	public boolean isVariableStored(String var) {
 		return _variablesMap.containsKey(var);
 	}
 	
+	/**
+	 * @param var
+	 * @return
+	 */
 	public String getStoredVariable(String var) {
 		return _variablesMap.get(var);
 	}
 	
+	/**
+	 * @return
+	 */
 	public static final GlobalVariablesManager getInstance() {
 		return SingletonHolder._instance;
 	}
