@@ -103,6 +103,7 @@ public class SevenSigns {
 	public static final int ANAKIM_NPC_ID = 25286;
 	public static final int CREST_OF_DAWN_ID = 31170;
 	public static final int CREST_OF_DUSK_ID = 31171;
+	
 	// Seal Stone Related Constants
 	public static final int SEAL_STONE_BLUE_ID = 6360;
 	public static final int SEAL_STONE_GREEN_ID = 6361;
@@ -381,26 +382,43 @@ public class SevenSigns {
 		}
 	}
 	
+	/**
+	 * @return
+	 */
 	public static SevenSigns getInstance() {
 		return SingletonHolder._instance;
 	}
 	
+	/**
+	 * @param blueCount
+	 * @param greenCount
+	 * @param redCount
+	 * @return
+	 */
 	public static long calcContributionScore(long blueCount, long greenCount, long redCount) {
 		long contrib = blueCount * BLUE_CONTRIB_POINTS;
 		contrib += greenCount * GREEN_CONTRIB_POINTS;
 		contrib += redCount * RED_CONTRIB_POINTS;
-		
 		return contrib;
 	}
 	
+	/**
+	 * @param blueCount
+	 * @param greenCount
+	 * @param redCount
+	 * @return
+	 */
 	public static long calcAncientAdenaReward(long blueCount, long greenCount, long redCount) {
 		long reward = blueCount * SEAL_STONE_BLUE_VALUE;
 		reward += greenCount * SEAL_STONE_GREEN_VALUE;
 		reward += redCount * SEAL_STONE_RED_VALUE;
-		
 		return reward;
 	}
 	
+	/**
+	 * @param cabal
+	 * @return
+	 */
 	public static final String getCabalShortName(int cabal) {
 		switch (cabal) {
 			case CABAL_DAWN:
@@ -408,34 +426,43 @@ public class SevenSigns {
 			case CABAL_DUSK:
 				return "dusk";
 		}
-		
 		return "No Cabal";
 	}
 	
+	/**
+	 * @param cabal
+	 * @return
+	 */
 	public static final String getCabalName(int cabal) {
 		switch (cabal) {
 			case CABAL_DAWN:
 				/*
-				 * Move To MessageTable For L2JTW return "Lords of Dawn";
+				 * Move To MessageTable For L2JTW
 				 */
+				// return "Lords of Dawn";
 				return MessageTable.Messages[13].getMessage();
 			case CABAL_DUSK:
 				/*
-				 * Move To MessageTable For L2JTW return "Revolutionaries of Dusk";
+				 * Move To MessageTable For L2JTW
 				 */
+				// return "Revolutionaries of Dusk";
 				return MessageTable.Messages[14].getMessage();
 		}
 		
 		/*
-		 * Move To MessageTable For L2JTW return "No Cabal";
+		 * Move To MessageTable For L2JTW
 		 */
+		// return "No Cabal";
 		return MessageTable.Messages[15].getMessage();
 	}
 	
-	// Add by pmq Start
+	/**
+	 * @param seal
+	 * @param shortName
+	 * @return
+	 */
 	public static final String getSealFileName(int seal, boolean shortName) {
 		String sealName = (!shortName) ? MessageTable.Messages[16].getMessage() : "";
-		
 		switch (seal) {
 			case SEAL_AVARICE:
 				sealName += MessageTable.Messages[16].getExtra(1);
@@ -447,15 +474,16 @@ public class SevenSigns {
 				sealName += MessageTable.Messages[16].getExtra(3);
 			break;
 		}
-		
 		return sealName;
 	}
 	
-	// Add by pmq End
-	
+	/**
+	 * @param seal
+	 * @param shortName
+	 * @return
+	 */
 	public static final String getSealName(int seal, boolean shortName) {
 		String sealName = (!shortName) ? "Seal of " : "";
-		
 		switch (seal) {
 			case SEAL_AVARICE:
 				sealName += "Avarice";
@@ -467,32 +495,34 @@ public class SevenSigns {
 				sealName += "Strife";
 			break;
 		}
-		
 		return sealName;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getCurrentCycle() {
 		return _currentCycle;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final int getCurrentPeriod() {
 		return _activePeriod;
 	}
 	
 	private final int getDaysToPeriodChange() {
 		int numDays = _nextPeriodChange.get(Calendar.DAY_OF_WEEK) - PERIOD_START_DAY;
-		
 		if (numDays < 0) {
 			return 0 - numDays;
 		}
-		
 		return 7 - numDays;
 	}
 	
 	public final long getMilliToPeriodChange() {
 		long currTimeMillis = System.currentTimeMillis();
 		long changeTimeMillis = _nextPeriodChange.getTimeInMillis();
-		
 		return (changeTimeMillis - currTimeMillis);
 	}
 	
@@ -534,26 +564,30 @@ public class SevenSigns {
 		switch (_activePeriod) {
 			case PERIOD_COMP_RECRUITING:
 				/*
-				 * Move To MessageTable For L2JTW periodName = "Quest Event Initialization";
+				 * Move To MessageTable For L2JTW
 				 */
+				// periodName = "Quest Event Initialization";
 				periodName = MessageTable.Messages[17].getMessage();
 			break;
 			case PERIOD_COMPETITION:
 				/*
-				 * Move To MessageTable For L2JTW periodName = "Competition (Quest Event)";
+				 * Move To MessageTable For L2JTW
 				 */
+				// periodName = "Competition (Quest Event)";
 				periodName = MessageTable.Messages[18].getMessage();
 			break;
 			case PERIOD_COMP_RESULTS:
 				/*
-				 * Move To MessageTable For L2JTW periodName = "Quest Event Results";
+				 * Move To MessageTable For L2JTW
 				 */
+				// periodName = "Quest Event Results";
 				periodName = MessageTable.Messages[19].getMessage();
 			break;
 			case PERIOD_SEAL_VALIDATION:
 				/*
-				 * Move To MessageTable For L2JTW periodName = "Seal Validation";
+				 * Move To MessageTable For L2JTW
 				 */
+				// periodName = "Seal Validation";
 				periodName = MessageTable.Messages[20].getMessage();
 			break;
 		}
@@ -561,10 +595,16 @@ public class SevenSigns {
 		return periodName;
 	}
 	
+	/**
+	 * @return
+	 */
 	public final boolean isSealValidationPeriod() {
 		return (_activePeriod == PERIOD_SEAL_VALIDATION);
 	}
 	
+	/**
+	 * @return
+	 */
 	public final boolean isCompResultsPeriod() {
 		return (_activePeriod == PERIOD_COMP_RESULTS);
 	}
@@ -611,6 +651,10 @@ public class SevenSigns {
 		return true;
 	}
 	
+	/**
+	 * @param cabal
+	 * @return
+	 */
 	public final int getCurrentScore(int cabal) {
 		double totalStoneScore = _dawnStoneScore + _duskStoneScore;
 		
@@ -626,6 +670,10 @@ public class SevenSigns {
 		return 0;
 	}
 	
+	/**
+	 * @param cabal
+	 * @return
+	 */
 	public final double getCurrentStoneScore(int cabal) {
 		switch (cabal) {
 			case CABAL_NULL:
@@ -639,6 +687,10 @@ public class SevenSigns {
 		return 0;
 	}
 	
+	/**
+	 * @param cabal
+	 * @return
+	 */
 	public final int getCurrentFestivalScore(int cabal) {
 		switch (cabal) {
 			case CABAL_NULL:
@@ -662,6 +714,10 @@ public class SevenSigns {
 		}
 	}
 	
+	/**
+	 * @param seal
+	 * @return
+	 */
 	public final int getSealOwner(int seal) {
 		return _signsSealOwners.get(seal);
 	}
@@ -676,6 +732,10 @@ public class SevenSigns {
 		}
 	}
 	
+	/**
+	 * @param cabal
+	 * @return
+	 */
 	public final int getTotalMembers(int cabal) {
 		int cabalMembers = 0;
 		String cabalName = getCabalShortName(cabal);
@@ -689,6 +749,10 @@ public class SevenSigns {
 		return cabalMembers;
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public int getPlayerStoneContrib(int objectId) {
 		final StatsSet currPlayer = _signsPlayerData.get(objectId);
 		if (currPlayer == null) {
@@ -703,6 +767,10 @@ public class SevenSigns {
 		return stoneCount;
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public int getPlayerContribScore(int objectId) {
 		final StatsSet currPlayer = _signsPlayerData.get(objectId);
 		if (currPlayer == null) {
@@ -712,6 +780,10 @@ public class SevenSigns {
 		return currPlayer.getInteger("contribution_score");
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public int getPlayerAdenaCollect(int objectId) {
 		final StatsSet currPlayer = _signsPlayerData.get(objectId);
 		if (currPlayer == null) {
@@ -721,6 +793,10 @@ public class SevenSigns {
 		return currPlayer.getInteger("ancient_adena_amount");
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public int getPlayerSeal(int objectId) {
 		final StatsSet currPlayer = _signsPlayerData.get(objectId);
 		if (currPlayer == null) {
@@ -730,6 +806,10 @@ public class SevenSigns {
 		return currPlayer.getInteger("seal");
 	}
 	
+	/**
+	 * @param objectId
+	 * @return
+	 */
 	public int getPlayerCabal(int objectId) {
 		final StatsSet currPlayer = _signsPlayerData.get(objectId);
 		if (currPlayer == null) {
@@ -825,7 +905,7 @@ public class SevenSigns {
 	 */
 	public void saveSevenSignsData() {
 		if (Config.DEBUG) {
-			_log.info("세븐사인: Saving data to disk.");
+			_log.info("세븐사인: 디스크에 데이터를 저장중입니다.");
 		}
 		
 		Connection con = null;
@@ -856,6 +936,9 @@ public class SevenSigns {
 		}
 	}
 	
+	/**
+	 * @param objectId
+	 */
 	public final void saveSevenSignsData(int objectId) {
 		StatsSet sevenDat = _signsPlayerData.get(objectId);
 		if (sevenDat == null) {
@@ -884,11 +967,13 @@ public class SevenSigns {
 		}
 	}
 	
+	/**
+	 * 세븐가인 상태 업데이트
+	 */
 	public final void saveSevenSignsStatus() {
 		Connection con = null;
 		try {
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
 			PreparedStatement statement = con.prepareStatement(UPDATE_STATUS);
 			statement.setInt(1, _currentCycle);
 			statement.setInt(2, _activePeriod);
@@ -907,20 +992,18 @@ public class SevenSigns {
 			statement.setInt(15, _signsDuskSealTotals.get(SEAL_GNOSIS));
 			statement.setInt(16, _signsDuskSealTotals.get(SEAL_STRIFE));
 			statement.setInt(17, SevenSignsFestival.getInstance().getCurrentFestivalCycle());
-			
 			for (int i = 0; i < SevenSignsFestival.FESTIVAL_COUNT; i++) {
 				statement.setInt(18 + i, SevenSignsFestival.getInstance().getAccumulatedBonus(i));
 			}
-			
 			_lastSave = Calendar.getInstance();
 			statement.setLong(18 + SevenSignsFestival.FESTIVAL_COUNT, _lastSave.getTimeInMillis());
 			statement.execute();
 			statement.close();
 			if (Config.DEBUG) {
-				_log.info("세븐사인: Updated data in database.");
+				_log.info("세븐사인: 데이터베이스에 데이터를 업데이트했습니다.");
 			}
 		} catch (SQLException e) {
-			_log.log(Level.SEVERE, "세븐사인: Unable to save data to database: " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "세븐사인: 데이터베이스에 데이터를 업데이트 중 오류가 발생했습니다: " + e.getMessage(), e);
 		} finally {
 			L2DatabaseFactory.close(con);
 		}
@@ -1181,9 +1264,9 @@ public class SevenSigns {
 	 */
 	protected void calcNewSealOwners() {
 		if (Config.DEBUG) {
-			_log.info("세븐사인: (Avarice) Dawn = " + _signsDawnSealTotals.get(SEAL_AVARICE) + ", Dusk = " + _signsDuskSealTotals.get(SEAL_AVARICE));
-			_log.info("세븐사인: (Gnosis) Dawn = " + _signsDawnSealTotals.get(SEAL_GNOSIS) + ", Dusk = " + _signsDuskSealTotals.get(SEAL_GNOSIS));
-			_log.info("세븐사인: (Strife) Dawn = " + _signsDawnSealTotals.get(SEAL_STRIFE) + ", Dusk = " + _signsDuskSealTotals.get(SEAL_STRIFE));
+			_log.info("세븐사인: (탐욕) 여명 = " + _signsDawnSealTotals.get(SEAL_AVARICE) + ", 황혼 = " + _signsDuskSealTotals.get(SEAL_AVARICE));
+			_log.info("세븐사인: (계시) 여명 = " + _signsDawnSealTotals.get(SEAL_GNOSIS) + ", 황혼 = " + _signsDuskSealTotals.get(SEAL_GNOSIS));
+			_log.info("세븐사인: (전란) 여명 = " + _signsDawnSealTotals.get(SEAL_STRIFE) + ", 황혼 = " + _signsDuskSealTotals.get(SEAL_STRIFE));
 		}
 		
 		for (Integer currSeal : _signsDawnSealTotals.keySet()) {
@@ -1319,8 +1402,12 @@ public class SevenSigns {
 	}
 	
 	private final class TeleLosingCabalFromDungeons implements TObjectProcedure<L2PcInstance> {
+		
 		private final String _cmpWinner;
 		
+		/**
+		 * @param compWinner
+		 */
 		protected TeleLosingCabalFromDungeons(final String compWinner) {
 			_cmpWinner = compWinner;
 		}
@@ -1335,8 +1422,9 @@ public class SevenSigns {
 						onlinePlayer.teleToLocation(MapRegionManager.TeleportWhereType.Town);
 						onlinePlayer.setIsIn7sDungeon(false);
 						/*
-						 * Move To MessageTable For L2JTW onlinePlayer.sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
+						 * Move To MessageTable For L2JTW
 						 */
+						// onlinePlayer.sendMessage("You have been teleported to the nearest town due to the beginning of the Seal Validation period.");
 						onlinePlayer.sendMessage(21);
 					}
 				} else {
@@ -1353,6 +1441,7 @@ public class SevenSigns {
 			
 			return true;
 		}
+		
 	}
 	
 	/**
@@ -1470,6 +1559,10 @@ public class SevenSigns {
 		}
 	}
 	
+	/**
+	 * @param itemId
+	 * @return
+	 */
 	public boolean checkIsDawnPostingTicket(int itemId) {
 		// TODO I think it should be some kind of a list in the datapack for compare;
 		if ((itemId > 6114) && (itemId < 6175)) {
@@ -1499,6 +1592,10 @@ public class SevenSigns {
 		return false;
 	}
 	
+	/**
+	 * @param itemId
+	 * @return
+	 */
 	public boolean checkIsRookiePostingTicket(int itemId) {
 		// TODO I think it should be some kind of a list in the datapack for compare;
 		if ((itemId > 6174) && (itemId < 6295)) {
@@ -1516,13 +1613,20 @@ public class SevenSigns {
 		return false;
 	}
 	
+	/**
+	 * @param StrifeOwner
+	 */
 	public void giveCPMult(int StrifeOwner) {
 		L2World.getInstance().forEachPlayer(new GiveCPMult(StrifeOwner));
 	}
 	
 	private final class GiveCPMult implements TObjectProcedure<L2PcInstance> {
+		
 		private final int _strifeOwner;
 		
+		/**
+		 * @param strifeOwner
+		 */
 		protected GiveCPMult(int strifeOwner) {
 			_strifeOwner = strifeOwner;
 		}
@@ -1543,6 +1647,7 @@ public class SevenSigns {
 			}
 			return true;
 		}
+		
 	}
 	
 	public void removeCPMult() {
@@ -1550,6 +1655,7 @@ public class SevenSigns {
 	}
 	
 	protected final class RemoveCPMult implements TObjectProcedure<L2PcInstance> {
+		
 		@Override
 		public final boolean execute(final L2PcInstance character) {
 			if (character != null) {
@@ -1559,8 +1665,13 @@ public class SevenSigns {
 			}
 			return true;
 		}
+		
 	}
 	
+	/**
+	 * @param activeChar
+	 * @return
+	 */
 	public boolean checkSummonConditions(L2PcInstance activeChar) {
 		if (activeChar == null) {
 			return true;
@@ -1570,8 +1681,9 @@ public class SevenSigns {
 			if (getSealOwner(SEAL_STRIFE) == CABAL_DAWN) {
 				if (getPlayerCabal(activeChar.getObjectId()) == CABAL_DUSK) {
 					/*
-					 * Move To MessageTable For L2JTW activeChar.sendMessage("You cannot summon Siege Golem or Cannon while Seal of Strife posessed by Lords of Dawn.");
+					 * Move To MessageTable For L2JTW
 					 */
+					// activeChar.sendMessage("You cannot summon Siege Golem or Cannon while Seal of Strife posessed by Lords of Dawn.");
 					activeChar.sendPacket(SystemMessageId.SEAL_OF_STRIFE_FORBIDS_SUMMONING); // Update by pmq
 					return true;
 				}
