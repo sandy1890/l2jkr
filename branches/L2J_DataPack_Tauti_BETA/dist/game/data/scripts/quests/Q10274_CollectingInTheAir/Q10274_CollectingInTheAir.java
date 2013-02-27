@@ -18,6 +18,8 @@
  */
 package quests.Q10274_CollectingInTheAir;
 
+import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
+
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -28,40 +30,39 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Collecting in the Air (10274).<br>
+ * 공중 채집을 해보자 (10274).<br>
  * Original Jython script by Kerberos v1.0 on 2009/04/26
  * @author nonom
+ * @author lineage2kr
  */
 public class Q10274_CollectingInTheAir extends Quest {
 	
-	private static final String qn = "10274_CollectingInTheAir";
-	
 	// NPCs
-	private static final int LEKON = 32557;
+	private static final int LEKON = 32557; // 엔지니어 레콘
 	
 	// Items
-	private static final int SCROLL = 13844;
-	private static final int RED = 13858;
-	private static final int BLUE = 13859;
-	private static final int GREEN = 13860;
+	private static final int SCROLL = 13844; // 스타스톤 추출 주문서
+	private static final int RED = 13858; // 조잡한 붉은 스타스톤 추출석
+	private static final int BLUE = 13859; // 조잡한 푸른 스타스톤 추출석
+	private static final int GREEN = 13860; // 조잡한 초록 스타스톤 추출석
 	
 	private static final int MOBS[] =
 	{
-		18684,
-		18685,
-		18686,
-		18687,
-		18688,
-		18689,
-		18690,
-		18691,
-		18692
+		18684, // 붉은 스타 스톤
+		18685, // 붉은 스타 스톤
+		18686, // 붉은 스타 스톤
+		18687, // 푸른 스타 스톤
+		18688, // 푸른 스타 스톤
+		18689, // 푸른 스타 스톤
+		18690, // 초록 스타 스톤
+		18691, // 초록 스타 스톤
+		18692, // 초록 스타 스톤
 	};
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player) {
-		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
-		final QuestState st = player.getQuestState(qn);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null) {
 			return htmltext;
 		}
@@ -71,7 +72,7 @@ public class Q10274_CollectingInTheAir extends Quest {
 				htmltext = "32557-0a.htm";
 			break;
 			case State.CREATED:
-				QuestState qs = player.getQuestState("10273_GoodDayToFly");
+				QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 				if (qs != null) {
 					htmltext = (qs.isCompleted() && (player.getLevel() >= 75)) ? "32557-01.htm" : "32557-00.htm";
 				} else {
@@ -96,7 +97,7 @@ public class Q10274_CollectingInTheAir extends Quest {
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null) {
 			return htmltext;
 		}
@@ -112,24 +113,18 @@ public class Q10274_CollectingInTheAir extends Quest {
 	
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) {
-		final QuestState st = caster.getQuestState(qn);
+		final QuestState st = caster.getQuestState(getName());
 		if ((st == null) || !st.isStarted()) {
 			return null;
 		}
-		
 		if (Util.contains(targets, npc) && (st.getInt("cond") == 1) && (skill.getId() == 2630)) {
 			st.playSound("ItemSound.quest_itemget");
 			final int npcId = npc.getNpcId();
-			// Red Star Stones
-			if ((npcId >= 18684) && (npcId <= 18686)) {
+			if ((npcId >= 18684) && (npcId <= 18686)) { // 붉은 스타 스톤
 				st.giveItems(RED, 1);
-			}
-			// Blue Star Stones
-			else if ((npcId >= 18687) && (npcId <= 18689)) {
+			} else if ((npcId >= 18687) && (npcId <= 18689)) { // 푸른 스타 스톤
 				st.giveItems(BLUE, 1);
-			}
-			// Green Star Stones
-			else if ((npcId >= 18690) && (npcId <= 18692)) {
+			} else if ((npcId >= 18690) && (npcId <= 18692)) { // 초록 스타 스톤
 				st.giveItems(GREEN, 1);
 			}
 			npc.doDie(caster);
@@ -137,14 +132,16 @@ public class Q10274_CollectingInTheAir extends Quest {
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public Q10274_CollectingInTheAir(int questId, String name, String descr) {
 		super(questId, name, descr);
-		
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
-		
 		addSkillSeeId(MOBS);
-		
 		questItemIds = new int[]
 		{
 			SCROLL,
@@ -155,7 +152,7 @@ public class Q10274_CollectingInTheAir extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new Q10274_CollectingInTheAir(10274, qn, "Collecting in the Air");
+		new Q10274_CollectingInTheAir(10274, Q10274_CollectingInTheAir.class.getSimpleName(), "공중 채집을 해보자");
 	}
 	
 }
