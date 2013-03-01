@@ -18,6 +18,8 @@
  */
 package quests.Q702_ATrapForRevenge;
 
+import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -25,41 +27,42 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * A Trap for Revenge (702)
+ * 복수를 위한 함정 (702)
  * @author malyelfik
+ * @author lineage2kr
  */
 public class Q702_ATrapForRevenge extends Quest {
 	
-	private static final String qn = "702_ATrapForRevenge";
-	
 	// NPC
-	private static final int Plenos = 32563;
-	private static final int Lekon = 32557;
-	private static final int Tenius = 32555;
+	private static final int Plenos = 32563; // 솔져 플레노스
+	private static final int Lekon = 32557; // 엔지니어 레콘
+	private static final int Tenius = 32555; // 솔져 테니스
+	
+	// Monsters
 	private static final int[] Monsters =
 	{
-		22612,
-		22613,
-		25632,
-		22610,
-		22611,
-		25631,
-		25626
+		22612, // 드락
+		22613, // 드락
+		25632, // 파멸의 권속 드락
+		22610, // 돌연변이 드레이크 윙
+		22611, // 돌연변이 드레이크 윙
+		25631, // 파멸의 권속 드레이크 윙
+		25626, // 파멸의 사자 디우스
 	};
 	
 	// Items
-	private static final int DrakeFlesh = 13877;
-	private static final int RottenBlood = 13878;
-	private static final int BaitForDrakes = 13879;
-	private static final int VariantDrakeWingHorns = 13880;
-	private static final int ExtractedRedStarStone = 14009;
+	private static final int DrakeFlesh = 13877; // 드레이크의 살점
+	private static final int RottenBlood = 13878; // 썩은 피
+	private static final int BaitForDrakes = 13879; // 드레이크용 미끼
+	private static final int VariantDrakeWingHorns = 13880; // 변종 드레이크 윙의 뿔
+	private static final int ExtractedRedStarStone = 14009; // 붉은 스타스톤 추출석
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
 		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null) {
-			return "<html><body>目前沒有執行任務，或條件不符。</body></html>";
+			return getNoQuestMsg(player);
 		}
 		
 		if (event.equalsIgnoreCase("32563-04.htm")) {
@@ -186,16 +189,15 @@ public class Q702_ATrapForRevenge extends Quest {
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player) {
-		String htmltext = "<html><body>目前沒有執行任務，或條件不符。</body></html>";
-		final QuestState st = player.getQuestState(qn);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null) {
 			return htmltext;
 		}
-		
 		if (npc.getNpcId() == Plenos) {
 			switch (st.getState()) {
 				case State.CREATED:
-					final QuestState prev = player.getQuestState("10273_GoodDayToFly");
+					final QuestState prev = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 					htmltext = ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78)) ? "32563-01.htm" : "32563-02.htm";
 				break;
 				case State.STARTED:
@@ -233,7 +235,7 @@ public class Q702_ATrapForRevenge extends Quest {
 		if (partyMember == null) {
 			return null;
 		}
-		final QuestState st = partyMember.getQuestState(qn);
+		final QuestState st = partyMember.getQuestState(getName());
 		final int chance = getRandom(1000);
 		switch (npc.getNpcId()) {
 			case 22612:
@@ -296,6 +298,11 @@ public class Q702_ATrapForRevenge extends Quest {
 		return null;
 	}
 	
+	/**
+	 * @param questId
+	 * @param name
+	 * @param descr
+	 */
 	public Q702_ATrapForRevenge(int questId, String name, String descr) {
 		super(questId, name, descr);
 		addStartNpc(Plenos);
@@ -306,7 +313,7 @@ public class Q702_ATrapForRevenge extends Quest {
 	}
 	
 	public static void main(String[] args) {
-		new Q702_ATrapForRevenge(702, qn, "為了復仇的陷阱");
+		new Q702_ATrapForRevenge(702, Q702_ATrapForRevenge.class.getSimpleName(), "복수를 위한 함정");
 	}
 	
 }
